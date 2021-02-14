@@ -1,0 +1,81 @@
+.TH "SVF::ICFGEdge" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::ICFGEdge
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::GenericEdge< NodeTy >\fP\&.
+.PP
+Inherited by \fBSVF::CallCFGEdge\fP, \fBSVF::IntraCFGEdge\fP, and \fBSVF::RetCFGEdge\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBICFGEdgeK\fP { \fBIntraCF\fP, \fBCallCF\fP, \fBRetCF\fP }"
+.br
+.ti -1c
+.RI "typedef \fBICFGEdgeK\fP \fBSVFGEdgeK\fP"
+.br
+.ti -1c
+.RI "typedef \fBGenericNode\fP< \fBICFGNode\fP, \fBICFGEdge\fP >::GEdgeSetTy \fBICFGEdgeSetTy\fP"
+.br
+.ti -1c
+.RI "typedef ICFGEdgeSetTy \fBSVFGEdgeSetTy\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBICFGEdge\fP (\fBICFGNode\fP *s, \fBICFGNode\fP *d, \fBGEdgeFlag\fP k)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fB~ICFGEdge\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "bool \fBisCFGEdge\fP () const"
+.br
+.RI "Get methods of the components\&. "
+.ti -1c
+.RI "bool \fBisCallCFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisRetCFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisIntraCFGEdge\fP () const"
+.br
+.ti -1c
+.RI "virtual const std::string \fBtoString\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBGEdgeFlag\fP \fBmakeEdgeFlagWithInvokeID\fP (GEdgeKind k, CallSiteID cs)"
+.br
+.RI "Compute the unique edgeFlag value from edge kind and CallSiteID\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBraw_ostream\fP & \fBoperator<<\fP (\fBraw_ostream\fP &o, const \fBICFGEdge\fP &edge)"
+.br
+.RI "Overloading operator << for dumping \fBICFG\fP node ID\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSVF::ICFGEdge::ICFGEdgeK\fP"
+ten types of \fBICFG\fP edge three types of control-flow edges seven types of value-flow edges 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

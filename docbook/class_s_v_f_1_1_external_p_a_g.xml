@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_external_p_a_g" xml:lang="en-US">
+<title>SVF::ExternalPAG Class Reference</title>
+<indexterm><primary>SVF::ExternalPAG</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ExternalPAG.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a7401db95a642fc218e6337dce61b98e1"/><emphasis role="strong">ExternalPAG</emphasis> (std::string functionName)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a25d59d95afaa5f548e09e6e625a14f33"/>std::string <emphasis role="strong">getFunctionName</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a1d35176325629ae64beb28d5474dd8d7"/>NodeSet &amp; <emphasis role="strong">getValueNodes</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1acb3156be31f4dd45590d931b0f9279f5"/>NodeSet &amp; <emphasis role="strong">getObjectNodes</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a68a53b3db6cdf02f49786492fc49c012"/>OrderedSet&lt; std::tuple&lt; NodeID, NodeID, std::string, int &gt; &gt; &amp; <emphasis role="strong">getEdges</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1af88e42a31e396ee9df11146638f1efcd"/>Map&lt; int, NodeID &gt; &amp; <emphasis role="strong">getArgNodes</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1ab32ce97e36e69379bc6b70c1657bbaa6"/>NodeID <emphasis role="strong">getReturnNode</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a8f692a4725b0b9d548f816c71b2c3401"/>void <emphasis role="strong">setReturnNode</emphasis> (NodeID returnNode)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a419d2de51e3af016cf2cc3514ee0d735"/>bool <link linkend="_class_s_v_f_1_1_external_p_a_g_1a419d2de51e3af016cf2cc3514ee0d735">hasReturnNode</link> () const</para>
+
+<para>Does this function have a return node? </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_external_p_a_g_1a6e8b309508de040504ad4b2ce6a5de28">addExternalPAG</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *function)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_s_v_f_1_1_external_p_a_g_1a865a75aec231c9122842d2bdafeb4f6b">initialise</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *svfModule)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_s_v_f_1_1_external_p_a_g_1a7a82128508395830433145977dbe37c0">connectCallsiteToExternalPAG</link> (CallSite *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a3a798aa788c5f1c200b7e2719660b5ec"/>static bool <link linkend="_class_s_v_f_1_1_external_p_a_g_1a3a798aa788c5f1c200b7e2719660b5ec">hasExternalPAG</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *function)</para>
+
+<para>Whether an external <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> implementing function exists. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_s_v_f_1_1_external_p_a_g_1acee9fa409f3649dcf2c0f5e6da66ceb0">dumpFunctions</link> (std::vector&lt; std::string &gt; functions)</para>
+
+<para>Dump individual PAGs of specified functions. Currently to outs(). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents the <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> of a function loaded externally (i.e. from file). It&apos;s purpose is to be attached to the main <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> (almost) seamlessly. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a6e8b309508de040504ad4b2ce6a5de28"/>    <section>
+    <title>addExternalPAG()</title>
+<indexterm><primary>addExternalPAG</primary><secondary>SVF::ExternalPAG</secondary></indexterm>
+<indexterm><primary>SVF::ExternalPAG</primary><secondary>addExternalPAG</secondary></indexterm>
+<para><computeroutput>bool ExternalPAG::addExternalPAG (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * function)</computeroutput></para>
+<para>Adds (creates new equivalents) all the nodes and edges of this extpag to the main <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link>. function is used as a key for future lookups. Returns true on success, false otherwise (incl. if it already exists). </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a7a82128508395830433145977dbe37c0"/>    <section>
+    <title>connectCallsiteToExternalPAG()</title>
+<indexterm><primary>connectCallsiteToExternalPAG</primary><secondary>SVF::ExternalPAG</secondary></indexterm>
+<indexterm><primary>SVF::ExternalPAG</primary><secondary>connectCallsiteToExternalPAG</secondary></indexterm>
+<para><computeroutput>bool ExternalPAG::connectCallsiteToExternalPAG (CallSite * cs)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Connects callsite if a external <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> implementing the relevant function has been added. Returns true on success, false otherwise. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1acee9fa409f3649dcf2c0f5e6da66ceb0"/>    <section>
+    <title>dumpFunctions()</title>
+<indexterm><primary>dumpFunctions</primary><secondary>SVF::ExternalPAG</secondary></indexterm>
+<indexterm><primary>SVF::ExternalPAG</primary><secondary>dumpFunctions</secondary></indexterm>
+<para><computeroutput>void ExternalPAG::dumpFunctions (std::vector&lt; std::string &gt; functions)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Dump individual PAGs of specified functions. Currently to outs(). </para>
+</para>
+
+<para>Dump PAGs for the functions </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_external_p_a_g_1a865a75aec231c9122842d2bdafeb4f6b"/>    <section>
+    <title>initialise()</title>
+<indexterm><primary>initialise</primary><secondary>SVF::ExternalPAG</secondary></indexterm>
+<indexterm><primary>SVF::ExternalPAG</primary><secondary>initialise</secondary></indexterm>
+<para><computeroutput>void ExternalPAG::initialise (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * svfModule)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Parses command line arguments and attaches external PAGs to main <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link>. </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/Graphs/ExternalPAG.hlib/Graphs/ExternalPAG.cpp</section>
+</section>

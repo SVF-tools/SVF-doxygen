@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_saber_checker_a_p_i" xml:lang="en-US">
+<title>SVF::SaberCheckerAPI Class Reference</title>
+<indexterm><primary>SVF::SaberCheckerAPI</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056">CHECKER_TYPE</link> { 
+<emphasis role="strong">CK_DUMMY</emphasis> = 0
+, <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056acd7e3bca6e36e08205576482b1b0221e">CK_ALLOC</link>
+, <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056a0fa2e38d001b233c6563822491adf507">CK_FREE</link>
+, <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056a75cc4daa228ceb26f63cb1825da8a73e">CK_FOPEN</link>
+, 
+<link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056a731dcaf32786abf31c43be180dd366cb">CK_FCLOSE</link>
+ }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a3115116dc595c4b157f2cfc0a6ea89fc"/>typedef llvm::StringMap&lt; <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056">CHECKER_TYPE</link> &gt; <emphasis role="strong">TDAPIMap</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a71cbe5fbf582d0801f604595d3dfb416"/>bool <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a71cbe5fbf582d0801f604595d3dfb416">isMemAlloc</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun) const</para>
+
+<para>Return true if this call is a memory allocation. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a8a96f6ee7bd9be1abfa89b05d773539f"/>bool <emphasis role="strong">isMemAlloc</emphasis> (const Instruction *inst) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a0e485cc7410e7a1ea68fb59dfdff1ff4"/>bool <emphasis role="strong">isMemAlloc</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1ab6d9c2435bdb1c01542cc75e9eef0a4e"/>bool <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1ab6d9c2435bdb1c01542cc75e9eef0a4e">isMemDealloc</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun) const</para>
+
+<para>Return true if this call is a memory deallocation. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a3b9d60c60d518a8abe2951ccc627fe33"/>bool <emphasis role="strong">isMemDealloc</emphasis> (const Instruction *inst) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1abe9fee725114243e16db4c2fd1abf3fa"/>bool <emphasis role="strong">isMemDealloc</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a0977378f6f2a782041c97912762deb5f"/>bool <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a0977378f6f2a782041c97912762deb5f">isFOpen</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun) const</para>
+
+<para>Return true if this call is a file open. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1ad7308258d0186a99325adf030c1138a6"/>bool <emphasis role="strong">isFOpen</emphasis> (const Instruction *inst) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1aa0996d51dc3fc3e98d8572fbae88186a"/>bool <emphasis role="strong">isFOpen</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a970676d884d66da9fce00fe5b60c96ba"/>bool <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a970676d884d66da9fce00fe5b60c96ba">isFClose</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun) const</para>
+
+<para>Return true if this call is a file close. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1ad029e2f347ee2aeb5b0abb928a552789"/>bool <emphasis role="strong">isFClose</emphasis> (const Instruction *inst) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1ac176579c004a0bf210bbcc5bc7f0f250"/>bool <emphasis role="strong">isFClose</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1acf41a2b6de063da9ed492ef0da129036"/>static <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i">SaberCheckerAPI</link> * <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1acf41a2b6de063da9ed492ef0da129036">getCheckerAPI</link> ()</para>
+
+<para>Return a static reference. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056"/>    <section>
+    <title>CHECKER_TYPE</title>
+<indexterm><primary>CHECKER_TYPE</primary><secondary>SVF::SaberCheckerAPI</secondary></indexterm>
+<indexterm><primary>SVF::SaberCheckerAPI</primary><secondary>CHECKER_TYPE</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056">SVF::SaberCheckerAPI::CHECKER_TYPE</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>CK_ALLOC</primary><secondary>SVF::SaberCheckerAPI</secondary></indexterm>
+<indexterm><primary>SVF::SaberCheckerAPI</primary><secondary>CK_ALLOC</secondary></indexterm>
+<anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056acd7e3bca6e36e08205576482b1b0221e"/>CK_ALLOC</entry><entry>
+<para>dummy type </para>
+</entry></row><row><entry><indexterm><primary>CK_FREE</primary><secondary>SVF::SaberCheckerAPI</secondary></indexterm>
+<indexterm><primary>SVF::SaberCheckerAPI</primary><secondary>CK_FREE</secondary></indexterm>
+<anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056a0fa2e38d001b233c6563822491adf507"/>CK_FREE</entry><entry>
+<para>memory allocation </para>
+</entry></row><row><entry><indexterm><primary>CK_FOPEN</primary><secondary>SVF::SaberCheckerAPI</secondary></indexterm>
+<indexterm><primary>SVF::SaberCheckerAPI</primary><secondary>CK_FOPEN</secondary></indexterm>
+<anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056a75cc4daa228ceb26f63cb1825da8a73e"/>CK_FOPEN</entry><entry>
+<para>memory deallocation </para>
+</entry></row><row><entry><indexterm><primary>CK_FCLOSE</primary><secondary>SVF::SaberCheckerAPI</secondary></indexterm>
+<indexterm><primary>SVF::SaberCheckerAPI</primary><secondary>CK_FCLOSE</secondary></indexterm>
+<anchor xml:id="_class_s_v_f_1_1_saber_checker_a_p_i_1a32f3c37a5957dc7533f7e82617d5d056a731dcaf32786abf31c43be180dd366cb"/>CK_FCLOSE</entry><entry>
+<para>File open. </para>
+
+<para>File close </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/SABER/SaberCheckerAPI.hlib/SABER/SaberCheckerAPI.cpp</section>
+</section>

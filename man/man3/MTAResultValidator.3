@@ -1,0 +1,92 @@
+.TH "MTAResultValidator" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MTAResultValidator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MTAResultValidator\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef int \fBINTERLEV_FLAG\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMTAResultValidator\fP (MHP *mh)"
+.br
+.ti -1c
+.RI "void \fBanalyze\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "std::vector< std::string > & \fBsplit\fP (const std::string &s, char delim, std::vector< std::string > &elems)"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBsplit\fP (const std::string &s, char delim)"
+.br
+.ti -1c
+.RI "NodeID \fBgetIntArg\fP (const Instruction *inst, unsigned int arg_num)"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBgetStringArg\fP (const Instruction *inst, unsigned int arg_num)"
+.br
+.ti -1c
+.RI "CallStrCxt \fBgetCxtArg\fP (const Instruction *inst, unsigned int arg_num)"
+.br
+.ti -1c
+.RI "const Instruction * \fBgetPreviousMemoryAccessInst\fP (const Instruction *I)"
+.br
+.ti -1c
+.RI "bool \fBmatchCxt\fP (const CallStrCxt cxt1, const CallStrCxt cxt2) const"
+.br
+.ti -1c
+.RI "void \fBdumpCxt\fP (const CallStrCxt &cxt) const"
+.br
+.ti -1c
+.RI "void \fBdumpInterlev\fP (NodeBS &lev)"
+.br
+.ti -1c
+.RI "std::string \fBgetOutput\fP (const char *scenario, bool analysisRes)"
+.br
+.ti -1c
+.RI "std::string \fBgetOutputforInterlevAnalysis\fP (const char *scenario, INTERLEV_FLAG analysisRes)"
+.br
+.ti -1c
+.RI "bool \fBcollectCallsiteTargets\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcollectCxtThreadTargets\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcollectTCTTargets\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcollectInterleavingTargets\fP ()"
+.br
+.ti -1c
+.RI "bool \fBvalidateCxtThread\fP ()"
+.br
+.ti -1c
+.RI "bool \fBvalidateTCT\fP ()"
+.br
+.ti -1c
+.RI "INTERLEV_FLAG \fBvalidateInterleaving\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Validate the result of context-sensitive analysis, including context-sensitive thread detection and thread interleaving\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

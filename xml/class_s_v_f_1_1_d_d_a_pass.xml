@@ -1,0 +1,528 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_d_d_a_pass" kind="class" language="C++" prot="public">
+    <compoundname>SVF::DDAPass</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ModulePass</basecompoundref>
+    <includes refid="_d_d_a_pass_8h" local="no">DDAPass.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_pass_1a5e51ac666db439865846b835bcea9d21" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SCCDetection</ref>&lt; <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> * &gt;</type>
+        <definition>typedef SCCDetection&lt;SVFG*&gt; SVF::DDAPass::SVFGSCC</definition>
+        <argsstring></argsstring>
+        <name>SVFGSCC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="30" column="26" bodyfile="include/DDA/DDAPass.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_pass_1acc81a1f7ad572fa27648999334479f56" prot="public" static="no">
+        <type>OrderedSet&lt; const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> * &gt;</type>
+        <definition>typedef OrderedSet&lt;const SVFGEdge*&gt; SVF::DDAPass::SVFGEdgeSet</definition>
+        <argsstring></argsstring>
+        <name>SVFGEdgeSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="31" column="24" bodyfile="include/DDA/DDAPass.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_pass_1acc7ad5d3266cb3e24fba0b4db186348a" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="class_s_v_f_1_1_pointer_analysis" kindref="compound">PointerAnalysis</ref> * &gt;</type>
+        <definition>typedef std::vector&lt;PointerAnalysis*&gt; SVF::DDAPass::PTAVector</definition>
+        <argsstring></argsstring>
+        <name>PTAVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="32" column="25" bodyfile="include/DDA/DDAPass.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_pass_1adb39fc24e3d45e558ac36f37b5dc3565" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char DDAPass::ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Pass ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="29" column="17" bodyfile="include/DDA/DDAPass.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_pass_1a240ffa3ed0963e579db60784f4a21b9f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_pointer_analysis" kindref="compound">PointerAnalysis</ref> *</type>
+        <definition>PointerAnalysis* SVF::DDAPass::_pta</definition>
+        <argsstring></argsstring>
+        <name>_pta</name>
+        <briefdescription>
+<para>pointer analysis to be executed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="91" column="21" bodyfile="include/DDA/DDAPass.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_pass_1a8bb61315bc5d1816f4e07140864af47f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_d_d_a_client" kindref="compound">DDAClient</ref> *</type>
+        <definition>DDAClient* SVF::DDAPass::_client</definition>
+        <argsstring></argsstring>
+        <name>_client</name>
+        <briefdescription>
+<para>DDA client used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="92" column="15" bodyfile="include/DDA/DDAPass.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a4f68cbbe00863024cba2ecf513ff979f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::DDAPass::DDAPass</definition>
+        <argsstring>()</argsstring>
+        <name>DDAPass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="34" column="5" bodyfile="include/DDA/DDAPass.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1adc8e3d685a1fbb9731040a8ceb4f4202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DDAPass::~DDAPass</definition>
+        <argsstring>()</argsstring>
+        <name>~DDAPass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="35" column="5" bodyfile="lib/DDA/DDAPass.cpp" bodystart="60" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1af9ab14540f72aee9e54d5c450a4ebc86" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAPass::getAnalysisUsage</definition>
+        <argsstring>(AnalysisUsage &amp;au) const</argsstring>
+        <name>getAnalysisUsage</name>
+        <param>
+          <type>AnalysisUsage &amp;</type>
+          <declname>au</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>do not intend to change the IR in this pass,</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="37" column="25" bodyfile="include/DDA/DDAPass.h" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a77ecb6c9fd126f71b018e565f543e3ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void *</type>
+        <definition>virtual void* SVF::DDAPass::getAdjustedAnalysisPointer</definition>
+        <argsstring>(AnalysisID)</argsstring>
+        <name>getAdjustedAnalysisPointer</name>
+        <param>
+          <type>AnalysisID</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="44" column="25" bodyfile="include/DDA/DDAPass.h" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a0a39a0f3e530a97a38dbfe0d9f04ec33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>AliasResult</type>
+        <definition>virtual AliasResult SVF::DDAPass::alias</definition>
+        <argsstring>(const MemoryLocation &amp;LocA, const MemoryLocation &amp;LocB)</argsstring>
+        <name>alias</name>
+        <param>
+          <type>const MemoryLocation &amp;</type>
+          <declname>LocA</declname>
+        </param>
+        <param>
+          <type>const MemoryLocation &amp;</type>
+          <declname>LocB</declname>
+        </param>
+        <briefdescription>
+<para>Interface expose to users of our pointer analysis, given Location infos. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="50" column="32" bodyfile="include/DDA/DDAPass.h" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a242575c5bd8a8f17fdc802e5ba80e7b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>AliasResult</type>
+        <definition>AliasResult DDAPass::alias</definition>
+        <argsstring>(const Value *V1, const Value *V2)</argsstring>
+        <name>alias</name>
+        <param>
+          <type>const Value *</type>
+          <declname>V1</declname>
+        </param>
+        <param>
+          <type>const Value *</type>
+          <declname>V2</declname>
+        </param>
+        <briefdescription>
+<para>Interface expose to users of our pointer analysis, given Value infos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return alias results based on our points-to/alias analysis TODO: Need to handle PartialAlias and MustAlias here. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO: When this method is invoked during compiler optimizations, the IR used for pointer analysis may been changed, so some Values may not find corresponding <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> node. In this case, we only check alias between two Values if they both have <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> nodes. Otherwise, MayAlias will be returned.</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="56" column="25" bodyfile="lib/DDA/DDAPass.cpp" bodystart="319" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a96de481dd2af7b39428aff38158c1d4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>AliasResult</type>
+        <definition>AliasResult DDAPass::alias</definition>
+        <argsstring>(NodeID V1, NodeID V2)</argsstring>
+        <name>alias</name>
+        <param>
+          <type>NodeID</type>
+          <declname>V1</declname>
+        </param>
+        <param>
+          <type>NodeID</type>
+          <declname>V2</declname>
+        </param>
+        <briefdescription>
+<para>Interface expose to users of our pointer analysis, given PAGNodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="59" column="25" bodyfile="lib/DDA/DDAPass.cpp" bodystart="303" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1af196994d6ec7f5cead72212407842103" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DDAPass::runOnModule</definition>
+        <argsstring>(SVFModule *module)</argsstring>
+        <name>runOnModule</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_s_v_f_module" kindref="compound">SVFModule</ref> *</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>We start from here. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>initialization for llvm alias analyzer</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="62" column="18" bodyfile="lib/DDA/DDAPass.cpp" bodystart="68" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a7bc2c9a62b7d97b8e19bee0c4625aea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool DDAPass::runOnModule</definition>
+        <argsstring>(Module &amp;module)</argsstring>
+        <name>runOnModule</name>
+        <param>
+          <type>Module &amp;</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>We start from here. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="65" column="18" bodyfile="lib/DDA/DDAPass.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1aa33694e0b5f30c451c229e92877e4842" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DDAPass::selectClient</definition>
+        <argsstring>(SVFModule *module)</argsstring>
+        <name>selectClient</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_s_v_f_module" kindref="compound">SVFModule</ref> *</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>Select a client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>select a client to initialize queries </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>solve function pointer</para>
+<para>allow user specify queries</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="68" column="18" bodyfile="lib/DDA/DDAPass.cpp" bodystart="91" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a597a387848c03a05d1cfdfafc510cf2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>StringRef</type>
+        <definition>virtual StringRef SVF::DDAPass::getPassName</definition>
+        <argsstring>() const</argsstring>
+        <name>getPassName</name>
+        <briefdescription>
+<para>Pass name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="71" column="30" bodyfile="include/DDA/DDAPass.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1afc700bd3abb5d9199621741b9bd04f0f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DDAPass::printQueryPTS</definition>
+        <argsstring>()</argsstring>
+        <name>printQueryPTS</name>
+        <briefdescription>
+<para>Print queries&apos; pts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Print queries&apos; pts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="78" column="10" bodyfile="lib/DDA/DDAPass.cpp" bodystart="347" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a13ff3107a0e4f8749b166fa9b8165167" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DDAPass::runPointerAnalysis</definition>
+        <argsstring>(SVFModule *module, u32_t kind)</argsstring>
+        <name>runPointerAnalysis</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_s_v_f_module" kindref="compound">SVFModule</ref> *</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>kind</declname>
+        </param>
+        <briefdescription>
+<para>Create pointer analysis according to specified kind and analyze the module. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Initialize pointer analysis.</para>
+<para>initialize</para>
+<para>compute points-to</para>
+<para>finalize</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="80" column="10" bodyfile="lib/DDA/DDAPass.cpp" bodystart="127" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1add44aee75c9a59327b4eb46774551e2b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DDAPass::initCxtInsensitiveEdges</definition>
+        <argsstring>(PointerAnalysis *pta, const SVFG *svfg, const SVFGSCC *svfgSCC, SVFGEdgeSet &amp;insensitveEdges)</argsstring>
+        <name>initCxtInsensitiveEdges</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_pointer_analysis" kindref="compound">PointerAnalysis</ref> *</type>
+          <declname>pta</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> *</type>
+          <declname>svfg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SVFGSCC</ref> *</type>
+          <declname>svfgSCC</declname>
+        </param>
+        <param>
+          <type>SVFGEdgeSet &amp;</type>
+          <declname>insensitveEdges</declname>
+        </param>
+        <briefdescription>
+<para>Context insensitive Edge for DDA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize context insensitive Edge for DDA </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="82" column="10" bodyfile="lib/DDA/DDAPass.cpp" bodystart="181" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1a3810708c5e2695d2a0e36084b589e432" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DDAPass::edgeInSVFGSCC</definition>
+        <argsstring>(const SVFGSCC *svfgSCC, const SVFGEdge *edge)</argsstring>
+        <name>edgeInSVFGSCC</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SVFGSCC</ref> *</type>
+          <declname>svfgSCC</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>Return TRUE if this edge is inside a <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> SCC, i.e., src node and dst node are in the same SCC on the <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> edge in a SCC cycle </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="84" column="10" bodyfile="lib/DDA/DDAPass.cpp" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1aab60429398a89ec1c8663a305130376f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DDAPass::edgeInCallGraphSCC</definition>
+        <argsstring>(PointerAnalysis *pta, const SVFGEdge *edge)</argsstring>
+        <name>edgeInCallGraphSCC</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_pointer_analysis" kindref="compound">PointerAnalysis</ref> *</type>
+          <declname>pta</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>Return TRUE if this edge is inside a <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> SCC, i.e., src node and dst node are in the same SCC on the <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether call graph edge in <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> SCC </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="86" column="10" bodyfile="lib/DDA/DDAPass.cpp" bodystart="200" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1af8bc7f84e7dc8c7032eec6162a837ba6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DDAPass::collectCxtInsenEdgeForRecur</definition>
+        <argsstring>(PointerAnalysis *pta, const SVFG *svfg, SVFGEdgeSet &amp;insensitveEdges)</argsstring>
+        <name>collectCxtInsenEdgeForRecur</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_pointer_analysis" kindref="compound">PointerAnalysis</ref> *</type>
+          <declname>pta</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> *</type>
+          <declname>svfg</declname>
+        </param>
+        <param>
+          <type>SVFGEdgeSet &amp;</type>
+          <declname>insensitveEdges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark insensitive edge for function recursions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="88" column="10" bodyfile="lib/DDA/DDAPass.cpp" bodystart="218" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_pass_1af03661604ba924d1c3fd34a231ba87a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DDAPass::collectCxtInsenEdgeForVFCycle</definition>
+        <argsstring>(PointerAnalysis *pta, const SVFG *svfg, const SVFGSCC *svfgSCC, SVFGEdgeSet &amp;insensitveEdges)</argsstring>
+        <name>collectCxtInsenEdgeForVFCycle</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_pointer_analysis" kindref="compound">PointerAnalysis</ref> *</type>
+          <declname>pta</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> *</type>
+          <declname>svfg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SVFGSCC</ref> *</type>
+          <declname>svfgSCC</declname>
+        </param>
+        <param>
+          <type>SVFGEdgeSet &amp;</type>
+          <declname>insensitveEdges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark insensitive edge for value-flow cycles </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAPass.h" line="89" column="10" bodyfile="lib/DDA/DDAPass.cpp" bodystart="241" bodyend="301"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Demand-Driven Pointer Analysis. This class performs various pointer analysis on the given module. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SVF::DDAPass</label>
+        <link refid="class_s_v_f_1_1_d_d_a_pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModulePass</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SVF::DDAPass</label>
+        <link refid="class_s_v_f_1_1_d_d_a_pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModulePass</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/DDA/DDAPass.h" line="24" column="1" bodyfile="include/DDA/DDAPass.h" bodystart="25" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a8bb61315bc5d1816f4e07140864af47f" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>_client</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a240ffa3ed0963e579db60784f4a21b9f" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>_pta</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a0a39a0f3e530a97a38dbfe0d9f04ec33" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>alias</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a242575c5bd8a8f17fdc802e5ba80e7b0" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>alias</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a96de481dd2af7b39428aff38158c1d4e" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>alias</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1af8bc7f84e7dc8c7032eec6162a837ba6" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>collectCxtInsenEdgeForRecur</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1af03661604ba924d1c3fd34a231ba87a6" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>collectCxtInsenEdgeForVFCycle</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a4f68cbbe00863024cba2ecf513ff979f" prot="public" virt="non-virtual"><scope>SVF::DDAPass</scope><name>DDAPass</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1aab60429398a89ec1c8663a305130376f" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>edgeInCallGraphSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a3810708c5e2695d2a0e36084b589e432" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>edgeInSVFGSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a77ecb6c9fd126f71b018e565f543e3ad" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>getAdjustedAnalysisPointer</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1af9ab14540f72aee9e54d5c450a4ebc86" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>getAnalysisUsage</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a597a387848c03a05d1cfdfafc510cf2b" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>getPassName</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1adb39fc24e3d45e558ac36f37b5dc3565" prot="public" virt="non-virtual"><scope>SVF::DDAPass</scope><name>ID</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1add44aee75c9a59327b4eb46774551e2b" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>initCxtInsensitiveEdges</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1afc700bd3abb5d9199621741b9bd04f0f" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>printQueryPTS</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1acc7ad5d3266cb3e24fba0b4db186348a" prot="public" virt="non-virtual"><scope>SVF::DDAPass</scope><name>PTAVector</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1af196994d6ec7f5cead72212407842103" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>runOnModule</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a7bc2c9a62b7d97b8e19bee0c4625aea3" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>runOnModule</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a13ff3107a0e4f8749b166fa9b8165167" prot="private" virt="non-virtual"><scope>SVF::DDAPass</scope><name>runPointerAnalysis</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1aa33694e0b5f30c451c229e92877e4842" prot="public" virt="virtual"><scope>SVF::DDAPass</scope><name>selectClient</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1acc81a1f7ad572fa27648999334479f56" prot="public" virt="non-virtual"><scope>SVF::DDAPass</scope><name>SVFGEdgeSet</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1a5e51ac666db439865846b835bcea9d21" prot="public" virt="non-virtual"><scope>SVF::DDAPass</scope><name>SVFGSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_pass_1adc8e3d685a1fbb9731040a8ceb4f4202" prot="public" virt="non-virtual"><scope>SVF::DDAPass</scope><name>~DDAPass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

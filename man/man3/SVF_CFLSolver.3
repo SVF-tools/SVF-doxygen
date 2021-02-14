@@ -1,0 +1,105 @@
+.TH "SVF::CFLSolver< GraphType, DPIm >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::CFLSolver< GraphType, DPIm >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBSVF::SrcSnkDDA\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef llvm::GraphTraits< GraphType > \fBGTraits\fP"
+.br
+.RI "Define the GTraits and node iterator\&. "
+.ti -1c
+.RI "typedef GTraits::NodeType \fBGNODE\fP"
+.br
+.ti -1c
+.RI "typedef GTraits::EdgeType \fBGEDGE\fP"
+.br
+.ti -1c
+.RI "typedef GTraits::nodes_iterator \fBnode_iterator\fP"
+.br
+.ti -1c
+.RI "typedef GTraits::ChildIteratorType \fBchild_iterator\fP"
+.br
+.ti -1c
+.RI "typedef llvm::GraphTraits< llvm::Inverse< GNODE * > > \fBInvGTraits\fP"
+.br
+.RI "Define inverse GTraits and note iterator\&. "
+.ti -1c
+.RI "typedef InvGTraits::ChildIteratorType \fBinv_child_iterator\fP"
+.br
+.ti -1c
+.RI "typedef \fBFIFOWorkList\fP< DPIm > \fBWorkList\fP"
+.br
+.RI "Define worklist\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCFLSolver\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~CFLSolver\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "const GraphType \fBgraph\fP () const"
+.br
+.RI "Get/Set graph methods\&. "
+.ti -1c
+.RI "void \fBsetGraph\fP (GraphType g)"
+.br
+.ti -1c
+.RI "GNODE * \fBgetNode\fP (NodeID id) const"
+.br
+.ti -1c
+.RI "virtual NodeID \fBgetNodeIDFromItem\fP (const DPIm &item) const"
+.br
+.ti -1c
+.RI "virtual void \fBforwardTraverse\fP (DPIm &it)"
+.br
+.RI "CFL forward traverse solve\&. "
+.ti -1c
+.RI "virtual void \fBbackwardTraverse\fP (DPIm &it)"
+.br
+.RI "CFL forward traverse solve\&. "
+.ti -1c
+.RI "virtual void \fBFWProcessCurNode\fP (const DPIm &)"
+.br
+.RI "Process the DP item\&. "
+.ti -1c
+.RI "virtual void \fBBWProcessCurNode\fP (const DPIm &)"
+.br
+.ti -1c
+.RI "virtual void \fBFWProcessOutgoingEdge\fP (const DPIm &item, GEDGE *edge)"
+.br
+.RI "Propagation for the solving, to be implemented in the child class\&. "
+.ti -1c
+.RI "virtual void \fBBWProcessIncomingEdge\fP (const DPIm &item, GEDGE *edge)"
+.br
+.ti -1c
+.RI "DPIm \fBpopFromWorklist\fP ()"
+.br
+.RI "Worklist operations\&. "
+.ti -1c
+.RI "bool \fBpushIntoWorklist\fP (DPIm &item)"
+.br
+.ti -1c
+.RI "bool \fBisWorklistEmpty\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisInWorklist\fP (DPIm &item)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

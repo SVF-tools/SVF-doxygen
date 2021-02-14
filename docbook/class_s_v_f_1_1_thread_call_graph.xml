@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_thread_call_graph" xml:lang="en-US">
+<title>SVF::ThreadCallGraph Class Reference</title>
+<indexterm><primary>SVF::ThreadCallGraph</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ThreadCallGraph.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::ThreadCallGraph:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_thread_call_graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ad48fad1fec75346c9eb79bbd6e8caee4"/>typedef Set&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * &gt; <emphasis role="strong">InstSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a0d560b811f8df1a710c627e1ac100155"/>typedef InstSet <emphasis role="strong">CallSiteSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1af952209ad8f7ae0c0f58c87d97f57ee9"/>typedef std::vector&lt; const Instruction * &gt; <emphasis role="strong">InstVector</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a8c6eef5a291bd0c65cc2f816767795f1"/>typedef Map&lt; const Instruction *, InstSet &gt; <emphasis role="strong">CallToInstMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a304ba7ef48068fa019c69af5744842cc"/>typedef Set&lt; CallSiteSet * &gt; <emphasis role="strong">CtxSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1aa5efa630056c1db2bb0dadc868752ec8"/>typedef ThreadForkEdge::ForkEdgeSet <emphasis role="strong">ForkEdgeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ad0d6585b7d26cd4597466a79e2fedacd"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, ForkEdgeSet &gt; <emphasis role="strong">CallInstToForkEdgesMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1aa9e07204488ec8f0f83f4e218b6ce6bd"/>typedef ThreadJoinEdge::JoinEdgeSet <emphasis role="strong">JoinEdgeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a2f24d314b211151182bee38b61731749"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, JoinEdgeSet &gt; <emphasis role="strong">CallInstToJoinEdgesMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1abc4cdc5b401932bf410d26ab4d58ca33"/>typedef HareParForEdge::ParForEdgeSet <emphasis role="strong">ParForEdgeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ac6eb68444968f7bfc3e1e16099454cab"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, ParForEdgeSet &gt; <emphasis role="strong">CallInstToParForEdgesMap</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_s_v_f_1_1_thread_call_graph_1a09946f39049bad87401b6e1567a7fb19">ThreadCallGraph</link> ()</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a7991ee2d70e1c9f1f8bdf5e46d56802c"/>virtual <link linkend="_class_s_v_f_1_1_thread_call_graph_1a7991ee2d70e1c9f1f8bdf5e46d56802c">~ThreadCallGraph</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ae25bca6e64ceedc56f1e2f1ae30f89eb"/>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1ae25bca6e64ceedc56f1e2f1ae30f89eb">updateCallGraph</link> (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> *pta)</para>
+
+<para>Update call graph using pointer results. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a49f5c6a95e236fad35b3d0410e0f4503">updateJoinEdge</link> (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> *pta)</para>
+
+<para>Update join edge using pointer analysis results. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_thread_call_graph_1ac528526e77b995de0cd5e718503f42ed">hasThreadForkEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+
+<para>Get call graph edge via call instruction. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1af33e1701215e9818b22f11789746821e"/>ForkEdgeSet::const_iterator <emphasis role="strong">getForkEdgeBegin</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a43513b641e4f05ec165db78e3ac55fef"/>ForkEdgeSet::const_iterator <emphasis role="strong">getForkEdgeEnd</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_thread_call_graph_1ac591fcd46254a0d809dac16ee15ab12e">hasThreadJoinEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+
+<para>Get call graph edge via call instruction. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ad6215527f01188f8e65fe8616e92dbc2"/>JoinEdgeSet::const_iterator <emphasis role="strong">getJoinEdgeBegin</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a17b7b3f0bdb4a52166b8509bd90499ba"/>JoinEdgeSet::const_iterator <emphasis role="strong">getJoinEdgeEnd</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1aa8be8d48d680b3f2e61b2d8af5e9eddc"/>void <emphasis role="strong">getJoinSites</emphasis> (const <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *routine, InstSet &amp;csSet)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a4ba42f59f0a6a7ea5b059f6e8df64d89"/>static bool <link linkend="_class_s_v_f_1_1_thread_call_graph_1a4ba42f59f0a6a7ea5b059f6e8df64d89">classof</link> (const <link linkend="_class_s_v_f_1_1_thread_call_graph">ThreadCallGraph</link> *)</para>
+
+<para>ClassOf. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a5d991e4511fc909dc170a4b03e71d77e"/>static bool <emphasis role="strong">classof</emphasis> (const <link linkend="_class_s_v_f_1_1_p_t_a_call_graph">PTACallGraph</link> *g)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_thread_call_graph_1aa5c29ac668359942a9bc31cacd0cd9c4">isForksite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *csInst)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ac9dde4936d04321a17656af1af1108da"/>bool <emphasis role="strong">isJoinsite</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *csInst)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1af5ad00c7a5362aa288bddf4824601ab8"/>bool <emphasis role="strong">isParForSite</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *csInst)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a37f2e076713a9aeb0e4313fb05dfb92e"/>CallSiteSet::const_iterator <link linkend="_class_s_v_f_1_1_thread_call_graph_1a37f2e076713a9aeb0e4313fb05dfb92e">forksitesBegin</link> () const</para>
+
+<para>Fork sites iterators. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a1ebbd26c17cff1c1a1bee9caa9a8f825"/>CallSiteSet::const_iterator <emphasis role="strong">forksitesEnd</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a98ecfe14be2d38d292b5919716cdd29d"/>CallSiteSet::const_iterator <link linkend="_class_s_v_f_1_1_thread_call_graph_1a98ecfe14be2d38d292b5919716cdd29d">joinsitesBegin</link> () const</para>
+
+<para>Join sites iterators. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a50502f398e5eac9c6da3e26ea6052057"/>CallSiteSet::const_iterator <emphasis role="strong">joinsitesEnd</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a29c74634b17007e5bef6fb48e1f3839f"/>CallSiteSet::const_iterator <link linkend="_class_s_v_f_1_1_thread_call_graph_1a29c74634b17007e5bef6fb48e1f3839f">parForSitesBegin</link> () const</para>
+
+<para>hare_parallel_for sites iterators </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a506343bcd23ba71d2db915ff7c58e728"/>CallSiteSet::const_iterator <emphasis role="strong">parForSitesEnd</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1aa847760765aae18bcb93b260a881441b"/>u32_t <link linkend="_class_s_v_f_1_1_thread_call_graph_1aa847760765aae18bcb93b260a881441b">getNumOfForksite</link> () const</para>
+
+<para>Num of fork/join sites. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a733bf08c7a496435ad09a41e6b0343ff"/>u32_t <emphasis role="strong">getNumOfJoinsite</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ad883eb92aece6818a3a0a261fa3407ce"/>u32_t <emphasis role="strong">getNumOfParForSite</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1adcad8524a53baf256cd45503ec568c10"/><link linkend="_class_s_v_f_1_1_thread_a_p_i">ThreadAPI</link> * <link linkend="_class_s_v_f_1_1_thread_call_graph_1adcad8524a53baf256cd45503ec568c10">getThreadAPI</link> () const</para>
+
+<para>Thread API. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a6e2ebab64fd01e40e7100162fe544b04"/>bool <link linkend="_class_s_v_f_1_1_thread_call_graph_1a6e2ebab64fd01e40e7100162fe544b04">addForksite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Add fork sites which directly or indirectly create a thread. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ae72e4e29bfda892f059f719454f6fcd2"/>bool <emphasis role="strong">addJoinsite</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a9daa0817e1f88a2478d7094646c72e13"/>bool <emphasis role="strong">addParForSite</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a92e5a3154a98e12bdbbe4e0d39e62b3e">addDirectForkEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Add direct/indirect thread fork edges. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a2b0ccaaf219533907c0733b050628100">addIndirectForkEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a62476a033fb54314da61dff6981bf229">addDirectJoinEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const CallSiteSet &amp;forksite)</para>
+
+<para>Add thread join edges. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a700ec3fd1c9d89a7176e05b2f1949aef">addDirectParForEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Add direct/indirect parallel for edges. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a349b7fce76822de0c13118d9fdcd3db9">addIndirectParForEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a29d3e4d720f61b4c29fee9691cedff96"/>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a29d3e4d720f61b4c29fee9691cedff96">addThreadForkEdgeSetMap</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, <link linkend="_class_s_v_f_1_1_thread_fork_edge">ThreadForkEdge</link> *edge)</para>
+
+<para>map call instruction to its CallGraphEdge map </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a70a03bcaa6386ef39188acb6b2aa9d5a"/>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a70a03bcaa6386ef39188acb6b2aa9d5a">addThreadJoinEdgeSetMap</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, <link linkend="_class_s_v_f_1_1_thread_join_edge">ThreadJoinEdge</link> *edge)</para>
+
+<para>map call instruction to its CallGraphEdge map </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a845258d0d19de3dda573521a34dbf705"/>void <link linkend="_class_s_v_f_1_1_thread_call_graph_1a845258d0d19de3dda573521a34dbf705">addHareParForEdgeSetMap</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, <link linkend="_class_s_v_f_1_1_hare_par_for_edge">HareParForEdge</link> *edge)</para>
+
+<para>map call instruction to its CallGraphEdge map </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a10f3f07059d0534e391093372fcd708d"/><link linkend="_class_s_v_f_1_1_thread_join_edge">ThreadJoinEdge</link> * <link linkend="_class_s_v_f_1_1_thread_call_graph_1a10f3f07059d0534e391093372fcd708d">hasThreadJoinEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *call, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *joinFunNode, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *threadRoutineFunNode, CallSiteID csId) const</para>
+
+<para>has thread join edge </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Thread sensitive call graph </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a09946f39049bad87401b6e1567a7fb19"/>    <section>
+    <title>ThreadCallGraph()</title>
+<indexterm><primary>ThreadCallGraph</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>ThreadCallGraph</secondary></indexterm>
+<para><computeroutput>ThreadCallGraph::ThreadCallGraph ( )</computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para>Constructor </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a92e5a3154a98e12bdbbe4e0d39e62b3e"/>    <section>
+    <title>addDirectForkEdge()</title>
+<indexterm><primary>addDirectForkEdge</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>addDirectForkEdge</secondary></indexterm>
+<para><computeroutput>void ThreadCallGraph::addDirectForkEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs)</computeroutput></para><para>
+
+<para>Add direct/indirect thread fork edges. </para>
+</para>
+
+<para>Add direct fork edges </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a62476a033fb54314da61dff6981bf229"/>    <section>
+    <title>addDirectJoinEdge()</title>
+<indexterm><primary>addDirectJoinEdge</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>addDirectJoinEdge</secondary></indexterm>
+<para><computeroutput>void ThreadCallGraph::addDirectJoinEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const CallSiteSet &amp; forkset)</computeroutput></para><para>
+
+<para>Add thread join edges. </para>
+</para>
+
+<para>Add direct fork edges As join edge is a special return which is back to join site(s) rather than its fork site A <link linkend="_class_s_v_f_1_1_thread_join_edge">ThreadJoinEdge</link> is created from the functions where join sites reside in to the start routine function But we don&apos;t invoke <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a3154bbc421fc85649e786ed67ca03750">addEdge()</link> method to add the edge to src and dst, otherwise it makes a scc cycle </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a700ec3fd1c9d89a7176e05b2f1949aef"/>    <section>
+    <title>addDirectParForEdge()</title>
+<indexterm><primary>addDirectParForEdge</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>addDirectParForEdge</secondary></indexterm>
+<para><computeroutput>void ThreadCallGraph::addDirectParForEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs)</computeroutput></para><para>
+
+<para>Add direct/indirect parallel for edges. </para>
+</para>
+
+<para>Add a direct ParFor edges </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a2b0ccaaf219533907c0733b050628100"/>    <section>
+    <title>addIndirectForkEdge()</title>
+<indexterm><primary>addIndirectForkEdge</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>addIndirectForkEdge</secondary></indexterm>
+<para><computeroutput>void ThreadCallGraph::addIndirectForkEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * calleefun)</computeroutput></para>
+<para>Add indirect fork edge to update call graph </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a349b7fce76822de0c13118d9fdcd3db9"/>    <section>
+    <title>addIndirectParForEdge()</title>
+<indexterm><primary>addIndirectParForEdge</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>addIndirectParForEdge</secondary></indexterm>
+<para><computeroutput>void ThreadCallGraph::addIndirectParForEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * calleefun)</computeroutput></para>
+<para>Add an indirect ParFor edge to update call graph </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ac528526e77b995de0cd5e718503f42ed"/>    <section>
+    <title>hasThreadForkEdge()</title>
+<indexterm><primary>hasThreadForkEdge</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>hasThreadForkEdge</secondary></indexterm>
+<para><computeroutput>bool SVF::ThreadCallGraph::hasThreadForkEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get call graph edge via call instruction. </para>
+</para>
+
+<para>whether this call instruction has a valid call graph edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1ac591fcd46254a0d809dac16ee15ab12e"/>    <section>
+    <title>hasThreadJoinEdge()</title>
+<indexterm><primary>hasThreadJoinEdge</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>hasThreadJoinEdge</secondary></indexterm>
+<para><computeroutput>bool SVF::ThreadCallGraph::hasThreadJoinEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get call graph edge via call instruction. </para>
+</para>
+
+<para>whether this call instruction has a valid call graph edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1aa5c29ac668359942a9bc31cacd0cd9c4"/>    <section>
+    <title>isForksite()</title>
+<indexterm><primary>isForksite</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>isForksite</secondary></indexterm>
+<para><computeroutput>bool SVF::ThreadCallGraph::isForksite (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * csInst)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Whether a callsite is a fork or join or hare_parallel_for </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_thread_call_graph_1a49f5c6a95e236fad35b3d0410e0f4503"/>    <section>
+    <title>updateJoinEdge()</title>
+<indexterm><primary>updateJoinEdge</primary><secondary>SVF::ThreadCallGraph</secondary></indexterm>
+<indexterm><primary>SVF::ThreadCallGraph</primary><secondary>updateJoinEdge</secondary></indexterm>
+<para><computeroutput>void ThreadCallGraph::updateJoinEdge (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> * pta)</computeroutput></para><para>
+
+<para>Update join edge using pointer analysis results. </para>
+</para>
+
+<para>Update join edge using pointer analysis results </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/Graphs/ThreadCallGraph.hlib/Graphs/ThreadCallGraph.cpp</section>
+</section>

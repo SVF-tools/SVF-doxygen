@@ -1,0 +1,1128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_prog_slice" kind="class" language="C++" prot="public">
+    <compoundname>SVF::ProgSlice</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_s_v_f_1_1_prog_slice_1a4864972e12f3e95f06bcf2bf8c847b3a" prot="public" static="no">
+        <type>Set&lt; const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> * &gt;</type>
+        <definition>typedef Set&lt;const SVFGNode*&gt; SVF::ProgSlice::SVFGNodeSet</definition>
+        <argsstring></argsstring>
+        <name>SVFGNodeSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="45" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_prog_slice_1af41c438baa739406a35bcb2e9ba431dd" prot="public" static="no">
+        <type>SVFGNodeSet::const_iterator</type>
+        <definition>typedef SVFGNodeSet::const_iterator SVF::ProgSlice::SVFGNodeSetIter</definition>
+        <argsstring></argsstring>
+        <name>SVFGNodeSetIter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="46" column="41" bodyfile="include/SABER/ProgSlice.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_prog_slice_1a3dc89d666a0f369ca85e13632676e6aa" prot="public" static="no">
+        <type><ref refid="struct_dd_node" kindref="compound">PathCondAllocator::Condition</ref></type>
+        <definition>typedef PathCondAllocator::Condition SVF::ProgSlice::Condition</definition>
+        <argsstring></argsstring>
+        <name>Condition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="47" column="42" bodyfile="include/SABER/ProgSlice.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_prog_slice_1ae16157bd0b66dfb3cc18b778a745ed00" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *, <ref refid="struct_dd_node" kindref="compound">Condition</ref> * &gt;</type>
+        <definition>typedef Map&lt;const SVFGNode*, Condition*&gt; SVF::ProgSlice::SVFGNodeToCondMap</definition>
+        <argsstring></argsstring>
+        <name>SVFGNodeToCondMap</name>
+        <briefdescription>
+<para>map a SVFGNode to its condition during value-flow guard computation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="48" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_prog_slice_1a684e44ade783439c6f77a8d84eed282c" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_f_i_f_o_work_list" kindref="compound">FIFOWorkList</ref>&lt; const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> * &gt;</type>
+        <definition>typedef FIFOWorkList&lt;const SVFGNode*&gt; SVF::ProgSlice::VFWorkList</definition>
+        <argsstring></argsstring>
+        <name>VFWorkList</name>
+        <briefdescription>
+<para>worklist for value-flow guard computation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="50" column="26" bodyfile="include/SABER/ProgSlice.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_prog_slice_1ab13cc8f64fed5f06b11f7ca67cbc0dc5" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_f_i_f_o_work_list" kindref="compound">FIFOWorkList</ref>&lt; const BasicBlock * &gt;</type>
+        <definition>typedef FIFOWorkList&lt;const BasicBlock*&gt; SVF::ProgSlice::CFWorkList</definition>
+        <argsstring></argsstring>
+        <name>CFWorkList</name>
+        <briefdescription>
+<para>worklist for control-flow guard computation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="51" column="26" bodyfile="include/SABER/ProgSlice.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1ac12dc4caa0c764ae69175e787efad2ab" prot="private" static="no" mutable="no">
+        <type>SVFGNodeSet</type>
+        <definition>SVFGNodeSet SVF::ProgSlice::forwardslice</definition>
+        <argsstring></argsstring>
+        <name>forwardslice</name>
+        <briefdescription>
+<para>the forward slice </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="291" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1addb781260db48c0571c0083a45065ca0" prot="private" static="no" mutable="no">
+        <type>SVFGNodeSet</type>
+        <definition>SVFGNodeSet SVF::ProgSlice::backwardslice</definition>
+        <argsstring></argsstring>
+        <name>backwardslice</name>
+        <briefdescription>
+<para>the backward slice </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="292" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1ab4da58e7c4cd2c80b4830efeaa896f80" prot="private" static="no" mutable="no">
+        <type>SVFGNodeSet</type>
+        <definition>SVFGNodeSet SVF::ProgSlice::sinks</definition>
+        <argsstring></argsstring>
+        <name>sinks</name>
+        <briefdescription>
+<para>a set of sink nodes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="293" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1ada13c2389d43973ff7db18b7fca90087" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+        <definition>const SVFGNode* SVF::ProgSlice::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+<para>root node on the slice </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="294" column="20" bodyfile="include/SABER/ProgSlice.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1aeda61b2786b128e8c45089de60dcafce" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_prog_slice_1ae16157bd0b66dfb3cc18b778a745ed00" kindref="member">SVFGNodeToCondMap</ref></type>
+        <definition>SVFGNodeToCondMap SVF::ProgSlice::svfgNodeToCondMap</definition>
+        <argsstring></argsstring>
+        <name>svfgNodeToCondMap</name>
+        <briefdescription>
+<para>map a SVFGNode to its path condition starting from root </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="295" column="23" bodyfile="include/SABER/ProgSlice.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1a2a7a3a6dc518fd375f506d43b0ac9fc9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::partialReachable</definition>
+        <argsstring></argsstring>
+        <name>partialReachable</name>
+        <briefdescription>
+<para>reachable from some paths </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="296" column="10" bodyfile="include/SABER/ProgSlice.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1a632db4b2e69848955925746ac721d94f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::fullReachable</definition>
+        <argsstring></argsstring>
+        <name>fullReachable</name>
+        <briefdescription>
+<para>reachable from all paths </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="297" column="10" bodyfile="include/SABER/ProgSlice.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1ab36bc2aa24a2a90555a9714dcbfc83e5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::reachGlob</definition>
+        <argsstring></argsstring>
+        <name>reachGlob</name>
+        <briefdescription>
+<para>Whether slice reach a global. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="298" column="10" bodyfile="include/SABER/ProgSlice.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1adc27c77d68f54030bdbb714139a974e5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_path_cond_allocator" kindref="compound">PathCondAllocator</ref> *</type>
+        <definition>PathCondAllocator* SVF::ProgSlice::pathAllocator</definition>
+        <argsstring></argsstring>
+        <name>pathAllocator</name>
+        <briefdescription>
+<para>path condition allocator </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="299" column="23" bodyfile="include/SABER/ProgSlice.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1af3095788fc3d7798abfae10e3216968b" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+        <definition>const SVFGNode* SVF::ProgSlice::_curSVFGNode</definition>
+        <argsstring></argsstring>
+        <name>_curSVFGNode</name>
+        <briefdescription>
+<para>current svfg node during guard computation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="300" column="20" bodyfile="include/SABER/ProgSlice.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1a06d79a32f9f550b068813324dac41460" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::finalCond</definition>
+        <argsstring></argsstring>
+        <name>finalCond</name>
+        <briefdescription>
+<para>final condition </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="301" column="15" bodyfile="include/SABER/ProgSlice.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_prog_slice_1a457a759c552a1418538769d79d7a7dde" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> *</type>
+        <definition>const SVFG* SVF::ProgSlice::svfg</definition>
+        <argsstring></argsstring>
+        <name>svfg</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="302" column="16" bodyfile="include/SABER/ProgSlice.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a76b91deacf7a66d142752f5a303386eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::ProgSlice::ProgSlice</definition>
+        <argsstring>(const SVFGNode *src, PathCondAllocator *pa, const SVFG *graph)</argsstring>
+        <name>ProgSlice</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_path_cond_allocator" kindref="compound">PathCondAllocator</ref> *</type>
+          <declname>pa</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> *</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="54" column="5" bodyfile="include/SABER/ProgSlice.h" bodystart="54" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ad761a9848d2dab7700a7fdeb91c2454d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SVF::ProgSlice::~ProgSlice</definition>
+        <argsstring>()</argsstring>
+        <name>~ProgSlice</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="61" column="13" bodyfile="include/SABER/ProgSlice.h" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1aae54f4e8a827f55abe08762b69d9f84b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t SVF::ProgSlice::getForwardSliceSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getForwardSliceSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="66" column="18" bodyfile="include/SABER/ProgSlice.h" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a967fa01a8baae0dd086b5c09ae0faa7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t SVF::ProgSlice::getBackwardSliceSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getBackwardSliceSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="70" column="18" bodyfile="include/SABER/ProgSlice.h" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a0017e160c2a5412947c170f944e593bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::ProgSlice::addToForwardSlice</definition>
+        <argsstring>(const SVFGNode *node)</argsstring>
+        <name>addToForwardSlice</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Forward and backward slice operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="76" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ac98eccef9fc2521b833a8c14b43e49e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::ProgSlice::addToBackwardSlice</definition>
+        <argsstring>(const SVFGNode *node)</argsstring>
+        <name>addToBackwardSlice</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="80" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a5a4b7f34001cc90f9b60222caee1bde6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::inForwardSlice</definition>
+        <argsstring>(const SVFGNode *node)</argsstring>
+        <name>inForwardSlice</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="84" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a066430ffa98a3fa0a5ad48d26e0450f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::inBackwardSlice</definition>
+        <argsstring>(const SVFGNode *node)</argsstring>
+        <name>inBackwardSlice</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="88" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ae482fcb138aaf345586a39daa34ff895" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>SVFGNodeSetIter</type>
+        <definition>SVFGNodeSetIter SVF::ProgSlice::forwardSliceBegin</definition>
+        <argsstring>() const</argsstring>
+        <name>forwardSliceBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="92" column="28" bodyfile="include/SABER/ProgSlice.h" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1add10d8fd041ac7e6eb611df8a6b1384b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>SVFGNodeSetIter</type>
+        <definition>SVFGNodeSetIter SVF::ProgSlice::forwardSliceEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>forwardSliceEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="96" column="28" bodyfile="include/SABER/ProgSlice.h" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ab5810f8a7a994f0637c54b94d0367a89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>SVFGNodeSetIter</type>
+        <definition>SVFGNodeSetIter SVF::ProgSlice::backwardSliceBegin</definition>
+        <argsstring>() const</argsstring>
+        <name>backwardSliceBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="100" column="28" bodyfile="include/SABER/ProgSlice.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1aed4bedc716a3e252e44a6f28e677d61c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>SVFGNodeSetIter</type>
+        <definition>SVFGNodeSetIter SVF::ProgSlice::backwardSliceEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>backwardSliceEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="104" column="28" bodyfile="include/SABER/ProgSlice.h" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ac1dc48ea64a89ce37394a22e609a0cd0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+        <definition>const SVFGNode* SVF::ProgSlice::getSource</definition>
+        <argsstring>() const</argsstring>
+        <name>getSource</name>
+        <briefdescription>
+<para>root and sink operations </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="112" column="27" bodyfile="include/SABER/ProgSlice.h" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1acee5145fb261280a1f8187184e393aed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::ProgSlice::addToSinks</definition>
+        <argsstring>(const SVFGNode *node)</argsstring>
+        <name>addToSinks</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="116" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a03a1ef4d56958fa4a0c3a3a95806203d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const SVFGNodeSet &amp;</type>
+        <definition>const SVFGNodeSet&amp; SVF::ProgSlice::getSinks</definition>
+        <argsstring>() const</argsstring>
+        <name>getSinks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="120" column="30" bodyfile="include/SABER/ProgSlice.h" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1adf620c97daed49735d21b485c448b4a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>SVFGNodeSetIter</type>
+        <definition>SVFGNodeSetIter SVF::ProgSlice::sinksBegin</definition>
+        <argsstring>() const</argsstring>
+        <name>sinksBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="124" column="28" bodyfile="include/SABER/ProgSlice.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a27636f096ec825c4d5cb1dca608afb31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>SVFGNodeSetIter</type>
+        <definition>SVFGNodeSetIter SVF::ProgSlice::sinksEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>sinksEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="128" column="28" bodyfile="include/SABER/ProgSlice.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1af6f137be08ca0e743424ff07d679777d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::ProgSlice::setPartialReachable</definition>
+        <argsstring>()</argsstring>
+        <name>setPartialReachable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="132" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ae6102647fa4985142c293116516612cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::ProgSlice::setAllReachable</definition>
+        <argsstring>()</argsstring>
+        <name>setAllReachable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="136" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a397632ce0c523c4a54c5dc578606d14d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::setReachGlobal</definition>
+        <argsstring>()</argsstring>
+        <name>setReachGlobal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="140" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a3822badbbe9ac808296d5248f2dbf8e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::isPartialReachable</definition>
+        <argsstring>() const</argsstring>
+        <name>isPartialReachable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="144" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a2f96f034b7236791fe1d4d351174722e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::isAllReachable</definition>
+        <argsstring>() const</argsstring>
+        <name>isAllReachable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="148" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a067480a9815fdb728cd259ef9b687e3e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::isReachGlobal</definition>
+        <argsstring>() const</argsstring>
+        <name>isReachGlobal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="152" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1aa7979418bed24fcecfc6fa04532cd586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ProgSlice::AllPathReachableSolve</definition>
+        <argsstring>()</argsstring>
+        <name>AllPathReachableSolve</name>
+        <briefdescription>
+<para>Guarded reachability solve. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute path conditions for nodes on the backward slice path condition of each node is calculated starting from root node (source) Given a SVFGNode n, its path condition C is allocated (path_i stands for one of m program paths reaches n)</para>
+<para>C = \bigvee Guard(path_i), 0 &lt; i &lt; m Guard(path_i) = \bigwedge VFGGuard(x,y), suppose (x,y) are two SVFGNode nodes on path_i </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>mark source node conditions to be true</para>
+<para>clean up the control flow conditions for next round guard computation</para>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="159" column="10" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="44" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a62a9f2c107f27d6c04c30ef153ffb8ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ProgSlice::isSatisfiableForAll</definition>
+        <argsstring>()</argsstring>
+        <name>isSatisfiableForAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Solve by computing disjunction of conditions from all sinks (e.g., memory leak) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="160" column="10" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="96" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a45fb7711498bcba60e931c9c2a9ccec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ProgSlice::isSatisfiableForPairs</definition>
+        <argsstring>()</argsstring>
+        <name>isSatisfiableForPairs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Solve by analysing each pair of sinks (e.g., double free) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="161" column="10" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="112" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ae91ba54faff9f6a2f85a499799419cb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value * ProgSlice::getLLVMValue</definition>
+        <argsstring>(const SVFGNode *node) const</argsstring>
+        <name>getLLVMValue</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Get llvm value from a SVFGNode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return llvm value for addr/copy/gep/load/phi/actualParam/formalParam/actualRet/formalRet but not for store/mssaphi/actualIn/acutalOut/formalIn/formalOut </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="164" column="17" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="154" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a40ca6247fde5e973298e8383f2180203" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+        <definition>const CallBlockNode * ProgSlice::getCallSite</definition>
+        <argsstring>(const SVFGEdge *edge) const</argsstring>
+        <name>getCallSite</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>Get callsite ID and get returnsiteID from SVFGEdge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="168" column="25" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="133" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a2a4c2d573b43f005ae668bffc7fc911d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+        <definition>const CallBlockNode * ProgSlice::getRetSite</definition>
+        <argsstring>(const SVFGEdge *edge) const</argsstring>
+        <name>getRetSite</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="169" column="25" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="141" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a37d2e74fd977ebf9bfbe881bbe1c4a95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::condAnd</definition>
+        <argsstring>(Condition *lhs, Condition *rhs)</argsstring>
+        <name>condAnd</name>
+        <param>
+          <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Condition operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="174" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ac57638eaa2f656b8a7a5e3484c8e1265" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::condOr</definition>
+        <argsstring>(Condition *lhs, Condition *rhs)</argsstring>
+        <name>condOr</name>
+        <param>
+          <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="178" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1af90dd6f54db7bef80cd7e5c97e8dd193" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::condNeg</definition>
+        <argsstring>(Condition *cond)</argsstring>
+        <name>condNeg</name>
+        <param>
+          <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="182" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a50bb38398ecc422b6d10e0d77bb032c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::getTrueCond</definition>
+        <argsstring>() const</argsstring>
+        <name>getTrueCond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="186" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="186" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a9150b694dd7b2e53ef7e78ea1b78094d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::getFalseCond</definition>
+        <argsstring>() const</argsstring>
+        <name>getFalseCond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="190" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a39381b290a1bc3cc7d7e6d706a7392cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SVF::ProgSlice::dumpCond</definition>
+        <argsstring>(Condition *cond) const</argsstring>
+        <name>dumpCond</name>
+        <param>
+          <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="194" column="24" bodyfile="include/SABER/ProgSlice.h" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1afac06b0be2b04cb8a65af21fd697b756" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ProgSlice::evalFinalCond</definition>
+        <argsstring>() const</argsstring>
+        <name>evalFinalCond</name>
+        <briefdescription>
+<para>Evaluate final condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Evaluate Atoms of a condition TODO: for now we only evaluate one path, evaluate every single path</para>
+<para>Atom <ndash/> a propositional valirable: a, b, c Literal <ndash/> an atom or its negation: a, ~a Clause <ndash/> A disjunction of some literals: a \vee b CNF formula <ndash/> a conjunction of some clauses: (a \vee b ) \wedge (c \vee d) </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>print leak path after eliminating duplicated element</para>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="199" column="17" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="197" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ab1fdec8d39c9890324718607d7464eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgSlice::annotatePaths</definition>
+        <argsstring>()</argsstring>
+        <name>annotatePaths</name>
+        <briefdescription>
+<para>Annotate program according to final condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Annotate program paths according to the final path condition computed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="203" column="10" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="222" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a32ffd130984483b201c485da91ec467f" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> *</type>
+        <definition>const SVFG* SVF::ProgSlice::getSVFG</definition>
+        <argsstring>() const</argsstring>
+        <name>getSVFG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="206" column="23" bodyfile="include/SABER/ProgSlice.h" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a899332b210414ac991b57e83851ee5be" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgSlice::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+<para>Release memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO: how to clean bdd memory</para>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="212" column="10" bodyfile="lib/SABER/ProgSlice.cpp" bodystart="243" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ab514f387ae2122e919030c5006f1bbce" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::ProgSlice::clearCFCond</definition>
+        <argsstring>()</argsstring>
+        <name>clearCFCond</name>
+        <briefdescription>
+<para>Clear Control flow conditions before each VF computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO: how to clean bdd memory</para>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="214" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="214" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a15542937ee75195de1a3ffca18a168cf" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::getVFCond</definition>
+        <argsstring>(const SVFGNode *node) const</argsstring>
+        <name>getVFCond</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Get/set VF (value-flow) and CF (control-flow) conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="222" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="222" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1add68dd06ab20899bc898d065ae2e82c0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ProgSlice::setVFCond</definition>
+        <argsstring>(const SVFGNode *node, Condition *cond)</argsstring>
+        <name>setVFCond</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="231" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="231" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ab945cc59c20bb4801f6e11120cc6940d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::ComputeIntraVFGGuard</definition>
+        <argsstring>(const BasicBlock *src, const BasicBlock *dst)</argsstring>
+        <name>ComputeIntraVFGGuard</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Compute guards for value-flows. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="244" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1ae6ca91373bb2a5c2ddc3b20feb630fe6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::ComputeInterCallVFGGuard</definition>
+        <argsstring>(const BasicBlock *src, const BasicBlock *dst, const BasicBlock *callBB)</argsstring>
+        <name>ComputeInterCallVFGGuard</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>callBB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="248" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a0e1c3e7936361a27e876fa1a0678e6c5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+        <definition>Condition* SVF::ProgSlice::ComputeInterRetVFGGuard</definition>
+        <argsstring>(const BasicBlock *src, const BasicBlock *dst, const BasicBlock *retBB)</argsstring>
+        <name>ComputeInterRetVFGGuard</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>retBB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="252" column="22" bodyfile="include/SABER/ProgSlice.h" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a8b61702d8e35f066bb78e823f2c59ce6" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BasicBlock *</type>
+        <definition>const BasicBlock* SVF::ProgSlice::getSVFGNodeBB</definition>
+        <argsstring>(const SVFGNode *node) const</argsstring>
+        <name>getSVFGNodeBB</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the basic block where a SVFGNode resides in a SVFGNode may not in a basic block if it is not a program statement (e.g. <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> is an global assignment or NullPtrSVFGNode) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="261" column="29" bodyfile="include/SABER/ProgSlice.h" bodystart="261" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1afad8cd2f720bf01eedd825c3c418abc0" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+        <definition>const SVFGNode* SVF::ProgSlice::getCurSVFGNode</definition>
+        <argsstring>() const</argsstring>
+        <name>getCurSVFGNode</name>
+        <briefdescription>
+<para>Get/set current <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="274" column="27" bodyfile="include/SABER/ProgSlice.h" bodystart="274" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1aee72d029c185c24b2bf01cdc0dcb25d8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::ProgSlice::setCurSVFGNode</definition>
+        <argsstring>(const SVFGNode *node)</argsstring>
+        <name>setCurSVFGNode</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="278" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="278" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_prog_slice_1a2b8ad7aad51029106d88e81072e09a5e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::ProgSlice::setFinalCond</definition>
+        <argsstring>(Condition *cond)</argsstring>
+        <name>setFinalCond</name>
+        <param>
+          <type><ref refid="struct_dd_node" kindref="compound">Condition</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+<para>Set final condition after all path reachability analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SABER/ProgSlice.h" line="285" column="17" bodyfile="include/SABER/ProgSlice.h" bodystart="285" bodyend="288"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/SABER/ProgSlice.h" line="41" column="1" bodyfile="include/SABER/ProgSlice.h" bodystart="42" bodyend="303"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_prog_slice_1af3095788fc3d7798abfae10e3216968b" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>_curSVFGNode</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ac98eccef9fc2521b833a8c14b43e49e1" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>addToBackwardSlice</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a0017e160c2a5412947c170f944e593bd" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>addToForwardSlice</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1acee5145fb261280a1f8187184e393aed" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>addToSinks</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1aa7979418bed24fcecfc6fa04532cd586" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>AllPathReachableSolve</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ab1fdec8d39c9890324718607d7464eab" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>annotatePaths</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1addb781260db48c0571c0083a45065ca0" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>backwardslice</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ab5810f8a7a994f0637c54b94d0367a89" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>backwardSliceBegin</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1aed4bedc716a3e252e44a6f28e677d61c" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>backwardSliceEnd</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ab13cc8f64fed5f06b11f7ca67cbc0dc5" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>CFWorkList</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ab514f387ae2122e919030c5006f1bbce" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>clearCFCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ae6ca91373bb2a5c2ddc3b20feb630fe6" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>ComputeInterCallVFGGuard</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a0e1c3e7936361a27e876fa1a0678e6c5" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>ComputeInterRetVFGGuard</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ab945cc59c20bb4801f6e11120cc6940d" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>ComputeIntraVFGGuard</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a37d2e74fd977ebf9bfbe881bbe1c4a95" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>condAnd</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a3dc89d666a0f369ca85e13632676e6aa" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>Condition</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1af90dd6f54db7bef80cd7e5c97e8dd193" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>condNeg</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ac57638eaa2f656b8a7a5e3484c8e1265" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>condOr</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a899332b210414ac991b57e83851ee5be" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>destroy</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a39381b290a1bc3cc7d7e6d706a7392cc" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>dumpCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1afac06b0be2b04cb8a65af21fd697b756" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>evalFinalCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a06d79a32f9f550b068813324dac41460" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>finalCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ac12dc4caa0c764ae69175e787efad2ab" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>forwardslice</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ae482fcb138aaf345586a39daa34ff895" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>forwardSliceBegin</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1add10d8fd041ac7e6eb611df8a6b1384b" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>forwardSliceEnd</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a632db4b2e69848955925746ac721d94f" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>fullReachable</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a967fa01a8baae0dd086b5c09ae0faa7b" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getBackwardSliceSize</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a40ca6247fde5e973298e8383f2180203" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getCallSite</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1afad8cd2f720bf01eedd825c3c418abc0" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getCurSVFGNode</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a9150b694dd7b2e53ef7e78ea1b78094d" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getFalseCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1aae54f4e8a827f55abe08762b69d9f84b" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getForwardSliceSize</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ae91ba54faff9f6a2f85a499799419cb5" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getLLVMValue</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a2a4c2d573b43f005ae668bffc7fc911d" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getRetSite</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a03a1ef4d56958fa4a0c3a3a95806203d" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getSinks</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ac1dc48ea64a89ce37394a22e609a0cd0" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getSource</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a32ffd130984483b201c485da91ec467f" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getSVFG</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a8b61702d8e35f066bb78e823f2c59ce6" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getSVFGNodeBB</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a50bb38398ecc422b6d10e0d77bb032c3" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getTrueCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a15542937ee75195de1a3ffca18a168cf" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>getVFCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a066430ffa98a3fa0a5ad48d26e0450f7" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>inBackwardSlice</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a5a4b7f34001cc90f9b60222caee1bde6" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>inForwardSlice</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a2f96f034b7236791fe1d4d351174722e" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>isAllReachable</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a3822badbbe9ac808296d5248f2dbf8e2" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>isPartialReachable</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a067480a9815fdb728cd259ef9b687e3e" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>isReachGlobal</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a62a9f2c107f27d6c04c30ef153ffb8ed" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>isSatisfiableForAll</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a45fb7711498bcba60e931c9c2a9ccec4" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>isSatisfiableForPairs</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a2a7a3a6dc518fd375f506d43b0ac9fc9" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>partialReachable</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1adc27c77d68f54030bdbb714139a974e5" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>pathAllocator</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a76b91deacf7a66d142752f5a303386eb" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>ProgSlice</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ab36bc2aa24a2a90555a9714dcbfc83e5" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>reachGlob</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ada13c2389d43973ff7db18b7fca90087" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>root</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ae6102647fa4985142c293116516612cd" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>setAllReachable</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1aee72d029c185c24b2bf01cdc0dcb25d8" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>setCurSVFGNode</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a2b8ad7aad51029106d88e81072e09a5e" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>setFinalCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1af6f137be08ca0e743424ff07d679777d" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>setPartialReachable</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a397632ce0c523c4a54c5dc578606d14d" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>setReachGlobal</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1add68dd06ab20899bc898d065ae2e82c0" prot="protected" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>setVFCond</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ab4da58e7c4cd2c80b4830efeaa896f80" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>sinks</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1adf620c97daed49735d21b485c448b4a2" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>sinksBegin</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a27636f096ec825c4d5cb1dca608afb31" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>sinksEnd</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a457a759c552a1418538769d79d7a7dde" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>svfg</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a4864972e12f3e95f06bcf2bf8c847b3a" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>SVFGNodeSet</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1af41c438baa739406a35bcb2e9ba431dd" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>SVFGNodeSetIter</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1aeda61b2786b128e8c45089de60dcafce" prot="private" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>svfgNodeToCondMap</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ae16157bd0b66dfb3cc18b778a745ed00" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>SVFGNodeToCondMap</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1a684e44ade783439c6f77a8d84eed282c" prot="public" virt="non-virtual"><scope>SVF::ProgSlice</scope><name>VFWorkList</name></member>
+      <member refid="class_s_v_f_1_1_prog_slice_1ad761a9848d2dab7700a7fdeb91c2454d" prot="public" virt="virtual"><scope>SVF::ProgSlice</scope><name>~ProgSlice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

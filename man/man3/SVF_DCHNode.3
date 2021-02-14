@@ -1,0 +1,89 @@
+.TH "SVF::DCHNode" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::DCHNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::GenericNode< DCHNode, DCHEdge >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCLASSATTR\fP { \fBPURE_ABSTRACT\fP = 0x1, \fBMULTI_INHERITANCE\fP = 0x2, \fBTEMPLATE\fP = 0x04, \fBSCALAR\fP = 0x08 }"
+.br
+.ti -1c
+.RI "typedef std::vector< const Function * > \fBFuncVector\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDCHNode\fP (const DIType *diType, NodeID i=0, \fBGNodeK\fP k=0)"
+.br
+.ti -1c
+.RI "const DIType * \fBgetType\fP (void) const"
+.br
+.ti -1c
+.RI "std::string \fBgetName\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFlag\fP (CLASSATTR mask)"
+.br
+.RI "Flags\&. "
+.ti -1c
+.RI "bool \fBhasFlag\fP (CLASSATTR mask) const"
+.br
+.ti -1c
+.RI "void \fBsetPureAbstract\fP ()"
+.br
+.RI "Attribute\&. "
+.ti -1c
+.RI "void \fBsetMultiInheritance\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTemplate\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetScalar\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisPureAbstract\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisMultiInheritance\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisTemplate\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisScalar\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddTypedef\fP (const DIDerivedType *diTypedef)"
+.br
+.ti -1c
+.RI "const Set< const DIDerivedType * > & \fBgetTypedefs\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetVTable\fP (const GlobalValue *vtbl)"
+.br
+.ti -1c
+.RI "const GlobalValue * \fBgetVTable\fP () const"
+.br
+.ti -1c
+.RI "const std::vector< std::vector< const Function * > > & \fBgetVfnVectors\fP (void) const"
+.br
+.RI "Returns the vector of virtual function vectors\&. "
+.ti -1c
+.RI "std::vector< const Function * > & \fBgetVfnVector\fP (unsigned n)"
+.br
+.RI "Return the nth virtual function vector in the vtable\&. "
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

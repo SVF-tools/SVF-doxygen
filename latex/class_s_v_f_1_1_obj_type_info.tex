@@ -1,0 +1,173 @@
+\hypertarget{class_s_v_f_1_1_obj_type_info}{}\doxysection{SVF\+::Obj\+Type\+Info Class Reference}
+\label{class_s_v_f_1_1_obj_type_info}\index{SVF::ObjTypeInfo@{SVF::ObjTypeInfo}}
+
+
+{\ttfamily \#include $<$Mem\+Model.\+h$>$}
+
+Inheritance diagram for SVF\+::Obj\+Type\+Info\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_v_f_1_1_obj_type_info}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a91b41b7ade5871362b77a2ef566b2830}\label{class_s_v_f_1_1_obj_type_info_a91b41b7ade5871362b77a2ef566b2830}} 
+enum {\bfseries MEMTYPE} \{ \newline
+{\bfseries FUNCTION\+\_\+\+OBJ} = 0x1
+, {\bfseries GLOBVAR\+\_\+\+OBJ} = 0x2
+, {\bfseries STATIC\+\_\+\+OBJ} = 0x4
+, {\bfseries STACK\+\_\+\+OBJ} = 0x8
+, \newline
+{\bfseries HEAP\+\_\+\+OBJ} = 0x10
+, {\bfseries VAR\+\_\+\+STRUCT\+\_\+\+OBJ} = 0x20
+, {\bfseries VAR\+\_\+\+ARRAY\+\_\+\+OBJ} = 0x40
+, {\bfseries CONST\+\_\+\+STRUCT\+\_\+\+OBJ} = 0x80
+, \newline
+{\bfseries CONST\+\_\+\+ARRAY\+\_\+\+OBJ} = 0x100
+, {\bfseries CONST\+\_\+\+OBJ} = 0x200
+, {\bfseries HASPTR\+\_\+\+OBJ} = 0x400
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a1a182e6a8710242f94729412d4683f8d}\label{class_s_v_f_1_1_obj_type_info_a1a182e6a8710242f94729412d4683f8d}} 
+\mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_a1a182e6a8710242f94729412d4683f8d}{Obj\+Type\+Info}} (const Value $\ast$, const Type $\ast$t, u32\+\_\+t max)
+\begin{DoxyCompactList}\small\item\em Constructors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_afa03172e8fe0af6b523e866d54235f3a}\label{class_s_v_f_1_1_obj_type_info_afa03172e8fe0af6b523e866d54235f3a}} 
+\mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_afa03172e8fe0af6b523e866d54235f3a}{Obj\+Type\+Info}} (u32\+\_\+t max, const Type $\ast$t)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_ace5fdb3701cb93df0f02aedc94e7e975}\label{class_s_v_f_1_1_obj_type_info_ace5fdb3701cb93df0f02aedc94e7e975}} 
+virtual \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_ace5fdb3701cb93df0f02aedc94e7e975}{$\sim$\+Obj\+Type\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_aba198ceecd53d73ab0b0deb0133cda0d}{init}} (const Value $\ast$value)
+\begin{DoxyCompactList}\small\item\em Initialize the object type. \end{DoxyCompactList}\item 
+virtual u32\+\_\+t \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_a9208f6856f2554a6d3a2745a2b7a366c}{get\+Obj\+Size}} (const Value $\ast$val)
+\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_acc90d7a517c58ac86ef8109dcece3f10}{analyze\+Global\+Stack\+Obj\+Type}} (const Value $\ast$val)
+\begin{DoxyCompactList}\small\item\em Analyse types of gobal and stack objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_a57ffe17476467619e844b27cb292149a}{analyze\+Heap\+Static\+Obj\+Type}} (const Value $\ast$val)
+\begin{DoxyCompactList}\small\item\em Analyse types of heap and static objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a706cdc47e78732853252d5a4af85653a}\label{class_s_v_f_1_1_obj_type_info_a706cdc47e78732853252d5a4af85653a}} 
+const Type $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_a706cdc47e78732853252d5a4af85653a}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get LLVM type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a81bc3d785062c7e527ecf8e564cd52a4}\label{class_s_v_f_1_1_obj_type_info_a81bc3d785062c7e527ecf8e564cd52a4}} 
+u32\+\_\+t \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_a81bc3d785062c7e527ecf8e564cd52a4}{get\+Max\+Field\+Offset\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Get max field offset limit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a9fff869c63776c6ebeff78933e0f6092}\label{class_s_v_f_1_1_obj_type_info_a9fff869c63776c6ebeff78933e0f6092}} 
+void \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_a9fff869c63776c6ebeff78933e0f6092}{set\+Max\+Field\+Offset\+Limit}} (u32\+\_\+t limit)
+\begin{DoxyCompactList}\small\item\em Get max field offset limit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_ad6fb2bfae3d4b73a6821a87106f65f49}\label{class_s_v_f_1_1_obj_type_info_ad6fb2bfae3d4b73a6821a87106f65f49}} 
+void \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_ad6fb2bfae3d4b73a6821a87106f65f49}{set\+Flag}} (MEMTYPE mask)
+\begin{DoxyCompactList}\small\item\em Flag for this object type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a8e630eb30d05f665b998c6f9326d65cb}\label{class_s_v_f_1_1_obj_type_info_a8e630eb30d05f665b998c6f9326d65cb}} 
+bool {\bfseries has\+Flag} (MEMTYPE mask)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_ac99fa14fdf7bc0dd3e9ff36c7a3a351f}\label{class_s_v_f_1_1_obj_type_info_ac99fa14fdf7bc0dd3e9ff36c7a3a351f}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_ac99fa14fdf7bc0dd3e9ff36c7a3a351f}{is\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Object attributes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_aa2855b69150287e5f04a7a683dc4c91f}\label{class_s_v_f_1_1_obj_type_info_aa2855b69150287e5f04a7a683dc4c91f}} 
+bool {\bfseries is\+Global\+Obj} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a3594dc1c1943dbac0ab72f2ff163c523}\label{class_s_v_f_1_1_obj_type_info_a3594dc1c1943dbac0ab72f2ff163c523}} 
+bool {\bfseries is\+Static\+Obj} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_aa568dc82decd28d2ef40785a4a647602}\label{class_s_v_f_1_1_obj_type_info_aa568dc82decd28d2ef40785a4a647602}} 
+bool {\bfseries is\+Stack} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a26c179394fbda9a9261d0bf3f52b619d}\label{class_s_v_f_1_1_obj_type_info_a26c179394fbda9a9261d0bf3f52b619d}} 
+bool {\bfseries is\+Heap} ()
+\item 
+bool \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_a40d6703875b370aed2c6dc41c0594af5}{is\+Var\+Struct}} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a5d4afc5e1ba5cbcedf049467f75ef7c4}\label{class_s_v_f_1_1_obj_type_info_a5d4afc5e1ba5cbcedf049467f75ef7c4}} 
+bool {\bfseries is\+Const\+Struct} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a06493939f797f122b70b90bbf22cad7a}\label{class_s_v_f_1_1_obj_type_info_a06493939f797f122b70b90bbf22cad7a}} 
+bool {\bfseries is\+Struct} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_aca1e900f9b0a774684af77666cf033e3}\label{class_s_v_f_1_1_obj_type_info_aca1e900f9b0a774684af77666cf033e3}} 
+bool {\bfseries is\+Var\+Array} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_ad90ea6a01cca9c370b7f17b408dcc5a7}\label{class_s_v_f_1_1_obj_type_info_ad90ea6a01cca9c370b7f17b408dcc5a7}} 
+bool {\bfseries is\+Const\+Array} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a0627e8b9dda2e13cc77c334eefab21e1}\label{class_s_v_f_1_1_obj_type_info_a0627e8b9dda2e13cc77c334eefab21e1}} 
+bool {\bfseries is\+Array} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a8c0ae8e177452b88b3a4ec81bf77c378}\label{class_s_v_f_1_1_obj_type_info_a8c0ae8e177452b88b3a4ec81bf77c378}} 
+bool {\bfseries is\+Constant} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_ac5bae1e7917f415193a805e8d2e29320}\label{class_s_v_f_1_1_obj_type_info_ac5bae1e7917f415193a805e8d2e29320}} 
+bool {\bfseries has\+Ptr\+Obj} ()
+\item 
+virtual bool \mbox{\hyperlink{class_s_v_f_1_1_obj_type_info_a3a58b1e0192b92dac5bbfad24adbcdac}{is\+Non\+Ptr\+Field\+Obj}} (const \mbox{\hyperlink{class_s_v_f_1_1_location_set}{Location\+Set}} \&ls)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Type Info of an abstract memory object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_acc90d7a517c58ac86ef8109dcece3f10}\label{class_s_v_f_1_1_obj_type_info_acc90d7a517c58ac86ef8109dcece3f10}} 
+\index{SVF::ObjTypeInfo@{SVF::ObjTypeInfo}!analyzeGlobalStackObjType@{analyzeGlobalStackObjType}}
+\index{analyzeGlobalStackObjType@{analyzeGlobalStackObjType}!SVF::ObjTypeInfo@{SVF::ObjTypeInfo}}
+\doxysubsubsection{\texorpdfstring{analyzeGlobalStackObjType()}{analyzeGlobalStackObjType()}}
+{\footnotesize\ttfamily void Obj\+Type\+Info\+::analyze\+Global\+Stack\+Obj\+Type (\begin{DoxyParamCaption}\item[{const Value $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Analyse types of gobal and stack objects. 
+
+Analyse types of all flattened fields of this object \mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a57ffe17476467619e844b27cb292149a}\label{class_s_v_f_1_1_obj_type_info_a57ffe17476467619e844b27cb292149a}} 
+\index{SVF::ObjTypeInfo@{SVF::ObjTypeInfo}!analyzeHeapStaticObjType@{analyzeHeapStaticObjType}}
+\index{analyzeHeapStaticObjType@{analyzeHeapStaticObjType}!SVF::ObjTypeInfo@{SVF::ObjTypeInfo}}
+\doxysubsubsection{\texorpdfstring{analyzeHeapStaticObjType()}{analyzeHeapStaticObjType()}}
+{\footnotesize\ttfamily void Obj\+Type\+Info\+::analyze\+Heap\+Static\+Obj\+Type (\begin{DoxyParamCaption}\item[{const Value $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Analyse types of heap and static objects. 
+
+Analyse types of heap and static objects \mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a9208f6856f2554a6d3a2745a2b7a366c}\label{class_s_v_f_1_1_obj_type_info_a9208f6856f2554a6d3a2745a2b7a366c}} 
+\index{SVF::ObjTypeInfo@{SVF::ObjTypeInfo}!getObjSize@{getObjSize}}
+\index{getObjSize@{getObjSize}!SVF::ObjTypeInfo@{SVF::ObjTypeInfo}}
+\doxysubsubsection{\texorpdfstring{getObjSize()}{getObjSize()}}
+{\footnotesize\ttfamily u32\+\_\+t Obj\+Type\+Info\+::get\+Obj\+Size (\begin{DoxyParamCaption}\item[{const Value $\ast$}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the size of this object, derived classes can override this to get more precise object size
+
+Return size of this Object 
+
+Reimplemented in \mbox{\hyperlink{class_s_v_f_1_1_loc_obj_type_info_a9c859cb40a6e02f0a7fd18d5c826b990}{SVF\+::\+Loc\+Obj\+Type\+Info}}.
+
+\mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_aba198ceecd53d73ab0b0deb0133cda0d}\label{class_s_v_f_1_1_obj_type_info_aba198ceecd53d73ab0b0deb0133cda0d}} 
+\index{SVF::ObjTypeInfo@{SVF::ObjTypeInfo}!init@{init}}
+\index{init@{init}!SVF::ObjTypeInfo@{SVF::ObjTypeInfo}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Obj\+Type\+Info\+::init (\begin{DoxyParamCaption}\item[{const Value $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Initialize the object type. 
+
+Initialize the type info of an object \mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a3a58b1e0192b92dac5bbfad24adbcdac}\label{class_s_v_f_1_1_obj_type_info_a3a58b1e0192b92dac5bbfad24adbcdac}} 
+\index{SVF::ObjTypeInfo@{SVF::ObjTypeInfo}!isNonPtrFieldObj@{isNonPtrFieldObj}}
+\index{isNonPtrFieldObj@{isNonPtrFieldObj}!SVF::ObjTypeInfo@{SVF::ObjTypeInfo}}
+\doxysubsubsection{\texorpdfstring{isNonPtrFieldObj()}{isNonPtrFieldObj()}}
+{\footnotesize\ttfamily bool Obj\+Type\+Info\+::is\+Non\+Ptr\+Field\+Obj (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_v_f_1_1_location_set}{Location\+Set}} \&}]{ls }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Whether a location set is a pointer type or not \mbox{\Hypertarget{class_s_v_f_1_1_obj_type_info_a40d6703875b370aed2c6dc41c0594af5}\label{class_s_v_f_1_1_obj_type_info_a40d6703875b370aed2c6dc41c0594af5}} 
+\index{SVF::ObjTypeInfo@{SVF::ObjTypeInfo}!isVarStruct@{isVarStruct}}
+\index{isVarStruct@{isVarStruct}!SVF::ObjTypeInfo@{SVF::ObjTypeInfo}}
+\doxysubsubsection{\texorpdfstring{isVarStruct()}{isVarStruct()}}
+{\footnotesize\ttfamily bool SVF\+::\+Obj\+Type\+Info\+::is\+Var\+Struct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Object attributes (noted that an object can be a nested compound types) e.\+g. both is\+Struct and is\+Array can return true 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Memory\+Model/Mem\+Model.\+h\item 
+lib/\+Memory\+Model/Mem\+Model.\+cpp\end{DoxyCompactItemize}

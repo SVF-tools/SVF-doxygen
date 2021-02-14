@@ -1,0 +1,136 @@
+.TH "SVF::FlowDDA" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::FlowDDA
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FlowDDA\&.h>\fP
+.PP
+Inherits \fBSVF::BVDataPTAImpl\fP, and \fBSVF::DDAVFSolver< NodeID, PointsTo, LocDPItem >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef BVDataPTAImpl::CallSiteSet \fBCallSiteSet\fP"
+.br
+.ti -1c
+.RI "typedef BVDataPTAImpl::CallEdgeMap \fBCallEdgeMap\fP"
+.br
+.ti -1c
+.RI "typedef BVDataPTAImpl::FunctionSet \fBFunctionSet\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFlowDDA\fP (\fBPAG\fP *\fB_pag\fP, \fBDDAClient\fP *client)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~FlowDDA\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual void \fBanalyze\fP () override"
+.br
+.RI "dummy analyze method "
+.ti -1c
+.RI "void \fBcomputeDDAPts\fP (NodeID id) override"
+.br
+.RI "Compute points-to set for all top variable\&. "
+.ti -1c
+.RI "void \fBhandleOutOfBudgetDpm\fP (const \fBLocDPItem\fP &dpm)"
+.br
+.RI "Handle out-of-budget dpm\&. "
+.ti -1c
+.RI "virtual bool \fBhandleBKCondition\fP (\fBLocDPItem\fP &dpm, const \fBSVFGEdge\fP *edge) override"
+.br
+.RI "Handle condition for flow analysis (backward analysis) "
+.ti -1c
+.RI "bool \fBtestIndCallReachability\fP (\fBLocDPItem\fP &dpm, const \fBSVFFunction\fP *callee, CallSiteID csId)"
+.br
+.RI "refine indirect call edge "
+.ti -1c
+.RI "virtual void \fBinitialize\fP () override"
+.br
+.RI "Initialization of the analysis\&. "
+.ti -1c
+.RI "virtual void \fBfinalize\fP () override"
+.br
+.RI "Finalize analysis\&. "
+.ti -1c
+.RI "virtual bool \fBisHeapCondMemObj\fP (const NodeID &var, const \fBStoreSVFGNode\fP *store) override"
+.br
+.ti -1c
+.RI "virtual PointsTo \fBgetConservativeCPts\fP (const \fBLocDPItem\fP &dpm) override"
+.br
+.RI "Override parent method\&. "
+.ti -1c
+.RI "virtual NodeID \fBgetPtrNodeID\fP (const NodeID &var) const override"
+.br
+.RI "Override parent method\&. "
+.ti -1c
+.RI "virtual void \fBhandleAddr\fP (PointsTo &pts, const \fBLocDPItem\fP &dpm, const \fBAddrSVFGNode\fP *addr) override"
+.br
+.RI "Handle Address SVFGNode to add proper points-to\&. "
+.ti -1c
+.RI "virtual PointsTo \fBprocessGepPts\fP (const \fBGepSVFGNode\fP *gep, const PointsTo &srcPts) override"
+.br
+.RI "processGep node "
+.ti -1c
+.RI "virtual void \fBupdateCallGraphAndSVFG\fP (const \fBLocDPItem\fP &dpm, const \fBCallBlockNode\fP *cs, SVFGEdgeSet &svfgEdges) override"
+.br
+.RI "Update call graph\&. "
+.ti -1c
+.RI "virtual const PointsTo & \fBgetCachedTLPointsTo\fP (const \fBLocDPItem\fP &dpm) override"
+.br
+.RI "Override parent class functions to get/add cached points-to directly via \fBPAGNode\fP ID\&. "
+.ti -1c
+.RI "virtual bool \fBunionDDAPts\fP (\fBLocDPItem\fP dpm, const PointsTo &targetPts) override"
+.br
+.RI "Union pts\&. "
+.ti -1c
+.RI "virtual const std::string \fBPTAName\fP () const override"
+.br
+.RI "Return PTA name\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Flow sensitive demand-driven analysis on value-flow graph 
+.SH "Member Function Documentation"
+.PP 
+.SS "void FlowDDA::computeDDAPts (NodeID id)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Compute points-to set for all top variable\&. Compute points-to set for queries start DDA analysis
+.PP
+Reimplemented from \fBSVF::PointerAnalysis\fP\&.
+.SS "virtual void SVF::FlowDDA::handleAddr (PointsTo & pts, const \fBLocDPItem\fP & dpm, const \fBAddrSVFGNode\fP * addr)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Handle Address SVFGNode to add proper points-to\&. whether this object is set field-insensitive during pre-analysis
+.PP
+Implements \fBSVF::DDAVFSolver< NodeID, PointsTo, LocDPItem >\fP\&.
+.SS "void FlowDDA::handleOutOfBudgetDpm (const \fBLocDPItem\fP & dpm)"
+
+.PP
+Handle out-of-budget dpm\&. Handle out-of-budget dpm 
+.SS "bool FlowDDA::isHeapCondMemObj (const NodeID & var, const \fBStoreSVFGNode\fP * store)\fC [override]\fP, \fC [virtual]\fP"
+we exclude concrete heap here following the conditions: (1) local allocated heap and (2) not escaped to the scope outside the current function (3) not inside loop (4) not involved in recursion 
+.PP
+Reimplemented from \fBSVF::DDAVFSolver< NodeID, PointsTo, LocDPItem >\fP\&.
+.SS "PointsTo FlowDDA::processGepPts (const \fBGepSVFGNode\fP * gep, const PointsTo & srcPts)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+processGep node Generate field objects for structs 
+.PP
+Implements \fBSVF::DDAVFSolver< NodeID, PointsTo, LocDPItem >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

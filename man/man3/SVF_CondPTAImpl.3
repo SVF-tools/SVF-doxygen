@@ -1,0 +1,226 @@
+.TH "SVF::CondPTAImpl< Cond >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::CondPTAImpl< Cond >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PointerAnalysisImpl\&.h>\fP
+.PP
+Inherits \fBSVF::PointerAnalysis\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBCondVar\fP< Cond > \fBCVar\fP"
+.br
+.ti -1c
+.RI "typedef \fBCondStdSet\fP< \fBCVar\fP > \fBCPtSet\fP"
+.br
+.ti -1c
+.RI "typedef \fBPTData\fP< \fBCVar\fP, \fBCVar\fP, \fBCPtSet\fP > \fBPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBMutablePTData\fP< \fBCVar\fP, \fBCVar\fP, \fBCPtSet\fP > \fBMutPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef Map< NodeID, PointsTo > \fBPtrToBVPtsMap\fP"
+.br
+.ti -1c
+.RI "typedef Map< NodeID, NodeSet > \fBPtrToNSMap\fP"
+.br
+.RI "map a pointer to its BitVector points-to representation "
+.ti -1c
+.RI "typedef Map< NodeID, \fBCPtSet\fP > \fBPtrToCPtsMap\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCondPTAImpl\fP (\fBPAG\fP *\fBpag\fP, \fBPointerAnalysis::PTATY\fP type)"
+.br
+.RI "map a pointer to its conditional points-to set "
+.ti -1c
+.RI "virtual \fB~CondPTAImpl\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBdestroy\fP ()"
+.br
+.RI "Release memory\&. "
+.ti -1c
+.RI "\fBPTDataTy\fP * \fBgetPTDataTy\fP () const"
+.br
+.RI "Get points-to data\&. "
+.ti -1c
+.RI "\fBMutPTDataTy\fP * \fBgetMutPTDataTy\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhasPtsMap\fP (void) const"
+.br
+.ti -1c
+.RI "const MutPTDataTy::PtsMap & \fBgetPtsMap\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPointerAnalysis\fP *pta)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "\fBPTDataTy\fP * \fBptD\fP"
+.br
+.RI "Points-to data\&. "
+.ti -1c
+.RI "bool \fBnormalized\fP"
+.br
+.RI "Normalized flag\&. "
+.ti -1c
+.RI "PtrToBVPtsMap \fBptrToBVPtsMap\fP"
+.br
+.RI "Normal points-to representation (without conditions) "
+.ti -1c
+.RI "\fBPtrToNSMap\fP \fBobjToNSRevPtsMap\fP"
+.br
+.RI "Normal points-to representation (without conditions) "
+.ti -1c
+.RI "PtrToCPtsMap \fBptrToCPtsMap\fP"
+.br
+.RI "Conditional points-to representation (with conditions) "
+.ti -1c
+.RI "virtual const \fBCPtSet\fP & \fBgetPts\fP (\fBCVar\fP id)"
+.br
+.ti -1c
+.RI "virtual const Set< \fBCVar\fP > & \fBgetRevPts\fP (\fBCVar\fP nodeId)"
+.br
+.ti -1c
+.RI "virtual void \fBclearPts\fP ()"
+.br
+.RI "Clear all data\&. "
+.ti -1c
+.RI "bool \fBoverlap\fP (const \fBCPtSet\fP &cpts1, const \fBCPtSet\fP &cpts2) const"
+.br
+.RI "Whether cpts1 and cpts2 have overlap points-to targets\&. "
+.ti -1c
+.RI "void \fBexpandFIObjs\fP (const \fBCPtSet\fP &cpts, \fBCPtSet\fP &expandedCpts)"
+.br
+.RI "Expand all fields of an aggregate in all points-to sets\&. "
+.ti -1c
+.RI "virtual void \fBdumpCPts\fP ()"
+.br
+.RI "Print out conditional pts\&. "
+.ti -1c
+.RI "virtual PointsTo \fBgetBVPointsTo\fP (const \fBCPtSet\fP &cpts) const"
+.br
+.RI "Given a conditional pts return its bit vector points-to\&. "
+.ti -1c
+.RI "virtual PointsTo & \fBgetPts\fP (NodeID ptr)"
+.br
+.RI "Given a pointer return its bit vector points-to\&. "
+.ti -1c
+.RI "virtual const \fBCPtSet\fP & \fBgetCondPointsTo\fP (NodeID ptr)"
+.br
+.RI "Given a pointer return its conditional points-to\&. "
+.ti -1c
+.RI "virtual NodeSet & \fBgetRevPts\fP (NodeID obj)"
+.br
+.RI "Given an object return all pointers points to this object\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const MemoryLocation &LocA, const MemoryLocation &LocB)"
+.br
+.RI "Interface expose to users of our pointer analysis, given Location infos\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const Value *V1, const Value *V2)"
+.br
+.RI "Interface expose to users of our pointer analysis, given Value infos\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (NodeID node1, NodeID node2)"
+.br
+.RI "Interface expose to users of our pointer analysis, given two pointers\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const \fBCVar\fP &var1, const \fBCVar\fP &var2)"
+.br
+.RI "Interface expose to users of our pointer analysis, given conditional variables\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const \fBCPtSet\fP &pts1, const \fBCPtSet\fP &pts2)"
+.br
+.RI "Interface expose to users of our pointer analysis, given two conditional points-to sets\&. "
+.ti -1c
+.RI "bool \fBcontainBlackHoleNode\fP (const \fBCPtSet\fP &cpts)"
+.br
+.RI "Test blk node for cpts\&. "
+.ti -1c
+.RI "bool \fBcontainConstantNode\fP (const \fBCPtSet\fP &cpts)"
+.br
+.RI "Test constant node for cpts\&. "
+.ti -1c
+.RI "virtual bool \fBisCondCompatible\fP (const Cond &cxt1, const Cond &cxt2, bool singleton) const =0"
+.br
+.RI "Whether two conditions are compatible (to be implemented by child class) "
+.ti -1c
+.RI "void \fBdumpTopLevelPtsTo\fP ()"
+.br
+.RI "Dump points-to information of top-level pointers\&. "
+.ti -1c
+.RI "virtual void \fBfinalize\fP ()"
+.br
+.RI "Finalization of pointer analysis, and normalize points-to information to Bit Vector representation\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (\fBCVar\fP id, const \fBCPtSet\fP &target)"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (\fBCVar\fP id, \fBCVar\fP ptd)"
+.br
+.ti -1c
+.RI "virtual bool \fBaddPts\fP (\fBCVar\fP id, \fBCVar\fP ptd)"
+.br
+.ti -1c
+.RI "bool \fBmustAlias\fP (const \fBCVar\fP &var1, const \fBCVar\fP &var2)"
+.br
+.RI "Internal interface to be used for conditional points-to set queries\&. "
+.ti -1c
+.RI "bool \fBcontains\fP (const \fBCPtSet\fP &cpts1, const \fBCPtSet\fP &cpts2)"
+.br
+.ti -1c
+.RI "bool \fBisSameVar\fP (const \fBCVar\fP &var1, const \fBCVar\fP &var2) const"
+.br
+.RI "Whether two pointers/objects are the same one by considering their conditions\&. "
+.ti -1c
+.RI "virtual void \fBNormalizePointsTo\fP ()"
+.br
+.RI "Normalize points-to information to BitVector/conditional representation\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class Cond>
+.br
+class SVF::CondPTAImpl< Cond >"
+Pointer analysis implementation which uses conditional points-to map data structure (context/path sensitive analysis) 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class Cond > \fBSVF::CondPTAImpl\fP< Cond >::\fBCondPTAImpl\fP (\fBPAG\fP * pag, \fBPointerAnalysis::PTATY\fP type)\fC [inline]\fP"
+
+.PP
+map a pointer to its conditional points-to set Constructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class Cond > virtual const \fBCPtSet\fP& \fBSVF::CondPTAImpl\fP< Cond >::getPts (\fBCVar\fP id)\fC [inline]\fP, \fC [virtual]\fP"
+Get points-to and reverse points-to 
+.SS "template<class Cond > bool \fBSVF::CondPTAImpl\fP< Cond >::isSameVar (const \fBCVar\fP & var1, const \fBCVar\fP & var2) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Whether two pointers/objects are the same one by considering their conditions\&. we distinguish context sensitive memory allocation here
+.SS "template<class Cond > virtual bool \fBSVF::CondPTAImpl\fP< Cond >::unionPts (\fBCVar\fP id, const \fBCPtSet\fP & target)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Union/add points-to, and add the reverse points-to for node collapse purpose To be noted that adding reverse pts might incur 10% total overhead during solving 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

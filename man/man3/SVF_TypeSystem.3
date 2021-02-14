@@ -1,0 +1,85 @@
+.TH "SVF::TypeSystem" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::TypeSystem
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Map< NodeID, \fBTypeSet\fP * > \fBVarToTypeSetMapTy\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< \fBPTAType\fP, NodeBS > \fBTypeToVarsMapTy\fP"
+.br
+.ti -1c
+.RI "typedef VarToTypeSetMapTy::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef VarToTypeSetMapTy::const_iterator \fBconst_iterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "iterator \fBbegin\fP ()"
+.br
+.RI "Iterators\&. "
+.ti -1c
+.RI "iterator \fBend\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBend\fP () const"
+.br
+.ti -1c
+.RI "\fBTypeSystem\fP (const \fBPAG\fP *pag)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "bool \fBhasTypeSet\fP (NodeID var) const"
+.br
+.RI "Has typeset or not\&. "
+.ti -1c
+.RI "const \fBTypeSet\fP * \fBgetTypeSet\fP (NodeID var) const"
+.br
+.RI "Get a var's typeset\&. "
+.ti -1c
+.RI "bool \fBaddTypeForVar\fP (NodeID var, const \fBPTAType\fP &type)"
+.br
+.ti -1c
+.RI "bool \fBaddTypeForVar\fP (NodeID var, const Type *type)"
+.br
+.ti -1c
+.RI "void \fBaddVarForType\fP (NodeID var, const \fBPTAType\fP &type)"
+.br
+.ti -1c
+.RI "void \fBaddVarForType\fP (NodeID var, const Type *type)"
+.br
+.ti -1c
+.RI "bool \fBhasVarsForType\fP (const \fBPTAType\fP &type) const"
+.br
+.ti -1c
+.RI "NodeBS & \fBgetVarsForType\fP (const \fBPTAType\fP &type)"
+.br
+.ti -1c
+.RI "void \fBprintTypeSystem\fP () const"
+.br
+.RI "Print each var's id and all its types\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "bool SVF::TypeSystem::addTypeForVar (NodeID var, const \fBPTAType\fP & type)\fC [inline]\fP"
+Add a ptatype for a var Return true if the ptatype is new for this var 
+.SS "bool SVF::TypeSystem::addTypeForVar (NodeID var, const Type * type)\fC [inline]\fP"
+Add a ptatype for a var Return true if the ptatype is new for this var 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

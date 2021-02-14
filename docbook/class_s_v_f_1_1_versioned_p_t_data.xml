@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_versioned_p_t_data" xml:lang="en-US">
+<title>SVF::VersionedPTData&lt; Key, Datum, Data, VersionedKey &gt; Class Template Reference</title>
+<indexterm><primary>SVF::VersionedPTData&lt; Key, Datum, Data, VersionedKey &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;AbstractPointsToDS.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::VersionedPTData&lt; Key, Datum, Data, VersionedKey &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_versioned_p_t_data.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a2908a27b3b6f720a140134124eac86e7"/>typedef <link linkend="_class_s_v_f_1_1_p_t_data">PTData</link>&lt; Key, Datum, Data &gt; <emphasis role="strong">BasePTData</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a84a4cc7bf0077f92821ad092c0ad73be"/>typedef <link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">BasePTData::PTDataTy</link> <emphasis role="strong">PTDataTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a310e2323b6c64580fcdddc0375a08738"/>typedef BasePTData::KeySet <emphasis role="strong">KeySet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a4befa2e8a7c348191ba42ff54c574a12"/>typedef Set&lt; VersionedKey &gt; <emphasis role="strong">VersionedKeySet</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a4d9ac1680e6719a9b3da706478bbdee4"/><emphasis role="strong">VersionedPTData</emphasis> (bool reversePT=true, <link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">PTDataTy</link> ty=PTDataTy::Versioned)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a45bd3c3d1af738b998701dfaae544777"/>virtual const Data &amp; <emphasis role="strong">getPts</emphasis> (const VersionedKey &amp;vk)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1aa090922fa8d0a2434994ceb56c1ba8fa"/>virtual const VersionedKeySet &amp; <emphasis role="strong">getVersionedKeyRevPts</emphasis> (const Datum &amp;datum)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1adf3c8af290b0d465e2745bca647e4812"/>virtual bool <emphasis role="strong">addPts</emphasis> (const VersionedKey &amp;vk, const Datum &amp;element)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a3503c0cab8db30aaa2b0603bbdd28632"/>virtual bool <emphasis role="strong">unionPts</emphasis> (const VersionedKey &amp;dstVar, const VersionedKey &amp;srcVar)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a6a494dbc79246f2f207d8db35478e2cb"/>virtual bool <emphasis role="strong">unionPts</emphasis> (const VersionedKey &amp;dstVar, const Key &amp;srcVar)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1ae259d1f362090248abd4f4520dc43ba3"/>virtual bool <emphasis role="strong">unionPts</emphasis> (const Key &amp;dstVar, const VersionedKey &amp;srcVar)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a56586d50f1f53f0ef5d61d480a825c16"/>virtual bool <emphasis role="strong">unionPts</emphasis> (const VersionedKey &amp;dstVar, const Data &amp;srcData)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a7cdde443124531c080e5ab2b55629326"/>virtual void <emphasis role="strong">clearPts</emphasis> (const VersionedKey &amp;vk, const Datum &amp;element)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1a928eca53e077c9a0f544d7334de2f549"/>virtual void <emphasis role="strong">clearFullPts</emphasis> (const VersionedKey &amp;vk)=0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_class_s_v_f_1_1_versioned_p_t_data_1aad5a199fc9542ee5aaf14fe418a13ee6">classof</link> (const <link linkend="_class_s_v_f_1_1_versioned_p_t_data">VersionedPTData</link>&lt; Key, Datum, Data, VersionedKey &gt; *)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1af90e86e2cefca127923a6d5661d31739"/>static bool <emphasis role="strong">classof</emphasis> (const <link linkend="_class_s_v_f_1_1_p_t_data">PTData</link>&lt; Key, Datum, Data &gt; *ptd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Key, typename Datum, typename Data, typename VersionedKey&gt;
+class SVF::VersionedPTData&lt; Key, Datum, Data, VersionedKey &gt;</title></simplesect>
+
+
+<para><link linkend="_class_s_v_f_1_1_p_t_data">PTData</link> with normal keys and versioned keys. Replicates the <link linkend="_class_s_v_f_1_1_p_t_data">PTData</link> interface for versioned keys too. Intended to be used for versioned flow-sensitive PTA&#8211;hence the name&#8211;but can be used anywhere where there are two types of keys at play. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_versioned_p_t_data_1aad5a199fc9542ee5aaf14fe418a13ee6"/>    <section>
+    <title>classof()</title>
+<indexterm><primary>classof</primary><secondary>SVF::VersionedPTData&lt; Key, Datum, Data, VersionedKey &gt;</secondary></indexterm>
+<indexterm><primary>SVF::VersionedPTData&lt; Key, Datum, Data, VersionedKey &gt;</primary><secondary>classof</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Datum , typename Data , typename VersionedKey &gt; </computeroutput><para><computeroutput>static bool <link linkend="_class_s_v_f_1_1_versioned_p_t_data">SVF::VersionedPTData</link>&lt; Key, Datum, Data, VersionedKey &gt;::classof (const <link linkend="_class_s_v_f_1_1_versioned_p_t_data">VersionedPTData</link>&lt; Key, Datum, Data, VersionedKey &gt; * )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Methods to support type inquiry through isa, cast, and dyn_cast: </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+include/MemoryModel/AbstractPointsToDS.h</section>
+</section>

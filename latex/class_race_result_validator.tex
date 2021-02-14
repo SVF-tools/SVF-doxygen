@@ -1,0 +1,95 @@
+\hypertarget{class_race_result_validator}{}\doxysection{Race\+Result\+Validator Class Reference}
+\label{class_race_result_validator}\index{RaceResultValidator@{RaceResultValidator}}
+
+
+Validate the result of concurrent analysis.  
+
+
+
+
+{\ttfamily \#include $<$MTAResult\+Validator.\+h$>$}
+
+Inheritance diagram for Race\+Result\+Validator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_race_result_validator}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_race_result_validator_1_1_access_pair}{Access\+Pair}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_race_result_validator_a640504d09fad1724b429abba7000d78a}\label{class_race_result_validator_a640504d09fad1724b429abba7000d78a}} 
+typedef int {\bfseries RC\+\_\+\+FLAG}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_race_result_validator_aba1a226c3fb9799c38eff0513d75c52a}\label{class_race_result_validator_aba1a226c3fb9799c38eff0513d75c52a}} 
+virtual \mbox{\hyperlink{class_race_result_validator_aba1a226c3fb9799c38eff0513d75c52a}{$\sim$\+Race\+Result\+Validator}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_race_result_validator_aaedcd28861706a418fdaf7582ea0553b}\label{class_race_result_validator_aaedcd28861706a418fdaf7582ea0553b}} 
+void \mbox{\hyperlink{class_race_result_validator_aaedcd28861706a418fdaf7582ea0553b}{init}} (SVFModule $\ast$M)
+\begin{DoxyCompactList}\small\item\em Initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_race_result_validator_a21e23f7f1b1bbb1775a41f6e4b7d8bd2}\label{class_race_result_validator_a21e23f7f1b1bbb1775a41f6e4b7d8bd2}} 
+void \mbox{\hyperlink{class_race_result_validator_a21e23f7f1b1bbb1775a41f6e4b7d8bd2}{analyze}} ()
+\begin{DoxyCompactList}\small\item\em Analysis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_race_result_validator_ae218778896057b975597948a59a46607}\label{class_race_result_validator_ae218778896057b975597948a59a46607}} 
+void \mbox{\hyperlink{class_race_result_validator_ae218778896057b975597948a59a46607}{release}} ()
+\begin{DoxyCompactList}\small\item\em Release resource. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_race_result_validator_a45e68a2e6a11ccc2031de7fd1014770f}\label{class_race_result_validator_a45e68a2e6a11ccc2031de7fd1014770f}} 
+bool \mbox{\hyperlink{class_race_result_validator_a45e68a2e6a11ccc2031de7fd1014770f}{has\+Validation\+Target}} () const
+\begin{DoxyCompactList}\small\item\em Check if the input program has validation target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_race_result_validator_a90189d5d999fcad00a12821d620d6c59}{may\+Access\+Aliases}} (const Instruction $\ast$I1, const Instruction $\ast$I2)
+\item 
+\mbox{\Hypertarget{class_race_result_validator_ad27006fe8be713c8d51bbe4b66af913c}\label{class_race_result_validator_ad27006fe8be713c8d51bbe4b66af913c}} 
+virtual bool {\bfseries may\+Happen\+In\+Parallel} (const Instruction $\ast$I1, const Instruction $\ast$I2)
+\item 
+\mbox{\Hypertarget{class_race_result_validator_ab4cb632afd825334aa69cee9790672fa}\label{class_race_result_validator_ab4cb632afd825334aa69cee9790672fa}} 
+virtual bool {\bfseries protected\+By\+Common\+Locks} (const Instruction $\ast$I1, const Instruction $\ast$I2)
+\item 
+\mbox{\Hypertarget{class_race_result_validator_a1d170ebf9afb5d00b4bd36cc2b415dbb}\label{class_race_result_validator_a1d170ebf9afb5d00b4bd36cc2b415dbb}} 
+virtual bool {\bfseries may\+Have\+Data\+Race} (const Instruction $\ast$I1, const Instruction $\ast$I2)
+\item 
+void \mbox{\hyperlink{class_race_result_validator_a3aa6ef4733150b1ea4ae396263e2d1e4}{collect\+Validation\+Targets}} ()
+\item 
+\mbox{\Hypertarget{class_race_result_validator_a4327af2795a9aa336543d8b3c3a7bfdf}\label{class_race_result_validator_a4327af2795a9aa336543d8b3c3a7bfdf}} 
+void \mbox{\hyperlink{class_race_result_validator_a4327af2795a9aa336543d8b3c3a7bfdf}{validate\+All}} ()
+\begin{DoxyCompactList}\small\item\em Perform validation for all targets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_race_result_validator_a4ae48756137dc202d48a4135251f6909}\label{class_race_result_validator_a4ae48756137dc202d48a4135251f6909}} 
+std\+::string \mbox{\hyperlink{class_race_result_validator_a4ae48756137dc202d48a4135251f6909}{get\+Output}} (const char $\ast$scenario, bool analysis\+Res, bool expected\+Res)
+\begin{DoxyCompactList}\small\item\em Get the validation result string of a single validation scenario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Validate the result of concurrent analysis. 
+
+The properties to validate of two memory accesses include one or more of the following four\+: (1) they may accesses aliases; (2) they may happen in parallel; (3) they are protected by common lock(s); (4) they may cause a data race error. The ground truth are specified by the \char`\"{}\+RC\+\_\+\+ACCESS\char`\"{} function in the target program.
+
+Users may utilize this result validator to validate their analysis with one or more of the four properties, by inheriting the RCResult\+Validator class. The corresponding virtual function of the desired property should be overridden. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_race_result_validator_a3aa6ef4733150b1ea4ae396263e2d1e4}\label{class_race_result_validator_a3aa6ef4733150b1ea4ae396263e2d1e4}} 
+\index{RaceResultValidator@{RaceResultValidator}!collectValidationTargets@{collectValidationTargets}}
+\index{collectValidationTargets@{collectValidationTargets}!RaceResultValidator@{RaceResultValidator}}
+\doxysubsubsection{\texorpdfstring{collectValidationTargets()}{collectValidationTargets()}}
+{\footnotesize\ttfamily void Race\+Result\+Validator\+::collect\+Validation\+Targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Collect the targets for validations. The targets should be memory access Instructions in pairs. The collected targets are stored in the member variable \char`\"{}access\+Pairs\char`\"{}. \mbox{\Hypertarget{class_race_result_validator_a90189d5d999fcad00a12821d620d6c59}\label{class_race_result_validator_a90189d5d999fcad00a12821d620d6c59}} 
+\index{RaceResultValidator@{RaceResultValidator}!mayAccessAliases@{mayAccessAliases}}
+\index{mayAccessAliases@{mayAccessAliases}!RaceResultValidator@{RaceResultValidator}}
+\doxysubsubsection{\texorpdfstring{mayAccessAliases()}{mayAccessAliases()}}
+{\footnotesize\ttfamily virtual bool Race\+Result\+Validator\+::may\+Access\+Aliases (\begin{DoxyParamCaption}\item[{const Instruction $\ast$}]{I1,  }\item[{const Instruction $\ast$}]{I2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Interface to the specific validation properties. Override one or more to implement your own analysis. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+MTA/MTAResult\+Validator.\+h\end{DoxyCompactItemize}

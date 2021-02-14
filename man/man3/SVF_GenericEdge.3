@@ -1,0 +1,91 @@
+.TH "SVF::GenericEdge< NodeTy >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::GenericEdge< NodeTy >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GenericGraph\&.h>\fP
+.PP
+Inherited by \fBSVF::CHEdge\fP, \fBSVF::ConstraintEdge\fP, \fBSVF::ICFGEdge\fP, \fBSVF::PAGEdge\fP, \fBSVF::PTACallGraphEdge\fP, \fBSVF::TCTEdge\fP, and \fBSVF::VFGEdge\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBequalGEdge\fP"
+.br
+.RI "Add the hash function for std::set (we also can overload operator< to implement this) "
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef NodeTy \fBNodeType\fP"
+.br
+.RI "Node type\&. "
+.ti -1c
+.RI "typedef u64_t \fBGEdgeFlag\fP"
+.br
+.ti -1c
+.RI "typedef s32_t \fBGEdgeKind\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGenericEdge\fP (NodeTy *s, NodeTy *d, \fBGEdgeFlag\fP k)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~GenericEdge\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "NodeID \fBgetSrcID\fP () const"
+.br
+.RI "get methods of the components "
+.ti -1c
+.RI "NodeID \fBgetDstID\fP () const"
+.br
+.ti -1c
+.RI "GEdgeKind \fBgetEdgeKind\fP () const"
+.br
+.ti -1c
+.RI "\fBNodeType\fP * \fBgetSrcNode\fP () const"
+.br
+.ti -1c
+.RI "\fBNodeType\fP * \fBgetDstNode\fP () const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBGenericEdge\fP< \fBNodeType\fP > *rhs) const"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr unsigned char \fBEdgeKindMaskBits\fP = 8"
+.br
+.RI "We use the lower 8 bits to denote edge kind\&. "
+.ti -1c
+.RI "static constexpr u64_t \fBEdgeKindMask\fP = (~0ULL) >> (64 \- \fBEdgeKindMaskBits\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class NodeTy>
+.br
+class SVF::GenericEdge< NodeTy >"
+Generic edge on the graph as base class 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<class NodeTy > typedef u64_t \fBSVF::GenericEdge\fP< NodeTy >::\fBGEdgeFlag\fP"
+Edge Flag Edge format as follows (from lowest bit): (1) 0-7 bits encode an edge kind (allow maximum 16 kinds) (2) 8-63 bits encode a callsite instruction 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

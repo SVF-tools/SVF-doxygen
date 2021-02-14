@@ -1,0 +1,190 @@
+.TH "SVF::CondPointsToSet< Cond >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::CondPointsToSet< Cond >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ConditionalPT\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Map< Cond, PointsTo > \fBCondPts\fP"
+.br
+.ti -1c
+.RI "typedef CondPts::iterator \fBCondPtsIter\fP"
+.br
+.ti -1c
+.RI "typedef CondPts::const_iterator \fBCondPtsConstIter\fP"
+.br
+.ti -1c
+.RI "typedef \fBCondVar\fP< Cond > \fBSingleCondVar\fP"
+.br
+.ti -1c
+.RI "typedef CondPtsSetIterator \fBiterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCondPointsToSet\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fBCondPointsToSet\fP (const Cond &cond, const PointsTo &pts)"
+.br
+.ti -1c
+.RI "\fBCondPointsToSet\fP (const \fBCondPointsToSet\fP< Cond > &cptsSet)"
+.br
+.RI "Copy constructor\&. "
+.ti -1c
+.RI "CondPts & \fBpointsTo\fP (void)"
+.br
+.RI "Get Conditional PointsTo and starndard points-to\&. "
+.ti -1c
+.RI "const CondPts & \fBpointsTo\fP (void) const"
+.br
+.ti -1c
+.RI "const PointsTo & \fBpointsTo\fP (Cond cond) const"
+.br
+.ti -1c
+.RI "bool \fBhasPointsTo\fP (Cond cond) const"
+.br
+.ti -1c
+.RI "PointsTo & \fBpointsTo\fP (Cond cond)"
+.br
+.ti -1c
+.RI "CondPtsIter \fBcptsBegin\fP ()"
+.br
+.RI "iterators "
+.ti -1c
+.RI "CondPtsIter \fBcptsEnd\fP ()"
+.br
+.ti -1c
+.RI "CondPtsConstIter \fBcptsBegin\fP () const"
+.br
+.ti -1c
+.RI "CondPtsConstIter \fBcptsEnd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "unsigned \fBnumElement\fP () const"
+.br
+.RI "Get number of points-to targets\&. "
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.RI "Return true if no element in the set\&. "
+.ti -1c
+.RI "\fBCondPointsToSet\fP< Cond > & \fBoperator=\fP (const \fBCondPointsToSet\fP< Cond > &other)"
+.br
+.RI "Overloading operators\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBCondPointsToSet\fP< Cond > &rhs) const"
+.br
+.RI "Overloading operator ==\&. "
+.ti -1c
+.RI "bool \fBaliased\fP (const \fBCondPointsToSet\fP< Cond > &rhs) const"
+.br
+.ti -1c
+.RI "bool \fBisSubset\fP (const \fBCondPointsToSet\fP< Cond > &rhs) const"
+.br
+.RI "Check whether this \fBCondPointsToSet\fP is a subset of RHS\&. "
+.ti -1c
+.RI "bool \fBintersects\fP (const \fBCondPointsToSet\fP< Cond > *rhs) const"
+.br
+.RI "Return TRUE if this and RHS share any common element\&. "
+.ti -1c
+.RI "void \fBintersectWithComplement\fP (const \fBCondPointsToSet\fP< Cond > &cpts1, const \fBCondPointsToSet\fP< Cond > &cpts2)"
+.br
+.RI "Result of cpts1 & ~cpts2 is stored into this bitmap\&. "
+.ti -1c
+.RI "void \fBintersectWithComplement\fP (const \fBCondPointsToSet\fP< Cond > &cpts1)"
+.br
+.RI "Result of cur & ~cpts1 is stored into this bitmap\&. "
+.ti -1c
+.RI "bool \fBoperator&=\fP (const \fBCondPointsToSet\fP< Cond > &rhs)"
+.br
+.RI "Overloading operator &=\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBCondPointsToSet\fP< Cond > &rhs)"
+.br
+.RI "Overloading operator !=\&. "
+.ti -1c
+.RI "bool \fBoperator|=\fP (const \fBCondPointsToSet\fP< Cond > &rhs)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBCondPointsToSet\fP< Cond > &rhs) const"
+.br
+.ti -1c
+.RI "bool \fBtest_and_set\fP (const \fBSingleCondVar\fP &var)"
+.br
+.RI "Test and set\&. "
+.ti -1c
+.RI "bool \fBtest\fP (const \fBSingleCondVar\fP &var) const"
+.br
+.ti -1c
+.RI "void \fBset\fP (const \fBSingleCondVar\fP &var)"
+.br
+.ti -1c
+.RI "void \fBreset\fP (const \fBSingleCondVar\fP &var)"
+.br
+.ti -1c
+.RI "void \fBdump\fP (\fBraw_ostream\fP &O) const"
+.br
+.ti -1c
+.RI "std::string \fBdumpStr\fP () const"
+.br
+.ti -1c
+.RI "iterator \fBbegin\fP ()"
+.br
+.RI "iterators "
+.ti -1c
+.RI "iterator \fBend\fP ()"
+.br
+.ti -1c
+.RI "iterator \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "iterator \fBend\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class Cond>
+.br
+class SVF::CondPointsToSet< Cond >"
+Conditional Points-to set 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class Cond > bool \fBSVF::CondPointsToSet\fP< Cond >::aliased (const \fBCondPointsToSet\fP< Cond > & rhs) const\fC [inline]\fP"
+Two conditional points-to set are aliased when they access the same memory location under the same condition 
+.SS "template<class Cond > bool \fBSVF::CondPointsToSet\fP< Cond >::intersects (const \fBCondPointsToSet\fP< Cond > * rhs) const\fC [inline]\fP"
+
+.PP
+Return TRUE if this and RHS share any common element\&. if either cpts is empty, just return\&.
+.SS "template<class Cond > void \fBSVF::CondPointsToSet\fP< Cond >::intersectWithComplement (const \fBCondPointsToSet\fP< Cond > & cpts1)\fC [inline]\fP"
+
+.PP
+Result of cur & ~cpts1 is stored into this bitmap\&. if either cpts is empty, just return\&.
+.SS "template<class Cond > bool \fBSVF::CondPointsToSet\fP< Cond >::operator< (const \fBCondPointsToSet\fP< Cond > & rhs) const\fC [inline]\fP"
+Compare two \fBCondPointsToSet\fP according to their points-to set size and points-to elements\&.
+.IP "1." 4
+\fBCondPointsToSet\fP with smaller points-to set size is smaller than the other;
+.IP "2." 4
+If the sizes are equal, comparing the conditions and real points-to targets in their points-to elements\&. 
+.PP
+
+.SS "template<class Cond > bool \fBSVF::CondPointsToSet\fP< Cond >::operator|= (const \fBCondPointsToSet\fP< Cond > & rhs)\fC [inline]\fP"
+Overloading operator |= Merge \fBCondPointsToSet\fP of RHS into this one\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_p_t_a_call_graph" xml:lang="en-US">
+<title>SVF::PTACallGraph Class Reference</title>
+<indexterm><primary>SVF::PTACallGraph</primary></indexterm>
+<para>Inheritance diagram for SVF::PTACallGraph:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_p_t_a_call_graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a5b1fe2b2314db947cd5e709b7285fe1c"/>enum <emphasis role="strong">CGEK</emphasis> { <emphasis role="strong">NormCallGraph</emphasis>
+, <emphasis role="strong">ThdCallGraph</emphasis>
+ }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a1ad288117daa4031e195eb35d805cac6"/>typedef PTACallGraphEdge::CallGraphEdgeSet <emphasis role="strong">CallGraphEdgeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a049bc978a93f0db1fe91efb6feb22b14"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> * &gt; <emphasis role="strong">FunToCallGraphNodeMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a16d115dd425ec02ab6d91c711fab7fd9"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, CallGraphEdgeSet &gt; <emphasis role="strong">CallInstToCallGraphEdgesMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a1d1ea71cb29e190ad3c6817810bd57c7"/>typedef std::pair&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * &gt; <emphasis role="strong">CallSitePair</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ae4e3e5f108bc1e47af8f58d2e43345d2"/>typedef Map&lt; CallSitePair, CallSiteID &gt; <emphasis role="strong">CallSiteToIdMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a5f626f5c9254b9e643d943e59068efba"/>typedef Map&lt; CallSiteID, CallSitePair &gt; <emphasis role="strong">IdToCallSiteMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a5f5a5ec7e707a21994d301cc07d32a5a"/>typedef Set&lt; const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * &gt; <emphasis role="strong">FunctionSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a47bfbae96294592f4e6060deddbe5700"/>typedef OrderedMap&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, FunctionSet &gt; <emphasis role="strong">CallEdgeMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a2f28a1ce0c7d6a0bc2fc2627e90acf1c"/>typedef CallGraphEdgeSet::iterator <emphasis role="strong">CallGraphEdgeIter</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a9b7f6979a95244c620fdb791e053237b"/>typedef CallGraphEdgeSet::const_iterator <emphasis role="strong">CallGraphEdgeConstIter</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a612b05f1c37dc50a888b773b9bbe093f"/><link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a612b05f1c37dc50a888b773b9bbe093f">PTACallGraph</link> (CGEK k=NormCallGraph)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a8a1621038edeb847bfc5a4a7be7620a3">addCallGraphNode</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+
+<para>Add callgraph Node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a7f1ee630caa4ec5e7ad309e1f3865e2e"/>virtual <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a7f1ee630caa4ec5e7ad309e1f3865e2e">~PTACallGraph</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ac6a294ec1c88862c8f7d54000f04e1f7"/>CGEK <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1ac6a294ec1c88862c8f7d54000f04e1f7">getKind</link> () const</para>
+
+<para>Return type of this callgraph. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ad49fa2a288945f6910deb11acdf6a42d"/>CallEdgeMap &amp; <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1ad49fa2a288945f6910deb11acdf6a42d">getIndCallMap</link> ()</para>
+
+<para>Get callees from an indirect callsite. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ac46ec4fe0094145c5fdb81394f1dd644"/>bool <emphasis role="strong">hasIndCSCallees</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a88bec70a6bf5c1c41bc4efd035ef0e08"/>const FunctionSet &amp; <emphasis role="strong">getIndCSCallees</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1aab4214b734d00f5db59385535419ca58"/>u32_t <emphasis role="strong">getTotalCallSiteNumber</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a3379185589e9bcafa4f961930aaf2694"/>Size_t <emphasis role="strong">getNumOfResolvedIndCallEdge</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a368306a46d84ccc6d07d94833aded629"/>const CallInstToCallGraphEdgesMap &amp; <emphasis role="strong">getCallInstToCallGraphEdgesMap</emphasis> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1ac695d78f0a78e2e5f1fb4f93264e52b8">verifyCallGraph</link> ()</para>
+
+<para>Issue a warning if the function which has indirect call sites can not be reached from program entry. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1aaab54c670518d9d6790707f76ea76aa1"/><link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> * <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1aaab54c670518d9d6790707f76ea76aa1">getCallGraphNode</link> (NodeID id) const</para>
+
+<para>Get call graph node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ae3ee76be0e959a736c868dc7e0128077"/><link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> * <emphasis role="strong">getCallGraphNode</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a72efe87a80f84a3945a93431d9414d3d"/>CallSiteID <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a72efe87a80f84a3945a93431d9414d3d">addCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee)</para>
+
+<para>Add/Get CallSiteID. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1afb2daec804e81f0beb72fbc805d1c82a"/>CallSiteID <emphasis role="strong">getCallSiteID</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a236d1269b1b560e09f22e0197f6f1ad7"/>bool <emphasis role="strong">hasCallSiteID</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a9155629ddc58f71c6a6f2aec978e4610"/>const CallSitePair &amp; <emphasis role="strong">getCallSitePair</emphasis> (CallSiteID id) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a2c8b1674f1f942a3b5aa77b7abccb229"/>const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * <emphasis role="strong">getCallSite</emphasis> (CallSiteID id) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a42035e9669204ddd5d38583db21af3d7"/>const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * <emphasis role="strong">getCallerOfCallSite</emphasis> (CallSiteID id) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1aacd5f35171717cb4d758c17bef828a0f"/>const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * <emphasis role="strong">getCalleeOfCallSite</emphasis> (CallSiteID id) const</para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge">PTACallGraphEdge</link> * <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a6d29a39440d8f6290e2e8b7322b965fb">hasGraphEdge</link> (<link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *src, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *dst, PTACallGraphEdge::CEDGEK kind, CallSiteID csId) const</para>
+
+<para>Whether we have aleady created this call graph edge. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge">PTACallGraphEdge</link> * <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a2634a24621ab93fae7ec1cf94a8cba0b">getGraphEdge</link> (<link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *src, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *dst, PTACallGraphEdge::CEDGEK kind, CallSiteID csId)</para>
+
+<para>Get call graph edge via nodes. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a486f79252c216eb5a9f4c09261a24ae2"/>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a486f79252c216eb5a9f4c09261a24ae2">getCallees</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, FunctionSet &amp;callees)</para>
+
+<para>Get all callees for a callsite. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1afdd308d681cb2a57e9473186f431db61">hasCallGraphEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *inst) const</para>
+
+<para>Get call graph edge via call instruction. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1acf542e7e581ffa8453066f4c8cdfb65c"/>CallGraphEdgeSet::const_iterator <emphasis role="strong">getCallEdgeBegin</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *inst) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1abfa1f3777d16597392385cf7d8bac472"/>CallGraphEdgeSet::const_iterator <emphasis role="strong">getCallEdgeEnd</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *inst) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a3154bbc421fc85649e786ed67ca03750"/>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a3154bbc421fc85649e786ed67ca03750">addEdge</link> (<link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge">PTACallGraphEdge</link> *edge)</para>
+
+<para>Add call graph edge. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1ab0da49175c64d8e2fccd19680d79771e">addDirectCallGraphEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *call, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callerFun, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *calleeFun)</para>
+
+<para>Add direct/indirect call edges. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a09d0b8461ec0e678e1e69368b0f66b02">addIndirectCallGraphEdge</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callerFun, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *calleeFun)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a80070e2f50ed1036d334250841215ca8">getAllCallSitesInvokingCallee</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee, PTACallGraphEdge::CallInstSet &amp;csSet)</para>
+
+<para>Get callsites invoking the callee. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a0d2544130cc2cdc3ac418c975c278eb2">getDirCallSitesInvokingCallee</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee, PTACallGraphEdge::CallInstSet &amp;csSet)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a9a4b0c6672288b9201ab254b4c49548d">getIndCallSitesInvokingCallee</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee, PTACallGraphEdge::CallInstSet &amp;csSet)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1aa03df6b1ebf7f8356a47fa074d3f91a4">isReachableBetweenFunctions</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *srcFn, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *dstFn) const</para>
+
+<para>Whether its reachable between two functions. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a841be22581a7896d8924564e7199f62b">dump</link> (const std::string &amp;filename)</para>
+
+<para>Dump the graph. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a6a794ee3e4b217a1a0c6edf4bcdbdb69">destroy</link> ()</para>
+
+<para>Clean up memory. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a97986d6e6732c78b04cc053f0e9d1367"/>FunToCallGraphNodeMap <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1a97986d6e6732c78b04cc053f0e9d1367">funToCallGraphNodeMap</link></para>
+
+<para>Call Graph node map. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ab29003352d8152b9d0fd37919ac212c5"/>CallInstToCallGraphEdgesMap <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_1ab29003352d8152b9d0fd37919ac212c5">callinstToCallGraphEdgesMap</link></para>
+
+<para>Map a call instruction to its corresponding call edges. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1af0e1a940677fb7f6c4aaef2f9c46c3e5"/>NodeID <emphasis role="strong">callGraphNodeNum</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ad73bc2f0669ff2a28ccabb5355278826"/>Size_t <emphasis role="strong">numOfResolvedIndCallEdge</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a8a1621038edeb847bfc5a4a7be7620a3"/>    <section>
+    <title>addCallGraphNode()</title>
+<indexterm><primary>addCallGraphNode</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>addCallGraphNode</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::addCallGraphNode (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * fun)</computeroutput></para><para>
+
+<para>Add callgraph Node. </para>
+</para>
+
+<para>Add call graph node </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ab0da49175c64d8e2fccd19680d79771e"/>    <section>
+    <title>addDirectCallGraphEdge()</title>
+<indexterm><primary>addDirectCallGraphEdge</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>addDirectCallGraphEdge</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::addDirectCallGraphEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callerFun, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * calleeFun)</computeroutput></para><para>
+
+<para>Add direct/indirect call edges. </para>
+</para>
+
+<para>Add direct call edges </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a09d0b8461ec0e678e1e69368b0f66b02"/>    <section>
+    <title>addIndirectCallGraphEdge()</title>
+<indexterm><primary>addIndirectCallGraphEdge</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>addIndirectCallGraphEdge</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::addIndirectCallGraphEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callerFun, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * calleeFun)</computeroutput></para>
+<para>Add indirect call edge to update call graph </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a6a794ee3e4b217a1a0c6edf4bcdbdb69"/>    <section>
+    <title>destroy()</title>
+<indexterm><primary>destroy</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>destroy</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::destroy ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up memory. </para>
+</para>
+
+<para>Memory has been cleaned up at <link linkend="_class_s_v_f_1_1_generic_graph">GenericGraph</link> </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a841be22581a7896d8924564e7199f62b"/>    <section>
+    <title>dump()</title>
+<indexterm><primary>dump</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>dump</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::dump (const std::string &amp; filename)</computeroutput></para><para>
+
+<para>Dump the graph. </para>
+</para>
+
+<para>Dump call graph into dot file </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a80070e2f50ed1036d334250841215ca8"/>    <section>
+    <title>getAllCallSitesInvokingCallee()</title>
+<indexterm><primary>getAllCallSitesInvokingCallee</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>getAllCallSitesInvokingCallee</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::getAllCallSitesInvokingCallee (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callee, PTACallGraphEdge::CallInstSet &amp; csSet)</computeroutput></para><para>
+
+<para>Get callsites invoking the callee. </para>
+</para>
+
+<para>Get all callsite invoking this callee </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a0d2544130cc2cdc3ac418c975c278eb2"/>    <section>
+    <title>getDirCallSitesInvokingCallee()</title>
+<indexterm><primary>getDirCallSitesInvokingCallee</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>getDirCallSitesInvokingCallee</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::getDirCallSitesInvokingCallee (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callee, PTACallGraphEdge::CallInstSet &amp; csSet)</computeroutput></para>
+<para>Get direct callsite invoking this callee </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a2634a24621ab93fae7ec1cf94a8cba0b"/>    <section>
+    <title>getGraphEdge()</title>
+<indexterm><primary>getGraphEdge</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>getGraphEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge">PTACallGraphEdge</link> * PTACallGraph::getGraphEdge (<link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> * src, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> * dst, PTACallGraphEdge::CEDGEK kind, CallSiteID csId)</computeroutput></para><para>
+
+<para>Get call graph edge via nodes. </para>
+</para>
+
+<para>get CallGraph edge via nodes </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a9a4b0c6672288b9201ab254b4c49548d"/>    <section>
+    <title>getIndCallSitesInvokingCallee()</title>
+<indexterm><primary>getIndCallSitesInvokingCallee</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>getIndCallSitesInvokingCallee</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::getIndCallSitesInvokingCallee (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callee, PTACallGraphEdge::CallInstSet &amp; csSet)</computeroutput></para>
+<para>Get indirect callsite invoking this callee </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1afdd308d681cb2a57e9473186f431db61"/>    <section>
+    <title>hasCallGraphEdge()</title>
+<indexterm><primary>hasCallGraphEdge</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>hasCallGraphEdge</secondary></indexterm>
+<para><computeroutput>bool SVF::PTACallGraph::hasCallGraphEdge (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * inst) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get call graph edge via call instruction. </para>
+</para>
+
+<para>whether this call instruction has a valid call graph edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1a6d29a39440d8f6290e2e8b7322b965fb"/>    <section>
+    <title>hasGraphEdge()</title>
+<indexterm><primary>hasGraphEdge</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>hasGraphEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge">PTACallGraphEdge</link> * PTACallGraph::hasGraphEdge (<link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> * src, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> * dst, PTACallGraphEdge::CEDGEK kind, CallSiteID csId) const</computeroutput></para><para>
+
+<para>Whether we have aleady created this call graph edge. </para>
+</para>
+
+<para>Whether we have already created this call graph edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1aa03df6b1ebf7f8356a47fa074d3f91a4"/>    <section>
+    <title>isReachableBetweenFunctions()</title>
+<indexterm><primary>isReachableBetweenFunctions</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>isReachableBetweenFunctions</secondary></indexterm>
+<para><computeroutput>bool PTACallGraph::isReachableBetweenFunctions (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * srcFn, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * dstFn) const</computeroutput></para><para>
+
+<para>Whether its reachable between two functions. </para>
+</para>
+
+<para>Whether its reachable between two functions </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_1ac695d78f0a78e2e5f1fb4f93264e52b8"/>    <section>
+    <title>verifyCallGraph()</title>
+<indexterm><primary>verifyCallGraph</primary><secondary>SVF::PTACallGraph</secondary></indexterm>
+<indexterm><primary>SVF::PTACallGraph</primary><secondary>verifyCallGraph</secondary></indexterm>
+<para><computeroutput>void PTACallGraph::verifyCallGraph ( )</computeroutput></para><para>
+
+<para>Issue a warning if the function which has indirect call sites can not be reached from program entry. </para>
+</para>
+
+<para>Issue a warning if the function which has indirect call sites can not be reached from program entry. </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/Graphs/PTACallGraph.hlib/Graphs/PTACallGraph.cpp</section>
+</section>

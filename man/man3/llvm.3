@@ -1,0 +1,174 @@
+.TH "llvm" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+llvm
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::ConstraintNode * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::ConstraintNode * > >\fP"
+.br
+.RI "Inverse GraphTraits specializations for Value flow node, it is used for inverse traversal\&. "
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::ConstraintGraph * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::GenericNode< NodeTy, EdgeTy > * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::GenericNode< NodeTy, EdgeTy > * > >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::GenericGraph< NodeTy, EdgeTy > * >\fP"
+.br
+.ti -1c
+.RI "class \fBGraphPrinter\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::ICFGNode * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::ICFGNode * > >\fP"
+.br
+.RI "Inverse GraphTraits specializations for call graph node, it is used for inverse traversal\&. "
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::ICFG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::OfflineConsG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::PAGNode * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::PAGNode * > >\fP"
+.br
+.RI "Inverse GraphTraits specializations for PAG node, it is used for inverse traversal\&. "
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::PAG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::PTACallGraphNode * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::PTACallGraphNode * > >\fP"
+.br
+.RI "Inverse GraphTraits specializations for call graph node, it is used for inverse traversal\&. "
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::PTACallGraph * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::SVFG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::VFGNode * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::VFGNode * > >\fP"
+.br
+.RI "Inverse GraphTraits specializations for call graph node, it is used for inverse traversal\&. "
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::VFG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::TCTNode * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::TCTNode * > >\fP"
+.br
+.RI "Inverse GraphTraits specializations for Value flow node, it is used for inverse traversal\&. "
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::TCT * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::CHNode * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::CHNode * > >\fP"
+.br
+.RI "Inverse GraphTraits specializations for call graph node, it is used for inverse traversal\&. "
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::CHGraph * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::DCHNode * >\fP"
+.br
+.ti -1c
+.RI "struct \fBGraphTraits< Inverse< SVF::DCHNode * > >\fP"
+.br
+.RI "Inverse GraphTraits specializations for call graph node, it is used for inverse traversal\&. "
+.ti -1c
+.RI "struct \fBGraphTraits< SVF::DCHGraph * >\fP"
+.br
+.ti -1c
+.RI "class \fBgeneric_bridge_gep_type_iterator\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< ConstraintGraph * >\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< ICFG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< OfflineConsG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< PAG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< PTACallGraph * >\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< SVFG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< VFG * >\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< TCT * >\fP"
+.br
+.ti -1c
+.RI "struct \fBDOTGraphTraits< CHGraph * >\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBgeneric_bridge_gep_type_iterator\fP \fBbridge_gep_iterator\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBbridge_gep_iterator\fP \fBbridge_gep_begin\fP (const User *GEP)"
+.br
+.ti -1c
+.RI "\fBbridge_gep_iterator\fP \fBbridge_gep_end\fP (const User *GEP)"
+.br
+.ti -1c
+.RI "\fBbridge_gep_iterator\fP \fBbridge_gep_begin\fP (const User &GEP)"
+.br
+.ti -1c
+.RI "\fBbridge_gep_iterator\fP \fBbridge_gep_end\fP (const User &GEP)"
+.br
+.ti -1c
+.RI "template<typename T > \fBgeneric_bridge_gep_type_iterator\fP< const T * > \fBbridge_gep_end\fP (Type *, ArrayRef< T > A)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+GraphTraits specialization for constraint graph
+.PP
+GraphTraits specialization 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

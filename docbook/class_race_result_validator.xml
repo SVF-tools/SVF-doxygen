@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_race_result_validator" xml:lang="en-US">
+<title>RaceResultValidator Class Reference</title>
+<indexterm><primary>RaceResultValidator</primary></indexterm>
+<para>
+
+<para>Validate the result of concurrent analysis. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;MTAResultValidator.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for RaceResultValidator:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_race_result_validator.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_race_result_validator_1_1_access_pair">AccessPair</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1a640504d09fad1724b429abba7000d78a"/>typedef int <emphasis role="strong">RC_FLAG</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1aba1a226c3fb9799c38eff0513d75c52a"/>virtual <link linkend="_class_race_result_validator_1aba1a226c3fb9799c38eff0513d75c52a">~RaceResultValidator</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1aaedcd28861706a418fdaf7582ea0553b"/>void <link linkend="_class_race_result_validator_1aaedcd28861706a418fdaf7582ea0553b">init</link> (SVFModule *M)</para>
+
+<para>Initialization. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1a21e23f7f1b1bbb1775a41f6e4b7d8bd2"/>void <link linkend="_class_race_result_validator_1a21e23f7f1b1bbb1775a41f6e4b7d8bd2">analyze</link> ()</para>
+
+<para>Analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1ae218778896057b975597948a59a46607"/>void <link linkend="_class_race_result_validator_1ae218778896057b975597948a59a46607">release</link> ()</para>
+
+<para>Release resource. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1a45e68a2e6a11ccc2031de7fd1014770f"/>bool <link linkend="_class_race_result_validator_1a45e68a2e6a11ccc2031de7fd1014770f">hasValidationTarget</link> () const</para>
+
+<para>Check if the input program has validation target. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual bool <link linkend="_class_race_result_validator_1a90189d5d999fcad00a12821d620d6c59">mayAccessAliases</link> (const Instruction *I1, const Instruction *I2)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1ad27006fe8be713c8d51bbe4b66af913c"/>virtual bool <emphasis role="strong">mayHappenInParallel</emphasis> (const Instruction *I1, const Instruction *I2)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1ab4cb632afd825334aa69cee9790672fa"/>virtual bool <emphasis role="strong">protectedByCommonLocks</emphasis> (const Instruction *I1, const Instruction *I2)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1a1d170ebf9afb5d00b4bd36cc2b415dbb"/>virtual bool <emphasis role="strong">mayHaveDataRace</emphasis> (const Instruction *I1, const Instruction *I2)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_race_result_validator_1a3aa6ef4733150b1ea4ae396263e2d1e4">collectValidationTargets</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1a4327af2795a9aa336543d8b3c3a7bfdf"/>void <link linkend="_class_race_result_validator_1a4327af2795a9aa336543d8b3c3a7bfdf">validateAll</link> ()</para>
+
+<para>Perform validation for all targets. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_race_result_validator_1a4ae48756137dc202d48a4135251f6909"/>std::string <link linkend="_class_race_result_validator_1a4ae48756137dc202d48a4135251f6909">getOutput</link> (const char *scenario, bool analysisRes, bool expectedRes)</para>
+
+<para>Get the validation result string of a single validation scenario. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Validate the result of concurrent analysis. </para>
+
+
+
+<para>The properties to validate of two memory accesses include one or more of the following four: (1) they may accesses aliases; (2) they may happen in parallel; (3) they are protected by common lock(s); (4) they may cause a data race error. The ground truth are specified by the &quot;RC_ACCESS&quot; function in the target program.</para>
+
+<para>Users may utilize this result validator to validate their analysis with one or more of the four properties, by inheriting the RCResultValidator class. The corresponding virtual function of the desired property should be overridden. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_race_result_validator_1a3aa6ef4733150b1ea4ae396263e2d1e4"/>    <section>
+    <title>collectValidationTargets()</title>
+<indexterm><primary>collectValidationTargets</primary><secondary>RaceResultValidator</secondary></indexterm>
+<indexterm><primary>RaceResultValidator</primary><secondary>collectValidationTargets</secondary></indexterm>
+<para><computeroutput>void RaceResultValidator::collectValidationTargets ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Collect the targets for validations. The targets should be memory access Instructions in pairs. The collected targets are stored in the member variable &quot;accessPairs&quot;. </para>
+    </section><anchor xml:id="_class_race_result_validator_1a90189d5d999fcad00a12821d620d6c59"/>    <section>
+    <title>mayAccessAliases()</title>
+<indexterm><primary>mayAccessAliases</primary><secondary>RaceResultValidator</secondary></indexterm>
+<indexterm><primary>RaceResultValidator</primary><secondary>mayAccessAliases</secondary></indexterm>
+<para><computeroutput>virtual bool RaceResultValidator::mayAccessAliases (const Instruction * I1, const Instruction * I2)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Interface to the specific validation properties. Override one or more to implement your own analysis. </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+include/MTA/MTAResultValidator.h</section>
+</section>

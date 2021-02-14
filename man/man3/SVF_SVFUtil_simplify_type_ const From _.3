@@ -1,0 +1,32 @@
+.TH "SVF::SVFUtil::simplify_type< const From >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::SVFUtil::simplify_type< const From >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBNonConstSimpleType\fP = typename \fBsimplify_type\fP< From >::SimpleType"
+.br
+.ti -1c
+.RI "using \fBSimpleType\fP = typename llvm::add_const_past_pointer< NonConstSimpleType >::type"
+.br
+.ti -1c
+.RI "using \fBRetType\fP = typename llvm::add_lvalue_reference_if_not_pointer< SimpleType >::type"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static RetType \fBgetSimplifiedValue\fP (const From &Val)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

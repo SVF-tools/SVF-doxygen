@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_diff_p_t_data" xml:lang="en-US">
+<title>SVF::DiffPTData&lt; Key, Datum, Data &gt; Class Template Reference</title>
+<indexterm><primary>SVF::DiffPTData&lt; Key, Datum, Data &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;AbstractPointsToDS.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::DiffPTData&lt; Key, Datum, Data &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_diff_p_t_data.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1a4c686a448797c17d567d420a92471d83"/>typedef <link linkend="_class_s_v_f_1_1_p_t_data">PTData</link>&lt; Key, Datum, Data &gt; <emphasis role="strong">BasePTData</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1a9fdb53b644ca2c056ddc23891d1ed042"/>typedef <link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">BasePTData::PTDataTy</link> <emphasis role="strong">PTDataTy</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1a46c7a30c83c920fdd30e85987dd3fb7c"/><emphasis role="strong">DiffPTData</emphasis> (bool reversePT=true, <link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">PTDataTy</link> ty=PTDataTy::Diff)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1a7abbdc7ba905339bdc2bf4af3cd285c9"/>virtual const Data &amp; <link linkend="_class_s_v_f_1_1_diff_p_t_data_1a7abbdc7ba905339bdc2bf4af3cd285c9">getDiffPts</link> (Key &amp;var)=0</para>
+
+<para>Get diff points to. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_diff_p_t_data_1aa072ff64b5b36236dc9808e64f2e9d9b">computeDiffPts</link> (Key &amp;var, const Data &amp;all)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_diff_p_t_data_1a18e20bd7054b0aaea4b6ccacd251ce60">updatePropaPtsMap</link> (Key &amp;src, Key &amp;dst)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1a479e6bf3caa96f6dc85f35f74eae2608"/>virtual void <link linkend="_class_s_v_f_1_1_diff_p_t_data_1a479e6bf3caa96f6dc85f35f74eae2608">clearPropaPts</link> (Key &amp;var)=0</para>
+
+<para>Clear propagated points-to set of var. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_class_s_v_f_1_1_diff_p_t_data_1aad11ad25fc11ceaf6802eb39d2e01b6c">classof</link> (const <link linkend="_class_s_v_f_1_1_diff_p_t_data">DiffPTData</link>&lt; Key, Datum, Data &gt; *)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1a5385c9ebfc581e01c03df5b751fdac68"/>static bool <emphasis role="strong">classof</emphasis> (const <link linkend="_class_s_v_f_1_1_p_t_data">PTData</link>&lt; Key, Datum, Data &gt; *ptd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Key, typename Datum, typename Data&gt;
+class SVF::DiffPTData&lt; Key, Datum, Data &gt;</title></simplesect>
+
+
+<para>Abstract diff points-to data with cached information. This is an optimisation on top of the base points-to data structure. The points-to information is propagated incrementally only for the different parts. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1aad11ad25fc11ceaf6802eb39d2e01b6c"/>    <section>
+    <title>classof()</title>
+<indexterm><primary>classof</primary><secondary>SVF::DiffPTData&lt; Key, Datum, Data &gt;</secondary></indexterm>
+<indexterm><primary>SVF::DiffPTData&lt; Key, Datum, Data &gt;</primary><secondary>classof</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Datum , typename Data &gt; </computeroutput><para><computeroutput>static bool <link linkend="_class_s_v_f_1_1_diff_p_t_data">SVF::DiffPTData</link>&lt; Key, Datum, Data &gt;::classof (const <link linkend="_class_s_v_f_1_1_diff_p_t_data">DiffPTData</link>&lt; Key, Datum, Data &gt; * )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Methods to support type inquiry through isa, cast, and dyn_cast: </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1aa072ff64b5b36236dc9808e64f2e9d9b"/>    <section>
+    <title>computeDiffPts()</title>
+<indexterm><primary>computeDiffPts</primary><secondary>SVF::DiffPTData&lt; Key, Datum, Data &gt;</secondary></indexterm>
+<indexterm><primary>SVF::DiffPTData&lt; Key, Datum, Data &gt;</primary><secondary>computeDiffPts</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Datum , typename Data &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_class_s_v_f_1_1_diff_p_t_data">SVF::DiffPTData</link>&lt; Key, Datum, Data &gt;::computeDiffPts (Key &amp; var, const Data &amp; all)<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Compute diff points to. Return TRUE if diff is not empty.<orderedlist>
+<listitem>
+<para>calculate diff: diff = all - propa.</para>
+</listitem><listitem>
+<para>update propagated pts: propa = all. </para>
+</listitem></orderedlist>
+</para>
+<para>
+Implemented in <link linkend="_class_s_v_f_1_1_mutable_diff_p_t_data_1aef050de307f661efb60b62055aa8aacb">SVF::MutableDiffPTData&lt; Key, Datum, Data &gt;</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_diff_p_t_data_1a18e20bd7054b0aaea4b6ccacd251ce60"/>    <section>
+    <title>updatePropaPtsMap()</title>
+<indexterm><primary>updatePropaPtsMap</primary><secondary>SVF::DiffPTData&lt; Key, Datum, Data &gt;</secondary></indexterm>
+<indexterm><primary>SVF::DiffPTData&lt; Key, Datum, Data &gt;</primary><secondary>updatePropaPtsMap</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Datum , typename Data &gt; </computeroutput><para><computeroutput>virtual void <link linkend="_class_s_v_f_1_1_diff_p_t_data">SVF::DiffPTData</link>&lt; Key, Datum, Data &gt;::updatePropaPtsMap (Key &amp; src, Key &amp; dst)<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Update dst&apos;s propagated points-to set with src&apos;s. The final result is the intersection of these two sets. </para>
+<para>
+Implemented in <link linkend="_class_s_v_f_1_1_mutable_diff_p_t_data_1a0fbfcc44d33bb2a2f0abf50666ecc1c1">SVF::MutableDiffPTData&lt; Key, Datum, Data &gt;</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+include/MemoryModel/AbstractPointsToDS.h</section>
+</section>

@@ -1,0 +1,81 @@
+\hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver}{}\doxysection{SVF\+::WPASCCSolver$<$ Graph\+Type $>$ Class Template Reference}
+\label{class_s_v_f_1_1_w_p_a_s_c_c_solver}\index{SVF::WPASCCSolver$<$ GraphType $>$@{SVF::WPASCCSolver$<$ GraphType $>$}}
+
+
+{\ttfamily \#include $<$WPAFSSolver.\+h$>$}
+
+Inheritance diagram for SVF\+::WPASCCSolver$<$ Graph\+Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_s_v_f_1_1_w_p_a_s_c_c_solver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_a1ae985e2ff1a63320f6cbbb20053d808}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_a1ae985e2ff1a63320f6cbbb20053d808}} 
+typedef \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_solver}{WPASolver}}$<$ Graph\+Type $>$\+::GTraits {\bfseries GTraits}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_aa40ff9a4090744e66034f9de38f7f45f}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_aa40ff9a4090744e66034f9de38f7f45f}} 
+typedef \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_solver}{WPASolver}}$<$ Graph\+Type $>$\+::GNODE {\bfseries GNODE}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_abec9201d60f0bf2724dbe9ad8a0dfc39}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_abec9201d60f0bf2724dbe9ad8a0dfc39}} 
+typedef \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_solver}{WPASolver}}$<$ Graph\+Type $>$\+::child\+\_\+iterator {\bfseries child\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_s_c_c_solver_ac37c1063fbdff394c9a313c8d131d893}{solve}} ()
+\begin{DoxyCompactList}\small\item\em Constraint Solving. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_aebc289ed32678fb7f93738927f0887d1}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_aebc289ed32678fb7f93738927f0887d1}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_s_c_c_solver_aebc289ed32678fb7f93738927f0887d1}{propagate}} (GNODE $\ast$v)
+\begin{DoxyCompactList}\small\item\em Propagation for the solving, to be implemented in the child class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_a92c96800a81e69f0148c2d43342837a5}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_a92c96800a81e69f0148c2d43342837a5}} 
+virtual void {\bfseries add\+Node\+Into\+Work\+List} (Node\+ID node)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_ae1ed4875e706677acf22a776f7285185}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_ae1ed4875e706677acf22a776f7285185}} 
+bool {\bfseries is\+In\+Current\+SCC} (Node\+ID node)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_a782121c831536e231f5b287629defef7}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_a782121c831536e231f5b287629defef7}} 
+void {\bfseries set\+Current\+SCC} (Node\+ID id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_a28973d7e1301c36254b67c695e8431aa}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_a28973d7e1301c36254b67c695e8431aa}} 
+Node\+ID \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_s_c_c_solver_a28973d7e1301c36254b67c695e8431aa}{cur\+SCCID}}
+\begin{DoxyCompactList}\small\item\em index of current SCC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Graph\+Type$>$\newline
+class SVF\+::\+WPASCCSolver$<$ Graph\+Type $>$}
+
+Solver based on SCC cycles. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_w_p_a_s_c_c_solver_ac37c1063fbdff394c9a313c8d131d893}\label{class_s_v_f_1_1_w_p_a_s_c_c_solver_ac37c1063fbdff394c9a313c8d131d893}} 
+\index{SVF::WPASCCSolver$<$ GraphType $>$@{SVF::WPASCCSolver$<$ GraphType $>$}!solve@{solve}}
+\index{solve@{solve}!SVF::WPASCCSolver$<$ GraphType $>$@{SVF::WPASCCSolver$<$ GraphType $>$}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily template$<$class Graph\+Type $>$ \\
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_s_c_c_solver}{SVF\+::\+WPASCCSolver}}$<$ Graph\+Type $>$\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Constraint Solving. 
+
+All nodes will be solved afterwards, so the worklist can be cleared before each solve iteration.
+
+Reimplemented from \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_solver_a44d31c197e7f6d88e410c7d85fdd6bdc}{SVF\+::\+WPASolver$<$ Graph\+Type $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_s_v_f_1_1_w_p_a_minimum_solver_afb4c3a86fdb91cbb555669003cf299c2}{SVF\+::\+WPAMinimum\+Solver$<$ Graph\+Type $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+WPA/WPAFSSolver.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+.TH "SVF::MemObj" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::MemObj
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MemModel\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMemObj\fP (const Value *val, SymID id)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fBMemObj\fP (SymID id, const Type *type=NULL)"
+.br
+.RI "Constructor for black hole and constant obj\&. "
+.ti -1c
+.RI "\fB~MemObj\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBinit\fP (const Value *val)"
+.br
+.RI "Initialize the object\&. "
+.ti -1c
+.RI "void \fBinit\fP (const Type *type)"
+.br
+.RI "Initialize black hole and constant object\&. "
+.ti -1c
+.RI "const llvm::Type * \fBgetType\fP () const"
+.br
+.RI "Get obj type\&. "
+.ti -1c
+.RI "Size_t \fBgetMaxFieldOffsetLimit\fP () const"
+.br
+.RI "Get max field offset limit\&. "
+.ti -1c
+.RI "const Value * \fBgetRefVal\fP () const"
+.br
+.RI "Get the reference value to this object\&. "
+.ti -1c
+.RI "SymID \fBgetSymId\fP () const"
+.br
+.RI "Get the memory object id\&. "
+.ti -1c
+.RI "bool \fBisFieldInsensitive\fP () const"
+.br
+.RI "Return true if its field limit is 0\&. "
+.ti -1c
+.RI "void \fBsetFieldInsensitive\fP ()"
+.br
+.RI "Set the memory object to be field insensitive\&. "
+.ti -1c
+.RI "void \fBsetFieldSensitive\fP ()"
+.br
+.RI "Set the memory object to be field sensitive (up to max field limit) "
+.ti -1c
+.RI "bool \fBisBlackHoleObj\fP () const"
+.br
+.RI "Whether it is a black hole object\&. "
+.ti -1c
+.RI "bool \fBisFunction\fP () const"
+.br
+.RI "object attributes methods "
+.ti -1c
+.RI "bool \fBisGlobalObj\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisStaticObj\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisStack\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisHeap\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisStruct\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisArray\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisVarStruct\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisVarArray\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisConstStruct\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisConstArray\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisConstant\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhasPtrObj\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisNonPtrFieldObj\fP (const \fBLocationSet\fP &ls) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBMemObj\fP &mem) const"
+.br
+.RI "Operator overloading\&. "
+.ti -1c
+.RI "void \fBdestroy\fP ()"
+.br
+.RI "Clean up memory\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Memory Object 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MemObj::MemObj (const Value * val, SymID id)"
+
+.PP
+Constructor\&. Constructor of a memory object 
+.SS "MemObj::MemObj (SymID id, const Type * type = \fCNULL\fP)"
+
+.PP
+Constructor for black hole and constant obj\&. Constructor of a memory object 
+.SH "Member Function Documentation"
+.PP 
+.SS "const Type * MemObj::getType () const"
+
+.PP
+Get obj type\&. Get obj type info\&. 
+.SS "bool MemObj::isBlackHoleObj () const"
+
+.PP
+Whether it is a black hole object\&. Whether it is a black hole object 
+.SS "void MemObj::setFieldSensitive ()"
+
+.PP
+Set the memory object to be field sensitive (up to max field limit) Set mem object to be field sensitive (up to maximum field limit) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

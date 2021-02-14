@@ -1,0 +1,2184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_d_d_a_v_f_solver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SVF::DDAVFSolver</compoundname>
+    <includes refid="_d_d_a_v_f_solver_8h" local="no">DDAVFSolver.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class CVar</type>
+      </param>
+      <param>
+        <type>class CPtSet</type>
+      </param>
+      <param>
+        <type>class DPIm</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1afdecfbacc64cb8d694268aa73ec8a7b6" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::outOfBudgetQuery</definition>
+        <argsstring></argsstring>
+        <name>outOfBudgetQuery</name>
+        <briefdescription>
+<para>Whether the current query is out of step limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="751" column="10" bodyfile="include/DDA/DDAVFSolver.h" bodystart="751" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1af08857f907caa32c090eed2c1b404729" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> *</type>
+        <definition>PAG* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::_pag</definition>
+        <argsstring></argsstring>
+        <name>_pag</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="752" column="9" bodyfile="include/DDA/DDAVFSolver.h" bodystart="752" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a74d83f06e8fc0ecedc1e1846030c99c6" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> *</type>
+        <definition>SVFG* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::_svfg</definition>
+        <argsstring></argsstring>
+        <name>_svfg</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="753" column="10" bodyfile="include/DDA/DDAVFSolver.h" bodystart="753" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aa1d1b6e8cc23f0a6d3935cbe4f02cbdf" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_andersen_wave_diff" kindref="compound">AndersenWaveDiff</ref> *</type>
+        <definition>AndersenWaveDiff* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::_ander</definition>
+        <argsstring></argsstring>
+        <name>_ander</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_andersen" kindref="compound">Andersen</ref>&apos;s analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="754" column="22" bodyfile="include/DDA/DDAVFSolver.h" bodystart="754" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ae0e78fafb7eec0fbc1a02d24547335e9" prot="protected" static="no" mutable="no">
+        <type>NodeBS</type>
+        <definition>NodeBS SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::candidateQueries</definition>
+        <argsstring></argsstring>
+        <name>candidateQueries</name>
+        <briefdescription>
+<para>candidate pointers; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="755" column="12" bodyfile="include/DDA/DDAVFSolver.h" bodystart="755" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1abf24080617c6a74abed9f0bb0bc9c0c5" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_p_t_a_call_graph" kindref="compound">PTACallGraph</ref> *</type>
+        <definition>PTACallGraph* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::_callGraph</definition>
+        <argsstring></argsstring>
+        <name>_callGraph</name>
+        <briefdescription>
+<para>CallGraph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="756" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="756" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a4c307d486756daa1e79595b1e9edc40a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">CallGraphSCC</ref> *</type>
+        <definition>CallGraphSCC* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::_callGraphSCC</definition>
+        <argsstring></argsstring>
+        <name>_callGraphSCC</name>
+        <briefdescription>
+<para>SCC for CallGraph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="757" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="757" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a54f5d4972238ae69f19c9da3b9f51644" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SVFGSCC</ref> *</type>
+        <definition>SVFGSCC* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::_svfgSCC</definition>
+        <argsstring></argsstring>
+        <name>_svfgSCC</name>
+        <briefdescription>
+<para>SCC for <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="758" column="13" bodyfile="include/DDA/DDAVFSolver.h" bodystart="758" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a63d04c3af4529d0e0f82acd76ed57f6c" prot="protected" static="no" mutable="no">
+        <type>DPTItemSet</type>
+        <definition>DPTItemSet SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::backwardVisited</definition>
+        <argsstring></argsstring>
+        <name>backwardVisited</name>
+        <briefdescription>
+<para>visited map during backward traversing </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="759" column="16" bodyfile="include/DDA/DDAVFSolver.h" bodystart="759" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a2d6df8149b45d719e22fc505df94171a" prot="protected" static="no" mutable="no">
+        <type>DPImToCPtSetMap</type>
+        <definition>DPImToCPtSetMap SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::dpmToTLCPtSetMap</definition>
+        <argsstring></argsstring>
+        <name>dpmToTLCPtSetMap</name>
+        <briefdescription>
+<para>points-to caching map for top-level vars </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="760" column="21" bodyfile="include/DDA/DDAVFSolver.h" bodystart="760" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a2565bf8dcacb22350dc1dc98ec7595f2" prot="protected" static="no" mutable="no">
+        <type>DPImToCPtSetMap</type>
+        <definition>DPImToCPtSetMap SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::dpmToADCPtSetMap</definition>
+        <argsstring></argsstring>
+        <name>dpmToADCPtSetMap</name>
+        <briefdescription>
+<para>points-to caching map for address-taken vars </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="761" column="21" bodyfile="include/DDA/DDAVFSolver.h" bodystart="761" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aa724698d499615bce7caf8f312b746a7" prot="protected" static="no" mutable="no">
+        <type>LocToDPMVecMap</type>
+        <definition>LocToDPMVecMap SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::locToDpmSetMap</definition>
+        <argsstring></argsstring>
+        <name>locToDpmSetMap</name>
+        <briefdescription>
+<para>map location to its dpms </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="762" column="20" bodyfile="include/DDA/DDAVFSolver.h" bodystart="762" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a9d8959dfee05685cd74d0d7a78069692" prot="protected" static="no" mutable="no">
+        <type>DPMToDPMMap</type>
+        <definition>DPMToDPMMap SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::dpmToloadDpmMap</definition>
+        <argsstring></argsstring>
+        <name>dpmToloadDpmMap</name>
+        <briefdescription>
+<para>dpms at loads for may/must-alias analysis with stores </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="763" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="763" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a6d62420837fe0c7814fc4da68a91eda4" prot="protected" static="no" mutable="no">
+        <type>DPMToCVarMap</type>
+        <definition>DPMToCVarMap SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::loadToPTCVarMap</definition>
+        <argsstring></argsstring>
+        <name>loadToPTCVarMap</name>
+        <briefdescription>
+<para>map a load dpm to its cvar pointed by its pointer operand </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="764" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="764" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aad57a954473f3099188cf8c8fba87880" prot="protected" static="no" mutable="no">
+        <type>DPTItemSet</type>
+        <definition>DPTItemSet SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::outOfBudgetDpms</definition>
+        <argsstring></argsstring>
+        <name>outOfBudgetDpms</name>
+        <briefdescription>
+<para>out of budget dpm set </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="765" column="16" bodyfile="include/DDA/DDAVFSolver.h" bodystart="765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1af66895278f0ecbc882f9e4f43ef9c8a8" prot="protected" static="no" mutable="no">
+        <type>StoreToPMSetMap</type>
+        <definition>StoreToPMSetMap SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::storeToDPMs</definition>
+        <argsstring></argsstring>
+        <name>storeToDPMs</name>
+        <briefdescription>
+<para>map store to set of DPM which have been stong updated there </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="766" column="21" bodyfile="include/DDA/DDAVFSolver.h" bodystart="766" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ae40c7bad663e0fa07dee4be3d1794ff2" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_d_d_a_stat" kindref="compound">DDAStat</ref> *</type>
+        <definition>DDAStat* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::ddaStat</definition>
+        <argsstring></argsstring>
+        <name>ddaStat</name>
+        <briefdescription>
+<para>DDA stat. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="767" column="13" bodyfile="include/DDA/DDAVFSolver.h" bodystart="767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a0d563fe8b016b27a58f5b054fec9c38a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_s_v_f_g_builder" kindref="compound">SVFGBuilder</ref></type>
+        <definition>SVFGBuilder SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::svfgBuilder</definition>
+        <argsstring></argsstring>
+        <name>svfgBuilder</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> Builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="768" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="768" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1acd694c2092adf8c516d1aba5f798cec7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::startNewPTCompFromLoadSrc</definition>
+        <argsstring>(CPtSet &amp;pts, const DPIm &amp;oldDpm)</argsstring>
+        <name>startNewPTCompFromLoadSrc</name>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>oldDpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Backward traverse for top-level pointers of load/store statements </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="364" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="364" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aff744e724dcf06a2b1cdd7ba2b1093f1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::startNewPTCompFromStoreDst</definition>
+        <argsstring>(CPtSet &amp;pts, const DPIm &amp;oldDpm)</argsstring>
+        <name>startNewPTCompFromStoreDst</name>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>oldDpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="375" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="375" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1adbd209b4a2327b2b068fbb56e12042f7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::backtraceToStoreSrc</definition>
+        <argsstring>(CPtSet &amp;pts, const DPIm &amp;oldDpm)</argsstring>
+        <name>backtraceToStoreSrc</name>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>oldDpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="385" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="385" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1af6a6243b497df5fdab9f658b9add9c8a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::backwardPropDpm</definition>
+        <argsstring>(CPtSet &amp;pts, NodeID ptr, const DPIm &amp;oldDpm, const SVFGEdge *edge)</argsstring>
+        <name>backwardPropDpm</name>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>NodeID</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>oldDpm</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>dpm transit during backward tracing </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>handle context-/path- sensitivity</para>
+<para>record the source of load dpm</para>
+<para>handle out of budget case</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="398" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="398" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a345e5379f53b618adef014aa6887bfe7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isMustAlias</definition>
+        <argsstring>(const DPIm &amp;, const DPIm &amp;)</argsstring>
+        <name>isMustAlias</name>
+        <param>
+          <type>const DPIm &amp;</type>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+        </param>
+        <briefdescription>
+<para>whether load and store are aliased </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="421" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="421" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a94bcddbc7b9ccecb3fbb693b13372785" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isStrongUpdate</definition>
+        <argsstring>(const CPtSet &amp;dstCPSet, const StoreSVFGNode *store)</argsstring>
+        <name>isStrongUpdate</name>
+        <param>
+          <type>const CPtSet &amp;</type>
+          <declname>dstCPSet</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_store_v_f_g_node" kindref="compound">StoreSVFGNode</ref> *</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+<para>Return TRUE if this is a strong update STORE statement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Find the unique element in cpts</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="426" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="426" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a20cadb651b41343437e135e985c4e566" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isLocalCVarInRecursion</definition>
+        <argsstring>(const CVar &amp;var) const</argsstring>
+        <name>isLocalCVarInRecursion</name>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Whether a local variable is in function recursions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="443" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="443" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ace35b8247204d9806ca1a4f01bff2364" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::propagateViaObj</definition>
+        <argsstring>(const CVar &amp;storeObj, const CVar &amp;loadObj)</argsstring>
+        <name>propagateViaObj</name>
+        <reimplementedby refid="class_s_v_f_1_1_context_d_d_a_1a45d7a381fec0692b4d2f7d0eec47ccf1">propagateViaObj</reimplementedby>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>storeObj</declname>
+        </param>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>loadObj</declname>
+        </param>
+        <briefdescription>
+<para>If the points-to contain the object obj, we could move forward along indirect value-flow edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="460" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="460" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1afcc074be34dd0c45418ff16b3d9d4192" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::resolveFunPtr</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>resolveFunPtr</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+<para>resolve function pointer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>use pre-analysis call graph to approximate all potential callsites</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="467" column="10" bodyfile="include/DDA/DDAVFSolver.h" bodystart="467" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a3fa002d4ba4194ffde62ecbdd361a24d" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>NodeID</type>
+        <definition>virtual NodeID SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getPtrNodeID</definition>
+        <argsstring>(const CVar &amp;var) const =0</argsstring>
+        <name>getPtrNodeID</name>
+        <reimplementedby refid="class_s_v_f_1_1_context_d_d_a_1a6ae16be6774994932aaa594c9b9cb397">getPtrNodeID</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1a9749c82c1164adb17e2ae53e725ded9a">getPtrNodeID</reimplementedby>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Methods to be implemented in child class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get variable ID (PAGNodeID) according to CVar </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="496" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ab10a34efa1acb6125ea32cf7a8cf919f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>CPtSet</type>
+        <definition>virtual CPtSet SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::processGepPts</definition>
+        <argsstring>(const GepSVFGNode *gep, const CPtSet &amp;srcPts)=0</argsstring>
+        <name>processGepPts</name>
+        <reimplementedby refid="class_s_v_f_1_1_context_d_d_a_1aefd2b50015aa98fa88a508e3ed1d402a">processGepPts</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1ac48be374351dad54ee2418dde841cf24">processGepPts</reimplementedby>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_gep_v_f_g_node" kindref="compound">GepSVFGNode</ref> *</type>
+          <declname>gep</declname>
+        </param>
+        <param>
+          <type>const CPtSet &amp;</type>
+          <declname>srcPts</declname>
+        </param>
+        <briefdescription>
+<para>ProcessGep node to generate field object nodes of a struct. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="498" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1acfe7d961caac8f0f558881a9a006b1fa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::handleAddr</definition>
+        <argsstring>(CPtSet &amp;pts, const DPIm &amp;dpm, const AddrSVFGNode *addr)=0</argsstring>
+        <name>handleAddr</name>
+        <reimplementedby refid="class_s_v_f_1_1_context_d_d_a_1a26031c81d3eba5b3ff3ebd51d89510ae">handleAddr</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1a1b8d66dbe8c6587e74d70f5d231eb69d">handleAddr</reimplementedby>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_addr_v_f_g_node" kindref="compound">AddrSVFGNode</ref> *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Handle AddrSVFGNode to add proper points-to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="500" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a38f5a6b666b2a427d55f1217f9c5595f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>CPtSet</type>
+        <definition>virtual CPtSet SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getConservativeCPts</definition>
+        <argsstring>(const DPIm &amp;dpm)=0</argsstring>
+        <name>getConservativeCPts</name>
+        <reimplementedby refid="class_s_v_f_1_1_context_d_d_a_1a32ce0085cb99f92f63b54df0f2ea2523">getConservativeCPts</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1a086e428c83c2c3ed7fdfbbfd17abdf78">getConservativeCPts</reimplementedby>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+<para>Get conservative points-to results when the query is out of budget. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="502" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a601282325e55badc15f3ba9141816af5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::handleBKCondition</definition>
+        <argsstring>(DPIm &amp;, const SVFGEdge *)</argsstring>
+        <name>handleBKCondition</name>
+        <reimplementedby refid="class_s_v_f_1_1_context_d_d_a_1aa8a7b6e99b92abfa5c2404515b703a2d">handleBKCondition</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1addb412dc03c7684889693ce263585867">handleBKCondition</reimplementedby>
+        <param>
+          <type>DPIm &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Handle condition for context or path analysis (backward analysis) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="504" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="504" bodyend="507"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a4f63b6b3a06633675ae99667cbaa6cdc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::updateCallGraphAndSVFG</definition>
+        <argsstring>(const DPIm &amp;, const CallBlockNode *, SVFGEdgeSet &amp;)</argsstring>
+        <name>updateCallGraphAndSVFG</name>
+        <reimplementedby refid="class_s_v_f_1_1_context_d_d_a_1a4b8466d2e8e885fea2f41b5713f785bd">updateCallGraphAndSVFG</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1ad6f9b84e18367f40c7c2d26bedda7684">updateCallGraphAndSVFG</reimplementedby>
+        <param>
+          <type>const DPIm &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+        </param>
+        <param>
+          <type>SVFGEdgeSet &amp;</type>
+        </param>
+        <briefdescription>
+<para>Update call graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="509" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="509" bodyend="509"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a7112ce6145be0855f8b035bb0d8a331c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::markbkVisited</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>markbkVisited</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+<para>Visited flags to avoid cycles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="514" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="514" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a9a9c3a8b5e4ffc89418073110e446f20" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isbkVisited</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>isbkVisited</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="518" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="518" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aa7e5839c5bc6f913561de10bce61e74b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::clearbkVisited</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>clearbkVisited</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="522" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="522" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ae31e9281e4f1e0585fdf328b7339e1bf" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const CPtSet &amp;</type>
+        <definition>virtual const CPtSet&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getCachedPointsTo</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>getCachedPointsTo</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+<para>Points-to Caching for top-level pointers and address-taken objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="531" column="33" bodyfile="include/DDA/DDAVFSolver.h" bodystart="531" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a239a55960dfbbe73df63063070a18b56" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::updateCachedPointsTo</definition>
+        <argsstring>(const DPIm &amp;dpm, const CPtSet &amp;pts)</argsstring>
+        <name>updateCachedPointsTo</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="538" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="538" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aac432dfa7ccfc3434d9e0e2eb65afe7f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const CPtSet &amp;</type>
+        <definition>virtual const CPtSet&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getCachedTLPointsTo</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>getCachedTLPointsTo</name>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1a950d653b249cfc2d20932adb3498b99b">getCachedTLPointsTo</reimplementedby>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="547" column="33" bodyfile="include/DDA/DDAVFSolver.h" bodystart="547" bodyend="550"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a2a2b3783074c9f509fc265b97b979704" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const CPtSet &amp;</type>
+        <definition>virtual const CPtSet&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getCachedADPointsTo</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>getCachedADPointsTo</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="551" column="33" bodyfile="include/DDA/DDAVFSolver.h" bodystart="551" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a7b35588de00e322afd742041bf735571" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isTopLevelPtrStmt</definition>
+        <argsstring>(const SVFGNode *stmt)</argsstring>
+        <name>isTopLevelPtrStmt</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>stmt</declname>
+        </param>
+        <briefdescription>
+<para>Whether this is a top-level pointer statement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="558" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="558" bodyend="564"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ac4cb0b666d68d135c5e385bfc880fd67" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>DPIm</type>
+        <definition>virtual DPIm SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getDPImWithOldCond</definition>
+        <argsstring>(const DPIm &amp;oldDpm, const CVar &amp;var, const SVFGNode *loc)</argsstring>
+        <name>getDPImWithOldCond</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>oldDpm</declname>
+        </param>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Return dpm with old context and path conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="566" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="566" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aba0ec611a5cfd096ac0b8b11e0bd5580" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::SVFGSCCDetection</definition>
+        <argsstring>()</argsstring>
+        <name>SVFGSCCDetection</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> SCC detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="581" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="581" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a1583ed2eb1d4b88dc2a5b4c0b6842496" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeID</type>
+        <definition>NodeID SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getSVFGSCCRepNode</definition>
+        <argsstring>(NodeID id)</argsstring>
+        <name>getSVFGSCCRepNode</name>
+        <param>
+          <type>NodeID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get SCC rep node of a <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="590" column="19" bodyfile="include/DDA/DDAVFSolver.h" bodystart="590" bodyend="593"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1add7daee4a0ecae479a5ab015130c8c93" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isSVFGNodeInCycle</definition>
+        <argsstring>(const SVFGNode *node)</argsstring>
+        <name>isSVFGNodeInCycle</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Return whether this SVFGNode is in cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="595" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="595" bodyend="598"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a034e3c8b2eec00aee9de439dfeeda332" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::edgeInSVFGSCC</definition>
+        <argsstring>(const SVFGEdge *edge)</argsstring>
+        <name>edgeInSVFGSCC</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>Return TRUE if this edge is inside a <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> SCC, i.e., src node and dst node are in the same SCC on the <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="600" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="600" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1afc2b0eeb1d5d5f292690f3c949217c38" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::setCallGraph</definition>
+        <argsstring>(PTACallGraph *cg)</argsstring>
+        <name>setCallGraph</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_p_t_a_call_graph" kindref="compound">PTACallGraph</ref> *</type>
+          <declname>cg</declname>
+        </param>
+        <briefdescription>
+<para>Set callgraph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="605" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="605" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1abd652b2627f68d7d4f8bf3bdb20ce975" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::setCallGraphSCC</definition>
+        <argsstring>(CallGraphSCC *scc)</argsstring>
+        <name>setCallGraphSCC</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">CallGraphSCC</ref> *</type>
+          <declname>scc</declname>
+        </param>
+        <briefdescription>
+<para>Set callgraphSCC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="610" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="610" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a645c7d0637b49e139898016ff652e1f3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isHeapCondMemObj</definition>
+        <argsstring>(const CVar &amp;var, const StoreSVFGNode *)</argsstring>
+        <name>isHeapCondMemObj</name>
+        <reimplementedby refid="class_s_v_f_1_1_context_d_d_a_1a02902af9bc4455b994a5da4a9d6cf121">isHeapCondMemObj</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1afc3b2b4e0da7a2484ec35c3ce84a9d60">isHeapCondMemObj</reimplementedby>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_store_v_f_g_node" kindref="compound">StoreSVFGNode</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Check heap and array object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="616" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="616" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a9aaa5ee3dc8abc51c4b6e463e1949ee7" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isArrayCondMemObj</definition>
+        <argsstring>(const CVar &amp;var) const</argsstring>
+        <name>isArrayCondMemObj</name>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="623" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="623" bodyend="628"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a37a6321f50bef2939b287cc088e76170" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isFieldInsenCondMemObj</definition>
+        <argsstring>(const CVar &amp;var) const</argsstring>
+        <name>isFieldInsenCondMemObj</name>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="629" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="629" bodyend="633"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a1cd1023bca18db16bc54e622c881e494" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::addLoadDpmAndCVar</definition>
+        <argsstring>(const DPIm &amp;dpm, const DPIm &amp;loadDpm, const CVar &amp;loadVar)</argsstring>
+        <name>addLoadDpmAndCVar</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>loadDpm</declname>
+        </param>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>loadVar</declname>
+        </param>
+        <briefdescription>
+<para>LoadDpm for must-alias analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="659" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="659" bodyend="663"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a4725013a7617645e1418ed670d4837b5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::addLoadDpm</definition>
+        <argsstring>(const DPIm &amp;dpm, const DPIm &amp;loadDpm)</argsstring>
+        <name>addLoadDpm</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>loadDpm</declname>
+        </param>
+        <briefdescription>
+<para>Note that simply use &quot;dpmToloadDpmMap[dpm]=loadDpm&quot;, requires DPIm have a default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="665" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="665" bodyend="672"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a630aad14a285c954a50c632f9cb13fa9" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const DPIm &amp;</type>
+        <definition>const DPIm&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getLoadDpm</definition>
+        <argsstring>(const DPIm &amp;dpm) const</argsstring>
+        <name>getLoadDpm</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="673" column="23" bodyfile="include/DDA/DDAVFSolver.h" bodystart="673" bodyend="678"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a7579491400f1781356cb7d1913537547" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::addLoadCVar</definition>
+        <argsstring>(const DPIm &amp;dpm, const CVar &amp;loadVar)</argsstring>
+        <name>addLoadCVar</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>loadVar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="679" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="679" bodyend="686"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ad42efad8e857290459689833c224e467" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const CVar &amp;</type>
+        <definition>const CVar&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getLoadCVar</definition>
+        <argsstring>(const DPIm &amp;dpm) const</argsstring>
+        <name>getLoadCVar</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="687" column="23" bodyfile="include/DDA/DDAVFSolver.h" bodystart="687" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ac39860015b45b9af6351d0343f8983bb" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_andersen_wave_diff" kindref="compound">AndersenWaveDiff</ref> *</type>
+        <definition>AndersenWaveDiff* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getAndersenAnalysis</definition>
+        <argsstring>() const</argsstring>
+        <name>getAndersenAnalysis</name>
+        <briefdescription>
+<para>Return <ref refid="class_s_v_f_1_1_andersen" kindref="compound">Andersen</ref>&apos;s analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="695" column="29" bodyfile="include/DDA/DDAVFSolver.h" bodystart="695" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a9005f1f0e4a808838276ff44b300f96d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::handleOutOfBudgetDpm</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>handleOutOfBudgetDpm</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+<para>handle out-of-budget queries </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle out-of-budget dpm </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="702" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="702" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a3fb52286c5324ea3d58e22c630b307e3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::testOutOfBudget</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>testOutOfBudget</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="703" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="703" bodyend="709"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a7994236bff84ba8244592fdf5e546734" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isOutOfBudgetQuery</definition>
+        <argsstring>() const</argsstring>
+        <name>isOutOfBudgetQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="710" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="710" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ae1e77060ac22d465b5cc9430962e280c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::addOutOfBudgetDpm</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>addOutOfBudgetDpm</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="714" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="714" bodyend="717"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a0b1f774883adc7d535f8363bf3c8b1e8" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::isOutOfBudgetDpm</definition>
+        <argsstring>(const DPIm &amp;dpm) const</argsstring>
+        <name>isOutOfBudgetDpm</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="718" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="718" bodyend="721"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1adcb641eec4f620effdb3f61a46429f40" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_d_d_a_stat" kindref="compound">DDAStat</ref> *</type>
+        <definition>DDAStat* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::setDDAStat</definition>
+        <argsstring>(DDAStat *s)</argsstring>
+        <name>setDDAStat</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_d_d_a_stat" kindref="compound">DDAStat</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="class_s_v_f_1_1_d_d_a_stat" kindref="compound">DDAStat</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="725" column="20" bodyfile="include/DDA/DDAVFSolver.h" bodystart="725" bodyend="729"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aeb6b56cf3d140d251b0524eb5cbd6dce" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::addSUStat</definition>
+        <argsstring>(const DPIm &amp;dpm, const SVFGNode *node)</argsstring>
+        <name>addSUStat</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>stat strong updates num </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="731" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="731" bodyend="738"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a7d0775354df32f293e98578ed071d33c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::rmSUStat</definition>
+        <argsstring>(const DPIm &amp;dpm, const SVFGNode *node)</argsstring>
+        <name>rmSUStat</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>remove strong updates num if the dpm goes to weak updates branch </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="740" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="740" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ad849ae4509e88832f784c748468ab959" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const LocToDPMVecMap &amp;</type>
+        <definition>const LocToDPMVecMap&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getLocToDPMVecMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getLocToDPMVecMap</name>
+        <briefdescription>
+<para>Map a SVFGNode to its dpms for handling value-flow cycles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="638" column="33" bodyfile="include/DDA/DDAVFSolver.h" bodystart="638" bodyend="641"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a6c32a1cdcdbea0151c8cf17ffe598f29" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const DPTItemSet &amp;</type>
+        <definition>const DPTItemSet&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getDpmSetAtLoc</definition>
+        <argsstring>(const SVFGNode *loc)</argsstring>
+        <name>getDpmSetAtLoc</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="642" column="29" bodyfile="include/DDA/DDAVFSolver.h" bodystart="642" bodyend="645"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1af7be3fa6c73dde97d6f9fd0395c9aee0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::addDpmToLoc</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>addDpmToLoc</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="646" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="646" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a00ae738a76564b7b334faae567674e34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::removeDpmFromLoc</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>removeDpmFromLoc</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="650" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="650" bodyend="654"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a502207f81ed22fa42f9e18ccba83ad4e" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SCCDetection</ref>&lt; <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> * &gt;</type>
+        <definition>typedef SCCDetection&lt;SVFG*&gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::SVFGSCC</definition>
+        <argsstring></argsstring>
+        <name>SVFGSCC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="28" column="26" bodyfile="include/DDA/DDAVFSolver.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1af6e05e87ba8d6b6ae65807803b1b0221" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SCCDetection</ref>&lt; <ref refid="class_s_v_f_1_1_p_t_a_call_graph" kindref="compound">PTACallGraph</ref> * &gt;</type>
+        <definition>typedef SCCDetection&lt;PTACallGraph*&gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::CallGraphSCC</definition>
+        <argsstring></argsstring>
+        <name>CallGraphSCC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="29" column="26" bodyfile="include/DDA/DDAVFSolver.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ac227096ad71dfda8bc48c139fccb3af2" prot="public" static="no">
+        <type>PTACallGraphEdge::CallInstSet</type>
+        <definition>typedef PTACallGraphEdge::CallInstSet SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::CallInstSet</definition>
+        <argsstring></argsstring>
+        <name>CallInstSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="30" column="43" bodyfile="include/DDA/DDAVFSolver.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a7248a3fe0078a2b13786765b5f014ba6" prot="public" static="no">
+        <type>PAG::CallSiteSet</type>
+        <definition>typedef PAG::CallSiteSet SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::CallSiteSet</definition>
+        <argsstring></argsstring>
+        <name>CallSiteSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="31" column="30" bodyfile="include/DDA/DDAVFSolver.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a05d6b074b04aad7dc1f3cbe0ca587467" prot="public" static="no">
+        <type>OrderedSet&lt; DPIm &gt;</type>
+        <definition>typedef OrderedSet&lt;DPIm&gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::DPTItemSet</definition>
+        <argsstring></argsstring>
+        <name>DPTItemSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="32" column="24" bodyfile="include/DDA/DDAVFSolver.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a8b5a34679fb1362425c88d6e74b6c019" prot="public" static="no">
+        <type>OrderedMap&lt; DPIm, CPtSet &gt;</type>
+        <definition>typedef OrderedMap&lt;DPIm, CPtSet&gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::DPImToCPtSetMap</definition>
+        <argsstring></argsstring>
+        <name>DPImToCPtSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="33" column="24" bodyfile="include/DDA/DDAVFSolver.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1af0538abf12c01d31a0296553e2f7c92d" prot="public" static="no">
+        <type>OrderedMap&lt; DPIm, CVar &gt;</type>
+        <definition>typedef OrderedMap&lt;DPIm,CVar&gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::DPMToCVarMap</definition>
+        <argsstring></argsstring>
+        <name>DPMToCVarMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="34" column="24" bodyfile="include/DDA/DDAVFSolver.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a2ccbcfa949a1796094b5d9499177fc2b" prot="public" static="no">
+        <type>OrderedMap&lt; DPIm, DPIm &gt;</type>
+        <definition>typedef OrderedMap&lt;DPIm,DPIm&gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::DPMToDPMMap</definition>
+        <argsstring></argsstring>
+        <name>DPMToDPMMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="35" column="24" bodyfile="include/DDA/DDAVFSolver.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aab76f98ae4f0c1f62f101ac5c5fdbf83" prot="public" static="no">
+        <type>OrderedMap&lt; NodeID, DPTItemSet &gt;</type>
+        <definition>typedef OrderedMap&lt;NodeID, DPTItemSet&gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::LocToDPMVecMap</definition>
+        <argsstring></argsstring>
+        <name>LocToDPMVecMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="36" column="24" bodyfile="include/DDA/DDAVFSolver.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aef98e8e9144a69bb7481fef5d2dcb303" prot="public" static="no">
+        <type>OrderedSet&lt; const <ref refid="class_s_v_f_1_1_v_f_g_edge" kindref="compound">SVFGEdge</ref> * &gt;</type>
+        <definition>typedef OrderedSet&lt;const SVFGEdge* &gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::ConstSVFGEdgeSet</definition>
+        <argsstring></argsstring>
+        <name>ConstSVFGEdgeSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="37" column="24" bodyfile="include/DDA/DDAVFSolver.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a6489319b33a807f7caba2d34017a3e1b" prot="public" static="no">
+        <type>SVFGEdge::SVFGEdgeSetTy</type>
+        <definition>typedef SVFGEdge::SVFGEdgeSetTy SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::SVFGEdgeSet</definition>
+        <argsstring></argsstring>
+        <name>SVFGEdgeSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="38" column="37" bodyfile="include/DDA/DDAVFSolver.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_d_d_a_v_f_solver_1accaacd2dd680f92ff83cfe75eef6ffab" prot="public" static="no">
+        <type>OrderedMap&lt; const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *, DPTItemSet &gt;</type>
+        <definition>typedef OrderedMap&lt;const SVFGNode*, DPTItemSet&gt; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::StoreToPMSetMap</definition>
+        <argsstring></argsstring>
+        <name>StoreToPMSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="39" column="24" bodyfile="include/DDA/DDAVFSolver.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_s_v_f_1_1_d_d_a_v_f_solver_1af83f88f2ae2456f2691e8822d56b1598" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DDAStat</definition>
+        <argsstring></argsstring>
+        <name>DDAStat</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_d_d_a_stat" kindref="compound">DDAStat</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="26" column="5" bodyfile="include/DDA/DDAVFSolver.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a7ee96b513074c283d23434590ce15e7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::DDAVFSolver</definition>
+        <argsstring>()</argsstring>
+        <name>DDAVFSolver</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="42" column="5" bodyfile="include/DDA/DDAVFSolver.h" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a211f2f0c572d5085d22c2cb40341b606" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::~DDAVFSolver</definition>
+        <argsstring>()</argsstring>
+        <name>~DDAVFSolver</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="46" column="13" bodyfile="include/DDA/DDAVFSolver.h" bodystart="46" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a73bbf4f763316e8d5db62d163da35a18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeBS &amp;</type>
+        <definition>NodeBS&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getCandidateQueries</definition>
+        <argsstring>()</argsstring>
+        <name>getCandidateQueries</name>
+        <briefdescription>
+<para>Return candidate pointers for DDA. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="68" column="19" bodyfile="include/DDA/DDAVFSolver.h" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ad7d92fad8606d5512786a7b7a08930e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>DPIm</type>
+        <definition>virtual DPIm SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getDPIm</definition>
+        <argsstring>(const CVar &amp;var, const SVFGNode *loc) const</argsstring>
+        <name>getDPIm</name>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Given CVar and location (SVFGNode) return a new <ref refid="class_s_v_f_1_1_d_p_item" kindref="compound">DPItem</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="73" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a99764ee5bc19378795fe464e9036e78b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::unionDDAPts</definition>
+        <argsstring>(CPtSet &amp;pts, const CPtSet &amp;targetPts)</argsstring>
+        <name>unionDDAPts</name>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>const CPtSet &amp;</type>
+          <declname>targetPts</declname>
+        </param>
+        <briefdescription>
+<para>Union pts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="79" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ae7949e141978474f3b6cb510bacafa37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::unionDDAPts</definition>
+        <argsstring>(DPIm dpm, const CPtSet &amp;targetPts)</argsstring>
+        <name>unionDDAPts</name>
+        <reimplementedby refid="class_s_v_f_1_1_flow_d_d_a_1a3d08dfe5a1571f5d631afcd304905a05">unionDDAPts</reimplementedby>
+        <param>
+          <type>DPIm</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const CPtSet &amp;</type>
+          <declname>targetPts</declname>
+        </param>
+        <briefdescription>
+<para>Union pts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="84" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a5a8632a957fce63f186dd8b657566dd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::addDDAPts</definition>
+        <argsstring>(CPtSet &amp;pts, const CVar &amp;var)</argsstring>
+        <name>addDDAPts</name>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>const CVar &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Add pts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="90" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1acb7980c7e0d1d8ad6abab0b80831d2a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref> *</type>
+        <definition>SVFG* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getSVFG</definition>
+        <argsstring>() const</argsstring>
+        <name>getSVFG</name>
+        <briefdescription>
+<para>Return <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="95" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a1fdd7c0efa8f0506edfba2da8f2b3cc0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SVFGSCC</ref> *</type>
+        <definition>SVFGSCC* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getSVFGSCC</definition>
+        <argsstring>() const</argsstring>
+        <name>getSVFGSCC</name>
+        <briefdescription>
+<para>Return SVFGSCC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="100" column="20" bodyfile="include/DDA/DDAVFSolver.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1aa4dc73ea65f736282a413a9d286141e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::dumpCPtSet</definition>
+        <argsstring>(const CPtSet &amp;cpts) const</argsstring>
+        <name>dumpCPtSet</name>
+        <param>
+          <type>const CPtSet &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="105" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="105" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a52737dd41c63404ef91691154aa250ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const CPtSet &amp;</type>
+        <definition>virtual const CPtSet&amp; SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::findPT</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>findPT</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+<para>Compute points-to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Add successors of current stmt if its pts has been changed.</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="115" column="26" bodyfile="include/DDA/DDAVFSolver.h" bodystart="115" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a99f631cf1bc438e3f08f7f935e98e38d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::handleSingleStatement</definition>
+        <argsstring>(const DPIm &amp;dpm, CPtSet &amp;pts)</argsstring>
+        <name>handleSingleStatement</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <briefdescription>
+<para>Handle single statement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>resolve function pointer first at indirect callsite</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="147" column="18" bodyfile="include/DDA/DDAVFSolver.h" bodystart="147" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a8c5220108a65fa281959529cb1e9cc57" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::reCompute</definition>
+        <argsstring>(const DPIm &amp;dpm)</argsstring>
+        <name>reCompute</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <briefdescription>
+<para>recompute points-to for value-flow cycles and indirect calls </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>re-compute due to indirect calls</para>
+<para>callgraph scc detection for local variable in recursion</para>
+<para>re-compute for transitive closures</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="227" column="10" bodyfile="include/DDA/DDAVFSolver.h" bodystart="227" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ace037388135f272365cee2e87844bfba" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::reComputeForEdges</definition>
+        <argsstring>(const DPIm &amp;dpm, const SVFGEdgeSet &amp;edgeSet, bool indirectCall=false)</argsstring>
+        <name>reComputeForEdges</name>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>dpm</declname>
+        </param>
+        <param>
+          <type>const SVFGEdgeSet &amp;</type>
+          <declname>edgeSet</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>indirectCall</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Traverse along out edges to find all nodes which may be affected by locDPM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Only collect nodes we have traversed</para>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="248" column="10" bodyfile="include/DDA/DDAVFSolver.h" bodystart="248" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1af2a0732401e5904ebf81878d3ffe0675" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::buildSVFG</definition>
+        <argsstring>(PAG *pag)</argsstring>
+        <name>buildSVFG</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> *</type>
+          <declname>pag</declname>
+        </param>
+        <briefdescription>
+<para>Build <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="289" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="289" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1afe518d3d7f8051de5b9860f2460aa1b7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::resetQuery</definition>
+        <argsstring>()</argsstring>
+        <name>resetQuery</name>
+        <briefdescription>
+<para>Reset visited map for next points-to query. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="296" column="25" bodyfile="include/DDA/DDAVFSolver.h" bodystart="296" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1ab60c701f1881d88aa4440991fb972638" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::OOBResetVisited</definition>
+        <argsstring>()</argsstring>
+        <name>OOBResetVisited</name>
+        <briefdescription>
+<para>Reset visited map if the current query is out-of-budget. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="308" column="17" bodyfile="include/DDA/DDAVFSolver.h" bodystart="308" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a55803a2d30137b5ad15c5afeec7c6b28" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_v_f_g_node" kindref="compound">SVFGNode</ref> *</type>
+        <definition>const SVFGNode* SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::getDefSVFGNode</definition>
+        <argsstring>(const PAGNode *pagNode) const</argsstring>
+        <name>getDefSVFGNode</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_p_a_g_node" kindref="compound">PAGNode</ref> *</type>
+          <declname>pagNode</declname>
+        </param>
+        <briefdescription>
+<para>GetDefinition <ref refid="class_s_v_f_1_1_s_v_f_g" kindref="compound">SVFG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="319" column="27" bodyfile="include/DDA/DDAVFSolver.h" bodystart="319" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a040bc02742836b0a6d46ce3c3e89fa46" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::backtraceAlongIndirectVF</definition>
+        <argsstring>(CPtSet &amp;pts, const DPIm &amp;oldDpm)</argsstring>
+        <name>backtraceAlongIndirectVF</name>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>oldDpm</declname>
+        </param>
+        <briefdescription>
+<para>Backward traverse along indirect value flows. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="324" column="10" bodyfile="include/DDA/DDAVFSolver.h" bodystart="324" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_d_d_a_v_f_solver_1a7a6af30f30f32d55fc910f2ae4909791" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;::backtraceAlongDirectVF</definition>
+        <argsstring>(CPtSet &amp;pts, const DPIm &amp;oldDpm)</argsstring>
+        <name>backtraceAlongDirectVF</name>
+        <param>
+          <type>CPtSet &amp;</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>const DPIm &amp;</type>
+          <declname>oldDpm</declname>
+        </param>
+        <briefdescription>
+<para>Backward traverse along direct value flows. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/DDA/DDAVFSolver.h" line="346" column="10" bodyfile="include/DDA/DDAVFSolver.h" bodystart="346" bodyend="360"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Value-Flow Based Demand-Driven Points-to Analysis </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="22">
+        <label>SVF::MRGenerator</label>
+        <link refid="class_s_v_f_1_1_m_r_generator"/>
+      </node>
+      <node id="29">
+        <label>SVF::GenericGraph&lt; ConstraintNode, ConstraintEdge &gt;</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="16">
+        <label>GenericICFGTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="26">
+        <label>WPAConstraintSolver</label>
+        <link refid="class_s_v_f_1_1_w_p_a_solver"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>scc</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>worklist</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>SVF::ConstraintGraph</label>
+        <link refid="class_s_v_f_1_1_constraint_graph"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>pag</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>nodesToBeCollapsed</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>AddrCGEdgeSet</edgelabel>
+          <edgelabel>LoadCGEdgeSet</edgelabel>
+          <edgelabel>StoreCGEdgeSet</edgelabel>
+          <edgelabel>directEdgeSet</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>SVF::GenericNode&lt; ConstraintNode, ConstraintEdge &gt;</label>
+        <link refid="class_s_v_f_1_1_generic_node"/>
+      </node>
+      <node id="25">
+        <label>SVF::AndersenBase</label>
+        <link refid="class_s_v_f_1_1_andersen_base"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>consCG</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GenericCallGraphTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="9">
+        <label>SVF::PAG</label>
+        <link refid="class_s_v_f_1_1_p_a_g"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SVF::SCCDetection&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_s_c_c_detection"/>
+      </node>
+      <node id="27">
+        <label>SVF::FIFOWorkList&lt; NodeID &gt;</label>
+        <link refid="class_s_v_f_1_1_f_i_f_o_work_list"/>
+      </node>
+      <node id="1">
+        <label>SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;</label>
+        <link refid="class_s_v_f_1_1_d_d_a_v_f_solver"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_callGraphSCC</edgelabel>
+          <edgelabel>_svfgSCC</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>svfgBuilder</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>_ander</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>_callGraph</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_svfg</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>ddaStat</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>_pag</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SVF::PTAStat</label>
+        <link refid="class_s_v_f_1_1_p_t_a_stat"/>
+      </node>
+      <node id="17">
+        <label>SVF::CommonCHGraph</label>
+        <link refid="class_s_v_f_1_1_common_c_h_graph"/>
+      </node>
+      <node id="19">
+        <label>SVF::MemSSA</label>
+        <link refid="class_s_v_f_1_1_mem_s_s_a"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>pta</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>mrGen</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SVF::SVFG</label>
+        <link refid="class_s_v_f_1_1_s_v_f_g"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>pta</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mssa</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SVF::ICFG</label>
+        <link refid="class_s_v_f_1_1_i_c_f_g"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>SVF::MemSSAStat</label>
+        <link refid="class_s_v_f_1_1_mem_s_s_a_stat"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SVF::GenericGraph&lt; PAGNode, PAGEdge &gt;</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="14">
+        <label>SVF::SVFModule</label>
+        <link refid="class_s_v_f_1_1_s_v_f_module"/>
+      </node>
+      <node id="11">
+        <label>SVF::SVFGStat</label>
+        <link refid="class_s_v_f_1_1_s_v_f_g_stat"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>SVF::AndersenWaveDiff</label>
+        <link refid="class_s_v_f_1_1_andersen_wave_diff"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SVF::TypeSystem</label>
+        <link refid="class_s_v_f_1_1_type_system"/>
+      </node>
+      <node id="24">
+        <label>SVF::Andersen</label>
+        <link refid="class_s_v_f_1_1_andersen"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SVF::SVFGBuilder</label>
+        <link refid="class_s_v_f_1_1_s_v_f_g_builder"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>globalSvfg</edgelabel>
+          <edgelabel>svfg</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SVF::VFG</label>
+        <link refid="class_s_v_f_1_1_v_f_g"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>callgraph</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>pag</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>SVF::BVDataPTAImpl</label>
+        <link refid="class_s_v_f_1_1_b_v_data_p_t_a_impl"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>SVF::DDAStat</label>
+        <link refid="class_s_v_f_1_1_d_d_a_stat"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SVF::PTACallGraph</label>
+        <link refid="class_s_v_f_1_1_p_t_a_call_graph"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GenericVFGTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="13">
+        <label>SVF::PointerAnalysis</label>
+        <link refid="class_s_v_f_1_1_pointer_analysis"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>callGraphSCC</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>svfMod</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>icfg</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>ptaCallGraph</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>chgraph</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>pag</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>typeSystem</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/DDA/DDAVFSolver.h" line="24" column="1" bodyfile="include/DDA/DDAVFSolver.h" bodystart="25" bodyend="769"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aa1d1b6e8cc23f0a6d3935cbe4f02cbdf" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>_ander</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1abf24080617c6a74abed9f0bb0bc9c0c5" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>_callGraph</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a4c307d486756daa1e79595b1e9edc40a" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>_callGraphSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1af08857f907caa32c090eed2c1b404729" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>_pag</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a74d83f06e8fc0ecedc1e1846030c99c6" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>_svfg</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a54f5d4972238ae69f19c9da3b9f51644" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>_svfgSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a5a8632a957fce63f186dd8b657566dd2" prot="public" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>addDDAPts</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1af7be3fa6c73dde97d6f9fd0395c9aee0" prot="private" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>addDpmToLoc</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a7579491400f1781356cb7d1913537547" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>addLoadCVar</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a4725013a7617645e1418ed670d4837b5" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>addLoadDpm</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a1cd1023bca18db16bc54e622c881e494" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>addLoadDpmAndCVar</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ae1e77060ac22d465b5cc9430962e280c" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>addOutOfBudgetDpm</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aeb6b56cf3d140d251b0524eb5cbd6dce" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>addSUStat</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a7a6af30f30f32d55fc910f2ae4909791" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>backtraceAlongDirectVF</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a040bc02742836b0a6d46ce3c3e89fa46" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>backtraceAlongIndirectVF</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1adbd209b4a2327b2b068fbb56e12042f7" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>backtraceToStoreSrc</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1af6a6243b497df5fdab9f658b9add9c8a" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>backwardPropDpm</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a63d04c3af4529d0e0f82acd76ed57f6c" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>backwardVisited</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1af2a0732401e5904ebf81878d3ffe0675" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>buildSVFG</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1af6e05e87ba8d6b6ae65807803b1b0221" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>CallGraphSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ac227096ad71dfda8bc48c139fccb3af2" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>CallInstSet</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a7248a3fe0078a2b13786765b5f014ba6" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>CallSiteSet</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ae0e78fafb7eec0fbc1a02d24547335e9" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>candidateQueries</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aa7e5839c5bc6f913561de10bce61e74b" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>clearbkVisited</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aef98e8e9144a69bb7481fef5d2dcb303" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>ConstSVFGEdgeSet</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1af83f88f2ae2456f2691e8822d56b1598" prot="private" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>DDAStat</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ae40c7bad663e0fa07dee4be3d1794ff2" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>ddaStat</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a7ee96b513074c283d23434590ce15e7d" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>DDAVFSolver</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a8b5a34679fb1362425c88d6e74b6c019" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>DPImToCPtSetMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a2565bf8dcacb22350dc1dc98ec7595f2" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>dpmToADCPtSetMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1af0538abf12c01d31a0296553e2f7c92d" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>DPMToCVarMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a2ccbcfa949a1796094b5d9499177fc2b" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>DPMToDPMMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a9d8959dfee05685cd74d0d7a78069692" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>dpmToloadDpmMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a2d6df8149b45d719e22fc505df94171a" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>dpmToTLCPtSetMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a05d6b074b04aad7dc1f3cbe0ca587467" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>DPTItemSet</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aa4dc73ea65f736282a413a9d286141e5" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>dumpCPtSet</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a034e3c8b2eec00aee9de439dfeeda332" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>edgeInSVFGSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a52737dd41c63404ef91691154aa250ce" prot="public" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>findPT</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ac39860015b45b9af6351d0343f8983bb" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getAndersenAnalysis</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a2a2b3783074c9f509fc265b97b979704" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>getCachedADPointsTo</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ae31e9281e4f1e0585fdf328b7339e1bf" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>getCachedPointsTo</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aac432dfa7ccfc3434d9e0e2eb65afe7f" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>getCachedTLPointsTo</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a73bbf4f763316e8d5db62d163da35a18" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getCandidateQueries</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a38f5a6b666b2a427d55f1217f9c5595f" prot="protected" virt="pure-virtual"><scope>SVF::DDAVFSolver</scope><name>getConservativeCPts</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a55803a2d30137b5ad15c5afeec7c6b28" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getDefSVFGNode</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ad7d92fad8606d5512786a7b7a08930e2" prot="public" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>getDPIm</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ac4cb0b666d68d135c5e385bfc880fd67" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>getDPImWithOldCond</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a6c32a1cdcdbea0151c8cf17ffe598f29" prot="private" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getDpmSetAtLoc</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ad42efad8e857290459689833c224e467" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getLoadCVar</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a630aad14a285c954a50c632f9cb13fa9" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getLoadDpm</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ad849ae4509e88832f784c748468ab959" prot="private" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getLocToDPMVecMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a3fa002d4ba4194ffde62ecbdd361a24d" prot="protected" virt="pure-virtual"><scope>SVF::DDAVFSolver</scope><name>getPtrNodeID</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1acb7980c7e0d1d8ad6abab0b80831d2a9" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getSVFG</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a1fdd7c0efa8f0506edfba2da8f2b3cc0" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getSVFGSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a1583ed2eb1d4b88dc2a5b4c0b6842496" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>getSVFGSCCRepNode</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1acfe7d961caac8f0f558881a9a006b1fa" prot="protected" virt="pure-virtual"><scope>SVF::DDAVFSolver</scope><name>handleAddr</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a601282325e55badc15f3ba9141816af5" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>handleBKCondition</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a9005f1f0e4a808838276ff44b300f96d" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>handleOutOfBudgetDpm</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a99f631cf1bc438e3f08f7f935e98e38d" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>handleSingleStatement</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a9aaa5ee3dc8abc51c4b6e463e1949ee7" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>isArrayCondMemObj</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a9a9c3a8b5e4ffc89418073110e446f20" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>isbkVisited</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a37a6321f50bef2939b287cc088e76170" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>isFieldInsenCondMemObj</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a645c7d0637b49e139898016ff652e1f3" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>isHeapCondMemObj</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a20cadb651b41343437e135e985c4e566" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>isLocalCVarInRecursion</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a345e5379f53b618adef014aa6887bfe7" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>isMustAlias</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a0b1f774883adc7d535f8363bf3c8b1e8" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>isOutOfBudgetDpm</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a7994236bff84ba8244592fdf5e546734" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>isOutOfBudgetQuery</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a94bcddbc7b9ccecb3fbb693b13372785" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>isStrongUpdate</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1add7daee4a0ecae479a5ab015130c8c93" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>isSVFGNodeInCycle</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a7b35588de00e322afd742041bf735571" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>isTopLevelPtrStmt</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a6d62420837fe0c7814fc4da68a91eda4" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>loadToPTCVarMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aa724698d499615bce7caf8f312b746a7" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>locToDpmSetMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aab76f98ae4f0c1f62f101ac5c5fdbf83" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>LocToDPMVecMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a7112ce6145be0855f8b035bb0d8a331c" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>markbkVisited</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ab60c701f1881d88aa4440991fb972638" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>OOBResetVisited</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aad57a954473f3099188cf8c8fba87880" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>outOfBudgetDpms</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1afdecfbacc64cb8d694268aa73ec8a7b6" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>outOfBudgetQuery</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ab10a34efa1acb6125ea32cf7a8cf919f" prot="protected" virt="pure-virtual"><scope>SVF::DDAVFSolver</scope><name>processGepPts</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ace35b8247204d9806ca1a4f01bff2364" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>propagateViaObj</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a8c5220108a65fa281959529cb1e9cc57" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>reCompute</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ace037388135f272365cee2e87844bfba" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>reComputeForEdges</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a00ae738a76564b7b334faae567674e34" prot="private" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>removeDpmFromLoc</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1afe518d3d7f8051de5b9860f2460aa1b7" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>resetQuery</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1afcc074be34dd0c45418ff16b3d9d4192" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>resolveFunPtr</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a7d0775354df32f293e98578ed071d33c" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>rmSUStat</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1afc2b0eeb1d5d5f292690f3c949217c38" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>setCallGraph</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1abd652b2627f68d7d4f8bf3bdb20ce975" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>setCallGraphSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1adcb641eec4f620effdb3f61a46429f40" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>setDDAStat</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1acd694c2092adf8c516d1aba5f798cec7" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>startNewPTCompFromLoadSrc</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aff744e724dcf06a2b1cdd7ba2b1093f1" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>startNewPTCompFromStoreDst</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1af66895278f0ecbc882f9e4f43ef9c8a8" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>storeToDPMs</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1accaacd2dd680f92ff83cfe75eef6ffab" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>StoreToPMSetMap</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a0d563fe8b016b27a58f5b054fec9c38a" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>svfgBuilder</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a6489319b33a807f7caba2d34017a3e1b" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>SVFGEdgeSet</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a502207f81ed22fa42f9e18ccba83ad4e" prot="public" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>SVFGSCC</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1aba0ec611a5cfd096ac0b8b11e0bd5580" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>SVFGSCCDetection</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a3fb52286c5324ea3d58e22c630b307e3" prot="protected" virt="non-virtual"><scope>SVF::DDAVFSolver</scope><name>testOutOfBudget</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a99764ee5bc19378795fe464e9036e78b" prot="public" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>unionDDAPts</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1ae7949e141978474f3b6cb510bacafa37" prot="public" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>unionDDAPts</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a239a55960dfbbe73df63063070a18b56" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>updateCachedPointsTo</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a4f63b6b3a06633675ae99667cbaa6cdc" prot="protected" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>updateCallGraphAndSVFG</name></member>
+      <member refid="class_s_v_f_1_1_d_d_a_v_f_solver_1a211f2f0c572d5085d22c2cb40341b606" prot="public" virt="virtual"><scope>SVF::DDAVFSolver</scope><name>~DDAVFSolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

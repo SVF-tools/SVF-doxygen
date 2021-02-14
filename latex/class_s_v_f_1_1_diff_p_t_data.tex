@@ -1,0 +1,95 @@
+\hypertarget{class_s_v_f_1_1_diff_p_t_data}{}\doxysection{SVF\+::Diff\+PTData$<$ Key, Datum, Data $>$ Class Template Reference}
+\label{class_s_v_f_1_1_diff_p_t_data}\index{SVF::DiffPTData$<$ Key, Datum, Data $>$@{SVF::DiffPTData$<$ Key, Datum, Data $>$}}
+
+
+{\ttfamily \#include $<$Abstract\+Points\+To\+DS.\+h$>$}
+
+Inheritance diagram for SVF\+::Diff\+PTData$<$ Key, Datum, Data $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_s_v_f_1_1_diff_p_t_data}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_a4c686a448797c17d567d420a92471d83}\label{class_s_v_f_1_1_diff_p_t_data_a4c686a448797c17d567d420a92471d83}} 
+typedef \mbox{\hyperlink{class_s_v_f_1_1_p_t_data}{PTData}}$<$ Key, Datum, Data $>$ {\bfseries Base\+PTData}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_a9fdb53b644ca2c056ddc23891d1ed042}\label{class_s_v_f_1_1_diff_p_t_data_a9fdb53b644ca2c056ddc23891d1ed042}} 
+typedef \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a74ce29609c51f2be34a0b5b7650a9848}{Base\+PTData\+::\+PTData\+Ty}} {\bfseries PTData\+Ty}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_a46c7a30c83c920fdd30e85987dd3fb7c}\label{class_s_v_f_1_1_diff_p_t_data_a46c7a30c83c920fdd30e85987dd3fb7c}} 
+{\bfseries Diff\+PTData} (bool reverse\+PT=true, \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a74ce29609c51f2be34a0b5b7650a9848}{PTData\+Ty}} ty=PTData\+Ty\+::\+Diff)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_a7abbdc7ba905339bdc2bf4af3cd285c9}\label{class_s_v_f_1_1_diff_p_t_data_a7abbdc7ba905339bdc2bf4af3cd285c9}} 
+virtual const Data \& \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data_a7abbdc7ba905339bdc2bf4af3cd285c9}{get\+Diff\+Pts}} (Key \&var)=0
+\begin{DoxyCompactList}\small\item\em Get diff points to. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data_aa072ff64b5b36236dc9808e64f2e9d9b}{compute\+Diff\+Pts}} (Key \&var, const Data \&all)=0
+\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data_a18e20bd7054b0aaea4b6ccacd251ce60}{update\+Propa\+Pts\+Map}} (Key \&src, Key \&dst)=0
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_a479e6bf3caa96f6dc85f35f74eae2608}\label{class_s_v_f_1_1_diff_p_t_data_a479e6bf3caa96f6dc85f35f74eae2608}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data_a479e6bf3caa96f6dc85f35f74eae2608}{clear\+Propa\+Pts}} (Key \&var)=0
+\begin{DoxyCompactList}\small\item\em Clear propagated points-\/to set of var. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data_aad11ad25fc11ceaf6802eb39d2e01b6c}{classof}} (const \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data}{Diff\+PTData}}$<$ Key, Datum, Data $>$ $\ast$)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_a5385c9ebfc581e01c03df5b751fdac68}\label{class_s_v_f_1_1_diff_p_t_data_a5385c9ebfc581e01c03df5b751fdac68}} 
+static bool {\bfseries classof} (const \mbox{\hyperlink{class_s_v_f_1_1_p_t_data}{PTData}}$<$ Key, Datum, Data $>$ $\ast$ptd)
+\end{DoxyCompactItemize}
+
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename Datum, typename Data$>$\newline
+class SVF\+::\+Diff\+PTData$<$ Key, Datum, Data $>$}
+
+Abstract diff points-\/to data with cached information. This is an optimisation on top of the base points-\/to data structure. The points-\/to information is propagated incrementally only for the different parts. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_aad11ad25fc11ceaf6802eb39d2e01b6c}\label{class_s_v_f_1_1_diff_p_t_data_aad11ad25fc11ceaf6802eb39d2e01b6c}} 
+\index{SVF::DiffPTData$<$ Key, Datum, Data $>$@{SVF::DiffPTData$<$ Key, Datum, Data $>$}!classof@{classof}}
+\index{classof@{classof}!SVF::DiffPTData$<$ Key, Datum, Data $>$@{SVF::DiffPTData$<$ Key, Datum, Data $>$}}
+\doxysubsubsection{\texorpdfstring{classof()}{classof()}}
+{\footnotesize\ttfamily template$<$typename Key , typename Datum , typename Data $>$ \\
+static bool \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data}{SVF\+::\+Diff\+PTData}}$<$ Key, Datum, Data $>$\+::classof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data}{Diff\+PTData}}$<$ Key, Datum, Data $>$ $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Methods to support type inquiry through isa, cast, and dyn\+\_\+cast\+: \mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_aa072ff64b5b36236dc9808e64f2e9d9b}\label{class_s_v_f_1_1_diff_p_t_data_aa072ff64b5b36236dc9808e64f2e9d9b}} 
+\index{SVF::DiffPTData$<$ Key, Datum, Data $>$@{SVF::DiffPTData$<$ Key, Datum, Data $>$}!computeDiffPts@{computeDiffPts}}
+\index{computeDiffPts@{computeDiffPts}!SVF::DiffPTData$<$ Key, Datum, Data $>$@{SVF::DiffPTData$<$ Key, Datum, Data $>$}}
+\doxysubsubsection{\texorpdfstring{computeDiffPts()}{computeDiffPts()}}
+{\footnotesize\ttfamily template$<$typename Key , typename Datum , typename Data $>$ \\
+virtual bool \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data}{SVF\+::\+Diff\+PTData}}$<$ Key, Datum, Data $>$\+::compute\+Diff\+Pts (\begin{DoxyParamCaption}\item[{Key \&}]{var,  }\item[{const Data \&}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Compute diff points to. Return TRUE if diff is not empty.
+\begin{DoxyEnumerate}
+\item calculate diff\+: diff = all -\/ propa.
+\item update propagated pts\+: propa = all. 
+\end{DoxyEnumerate}
+
+Implemented in \mbox{\hyperlink{class_s_v_f_1_1_mutable_diff_p_t_data_aef050de307f661efb60b62055aa8aacb}{SVF\+::\+Mutable\+Diff\+PTData$<$ Key, Datum, Data $>$}}.
+
+\mbox{\Hypertarget{class_s_v_f_1_1_diff_p_t_data_a18e20bd7054b0aaea4b6ccacd251ce60}\label{class_s_v_f_1_1_diff_p_t_data_a18e20bd7054b0aaea4b6ccacd251ce60}} 
+\index{SVF::DiffPTData$<$ Key, Datum, Data $>$@{SVF::DiffPTData$<$ Key, Datum, Data $>$}!updatePropaPtsMap@{updatePropaPtsMap}}
+\index{updatePropaPtsMap@{updatePropaPtsMap}!SVF::DiffPTData$<$ Key, Datum, Data $>$@{SVF::DiffPTData$<$ Key, Datum, Data $>$}}
+\doxysubsubsection{\texorpdfstring{updatePropaPtsMap()}{updatePropaPtsMap()}}
+{\footnotesize\ttfamily template$<$typename Key , typename Datum , typename Data $>$ \\
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_diff_p_t_data}{SVF\+::\+Diff\+PTData}}$<$ Key, Datum, Data $>$\+::update\+Propa\+Pts\+Map (\begin{DoxyParamCaption}\item[{Key \&}]{src,  }\item[{Key \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update dst\textquotesingle{}s propagated points-\/to set with src\textquotesingle{}s. The final result is the intersection of these two sets. 
+
+Implemented in \mbox{\hyperlink{class_s_v_f_1_1_mutable_diff_p_t_data_a0fbfcc44d33bb2a2f0abf50666ecc1c1}{SVF\+::\+Mutable\+Diff\+PTData$<$ Key, Datum, Data $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Memory\+Model/Abstract\+Points\+To\+DS.\+h\end{DoxyCompactItemize}

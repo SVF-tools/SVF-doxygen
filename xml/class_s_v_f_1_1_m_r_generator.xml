@@ -1,0 +1,1929 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_m_r_generator" kind="class" language="C++" prot="public">
+    <compoundname>SVF::MRGenerator</compoundname>
+    <derivedcompoundref refid="class_s_v_f_1_1_distinct_m_r_g" prot="public" virt="non-virtual">SVF::DistinctMRG</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_intra_disjoint_m_r_g" prot="public" virt="non-virtual">SVF::IntraDisjointMRG</derivedcompoundref>
+    <includes refid="_mem_region_8h" local="no">MemRegion.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a68d50c752252bd40c402c7b99b95f0fc" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_f_i_f_o_work_list" kindref="compound">FIFOWorkList</ref>&lt; NodeID &gt;</type>
+        <definition>typedef FIFOWorkList&lt;NodeID&gt; SVF::MRGenerator::WorkList</definition>
+        <argsstring></argsstring>
+        <name>WorkList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="136" column="26" bodyfile="include/MSSA/MemRegion.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" prot="public" static="no">
+        <type>OrderedSet&lt; const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *, <ref refid="struct_s_v_f_1_1_mem_region_1_1equal_mem_region" kindref="compound">MemRegion::equalMemRegion</ref> &gt;</type>
+        <definition>typedef OrderedSet&lt;const MemRegion*, MemRegion::equalMemRegion&gt; SVF::MRGenerator::MRSet</definition>
+        <argsstring></argsstring>
+        <name>MRSet</name>
+        <briefdescription>
+<para>Get typedef from Pointer Analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Define mem region set </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="142" column="24" bodyfile="include/MSSA/MemRegion.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a82be01b460a498c07fb6a8aba853ed31" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> *, const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> * &gt;</type>
+        <definition>typedef Map&lt;const PAGEdge*, const SVFFunction*&gt; SVF::MRGenerator::PAGEdgeToFunMap</definition>
+        <argsstring></argsstring>
+        <name>PAGEdgeToFunMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="143" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a2c58aadbebb9daf5a0be3926b3997013" prot="public" static="no">
+        <type>OrderedSet&lt; PointsTo, <ref refid="struct_s_v_f_1_1_mem_region_1_1equal_points_to" kindref="compound">MemRegion::equalPointsTo</ref> &gt;</type>
+        <definition>typedef OrderedSet&lt;PointsTo, MemRegion::equalPointsTo&gt; SVF::MRGenerator::PointsToList</definition>
+        <argsstring></argsstring>
+        <name>PointsToList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="144" column="24" bodyfile="include/MSSA/MemRegion.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a71b584c7e0feb3014ad5f74eb31467bb" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *, PointsToList &gt;</type>
+        <definition>typedef Map&lt;const SVFFunction*, PointsToList &gt; SVF::MRGenerator::FunToPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>FunToPointsToMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="145" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a0984b63a3e159b4825e4ffd2fcfb6ca4" prot="public" static="no">
+        <type>OrderedMap&lt; PointsTo, PointsTo, <ref refid="struct_s_v_f_1_1_mem_region_1_1equal_points_to" kindref="compound">MemRegion::equalPointsTo</ref> &gt;</type>
+        <definition>typedef OrderedMap&lt;PointsTo, PointsTo, MemRegion::equalPointsTo &gt; SVF::MRGenerator::PtsToRepPtsSetMap</definition>
+        <argsstring></argsstring>
+        <name>PtsToRepPtsSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="146" column="24" bodyfile="include/MSSA/MemRegion.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a090070379a09460aef0c07270d32d27b" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *, <ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &gt;</type>
+        <definition>typedef Map&lt;const SVFFunction*, MRSet&gt; SVF::MRGenerator::FunToMRsMap</definition>
+        <argsstring></argsstring>
+        <name>FunToMRsMap</name>
+        <briefdescription>
+<para>Map a function to its region set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="149" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a72f55ad36f4ce46c5eee4bf0ce736cee" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_load_p_e" kindref="compound">LoadPE</ref> *, <ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &gt;</type>
+        <definition>typedef Map&lt;const LoadPE*, MRSet&gt; SVF::MRGenerator::LoadsToMRsMap</definition>
+        <argsstring></argsstring>
+        <name>LoadsToMRsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Map loads/stores to its mem regions, TODO:visitAtomicCmpXchgInst, visitAtomicRMWInst?? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="153" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a9d2221818297a7abeb8d8736093105d0" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_store_p_e" kindref="compound">StorePE</ref> *, <ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &gt;</type>
+        <definition>typedef Map&lt;const StorePE*, MRSet&gt; SVF::MRGenerator::StoresToMRsMap</definition>
+        <argsstring></argsstring>
+        <name>StoresToMRsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="154" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a71b5ce2c754ffff5a84fdb0c3aa16819" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *, <ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &gt;</type>
+        <definition>typedef Map&lt;const CallBlockNode*, MRSet&gt; SVF::MRGenerator::CallSiteToMRsMap</definition>
+        <argsstring></argsstring>
+        <name>CallSiteToMRsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="155" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1af500450901135fd31ceb2ab497ca1086" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_load_p_e" kindref="compound">LoadPE</ref> *, PointsTo &gt;</type>
+        <definition>typedef Map&lt;const LoadPE*, PointsTo&gt; SVF::MRGenerator::LoadsToPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>LoadsToPointsToMap</name>
+        <briefdescription>
+<para>Map loads/stores/callsites to their cpts set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="160" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a4e246650818afd8be99a5ed6e23c4cd7" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_store_p_e" kindref="compound">StorePE</ref> *, PointsTo &gt;</type>
+        <definition>typedef Map&lt;const StorePE*, PointsTo&gt; SVF::MRGenerator::StoresToPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>StoresToPointsToMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="161" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1ae73349361642cbc0c5f4be0b8bf96090" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *, PointsTo &gt;</type>
+        <definition>typedef Map&lt;const CallBlockNode*, PointsTo&gt; SVF::MRGenerator::CallSiteToPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>CallSiteToPointsToMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="162" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1ab01e492f002c73e2c89eb0b4c8f9647d" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *, NodeBS &gt;</type>
+        <definition>typedef Map&lt;const SVFFunction*, NodeBS&gt; SVF::MRGenerator::FunToNodeBSMap</definition>
+        <argsstring></argsstring>
+        <name>FunToNodeBSMap</name>
+        <briefdescription>
+<para>Maps Mod-Ref analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Map a function to its indirect refs/mods of memory objects </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="168" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a55ca7850e00f57a8a4b83bc969493046" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *, NodeBS &gt;</type>
+        <definition>typedef Map&lt;const CallBlockNode*, NodeBS&gt; SVF::MRGenerator::CallSiteToNodeBSMap</definition>
+        <argsstring></argsstring>
+        <name>CallSiteToNodeBSMap</name>
+        <briefdescription>
+<para>Map a callsite to its indirect refs/mods of memory objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="170" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1ab075a7c7fbc60f678b3fee8bbc06194d" prot="public" static="no">
+        <type>Map&lt; NodeID, NodeBS &gt;</type>
+        <definition>typedef Map&lt;NodeID, NodeBS&gt; SVF::MRGenerator::NodeToPTSSMap</definition>
+        <argsstring></argsstring>
+        <name>NodeToPTSSMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="173" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1a1715322c61a3f41f1a093098591869d4" prot="public" static="no">
+        <type>PAG::PAGEdgeList</type>
+        <definition>typedef PAG::PAGEdgeList SVF::MRGenerator::PAGEdgeList</definition>
+        <argsstring></argsstring>
+        <name>PAGEdgeList</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> edge list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="176" column="30" bodyfile="include/MSSA/MemRegion.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_m_r_generator_1af8d52e6c9884c6e1abc6dbcbc5e32629" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SCCDetection</ref>&lt; <ref refid="class_s_v_f_1_1_p_t_a_call_graph" kindref="compound">PTACallGraph</ref> * &gt;</type>
+        <definition>typedef SCCDetection&lt;PTACallGraph*&gt; SVF::MRGenerator::SCC</definition>
+        <argsstring></argsstring>
+        <name>SCC</name>
+        <briefdescription>
+<para>Call Graph SCC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="178" column="26" bodyfile="include/MSSA/MemRegion.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1afb7ce3a24edda14895999eb15231daff" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_b_v_data_p_t_a_impl" kindref="compound">BVDataPTAImpl</ref> *</type>
+        <definition>BVDataPTAImpl* SVF::MRGenerator::pta</definition>
+        <argsstring></argsstring>
+        <name>pta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="197" column="19" bodyfile="include/MSSA/MemRegion.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1aa3a12cf1f761d25b9213bc6e50d89ba5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1af8d52e6c9884c6e1abc6dbcbc5e32629" kindref="member">SCC</ref> *</type>
+        <definition>SCC* SVF::MRGenerator::callGraphSCC</definition>
+        <argsstring></argsstring>
+        <name>callGraphSCC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="198" column="9" bodyfile="include/MSSA/MemRegion.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a05005a166c39b1adea492655d77db519" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_p_t_a_call_graph" kindref="compound">PTACallGraph</ref> *</type>
+        <definition>PTACallGraph* SVF::MRGenerator::callGraph</definition>
+        <argsstring></argsstring>
+        <name>callGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="199" column="18" bodyfile="include/MSSA/MemRegion.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a6a62d2dede5d2506c19b2d058d1cd9d3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SVF::MRGenerator::ptrOnlyMSSA</definition>
+        <argsstring></argsstring>
+        <name>ptrOnlyMSSA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="200" column="10" bodyfile="include/MSSA/MemRegion.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a3e74c3706ffcc14f378771b417dcbb96" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a090070379a09460aef0c07270d32d27b" kindref="member">FunToMRsMap</ref></type>
+        <definition>FunToMRsMap SVF::MRGenerator::funToMRsMap</definition>
+        <argsstring></argsstring>
+        <name>funToMRsMap</name>
+        <briefdescription>
+<para>Map a function to all its memory regions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="203" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a0d8229b1f0b8428708e923d19096e4ba" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a72f55ad36f4ce46c5eee4bf0ce736cee" kindref="member">LoadsToMRsMap</ref></type>
+        <definition>LoadsToMRsMap SVF::MRGenerator::loadsToMRsMap</definition>
+        <argsstring></argsstring>
+        <name>loadsToMRsMap</name>
+        <briefdescription>
+<para>Map a load <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> Edge to its memory regions sets in order for inserting mus in Memory SSA. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="205" column="19" bodyfile="include/MSSA/MemRegion.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a255551fd3ff8fb33bcea93d0b00280b3" prot="private" static="no" mutable="no">
+        <type>StoresToMRsMap</type>
+        <definition>StoresToMRsMap SVF::MRGenerator::storesToMRsMap</definition>
+        <argsstring></argsstring>
+        <name>storesToMRsMap</name>
+        <briefdescription>
+<para>Map a store <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> Edge to its memory regions sets in order for inserting chis in Memory SSA. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="207" column="20" bodyfile="include/MSSA/MemRegion.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a7a7ed21181c2486b60170a479a5a534e" prot="private" static="no" mutable="no">
+        <type>CallSiteToMRsMap</type>
+        <definition>CallSiteToMRsMap SVF::MRGenerator::callsiteToRefMRsMap</definition>
+        <argsstring></argsstring>
+        <name>callsiteToRefMRsMap</name>
+        <briefdescription>
+<para>Map a callsite to its refs regions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="209" column="22" bodyfile="include/MSSA/MemRegion.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1adf8d477e5f622855799842134145ecc4" prot="private" static="no" mutable="no">
+        <type>CallSiteToMRsMap</type>
+        <definition>CallSiteToMRsMap SVF::MRGenerator::callsiteToModMRsMap</definition>
+        <argsstring></argsstring>
+        <name>callsiteToModMRsMap</name>
+        <briefdescription>
+<para>Map a callsite to its mods regions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="211" column="22" bodyfile="include/MSSA/MemRegion.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1af47e15d6b8c15d547a718f3577513975" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1af500450901135fd31ceb2ab497ca1086" kindref="member">LoadsToPointsToMap</ref></type>
+        <definition>LoadsToPointsToMap SVF::MRGenerator::loadsToPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>loadsToPointsToMap</name>
+        <briefdescription>
+<para>Map a load <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> Edge to its CPts set map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="213" column="24" bodyfile="include/MSSA/MemRegion.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a7d86f708743a59aa31c0a9fd6de45dac" prot="private" static="no" mutable="no">
+        <type>StoresToPointsToMap</type>
+        <definition>StoresToPointsToMap SVF::MRGenerator::storesToPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>storesToPointsToMap</name>
+        <briefdescription>
+<para>Map a store <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> Edge to its CPts set map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="215" column="24" bodyfile="include/MSSA/MemRegion.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a34967cda51699f948a581b9f88fa3b10" prot="private" static="no" mutable="no">
+        <type>CallSiteToPointsToMap</type>
+        <definition>CallSiteToPointsToMap SVF::MRGenerator::callsiteToRefPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>callsiteToRefPointsToMap</name>
+        <briefdescription>
+<para>Map a callsite to it refs cpts set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="217" column="27" bodyfile="include/MSSA/MemRegion.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1ab8df193e84009e406c301731d17dc7b9" prot="private" static="no" mutable="no">
+        <type>CallSiteToPointsToMap</type>
+        <definition>CallSiteToPointsToMap SVF::MRGenerator::callsiteToModPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>callsiteToModPointsToMap</name>
+        <briefdescription>
+<para>Map a callsite to it mods cpts set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="219" column="27" bodyfile="include/MSSA/MemRegion.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1acaf48288039d19bf0bb9f2e506fbfd8d" prot="private" static="no" mutable="no">
+        <type>FunToPointsToMap</type>
+        <definition>FunToPointsToMap SVF::MRGenerator::funToPointsToMap</definition>
+        <argsstring></argsstring>
+        <name>funToPointsToMap</name>
+        <briefdescription>
+<para>Map a function to all of its conditional points-to sets. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="222" column="22" bodyfile="include/MSSA/MemRegion.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1ab250a4950269f57027d8e8ef10089f58" prot="private" static="no" mutable="no">
+        <type>PAGEdgeToFunMap</type>
+        <definition>PAGEdgeToFunMap SVF::MRGenerator::pagEdgeToFunMap</definition>
+        <argsstring></argsstring>
+        <name>pagEdgeToFunMap</name>
+        <briefdescription>
+<para>Map a <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> to its fun. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="224" column="21" bodyfile="include/MSSA/MemRegion.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1afe018918c8acc83cd128b4c56ff42075" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1ab01e492f002c73e2c89eb0b4c8f9647d" kindref="member">FunToNodeBSMap</ref></type>
+        <definition>FunToNodeBSMap SVF::MRGenerator::funToRefsMap</definition>
+        <argsstring></argsstring>
+        <name>funToRefsMap</name>
+        <briefdescription>
+<para>Map a function to its indirect uses of memory objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="227" column="20" bodyfile="include/MSSA/MemRegion.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1aeb185d6d9c7bfe4b98c7440db6b8bbc4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1ab01e492f002c73e2c89eb0b4c8f9647d" kindref="member">FunToNodeBSMap</ref></type>
+        <definition>FunToNodeBSMap SVF::MRGenerator::funToModsMap</definition>
+        <argsstring></argsstring>
+        <name>funToModsMap</name>
+        <briefdescription>
+<para>Map a function to its indirect defs of memory objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="229" column="20" bodyfile="include/MSSA/MemRegion.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a08779053af9db71ba0bc24710a7e198c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a55ca7850e00f57a8a4b83bc969493046" kindref="member">CallSiteToNodeBSMap</ref></type>
+        <definition>CallSiteToNodeBSMap SVF::MRGenerator::csToRefsMap</definition>
+        <argsstring></argsstring>
+        <name>csToRefsMap</name>
+        <briefdescription>
+<para>Map a callsite to its indirect uses of memory objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="231" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a72222bae993142be1881c34660646b82" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a55ca7850e00f57a8a4b83bc969493046" kindref="member">CallSiteToNodeBSMap</ref></type>
+        <definition>CallSiteToNodeBSMap SVF::MRGenerator::csToModsMap</definition>
+        <argsstring></argsstring>
+        <name>csToModsMap</name>
+        <briefdescription>
+<para>Map a callsite to its indirect defs of memory objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="233" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a145cccd6355dd479e8a0c744584cef9a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a55ca7850e00f57a8a4b83bc969493046" kindref="member">CallSiteToNodeBSMap</ref></type>
+        <definition>CallSiteToNodeBSMap SVF::MRGenerator::csToCallSiteArgsPtsMap</definition>
+        <argsstring></argsstring>
+        <name>csToCallSiteArgsPtsMap</name>
+        <briefdescription>
+<para>Map a callsite to all its object might pass into its callees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="235" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a9368636daea4542fa36fff822ff39104" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a55ca7850e00f57a8a4b83bc969493046" kindref="member">CallSiteToNodeBSMap</ref></type>
+        <definition>CallSiteToNodeBSMap SVF::MRGenerator::csToCallSiteRetPtsMap</definition>
+        <argsstring></argsstring>
+        <name>csToCallSiteRetPtsMap</name>
+        <briefdescription>
+<para>Map a callsite to all its object might return from its callees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="237" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1a0e46c7beb580ace3a652ac9e1c419b48" prot="private" static="no" mutable="no">
+        <type>NodeToPTSSMap</type>
+        <definition>NodeToPTSSMap SVF::MRGenerator::cachedPtsChainMap</definition>
+        <argsstring></argsstring>
+        <name>cachedPtsChainMap</name>
+        <briefdescription>
+<para>Map a pointer to its cached points-to chain;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="240" column="19" bodyfile="include/MSSA/MemRegion.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1af46b82e45aa1ecdfb397325971206541" prot="private" static="no" mutable="no">
+        <type>NodeBS</type>
+        <definition>NodeBS SVF::MRGenerator::allGlobals</definition>
+        <argsstring></argsstring>
+        <name>allGlobals</name>
+        <briefdescription>
+<para>All global variable <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> node ids. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="243" column="12" bodyfile="include/MSSA/MemRegion.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1af94bd8155a23273aab2396334d905119" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref></type>
+        <definition>MRSet SVF::MRGenerator::memRegSet</definition>
+        <argsstring></argsstring>
+        <name>memRegSet</name>
+        <briefdescription>
+<para>A set of All memory regions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="283" column="11" bodyfile="include/MSSA/MemRegion.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_m_r_generator_1ab4d1ff0357d389a65ff1c2112ce631a1" prot="protected" static="no" mutable="no">
+        <type>PtsToRepPtsSetMap</type>
+        <definition>PtsToRepPtsSetMap SVF::MRGenerator::cptsToRepCPtsMap</definition>
+        <argsstring></argsstring>
+        <name>cptsToRepCPtsMap</name>
+        <briefdescription>
+<para>Map a condition pts to its rep conditional pts (super set points-to) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="285" column="23" bodyfile="include/MSSA/MemRegion.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a1f69924c587c4e68a029fd4e86cffacf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+        <definition>MRSet&amp; SVF::MRGenerator::getMRSet</definition>
+        <argsstring>()</argsstring>
+        <name>getMRSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="180" column="11" bodyfile="include/MSSA/MemRegion.h" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a2e039a855c8e421e80cc7b015211a192" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const PointsTo &amp;</type>
+        <definition>const PointsTo&amp; SVF::MRGenerator::getRepPointsTo</definition>
+        <argsstring>(const PointsTo &amp;cpts) const</argsstring>
+        <name>getRepPointsTo</name>
+        <param>
+          <type>const PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <briefdescription>
+<para>Get superset cpts set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="186" column="27" bodyfile="include/MSSA/MemRegion.h" bodystart="186" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a7ecde80ed05d425a19bf7fe0c5feff84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+        <definition>const MemRegion * MRGenerator::getMR</definition>
+        <argsstring>(const PointsTo &amp;cpts) const</argsstring>
+        <name>getMR</name>
+        <param>
+          <type>const PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <briefdescription>
+<para>Get a memory region according to cpts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate a memory region and put in into functions which use it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="193" column="21" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="88" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ad34e796ebc49f5749de39e81374dc7a7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Size_t</type>
+        <definition>Size_t SVF::MRGenerator::getMRNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getMRNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="425" column="19" bodyfile="include/MSSA/MemRegion.h" bodystart="425" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a46e08638c8b5e6f6755de045c94862c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SVF::MRGenerator::~MRGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>~MRGenerator</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="431" column="13" bodyfile="include/MSSA/MemRegion.h" bodystart="431" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a4f65593325e4391333fa1b0bedbffc4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MRGenerator::generateMRs</definition>
+        <argsstring>()</argsstring>
+        <name>generateMRs</name>
+        <briefdescription>
+<para>Start generating memory regions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate memory regions according to pointer analysis results Attach regions on loads/stores </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>collect mod-ref for loads/stores</para>
+<para>collect mod-ref for calls</para>
+<para>Partition memory regions</para>
+<para>attach memory regions for loads/stores/calls</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="437" column="18" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="120" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a3121380139c7ae96d2045d66203253b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+        <definition>const SVFFunction* SVF::MRGenerator::getFunction</definition>
+        <argsstring>(const PAGEdge *pagEdge) const</argsstring>
+        <name>getFunction</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> *</type>
+          <declname>pagEdge</declname>
+        </param>
+        <briefdescription>
+<para>Get the function which <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> Edge located. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="440" column="23" bodyfile="include/MSSA/MemRegion.h" bodystart="440" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a64ba36ddcd304f6543e416c552763879" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+        <definition>MRSet&amp; SVF::MRGenerator::getFunMRSet</definition>
+        <argsstring>(const SVFFunction *fun)</argsstring>
+        <name>getFunMRSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Get Memory Region set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="448" column="18" bodyfile="include/MSSA/MemRegion.h" bodystart="448" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a5cf5ae60ad6028809088f3c842afde9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+        <definition>MRSet&amp; SVF::MRGenerator::getLoadMRSet</definition>
+        <argsstring>(const LoadPE *load)</argsstring>
+        <name>getLoadMRSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_load_p_e" kindref="compound">LoadPE</ref> *</type>
+          <declname>load</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="452" column="18" bodyfile="include/MSSA/MemRegion.h" bodystart="452" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ac409bbee6bf9deef7e31233a05054ee2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+        <definition>MRSet&amp; SVF::MRGenerator::getStoreMRSet</definition>
+        <argsstring>(const StorePE *store)</argsstring>
+        <name>getStoreMRSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_store_p_e" kindref="compound">StorePE</ref> *</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="456" column="18" bodyfile="include/MSSA/MemRegion.h" bodystart="456" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1aeed8bcf54d2a72c640e464e256249630" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MRGenerator::hasRefMRSet</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>hasRefMRSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="460" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="460" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a8868281e5f5b5f3a83acf8568971ad40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MRGenerator::hasModMRSet</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>hasModMRSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="464" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="464" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a7ede01d58bb2490ded5895ca5bd45948" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+        <definition>MRSet&amp; SVF::MRGenerator::getCallSiteRefMRSet</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getCallSiteRefMRSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="468" column="18" bodyfile="include/MSSA/MemRegion.h" bodystart="468" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1acb78098bf1fc8c3a80720a3dff3a0a1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+        <definition>MRSet&amp; SVF::MRGenerator::getCallSiteModMRSet</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getCallSiteModMRSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="472" column="18" bodyfile="include/MSSA/MemRegion.h" bodystart="472" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1abe76a16b9eedc9f8ffca6bc39cfb5c7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MRGenerator::hasPAGEdgeList</definition>
+        <argsstring>(const Instruction *inst)</argsstring>
+        <name>hasPAGEdgeList</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Whether this instruction has <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> Edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="478" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="478" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a2eda764e59d9b5e7620d2cf26562615a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a1715322c61a3f41f1a093098591869d4" kindref="member">PAGEdgeList</ref> &amp;</type>
+        <definition>PAGEdgeList&amp; SVF::MRGenerator::getPAGEdgesFromInst</definition>
+        <argsstring>(const Instruction *inst)</argsstring>
+        <name>getPAGEdgesFromInst</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Given an instruction, get all its the <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> (statement) in sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="487" column="24" bodyfile="include/MSSA/MemRegion.h" bodystart="487" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a1658aacb68aacb4785266263c1641a6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PointsTo</type>
+        <definition>PointsTo MRGenerator::getModInfoForCall</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getModInfoForCall</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+<para>getModRefInfo APIs </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Collect mod ref for external callsite other than heap alloc external call</para>
+<para>Obtain the mod sets for a call, used for external ModRefInfo queries </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="499" column="14" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="647" bodyend="666"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1afc17f566f57656cf17c08665602b4849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PointsTo</type>
+        <definition>PointsTo MRGenerator::getRefInfoForCall</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getRefInfoForCall</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Obtain the ref sets for a call, used for external ModRefInfo queries </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="500" column="14" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="671" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a455e0ba173141ac8ce76a655ac52205f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ModRefInfo</type>
+        <definition>ModRefInfo MRGenerator::getModRefInfo</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getModRefInfo</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine whether a CallSite instruction can mod or ref any memory location </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="501" column="16" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="696" bodyend="709"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a9f1d1604fb884e5c99702556915396f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ModRefInfo</type>
+        <definition>ModRefInfo MRGenerator::getModRefInfo</definition>
+        <argsstring>(const CallBlockNode *cs, const Value *V)</argsstring>
+        <name>getModRefInfo</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const Value *</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine whether a const CallBlockNode* instruction can mod or ref a specific memory location pointed by V </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="502" column="16" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="715" bodyend="744"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a83f957962bf3c7621661ce87b095e841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ModRefInfo</type>
+        <definition>ModRefInfo MRGenerator::getModRefInfo</definition>
+        <argsstring>(const CallBlockNode *cs1, const CallBlockNode *cs2)</argsstring>
+        <name>getModRefInfo</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine mod-ref relations between two const CallBlockNode* instructions </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>return NoModRef neither two callsites ref or mod any memory</para>
+<para>Ref: cs1 ref memory mod by cs2</para>
+<para>Mod: cs1 mod memory ref or mod by cs2</para>
+<para>ModRef: cs1 ref and mod memory mod by cs2</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="503" column="16" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="749" bodyend="786"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ac253d88de2a0cb9624c70d2bcfdac36e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MRGenerator::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+<para>Clean up memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clean up memory </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="246" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="47" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ac43b3f895efd160c7dd5860c0dfd1625" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MRGenerator::collectCallSitePts</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>collectCallSitePts</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get all objects might pass into and pass out of callee(s) from a callsite </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>collect the pts chain of the callsite arguments</para>
+<para>collect the pts chain of the return argument</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="249" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="456" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a81bd687d34eea884dfcf68274fcec7b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NodeBS &amp;</type>
+        <definition>NodeBS &amp; MRGenerator::CollectPtsChain</definition>
+        <argsstring>(NodeID id)</argsstring>
+        <name>CollectPtsChain</name>
+        <param>
+          <type>NodeID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recurisively collect all points-to of the whole struct fields </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="252" column="12" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="504" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a373b57017e99ee8466d1c8a363adaeef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeBS &amp;</type>
+        <definition>NodeBS&amp; SVF::MRGenerator::getCallSiteArgsPts</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getCallSiteArgsPts</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+<para>Return the pts chain of all callsite arguments. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="255" column="19" bodyfile="include/MSSA/MemRegion.h" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1aac03d1d2e10543e100530f99165b4388" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeBS &amp;</type>
+        <definition>NodeBS&amp; SVF::MRGenerator::getCallSiteRetPts</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getCallSiteRetPts</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+<para>Return the pts chain of the return parameter of the callsite. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="260" column="19" bodyfile="include/MSSA/MemRegion.h" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a2cf20660f2fd686fa3cabd046c4a10bf" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MRGenerator::isNonLocalObject</definition>
+        <argsstring>(NodeID id, const SVFFunction *curFun) const</argsstring>
+        <name>isNonLocalObject</name>
+        <param>
+          <type>NodeID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>curFun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the object node is a non-local object including global, heap, and stack variable in recursions </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>if the object is heap or global</para>
+<para>or if the local variable of its callers or a local variable is in function recursion cycles</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="266" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="553" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1add22c9a95478dea21148e87c8dfc584a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MRGenerator::getEscapObjviaGlobals</definition>
+        <argsstring>(NodeBS &amp;globs, const NodeBS &amp;pts)</argsstring>
+        <name>getEscapObjviaGlobals</name>
+        <param>
+          <type>NodeBS &amp;</type>
+          <declname>globs</declname>
+        </param>
+        <param>
+          <type>const NodeBS &amp;</type>
+          <declname>pts</declname>
+          <defname>calleeModRef</defname>
+        </param>
+        <briefdescription>
+<para>Get all the objects in callee&apos;s modref escaped via global objects (the chain pts of globals) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get all the objects in callee&apos;s modref escaped via global objects (the chain pts of globals) Otherwise, the object in callee&apos;s modref would not escape through globals </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="269" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="538" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ab3d3ca72d2cddf5336d00dc623f33401" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MRGenerator::getCallGraphSCCRevTopoOrder</definition>
+        <argsstring>(WorkList &amp;worklist)</argsstring>
+        <name>getCallGraphSCCRevTopoOrder</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_f_i_f_o_work_list" kindref="compound">WorkList</ref> &amp;</type>
+          <declname>worklist</declname>
+        </param>
+        <briefdescription>
+<para>Get reverse topo call graph scc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the reverse topo order of scc call graph </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="272" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="441" bodyend="451"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a1023eb17f1a46eee9a948490a4c8fdd5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::MRGenerator::MRGenerator</definition>
+        <argsstring>(BVDataPTAImpl *p, bool ptrOnly)</argsstring>
+        <name>MRGenerator</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_b_v_data_p_t_a_impl" kindref="compound">BVDataPTAImpl</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ptrOnly</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="275" column="5" bodyfile="include/MSSA/MemRegion.h" bodystart="275" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a42708b4ce8b5548e156a0e6d01602cc2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MRGenerator::createMR</definition>
+        <argsstring>(const SVFFunction *fun, const PointsTo &amp;cpts)</argsstring>
+        <name>createMR</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <param>
+          <type>const PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <briefdescription>
+<para>Generate a memory region and put in into functions which use it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate a memory region and put in into functions which use it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="288" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="65" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1afdae3e11009966856736d9aa1e2ad5bd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MRGenerator::collectGlobals</definition>
+        <argsstring>()</argsstring>
+        <name>collectGlobals</name>
+        <briefdescription>
+<para>Collect all global variables for later escape analysis. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Collect globals for escape analysis </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="291" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="100" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a207dfa4c9f044764665478142c6e6b22" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MRGenerator::collectModRefForLoadStore</definition>
+        <argsstring>()</argsstring>
+        <name>collectModRefForLoadStore</name>
+        <briefdescription>
+<para>Generate regions for loads/stores. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate memory regions for loads/stores </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>if this function does not have any caller, then we do not care its MSSA</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="294" column="18" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="149" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a502f8379620378b36bc12d9a91b408d2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MRGenerator::collectModRefForCall</definition>
+        <argsstring>()</argsstring>
+        <name>collectModRefForCall</name>
+        <briefdescription>
+<para>Generate regions for calls/rets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate memory regions for calls </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>collect points-to information for callsites</para>
+<para>handle all sub scc nodes of this rep node</para>
+<para>Get mod-ref of all callsites calling callGraphNode</para>
+<para>mods are treated as both def and use of memory objects</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="297" column="18" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="205" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ac0b966ee2065607a24920dd9067b40e9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MRGenerator::partitionMRs</definition>
+        <argsstring>()</argsstring>
+        <name>partitionMRs</name>
+        <reimplementedby refid="class_s_v_f_1_1_distinct_m_r_g_1a4512ef21fa83988ad4d588831bfba482">partitionMRs</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_intra_disjoint_m_r_g_1a6d2434f0e3a318b89b7b9fa4f5613b64">partitionMRs</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_inter_disjoint_m_r_g_1a807cf159e53c2fb2903296207185dda0">partitionMRs</reimplementedby>
+        <briefdescription>
+<para>Partition regions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Partition memory regions </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Compute all superset of all condition points-to sets TODO: we may need some refined region partitioning algorithm here For now, we just collapse all refs/mods objects at callsites into one region Consider modularly partition memory regions to speed up analysis (only partition regions within function scope)</para>
+<para>Generate memory regions according to condition pts after computing superset</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="300" column="18" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="294" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a9c1da53188729eb743e1a33bbad87af7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MRGenerator::updateAliasMRs</definition>
+        <argsstring>()</argsstring>
+        <name>updateAliasMRs</name>
+        <briefdescription>
+<para>Update aliased regions for loads/stores/callsites. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Update aliased regions for loads/stores/callsites </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>update stores with its aliased regions</para>
+<para>update callsites with its aliased regions</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="303" column="18" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="325" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a4d20ddfe5cb90d91fd86276a3f010b87" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MRGenerator::sortPointsTo</definition>
+        <argsstring>(const PointsTo &amp;cpts)</argsstring>
+        <name>sortPointsTo</name>
+        <param>
+          <type>const PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <briefdescription>
+<para>Given a condition pts, insert into cptsToRepCPtsMap for region generation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a condition pts, insert into cptsToRepCPtsMap Always map it to its superset(rep) cpts according to existing items 1) map cpts to its superset(rep) which exists in the map, otherwise its superset is itself 2) adjust existing items in the map if their supersets are cpts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="306" column="18" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="261" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1acd1759ce72edc748e6628d7e82458473" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::MRGenerator::isAliasedMR</definition>
+        <argsstring>(const PointsTo &amp;cpts, const MemRegion *mr)</argsstring>
+        <name>isAliasedMR</name>
+        <param>
+          <type>const PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+<para>Whether a region is aliased with a conditional points-to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="309" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="309" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a6426e7a9a6324b8b2f8a9bcf4aab1fc1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::MRGenerator::getAliasMemRegions</definition>
+        <argsstring>(MRSet &amp;aliasMRs, const PointsTo &amp;cpts, const SVFFunction *fun)</argsstring>
+        <name>getAliasMemRegions</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+          <declname>aliasMRs</declname>
+        </param>
+        <param>
+          <type>const PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Get all aliased mem regions from function fun according to cpts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="314" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="314" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a2a7012e9f2e84ac1c5f7ed61daa67ac7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::MRGenerator::getMRsForLoad</definition>
+        <argsstring>(MRSet &amp;aliasMRs, const PointsTo &amp;cpts, const SVFFunction *)</argsstring>
+        <name>getMRsForLoad</name>
+        <reimplementedby refid="class_s_v_f_1_1_inter_disjoint_m_r_g_1affab79ce9b1ef9ec7bc04af8ad2954dc">getMRsForLoad</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_distinct_m_r_g_1ad877dd9e21c3e1d5a1437b12e68ff993">getMRsForLoad</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_intra_disjoint_m_r_g_1aa1395f921e2a6e2607a6887f134cb63f">getMRsForLoad</reimplementedby>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+          <declname>aliasMRs</declname>
+        </param>
+        <param>
+          <type>const PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get memory regions for a load statement according to cpts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="324" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="324" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1af4eda1f51e3f58c8cccddee474972fe9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::MRGenerator::getMRsForCallSiteRef</definition>
+        <argsstring>(MRSet &amp;aliasMRs, const PointsTo &amp;cpts, const SVFFunction *)</argsstring>
+        <name>getMRsForCallSiteRef</name>
+        <reimplementedby refid="class_s_v_f_1_1_distinct_m_r_g_1a2b3e57a20079b28fb9ec389bdc4f37f3">getMRsForCallSiteRef</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_intra_disjoint_m_r_g_1a8a1c8f676758ba6193bc683d10126175">getMRsForCallSiteRef</reimplementedby>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRSet</ref> &amp;</type>
+          <declname>aliasMRs</declname>
+        </param>
+        <param>
+          <type>const PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get memory regions for call site ref according to cpts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="331" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="331" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1adc9d530e6f010596d91cd3711dc1358b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MRGenerator::modRefAnalysis</definition>
+        <argsstring>(PTACallGraphNode *callGraphNode, WorkList &amp;worklist)</argsstring>
+        <name>modRefAnalysis</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_p_t_a_call_graph_node" kindref="compound">PTACallGraphNode</ref> *</type>
+          <declname>callGraphNode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_f_i_f_o_work_list" kindref="compound">WorkList</ref> &amp;</type>
+          <declname>worklist</declname>
+        </param>
+        <briefdescription>
+<para>Mod-Ref analysis for callsite invoking this callGraphNode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call site mod-ref analysis Compute mod-ref of all callsites invoking this call graph node </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>add ref/mod set of callee to its invocation callsites at caller</para>
+<para>handle direct callsites</para>
+<para>handle indirect callsites</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="338" column="18" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="612" bodyend="642"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a123a2ea51b04f1398b9ee66567f5014a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool MRGenerator::handleCallsiteModRef</definition>
+        <argsstring>(NodeBS &amp;mod, NodeBS &amp;ref, const CallBlockNode *cs, const SVFFunction *fun)</argsstring>
+        <name>handleCallsiteModRef</name>
+        <param>
+          <type>NodeBS &amp;</type>
+          <declname>mod</declname>
+        </param>
+        <param>
+          <type>NodeBS &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+          <defname>callee</defname>
+        </param>
+        <briefdescription>
+<para>Get Mod-Ref of a callee function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get Mod-Ref of a callee function </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>if a callee is a heap allocator function, then its mod set of this callsite is the heap object.</para>
+<para>otherwise, we find the mod/ref sets from the callee function, who has definition and been processed</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="341" column="18" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="580" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ae439967f24dbb6dbc11287592eb0d30c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MRGenerator::addCPtsToStore</definition>
+        <argsstring>(PointsTo &amp;cpts, const StorePE *st, const SVFFunction *fun)</argsstring>
+        <name>addCPtsToStore</name>
+        <param>
+          <type>PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_store_p_e" kindref="compound">StorePE</ref> *</type>
+          <declname>st</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Add cpts to store/load. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="346" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="346" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a4d71379ec4350d6fde0c12336c1b92d8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MRGenerator::addCPtsToLoad</definition>
+        <argsstring>(PointsTo &amp;cpts, const LoadPE *ld, const SVFFunction *fun)</argsstring>
+        <name>addCPtsToLoad</name>
+        <param>
+          <type>PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_load_p_e" kindref="compound">LoadPE</ref> *</type>
+          <declname>ld</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="352" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="352" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a2416e15c41fce38dfa63318a8f64e11f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MRGenerator::addCPtsToCallSiteRefs</definition>
+        <argsstring>(PointsTo &amp;cpts, const CallBlockNode *cs)</argsstring>
+        <name>addCPtsToCallSiteRefs</name>
+        <param>
+          <type>PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="358" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="358" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ae2594115874771c93963846f3276e1fb" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MRGenerator::addCPtsToCallSiteMods</definition>
+        <argsstring>(PointsTo &amp;cpts, const CallBlockNode *cs)</argsstring>
+        <name>addCPtsToCallSiteMods</name>
+        <param>
+          <type>PointsTo &amp;</type>
+          <declname>cpts</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="363" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="363" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a1cb94c8a0379eb30c99f0c3cb2bfebaf" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MRGenerator::hasCPtsList</definition>
+        <argsstring>(const SVFFunction *fun) const</argsstring>
+        <name>hasCPtsList</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="368" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="368" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a6d86c8ebe87cb54f39e52daa7ffb0e2e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PointsToList &amp;</type>
+        <definition>PointsToList&amp; SVF::MRGenerator::getPointsToList</definition>
+        <argsstring>(const SVFFunction *fun)</argsstring>
+        <name>getPointsToList</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="372" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="372" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ad8333efeda532f0d403352ad6a4987e9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FunToPointsToMap &amp;</type>
+        <definition>FunToPointsToMap&amp; SVF::MRGenerator::getFunToPointsToList</definition>
+        <argsstring>()</argsstring>
+        <name>getFunToPointsToList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="376" column="29" bodyfile="include/MSSA/MemRegion.h" bodystart="376" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a899c81db92c6bcf24f6f9b769e02e5bf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MRGenerator::addRefSideEffectOfFunction</definition>
+        <argsstring>(const SVFFunction *fun, const NodeBS &amp;refs)</argsstring>
+        <name>addRefSideEffectOfFunction</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <param>
+          <type>const NodeBS &amp;</type>
+          <declname>refs</declname>
+        </param>
+        <briefdescription>
+<para>Add/Get methods for side-effect of functions and callsites. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add indirect uses an memory object in the function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="384" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="384" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a39604645ca9ba10607ada3872b14705a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MRGenerator::addModSideEffectOfFunction</definition>
+        <argsstring>(const SVFFunction *fun, const NodeBS &amp;mods)</argsstring>
+        <name>addModSideEffectOfFunction</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <param>
+          <type>const NodeBS &amp;</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+<para>Add indirect def an memory object in the function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add indirect def an memory object in the function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="386" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="396" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a4e02c3aee7eb0206f6d643b72e39d059" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MRGenerator::addRefSideEffectOfCallSite</definition>
+        <argsstring>(const CallBlockNode *cs, const NodeBS &amp;refs)</argsstring>
+        <name>addRefSideEffectOfCallSite</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const NodeBS &amp;</type>
+          <declname>refs</declname>
+        </param>
+        <briefdescription>
+<para>Add indirect uses an memory object in the function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add indirect uses an memory object in the function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="388" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="408" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a8b00b46136ce2586b5f94248d0826a94" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MRGenerator::addModSideEffectOfCallSite</definition>
+        <argsstring>(const CallBlockNode *cs, const NodeBS &amp;mods)</argsstring>
+        <name>addModSideEffectOfCallSite</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const NodeBS &amp;</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+<para>Add indirect def an memory object in the function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add indirect def an memory object in the function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="390" column="10" bodyfile="lib/MSSA/MemRegion.cpp" bodystart="424" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ac0007c8808654ca74feef0d8568378b9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const NodeBS &amp;</type>
+        <definition>const NodeBS&amp; SVF::MRGenerator::getRefSideEffectOfFunction</definition>
+        <argsstring>(const SVFFunction *fun)</argsstring>
+        <name>getRefSideEffectOfFunction</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Get indirect refs of a function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="393" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="393" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a7d47fbc3dbe8fd19ca5e4210bdecf914" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const NodeBS &amp;</type>
+        <definition>const NodeBS&amp; SVF::MRGenerator::getModSideEffectOfFunction</definition>
+        <argsstring>(const SVFFunction *fun)</argsstring>
+        <name>getModSideEffectOfFunction</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Get indirect mods of a function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="398" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="398" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ae2cc7d7d6ab427acb0352b388c7a4acc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const NodeBS &amp;</type>
+        <definition>const NodeBS&amp; SVF::MRGenerator::getRefSideEffectOfCallSite</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getRefSideEffectOfCallSite</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+<para>Get indirect refs of a callsite. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="403" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="403" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1aebd6abbf574392abce426dc796d2ee56" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const NodeBS &amp;</type>
+        <definition>const NodeBS&amp; SVF::MRGenerator::getModSideEffectOfCallSite</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getModSideEffectOfCallSite</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+<para>Get indirect mods of a callsite. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="408" column="25" bodyfile="include/MSSA/MemRegion.h" bodystart="408" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1ac91b6f0f33a95ba35cc23e0e4657732a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MRGenerator::hasRefSideEffectOfCallSite</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>hasRefSideEffectOfCallSite</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+<para>Has indirect refs of a callsite. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="413" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="413" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_m_r_generator_1a07dc868039c5e2764b3cc34faff6d94a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MRGenerator::hasModSideEffectOfCallSite</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>hasModSideEffectOfCallSite</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+<para>Has indirect mods of a callsite. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemRegion.h" line="418" column="17" bodyfile="include/MSSA/MemRegion.h" bodystart="418" bodyend="421"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Memory Region Partitioning </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SVF::MRGenerator</label>
+        <link refid="class_s_v_f_1_1_m_r_generator"/>
+      </node>
+      <node id="3">
+        <label>SVF::IntraDisjointMRG</label>
+        <link refid="class_s_v_f_1_1_intra_disjoint_m_r_g"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SVF::InterDisjointMRG</label>
+        <link refid="class_s_v_f_1_1_inter_disjoint_m_r_g"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SVF::DistinctMRG</label>
+        <link refid="class_s_v_f_1_1_distinct_m_r_g"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/MSSA/MemRegion.h" line="132" column="1" bodyfile="include/MSSA/MemRegion.h" bodystart="133" bodyend="506"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ae2594115874771c93963846f3276e1fb" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>addCPtsToCallSiteMods</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a2416e15c41fce38dfa63318a8f64e11f" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>addCPtsToCallSiteRefs</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a4d71379ec4350d6fde0c12336c1b92d8" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>addCPtsToLoad</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ae439967f24dbb6dbc11287592eb0d30c" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>addCPtsToStore</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a8b00b46136ce2586b5f94248d0826a94" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>addModSideEffectOfCallSite</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a39604645ca9ba10607ada3872b14705a" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>addModSideEffectOfFunction</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a4e02c3aee7eb0206f6d643b72e39d059" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>addRefSideEffectOfCallSite</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a899c81db92c6bcf24f6f9b769e02e5bf" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>addRefSideEffectOfFunction</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1af46b82e45aa1ecdfb397325971206541" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>allGlobals</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a0e46c7beb580ace3a652ac9e1c419b48" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>cachedPtsChainMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a05005a166c39b1adea492655d77db519" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>callGraph</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1aa3a12cf1f761d25b9213bc6e50d89ba5" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>callGraphSCC</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1adf8d477e5f622855799842134145ecc4" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>callsiteToModMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ab8df193e84009e406c301731d17dc7b9" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>callsiteToModPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a71b5ce2c754ffff5a84fdb0c3aa16819" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>CallSiteToMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a55ca7850e00f57a8a4b83bc969493046" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>CallSiteToNodeBSMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ae73349361642cbc0c5f4be0b8bf96090" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>CallSiteToPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a7a7ed21181c2486b60170a479a5a534e" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>callsiteToRefMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a34967cda51699f948a581b9f88fa3b10" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>callsiteToRefPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ac43b3f895efd160c7dd5860c0dfd1625" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>collectCallSitePts</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1afdae3e11009966856736d9aa1e2ad5bd" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>collectGlobals</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a502f8379620378b36bc12d9a91b408d2" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>collectModRefForCall</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a207dfa4c9f044764665478142c6e6b22" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>collectModRefForLoadStore</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a81bd687d34eea884dfcf68274fcec7b5" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>CollectPtsChain</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ab4d1ff0357d389a65ff1c2112ce631a1" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>cptsToRepCPtsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a42708b4ce8b5548e156a0e6d01602cc2" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>createMR</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a145cccd6355dd479e8a0c744584cef9a" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>csToCallSiteArgsPtsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a9368636daea4542fa36fff822ff39104" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>csToCallSiteRetPtsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a72222bae993142be1881c34660646b82" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>csToModsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a08779053af9db71ba0bc24710a7e198c" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>csToRefsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ac253d88de2a0cb9624c70d2bcfdac36e" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>destroy</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1aeb185d6d9c7bfe4b98c7440db6b8bbc4" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>funToModsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a3e74c3706ffcc14f378771b417dcbb96" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>funToMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a090070379a09460aef0c07270d32d27b" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>FunToMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ab01e492f002c73e2c89eb0b4c8f9647d" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>FunToNodeBSMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1acaf48288039d19bf0bb9f2e506fbfd8d" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>funToPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a71b584c7e0feb3014ad5f74eb31467bb" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>FunToPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1afe018918c8acc83cd128b4c56ff42075" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>funToRefsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a4f65593325e4391333fa1b0bedbffc4a" prot="public" virt="virtual"><scope>SVF::MRGenerator</scope><name>generateMRs</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a6426e7a9a6324b8b2f8a9bcf4aab1fc1" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>getAliasMemRegions</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ab3d3ca72d2cddf5336d00dc623f33401" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getCallGraphSCCRevTopoOrder</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a373b57017e99ee8466d1c8a363adaeef" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getCallSiteArgsPts</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1acb78098bf1fc8c3a80720a3dff3a0a1d" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getCallSiteModMRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a7ede01d58bb2490ded5895ca5bd45948" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getCallSiteRefMRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1aac03d1d2e10543e100530f99165b4388" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getCallSiteRetPts</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1add22c9a95478dea21148e87c8dfc584a" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getEscapObjviaGlobals</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a3121380139c7ae96d2045d66203253b6" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getFunction</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a64ba36ddcd304f6543e416c552763879" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getFunMRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ad8333efeda532f0d403352ad6a4987e9" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getFunToPointsToList</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a5cf5ae60ad6028809088f3c842afde9d" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getLoadMRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a1658aacb68aacb4785266263c1641a6a" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getModInfoForCall</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a455e0ba173141ac8ce76a655ac52205f" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getModRefInfo</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a9f1d1604fb884e5c99702556915396f9" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getModRefInfo</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a83f957962bf3c7621661ce87b095e841" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getModRefInfo</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1aebd6abbf574392abce426dc796d2ee56" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getModSideEffectOfCallSite</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a7d47fbc3dbe8fd19ca5e4210bdecf914" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getModSideEffectOfFunction</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a7ecde80ed05d425a19bf7fe0c5feff84" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getMR</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ad34e796ebc49f5749de39e81374dc7a7" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getMRNum</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a1f69924c587c4e68a029fd4e86cffacf" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getMRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1af4eda1f51e3f58c8cccddee474972fe9" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>getMRsForCallSiteRef</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a2a7012e9f2e84ac1c5f7ed61daa67ac7" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>getMRsForLoad</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a2eda764e59d9b5e7620d2cf26562615a" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getPAGEdgesFromInst</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a6d86c8ebe87cb54f39e52daa7ffb0e2e" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getPointsToList</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1afc17f566f57656cf17c08665602b4849" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getRefInfoForCall</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ae2cc7d7d6ab427acb0352b388c7a4acc" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getRefSideEffectOfCallSite</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ac0007c8808654ca74feef0d8568378b9" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getRefSideEffectOfFunction</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a2e039a855c8e421e80cc7b015211a192" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getRepPointsTo</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ac409bbee6bf9deef7e31233a05054ee2" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>getStoreMRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a123a2ea51b04f1398b9ee66567f5014a" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>handleCallsiteModRef</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a1cb94c8a0379eb30c99f0c3cb2bfebaf" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>hasCPtsList</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a8868281e5f5b5f3a83acf8568971ad40" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>hasModMRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a07dc868039c5e2764b3cc34faff6d94a" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>hasModSideEffectOfCallSite</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1abe76a16b9eedc9f8ffca6bc39cfb5c7e" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>hasPAGEdgeList</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1aeed8bcf54d2a72c640e464e256249630" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>hasRefMRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ac91b6f0f33a95ba35cc23e0e4657732a" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>hasRefSideEffectOfCallSite</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1acd1759ce72edc748e6628d7e82458473" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>isAliasedMR</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a2cf20660f2fd686fa3cabd046c4a10bf" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>isNonLocalObject</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a72f55ad36f4ce46c5eee4bf0ce736cee" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>LoadsToMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a0d8229b1f0b8428708e923d19096e4ba" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>loadsToMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1af47e15d6b8c15d547a718f3577513975" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>loadsToPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1af500450901135fd31ceb2ab497ca1086" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>LoadsToPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1af94bd8155a23273aab2396334d905119" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>memRegSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1adc9d530e6f010596d91cd3711dc1358b" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>modRefAnalysis</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a1023eb17f1a46eee9a948490a4c8fdd5" prot="protected" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>MRGenerator</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>MRSet</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ab075a7c7fbc60f678b3fee8bbc06194d" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>NodeToPTSSMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a1715322c61a3f41f1a093098591869d4" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>PAGEdgeList</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ab250a4950269f57027d8e8ef10089f58" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>pagEdgeToFunMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a82be01b460a498c07fb6a8aba853ed31" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>PAGEdgeToFunMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1ac0b966ee2065607a24920dd9067b40e9" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>partitionMRs</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a2c58aadbebb9daf5a0be3926b3997013" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>PointsToList</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1afb7ce3a24edda14895999eb15231daff" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>pta</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a6a62d2dede5d2506c19b2d058d1cd9d3" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>ptrOnlyMSSA</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a0984b63a3e159b4825e4ffd2fcfb6ca4" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>PtsToRepPtsSetMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1af8d52e6c9884c6e1abc6dbcbc5e32629" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>SCC</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a4d20ddfe5cb90d91fd86276a3f010b87" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>sortPointsTo</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a255551fd3ff8fb33bcea93d0b00280b3" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>storesToMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a9d2221818297a7abeb8d8736093105d0" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>StoresToMRsMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a7d86f708743a59aa31c0a9fd6de45dac" prot="private" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>storesToPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a4e246650818afd8be99a5ed6e23c4cd7" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>StoresToPointsToMap</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a9c1da53188729eb743e1a33bbad87af7" prot="protected" virt="virtual"><scope>SVF::MRGenerator</scope><name>updateAliasMRs</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a68d50c752252bd40c402c7b99b95f0fc" prot="public" virt="non-virtual"><scope>SVF::MRGenerator</scope><name>WorkList</name></member>
+      <member refid="class_s_v_f_1_1_m_r_generator_1a46e08638c8b5e6f6755de045c94862c4" prot="public" virt="virtual"><scope>SVF::MRGenerator</scope><name>~MRGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,182 @@
+.TH "SVF::TypeBasedHeapCloning" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::TypeBasedHeapCloning
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const MDNode * \fBgetRawCTirMetadata\fP (const Value *)"
+.br
+.RI "Returns raw ctir metadata of a Value\&. Returns null if it doesn't exist\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTypeBasedHeapCloning\fP (\fBBVDataPTAImpl\fP *pta)"
+.br
+.RI "Constructor\&. pta is the pointer analysis using this object (i\&.e\&. that which is extending)\&. "
+.ti -1c
+.RI "virtual void \fBbackPropagate\fP (NodeID clone)=0"
+.br
+.ti -1c
+.RI "void \fBsetDCHG\fP (\fBDCHGraph\fP *\fBdchg\fP)"
+.br
+.RI "DCHG \fImust\fP be set by extending class once the DCHG is available\&. "
+.ti -1c
+.RI "void \fBsetPAG\fP (\fBPAG\fP *pag)"
+.br
+.RI "\fBPAG\fP \fImust\fP be set by extending class once the \fBPAG\fP is available\&. "
+.ti -1c
+.RI "bool \fBisBlkObjOrConstantObj\fP (NodeID o) const"
+.br
+.ti -1c
+.RI "bool \fBisBase\fP (const DIType *a, const DIType *b) const"
+.br
+.ti -1c
+.RI "bool \fBisClone\fP (NodeID o) const"
+.br
+.RI "Returns true if o is a clone\&. "
+.ti -1c
+.RI "void \fBsetType\fP (NodeID o, const DIType *t)"
+.br
+.RI "Sets the type (in objToType) of o\&. "
+.ti -1c
+.RI "const DIType * \fBgetType\fP (NodeID o) const"
+.br
+.RI "Returns the type (from objToType) of o\&. Asserts existence\&. "
+.ti -1c
+.RI "void \fBsetAllocationSite\fP (NodeID o, NodeID site)"
+.br
+.RI "Sets the allocation site (in objToAllocation) of o\&. "
+.ti -1c
+.RI "NodeID \fBgetAllocationSite\fP (NodeID o) const"
+.br
+.RI "Returns the allocation site (from objToAllocation) of o\&. Asserts existence\&. "
+.ti -1c
+.RI "const NodeBS \fBgetObjsWithClones\fP (void)"
+.br
+.RI "Returns objects that have clones (any key in objToClones)\&. "
+.ti -1c
+.RI "void \fBaddClone\fP (NodeID o, NodeID c)"
+.br
+.RI "Add a clone c to object o\&. "
+.ti -1c
+.RI "const NodeBS & \fBgetClones\fP (NodeID o)"
+.br
+.RI "Returns all the clones of o\&. "
+.ti -1c
+.RI "void \fBsetOriginalObj\fP (NodeID c, NodeID o)"
+.br
+.ti -1c
+.RI "NodeID \fBgetOriginalObj\fP (NodeID c) const"
+.br
+.RI "Returns the original object c is cloned from\&. If c is not a clone, returns itself\&. "
+.ti -1c
+.RI "PointsTo & \fBgetFilterSet\fP (NodeID loc)"
+.br
+.RI "Returns the filter set of a location\&. Not const; could create empty PointsTo\&. "
+.ti -1c
+.RI "void \fBaddGepToObj\fP (NodeID gep, NodeID base, unsigned offset)"
+.br
+.RI "Associates gep with base (through objToGeps and memObjToGeps)\&. "
+.ti -1c
+.RI "const NodeBS & \fBgetGepObjsFromMemObj\fP (const \fBMemObj\fP *memObj, unsigned offset)"
+.br
+.ti -1c
+.RI "const NodeBS & \fBgetGepObjs\fP (NodeID base)"
+.br
+.ti -1c
+.RI "const NodeBS \fBgetGepObjClones\fP (NodeID base, unsigned offset)"
+.br
+.ti -1c
+.RI "bool \fBinit\fP (NodeID loc, NodeID p, const DIType *tildet, bool reuse, bool gep=false)"
+.br
+.ti -1c
+.RI "NodeID \fBcloneObject\fP (NodeID o, const DIType *type, bool reuse)"
+.br
+.ti -1c
+.RI "NodeID \fBaddCloneDummyObjNode\fP (const \fBMemObj\fP *mem)"
+.br
+.RI "Add clone dummy object node to \fBPAG\fP\&. "
+.ti -1c
+.RI "NodeID \fBaddCloneGepObjNode\fP (const \fBMemObj\fP *mem, const \fBLocationSet\fP &l)"
+.br
+.RI "Add clone GEP object node to \fBPAG\fP\&. "
+.ti -1c
+.RI "NodeID \fBaddCloneFIObjNode\fP (const \fBMemObj\fP *mem)"
+.br
+.RI "Add clone FI object node to \fBPAG\fP\&. "
+.ti -1c
+.RI "const DIType * \fBgetTypeFromCTirMetadata\fP (const Value *)"
+.br
+.ti -1c
+.RI "void \fBvalidateTBHCTests\fP (\fBSVFModule\fP *svfMod)"
+.br
+.ti -1c
+.RI "void \fBdumpStats\fP (void)"
+.br
+.RI "Dump some statistics we tracked\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDCHGraph\fP * \fBdchg\fP = nullptr"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const DIType * \fBundefType\fP = nullptr"
+.br
+.RI "The undefined type (•); void\&. "
+.ti -1c
+.RI "static const std::string \fBderefFnName\fP = 'deref'"
+.br
+.RI "deref function for TBHC alias tests\&. "
+.ti -1c
+.RI "static const std::string \fBmangledDerefFnName\fP = '_Z5derefv'"
+.br
+.RI "deref function (mangled) for TBHC alias tests\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void SVF::TypeBasedHeapCloning::backPropagate (NodeID clone)\fC [protected]\fP, \fC [pure virtual]\fP"
+Required by user\&. Handles back-propagation of newly created clone after all metadata has been set\&. Used by cloneObject\&. 
+.PP
+Implemented in \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "NodeID TypeBasedHeapCloning::cloneObject (NodeID o, const DIType * type, bool reuse)\fC [protected]\fP"
+Returns a clone of o with type type\&. reuse indicates whether we are cloning as a result of reuse\&. 
+.SS "const NodeBS TypeBasedHeapCloning::getGepObjClones (NodeID base, unsigned offset)\fC [protected]\fP"
+Returns the GEP object node(s) of base for ls\&. This may include clones\&. If there are no GEP objects, then getGepObjNode is called on the \fBPAG\fP (through base's getGepObjNode) which will create one\&. 
+.SS "const NodeBS & TypeBasedHeapCloning::getGepObjs (NodeID base)\fC [protected]\fP"
+Returns all gep objects under an object\&. Not const; could create empty set\&. 
+.SS "const NodeBS & TypeBasedHeapCloning::getGepObjsFromMemObj (const \fBMemObj\fP * memObj, unsigned offset)\fC [protected]\fP"
+Returns all gep objects at a particular offset for memory object\&. Not const; could create empty set\&. 
+.SS "const DIType * TypeBasedHeapCloning::getTypeFromCTirMetadata (const Value * v)\fC [protected]\fP"
+Returns the ctir type attached to the value, nullptr if non-existant\&. Not static because it needs the DCHG to return the canonical type\&. Not static because we need dchg's getCanonicalType\&. 
+.SS "bool TypeBasedHeapCloning::init (NodeID loc, NodeID p, const DIType * tildet, bool reuse, bool gep = \fCfalse\fP)\fC [protected]\fP"
+Initialise the pointees of p at loc (which is type tildet *)\&. reuse indicates whether reuse is a possibility for this initialisation\&. Returns whether p changed\&. 
+.SS "bool TypeBasedHeapCloning::isBase (const DIType * a, const DIType * b) const\fC [protected]\fP"
+Wrapper around \fBDCHGraph::isBase\fP\&. Purpose is to keep our conditions clean by only passing two parameters like the rules\&. 
+.SS "bool TypeBasedHeapCloning::isBlkObjOrConstantObj (NodeID o) const\fC [protected]\fP"
+Check if an object is a black hole obj or a constant object\&. Required since other implementations obviously do not account for clones\&. 
+.SS "void TypeBasedHeapCloning::validateTBHCTests (\fBSVFModule\fP * svfMod)\fC [protected]\fP"
+Runs tests on MAYALIAS, NOALIAS, etc\&. built from TBHC_MAYALIAS, TBHC_NOALIAS, etc\&. macros\&. TBHC_XALIAS macros produce: call XALIAS(\&.\&.\&.) %1 = load \&.\&.\&. \&.\&.\&. n = load p store \&.\&.\&. n-1, \&.\&.\&.* n !ctir !t1 call deref() n+1 = load \&.\&.\&. \&.\&.\&. n+n = load q store \&.\&.\&. n+n-1, \&.\&.\&.* n+n !ctir !t2 call deref() We want to test the points-to sets of n and n+n after filtering with !t1 and !t2 respectively\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDCHGraph\fP* SVF::TypeBasedHeapCloning::dchg = nullptr\fC [protected]\fP"
+Class hierarchy graph built from debug information\&. Required, CHG from IR is insufficient\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

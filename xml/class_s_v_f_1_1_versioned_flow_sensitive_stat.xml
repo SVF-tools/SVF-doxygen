@@ -1,0 +1,680 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_versioned_flow_sensitive_stat" kind="class" language="C++" prot="public">
+    <compoundname>SVF::VersionedFlowSensitiveStat</compoundname>
+    <basecompoundref refid="class_s_v_f_1_1_p_t_a_stat" prot="public" virt="non-virtual">SVF::PTAStat</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a19bde64f7e0ac99a2a6b49e78aa2e70f" prot="public" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_versioned_flow_sensitive" kindref="compound">VersionedFlowSensitive</ref> *</type>
+        <definition>VersionedFlowSensitive* SVF::VersionedFlowSensitiveStat::vfspta</definition>
+        <argsstring></argsstring>
+        <name>vfspta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="169" column="28" bodyfile="include/WPA/WPAStat.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a7efe89e95b5989f861d934d52d0bbce0" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_NumVersions</definition>
+        <argsstring></argsstring>
+        <name>_NumVersions</name>
+        <briefdescription>
+<para>Total number of versions across all objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="192" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1aacce301a2c2613591dcd2afaccfcb380" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_MaxVersions</definition>
+        <argsstring></argsstring>
+        <name>_MaxVersions</name>
+        <briefdescription>
+<para>Most versions for a single object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="194" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1ac938f088c33346ad01ace37160ea8e81" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_NumUsedVersions</definition>
+        <argsstring></argsstring>
+        <name>_NumUsedVersions</name>
+        <briefdescription>
+<para>Number of version PTSs actually used (sum of next two fields). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="196" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a59f2b0ca53d3b94ce596cd2a934e6976" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_NumNonEmptyVersions</definition>
+        <argsstring></argsstring>
+        <name>_NumNonEmptyVersions</name>
+        <briefdescription>
+<para>Number of versions with non-empty points-to sets (since versioning is over-approximate). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="198" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a585f952ecdbd9fb559d2a5754a77d7b4" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_NumEmptyVersions</definition>
+        <argsstring></argsstring>
+        <name>_NumEmptyVersions</name>
+        <briefdescription>
+<para>Number of versions with empty points-to sets (actually empty, not never-accessed). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="200" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a54c05a4b7ca2af66bf74a5f87cd2c416" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_NumSingleVersion</definition>
+        <argsstring></argsstring>
+        <name>_NumSingleVersion</name>
+        <briefdescription>
+<para>Number of objects which have a single version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="202" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a99a7d0bbea0f015f5a656c33ee3ab88d" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_MaxPtsSize</definition>
+        <argsstring></argsstring>
+        <name>_MaxPtsSize</name>
+        <briefdescription>
+<para>Largest PTS size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="205" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1ac07c5308abfe6cdb6b242a7548fe71c5" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_MaxTopLvlPtsSize</definition>
+        <argsstring></argsstring>
+        <name>_MaxTopLvlPtsSize</name>
+        <briefdescription>
+<para>Max points-to set size in top-level pointers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="207" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a8c4bfeab6bb30a16689d3c3c54a1057d" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_MaxVersionPtsSize</definition>
+        <argsstring></argsstring>
+        <name>_MaxVersionPtsSize</name>
+        <briefdescription>
+<para>Max address-taken points-to set size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="209" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a5ae1833ae26af8bcb819dad24e2390de" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::VersionedFlowSensitiveStat::_TotalPtsSize</definition>
+        <argsstring></argsstring>
+        <name>_TotalPtsSize</name>
+        <briefdescription>
+<para>Total of points-to set sizes for calculating averages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="212" column="11" bodyfile="include/WPA/WPAStat.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a637485a4ee7fd5bfd5b78ee140fb3108" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SVF::VersionedFlowSensitiveStat::_AvgPtsSize</definition>
+        <argsstring></argsstring>
+        <name>_AvgPtsSize</name>
+        <briefdescription>
+<para>Average size across all points-to sets. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="215" column="12" bodyfile="include/WPA/WPAStat.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a8bf7eeabb0c390d4f5405d87ffad0492" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SVF::VersionedFlowSensitiveStat::_AvgTopLvlPtsSize</definition>
+        <argsstring></argsstring>
+        <name>_AvgTopLvlPtsSize</name>
+        <briefdescription>
+<para>Average points-to set size for top-level pointers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="217" column="12" bodyfile="include/WPA/WPAStat.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a2e3c24fbb1faaf345e6806e99a07f782" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SVF::VersionedFlowSensitiveStat::_AvgVersionPtsSize</definition>
+        <argsstring></argsstring>
+        <name>_AvgVersionPtsSize</name>
+        <briefdescription>
+<para>Average points-to set size for address-taken objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="219" column="12" bodyfile="include/WPA/WPAStat.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a762c964e76d181716e1a3833dc4c0706" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::VersionedFlowSensitiveStat::VersionedFlowSensitiveStat</definition>
+        <argsstring>(VersionedFlowSensitive *pta)</argsstring>
+        <name>VersionedFlowSensitiveStat</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_versioned_flow_sensitive" kindref="compound">VersionedFlowSensitive</ref> *</type>
+          <declname>pta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="171" column="5" bodyfile="include/WPA/WPAStat.h" bodystart="171" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a57190355942c2f4f839a1a3fd8db9d32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SVF::VersionedFlowSensitiveStat::~VersionedFlowSensitiveStat</definition>
+        <argsstring>()</argsstring>
+        <name>~VersionedFlowSensitiveStat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="178" column="13" bodyfile="include/WPA/WPAStat.h" bodystart="178" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1af202623692135ad746aed1be995c55fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VersionedFlowSensitiveStat::performStat</definition>
+        <argsstring>()</argsstring>
+        <name>performStat</name>
+        <reimplements refid="class_s_v_f_1_1_p_t_a_stat_1acfed70588cf921694db35990ec3c7497">performStat</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="180" column="18" bodyfile="lib/WPA/VersionedFlowSensitiveStat.cpp" bodystart="34" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a6664f28eab3052988ab9e89766373981" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VersionedFlowSensitiveStat::clearStat</definition>
+        <argsstring>()</argsstring>
+        <name>clearStat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="183" column="10" bodyfile="lib/WPA/VersionedFlowSensitiveStat.cpp" bodystart="17" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1ad7fe08f5d684e3411f8f28ec346bd814" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VersionedFlowSensitiveStat::versionStat</definition>
+        <argsstring>(void)</argsstring>
+        <name>versionStat</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>For all version-related statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="186" column="10" bodyfile="lib/WPA/VersionedFlowSensitiveStat.cpp" bodystart="153" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_versioned_flow_sensitive_stat_1acbe0a777f2c00b142a94ce2b974fd5d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VersionedFlowSensitiveStat::ptsSizeStat</definition>
+        <argsstring>(void)</argsstring>
+        <name>ptsSizeStat</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>For all PTS size related statistics not handled by versionStat. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPAStat.h" line="189" column="10" bodyfile="lib/WPA/VersionedFlowSensitiveStat.cpp" bodystart="207" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SVF::VersionedFlowSensitiveStat</label>
+        <link refid="class_s_v_f_1_1_versioned_flow_sensitive_stat"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SVF::PTAStat</label>
+        <link refid="class_s_v_f_1_1_p_t_a_stat"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>SVF::VersionedFlowSensitive</label>
+        <link refid="class_s_v_f_1_1_versioned_flow_sensitive"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>SVF::MRGenerator</label>
+        <link refid="class_s_v_f_1_1_m_r_generator"/>
+      </node>
+      <node id="33">
+        <label>SVF::GenericGraph&lt; ConstraintNode, ConstraintEdge &gt;</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="13">
+        <label>GenericICFGTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="31">
+        <label>WPAConstraintSolver</label>
+        <link refid="class_s_v_f_1_1_w_p_a_solver"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>scc</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>worklist</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>SVF::ConstraintGraph</label>
+        <link refid="class_s_v_f_1_1_constraint_graph"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>pag</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>nodesToBeCollapsed</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>AddrCGEdgeSet</edgelabel>
+          <edgelabel>LoadCGEdgeSet</edgelabel>
+          <edgelabel>StoreCGEdgeSet</edgelabel>
+          <edgelabel>directEdgeSet</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>WPASVFGFSSolver</label>
+        <link refid="class_s_v_f_1_1_w_p_a_f_s_solver"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>SVF::GenericNode&lt; ConstraintNode, ConstraintEdge &gt;</label>
+        <link refid="class_s_v_f_1_1_generic_node"/>
+      </node>
+      <node id="6">
+        <label>SVF::WPASolver&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_w_p_a_solver"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>scc</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>worklist</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>SVF::AndersenBase</label>
+        <link refid="class_s_v_f_1_1_andersen_base"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>consCG</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>GenericCallGraphTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="1">
+        <label>SVF::VersionedFlowSensitiveStat</label>
+        <link refid="class_s_v_f_1_1_versioned_flow_sensitive_stat"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>vfspta</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>SVF::PAG</label>
+        <link refid="class_s_v_f_1_1_p_a_g"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SVF::SCCDetection&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_s_c_c_detection"/>
+      </node>
+      <node id="8">
+        <label>SVF::FIFOWorkList&lt; NodeID &gt;</label>
+        <link refid="class_s_v_f_1_1_f_i_f_o_work_list"/>
+      </node>
+      <node id="2">
+        <label>SVF::PTAStat</label>
+        <link refid="class_s_v_f_1_1_p_t_a_stat"/>
+      </node>
+      <node id="16">
+        <label>SVF::CommonCHGraph</label>
+        <link refid="class_s_v_f_1_1_common_c_h_graph"/>
+      </node>
+      <node id="25">
+        <label>SVF::MemSSA</label>
+        <link refid="class_s_v_f_1_1_mem_s_s_a"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>pta</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>mrGen</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>SVF::SVFG</label>
+        <link refid="class_s_v_f_1_1_s_v_f_g"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>pta</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>mssa</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SVF::ICFG</label>
+        <link refid="class_s_v_f_1_1_i_c_f_g"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>SVF::MemSSAStat</label>
+        <link refid="class_s_v_f_1_1_mem_s_s_a_stat"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SVF::GenericGraph&lt; PAGNode, PAGEdge &gt;</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="11">
+        <label>SVF::SVFModule</label>
+        <link refid="class_s_v_f_1_1_s_v_f_module"/>
+      </node>
+      <node id="24">
+        <label>SVF::SVFGStat</label>
+        <link refid="class_s_v_f_1_1_s_v_f_g_stat"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>SVF::AndersenWaveDiff</label>
+        <link refid="class_s_v_f_1_1_andersen_wave_diff"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>SVF::TypeSystem</label>
+        <link refid="class_s_v_f_1_1_type_system"/>
+      </node>
+      <node id="29">
+        <label>SVF::Andersen</label>
+        <link refid="class_s_v_f_1_1_andersen"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SVF::FlowSensitive</label>
+        <link refid="class_s_v_f_1_1_flow_sensitive"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>memSSA</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>ander</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>fspta</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>svfg</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>SVF::SVFGBuilder</label>
+        <link refid="class_s_v_f_1_1_s_v_f_g_builder"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>globalSvfg</edgelabel>
+          <edgelabel>svfg</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>SVF::VFG</label>
+        <link refid="class_s_v_f_1_1_v_f_g"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>callgraph</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>pag</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SVF::BVDataPTAImpl</label>
+        <link refid="class_s_v_f_1_1_b_v_data_p_t_a_impl"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>SVF::PTACallGraph</label>
+        <link refid="class_s_v_f_1_1_p_t_a_call_graph"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>GenericVFGTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="10">
+        <label>SVF::PointerAnalysis</label>
+        <link refid="class_s_v_f_1_1_pointer_analysis"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>callGraphSCC</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>svfMod</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>icfg</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>ptaCallGraph</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>chgraph</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>pag</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>typeSystem</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/WPA/WPAStat.h" line="166" column="1" bodyfile="include/WPA/WPAStat.h" bodystart="167" bodyend="220"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a637485a4ee7fd5bfd5b78ee140fb3108" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_AvgPtsSize</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a8bf7eeabb0c390d4f5405d87ffad0492" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_AvgTopLvlPtsSize</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a2e3c24fbb1faaf345e6806e99a07f782" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_AvgVersionPtsSize</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a99a7d0bbea0f015f5a656c33ee3ab88d" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_MaxPtsSize</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1ac07c5308abfe6cdb6b242a7548fe71c5" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_MaxTopLvlPtsSize</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a8c4bfeab6bb30a16689d3c3c54a1057d" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_MaxVersionPtsSize</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1aacce301a2c2613591dcd2afaccfcb380" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_MaxVersions</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a585f952ecdbd9fb559d2a5754a77d7b4" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_NumEmptyVersions</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a59f2b0ca53d3b94ce596cd2a934e6976" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_NumNonEmptyVersions</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a54c05a4b7ca2af66bf74a5f87cd2c416" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_NumSingleVersion</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1ac938f088c33346ad01ace37160ea8e81" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_NumUsedVersions</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a7efe89e95b5989f861d934d52d0bbce0" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_NumVersions</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a5ae1833ae26af8bcb819dad24e2390de" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>_TotalPtsSize</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1adb0edbe88a74e5e89921bcfafa4759c6" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>AveragePointsToSetSize</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a1649c9f893c5b9ec2d57a399bc050030" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>AverageTopLevPointsToSetSize</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a1772bc87370b5625f71edd4476277064" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>callgraphStat</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a6664f28eab3052988ab9e89766373981" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>clearStat</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1afe854f7416ea408104721a083ee9fee0" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>endClk</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a267ba4aac2e7ceb65f008f9486d3d9f7" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>endTime</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1afa718535839a939e51afc0f8c1fbdac6" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>generalNumMap</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1aea47f02f3f56b089ba8ed45270e16eb4" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>getClk</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a5b4095f427c9c7b9ec0db497ba33baea" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>localVarInRecursion</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a68c8df7d9fbb4b34254857a432e5d5e8" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>markedClocksOnly</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ab754f7768ffcd6f232b8cdf0fef6fc4e" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>MaxNumOfNodesInSCC</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1af2b45aab2eee96a1cabba3025e4375a2" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>MaxPointsToSetSize</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1af6a6e3ea4c7f8e1c984bea8d5fb9a7c0" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>MaxStructSize</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ad1a7e7aec8f272017be7d0b6acda86a4" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumberOfFieldInsensitiveObj</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ab62eb21c7dc03f68b0509c31451b2e98" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumberOfFieldSensitiveObj</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ac5bf59a0a7a760c9fec5f22dedec5eb6" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfAddrs</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a6cbeca77d0681f7da28979cbd0f661b2" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfCalls</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ae74458d96423e4a7391fe8697d5a9a67" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfConstantObjs</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a97a8b662356fc89cdd2cb9463fa5578b" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfCopys</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ac518843a4148ecc45027ccc19a690c05" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfCycles</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a1745e5c3c026a130a70954da9c0074b1" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfFieldExpand</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ae9952b7456b5102113d1fee4d9d7801a" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfFunctionObjs</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a16f9bdb5387471d0bd825c4a9cbcb22e" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfGepFieldObjects</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a164249b9d35606387e628529c643d119" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfGepFieldPointers</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1acc5e4740e11cb6f9794723e5f61ab63b" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfGeps</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a57574c85a5a875a05ef83d3c916cf3e5" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfGlobalObjs</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a4aff48eaa2045ee619a8ea793a9234b8" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfHeapObjs</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a618707c52da086e04f5e7bff31794cf3" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfIndirectCallSites</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ad51d2bd924f049e440b3d0dd0d423524" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfIndirectEdgeSolved</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ae95fb0771a71ead27da79a45cac47a36" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfIterations</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a4aa7356142f51d942063be5a2910940f" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfLoads</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a5c09f41916e40d784a63e301584511f9" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfMemObjects</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1aea3e95097b3b9d326bef0d36f17e51a5" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfNodesInCycles</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a9014371b8ed95ab8135eed2a7fa945f1" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfNonPtrObjs</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a1211e1c7f16b715f32ecdef83f39a8c6" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfNullPointer</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1adb31b163f0cbb9d9ce207ef5d8c075fa" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfObjsHasConstArray</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a918051b1d0eb4f49c349352408cc9751" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfObjsHasConstStruct</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a78693e8bf93d712eb76c9d6dc0c45ae6" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfObjsHasVarArray</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a95edd35cec92fa4cacc8b59b5eecc827" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfObjsHasVarStruct</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a218748b401bdd3d5eebd45eea0026b12" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfPointers</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a0de03cdb382b353c6c1495c0f80cfe19" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfProcessedAddrs</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ad30b36fb1884d1ef0b01c3b36a245211" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfProcessedCopys</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1aaa9d98f868c0724cb57c6934e783d1e5" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfProcessedGeps</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a17531fa1df42df0b19191d61853380d9" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfProcessedLoads</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a5b9bc0e9dac6ac97199476f6b7ea1edf" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfProcessedStores</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1aefcc3638fac7034ab3542be8eb01ab58" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfPWCCycles</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a0a552611fcd20e1310290bdae404a514" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfReturns</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ad1731b88c24bb79728f62cd3e9c55699" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfSCCDetection</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a07a1db62ddba50bda787b2985ef8d135" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfSfr</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ae05503909688a17dc1f282d1d029d24e" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfStackObjs</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a656ad9980ff05af396ed6754c50916e7" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NumOfStores</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a7e8f9f9c1662822f3f8bd016db84e1e6" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>NUMStatMap</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1af202623692135ad746aed1be995c55fb" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>performStat</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1adef061d4454a1b1fb46efa4013d9a956" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>performStatPerQuery</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1aa5f455bfa79743b8e263431593d29bbf" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>printStat</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a7ce0630cfe41448bec002f03a176175d" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>printStatPerQuery</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a95a0a7861731072baeaf75354531875f" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>ProcessCopyGepTime</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1aeb6a52c31ecd004670e85f24b01d75d6" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>ProcessLoadStoreTime</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ac9b65b591200c16c420fbd26710b448f" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>PTAStat</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1afdb975520329be0c33cc7bdd51ba7031" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>PTNumStatMap</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1acbe0a777f2c00b142a94ce2b974fd5d5" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>ptsSizeStat</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ad4c1cf3750341f73987c37745f3bd2aa" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>SCCDetectionTime</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a8c4101e697057269def501d14a987287" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>SCCMergeTime</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a4ddc0ea34909863ca339fcbba2eef278" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>setMarkedClocksOnly</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a5524ff7901659f56e9de343992be8f3b" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>startClk</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a59e0fe6fa506f1cf319b5acaf9d28be9" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>startTime</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a28f304e7095f3843ca4cc017bc1f7b10" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>TIMEStatMap</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a3724756ac0527ba3d199be32e38c6337" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>timeStatMap</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a25001a6d794d91056f37d954d9660910" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>TotalAnalysisTime</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a3afc0a36232a0388d8aa42c68219cb26" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>TotalNumOfEdges</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1ac0e0a1c49d33e02f5cc0f21565ce627d" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>TotalNumOfFieldObjects</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1acd9848f15aa359550e86c7b857df84ed" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>TotalNumOfObjects</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a1a4d418fd9e5413e7ffbbfe57f5e0560" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>TotalNumOfPointers</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a8aedfeb35f76e6d33135637156468894" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>UpdateCallGraphTime</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a762c964e76d181716e1a3833dc4c0706" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>VersionedFlowSensitiveStat</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1ad7fe08f5d684e3411f8f28ec346bd814" prot="private" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>versionStat</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a19bde64f7e0ac99a2a6b49e78aa2e70f" prot="public" virt="non-virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>vfspta</name></member>
+      <member refid="class_s_v_f_1_1_p_t_a_stat_1a1e5294c49b8bd8a850e938dccd5800a5" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>~PTAStat</name></member>
+      <member refid="class_s_v_f_1_1_versioned_flow_sensitive_stat_1a57190355942c2f4f839a1a3fd8db9d32" prot="public" virt="virtual"><scope>SVF::VersionedFlowSensitiveStat</scope><name>~VersionedFlowSensitiveStat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

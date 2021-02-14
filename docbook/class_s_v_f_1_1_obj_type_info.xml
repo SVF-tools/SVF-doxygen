@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_obj_type_info" xml:lang="en-US">
+<title>SVF::ObjTypeInfo Class Reference</title>
+<indexterm><primary>SVF::ObjTypeInfo</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MemModel.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::ObjTypeInfo:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_obj_type_info.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a91b41b7ade5871362b77a2ef566b2830"/>enum <emphasis role="strong">MEMTYPE</emphasis> { 
+<emphasis role="strong">FUNCTION_OBJ</emphasis> = 0x1
+, <emphasis role="strong">GLOBVAR_OBJ</emphasis> = 0x2
+, <emphasis role="strong">STATIC_OBJ</emphasis> = 0x4
+, <emphasis role="strong">STACK_OBJ</emphasis> = 0x8
+, 
+<emphasis role="strong">HEAP_OBJ</emphasis> = 0x10
+, <emphasis role="strong">VAR_STRUCT_OBJ</emphasis> = 0x20
+, <emphasis role="strong">VAR_ARRAY_OBJ</emphasis> = 0x40
+, <emphasis role="strong">CONST_STRUCT_OBJ</emphasis> = 0x80
+, 
+<emphasis role="strong">CONST_ARRAY_OBJ</emphasis> = 0x100
+, <emphasis role="strong">CONST_OBJ</emphasis> = 0x200
+, <emphasis role="strong">HASPTR_OBJ</emphasis> = 0x400
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a1a182e6a8710242f94729412d4683f8d"/><link linkend="_class_s_v_f_1_1_obj_type_info_1a1a182e6a8710242f94729412d4683f8d">ObjTypeInfo</link> (const Value *, const Type *t, u32_t max)</para>
+
+<para>Constructors. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1afa03172e8fe0af6b523e866d54235f3a"/><link linkend="_class_s_v_f_1_1_obj_type_info_1afa03172e8fe0af6b523e866d54235f3a">ObjTypeInfo</link> (u32_t max, const Type *t)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1ace5fdb3701cb93df0f02aedc94e7e975"/>virtual <link linkend="_class_s_v_f_1_1_obj_type_info_1ace5fdb3701cb93df0f02aedc94e7e975">~ObjTypeInfo</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_obj_type_info_1aba198ceecd53d73ab0b0deb0133cda0d">init</link> (const Value *value)</para>
+
+<para>Initialize the object type. </para>
+</listitem>
+            <listitem><para>virtual u32_t <link linkend="_class_s_v_f_1_1_obj_type_info_1a9208f6856f2554a6d3a2745a2b7a366c">getObjSize</link> (const Value *val)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_obj_type_info_1acc90d7a517c58ac86ef8109dcece3f10">analyzeGlobalStackObjType</link> (const Value *val)</para>
+
+<para>Analyse types of gobal and stack objects. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_obj_type_info_1a57ffe17476467619e844b27cb292149a">analyzeHeapStaticObjType</link> (const Value *val)</para>
+
+<para>Analyse types of heap and static objects. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a706cdc47e78732853252d5a4af85653a"/>const Type * <link linkend="_class_s_v_f_1_1_obj_type_info_1a706cdc47e78732853252d5a4af85653a">getType</link> () const</para>
+
+<para>Get LLVM type. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a81bc3d785062c7e527ecf8e564cd52a4"/>u32_t <link linkend="_class_s_v_f_1_1_obj_type_info_1a81bc3d785062c7e527ecf8e564cd52a4">getMaxFieldOffsetLimit</link> ()</para>
+
+<para>Get max field offset limit. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a9fff869c63776c6ebeff78933e0f6092"/>void <link linkend="_class_s_v_f_1_1_obj_type_info_1a9fff869c63776c6ebeff78933e0f6092">setMaxFieldOffsetLimit</link> (u32_t limit)</para>
+
+<para>Get max field offset limit. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1ad6fb2bfae3d4b73a6821a87106f65f49"/>void <link linkend="_class_s_v_f_1_1_obj_type_info_1ad6fb2bfae3d4b73a6821a87106f65f49">setFlag</link> (MEMTYPE mask)</para>
+
+<para>Flag for this object type. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a8e630eb30d05f665b998c6f9326d65cb"/>bool <emphasis role="strong">hasFlag</emphasis> (MEMTYPE mask)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1ac99fa14fdf7bc0dd3e9ff36c7a3a351f"/>bool <link linkend="_class_s_v_f_1_1_obj_type_info_1ac99fa14fdf7bc0dd3e9ff36c7a3a351f">isFunction</link> ()</para>
+
+<para>Object attributes. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1aa2855b69150287e5f04a7a683dc4c91f"/>bool <emphasis role="strong">isGlobalObj</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a3594dc1c1943dbac0ab72f2ff163c523"/>bool <emphasis role="strong">isStaticObj</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1aa568dc82decd28d2ef40785a4a647602"/>bool <emphasis role="strong">isStack</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a26c179394fbda9a9261d0bf3f52b619d"/>bool <emphasis role="strong">isHeap</emphasis> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_obj_type_info_1a40d6703875b370aed2c6dc41c0594af5">isVarStruct</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a5d4afc5e1ba5cbcedf049467f75ef7c4"/>bool <emphasis role="strong">isConstStruct</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a06493939f797f122b70b90bbf22cad7a"/>bool <emphasis role="strong">isStruct</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1aca1e900f9b0a774684af77666cf033e3"/>bool <emphasis role="strong">isVarArray</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1ad90ea6a01cca9c370b7f17b408dcc5a7"/>bool <emphasis role="strong">isConstArray</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a0627e8b9dda2e13cc77c334eefab21e1"/>bool <emphasis role="strong">isArray</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a8c0ae8e177452b88b3a4ec81bf77c378"/>bool <emphasis role="strong">isConstant</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1ac5bae1e7917f415193a805e8d2e29320"/>bool <emphasis role="strong">hasPtrObj</emphasis> ()</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_obj_type_info_1a3a58b1e0192b92dac5bbfad24adbcdac">isNonPtrFieldObj</link> (const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp;ls)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Type Info of an abstract memory object </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_obj_type_info_1acc90d7a517c58ac86ef8109dcece3f10"/>    <section>
+    <title>analyzeGlobalStackObjType()</title>
+<indexterm><primary>analyzeGlobalStackObjType</primary><secondary>SVF::ObjTypeInfo</secondary></indexterm>
+<indexterm><primary>SVF::ObjTypeInfo</primary><secondary>analyzeGlobalStackObjType</secondary></indexterm>
+<para><computeroutput>void ObjTypeInfo::analyzeGlobalStackObjType (const Value * val)</computeroutput></para><para>
+
+<para>Analyse types of gobal and stack objects. </para>
+</para>
+
+<para>Analyse types of all flattened fields of this object </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a57ffe17476467619e844b27cb292149a"/>    <section>
+    <title>analyzeHeapStaticObjType()</title>
+<indexterm><primary>analyzeHeapStaticObjType</primary><secondary>SVF::ObjTypeInfo</secondary></indexterm>
+<indexterm><primary>SVF::ObjTypeInfo</primary><secondary>analyzeHeapStaticObjType</secondary></indexterm>
+<para><computeroutput>void ObjTypeInfo::analyzeHeapStaticObjType (const Value * val)</computeroutput></para><para>
+
+<para>Analyse types of heap and static objects. </para>
+</para>
+
+<para>Analyse types of heap and static objects </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a9208f6856f2554a6d3a2745a2b7a366c"/>    <section>
+    <title>getObjSize()</title>
+<indexterm><primary>getObjSize</primary><secondary>SVF::ObjTypeInfo</secondary></indexterm>
+<indexterm><primary>SVF::ObjTypeInfo</primary><secondary>getObjSize</secondary></indexterm>
+<para><computeroutput>u32_t ObjTypeInfo::getObjSize (const Value * val)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Get the size of this object, derived classes can override this to get more precise object size</para>
+
+<para>Return size of this Object </para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_loc_obj_type_info_1a9c859cb40a6e02f0a7fd18d5c826b990">SVF::LocObjTypeInfo</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1aba198ceecd53d73ab0b0deb0133cda0d"/>    <section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>SVF::ObjTypeInfo</secondary></indexterm>
+<indexterm><primary>SVF::ObjTypeInfo</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>void ObjTypeInfo::init (const Value * val)</computeroutput></para><para>
+
+<para>Initialize the object type. </para>
+</para>
+
+<para>Initialize the type info of an object </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a3a58b1e0192b92dac5bbfad24adbcdac"/>    <section>
+    <title>isNonPtrFieldObj()</title>
+<indexterm><primary>isNonPtrFieldObj</primary><secondary>SVF::ObjTypeInfo</secondary></indexterm>
+<indexterm><primary>SVF::ObjTypeInfo</primary><secondary>isNonPtrFieldObj</secondary></indexterm>
+<para><computeroutput>bool ObjTypeInfo::isNonPtrFieldObj (const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp; ls)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Whether a location set is a pointer type or not </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_obj_type_info_1a40d6703875b370aed2c6dc41c0594af5"/>    <section>
+    <title>isVarStruct()</title>
+<indexterm><primary>isVarStruct</primary><secondary>SVF::ObjTypeInfo</secondary></indexterm>
+<indexterm><primary>SVF::ObjTypeInfo</primary><secondary>isVarStruct</secondary></indexterm>
+<para><computeroutput>bool SVF::ObjTypeInfo::isVarStruct ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Object attributes (noted that an object can be a nested compound types) e.g. both isStruct and isArray can return true </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/MemoryModel/MemModel.hlib/MemoryModel/MemModel.cpp</section>
+</section>

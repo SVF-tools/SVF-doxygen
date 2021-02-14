@@ -1,0 +1,1472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_basic_types_8h" kind="file" language="C++">
+    <compoundname>BasicTypes.h</compoundname>
+    <includes refid="_s_v_f_basic_types_8h" local="yes">Util/SVFBasicTypes.h</includes>
+    <includes refid="_g_e_p_type_bridge_iterator_8h" local="yes">SVF-FE/GEPTypeBridgeIterator.h</includes>
+    <includes refid="_graph_printer_8h" local="yes">Graphs/GraphPrinter.h</includes>
+    <includes refid="_casting_8h" local="yes">Util/Casting.h</includes>
+    <includes local="no">llvm/ADT/SmallVector.h</includes>
+    <includes local="no">llvm/ADT/SparseBitVector.h</includes>
+    <includes local="no">llvm/IR/Instructions.h</includes>
+    <includes local="no">llvm/IR/CallSite.h</includes>
+    <includes local="no">llvm/IR/InstVisitor.h</includes>
+    <includes local="no">llvm/IR/InstIterator.h</includes>
+    <includes local="no">llvm/IR/GetElementPtrTypeIterator.h</includes>
+    <includes local="no">llvm/Analysis/ScalarEvolution.h</includes>
+    <includes local="no">llvm/ADT/StringExtras.h</includes>
+    <includes local="no">llvm/Analysis/AliasAnalysis.h</includes>
+    <includes local="no">llvm/Analysis/CallGraph.h</includes>
+    <includes local="no">llvm/IR/GlobalVariable.h</includes>
+    <includes local="no">llvm/Support/SourceMgr.h</includes>
+    <includes local="no">llvm/Bitcode/BitcodeWriter.h</includes>
+    <includes local="no">llvm/Bitcode/BitcodeReader.h</includes>
+    <includes local="no">llvm/IRReader/IRReader.h</includes>
+    <includes local="no">llvm/Transforms/Utils/UnifyFunctionExitNodes.h</includes>
+    <includes local="no">llvm/Analysis/DominanceFrontier.h</includes>
+    <includes local="no">llvm/Analysis/PostDominators.h</includes>
+    <includes local="no">llvm/Analysis/ScalarEvolutionExpressions.h</includes>
+    <includes local="no">llvm/ADT/GraphTraits.h</includes>
+    <includes local="no">llvm/Support/GraphWriter.h</includes>
+    <includes local="no">llvm/IR/IRBuilder.h</includes>
+    <includes local="no">llvm/Transforms/Utils/Local.h</includes>
+    <includes local="no">llvm/IR/DebugInfo.h</includes>
+    <includedby refid="_d_d_a_client_8h" local="yes">include/DDA/DDAClient.h</includedby>
+    <includedby refid="_generic_graph_8h" local="yes">include/Graphs/GenericGraph.h</includedby>
+    <includedby refid="_p_t_a_call_graph_8h" local="yes">include/Graphs/PTACallGraph.h</includedby>
+    <includedby refid="_location_set_8h" local="yes">include/MemoryModel/LocationSet.h</includedby>
+    <includedby refid="_p_t_a_stat_8h" local="yes">include/MemoryModel/PTAStat.h</includedby>
+    <includedby refid="_p_t_a_type_8h" local="yes">include/MemoryModel/PTAType.h</includedby>
+    <includedby refid="_m_t_a_8h" local="yes">include/MTA/MTA.h</includedby>
+    <includedby refid="_m_t_a_annotator_8h" local="yes">include/MTA/MTAAnnotator.h</includedby>
+    <includedby refid="_saber_annotator_8h" local="yes">include/SABER/SaberAnnotator.h</includedby>
+    <includedby refid="_saber_s_v_f_g_builder_8h" local="yes">include/SABER/SaberSVFGBuilder.h</includedby>
+    <includedby refid="_break_constant_expr_8h" local="yes">include/SVF-FE/BreakConstantExpr.h</includedby>
+    <includedby refid="_c_p_p_util_8h" local="yes">include/SVF-FE/CPPUtil.h</includedby>
+    <includedby refid="_data_flow_util_8h" local="yes">include/SVF-FE/DataFlowUtil.h</includedby>
+    <includedby refid="_l_l_v_m_module_8h" local="yes">include/SVF-FE/LLVMModule.h</includedby>
+    <includedby refid="_l_l_v_m_util_8h" local="yes">include/SVF-FE/LLVMUtil.h</includedby>
+    <includedby refid="_annotator_8h" local="yes">include/Util/Annotator.h</includedby>
+    <includedby refid="_conditions_8h" local="yes">include/Util/Conditions.h</includedby>
+    <includedby refid="_cxt_stmt_8h" local="yes">include/Util/CxtStmt.h</includedby>
+    <includedby refid="_ext_a_p_i_8h" local="yes">include/Util/ExtAPI.h</includedby>
+    <includedby refid="_s_c_c_8h" local="yes">include/Util/SCC.h</includedby>
+    <includedby refid="_s_v_f_module_8h" local="yes">include/Util/SVFModule.h</includedby>
+    <includedby refid="_s_v_f_util_8h" local="yes">include/Util/SVFUtil.h</includedby>
+    <includedby refid="_thread_a_p_i_8h" local="yes">include/Util/ThreadAPI.h</includedby>
+    <includedby refid="_type_based_heap_cloning_8h" local="yes">include/Util/TypeBasedHeapCloning.h</includedby>
+    <includedby refid="_work_list_8h" local="yes">include/Util/WorkList.h</includedby>
+    <includedby refid="_c_s_c_8h" local="yes">include/WPA/CSC.h</includedby>
+    <includedby refid="_external_p_a_g_8cpp" local="yes">lib/Graphs/ExternalPAG.cpp</includedby>
+    <includedby refid="_p_a_g_builder_8cpp" local="yes">lib/SVF-FE/PAGBuilder.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>list</label>
+      </node>
+      <node id="25">
+        <label>Util/Casting.h</label>
+        <link refid="_casting_8h_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>system_error</label>
+      </node>
+      <node id="51">
+        <label>llvm/IR/IRBuilder.h</label>
+      </node>
+      <node id="49">
+        <label>llvm/ADT/GraphTraits.h</label>
+      </node>
+      <node id="43">
+        <label>llvm/Bitcode/BitcodeReader.h</label>
+      </node>
+      <node id="31">
+        <label>llvm/ADT/SmallVector.h</label>
+      </node>
+      <node id="34">
+        <label>llvm/IR/InstVisitor.h</label>
+      </node>
+      <node id="5">
+        <label>llvm/Support/CommandLine.h</label>
+      </node>
+      <node id="4">
+        <label>llvm/Support/raw_ostream.h</label>
+      </node>
+      <node id="48">
+        <label>llvm/Analysis/ScalarEvolutionExpressions.h</label>
+      </node>
+      <node id="37">
+        <label>llvm/ADT/StringExtras.h</label>
+      </node>
+      <node id="28">
+        <label>cassert</label>
+      </node>
+      <node id="1">
+        <label>include/Util/BasicTypes.h</label>
+        <link refid="_basic_types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="38">
+        <label>llvm/Analysis/AliasAnalysis.h</label>
+      </node>
+      <node id="10">
+        <label>unordered_set</label>
+      </node>
+      <node id="18">
+        <label>llvm/IR/User.h</label>
+      </node>
+      <node id="3">
+        <label>llvm/ADT/SparseBitVector.h</label>
+      </node>
+      <node id="36">
+        <label>llvm/Analysis/ScalarEvolution.h</label>
+      </node>
+      <node id="50">
+        <label>llvm/Support/GraphWriter.h</label>
+      </node>
+      <node id="26">
+        <label>llvm/Support/Compiler.h</label>
+      </node>
+      <node id="27">
+        <label>llvm/Support/type_traits.h</label>
+      </node>
+      <node id="20">
+        <label>llvm/IR/GetElementPtrTypeIterator.h</label>
+      </node>
+      <node id="13">
+        <label>stack</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="19">
+        <label>llvm/ADT/PointerIntPair.h</label>
+      </node>
+      <node id="23">
+        <label>llvm/Support/ToolOutputFile.h</label>
+      </node>
+      <node id="52">
+        <label>llvm/Transforms/Utils/Local.h</label>
+      </node>
+      <node id="6">
+        <label>llvm/ADT/StringMap.h</label>
+      </node>
+      <node id="17">
+        <label>llvm/IR/Operator.h</label>
+      </node>
+      <node id="47">
+        <label>llvm/Analysis/PostDominators.h</label>
+      </node>
+      <node id="53">
+        <label>llvm/IR/DebugInfo.h</label>
+      </node>
+      <node id="46">
+        <label>llvm/Analysis/DominanceFrontier.h</label>
+      </node>
+      <node id="14">
+        <label>deque</label>
+      </node>
+      <node id="12">
+        <label>unordered_map</label>
+      </node>
+      <node id="44">
+        <label>llvm/IRReader/IRReader.h</label>
+      </node>
+      <node id="2">
+        <label>Util/SVFBasicTypes.h</label>
+        <link refid="_s_v_f_basic_types_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>llvm/Support/FileSystem.h</label>
+      </node>
+      <node id="40">
+        <label>llvm/IR/GlobalVariable.h</label>
+      </node>
+      <node id="45">
+        <label>llvm/Transforms/Utils/UnifyFunctionExitNodes.h</label>
+      </node>
+      <node id="42">
+        <label>llvm/Bitcode/BitcodeWriter.h</label>
+      </node>
+      <node id="30">
+        <label>type_traits</label>
+      </node>
+      <node id="9">
+        <label>set</label>
+      </node>
+      <node id="16">
+        <label>llvm/IR/DerivedTypes.h</label>
+      </node>
+      <node id="41">
+        <label>llvm/Support/SourceMgr.h</label>
+      </node>
+      <node id="32">
+        <label>llvm/IR/Instructions.h</label>
+      </node>
+      <node id="15">
+        <label>SVF-FE/GEPTypeBridgeIterator.h</label>
+        <link refid="_g_e_p_type_bridge_iterator_8h_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>memory</label>
+      </node>
+      <node id="21">
+        <label>Graphs/GraphPrinter.h</label>
+        <link refid="_graph_printer_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>llvm/IR/CallSite.h</label>
+      </node>
+      <node id="35">
+        <label>llvm/IR/InstIterator.h</label>
+      </node>
+      <node id="39">
+        <label>llvm/Analysis/CallGraph.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="77">
+        <label>include/SVF-FE/CPPUtil.h</label>
+        <link refid="_c_p_p_util_8h_source"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>include/SABER/LeakChecker.h</label>
+        <link refid="_leak_checker_8h_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>include/MemoryModel/LocationSet.h</label>
+        <link refid="_location_set_8h_source"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/Graphs/PAG.h</label>
+        <link refid="_p_a_g_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>include/WPA/TypeAnalysis.h</label>
+        <link refid="_type_analysis_8h_source"/>
+      </node>
+      <node id="53">
+        <label>include/MSSA/MSSAMuChi.h</label>
+        <link refid="_m_s_s_a_mu_chi_8h_source"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>include/WPA/WPASolver.h</label>
+        <link refid="_w_p_a_solver_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>include/MemoryModel/ConditionalPT.h</label>
+        <link refid="_conditional_p_t_8h_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>include/SVF-FE/DCHG.h</label>
+        <link refid="_d_c_h_g_8h_source"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>include/Util/CFLSolver.h</label>
+        <link refid="_c_f_l_solver_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>include/MemoryModel/PointerAnalysis.h</label>
+        <link refid="_pointer_analysis_8h_source"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>include/SABER/ProgSlice.h</label>
+        <link refid="_prog_slice_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>include/Graphs/VFGNode.h</label>
+        <link refid="_v_f_g_node_8h_source"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>include/MTA/MHP.h</label>
+        <link refid="_m_h_p_8h_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>include/Graphs/SVFGNode.h</label>
+        <link refid="_s_v_f_g_node_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>include/SVF-FE/LLVMUtil.h</label>
+        <link refid="_l_l_v_m_util_8h_source"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/Graphs/ICFG.h</label>
+        <link refid="_i_c_f_g_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>include/Util/PathCondAllocator.h</label>
+        <link refid="_path_cond_allocator_8h_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>include/Util/ThreadAPI.h</label>
+        <link refid="_thread_a_p_i_8h_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>include/MTA/TCT.h</label>
+        <link refid="_t_c_t_8h_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>include/SABER/SrcSnkDDA.h</label>
+        <link refid="_src_snk_d_d_a_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>include/Util/Conditions.h</label>
+        <link refid="_conditions_8h_source"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>include/Graphs/ThreadCallGraph.h</label>
+        <link refid="_thread_call_graph_8h_source"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>include/Util/SVFUtil.h</label>
+        <link refid="_s_v_f_util_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>include/Graphs/PAGEdge.h</label>
+        <link refid="_p_a_g_edge_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>include/MemoryModel/PTAStat.h</label>
+        <link refid="_p_t_a_stat_8h_source"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>include/WPA/FlowSensitiveTBHC.h</label>
+        <link refid="_flow_sensitive_t_b_h_c_8h_source"/>
+      </node>
+      <node id="95">
+        <label>include/WPA/WPAFSSolver.h</label>
+        <link refid="_w_p_a_f_s_solver_8h_source"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/Graphs/GenericGraph.h</label>
+        <link refid="_generic_graph_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/Graphs/ICFGStat.h</label>
+        <link refid="_i_c_f_g_stat_8h_source"/>
+      </node>
+      <node id="1">
+        <label>include/Util/BasicTypes.h</label>
+        <link refid="_basic_types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>include/SVF-FE/Graph2Json.h</label>
+        <link refid="_graph2_json_8h_source"/>
+      </node>
+      <node id="55">
+        <label>include/WPA/WPAPass.h</label>
+        <link refid="_w_p_a_pass_8h_source"/>
+      </node>
+      <node id="42">
+        <label>include/WPA/FlowSensitive.h</label>
+        <link refid="_flow_sensitive_8h_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>include/Graphs/SVFGStat.h</label>
+        <link refid="_s_v_f_g_stat_8h_source"/>
+      </node>
+      <node id="90">
+        <label>include/Util/SCC.h</label>
+        <link refid="_s_c_c_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/Graphs/ConsGEdge.h</label>
+        <link refid="_cons_g_edge_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>include/WPA/Steensgaard.h</label>
+        <link refid="_steensgaard_8h_source"/>
+      </node>
+      <node id="58">
+        <label>include/Graphs/PTACallGraph.h</label>
+        <link refid="_p_t_a_call_graph_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>include/DDA/DDAVFSolver.h</label>
+        <link refid="_d_d_a_v_f_solver_8h_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>include/MSSA/SVFGBuilder.h</label>
+        <link refid="_s_v_f_g_builder_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>include/SVF-FE/BreakConstantExpr.h</label>
+        <link refid="_break_constant_expr_8h_source"/>
+      </node>
+      <node id="89">
+        <label>include/Util/ExtAPI.h</label>
+        <link refid="_ext_a_p_i_8h_source"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>include/WPA/CSC.h</label>
+        <link refid="_c_s_c_8h_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/DDA/DDAPass.h</label>
+        <link refid="_d_d_a_pass_8h_source"/>
+      </node>
+      <node id="32">
+        <label>include/MTA/FSMPTA.h</label>
+        <link refid="_f_s_m_p_t_a_8h_source"/>
+      </node>
+      <node id="31">
+        <label>include/MTA/LockAnalysis.h</label>
+        <link refid="_lock_analysis_8h_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/Graphs/OfflineConsG.h</label>
+        <link refid="_offline_cons_g_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>include/Util/TypeBasedHeapCloning.h</label>
+        <link refid="_type_based_heap_cloning_8h_source"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>include/MTA/MTAResultValidator.h</label>
+        <link refid="_m_t_a_result_validator_8h_source"/>
+      </node>
+      <node id="48">
+        <label>include/Graphs/VFG.h</label>
+        <link refid="_v_f_g_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>include/Graphs/SVFG.h</label>
+        <link refid="_s_v_f_g_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/DDA/DDAClient.h</label>
+        <link refid="_d_d_a_client_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>include/SABER/SaberAnnotator.h</label>
+        <link refid="_saber_annotator_8h_source"/>
+      </node>
+      <node id="51">
+        <label>include/MSSA/MemSSA.h</label>
+        <link refid="_mem_s_s_a_8h_source"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>include/Util/SVFModule.h</label>
+        <link refid="_s_v_f_module_8h_source"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>include/Graphs/ConsG.h</label>
+        <link refid="_cons_g_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>include/MemoryModel/MemModel.h</label>
+        <link refid="_mem_model_8h_source"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>include/SVF-FE/SymbolTableInfo.h</label>
+        <link refid="_symbol_table_info_8h_source"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>include/SVF-FE/CallGraphBuilder.h</label>
+        <link refid="_call_graph_builder_8h_source"/>
+      </node>
+      <node id="71">
+        <label>include/DDA/DDAStat.h</label>
+        <link refid="_d_d_a_stat_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>include/Util/Annotator.h</label>
+        <link refid="_annotator_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>include/Util/WorkList.h</label>
+        <link refid="_work_list_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>include/MSSA/MemRegion.h</label>
+        <link refid="_mem_region_8h_source"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>include/MemoryModel/PTAType.h</label>
+        <link refid="_p_t_a_type_8h_source"/>
+      </node>
+      <node id="64">
+        <label>include/Graphs/VFGEdge.h</label>
+        <link refid="_v_f_g_edge_8h_source"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>include/MTA/MTAStat.h</label>
+        <link refid="_m_t_a_stat_8h_source"/>
+      </node>
+      <node id="19">
+        <label>include/SABER/DoubleFreeChecker.h</label>
+        <link refid="_double_free_checker_8h_source"/>
+      </node>
+      <node id="34">
+        <label>include/MTA/MTAAnnotator.h</label>
+        <link refid="_m_t_a_annotator_8h_source"/>
+      </node>
+      <node id="41">
+        <label>include/SABER/SaberSVFGBuilder.h</label>
+        <link refid="_saber_s_v_f_g_builder_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>include/Graphs/PAGNode.h</label>
+        <link refid="_p_a_g_node_8h_source"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>include/MTA/MTA.h</label>
+        <link refid="_m_t_a_8h_source"/>
+      </node>
+      <node id="25">
+        <label>include/MemoryModel/PAGBuilderFromFile.h</label>
+        <link refid="_p_a_g_builder_from_file_8h_source"/>
+      </node>
+      <node id="27">
+        <label>include/MemoryModel/PointerAnalysisImpl.h</label>
+        <link refid="_pointer_analysis_impl_8h_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>include/DDA/FlowDDA.h</label>
+        <link refid="_flow_d_d_a_8h_source"/>
+      </node>
+      <node id="16">
+        <label>include/MTA/PCG.h</label>
+        <link refid="_p_c_g_8h_source"/>
+      </node>
+      <node id="65">
+        <label>include/SVF-FE/CHG.h</label>
+        <link refid="_c_h_g_8h_source"/>
+      </node>
+      <node id="50">
+        <label>include/MSSA/MemPartition.h</label>
+        <link refid="_mem_partition_8h_source"/>
+      </node>
+      <node id="63">
+        <label>include/Graphs/ExternalPAG.h</label>
+        <link refid="_external_p_a_g_8h_source"/>
+      </node>
+      <node id="20">
+        <label>include/SABER/FileChecker.h</label>
+        <link refid="_file_checker_8h_source"/>
+      </node>
+      <node id="45">
+        <label>include/WPA/WPAStat.h</label>
+        <link refid="_w_p_a_stat_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>include/Graphs/SVFGOPT.h</label>
+        <link refid="_s_v_f_g_o_p_t_8h_source"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/Graphs/ICFGNode.h</label>
+        <link refid="_i_c_f_g_node_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/WPA/Andersen.h</label>
+        <link refid="_andersen_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>include/Util/DPItem.h</label>
+        <link refid="_d_p_item_8h_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>include/WPA/VersionedFlowSensitive.h</label>
+        <link refid="_versioned_flow_sensitive_8h_source"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>include/DDA/ContextDDA.h</label>
+        <link refid="_context_d_d_a_8h_source"/>
+      </node>
+      <node id="61">
+        <label>include/SABER/SaberCheckerAPI.h</label>
+        <link refid="_saber_checker_a_p_i_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>include/WPA/AndersenSFR.h</label>
+        <link refid="_andersen_s_f_r_8h_source"/>
+      </node>
+      <node id="84">
+        <label>include/SVF-FE/DataFlowUtil.h</label>
+        <link refid="_data_flow_util_8h_source"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>include/SVF-FE/PAGBuilder.h</label>
+        <link refid="_p_a_g_builder_8h_source"/>
+      </node>
+      <node id="78">
+        <label>include/SVF-FE/LLVMModule.h</label>
+        <link refid="_l_l_v_m_module_8h_source"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>include/Graphs/SVFGEdge.h</label>
+        <link refid="_s_v_f_g_edge_8h_source"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>include/SVF-FE/ICFGBuilder.h</label>
+        <link refid="_i_c_f_g_builder_8h_source"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>include/Util/CxtStmt.h</label>
+        <link refid="_cxt_stmt_8h_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_s_v_f_1_1_s_v_f_function" prot="public">SVF::SVFFunction</innerclass>
+    <innerclass refid="class_s_v_f_1_1_s_v_f_global" prot="public">SVF::SVFGlobal</innerclass>
+    <innerclass refid="class_s_v_f_1_1_s_v_f_basic_block" prot="public">SVF::SVFBasicBlock</innerclass>
+    <innerclass refid="class_s_v_f_1_1_s_v_f_instruction" prot="public">SVF::SVFInstruction</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01_s_v_f_1_1_call_site_01_4" prot="public">std::hash&lt; SVF::CallSite &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01llvm_1_1_sparse_bit_vector_3_4_01_4" prot="public">std::hash&lt; llvm::SparseBitVector&lt;&gt; &gt;</innerclass>
+    <innernamespace refid="namespace_s_v_f">SVF</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//===-<sp/>BasicTypes.h<sp/>--<sp/>Basic<sp/>types<sp/>used<sp/>in<sp/>SVF-------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SVF:<sp/>Static<sp/>Value-Flow<sp/>Analysis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>&lt;2013-2017&gt;<sp/><sp/>&lt;Yulei<sp/>Sui&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//===----------------------------------------------------------------------===//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>BasicTypes.h</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Apr<sp/>1,<sp/>2014</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Yulei<sp/>Sui</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BASICTYPES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASICTYPES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Util/SVFBasicTypes.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SVF-FE/GEPTypeBridgeIterator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Graphs/GraphPrinter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Util/Casting.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/ADT/SmallVector.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>small<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/ADT/SparseBitVector.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IR/Instructions.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IR/CallSite.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IR/InstVisitor.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>instruction<sp/>visitor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IR/InstIterator.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>inst<sp/>iteration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IR/GetElementPtrTypeIterator.h&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//for<sp/>gep<sp/>iterator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Analysis/ScalarEvolution.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/ADT/StringExtras.h&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>utostr_32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Analysis/AliasAnalysis.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Analysis/CallGraph.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>call<sp/>graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IR/GlobalVariable.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>for<sp/>GlobalVariable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Support/SourceMgr.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>for<sp/>SMDiagnostic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Bitcode/BitcodeWriter.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>WriteBitcodeToFile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Bitcode/BitcodeReader.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IRReader/IRReader.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IR<sp/>reader<sp/>for<sp/>bit<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Transforms/Utils/UnifyFunctionExitNodes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Analysis/DominanceFrontier.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Analysis/PostDominators.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Analysis/ScalarEvolutionExpressions.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/ADT/GraphTraits.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>Graphtraits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Support/GraphWriter.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>graph<sp/>write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IR/IRBuilder.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>instrument<sp/>svf.main</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/Transforms/Utils/Local.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>FindDbgAddrUses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;llvm/IR/DebugInfo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_v_f" kindref="compound">SVF</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BddCond;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="namespace_s_v_f_1a86863d104a3930b3a806935d92ddbf30" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::SMDiagnostic<sp/><ref refid="namespace_s_v_f_1a86863d104a3930b3a806935d92ddbf30" kindref="member">SMDiagnostic</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::LLVMContext<sp/>LLVMContext;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Type<sp/>Type;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Function<sp/>Function;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::BasicBlock<sp/>BasicBlock;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Value<sp/>Value;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Instruction<sp/>Instruction;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::CallSite<sp/>CallSite;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::GlobalObject<sp/>GlobalObject;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::GlobalValue<sp/>GlobalValue;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::GlobalVariable<sp/>GlobalVariable;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Module<sp/>Module;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::CallGraph<sp/>LLVMCallGraph;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::User<sp/>User;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Use<sp/>Use;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Loop<sp/>Loop;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::LoopInfo<sp/>LoopInfo;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::UnifyFunctionExitNodes<sp/>UnifyFunctionExitNodes;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ModulePass<sp/>ModulePass;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::AnalysisUsage<sp/>AnalysisUsage;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::raw_ostream<sp/><ref refid="namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71" kindref="member">raw_ostream</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::raw_string_ostream<sp/>raw_string_ostream;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::raw_fd_ostream<sp/>raw_fd_ostream;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::StringRef<sp/>StringRef;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ToolOutputFile<sp/>ToolOutputFile;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="namespace_s_v_f_1a2bf58575ac7d068e0f1a4cf953b9e6cb" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::StructType<sp/><ref refid="namespace_s_v_f_1a2bf58575ac7d068e0f1a4cf953b9e6cb" kindref="member">StructType</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ArrayType<sp/>ArrayType;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::PointerType<sp/>PointerType;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::FunctionType<sp/>FunctionType;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::VectorType<sp/>VectorType;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::MetadataAsValue<sp/>MetadataAsValue;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::BlockAddress<sp/>BlockAddress;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="namespace_s_v_f_1a03db82b8a7914367024723dba4d6ca3c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DataLayout<sp/><ref refid="namespace_s_v_f_1a03db82b8a7914367024723dba4d6ca3c" kindref="member">DataLayout</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::StructLayout<sp/>StructLayout;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::SmallVector&lt;BasicBlock*,<sp/>8&gt;<sp/>SmallBBVector;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ConstantStruct<sp/>ConstantStruct;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::MemoryLocation<sp/>MemoryLocation;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="namespace_s_v_f_1a58cdfbc4160cae08745b67844ac29801" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Argument<sp/><ref refid="namespace_s_v_f_1a58cdfbc4160cae08745b67844ac29801" kindref="member">Argument</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::Constant<sp/>Constant;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ConstantData<sp/>ConstantData;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ConstantExpr<sp/>ConstantExpr;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ConstantAggregate<sp/>ConstantAggregate;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ConstantPointerNull<sp/>ConstantPointerNull;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ConstantArray<sp/>ConstantArray;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::GlobalAlias<sp/>GlobalAlias;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::AliasResult<sp/>AliasResult;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ModRefInfo<sp/>ModRefInfo;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::AnalysisID<sp/>AnalysisID;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ConstantDataArray<sp/>ConstantDataArray;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="namespace_s_v_f_1a3011dbac9102f044ad5f36a4ad3d4a71" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::NamedMDNode<sp/><ref refid="namespace_s_v_f_1a3011dbac9102f044ad5f36a4ad3d4a71" kindref="member">NamedMDNode</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::MDString<sp/>MDString;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::MDNode<sp/>MDNode;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="namespace_s_v_f_1a3bacb4f95c73e6d794901d01c6b65a83" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::AllocaInst<sp/><ref refid="namespace_s_v_f_1a3bacb4f95c73e6d794901d01c6b65a83" kindref="member">AllocaInst</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::CallInst<sp/>CallInst;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::InvokeInst<sp/>InvokeInst;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::CallBrInst<sp/>CallBrInst;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::StoreInst<sp/>StoreInst;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::LoadInst<sp/>LoadInst;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::PHINode<sp/>PHINode;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::GetElementPtrInst<sp/>GetElementPtrInst;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::CastInst<sp/>CastInst;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::BitCastInst<sp/>BitCastInst;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ReturnInst<sp/>ReturnInst;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ConstantInt<sp/>ConstantInt;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::SelectInst<sp/>SelectInst;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::IntToPtrInst<sp/>IntToPtrInst;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::CmpInst<sp/>CmpInst;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::BranchInst<sp/>BranchInst;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::SwitchInst<sp/>SwitchInst;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ExtractValueInst<sp/><sp/>ExtractValueInst;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::InsertValueInst<sp/>InsertValueInst;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::BinaryOperator<sp/>BinaryOperator;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::UnaryOperator<sp/>UnaryOperator;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::PtrToIntInst<sp/>PtrToIntInst;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::VAArgInst<sp/>VAArgInst;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ExtractElementInst<sp/>ExtractElementInst;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::InsertElementInst<sp/>InsertElementInst;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ShuffleVectorInst<sp/>ShuffleVectorInst;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::LandingPadInst<sp/>LandingPadInst;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ResumeInst<sp/>ResumeInst;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::UnreachableInst<sp/>UnreachableInst;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::FenceInst<sp/>FenceInst;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::AtomicCmpXchgInst<sp/>AtomicCmpXchgInst;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::AtomicRMWInst<sp/>AtomicRMWInst;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::UndefValue<sp/>UndefValue;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(LLVM_VERSION_MAJOR<sp/>&gt;=<sp/>9)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::FunctionCallee<sp/>FunctionCallee;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="namespace_s_v_f_1a9f1aca0384166e42d14e2608009ebc01" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ScalarEvolutionWrapperPass<sp/><ref refid="namespace_s_v_f_1a9f1aca0384166e42d14e2608009ebc01" kindref="member">ScalarEvolutionWrapperPass</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::ScalarEvolution<sp/>ScalarEvolution;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::SCEVAddRecExpr<sp/>SCEVAddRecExpr;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::SCEVConstant<sp/>SCEVConstant;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::SCEV<sp/>SCEV;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="namespace_s_v_f_1ab44d20f806be99699895260b14a942d7" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DominanceFrontier<sp/><ref refid="namespace_s_v_f_1ab44d20f806be99699895260b14a942d7" kindref="member">DominanceFrontier</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DominatorTree<sp/>DominatorTree;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::PostDominatorTree<sp/>PostDominatorTree;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DomTreeNode<sp/>DomTreeNode;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DominanceFrontierBase&lt;BasicBlock,<sp/>false&gt;<sp/>DominanceFrontierBase;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::PostDominatorTreeWrapperPass<sp/>PostDominatorTreeWrapperPass;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::LoopInfoWrapperPass<sp/>LoopInfoWrapperPass;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="namespace_s_v_f_1a255af6ff30782cb9a548feadb0fe7d6b" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::inst_iterator<sp/><ref refid="namespace_s_v_f_1a255af6ff30782cb9a548feadb0fe7d6b" kindref="member">inst_iterator</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::succ_const_iterator<sp/>succ_const_iterator;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::const_inst_iterator<sp/>const_inst_iterator;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::const_pred_iterator<sp/>const_pred_iterator;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::gep_type_iterator<sp/>gep_type_iterator;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classllvm_1_1generic__bridge__gep__type__iterator" kindref="compound">llvm::bridge_gep_iterator</ref><sp/><ref refid="classllvm_1_1generic__bridge__gep__type__iterator" kindref="compound">bridge_gep_iterator</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classllvm_1_1_graph_printer" kindref="compound">llvm::GraphPrinter</ref><sp/><ref refid="classllvm_1_1_graph_printer" kindref="compound">GraphPrinter</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::IRBuilder&lt;&gt;<sp/>IRBuilder;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::IntegerType<sp/>IntegerType;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="namespace_s_v_f_1a5ae98f122c64b0114df2e5861b341321" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DebugInfoFinder<sp/><ref refid="namespace_s_v_f_1a5ae98f122c64b0114df2e5861b341321" kindref="member">DebugInfoFinder</ref>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DIType<sp/>DIType;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DIBasicType<sp/>DIBasicType;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DICompositeType<sp/>DICompositeType;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DIDerivedType<sp/>DIDerivedType;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DISubroutineType<sp/>DISubroutineType;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DISubprogram<sp/>DISubprogram;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DISubrange<sp/>DISubrange;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DINode<sp/>DINode;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DINodeArray<sp/>DINodeArray;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>llvm::DITypeRefArray<sp/>DITypeRefArray;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dwarf<sp/>=<sp/>llvm::dwarf;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="class_s_v_f_1_1_s_v_f_function" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_v_f_1_1_s_v_f_value" kindref="compound">SVFValue</ref></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDecl;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isIntri;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>Function*<sp/>fun;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val):<sp/><ref refid="class_s_v_f_1_1_s_v_f_value_1ac42927fed1c213852daceb902478d9c8" kindref="member">SVFValue</ref>(val,SVFValue::SVFFunc),</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isDecl(</highlight><highlight class="keyword">false</highlight><highlight class="normal">),<sp/>isIntri(</highlight><highlight class="keyword">false</highlight><highlight class="normal">),<sp/>fun(NULL)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref>(Function*<sp/>f):<sp/><ref refid="class_s_v_f_1_1_s_v_f_value_1ac42927fed1c213852daceb902478d9c8" kindref="member">SVFValue</ref>(f-&gt;getName(),SVFValue::SVFFunc),</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isDecl(f-&gt;isDeclaration()),<sp/>isIntri(f-&gt;isIntrinsic()),<sp/>fun(f)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Function*<sp/>getLLVMFun()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="231"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(fun<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;no<sp/>LLVM<sp/>Function<sp/>found!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fun;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDeclaration()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="237"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isDecl;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isIntrinsic()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="242"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isIntri;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>u32_t<sp/>arg_size()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="247"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getLLVMFun()-&gt;arg_size();</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isVarArg()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="252"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getLLVMFun()-&gt;isVarArg();</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="class_s_v_f_1_1_s_v_f_global" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_v_f_1_1_s_v_f_global" kindref="compound">SVFGlobal</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_v_f_1_1_s_v_f_value" kindref="compound">SVFValue</ref></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_v_f_1_1_s_v_f_global" kindref="compound">SVFGlobal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val):<sp/><ref refid="class_s_v_f_1_1_s_v_f_value_1ac42927fed1c213852daceb902478d9c8" kindref="member">SVFValue</ref>(val,SVFValue::SVFGlob)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="class_s_v_f_1_1_s_v_f_basic_block" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_v_f_1_1_s_v_f_basic_block" kindref="compound">SVFBasicBlock</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_v_f_1_1_s_v_f_value" kindref="compound">SVFValue</ref></highlight></codeline>
+<codeline lineno="269"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_v_f_1_1_s_v_f_basic_block" kindref="compound">SVFBasicBlock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val):<sp/><ref refid="class_s_v_f_1_1_s_v_f_value_1ac42927fed1c213852daceb902478d9c8" kindref="member">SVFValue</ref>(val,SVFValue::SVFBB)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="class_s_v_f_1_1_s_v_f_instruction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_v_f_1_1_s_v_f_instruction" kindref="compound">SVFInstruction</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_v_f_1_1_s_v_f_value" kindref="compound">SVFValue</ref></highlight></codeline>
+<codeline lineno="279"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_v_f_1_1_s_v_f_instruction" kindref="compound">SVFInstruction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>val):<sp/><ref refid="class_s_v_f_1_1_s_v_f_value_1ac42927fed1c213852daceb902478d9c8" kindref="member">SVFValue</ref>(val,SVFValue::SVFInst)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><ref refid="namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71" kindref="member">raw_ostream</ref>&amp;<sp/>operator&lt;&lt;<sp/>(<ref refid="namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71" kindref="member">raw_ostream</ref><sp/>&amp;o,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;F,<sp/>S&gt;<sp/>&amp;var)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>var.first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>var.second<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>o;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>namespace<sp/>SVF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="structstd_1_1hash_3_01_s_v_f_1_1_call_site_01_4" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::hash&lt;<ref refid="namespace_s_v_f" kindref="compound">SVF</ref>::CallSite&gt;<sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>operator()(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SVF::CallSite<sp/>&amp;cs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::hash&lt;SVF::Instruction<sp/>*&gt;<sp/>h;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>h(cs.getInstruction());</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="structstd_1_1hash_3_01llvm_1_1_sparse_bit_vector_3_4_01_4" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::hash&lt;<ref refid="namespacellvm" kindref="compound">llvm</ref>::SparseBitVector&lt;&gt;&gt;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>operator()(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>llvm::SparseBitVector&lt;&gt;<sp/>&amp;sbv)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::hash&lt;std::pair&lt;std::pair&lt;size_t,<sp/>size_t&gt;,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&gt;&gt;<sp/>h;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>h(std::make_pair(std::make_pair(sbv.count(),<sp/>sbv.find_first()),<sp/>sbv.find_last()));</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BASICTYPES_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/Util/BasicTypes.h"/>
+  </compounddef>
+</doxygen>

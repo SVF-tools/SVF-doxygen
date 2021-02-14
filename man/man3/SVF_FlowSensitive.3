@@ -1,0 +1,508 @@
+.TH "SVF::FlowSensitive" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::FlowSensitive
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::WPAFSSolver< GraphType >\fP, and \fBSVF::BVDataPTAImpl\fP\&.
+.PP
+Inherited by \fBSVF::FSMPTA\fP, \fBSVF::FlowSensitiveTBHC\fP, and \fBSVF::VersionedFlowSensitive\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBBVDataPTAImpl::MutDFPTDataTy\fP \fBMutDFPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBBVDataPTAImpl::MutDFPTDataTy::DFPtsMap\fP \fBDFInOutMap\fP"
+.br
+.ti -1c
+.RI "typedef BVDataPTAImpl::MutDFPTDataTy::PtsMap \fBPtsMap\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFlowSensitive\fP (\fBPAG\fP *_pag, \fBPTATY\fP type=\fBFSSPARSE_WPA\fP)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~FlowSensitive\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual bool \fBrunOnModule\fP (\fBSVFModule\fP *)"
+.br
+.RI "We start from here\&. "
+.ti -1c
+.RI "virtual void \fBanalyze\fP ()"
+.br
+.RI "Flow sensitive analysis\&. "
+.ti -1c
+.RI "virtual void \fBinitialize\fP ()"
+.br
+.RI "Initialize analysis\&. "
+.ti -1c
+.RI "virtual void \fBfinalize\fP ()"
+.br
+.RI "Finalize analysis\&. "
+.ti -1c
+.RI "virtual const std::string \fBPTAName\fP () const"
+.br
+.RI "Get PTA name\&. "
+.ti -1c
+.RI "\fBSVFG\fP * \fBgetSVFG\fP () const"
+.br
+.RI "Return \fBSVFG\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBFlowSensitive\fP * \fBcreateFSWPA\fP (\fBPAG\fP *_pag)"
+.br
+.RI "Create signle instance of flow-sensitive pointer analysis\&. "
+.ti -1c
+.RI "static void \fBreleaseFSWPA\fP ()"
+.br
+.RI "Release flow-sensitive pointer analysis\&. "
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBFlowSensitive\fP *)"
+.br
+.RI "Methods for support type inquiry through isa, cast, and dyn_cast\&. "
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPointerAnalysis\fP *pta)"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef SVFG::SVFGEdgeSetTy \fBSVFGEdgeSetTy\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual NodeStack & \fBSCCDetect\fP ()"
+.br
+.RI "SCC detection\&. "
+.ti -1c
+.RI "virtual bool \fBpropFromSrcToDst\fP (\fBSVFGEdge\fP *edge)"
+.br
+.RI "Propagation\&. "
+.ti -1c
+.RI "virtual bool \fBpropAlongDirectEdge\fP (const \fBDirectSVFGEdge\fP *edge)"
+.br
+.RI "Propagate points-to information along a DIRECT \fBSVFG\fP edge\&. "
+.ti -1c
+.RI "virtual bool \fBpropAlongIndirectEdge\fP (const \fBIndirectSVFGEdge\fP *edge)"
+.br
+.RI "Propagate points-to information along an INDIRECT \fBSVFG\fP edge\&. "
+.ti -1c
+.RI "virtual bool \fBpropVarPtsFromSrcToDst\fP (NodeID var, const \fBSVFGNode\fP *src, const \fBSVFGNode\fP *dst)"
+.br
+.RI "Propagate points-to information of a certain variable from src to dst\&. "
+.ti -1c
+.RI "virtual bool \fBpropagateFromAPToFP\fP (const \fBActualParmSVFGNode\fP *ap, const \fBSVFGNode\fP *dst)"
+.br
+.ti -1c
+.RI "virtual bool \fBpropagateFromFRToAR\fP (const \fBFormalRetSVFGNode\fP *fr, const \fBSVFGNode\fP *dst)"
+.br
+.ti -1c
+.RI "virtual bool \fBweakUpdateOutFromIn\fP (const \fBSVFGNode\fP *node)"
+.br
+.RI "Handle weak updates\&. "
+.ti -1c
+.RI "virtual bool \fBstrongUpdateOutFromIn\fP (const \fBSVFGNode\fP *node, NodeID singleton)"
+.br
+.RI "Handle strong updates\&. "
+.ti -1c
+.RI "bool \fBpropVarPtsAfterCGUpdated\fP (NodeID var, const \fBSVFGNode\fP *src, const \fBSVFGNode\fP *dst)"
+.br
+.ti -1c
+.RI "virtual bool \fBpropDFOutToIn\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar)"
+.br
+.ti -1c
+.RI "virtual bool \fBpropDFInToIn\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar)"
+.br
+.ti -1c
+.RI "bool \fBupdateOutFromIn\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar)"
+.br
+.RI "Update data-flow points-to data\&. "
+.ti -1c
+.RI "virtual bool \fBupdateInFromIn\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar)"
+.br
+.ti -1c
+.RI "virtual bool \fBupdateInFromOut\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar)"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPtsFromIn\fP (const \fBSVFGNode\fP *stmt, NodeID srcVar, NodeID dstVar)"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPtsFromTop\fP (const \fBSVFGNode\fP *stmt, NodeID srcVar, NodeID dstVar)"
+.br
+.ti -1c
+.RI "void \fBclearAllDFOutVarFlag\fP (const \fBSVFGNode\fP *stmt)"
+.br
+.ti -1c
+.RI "virtual void \fBprocessNode\fP (NodeID nodeId)"
+.br
+.RI "Handle various constraints\&. "
+.ti -1c
+.RI "bool \fBprocessSVFGNode\fP (\fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessAddr\fP (const \fBAddrSVFGNode\fP *addr)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessCopy\fP (const \fBCopySVFGNode\fP *copy)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessPhi\fP (const \fBPHISVFGNode\fP *phi)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessGep\fP (const \fBGepSVFGNode\fP *edge)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessLoad\fP (const \fBLoadSVFGNode\fP *load)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessStore\fP (const \fBStoreSVFGNode\fP *store)"
+.br
+.ti -1c
+.RI "bool \fBupdateCallGraph\fP (const CallSiteToFunPtrMap &callsites)"
+.br
+.RI "Update call graph\&. "
+.ti -1c
+.RI "void \fBconnectCallerAndCallee\fP (const CallEdgeMap &newEdges, SVFGEdgeSetTy &edges)"
+.br
+.RI "Connect nodes in \fBSVFG\fP\&. "
+.ti -1c
+.RI "virtual void \fBupdateConnectedNodes\fP (const SVFGEdgeSetTy &edges)"
+.br
+.RI "Update nodes connected during updating call graph\&. "
+.ti -1c
+.RI "bool \fBisStrongUpdate\fP (const \fBSVFGNode\fP *node, NodeID &singleton)"
+.br
+.RI "Return TRUE if this is a strong update STORE statement\&. "
+.ti -1c
+.RI "virtual void \fBprintCTirAliasStats\fP (void)"
+.br
+.ti -1c
+.RI "virtual void \fBcountAliases\fP (Set< std::pair< NodeID, NodeID >> cmp, unsigned *mayAliases, unsigned *noAliases)"
+.br
+.RI "Fills may/noAliases for the location/pointer pairs in cmp\&. "
+.ti -1c
+.RI "const PointsTo & \fBgetDFInPtsSet\fP (const \fBSVFGNode\fP *stmt, const NodeID node)"
+.br
+.RI "Get points-to set for a node from data flow IN/OUT set at a statement\&. "
+.ti -1c
+.RI "const PointsTo & \fBgetDFOutPtsSet\fP (const \fBSVFGNode\fP *stmt, const NodeID node)"
+.br
+.ti -1c
+.RI "void \fBsvfgStat\fP ()"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "const DFInOutMap & \fBgetDFInputMap\fP () const"
+.br
+.ti -1c
+.RI "const DFInOutMap & \fBgetDFOutputMap\fP () const"
+.br
+.in -1c
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSVFG\fP * \fBsvfg\fP"
+.br
+.ti -1c
+.RI "\fBSVFGBuilder\fP \fBmemSSA\fP"
+.br
+.ti -1c
+.RI "\fBAndersenWaveDiff\fP * \fBander\fP"
+.br
+.ti -1c
+.RI "Size_t \fBnumOfProcessedAddr\fP"
+.br
+.RI "Statistics\&. "
+.ti -1c
+.RI "Size_t \fBnumOfProcessedCopy\fP"
+.br
+.RI "Number of processed Addr node\&. "
+.ti -1c
+.RI "Size_t \fBnumOfProcessedGep\fP"
+.br
+.RI "Number of processed Copy node\&. "
+.ti -1c
+.RI "Size_t \fBnumOfProcessedPhi\fP"
+.br
+.RI "Number of processed Gep node\&. "
+.ti -1c
+.RI "Size_t \fBnumOfProcessedLoad\fP"
+.br
+.RI "Number of processed Phi node\&. "
+.ti -1c
+.RI "Size_t \fBnumOfProcessedStore\fP"
+.br
+.RI "Number of processed Load node\&. "
+.ti -1c
+.RI "Size_t \fBnumOfProcessedActualParam\fP"
+.br
+.RI "Number of processed Store node\&. "
+.ti -1c
+.RI "Size_t \fBnumOfProcessedFormalRet\fP"
+.br
+.RI "Number of processed actual param node\&. "
+.ti -1c
+.RI "Size_t \fBnumOfProcessedMSSANode\fP"
+.br
+.RI "Number of processed formal ret node\&. "
+.ti -1c
+.RI "Size_t \fBmaxSCCSize\fP"
+.br
+.RI "Number of processed mssa node\&. "
+.ti -1c
+.RI "Size_t \fBnumOfSCC\fP"
+.br
+.ti -1c
+.RI "Size_t \fBnumOfNodesInSCC\fP"
+.br
+.ti -1c
+.RI "double \fBsolveTime\fP"
+.br
+.RI "time of solve\&. "
+.ti -1c
+.RI "double \fBsccTime\fP"
+.br
+.RI "time of SCC detection\&. "
+.ti -1c
+.RI "double \fBprocessTime\fP"
+.br
+.RI "time of processNode\&. "
+.ti -1c
+.RI "double \fBpropagationTime\fP"
+.br
+.RI "time of points-to propagation\&. "
+.ti -1c
+.RI "double \fBdirectPropaTime\fP"
+.br
+.RI "time of points-to propagation of address-taken objects "
+.ti -1c
+.RI "double \fBindirectPropaTime\fP"
+.br
+.RI "time of points-to propagation of top-level pointers "
+.ti -1c
+.RI "double \fBupdateTime\fP"
+.br
+.RI "time of strong/weak updates\&. "
+.ti -1c
+.RI "double \fBaddrTime\fP"
+.br
+.RI "time of handling address edges "
+.ti -1c
+.RI "double \fBcopyTime\fP"
+.br
+.RI "time of handling copy edges "
+.ti -1c
+.RI "double \fBgepTime\fP"
+.br
+.RI "time of handling gep edges "
+.ti -1c
+.RI "double \fBloadTime\fP"
+.br
+.RI "time of load edges "
+.ti -1c
+.RI "double \fBstoreTime\fP"
+.br
+.RI "time of store edges "
+.ti -1c
+.RI "double \fBphiTime\fP"
+.br
+.RI "time of phi nodes\&. "
+.ti -1c
+.RI "double \fBupdateCallGraphTime\fP"
+.br
+.RI "time of updating call graph "
+.ti -1c
+.RI "NodeBS \fBsvfgHasSU\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBFlowSensitive\fP * \fBfspta\fP = NULL"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBFlowSensitiveStat\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void FlowSensitive::analyze ()\fC [virtual]\fP"
+
+.PP
+Flow sensitive analysis\&. Start analysis Initialization for the Solver
+.PP
+Start solving constraints
+.PP
+finalize the analysis
+.PP
+Implements \fBSVF::PointerAnalysis\fP\&.
+.PP
+Reimplemented in \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "void FlowSensitive::connectCallerAndCallee (const CallEdgeMap & newEdges, SVFGEdgeSetTy & edges)\fC [protected]\fP"
+
+.PP
+Connect nodes in \fBSVFG\fP\&. Handle parameter passing in \fBSVFG\fP 
+.SS "void FlowSensitive::finalize (void)\fC [virtual]\fP"
+
+.PP
+Finalize analysis\&. Finalize analysis 
+.PP
+Reimplemented from \fBSVF::PointerAnalysis\fP\&.
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP, and \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "const DFInOutMap& SVF::FlowSensitive::getDFInputMap () const\fC [inline]\fP, \fC [protected]\fP"
+Get IN/OUT data flow map\&. May only be called when the backing is MUTABLE\&. 
+.SS "void FlowSensitive::initialize ()\fC [virtual]\fP"
+
+.PP
+Initialize analysis\&. Initialize analysis 
+.PP
+Reimplemented from \fBSVF::PointerAnalysis\fP\&.
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP, and \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "bool FlowSensitive::isStrongUpdate (const \fBSVFGNode\fP * node, NodeID & singleton)\fC [protected]\fP"
+
+.PP
+Return TRUE if this is a strong update STORE statement\&. Return TRUE if this is a strong update STORE statement\&. Find the unique element in cpts
+.SS "void FlowSensitive::printCTirAliasStats (void)\fC [protected]\fP, \fC [virtual]\fP"
+Prints some easily parseable stats on aliasing of relevant CTir TL PTS\&. Format: eval-ctir-aliases #TOTAL_TESTS #MAY_ALIAS #NO_ALIAS 
+.SS "bool FlowSensitive::processAddr (const \fBAddrSVFGNode\fP * addr)\fC [protected]\fP, \fC [virtual]\fP"
+Process address node TODO: If this object has been set as field-insensitive, just add the insensitive object node into dst pointer's pts\&.
+.PP
+Reimplemented in \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "bool FlowSensitive::processCopy (const \fBCopySVFGNode\fP * copy)\fC [protected]\fP, \fC [virtual]\fP"
+Process copy node 
+.PP
+Reimplemented in \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "bool FlowSensitive::processGep (const \fBGepSVFGNode\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+Process gep node 
+.PP
+Reimplemented in \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "bool FlowSensitive::processLoad (const \fBLoadSVFGNode\fP * load)\fC [protected]\fP, \fC [virtual]\fP"
+Process load node
+.PP
+Foreach node \\in src pts(dst) = union pts(node) If the ptd is a field-insensitive node, we should also get all field nodes' points-to sets and pass them to pagDst\&.
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP, and \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "void FlowSensitive::processNode (NodeID nodeId)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Handle various constraints\&. Process each \fBSVFG\fP node 
+.PP
+Reimplemented from \fBSVF::WPASolver< GraphType >\fP\&.
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP\&.
+.SS "bool FlowSensitive::processPhi (const \fBPHISVFGNode\fP * phi)\fC [protected]\fP, \fC [virtual]\fP"
+Process mssa phi node 
+.PP
+Reimplemented in \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "bool FlowSensitive::processStore (const \fBStoreSVFGNode\fP * store)\fC [protected]\fP, \fC [virtual]\fP"
+Process store node
+.PP
+foreach node \\in dst pts(node) = union pts(src) STORE statement can only be processed if the pointer on the LHS points to something\&. If we handle STORE with an empty points-to set, the OUT set will be updated from IN set\&. Then if LHS pointer points-to one target and it has been identified as a strong update, we can't remove those points-to information computed before this strong update from the OUT set\&.
+.PP
+check if this is a strong updates store
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP, and \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "bool FlowSensitive::processSVFGNode (\fBSVFGNode\fP * node)\fC [protected]\fP"
+Process each \fBSVFG\fP node 
+.SS "bool FlowSensitive::propagateFromAPToFP (const \fBActualParmSVFGNode\fP * ap, const \fBSVFGNode\fP * dst)\fC [protected]\fP, \fC [virtual]\fP"
+Propagate points-to information from an actual-param to a formal-param\&. Not necessary if \fBSVFGOPT\fP is used instead of original \fBSVFG\fP\&.
+.PP
+Propagate points-to information from actual-param to formal-param\&. Not necessary if \fBSVFGOPT\fP is used instead of original \fBSVFG\fP\&. 
+.SS "bool FlowSensitive::propagateFromFRToAR (const \fBFormalRetSVFGNode\fP * fr, const \fBSVFGNode\fP * dst)\fC [protected]\fP, \fC [virtual]\fP"
+Propagate points-to information from a formal-ret to an actual-ret\&. Not necessary if \fBSVFGOPT\fP is used instead of original \fBSVFG\fP\&.
+.PP
+Propagate points-to information from formal-ret to actual-ret\&. Not necessary if \fBSVFGOPT\fP is used instead of original \fBSVFG\fP\&. 
+.SS "bool FlowSensitive::propAlongDirectEdge (const \fBDirectSVFGEdge\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Propagate points-to information along a DIRECT \fBSVFG\fP edge\&. Propagate points-to information along DIRECT \fBSVFG\fP edge\&. 
+.PP
+Reimplemented in \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "bool FlowSensitive::propAlongIndirectEdge (const \fBIndirectSVFGEdge\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Propagate points-to information along an INDIRECT \fBSVFG\fP edge\&. Propagate points-to information along INDIRECT \fBSVFG\fP edge\&. If this is a field-insensitive obj, propagate all field node's pts
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP, and \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "bool FlowSensitive::propFromSrcToDst (\fBSVFGEdge\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Propagation\&. Propagate points-to information from an edge's src node to its dst node\&.
+.PP
+Propagate points-to information from source to destination node Union dfOutput of src to dfInput of dst\&. Only propagate points-to set of node which exists on the \fBSVFG\fP edge\&.
+.IP "1." 4
+propagation along direct edge will always return TRUE\&.
+.IP "2." 4
+propagation along indirect edge will return TRUE if destination node's IN set has been updated\&. 
+.PP
+
+.SS "bool FlowSensitive::propVarPtsAfterCGUpdated (NodeID var, const \fBSVFGNode\fP * src, const \fBSVFGNode\fP * dst)\fC [protected]\fP"
+Propagation between newly connected \fBSVFG\fP nodes during updateCallGraph\&. Can only be used during updateCallGraph\&.
+.PP
+Propagate points-to information of a certain variable from src to dst\&. 
+.SS "bool FlowSensitive::propVarPtsFromSrcToDst (NodeID var, const \fBSVFGNode\fP * src, const \fBSVFGNode\fP * dst)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Propagate points-to information of a certain variable from src to dst\&. Propagate points-to information of a certain variable from src to dst\&. 
+.SS "NodeStack & FlowSensitive::SCCDetect ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+SCC detection\&. SCC detection 
+.PP
+Reimplemented from \fBSVF::WPAFSSolver< GraphType >\fP\&.
+.SS "bool FlowSensitive::updateCallGraph (const CallSiteToFunPtrMap & callsites)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Update call graph\&. Update call graph\&.
+.PP
+Update call graph 
+.PP
+Reimplemented from \fBSVF::BVDataPTAImpl\fP\&.
+.SS "void FlowSensitive::updateConnectedNodes (const SVFGEdgeSetTy & edges)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Update nodes connected during updating call graph\&. Push nodes connected during update call graph into worklist so they will be solved during next iteration\&. If this is a formal-param or actual-ret node, we need to solve this phi node in next iteration
+.PP
+If this is a formal-in or actual-out node, we need to propagate points-to information from its predecessor node\&.
+.PP
+If this is a field-insensitive obj, propagate all field node's pts
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

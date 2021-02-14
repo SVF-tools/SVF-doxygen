@@ -1,0 +1,110 @@
+.TH "SVF::AndersenWaveDiff" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::AndersenWaveDiff
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Andersen\&.h>\fP
+.PP
+Inherits \fBSVF::Andersen\fP\&.
+.PP
+Inherited by \fBSVF::AndersenWaveDiffWithType\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAndersenWaveDiff\fP (\fBPAG\fP *_pag, \fBPTATY\fP type=\fBAndersenWaveDiff_WPA\fP, bool alias_check=true)"
+.br
+.ti -1c
+.RI "virtual void \fBsolveWorklist\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBprocessNode\fP (NodeID nodeId)"
+.br
+.ti -1c
+.RI "virtual void \fBpostProcessNode\fP (NodeID nodeId)"
+.br
+.ti -1c
+.RI "virtual void \fBhandleCopyGep\fP (\fBConstraintNode\fP *node)"
+.br
+.ti -1c
+.RI "virtual bool \fBhandleLoad\fP (NodeID id, const \fBConstraintEdge\fP *load)"
+.br
+.ti -1c
+.RI "virtual bool \fBhandleStore\fP (NodeID id, const \fBConstraintEdge\fP *store)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessCopy\fP (NodeID node, const \fBConstraintEdge\fP *edge)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBAndersenWaveDiff\fP * \fBcreateAndersenWaveDiff\fP (\fBPAG\fP *_pag)"
+.br
+.RI "Create an singleton instance directly instead of invoking llvm pass manager\&. "
+.ti -1c
+.RI "static void \fBreleaseAndersenWaveDiff\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBmergeNodeToRep\fP (NodeID nodeId, NodeID newRepId)"
+.br
+.RI "Merge sub node to its rep\&. "
+.ti -1c
+.RI "virtual void \fBprocessCast\fP (const \fBConstraintEdge\fP *)"
+.br
+.RI "process 'bitcast' \fBCopyCGEdge\fP "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Wave propagation with diff points-to set\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AndersenWaveDiff::handleCopyGep (\fBConstraintNode\fP * node)\fC [virtual]\fP"
+Handle copy gep 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "bool AndersenWaveDiff::handleLoad (NodeID nodeId, const \fBConstraintEdge\fP * edge)\fC [virtual]\fP"
+Handle load 
+.SS "bool AndersenWaveDiff::handleStore (NodeID nodeId, const \fBConstraintEdge\fP * edge)\fC [virtual]\fP"
+Handle store 
+.SS "void AndersenWaveDiff::mergeNodeToRep (NodeID nodeId, NodeID newRepId)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Merge sub node to its rep\&. update rep's propagated points-to set
+.PP
+.IP "1." 4
+if find gep edges inside SCC cycle, the rep node will become a PWC node and its pts should be collapsed later\&.
+.IP "2." 4
+if the node to be merged is already a PWC node, the rep node will also become a PWC node as it will have a self-cycle gep edge\&.
+.PP
+
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "void AndersenWaveDiff::postProcessNode (NodeID nodeId)\fC [virtual]\fP"
+Post process node 
+.SS "bool AndersenWaveDiff::processCopy (NodeID node, const \fBConstraintEdge\fP * edge)\fC [virtual]\fP"
+Propagate diff points-to set from src to dst 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "void AndersenWaveDiff::processNode (NodeID nodeId)\fC [virtual]\fP"
+Process edge \fBPAGNode\fP 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "void AndersenWaveDiff::solveWorklist ()\fC [virtual]\fP"
+solve worklist 
+.PP
+Reimplemented from \fBSVF::WPASolver< GraphType >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

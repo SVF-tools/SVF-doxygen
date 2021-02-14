@@ -1,0 +1,450 @@
+.TH "SVF::DDAVFSolver< CVar, CPtSet, DPIm >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::DDAVFSolver< CVar, CPtSet, DPIm >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DDAVFSolver\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBSCCDetection\fP< \fBSVFG\fP * > \fBSVFGSCC\fP"
+.br
+.ti -1c
+.RI "typedef \fBSCCDetection\fP< \fBPTACallGraph\fP * > \fBCallGraphSCC\fP"
+.br
+.ti -1c
+.RI "typedef PTACallGraphEdge::CallInstSet \fBCallInstSet\fP"
+.br
+.ti -1c
+.RI "typedef PAG::CallSiteSet \fBCallSiteSet\fP"
+.br
+.ti -1c
+.RI "typedef OrderedSet< DPIm > \fBDPTItemSet\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< DPIm, CPtSet > \fBDPImToCPtSetMap\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< DPIm, CVar > \fBDPMToCVarMap\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< DPIm, DPIm > \fBDPMToDPMMap\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< NodeID, DPTItemSet > \fBLocToDPMVecMap\fP"
+.br
+.ti -1c
+.RI "typedef OrderedSet< const \fBSVFGEdge\fP * > \fBConstSVFGEdgeSet\fP"
+.br
+.ti -1c
+.RI "typedef SVFGEdge::SVFGEdgeSetTy \fBSVFGEdgeSet\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< const \fBSVFGNode\fP *, DPTItemSet > \fBStoreToPMSetMap\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDDAVFSolver\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~DDAVFSolver\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "NodeBS & \fBgetCandidateQueries\fP ()"
+.br
+.RI "Return candidate pointers for DDA\&. "
+.ti -1c
+.RI "virtual DPIm \fBgetDPIm\fP (const CVar &var, const \fBSVFGNode\fP *loc) const"
+.br
+.RI "Given CVar and location (SVFGNode) return a new \fBDPItem\fP\&. "
+.ti -1c
+.RI "virtual bool \fBunionDDAPts\fP (CPtSet &pts, const CPtSet &targetPts)"
+.br
+.RI "Union pts\&. "
+.ti -1c
+.RI "virtual bool \fBunionDDAPts\fP (DPIm dpm, const CPtSet &targetPts)"
+.br
+.RI "Union pts\&. "
+.ti -1c
+.RI "virtual void \fBaddDDAPts\fP (CPtSet &pts, const CVar &var)"
+.br
+.RI "Add pts\&. "
+.ti -1c
+.RI "\fBSVFG\fP * \fBgetSVFG\fP () const"
+.br
+.RI "Return \fBSVFG\fP\&. "
+.ti -1c
+.RI "\fBSVFGSCC\fP * \fBgetSVFGSCC\fP () const"
+.br
+.RI "Return SVFGSCC\&. "
+.ti -1c
+.RI "void \fBdumpCPtSet\fP (const CPtSet &cpts) const"
+.br
+.ti -1c
+.RI "virtual const CPtSet & \fBfindPT\fP (const DPIm &dpm)"
+.br
+.RI "Compute points-to\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBhandleSingleStatement\fP (const DPIm &dpm, CPtSet &pts)"
+.br
+.RI "Handle single statement\&. "
+.ti -1c
+.RI "void \fBreCompute\fP (const DPIm &dpm)"
+.br
+.RI "recompute points-to for value-flow cycles and indirect calls "
+.ti -1c
+.RI "void \fBreComputeForEdges\fP (const DPIm &dpm, const SVFGEdgeSet &edgeSet, bool indirectCall=false)"
+.br
+.RI "Traverse along out edges to find all nodes which may be affected by locDPM\&. "
+.ti -1c
+.RI "virtual void \fBbuildSVFG\fP (\fBPAG\fP *pag)"
+.br
+.RI "Build \fBSVFG\fP\&. "
+.ti -1c
+.RI "virtual void \fBresetQuery\fP ()"
+.br
+.RI "Reset visited map for next points-to query\&. "
+.ti -1c
+.RI "void \fBOOBResetVisited\fP ()"
+.br
+.RI "Reset visited map if the current query is out-of-budget\&. "
+.ti -1c
+.RI "const \fBSVFGNode\fP * \fBgetDefSVFGNode\fP (const \fBPAGNode\fP *pagNode) const"
+.br
+.RI "GetDefinition \fBSVFG\fP\&. "
+.ti -1c
+.RI "void \fBbacktraceAlongIndirectVF\fP (CPtSet &pts, const DPIm &oldDpm)"
+.br
+.RI "Backward traverse along indirect value flows\&. "
+.ti -1c
+.RI "void \fBbacktraceAlongDirectVF\fP (CPtSet &pts, const DPIm &oldDpm)"
+.br
+.RI "Backward traverse along direct value flows\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBDDAStat\fP"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "bool \fBoutOfBudgetQuery\fP"
+.br
+.RI "Whether the current query is out of step limits\&. "
+.ti -1c
+.RI "\fBPAG\fP * \fB_pag\fP"
+.br
+.RI "\fBPAG\fP\&. "
+.ti -1c
+.RI "\fBSVFG\fP * \fB_svfg\fP"
+.br
+.RI "\fBSVFG\fP\&. "
+.ti -1c
+.RI "\fBAndersenWaveDiff\fP * \fB_ander\fP"
+.br
+.RI "\fBAndersen\fP's analysis\&. "
+.ti -1c
+.RI "NodeBS \fBcandidateQueries\fP"
+.br
+.RI "candidate pointers; "
+.ti -1c
+.RI "\fBPTACallGraph\fP * \fB_callGraph\fP"
+.br
+.RI "CallGraph\&. "
+.ti -1c
+.RI "\fBCallGraphSCC\fP * \fB_callGraphSCC\fP"
+.br
+.RI "SCC for CallGraph\&. "
+.ti -1c
+.RI "\fBSVFGSCC\fP * \fB_svfgSCC\fP"
+.br
+.RI "SCC for \fBSVFG\fP\&. "
+.ti -1c
+.RI "DPTItemSet \fBbackwardVisited\fP"
+.br
+.RI "visited map during backward traversing "
+.ti -1c
+.RI "DPImToCPtSetMap \fBdpmToTLCPtSetMap\fP"
+.br
+.RI "points-to caching map for top-level vars "
+.ti -1c
+.RI "DPImToCPtSetMap \fBdpmToADCPtSetMap\fP"
+.br
+.RI "points-to caching map for address-taken vars "
+.ti -1c
+.RI "LocToDPMVecMap \fBlocToDpmSetMap\fP"
+.br
+.RI "map location to its dpms "
+.ti -1c
+.RI "DPMToDPMMap \fBdpmToloadDpmMap\fP"
+.br
+.RI "dpms at loads for may/must-alias analysis with stores "
+.ti -1c
+.RI "DPMToCVarMap \fBloadToPTCVarMap\fP"
+.br
+.RI "map a load dpm to its cvar pointed by its pointer operand "
+.ti -1c
+.RI "DPTItemSet \fBoutOfBudgetDpms\fP"
+.br
+.RI "out of budget dpm set "
+.ti -1c
+.RI "StoreToPMSetMap \fBstoreToDPMs\fP"
+.br
+.RI "map store to set of DPM which have been stong updated there "
+.ti -1c
+.RI "\fBDDAStat\fP * \fBddaStat\fP"
+.br
+.RI "DDA stat\&. "
+.ti -1c
+.RI "\fBSVFGBuilder\fP \fBsvfgBuilder\fP"
+.br
+.RI "\fBSVFG\fP Builder\&. "
+.ti -1c
+.RI "void \fBstartNewPTCompFromLoadSrc\fP (CPtSet &pts, const DPIm &oldDpm)"
+.br
+.ti -1c
+.RI "void \fBstartNewPTCompFromStoreDst\fP (CPtSet &pts, const DPIm &oldDpm)"
+.br
+.ti -1c
+.RI "void \fBbacktraceToStoreSrc\fP (CPtSet &pts, const DPIm &oldDpm)"
+.br
+.ti -1c
+.RI "virtual void \fBbackwardPropDpm\fP (CPtSet &pts, NodeID ptr, const DPIm &oldDpm, const \fBSVFGEdge\fP *edge)"
+.br
+.RI "dpm transit during backward tracing "
+.ti -1c
+.RI "virtual bool \fBisMustAlias\fP (const DPIm &, const DPIm &)"
+.br
+.RI "whether load and store are aliased "
+.ti -1c
+.RI "virtual bool \fBisStrongUpdate\fP (const CPtSet &dstCPSet, const \fBStoreSVFGNode\fP *store)"
+.br
+.RI "Return TRUE if this is a strong update STORE statement\&. "
+.ti -1c
+.RI "virtual bool \fBisLocalCVarInRecursion\fP (const CVar &var) const"
+.br
+.RI "Whether a local variable is in function recursions\&. "
+.ti -1c
+.RI "virtual bool \fBpropagateViaObj\fP (const CVar &storeObj, const CVar &loadObj)"
+.br
+.RI "If the points-to contain the object obj, we could move forward along indirect value-flow edge\&. "
+.ti -1c
+.RI "void \fBresolveFunPtr\fP (const DPIm &dpm)"
+.br
+.RI "resolve function pointer "
+.ti -1c
+.RI "virtual NodeID \fBgetPtrNodeID\fP (const CVar &var) const =0"
+.br
+.RI "Methods to be implemented in child class\&. "
+.ti -1c
+.RI "virtual CPtSet \fBprocessGepPts\fP (const \fBGepSVFGNode\fP *gep, const CPtSet &srcPts)=0"
+.br
+.RI "ProcessGep node to generate field object nodes of a struct\&. "
+.ti -1c
+.RI "virtual void \fBhandleAddr\fP (CPtSet &pts, const DPIm &dpm, const \fBAddrSVFGNode\fP *addr)=0"
+.br
+.RI "Handle AddrSVFGNode to add proper points-to\&. "
+.ti -1c
+.RI "virtual CPtSet \fBgetConservativeCPts\fP (const DPIm &dpm)=0"
+.br
+.RI "Get conservative points-to results when the query is out of budget\&. "
+.ti -1c
+.RI "virtual bool \fBhandleBKCondition\fP (DPIm &, const \fBSVFGEdge\fP *)"
+.br
+.RI "Handle condition for context or path analysis (backward analysis) "
+.ti -1c
+.RI "virtual void \fBupdateCallGraphAndSVFG\fP (const DPIm &, const \fBCallBlockNode\fP *, SVFGEdgeSet &)"
+.br
+.RI "Update call graph\&. "
+.ti -1c
+.RI "void \fBmarkbkVisited\fP (const DPIm &dpm)"
+.br
+.RI "Visited flags to avoid cycles\&. "
+.ti -1c
+.RI "bool \fBisbkVisited\fP (const DPIm &dpm)"
+.br
+.ti -1c
+.RI "void \fBclearbkVisited\fP (const DPIm &dpm)"
+.br
+.ti -1c
+.RI "virtual const CPtSet & \fBgetCachedPointsTo\fP (const DPIm &dpm)"
+.br
+.RI "Points-to Caching for top-level pointers and address-taken objects\&. "
+.ti -1c
+.RI "virtual void \fBupdateCachedPointsTo\fP (const DPIm &dpm, const CPtSet &pts)"
+.br
+.ti -1c
+.RI "virtual const CPtSet & \fBgetCachedTLPointsTo\fP (const DPIm &dpm)"
+.br
+.ti -1c
+.RI "virtual const CPtSet & \fBgetCachedADPointsTo\fP (const DPIm &dpm)"
+.br
+.ti -1c
+.RI "bool \fBisTopLevelPtrStmt\fP (const \fBSVFGNode\fP *stmt)"
+.br
+.RI "Whether this is a top-level pointer statement\&. "
+.ti -1c
+.RI "virtual DPIm \fBgetDPImWithOldCond\fP (const DPIm &oldDpm, const CVar &var, const \fBSVFGNode\fP *loc)"
+.br
+.RI "Return dpm with old context and path conditions\&. "
+.ti -1c
+.RI "void \fBSVFGSCCDetection\fP ()"
+.br
+.RI "\fBSVFG\fP SCC detection\&. "
+.ti -1c
+.RI "NodeID \fBgetSVFGSCCRepNode\fP (NodeID id)"
+.br
+.RI "Get SCC rep node of a \fBSVFG\fP node\&. "
+.ti -1c
+.RI "bool \fBisSVFGNodeInCycle\fP (const \fBSVFGNode\fP *node)"
+.br
+.RI "Return whether this SVFGNode is in cycle\&. "
+.ti -1c
+.RI "bool \fBedgeInSVFGSCC\fP (const \fBSVFGEdge\fP *edge)"
+.br
+.RI "Return TRUE if this edge is inside a \fBSVFG\fP SCC, i\&.e\&., src node and dst node are in the same SCC on the \fBSVFG\fP\&. "
+.ti -1c
+.RI "void \fBsetCallGraph\fP (\fBPTACallGraph\fP *cg)"
+.br
+.RI "Set callgraph\&. "
+.ti -1c
+.RI "void \fBsetCallGraphSCC\fP (\fBCallGraphSCC\fP *scc)"
+.br
+.RI "Set callgraphSCC\&. "
+.ti -1c
+.RI "virtual bool \fBisHeapCondMemObj\fP (const CVar &var, const \fBStoreSVFGNode\fP *)"
+.br
+.RI "Check heap and array object\&. "
+.ti -1c
+.RI "bool \fBisArrayCondMemObj\fP (const CVar &var) const"
+.br
+.ti -1c
+.RI "bool \fBisFieldInsenCondMemObj\fP (const CVar &var) const"
+.br
+.ti -1c
+.RI "void \fBaddLoadDpmAndCVar\fP (const DPIm &dpm, const DPIm &loadDpm, const CVar &loadVar)"
+.br
+.RI "LoadDpm for must-alias analysis\&. "
+.ti -1c
+.RI "void \fBaddLoadDpm\fP (const DPIm &dpm, const DPIm &loadDpm)"
+.br
+.RI "Note that simply use 'dpmToloadDpmMap[dpm]=loadDpm', requires DPIm have a default constructor\&. "
+.ti -1c
+.RI "const DPIm & \fBgetLoadDpm\fP (const DPIm &dpm) const"
+.br
+.ti -1c
+.RI "void \fBaddLoadCVar\fP (const DPIm &dpm, const CVar &loadVar)"
+.br
+.ti -1c
+.RI "const CVar & \fBgetLoadCVar\fP (const DPIm &dpm) const"
+.br
+.ti -1c
+.RI "\fBAndersenWaveDiff\fP * \fBgetAndersenAnalysis\fP () const"
+.br
+.RI "Return \fBAndersen\fP's analysis\&. "
+.ti -1c
+.RI "void \fBhandleOutOfBudgetDpm\fP (const DPIm &dpm)"
+.br
+.RI "handle out-of-budget queries "
+.ti -1c
+.RI "bool \fBtestOutOfBudget\fP (const DPIm &dpm)"
+.br
+.ti -1c
+.RI "bool \fBisOutOfBudgetQuery\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddOutOfBudgetDpm\fP (const DPIm &dpm)"
+.br
+.ti -1c
+.RI "bool \fBisOutOfBudgetDpm\fP (const DPIm &dpm) const"
+.br
+.ti -1c
+.RI "\fBDDAStat\fP * \fBsetDDAStat\fP (\fBDDAStat\fP *s)"
+.br
+.RI "Set \fBDDAStat\fP\&. "
+.ti -1c
+.RI "void \fBaddSUStat\fP (const DPIm &dpm, const \fBSVFGNode\fP *node)"
+.br
+.RI "stat strong updates num "
+.ti -1c
+.RI "void \fBrmSUStat\fP (const DPIm &dpm, const \fBSVFGNode\fP *node)"
+.br
+.RI "remove strong updates num if the dpm goes to weak updates branch "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class CVar, class CPtSet, class DPIm>
+.br
+class SVF::DDAVFSolver< CVar, CPtSet, DPIm >"
+Value-Flow Based Demand-Driven Points-to Analysis 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class CVar , class CPtSet , class DPIm > virtual void \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::backwardPropDpm (CPtSet & pts, NodeID ptr, const DPIm & oldDpm, const \fBSVFGEdge\fP * edge)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+dpm transit during backward tracing handle context-/path- sensitivity
+.PP
+record the source of load dpm
+.PP
+handle out of budget case
+.SS "template<class CVar , class CPtSet , class DPIm > virtual const CPtSet& \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::findPT (const DPIm & dpm)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Compute points-to\&. Add successors of current stmt if its pts has been changed\&.
+.SS "template<class CVar , class CPtSet , class DPIm > virtual NodeID \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::getPtrNodeID (const CVar & var) const\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Methods to be implemented in child class\&. Get variable ID (PAGNodeID) according to CVar 
+.PP
+Implemented in \fBSVF::FlowDDA\fP, and \fBSVF::ContextDDA\fP\&.
+.SS "template<class CVar , class CPtSet , class DPIm > void \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::handleOutOfBudgetDpm (const DPIm & dpm)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+handle out-of-budget queries Handle out-of-budget dpm 
+.SS "template<class CVar , class CPtSet , class DPIm > virtual void \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::handleSingleStatement (const DPIm & dpm, CPtSet & pts)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Handle single statement\&. resolve function pointer first at indirect callsite
+.SS "template<class CVar , class CPtSet , class DPIm > virtual bool \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::isStrongUpdate (const CPtSet & dstCPSet, const \fBStoreSVFGNode\fP * store)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Return TRUE if this is a strong update STORE statement\&. Find the unique element in cpts
+.SS "template<class CVar , class CPtSet , class DPIm > void \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::reCompute (const DPIm & dpm)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+recompute points-to for value-flow cycles and indirect calls re-compute due to indirect calls
+.PP
+callgraph scc detection for local variable in recursion
+.PP
+re-compute for transitive closures
+.SS "template<class CVar , class CPtSet , class DPIm > void \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::reComputeForEdges (const DPIm & dpm, const SVFGEdgeSet & edgeSet, bool indirectCall = \fCfalse\fP)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Traverse along out edges to find all nodes which may be affected by locDPM\&. Only collect nodes we have traversed
+.SS "template<class CVar , class CPtSet , class DPIm > void \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::resolveFunPtr (const DPIm & dpm)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+resolve function pointer use pre-analysis call graph to approximate all potential callsites
+.SS "template<class CVar , class CPtSet , class DPIm > void \fBSVF::DDAVFSolver\fP< CVar, CPtSet, DPIm >::startNewPTCompFromLoadSrc (CPtSet & pts, const DPIm & oldDpm)\fC [inline]\fP, \fC [protected]\fP"
+Backward traverse for top-level pointers of load/store statements 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

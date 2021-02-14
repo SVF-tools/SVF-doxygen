@@ -1,0 +1,70 @@
+.TH "SVF::SCCDetection< GraphType >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::SCCDetection< GraphType >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGNodeSCCInfo\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::stack< NodeID > \fBGNodeStack\fP"
+.br
+.ti -1c
+.RI "typedef Map< NodeID, \fBGNodeSCCInfo\fP > \fBGNODESCCInfoMap\fP"
+.br
+.ti -1c
+.RI "typedef Map< NodeID, NodeID > \fBNodeToNodeMap\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSCCDetection\fP (const GraphType &GT)"
+.br
+.ti -1c
+.RI "GNodeStack & \fBtopoNodeStack\fP ()"
+.br
+.ti -1c
+.RI "const GNODESCCInfoMap & \fBGNodeSCCInfo\fP () const"
+.br
+.ti -1c
+.RI "NodeID \fBrepNode\fP (NodeID n) const"
+.br
+.RI "get the rep node if not found return itself "
+.ti -1c
+.RI "bool \fBisInCycle\fP (NodeID n) const"
+.br
+.RI "whether the node is in a cycle "
+.ti -1c
+.RI "const NodeBS & \fBsubNodes\fP (NodeID n) const"
+.br
+.RI "get all subnodes in one scc, if size is empty insert itself into the set "
+.ti -1c
+.RI "const NodeBS & \fBgetRepNodes\fP () const"
+.br
+.RI "get all repNodeID "
+.ti -1c
+.RI "const GraphType & \fBgraph\fP ()"
+.br
+.ti -1c
+.RI "void \fBfind\fP (void)"
+.br
+.ti -1c
+.RI "void \fBfind\fP (NodeSet &candidates)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

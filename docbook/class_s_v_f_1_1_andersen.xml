@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_andersen" xml:lang="en-US">
+<title>SVF::Andersen Class Reference</title>
+<indexterm><primary>SVF::Andersen</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Andersen.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::Andersen:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_andersen.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a77e7378a3a35622bde2371d7d3ed7013"/>typedef <link linkend="_class_s_v_f_1_1_s_c_c_detection">SCCDetection</link>&lt; <link linkend="_class_s_v_f_1_1_constraint_graph">ConstraintGraph</link> * &gt; <emphasis role="strong">CGSCC</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a0f65f1881111167bffe1cb2ad05c0a51"/>typedef OrderedMap&lt; CallSite, NodeID &gt; <emphasis role="strong">CallSite2DummyValPN</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1aed87dd498ba5daf263624a74118ef007"/><link linkend="_class_s_v_f_1_1_andersen_1aed87dd498ba5daf263624a74118ef007">Andersen</link> (<link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> *_pag, <link linkend="_class_s_v_f_1_1_pointer_analysis_1a0b182ac680cce0547dbe7714c870ca85">PTATY</link> type=<link linkend="_class_s_v_f_1_1_pointer_analysis_1a0b182ac680cce0547dbe7714c870ca85ab68615784a520e39856be5237930e6a6">Andersen_WPA</link>, bool alias_check=true)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a15218a84e653baf2cd7f1dc95ccfb77d"/>virtual <link linkend="_class_s_v_f_1_1_andersen_1a15218a84e653baf2cd7f1dc95ccfb77d">~Andersen</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_andersen_1a20617a69c112ad423b1b5021e48a8548">initialize</link> ()</para>
+
+<para>Initialize analysis. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_andersen_1ad90c8cf193bd81870ce8dd88c9580e2c">finalize</link> ()</para>
+
+<para>Finalize analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a95c0b2f501dff61993cd43a5cab89e17"/>void <link linkend="_class_s_v_f_1_1_andersen_1a95c0b2f501dff61993cd43a5cab89e17">resetData</link> ()</para>
+
+<para>Reset data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1aad706e332847e6b0892350a05028ba30"/>NodeID <link linkend="_class_s_v_f_1_1_andersen_1aad706e332847e6b0892350a05028ba30">sccRepNode</link> (NodeID id) const</para>
+
+<para>SCC methods. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1acd2feff818906db49a1bb2d94c33db5f"/>NodeBS &amp; <emphasis role="strong">sccSubNodes</emphasis> (NodeID repId)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a187285a5bdf9422d9188b2b11b667639"/>virtual const PointsTo &amp; <link linkend="_class_s_v_f_1_1_andersen_1a187285a5bdf9422d9188b2b11b667639">getPts</link> (NodeID id)</para>
+
+<para>Operation of points-to set. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1ab7dadfd4d810be4863f03ed996b3b3c4">unionPts</link> (NodeID id, const PointsTo &amp;target)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a8da98a9d33a6e9be329309f4af65e969"/>virtual bool <emphasis role="strong">unionPts</emphasis> (NodeID id, NodeID ptd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_andersen_1a43858bd242c7f2c5f33c3c0f6445376a">dumpTopLevelPtsTo</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a2b13f14db90ad59a61dff097bcdf8fb7"/>void <emphasis role="strong">setPWCOpt</emphasis> (bool flag)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a44d62658bbd2efcef5ff479930b5dce9"/>bool <emphasis role="strong">mergePWC</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a69161671030b51c5a6cf139325aa098f"/>void <emphasis role="strong">setDiffOpt</emphasis> (bool flag)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a6804284abb4b63f44eefdaf044a301f7"/>bool <emphasis role="strong">enableDiff</emphasis> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1aaec53980b25ed769fa9a985860f810b5"/>static bool <link linkend="_class_s_v_f_1_1_andersen_1aaec53980b25ed769fa9a985860f810b5">classof</link> (const <link linkend="_class_s_v_f_1_1_andersen">Andersen</link> *)</para>
+
+<para>Methods for support type inquiry through isa, cast, and dyn_cast: </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a60214d7c6c9aac8e498644b048660ab9"/>static bool <emphasis role="strong">classof</emphasis> (const <link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> *pta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a7b1b9e9b25b5643440aca77e23a8de07"/>void <emphasis role="strong">heapAllocatorViaIndCall</emphasis> (CallSite cs, NodePairSet &amp;cpySrcNodes)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a7e26ac6fb40684694f7ff2aadfde8bc7"/>virtual void <link linkend="_class_s_v_f_1_1_andersen_1a7e26ac6fb40684694f7ff2aadfde8bc7">computeDiffPts</link> (NodeID id)</para>
+
+<para>Handle diff points-to set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a106691684d8e7a69157d423393d83d66"/>virtual const PointsTo &amp; <emphasis role="strong">getDiffPts</emphasis> (NodeID id)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a4baa6fc95d52afa370fc0fabffd42018"/>void <link linkend="_class_s_v_f_1_1_andersen_1a4baa6fc95d52afa370fc0fabffd42018">updatePropaPts</link> (NodeID dstId, NodeID srcId)</para>
+
+<para>Handle propagated points-to set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a839ed248cf5ff8359217e2029f389d8a"/>void <emphasis role="strong">clearPropaPts</emphasis> (NodeID src)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a9075cd05cb21e0f08a1109b7af6c7480"/>virtual void <emphasis role="strong">initWorklist</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1ab81b08574f80287803dd43b5ebe2adfa"/>virtual void <emphasis role="strong">setSCCEdgeFlag</emphasis> (ConstraintNode::SCCEdgeFlag f)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_andersen_1a1caa6fa0740f4fa789d960a5a6fcb9c1">processNode</link> (NodeID nodeId)</para>
+
+<para>Override <link linkend="_class_s_v_f_1_1_w_p_a_solver">WPASolver</link> function in order to use the default solver. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_andersen_1adccf6acf63abc9cafc92b2148396fd10">processAllAddr</link> ()</para>
+
+<para>handling various constraints </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1abc20264231658b99998bc4af1f03a4de">processLoad</link> (NodeID node, const <link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> *load)</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1ac262d42d45dc6130cb031d5b0ed1f024">processStore</link> (NodeID node, const <link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> *load)</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1ac4afe532655c3f311143ebbe15175ca2">processCopy</link> (NodeID node, const <link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> *edge)</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1aa697d4a6fe09dd6e50abb09228b3567f">processGep</link> (NodeID node, const <link linkend="_class_s_v_f_1_1_gep_c_g_edge">GepCGEdge</link> *edge)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_andersen_1ab069683dd6ca563113efbde2813ab35e">handleCopyGep</link> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *node)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_andersen_1a0f32ba8cb1109c257552fa775a007ffd">handleLoadStore</link> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *node)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_andersen_1aca095e135edb5d27efe76bb7ee71184c">processAddr</link> (const <link linkend="_class_s_v_f_1_1_addr_c_g_edge">AddrCGEdge</link> *addr)</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1ac6b1efcaadfed48c226701ecf6bac55e">processGepPts</link> (const PointsTo &amp;pts, const <link linkend="_class_s_v_f_1_1_gep_c_g_edge">GepCGEdge</link> *edge)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a8ba593bd16d4436310f2f25e75687c57"/>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1a8ba593bd16d4436310f2f25e75687c57">addCopyEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add copy edge on constraint graph. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1a6c60b761ddf3d6bf08c8a9c3f6fd9f0b">updateCallGraph</link> (const CallSiteToFunPtrMap &amp;callsites)</para>
+
+<para>Update call graph for the input indirect callsites. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1aecc02a942e32689fbb25fb341b5a6d2e"/>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1aecc02a942e32689fbb25fb341b5a6d2e">updateCallGraph</link> ()</para>
+
+<para>Update call graph for all the indirect callsites. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_andersen_1a5a90e681e46c52ffd3debf02910c7ecf">connectCaller2CalleeParams</link> (CallSite cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *F, NodePairSet &amp;cpySrcNodes)</para>
+
+<para>Connect formal and actual parameters for indirect callsites. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_andersen_1a36729160041bc3a3e2b0a92b29062848">mergeNodeToRep</link> (NodeID nodeId, NodeID newRepId)</para>
+
+<para>Merge sub node to its rep. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1ae6b1e54a389abc68994219e39539127e">mergeSrcToTgt</link> (NodeID srcId, NodeID tgtId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_andersen_1a1ba1e1e36af289982146de06cf06ab0a">mergeSccNodes</link> (NodeID repNodeId, const NodeBS &amp;subNodes)</para>
+
+<para>Merge sub node in a SCC cycle to their rep node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1ac86ffd334568e4df5c08b3c827018bef"/>void <emphasis role="strong">mergeSccCycle</emphasis> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_andersen_1ae79bff0e9c49f15e7db00ed605824d98">collapsePWCNode</link> (NodeID nodeId)</para>
+
+<para>Collapse a field object into its base for field insensitive anlaysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1ac22a6946de30bc5887b9e4ec9259764f"/>void <emphasis role="strong">collapseFields</emphasis> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_andersen_1a3f0048155f0b3a6899dac6f30553aa9e">collapseNodePts</link> (NodeID nodeId)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_andersen_1af4a0d960ef198047517bb32ee1e24a61">collapseField</link> (NodeID nodeId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_andersen_1acd54e3edace1f41511c8f0a6a68dac18">updateNodeRepAndSubs</link> (NodeID nodeId, NodeID newRepId)</para>
+
+<para>Updates subnodes of its rep, and rep node of its subs. </para>
+</listitem>
+            <listitem><para>virtual NodeStack &amp; <link linkend="_class_s_v_f_1_1_andersen_1a31ea24432ff42ab86a4728f2bde571bc">SCCDetect</link> ()</para>
+
+<para>SCC detection. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a308ef1f3a1c9fd7ac1858d0c690aa37a"/>void <link linkend="_class_s_v_f_1_1_andersen_1a308ef1f3a1c9fd7ac1858d0c690aa37a">sanitizePts</link> ()</para>
+
+<para>Sanitize pts for field insensitive objects. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1ad92dbecc91170b235180e59ba307acda"/>virtual const std::string <link linkend="_class_s_v_f_1_1_andersen_1ad92dbecc91170b235180e59ba307acda">PTAName</link> () const</para>
+
+<para>Get PTA name. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1af42fe6aeacfd31bbef7f5c80c8cf6173"/>virtual bool <link linkend="_class_s_v_f_1_1_andersen_1af42fe6aeacfd31bbef7f5c80c8cf6173">matchType</link> (NodeID, NodeID, const <link linkend="_class_s_v_f_1_1_normal_gep_c_g_edge">NormalGepCGEdge</link> *)</para>
+
+<para>match types for Gep Edges </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a85cc81a4f9399e9a23372fa2658325a6"/>virtual void <link linkend="_class_s_v_f_1_1_andersen_1a85cc81a4f9399e9a23372fa2658325a6">addTypeForGepObjNode</link> (NodeID, const <link linkend="_class_s_v_f_1_1_normal_gep_c_g_edge">NormalGepCGEdge</link> *)</para>
+
+<para>add type for newly created GepObjNode </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a2f88b6035ecb480f7d11afe6bc666541"/>CallSite2DummyValPN <link linkend="_class_s_v_f_1_1_andersen_1a2f88b6035ecb480f7d11afe6bc666541">callsite2DummyValPN</link></para>
+
+<para>Map an instruction to a dummy obj which created at an indirect callsite, which invokes a heap allocator. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1ab90350dc4788d8e282404bd7944dd263"/>bool <emphasis role="strong">pwcOpt</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_andersen_1a187a23c3b522f2aca49d3c5408ab4469"/>bool <emphasis role="strong">diffOpt</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Inclusion-based Pointer Analysis </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_andersen_1af4a0d960ef198047517bb32ee1e24a61"/>    <section>
+    <title>collapseField()</title>
+<indexterm><primary>collapseField</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>collapseField</secondary></indexterm>
+<para><computeroutput>bool Andersen::collapseField (NodeID nodeId)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Collapse field. make struct with the same base as nodeId become field-insensitive. </para>
+
+<para>Black hole doesn&apos;t have structures, no collapse is needed. In later versions, instead of using base node to represent the struct, we&apos;ll create new field-insensitive node. To avoid creating a new &quot;black hole&quot; node, do not collapse field for black hole node.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a3f0048155f0b3a6899dac6f30553aa9e"/>    <section>
+    <title>collapseNodePts()</title>
+<indexterm><primary>collapseNodePts</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>collapseNodePts</secondary></indexterm>
+<para><computeroutput>bool Andersen::collapseNodePts (NodeID nodeId)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Collapse node&apos;s points-to set. Change all points-to elements into field-insensitive. </para>
+
+<para>Points to set may be changed during collapse, so use a clone instead.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1ae79bff0e9c49f15e7db00ed605824d98"/>    <section>
+    <title>collapsePWCNode()</title>
+<indexterm><primary>collapsePWCNode</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>collapsePWCNode</secondary></indexterm>
+<para><computeroutput>void Andersen::collapsePWCNode (NodeID nodeId)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Collapse a field object into its base for field insensitive anlaysis. </para>
+</para>
+
+<para>Detect and collapse PWC nodes produced by processing gep edges, under the constraint of field limit. </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_w_p_a_solver_1a138b403af0370ad6fdf8cc6af0530392">SVF::WPASolver&lt; GraphType &gt;</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a5a90e681e46c52ffd3debf02910c7ecf"/>    <section>
+    <title>connectCaller2CalleeParams()</title>
+<indexterm><primary>connectCaller2CalleeParams</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>connectCaller2CalleeParams</secondary></indexterm>
+<para><computeroutput>void Andersen::connectCaller2CalleeParams (CallSite cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * F, NodePairSet &amp; cpySrcNodes)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Connect formal and actual parameters for indirect callsites. </para>
+</para>
+
+<para>Connect formal and actual parameters for indirect callsites </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a43858bd242c7f2c5f33c3c0f6445376a"/>    <section>
+    <title>dumpTopLevelPtsTo()</title>
+<indexterm><primary>dumpTopLevelPtsTo</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>dumpTopLevelPtsTo</secondary></indexterm>
+<para><computeroutput>void Andersen::dumpTopLevelPtsTo ( )<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Print pag nodes&apos; pts by an ascending order </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_b_v_data_p_t_a_impl_1a8d6cea841b6ded0f80ef2b5784e9b752">SVF::BVDataPTAImpl</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1ad90c8cf193bd81870ce8dd88c9580e2c"/>    <section>
+    <title>finalize()</title>
+<indexterm><primary>finalize</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>finalize</secondary></indexterm>
+<para><computeroutput>void Andersen::finalize (void )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Finalize analysis. </para>
+</para>
+
+<para>Finalize analysis </para>
+
+<para>sanitize field insensitive obj TODO: Fields has been collapsed during <link linkend="_class_s_v_f_1_1_andersen_1af4a0d960ef198047517bb32ee1e24a61">Andersen::collapseField()</link>.</para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_andersen_base_1a099dad1149eb2e3f8068ef23870005a8">SVF::AndersenBase</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1ab069683dd6ca563113efbde2813ab35e"/>    <section>
+    <title>handleCopyGep()</title>
+<indexterm><primary>handleCopyGep</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>handleCopyGep</secondary></indexterm>
+<para><computeroutput>void Andersen::handleCopyGep (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * node)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process copy and gep edges </para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_s_c_d_1aa0a496376f7bea2c417ef83c51d19a61">SVF::AndersenSCD</link>, <link linkend="_class_s_v_f_1_1_andersen_h_l_c_d_1a9582cde6cbb510f3fb624109f8ea8f63">SVF::AndersenHLCD</link>, <link linkend="_class_s_v_f_1_1_andersen_l_c_d_1a139d80e25fe713194f719581915d36d5">SVF::AndersenLCD</link>, and <link linkend="_class_s_v_f_1_1_andersen_wave_diff_1ad5c85a28967cc3f62e663dc00a8aa8c9">SVF::AndersenWaveDiff</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a0f32ba8cb1109c257552fa775a007ffd"/>    <section>
+    <title>handleLoadStore()</title>
+<indexterm><primary>handleLoadStore</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>handleLoadStore</secondary></indexterm>
+<para><computeroutput>void Andersen::handleLoadStore (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * node)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process load and store edges </para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_s_c_d_1a7ae683eb8c607a0e742b44e3019b8cbc">SVF::AndersenSCD</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a20617a69c112ad423b1b5021e48a8548"/>    <section>
+    <title>initialize()</title>
+<indexterm><primary>initialize</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>initialize</secondary></indexterm>
+<para><computeroutput>void Andersen::initialize ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initialize analysis. </para>
+</para>
+
+<para>Initilize analysis </para>
+
+<para>Initialize worklist</para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_andersen_base_1a4d3496c305281d7fb423db21e38cf690">SVF::AndersenBase</link>.</para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_s_f_r_1a3b255068b3ea53041af94fd373a53bd4">SVF::AndersenSFR</link>, <link linkend="_class_s_v_f_1_1_andersen_h_l_c_d_1a5926080868429040f5142843f01a2a5c">SVF::AndersenHLCD</link>, and <link linkend="_class_s_v_f_1_1_andersen_h_c_d_1aaac9cac7fc5696adb585abd9d67f8c14">SVF::AndersenHCD</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a36729160041bc3a3e2b0a92b29062848"/>    <section>
+    <title>mergeNodeToRep()</title>
+<indexterm><primary>mergeNodeToRep</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>mergeNodeToRep</secondary></indexterm>
+<para><computeroutput>void Andersen::mergeNodeToRep (NodeID nodeId, NodeID newRepId)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Merge sub node to its rep. </para>
+</para>
+
+<para><orderedlist>
+<listitem>
+<para>if find gep edges inside SCC cycle, the rep node will become a PWC node and its pts should be collapsed later.</para>
+</listitem><listitem>
+<para>if the node to be merged is already a PWC node, the rep node will also become a PWC node as it will have a self-cycle gep edge.</para>
+</listitem></orderedlist>
+</para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_wave_diff_1acdc82c72b14e012551a460fa91a634db">SVF::AndersenWaveDiff</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a1ba1e1e36af289982146de06cf06ab0a"/>    <section>
+    <title>mergeSccNodes()</title>
+<indexterm><primary>mergeSccNodes</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>mergeSccNodes</secondary></indexterm>
+<para><computeroutput>void Andersen::mergeSccNodes (NodeID repNodeId, const NodeBS &amp; subNodes)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Merge sub node in a SCC cycle to their rep node. </para>
+</para>
+
+<para>Union points-to of subscc nodes into its rep nodes <link linkend="_struct_move">Move</link> incoming/outgoing direct edges of sub node to rep node </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1ae6b1e54a389abc68994219e39539127e"/>    <section>
+    <title>mergeSrcToTgt()</title>
+<indexterm><primary>mergeSrcToTgt</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>mergeSrcToTgt</secondary></indexterm>
+<para><computeroutput>bool Andersen::mergeSrcToTgt (NodeID nodeId, NodeID newRepId)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>merge nodeId to newRepId. Return true if the newRepId is a PWC node </para>
+
+<para>union pts of node to rep</para>
+
+<para>move the edges from node to rep, and remove the node</para>
+
+<para>set rep and sub relations</para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_s_f_r_1ac5f406db5610347564fceff4d36f6a6f">SVF::AndersenSFR</link>, <link linkend="_class_s_v_f_1_1_andersen_h_l_c_d_1a59da289c87f9ab815a15e0a745bdc31f">SVF::AndersenHLCD</link>, and <link linkend="_class_s_v_f_1_1_andersen_l_c_d_1ac78efb1e4246c06c64dad1d368ed032d">SVF::AndersenLCD</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1aca095e135edb5d27efe76bb7ee71184c"/>    <section>
+    <title>processAddr()</title>
+<indexterm><primary>processAddr</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>processAddr</secondary></indexterm>
+<para><computeroutput>void Andersen::processAddr (const <link linkend="_class_s_v_f_1_1_addr_c_g_edge">AddrCGEdge</link> * addr)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process address edges </para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_s_c_d_1a52704e25a1e3b30ddf8676811f4e1584">SVF::AndersenSCD</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1adccf6acf63abc9cafc92b2148396fd10"/>    <section>
+    <title>processAllAddr()</title>
+<indexterm><primary>processAllAddr</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>processAllAddr</secondary></indexterm>
+<para><computeroutput>void Andersen::processAllAddr ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>handling various constraints </para>
+</para>
+
+<para>Process address edges </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1ac4afe532655c3f311143ebbe15175ca2"/>    <section>
+    <title>processCopy()</title>
+<indexterm><primary>processCopy</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>processCopy</secondary></indexterm>
+<para><computeroutput>bool Andersen::processCopy (NodeID node, const <link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> * edge)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process copy edges src &#8211;copy--&gt; dst, union pts(dst) with pts(src) </para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_wave_diff_1a3a5b952c0c2fe2be1b9a6fcfeeba2c37">SVF::AndersenWaveDiff</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1aa697d4a6fe09dd6e50abb09228b3567f"/>    <section>
+    <title>processGep()</title>
+<indexterm><primary>processGep</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>processGep</secondary></indexterm>
+<para><computeroutput>bool Andersen::processGep (NodeID node, const <link linkend="_class_s_v_f_1_1_gep_c_g_edge">GepCGEdge</link> * edge)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process gep edges src &#8211;gep--&gt; dst, for each srcPtdNode \in pts(src) ==&gt; add fieldSrcPtdNode into tmpDstPts union pts(dst) with tmpDstPts </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1ac6b1efcaadfed48c226701ecf6bac55e"/>    <section>
+    <title>processGepPts()</title>
+<indexterm><primary>processGepPts</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>processGepPts</secondary></indexterm>
+<para><computeroutput>bool Andersen::processGepPts (const PointsTo &amp; pts, const <link linkend="_class_s_v_f_1_1_gep_c_g_edge">GepCGEdge</link> * edge)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Compute points-to for gep edges </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1abc20264231658b99998bc4af1f03a4de"/>    <section>
+    <title>processLoad()</title>
+<indexterm><primary>processLoad</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>processLoad</secondary></indexterm>
+<para><computeroutput>bool Andersen::processLoad (NodeID node, const <link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> * load)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process load edges src &#8211;load--&gt; dst, node \in pts(src) ==&gt; node&#8211;copy--&gt;dst </para>
+
+<para>TODO: New copy edges are also added for black hole obj node to make gcc in spec 2000 pass the flow-sensitive analysis. Try to handle black hole obj in an appropiate way.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a1caa6fa0740f4fa789d960a5a6fcb9c1"/>    <section>
+    <title>processNode()</title>
+<indexterm><primary>processNode</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>processNode</secondary></indexterm>
+<para><computeroutput>void Andersen::processNode (NodeID nodeId)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Override <link linkend="_class_s_v_f_1_1_w_p_a_solver">WPASolver</link> function in order to use the default solver. </para>
+</para>
+
+<para>Start constraint solving </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_w_p_a_solver_1abd7fd785e70f66d394088101d78598ca">SVF::WPASolver&lt; GraphType &gt;</link>.</para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_wave_diff_1afa1055cda6c910b24480505efd205895">SVF::AndersenWaveDiff</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1ac262d42d45dc6130cb031d5b0ed1f024"/>    <section>
+    <title>processStore()</title>
+<indexterm><primary>processStore</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>processStore</secondary></indexterm>
+<para><computeroutput>bool Andersen::processStore (NodeID node, const <link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> * store)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process store edges src &#8211;store--&gt; dst, node \in pts(dst) ==&gt; src&#8211;copy--&gt;node </para>
+
+<para>TODO: New copy edges are also added for black hole obj node to make gcc in spec 2000 pass the flow-sensitive analysis. Try to handle black hole obj in an appropiate way</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a31ea24432ff42ab86a4728f2bde571bc"/>    <section>
+    <title>SCCDetect()</title>
+<indexterm><primary>SCCDetect</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>SCCDetect</secondary></indexterm>
+<para><computeroutput>NodeStack &amp; Andersen::SCCDetect ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>SCC detection. </para>
+</para>
+
+<para>SCC detection on constraint graph </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_w_p_a_solver_1aaa932894d00b69cfa741f9987a9cc6b8">SVF::WPASolver&lt; GraphType &gt;</link>.</para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_s_c_d_1a70f69baf47587b742b5013a63a3ce593">SVF::AndersenSCD</link>, <link linkend="_class_s_v_f_1_1_andersen_l_c_d_1a078a58b3b3f18cca4e09ff5a9a8ed791">SVF::AndersenLCD</link>, and <link linkend="_class_s_v_f_1_1_andersen_wave_diff_with_type_1aef46713e8407e5963c5c8f04ff1545d1">SVF::AndersenWaveDiffWithType</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1ab7dadfd4d810be4863f03ed996b3b3c4"/>    <section>
+    <title>unionPts()</title>
+<indexterm><primary>unionPts</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>unionPts</secondary></indexterm>
+<para><computeroutput>virtual bool SVF::Andersen::unionPts (NodeID id, const PointsTo &amp; target)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Union/add points-to. Add the reverse points-to for node collapse purpose To be noted that adding reverse pts might incur 10% total overhead during solving </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_b_v_data_p_t_a_impl_1ae7073c07bfd7912f888d54d4652c7cc2">SVF::BVDataPTAImpl</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1a6c60b761ddf3d6bf08c8a9c3f6fd9f0b"/>    <section>
+    <title>updateCallGraph()</title>
+<indexterm><primary>updateCallGraph</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>updateCallGraph</secondary></indexterm>
+<para><computeroutput>bool Andersen::updateCallGraph (const CallSiteToFunPtrMap &amp; callsites)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update call graph for the input indirect callsites. </para>
+</para>
+
+<para>Update call graph for the input indirect callsites </para>
+
+<para>nodes as a src of a generated new copy edge</para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_b_v_data_p_t_a_impl_1aa534e475fa34fa322c567bc376a3da70">SVF::BVDataPTAImpl</link>.</para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_andersen_s_c_d_1a512c636bdaafe6a3ac8f0cc29392c573">SVF::AndersenSCD</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_andersen_1acd54e3edace1f41511c8f0a6a68dac18"/>    <section>
+    <title>updateNodeRepAndSubs()</title>
+<indexterm><primary>updateNodeRepAndSubs</primary><secondary>SVF::Andersen</secondary></indexterm>
+<indexterm><primary>SVF::Andersen</primary><secondary>updateNodeRepAndSubs</secondary></indexterm>
+<para><computeroutput>void Andersen::updateNodeRepAndSubs (NodeID nodeId, NodeID newRepId)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Updates subnodes of its rep, and rep node of its subs. </para>
+</para>
+
+<para>update nodeToRepMap, for each subs of current node updates its rep to newRepId</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/WPA/Andersen.hlib/WPA/Andersen.cpp</section>
+</section>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_d_d_a_pass" xml:lang="en-US">
+<title>SVF::DDAPass Class Reference</title>
+<indexterm><primary>SVF::DDAPass</primary></indexterm>
+<para>
+<computeroutput>#include &lt;DDAPass.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::DDAPass:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_d_d_a_pass.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1a5e51ac666db439865846b835bcea9d21"/>typedef <link linkend="_class_s_v_f_1_1_s_c_c_detection">SCCDetection</link>&lt; <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> * &gt; <emphasis role="strong">SVFGSCC</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1acc81a1f7ad572fa27648999334479f56"/>typedef OrderedSet&lt; const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * &gt; <emphasis role="strong">SVFGEdgeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1acc7ad5d3266cb3e24fba0b4db186348a"/>typedef std::vector&lt; <link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> * &gt; <emphasis role="strong">PTAVector</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_d_d_a_pass_1af9ab14540f72aee9e54d5c450a4ebc86">getAnalysisUsage</link> (AnalysisUsage &amp;au) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1a77ecb6c9fd126f71b018e565f543e3ad"/>virtual void * <emphasis role="strong">getAdjustedAnalysisPointer</emphasis> (AnalysisID)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1a0a39a0f3e530a97a38dbfe0d9f04ec33"/>virtual AliasResult <link linkend="_class_s_v_f_1_1_d_d_a_pass_1a0a39a0f3e530a97a38dbfe0d9f04ec33">alias</link> (const MemoryLocation &amp;LocA, const MemoryLocation &amp;LocB)</para>
+
+<para>Interface expose to users of our pointer analysis, given Location infos. </para>
+</listitem>
+            <listitem><para>virtual AliasResult <link linkend="_class_s_v_f_1_1_d_d_a_pass_1a242575c5bd8a8f17fdc802e5ba80e7b0">alias</link> (const Value *V1, const Value *V2)</para>
+
+<para>Interface expose to users of our pointer analysis, given Value infos. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1a96de481dd2af7b39428aff38158c1d4e"/>virtual AliasResult <link linkend="_class_s_v_f_1_1_d_d_a_pass_1a96de481dd2af7b39428aff38158c1d4e">alias</link> (NodeID V1, NodeID V2)</para>
+
+<para>Interface expose to users of our pointer analysis, given PAGNodes. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_d_d_a_pass_1af196994d6ec7f5cead72212407842103">runOnModule</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *module)</para>
+
+<para>We start from here. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1a7bc2c9a62b7d97b8e19bee0c4625aea3"/>virtual bool <link linkend="_class_s_v_f_1_1_d_d_a_pass_1a7bc2c9a62b7d97b8e19bee0c4625aea3">runOnModule</link> (Module &amp;module)</para>
+
+<para>We start from here. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_d_d_a_pass_1aa33694e0b5f30c451c229e92877e4842">selectClient</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *module)</para>
+
+<para>Select a client. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1a597a387848c03a05d1cfdfafc510cf2b"/>virtual StringRef <link linkend="_class_s_v_f_1_1_d_d_a_pass_1a597a387848c03a05d1cfdfafc510cf2b">getPassName</link> () const</para>
+
+<para>Pass name. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1adb39fc24e3d45e558ac36f37b5dc3565"/>static char <link linkend="_class_s_v_f_1_1_d_d_a_pass_1adb39fc24e3d45e558ac36f37b5dc3565">ID</link> = 0</para>
+
+<para>Pass ID. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Demand-Driven Pointer Analysis. This class performs various pointer analysis on the given module. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1a242575c5bd8a8f17fdc802e5ba80e7b0"/>    <section>
+    <title>alias()</title>
+<indexterm><primary>alias</primary><secondary>SVF::DDAPass</secondary></indexterm>
+<indexterm><primary>SVF::DDAPass</primary><secondary>alias</secondary></indexterm>
+<para><computeroutput>AliasResult DDAPass::alias (const Value * V1, const Value * V2)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Interface expose to users of our pointer analysis, given Value infos. </para>
+</para>
+
+<para>Return alias results based on our points-to/alias analysis TODO: Need to handle PartialAlias and MustAlias here. </para>
+
+<para>TODO: When this method is invoked during compiler optimizations, the IR used for pointer analysis may been changed, so some Values may not find corresponding <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> node. In this case, we only check alias between two Values if they both have <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> nodes. Otherwise, MayAlias will be returned.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1af9ab14540f72aee9e54d5c450a4ebc86"/>    <section>
+    <title>getAnalysisUsage()</title>
+<indexterm><primary>getAnalysisUsage</primary><secondary>SVF::DDAPass</secondary></indexterm>
+<indexterm><primary>SVF::DDAPass</primary><secondary>getAnalysisUsage</secondary></indexterm>
+<para><computeroutput>virtual void SVF::DDAPass::getAnalysisUsage (AnalysisUsage &amp; au) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>do not intend to change the IR in this pass,</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1af196994d6ec7f5cead72212407842103"/>    <section>
+    <title>runOnModule()</title>
+<indexterm><primary>runOnModule</primary><secondary>SVF::DDAPass</secondary></indexterm>
+<indexterm><primary>SVF::DDAPass</primary><secondary>runOnModule</secondary></indexterm>
+<para><computeroutput>void DDAPass::runOnModule (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * module)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>We start from here. </para>
+</para>
+
+<para>initialization for llvm alias analyzer</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_d_a_pass_1aa33694e0b5f30c451c229e92877e4842"/>    <section>
+    <title>selectClient()</title>
+<indexterm><primary>selectClient</primary><secondary>SVF::DDAPass</secondary></indexterm>
+<indexterm><primary>SVF::DDAPass</primary><secondary>selectClient</secondary></indexterm>
+<para><computeroutput>void DDAPass::selectClient (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * module)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Select a client. </para>
+</para>
+
+<para>select a client to initialize queries </para>
+
+<para>solve function pointer</para>
+
+<para>allow user specify queries</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/DDA/DDAPass.hlib/DDA/DDAPass.cpp</section>
+</section>

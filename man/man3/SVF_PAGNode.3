@@ -1,0 +1,160 @@
+.TH "SVF::PAGNode" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::PAGNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::GenericNode< NodeTy, EdgeTy >\fP\&.
+.PP
+Inherited by \fBSVF::ObjPN\fP, \fBSVF::RetPN\fP, \fBSVF::ValPN\fP, and \fBSVF::VarArgPN\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPNODEK\fP { \fBValNode\fP, \fBObjNode\fP, \fBRetNode\fP, \fBVarargNode\fP, \fBGepValNode\fP, \fBGepObjNode\fP, \fBFIObjNode\fP, \fBDummyValNode\fP, \fBDummyObjNode\fP, \fBCloneGepObjNode\fP, \fBCloneFIObjNode\fP, \fBCloneDummyObjNode\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPAGNode\fP (const Value *val, NodeID i, \fBPNODEK\fP k)"
+.br
+.RI "address-taken pointer "
+.ti -1c
+.RI "virtual \fB~PAGNode\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "const Value * \fBgetValue\fP () const"
+.br
+.RI "Get/has methods of the components\&. "
+.ti -1c
+.RI "virtual const Type * \fBgetType\fP () const"
+.br
+.RI "Return type of the value\&. "
+.ti -1c
+.RI "bool \fBhasValue\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBisPointer\fP () const"
+.br
+.RI "Whether it is a pointer\&. "
+.ti -1c
+.RI "bool \fBisTopLevelPtr\fP () const"
+.br
+.RI "Whether it is a top-level pointer\&. "
+.ti -1c
+.RI "bool \fBisAddressTakenPtr\fP () const"
+.br
+.RI "Whether it is an address-taken pointer\&. "
+.ti -1c
+.RI "bool \fBisConstantData\fP () const"
+.br
+.ti -1c
+.RI "virtual const std::string \fBgetValueName\fP () const =0"
+.br
+.RI "Get name of the LLVM value\&. "
+.ti -1c
+.RI "virtual const Function * \fBgetFunction\fP () const"
+.br
+.RI "Return the function that this \fBPAGNode\fP resides in\&. Return NULL if it is a global or constantexpr node\&. "
+.ti -1c
+.RI "PAGEdge::PAGEdgeSetTy & \fBgetIncomingEdges\fP (\fBPAGEdge::PEDGEK\fP kind)"
+.br
+.RI "Get incoming \fBPAG\fP edges\&. "
+.ti -1c
+.RI "PAGEdge::PAGEdgeSetTy & \fBgetOutgoingEdges\fP (\fBPAGEdge::PEDGEK\fP kind)"
+.br
+.RI "Get outgoing \fBPAG\fP edges\&. "
+.ti -1c
+.RI "bool \fBhasIncomingEdges\fP (\fBPAGEdge::PEDGEK\fP kind) const"
+.br
+.RI "Has incoming \fBPAG\fP edges\&. "
+.ti -1c
+.RI "bool \fBhasIncomingVariantGepEdge\fP () const"
+.br
+.RI "Has incoming VariantGepEdges\&. "
+.ti -1c
+.RI "PAGEdge::PAGEdgeSetTy::iterator \fBgetIncomingEdgesBegin\fP (\fBPAGEdge::PEDGEK\fP kind) const"
+.br
+.RI "Get incoming \fBPAGEdge\fP iterator\&. "
+.ti -1c
+.RI "PAGEdge::PAGEdgeSetTy::iterator \fBgetIncomingEdgesEnd\fP (\fBPAGEdge::PEDGEK\fP kind) const"
+.br
+.RI "Get incoming \fBPAGEdge\fP iterator\&. "
+.ti -1c
+.RI "bool \fBhasOutgoingEdges\fP (\fBPAGEdge::PEDGEK\fP kind) const"
+.br
+.RI "Has outgoing \fBPAG\fP edges\&. "
+.ti -1c
+.RI "PAGEdge::PAGEdgeSetTy::iterator \fBgetOutgoingEdgesBegin\fP (\fBPAGEdge::PEDGEK\fP kind) const"
+.br
+.RI "Get outgoing \fBPAGEdge\fP iterator\&. "
+.ti -1c
+.RI "PAGEdge::PAGEdgeSetTy::iterator \fBgetOutgoingEdgesEnd\fP (\fBPAGEdge::PEDGEK\fP kind) const"
+.br
+.RI "Get outgoing \fBPAGEdge\fP iterator\&. "
+.ti -1c
+.RI "void \fBaddInEdge\fP (\fBPAGEdge\fP *inEdge)"
+.br
+.RI "add methods of the components "
+.ti -1c
+.RI "void \fBaddOutEdge\fP (\fBPAGEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "virtual const std::string \fBtoString\fP () const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const Value * \fBvalue\fP"
+.br
+.RI "value of this \fBPAG\fP node "
+.ti -1c
+.RI "PAGEdge::PAGKindToEdgeSetMapTy \fBInEdgeKindToSetMap\fP"
+.br
+.ti -1c
+.RI "PAGEdge::PAGKindToEdgeSetMapTy \fBOutEdgeKindToSetMap\fP"
+.br
+.ti -1c
+.RI "bool \fBisTLPointer\fP"
+.br
+.ti -1c
+.RI "bool \fBisATPointer\fP"
+.br
+.RI "top-level pointer "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBraw_ostream\fP & \fBoperator<<\fP (\fBraw_ostream\fP &o, const \fBPAGNode\fP &node)"
+.br
+.RI "Overloading operator << for dumping \fBPAGNode\fP value\&. "
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSVF::PAGNode::PNODEK\fP"
+Nine kinds of \fBPAG\fP nodes ValNode: llvm pointer value ObjNode: memory object RetNode: unique return node Vararg: unique node for vararg parameter GepValNode: tempory gep value node for field sensitivity GepValNode: tempory gep obj node for field sensitivity FIObjNode: for field insensitive analysis DummyValNode and DummyObjNode: for non-llvm-value node Clone*Node: objects created by TBHC\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PAGNode::PAGNode (const Value * val, NodeID i, \fBPNODEK\fP k)"
+
+.PP
+address-taken pointer Constructor
+.PP
+\fBPAGNode\fP constructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool SVF::PAGNode::isConstantData () const\fC [inline]\fP"
+Whether it is constant data, i\&.e\&., '0', '1\&.001', 'str' or llvm's metadata, i\&.e\&., metadata !4087 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

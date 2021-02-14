@@ -1,0 +1,133 @@
+.TH "SVF::MutableVersionedPTData< Key, Datum, Data, VersionedKey >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::MutableVersionedPTData< Key, Datum, Data, VersionedKey >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MutablePointsToDS\&.h>\fP
+.PP
+Inherits \fBSVF::VersionedPTData< Key, Datum, Data, VersionedKey >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPTData\fP< Key, Datum, Data > \fBBasePTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBVersionedPTData\fP< Key, Datum, Data, VersionedKey > \fBBaseVersionedPTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBBasePTData::PTDataTy\fP \fBPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef BasePTData::KeySet \fBKeySet\fP"
+.br
+.ti -1c
+.RI "typedef BaseVersionedPTData::VersionedKeySet \fBVersionedKeySet\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMutableVersionedPTData\fP (bool reversePT=true, \fBPTDataTy\fP ty=PTDataTy::MutVersioned)"
+.br
+.ti -1c
+.RI "virtual void \fBclear\fP () override"
+.br
+.RI "Clears all points-to sets as if nothing is stored\&. "
+.ti -1c
+.RI "virtual const Data & \fBgetPts\fP (const Key &vk) override"
+.br
+.RI "Get points-to set of var\&. "
+.ti -1c
+.RI "virtual const Data & \fBgetPts\fP (const VersionedKey &vk) override"
+.br
+.ti -1c
+.RI "virtual const KeySet & \fBgetRevPts\fP (const Datum &datum) override"
+.br
+.RI "Get reverse points-to set of datum\&. "
+.ti -1c
+.RI "virtual const VersionedKeySet & \fBgetVersionedKeyRevPts\fP (const Datum &datum) override"
+.br
+.ti -1c
+.RI "virtual bool \fBaddPts\fP (const Key &k, const Datum &element) override"
+.br
+.RI "Adds element to the points-to set associated with var\&. "
+.ti -1c
+.RI "virtual bool \fBaddPts\fP (const VersionedKey &vk, const Datum &element) override"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstVar, const Key &srcVar) override"
+.br
+.RI "Performs pts(dstVar) = pts(dstVar) U pts(srcVar)\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const VersionedKey &dstVar, const VersionedKey &srcVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const VersionedKey &dstVar, const Key &srcVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstVar, const VersionedKey &srcVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstVar, const Data &srcData) override"
+.br
+.RI "Performs pts(dstVar) = pts(dstVar) U srcData\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const VersionedKey &dstVar, const Data &srcData) override"
+.br
+.ti -1c
+.RI "virtual void \fBclearPts\fP (const Key &k, const Datum &element) override"
+.br
+.RI "Clears element from the points-to set of var\&. "
+.ti -1c
+.RI "virtual void \fBclearPts\fP (const VersionedKey &vk, const Datum &element) override"
+.br
+.ti -1c
+.RI "virtual void \fBclearFullPts\fP (const Key &k) override"
+.br
+.RI "Fully clears the points-to set of var\&. "
+.ti -1c
+.RI "virtual void \fBclearFullPts\fP (const VersionedKey &vk) override"
+.br
+.ti -1c
+.RI "virtual void \fBdumpPTData\fP () override"
+.br
+.RI "Dump stored keys and points-to sets\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBMutableVersionedPTData\fP< Key, Datum, Data, VersionedKey > *)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPTData\fP< Key, Datum, Data > *ptd)"
+.br
+.in -1c
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Key, typename Datum, typename Data, typename VersionedKey>
+.br
+class SVF::MutableVersionedPTData< Key, Datum, Data, VersionedKey >"
+\fBVersionedPTData\fP implemented with mutable points-to set (Data)\&. Implemented as a wrapper around two MutablePTDatas: one for Keys, one for VersionedKeys\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Key , typename Datum , typename Data , typename VersionedKey > static bool \fBSVF::MutableVersionedPTData\fP< Key, Datum, Data, VersionedKey >::classof (const \fBMutableVersionedPTData\fP< Key, Datum, Data, VersionedKey > *)\fC [inline]\fP, \fC [static]\fP"
+Methods to support type inquiry through isa, cast, and dyn_cast: 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

@@ -1,0 +1,62 @@
+.TH "SVF::WPAMinimumSolver< GraphType >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::WPAMinimumSolver< GraphType >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WPAFSSolver\&.h>\fP
+.PP
+Inherits \fBSVF::WPASCCSolver< GraphType >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBWPASolver\fP< GraphType >::GTraits \fBGTraits\fP"
+.br
+.ti -1c
+.RI "typedef \fBWPASolver\fP< GraphType >::GNODE \fBGNODE\fP"
+.br
+.ti -1c
+.RI "typedef \fBWPASolver\fP< GraphType >::child_iterator \fBchild_iterator\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBsolve\fP ()"
+.br
+.RI "Constraint Solving\&. "
+.ti -1c
+.RI "virtual void \fBaddNodeIntoWorkList\fP (NodeID node)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class GraphType>
+.br
+class SVF::WPAMinimumSolver< GraphType >"
+Only solve nodes which need to be analyzed\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class GraphType > virtual void \fBSVF::WPAMinimumSolver\fP< GraphType >::solve ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Constraint Solving\&. If the worklist is not empty, then only solve these nodes contained in worklist\&. Otherwise all nodes in the graph will be processed\&.
+.PP
+get nodes which need to be processed in this SCC cycle
+.PP
+remove nodes which have been processed from the candidate set
+.PP
+All nodes will be solved afterwards, so the worklist can be cleared before each solve iteration\&.
+.PP
+Reimplemented from \fBSVF::WPASCCSolver< GraphType >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

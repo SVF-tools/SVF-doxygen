@@ -1,0 +1,73 @@
+.TH "SVF::StmtVFGNode" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::StmtVFGNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <VFGNode\&.h>\fP
+.PP
+Inherits \fBSVF::VFGNode\fP\&.
+.PP
+Inherited by \fBSVF::AddrVFGNode\fP, \fBSVF::CopyVFGNode\fP, \fBSVF::GepVFGNode\fP, \fBSVF::LoadVFGNode\fP, and \fBSVF::StoreVFGNode\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStmtVFGNode\fP (NodeID id, const \fBPAGEdge\fP *e, \fBVFGNodeK\fP k)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "bool \fBisPTANode\fP () const"
+.br
+.RI "Whether this node is used for pointer analysis\&. Both src and dst PAGNodes are of ptr type\&. "
+.in -1c
+.in +1c
+.ti -1c
+.RI "const \fBPAGEdge\fP * \fBgetPAGEdge\fP () const"
+.br
+.ti -1c
+.RI "NodeID \fBgetPAGSrcNodeID\fP () const"
+.br
+.ti -1c
+.RI "NodeID \fBgetPAGDstNodeID\fP () const"
+.br
+.ti -1c
+.RI "\fBPAGNode\fP * \fBgetPAGSrcNode\fP () const"
+.br
+.ti -1c
+.RI "\fBPAGNode\fP * \fBgetPAGDstNode\fP () const"
+.br
+.ti -1c
+.RI "const Instruction * \fBgetInst\fP () const"
+.br
+.ti -1c
+.RI "virtual const std::string \fBtoString\fP () const"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBStmtVFGNode\fP *)"
+.br
+.RI "Methods for support type inquiry through isa, cast, and dyn_cast: "
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBGenericVFGNodeTy\fP *node)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBICFG\fP node stands for a program statement 
+.SH "Member Function Documentation"
+.PP 
+.SS "const Instruction* SVF::StmtVFGNode::getInst () const\fC [inline]\fP"
+should return a valid instruction unless it is a global \fBPAGEdge\fP
+.SS "const \fBPAGEdge\fP* SVF::StmtVFGNode::getPAGEdge () const\fC [inline]\fP"
+\fBPAGNode\fP and \fBPAGEdge\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

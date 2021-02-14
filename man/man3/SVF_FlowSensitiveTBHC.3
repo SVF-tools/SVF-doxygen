@@ -1,0 +1,194 @@
+.TH "SVF::FlowSensitiveTBHC" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::FlowSensitiveTBHC
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FlowSensitiveTBHC\&.h>\fP
+.PP
+Inherits \fBSVF::FlowSensitive\fP, and \fBSVF::TypeBasedHeapCloning\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFlowSensitiveTBHC\fP (\fBPAG\fP *_pag, \fBPTATY\fP type=\fBFSTBHC_WPA\fP)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~FlowSensitiveTBHC\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual void \fBanalyze\fP () override"
+.br
+.RI "Flow sensitive analysis with FSTBHC\&. "
+.ti -1c
+.RI "virtual void \fBinitialize\fP () override"
+.br
+.RI "Initialize analysis\&. "
+.ti -1c
+.RI "virtual void \fBfinalize\fP () override"
+.br
+.RI "Finalize analysis\&. "
+.ti -1c
+.RI "virtual const std::string \fBPTAName\fP () const override"
+.br
+.RI "Get PTA name\&. "
+.ti -1c
+.RI "virtual bool \fBpropAlongIndirectEdge\fP (const \fBIndirectSVFGEdge\fP *edge) override"
+.br
+.RI "Propagate points-to information along an INDIRECT \fBSVFG\fP edge\&. "
+.ti -1c
+.RI "virtual bool \fBpropAlongDirectEdge\fP (const \fBDirectSVFGEdge\fP *edge) override"
+.br
+.RI "Propagate points-to information along a DIRECT \fBSVFG\fP edge\&. "
+.ti -1c
+.RI "virtual bool \fBprocessAddr\fP (const \fBAddrSVFGNode\fP *addr) override"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessGep\fP (const \fBGepSVFGNode\fP *gep) override"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessLoad\fP (const \fBLoadSVFGNode\fP *load) override"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessStore\fP (const \fBStoreSVFGNode\fP *store) override"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessPhi\fP (const \fBPHISVFGNode\fP *phi) override"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessCopy\fP (const \fBCopySVFGNode\fP *copy) override"
+.br
+.ti -1c
+.RI "virtual const NodeBS & \fBgetAllFieldsObjNode\fP (NodeID id) override"
+.br
+.ti -1c
+.RI "virtual bool \fBupdateInFromIn\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBupdateInFromOut\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPtsFromIn\fP (const \fBSVFGNode\fP *stmt, NodeID srcVar, NodeID dstVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPtsFromTop\fP (const \fBSVFGNode\fP *stmt, NodeID srcVar, NodeID dstVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBpropDFOutToIn\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBpropDFInToIn\fP (const \fBSVFGNode\fP *srcStmt, NodeID srcVar, const \fBSVFGNode\fP *dstStmt, NodeID dstVar) override"
+.br
+.ti -1c
+.RI "virtual void \fBexpandFIObjs\fP (const PointsTo &pts, PointsTo &expandedPts) override"
+.br
+.RI "Expand FI objects\&. "
+.ti -1c
+.RI "const DIType * \fBgetTypeFromCTirMetadata\fP (const \fBSVFGNode\fP *)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const MDNode * \fBgetRawCTirMetadata\fP (const \fBSVFGNode\fP *)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBFlowSensitiveTBHC\fP *)"
+.br
+.RI "For LLVM RTTI\&. "
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPointerAnalysis\fP *pta)"
+.br
+.RI "For LLVM RTTI\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBbackPropagate\fP (NodeID clone) override"
+.br
+.ti -1c
+.RI "virtual void \fBcountAliases\fP (Set< std::pair< NodeID, NodeID >> cmp, unsigned *mayAliases, unsigned *noAliases) override"
+.br
+.RI "Fills may/noAliases for the location/pointer pairs in cmp\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Flow sensitive whole program pointer analysis with type-based heap cloning\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void FlowSensitiveTBHC::backPropagate (NodeID clone)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Required by user\&. Handles back-propagation of newly created clone after all metadata has been set\&. Used by cloneObject\&. 
+.PP
+Implements \fBSVF::TypeBasedHeapCloning\fP\&.
+.SS "void FlowSensitiveTBHC::expandFIObjs (const PointsTo & pts, PointsTo & expandedPts)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Expand FI objects\&. Expand all fields of an aggregate in all points-to sets 
+.PP
+Reimplemented from \fBSVF::BVDataPTAImpl\fP\&.
+.SS "const MDNode * FlowSensitiveTBHC::getRawCTirMetadata (const \fBSVFGNode\fP * s)\fC [static]\fP"
+Returns raw ctir metadata of the instruction behind a \fBSVFG\fP node\&. Wraps \fBgetRawCTirMetadata(const Value *)\fP\&. Returns null if it doesn't exist\&. 
+.SS "const DIType * FlowSensitiveTBHC::getTypeFromCTirMetadata (const \fBSVFGNode\fP * s)"
+Extracts the value from SVFGNode (if it exists), and calls \fBgetTypeFromCTirMetadata(const Value *)\fP\&. If no ctir type exists, returns null (void)\&. 
+.SS "bool FlowSensitiveTBHC::processAddr (const \fBAddrSVFGNode\fP * addr)\fC [override]\fP, \fC [virtual]\fP"
+Process address node TODO: If this object has been set as field-insensitive, just add the insensitive object node into dst pointer's pts\&.
+.PP
+Reimplemented from \fBSVF::FlowSensitive\fP\&.
+.SS "bool FlowSensitiveTBHC::processCopy (const \fBCopySVFGNode\fP * copy)\fC [override]\fP, \fC [virtual]\fP"
+Process copy node 
+.PP
+Reimplemented from \fBSVF::FlowSensitive\fP\&.
+.SS "bool FlowSensitiveTBHC::processGep (const \fBGepSVFGNode\fP * edge)\fC [override]\fP, \fC [virtual]\fP"
+Process gep node 
+.PP
+Reimplemented from \fBSVF::FlowSensitive\fP\&.
+.SS "bool FlowSensitiveTBHC::processLoad (const \fBLoadSVFGNode\fP * load)\fC [override]\fP, \fC [virtual]\fP"
+Process load node
+.PP
+Foreach node \\in src pts(dst) = union pts(node) If the ptd is a field-insensitive node, we should also get all field nodes' points-to sets and pass them to pagDst\&.
+.PP
+If the ptd is a field-insensitive node, we should also get all field nodes' points-to sets and pass them to pagDst\&.
+.PP
+Reimplemented from \fBSVF::FlowSensitive\fP\&.
+.SS "bool FlowSensitiveTBHC::processPhi (const \fBPHISVFGNode\fP * phi)\fC [override]\fP, \fC [virtual]\fP"
+Process mssa phi node 
+.PP
+Reimplemented from \fBSVF::FlowSensitive\fP\&.
+.SS "bool FlowSensitiveTBHC::processStore (const \fBStoreSVFGNode\fP * store)\fC [override]\fP, \fC [virtual]\fP"
+Process store node
+.PP
+foreach node \\in dst pts(node) = union pts(src) STORE statement can only be processed if the pointer on the LHS points to something\&. If we handle STORE with an empty points-to set, the OUT set will be updated from IN set\&. Then if LHS pointer points-to one target and it has been identified as a strong update, we can't remove those points-to information computed before this strong update from the OUT set\&.
+.PP
+check if this is a strong updates store
+.PP
+STORE statement can only be processed if the pointer on the LHS points to something\&. If we handle STORE with an empty points-to set, the OUT set will be updated from IN set\&. Then if LHS pointer points-to one target and it has been identified as a strong update, we can't remove those points-to information computed before this strong update from the OUT set\&.
+.PP
+check if this is a strong updates store
+.PP
+Reimplemented from \fBSVF::FlowSensitive\fP\&.
+.SS "bool FlowSensitiveTBHC::propAlongDirectEdge (const \fBDirectSVFGEdge\fP * edge)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Propagate points-to information along a DIRECT \fBSVFG\fP edge\&. Propagate points-to information along DIRECT \fBSVFG\fP edge\&. 
+.PP
+Reimplemented from \fBSVF::FlowSensitive\fP\&.
+.SS "bool FlowSensitiveTBHC::propAlongIndirectEdge (const \fBIndirectSVFGEdge\fP * edge)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Propagate points-to information along an INDIRECT \fBSVFG\fP edge\&. Propagate points-to information along INDIRECT \fBSVFG\fP edge\&. If this is a field-insensitive obj, propagate all field node's pts
+.PP
+If this is a field-insensitive obj, propagate all field node's pts
+.PP
+Reimplemented from \fBSVF::FlowSensitive\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

@@ -1,0 +1,94 @@
+.TH "SVF::PTData< Key, Datum, Data >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::PTData< Key, Datum, Data >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AbstractPointsToDS\&.h>\fP
+.PP
+Inherited by \fBSVF::MutablePTData< VersionedKey, Datum, Data >\fP, \fBSVF::VersionedPTData< NodeID, NodeID, PointsTo, VersionedVar >\fP, \fBSVF::DFPTData< Key, Datum, Data >\fP, \fBSVF::DiffPTData< Key, Datum, Data >\fP, \fBSVF::MutablePTData< Key, Datum, Data >\fP, and \fBSVF::VersionedPTData< Key, Datum, Data, VersionedKey >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPTDataTy\fP { \fBBase\fP, \fBMutBase\fP, \fBDiff\fP, \fBMutDiff\fP, \fBDataFlow\fP, \fBMutDataFlow\fP, \fBIncMutDataFlow\fP, \fBVersioned\fP, \fBMutVersioned\fP }"
+.br
+.RI "Types of a points-to data structures\&. "
+.ti -1c
+.RI "typedef Set< Key > \fBKeySet\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPTData\fP (bool reversePT=true, \fBPTDataTy\fP ty=PTDataTy::Base)"
+.br
+.ti -1c
+.RI "\fBPTDataTy\fP \fBgetPTDTY\fP () const"
+.br
+.RI "Get the type of points-to data structure that this is\&. "
+.ti -1c
+.RI "virtual void \fBclear\fP ()=0"
+.br
+.RI "Clears all points-to sets as if nothing is stored\&. "
+.ti -1c
+.RI "virtual const Data & \fBgetPts\fP (const Key &var)=0"
+.br
+.RI "Get points-to set of var\&. "
+.ti -1c
+.RI "virtual const KeySet & \fBgetRevPts\fP (const Datum &datum)=0"
+.br
+.RI "Get reverse points-to set of datum\&. "
+.ti -1c
+.RI "virtual bool \fBaddPts\fP (const Key &var, const Datum &element)=0"
+.br
+.RI "Adds element to the points-to set associated with var\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstVar, const Key &srcVar)=0"
+.br
+.RI "Performs pts(dstVar) = pts(dstVar) U pts(srcVar)\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstVar, const Data &srcData)=0"
+.br
+.RI "Performs pts(dstVar) = pts(dstVar) U srcData\&. "
+.ti -1c
+.RI "virtual void \fBclearPts\fP (const Key &var, const Datum &element)=0"
+.br
+.RI "Clears element from the points-to set of var\&. "
+.ti -1c
+.RI "virtual void \fBclearFullPts\fP (const Key &var)=0"
+.br
+.RI "Fully clears the points-to set of var\&. "
+.ti -1c
+.RI "virtual void \fBdumpPTData\fP ()=0"
+.br
+.RI "Dump stored keys and points-to sets\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBrev\fP"
+.br
+.RI "Whether we maintain reverse points-to sets or not\&. "
+.ti -1c
+.RI "\fBPTDataTy\fP \fBptdTy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Key, typename Datum, typename Data>
+.br
+class SVF::PTData< Key, Datum, Data >"
+Basic points-to data structure Given a key (variable/condition variable), return its points-to data (pts/condition pts) It is designed flexible for different context, heap and path sensitive analysis Context Insensitive Key --> Variable, Data --> PointsTo Context sensitive: Key --> \fBCondVar\fP, Data --> PointsTo Heap sensitive: Key --> Variable Data --> \fBCondPointsToSet\fP Context and heap sensitive: Key --> \fBCondVar\fP, Data --> \fBCondPointsToSet\fP
+.PP
+This class is abstract to allow for multiple methods of actually storing points-to sets\&. Key: 'owning' variable of a points-to set\&. Datum: elements in points-to sets\&. Data: the points-to set; a collection of Datums\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

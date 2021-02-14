@@ -1,0 +1,102 @@
+\hypertarget{class_s_v_f_1_1_fork_join_analysis}{}\doxysection{SVF\+::Fork\+Join\+Analysis Class Reference}
+\label{class_s_v_f_1_1_fork_join_analysis}\index{SVF::ForkJoinAnalysis@{SVF::ForkJoinAnalysis}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a8d40e687caf8999369621ed385dfc631}\label{class_s_v_f_1_1_fork_join_analysis_a8d40e687caf8999369621ed385dfc631}} 
+enum \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a8d40e687caf8999369621ed385dfc631}{Val\+Domain}} \{ {\bfseries Empty}
+, {\bfseries TDAlive}
+, {\bfseries TDDead}
+ \}
+\begin{DoxyCompactList}\small\item\em semilattice Empty==$>$TDDead==$>$TDAlive \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a613d763731058899e6819acdb2d7315f}\label{class_s_v_f_1_1_fork_join_analysis_a613d763731058899e6819acdb2d7315f}} 
+typedef TCT\+::\+Inst\+Vec {\bfseries Inst\+Vec}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a8e0f7a646ab6b0295d9a990c91725b50}\label{class_s_v_f_1_1_fork_join_analysis_a8e0f7a646ab6b0295d9a990c91725b50}} 
+typedef Map$<$ const \mbox{\hyperlink{class_s_v_f_1_1_cxt_stmt}{Cxt\+Stmt}}, \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a8d40e687caf8999369621ed385dfc631}{Val\+Domain}} $>$ {\bfseries Cxt\+Stmt\+To\+Alive\+Flag\+Map}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a27168ab02991978299cd312f6d223774}\label{class_s_v_f_1_1_fork_join_analysis_a27168ab02991978299cd312f6d223774}} 
+typedef Map$<$ const \mbox{\hyperlink{class_s_v_f_1_1_cxt_stmt}{Cxt\+Stmt}}, Node\+BS $>$ {\bfseries Cxt\+Stmt\+To\+TIDMap}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a7fb8df483e619337e77088e8543a9846}\label{class_s_v_f_1_1_fork_join_analysis_a7fb8df483e619337e77088e8543a9846}} 
+typedef Set$<$ Node\+Pair $>$ {\bfseries Thread\+Pair\+Set}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a2cf27e4045ca5fdaedb8f0d26ca007a3}\label{class_s_v_f_1_1_fork_join_analysis_a2cf27e4045ca5fdaedb8f0d26ca007a3}} 
+typedef Map$<$ const \mbox{\hyperlink{class_s_v_f_1_1_cxt_stmt}{Cxt\+Stmt}}, const Loop $\ast$ $>$ {\bfseries Cxt\+Stmt\+To\+Loop\+Map}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a0ec0920d324604e3672db4d8dff93b1e}\label{class_s_v_f_1_1_fork_join_analysis_a0ec0920d324604e3672db4d8dff93b1e}} 
+typedef \mbox{\hyperlink{class_s_v_f_1_1_f_i_f_o_work_list}{FIFOWork\+List}}$<$ \mbox{\hyperlink{class_s_v_f_1_1_cxt_stmt}{Cxt\+Stmt}} $>$ {\bfseries Cxt\+Stmt\+Work\+List}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_acd98a293bb20064cf5d0bb71c619fc54}\label{class_s_v_f_1_1_fork_join_analysis_acd98a293bb20064cf5d0bb71c619fc54}} 
+typedef Map$<$ const Instruction $\ast$, \mbox{\hyperlink{class_s_v_f_1_1_p_t_a_s_c_e_v}{PTASCEV}} $>$ {\bfseries forkjoin\+To\+PTASCEVMap}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a431ec90a12a62bb892e8b78f66a8f9dc}\label{class_s_v_f_1_1_fork_join_analysis_a431ec90a12a62bb892e8b78f66a8f9dc}} 
+{\bfseries Fork\+Join\+Analysis} (\mbox{\hyperlink{class_s_v_f_1_1_t_c_t}{TCT}} $\ast$t)
+\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a731ece7e21bfa2b08ae16780b55f9f5f}{collect\+SCEVInfo}} ()
+\begin{DoxyCompactList}\small\item\em functions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a16061e7c28e7a9177d9ab798c102b815}{analyze\+Fork\+Join\+Pair}} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a819ef18524ee9104b920d1a465c61da1}\label{class_s_v_f_1_1_fork_join_analysis_a819ef18524ee9104b920d1a465c61da1}} 
+Node\+BS \& \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a819ef18524ee9104b920d1a465c61da1}{get\+Directly\+Joined\+Tid}} (const \mbox{\hyperlink{class_s_v_f_1_1_cxt_stmt}{Cxt\+Stmt}} \&cs)
+\begin{DoxyCompactList}\small\item\em Get directly joined thread\+IDs based on a context-\/sensitive join site. \end{DoxyCompactList}\item 
+Node\+BS \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a34ec31a6859cd94b525bfa26e549d8c1}{get\+Dir\+And\+Ind\+Joined\+Tid}} (const \mbox{\hyperlink{class_s_v_f_1_1_cxt_stmt}{Cxt\+Stmt}} \&cs)
+\begin{DoxyCompactList}\small\item\em Get directly and indirectly joined thread\+IDs based on a context-\/sensitive join site. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a4e058b920c3648f943f85099690ff44f}\label{class_s_v_f_1_1_fork_join_analysis_a4e058b920c3648f943f85099690ff44f}} 
+const Loop $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a4e058b920c3648f943f85099690ff44f}{is\+Join\+In\+Symmetric\+Loop}} (const \mbox{\hyperlink{class_s_v_f_1_1_cxt_stmt}{Cxt\+Stmt}} \&cs) const
+\begin{DoxyCompactList}\small\item\em Whether a context-\/sensitive join satisfies symmetric loop pattern. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a86c68ce5fd8825b1593d92a5a5bad389}\label{class_s_v_f_1_1_fork_join_analysis_a86c68ce5fd8825b1593d92a5a5bad389}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a86c68ce5fd8825b1593d92a5a5bad389}{is\+HBPair}} (Node\+ID tid1, Node\+ID tid2)
+\begin{DoxyCompactList}\small\item\em Whether thread t1 happens-\/before thread t2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_ab55532eefbcef639ced957ad82fbd340}\label{class_s_v_f_1_1_fork_join_analysis_ab55532eefbcef639ced957ad82fbd340}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_ab55532eefbcef639ced957ad82fbd340}{is\+Full\+Join}} (Node\+ID tid1, Node\+ID tid2)
+\begin{DoxyCompactList}\small\item\em Whether t1 fully joins t2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_acc178bd423dbb21bd46a9fae9ed0351c}\label{class_s_v_f_1_1_fork_join_analysis_acc178bd423dbb21bd46a9fae9ed0351c}} 
+const Instruction $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_acc178bd423dbb21bd46a9fae9ed0351c}{get\+Exit\+Inst\+Of\+Parent\+Routine\+Fun}} (Node\+ID tid) const
+\begin{DoxyCompactList}\small\item\em Get exit instruction of the start routine function of tid\textquotesingle{}s parent thread. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a3449439792a54c847c67b3041094db49}\label{class_s_v_f_1_1_fork_join_analysis_a3449439792a54c847c67b3041094db49}} 
+const Loop $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_a3449439792a54c847c67b3041094db49}{get\+Join\+Loop}} (const Instruction $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Get loop for join site. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_ad3db3e7a2ebe7646675aab16103691e7}\label{class_s_v_f_1_1_fork_join_analysis_ad3db3e7a2ebe7646675aab16103691e7}} 
+Scalar\+Evolution $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_fork_join_analysis_ad3db3e7a2ebe7646675aab16103691e7}{get\+SE}} (const Instruction $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Get SE for function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a16061e7c28e7a9177d9ab798c102b815}\label{class_s_v_f_1_1_fork_join_analysis_a16061e7c28e7a9177d9ab798c102b815}} 
+\index{SVF::ForkJoinAnalysis@{SVF::ForkJoinAnalysis}!analyzeForkJoinPair@{analyzeForkJoinPair}}
+\index{analyzeForkJoinPair@{analyzeForkJoinPair}!SVF::ForkJoinAnalysis@{SVF::ForkJoinAnalysis}}
+\doxysubsubsection{\texorpdfstring{analyzeForkJoinPair()}{analyzeForkJoinPair()}}
+{\footnotesize\ttfamily void Fork\+Join\+Analysis\+::analyze\+Fork\+Join\+Pair (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+context-\/sensitive forward traversal from each fork site. Generate following results (1) fork join pair, maps a context-\/sensitive join site to its corresponding thread ids (2) never happen-\/in-\/parallel thread pairs
+
+Context-\/sensitive forward traversal from each fork site \mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a731ece7e21bfa2b08ae16780b55f9f5f}\label{class_s_v_f_1_1_fork_join_analysis_a731ece7e21bfa2b08ae16780b55f9f5f}} 
+\index{SVF::ForkJoinAnalysis@{SVF::ForkJoinAnalysis}!collectSCEVInfo@{collectSCEVInfo}}
+\index{collectSCEVInfo@{collectSCEVInfo}!SVF::ForkJoinAnalysis@{SVF::ForkJoinAnalysis}}
+\doxysubsubsection{\texorpdfstring{collectSCEVInfo()}{collectSCEVInfo()}}
+{\footnotesize\ttfamily void Fork\+Join\+Analysis\+::collect\+SCEVInfo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+functions 
+
+Collect SCEV pass information for pointers at fork/join sites Because Scalar\+Evolution is a function pass, previous knowledge of a function may be overwritten when analyzing a new function. We use a internal wrapper class \mbox{\hyperlink{class_s_v_f_1_1_p_t_a_s_c_e_v}{PTASCEV}} to record all the necessary information for determining symmetric fork/join inside loops \mbox{\Hypertarget{class_s_v_f_1_1_fork_join_analysis_a34ec31a6859cd94b525bfa26e549d8c1}\label{class_s_v_f_1_1_fork_join_analysis_a34ec31a6859cd94b525bfa26e549d8c1}} 
+\index{SVF::ForkJoinAnalysis@{SVF::ForkJoinAnalysis}!getDirAndIndJoinedTid@{getDirAndIndJoinedTid}}
+\index{getDirAndIndJoinedTid@{getDirAndIndJoinedTid}!SVF::ForkJoinAnalysis@{SVF::ForkJoinAnalysis}}
+\doxysubsubsection{\texorpdfstring{getDirAndIndJoinedTid()}{getDirAndIndJoinedTid()}}
+{\footnotesize\ttfamily Node\+BS Fork\+Join\+Analysis\+::get\+Dir\+And\+Ind\+Joined\+Tid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_v_f_1_1_cxt_stmt}{Cxt\+Stmt}} \&}]{cs }\end{DoxyParamCaption})}
+
+
+
+Get directly and indirectly joined thread\+IDs based on a context-\/sensitive join site. 
+
+Return thread id(s) which are joined at this join site (1) thread t1 directly joins thread t2 (2) thread t1 indirectly joins thread t3 via directly joining t2 (t2 fully joins its child thread t3) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+MTA/MHP.\+h\item 
+lib/\+MTA/MHP.\+cpp\end{DoxyCompactItemize}

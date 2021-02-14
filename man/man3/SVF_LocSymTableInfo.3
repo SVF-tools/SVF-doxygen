@@ -1,0 +1,86 @@
+.TH "SVF::LocSymTableInfo" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::LocSymTableInfo
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SymbolTableInfo\&.h>\fP
+.PP
+Inherits \fBSVF::SymbolTableInfo\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLocSymTableInfo\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~LocSymTableInfo\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual bool \fBcomputeGepOffset\fP (const User *V, \fBLocationSet\fP &ls)"
+.br
+.RI "Compute gep offset\&. "
+.ti -1c
+.RI "virtual \fBLocationSet\fP \fBgetModulusOffset\fP (const \fBMemObj\fP *obj, const \fBLocationSet\fP &ls)"
+.br
+.RI "Given an offset from a Gep Instruction, return it modulus offset by considering memory layout\&. "
+.ti -1c
+.RI "void \fBverifyStructSize\fP (\fBStInfo\fP *stInfo, u32_t structSize)"
+.br
+.RI "Verify struct size construction\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBcollectStructInfo\fP (const \fBStructType\fP *T)"
+.br
+.RI "Collect the struct info\&. "
+.ti -1c
+.RI "virtual void \fBcollectArrayInfo\fP (const ArrayType *T)"
+.br
+.RI "Collect the array info\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Bytes/bits-level modeling of memory locations to handle weakly type languages\&. (declared with one type but accessed as another) Abstract memory objects are created according to the static allocated size\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void LocSymTableInfo::collectArrayInfo (const ArrayType * T)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Collect the array info\&. Collect array information 
+.PP
+Reimplemented from \fBSVF::SymbolTableInfo\fP\&.
+.SS "bool LocSymTableInfo::computeGepOffset (const User * V, \fBLocationSet\fP & ls)\fC [virtual]\fP"
+
+.PP
+Compute gep offset\&. Compute gep offset variant offset
+.PP
+Reimplemented from \fBSVF::SymbolTableInfo\fP\&.
+.SS "\fBLocationSet\fP LocSymTableInfo::getModulusOffset (const \fBMemObj\fP * obj, const \fBLocationSet\fP & ls)\fC [virtual]\fP"
+
+.PP
+Given an offset from a Gep Instruction, return it modulus offset by considering memory layout\&. Given \fBLocationSet\fP from a Gep Instruction, return a new \fBLocationSet\fP which matches the field information of this \fBObjTypeInfo\fP by considering memory layout Find an appropriate field for this \fBLocationSet\fP
+.PP
+This location set represent one object
+.PP
+if the offset is negative, it's possible that we're looking for an obj node out of range of current struct\&. Make the offset positive so we can still get a node within current struct to represent this obj\&.
+.PP
+This location set represents multiple objects
+.PP
+Reimplemented from \fBSVF::SymbolTableInfo\fP\&.
+.SS "void LocSymTableInfo::verifyStructSize (\fBStInfo\fP * stinfo, u32_t structSize)"
+
+.PP
+Verify struct size construction\&. Verify struct size Please note this verify may not be complete as different machine has different alignment mechanism
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_d_c_h_graph" xml:lang="en-US">
+<title>SVF::DCHGraph Class Reference</title>
+<indexterm><primary>SVF::DCHGraph</primary></indexterm>
+<para>
+
+<para>Dwarf based CHG. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;DCHG.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::DCHGraph:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_d_c_h_graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a7cbea4d5399333497faa3f8d213e365e"/><emphasis role="strong">DCHGraph</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *svfMod)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a710c6b87fd475552eddb425e38de8889">buildCHG</link> (bool extend)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a587baf86ecc2fdbecfcf85310673e9f4"/>void <emphasis role="strong">dump</emphasis> (const std::string &amp;filename)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a5f08ed4cbba3e4b7a348d5ad77664726"/>void <emphasis role="strong">print</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a1494aeef22e15baaa160e8d598dd7de0"/>virtual bool <emphasis role="strong">csHasVFnsBasedonCHA</emphasis> (CallSite cs) override</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1ad398e58286af020fb4dcc03644f2a24f"/>virtual const VFunSet &amp; <emphasis role="strong">getCSVFsBasedonCHA</emphasis> (CallSite cs) override</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a2fef8f7209f100c7a266cf3102b1219b"/>virtual bool <emphasis role="strong">csHasVtblsBasedonCHA</emphasis> (CallSite cs) override</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a3383b841bb79ee39cb108b9906fca6a9"/>virtual const VTableSet &amp; <emphasis role="strong">getCSVtblsBasedonCHA</emphasis> (CallSite cs) override</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a6a5d012fda005d45bf3196d1a7d2c6fa"/>virtual void <emphasis role="strong">getVFnsFromVtbls</emphasis> (CallSite cs, const VTableSet &amp;vtbls, VFunSet &amp;virtualFunctions) override</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_d_c_h_graph_1ab33f9af6ad22eb99dd0d9950fb0e50e6">isBase</link> (const DIType *a, const DIType *b, bool firstField)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1af0534356b4a8c68507e1237f1d7a8c11"/>virtual bool <link linkend="_class_s_v_f_1_1_d_c_h_graph_1af0534356b4a8c68507e1237f1d7a8c11">isFieldOf</link> (const DIType *f, const DIType *b)</para>
+
+<para>Returns true if f is a field of b (fields from getFieldTypes). </para>
+</listitem>
+            <listitem><para>const DIType * <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a079feacdcc3783f4a9108a3b2d2aed2c">getCanonicalType</link> (const DIType *t)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1acaff636e6a9cf59363d6ee00435c04ff"/>const DIType * <link linkend="_class_s_v_f_1_1_d_c_h_graph_1acaff636e6a9cf59363d6ee00435c04ff">getFieldType</link> (const DIType *base, unsigned idx)</para>
+
+<para>Returns the type of field number idx (flattened) in base. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1ae9a0007299178912e2568dc7158d6824"/>const std::vector&lt; const DIType * &gt; &amp; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1ae9a0007299178912e2568dc7158d6824">getFieldTypes</link> (const DIType *base)</para>
+
+<para>Returns a vector of the types of all fields in base. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a0788694fbff155949fc4f4d6487c223e"/>unsigned <emphasis role="strong">getNumFields</emphasis> (const DIType *base)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a159e158c794fff115d5642b85963f43b"/>const Set&lt; const DIType * &gt; &amp; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a159e158c794fff115d5642b85963f43b">getAggs</link> (const DIType *base)</para>
+
+<para>Returns all the aggregates contained (transitively) in base. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a2b2dbc52089696854a8339f2e83fc333"/>bool <emphasis role="strong">isFirstField</emphasis> (const DIType *f, const DIType *b)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a175ed6ad0c9b23d5617f755ab96c76c4"/>static const DIType * <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a175ed6ad0c9b23d5617f755ab96c76c4">stripQualifiers</link> (const DIType *)</para>
+
+<para>Returns the DIType beneath the qualifiers. Does not strip away &quot;DW_TAG_members&quot;. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a6c276e661e5e63c1c84387f84c8a62e4"/>static const DIType * <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a6c276e661e5e63c1c84387f84c8a62e4">stripArray</link> (const DIType *)</para>
+
+<para>Returns the DIType beneath all qualifiers and arrays. </para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_s_v_f_1_1_d_c_h_graph_1acb76ab20da1bfbec00f63d08e48cbddd">teq</link> (const DIType *t1, const DIType *t2)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a2dc488345cc3a5f37079952f638d8c2b"/>static std::string <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a2dc488345cc3a5f37079952f638d8c2b">diTypeToStr</link> (const DIType *)</para>
+
+<para>Returns a human-readable version of the DIType. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a9d2be5aec5216cbc1d1709b41f79c44b"/>static bool <emphasis role="strong">isAgg</emphasis> (const DIType *t)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1af9970ff0ef4a8f4c638da9f519d14a21"/>static bool <emphasis role="strong">classof</emphasis> (const <link linkend="_class_s_v_f_1_1_common_c_h_graph">CommonCHGraph</link> *chg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a85a3c9a6a60a4379717773f8722ae42e"/>const <link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a85a3c9a6a60a4379717773f8722ae42e">svfModule</link></para>
+
+<para><link linkend="_namespace_s_v_f">SVF</link> Module this CHG is built from. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1aa6f49dfc9e3580d3f2d8c257395eb11e"/>bool <link linkend="_class_s_v_f_1_1_d_c_h_graph_1aa6f49dfc9e3580d3f2d8c257395eb11e">extended</link> = false</para>
+
+<para>Whether this CHG is an extended CHG (first-field). Set by buildCHG. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a581ce71cbc7994f71c9a6b9b145d3b9f"/>Map&lt; const DIType *, <link linkend="_class_s_v_f_1_1_d_c_h_node">DCHNode</link> * &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a581ce71cbc7994f71c9a6b9b145d3b9f">diTypeToNodeMap</link></para>
+
+<para>Maps DITypes to their nodes. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1aaa63715e67ade7711a0366eb7559b708"/>Map&lt; const GlobalValue *, const DIType * &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1aaa63715e67ade7711a0366eb7559b708">vtblToTypeMap</link></para>
+
+<para>Maps VTables to the DIType associated with them. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1ac0d5f1e10f642aac5b64792bf5fcbd9d"/>Map&lt; const DIType *, NodeBS &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1ac0d5f1e10f642aac5b64792bf5fcbd9d">chaMap</link></para>
+
+<para>Maps types to all children (i.e. CHA). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1abe8d313b501182ab62f2276a19d670a4"/>Map&lt; const DIType *, NodeBS &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1abe8d313b501182ab62f2276a19d670a4">chaFFMap</link></para>
+
+<para>Maps types to all children but also considering first field. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a294e7a04aff9cef87c1008e91a620155"/>Map&lt; const DIType *, VTableSet &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a294e7a04aff9cef87c1008e91a620155">vtblCHAMap</link></para>
+
+<para>Maps types to a set with their vtable and all their children&apos;s. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1ad79a569e77f94fa8494eed3f18e07e90"/>Map&lt; CallSite, VFunSet &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1ad79a569e77f94fa8494eed3f18e07e90">csCHAMap</link></para>
+
+<para>Maps callsites to a set of potential virtual functions based on CHA. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a498a18fe8702251b6f2a4e6379e5cbb1"/>Map&lt; const DIType *, const DIType * &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a498a18fe8702251b6f2a4e6379e5cbb1">canonicalTypeMap</link></para>
+
+<para>Maps types to their canonical type (many-to-one). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a10225f56b21eb7f0870fdc433de3c393"/>Set&lt; const DIType * &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a10225f56b21eb7f0870fdc433de3c393">canonicalTypes</link></para>
+
+<para>Set of all possible canonical types (i.e. values of canonicalTypeMap). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a574ec14099f1112b394b00a79f3fdf1a"/>Map&lt; const DIType *, std::vector&lt; const DIType * &gt; &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1a574ec14099f1112b394b00a79f3fdf1a">fieldTypes</link></para>
+
+<para>Maps types to their flattened fields&apos; types. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1adc7a17f70ac3fa89624ad874dbd16ff9"/>Map&lt; const DIType *, Set&lt; const DIType * &gt; &gt; <link linkend="_class_s_v_f_1_1_d_c_h_graph_1adc7a17f70ac3fa89624ad874dbd16ff9">containingAggs</link></para>
+
+<para>Maps aggregate types to all the aggregate types it transitively contains. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Dwarf based CHG. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a710c6b87fd475552eddb425e38de8889"/>    <section>
+    <title>buildCHG()</title>
+<indexterm><primary>buildCHG</primary><secondary>SVF::DCHGraph</secondary></indexterm>
+<indexterm><primary>SVF::DCHGraph</primary><secondary>buildCHG</secondary></indexterm>
+<para><computeroutput>void DCHGraph::buildCHG (bool extend)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Builds the CHG from DWARF debug information. extend determines whether to extend the CHG with first field edges. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1a079feacdcc3783f4a9108a3b2d2aed2c"/>    <section>
+    <title>getCanonicalType()</title>
+<indexterm><primary>getCanonicalType</primary><secondary>SVF::DCHGraph</secondary></indexterm>
+<indexterm><primary>SVF::DCHGraph</primary><secondary>getCanonicalType</secondary></indexterm>
+<para><computeroutput>const DIType * DCHGraph::getCanonicalType (const DIType * t)</computeroutput></para>
+<para>Returns the type representing all qualifier-variations of t. This should only matter in the case of DerivedTypes where qualifiers and have qualified base types cause a mess. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1ab33f9af6ad22eb99dd0d9950fb0e50e6"/>    <section>
+    <title>isBase()</title>
+<indexterm><primary>isBase</primary><secondary>SVF::DCHGraph</secondary></indexterm>
+<indexterm><primary>SVF::DCHGraph</primary><secondary>isBase</secondary></indexterm>
+<para><computeroutput>bool DCHGraph::isBase (const DIType * a, const DIType * b, bool firstField)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Returns true if a is a transitive base of b. firstField determines whether to consider first-field edges. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_c_h_graph_1acb76ab20da1bfbec00f63d08e48cbddd"/>    <section>
+    <title>teq()</title>
+<indexterm><primary>teq</primary><secondary>SVF::DCHGraph</secondary></indexterm>
+<indexterm><primary>SVF::DCHGraph</primary><secondary>teq</secondary></indexterm>
+<para><computeroutput>bool DCHGraph::teq (const DIType * t1, const DIType * t2)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Returns true if t1 and t2 are equivalent, ignoring qualifiers. For equality... Tags always need to be equal. DIBasicType: shallow pointer equality. DIDerivedType: base types (teq). DICompositeType: shallow pointer equality. DISubroutineType: shallow pointer equality. </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/SVF-FE/DCHG.hlib/SVF-FE/DCHG.cpp</section>
+</section>

@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_m_h_p" xml:lang="en-US">
+<title>SVF::MHP Class Reference</title>
+<indexterm><primary>SVF::MHP</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MHP.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a0cacd62ca23e5f025dba503b0537c15a"/>typedef Set&lt; const Function * &gt; <emphasis role="strong">FunSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1aa17ec09b08f8dc7927aa7fa00232dd2f"/>typedef Set&lt; const Instruction * &gt; <emphasis role="strong">InstSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a83643e264defbd0a985031f5e3b5b537"/>typedef Set&lt; const <link linkend="_class_s_v_f_1_1_stmt_v_f_g_node">StmtSVFGNode</link> * &gt; <emphasis role="strong">SVFGNodeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a8fecc443c4d92a36a9c50ec6a4f5dea8"/>typedef TCT::InstVec <emphasis role="strong">InstVec</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1aeba1145d32693ae7b642f483eeae94ef"/>typedef <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">FIFOWorkList</link>&lt; <link linkend="_class_s_v_f_1_1_cxt_thread_stmt">CxtThreadStmt</link> &gt; <emphasis role="strong">CxtThreadStmtWorkList</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a28031502c4f8f0d4012c0827c57efb32"/>typedef Set&lt; <link linkend="_class_s_v_f_1_1_cxt_thread_stmt">CxtThreadStmt</link> &gt; <emphasis role="strong">CxtThreadStmtSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a0726df05cc034b9961eb4da42a9515af"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_cxt_thread_stmt">CxtThreadStmt</link>, NodeBS &gt; <emphasis role="strong">ThreadStmtToThreadInterleav</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1ae3e240893d0950354d3d775e87d4adf9"/>typedef Map&lt; const Instruction *, CxtThreadStmtSet &gt; <emphasis role="strong">InstToThreadStmtSetMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a08ba219ec02b07b1bbd91a88ebb4acd7"/>typedef Set&lt; <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link> &gt; <emphasis role="strong">LockSpan</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a570f93674511a93cdf2afb96df4947b6"/>typedef std::pair&lt; const Function *, const Function * &gt; <emphasis role="strong">FuncPair</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1adff2785f9d46eb110ce5b429592b2a38"/>typedef Map&lt; FuncPair, bool &gt; <emphasis role="strong">FuncPairToBool</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_s_v_f_1_1_m_h_p_1abf1f5a7c365dfb95b42015b7b2ad6fbe">MHP</link> (<link linkend="_class_s_v_f_1_1_t_c_t">TCT</link> *t)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_s_v_f_1_1_m_h_p_1a6b7133f1767c3636ce253c5325be5053">~MHP</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_h_p_1a02457fa6e3c85c897ec3b3d8db18cc4b">analyze</link> ()</para>
+
+<para>Start analysis here. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_h_p_1adfd90a8d20d630bc3813f5ed71d3abf7">analyzeInterleaving</link> ()</para>
+
+<para>Analyze thread interleaving. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a20e740d4b96ef086b6b5778acd38ca88"/><link linkend="_class_s_v_f_1_1_thread_call_graph">ThreadCallGraph</link> * <link linkend="_class_s_v_f_1_1_m_h_p_1a20e740d4b96ef086b6b5778acd38ca88">getThreadCallGraph</link> () const</para>
+
+<para>Get <link linkend="_class_s_v_f_1_1_thread_call_graph">ThreadCallGraph</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a033936547612c54326a604f0ff1e39a6"/><link linkend="_class_s_v_f_1_1_t_c_t">TCT</link> * <link linkend="_class_s_v_f_1_1_m_h_p_1a033936547612c54326a604f0ff1e39a6">getTCT</link> () const</para>
+
+<para>Get Thread Creation Tree. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a1cfec64cc65abcbc5ba32695850bfb48"/>bool <link linkend="_class_s_v_f_1_1_m_h_p_1a1cfec64cc65abcbc5ba32695850bfb48">isConnectedfromMain</link> (const Function *fun)</para>
+
+<para>Whether the function is connected from main function in thread call graph. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a9989f2d200cec6c387d63f452b8eac6b"/>virtual bool <link linkend="_class_s_v_f_1_1_m_h_p_1a9989f2d200cec6c387d63f452b8eac6b">mayHappenInParallel</link> (const Instruction *i1, const Instruction *i2)</para>
+
+<para>Interface to query whether two instructions may happen-in-parallel. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a9a4b6d5c57552b61a62a4dd180aef40c"/>virtual bool <emphasis role="strong">mayHappenInParallelCache</emphasis> (const Instruction *i1, const Instruction *i2)</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_m_h_p_1a2faaa02abec3b8f8fca73e178cbdcb41">mayHappenInParallelInst</link> (const Instruction *i1, const Instruction *i2)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1aab80f1bc5c359a7d3b03f249bafa1d40"/>virtual bool <emphasis role="strong">executedByTheSameThread</emphasis> (const Instruction *i1, const Instruction *i2)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a653460ed316804bea377eecdde412d36"/>const NodeBS &amp; <link linkend="_class_s_v_f_1_1_m_h_p_1a653460ed316804bea377eecdde412d36">getInterleavingThreads</link> (const <link linkend="_class_s_v_f_1_1_cxt_thread_stmt">CxtThreadStmt</link> &amp;cts)</para>
+
+<para>Get interleaving thread for statement inst. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a3ba43bb0be55ffade3d70f8cbb95f88f"/>bool <emphasis role="strong">hasInterleavingThreads</emphasis> (const <link linkend="_class_s_v_f_1_1_cxt_thread_stmt">CxtThreadStmt</link> &amp;cts) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a49504524c0d3e53c769cdbfd9ec1ccb0"/>const CxtThreadStmtSet &amp; <link linkend="_class_s_v_f_1_1_m_h_p_1a49504524c0d3e53c769cdbfd9ec1ccb0">getThreadStmtSet</link> (const Instruction *inst) const</para>
+
+<para>Get/has ThreadStmt. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a6841b147e2a681ea372bdddd53616294"/>bool <emphasis role="strong">hasThreadStmtSet</emphasis> (const Instruction *inst) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_h_p_1a22f7dc5043fed97f1b4b273b8b710415">printInterleaving</link> ()</para>
+
+<para>Print interleaving results. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a26ae18993915d76b704232cded9811c2"/>u32_t <link linkend="_class_s_v_f_1_1_m_h_p_1a26ae18993915d76b704232cded9811c2">numOfTotalQueries</link></para>
+
+<para>Total number of queries. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1ab8bd382e0c70b0feb2a291ecc4043106"/>u32_t <link linkend="_class_s_v_f_1_1_m_h_p_1ab8bd382e0c70b0feb2a291ecc4043106">numOfMHPQueries</link></para>
+
+<para>Number of queries are answered as may-happen-in-parallel. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1aca306b97c6dcd47a8f407038436473a2"/>double <emphasis role="strong">interleavingTime</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_h_p_1ab7d9fe837844197b7acdc0493a50aaa5"/>double <emphasis role="strong">interleavingQueriesTime</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class serves as a base may-happen in parallel analysis for multithreaded program Given a statement under an abstract thread, it tells which abstract threads may be alive at the same time (May-happen-in-parallel). </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_m_h_p_1abf1f5a7c365dfb95b42015b7b2ad6fbe"/>    <section>
+    <title>MHP()</title>
+<indexterm><primary>MHP</primary><secondary>SVF::MHP</secondary></indexterm>
+<indexterm><primary>SVF::MHP</primary><secondary>MHP</secondary></indexterm>
+<para><computeroutput>MHP::MHP (<link linkend="_class_s_v_f_1_1_t_c_t">TCT</link> * t)</computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para>Constructor </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a6b7133f1767c3636ce253c5325be5053"/>    <section>
+    <title>~MHP()</title>
+<indexterm><primary>~MHP</primary><secondary>SVF::MHP</secondary></indexterm>
+<indexterm><primary>SVF::MHP</primary><secondary>~MHP</secondary></indexterm>
+<para><computeroutput>MHP::~MHP ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Destructor </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_m_h_p_1a02457fa6e3c85c897ec3b3d8db18cc4b"/>    <section>
+    <title>analyze()</title>
+<indexterm><primary>analyze</primary><secondary>SVF::MHP</secondary></indexterm>
+<indexterm><primary>SVF::MHP</primary><secondary>analyze</secondary></indexterm>
+<para><computeroutput>void MHP::analyze ( )</computeroutput></para><para>
+
+<para>Start analysis here. </para>
+</para>
+
+<para>Start analysis here </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_h_p_1adfd90a8d20d630bc3813f5ed71d3abf7"/>    <section>
+    <title>analyzeInterleaving()</title>
+<indexterm><primary>analyzeInterleaving</primary><secondary>SVF::MHP</secondary></indexterm>
+<indexterm><primary>SVF::MHP</primary><secondary>analyzeInterleaving</secondary></indexterm>
+<para><computeroutput>void MHP::analyzeInterleaving ( )</computeroutput></para><para>
+
+<para>Analyze thread interleaving. </para>
+</para>
+
+<para>Analyze thread interleaving </para>
+
+<para>handle non-candidate function</para>
+
+<para>handle candidate function</para>
+
+<para>update non-candidate functions&apos; interleaving</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a2faaa02abec3b8f8fca73e178cbdcb41"/>    <section>
+    <title>mayHappenInParallelInst()</title>
+<indexterm><primary>mayHappenInParallelInst</primary><secondary>SVF::MHP</secondary></indexterm>
+<indexterm><primary>SVF::MHP</primary><secondary>mayHappenInParallelInst</secondary></indexterm>
+<para><computeroutput>bool MHP::mayHappenInParallelInst (const Instruction * i1, const Instruction * i2)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Answer <link linkend="_class_s_v_f_1_1_m_h_p">MHP</link> queries For a pair of ThreadStmts (t1,s1) = &lt;l1&gt; (t2,s2) = &lt;l2&gt; They may happen in parallel if (1) t1 == t2 and t1 inloop/incycle (2) t1!=t2 and t1 \in l2 and t2 \in l1 </para>
+
+<para>TODO: Any instruction in dead function is assumed no <link linkend="_class_s_v_f_1_1_m_h_p">MHP</link> with others</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_h_p_1a22f7dc5043fed97f1b4b273b8b710415"/>    <section>
+    <title>printInterleaving()</title>
+<indexterm><primary>printInterleaving</primary><secondary>SVF::MHP</secondary></indexterm>
+<indexterm><primary>SVF::MHP</primary><secondary>printInterleaving</secondary></indexterm>
+<para><computeroutput>void MHP::printInterleaving ( )</computeroutput></para><para>
+
+<para>Print interleaving results. </para>
+</para>
+
+<para>Print interleaving results </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/MTA/MHP.hlib/MTA/MHP.cpp</section>
+</section>

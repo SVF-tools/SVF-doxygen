@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_s_v_f_g" xml:lang="en-US">
+<title>SVF::SVFG Class Reference</title>
+<indexterm><primary>SVF::SVFG</primary></indexterm>
+<para>
+<computeroutput>#include &lt;SVFG.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::SVFG:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_s_v_f_g.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a3d04ce1429b1edf90c9c0833e3b5a4a9"/>typedef VFGNodeIDToNodeMapTy <emphasis role="strong">SVFGNodeIDToNodeMapTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a2590182f3b28c7fc8b2b53c09ec4305c"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *, NodeID &gt; <emphasis role="strong">PAGNodeToDefMapTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ac84d3749671f177b14749a825e36efe3"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_m_r_ver">MRVer</link> *, NodeID &gt; <emphasis role="strong">MSSAVarToDefMapTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1aa9f520779475e4783eccc45c460e346a"/>typedef NodeBS <emphasis role="strong">ActualINSVFGNodeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a2f6ed8a9f14657abc1e2a89247a84b99"/>typedef NodeBS <emphasis role="strong">ActualOUTSVFGNodeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a8859409373454b6b3d1252776e169cf5"/>typedef NodeBS <emphasis role="strong">FormalINSVFGNodeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1acb7262c3b9161c77eb1b491048152fb0"/>typedef NodeBS <emphasis role="strong">FormalOUTSVFGNodeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a9ccf41f90af56c89f2acb59a6ca9b0dc"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, ActualINSVFGNodeSet &gt; <emphasis role="strong">CallSiteToActualINsMapTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a8c7dea646606e723e6cf5055611e43c8"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, ActualOUTSVFGNodeSet &gt; <emphasis role="strong">CallSiteToActualOUTsMapTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a2b4850c833564916c7fce46d55672038"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *, FormalINSVFGNodeSet &gt; <emphasis role="strong">FunctionToFormalINsMapTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ac4c65501e9beba5495a57dd469f78e5b"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *, FormalOUTSVFGNodeSet &gt; <emphasis role="strong">FunctionToFormalOUTsMapTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1acdbe1c510273107b708935061b6c4127"/>typedef MemSSA::MUSet <emphasis role="strong">MUSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a8843ab4a4608f7f5f46f68ad31314c07"/>typedef MemSSA::CHISet <emphasis role="strong">CHISet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1aef7ee9d802934d51b3761663bdaf0c05"/>typedef MemSSA::PHISet <emphasis role="strong">PHISet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a7f4deffe7e13352b8c13eab110c834cc"/>typedef <link linkend="_class_s_v_f_1_1_m_s_s_a_m_u">MemSSA::MU</link> <emphasis role="strong">MU</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a60df52c14b303562ff5d73c7836e3495"/>typedef <link linkend="_class_s_v_f_1_1_m_s_s_a_c_h_i">MemSSA::CHI</link> <emphasis role="strong">CHI</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a86d4a41a881a3d2e5def103d7ba8bb2f"/>typedef <link linkend="_class_s_v_f_1_1_load_m_u">MemSSA::LOADMU</link> <emphasis role="strong">LOADMU</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ad14cdbb3f1df1f716aa03b4d39f4e52b"/>typedef <link linkend="_class_s_v_f_1_1_store_c_h_i">MemSSA::STORECHI</link> <emphasis role="strong">STORECHI</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a047573d70182da351b9e3bbf66ca0056"/>typedef <link linkend="_class_s_v_f_1_1_ret_m_u">MemSSA::RETMU</link> <emphasis role="strong">RETMU</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a101c5a8b31baf5c5613144f6e277abe9"/>typedef <link linkend="_class_s_v_f_1_1_entry_c_h_i">MemSSA::ENTRYCHI</link> <emphasis role="strong">ENTRYCHI</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a5f3e0fbf83621cc661d2c59800756727"/>typedef <link linkend="_class_s_v_f_1_1_call_c_h_i">MemSSA::CALLCHI</link> <emphasis role="strong">CALLCHI</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1acd9fd6597e5dedf3c14a430830c7dd08"/>typedef <link linkend="_class_s_v_f_1_1_call_m_u">MemSSA::CALLMU</link> <emphasis role="strong">CALLMU</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a710a36fc3f4ad15010c4469abcd032e5"/>virtual <link linkend="_class_s_v_f_1_1_s_v_f_g_1a710a36fc3f4ad15010c4469abcd032e5">~SVFG</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a8ba934714a7f2caf2e041002fdb66137"/><link linkend="_class_s_v_f_1_1_s_v_f_g_stat">SVFGStat</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1a8ba934714a7f2caf2e041002fdb66137">getStat</link> () const</para>
+
+<para>Return statistics. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1aeba803e60699f9d9422596d161d44241"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1aeba803e60699f9d9422596d161d44241">clearMSSA</link> ()</para>
+
+<para>Clear MSSA. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a49a910bc4ea6e98d1584e74a018badc9"/><link linkend="_class_s_v_f_1_1_mem_s_s_a">MemSSA</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1a49a910bc4ea6e98d1584e74a018badc9">getMSSA</link> () const</para>
+
+<para>Get <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> memory SSA. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ab6c337637ccc9bbf0bcc7153b427f7ca"/><link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1ab6c337637ccc9bbf0bcc7153b427f7ca">getPTA</link> () const</para>
+
+<para>Get Pointer Analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a7ace06b6c893b31f7dec2abe54e33e11"/><link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1a7ace06b6c893b31f7dec2abe54e33e11">getSVFGNode</link> (NodeID id) const</para>
+
+<para>Get a <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a1b9d1ad76785ae0eb07979aa75325640"/>bool <link linkend="_class_s_v_f_1_1_s_v_f_g_1a1b9d1ad76785ae0eb07979aa75325640">hasSVFGNode</link> (NodeID id) const</para>
+
+<para>Whether has the SVFGNode. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a60271ab47e0736f515a2267fd5c38b09"/><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1a60271ab47e0736f515a2267fd5c38b09">getSVFGEdge</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *src, const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *dst, <link linkend="_class_s_v_f_1_1_v_f_g_edge_1a156ae6a8b3a033f505c18c6b162e7cf5">SVFGEdge::VFGEdgeK</link> kind)</para>
+
+<para>Get a <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edge according to src and dst. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1af3bb18f904512cd6f450853666810229">getInterVFEdgesForIndirectCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee, SVFGEdgeSetTy &amp;edges)</para>
+
+<para>Get all inter value flow edges of a indirect call site. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a5fdaddc52e7342b834d76d64c1a1e498">dump</link> (const std::string &amp;file, bool simple=false)</para>
+
+<para>Dump graph into dot file. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a0cebc2ba5ae81a6d45b224a4f94fc8b4">connectCallerAndCallee</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee, SVFGEdgeSetTy &amp;edges)</para>
+
+<para>Connect <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes between caller and callee for indirect call site. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a8e7a945f4266e8dc7dcfff2ad6494bfb"/>const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1a8e7a945f4266e8dc7dcfff2ad6494bfb">getDefSVFGNode</link> (const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *pagNode) const</para>
+
+<para>Given a pagNode, return its definition site. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1adc9fbb4553472b238d6c3bb5062279cb">performStat</link> ()</para>
+
+<para>Perform statistics. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1afec2a195b5e367ec0d3f292168d10811"/>bool <link linkend="_class_s_v_f_1_1_s_v_f_g_1afec2a195b5e367ec0d3f292168d10811">hasActualINSVFGNodes</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+
+<para>Has a SVFGNode. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1abc41243e27c4543ad50b6649839a940c"/>bool <emphasis role="strong">hasActualOUTSVFGNodes</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a65f28035e0fa5bebf76d28612b2f8ba8"/>bool <emphasis role="strong">hasFormalINSVFGNodes</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a1f8c60ad57bf473e0186b794d666b5c2"/>bool <emphasis role="strong">hasFormalOUTSVFGNodes</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ab767c329e7fccf9efe16818515199d65"/>ActualINSVFGNodeSet &amp; <link linkend="_class_s_v_f_1_1_s_v_f_g_1ab767c329e7fccf9efe16818515199d65">getActualINSVFGNodes</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Get SVFGNode set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1af0c86a9e83a1f2427dd8e80287be37ed"/>ActualOUTSVFGNodeSet &amp; <emphasis role="strong">getActualOUTSVFGNodes</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a9d0714075d6071c26d26cf16c4dec7c5"/>FormalINSVFGNodeSet &amp; <emphasis role="strong">getFormalINSVFGNodes</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a287c337697eed7d92889bca0a0e370d7"/>FormalOUTSVFGNodeSet &amp; <emphasis role="strong">getFormalOUTSVFGNodes</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+</listitem>
+            <listitem><para>const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1ae2cff3c963136f474fac0a66aa8cff7b">isFunEntrySVFGNode</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node) const</para>
+
+<para>Whether a node is function entry SVFGNode. </para>
+</listitem>
+            <listitem><para>const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1ac75b83bdf3bcfecaae579716ab33dd61">isCallSiteRetSVFGNode</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node) const</para>
+
+<para>Whether a node is callsite return SVFGNode. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a931d8b82e10a54d68c68cf6bd80264be"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a931d8b82e10a54d68c68cf6bd80264be">removeSVFGEdge</link> (<link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge)</para>
+
+<para>Remove a <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a700c5fc6c1cb4136e55196fe3d393b8b"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a700c5fc6c1cb4136e55196fe3d393b8b">removeSVFGNode</link> (<link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+
+<para>Remove a SVFGNode. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a67750c461e3543f6b75d2dd510d67297"/>bool <link linkend="_class_s_v_f_1_1_s_v_f_g_1a67750c461e3543f6b75d2dd510d67297">addSVFGEdge</link> (<link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge)</para>
+
+<para>Add <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ac965abfbe9bdc872f98b36a171a7b5aa"/>u32_t <link linkend="_class_s_v_f_1_1_s_v_f_g_1ac965abfbe9bdc872f98b36a171a7b5aa">getSVFGNodeNum</link> () const</para>
+
+<para>Return total <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node number. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a82a93d9b7fcf1938e3090a0826a1ca7e">destroy</link> ()</para>
+
+<para>Clean up memory. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_s_v_f_g_1a68965c5a9cc5136aa0b593851c60ff12">SVFG</link> (<link linkend="_class_s_v_f_1_1_mem_s_s_a">MemSSA</link> *mssa, <link linkend="_class_s_v_f_1_1_v_f_g_1ac2e2f555975063da3fa1932ac35802c6">VFGK</link> k)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a0920e9f9896531959d74ae61013d96d6">buildSVFG</link> ()</para>
+
+<para>Start building <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1aa6e855dc13d0e2db44982722409a9d1d"/><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1aa6e855dc13d0e2db44982722409a9d1d">addIntraIndirectVFEdge</link> (NodeID srcId, NodeID dstId, const PointsTo &amp;cpts)</para>
+
+<para>Add indirect def-use edges of a memory region between two statements,. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a1484cd0bf03fc336d678d71d045d44c2"/><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * <emphasis role="strong">addCallIndirectVFEdge</emphasis> (NodeID srcId, NodeID dstId, const PointsTo &amp;cpts, CallSiteID csId)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a4578b49f6f59367738c3aa57bdaa61c1"/><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * <emphasis role="strong">addRetIndirectVFEdge</emphasis> (NodeID srcId, NodeID dstId, const PointsTo &amp;cpts, CallSiteID csId)</para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1ab8b57187140a36077d9a3dd6d0b25858">addThreadMHPIndirectVFEdge</link> (NodeID srcId, NodeID dstId, const PointsTo &amp;cpts)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a57629591037e16e57a0178d102a405f2"/><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1a57629591037e16e57a0178d102a405f2">addInterIndirectVFCallEdge</link> (const <link linkend="_class_s_v_f_1_1_actual_i_n_s_v_f_g_node">ActualINSVFGNode</link> *src, const <link linkend="_class_s_v_f_1_1_formal_i_n_s_v_f_g_node">FormalINSVFGNode</link> *dst, CallSiteID csId)</para>
+
+<para>Add inter VF edge from callsite mu to function entry chi. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * <link linkend="_class_s_v_f_1_1_s_v_f_g_1ac9666ae7266cf1a9c0a5f7d28b39d1e9">addInterIndirectVFRetEdge</link> (const <link linkend="_class_s_v_f_1_1_formal_o_u_t_s_v_f_g_node">FormalOUTSVFGNode</link> *src, const <link linkend="_class_s_v_f_1_1_actual_o_u_t_s_v_f_g_node">ActualOUTSVFGNode</link> *dst, CallSiteID csId)</para>
+
+<para>Add inter VF edge from function exit mu to callsite chi. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_s_v_f_g_1ac9ab2a95cd7a09bbe4b4aa3e6fafaf62">connectAInAndFIn</link> (const <link linkend="_class_s_v_f_1_1_actual_i_n_s_v_f_g_node">ActualINSVFGNode</link> *actualIn, const <link linkend="_class_s_v_f_1_1_formal_i_n_s_v_f_g_node">FormalINSVFGNode</link> *formalIn, CallSiteID csId, SVFGEdgeSetTy &amp;edges)</para>
+
+<para>Connect <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes between caller and callee for indirect call site. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a402dfe93b8692be453c4f76d048b690a"/>virtual void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a402dfe93b8692be453c4f76d048b690a">connectFOutAndAOut</link> (const <link linkend="_class_s_v_f_1_1_formal_o_u_t_s_v_f_g_node">FormalOUTSVFGNode</link> *formalOut, const <link linkend="_class_s_v_f_1_1_actual_o_u_t_s_v_f_g_node">ActualOUTSVFGNode</link> *actualOut, CallSiteID csId, SVFGEdgeSetTy &amp;edges)</para>
+
+<para>Connect formal-out and actual-out. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a9b133773dae3e7c613516ba16cfdfa2c"/>virtual void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a9b133773dae3e7c613516ba16cfdfa2c">getInterVFEdgeAtIndCSFromAPToFP</link> (const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *cs_arg, const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *fun_arg, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, CallSiteID csId, SVFGEdgeSetTy &amp;edges)</para>
+
+<para>Get inter value flow edges between indirect call site and callee. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ab2b969b7d5922427622dd875e6b8fe14"/>virtual void <emphasis role="strong">getInterVFEdgeAtIndCSFromFRToAR</emphasis> (const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *fun_ret, const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *cs_ret, CallSiteID csId, SVFGEdgeSetTy &amp;edges)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1afbaf925e1e165f75161999229fa5f782"/>virtual void <emphasis role="strong">getInterVFEdgeAtIndCSFromAInToFIn</emphasis> (<link linkend="_class_s_v_f_1_1_actual_i_n_s_v_f_g_node">ActualINSVFGNode</link> *actualIn, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee, SVFGEdgeSetTy &amp;edges)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a7a88391e0c2cf8a57238dec32c2474a3"/>virtual void <emphasis role="strong">getInterVFEdgeAtIndCSFromFOutToAOut</emphasis> (<link linkend="_class_s_v_f_1_1_actual_o_u_t_s_v_f_g_node">ActualOUTSVFGNode</link> *actualOut, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee, SVFGEdgeSetTy &amp;edges)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1accd1cbd26c9b194971f3107a57a0ab2e"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1accd1cbd26c9b194971f3107a57a0ab2e">setDef</link> (const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *pagNode, const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+
+<para>Given a <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link>, set/get its def <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node (definition of top level pointers) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1abd917826bf50ed409a307ce00562c97d"/>NodeID <emphasis role="strong">getDef</emphasis> (const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *pagNode) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a926c79813d5cfbd16201832024b95190"/>bool <emphasis role="strong">hasDef</emphasis> (const <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link> *pagNode) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1aa3ebc066d376e7ed508d2bce49fa864d"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1aa3ebc066d376e7ed508d2bce49fa864d">setDef</link> (const <link linkend="_class_s_v_f_1_1_m_r_ver">MRVer</link> *mvar, const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+
+<para>Given a MSSADef, set/get its def <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node (definition of address-taken variables) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a55a26b88ffe786b04184a29ae72575e7"/>NodeID <emphasis role="strong">getDef</emphasis> (const <link linkend="_class_s_v_f_1_1_m_r_ver">MRVer</link> *mvar) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1abddfc95cf644d0729ee29eccf95699f1">addSVFGNodesForAddrTakenVars</link> ()</para>
+
+<para>Create <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes for address-taken variables. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a164a3df08fc24bacc0b97aee8b6eec38">connectIndirectSVFGEdges</link> ()</para>
+
+<para>Connect direct <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edges between two <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes (value-flow of top address-taken variables) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a5921483cd5e1bf77b1b2bc8fb3250612">connectFromGlobalToProgEntry</link> ()</para>
+
+<para>Connect indirect <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edges from global initializers (store) to main function entry. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a88e1f6f77421c5274ceeb14928bdcb43"/>virtual void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a88e1f6f77421c5274ceeb14928bdcb43">addSVFGNode</link> (<link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node, <link linkend="_class_s_v_f_1_1_i_c_f_g_node">ICFGNode</link> *icfgNode)</para>
+
+<para>Add <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a5936a637df12548f1f7e5f1ecfb5cd0d"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a5936a637df12548f1f7e5f1ecfb5cd0d">addFormalINSVFGNode</link> (const <link linkend="_class_s_v_f_1_1_entry_c_h_i">MemSSA::ENTRYCHI</link> *chi)</para>
+
+<para>Add memory Function entry chi <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a56111524c2dd12c260e6efc11c463886"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a56111524c2dd12c260e6efc11c463886">addFormalOUTSVFGNode</link> (const <link linkend="_class_s_v_f_1_1_ret_m_u">MemSSA::RETMU</link> *mu)</para>
+
+<para>Add memory Function return mu <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1aeb28ef81c525e96113a9d25417660bfd"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1aeb28ef81c525e96113a9d25417660bfd">addActualINSVFGNode</link> (const <link linkend="_class_s_v_f_1_1_call_m_u">MemSSA::CALLMU</link> *mu)</para>
+
+<para>Add memory callsite mu <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a7c9675943c20c2ca42779f1cf91cb06d"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a7c9675943c20c2ca42779f1cf91cb06d">addActualOUTSVFGNode</link> (const <link linkend="_class_s_v_f_1_1_call_c_h_i">MemSSA::CALLCHI</link> *chi)</para>
+
+<para>Add memory callsite chi <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a57f191467850d66c71e1b9768e11fb57"/>void <link linkend="_class_s_v_f_1_1_s_v_f_g_1a57f191467850d66c71e1b9768e11fb57">addIntraMSSAPHISVFGNode</link> (const <link linkend="_class_s_v_f_1_1_m_s_s_a_p_h_i">MemSSA::PHI</link> *phi)</para>
+
+<para>Add memory SSA PHI <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a23ca21b90feca5e7d00c9ba9f489374a"/>bool <link linkend="_class_s_v_f_1_1_s_v_f_g_1a23ca21b90feca5e7d00c9ba9f489374a">hasFuncEntryChi</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *func) const</para>
+
+<para>Has function for EntryCHI/RetMU/CallCHI/CallMU. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a32378226c18a0b1e22271a2338a635f6"/>bool <emphasis role="strong">hasFuncRetMu</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *func) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a1027dcf25e914377e02885b786d00edc"/>bool <emphasis role="strong">hasCallSiteChi</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1afca91771a622290586bfa941132c322e"/>bool <emphasis role="strong">hasCallSiteMu</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1aafa1b445bd3578daaba8f82e517745f1"/>MSSAVarToDefMapTy <link linkend="_class_s_v_f_1_1_s_v_f_g_1aafa1b445bd3578daaba8f82e517745f1">MSSAVarToDefMap</link></para>
+
+<para>map a memory SSA operator to its definition <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1af9313ebec4a52fd887169b7c6373a7d4"/>CallSiteToActualINsMapTy <emphasis role="strong">callSiteToActualINMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a39873b954b6e0eb0641f56ca4cd06ef9"/>CallSiteToActualOUTsMapTy <emphasis role="strong">callSiteToActualOUTMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ae51cd0493e4e767848b96b69045762fd"/>FunctionToFormalINsMapTy <emphasis role="strong">funToFormalINMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a7d58f9fe97071ec9936174689cb99301"/>FunctionToFormalOUTsMapTy <emphasis role="strong">funToFormalOUTMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ad5c1415f488ec4412d5457262269eff3"/><link linkend="_class_s_v_f_1_1_s_v_f_g_stat">SVFGStat</link> * <emphasis role="strong">stat</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a6f07410ee34e4bf1079e3b5902c81d28"/><link linkend="_class_s_v_f_1_1_mem_s_s_a">MemSSA</link> * <emphasis role="strong">mssa</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a0d6cfa496e6885fe31b6b7a651fa01a8"/><link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> * <emphasis role="strong">pta</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ab2f81db3935389480baa5cb14e15e9d7"/>class <emphasis role="strong">SVFGBuilder</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a93a4287b55425abc188e5f5f2de54297"/>class <emphasis role="strong">SaberSVFGBuilder</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a665c93b68f49078c281270a028d04445"/>class <emphasis role="strong">TaintSVFGBuilder</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a9ccd530dc4c49b0df372a2ce95b66921"/>class <emphasis role="strong">DDASVFGBuilder</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ac0e43f4a2043538c9046f95826caa725"/>class <emphasis role="strong">MTASVFGBuilder</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a67654d252e9e93b74e35ba247048b41a"/>class <emphasis role="strong">RcSvfgBuilder</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Sparse value flow graph Each node stands for a definition, each edge stands for value flow relations </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a68965c5a9cc5136aa0b593851c60ff12"/>    <section>
+    <title>SVFG()</title>
+<indexterm><primary>SVFG</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>SVFG</secondary></indexterm>
+<para><computeroutput>SVFG::SVFG (<link linkend="_class_s_v_f_1_1_mem_s_s_a">MemSSA</link> * _mssa, <link linkend="_class_s_v_f_1_1_v_f_g_1ac2e2f555975063da3fa1932ac35802c6">VFGK</link> k)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para>Constructor </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ac9666ae7266cf1a9c0a5f7d28b39d1e9"/>    <section>
+    <title>addInterIndirectVFRetEdge()</title>
+<indexterm><primary>addInterIndirectVFRetEdge</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>addInterIndirectVFRetEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * SVFG::addInterIndirectVFRetEdge (const <link linkend="_class_s_v_f_1_1_formal_o_u_t_s_v_f_g_node">FormalOUTSVFGNode</link> * src, const <link linkend="_class_s_v_f_1_1_actual_o_u_t_s_v_f_g_node">ActualOUTSVFGNode</link> * dst, CallSiteID csId)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Add inter VF edge from function exit mu to callsite chi. </para>
+</para>
+
+<para>Add inter VF edge from function exit mu to callsite chi </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1abddfc95cf644d0729ee29eccf95699f1"/>    <section>
+    <title>addSVFGNodesForAddrTakenVars()</title>
+<indexterm><primary>addSVFGNodesForAddrTakenVars</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>addSVFGNodesForAddrTakenVars</secondary></indexterm>
+<para><computeroutput>void SVFG::addSVFGNodesForAddrTakenVars ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Create <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes for address-taken variables. </para>
+</para>
+
+<para>set defs for address-taken vars defined at phi/chi/call create corresponding def and use nodes for address-taken vars (a.k.a MRVers) initialize memory SSA phi nodes (phi of address-taken variables)</para>
+
+<para>initialize memory SSA entry chi nodes</para>
+
+<para>initialize memory SSA return mu nodes</para>
+
+<para>initialize memory SSA callsite mu nodes</para>
+
+<para>initialize memory SSA callsite chi nodes</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ab8b57187140a36077d9a3dd6d0b25858"/>    <section>
+    <title>addThreadMHPIndirectVFEdge()</title>
+<indexterm><primary>addThreadMHPIndirectVFEdge</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>addThreadMHPIndirectVFEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * SVFG::addThreadMHPIndirectVFEdge (NodeID srcId, NodeID dstId, const PointsTo &amp; cpts)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Add def-use edges of a memory region between two may-happen-in-parallel statements for multithreaded program </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a0920e9f9896531959d74ae61013d96d6"/>    <section>
+    <title>buildSVFG()</title>
+<indexterm><primary>buildSVFG</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>buildSVFG</secondary></indexterm>
+<para><computeroutput>void SVFG::buildSVFG ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Start building <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link>. </para>
+</para>
+
+<para>Build <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> 1) build <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes a) statements for top level pointers (PAGEdges) b) operators of address-taken variables (<link linkend="_class_s_v_f_1_1_m_s_s_a_p_h_i">MSSAPHI</link> and <link linkend="_class_s_v_f_1_1_m_s_s_a_c_h_i">MSSACHI</link>) 2) connect <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edges a) between two statements (PAGEdges) b) between two memory SSA operators (<link linkend="_class_s_v_f_1_1_m_s_s_a_p_h_i">MSSAPHI</link> <link linkend="_class_s_v_f_1_1_m_s_s_a_m_u">MSSAMU</link> and <link linkend="_class_s_v_f_1_1_m_s_s_a_c_h_i">MSSACHI</link>) </para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_s_v_f_g_o_p_t_1af4d2c6d2e3b316b256f860801fe3b178">SVF::SVFGOPT</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ac9ab2a95cd7a09bbe4b4aa3e6fafaf62"/>    <section>
+    <title>connectAInAndFIn()</title>
+<indexterm><primary>connectAInAndFIn</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>connectAInAndFIn</secondary></indexterm>
+<para><computeroutput>virtual void SVF::SVFG::connectAInAndFIn (const <link linkend="_class_s_v_f_1_1_actual_i_n_s_v_f_g_node">ActualINSVFGNode</link> * actualIn, const <link linkend="_class_s_v_f_1_1_formal_i_n_s_v_f_g_node">FormalINSVFGNode</link> * formalIn, CallSiteID csId, SVFGEdgeSetTy &amp; edges)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Connect <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes between caller and callee for indirect call site. </para>
+</para>
+
+<para>Connect actual-in and formal-in </para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_s_v_f_g_o_p_t_1aa39900e11f5689f8bd70f3ec45865225">SVF::SVFGOPT</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a0cebc2ba5ae81a6d45b224a4f94fc8b4"/>    <section>
+    <title>connectCallerAndCallee()</title>
+<indexterm><primary>connectCallerAndCallee</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>connectCallerAndCallee</secondary></indexterm>
+<para><computeroutput>void SVFG::connectCallerAndCallee (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callee, SVFGEdgeSetTy &amp; edges)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Connect <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes between caller and callee for indirect call site. </para>
+</para>
+
+<para>Connect actual params/return to formal params/return for top-level variables. Also connect indirect actual in/out and formal in/out. </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_v_f_g_1aa1e09df7b3724bf18e450b16735998ab">SVF::VFG</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a5921483cd5e1bf77b1b2bc8fb3250612"/>    <section>
+    <title>connectFromGlobalToProgEntry()</title>
+<indexterm><primary>connectFromGlobalToProgEntry</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>connectFromGlobalToProgEntry</secondary></indexterm>
+<para><computeroutput>void SVFG::connectFromGlobalToProgEntry ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Connect indirect <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edges from global initializers (store) to main function entry. </para>
+</para>
+
+<para>Connect indirect <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edges from global initializers (store) to main function entry </para>
+
+<para>connect this store to main function entry</para>
+
+<para>add indirect value flow edge</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a164a3df08fc24bacc0b97aee8b6eec38"/>    <section>
+    <title>connectIndirectSVFGEdges()</title>
+<indexterm><primary>connectIndirectSVFGEdges</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>connectIndirectSVFGEdges</secondary></indexterm>
+<para><computeroutput>void SVFG::connectIndirectSVFGEdges ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Connect direct <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> edges between two <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> nodes (value-flow of top address-taken variables) </para>
+</para>
+
+<para>There&apos;s no need to connect actual out node to its definition site in the same function.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a82a93d9b7fcf1938e3090a0826a1ca7e"/>    <section>
+    <title>destroy()</title>
+<indexterm><primary>destroy</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>destroy</secondary></indexterm>
+<para><computeroutput>void SVFG::destroy ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up memory. </para>
+</para>
+
+<para>Memory has been cleaned up at <link linkend="_class_s_v_f_1_1_generic_graph">GenericGraph</link> </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1a5fdaddc52e7342b834d76d64c1a1e498"/>    <section>
+    <title>dump()</title>
+<indexterm><primary>dump</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>dump</secondary></indexterm>
+<para><computeroutput>void SVFG::dump (const std::string &amp; file, bool simple = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+
+<para>Dump graph into dot file. </para>
+</para>
+
+<para>Dump <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1af3bb18f904512cd6f450853666810229"/>    <section>
+    <title>getInterVFEdgesForIndirectCallSite()</title>
+<indexterm><primary>getInterVFEdgesForIndirectCallSite</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>getInterVFEdgesForIndirectCallSite</secondary></indexterm>
+<para><computeroutput>void SVFG::getInterVFEdgesForIndirectCallSite (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * callBlockNode, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callee, SVFGEdgeSetTy &amp; edges)</computeroutput></para><para>
+
+<para>Get all inter value flow edges of a indirect call site. </para>
+</para>
+
+<para>Get all inter value flow edges at this indirect call site, including call and return edges. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ac75b83bdf3bcfecaae579716ab33dd61"/>    <section>
+    <title>isCallSiteRetSVFGNode()</title>
+<indexterm><primary>isCallSiteRetSVFGNode</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>isCallSiteRetSVFGNode</secondary></indexterm>
+<para><computeroutput>const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * SVFG::isCallSiteRetSVFGNode (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * node) const</computeroutput></para><para>
+
+<para>Whether a node is callsite return SVFGNode. </para>
+</para>
+
+<para>Whether this is an callsite return SVFGNode (actual return, actual out) </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1ae2cff3c963136f474fac0a66aa8cff7b"/>    <section>
+    <title>isFunEntrySVFGNode()</title>
+<indexterm><primary>isFunEntrySVFGNode</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>isFunEntrySVFGNode</secondary></indexterm>
+<para><computeroutput>const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * SVFG::isFunEntrySVFGNode (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * node) const</computeroutput></para><para>
+
+<para>Whether a node is function entry SVFGNode. </para>
+</para>
+
+<para>Whether this is an function entry SVFGNode (formal parameter, formal In) </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_s_v_f_g_1adc9fbb4553472b238d6c3bb5062279cb"/>    <section>
+    <title>performStat()</title>
+<indexterm><primary>performStat</primary><secondary>SVF::SVFG</secondary></indexterm>
+<indexterm><primary>SVF::SVFG</primary><secondary>performStat</secondary></indexterm>
+<para><computeroutput>void SVFG::performStat ( )</computeroutput></para><para>
+
+<para>Perform statistics. </para>
+</para>
+
+<para>Perform Statistics </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/Graphs/SVFG.hlib/Graphs/SVFG.cpp</section>
+</section>

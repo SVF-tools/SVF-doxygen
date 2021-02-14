@@ -1,0 +1,120 @@
+.TH "SVF::NodeIDAllocator" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::NodeIDAllocator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NodeIDAllocator\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBStrategy\fP { \fBNONE\fP, \fBDENSE\fP, \fBDEBUG\fP }"
+.br
+.RI "Allocation strategy to use\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "NodeID \fBallocateObjectId\fP (void)"
+.br
+.RI "Allocate an object ID as determined by the strategy\&. "
+.ti -1c
+.RI "NodeID \fBallocateGepObjectId\fP (NodeID base, u32_t offset, u32_t maxFieldLimit)"
+.br
+.ti -1c
+.RI "NodeID \fBallocateValueId\fP (void)"
+.br
+.RI "Allocate a value ID as determined by the strategy\&. "
+.ti -1c
+.RI "void \fBendSymbolAllocation\fP (void)"
+.br
+.RI "Notify the allocator that all symbols have had IDs allocated\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBNodeIDAllocator\fP * \fBget\fP (void)"
+.br
+.RI "Return (singleton) allocator\&. "
+.ti -1c
+.RI "static void \fBunset\fP (void)"
+.br
+.RI "Deletes the (singleton) allocator\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "static const std::string \fBuserStrategyDense\fP = 'dense'"
+.br
+.ti -1c
+.RI "static const std::string \fBuserStrategyDebug\fP = 'debug'"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "static const NodeID \fBblackHoleObjectId\fP = 0"
+.br
+.ti -1c
+.RI "static const NodeID \fBconstantObjectId\fP = 1"
+.br
+.ti -1c
+.RI "static const NodeID \fBblackHolePointerId\fP = 2"
+.br
+.ti -1c
+.RI "static const NodeID \fBnullPointerId\fP = 3"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+Allocates node IDs for objects and values, upon request, according to some strategy which can be user-defined\&. It is the job of \fBSymbolTableInfo\fP to tell the \fBNodeIDAllocator\fP when all symbols have been allocated through endSymbolAllocation\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSVF::NodeIDAllocator::Strategy\fP"
+
+.PP
+Allocation strategy to use\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINONE \fP\fP
+Used to initialise from llvm::cl::opt\&. 
+.TP
+\fB\fIDENSE \fP\fP
+Allocate objects contiguously, separate from values, and vice versa\&. If [****\&.\&.\&.*****] is the space of unsigned integers, we allocate as, [ssssooooooo\&.\&.\&.vvvvvvv] (o = object, v = value, s = special)\&. 
+.TP
+\fB\fIDEBUG \fP\fP
+Allocate values and objects as they come in with a single counter\&. GEP objects are allocated as an offset from their base (see implementation of allocateGepObjectId)\&. The purpose of this allocation strategy is human readability\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "NodeID SVF::NodeIDAllocator::allocateGepObjectId (NodeID base, u32_t offset, u32_t maxFieldLimit)"
+Allocate a GEP object ID as determined by the strategy\&. allocateObjectId is still fine for GEP objects, but for some strategies (DEBUG, namely), GEP objects can be allocated differently (more readable, for DEBUG)\&. Regardless, numObjects is shared; there is no special numGepObjects\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "const NodeID SVF::NodeIDAllocator::blackHoleObjectId = 0\fC [static]\fP"
+These nodes, and any nodes before them are assumed allocated as objects and values\&. For simplicity's sake, numObjects and numVals thus start at 4 (and the other counters are set appropriately)\&. 
+.SS "const std::string SVF::NodeIDAllocator::userStrategyDense = 'dense'\fC [static]\fP"
+Option strings as written by the user\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

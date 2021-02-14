@@ -1,0 +1,587 @@
+.TH "SVF::PointerAnalysis" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::PointerAnalysis
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBSVF::CondPTAImpl< ContextCond >\fP, \fBSVF::BVDataPTAImpl\fP, and \fBSVF::CondPTAImpl< Cond >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPTATY\fP { \fBAndersen_BASE\fP, \fBAndersen_WPA\fP, \fBAndersenLCD_WPA\fP, \fBAndersenHCD_WPA\fP, \fBAndersenHLCD_WPA\fP, \fBAndersenSCD_WPA\fP, \fBAndersenSFR_WPA\fP, \fBAndersenWaveDiff_WPA\fP, \fBAndersenWaveDiffWithType_WPA\fP, \fBSteensgaard_WPA\fP, \fBCSCallString_WPA\fP, \fBCSSummary_WPA\fP, \fBFSDATAFLOW_WPA\fP, \fBFSSPARSE_WPA\fP, \fBFSTBHC_WPA\fP, \fBVFS_WPA\fP, \fBFSCS_WPA\fP, \fBFSCSPS_WPA\fP, \fBADAPTFSCS_WPA\fP, \fBADAPTFSCSPS_WPA\fP, \fBTypeCPP_WPA\fP, \fBFieldS_DDA\fP, \fBFlowS_DDA\fP, \fBPathS_DDA\fP, \fBCxt_DDA\fP, \fBDefault_PTA\fP }"
+.br
+.RI "Pointer analysis type list\&. "
+.ti -1c
+.RI "enum \fBPTAImplTy\fP { \fBBaseImpl\fP, \fBBVDataImpl\fP, \fBCondImpl\fP }"
+.br
+.RI "Implementation type: \fBBVDataPTAImpl\fP or \fBCondPTAImpl\fP\&. "
+.ti -1c
+.RI "typedef llvm::AliasAnalysis \fBAliasAnalysis\fP"
+.br
+.RI "Indirect call edges type, map a callsite to a set of callees\&. "
+.ti -1c
+.RI "typedef Set< const \fBCallBlockNode\fP * > \fBCallSiteSet\fP"
+.br
+.ti -1c
+.RI "typedef PAG::CallSiteToFunPtrMap \fBCallSiteToFunPtrMap\fP"
+.br
+.ti -1c
+.RI "typedef Set< const \fBSVFFunction\fP * > \fBFunctionSet\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< const \fBCallBlockNode\fP *, FunctionSet > \fBCallEdgeMap\fP"
+.br
+.ti -1c
+.RI "typedef \fBSCCDetection\fP< \fBPTACallGraph\fP * > \fBCallGraphSCC\fP"
+.br
+.ti -1c
+.RI "typedef Set< const GlobalValue * > \fBVTableSet\fP"
+.br
+.ti -1c
+.RI "typedef Set< const \fBSVFFunction\fP * > \fBVFunSet\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Size_t \fBgetNumOfResolvedIndCallEdge\fP () const"
+.br
+.RI "Return number of resolved indirect call edges\&. "
+.ti -1c
+.RI "\fBPTACallGraph\fP * \fBgetPTACallGraph\fP () const"
+.br
+.RI "Return call graph\&. "
+.ti -1c
+.RI "\fBCallGraphSCC\fP * \fBgetCallGraphSCC\fP () const"
+.br
+.RI "Return call graph SCC\&. "
+.ti -1c
+.RI "\fBPointerAnalysis\fP (\fBPAG\fP *\fBpag\fP, \fBPTATY\fP ty=\fBDefault_PTA\fP, bool alias_check=true)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fBPTATY\fP \fBgetAnalysisTy\fP () const"
+.br
+.RI "Type of pointer analysis\&. "
+.ti -1c
+.RI "\fBPTAImplTy\fP \fBgetImplTy\fP () const"
+.br
+.RI "Return implementation type of the pointer analysis\&. "
+.ti -1c
+.RI "bool \fBprintStat\fP ()"
+.br
+.RI "Whether print statistics\&. "
+.ti -1c
+.RI "void \fBdisablePrintStat\fP ()"
+.br
+.RI "Whether print statistics\&. "
+.ti -1c
+.RI "CallEdgeMap & \fBgetIndCallMap\fP ()"
+.br
+.RI "Get callees from an indirect callsite\&. "
+.ti -1c
+.RI "bool \fBhasIndCSCallees\fP (const \fBCallBlockNode\fP *cs) const"
+.br
+.ti -1c
+.RI "const FunctionSet & \fBgetIndCSCallees\fP (const \fBCallBlockNode\fP *cs) const"
+.br
+.ti -1c
+.RI "virtual void \fBresolveIndCalls\fP (const \fBCallBlockNode\fP *cs, const PointsTo &target, CallEdgeMap &newEdges, LLVMCallGraph *callgraph=NULL)"
+.br
+.RI "Resolve indirect call edges\&. "
+.ti -1c
+.RI "bool \fBmatchArgs\fP (const \fBCallBlockNode\fP *cs, const \fBSVFFunction\fP *callee)"
+.br
+.RI "Match arguments for callsite at caller and callee\&. "
+.ti -1c
+.RI "void \fBcallGraphSCCDetection\fP ()"
+.br
+.RI "CallGraph SCC related methods\&. "
+.ti -1c
+.RI "NodeID \fBgetCallGraphSCCRepNode\fP (NodeID id) const"
+.br
+.RI "Get SCC rep node of a \fBSVFG\fP node\&. "
+.ti -1c
+.RI "bool \fBinSameCallGraphSCC\fP (const \fBSVFFunction\fP *fun1, const \fBSVFFunction\fP *fun2)"
+.br
+.RI "Return TRUE if this edge is inside a CallGraph SCC, i\&.e\&., src node and dst node are in the same SCC on the \fBSVFG\fP\&. "
+.ti -1c
+.RI "bool \fBisInRecursion\fP (const \fBSVFFunction\fP *fun) const"
+.br
+.ti -1c
+.RI "bool \fBisLocalVarInRecursiveFun\fP (NodeID id) const"
+.br
+.RI "Whether a local variable is in function recursions\&. "
+.ti -1c
+.RI "virtual const std::string \fBPTAName\fP () const"
+.br
+.RI "Return PTA name\&. "
+.ti -1c
+.RI "\fBCommonCHGraph\fP * \fBgetCHGraph\fP () const"
+.br
+.RI "get \fBCHGraph\fP "
+.ti -1c
+.RI "void \fBgetVFnsFromCHA\fP (const \fBCallBlockNode\fP *cs, VFunSet &vfns)"
+.br
+.ti -1c
+.RI "void \fBgetVFnsFromPts\fP (const \fBCallBlockNode\fP *cs, const PointsTo &target, VFunSet &vfns)"
+.br
+.ti -1c
+.RI "void \fBconnectVCallToVFns\fP (const \fBCallBlockNode\fP *cs, const VFunSet &vfns, CallEdgeMap &newEdges)"
+.br
+.ti -1c
+.RI "virtual void \fBresolveCPPIndCalls\fP (const \fBCallBlockNode\fP *cs, const PointsTo &target, CallEdgeMap &newEdges)"
+.br
+.RI "Resolve cpp indirect call edges\&. "
+.ti -1c
+.RI "const \fBTypeSystem\fP * \fBgetTypeSystem\fP () const"
+.br
+.RI "get \fBTypeSystem\fP "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const std::string \fBaliasTestMayAlias\fP = 'MAYALIAS'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestMayAliasMangled\fP = '_Z8MAYALIASPvS_'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestNoAlias\fP = 'NOALIAS'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestNoAliasMangled\fP = '_Z7NOALIASPvS_'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestPartialAlias\fP = 'PARTIALALIAS'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestPartialAliasMangled\fP = '_Z12PARTIALALIASPvS_'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestMustAlias\fP = 'MUSTALIAS'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestMustAliasMangled\fP = '_Z9MUSTALIASPvS_'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestFailMayAlias\fP = 'EXPECTEDFAIL_MAYALIAS'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestFailMayAliasMangled\fP = '_Z21EXPECTEDFAIL_MAYALIASPvS_'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestFailNoAlias\fP = 'EXPECTEDFAIL_NOALIAS'"
+.br
+.ti -1c
+.RI "static const std::string \fBaliasTestFailNoAliasMangled\fP = '_Z20EXPECTEDFAIL_NOALIASPvS_'"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBprint_stat\fP"
+.br
+.RI "User input flags\&. "
+.ti -1c
+.RI "bool \fBalias_validation\fP"
+.br
+.RI "Flag for validating points-to/alias results\&. "
+.ti -1c
+.RI "u32_t \fBOnTheFlyIterBudgetForStat\fP"
+.br
+.RI "Flag for iteration budget for on-the-fly statistics\&. "
+.ti -1c
+.RI "\fBSVFModule\fP * \fBsvfMod\fP"
+.br
+.RI "Module\&. "
+.ti -1c
+.RI "\fBPTATY\fP \fBptaTy\fP"
+.br
+.RI "Pointer analysis Type\&. "
+.ti -1c
+.RI "\fBPTAImplTy\fP \fBptaImplTy\fP"
+.br
+.RI "PTA implementation type\&. "
+.ti -1c
+.RI "\fBPTAStat\fP * \fBstat\fP"
+.br
+.RI "Statistics\&. "
+.ti -1c
+.RI "\fBPTACallGraph\fP * \fBptaCallGraph\fP"
+.br
+.RI "Call graph used for pointer analysis\&. "
+.ti -1c
+.RI "\fBCallGraphSCC\fP * \fBcallGraphSCC\fP"
+.br
+.RI "SCC for CallGraph\&. "
+.ti -1c
+.RI "\fBICFG\fP * \fBicfg\fP"
+.br
+.RI "Interprocedural control-flow graph\&. "
+.ti -1c
+.RI "\fBTypeSystem\fP * \fBtypeSystem\fP"
+.br
+.RI "\fBTypeSystem\fP\&. "
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBPAG\fP * \fBpag\fP = NULL"
+.br
+.RI "\fBPAG\fP\&. "
+.ti -1c
+.RI "static \fBCommonCHGraph\fP * \fBchgraph\fP = NULL"
+.br
+.RI "\fBCHGraph\fP\&. "
+.in -1c
+.in +1c
+.ti -1c
+.RI "\fBPAG\fP * \fBgetPAG\fP () const"
+.br
+.ti -1c
+.RI "\fBPTAStat\fP * \fBgetStat\fP () const"
+.br
+.RI "Get PTA stat\&. "
+.ti -1c
+.RI "\fBSVFModule\fP * \fBgetModule\fP () const"
+.br
+.RI "Module\&. "
+.ti -1c
+.RI "OrderedNodeSet & \fBgetAllValidPtrs\fP ()"
+.br
+.RI "Get all Valid Pointers for resolution\&. "
+.ti -1c
+.RI "virtual \fB~PointerAnalysis\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual void \fBinitialize\fP ()"
+.br
+.RI "Initialization of a pointer analysis, including building symbol table and \fBPAG\fP etc\&. "
+.ti -1c
+.RI "virtual void \fBfinalize\fP ()"
+.br
+.RI "Finalization of a pointer analysis, including checking alias correctness\&. "
+.ti -1c
+.RI "virtual void \fBanalyze\fP ()=0"
+.br
+.RI "Start Analysis here (main part of pointer analysis)\&. It needs to be implemented in child class\&. "
+.ti -1c
+.RI "virtual void \fBcomputeDDAPts\fP (NodeID)"
+.br
+.RI "Compute points-to results on-demand, overridden by derived classes\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const MemoryLocation &LocA, const MemoryLocation &LocB)=0"
+.br
+.RI "Interface exposed to users of our pointer analysis, given Location infos\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const Value *V1, const Value *V2)=0"
+.br
+.RI "Interface exposed to users of our pointer analysis, given Value infos\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (NodeID node1, NodeID node2)=0"
+.br
+.RI "Interface exposed to users of our pointer analysis, given PAGNodeID\&. "
+.ti -1c
+.RI "virtual const PointsTo & \fBgetPts\fP (NodeID ptr)=0"
+.br
+.RI "Get points-to targets of a pointer\&. It needs to be implemented in child class\&. "
+.ti -1c
+.RI "virtual const NodeSet & \fBgetRevPts\fP (NodeID nodeId)=0"
+.br
+.ti -1c
+.RI "virtual void \fBclearPts\fP ()"
+.br
+.RI "Clear points-to data\&. "
+.ti -1c
+.RI "void \fBprintIndCSTargets\fP (const \fBCallBlockNode\fP *cs, const FunctionSet &targets)"
+.br
+.RI "Print targets of a function pointer\&. "
+.ti -1c
+.RI "virtual void \fBdumpTopLevelPtsTo\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdumpAllPts\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdumpCPts\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdumpPts\fP (NodeID ptr, const PointsTo &pts)"
+.br
+.ti -1c
+.RI "void \fBprintIndCSTargets\fP ()"
+.br
+.ti -1c
+.RI "void \fBdumpAllTypes\fP ()"
+.br
+.ti -1c
+.RI "void \fBdumpStat\fP ()"
+.br
+.RI "Dump the statistics\&. "
+.ti -1c
+.RI "bool \fBcontainBlackHoleNode\fP (const PointsTo &pts)"
+.br
+.RI "Determine whether a points-to contains a black hole or constant node\&. "
+.ti -1c
+.RI "bool \fBcontainConstantNode\fP (const PointsTo &pts)"
+.br
+.ti -1c
+.RI "virtual bool \fBisBlkObjOrConstantObj\fP (NodeID ptd) const"
+.br
+.ti -1c
+.RI "bool \fBisNonPointerObj\fP (NodeID ptd) const"
+.br
+.ti -1c
+.RI "bool \fBisHeapMemObj\fP (NodeID id) const"
+.br
+.RI "Whether this object is heap or array\&. "
+.ti -1c
+.RI "bool \fBisArrayMemObj\fP (NodeID id) const"
+.br
+.ti -1c
+.RI "bool \fBisFIObjNode\fP (NodeID id) const"
+.br
+.ti -1c
+.RI "NodeID \fBgetBaseObjNode\fP (NodeID id)"
+.br
+.ti -1c
+.RI "NodeID \fBgetFIObjNode\fP (NodeID id)"
+.br
+.ti -1c
+.RI "NodeID \fBgetGepObjNode\fP (NodeID id, const \fBLocationSet\fP &ls)"
+.br
+.ti -1c
+.RI "virtual const NodeBS & \fBgetAllFieldsObjNode\fP (NodeID id)"
+.br
+.ti -1c
+.RI "void \fBsetObjFieldInsensitive\fP (NodeID id)"
+.br
+.ti -1c
+.RI "bool \fBisFieldInsensitive\fP (NodeID id) const"
+.br
+.ti -1c
+.RI "const CallSiteToFunPtrMap & \fBgetIndirectCallsites\fP () const"
+.br
+.RI "Return all indirect callsites\&. "
+.ti -1c
+.RI "NodeID \fBgetFunPtr\fP (const \fBCallBlockNode\fP *cs) const"
+.br
+.RI "Return function pointer \fBPAGNode\fP at a callsite cs\&. "
+.ti -1c
+.RI "virtual void \fBvalidateTests\fP ()"
+.br
+.RI "Alias check functions to verify correctness of pointer analysis\&. "
+.ti -1c
+.RI "virtual void \fBvalidateSuccessTests\fP (std::string fun)"
+.br
+.ti -1c
+.RI "virtual void \fBvalidateExpectedFailureTests\fP (std::string fun)"
+.br
+.ti -1c
+.RI "bool \fBdumpGraph\fP ()"
+.br
+.RI "Whether to dump the graph for debugging purpose\&. "
+.ti -1c
+.RI "void \fBresetObjFieldSensitive\fP ()"
+.br
+.RI "Reset all object node as field-sensitive\&. "
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSVF::PointerAnalysis::PTAImplTy\fP"
+
+.PP
+Implementation type: \fBBVDataPTAImpl\fP or \fBCondPTAImpl\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBaseImpl \fP\fP
+Represents PointerAnalaysis\&. 
+.TP
+\fB\fIBVDataImpl \fP\fP
+Represents \fBBVDataPTAImpl\fP\&. 
+.TP
+\fB\fICondImpl \fP\fP
+Represents \fBCondPTAImpl\fP\&. 
+.SS "enum \fBSVF::PointerAnalysis::PTATY\fP"
+
+.PP
+Pointer analysis type list\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIAndersen_BASE \fP\fP
+Base \fBAndersen\fP PTA\&. 
+.TP
+\fB\fIAndersen_WPA \fP\fP
+\fBAndersen\fP PTA\&. 
+.TP
+\fB\fIAndersenLCD_WPA \fP\fP
+Lazy cycle detection andersen-style WPA\&. 
+.TP
+\fB\fIAndersenHCD_WPA \fP\fP
+Hybird cycle detection andersen-style WPA\&. 
+.TP
+\fB\fIAndersenHLCD_WPA \fP\fP
+Hybird lazy cycle detection andersen-style WPA\&. 
+.TP
+\fB\fIAndersenSCD_WPA \fP\fP
+Selective cycle detection andersen-style WPA\&. 
+.TP
+\fB\fIAndersenSFR_WPA \fP\fP
+Stride-based field representation\&. 
+.TP
+\fB\fIAndersenWaveDiff_WPA \fP\fP
+Diff wave propagation andersen-style WPA\&. 
+.TP
+\fB\fIAndersenWaveDiffWithType_WPA \fP\fP
+Diff wave propagation with type info andersen-style WPA\&. 
+.TP
+\fB\fISteensgaard_WPA \fP\fP
+\fBSteensgaard\fP PTA\&. 
+.TP
+\fB\fICSCallString_WPA \fP\fP
+Call string based context sensitive WPA\&. 
+.TP
+\fB\fICSSummary_WPA \fP\fP
+Summary based context sensitive WPA\&. 
+.TP
+\fB\fIFSDATAFLOW_WPA \fP\fP
+Traditional Dataflow-based flow sensitive WPA\&. 
+.TP
+\fB\fIFSSPARSE_WPA \fP\fP
+Sparse flow sensitive WPA\&. 
+.TP
+\fB\fIFSTBHC_WPA \fP\fP
+Sparse flow-sensitive type-based heap cloning WPA\&. 
+.TP
+\fB\fIVFS_WPA \fP\fP
+Versioned sparse flow-sensitive WPA\&. 
+.TP
+\fB\fIFSCS_WPA \fP\fP
+Flow-, context- sensitive WPA\&. 
+.TP
+\fB\fIFSCSPS_WPA \fP\fP
+Flow-, context-, path- sensitive WPA\&. 
+.TP
+\fB\fIADAPTFSCS_WPA \fP\fP
+Adaptive Flow-, context-, sensitive WPA\&. 
+.TP
+\fB\fIADAPTFSCSPS_WPA \fP\fP
+Adaptive Flow-, context-, path- sensitive WPA\&. 
+.TP
+\fB\fITypeCPP_WPA \fP\fP
+Type-based analysis for C++\&. 
+.TP
+\fB\fIFieldS_DDA \fP\fP
+Field sensitive DDA\&. 
+.TP
+\fB\fIFlowS_DDA \fP\fP
+Flow sensitive DDA\&. 
+.TP
+\fB\fIPathS_DDA \fP\fP
+Guarded value-flow DDA\&. 
+.TP
+\fB\fICxt_DDA \fP\fP
+context sensitive DDA 
+.TP
+\fB\fIDefault_PTA \fP\fP
+default pta without any analysis 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PointerAnalysis::PointerAnalysis (\fBPAG\fP * p, \fBPTATY\fP ty = \fC\fBDefault_PTA\fP\fP, bool alias_check = \fCtrue\fP)"
+
+.PP
+Constructor\&. Constructor 
+.SS "PointerAnalysis::~PointerAnalysis ()\fC [virtual]\fP"
+
+.PP
+Destructor\&. Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SVF::PointerAnalysis::callGraphSCCDetection ()\fC [inline]\fP"
+
+.PP
+CallGraph SCC related methods\&. CallGraph SCC detection 
+.SS "bool PointerAnalysis::dumpGraph ()\fC [protected]\fP"
+
+.PP
+Whether to dump the graph for debugging purpose\&. Flag in order to dump graph 
+.SS "void PointerAnalysis::dumpPts (NodeID ptr, const PointsTo & pts)\fC [virtual]\fP"
+Dump points-to of top-level pointers (\fBValPN\fP) print the points-to set of node which has the maximum pts size\&.
+.SS "void PointerAnalysis::finalize (void)\fC [virtual]\fP"
+
+.PP
+Finalization of a pointer analysis, including checking alias correctness\&. Finalize the analysis after solving Given the alias results, verify whether it is correct or not using alias check functions Print statistics
+.PP
+Dump results
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP, \fBSVF::FlowSensitiveTBHC\fP, \fBSVF::FlowDDA\fP, \fBSVF::ContextDDA\fP, \fBSVF::TypeAnalysis\fP, \fBSVF::FlowSensitive\fP, \fBSVF::Andersen\fP, \fBSVF::AndersenBase\fP, \fBSVF::CondPTAImpl< Cond >\fP, and \fBSVF::CondPTAImpl< ContextCond >\fP\&.
+.SS "\fBPAG\fP* SVF::PointerAnalysis::getPAG () const\fC [inline]\fP"
+Get/set \fBPAG\fP 
+.SS "virtual const NodeSet& SVF::PointerAnalysis::getRevPts (NodeID nodeId)\fC [pure virtual]\fP"
+Given an object, get all the nodes having whose pointsto contains the object\&. Similar to getPts, this also needs to be implemented in child classes\&. 
+.PP
+Implemented in \fBSVF::CondPTAImpl< Cond >\fP, \fBSVF::CondPTAImpl< ContextCond >\fP, and \fBSVF::BVDataPTAImpl\fP\&.
+.SS "void PointerAnalysis::initialize ()\fC [virtual]\fP"
+
+.PP
+Initialization of a pointer analysis, including building symbol table and \fBPAG\fP etc\&. Initialization of pointer analysis initialise pta call graph for every pointer analysis instance
+.PP
+Reimplemented in \fBSVF::VersionedFlowSensitive\fP, \fBSVF::FlowSensitiveTBHC\fP, \fBSVF::FlowDDA\fP, \fBSVF::ContextDDA\fP, \fBSVF::TypeAnalysis\fP, \fBSVF::FlowSensitive\fP, \fBSVF::AndersenSFR\fP, \fBSVF::AndersenHLCD\fP, \fBSVF::AndersenHCD\fP, \fBSVF::Andersen\fP, and \fBSVF::AndersenBase\fP\&.
+.SS "bool SVF::PointerAnalysis::isFIObjNode (NodeID id) const\fC [inline]\fP"
+For field-sensitivity 
+.SS "bool PointerAnalysis::isLocalVarInRecursiveFun (NodeID id) const"
+
+.PP
+Whether a local variable is in function recursions\&. Return TRUE if this node is a local variable of recursive function\&. 
+.SS "bool PointerAnalysis::matchArgs (const \fBCallBlockNode\fP * cs, const \fBSVFFunction\fP * callee)"
+
+.PP
+Match arguments for callsite at caller and callee\&. Match arguments for callsite at caller and callee 
+.SS "void PointerAnalysis::printIndCSTargets ()"
+Print all indirect callsites 
+.SS "void PointerAnalysis::printIndCSTargets (const \fBCallBlockNode\fP * cs, const FunctionSet & targets)"
+
+.PP
+Print targets of a function pointer\&. Print indirect call targets at an indirect callsite 
+.SS "void PointerAnalysis::resetObjFieldSensitive ()\fC [protected]\fP"
+
+.PP
+Reset all object node as field-sensitive\&. Reset field sensitivity 
+.SS "void PointerAnalysis::resolveIndCalls (const \fBCallBlockNode\fP * cs, const PointsTo & target, CallEdgeMap & newEdges, LLVMCallGraph * callgraph = \fCNULL\fP)\fC [virtual]\fP"
+
+.PP
+Resolve indirect call edges\&. Resolve indirect calls discover indirect pointer target
+.PP
+if the arg size does not match then we do not need to connect this parameter even if the callee is a variadic function (the first parameter of variadic function is its paramter number)
+.SS "void PointerAnalysis::validateExpectedFailureTests (std::string fun)\fC [protected]\fP, \fC [virtual]\fP"
+Pointer analysis validator 
+.SS "void PointerAnalysis::validateSuccessTests (std::string fun)\fC [protected]\fP, \fC [virtual]\fP"
+Find the alias check functions annotated in the C files check whether the alias analysis results consistent with the alias check function itself 
+.SS "void PointerAnalysis::validateTests ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Alias check functions to verify correctness of pointer analysis\&. Validate test cases 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool SVF::PointerAnalysis::print_stat\fC [protected]\fP"
+
+.PP
+User input flags\&. Flag for printing the statistic results 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

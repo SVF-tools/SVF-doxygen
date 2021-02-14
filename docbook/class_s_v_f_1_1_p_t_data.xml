@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_p_t_data" xml:lang="en-US">
+<title>SVF::PTData&lt; Key, Datum, Data &gt; Class Template Reference</title>
+<indexterm><primary>SVF::PTData&lt; Key, Datum, Data &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;AbstractPointsToDS.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::PTData&lt; Key, Datum, Data &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_p_t_data.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848"/>enum <link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">PTDataTy</link> { 
+<emphasis role="strong">Base</emphasis>
+, <emphasis role="strong">MutBase</emphasis>
+, <emphasis role="strong">Diff</emphasis>
+, <emphasis role="strong">MutDiff</emphasis>
+, 
+<emphasis role="strong">DataFlow</emphasis>
+, <emphasis role="strong">MutDataFlow</emphasis>
+, <emphasis role="strong">IncMutDataFlow</emphasis>
+, <emphasis role="strong">Versioned</emphasis>
+, 
+<emphasis role="strong">MutVersioned</emphasis>
+ }</para>
+
+<para>Types of a points-to data structures. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1ae53ed7301014b43bf1d215208a702a8b"/>typedef Set&lt; Key &gt; <emphasis role="strong">KeySet</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a4481e26740c77bd69239552badf85614"/><emphasis role="strong">PTData</emphasis> (bool reversePT=true, <link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">PTDataTy</link> ty=PTDataTy::Base)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a22b25cb7e65dd9989dbb4c1819d68dee"/><link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">PTDataTy</link> <link linkend="_class_s_v_f_1_1_p_t_data_1a22b25cb7e65dd9989dbb4c1819d68dee">getPTDTY</link> () const</para>
+
+<para>Get the type of points-to data structure that this is. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a3cdec1f0be962716508d3922dce058d5"/>virtual void <link linkend="_class_s_v_f_1_1_p_t_data_1a3cdec1f0be962716508d3922dce058d5">clear</link> ()=0</para>
+
+<para>Clears all points-to sets as if nothing is stored. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a86a93186b51b6ce9dccffecad8381281"/>virtual const Data &amp; <link linkend="_class_s_v_f_1_1_p_t_data_1a86a93186b51b6ce9dccffecad8381281">getPts</link> (const Key &amp;var)=0</para>
+
+<para>Get points-to set of var. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a5ac0805846fb6bac6c58c0fefb106c5f"/>virtual const KeySet &amp; <link linkend="_class_s_v_f_1_1_p_t_data_1a5ac0805846fb6bac6c58c0fefb106c5f">getRevPts</link> (const Datum &amp;datum)=0</para>
+
+<para>Get reverse points-to set of datum. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a1365146d19ee927f870a7384c0d1db6b"/>virtual bool <link linkend="_class_s_v_f_1_1_p_t_data_1a1365146d19ee927f870a7384c0d1db6b">addPts</link> (const Key &amp;var, const Datum &amp;element)=0</para>
+
+<para>Adds element to the points-to set associated with var. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a482eda0b2ea6a8e1326ee1a0c25c1fdc"/>virtual bool <link linkend="_class_s_v_f_1_1_p_t_data_1a482eda0b2ea6a8e1326ee1a0c25c1fdc">unionPts</link> (const Key &amp;dstVar, const Key &amp;srcVar)=0</para>
+
+<para>Performs pts(dstVar) = pts(dstVar) U pts(srcVar). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1ab378c0f2171f6de9b8aa076b43f88e89"/>virtual bool <link linkend="_class_s_v_f_1_1_p_t_data_1ab378c0f2171f6de9b8aa076b43f88e89">unionPts</link> (const Key &amp;dstVar, const Data &amp;srcData)=0</para>
+
+<para>Performs pts(dstVar) = pts(dstVar) U srcData. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a2ee28cb51800a57a7646d72f1b92e6ac"/>virtual void <link linkend="_class_s_v_f_1_1_p_t_data_1a2ee28cb51800a57a7646d72f1b92e6ac">clearPts</link> (const Key &amp;var, const Datum &amp;element)=0</para>
+
+<para>Clears element from the points-to set of var. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a4a27923265487dac1eede5a57cc0c9a5"/>virtual void <link linkend="_class_s_v_f_1_1_p_t_data_1a4a27923265487dac1eede5a57cc0c9a5">clearFullPts</link> (const Key &amp;var)=0</para>
+
+<para>Fully clears the points-to set of var. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1affb0e613229679f926c52c37b3c141ea"/>virtual void <link linkend="_class_s_v_f_1_1_p_t_data_1affb0e613229679f926c52c37b3c141ea">dumpPTData</link> ()=0</para>
+
+<para>Dump stored keys and points-to sets. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1aea15e71384244f3ad556e9924a1d0d21"/>bool <link linkend="_class_s_v_f_1_1_p_t_data_1aea15e71384244f3ad556e9924a1d0d21">rev</link></para>
+
+<para>Whether we maintain reverse points-to sets or not. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_data_1a11120561456b00e1a6210e5105e8f718"/><link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">PTDataTy</link> <emphasis role="strong">ptdTy</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Key, typename Datum, typename Data&gt;
+class SVF::PTData&lt; Key, Datum, Data &gt;</title></simplesect>
+
+
+<para>Basic points-to data structure Given a key (variable/condition variable), return its points-to data (pts/condition pts) It is designed flexible for different context, heap and path sensitive analysis Context Insensitive Key --&gt; Variable, Data --&gt; PointsTo Context sensitive: Key --&gt; <link linkend="_class_s_v_f_1_1_cond_var">CondVar</link>, Data --&gt; PointsTo Heap sensitive: Key --&gt; Variable Data --&gt; <link linkend="_class_s_v_f_1_1_cond_points_to_set">CondPointsToSet</link> Context and heap sensitive: Key --&gt; <link linkend="_class_s_v_f_1_1_cond_var">CondVar</link>, Data --&gt; <link linkend="_class_s_v_f_1_1_cond_points_to_set">CondPointsToSet</link></para>
+
+<para>This class is abstract to allow for multiple methods of actually storing points-to sets. Key: &quot;owning&quot; variable of a points-to set. Datum: elements in points-to sets. Data: the points-to set; a collection of Datums. </para>
+<para>
+The documentation for this class was generated from the following file:</para>
+include/MemoryModel/AbstractPointsToDS.h</section>
+</section>

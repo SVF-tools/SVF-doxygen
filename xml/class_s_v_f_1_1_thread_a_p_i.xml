@@ -1,0 +1,967 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_thread_a_p_i" kind="class" language="C++" prot="public">
+    <compoundname>SVF::ThreadAPI</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TD_TYPE</name>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a5953e882e253807e49aa229e64e001b8" prot="public">
+          <name>TD_DUMMY</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a9a40948eeab9b022957ae33715ee83da" prot="public">
+          <name>TD_FORK</name>
+          <briefdescription>
+<para>dummy type </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a9efe9b72a2520e1fae3cae1e747e3134" prot="public">
+          <name>TD_JOIN</name>
+          <briefdescription>
+<para>create a new thread </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a0b558cf037397818414cac2f7c87ab08" prot="public">
+          <name>TD_DETACH</name>
+          <briefdescription>
+<para>wait for a thread to join </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a5bda6aca46dfc712f3781b4732a373a3" prot="public">
+          <name>TD_ACQUIRE</name>
+          <briefdescription>
+<para>detach a thread directly instead wait for it to join </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3ab7ea623d48ae64aa09ab49deebbb7113" prot="public">
+          <name>TD_TRY_ACQUIRE</name>
+          <briefdescription>
+<para>acquire a lock </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3ac826e1e1c43305a3abcfdc9a2169b8dd" prot="public">
+          <name>TD_RELEASE</name>
+          <briefdescription>
+<para>try to acquire a lock </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3af3a3036705ecca40cf170d12d0ccf4dc" prot="public">
+          <name>TD_EXIT</name>
+          <briefdescription>
+<para>release a lock </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3afad2e548ab59646972d8c66e593845cc" prot="public">
+          <name>TD_CANCEL</name>
+          <briefdescription>
+<para>exit/kill a thread </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3aa8a39bd1bb13292a55dd6168909c872e" prot="public">
+          <name>TD_COND_WAIT</name>
+          <briefdescription>
+<para>cancel a thread by another </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a01a3b1723176504482b606d8e097949f" prot="public">
+          <name>TD_COND_SIGNAL</name>
+          <briefdescription>
+<para>wait a condition </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3aa6ee2952d7757b0919f56bd39fd5a93e" prot="public">
+          <name>TD_COND_BROADCAST</name>
+          <briefdescription>
+<para>signal a condition </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3abb17ca545bd259f16a36a2d2af43948b" prot="public">
+          <name>TD_MUTEX_INI</name>
+          <briefdescription>
+<para>broadcast a condition </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a91db238366fcdcd65bd7710882c8716f" prot="public">
+          <name>TD_MUTEX_DESTROY</name>
+          <briefdescription>
+<para>initial a mutex variable </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a1f921d7369e3a00a77394640f887c7ff" prot="public">
+          <name>TD_CONDVAR_INI</name>
+          <briefdescription>
+<para>initial a mutex variable </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a9c3f04e71ed64ce8d2862d7a6f39a95b" prot="public">
+          <name>TD_CONDVAR_DESTROY</name>
+          <briefdescription>
+<para>initial a mutex variable </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a4fb99e17bf56ae018448f5f97aa8cda6" prot="public">
+          <name>TD_BAR_INIT</name>
+          <briefdescription>
+<para>initial a mutex variable </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3aa2b2704ecc4c11ec0dbeaf1b22532431" prot="public">
+          <name>TD_BAR_WAIT</name>
+          <briefdescription>
+<para>Barrier init. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a4690967fd6d32fb82c5de637846a3476" prot="public">
+          <name>HARE_PAR_FOR</name>
+          <briefdescription>
+<para>Barrier wait. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="47" column="5" bodyfile="include/Util/ThreadAPI.h" bodystart="48" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_thread_a_p_i_1ae9721b91bd60d27ae3dd48cb058301b2" prot="public" static="no">
+        <type>llvm::StringMap&lt; <ref refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3" kindref="member">TD_TYPE</ref> &gt;</type>
+        <definition>typedef llvm::StringMap&lt;TD_TYPE&gt; SVF::ThreadAPI::TDAPIMap</definition>
+        <argsstring></argsstring>
+        <name>TDAPIMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="70" column="29" bodyfile="include/Util/ThreadAPI.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_thread_a_p_i_1a4277abaae24b43d83470054c247f479c" prot="private" static="no" mutable="no">
+        <type>TDAPIMap</type>
+        <definition>TDAPIMap SVF::ThreadAPI::tdAPIMap</definition>
+        <argsstring></argsstring>
+        <name>tdAPIMap</name>
+        <briefdescription>
+<para>API map, from a string to threadAPI type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="74" column="14" bodyfile="include/Util/ThreadAPI.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_thread_a_p_i_1a2faebd2e481362b11ccce4256f81c32d" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_thread_a_p_i" kindref="compound">ThreadAPI</ref> *</type>
+        <definition>ThreadAPI * ThreadAPI::tdAPI</definition>
+        <argsstring></argsstring>
+        <name>tdAPI</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>Static reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="86" column="22" bodyfile="include/Util/ThreadAPI.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a9c5ea333cc420bc3b8d8765c664ab128" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::ThreadAPI::ThreadAPI</definition>
+        <argsstring>()</argsstring>
+        <name>ThreadAPI</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="77" column="5" bodyfile="include/Util/ThreadAPI.h" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a4535862f26efff9f45236000507932c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ThreadAPI::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Initialize the map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>initialize the map </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="83" column="10" bodyfile="lib/Util/ThreadAPI.cpp" bodystart="101" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a768a655dffc5fcf1d63e2a0b3f2930f4" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3" kindref="member">TD_TYPE</ref></type>
+        <definition>TD_TYPE SVF::ThreadAPI::getType</definition>
+        <argsstring>(const SVFFunction *F) const</argsstring>
+        <name>getType</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>F</declname>
+        </param>
+        <briefdescription>
+<para>Get the function type if it is a threadAPI function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="89" column="20" bodyfile="include/Util/ThreadAPI.h" bodystart="89" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a6852ff1eedc1117e95e45e4a90c80d53" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_thread_a_p_i" kindref="compound">ThreadAPI</ref> *</type>
+        <definition>static ThreadAPI* SVF::ThreadAPI::getThreadAPI</definition>
+        <argsstring>()</argsstring>
+        <name>getThreadAPI</name>
+        <briefdescription>
+<para>Return a static reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="102" column="22" bodyfile="include/Util/ThreadAPI.h" bodystart="102" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a08c83946d87ab935bd8bf6fea20792ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+        <definition>const SVFFunction * ThreadAPI::getCallee</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getCallee</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return the callee/callsite/func. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="113" column="23" bodyfile="lib/Util/ThreadAPI.cpp" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1ab2c517ddae02fbb80f56ddc609b2f5ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+        <definition>const SVFFunction * ThreadAPI::getCallee</definition>
+        <argsstring>(const CallSite cs) const</argsstring>
+        <name>getCallee</name>
+        <param>
+          <type>const CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="114" column="23" bodyfile="lib/Util/ThreadAPI.cpp" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1ad4dfe9563de352bb40fb1028a2851512" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const CallSite</type>
+        <definition>const CallSite ThreadAPI::getLLVMCallSite</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getLLVMCallSite</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="115" column="20" bodyfile="lib/Util/ThreadAPI.cpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a9da276dca5092d18f4f22d32e5ab6cdf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDFork</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>isTDFork</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return true if this call create a new thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="120" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a261eb3c2f7e44a81edf4feddfc65a3cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDFork</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>isTDFork</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="124" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a86d75b7e3570337e484397e60f97d88e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isHareParFor</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>isHareParFor</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return true if this call proceeds a hare_parallel_for. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="132" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1adb944c2287cf7686a03b0e53a03ba025" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isHareParFor</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>isHareParFor</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="136" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a11dc55f35c18bd1f46d00c21c7dc695e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getForkedThread</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getForkedThread</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return arguments/attributes of pthread_create / hare_parallel_for. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the first argument of the call, Note that, it is the pthread_t pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="146" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="146" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a25a4bc5f173773340b430324a4d3bbdd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getForkedThread</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>getForkedThread</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="152" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a7ddc0c71aeae315af21972a4905b3456" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getForkedFun</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getForkedFun</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the third argument of the call, Note that, it could be function type or a void* pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="159" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="159" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1aff38fda045d0016660710ab9124da13c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getForkedFun</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>getForkedFun</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="165" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a6bc40bc0b35c23e9d1874c844511449d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getActualParmAtForkSite</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getActualParmAtForkSite</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the forth argument of the call, Note that, it is the sole argument of start routine ( a void* pointer ) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="172" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="172" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1ae8224e28db2323874fb9da8b05d3ab80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getActualParmAtForkSite</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>getActualParmAtForkSite</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="178" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1afeedd6e518af76fa9e7142af8899b2f5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getTaskFuncAtHareParForSite</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getTaskFuncAtHareParForSite</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Get the task function (i.e., the 5th parameter) of the hare_parallel_for call. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="186" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="186" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a282d6aeab91135af4cab8195d67badf6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getTaskFuncAtHareParForSite</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>getTaskFuncAtHareParForSite</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="192" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a58cf56e35be873a5a26c5eb0d9b5c9b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getTaskDataAtHareParForSite</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getTaskDataAtHareParForSite</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Get the task data (i.e., the 6th parameter) of the hare_parallel_for call. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="200" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="200" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1aee8fac6281a95d8a519add100e8887d1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getTaskDataAtHareParForSite</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>getTaskDataAtHareParForSite</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="206" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a8cc5f9ff6039392ce1471cd830973c44" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDJoin</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>isTDJoin</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return true if this call wait for a worker thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="214" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a50e56d63c6d713ac34b4006d248f880b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDJoin</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>isTDJoin</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="218" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1ac9f3cc080275ce7d76dd2f56fc7c6434" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getJoinedThread</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getJoinedThread</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return arguments/attributes of pthread_join. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the first argument of the call, Note that, it is the pthread_t pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="228" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="228" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1adf4350f4ef5a8d845806ab99591efa93" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getJoinedThread</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>getJoinedThread</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="240" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="240" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1ad1c595f7b15a2d3079b9e9200c84f7d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getRetParmAtJoinedSite</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getRetParmAtJoinedSite</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the send argument of the call, Note that, it is the pthread_t pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="246" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="246" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a5439ef32c909b02c83cbd30eb0a0fe12" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getRetParmAtJoinedSite</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>getRetParmAtJoinedSite</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="252" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1ae87d129560d7015966336f06a516db23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDExit</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>isTDExit</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return true if this call exits/terminate a thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="261" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a22d6c0cf0ba19af0661b106a8859024f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDExit</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>isTDExit</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="266" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="266" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a9db4df7968ec179e5012794c58fdee70" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDAcquire</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>isTDAcquire</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return true if this call acquire a lock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="274" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="274" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a608f0cb60a665745748b6a6654a6e837" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDAcquire</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>isTDAcquire</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="279" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="279" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a38adae633d5aceddcca3b3a23ad66db9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDRelease</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>isTDRelease</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return true if this call release a lock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="287" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="287" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a1bba2e9df7a74e7e2f728267ff4bfe0f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDRelease</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>isTDRelease</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="292" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="292" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a8f1c869eb42f7c89697cf2c7452ba9e9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getLockVal</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>getLockVal</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return lock value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>First argument of pthread_mutex_lock/pthread_mutex_unlock </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="301" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="301" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1ad1d43e47f5036138e85068a1714f6c48" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::ThreadAPI::getLockVal</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>getLockVal</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="307" column="24" bodyfile="include/Util/ThreadAPI.h" bodystart="307" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a0ff50b4312b9aa2c7ebd00e9a40a2668" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDBarWait</definition>
+        <argsstring>(const Instruction *inst) const</argsstring>
+        <name>isTDBarWait</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Return true if this call waits for a barrier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="315" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="315" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1af3aa58dc83dca382162df67c12169585" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::ThreadAPI::isTDBarWait</definition>
+        <argsstring>(CallSite cs) const</argsstring>
+        <name>isTDBarWait</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="320" column="17" bodyfile="include/Util/ThreadAPI.h" bodystart="320" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1a60fba05298bc3bf43ec786255daba4ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ThreadAPI::performAPIStat</definition>
+        <argsstring>(SVFModule *m)</argsstring>
+        <name>performAPIStat</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_s_v_f_module" kindref="compound">SVFModule</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="326" column="10" bodyfile="lib/Util/ThreadAPI.cpp" bodystart="198" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_thread_a_p_i_1ac07a0ae387ad9ff483fb9e2993d4b69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ThreadAPI::statInit</definition>
+        <argsstring>(llvm::StringMap&lt; u32_t &gt; &amp;tdAPIStatMap)</argsstring>
+        <name>statInit</name>
+        <param>
+          <type>llvm::StringMap&lt; u32_t &gt; &amp;</type>
+          <declname>tdAPIStatMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Util/ThreadAPI.h" line="327" column="10" bodyfile="lib/Util/ThreadAPI.cpp" bodystart="158" bodyend="196"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Util/ThreadAPI.h" line="43" column="1" bodyfile="include/Util/ThreadAPI.h" bodystart="44" bodyend="328"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a6bc40bc0b35c23e9d1874c844511449d" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getActualParmAtForkSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ae8224e28db2323874fb9da8b05d3ab80" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getActualParmAtForkSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a08c83946d87ab935bd8bf6fea20792ba" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getCallee</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ab2c517ddae02fbb80f56ddc609b2f5ef" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getCallee</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a7ddc0c71aeae315af21972a4905b3456" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getForkedFun</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1aff38fda045d0016660710ab9124da13c" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getForkedFun</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a11dc55f35c18bd1f46d00c21c7dc695e" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getForkedThread</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a25a4bc5f173773340b430324a4d3bbdd" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getForkedThread</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ac9f3cc080275ce7d76dd2f56fc7c6434" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getJoinedThread</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1adf4350f4ef5a8d845806ab99591efa93" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getJoinedThread</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ad4dfe9563de352bb40fb1028a2851512" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getLLVMCallSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a8f1c869eb42f7c89697cf2c7452ba9e9" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getLockVal</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ad1d43e47f5036138e85068a1714f6c48" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getLockVal</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ad1c595f7b15a2d3079b9e9200c84f7d7" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getRetParmAtJoinedSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a5439ef32c909b02c83cbd30eb0a0fe12" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getRetParmAtJoinedSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a58cf56e35be873a5a26c5eb0d9b5c9b3" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getTaskDataAtHareParForSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1aee8fac6281a95d8a519add100e8887d1" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getTaskDataAtHareParForSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1afeedd6e518af76fa9e7142af8899b2f5" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getTaskFuncAtHareParForSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a282d6aeab91135af4cab8195d67badf6" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getTaskFuncAtHareParForSite</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a6852ff1eedc1117e95e45e4a90c80d53" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getThreadAPI</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a768a655dffc5fcf1d63e2a0b3f2930f4" prot="private" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>getType</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a4690967fd6d32fb82c5de637846a3476" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>HARE_PAR_FOR</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a4535862f26efff9f45236000507932c9" prot="private" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>init</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a86d75b7e3570337e484397e60f97d88e" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isHareParFor</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1adb944c2287cf7686a03b0e53a03ba025" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isHareParFor</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a9db4df7968ec179e5012794c58fdee70" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDAcquire</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a608f0cb60a665745748b6a6654a6e837" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDAcquire</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a0ff50b4312b9aa2c7ebd00e9a40a2668" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDBarWait</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1af3aa58dc83dca382162df67c12169585" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDBarWait</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ae87d129560d7015966336f06a516db23" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDExit</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a22d6c0cf0ba19af0661b106a8859024f" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDExit</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a9da276dca5092d18f4f22d32e5ab6cdf" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDFork</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a261eb3c2f7e44a81edf4feddfc65a3cc" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDFork</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a8cc5f9ff6039392ce1471cd830973c44" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDJoin</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a50e56d63c6d713ac34b4006d248f880b" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDJoin</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38adae633d5aceddcca3b3a23ad66db9" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDRelease</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a1bba2e9df7a74e7e2f728267ff4bfe0f" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>isTDRelease</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a60fba05298bc3bf43ec786255daba4ba" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>performAPIStat</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ac07a0ae387ad9ff483fb9e2993d4b69e" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>statInit</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a5bda6aca46dfc712f3781b4732a373a3" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_ACQUIRE</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a4fb99e17bf56ae018448f5f97aa8cda6" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_BAR_INIT</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3aa2b2704ecc4c11ec0dbeaf1b22532431" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_BAR_WAIT</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3afad2e548ab59646972d8c66e593845cc" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_CANCEL</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3aa6ee2952d7757b0919f56bd39fd5a93e" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_COND_BROADCAST</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a01a3b1723176504482b606d8e097949f" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_COND_SIGNAL</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3aa8a39bd1bb13292a55dd6168909c872e" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_COND_WAIT</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a9c3f04e71ed64ce8d2862d7a6f39a95b" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_CONDVAR_DESTROY</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a1f921d7369e3a00a77394640f887c7ff" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_CONDVAR_INI</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a0b558cf037397818414cac2f7c87ab08" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_DETACH</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a5953e882e253807e49aa229e64e001b8" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_DUMMY</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3af3a3036705ecca40cf170d12d0ccf4dc" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_EXIT</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a9a40948eeab9b022957ae33715ee83da" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_FORK</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a9efe9b72a2520e1fae3cae1e747e3134" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_JOIN</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3a91db238366fcdcd65bd7710882c8716f" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_MUTEX_DESTROY</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3abb17ca545bd259f16a36a2d2af43948b" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_MUTEX_INI</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3ac826e1e1c43305a3abcfdc9a2169b8dd" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_RELEASE</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3ab7ea623d48ae64aa09ab49deebbb7113" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_TRY_ACQUIRE</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a38a7516702c55ab418167b7c850516b3" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TD_TYPE</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a2faebd2e481362b11ccce4256f81c32d" prot="private" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>tdAPI</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a4277abaae24b43d83470054c247f479c" prot="private" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>tdAPIMap</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1ae9721b91bd60d27ae3dd48cb058301b2" prot="public" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>TDAPIMap</name></member>
+      <member refid="class_s_v_f_1_1_thread_a_p_i_1a9c5ea333cc420bc3b8d8765c664ab128" prot="private" virt="non-virtual"><scope>SVF::ThreadAPI</scope><name>ThreadAPI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

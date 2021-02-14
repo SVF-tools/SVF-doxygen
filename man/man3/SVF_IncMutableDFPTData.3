@@ -1,0 +1,140 @@
+.TH "SVF::IncMutableDFPTData< Key, Datum, Data >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::IncMutableDFPTData< Key, Datum, Data > \- Incremental version of the mutable data-flow points-to data structure\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MutablePointsToDS\&.h>\fP
+.PP
+Inherits \fBSVF::MutableDFPTData< Key, Datum, Data >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPTData\fP< Key, Datum, Data > \fBBasePTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBMutablePTData\fP< Key, Datum, Data > \fBBaseMutPTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBDFPTData\fP< Key, Datum, Data > \fBBaseDFPTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBMutableDFPTData\fP< Key, Datum, Data > \fBBaseMutDFPTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBBasePTData::PTDataTy\fP \fBPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef BaseDFPTData::LocID \fBLocID\fP"
+.br
+.ti -1c
+.RI "typedef Map< LocID, Data > \fBUpdatedVarMap\fP"
+.br
+.RI "for propagating only newly added variable in IN/OUT set "
+.ti -1c
+.RI "typedef UpdatedVarMap::iterator \fBUpdatedVarMapIter\fP"
+.br
+.ti -1c
+.RI "typedef UpdatedVarMap::const_iterator \fBUpdatedVarconstIter\fP"
+.br
+.ti -1c
+.RI "typedef Data::iterator \fBDataIter\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIncMutableDFPTData\fP (bool reversePT=true, \fBPTDataTy\fP ty=BasePTData::IncMutDataFlow)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual bool \fBupdateDFInFromIn\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBupdateDFInFromOut\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Union (IN[dstLoc:dstVar], OUT[srcLoc:srcVar])\&. "
+.ti -1c
+.RI "virtual bool \fBupdateDFOutFromIn\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Union (OUT[dstLoc:dstVar], IN[srcLoc:srcVar])\&. "
+.ti -1c
+.RI "virtual bool \fBupdateAllDFInFromOut\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Union (IN[dstLoc::dstVar], OUT[srcLoc:srcVar]\&. There is no flag check, unlike the above\&. "
+.ti -1c
+.RI "virtual bool \fBupdateAllDFInFromIn\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Union (IN[dstLoc::dstVar], IN[srcLoc:srcVar]\&. There is no flag check, unlike the above\&. "
+.ti -1c
+.RI "virtual bool \fBupdateAllDFOutFromIn\fP (LocID loc, const Key &singleton, bool strongUpdates) override"
+.br
+.RI "For each variable var in IN at loc, do updateDFOutFromIn(loc, var, loc, var)\&. "
+.ti -1c
+.RI "virtual bool \fBupdateTLVPts\fP (LocID srcLoc, const Key &srcVar, const Key &dstVar) override"
+.br
+.RI "Update points-to set of top-level pointers with IN[srcLoc:srcVar]\&. "
+.ti -1c
+.RI "virtual bool \fBupdateATVPts\fP (const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Update address-taken variables OUT[dstLoc:dstVar] with points-to of top-level pointers\&. "
+.ti -1c
+.RI "virtual void \fBclearAllDFOutUpdatedVar\fP (LocID loc) override"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBIncMutableDFPTData\fP< Key, Datum, Data > *)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPTData\fP< Key, Datum, Data > *ptd)"
+.br
+.in -1c
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Key, typename Datum, typename Data>
+.br
+class SVF::IncMutableDFPTData< Key, Datum, Data >"
+Incremental version of the mutable data-flow points-to data structure\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Key , typename Datum , typename Data > static bool \fBSVF::IncMutableDFPTData\fP< Key, Datum, Data >::classof (const \fBIncMutableDFPTData\fP< Key, Datum, Data > *)\fC [inline]\fP, \fC [static]\fP"
+Methods to support type inquiry through isa, cast, and dyn_cast: 
+.SS "template<typename Key , typename Datum , typename Data > virtual bool \fBSVF::IncMutableDFPTData\fP< Key, Datum, Data >::updateAllDFOutFromIn (LocID loc, const Key & singleton, bool strongUpdates)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+For each variable var in IN at loc, do updateDFOutFromIn(loc, var, loc, var)\&. Only variables has new pts from IN set need to be updated\&.
+.PP
+Enable strong updates if it is required to do so
+.PP
+Only variables has new pts from IN set need to be updated\&.
+.PP
+Enable strong updates if it is required to do so
+.PP
+Reimplemented from \fBSVF::MutableDFPTData< Key, Datum, Data >\fP\&.
+.SS "template<typename Key , typename Datum , typename Data > virtual bool \fBSVF::IncMutableDFPTData\fP< Key, Datum, Data >::updateDFInFromIn (LocID srcLoc, const Key & srcVar, LocID dstLoc, const Key & dstVar)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Update points-to for IN/OUT set IN[loc:var] represents the points-to of variable var in the IN set of location loc\&. union(ptsDst, ptsSrc) represents ptsDst = ptsDst U ptsSrc\&.
+.PP
+Union (IN[dstLoc:dstVar], IN[srcLoc:srcVar])\&. 
+.PP
+Reimplemented from \fBSVF::MutableDFPTData< Key, Datum, Data >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

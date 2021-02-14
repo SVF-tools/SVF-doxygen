@@ -1,0 +1,244 @@
+.TH "SVF::ConstraintNode" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::ConstraintNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::GenericNode< ConstraintNode, ConstraintEdge >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSCCEdgeFlag\fP { \fBCopy\fP, \fBDirect\fP }"
+.br
+.ti -1c
+.RI "typedef ConstraintEdge::ConstraintEdgeSetTy::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef ConstraintEdge::ConstraintEdgeSetTy::const_iterator \fBconst_iterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConstraintNode\fP (NodeID i)"
+.br
+.ti -1c
+.RI "bool \fBisPWCNode\fP () const"
+.br
+.RI "Whether a node involves in PWC, if so, all its points-to elements should become field-insensitive\&. "
+.ti -1c
+.RI "void \fBsetPWCNode\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisdirectEdge\fP (\fBConstraintEdge::ConstraintEdgeK\fP kind)"
+.br
+.RI "Direct and Indirect \fBPAG\fP edges\&. "
+.ti -1c
+.RI "bool \fBisIndirectEdge\fP (\fBConstraintEdge::ConstraintEdgeK\fP kind)"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetDirectInEdges\fP () const"
+.br
+.RI "Return constraint edges\&. "
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetDirectOutEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetCopyInEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetCopyOutEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetGepInEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetGepOutEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetLoadInEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetLoadOutEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetStoreInEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetStoreOutEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetAddrInEdges\fP () const"
+.br
+.ti -1c
+.RI "const \fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetAddrOutEdges\fP () const"
+.br
+.ti -1c
+.RI "iterator \fBdirectOutEdgeBegin\fP ()"
+.br
+.RI "Iterators\&. "
+.ti -1c
+.RI "iterator \fBdirectOutEdgeEnd\fP ()"
+.br
+.ti -1c
+.RI "iterator \fBdirectInEdgeBegin\fP ()"
+.br
+.ti -1c
+.RI "iterator \fBdirectInEdgeEnd\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBdirectOutEdgeBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBdirectOutEdgeEnd\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBdirectInEdgeBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBdirectInEdgeEnd\fP () const"
+.br
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBincomingAddrEdges\fP ()"
+.br
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBoutgoingAddrEdges\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBoutgoingAddrsBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBoutgoingAddrsEnd\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBincomingAddrsBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBincomingAddrsEnd\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBoutgoingLoadsBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBoutgoingLoadsEnd\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBincomingLoadsBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBincomingLoadsEnd\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBoutgoingStoresBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBoutgoingStoresEnd\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBincomingStoresBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBincomingStoresEnd\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddIncomingCopyEdge\fP (\fBCopyCGEdge\fP *inEdge)"
+.br
+.RI "Add constraint graph edges\&. "
+.ti -1c
+.RI "void \fBaddIncomingGepEdge\fP (\fBGepCGEdge\fP *inEdge)"
+.br
+.ti -1c
+.RI "void \fBaddOutgoingCopyEdge\fP (\fBCopyCGEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBaddOutgoingGepEdge\fP (\fBGepCGEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBaddIncomingAddrEdge\fP (\fBAddrCGEdge\fP *inEdge)"
+.br
+.ti -1c
+.RI "void \fBaddIncomingLoadEdge\fP (\fBLoadCGEdge\fP *inEdge)"
+.br
+.ti -1c
+.RI "void \fBaddIncomingStoreEdge\fP (\fBStoreCGEdge\fP *inEdge)"
+.br
+.ti -1c
+.RI "void \fBaddIncomingDirectEdge\fP (\fBConstraintEdge\fP *inEdge)"
+.br
+.ti -1c
+.RI "void \fBaddOutgoingAddrEdge\fP (\fBAddrCGEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBaddOutgoingLoadEdge\fP (\fBLoadCGEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBaddOutgoingStoreEdge\fP (\fBStoreCGEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBaddOutgoingDirectEdge\fP (\fBConstraintEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBremoveOutgoingAddrEdge\fP (\fBAddrCGEdge\fP *outEdge)"
+.br
+.RI "Remove constraint graph edges\&. "
+.ti -1c
+.RI "void \fBremoveIncomingAddrEdge\fP (\fBAddrCGEdge\fP *inEdge)"
+.br
+.ti -1c
+.RI "void \fBremoveOutgoingDirectEdge\fP (\fBConstraintEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBremoveIncomingDirectEdge\fP (\fBConstraintEdge\fP *inEdge)"
+.br
+.ti -1c
+.RI "void \fBremoveOutgoingLoadEdge\fP (\fBLoadCGEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBremoveIncomingLoadEdge\fP (\fBLoadCGEdge\fP *inEdge)"
+.br
+.ti -1c
+.RI "void \fBremoveOutgoingStoreEdge\fP (\fBStoreCGEdge\fP *outEdge)"
+.br
+.ti -1c
+.RI "void \fBremoveIncomingStoreEdge\fP (\fBStoreCGEdge\fP *inEdge)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBsetSCCEdgeFlag\fP (SCCEdgeFlag f)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB_isPWCNode\fP"
+.br
+.ti -1c
+.RI "NodeBS \fBstrides\fP"
+.br
+.ti -1c
+.RI "bool \fBnewExpand\fP"
+.br
+.ti -1c
+.RI "NodeBS \fBbaseIds\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static SCCEdgeFlag \fBsccEdgeFlag\fP = ConstraintNode::Direct"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

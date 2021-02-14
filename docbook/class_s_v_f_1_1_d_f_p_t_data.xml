@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_d_f_p_t_data" xml:lang="en-US">
+<title>SVF::DFPTData&lt; Key, Datum, Data &gt; Class Template Reference</title>
+<indexterm><primary>SVF::DFPTData&lt; Key, Datum, Data &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;AbstractPointsToDS.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::DFPTData&lt; Key, Datum, Data &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_d_f_p_t_data.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1ae5b9157688c1962918613649a69940e4"/>typedef <link linkend="_class_s_v_f_1_1_p_t_data">PTData</link>&lt; Key, Datum, Data &gt; <emphasis role="strong">BasePTData</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1af505f28eca8219bf28754d40c6eadc7c"/>typedef <link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">BasePTData::PTDataTy</link> <emphasis role="strong">PTDataTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1aa0ac08a5ac3a06e96c2576da761536b3"/>typedef NodeID <emphasis role="strong">LocID</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a1c9b437febcc05a8ef5ddb20e98b21cb"/><link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a1c9b437febcc05a8ef5ddb20e98b21cb">DFPTData</link> (bool reversePT=true, <link linkend="_class_s_v_f_1_1_p_t_data_1a74ce29609c51f2be34a0b5b7650a9848">PTDataTy</link> ty=BasePTData::DataFlow)</para>
+
+<para>Constructor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a12e2de05a6ece6e9e486c37b3083e534">hasDFInSet</link> (LocID loc) const =0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1ac00df48b29eea123d8778e8e9c963c16"/>virtual bool <emphasis role="strong">hasDFOutSet</emphasis> (LocID loc) const =0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a329824d15a4b5d2f8a1371fc98c4ab76">hasDFOutSet</link> (LocID loc, const Key &amp;var) const =0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a6aa28007d88862428fa605c8e7f306d2"/>virtual bool <emphasis role="strong">hasDFInSet</emphasis> (LocID loc, const Key &amp;var) const =0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1ad8b7b7c86f8f524cd11f96b6d4c013f8"/>virtual const Data &amp; <emphasis role="strong">getDFInPtsSet</emphasis> (LocID loc, const Key &amp;var)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a4d29f3c33f477bd273031b09d1b6cf50"/>virtual const Data &amp; <emphasis role="strong">getDFOutPtsSet</emphasis> (LocID loc, const Key &amp;var)=0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a4c2a88efa302a5857e78fa32c4271c08">updateDFInFromIn</link> (LocID srcLoc, const Key &amp;srcVar, LocID dstLoc, const Key &amp;dstVar)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1acdecfed9eff1772af0c398e160809173"/>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1acdecfed9eff1772af0c398e160809173">updateAllDFInFromIn</link> (LocID srcLoc, const Key &amp;srcVar, LocID dstLoc, const Key &amp;dstVar)=0</para>
+
+<para>Union (IN[dstLoc::dstVar], IN[srcLoc:srcVar]. There is no flag check, unlike the above. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a716c949a43140845c498778675d57f2b"/>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a716c949a43140845c498778675d57f2b">updateDFInFromOut</link> (LocID srcLoc, const Key &amp;srcVar, LocID dstLoc, const Key &amp;dstVar)=0</para>
+
+<para>Union (IN[dstLoc:dstVar], OUT[srcLoc:srcVar]). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a84217d424bd24a9cde806e8428cd68a2"/>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a84217d424bd24a9cde806e8428cd68a2">updateAllDFInFromOut</link> (LocID srcLoc, const Key &amp;srcVar, LocID dstLoc, const Key &amp;dstVar)=0</para>
+
+<para>Union (IN[dstLoc::dstVar], OUT[srcLoc:srcVar]. There is no flag check, unlike the above. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a4e4e548b1bb1c31f5bc5487817dfe8f8"/>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a4e4e548b1bb1c31f5bc5487817dfe8f8">updateDFOutFromIn</link> (LocID srcLoc, const Key &amp;srcVar, LocID dstLoc, const Key &amp;dstVar)=0</para>
+
+<para>Union (OUT[dstLoc:dstVar], IN[srcLoc:srcVar]). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a616c798289eb8af5eb529f5a56c2557b"/>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a616c798289eb8af5eb529f5a56c2557b">updateAllDFOutFromIn</link> (LocID loc, const Key &amp;singleton, bool strongUpdates)=0</para>
+
+<para>For each variable var in IN at loc, do updateDFOutFromIn(loc, var, loc, var). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a0cf720b50e17f3aba2171a558fc54032"/>virtual void <emphasis role="strong">clearAllDFOutUpdatedVar</emphasis> (LocID)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a0e326cbff78740fd641a2964eb7a143f"/>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a0e326cbff78740fd641a2964eb7a143f">updateTLVPts</link> (LocID srcLoc, const Key &amp;srcVar, const Key &amp;dstVar)=0</para>
+
+<para>Update points-to set of top-level pointers with IN[srcLoc:srcVar]. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a5a79c5b7007859640876a1bef5011c66"/>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a5a79c5b7007859640876a1bef5011c66">updateATVPts</link> (const Key &amp;srcVar, LocID dstLoc, const Key &amp;dstVar)=0</para>
+
+<para>Update address-taken variables OUT[dstLoc:dstVar] with points-to of top-level pointers. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data_1a2499a9d3e2b1c0cbfe3ac21c49e1a576">classof</link> (const <link linkend="_class_s_v_f_1_1_d_f_p_t_data">DFPTData</link>&lt; Key, Datum, Data &gt; *)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a8b93cfc14b18c52b4a69e42b9d189427"/>static bool <emphasis role="strong">classof</emphasis> (const <link linkend="_class_s_v_f_1_1_p_t_data">PTData</link>&lt; Key, Datum, Data &gt; *ptd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Key, typename Datum, typename Data&gt;
+class SVF::DFPTData&lt; Key, Datum, Data &gt;</title></simplesect>
+
+
+<para>Data-flow points-to data structure for flow-sensitive analysis as defined by Hardekopf and Lin (CGO 11). Points-to information is maintained at each program point (statement). For address-taken variables, every program point has two sets: IN and OUT points-to sets. For top-level variables, points-to sets are maintained flow-insensitively via getPts(var). </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a2499a9d3e2b1c0cbfe3ac21c49e1a576"/>    <section>
+    <title>classof()</title>
+<indexterm><primary>classof</primary><secondary>SVF::DFPTData&lt; Key, Datum, Data &gt;</secondary></indexterm>
+<indexterm><primary>SVF::DFPTData&lt; Key, Datum, Data &gt;</primary><secondary>classof</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Datum , typename Data &gt; </computeroutput><para><computeroutput>static bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data">SVF::DFPTData</link>&lt; Key, Datum, Data &gt;::classof (const <link linkend="_class_s_v_f_1_1_d_f_p_t_data">DFPTData</link>&lt; Key, Datum, Data &gt; * )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Methods to support type inquiry through isa, cast, and dyn_cast: </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a12e2de05a6ece6e9e486c37b3083e534"/>    <section>
+    <title>hasDFInSet()</title>
+<indexterm><primary>hasDFInSet</primary><secondary>SVF::DFPTData&lt; Key, Datum, Data &gt;</secondary></indexterm>
+<indexterm><primary>SVF::DFPTData&lt; Key, Datum, Data &gt;</primary><secondary>hasDFInSet</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Datum , typename Data &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data">SVF::DFPTData</link>&lt; Key, Datum, Data &gt;::hasDFInSet (LocID loc) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Determine whether the DF IN/OUT sets have points-to sets. </para>
+<para>
+Implemented in <link linkend="_class_s_v_f_1_1_mutable_d_f_p_t_data_1a564a0b873d4491a6dabccc599c4f82c7">SVF::MutableDFPTData&lt; Key, Datum, Data &gt;</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a329824d15a4b5d2f8a1371fc98c4ab76"/>    <section>
+    <title>hasDFOutSet()</title>
+<indexterm><primary>hasDFOutSet</primary><secondary>SVF::DFPTData&lt; Key, Datum, Data &gt;</secondary></indexterm>
+<indexterm><primary>SVF::DFPTData&lt; Key, Datum, Data &gt;</primary><secondary>hasDFOutSet</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Datum , typename Data &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data">SVF::DFPTData</link>&lt; Key, Datum, Data &gt;::hasDFOutSet (LocID loc, const Key &amp; var) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Access points-to set from data-flow IN/OUT set. </para>
+<para>
+Implemented in <link linkend="_class_s_v_f_1_1_mutable_d_f_p_t_data_1a7920b327d1662b48f32d6b4a2c085d8e">SVF::MutableDFPTData&lt; Key, Datum, Data &gt;</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_d_f_p_t_data_1a4c2a88efa302a5857e78fa32c4271c08"/>    <section>
+    <title>updateDFInFromIn()</title>
+<indexterm><primary>updateDFInFromIn</primary><secondary>SVF::DFPTData&lt; Key, Datum, Data &gt;</secondary></indexterm>
+<indexterm><primary>SVF::DFPTData&lt; Key, Datum, Data &gt;</primary><secondary>updateDFInFromIn</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Datum , typename Data &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_class_s_v_f_1_1_d_f_p_t_data">SVF::DFPTData</link>&lt; Key, Datum, Data &gt;::updateDFInFromIn (LocID srcLoc, const Key &amp; srcVar, LocID dstLoc, const Key &amp; dstVar)<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Update points-to for IN/OUT set IN[loc:var] represents the points-to of variable var in the IN set of location loc. union(ptsDst, ptsSrc) represents ptsDst = ptsDst U ptsSrc.</para>
+
+<para>Union (IN[dstLoc:dstVar], IN[srcLoc:srcVar]). </para>
+<para>
+Implemented in <link linkend="_class_s_v_f_1_1_inc_mutable_d_f_p_t_data_1a65c7e3eb77a92e9a0f2b5f72ca80d9d6">SVF::IncMutableDFPTData&lt; Key, Datum, Data &gt;</link>, and <link linkend="_class_s_v_f_1_1_mutable_d_f_p_t_data_1a11faecf2d217edd3d6c1aac03788e9e7">SVF::MutableDFPTData&lt; Key, Datum, Data &gt;</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+include/MemoryModel/AbstractPointsToDS.h</section>
+</section>

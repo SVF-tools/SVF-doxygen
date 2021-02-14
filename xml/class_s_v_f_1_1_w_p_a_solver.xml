@@ -1,0 +1,758 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_w_p_a_solver" kind="class" language="C++" prot="public">
+    <compoundname>SVF::WPASolver</compoundname>
+    <derivedcompoundref refid="class_s_v_f_1_1_andersen_base" prot="public" virt="non-virtual">SVF::AndersenBase</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_w_p_a_f_s_solver" prot="public" virt="non-virtual">SVF::WPAFSSolver&lt; GraphType &gt;</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>class GraphType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_s_v_f_1_1_w_p_a_solver_1a64d9cb98ab38b441440b860ae4de0f9b" prot="public" static="no">
+        <type>llvm::GraphTraits&lt; GraphType &gt;</type>
+        <definition>typedef llvm::GraphTraits&lt;GraphType&gt; SVF::WPASolver&lt; GraphType &gt;::GTraits</definition>
+        <argsstring></argsstring>
+        <name>GTraits</name>
+        <briefdescription>
+<para>Define the GTraits and node iterator for printing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="48" column="31" bodyfile="include/WPA/WPASolver.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_w_p_a_solver_1a2b0c0c4d1f172e8eeae0230fa09f365e" prot="public" static="no">
+        <type>GTraits::NodeRef</type>
+        <definition>typedef GTraits::NodeRef SVF::WPASolver&lt; GraphType &gt;::GNODE</definition>
+        <argsstring></argsstring>
+        <name>GNODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="49" column="49" bodyfile="include/WPA/WPASolver.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_w_p_a_solver_1ab7de73aabfa092b51b8dbe7b091e4c57" prot="public" static="no">
+        <type>GTraits::EdgeType</type>
+        <definition>typedef GTraits::EdgeType SVF::WPASolver&lt; GraphType &gt;::GEDGE</definition>
+        <argsstring></argsstring>
+        <name>GEDGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="50" column="49" bodyfile="include/WPA/WPASolver.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_w_p_a_solver_1a4d5b605b8932824a7088399305952f12" prot="public" static="no">
+        <type>GTraits::ChildIteratorType</type>
+        <definition>typedef GTraits::ChildIteratorType SVF::WPASolver&lt; GraphType &gt;::child_iterator</definition>
+        <argsstring></argsstring>
+        <name>child_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="51" column="49" bodyfile="include/WPA/WPASolver.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_w_p_a_solver_1a1352953966be14b2a1d6244f35e74a33" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SCCDetection</ref>&lt; GraphType &gt;</type>
+        <definition>typedef SCCDetection&lt;GraphType&gt; SVF::WPASolver&lt; GraphType &gt;::SCC</definition>
+        <argsstring></argsstring>
+        <name>SCC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="53" column="26" bodyfile="include/WPA/WPASolver.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_w_p_a_solver_1a624e9156b2d3a4f284548cbaaf650334" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_f_i_f_o_work_list" kindref="compound">FIFOWorkList</ref>&lt; NodeID &gt;</type>
+        <definition>typedef FIFOWorkList&lt;NodeID&gt; SVF::WPASolver&lt; GraphType &gt;::WorkList</definition>
+        <argsstring></argsstring>
+        <name>WorkList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="55" column="26" bodyfile="include/WPA/WPASolver.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_w_p_a_solver_1ac460772d9236a2fefe17b2557023b883" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SVF::WPASolver&lt; GraphType &gt;::reanalyze</definition>
+        <argsstring></argsstring>
+        <name>reanalyze</name>
+        <briefdescription>
+<para>Reanalyze if any constraint value changed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="205" column="10" bodyfile="include/WPA/WPASolver.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_w_p_a_solver_1aa7c0636780a86f376e9222bce771e859" prot="protected" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::WPASolver&lt; GraphType &gt;::iterationForPrintStat</definition>
+        <argsstring></argsstring>
+        <name>iterationForPrintStat</name>
+        <briefdescription>
+<para>print out statistics for i-th iteration </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="207" column="11" bodyfile="include/WPA/WPASolver.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_w_p_a_solver_1a87e9adb7fb0e0a42abaf90adac27a9c0" prot="protected" static="no" mutable="no">
+        <type>GraphType</type>
+        <definition>GraphType SVF::WPASolver&lt; GraphType &gt;::_graph</definition>
+        <argsstring></argsstring>
+        <name>_graph</name>
+        <briefdescription>
+<para>Graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="224" column="15" bodyfile="include/WPA/WPASolver.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_w_p_a_solver_1a21709a0f33b6238afe735cc9fe49ff70" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SCC</ref> *</type>
+        <definition>SCC* SVF::WPASolver&lt; GraphType &gt;::scc</definition>
+        <argsstring></argsstring>
+        <name>scc</name>
+        <briefdescription>
+<para>SCC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="227" column="9" bodyfile="include/WPA/WPASolver.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_w_p_a_solver_1a1775717a8c8d5d125b7561bc1ae6abf5" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_f_i_f_o_work_list" kindref="compound">WorkList</ref></type>
+        <definition>WorkList SVF::WPASolver&lt; GraphType &gt;::worklist</definition>
+        <argsstring></argsstring>
+        <name>worklist</name>
+        <briefdescription>
+<para>Worklist for resolution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="230" column="14" bodyfile="include/WPA/WPASolver.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_w_p_a_solver_1ab3369caa278da03e6e6697a839985cd6" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::WPASolver&lt; GraphType &gt;::numOfIteration</definition>
+        <argsstring></argsstring>
+        <name>numOfIteration</name>
+        <briefdescription>
+<para>num of iterations during constaint solving </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="234" column="11" bodyfile="include/WPA/WPASolver.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a0c5616b0e340955dafc2ab2f21740abd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::WPASolver&lt; GraphType &gt;::WPASolver</definition>
+        <argsstring>()</argsstring>
+        <name>WPASolver</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="60" column="5" bodyfile="include/WPA/WPASolver.h" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1ac88ef07e88b453a1b35684b59a7dd04a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SVF::WPASolver&lt; GraphType &gt;::~WPASolver</definition>
+        <argsstring>()</argsstring>
+        <name>~WPASolver</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="64" column="13" bodyfile="include/WPA/WPASolver.h" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a37ca8a99b8f83fba796293e6e13b0953" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_s_c_c_detection" kindref="compound">SCC</ref> *</type>
+        <definition>SCC* SVF::WPASolver&lt; GraphType &gt;::getSCCDetector</definition>
+        <argsstring>() const</argsstring>
+        <name>getSCCDetector</name>
+        <briefdescription>
+<para>Get SCC detector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="71" column="16" bodyfile="include/WPA/WPASolver.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1abe0a304039d1bd2cfd7befd32fdcde2b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const GraphType</type>
+        <definition>const GraphType SVF::WPASolver&lt; GraphType &gt;::graph</definition>
+        <argsstring>()</argsstring>
+        <name>graph</name>
+        <briefdescription>
+<para>Get/Set graph methods. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="78" column="28" bodyfile="include/WPA/WPASolver.h" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1aa04deb39cd024c051f30ac43d1d62b34" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::WPASolver&lt; GraphType &gt;::setGraph</definition>
+        <argsstring>(GraphType g)</argsstring>
+        <name>setGraph</name>
+        <param>
+          <type>GraphType</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="82" column="17" bodyfile="include/WPA/WPASolver.h" bodystart="82" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1aaa932894d00b69cfa741f9987a9cc6b8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>NodeStack &amp;</type>
+        <definition>virtual NodeStack&amp; SVF::WPASolver&lt; GraphType &gt;::SCCDetect</definition>
+        <argsstring>()</argsstring>
+        <name>SCCDetect</name>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_1a31ea24432ff42ab86a4728f2bde571bc">SCCDetect</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_wave_diff_with_type_1aef46713e8407e5963c5c8f04ff1545d1">SCCDetect</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_l_c_d_1a078a58b3b3f18cca4e09ff5a9a8ed791">SCCDetect</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_s_c_d_1a70f69baf47587b742b5013a63a3ce593">SCCDetect</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_sensitive_1a5f8a1493f7550a3f7a295e25d87bce12">SCCDetect</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_w_p_a_f_s_solver_1a2d4cfae34bd4a55f1fe03881c87f8708">SCCDetect</reimplementedby>
+        <briefdescription>
+<para>SCC detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="91" column="30" bodyfile="include/WPA/WPASolver.h" bodystart="91" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a16d371c8f6a9bdb1ca984bcb287d6c5a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>NodeStack &amp;</type>
+        <definition>virtual NodeStack&amp; SVF::WPASolver&lt; GraphType &gt;::SCCDetect</definition>
+        <argsstring>(NodeSet &amp;candidates)</argsstring>
+        <name>SCCDetect</name>
+        <param>
+          <type>NodeSet &amp;</type>
+          <declname>candidates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="96" column="30" bodyfile="include/WPA/WPASolver.h" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a44d31c197e7f6d88e410c7d85fdd6bdc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::solve</definition>
+        <argsstring>()</argsstring>
+        <name>solve</name>
+        <reimplementedby refid="class_s_v_f_1_1_w_p_a_s_c_c_solver_1ac37c1063fbdff394c9a313c8d131d893">solve</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_w_p_a_minimum_solver_1afb4c3a86fdb91cbb555669003cf299c2">solve</reimplementedby>
+        <briefdescription>
+<para>Constraint Solving. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="103" column="25" bodyfile="include/WPA/WPASolver.h" bodystart="103" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a7195381c3aab04890139b4fe2c561909" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::initWorklist</definition>
+        <argsstring>()</argsstring>
+        <name>initWorklist</name>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_1a9075cd05cb21e0f08a1109b7af6c7480">initWorklist</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="123" column="25" bodyfile="include/WPA/WPASolver.h" bodystart="123" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1af1bb670efde7006e3e99b3735e4fc4cc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::solveWorklist</definition>
+        <argsstring>()</argsstring>
+        <name>solveWorklist</name>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_wave_diff_1a35cd97d5f7c1dcb65dd077f45ad864e9">solveWorklist</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_l_c_d_1a52399086e540c2adabc03a978155f55d">solveWorklist</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_h_c_d_1ae3ac936d1ae3e46a9110b8c8ed9f279c">solveWorklist</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_h_l_c_d_1a0ead595bb9e36c89419adb22ef11a283">solveWorklist</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_s_c_d_1a98fac4ecfe203666178e2ace39da81e2">solveWorklist</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_steensgaard_1a966faa0548fe76d81a50339fffdd24c8">solveWorklist</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="134" column="25" bodyfile="include/WPA/WPASolver.h" bodystart="134" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1abd7fd785e70f66d394088101d78598ca" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::processNode</definition>
+        <argsstring>(NodeID)</argsstring>
+        <name>processNode</name>
+        <reimplementedby refid="class_s_v_f_1_1_versioned_flow_sensitive_1a8cad0df2ae7df81dc2a966e694a0f7a2">processNode</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_1a1caa6fa0740f4fa789d960a5a6fcb9c1">processNode</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_wave_diff_1afa1055cda6c910b24480505efd205895">processNode</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_flow_sensitive_1a16f594356ea565eb1fed2acea516a16b">processNode</reimplementedby>
+        <param>
+          <type>NodeID</type>
+        </param>
+        <briefdescription>
+<para>Following methods are to be implemented in child class, in order to achieve a fully worked PTA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Process each node on the graph, to be implemented in the child class </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="149" column="25" bodyfile="include/WPA/WPASolver.h" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a1d1892d8e7a9ede8cb181ad0ff191bc5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::WPASolver&lt; GraphType &gt;::updateCallGraph</definition>
+        <argsstring>()</argsstring>
+        <name>updateCallGraph</name>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_1aecc02a942e32689fbb25fb341b5a6d2e">updateCallGraph</reimplementedby>
+        <briefdescription>
+<para>update callgraph for all indirect callsites </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="151" column="18" bodyfile="include/WPA/WPASolver.h" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a138b403af0370ad6fdf8cc6af0530392" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::collapsePWCNode</definition>
+        <argsstring>(NodeID)</argsstring>
+        <name>collapsePWCNode</name>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_1ae79bff0e9c49f15e7db00ed605824d98">collapsePWCNode</reimplementedby>
+        <param>
+          <type>NodeID</type>
+        </param>
+        <briefdescription>
+<para>collapse positive weight cycles of a graph </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="156" column="18" bodyfile="include/WPA/WPASolver.h" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a79c2b3f10f3f813396d8caaa1f7bc62a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::collapseFields</definition>
+        <argsstring>()</argsstring>
+        <name>collapseFields</name>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_1ac22a6946de30bc5887b9e4ec9259764f">collapseFields</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="157" column="18" bodyfile="include/WPA/WPASolver.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a369adb6e4ba0ebc535614b6fa1854eaa" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::printStat</definition>
+        <argsstring>()</argsstring>
+        <name>printStat</name>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_base_1a566830d0c7a1f5cd967bb8f2ab168f8d">printStat</reimplementedby>
+        <briefdescription>
+<para>dump statistics </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="159" column="18" bodyfile="include/WPA/WPASolver.h" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a541ef7fda44ce79086c30b07a5f6126c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::propagate</definition>
+        <argsstring>(GNODE *v)</argsstring>
+        <name>propagate</name>
+        <reimplementedby refid="class_s_v_f_1_1_w_p_a_s_c_c_solver_1aebc289ed32678fb7f93738927f0887d1">propagate</reimplementedby>
+        <param>
+          <type>GNODE *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Propagation for the solving, to be implemented in the child class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="161" column="18" bodyfile="include/WPA/WPASolver.h" bodystart="161" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a904c056bcad2bdaff13763a48d372420" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool SVF::WPASolver&lt; GraphType &gt;::propFromSrcToDst</definition>
+        <argsstring>(GEDGE *)</argsstring>
+        <name>propFromSrcToDst</name>
+        <param>
+          <type>GEDGE *</type>
+        </param>
+        <briefdescription>
+<para>Propagate information from source to destination node, to be implemented in the child class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="172" column="18" bodyfile="include/WPA/WPASolver.h" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a3bd463cd456a1d58242f118328f51ddb" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>NodeID</type>
+        <definition>virtual NodeID SVF::WPASolver&lt; GraphType &gt;::sccRepNode</definition>
+        <argsstring>(NodeID id) const</argsstring>
+        <name>sccRepNode</name>
+        <reimplementedby refid="class_s_v_f_1_1_andersen_1aad706e332847e6b0892350a05028ba30">sccRepNode</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_w_p_a_f_s_solver_1a0bbaffd1673cc3850217afad0ca56e42">sccRepNode</reimplementedby>
+        <param>
+          <type>NodeID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="178" column="20" bodyfile="include/WPA/WPASolver.h" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a20a14ac31fe23d4fe67da15f5cc498df" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeID</type>
+        <definition>NodeID SVF::WPASolver&lt; GraphType &gt;::popFromWorklist</definition>
+        <argsstring>()</argsstring>
+        <name>popFromWorklist</name>
+        <briefdescription>
+<para>Worklist operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="185" column="19" bodyfile="include/WPA/WPASolver.h" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a4af1c3e72f5af96c4facff672108da58" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SVF::WPASolver&lt; GraphType &gt;::pushIntoWorklist</definition>
+        <argsstring>(NodeID id)</argsstring>
+        <name>pushIntoWorklist</name>
+        <param>
+          <type>NodeID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="190" column="25" bodyfile="include/WPA/WPASolver.h" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a992b105a0ec126050a123e24db3bd45b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::WPASolver&lt; GraphType &gt;::isWorklistEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>isWorklistEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="194" column="17" bodyfile="include/WPA/WPASolver.h" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a09c85e7a12715fc64e05a8448b699ec0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::WPASolver&lt; GraphType &gt;::isInWorklist</definition>
+        <argsstring>(NodeID id)</argsstring>
+        <name>isInWorklist</name>
+        <param>
+          <type>NodeID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="198" column="17" bodyfile="include/WPA/WPASolver.h" bodystart="198" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a5fd488d74e04aa9e66ca4eb42c6dbbf4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GNODE *</type>
+        <definition>GNODE* SVF::WPASolver&lt; GraphType &gt;::Node</definition>
+        <argsstring>(NodeID id)</argsstring>
+        <name>Node</name>
+        <param>
+          <type>NodeID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get node on the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="211" column="18" bodyfile="include/WPA/WPASolver.h" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_w_p_a_solver_1a01450e1475679d093413e6496c198fc0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeID</type>
+        <definition>NodeID SVF::WPASolver&lt; GraphType &gt;::Node_Index</definition>
+        <argsstring>(GNODE node)</argsstring>
+        <name>Node_Index</name>
+        <param>
+          <type>GNODE</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Get node ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/WPA/WPASolver.h" line="217" column="19" bodyfile="include/WPA/WPASolver.h" bodystart="217" bodyend="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>SVF::WPAFSSolver&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_w_p_a_f_s_solver"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>SVF::VersionedFlowSensitive</label>
+        <link refid="class_s_v_f_1_1_versioned_flow_sensitive"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SVF::TypeAnalysis</label>
+        <link refid="class_s_v_f_1_1_type_analysis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SVF::AndersenSCD</label>
+        <link refid="class_s_v_f_1_1_andersen_s_c_d"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SVF::WPASolver&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_w_p_a_solver"/>
+      </node>
+      <node id="8">
+        <label>SVF::AndersenSFR</label>
+        <link refid="class_s_v_f_1_1_andersen_s_f_r"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SVF::AndersenHCD</label>
+        <link refid="class_s_v_f_1_1_andersen_h_c_d"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SVF::AndersenLCD</label>
+        <link refid="class_s_v_f_1_1_andersen_l_c_d"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>SVF::FlowSensitive&lt; SVFG * &gt;</label>
+        <link refid="class_s_v_f_1_1_flow_sensitive"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SVF::AndersenHLCD</label>
+        <link refid="class_s_v_f_1_1_andersen_h_l_c_d"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SVF::AndersenWaveDiffWithType</label>
+        <link refid="class_s_v_f_1_1_andersen_wave_diff_with_type"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>SVF::Steensgaard</label>
+        <link refid="class_s_v_f_1_1_steensgaard"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SVF::WPASCCSolver&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_w_p_a_s_c_c_solver"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SVF::AndersenWaveDiff</label>
+        <link refid="class_s_v_f_1_1_andersen_wave_diff"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SVF::Andersen</label>
+        <link refid="class_s_v_f_1_1_andersen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SVF::AndersenBase&lt; ConstraintGraph * &gt;</label>
+        <link refid="class_s_v_f_1_1_andersen_base"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>SVF::WPAMinimumSolver&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_w_p_a_minimum_solver"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SVF::FSMPTA</label>
+        <link refid="class_s_v_f_1_1_f_s_m_p_t_a"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>SVF::FlowSensitiveTBHC</label>
+        <link refid="class_s_v_f_1_1_flow_sensitive_t_b_h_c"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SVF::WPASolver&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_w_p_a_solver"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>scc</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>worklist</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SVF::SCCDetection&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_s_c_c_detection"/>
+      </node>
+      <node id="3">
+        <label>SVF::FIFOWorkList&lt; NodeID &gt;</label>
+        <link refid="class_s_v_f_1_1_f_i_f_o_work_list"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/WPA/WPASolver.h" line="43" column="1" bodyfile="include/WPA/WPASolver.h" bodystart="44" bodyend="235"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a87e9adb7fb0e0a42abaf90adac27a9c0" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>_graph</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a4d5b605b8932824a7088399305952f12" prot="public" virt="non-virtual"><scope>SVF::WPASolver</scope><name>child_iterator</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a79c2b3f10f3f813396d8caaa1f7bc62a" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>collapseFields</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a138b403af0370ad6fdf8cc6af0530392" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>collapsePWCNode</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1ab7de73aabfa092b51b8dbe7b091e4c57" prot="public" virt="non-virtual"><scope>SVF::WPASolver</scope><name>GEDGE</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a37ca8a99b8f83fba796293e6e13b0953" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>getSCCDetector</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a2b0c0c4d1f172e8eeae0230fa09f365e" prot="public" virt="non-virtual"><scope>SVF::WPASolver</scope><name>GNODE</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1abe0a304039d1bd2cfd7befd32fdcde2b" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>graph</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a64d9cb98ab38b441440b860ae4de0f9b" prot="public" virt="non-virtual"><scope>SVF::WPASolver</scope><name>GTraits</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a7195381c3aab04890139b4fe2c561909" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>initWorklist</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a09c85e7a12715fc64e05a8448b699ec0" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>isInWorklist</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a992b105a0ec126050a123e24db3bd45b" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>isWorklistEmpty</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1aa7c0636780a86f376e9222bce771e859" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>iterationForPrintStat</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a5fd488d74e04aa9e66ca4eb42c6dbbf4" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>Node</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a01450e1475679d093413e6496c198fc0" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>Node_Index</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1ab3369caa278da03e6e6697a839985cd6" prot="public" virt="non-virtual"><scope>SVF::WPASolver</scope><name>numOfIteration</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a20a14ac31fe23d4fe67da15f5cc498df" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>popFromWorklist</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a369adb6e4ba0ebc535614b6fa1854eaa" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>printStat</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1abd7fd785e70f66d394088101d78598ca" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>processNode</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a541ef7fda44ce79086c30b07a5f6126c" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>propagate</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a904c056bcad2bdaff13763a48d372420" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>propFromSrcToDst</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a4af1c3e72f5af96c4facff672108da58" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>pushIntoWorklist</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1ac460772d9236a2fefe17b2557023b883" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>reanalyze</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a1352953966be14b2a1d6244f35e74a33" prot="public" virt="non-virtual"><scope>SVF::WPASolver</scope><name>SCC</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a21709a0f33b6238afe735cc9fe49ff70" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>scc</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1aaa932894d00b69cfa741f9987a9cc6b8" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>SCCDetect</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a16d371c8f6a9bdb1ca984bcb287d6c5a" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>SCCDetect</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a3bd463cd456a1d58242f118328f51ddb" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>sccRepNode</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1aa04deb39cd024c051f30ac43d1d62b34" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>setGraph</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a44d31c197e7f6d88e410c7d85fdd6bdc" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>solve</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1af1bb670efde7006e3e99b3735e4fc4cc" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>solveWorklist</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a1d1892d8e7a9ede8cb181ad0ff191bc5" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>updateCallGraph</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a1775717a8c8d5d125b7561bc1ae6abf5" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>worklist</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a624e9156b2d3a4f284548cbaaf650334" prot="public" virt="non-virtual"><scope>SVF::WPASolver</scope><name>WorkList</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1a0c5616b0e340955dafc2ab2f21740abd" prot="protected" virt="non-virtual"><scope>SVF::WPASolver</scope><name>WPASolver</name></member>
+      <member refid="class_s_v_f_1_1_w_p_a_solver_1ac88ef07e88b453a1b35684b59a7dd04a" prot="protected" virt="virtual"><scope>SVF::WPASolver</scope><name>~WPASolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

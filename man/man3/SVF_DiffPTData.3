@@ -1,0 +1,91 @@
+.TH "SVF::DiffPTData< Key, Datum, Data >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::DiffPTData< Key, Datum, Data >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AbstractPointsToDS\&.h>\fP
+.PP
+Inherits \fBSVF::PTData< Key, Datum, Data >\fP\&.
+.PP
+Inherited by \fBSVF::MutableDiffPTData< Key, Datum, Data >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPTData\fP< Key, Datum, Data > \fBBasePTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBBasePTData::PTDataTy\fP \fBPTDataTy\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiffPTData\fP (bool reversePT=true, \fBPTDataTy\fP ty=PTDataTy::Diff)"
+.br
+.ti -1c
+.RI "virtual const Data & \fBgetDiffPts\fP (Key &var)=0"
+.br
+.RI "Get diff points to\&. "
+.ti -1c
+.RI "virtual bool \fBcomputeDiffPts\fP (Key &var, const Data &all)=0"
+.br
+.ti -1c
+.RI "virtual void \fBupdatePropaPtsMap\fP (Key &src, Key &dst)=0"
+.br
+.ti -1c
+.RI "virtual void \fBclearPropaPts\fP (Key &var)=0"
+.br
+.RI "Clear propagated points-to set of var\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBDiffPTData\fP< Key, Datum, Data > *)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPTData\fP< Key, Datum, Data > *ptd)"
+.br
+.in -1c
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Key, typename Datum, typename Data>
+.br
+class SVF::DiffPTData< Key, Datum, Data >"
+Abstract diff points-to data with cached information\&. This is an optimisation on top of the base points-to data structure\&. The points-to information is propagated incrementally only for the different parts\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Key , typename Datum , typename Data > static bool \fBSVF::DiffPTData\fP< Key, Datum, Data >::classof (const \fBDiffPTData\fP< Key, Datum, Data > *)\fC [inline]\fP, \fC [static]\fP"
+Methods to support type inquiry through isa, cast, and dyn_cast: 
+.SS "template<typename Key , typename Datum , typename Data > virtual bool \fBSVF::DiffPTData\fP< Key, Datum, Data >::computeDiffPts (Key & var, const Data & all)\fC [pure virtual]\fP"
+Compute diff points to\&. Return TRUE if diff is not empty\&.
+.IP "1." 4
+calculate diff: diff = all - propa\&.
+.IP "2." 4
+update propagated pts: propa = all\&. 
+.PP
+
+.PP
+Implemented in \fBSVF::MutableDiffPTData< Key, Datum, Data >\fP\&.
+.SS "template<typename Key , typename Datum , typename Data > virtual void \fBSVF::DiffPTData\fP< Key, Datum, Data >::updatePropaPtsMap (Key & src, Key & dst)\fC [pure virtual]\fP"
+Update dst's propagated points-to set with src's\&. The final result is the intersection of these two sets\&. 
+.PP
+Implemented in \fBSVF::MutableDiffPTData< Key, Datum, Data >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

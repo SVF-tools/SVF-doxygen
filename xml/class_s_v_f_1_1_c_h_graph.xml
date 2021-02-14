@@ -1,0 +1,968 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_c_h_graph" kind="class" language="C++" prot="public">
+    <compoundname>SVF::CHGraph</compoundname>
+    <basecompoundref refid="class_s_v_f_1_1_common_c_h_graph" prot="public" virt="non-virtual">SVF::CommonCHGraph</basecompoundref>
+    <basecompoundref refid="class_s_v_f_1_1_generic_graph" prot="public" virt="non-virtual">SVF::GenericGraph&lt; CHNode, CHEdge &gt;</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_s_v_f_1_1_c_h_graph_1a2a1da7f262a2f11653fb583154a93a22" prot="public" static="no" strong="no">
+        <type></type>
+        <name>RELATIONTYPE</name>
+        <enumvalue id="class_s_v_f_1_1_c_h_graph_1a2a1da7f262a2f11653fb583154a93a22a331376f6d22d2346039db7a9c9a311c2" prot="public">
+          <name>CONSTRUCTOR</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_c_h_graph_1a2a1da7f262a2f11653fb583154a93a22adfb68ad45ad216277b580d9a45926dc7" prot="public">
+          <name>DESTRUCTOR</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="186" column="5" bodyfile="include/SVF-FE/CHG.h" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_c_h_graph_1ad0f60c720b277c60ed8a8966189bb42b" prot="public" static="no">
+        <type>Set&lt; const <ref refid="class_s_v_f_1_1_c_h_node" kindref="compound">CHNode</ref> * &gt;</type>
+        <definition>typedef Set&lt;const CHNode*&gt; SVF::CHGraph::CHNodeSetTy</definition>
+        <argsstring></argsstring>
+        <name>CHNodeSetTy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="179" column="17" bodyfile="include/SVF-FE/CHG.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_c_h_graph_1af1b638faf888898cdf168c25e008ab12" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_f_i_f_o_work_list" kindref="compound">FIFOWorkList</ref>&lt; const <ref refid="class_s_v_f_1_1_c_h_node" kindref="compound">CHNode</ref> * &gt;</type>
+        <definition>typedef FIFOWorkList&lt;const CHNode*&gt; SVF::CHGraph::WorkList</definition>
+        <argsstring></argsstring>
+        <name>WorkList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="180" column="26" bodyfile="include/SVF-FE/CHG.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_c_h_graph_1aedb20aca2fa11a070cfe28e14fd3552b" prot="public" static="no">
+        <type>Map&lt; std::string, CHNodeSetTy &gt;</type>
+        <definition>typedef Map&lt;std::string, CHNodeSetTy&gt; SVF::CHGraph::NameToCHNodesMap</definition>
+        <argsstring></argsstring>
+        <name>NameToCHNodesMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="181" column="17" bodyfile="include/SVF-FE/CHG.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_c_h_graph_1a3740a239432a5c7237109aa72aa28eff" prot="public" static="no">
+        <type>Map&lt; CallSite, CHNodeSetTy &gt;</type>
+        <definition>typedef Map&lt;CallSite, CHNodeSetTy&gt; SVF::CHGraph::CallSiteToCHNodesMap</definition>
+        <argsstring></argsstring>
+        <name>CallSiteToCHNodesMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="182" column="17" bodyfile="include/SVF-FE/CHG.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_c_h_graph_1aefdf6c5fe8a26efce200e8225d463cac" prot="public" static="no">
+        <type>Map&lt; CallSite, VTableSet &gt;</type>
+        <definition>typedef Map&lt;CallSite, VTableSet&gt; SVF::CHGraph::CallSiteToVTableSetMap</definition>
+        <argsstring></argsstring>
+        <name>CallSiteToVTableSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="183" column="17" bodyfile="include/SVF-FE/CHG.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_c_h_graph_1a0397e5da88106dc8b4a1e207ae455e74" prot="public" static="no">
+        <type>Map&lt; CallSite, VFunSet &gt;</type>
+        <definition>typedef Map&lt;CallSite, VFunSet&gt; SVF::CHGraph::CallSiteToVFunSetMap</definition>
+        <argsstring></argsstring>
+        <name>CallSiteToVFunSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="184" column="17" bodyfile="include/SVF-FE/CHG.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1a62a3ccdbc55381d5f8d96dc23141f2e5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_s_v_f_module" kindref="compound">SVFModule</ref> *</type>
+        <definition>SVFModule* SVF::CHGraph::svfMod</definition>
+        <argsstring></argsstring>
+        <name>svfMod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="289" column="15" bodyfile="include/SVF-FE/CHG.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1adb99b732d20cfc8cc0f078cda6753bc0" prot="private" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SVF::CHGraph::classNum</definition>
+        <argsstring></argsstring>
+        <name>classNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="290" column="11" bodyfile="include/SVF-FE/CHG.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1a1cf155a56d1a3b3c3ab1a3d593e1afcd" prot="private" static="no" mutable="no">
+        <type>s32_t</type>
+        <definition>s32_t SVF::CHGraph::vfID</definition>
+        <argsstring></argsstring>
+        <name>vfID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="291" column="11" bodyfile="include/SVF-FE/CHG.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1ab5bd2348e4418fcb2f3b18227fccd836" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SVF::CHGraph::buildingCHGTime</definition>
+        <argsstring></argsstring>
+        <name>buildingCHGTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="292" column="12" bodyfile="include/SVF-FE/CHG.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1aa040bc0a5653843419d24777343e1650" prot="private" static="no" mutable="no">
+        <type>Map&lt; std::string, <ref refid="class_s_v_f_1_1_c_h_node" kindref="compound">CHNode</ref> * &gt;</type>
+        <definition>Map&lt;std::string, CHNode *&gt; SVF::CHGraph::classNameToNodeMap</definition>
+        <argsstring></argsstring>
+        <name>classNameToNodeMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="293" column="9" bodyfile="include/SVF-FE/CHG.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1ac08f846413b6aed26a1bf39eb865b006" prot="private" static="no" mutable="no">
+        <type>NameToCHNodesMap</type>
+        <definition>NameToCHNodesMap SVF::CHGraph::classNameToDescendantsMap</definition>
+        <argsstring></argsstring>
+        <name>classNameToDescendantsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="294" column="22" bodyfile="include/SVF-FE/CHG.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1a083f726d74208c2d8107a75e0d6b3ca9" prot="private" static="no" mutable="no">
+        <type>NameToCHNodesMap</type>
+        <definition>NameToCHNodesMap SVF::CHGraph::classNameToAncestorsMap</definition>
+        <argsstring></argsstring>
+        <name>classNameToAncestorsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="295" column="22" bodyfile="include/SVF-FE/CHG.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1aaec4bdde66e4a7a63ea3f3c6ec0bd045" prot="private" static="no" mutable="no">
+        <type>NameToCHNodesMap</type>
+        <definition>NameToCHNodesMap SVF::CHGraph::classNameToInstAndDescsMap</definition>
+        <argsstring></argsstring>
+        <name>classNameToInstAndDescsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="296" column="22" bodyfile="include/SVF-FE/CHG.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1acd022005e2191bc3bcb265805abee4f8" prot="private" static="no" mutable="no">
+        <type>NameToCHNodesMap</type>
+        <definition>NameToCHNodesMap SVF::CHGraph::templateNameToInstancesMap</definition>
+        <argsstring></argsstring>
+        <name>templateNameToInstancesMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="297" column="22" bodyfile="include/SVF-FE/CHG.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1a7ef9982d89a4932883bd58bc49ad9986" prot="private" static="no" mutable="no">
+        <type>CallSiteToCHNodesMap</type>
+        <definition>CallSiteToCHNodesMap SVF::CHGraph::csToClassesMap</definition>
+        <argsstring></argsstring>
+        <name>csToClassesMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="298" column="26" bodyfile="include/SVF-FE/CHG.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1a6a581e9b4105745c518124b494b41c63" prot="private" static="no" mutable="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *, s32_t &gt;</type>
+        <definition>Map&lt;const SVFFunction*, s32_t&gt; SVF::CHGraph::virtualFunctionToIDMap</definition>
+        <argsstring></argsstring>
+        <name>virtualFunctionToIDMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="300" column="9" bodyfile="include/SVF-FE/CHG.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1af3ed2bee5d76e5a848b250950c3be333" prot="private" static="no" mutable="no">
+        <type>CallSiteToVTableSetMap</type>
+        <definition>CallSiteToVTableSetMap SVF::CHGraph::csToCHAVtblsMap</definition>
+        <argsstring></argsstring>
+        <name>csToCHAVtblsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="301" column="28" bodyfile="include/SVF-FE/CHG.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_c_h_graph_1a5e6502c5baad99c70e1cf56c84ce9474" prot="private" static="no" mutable="no">
+        <type>CallSiteToVFunSetMap</type>
+        <definition>CallSiteToVFunSetMap SVF::CHGraph::csToCHAVFnsMap</definition>
+        <argsstring></argsstring>
+        <name>csToCHAVFnsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="302" column="26" bodyfile="include/SVF-FE/CHG.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1afacd7d35dad4344a5c2551d951acb442" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::CHGraph::CHGraph</definition>
+        <argsstring>(SVFModule *svfModule)</argsstring>
+        <name>CHGraph</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_s_v_f_module" kindref="compound">SVFModule</ref> *</type>
+          <declname>svfModule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="192" column="5" bodyfile="include/SVF-FE/CHG.h" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1ae50fcba9fb131bc1956bcd6053bb7354" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CHGraph::~CHGraph</definition>
+        <argsstring>()</argsstring>
+        <name>~CHGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="196" column="5" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="81" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1ae6b620ead0f214e72fbef9c26da3d5a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::buildCHG</definition>
+        <argsstring>()</argsstring>
+        <name>buildCHG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="198" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="87" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1ab55b057a7be74ad03514dc15b6f01131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::buildInternalMaps</definition>
+        <argsstring>()</argsstring>
+        <name>buildInternalMaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="199" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="187" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a185d0eae7e361128e8dbbe47fc18051b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::buildCHGNodes</definition>
+        <argsstring>(const GlobalValue *V)</argsstring>
+        <name>buildCHGNodes</name>
+        <param>
+          <type>const GlobalValue *</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="200" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="119" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1aa7280c8102df6ee625cbe1accba6f09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::buildCHGNodes</definition>
+        <argsstring>(const SVFFunction *F)</argsstring>
+        <name>buildCHGNodes</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>F</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="201" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="150" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a57062fb6b3d22d98e5ef564eaff84b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::buildCHGEdges</definition>
+        <argsstring>(const SVFFunction *F)</argsstring>
+        <name>buildCHGEdges</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>F</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="202" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="162" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1aba5986ebcbba17f76202d5d14f35585f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::connectInheritEdgeViaCall</definition>
+        <argsstring>(const SVFFunction *caller, CallSite cs)</argsstring>
+        <name>connectInheritEdgeViaCall</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>caller</declname>
+        </param>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="203" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="194" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a9b7ecdcab366627a2dd636430f0a3b4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::connectInheritEdgeViaStore</definition>
+        <argsstring>(const SVFFunction *caller, const StoreInst *store)</argsstring>
+        <name>connectInheritEdgeViaStore</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>caller</declname>
+        </param>
+        <param>
+          <type>const StoreInst *</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="204" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="223" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a3867db3e76f068bd8c4399b103dcd0b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::addEdge</definition>
+        <argsstring>(const std::string className, const std::string baseClassName, CHEdge::CHEDGETYPE edgeType)</argsstring>
+        <name>addEdge</name>
+        <param>
+          <type>const std::string</type>
+          <declname>className</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>baseClassName</declname>
+        </param>
+        <param>
+          <type>CHEdge::CHEDGETYPE</type>
+          <declname>edgeType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="205" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="271" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a7beec68a60036c93a741a7152e8198b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_c_h_node" kindref="compound">CHNode</ref> *</type>
+        <definition>CHNode * CHGraph::getNode</definition>
+        <argsstring>(const std::string name) const</argsstring>
+        <name>getNode</name>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="208" column="12" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="286" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a39a7a8f6a4b9bb03523f190ce7b91e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_c_h_node" kindref="compound">CHNode</ref> *</type>
+        <definition>CHNode * CHGraph::createNode</definition>
+        <argsstring>(const std::string name)</argsstring>
+        <name>createNode</name>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="209" column="12" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="294" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a3468ae9cbcff4c525c627ddb7a416cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::buildClassNameToAncestorsDescendantsMap</definition>
+        <argsstring>()</argsstring>
+        <name>buildClassNameToAncestorsDescendantsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="210" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="321" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1aa54643023932a31697840cbb79be52e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::buildVirtualFunctionToIDMap</definition>
+        <argsstring>()</argsstring>
+        <name>buildVirtualFunctionToIDMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="211" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="591" bodyend="687"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a71e74fc9c9a27cd354aa113801ed416f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::buildCSToCHAVtblsAndVfnsMap</definition>
+        <argsstring>()</argsstring>
+        <name>buildCSToCHAVtblsAndVfnsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="212" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="795" bodyend="825"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a315f0dc381d62f99bede32f08aa9cde8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::readInheritanceMetadataFromModule</definition>
+        <argsstring>(const Module &amp;M)</argsstring>
+        <name>readInheritanceMetadataFromModule</name>
+        <param>
+          <type>const Module &amp;</type>
+          <declname>M</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="213" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="250" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a0685bd653851a903f765e21aec0fdbd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::analyzeVTables</definition>
+        <argsstring>(const Module &amp;M)</argsstring>
+        <name>analyzeVTables</name>
+        <param>
+          <type>const Module &amp;</type>
+          <declname>M</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="214" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="417" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1aef3ce1727cb91581d6cd1123cf767cfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const CHGraph::CHNodeSetTy &amp;</type>
+        <definition>const CHGraph::CHNodeSetTy &amp; CHGraph::getInstancesAndDescendants</definition>
+        <argsstring>(const std::string className)</argsstring>
+        <name>getInstancesAndDescendants</name>
+        <param>
+          <type>const std::string</type>
+          <declname>className</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="215" column="32" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="355" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a687d4d05b4c7db21d85256cd03efe08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const CHNodeSetTy &amp;</type>
+        <definition>const CHGraph::CHNodeSetTy &amp; CHGraph::getCSClasses</definition>
+        <argsstring>(CallSite cs)</argsstring>
+        <name>getCSClasses</name>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="216" column="23" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="689" bodyend="710"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1ac5f5646db24455609cd86c421774dd3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CHGraph::getVFnsFromVtbls</definition>
+        <argsstring>(CallSite cs, const VTableSet &amp;vtbls, VFunSet &amp;virtualFunctions) override</argsstring>
+        <name>getVFnsFromVtbls</name>
+        <reimplements refid="class_s_v_f_1_1_common_c_h_graph_1aae511b2ee7c2c7ea7be70c7884e92021">getVFnsFromVtbls</reimplements>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const VTableSet &amp;</type>
+          <declname>vtbls</declname>
+        </param>
+        <param>
+          <type>VFunSet &amp;</type>
+          <declname>virtualFunctions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>get target virtual functions</para>
+<para>get the function name of the virtual callsite</para>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="217" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="716" bodyend="793"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a29351163649618332394fc72cc35212f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::dump</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>dump</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dump call graph into dot file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="218" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="851" bodyend="855"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1ae382d5bab69843bdb9424c4c6ff94140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CHGraph::printCH</definition>
+        <argsstring>()</argsstring>
+        <name>printCH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="219" column="10" bodyfile="lib/SVF-FE/CHG.cpp" bodystart="827" bodyend="846"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a4ac546af1020af930f192460a7d40e4f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SVF::CHGraph::getVirtualFunctionID</definition>
+        <argsstring>(const SVFFunction *vfn) const</argsstring>
+        <name>getVirtualFunctionID</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>vfn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="221" column="18" bodyfile="include/SVF-FE/CHG.h" bodystart="221" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1ab53198e1a85df15f04ed601f3346ef85" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+        <definition>const SVFFunction* SVF::CHGraph::getVirtualFunctionBasedonID</definition>
+        <argsstring>(s32_t id) const</argsstring>
+        <name>getVirtualFunctionBasedonID</name>
+        <param>
+          <type>s32_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="230" column="30" bodyfile="include/SVF-FE/CHG.h" bodystart="230" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a5ee7e559425045f3af5c35ea6d6f03ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::CHGraph::addInstances</definition>
+        <argsstring>(const std::string templateName, CHNode *node)</argsstring>
+        <name>addInstances</name>
+        <param>
+          <type>const std::string</type>
+          <declname>templateName</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_c_h_node" kindref="compound">CHNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="242" column="17" bodyfile="include/SVF-FE/CHG.h" bodystart="242" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a26f89a9b269cad3fc894110d25598715" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const CHNodeSetTy &amp;</type>
+        <definition>const CHNodeSetTy&amp; SVF::CHGraph::getDescendants</definition>
+        <argsstring>(const std::string className)</argsstring>
+        <name>getDescendants</name>
+        <param>
+          <type>const std::string</type>
+          <declname>className</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="251" column="30" bodyfile="include/SVF-FE/CHG.h" bodystart="251" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a894a69fa143d3f460d433646a0521b6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const CHNodeSetTy &amp;</type>
+        <definition>const CHNodeSetTy&amp; SVF::CHGraph::getInstances</definition>
+        <argsstring>(const std::string className)</argsstring>
+        <name>getInstances</name>
+        <param>
+          <type>const std::string</type>
+          <declname>className</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="255" column="30" bodyfile="include/SVF-FE/CHG.h" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1acd4907aa926a4c7fdc3964700d721f79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool SVF::CHGraph::csHasVtblsBasedonCHA</definition>
+        <argsstring>(CallSite cs) override</argsstring>
+        <name>csHasVtblsBasedonCHA</name>
+        <reimplements refid="class_s_v_f_1_1_common_c_h_graph_1aff7363feebc20267dad7230666b583b1">csHasVtblsBasedonCHA</reimplements>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="260" column="17" bodyfile="include/SVF-FE/CHG.h" bodystart="260" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a885a81b08477e6ccdd7df98d249b8c39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool SVF::CHGraph::csHasVFnsBasedonCHA</definition>
+        <argsstring>(CallSite cs) override</argsstring>
+        <name>csHasVFnsBasedonCHA</name>
+        <reimplements refid="class_s_v_f_1_1_common_c_h_graph_1a0ce9117288d9e0b498f128217fda0cca">csHasVFnsBasedonCHA</reimplements>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="265" column="17" bodyfile="include/SVF-FE/CHG.h" bodystart="265" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a9878df891d2e20d09b65096060d2c148" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const VTableSet &amp;</type>
+        <definition>const VTableSet&amp; SVF::CHGraph::getCSVtblsBasedonCHA</definition>
+        <argsstring>(CallSite cs) override</argsstring>
+        <name>getCSVtblsBasedonCHA</name>
+        <reimplements refid="class_s_v_f_1_1_common_c_h_graph_1ae90f9a2152ab07aa0df16badd733f1fd">getCSVtblsBasedonCHA</reimplements>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="270" column="28" bodyfile="include/SVF-FE/CHG.h" bodystart="270" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1a1c0ca4e6a466ad317daf00a6c7de8e31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const VFunSet &amp;</type>
+        <definition>const VFunSet&amp; SVF::CHGraph::getCSVFsBasedonCHA</definition>
+        <argsstring>(CallSite cs) override</argsstring>
+        <name>getCSVFsBasedonCHA</name>
+        <reimplements refid="class_s_v_f_1_1_common_c_h_graph_1abe9232b9cada361e0434f7c4390a7864">getCSVFsBasedonCHA</reimplements>
+        <param>
+          <type>CallSite</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="276" column="26" bodyfile="include/SVF-FE/CHG.h" bodystart="276" bodyend="281"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_c_h_graph_1ae7e9f1a3c524d80c77b2a75f877dc2d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SVF::CHGraph::classof</definition>
+        <argsstring>(const CommonCHGraph *chg)</argsstring>
+        <name>classof</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_common_c_h_graph" kindref="compound">CommonCHGraph</ref> *</type>
+          <declname>chg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SVF-FE/CHG.h" line="283" column="24" bodyfile="include/SVF-FE/CHG.h" bodystart="283" bodyend="286"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>GenericCHGraphTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="1">
+        <label>SVF::CHGraph</label>
+        <link refid="class_s_v_f_1_1_c_h_graph"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SVF::CommonCHGraph</label>
+        <link refid="class_s_v_f_1_1_common_c_h_graph"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>GenericCHGraphTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="1">
+        <label>SVF::CHGraph</label>
+        <link refid="class_s_v_f_1_1_c_h_graph"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SVF::CommonCHGraph</label>
+        <link refid="class_s_v_f_1_1_common_c_h_graph"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/SVF-FE/CHG.h" line="176" column="1" bodyfile="include/SVF-FE/CHG.h" bodystart="177" bodyend="303"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a3867db3e76f068bd8c4399b103dcd0b7" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>addEdge</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a0a8831a5429005ff9d71adbd6bf3994f" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>addGNode</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a5ee7e559425045f3af5c35ea6d6f03ee" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>addInstances</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a0685bd653851a903f765e21aec0fdbd1" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>analyzeVTables</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a0d9744b1b0e7a09a6f7af29188e243b7" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>begin</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a3385b008ae03444404c1e392fd47f1d6" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>begin</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ae6b620ead0f214e72fbef9c26da3d5a0" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildCHG</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a57062fb6b3d22d98e5ef564eaff84b2e" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildCHGEdges</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a185d0eae7e361128e8dbbe47fc18051b" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildCHGNodes</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1aa7280c8102df6ee625cbe1accba6f09f" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildCHGNodes</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a3468ae9cbcff4c525c627ddb7a416cda" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildClassNameToAncestorsDescendantsMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a71e74fc9c9a27cd354aa113801ed416f" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildCSToCHAVtblsAndVfnsMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ab5bd2348e4418fcb2f3b18227fccd836" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildingCHGTime</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ab55b057a7be74ad03514dc15b6f01131" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildInternalMaps</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1aa54643023932a31697840cbb79be52e4" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>buildVirtualFunctionToIDMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a3740a239432a5c7237109aa72aa28eff" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>CallSiteToCHNodesMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a0397e5da88106dc8b4a1e207ae455e74" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>CallSiteToVFunSetMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1aefdf6c5fe8a26efce200e8225d463cac" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>CallSiteToVTableSetMap</name></member>
+      <member refid="class_s_v_f_1_1_common_c_h_graph_1a6a1feb9e268fb56b0de3efc39cfc8db8" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>CHGKind</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1afacd7d35dad4344a5c2551d951acb442" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>CHGraph</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ad0f60c720b277c60ed8a8966189bb42b" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>CHNodeSetTy</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a083f726d74208c2d8107a75e0d6b3ca9" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>classNameToAncestorsMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ac08f846413b6aed26a1bf39eb865b006" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>classNameToDescendantsMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1aaec4bdde66e4a7a63ea3f3c6ec0bd045" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>classNameToInstAndDescsMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1aa040bc0a5653843419d24777343e1650" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>classNameToNodeMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1adb99b732d20cfc8cc0f078cda6753bc0" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>classNum</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ae7e9f1a3c524d80c77b2a75f877dc2d6" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>classof</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1aba5986ebcbba17f76202d5d14f35585f" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>connectInheritEdgeViaCall</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a9b7ecdcab366627a2dd636430f0a3b4b" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>connectInheritEdgeViaStore</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a5dfa3f178d4abf37177d0d74ff4c6a97" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>const_iterator</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a2a1da7f262a2f11653fb583154a93a22a331376f6d22d2346039db7a9c9a311c2" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>CONSTRUCTOR</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a39a7a8f6a4b9bb03523f190ce7b91e58" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>createNode</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a885a81b08477e6ccdd7df98d249b8c39" prot="public" virt="virtual"><scope>SVF::CHGraph</scope><name>csHasVFnsBasedonCHA</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1acd4907aa926a4c7fdc3964700d721f79" prot="public" virt="virtual"><scope>SVF::CHGraph</scope><name>csHasVtblsBasedonCHA</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a5e6502c5baad99c70e1cf56c84ce9474" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>csToCHAVFnsMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1af3ed2bee5d76e5a848b250950c3be333" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>csToCHAVtblsMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a7ef9982d89a4932883bd58bc49ad9986" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>csToClassesMap</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1adf0a205f4f62f33c5fa8f2d544aac633" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>destroy</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a2a1da7f262a2f11653fb583154a93a22adfb68ad45ad216277b580d9a45926dc7" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>DESTRUCTOR</name></member>
+      <member refid="class_s_v_f_1_1_common_c_h_graph_1a6a1feb9e268fb56b0de3efc39cfc8db8ae9e3edea0bae930aa9af04699fca9506" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>DI</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a29351163649618332394fc72cc35212f" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>dump</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a2fbc96de5f066469c2739229307bcc0c" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>edgeNum</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a12d493d6ad2b6c89f240c9ccfa3bdf30" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>EdgeType</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a4bef15157423cef48dc7333a803cd27d" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>end</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a3001af3746d26b7dc0a212db5e48a4bb" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>end</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1aa5837cddbbd63c5a8ac5725bcecb192f" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>GenericGraph</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a687d4d05b4c7db21d85256cd03efe08b" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getCSClasses</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a1c0ca4e6a466ad317daf00a6c7de8e31" prot="public" virt="virtual"><scope>SVF::CHGraph</scope><name>getCSVFsBasedonCHA</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a9878df891d2e20d09b65096060d2c148" prot="public" virt="virtual"><scope>SVF::CHGraph</scope><name>getCSVtblsBasedonCHA</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a26f89a9b269cad3fc894110d25598715" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getDescendants</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a43c9c773bfa17abf481c33073e30d01b" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getGNode</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a894a69fa143d3f460d433646a0521b6f" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getInstances</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1aef3ce1727cb91581d6cd1123cf767cfb" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getInstancesAndDescendants</name></member>
+      <member refid="class_s_v_f_1_1_common_c_h_graph_1adf2a02fff9d7dd9fc9d92121e5e28f8b" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getKind</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a7beec68a60036c93a741a7152e8198b6" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getNode</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a29cab1426b0000bd87c026ab8c9979c0" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getTotalEdgeNum</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a8c8d16036008f87c7811586047599858" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getTotalNodeNum</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ac5f5646db24455609cd86c421774dd3e" prot="public" virt="virtual"><scope>SVF::CHGraph</scope><name>getVFnsFromVtbls</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ab53198e1a85df15f04ed601f3346ef85" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getVirtualFunctionBasedonID</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a4ac546af1020af930f192460a7d40e4f" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>getVirtualFunctionID</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a6885064afa211958af7b73f0233284e5" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>hasGNode</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a47a1ef8b67b0c92f78b4457dc3bbfe71" prot="protected" virt="non-virtual"><scope>SVF::CHGraph</scope><name>IDToNodeMap</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1ab9027b190f50ceefc90094e4f967f269" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>IDToNodeMapTy</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a2f2bca8219c7d769f6d2937e5cd40d14" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>incEdgeNum</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a7388dabef7300e77adf33f3999639f21" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>incNodeNum</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1ac213302cf5c7cdf3b66f7b18649d0fbc" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>iterator</name></member>
+      <member refid="class_s_v_f_1_1_common_c_h_graph_1a4d3f2b9ed7ae8e87baf69525e9115071" prot="protected" virt="non-virtual"><scope>SVF::CHGraph</scope><name>kind</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1aedb20aca2fa11a070cfe28e14fd3552b" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>NameToCHNodesMap</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a38122734cbe71551a420dfb7fee2012e" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>nodeNum</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a86c50fc6775fd29f88df2cb4646bb211" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>NodeType</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ae382d5bab69843bdb9424c4c6ff94140" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>printCH</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a315f0dc381d62f99bede32f08aa9cde8" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>readInheritanceMetadataFromModule</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a2a1da7f262a2f11653fb583154a93a22" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>RELATIONTYPE</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a1817b65e76052f11e36a67d6b9efd915" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>removeGNode</name></member>
+      <member refid="class_s_v_f_1_1_common_c_h_graph_1a6a1feb9e268fb56b0de3efc39cfc8db8afa3f4c3017fb95011bfdc11b147eae0c" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>Standard</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a62a3ccdbc55381d5f8d96dc23141f2e5" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>svfMod</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1acd022005e2191bc3bcb265805abee4f8" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>templateNameToInstancesMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a1cf155a56d1a3b3c3ab1a3d593e1afcd" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>vfID</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1a6a581e9b4105745c518124b494b41c63" prot="private" virt="non-virtual"><scope>SVF::CHGraph</scope><name>virtualFunctionToIDMap</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1af1b638faf888898cdf168c25e008ab12" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>WorkList</name></member>
+      <member refid="class_s_v_f_1_1_c_h_graph_1ae50fcba9fb131bc1956bcd6053bb7354" prot="public" virt="non-virtual"><scope>SVF::CHGraph</scope><name>~CHGraph</name></member>
+      <member refid="class_s_v_f_1_1_common_c_h_graph_1aeb7e79b36c74bcded008fe227952c335" prot="public" virt="virtual"><scope>SVF::CHGraph</scope><name>~CommonCHGraph</name></member>
+      <member refid="class_s_v_f_1_1_generic_graph_1a3b94850d788a1b8da45e9b8bf2f2df2c" prot="public" virt="virtual"><scope>SVF::CHGraph</scope><name>~GenericGraph</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,649 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_m_t_a_result_validator" kind="class" language="C++" prot="public">
+    <compoundname>MTAResultValidator</compoundname>
+    <includes refid="_m_t_a_result_validator_8h" local="no">MTAResultValidator.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_m_t_a_result_validator_1a7b461a9384c6b55776a0558307f07217" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int MTAResultValidator::INTERLEV_FLAG</definition>
+        <argsstring></argsstring>
+        <name>INTERLEV_FLAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="25" column="17" bodyfile="include/MTA/MTAResultValidator.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a5a8c57c7e8e1c522f54dbaef06fa8d71" prot="private" static="no" mutable="no">
+        <type>Map&lt; NodeID, const CallInst * &gt;</type>
+        <definition>Map&lt;NodeID, const CallInst*&gt; MTAResultValidator::csnumToInstMap</definition>
+        <argsstring></argsstring>
+        <name>csnumToInstMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="116" column="9" bodyfile="include/MTA/MTAResultValidator.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a448a1b77289d11f68cf3f4845b9e230c" prot="private" static="no" mutable="no">
+        <type>Map&lt; NodeID, CallStrCxt &gt;</type>
+        <definition>Map&lt;NodeID, CallStrCxt&gt; MTAResultValidator::vthdToCxt</definition>
+        <argsstring></argsstring>
+        <name>vthdToCxt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="117" column="9" bodyfile="include/MTA/MTAResultValidator.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a078fcd4c5b53fd3812a9f47a17c3c7dd" prot="private" static="no" mutable="no">
+        <type>Map&lt; NodeID, NodeID &gt;</type>
+        <definition>Map&lt;NodeID, NodeID&gt; MTAResultValidator::vthdTorthd</definition>
+        <argsstring></argsstring>
+        <name>vthdTorthd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="118" column="9" bodyfile="include/MTA/MTAResultValidator.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a2586dbf86f81ad5399084749264c6b6a" prot="private" static="no" mutable="no">
+        <type>Map&lt; NodeID, NodeID &gt;</type>
+        <definition>Map&lt;NodeID, NodeID&gt; MTAResultValidator::rthdTovthd</definition>
+        <argsstring></argsstring>
+        <name>rthdTovthd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="119" column="9" bodyfile="include/MTA/MTAResultValidator.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1adcdb134b8f322f1682e99f34868279f4" prot="private" static="no" mutable="no">
+        <type>Map&lt; NodeID, Set&lt; NodeID &gt; &gt;</type>
+        <definition>Map&lt;NodeID, Set&lt;NodeID&gt; &gt; MTAResultValidator::rthdToChildren</definition>
+        <argsstring></argsstring>
+        <name>rthdToChildren</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="121" column="9" bodyfile="include/MTA/MTAResultValidator.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a0e8f8cdfae31f3e15b750c61765d5c98" prot="private" static="no" mutable="no">
+        <type>MHP::InstToThreadStmtSetMap</type>
+        <definition>MHP::InstToThreadStmtSetMap MTAResultValidator::instToTSMap</definition>
+        <argsstring></argsstring>
+        <name>instToTSMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="123" column="33" bodyfile="include/MTA/MTAResultValidator.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1aa2f3634f4744c15e00fd18b8c7292b27" prot="private" static="no" mutable="no">
+        <type>MHP::ThreadStmtToThreadInterleav</type>
+        <definition>MHP::ThreadStmtToThreadInterleav MTAResultValidator::threadStmtToInterLeaving</definition>
+        <argsstring></argsstring>
+        <name>threadStmtToInterLeaving</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="124" column="38" bodyfile="include/MTA/MTAResultValidator.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1ad1c3a59143dcc36e264790d44aae9d88" prot="private" static="no" mutable="no">
+        <type>ThreadAPI *</type>
+        <definition>ThreadAPI* MTAResultValidator::tdAPI</definition>
+        <argsstring></argsstring>
+        <name>tdAPI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="130" column="15" bodyfile="include/MTA/MTAResultValidator.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a84eea35d671601a22681f16ff73faff2" prot="private" static="no" mutable="no">
+        <type>ThreadCallGraph *</type>
+        <definition>ThreadCallGraph* MTAResultValidator::tcg</definition>
+        <argsstring></argsstring>
+        <name>tcg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="131" column="21" bodyfile="include/MTA/MTAResultValidator.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a760aba79aef537a5a08af77c79ade1d1" prot="private" static="no" mutable="no">
+        <type>MHP *</type>
+        <definition>MHP* MTAResultValidator::mhp</definition>
+        <argsstring></argsstring>
+        <name>mhp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="132" column="9" bodyfile="include/MTA/MTAResultValidator.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a349e41fa243f41e05155bca2adbe144c" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr char const  *</type>
+        <definition>constexpr char const* MTAResultValidator::CXT_THREAD</definition>
+        <argsstring></argsstring>
+        <name>CXT_THREAD</name>
+        <initializer>= &quot;CXT_THREAD&quot;</initializer>
+        <briefdescription>
+<para>Map a statement to its thread interleavings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="126" column="33" bodyfile="include/MTA/MTAResultValidator.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a7b0a37ec546f17aad75d46366608d23a" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr char const  *</type>
+        <definition>constexpr char const* MTAResultValidator::INTERLEV_ACCESS</definition>
+        <argsstring></argsstring>
+        <name>INTERLEV_ACCESS</name>
+        <initializer>= &quot;INTERLEV_ACCESS&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="127" column="33" bodyfile="include/MTA/MTAResultValidator.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a89d4f3416f006baa96185d5735f79818" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr char const  *</type>
+        <definition>constexpr char const* MTAResultValidator::TCT_ACCESS</definition>
+        <argsstring></argsstring>
+        <name>TCT_ACCESS</name>
+        <initializer>= &quot;TCT_ACCESS&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="128" column="33" bodyfile="include/MTA/MTAResultValidator.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a37742b665bd85cb55bb7c73e3249d3d6" prot="private" static="yes" mutable="no">
+        <type>const INTERLEV_FLAG</type>
+        <definition>const INTERLEV_FLAG MTAResultValidator::INTERLEV_TRUE</definition>
+        <argsstring></argsstring>
+        <name>INTERLEV_TRUE</name>
+        <initializer>= 0x01</initializer>
+        <briefdescription>
+<para>Constant INTERLEV_FLAG values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="136" column="32" bodyfile="include/MTA/MTAResultValidator.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1adf3be08fcfe7ea89a1d2cab786674ea9" prot="private" static="yes" mutable="no">
+        <type>const INTERLEV_FLAG</type>
+        <definition>const INTERLEV_FLAG MTAResultValidator::INTERLEV_IMPRECISE</definition>
+        <argsstring></argsstring>
+        <name>INTERLEV_IMPRECISE</name>
+        <initializer>= 0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="137" column="32" bodyfile="include/MTA/MTAResultValidator.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_t_a_result_validator_1a61c524ad4ecd6d9108387693179afacb" prot="private" static="yes" mutable="no">
+        <type>const INTERLEV_FLAG</type>
+        <definition>const INTERLEV_FLAG MTAResultValidator::INTERLEV_UNSOUND</definition>
+        <argsstring></argsstring>
+        <name>INTERLEV_UNSOUND</name>
+        <initializer>= 0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="138" column="32" bodyfile="include/MTA/MTAResultValidator.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_t_a_result_validator_1af785ad6160c214a7bf5654c0b90ba247" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTAResultValidator::MTAResultValidator</definition>
+        <argsstring>(MHP *mh)</argsstring>
+        <name>MTAResultValidator</name>
+        <param>
+          <type>MHP *</type>
+          <declname>mh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="26" column="5" bodyfile="include/MTA/MTAResultValidator.h" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1ac04e317c17940c5e19ce82cc45b57597" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTAResultValidator::~MTAResultValidator</definition>
+        <argsstring>()</argsstring>
+        <name>~MTAResultValidator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="33" column="5" bodyfile="include/MTA/MTAResultValidator.h" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a462f1554e058b656861abfb0aa2e47ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTAResultValidator::analyze</definition>
+        <argsstring>()</argsstring>
+        <name>analyze</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="38" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="18" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a73db9ad234b263b6e644e4b38be14fe6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt; &amp;</type>
+        <definition>std::vector&lt; std::string &gt; &amp; MTAResultValidator::split</definition>
+        <argsstring>(const std::string &amp;s, char delim, std::vector&lt; std::string &gt; &amp;elems)</argsstring>
+        <name>split</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>delim</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>elems</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="47" column="17" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="41" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a7dad63ce2a85142a56d13926f10fde47" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; MTAResultValidator::split</definition>
+        <argsstring>(const std::string &amp;s, char delim)</argsstring>
+        <name>split</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>delim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="48" column="17" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="52" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a4ff908be3569c18528fb6f6ff98cd11a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NodeID</type>
+        <definition>NodeID MTAResultValidator::getIntArg</definition>
+        <argsstring>(const Instruction *inst, unsigned int arg_num)</argsstring>
+        <name>getIntArg</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>arg_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="51" column="12" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="58" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a1ac51d2847f9bdee27092ab22211bb61" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; MTAResultValidator::getStringArg</definition>
+        <argsstring>(const Instruction *inst, unsigned int arg_num)</argsstring>
+        <name>getStringArg</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>arg_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="52" column="17" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="67" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1afb110fec926967ba334bf2635d58a339" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CallStrCxt</type>
+        <definition>CallStrCxt MTAResultValidator::getCxtArg</definition>
+        <argsstring>(const Instruction *inst, unsigned int arg_num)</argsstring>
+        <name>getCxtArg</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>inst</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>arg_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="53" column="16" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="84" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1ab3ba3c6d9c40e97febdab0e7d4ad9a3e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const Instruction *</type>
+        <definition>const Instruction * MTAResultValidator::getPreviousMemoryAccessInst</definition>
+        <argsstring>(const Instruction *I)</argsstring>
+        <name>getPreviousMemoryAccessInst</name>
+        <param>
+          <type>const Instruction *</type>
+          <declname>I</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="59" column="23" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="105" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a6306899b5360e106dd090bea571027bf" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MTAResultValidator::matchCxt</definition>
+        <argsstring>(const CallStrCxt cxt1, const CallStrCxt cxt2) const</argsstring>
+        <name>matchCxt</name>
+        <param>
+          <type>const CallStrCxt</type>
+          <declname>cxt1</declname>
+        </param>
+        <param>
+          <type>const CallStrCxt</type>
+          <declname>cxt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="62" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="150" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1ae7d61becd14123f60976fd7261d0c84d" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTAResultValidator::dumpCxt</definition>
+        <argsstring>(const CallStrCxt &amp;cxt) const</argsstring>
+        <name>dumpCxt</name>
+        <param>
+          <type>const CallStrCxt &amp;</type>
+          <declname>cxt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="65" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="157" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a1af033b5742fa9cc1e4f9873184775b7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTAResultValidator::dumpInterlev</definition>
+        <argsstring>(NodeBS &amp;lev)</argsstring>
+        <name>dumpInterlev</name>
+        <param>
+          <type>NodeBS &amp;</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="67" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="172" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a9c9baeb57a645b57cc9053b3071f0602" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string MTAResultValidator::getOutput</definition>
+        <argsstring>(const char *scenario, bool analysisRes)</argsstring>
+        <name>getOutput</name>
+        <param>
+          <type>const char *</type>
+          <declname>scenario</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>analysisRes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="70" column="24" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="117" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1ac24a8a6922d9dc9edecab3bc45bc9204" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string MTAResultValidator::getOutputforInterlevAnalysis</definition>
+        <argsstring>(const char *scenario, INTERLEV_FLAG analysisRes)</argsstring>
+        <name>getOutputforInterlevAnalysis</name>
+        <param>
+          <type>const char *</type>
+          <declname>scenario</declname>
+        </param>
+        <param>
+          <type>INTERLEV_FLAG</type>
+          <declname>analysisRes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="71" column="24" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="129" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a1fc4116b134aa87420d055b193208e68" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MTAResultValidator::collectCallsiteTargets</definition>
+        <argsstring>()</argsstring>
+        <name>collectCallsiteTargets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="78" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="183" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a430c03371b2b5b7300c5c3a68d633909" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MTAResultValidator::collectCxtThreadTargets</definition>
+        <argsstring>()</argsstring>
+        <name>collectCxtThreadTargets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="84" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="213" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1abdf31e8fca824b56a53788de525042a6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MTAResultValidator::collectTCTTargets</definition>
+        <argsstring>()</argsstring>
+        <name>collectTCTTargets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="90" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="239" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a3c3eacff786230d093d27615ff360ed4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MTAResultValidator::collectInterleavingTargets</definition>
+        <argsstring>()</argsstring>
+        <name>collectInterleavingTargets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="96" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="265" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1afa01b108b67ec2ac05a6444b55dbfe01" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MTAResultValidator::validateCxtThread</definition>
+        <argsstring>()</argsstring>
+        <name>validateCxtThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="102" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="302" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1ae6a18cbaf113ee8e28c3e8dca458d4be" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MTAResultValidator::validateTCT</definition>
+        <argsstring>()</argsstring>
+        <name>validateTCT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="107" column="10" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="374" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_t_a_result_validator_1a373b5227fbfa82ac070f55db999afb28" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>INTERLEV_FLAG</type>
+        <definition>MTAResultValidator::INTERLEV_FLAG MTAResultValidator::validateInterleaving</definition>
+        <argsstring>()</argsstring>
+        <name>validateInterleaving</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MTA/MTAResultValidator.h" line="112" column="19" bodyfile="lib/MTA/MTAResultValidator.cpp" bodystart="425" bodyend="525"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Validate the result of context-sensitive analysis, including context-sensitive thread detection and thread interleaving. </para>
+    </detaileddescription>
+    <location file="include/MTA/MTAResultValidator.h" line="21" column="1" bodyfile="include/MTA/MTAResultValidator.h" bodystart="22" bodyend="140"/>
+    <listofallmembers>
+      <member refid="class_m_t_a_result_validator_1a462f1554e058b656861abfb0aa2e47ff" prot="public" virt="non-virtual"><scope>MTAResultValidator</scope><name>analyze</name></member>
+      <member refid="class_m_t_a_result_validator_1a1fc4116b134aa87420d055b193208e68" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>collectCallsiteTargets</name></member>
+      <member refid="class_m_t_a_result_validator_1a430c03371b2b5b7300c5c3a68d633909" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>collectCxtThreadTargets</name></member>
+      <member refid="class_m_t_a_result_validator_1a3c3eacff786230d093d27615ff360ed4" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>collectInterleavingTargets</name></member>
+      <member refid="class_m_t_a_result_validator_1abdf31e8fca824b56a53788de525042a6" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>collectTCTTargets</name></member>
+      <member refid="class_m_t_a_result_validator_1a5a8c57c7e8e1c522f54dbaef06fa8d71" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>csnumToInstMap</name></member>
+      <member refid="class_m_t_a_result_validator_1a349e41fa243f41e05155bca2adbe144c" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>CXT_THREAD</name></member>
+      <member refid="class_m_t_a_result_validator_1ae7d61becd14123f60976fd7261d0c84d" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>dumpCxt</name></member>
+      <member refid="class_m_t_a_result_validator_1a1af033b5742fa9cc1e4f9873184775b7" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>dumpInterlev</name></member>
+      <member refid="class_m_t_a_result_validator_1afb110fec926967ba334bf2635d58a339" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>getCxtArg</name></member>
+      <member refid="class_m_t_a_result_validator_1a4ff908be3569c18528fb6f6ff98cd11a" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>getIntArg</name></member>
+      <member refid="class_m_t_a_result_validator_1a9c9baeb57a645b57cc9053b3071f0602" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>getOutput</name></member>
+      <member refid="class_m_t_a_result_validator_1ac24a8a6922d9dc9edecab3bc45bc9204" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>getOutputforInterlevAnalysis</name></member>
+      <member refid="class_m_t_a_result_validator_1ab3ba3c6d9c40e97febdab0e7d4ad9a3e" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>getPreviousMemoryAccessInst</name></member>
+      <member refid="class_m_t_a_result_validator_1a1ac51d2847f9bdee27092ab22211bb61" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>getStringArg</name></member>
+      <member refid="class_m_t_a_result_validator_1a0e8f8cdfae31f3e15b750c61765d5c98" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>instToTSMap</name></member>
+      <member refid="class_m_t_a_result_validator_1a7b0a37ec546f17aad75d46366608d23a" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>INTERLEV_ACCESS</name></member>
+      <member refid="class_m_t_a_result_validator_1a7b461a9384c6b55776a0558307f07217" prot="public" virt="non-virtual"><scope>MTAResultValidator</scope><name>INTERLEV_FLAG</name></member>
+      <member refid="class_m_t_a_result_validator_1adf3be08fcfe7ea89a1d2cab786674ea9" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>INTERLEV_IMPRECISE</name></member>
+      <member refid="class_m_t_a_result_validator_1a37742b665bd85cb55bb7c73e3249d3d6" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>INTERLEV_TRUE</name></member>
+      <member refid="class_m_t_a_result_validator_1a61c524ad4ecd6d9108387693179afacb" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>INTERLEV_UNSOUND</name></member>
+      <member refid="class_m_t_a_result_validator_1a6306899b5360e106dd090bea571027bf" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>matchCxt</name></member>
+      <member refid="class_m_t_a_result_validator_1a760aba79aef537a5a08af77c79ade1d1" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>mhp</name></member>
+      <member refid="class_m_t_a_result_validator_1af785ad6160c214a7bf5654c0b90ba247" prot="public" virt="non-virtual"><scope>MTAResultValidator</scope><name>MTAResultValidator</name></member>
+      <member refid="class_m_t_a_result_validator_1adcdb134b8f322f1682e99f34868279f4" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>rthdToChildren</name></member>
+      <member refid="class_m_t_a_result_validator_1a2586dbf86f81ad5399084749264c6b6a" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>rthdTovthd</name></member>
+      <member refid="class_m_t_a_result_validator_1a73db9ad234b263b6e644e4b38be14fe6" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>split</name></member>
+      <member refid="class_m_t_a_result_validator_1a7dad63ce2a85142a56d13926f10fde47" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>split</name></member>
+      <member refid="class_m_t_a_result_validator_1a84eea35d671601a22681f16ff73faff2" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>tcg</name></member>
+      <member refid="class_m_t_a_result_validator_1a89d4f3416f006baa96185d5735f79818" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>TCT_ACCESS</name></member>
+      <member refid="class_m_t_a_result_validator_1ad1c3a59143dcc36e264790d44aae9d88" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>tdAPI</name></member>
+      <member refid="class_m_t_a_result_validator_1aa2f3634f4744c15e00fd18b8c7292b27" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>threadStmtToInterLeaving</name></member>
+      <member refid="class_m_t_a_result_validator_1afa01b108b67ec2ac05a6444b55dbfe01" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>validateCxtThread</name></member>
+      <member refid="class_m_t_a_result_validator_1a373b5227fbfa82ac070f55db999afb28" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>validateInterleaving</name></member>
+      <member refid="class_m_t_a_result_validator_1ae6a18cbaf113ee8e28c3e8dca458d4be" prot="protected" virt="non-virtual"><scope>MTAResultValidator</scope><name>validateTCT</name></member>
+      <member refid="class_m_t_a_result_validator_1a448a1b77289d11f68cf3f4845b9e230c" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>vthdToCxt</name></member>
+      <member refid="class_m_t_a_result_validator_1a078fcd4c5b53fd3812a9f47a17c3c7dd" prot="private" virt="non-virtual"><scope>MTAResultValidator</scope><name>vthdTorthd</name></member>
+      <member refid="class_m_t_a_result_validator_1ac04e317c17940c5e19ce82cc45b57597" prot="public" virt="non-virtual"><scope>MTAResultValidator</scope><name>~MTAResultValidator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

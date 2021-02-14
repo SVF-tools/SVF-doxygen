@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_versioned_flow_sensitive" xml:lang="en-US">
+<title>SVF::VersionedFlowSensitive Class Reference</title>
+<indexterm><primary>SVF::VersionedFlowSensitive</primary></indexterm>
+<para>
+<computeroutput>#include &lt;VersionedFlowSensitive.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::VersionedFlowSensitive:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_versioned_flow_sensitive.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a9d5fd2c683484053f5e7c0ab94cb766b"/>enum <emphasis role="strong">VersionType</emphasis> { <emphasis role="strong">CONSUME</emphasis>
+, <emphasis role="strong">YIELD</emphasis>
+ }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1af9a43f48b7d99cc6694f3ae3248fd8e0"/>typedef Map&lt; NodeID, Version &gt; <emphasis role="strong">ObjToVersionMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a6e36886fac2c276047def0a5acb85c0e"/>typedef Map&lt; NodeID, MeldVersion &gt; <emphasis role="strong">ObjToMeldVersionMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a0ea2cc21f9de287746ca2216b08e22b4"/>typedef Map&lt; NodeID, ObjToVersionMap &gt; <emphasis role="strong">LocVersionMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a31f2c86285f3366d0fc06590eb2a24bd"/>typedef Map&lt; NodeID, ObjToMeldVersionMap &gt; <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a31f2c86285f3366d0fc06590eb2a24bd">LocMeldVersionMap</link></para>
+
+<para>Maps locations to all versions it sees (through objects). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1aab24817adb8dca1b918f4d23f4821186"/>typedef Map&lt; NodeID, Map&lt; Version, Set&lt; Version &gt; &gt; &gt; <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1aab24817adb8dca1b918f4d23f4821186">VersionRelianceMap</link></para>
+
+<para>(o -&gt; (v -&gt; versions with rely on o:v). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1af52cafc2bb393823f51ca89a0abacec4"/><link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1af52cafc2bb393823f51ca89a0abacec4">VersionedFlowSensitive</link> (<link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> *_pag, <link linkend="_class_s_v_f_1_1_pointer_analysis_1a0b182ac680cce0547dbe7714c870ca85">PTATY</link> type=<link linkend="_class_s_v_f_1_1_pointer_analysis_1a0b182ac680cce0547dbe7714c870ca85a412254a7738029bf3ee96f5c15a6bec9">VFS_WPA</link>)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a81d3528fd082018e4345f0b026bf3584"/>virtual void <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a81d3528fd082018e4345f0b026bf3584">initialize</link> () override</para>
+
+<para>Initialize analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1ad955fda89f4f749151a1bd14562b03f6"/>virtual void <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1ad955fda89f4f749151a1bd14562b03f6">finalize</link> () override</para>
+
+<para>Finalize analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a6e4964389f96667bd69354fd4a742720"/>virtual const std::string <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a6e4964389f96667bd69354fd4a742720">PTAName</link> () const override</para>
+
+<para>Get PTA name. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a59f3dd74ed8c3e2fc48b9353ba2452aa"/>static VersionedVar <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a59f3dd74ed8c3e2fc48b9353ba2452aa">atKey</link> (NodeID, Version)</para>
+
+<para>Return key into vPtD for address-taken var of a specific version. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1afd1e0d4445e1e50e95f816e51f8de3c8"/>static bool <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1afd1e0d4445e1e50e95f816e51f8de3c8">classof</link> (const <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive">VersionedFlowSensitive</link> *)</para>
+
+<para>Methods to support type inquiry through isa, cast, and dyn_cast. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1abe1874f12ba05b4f453604c6d91598d6"/>static bool <emphasis role="strong">classof</emphasis> (const <link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> *pta)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1ab7b98127319bac71bd84652e622b5958"/>static <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive">VersionedFlowSensitive</link> * <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1ab7b98127319bac71bd84652e622b5958">createVFSWPA</link> (<link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> *_pag)</para>
+
+<para>Create single instance of versioned flow-sensitive points-to analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a754c77fff88e8f415dc7a2096d1bffe2"/>static void <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a754c77fff88e8f415dc7a2096d1bffe2">releaseVFSWPA</link> ()</para>
+
+<para>Release flow-sensitive pointer analysis. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a3d44a343a2e3f5d276fd1b069c92e112"/>static const Version <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a3d44a343a2e3f5d276fd1b069c92e112">invalidVersion</link> = 0</para>
+
+<para>If this version appears, there has been an error. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a1d1f71c41cc3e81e636b58f4436e6d9b">processLoad</link> (const <link linkend="_class_s_v_f_1_1_load_v_f_g_node">LoadSVFGNode</link> *load) override</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1aa96f517740420665168e9b0c7d2347f1">processStore</link> (const <link linkend="_class_s_v_f_1_1_store_v_f_g_node">StoreSVFGNode</link> *store) override</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a8cad0df2ae7df81dc2a966e694a0f7a2">processNode</link> (NodeID n) override</para>
+
+<para>Handle various constraints. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a18f24fe34af677e2a8c78ee89b89be1c">updateConnectedNodes</link> (const SVFGEdgeSetTy &amp;newEdges) override</para>
+
+<para>Update nodes connected during updating call graph. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a7add83046cc87c22e81bffb80c04bf58"/>virtual bool <link linkend="_class_s_v_f_1_1_versioned_flow_sensitive_1a7add83046cc87c22e81bffb80c04bf58">propAlongIndirectEdge</link> (const <link linkend="_class_s_v_f_1_1_indirect_s_v_f_g_edge">IndirectSVFGEdge</link> *edge) override</para>
+
+<para>Override to do nothing. Instead, we will use propagateVersion when necessary. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1aaee58f266762146e9fdc08ecfc326b29"/>class <emphasis role="strong">VersionedFlowSensitiveStat</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Versioned flow sensitive whole program pointer analysis </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a1d1f71c41cc3e81e636b58f4436e6d9b"/>    <section>
+    <title>processLoad()</title>
+<indexterm><primary>processLoad</primary><secondary>SVF::VersionedFlowSensitive</secondary></indexterm>
+<indexterm><primary>SVF::VersionedFlowSensitive</primary><secondary>processLoad</secondary></indexterm>
+<para><computeroutput>bool VersionedFlowSensitive::processLoad (const <link linkend="_class_s_v_f_1_1_load_v_f_g_node">LoadSVFGNode</link> * load)<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process load node</para>
+
+<para>Foreach node \in src pts(dst) = union pts(node) </para>
+
+<para>If o is a field-insensitive object, we should also get all field nodes&apos; points-to sets and pass them to p.</para>
+
+<para>If the ptd is a field-insensitive node, we should also get all field nodes&apos; points-to sets and pass them to pagDst.</para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_flow_sensitive_1a9968530b3dee876f55e6659530decf27">SVF::FlowSensitive</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a8cad0df2ae7df81dc2a966e694a0f7a2"/>    <section>
+    <title>processNode()</title>
+<indexterm><primary>processNode</primary><secondary>SVF::VersionedFlowSensitive</secondary></indexterm>
+<indexterm><primary>SVF::VersionedFlowSensitive</primary><secondary>processNode</secondary></indexterm>
+<para><computeroutput>void VersionedFlowSensitive::processNode (NodeID nodeId)<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handle various constraints. </para>
+</para>
+
+<para>Process each <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_flow_sensitive_1a16f594356ea565eb1fed2acea516a16b">SVF::FlowSensitive</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1aa96f517740420665168e9b0c7d2347f1"/>    <section>
+    <title>processStore()</title>
+<indexterm><primary>processStore</primary><secondary>SVF::VersionedFlowSensitive</secondary></indexterm>
+<indexterm><primary>SVF::VersionedFlowSensitive</primary><secondary>processStore</secondary></indexterm>
+<para><computeroutput>bool VersionedFlowSensitive::processStore (const <link linkend="_class_s_v_f_1_1_store_v_f_g_node">StoreSVFGNode</link> * store)<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Process store node</para>
+
+<para>foreach node \in dst pts(node) = union pts(src) </para>
+
+<para>STORE statement can only be processed if the pointer on the LHS points to something. If we handle STORE with an empty points-to set, the OUT set will be updated from IN set. Then if LHS pointer points-to one target and it has been identified as a strong update, we can&apos;t remove those points-to information computed before this strong update from the OUT set.</para>
+
+<para>check if this is a strong updates store</para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_flow_sensitive_1aa37d591d2d4f65957e840bef4d142a6a">SVF::FlowSensitive</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_versioned_flow_sensitive_1a18f24fe34af677e2a8c78ee89b89be1c"/>    <section>
+    <title>updateConnectedNodes()</title>
+<indexterm><primary>updateConnectedNodes</primary><secondary>SVF::VersionedFlowSensitive</secondary></indexterm>
+<indexterm><primary>SVF::VersionedFlowSensitive</primary><secondary>updateConnectedNodes</secondary></indexterm>
+<para><computeroutput>void VersionedFlowSensitive::updateConnectedNodes (const SVFGEdgeSetTy &amp; edges)<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update nodes connected during updating call graph. </para>
+</para>
+
+<para>Push nodes connected during update call graph into worklist so they will be solved during next iteration. </para>
+
+<para>If this is a formal-param or actual-ret node, we need to solve this phi node in next iteration</para>
+
+<para>If this is a formal-in or actual-out node, we need to propagate points-to information from its predecessor node.</para>
+
+<para>If this is a field-insensitive obj, propagate all field node&apos;s pts</para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_flow_sensitive_1a1886b4964efa92cfff761493d12768b8">SVF::FlowSensitive</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/WPA/VersionedFlowSensitive.hlib/WPA/VersionedFlowSensitive.cpp</section>
+</section>

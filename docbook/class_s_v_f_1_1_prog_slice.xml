@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_prog_slice" xml:lang="en-US">
+<title>SVF::ProgSlice Class Reference</title>
+<indexterm><primary>SVF::ProgSlice</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a4864972e12f3e95f06bcf2bf8c847b3a"/>typedef Set&lt; const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * &gt; <emphasis role="strong">SVFGNodeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1af41c438baa739406a35bcb2e9ba431dd"/>typedef SVFGNodeSet::const_iterator <emphasis role="strong">SVFGNodeSetIter</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a3dc89d666a0f369ca85e13632676e6aa"/>typedef <link linkend="_struct_dd_node">PathCondAllocator::Condition</link> <emphasis role="strong">Condition</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ae16157bd0b66dfb3cc18b778a745ed00"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *, <link linkend="_struct_dd_node">Condition</link> * &gt; <link linkend="_class_s_v_f_1_1_prog_slice_1ae16157bd0b66dfb3cc18b778a745ed00">SVFGNodeToCondMap</link></para>
+
+<para>map a SVFGNode to its condition during value-flow guard computation </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a684e44ade783439c6f77a8d84eed282c"/>typedef <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">FIFOWorkList</link>&lt; const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * &gt; <link linkend="_class_s_v_f_1_1_prog_slice_1a684e44ade783439c6f77a8d84eed282c">VFWorkList</link></para>
+
+<para>worklist for value-flow guard computation </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ab13cc8f64fed5f06b11f7ca67cbc0dc5"/>typedef <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">FIFOWorkList</link>&lt; const BasicBlock * &gt; <link linkend="_class_s_v_f_1_1_prog_slice_1ab13cc8f64fed5f06b11f7ca67cbc0dc5">CFWorkList</link></para>
+
+<para>worklist for control-flow guard computation </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a76b91deacf7a66d142752f5a303386eb"/><link linkend="_class_s_v_f_1_1_prog_slice_1a76b91deacf7a66d142752f5a303386eb">ProgSlice</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *src, <link linkend="_class_s_v_f_1_1_path_cond_allocator">PathCondAllocator</link> *pa, const <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> *graph)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ad761a9848d2dab7700a7fdeb91c2454d"/>virtual <link linkend="_class_s_v_f_1_1_prog_slice_1ad761a9848d2dab7700a7fdeb91c2454d">~ProgSlice</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1aae54f4e8a827f55abe08762b69d9f84b"/>u32_t <emphasis role="strong">getForwardSliceSize</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a967fa01a8baae0dd086b5c09ae0faa7b"/>u32_t <emphasis role="strong">getBackwardSliceSize</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a0017e160c2a5412947c170f944e593bd"/>void <link linkend="_class_s_v_f_1_1_prog_slice_1a0017e160c2a5412947c170f944e593bd">addToForwardSlice</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+
+<para>Forward and backward slice operations. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ac98eccef9fc2521b833a8c14b43e49e1"/>void <emphasis role="strong">addToBackwardSlice</emphasis> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a5a4b7f34001cc90f9b60222caee1bde6"/>bool <emphasis role="strong">inForwardSlice</emphasis> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a066430ffa98a3fa0a5ad48d26e0450f7"/>bool <emphasis role="strong">inBackwardSlice</emphasis> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ae482fcb138aaf345586a39daa34ff895"/>SVFGNodeSetIter <emphasis role="strong">forwardSliceBegin</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1add10d8fd041ac7e6eb611df8a6b1384b"/>SVFGNodeSetIter <emphasis role="strong">forwardSliceEnd</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ab5810f8a7a994f0637c54b94d0367a89"/>SVFGNodeSetIter <emphasis role="strong">backwardSliceBegin</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1aed4bedc716a3e252e44a6f28e677d61c"/>SVFGNodeSetIter <emphasis role="strong">backwardSliceEnd</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ac1dc48ea64a89ce37394a22e609a0cd0"/>const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * <link linkend="_class_s_v_f_1_1_prog_slice_1ac1dc48ea64a89ce37394a22e609a0cd0">getSource</link> () const</para>
+
+<para>root and sink operations </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1acee5145fb261280a1f8187184e393aed"/>void <emphasis role="strong">addToSinks</emphasis> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a03a1ef4d56958fa4a0c3a3a95806203d"/>const SVFGNodeSet &amp; <emphasis role="strong">getSinks</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1adf620c97daed49735d21b485c448b4a2"/>SVFGNodeSetIter <emphasis role="strong">sinksBegin</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a27636f096ec825c4d5cb1dca608afb31"/>SVFGNodeSetIter <emphasis role="strong">sinksEnd</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1af6f137be08ca0e743424ff07d679777d"/>void <emphasis role="strong">setPartialReachable</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ae6102647fa4985142c293116516612cd"/>void <emphasis role="strong">setAllReachable</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a397632ce0c523c4a54c5dc578606d14d"/>bool <emphasis role="strong">setReachGlobal</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a3822badbbe9ac808296d5248f2dbf8e2"/>bool <emphasis role="strong">isPartialReachable</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a2f96f034b7236791fe1d4d351174722e"/>bool <emphasis role="strong">isAllReachable</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a067480a9815fdb728cd259ef9b687e3e"/>bool <emphasis role="strong">isReachGlobal</emphasis> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_prog_slice_1aa7979418bed24fcecfc6fa04532cd586">AllPathReachableSolve</link> ()</para>
+
+<para>Guarded reachability solve. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_prog_slice_1a62a9f2c107f27d6c04c30ef153ffb8ed">isSatisfiableForAll</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_prog_slice_1a45fb7711498bcba60e931c9c2a9ccec4">isSatisfiableForPairs</link> ()</para>
+</listitem>
+            <listitem><para>const Value * <link linkend="_class_s_v_f_1_1_prog_slice_1ae91ba54faff9f6a2f85a499799419cb5">getLLVMValue</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node) const</para>
+
+<para>Get llvm value from a SVFGNode. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a40ca6247fde5e973298e8383f2180203"/>const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * <link linkend="_class_s_v_f_1_1_prog_slice_1a40ca6247fde5e973298e8383f2180203">getCallSite</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge) const</para>
+
+<para>Get callsite ID and get returnsiteID from SVFGEdge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a2a4c2d573b43f005ae668bffc7fc911d"/>const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * <emphasis role="strong">getRetSite</emphasis> (const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a37d2e74fd977ebf9bfbe881bbe1c4a95"/><link linkend="_struct_dd_node">Condition</link> * <link linkend="_class_s_v_f_1_1_prog_slice_1a37d2e74fd977ebf9bfbe881bbe1c4a95">condAnd</link> (<link linkend="_struct_dd_node">Condition</link> *lhs, <link linkend="_struct_dd_node">Condition</link> *rhs)</para>
+
+<para>Condition operations. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ac57638eaa2f656b8a7a5e3484c8e1265"/><link linkend="_struct_dd_node">Condition</link> * <emphasis role="strong">condOr</emphasis> (<link linkend="_struct_dd_node">Condition</link> *lhs, <link linkend="_struct_dd_node">Condition</link> *rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1af90dd6f54db7bef80cd7e5c97e8dd193"/><link linkend="_struct_dd_node">Condition</link> * <emphasis role="strong">condNeg</emphasis> (<link linkend="_struct_dd_node">Condition</link> *cond)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a50bb38398ecc422b6d10e0d77bb032c3"/><link linkend="_struct_dd_node">Condition</link> * <emphasis role="strong">getTrueCond</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a9150b694dd7b2e53ef7e78ea1b78094d"/><link linkend="_struct_dd_node">Condition</link> * <emphasis role="strong">getFalseCond</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a39381b290a1bc3cc7d7e6d706a7392cc"/>std::string <emphasis role="strong">dumpCond</emphasis> (<link linkend="_struct_dd_node">Condition</link> *cond) const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_s_v_f_1_1_prog_slice_1afac06b0be2b04cb8a65af21fd697b756">evalFinalCond</link> () const</para>
+
+<para>Evaluate final condition. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_prog_slice_1ab1fdec8d39c9890324718607d7464eab">annotatePaths</link> ()</para>
+
+<para>Annotate program according to final condition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a32ffd130984483b201c485da91ec467f"/>const <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> * <emphasis role="strong">getSVFG</emphasis> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_prog_slice_1a899332b210414ac991b57e83851ee5be">destroy</link> ()</para>
+
+<para>Release memory. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_prog_slice_1ab514f387ae2122e919030c5006f1bbce">clearCFCond</link> ()</para>
+
+<para>Clear Control flow conditions before each VF computation. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a15542937ee75195de1a3ffca18a168cf"/><link linkend="_struct_dd_node">Condition</link> * <link linkend="_class_s_v_f_1_1_prog_slice_1a15542937ee75195de1a3ffca18a168cf">getVFCond</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node) const</para>
+
+<para>Get/set VF (value-flow) and CF (control-flow) conditions. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1add68dd06ab20899bc898d065ae2e82c0"/>bool <emphasis role="strong">setVFCond</emphasis> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node, <link linkend="_struct_dd_node">Condition</link> *cond)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ab945cc59c20bb4801f6e11120cc6940d"/><link linkend="_struct_dd_node">Condition</link> * <link linkend="_class_s_v_f_1_1_prog_slice_1ab945cc59c20bb4801f6e11120cc6940d">ComputeIntraVFGGuard</link> (const BasicBlock *src, const BasicBlock *dst)</para>
+
+<para>Compute guards for value-flows. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ae6ca91373bb2a5c2ddc3b20feb630fe6"/><link linkend="_struct_dd_node">Condition</link> * <emphasis role="strong">ComputeInterCallVFGGuard</emphasis> (const BasicBlock *src, const BasicBlock *dst, const BasicBlock *callBB)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a0e1c3e7936361a27e876fa1a0678e6c5"/><link linkend="_struct_dd_node">Condition</link> * <emphasis role="strong">ComputeInterRetVFGGuard</emphasis> (const BasicBlock *src, const BasicBlock *dst, const BasicBlock *retBB)</para>
+</listitem>
+            <listitem><para>const BasicBlock * <link linkend="_class_s_v_f_1_1_prog_slice_1a8b61702d8e35f066bb78e823f2c59ce6">getSVFGNodeBB</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1afad8cd2f720bf01eedd825c3c418abc0"/>const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * <link linkend="_class_s_v_f_1_1_prog_slice_1afad8cd2f720bf01eedd825c3c418abc0">getCurSVFGNode</link> () const</para>
+
+<para>Get/set current <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1aee72d029c185c24b2bf01cdc0dcb25d8"/>void <emphasis role="strong">setCurSVFGNode</emphasis> (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> *node)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a2b8ad7aad51029106d88e81072e09a5e"/>void <link linkend="_class_s_v_f_1_1_prog_slice_1a2b8ad7aad51029106d88e81072e09a5e">setFinalCond</link> (<link linkend="_struct_dd_node">Condition</link> *cond)</para>
+
+<para>Set final condition after all path reachability analysis. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_prog_slice_1aa7979418bed24fcecfc6fa04532cd586"/>    <section>
+    <title>AllPathReachableSolve()</title>
+<indexterm><primary>AllPathReachableSolve</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>AllPathReachableSolve</secondary></indexterm>
+<para><computeroutput>bool ProgSlice::AllPathReachableSolve ( )</computeroutput></para><para>
+
+<para>Guarded reachability solve. </para>
+</para>
+
+<para>Compute path conditions for nodes on the backward slice path condition of each node is calculated starting from root node (source) Given a SVFGNode n, its path condition C is allocated (path_i stands for one of m program paths reaches n)</para>
+
+<para>C = \bigvee Guard(path_i), 0 &lt; i &lt; m Guard(path_i) = \bigwedge VFGGuard(x,y), suppose (x,y) are two SVFGNode nodes on path_i </para>
+
+<para>mark source node conditions to be true</para>
+
+<para>clean up the control flow conditions for next round guard computation</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ab1fdec8d39c9890324718607d7464eab"/>    <section>
+    <title>annotatePaths()</title>
+<indexterm><primary>annotatePaths</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>annotatePaths</secondary></indexterm>
+<para><computeroutput>void ProgSlice::annotatePaths ( )</computeroutput></para><para>
+
+<para>Annotate program according to final condition. </para>
+</para>
+
+<para>Annotate program paths according to the final path condition computed </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ab514f387ae2122e919030c5006f1bbce"/>    <section>
+    <title>clearCFCond()</title>
+<indexterm><primary>clearCFCond</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>clearCFCond</secondary></indexterm>
+<para><computeroutput>void SVF::ProgSlice::clearCFCond ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clear Control flow conditions before each VF computation. </para>
+</para>
+
+<para>TODO: how to clean bdd memory</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a899332b210414ac991b57e83851ee5be"/>    <section>
+    <title>destroy()</title>
+<indexterm><primary>destroy</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>destroy</secondary></indexterm>
+<para><computeroutput>void ProgSlice::destroy ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Release memory. </para>
+</para>
+
+<para>TODO: how to clean bdd memory</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_prog_slice_1afac06b0be2b04cb8a65af21fd697b756"/>    <section>
+    <title>evalFinalCond()</title>
+<indexterm><primary>evalFinalCond</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>evalFinalCond</secondary></indexterm>
+<para><computeroutput>std::string ProgSlice::evalFinalCond ( ) const</computeroutput></para><para>
+
+<para>Evaluate final condition. </para>
+</para>
+
+<para>Evaluate Atoms of a condition TODO: for now we only evaluate one path, evaluate every single path</para>
+
+<para>Atom &#8211; a propositional valirable: a, b, c Literal &#8211; an atom or its negation: a, ~a Clause &#8211; A disjunction of some literals: a \vee b CNF formula &#8211; a conjunction of some clauses: (a \vee b ) \wedge (c \vee d) </para>
+
+<para>print leak path after eliminating duplicated element</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_prog_slice_1ae91ba54faff9f6a2f85a499799419cb5"/>    <section>
+    <title>getLLVMValue()</title>
+<indexterm><primary>getLLVMValue</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>getLLVMValue</secondary></indexterm>
+<para><computeroutput>const Value * ProgSlice::getLLVMValue (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * node) const</computeroutput></para><para>
+
+<para>Get llvm value from a SVFGNode. </para>
+</para>
+
+<para>Return llvm value for addr/copy/gep/load/phi/actualParam/formalParam/actualRet/formalRet but not for store/mssaphi/actualIn/acutalOut/formalIn/formalOut </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a8b61702d8e35f066bb78e823f2c59ce6"/>    <section>
+    <title>getSVFGNodeBB()</title>
+<indexterm><primary>getSVFGNodeBB</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>getSVFGNodeBB</secondary></indexterm>
+<para><computeroutput>const BasicBlock* SVF::ProgSlice::getSVFGNodeBB (const <link linkend="_class_s_v_f_1_1_v_f_g_node">SVFGNode</link> * node) const<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Return the basic block where a SVFGNode resides in a SVFGNode may not in a basic block if it is not a program statement (e.g. <link linkend="_class_s_v_f_1_1_p_a_g_edge">PAGEdge</link> is an global assignment or NullPtrSVFGNode) </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a62a9f2c107f27d6c04c30ef153ffb8ed"/>    <section>
+    <title>isSatisfiableForAll()</title>
+<indexterm><primary>isSatisfiableForAll</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>isSatisfiableForAll</secondary></indexterm>
+<para><computeroutput>bool ProgSlice::isSatisfiableForAll ( )</computeroutput></para>
+<para>Solve by computing disjunction of conditions from all sinks (e.g., memory leak) </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_prog_slice_1a45fb7711498bcba60e931c9c2a9ccec4"/>    <section>
+    <title>isSatisfiableForPairs()</title>
+<indexterm><primary>isSatisfiableForPairs</primary><secondary>SVF::ProgSlice</secondary></indexterm>
+<indexterm><primary>SVF::ProgSlice</primary><secondary>isSatisfiableForPairs</secondary></indexterm>
+<para><computeroutput>bool ProgSlice::isSatisfiableForPairs ( )</computeroutput></para>
+<para>Solve by analysing each pair of sinks (e.g., double free) </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/SABER/ProgSlice.hlib/SABER/ProgSlice.cpp</section>
+</section>

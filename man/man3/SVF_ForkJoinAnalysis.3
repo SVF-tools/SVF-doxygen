@@ -1,0 +1,101 @@
+.TH "SVF::ForkJoinAnalysis" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::ForkJoinAnalysis
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBValDomain\fP { \fBEmpty\fP, \fBTDAlive\fP, \fBTDDead\fP }"
+.br
+.RI "semilattice Empty==>TDDead==>TDAlive "
+.ti -1c
+.RI "typedef TCT::InstVec \fBInstVec\fP"
+.br
+.ti -1c
+.RI "typedef Map< const \fBCxtStmt\fP, \fBValDomain\fP > \fBCxtStmtToAliveFlagMap\fP"
+.br
+.ti -1c
+.RI "typedef Map< const \fBCxtStmt\fP, NodeBS > \fBCxtStmtToTIDMap\fP"
+.br
+.ti -1c
+.RI "typedef Set< NodePair > \fBThreadPairSet\fP"
+.br
+.ti -1c
+.RI "typedef Map< const \fBCxtStmt\fP, const Loop * > \fBCxtStmtToLoopMap\fP"
+.br
+.ti -1c
+.RI "typedef \fBFIFOWorkList\fP< \fBCxtStmt\fP > \fBCxtStmtWorkList\fP"
+.br
+.ti -1c
+.RI "typedef Map< const Instruction *, \fBPTASCEV\fP > \fBforkjoinToPTASCEVMap\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBForkJoinAnalysis\fP (\fBTCT\fP *t)"
+.br
+.ti -1c
+.RI "void \fBcollectSCEVInfo\fP ()"
+.br
+.RI "functions "
+.ti -1c
+.RI "void \fBanalyzeForkJoinPair\fP ()"
+.br
+.ti -1c
+.RI "NodeBS & \fBgetDirectlyJoinedTid\fP (const \fBCxtStmt\fP &cs)"
+.br
+.RI "Get directly joined threadIDs based on a context-sensitive join site\&. "
+.ti -1c
+.RI "NodeBS \fBgetDirAndIndJoinedTid\fP (const \fBCxtStmt\fP &cs)"
+.br
+.RI "Get directly and indirectly joined threadIDs based on a context-sensitive join site\&. "
+.ti -1c
+.RI "const Loop * \fBisJoinInSymmetricLoop\fP (const \fBCxtStmt\fP &cs) const"
+.br
+.RI "Whether a context-sensitive join satisfies symmetric loop pattern\&. "
+.ti -1c
+.RI "bool \fBisHBPair\fP (NodeID tid1, NodeID tid2)"
+.br
+.RI "Whether thread t1 happens-before thread t2\&. "
+.ti -1c
+.RI "bool \fBisFullJoin\fP (NodeID tid1, NodeID tid2)"
+.br
+.RI "Whether t1 fully joins t2\&. "
+.ti -1c
+.RI "const Instruction * \fBgetExitInstOfParentRoutineFun\fP (NodeID tid) const"
+.br
+.RI "Get exit instruction of the start routine function of tid's parent thread\&. "
+.ti -1c
+.RI "const Loop * \fBgetJoinLoop\fP (const Instruction *inst)"
+.br
+.RI "Get loop for join site\&. "
+.ti -1c
+.RI "ScalarEvolution * \fBgetSE\fP (const Instruction *inst)"
+.br
+.RI "Get SE for function\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void ForkJoinAnalysis::analyzeForkJoinPair ()"
+context-sensitive forward traversal from each fork site\&. Generate following results (1) fork join pair, maps a context-sensitive join site to its corresponding thread ids (2) never happen-in-parallel thread pairs
+.PP
+Context-sensitive forward traversal from each fork site 
+.SS "void ForkJoinAnalysis::collectSCEVInfo ()"
+
+.PP
+functions Collect SCEV pass information for pointers at fork/join sites Because ScalarEvolution is a function pass, previous knowledge of a function may be overwritten when analyzing a new function\&. We use a internal wrapper class \fBPTASCEV\fP to record all the necessary information for determining symmetric fork/join inside loops 
+.SS "NodeBS ForkJoinAnalysis::getDirAndIndJoinedTid (const \fBCxtStmt\fP & cs)"
+
+.PP
+Get directly and indirectly joined threadIDs based on a context-sensitive join site\&. Return thread id(s) which are joined at this join site (1) thread t1 directly joins thread t2 (2) thread t1 indirectly joins thread t3 via directly joining t2 (t2 fully joins its child thread t3) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

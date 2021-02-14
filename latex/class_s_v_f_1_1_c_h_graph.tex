@@ -1,0 +1,159 @@
+\hypertarget{class_s_v_f_1_1_c_h_graph}{}\doxysection{SVF\+::CHGraph Class Reference}
+\label{class_s_v_f_1_1_c_h_graph}\index{SVF::CHGraph@{SVF::CHGraph}}
+Inheritance diagram for SVF\+::CHGraph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_v_f_1_1_c_h_graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a2a1da7f262a2f11653fb583154a93a22}\label{class_s_v_f_1_1_c_h_graph_a2a1da7f262a2f11653fb583154a93a22}} 
+enum {\bfseries RELATIONTYPE} \{ {\bfseries CONSTRUCTOR} = 0x1
+, {\bfseries DESTRUCTOR} = 0x2
+ \}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_ad0f60c720b277c60ed8a8966189bb42b}\label{class_s_v_f_1_1_c_h_graph_ad0f60c720b277c60ed8a8966189bb42b}} 
+typedef Set$<$ const \mbox{\hyperlink{class_s_v_f_1_1_c_h_node}{CHNode}} $\ast$ $>$ {\bfseries CHNode\+Set\+Ty}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_af1b638faf888898cdf168c25e008ab12}\label{class_s_v_f_1_1_c_h_graph_af1b638faf888898cdf168c25e008ab12}} 
+typedef \mbox{\hyperlink{class_s_v_f_1_1_f_i_f_o_work_list}{FIFOWork\+List}}$<$ const \mbox{\hyperlink{class_s_v_f_1_1_c_h_node}{CHNode}} $\ast$ $>$ {\bfseries Work\+List}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_aedb20aca2fa11a070cfe28e14fd3552b}\label{class_s_v_f_1_1_c_h_graph_aedb20aca2fa11a070cfe28e14fd3552b}} 
+typedef Map$<$ std\+::string, CHNode\+Set\+Ty $>$ {\bfseries Name\+To\+CHNodes\+Map}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a3740a239432a5c7237109aa72aa28eff}\label{class_s_v_f_1_1_c_h_graph_a3740a239432a5c7237109aa72aa28eff}} 
+typedef Map$<$ Call\+Site, CHNode\+Set\+Ty $>$ {\bfseries Call\+Site\+To\+CHNodes\+Map}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_aefdf6c5fe8a26efce200e8225d463cac}\label{class_s_v_f_1_1_c_h_graph_aefdf6c5fe8a26efce200e8225d463cac}} 
+typedef Map$<$ Call\+Site, VTable\+Set $>$ {\bfseries Call\+Site\+To\+VTable\+Set\+Map}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a0397e5da88106dc8b4a1e207ae455e74}\label{class_s_v_f_1_1_c_h_graph_a0397e5da88106dc8b4a1e207ae455e74}} 
+typedef Map$<$ Call\+Site, VFun\+Set $>$ {\bfseries Call\+Site\+To\+VFun\+Set\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_afacd7d35dad4344a5c2551d951acb442}\label{class_s_v_f_1_1_c_h_graph_afacd7d35dad4344a5c2551d951acb442}} 
+{\bfseries CHGraph} (\mbox{\hyperlink{class_s_v_f_1_1_s_v_f_module}{SVFModule}} $\ast$svf\+Module)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_ae6b620ead0f214e72fbef9c26da3d5a0}\label{class_s_v_f_1_1_c_h_graph_ae6b620ead0f214e72fbef9c26da3d5a0}} 
+void {\bfseries build\+CHG} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_ab55b057a7be74ad03514dc15b6f01131}\label{class_s_v_f_1_1_c_h_graph_ab55b057a7be74ad03514dc15b6f01131}} 
+void {\bfseries build\+Internal\+Maps} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a185d0eae7e361128e8dbbe47fc18051b}\label{class_s_v_f_1_1_c_h_graph_a185d0eae7e361128e8dbbe47fc18051b}} 
+void {\bfseries build\+CHGNodes} (const Global\+Value $\ast$V)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_aa7280c8102df6ee625cbe1accba6f09f}\label{class_s_v_f_1_1_c_h_graph_aa7280c8102df6ee625cbe1accba6f09f}} 
+void {\bfseries build\+CHGNodes} (const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$F)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a57062fb6b3d22d98e5ef564eaff84b2e}\label{class_s_v_f_1_1_c_h_graph_a57062fb6b3d22d98e5ef564eaff84b2e}} 
+void {\bfseries build\+CHGEdges} (const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$F)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_aba5986ebcbba17f76202d5d14f35585f}\label{class_s_v_f_1_1_c_h_graph_aba5986ebcbba17f76202d5d14f35585f}} 
+void {\bfseries connect\+Inherit\+Edge\+Via\+Call} (const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$caller, Call\+Site cs)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a9b7ecdcab366627a2dd636430f0a3b4b}\label{class_s_v_f_1_1_c_h_graph_a9b7ecdcab366627a2dd636430f0a3b4b}} 
+void {\bfseries connect\+Inherit\+Edge\+Via\+Store} (const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$caller, const Store\+Inst $\ast$store)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a3867db3e76f068bd8c4399b103dcd0b7}\label{class_s_v_f_1_1_c_h_graph_a3867db3e76f068bd8c4399b103dcd0b7}} 
+void {\bfseries add\+Edge} (const std\+::string class\+Name, const std\+::string base\+Class\+Name, CHEdge\+::\+CHEDGETYPE edge\+Type)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a7beec68a60036c93a741a7152e8198b6}\label{class_s_v_f_1_1_c_h_graph_a7beec68a60036c93a741a7152e8198b6}} 
+\mbox{\hyperlink{class_s_v_f_1_1_c_h_node}{CHNode}} $\ast$ {\bfseries get\+Node} (const std\+::string name) const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a39a7a8f6a4b9bb03523f190ce7b91e58}\label{class_s_v_f_1_1_c_h_graph_a39a7a8f6a4b9bb03523f190ce7b91e58}} 
+\mbox{\hyperlink{class_s_v_f_1_1_c_h_node}{CHNode}} $\ast$ {\bfseries create\+Node} (const std\+::string name)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a3468ae9cbcff4c525c627ddb7a416cda}\label{class_s_v_f_1_1_c_h_graph_a3468ae9cbcff4c525c627ddb7a416cda}} 
+void {\bfseries build\+Class\+Name\+To\+Ancestors\+Descendants\+Map} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_aa54643023932a31697840cbb79be52e4}\label{class_s_v_f_1_1_c_h_graph_aa54643023932a31697840cbb79be52e4}} 
+void {\bfseries build\+Virtual\+Function\+To\+IDMap} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a71e74fc9c9a27cd354aa113801ed416f}\label{class_s_v_f_1_1_c_h_graph_a71e74fc9c9a27cd354aa113801ed416f}} 
+void {\bfseries build\+CSTo\+CHAVtbls\+And\+Vfns\+Map} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a315f0dc381d62f99bede32f08aa9cde8}\label{class_s_v_f_1_1_c_h_graph_a315f0dc381d62f99bede32f08aa9cde8}} 
+void {\bfseries read\+Inheritance\+Metadata\+From\+Module} (const Module \&M)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a0685bd653851a903f765e21aec0fdbd1}\label{class_s_v_f_1_1_c_h_graph_a0685bd653851a903f765e21aec0fdbd1}} 
+void {\bfseries analyze\+VTables} (const Module \&M)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_aef3ce1727cb91581d6cd1123cf767cfb}\label{class_s_v_f_1_1_c_h_graph_aef3ce1727cb91581d6cd1123cf767cfb}} 
+const CHGraph\+::\+CHNode\+Set\+Ty \& {\bfseries get\+Instances\+And\+Descendants} (const std\+::string class\+Name)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a687d4d05b4c7db21d85256cd03efe08b}\label{class_s_v_f_1_1_c_h_graph_a687d4d05b4c7db21d85256cd03efe08b}} 
+const CHNode\+Set\+Ty \& {\bfseries get\+CSClasses} (Call\+Site cs)
+\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_c_h_graph_ac5f5646db24455609cd86c421774dd3e}{get\+VFns\+From\+Vtbls}} (Call\+Site cs, const VTable\+Set \&vtbls, VFun\+Set \&virtual\+Functions) override
+\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_c_h_graph_a29351163649618332394fc72cc35212f}{dump}} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_ae382d5bab69843bdb9424c4c6ff94140}\label{class_s_v_f_1_1_c_h_graph_ae382d5bab69843bdb9424c4c6ff94140}} 
+void {\bfseries print\+CH} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a4ac546af1020af930f192460a7d40e4f}\label{class_s_v_f_1_1_c_h_graph_a4ac546af1020af930f192460a7d40e4f}} 
+s32\+\_\+t {\bfseries get\+Virtual\+Function\+ID} (const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$vfn) const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_ab53198e1a85df15f04ed601f3346ef85}\label{class_s_v_f_1_1_c_h_graph_ab53198e1a85df15f04ed601f3346ef85}} 
+const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$ {\bfseries get\+Virtual\+Function\+Basedon\+ID} (s32\+\_\+t id) const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a5ee7e559425045f3af5c35ea6d6f03ee}\label{class_s_v_f_1_1_c_h_graph_a5ee7e559425045f3af5c35ea6d6f03ee}} 
+void {\bfseries add\+Instances} (const std\+::string template\+Name, \mbox{\hyperlink{class_s_v_f_1_1_c_h_node}{CHNode}} $\ast$node)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a26f89a9b269cad3fc894110d25598715}\label{class_s_v_f_1_1_c_h_graph_a26f89a9b269cad3fc894110d25598715}} 
+const CHNode\+Set\+Ty \& {\bfseries get\+Descendants} (const std\+::string class\+Name)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a894a69fa143d3f460d433646a0521b6f}\label{class_s_v_f_1_1_c_h_graph_a894a69fa143d3f460d433646a0521b6f}} 
+const CHNode\+Set\+Ty \& {\bfseries get\+Instances} (const std\+::string class\+Name)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_acd4907aa926a4c7fdc3964700d721f79}\label{class_s_v_f_1_1_c_h_graph_acd4907aa926a4c7fdc3964700d721f79}} 
+bool {\bfseries cs\+Has\+Vtbls\+Basedon\+CHA} (Call\+Site cs) override
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a885a81b08477e6ccdd7df98d249b8c39}\label{class_s_v_f_1_1_c_h_graph_a885a81b08477e6ccdd7df98d249b8c39}} 
+bool {\bfseries cs\+Has\+VFns\+Basedon\+CHA} (Call\+Site cs) override
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a9878df891d2e20d09b65096060d2c148}\label{class_s_v_f_1_1_c_h_graph_a9878df891d2e20d09b65096060d2c148}} 
+const VTable\+Set \& {\bfseries get\+CSVtbls\+Basedon\+CHA} (Call\+Site cs) override
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a1c0ca4e6a466ad317daf00a6c7de8e31}\label{class_s_v_f_1_1_c_h_graph_a1c0ca4e6a466ad317daf00a6c7de8e31}} 
+const VFun\+Set \& {\bfseries get\+CSVFs\+Basedon\+CHA} (Call\+Site cs) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_ae7e9f1a3c524d80c77b2a75f877dc2d6}\label{class_s_v_f_1_1_c_h_graph_ae7e9f1a3c524d80c77b2a75f877dc2d6}} 
+static bool {\bfseries classof} (const \mbox{\hyperlink{class_s_v_f_1_1_common_c_h_graph}{Common\+CHGraph}} $\ast$chg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_a29351163649618332394fc72cc35212f}\label{class_s_v_f_1_1_c_h_graph_a29351163649618332394fc72cc35212f}} 
+\index{SVF::CHGraph@{SVF::CHGraph}!dump@{dump}}
+\index{dump@{dump}!SVF::CHGraph@{SVF::CHGraph}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily void CHGraph\+::dump (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Dump call graph into dot file \mbox{\Hypertarget{class_s_v_f_1_1_c_h_graph_ac5f5646db24455609cd86c421774dd3e}\label{class_s_v_f_1_1_c_h_graph_ac5f5646db24455609cd86c421774dd3e}} 
+\index{SVF::CHGraph@{SVF::CHGraph}!getVFnsFromVtbls@{getVFnsFromVtbls}}
+\index{getVFnsFromVtbls@{getVFnsFromVtbls}!SVF::CHGraph@{SVF::CHGraph}}
+\doxysubsubsection{\texorpdfstring{getVFnsFromVtbls()}{getVFnsFromVtbls()}}
+{\footnotesize\ttfamily void CHGraph\+::get\+VFns\+From\+Vtbls (\begin{DoxyParamCaption}\item[{Call\+Site}]{cs,  }\item[{const VTable\+Set \&}]{vtbls,  }\item[{VFun\+Set \&}]{virtual\+Functions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+get target virtual functions
+
+get the function name of the virtual callsite
+
+Implements \mbox{\hyperlink{class_s_v_f_1_1_common_c_h_graph}{SVF\+::\+Common\+CHGraph}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+SVF-\/\+FE/CHG.\+h\item 
+lib/\+SVF-\/\+FE/CHG.\+cpp\end{DoxyCompactItemize}

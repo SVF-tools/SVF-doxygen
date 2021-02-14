@@ -1,0 +1,242 @@
+.TH "SVF::BVDataPTAImpl" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::BVDataPTAImpl
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PointerAnalysisImpl\&.h>\fP
+.PP
+Inherits \fBSVF::PointerAnalysis\fP\&.
+.PP
+Inherited by \fBSVF::AndersenBase\fP, \fBSVF::FlowDDA\fP, and \fBSVF::FlowSensitive\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPTData\fP< NodeID, NodeID, PointsTo > \fBPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBMutablePTData\fP< NodeID, NodeID, PointsTo > \fBMutPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBDiffPTData\fP< NodeID, NodeID, PointsTo > \fBDiffPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBMutableDiffPTData\fP< NodeID, NodeID, PointsTo > \fBMutDiffPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBDFPTData\fP< NodeID, NodeID, PointsTo > \fBDFPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBMutableDFPTData\fP< NodeID, NodeID, PointsTo > \fBMutDFPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBIncMutableDFPTData\fP< NodeID, NodeID, PointsTo > \fBIncMutDFPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBVersionedPTData\fP< NodeID, NodeID, PointsTo, VersionedVar > \fBVersionedPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef \fBMutableVersionedPTData\fP< NodeID, NodeID, PointsTo, VersionedVar > \fBMutVersionedPTDataTy\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBVDataPTAImpl\fP (\fBPAG\fP *\fBpag\fP, \fBPointerAnalysis::PTATY\fP type, bool alias_check=true)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~BVDataPTAImpl\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBdestroy\fP ()"
+.br
+.RI "Release memory\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPointerAnalysis\fP *pta)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "virtual const PointsTo & \fBgetPts\fP (NodeID id)"
+.br
+.ti -1c
+.RI "virtual const NodeSet & \fBgetRevPts\fP (NodeID nodeId)"
+.br
+.ti -1c
+.RI "virtual void \fBclearPts\fP (NodeID id, NodeID element)"
+.br
+.RI "Remove element from the points-to set of id\&. "
+.ti -1c
+.RI "virtual void \fBclearFullPts\fP (NodeID id)"
+.br
+.RI "Clear points-to set of id\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (NodeID id, const PointsTo &target)"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (NodeID id, NodeID ptd)"
+.br
+.ti -1c
+.RI "virtual bool \fBaddPts\fP (NodeID id, NodeID ptd)"
+.br
+.ti -1c
+.RI "virtual void \fBclearAllPts\fP ()"
+.br
+.RI "Clear all data\&. "
+.ti -1c
+.RI "virtual void \fBexpandFIObjs\fP (const PointsTo &pts, PointsTo &expandedPts)"
+.br
+.RI "Expand FI objects\&. "
+.ti -1c
+.RI "virtual void \fBwriteToFile\fP (const std::string &filename)"
+.br
+.RI "Interface for analysis result storage on filesystem\&. "
+.ti -1c
+.RI "virtual bool \fBreadFromFile\fP (const std::string &filename)"
+.br
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const MemoryLocation &LocA, const MemoryLocation &LocB)"
+.br
+.RI "Interface expose to users of our pointer analysis, given Location infos\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const Value *V1, const Value *V2)"
+.br
+.RI "Interface expose to users of our pointer analysis, given Value infos\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (NodeID node1, NodeID node2)"
+.br
+.RI "Interface expose to users of our pointer analysis, given PAGNodeID\&. "
+.ti -1c
+.RI "virtual AliasResult \fBalias\fP (const PointsTo &pts1, const PointsTo &pts2)"
+.br
+.RI "Interface expose to users of our pointer analysis, given two pts\&. "
+.ti -1c
+.RI "virtual void \fBdumpCPts\fP ()"
+.br
+.RI "dump and debug, print out conditional pts "
+.ti -1c
+.RI "virtual void \fBdumpTopLevelPtsTo\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdumpAllPts\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBupdateCallGraph\fP (const CallSiteToFunPtrMap &)"
+.br
+.RI "Update callgraph\&. This should be implemented by its subclass\&. "
+.ti -1c
+.RI "\fBPTDataTy\fP * \fBgetPTDataTy\fP () const"
+.br
+.RI "Get points-to data structure\&. "
+.ti -1c
+.RI "\fBDiffPTDataTy\fP * \fBgetDiffPTDataTy\fP () const"
+.br
+.ti -1c
+.RI "\fBDFPTDataTy\fP * \fBgetDFPTDataTy\fP () const"
+.br
+.ti -1c
+.RI "\fBMutDFPTDataTy\fP * \fBgetMutDFPTDataTy\fP () const"
+.br
+.ti -1c
+.RI "\fBVersionedPTDataTy\fP * \fBgetVersionedPTDataTy\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhasPtsMap\fP (void) const"
+.br
+.ti -1c
+.RI "const MutPTDataTy::PtsMap & \fBgetPtsMap\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBonTheFlyCallGraphSolve\fP (const CallSiteToFunPtrMap &callsites, CallEdgeMap &newEdges)"
+.br
+.RI "On the fly call graph construction\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Pointer analysis implementation which uses bit vector based points-to data structure 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BVDataPTAImpl::BVDataPTAImpl (\fBPAG\fP * p, \fBPointerAnalysis::PTATY\fP type, bool alias_check = \fCtrue\fP)"
+
+.PP
+Constructor\&. Constructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "AliasResult BVDataPTAImpl::alias (const MemoryLocation & LocA, const MemoryLocation & LocB)\fC [virtual]\fP"
+
+.PP
+Interface expose to users of our pointer analysis, given Location infos\&. Return alias results based on our points-to/alias analysis 
+.PP
+Implements \fBSVF::PointerAnalysis\fP\&.
+.SS "AliasResult BVDataPTAImpl::alias (const PointsTo & p1, const PointsTo & p2)\fC [virtual]\fP"
+
+.PP
+Interface expose to users of our pointer analysis, given two pts\&. Return alias results based on our points-to/alias analysis 
+.SS "AliasResult BVDataPTAImpl::alias (const Value * V1, const Value * V2)\fC [virtual]\fP"
+
+.PP
+Interface expose to users of our pointer analysis, given Value infos\&. Return alias results based on our points-to/alias analysis 
+.PP
+Implements \fBSVF::PointerAnalysis\fP\&.
+.SS "AliasResult BVDataPTAImpl::alias (NodeID node1, NodeID node2)\fC [virtual]\fP"
+
+.PP
+Interface expose to users of our pointer analysis, given PAGNodeID\&. Return alias results based on our points-to/alias analysis 
+.PP
+Implements \fBSVF::PointerAnalysis\fP\&.
+.SS "void BVDataPTAImpl::dumpAllPts ()\fC [virtual]\fP"
+Dump all points-to including top-level (\fBValPN\fP) and address-taken (\fBObjPN\fP) variables 
+.PP
+Reimplemented from \fBSVF::PointerAnalysis\fP\&.
+.SS "void BVDataPTAImpl::dumpTopLevelPtsTo ()\fC [virtual]\fP"
+Dump points-to of each pag node 
+.PP
+Reimplemented from \fBSVF::PointerAnalysis\fP\&.
+.PP
+Reimplemented in \fBSVF::Andersen\fP\&.
+.SS "void BVDataPTAImpl::expandFIObjs (const PointsTo & pts, PointsTo & expandedPts)\fC [virtual]\fP"
+
+.PP
+Expand FI objects\&. Expand all fields of an aggregate in all points-to sets 
+.PP
+Reimplemented in \fBSVF::FlowSensitiveTBHC\fP\&.
+.SS "virtual const PointsTo& SVF::BVDataPTAImpl::getPts (NodeID id)\fC [inline]\fP, \fC [virtual]\fP"
+Get points-to and reverse points-to 
+.PP
+Implements \fBSVF::PointerAnalysis\fP\&.
+.PP
+Reimplemented in \fBSVF::Steensgaard\fP, and \fBSVF::Andersen\fP\&.
+.SS "virtual const NodeSet& SVF::BVDataPTAImpl::getRevPts (NodeID nodeId)\fC [inline]\fP, \fC [virtual]\fP"
+Given an object, get all the nodes having whose pointsto contains the object\&. Similar to getPts, this also needs to be implemented in child classes\&. 
+.PP
+Implements \fBSVF::PointerAnalysis\fP\&.
+.SS "void BVDataPTAImpl::onTheFlyCallGraphSolve (const CallSiteToFunPtrMap & callsites, CallEdgeMap & newEdges)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+On the fly call graph construction\&. On the fly call graph construction callsites is candidate indirect callsites need to be analyzed based on points-to results newEdges is the new indirect call edges discovered 
+.SS "bool BVDataPTAImpl::readFromFile (const std::string & filename)\fC [virtual]\fP"
+Load pointer analysis result form a file\&. It populates \fBBVDataPTAImpl\fP with the points-to data, and updates \fBPAG\fP with the \fBPAG\fP offset nodes created during \fBAndersen\fP's solving stage\&. 
+.SS "virtual bool SVF::BVDataPTAImpl::unionPts (NodeID id, const PointsTo & target)\fC [inline]\fP, \fC [virtual]\fP"
+Union/add points-to\&. Add the reverse points-to for node collapse purpose To be noted that adding reverse pts might incur 10% total overhead during solving 
+.PP
+Reimplemented in \fBSVF::Steensgaard\fP, and \fBSVF::Andersen\fP\&.
+.SS "void BVDataPTAImpl::writeToFile (const std::string & filename)\fC [virtual]\fP"
+
+.PP
+Interface for analysis result storage on filesystem\&. Store pointer analysis result into a file\&. It includes the points-to relations, and all \fBPAG\fP nodes including those created when solving \fBAndersen\fP's constraints\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

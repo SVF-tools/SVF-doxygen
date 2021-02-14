@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_m_r_generator" xml:lang="en-US">
+<title>SVF::MRGenerator Class Reference</title>
+<indexterm><primary>SVF::MRGenerator</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MemRegion.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::MRGenerator:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_m_r_generator.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a68d50c752252bd40c402c7b99b95f0fc"/>typedef <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">FIFOWorkList</link>&lt; NodeID &gt; <emphasis role="strong">WorkList</emphasis></para>
+</listitem>
+            <listitem><para>typedef OrderedSet&lt; const <link linkend="_class_s_v_f_1_1_mem_region">MemRegion</link> *, <link linkend="_struct_s_v_f_1_1_mem_region_1_1equal_mem_region">MemRegion::equalMemRegion</link> &gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link></para>
+
+<para>Get typedef from Pointer Analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a82be01b460a498c07fb6a8aba853ed31"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_p_a_g_edge">PAGEdge</link> *, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * &gt; <emphasis role="strong">PAGEdgeToFunMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a2c58aadbebb9daf5a0be3926b3997013"/>typedef OrderedSet&lt; PointsTo, <link linkend="_struct_s_v_f_1_1_mem_region_1_1equal_points_to">MemRegion::equalPointsTo</link> &gt; <emphasis role="strong">PointsToList</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a71b584c7e0feb3014ad5f74eb31467bb"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *, PointsToList &gt; <emphasis role="strong">FunToPointsToMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a0984b63a3e159b4825e4ffd2fcfb6ca4"/>typedef OrderedMap&lt; PointsTo, PointsTo, <link linkend="_struct_s_v_f_1_1_mem_region_1_1equal_points_to">MemRegion::equalPointsTo</link> &gt; <emphasis role="strong">PtsToRepPtsSetMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a090070379a09460aef0c07270d32d27b"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *, <link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1a090070379a09460aef0c07270d32d27b">FunToMRsMap</link></para>
+
+<para>Map a function to its region set. </para>
+</listitem>
+            <listitem><para>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_load_p_e">LoadPE</link> *, <link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1a72f55ad36f4ce46c5eee4bf0ce736cee">LoadsToMRsMap</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a9d2221818297a7abeb8d8736093105d0"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_store_p_e">StorePE</link> *, <link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &gt; <emphasis role="strong">StoresToMRsMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a71b5ce2c754ffff5a84fdb0c3aa16819"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, <link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &gt; <emphasis role="strong">CallSiteToMRsMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1af500450901135fd31ceb2ab497ca1086"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_load_p_e">LoadPE</link> *, PointsTo &gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1af500450901135fd31ceb2ab497ca1086">LoadsToPointsToMap</link></para>
+
+<para>Map loads/stores/callsites to their cpts set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a4e246650818afd8be99a5ed6e23c4cd7"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_store_p_e">StorePE</link> *, PointsTo &gt; <emphasis role="strong">StoresToPointsToMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ae73349361642cbc0c5f4be0b8bf96090"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, PointsTo &gt; <emphasis role="strong">CallSiteToPointsToMap</emphasis></para>
+</listitem>
+            <listitem><para>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *, NodeBS &gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1ab01e492f002c73e2c89eb0b4c8f9647d">FunToNodeBSMap</link></para>
+
+<para>Maps Mod-Ref analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a55ca7850e00f57a8a4b83bc969493046"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *, NodeBS &gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1a55ca7850e00f57a8a4b83bc969493046">CallSiteToNodeBSMap</link></para>
+
+<para>Map a callsite to its indirect refs/mods of memory objects. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ab075a7c7fbc60f678b3fee8bbc06194d"/>typedef Map&lt; NodeID, NodeBS &gt; <emphasis role="strong">NodeToPTSSMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a1715322c61a3f41f1a093098591869d4"/>typedef PAG::PAGEdgeList <link linkend="_class_s_v_f_1_1_m_r_generator_1a1715322c61a3f41f1a093098591869d4">PAGEdgeList</link></para>
+
+<para><link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edge list. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1af8d52e6c9884c6e1abc6dbcbc5e32629"/>typedef <link linkend="_class_s_v_f_1_1_s_c_c_detection">SCCDetection</link>&lt; <link linkend="_class_s_v_f_1_1_p_t_a_call_graph">PTACallGraph</link> * &gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1af8d52e6c9884c6e1abc6dbcbc5e32629">SCC</link></para>
+
+<para>Call Graph SCC. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a1f69924c587c4e68a029fd4e86cffacf"/><link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp; <emphasis role="strong">getMRSet</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a2e039a855c8e421e80cc7b015211a192"/>const PointsTo &amp; <link linkend="_class_s_v_f_1_1_m_r_generator_1a2e039a855c8e421e80cc7b015211a192">getRepPointsTo</link> (const PointsTo &amp;cpts) const</para>
+
+<para>Get superset cpts set. </para>
+</listitem>
+            <listitem><para>const <link linkend="_class_s_v_f_1_1_mem_region">MemRegion</link> * <link linkend="_class_s_v_f_1_1_m_r_generator_1a7ecde80ed05d425a19bf7fe0c5feff84">getMR</link> (const PointsTo &amp;cpts) const</para>
+
+<para>Get a memory region according to cpts. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ad34e796ebc49f5749de39e81374dc7a7"/>Size_t <emphasis role="strong">getMRNum</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a46e08638c8b5e6f6755de045c94862c4"/>virtual <link linkend="_class_s_v_f_1_1_m_r_generator_1a46e08638c8b5e6f6755de045c94862c4">~MRGenerator</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1a4f65593325e4391333fa1b0bedbffc4a">generateMRs</link> ()</para>
+
+<para>Start generating memory regions. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a3121380139c7ae96d2045d66203253b6"/>const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * <link linkend="_class_s_v_f_1_1_m_r_generator_1a3121380139c7ae96d2045d66203253b6">getFunction</link> (const <link linkend="_class_s_v_f_1_1_p_a_g_edge">PAGEdge</link> *pagEdge) const</para>
+
+<para>Get the function which <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> Edge located. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a64ba36ddcd304f6543e416c552763879"/><link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp; <link linkend="_class_s_v_f_1_1_m_r_generator_1a64ba36ddcd304f6543e416c552763879">getFunMRSet</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+
+<para>Get Memory Region set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a5cf5ae60ad6028809088f3c842afde9d"/><link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp; <emphasis role="strong">getLoadMRSet</emphasis> (const <link linkend="_class_s_v_f_1_1_load_p_e">LoadPE</link> *load)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ac409bbee6bf9deef7e31233a05054ee2"/><link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp; <emphasis role="strong">getStoreMRSet</emphasis> (const <link linkend="_class_s_v_f_1_1_store_p_e">StorePE</link> *store)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1aeed8bcf54d2a72c640e464e256249630"/>bool <emphasis role="strong">hasRefMRSet</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a8868281e5f5b5f3a83acf8568971ad40"/>bool <emphasis role="strong">hasModMRSet</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a7ede01d58bb2490ded5895ca5bd45948"/><link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp; <emphasis role="strong">getCallSiteRefMRSet</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1acb78098bf1fc8c3a80720a3dff3a0a1d"/><link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp; <emphasis role="strong">getCallSiteModMRSet</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1abe76a16b9eedc9f8ffca6bc39cfb5c7e"/>bool <link linkend="_class_s_v_f_1_1_m_r_generator_1abe76a16b9eedc9f8ffca6bc39cfb5c7e">hasPAGEdgeList</link> (const Instruction *inst)</para>
+
+<para>Whether this instruction has <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> Edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a2eda764e59d9b5e7620d2cf26562615a"/><link linkend="_class_s_v_f_1_1_m_r_generator_1a1715322c61a3f41f1a093098591869d4">PAGEdgeList</link> &amp; <link linkend="_class_s_v_f_1_1_m_r_generator_1a2eda764e59d9b5e7620d2cf26562615a">getPAGEdgesFromInst</link> (const Instruction *inst)</para>
+
+<para>Given an instruction, get all its the <link linkend="_class_s_v_f_1_1_p_a_g_edge">PAGEdge</link> (statement) in sequence. </para>
+</listitem>
+            <listitem><para>PointsTo <link linkend="_class_s_v_f_1_1_m_r_generator_1a1658aacb68aacb4785266263c1641a6a">getModInfoForCall</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>getModRefInfo APIs </para>
+</listitem>
+            <listitem><para>PointsTo <link linkend="_class_s_v_f_1_1_m_r_generator_1afc17f566f57656cf17c08665602b4849">getRefInfoForCall</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para>ModRefInfo <link linkend="_class_s_v_f_1_1_m_r_generator_1a455e0ba173141ac8ce76a655ac52205f">getModRefInfo</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para>ModRefInfo <link linkend="_class_s_v_f_1_1_m_r_generator_1a9f1d1604fb884e5c99702556915396f9">getModRefInfo</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const Value *V)</para>
+</listitem>
+            <listitem><para>ModRefInfo <link linkend="_class_s_v_f_1_1_m_r_generator_1a83f957962bf3c7621661ce87b095e841">getModRefInfo</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs1, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs2)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a1023eb17f1a46eee9a948490a4c8fdd5"/><emphasis role="strong">MRGenerator</emphasis> (<link linkend="_class_s_v_f_1_1_b_v_data_p_t_a_impl">BVDataPTAImpl</link> *p, bool ptrOnly)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_r_generator_1a42708b4ce8b5548e156a0e6d01602cc2">createMR</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun, const PointsTo &amp;cpts)</para>
+
+<para>Generate a memory region and put in into functions which use it. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_r_generator_1afdae3e11009966856736d9aa1e2ad5bd">collectGlobals</link> ()</para>
+
+<para>Collect all global variables for later escape analysis. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1a207dfa4c9f044764665478142c6e6b22">collectModRefForLoadStore</link> ()</para>
+
+<para>Generate regions for loads/stores. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1a502f8379620378b36bc12d9a91b408d2">collectModRefForCall</link> ()</para>
+
+<para>Generate regions for calls/rets. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1ac0b966ee2065607a24920dd9067b40e9">partitionMRs</link> ()</para>
+
+<para>Partition regions. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1a9c1da53188729eb743e1a33bbad87af7">updateAliasMRs</link> ()</para>
+
+<para>Update aliased regions for loads/stores/callsites. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1a4d20ddfe5cb90d91fd86276a3f010b87">sortPointsTo</link> (const PointsTo &amp;cpts)</para>
+
+<para>Given a condition pts, insert into cptsToRepCPtsMap for region generation. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1acd1759ce72edc748e6628d7e82458473"/>virtual bool <link linkend="_class_s_v_f_1_1_m_r_generator_1acd1759ce72edc748e6628d7e82458473">isAliasedMR</link> (const PointsTo &amp;cpts, const <link linkend="_class_s_v_f_1_1_mem_region">MemRegion</link> *mr)</para>
+
+<para>Whether a region is aliased with a conditional points-to. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a6426e7a9a6324b8b2f8a9bcf4aab1fc1"/>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1a6426e7a9a6324b8b2f8a9bcf4aab1fc1">getAliasMemRegions</link> (<link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp;aliasMRs, const PointsTo &amp;cpts, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+
+<para>Get all aliased mem regions from function fun according to cpts. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a2a7012e9f2e84ac1c5f7ed61daa67ac7"/>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1a2a7012e9f2e84ac1c5f7ed61daa67ac7">getMRsForLoad</link> (<link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp;aliasMRs, const PointsTo &amp;cpts, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *)</para>
+
+<para>Get memory regions for a load statement according to cpts. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1af4eda1f51e3f58c8cccddee474972fe9"/>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1af4eda1f51e3f58c8cccddee474972fe9">getMRsForCallSiteRef</link> (<link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> &amp;aliasMRs, const PointsTo &amp;cpts, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *)</para>
+
+<para>Get memory regions for call site ref according to cpts. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_m_r_generator_1adc9d530e6f010596d91cd3711dc1358b">modRefAnalysis</link> (<link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *callGraphNode, <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">WorkList</link> &amp;worklist)</para>
+
+<para>Mod-Ref analysis for callsite invoking this callGraphNode. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_m_r_generator_1a123a2ea51b04f1398b9ee66567f5014a">handleCallsiteModRef</link> (NodeBS &amp;mod, NodeBS &amp;ref, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+
+<para>Get Mod-Ref of a callee function. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ae439967f24dbb6dbc11287592eb0d30c"/>void <link linkend="_class_s_v_f_1_1_m_r_generator_1ae439967f24dbb6dbc11287592eb0d30c">addCPtsToStore</link> (PointsTo &amp;cpts, const <link linkend="_class_s_v_f_1_1_store_p_e">StorePE</link> *st, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+
+<para>Add cpts to store/load. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a4d71379ec4350d6fde0c12336c1b92d8"/>void <emphasis role="strong">addCPtsToLoad</emphasis> (PointsTo &amp;cpts, const <link linkend="_class_s_v_f_1_1_load_p_e">LoadPE</link> *ld, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a2416e15c41fce38dfa63318a8f64e11f"/>void <emphasis role="strong">addCPtsToCallSiteRefs</emphasis> (PointsTo &amp;cpts, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ae2594115874771c93963846f3276e1fb"/>void <emphasis role="strong">addCPtsToCallSiteMods</emphasis> (PointsTo &amp;cpts, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a1cb94c8a0379eb30c99f0c3cb2bfebaf"/>bool <emphasis role="strong">hasCPtsList</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a6d86c8ebe87cb54f39e52daa7ffb0e2e"/>PointsToList &amp; <emphasis role="strong">getPointsToList</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ad8333efeda532f0d403352ad6a4987e9"/>FunToPointsToMap &amp; <emphasis role="strong">getFunToPointsToList</emphasis> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_r_generator_1a899c81db92c6bcf24f6f9b769e02e5bf">addRefSideEffectOfFunction</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun, const NodeBS &amp;refs)</para>
+
+<para>Add/Get methods for side-effect of functions and callsites. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_r_generator_1a39604645ca9ba10607ada3872b14705a">addModSideEffectOfFunction</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun, const NodeBS &amp;mods)</para>
+
+<para>Add indirect def an memory object in the function. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_m_r_generator_1a4e02c3aee7eb0206f6d643b72e39d059">addRefSideEffectOfCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const NodeBS &amp;refs)</para>
+
+<para>Add indirect uses an memory object in the function. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_m_r_generator_1a8b00b46136ce2586b5f94248d0826a94">addModSideEffectOfCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, const NodeBS &amp;mods)</para>
+
+<para>Add indirect def an memory object in the function. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ac0007c8808654ca74feef0d8568378b9"/>const NodeBS &amp; <link linkend="_class_s_v_f_1_1_m_r_generator_1ac0007c8808654ca74feef0d8568378b9">getRefSideEffectOfFunction</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+
+<para>Get indirect refs of a function. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a7d47fbc3dbe8fd19ca5e4210bdecf914"/>const NodeBS &amp; <link linkend="_class_s_v_f_1_1_m_r_generator_1a7d47fbc3dbe8fd19ca5e4210bdecf914">getModSideEffectOfFunction</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *fun)</para>
+
+<para>Get indirect mods of a function. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ae2cc7d7d6ab427acb0352b388c7a4acc"/>const NodeBS &amp; <link linkend="_class_s_v_f_1_1_m_r_generator_1ae2cc7d7d6ab427acb0352b388c7a4acc">getRefSideEffectOfCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Get indirect refs of a callsite. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1aebd6abbf574392abce426dc796d2ee56"/>const NodeBS &amp; <link linkend="_class_s_v_f_1_1_m_r_generator_1aebd6abbf574392abce426dc796d2ee56">getModSideEffectOfCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Get indirect mods of a callsite. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ac91b6f0f33a95ba35cc23e0e4657732a"/>bool <link linkend="_class_s_v_f_1_1_m_r_generator_1ac91b6f0f33a95ba35cc23e0e4657732a">hasRefSideEffectOfCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Has indirect refs of a callsite. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a07dc868039c5e2764b3cc34faff6d94a"/>bool <link linkend="_class_s_v_f_1_1_m_r_generator_1a07dc868039c5e2764b3cc34faff6d94a">hasModSideEffectOfCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Has indirect mods of a callsite. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1af94bd8155a23273aab2396334d905119"/><link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link> <link linkend="_class_s_v_f_1_1_m_r_generator_1af94bd8155a23273aab2396334d905119">memRegSet</link></para>
+
+<para>A set of All memory regions. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ab4d1ff0357d389a65ff1c2112ce631a1"/>PtsToRepPtsSetMap <link linkend="_class_s_v_f_1_1_m_r_generator_1ab4d1ff0357d389a65ff1c2112ce631a1">cptsToRepCPtsMap</link></para>
+
+<para>Map a condition pts to its rep conditional pts (super set points-to) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Memory Region Partitioning </para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ab01e492f002c73e2c89eb0b4c8f9647d"/>    <section>
+    <title>FunToNodeBSMap</title>
+<indexterm><primary>FunToNodeBSMap</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>FunToNodeBSMap</secondary></indexterm>
+<para><computeroutput>typedef Map&lt;const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link>*, NodeBS&gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1ab01e492f002c73e2c89eb0b4c8f9647d">SVF::MRGenerator::FunToNodeBSMap</link></computeroutput></para><para>
+
+<para>Maps Mod-Ref analysis. </para>
+</para>
+
+<para>Map a function to its indirect refs/mods of memory objects </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a72f55ad36f4ce46c5eee4bf0ce736cee"/>    <section>
+    <title>LoadsToMRsMap</title>
+<indexterm><primary>LoadsToMRsMap</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>LoadsToMRsMap</secondary></indexterm>
+<para><computeroutput>typedef Map&lt;const <link linkend="_class_s_v_f_1_1_load_p_e">LoadPE</link>*, <link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">MRSet</link>&gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1a72f55ad36f4ce46c5eee4bf0ce736cee">SVF::MRGenerator::LoadsToMRsMap</link></computeroutput></para>
+<para>Map loads/stores to its mem regions, TODO:visitAtomicCmpXchgInst, visitAtomicRMWInst?? </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f"/>    <section>
+    <title>MRSet</title>
+<indexterm><primary>MRSet</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>MRSet</secondary></indexterm>
+<para><computeroutput>typedef OrderedSet&lt;const <link linkend="_class_s_v_f_1_1_mem_region">MemRegion</link>*, <link linkend="_struct_s_v_f_1_1_mem_region_1_1equal_mem_region">MemRegion::equalMemRegion</link>&gt; <link linkend="_class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f">SVF::MRGenerator::MRSet</link></computeroutput></para><para>
+
+<para>Get typedef from Pointer Analysis. </para>
+</para>
+
+<para>Define mem region set </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a8b00b46136ce2586b5f94248d0826a94"/>    <section>
+    <title>addModSideEffectOfCallSite()</title>
+<indexterm><primary>addModSideEffectOfCallSite</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>addModSideEffectOfCallSite</secondary></indexterm>
+<para><computeroutput>bool MRGenerator::addModSideEffectOfCallSite (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const NodeBS &amp; mods)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Add indirect def an memory object in the function. </para>
+</para>
+
+<para>Add indirect def an memory object in the function </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a39604645ca9ba10607ada3872b14705a"/>    <section>
+    <title>addModSideEffectOfFunction()</title>
+<indexterm><primary>addModSideEffectOfFunction</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>addModSideEffectOfFunction</secondary></indexterm>
+<para><computeroutput>void MRGenerator::addModSideEffectOfFunction (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * fun, const NodeBS &amp; mods)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Add indirect def an memory object in the function. </para>
+</para>
+
+<para>Add indirect def an memory object in the function </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a4e02c3aee7eb0206f6d643b72e39d059"/>    <section>
+    <title>addRefSideEffectOfCallSite()</title>
+<indexterm><primary>addRefSideEffectOfCallSite</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>addRefSideEffectOfCallSite</secondary></indexterm>
+<para><computeroutput>bool MRGenerator::addRefSideEffectOfCallSite (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const NodeBS &amp; refs)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Add indirect uses an memory object in the function. </para>
+</para>
+
+<para>Add indirect uses an memory object in the function </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a899c81db92c6bcf24f6f9b769e02e5bf"/>    <section>
+    <title>addRefSideEffectOfFunction()</title>
+<indexterm><primary>addRefSideEffectOfFunction</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>addRefSideEffectOfFunction</secondary></indexterm>
+<para><computeroutput>void MRGenerator::addRefSideEffectOfFunction (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * fun, const NodeBS &amp; refs)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Add/Get methods for side-effect of functions and callsites. </para>
+</para>
+
+<para>Add indirect uses an memory object in the function </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1afdae3e11009966856736d9aa1e2ad5bd"/>    <section>
+    <title>collectGlobals()</title>
+<indexterm><primary>collectGlobals</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>collectGlobals</secondary></indexterm>
+<para><computeroutput>void MRGenerator::collectGlobals ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Collect all global variables for later escape analysis. </para>
+</para>
+
+<para>Collect globals for escape analysis </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a502f8379620378b36bc12d9a91b408d2"/>    <section>
+    <title>collectModRefForCall()</title>
+<indexterm><primary>collectModRefForCall</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>collectModRefForCall</secondary></indexterm>
+<para><computeroutput>void MRGenerator::collectModRefForCall ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Generate regions for calls/rets. </para>
+</para>
+
+<para>Generate memory regions for calls </para>
+
+<para>collect points-to information for callsites</para>
+
+<para>handle all sub scc nodes of this rep node</para>
+
+<para>Get mod-ref of all callsites calling callGraphNode</para>
+
+<para>mods are treated as both def and use of memory objects</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a207dfa4c9f044764665478142c6e6b22"/>    <section>
+    <title>collectModRefForLoadStore()</title>
+<indexterm><primary>collectModRefForLoadStore</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>collectModRefForLoadStore</secondary></indexterm>
+<para><computeroutput>void MRGenerator::collectModRefForLoadStore ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Generate regions for loads/stores. </para>
+</para>
+
+<para>Generate memory regions for loads/stores </para>
+
+<para>if this function does not have any caller, then we do not care its MSSA</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a42708b4ce8b5548e156a0e6d01602cc2"/>    <section>
+    <title>createMR()</title>
+<indexterm><primary>createMR</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>createMR</secondary></indexterm>
+<para><computeroutput>void MRGenerator::createMR (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * fun, const PointsTo &amp; cpts)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Generate a memory region and put in into functions which use it. </para>
+</para>
+
+<para>Generate a memory region and put in into functions which use it </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a4f65593325e4391333fa1b0bedbffc4a"/>    <section>
+    <title>generateMRs()</title>
+<indexterm><primary>generateMRs</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>generateMRs</secondary></indexterm>
+<para><computeroutput>void MRGenerator::generateMRs ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Start generating memory regions. </para>
+</para>
+
+<para>Generate memory regions according to pointer analysis results Attach regions on loads/stores </para>
+
+<para>collect mod-ref for loads/stores</para>
+
+<para>collect mod-ref for calls</para>
+
+<para>Partition memory regions</para>
+
+<para>attach memory regions for loads/stores/calls</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a1658aacb68aacb4785266263c1641a6a"/>    <section>
+    <title>getModInfoForCall()</title>
+<indexterm><primary>getModInfoForCall</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>getModInfoForCall</secondary></indexterm>
+<para><computeroutput>PointsTo MRGenerator::getModInfoForCall (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs)</computeroutput></para><para>
+
+<para>getModRefInfo APIs </para>
+</para>
+
+<para>Collect mod ref for external callsite other than heap alloc external call</para>
+
+<para>Obtain the mod sets for a call, used for external ModRefInfo queries </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a455e0ba173141ac8ce76a655ac52205f"/>    <section>
+    <title>getModRefInfo()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>getModRefInfo</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>getModRefInfo</secondary></indexterm>
+<para><computeroutput>ModRefInfo MRGenerator::getModRefInfo (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs)</computeroutput></para>
+<para>Determine whether a CallSite instruction can mod or ref any memory location </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a9f1d1604fb884e5c99702556915396f9"/>    <section>
+    <title>getModRefInfo()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>getModRefInfo</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>getModRefInfo</secondary></indexterm>
+<para><computeroutput>ModRefInfo MRGenerator::getModRefInfo (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const Value * V)</computeroutput></para>
+<para>Determine whether a const CallBlockNode* instruction can mod or ref a specific memory location pointed by V </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a83f957962bf3c7621661ce87b095e841"/>    <section>
+    <title>getModRefInfo()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>getModRefInfo</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>getModRefInfo</secondary></indexterm>
+<para><computeroutput>ModRefInfo MRGenerator::getModRefInfo (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs1, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs2)</computeroutput></para>
+<para>Determine mod-ref relations between two const CallBlockNode* instructions </para>
+
+<para>return NoModRef neither two callsites ref or mod any memory</para>
+
+<para>Ref: cs1 ref memory mod by cs2</para>
+
+<para>Mod: cs1 mod memory ref or mod by cs2</para>
+
+<para>ModRef: cs1 ref and mod memory mod by cs2</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a7ecde80ed05d425a19bf7fe0c5feff84"/>    <section>
+    <title>getMR()</title>
+<indexterm><primary>getMR</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>getMR</secondary></indexterm>
+<para><computeroutput>const <link linkend="_class_s_v_f_1_1_mem_region">MemRegion</link> * MRGenerator::getMR (const PointsTo &amp; cpts) const</computeroutput></para><para>
+
+<para>Get a memory region according to cpts. </para>
+</para>
+
+<para>Generate a memory region and put in into functions which use it </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1afc17f566f57656cf17c08665602b4849"/>    <section>
+    <title>getRefInfoForCall()</title>
+<indexterm><primary>getRefInfoForCall</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>getRefInfoForCall</secondary></indexterm>
+<para><computeroutput>PointsTo MRGenerator::getRefInfoForCall (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs)</computeroutput></para>
+<para>Obtain the ref sets for a call, used for external ModRefInfo queries </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a123a2ea51b04f1398b9ee66567f5014a"/>    <section>
+    <title>handleCallsiteModRef()</title>
+<indexterm><primary>handleCallsiteModRef</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>handleCallsiteModRef</secondary></indexterm>
+<para><computeroutput>bool MRGenerator::handleCallsiteModRef (NodeBS &amp; mod, NodeBS &amp; ref, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callee)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Get Mod-Ref of a callee function. </para>
+</para>
+
+<para>Get Mod-Ref of a callee function </para>
+
+<para>if a callee is a heap allocator function, then its mod set of this callsite is the heap object.</para>
+
+<para>otherwise, we find the mod/ref sets from the callee function, who has definition and been processed</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1adc9d530e6f010596d91cd3711dc1358b"/>    <section>
+    <title>modRefAnalysis()</title>
+<indexterm><primary>modRefAnalysis</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>modRefAnalysis</secondary></indexterm>
+<para><computeroutput>void MRGenerator::modRefAnalysis (<link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> * callGraphNode, <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">WorkList</link> &amp; worklist)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Mod-Ref analysis for callsite invoking this callGraphNode. </para>
+</para>
+
+<para>Call site mod-ref analysis Compute mod-ref of all callsites invoking this call graph node </para>
+
+<para>add ref/mod set of callee to its invocation callsites at caller</para>
+
+<para>handle direct callsites</para>
+
+<para>handle indirect callsites</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1ac0b966ee2065607a24920dd9067b40e9"/>    <section>
+    <title>partitionMRs()</title>
+<indexterm><primary>partitionMRs</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>partitionMRs</secondary></indexterm>
+<para><computeroutput>void MRGenerator::partitionMRs ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Partition regions. </para>
+</para>
+
+<para>Partition memory regions </para>
+
+<para>Compute all superset of all condition points-to sets TODO: we may need some refined region partitioning algorithm here For now, we just collapse all refs/mods objects at callsites into one region Consider modularly partition memory regions to speed up analysis (only partition regions within function scope)</para>
+
+<para>Generate memory regions according to condition pts after computing superset</para>
+<para>
+Reimplemented in <link linkend="_class_s_v_f_1_1_inter_disjoint_m_r_g_1a807cf159e53c2fb2903296207185dda0">SVF::InterDisjointMRG</link>, <link linkend="_class_s_v_f_1_1_intra_disjoint_m_r_g_1a6d2434f0e3a318b89b7b9fa4f5613b64">SVF::IntraDisjointMRG</link>, and <link linkend="_class_s_v_f_1_1_distinct_m_r_g_1a4512ef21fa83988ad4d588831bfba482">SVF::DistinctMRG</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a4d20ddfe5cb90d91fd86276a3f010b87"/>    <section>
+    <title>sortPointsTo()</title>
+<indexterm><primary>sortPointsTo</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>sortPointsTo</secondary></indexterm>
+<para><computeroutput>void MRGenerator::sortPointsTo (const PointsTo &amp; cpts)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Given a condition pts, insert into cptsToRepCPtsMap for region generation. </para>
+</para>
+
+<para>Given a condition pts, insert into cptsToRepCPtsMap Always map it to its superset(rep) cpts according to existing items 1) map cpts to its superset(rep) which exists in the map, otherwise its superset is itself 2) adjust existing items in the map if their supersets are cpts </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_r_generator_1a9c1da53188729eb743e1a33bbad87af7"/>    <section>
+    <title>updateAliasMRs()</title>
+<indexterm><primary>updateAliasMRs</primary><secondary>SVF::MRGenerator</secondary></indexterm>
+<indexterm><primary>SVF::MRGenerator</primary><secondary>updateAliasMRs</secondary></indexterm>
+<para><computeroutput>void MRGenerator::updateAliasMRs ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update aliased regions for loads/stores/callsites. </para>
+</para>
+
+<para>Update aliased regions for loads/stores/callsites </para>
+
+<para>update stores with its aliased regions</para>
+
+<para>update callsites with its aliased regions</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/MSSA/MemRegion.hlib/MSSA/MemRegion.cpp</section>
+</section>

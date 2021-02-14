@@ -1,0 +1,183 @@
+.TH "SVF::GenericNode< NodeTy, EdgeTy >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::GenericNode< NodeTy, EdgeTy >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GenericGraph\&.h>\fP
+.PP
+Inherited by \fBSVF::CHNode\fP, \fBSVF::ICFGNode\fP, \fBSVF::PAGNode\fP, \fBSVF::PTACallGraphNode\fP, \fBSVF::TCTNode\fP, and \fBSVF::VFGNode\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef NodeTy \fBNodeType\fP"
+.br
+.ti -1c
+.RI "typedef EdgeTy \fBEdgeType\fP"
+.br
+.ti -1c
+.RI "typedef s32_t \fBGNodeK\fP"
+.br
+.RI "Edge kind\&. "
+.ti -1c
+.RI "typedef OrderedSet< EdgeType *, typename EdgeType::equalGEdge > \fBGEdgeSetTy\fP"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "typedef GEdgeSetTy::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef GEdgeSetTy::const_iterator \fBconst_iterator\fP"
+.br
+.in -1c
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGenericNode\fP (NodeID i, \fBGNodeK\fP k)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~GenericNode\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "NodeID \fBgetId\fP () const"
+.br
+.RI "Get ID\&. "
+.ti -1c
+.RI "\fBGNodeK\fP \fBgetNodeKind\fP () const"
+.br
+.RI "Get node kind\&. "
+.ti -1c
+.RI "bool \fBhasIncomingEdge\fP () const"
+.br
+.RI "Has incoming/outgoing edge set\&. "
+.ti -1c
+.RI "bool \fBhasOutgoingEdge\fP () const"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBOutEdgeBegin\fP ()"
+.br
+.RI "iterators "
+.ti -1c
+.RI "\fBiterator\fP \fBOutEdgeEnd\fP ()"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBInEdgeBegin\fP ()"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBInEdgeEnd\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBOutEdgeBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBOutEdgeEnd\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBInEdgeBegin\fP () const"
+.br
+.ti -1c
+.RI "const_iterator \fBInEdgeEnd\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBiterator\fP \fBdirectOutEdgeBegin\fP ()"
+.br
+.RI "Iterators used for SCC detection, overwrite it in child class if necessory\&. "
+.ti -1c
+.RI "virtual \fBiterator\fP \fBdirectOutEdgeEnd\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBiterator\fP \fBdirectInEdgeBegin\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBiterator\fP \fBdirectInEdgeEnd\fP ()"
+.br
+.ti -1c
+.RI "virtual const_iterator \fBdirectOutEdgeBegin\fP () const"
+.br
+.ti -1c
+.RI "virtual const_iterator \fBdirectOutEdgeEnd\fP () const"
+.br
+.ti -1c
+.RI "virtual const_iterator \fBdirectInEdgeBegin\fP () const"
+.br
+.ti -1c
+.RI "virtual const_iterator \fBdirectInEdgeEnd\fP () const"
+.br
+.ti -1c
+.RI "bool \fBaddIncomingEdge\fP (EdgeType *inEdge)"
+.br
+.RI "Add incoming and outgoing edges\&. "
+.ti -1c
+.RI "bool \fBaddOutgoingEdge\fP (EdgeType *outEdge)"
+.br
+.ti -1c
+.RI "EdgeType * \fBhasIncomingEdge\fP (EdgeType *edge) const"
+.br
+.RI "Find incoming and outgoing edges\&. "
+.ti -1c
+.RI "EdgeType * \fBhasOutgoingEdge\fP (EdgeType *edge) const"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "const GEdgeSetTy & \fBgetOutEdges\fP () const"
+.br
+.ti -1c
+.RI "const GEdgeSetTy & \fBgetInEdges\fP () const"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "Size_t \fBremoveIncomingEdge\fP (EdgeType *edge)"
+.br
+.ti -1c
+.RI "Size_t \fBremoveOutgoingEdge\fP (EdgeType *edge)"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class NodeTy, class EdgeTy>
+.br
+class SVF::GenericNode< NodeTy, EdgeTy >"
+Generic node on the graph as base class 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<class NodeTy , class EdgeTy > typedef GEdgeSetTy::iterator \fBSVF::GenericNode\fP< NodeTy, EdgeTy >::\fBiterator\fP"
+Edge iterator 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class NodeTy , class EdgeTy > const GEdgeSetTy& \fBSVF::GenericNode\fP< NodeTy, EdgeTy >::getOutEdges () const\fC [inline]\fP"
+Get incoming/outgoing edge set 
+.SS "template<class NodeTy , class EdgeTy > Size_t \fBSVF::GenericNode\fP< NodeTy, EdgeTy >::removeIncomingEdge (EdgeType * edge)\fC [inline]\fP"
+Remove incoming and outgoing edges 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

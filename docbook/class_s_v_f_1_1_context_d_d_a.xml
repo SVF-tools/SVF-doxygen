@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_context_d_d_a" xml:lang="en-US">
+<title>SVF::ContextDDA Class Reference</title>
+<indexterm><primary>SVF::ContextDDA</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ContextDDA.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::ContextDDA:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_context_d_d_a.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_s_v_f_1_1_context_d_d_a_1adc70126ea6583df10b52501943a2af49">ContextDDA</link> (<link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> *<link linkend="_class_s_v_f_1_1_d_d_a_v_f_solver_1af08857f907caa32c090eed2c1b404729">_pag</link>, <link linkend="_class_s_v_f_1_1_d_d_a_client">DDAClient</link> *client)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_s_v_f_1_1_context_d_d_a_1a691e26b2d370efe2aee77212f982a1ed">~ContextDDA</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_context_d_d_a_1adb9f21a86daeb2dd79537f3939c393cf">initialize</link> () override</para>
+
+<para>Initialization of the analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1ae34cd06ee3b7d763c81ec418af76d244"/>virtual void <link linkend="_class_s_v_f_1_1_context_d_d_a_1ae34cd06ee3b7d763c81ec418af76d244">finalize</link> () override</para>
+
+<para>Finalize analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1ac8fe1cb3af6048a28028f00bb87a5eba"/>virtual void <link linkend="_class_s_v_f_1_1_context_d_d_a_1ac8fe1cb3af6048a28028f00bb87a5eba">analyze</link> () override</para>
+
+<para>dummy analyze method </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_context_d_d_a_1a337eb89cc5f31741ad8d840d9f284ca5">computeDDAPts</link> (NodeID id) override</para>
+
+<para>Compute points-to set for an unconditional pointer. </para>
+</listitem>
+            <listitem><para>virtual const <link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> &amp; <link linkend="_class_s_v_f_1_1_context_d_d_a_1ae0f3b07267ded5f0ee879c39effff864">computeDDAPts</link> (const <link linkend="_namespace_s_v_f_1ab3532a31724d8719d29aa4c3521ca215">CxtVar</link> &amp;cxtVar)</para>
+
+<para>Compute points-to set for a context-sensitive pointer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_context_d_d_a_1a1b9bfe46777c8a57781452a05635fb02">handleOutOfBudgetDpm</link> (const <link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm)</para>
+
+<para>Handle out-of-budget dpm. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a32ce0085cb99f92f63b54df0f2ea2523"/>virtual <link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> <link linkend="_class_s_v_f_1_1_context_d_d_a_1a32ce0085cb99f92f63b54df0f2ea2523">getConservativeCPts</link> (const <link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm) override</para>
+
+<para>Override parent method. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a6ae16be6774994932aaa594c9b9cb397"/>virtual NodeID <link linkend="_class_s_v_f_1_1_context_d_d_a_1a6ae16be6774994932aaa594c9b9cb397">getPtrNodeID</link> (const <link linkend="_namespace_s_v_f_1ab3532a31724d8719d29aa4c3521ca215">CxtVar</link> &amp;var) const override</para>
+
+<para>Override parent method. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_context_d_d_a_1aa8a7b6e99b92abfa5c2404515b703a2d">handleBKCondition</link> (<link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm, const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge) override</para>
+
+<para>Handle condition for context or path analysis (backward analysis) </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_context_d_d_a_1a02902af9bc4455b994a5da4a9d6cf121">isHeapCondMemObj</link> (const <link linkend="_namespace_s_v_f_1ab3532a31724d8719d29aa4c3521ca215">CxtVar</link> &amp;var, const <link linkend="_class_s_v_f_1_1_store_v_f_g_node">StoreSVFGNode</link> *store) override</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1aa440bf9abda3f353bf91e5e64462b818"/>bool <link linkend="_class_s_v_f_1_1_context_d_d_a_1aa440bf9abda3f353bf91e5e64462b818">testIndCallReachability</link> (<link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *callee, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>refine indirect call edge </para>
+</listitem>
+            <listitem><para>CallSiteID <link linkend="_class_s_v_f_1_1_context_d_d_a_1a2ce589a1d63a5126e178fc47527e0f92">getCSIDAtCall</link> (<link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm, const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge)</para>
+
+<para>get callsite id from call, return 0 if it is a spurious call edge </para>
+</listitem>
+            <listitem><para>CallSiteID <link linkend="_class_s_v_f_1_1_context_d_d_a_1a7687f36ad3f27bb16069975f00a1a202">getCSIDAtRet</link> (<link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm, const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge)</para>
+
+<para>get callsite id from return, return 0 if it is a spurious return edge </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a2754d0fd4b168786c990bbf36538b151"/>virtual void <link linkend="_class_s_v_f_1_1_context_d_d_a_1a2754d0fd4b168786c990bbf36538b151">popRecursiveCallSites</link> (<link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm)</para>
+
+<para>Pop recursive callsites. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a525949d1743136466d33bf4dc26ba423"/>virtual bool <link linkend="_class_s_v_f_1_1_context_d_d_a_1a525949d1743136466d33bf4dc26ba423">isEdgeInRecursion</link> (CallSiteID csId)</para>
+
+<para>Whether call/return inside recursion. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a4b8466d2e8e885fea2f41b5713f785bd"/>virtual void <link linkend="_class_s_v_f_1_1_context_d_d_a_1a4b8466d2e8e885fea2f41b5713f785bd">updateCallGraphAndSVFG</link> (const <link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs, SVFGEdgeSet &amp;svfgEdges) override</para>
+
+<para>Update call graph. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1ad54f523bf5f2504c1924b4f94c5abbba"/>bool <link linkend="_class_s_v_f_1_1_context_d_d_a_1ad54f523bf5f2504c1924b4f94c5abbba">edgeInCallGraphSCC</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge)</para>
+
+<para>Return TRUE if this edge is inside a <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> SCC, i.e., src node and dst node are in the same SCC on the <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> <link linkend="_class_s_v_f_1_1_context_d_d_a_1aefd2b50015aa98fa88a508e3ed1d402a">processGepPts</link> (const <link linkend="_class_s_v_f_1_1_gep_v_f_g_node">GepSVFGNode</link> *gep, const <link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> &amp;srcPts) override</para>
+
+<para>processGep node </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_context_d_d_a_1a26031c81d3eba5b3ff3ebd51d89510ae">handleAddr</link> (<link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> &amp;pts, const <link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp;dpm, const <link linkend="_class_s_v_f_1_1_addr_v_f_g_node">AddrSVFGNode</link> *addr) override</para>
+
+<para>Handle Address SVFGNode to add proper conditional points-to. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a45d7a381fec0692b4d2f7d0eec47ccf1"/>virtual bool <link linkend="_class_s_v_f_1_1_context_d_d_a_1a45d7a381fec0692b4d2f7d0eec47ccf1">propagateViaObj</link> (const <link linkend="_namespace_s_v_f_1ab3532a31724d8719d29aa4c3521ca215">CxtVar</link> &amp;storeObj, const <link linkend="_namespace_s_v_f_1ab3532a31724d8719d29aa4c3521ca215">CxtVar</link> &amp;loadObj) override</para>
+
+<para>Propagate along indirect value-flow if two objects of load and store are same. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_context_d_d_a_1a57d309971de00db9bd8c6bfaf237cbff">isCondCompatible</link> (const <link linkend="_class_s_v_f_1_1_context_cond">ContextCond</link> &amp;cxt1, const <link linkend="_class_s_v_f_1_1_context_cond">ContextCond</link> &amp;cxt2, bool singleton) const override</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a76487b8b3e3abb8a16b5c4f5c7e79819"/>bool <link linkend="_class_s_v_f_1_1_context_d_d_a_1a76487b8b3e3abb8a16b5c4f5c7e79819">isInsensitiveCallRet</link> (const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> *edge)</para>
+
+<para>Whether this edge is treated context-insensitively. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a0d407903c4b0d976da30538ff0c5fc41"/>ConstSVFGEdgeSet &amp; <link linkend="_class_s_v_f_1_1_context_d_d_a_1a0d407903c4b0d976da30538ff0c5fc41">getInsensitiveEdgeSet</link> ()</para>
+
+<para>Return insensitive edge set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1ac3e622d810ee69917b7bef08a882117c"/>virtual void <link linkend="_class_s_v_f_1_1_context_d_d_a_1ac3e622d810ee69917b7bef08a882117c">dumpContexts</link> (const <link linkend="_class_s_v_f_1_1_context_cond">ContextCond</link> &amp;cxts)</para>
+
+<para>dump context call strings </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1afb0ab7fc43e6f0331072419e39ae0606"/>virtual const std::string <link linkend="_class_s_v_f_1_1_context_d_d_a_1afb0ab7fc43e6f0331072419e39ae0606">PTAName</link> () const override</para>
+
+<para>Return PTA name. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Context-, Flow- Sensitive Demand-driven Analysis </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1adc70126ea6583df10b52501943a2af49"/>    <section>
+    <title>ContextDDA()</title>
+<indexterm><primary>ContextDDA</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>ContextDDA</secondary></indexterm>
+<para><computeroutput>ContextDDA::ContextDDA (<link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> * _pag, <link linkend="_class_s_v_f_1_1_d_d_a_client">DDAClient</link> * client)</computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para>Constructor </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a691e26b2d370efe2aee77212f982a1ed"/>    <section>
+    <title>~ContextDDA()</title>
+<indexterm><primary>~ContextDDA</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>~ContextDDA</secondary></indexterm>
+<para><computeroutput>ContextDDA::~ContextDDA ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Destructor </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1ae0f3b07267ded5f0ee879c39effff864"/>    <section>
+    <title>computeDDAPts()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>computeDDAPts</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>computeDDAPts</secondary></indexterm>
+<para><computeroutput>const <link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> &amp; ContextDDA::computeDDAPts (const <link linkend="_namespace_s_v_f_1ab3532a31724d8719d29aa4c3521ca215">CxtVar</link> &amp; var)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Compute points-to set for a context-sensitive pointer. </para>
+</para>
+
+<para>Compute points-to set for a context-sensitive pointer </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a337eb89cc5f31741ad8d840d9f284ca5"/>    <section>
+    <title>computeDDAPts()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>computeDDAPts</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>computeDDAPts</secondary></indexterm>
+<para><computeroutput>void ContextDDA::computeDDAPts (NodeID id)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Compute points-to set for an unconditional pointer. </para>
+</para>
+
+<para>Compute points-to set for an unconditional pointer </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_pointer_analysis_1a0bb90b398ef85504bcd816ae57bee01d">SVF::PointerAnalysis</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a2ce589a1d63a5126e178fc47527e0f92"/>    <section>
+    <title>getCSIDAtCall()</title>
+<indexterm><primary>getCSIDAtCall</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>getCSIDAtCall</secondary></indexterm>
+<para><computeroutput>CallSiteID ContextDDA::getCSIDAtCall (<link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp; dpm, const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * edge)</computeroutput></para><para>
+
+<para>get callsite id from call, return 0 if it is a spurious call edge </para>
+</para>
+
+<para>get callsite id from call, return 0 if it is a spurious call edge translate the callsite id from pre-computed callgraph on <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> to the one on current callgraph </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a7687f36ad3f27bb16069975f00a1a202"/>    <section>
+    <title>getCSIDAtRet()</title>
+<indexterm><primary>getCSIDAtRet</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>getCSIDAtRet</secondary></indexterm>
+<para><computeroutput>CallSiteID ContextDDA::getCSIDAtRet (<link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp; dpm, const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * edge)</computeroutput></para><para>
+
+<para>get callsite id from return, return 0 if it is a spurious return edge </para>
+</para>
+
+<para>get callsite id from return, return 0 if it is a spurious return edge translate the callsite id from pre-computed callgraph on <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> to the one on current callgraph </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a26031c81d3eba5b3ff3ebd51d89510ae"/>    <section>
+    <title>handleAddr()</title>
+<indexterm><primary>handleAddr</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>handleAddr</secondary></indexterm>
+<para><computeroutput>virtual void SVF::ContextDDA::handleAddr (<link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> &amp; pts, const <link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp; dpm, const <link linkend="_class_s_v_f_1_1_addr_v_f_g_node">AddrSVFGNode</link> * addr)<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handle Address SVFGNode to add proper conditional points-to. </para>
+</para>
+
+<para>whether this object is set field-insensitive during pre-analysis</para>
+<para>
+Implements <link linkend="_class_s_v_f_1_1_d_d_a_v_f_solver_1acfe7d961caac8f0f558881a9a006b1fa">SVF::DDAVFSolver&lt; CxtVar, CxtPtSet, CxtLocDPItem &gt;</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1aa8a7b6e99b92abfa5c2404515b703a2d"/>    <section>
+    <title>handleBKCondition()</title>
+<indexterm><primary>handleBKCondition</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>handleBKCondition</secondary></indexterm>
+<para><computeroutput>bool ContextDDA::handleBKCondition (<link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp; dpm, const <link linkend="_class_s_v_f_1_1_v_f_g_edge">SVFGEdge</link> * edge)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handle condition for context or path analysis (backward analysis) </para>
+</para>
+
+<para>Handle conditions during backward traversing. </para>
+
+<para>we don&apos;t handle context in recursions, they treated as assignments</para>
+
+<para>we don&apos;t handle context in recursions, they treated as assignments</para>
+
+<para>TODO: When this call site id is contained in current call string, we may find a recursion. Try to solve this later.</para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_d_d_a_v_f_solver_1a601282325e55badc15f3ba9141816af5">SVF::DDAVFSolver&lt; CxtVar, CxtPtSet, CxtLocDPItem &gt;</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a1b9bfe46777c8a57781452a05635fb02"/>    <section>
+    <title>handleOutOfBudgetDpm()</title>
+<indexterm><primary>handleOutOfBudgetDpm</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>handleOutOfBudgetDpm</secondary></indexterm>
+<para><computeroutput>void ContextDDA::handleOutOfBudgetDpm (const <link linkend="_class_s_v_f_1_1_cxt_stmt_d_p_item">CxtLocDPItem</link> &amp; dpm)</computeroutput></para><para>
+
+<para>Handle out-of-budget dpm. </para>
+</para>
+
+<para>Handle out-of-budget dpm </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1adb9f21a86daeb2dd79537f3939c393cf"/>    <section>
+    <title>initialize()</title>
+<indexterm><primary>initialize</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>initialize</secondary></indexterm>
+<para><computeroutput>void ContextDDA::initialize ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initialization of the analysis. </para>
+</para>
+
+<para>Analysis initialization </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_pointer_analysis_1a431ec4f85eb0f029e5740b92fd9ceb32">SVF::PointerAnalysis</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a57d309971de00db9bd8c6bfaf237cbff"/>    <section>
+    <title>isCondCompatible()</title>
+<indexterm><primary>isCondCompatible</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>isCondCompatible</secondary></indexterm>
+<para><computeroutput>bool ContextDDA::isCondCompatible (const <link linkend="_class_s_v_f_1_1_context_cond">ContextCond</link> &amp; cxt1, const <link linkend="_class_s_v_f_1_1_context_cond">ContextCond</link> &amp; cxt2, bool singleton) const<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Whether two call string contexts are compatible which may represent the same memory object compare with call strings from last few callsite ids (most recent ids to objects): compatible : (e.g., 123 == 123, 123 == 23). not compatible (e.g., 123 != 423)</para>
+
+<para>context conditions of local(not in recursion) and global variables are compatible </para>
+<para>
+Implements <link linkend="_class_s_v_f_1_1_cond_p_t_a_impl_1a6b746c30161c7dab86510895e0032935">SVF::CondPTAImpl&lt; ContextCond &gt;</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1a02902af9bc4455b994a5da4a9d6cf121"/>    <section>
+    <title>isHeapCondMemObj()</title>
+<indexterm><primary>isHeapCondMemObj</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>isHeapCondMemObj</secondary></indexterm>
+<para><computeroutput>bool ContextDDA::isHeapCondMemObj (const <link linkend="_namespace_s_v_f_1ab3532a31724d8719d29aa4c3521ca215">CxtVar</link> &amp; var, const <link linkend="_class_s_v_f_1_1_store_v_f_g_node">StoreSVFGNode</link> * store)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>we exclude concrete heap given the following conditions: (1) concrete calling context (not involved in recursion and not exceed the maximum context limit) (2) not inside loop </para>
+<para>
+Reimplemented from <link linkend="_class_s_v_f_1_1_d_d_a_v_f_solver_1a645c7d0637b49e139898016ff652e1f3">SVF::DDAVFSolver&lt; CxtVar, CxtPtSet, CxtLocDPItem &gt;</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_context_d_d_a_1aefd2b50015aa98fa88a508e3ed1d402a"/>    <section>
+    <title>processGepPts()</title>
+<indexterm><primary>processGepPts</primary><secondary>SVF::ContextDDA</secondary></indexterm>
+<indexterm><primary>SVF::ContextDDA</primary><secondary>processGepPts</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> ContextDDA::processGepPts (const <link linkend="_class_s_v_f_1_1_gep_v_f_g_node">GepSVFGNode</link> * gep, const <link linkend="_class_s_v_f_1_1_cond_std_set">CxtPtSet</link> &amp; srcPts)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>processGep node </para>
+</para>
+
+<para>Generate field objects for structs </para>
+<para>
+Implements <link linkend="_class_s_v_f_1_1_d_d_a_v_f_solver_1ab10a34efa1acb6125ea32cf7a8cf919f">SVF::DDAVFSolver&lt; CxtVar, CxtPtSet, CxtLocDPItem &gt;</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/DDA/ContextDDA.hlib/DDA/ContextDDA.cpp</section>
+</section>

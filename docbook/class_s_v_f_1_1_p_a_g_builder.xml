@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_p_a_g_builder" xml:lang="en-US">
+<title>SVF::PAGBuilder Class Reference</title>
+<indexterm><primary>SVF::PAGBuilder</primary></indexterm>
+<para>
+<computeroutput>#include &lt;PAGBuilder.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::PAGBuilder:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_p_a_g_builder.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a7c6b147496561a0efa5e4c27d5e1df8c"/><link linkend="_class_s_v_f_1_1_p_a_g_builder_1a7c6b147496561a0efa5e4c27d5e1df8c">PAGBuilder</link> ()</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ae6dd6cbbbc3963771971ae89b291b699"/>virtual <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ae6dd6cbbbc3963771971ae89b291b699">~PAGBuilder</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a757ab2c9481467842e1ad4c46a1f6291">build</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *svfModule)</para>
+
+<para>Start building <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> here. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ac037265d15e76801cdf45ae5682ccef8"/><link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ac037265d15e76801cdf45ae5682ccef8">getPAG</link> () const</para>
+
+<para>Return <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a2a2baa9aa1c4b467001ceab3f179ae1b">initialiseNodes</link> ()</para>
+
+<para>Initialize nodes and edges. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a4e6893b4ac983a96827e4447b471e8a3"/>void <emphasis role="strong">addEdge</emphasis> (NodeID src, NodeID dst, <link linkend="_class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6">PAGEdge::PEDGEK</link> kind, Size_t offset=0, Instruction *cs=NULL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a378d2bc2d5526f0ab72c1488d3b58380"/>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a378d2bc2d5526f0ab72c1488d3b58380">sanityCheck</link> ()</para>
+
+<para>Sanity check for <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1acfb6701d6460f26cd31526754419847b"/>NodeID <link linkend="_class_s_v_f_1_1_p_a_g_builder_1acfb6701d6460f26cd31526754419847b">getValueNode</link> (const Value *V)</para>
+
+<para>Get different kinds of node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a442ca853e750396d088aa736cc39356f"/>NodeID <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a442ca853e750396d088aa736cc39356f">getObjectNode</link> (const Value *V)</para>
+
+<para>GetObject - Return the object node (stack/global/heap/function) according to a LLVM Value. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a56174b3a60464bfb64f78b26d2408286"/>NodeID <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a56174b3a60464bfb64f78b26d2408286">getReturnNode</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *func)</para>
+
+<para>getReturnNode - Return the node representing the unique return value of a function. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1adab871886803e0dbe65b8c57bb15c309"/>NodeID <link linkend="_class_s_v_f_1_1_p_a_g_builder_1adab871886803e0dbe65b8c57bb15c309">getVarargNode</link> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *func)</para>
+
+<para>getVarargNode - Return the node representing the unique variadic argument of a function. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a7247d100cc4f652d7dc4ca356b0f2538">visitGlobal</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *svfModule)</para>
+
+<para>Handle globals including (global variable and functions) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a280244168f951cb2d6a061583c20c432">InitialGlobal</link> (const GlobalVariable *gvar, Constant *C, u32_t offset)</para>
+</listitem>
+            <listitem><para>NodeID <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a51bd1644b78b1123622a34e6dee40829">getGlobalVarField</link> (const GlobalVariable *gvar, u32_t offset)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a97cee5531a01ce845dcd217302759326">processCE</link> (const Value *val)</para>
+
+<para>Process constant expression. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a5cedcedab00c875ba392da281de7f5f2">computeGepOffset</link> (const User *V, <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp;ls)</para>
+
+<para>Compute offset of a gep instruction or gep constant expression. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1af0bcfa8c506dec6c8adb85852b39a8ab">handleDirectCall</link> (CallSite cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *F)</para>
+
+<para>Handle direct call. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ab222f5d9ad6c59e1c3a738153cf650d0">handleIndCall</link> (CallSite cs)</para>
+
+<para>Handle indirect call. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a5344e675f4207a1e9a2de54d0e5f6e9d">handleExtCall</link> (CallSite cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *F)</para>
+
+<para>Handle external call. </para>
+</listitem>
+            <listitem><para>const Type * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1af6862687d02f922f4a2561898778c4b6">getBaseTypeAndFlattenedFields</link> (Value *v, std::vector&lt; <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &gt; &amp;fields)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a0298648bd13700f9c4649c9ed39664a2">addComplexConsForExt</link> (Value *D, Value *S, u32_t sz=0)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ac119eecbd406c08b473b39c7fa3e475b">visitAllocaInst</link> (<link linkend="_namespace_s_v_f_1a3bacb4f95c73e6d794901d01c6b65a83">AllocaInst</link> &amp;AI)</para>
+
+<para>Our visit overrides. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a77a96e3bad770eab314403b9d02b263f">visitPHINode</link> (PHINode &amp;I)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a767d67bbcf32288c3a255b20f3d236bc">visitStoreInst</link> (StoreInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ad333677366e6e2eba1aa7f60f6e02814"/>void <emphasis role="strong">visitLoadInst</emphasis> (LoadInst &amp;I)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a0385ab439c9f8788678f0490565f6396">visitGetElementPtrInst</link> (GetElementPtrInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a279ed7ff3400183d81b4a4fbebe502f1"/>void <emphasis role="strong">visitCallInst</emphasis> (CallInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ae0008830aa2aebe1d0f31ed10a0b5533"/>void <emphasis role="strong">visitInvokeInst</emphasis> (InvokeInst &amp;II)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ae38d34776d2f3744adb90374aa84d12d"/>void <emphasis role="strong">visitCallBrInst</emphasis> (CallBrInst &amp;I)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1abe51d51b7bd29f223552643010df586b">visitCallSite</link> (CallSite cs)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1af56d19f29650c772bddeaee3d700b0a7">visitReturnInst</link> (ReturnInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a1aa76038afad572861c72fde345f9ad4"/>void <emphasis role="strong">visitCastInst</emphasis> (CastInst &amp;I)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a614aeca6530b697c0d67eb2b3173059c">visitSelectInst</link> (SelectInst &amp;I)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a54bab83475c617d969b6525f08d68e0c">visitExtractValueInst</link> (ExtractValueInst &amp;EVI)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a8afe9cfdcad2b2a961660fb1f8acd0d7">visitBranchInst</link> (BranchInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a0a54a195cf948c400d1fbaf705a4b423"/>void <emphasis role="strong">visitSwitchInst</emphasis> (SwitchInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a45d125ab3215cb00171b3d8f2e7048ed"/>void <emphasis role="strong">visitInsertValueInst</emphasis> (InsertValueInst &amp;I)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a98abdcc0bb0aa457a3a77c03af2a6354">visitBinaryOperator</link> (BinaryOperator &amp;I)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a7dfed8e95ae4bccdeac53e9c2d3b3cca">visitUnaryOperator</link> (UnaryOperator &amp;I)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ae6f28734ad5b933d347f6ebc95dcd2f2">visitCmpInst</link> (CmpInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a4e81ef5eff62ec9d040f4fe256ce4cc7"/>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a4e81ef5eff62ec9d040f4fe256ce4cc7">visitVAArgInst</link> (VAArgInst &amp;)</para>
+
+<para>TODO: do we need to care about these corner cases? </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a5b7b565582e046a3acb279e315dd5318">visitExtractElementInst</link> (ExtractElementInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a009b45ee9315080dbc80e25db7af3777"/>void <emphasis role="strong">visitInsertElementInst</emphasis> (InsertElementInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1abc5e3c052a31028b3d676e09c7e895b8"/>void <emphasis role="strong">visitShuffleVectorInst</emphasis> (ShuffleVectorInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a67e8185163f90a02dac7cb18a6e4eda5"/>void <emphasis role="strong">visitLandingPadInst</emphasis> (LandingPadInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1acde7a8663cf936a2f5ce473673a09dc4"/>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1acde7a8663cf936a2f5ce473673a09dc4">visitResumeInst</link> (ResumeInst &amp;)</para>
+
+<para>Instruction not that often. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ae9b2faad712a499759550b4958cef044"/>void <emphasis role="strong">visitUnreachableInst</emphasis> (UnreachableInst &amp;)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a3d0cc10b66f6fc0f3e909861ac8cd244"/>void <emphasis role="strong">visitFenceInst</emphasis> (FenceInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1af9e25ea8fee0e6d58c70ed7f1444ccaa"/>void <emphasis role="strong">visitAtomicCmpXchgInst</emphasis> (AtomicCmpXchgInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a86667fc83e3afd45da76b8a0bf73ea83"/>void <emphasis role="strong">visitAtomicRMWInst</emphasis> (AtomicRMWInst &amp;I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a141d835fbf86c6b1963f23b9198f4edb"/>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a141d835fbf86c6b1963f23b9198f4edb">visitInstruction</link> (Instruction &amp;)</para>
+
+<para>Provide base case for our instruction visit. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ac982536389623922a8db341784f599e5"/>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ac982536389623922a8db341784f599e5">setCurrentLocation</link> (const Value *val, const BasicBlock *bb)</para>
+
+<para>Set current basic block in order to keep track of control flow information. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a5147c8d5e072bf2e30b943e56a537925"/>const Value * <emphasis role="strong">getCurrentValue</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1abc50396b684b2c5d066974916b07424b"/>const BasicBlock * <emphasis role="strong">getCurrentBB</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a723c751c4575c5f73e2391c2ac1037c7"/>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a723c751c4575c5f73e2391c2ac1037c7">addGlobalBlackHoleAddrEdge</link> (NodeID node, const ConstantExpr *int2Ptrce)</para>
+
+<para>Add global black hole Address edge. </para>
+</listitem>
+            <listitem><para>NodeID <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a612e0c0ebc12361d2fa56fb5fd85a671">addNullPtrNode</link> ()</para>
+
+<para>Add NullPtr <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link>. </para>
+</listitem>
+            <listitem><para>NodeID <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a8960f5bcb7484b548c27948686317783">getGepValNode</link> (const Value *val, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp;ls, const Type *baseType, u32_t fieldidx)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_a_g_builder_1abad522a6e5d90b6d59baf667a6ec8f32">setCurrentBBAndValueForPAGEdge</link> (<link linkend="_class_s_v_f_1_1_p_a_g_edge">PAGEdge</link> *edge)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ae27d71a747b7536cf7e8b375a70265be"/><link linkend="_class_s_v_f_1_1_p_a_g_edge">PAGEdge</link> * <emphasis role="strong">addBlackHoleAddrEdge</emphasis> (NodeID node)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1affc73e4204e3150b4f8cf654752d0bd7"/><link linkend="_class_s_v_f_1_1_addr_p_e">AddrPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1affc73e4204e3150b4f8cf654752d0bd7">addAddrEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Address edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ad9d68206d9d900adc56474a97d84f5aa"/><link linkend="_class_s_v_f_1_1_copy_p_e">CopyPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ad9d68206d9d900adc56474a97d84f5aa">addCopyEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Copy edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a883daf0dd77cffc7525522138a72f5f5"/><link linkend="_class_s_v_f_1_1_cmp_p_e">CmpPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a883daf0dd77cffc7525522138a72f5f5">addCmpEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Copy edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a1e1a7ac8b5c26cc4a571a602eace6b87"/><link linkend="_class_s_v_f_1_1_binary_o_p_p_e">BinaryOPPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a1e1a7ac8b5c26cc4a571a602eace6b87">addBinaryOPEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Copy edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1aba8aa05cf63cec65b603b497ef35101f"/><link linkend="_class_s_v_f_1_1_unary_o_p_p_e">UnaryOPPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1aba8aa05cf63cec65b603b497ef35101f">addUnaryOPEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Unary edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a607f25cf79a39de233c3c3226a5c3a84"/><link linkend="_class_s_v_f_1_1_load_p_e">LoadPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a607f25cf79a39de233c3c3226a5c3a84">addLoadEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Load edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ab5343c240c160f0ab1c97f3546e82bc9"/><link linkend="_class_s_v_f_1_1_store_p_e">StorePE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ab5343c240c160f0ab1c97f3546e82bc9">addStoreEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Store edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a7f0bd7bb5f476a59490e09c599a7018d"/><link linkend="_class_s_v_f_1_1_call_p_e">CallPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a7f0bd7bb5f476a59490e09c599a7018d">addCallEdge</link> (NodeID src, NodeID dst, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Add Call edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a0102a8cfcbcb1d3b86cf4eb4aceb45ce"/><link linkend="_class_s_v_f_1_1_ret_p_e">RetPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a0102a8cfcbcb1d3b86cf4eb4aceb45ce">addRetEdge</link> (NodeID src, NodeID dst, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Add Return edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1afb20aef23c737da1f4253e0131a20918"/><link linkend="_class_s_v_f_1_1_gep_p_e">GepPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1afb20aef23c737da1f4253e0131a20918">addGepEdge</link> (NodeID src, NodeID dst, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp;ls, bool constGep)</para>
+
+<para>Add Gep edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ae8ae4030eb2aa3e91cbe3347ebbebe4d"/><link linkend="_class_s_v_f_1_1_normal_gep_p_e">NormalGepPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1ae8ae4030eb2aa3e91cbe3347ebbebe4d">addNormalGepEdge</link> (NodeID src, NodeID dst, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp;ls)</para>
+
+<para>Add Offset(Gep) edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1aca96a7d6ea2b029a094301744a803038"/><link linkend="_class_s_v_f_1_1_variant_gep_p_e">VariantGepPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1aca96a7d6ea2b029a094301744a803038">addVariantGepEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Variant(Gep) edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a1145de8b8cc483196ed48df4ddeb5518"/><link linkend="_class_s_v_f_1_1_t_d_fork_p_e">TDForkPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a1145de8b8cc483196ed48df4ddeb5518">addThreadForkEdge</link> (NodeID src, NodeID dst, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Add Thread fork edge for parameter passing. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a9d3dc63ec3c4a55168160eb413ee0133"/><link linkend="_class_s_v_f_1_1_t_d_join_p_e">TDJoinPE</link> * <link linkend="_class_s_v_f_1_1_p_a_g_builder_1a9d3dc63ec3c4a55168160eb413ee0133">addThreadJoinEdge</link> (NodeID src, NodeID dst, const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *cs)</para>
+
+<para>Add Thread join edge for parameter passing. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> Builder </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a0298648bd13700f9c4649c9ed39664a2"/>    <section>
+    <title>addComplexConsForExt()</title>
+<indexterm><primary>addComplexConsForExt</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>addComplexConsForExt</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::addComplexConsForExt (Value * D, Value * S, u32_t sz = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para>Add the load/store constraints and temp. nodes for the complex constraint *D = *S (where D/S may point to structs). </para>
+
+<para>If sz is 0, we will add edges for all fields.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a612e0c0ebc12361d2fa56fb5fd85a671"/>    <section>
+    <title>addNullPtrNode()</title>
+<indexterm><primary>addNullPtrNode</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>addNullPtrNode</secondary></indexterm>
+<para><computeroutput>NodeID SVF::PAGBuilder::addNullPtrNode ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Add NullPtr <link linkend="_class_s_v_f_1_1_p_a_g_node">PAGNode</link>. </para>
+</para>
+
+<para>let all undef value or non-determined pointers points-to black hole</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a757ab2c9481467842e1ad4c46a1f6291"/>    <section>
+    <title>build()</title>
+<indexterm><primary>build</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>build</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> * PAGBuilder::build (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * svfModule)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Start building <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> here. </para>
+</para>
+
+<para>Start building <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> here </para>
+
+<para>initial external library information initial <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> nodes</para>
+
+<para>initial <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edges: // handle globals</para>
+
+<para>handle functions</para>
+
+<para>collect return node of function fun</para>
+
+<para>Return <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> node will not be created for function which can not reach the return instruction due to call to abort(), exit(), etc. In 176.gcc of SPEC 2000, function build_objc_string() from c-lang.c shows an example when fun.doesNotReturn() evaluates to TRUE because of abort().</para>
+
+<para>To be noted, we do not record arguments which are in declared function without body TODO: what about external functions with <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> imported by commandline?</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a5cedcedab00c875ba392da281de7f5f2"/>    <section>
+    <title>computeGepOffset()</title>
+<indexterm><primary>computeGepOffset</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>computeGepOffset</secondary></indexterm>
+<para><computeroutput>bool PAGBuilder::computeGepOffset (const User * V, <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp; ls)</computeroutput></para><para>
+
+<para>Compute offset of a gep instruction or gep constant expression. </para>
+</para>
+
+<para>Return the object node offset according to GEP insn (V). Given a gep edge p = q + i, if &quot;i&quot; is a constant then we return its offset size otherwise if &quot;i&quot; is a variable determined by runtime, then it is a variant offset Return TRUE if the offset of this GEP insn is a constant. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1af6862687d02f922f4a2561898778c4b6"/>    <section>
+    <title>getBaseTypeAndFlattenedFields()</title>
+<indexterm><primary>getBaseTypeAndFlattenedFields</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>getBaseTypeAndFlattenedFields</secondary></indexterm>
+<para><computeroutput>const Type * PAGBuilder::getBaseTypeAndFlattenedFields (Value * V, std::vector&lt; <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &gt; &amp; fields)</computeroutput></para>
+<para>Find the base type and the max possible offset of an object pointed to by (V). </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a8960f5bcb7484b548c27948686317783"/>    <section>
+    <title>getGepValNode()</title>
+<indexterm><primary>getGepValNode</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>getGepValNode</secondary></indexterm>
+<para><computeroutput>NodeID PAGBuilder::getGepValNode (const Value * val, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp; ls, const Type * baseType, u32_t fieldidx)</computeroutput></para>
+<para>Add a temp field value node according to base value and offset this node is after the initial node method, it is out of scope of symInfo table </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a51bd1644b78b1123622a34e6dee40829"/>    <section>
+    <title>getGlobalVarField()</title>
+<indexterm><primary>getGlobalVarField</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>getGlobalVarField</secondary></indexterm>
+<para><computeroutput>NodeID PAGBuilder::getGlobalVarField (const GlobalVariable * gvar, u32_t offset)</computeroutput></para>
+<para>Get the field of the global variable node FIXME:Here we only get the field that actually used in the program We ignore the initialization of global variable field that not used in the program </para>
+
+<para>if we did not find the constant expression in the program, then we need to create a gep node for this field</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1af0bcfa8c506dec6c8adb85852b39a8ab"/>    <section>
+    <title>handleDirectCall()</title>
+<indexterm><primary>handleDirectCall</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>handleDirectCall</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::handleDirectCall (CallSite cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * F)</computeroutput></para><para>
+
+<para>Handle direct call. </para>
+</para>
+
+<para>Add the constraints for a direct, non-external call. </para>
+
+<para>FIXME: this assertion should be placed for correct checking except bug program like 188.ammp, 300.twolf</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a5344e675f4207a1e9a2de54d0e5f6e9d"/>    <section>
+    <title>handleExtCall()</title>
+<indexterm><primary>handleExtCall</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>handleExtCall</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::handleExtCall (CallSite cs, const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> * callee)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handle external call. </para>
+</para>
+
+<para>Handle external calls </para>
+
+<para>this case is for strcpy(dst,src); to maintain its semantics we will store src to the base of dst instead of dst. dst = load base store src base</para>
+
+<para>create inter-procedural <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edges for thread forks</para>
+
+<para>pthread_create has 1 arg. apr_thread_create has 2 arg.</para>
+
+<para>Connect actual parameter to formal parameter of the start routine</para>
+
+<para>handle indirect calls at pthread create APIs e.g., pthread_create(&amp;t1, NULL, fp, ...); const Value* fun = <link linkend="_class_s_v_f_1_1_thread_a_p_i_1a6852ff1eedc1117e95e45e4a90c80d53">ThreadAPI::getThreadAPI()</link>-&gt;getForkedFun(inst); if(!SVFUtil::isa&lt;Function&gt;(fun)) pag-&gt;addIndirectCallsites(cs,pag-&gt;getValueNode(fun));</para>
+
+<para>If forkedFun does not pass to spawnee as function type but as void pointer remember to update inter-procedural callgraph/PAG/SVFG etc. when indirect call targets are resolved We don&apos;t connect the callgraph here, further investigation is need to hanle mod-ref during <link linkend="_class_s_v_f_1_1_s_v_f_g">SVFG</link> construction.</para>
+
+<para>create inter-procedural <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edges for hare_parallel_for calls</para>
+
+<para>The task function of hare_parallel_for has 3 args.</para>
+
+<para>Connect actual parameter to formal parameter of the start routine</para>
+
+<para>handle indirect calls at hare_parallel_for (e.g., hare_parallel_for(..., fp, ...); const Value* fun = <link linkend="_class_s_v_f_1_1_thread_a_p_i_1a6852ff1eedc1117e95e45e4a90c80d53">ThreadAPI::getThreadAPI()</link>-&gt;getForkedFun(inst); if(!SVFUtil::isa&lt;Function&gt;(fun)) pag-&gt;addIndirectCallsites(cs,pag-&gt;getValueNode(fun));</para>
+
+<para>TODO: inter-procedural <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edges for thread joins</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ab222f5d9ad6c59e1c3a738153cf650d0"/>    <section>
+    <title>handleIndCall()</title>
+<indexterm><primary>handleIndCall</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>handleIndCall</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::handleIndCall (CallSite cs)</computeroutput></para><para>
+
+<para>Handle indirect call. </para>
+</para>
+
+<para>Indirect call is resolved on-the-fly during pointer analysis </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a280244168f951cb2d6a061583c20c432"/>    <section>
+    <title>InitialGlobal()</title>
+<indexterm><primary>InitialGlobal</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>InitialGlobal</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::InitialGlobal (const GlobalVariable * gvar, Constant * C, u32_t offset)</computeroutput></para>
+<para>src should not point to anything yet</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a2a2baa9aa1c4b467001ceab3f179ae1b"/>    <section>
+    <title>initialiseNodes()</title>
+<indexterm><primary>initialiseNodes</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>initialiseNodes</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::initialiseNodes ( )</computeroutput></para><para>
+
+<para>Initialize nodes and edges. </para>
+</para>
+
+<para>add address edges for constant nodes.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a97cee5531a01ce845dcd217302759326"/>    <section>
+    <title>processCE()</title>
+<indexterm><primary>processCE</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>processCE</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::processCE (const Value * val)</computeroutput></para><para>
+
+<para>Process constant expression. </para>
+</para>
+
+<para>Handle constant expression, and connect the gep edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1abad522a6e5d90b6d59baf667a6ec8f32"/>    <section>
+    <title>setCurrentBBAndValueForPAGEdge()</title>
+<indexterm><primary>setCurrentBBAndValueForPAGEdge</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>setCurrentBBAndValueForPAGEdge</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::setCurrentBBAndValueForPAGEdge (<link linkend="_class_s_v_f_1_1_p_a_g_edge">PAGEdge</link> * edge)</computeroutput></para>
+<para>We assume every <link linkend="_class_s_v_f_1_1_gep_val_p_n">GepValPN</link> and its <link linkend="_class_s_v_f_1_1_gep_p_e">GepPE</link> are unique across whole program</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ac119eecbd406c08b473b39c7fa3e475b"/>    <section>
+    <title>visitAllocaInst()</title>
+<indexterm><primary>visitAllocaInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitAllocaInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitAllocaInst (<link linkend="_namespace_s_v_f_1a3bacb4f95c73e6d794901d01c6b65a83">AllocaInst</link> &amp; inst)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Our visit overrides. </para>
+</para>
+
+<para>Visit alloca instructions Add edge V (dst) &lt;&#8211; O (src), V here is a value node on <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link>, O is object node on <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a98abdcc0bb0aa457a3a77c03af2a6354"/>    <section>
+    <title>visitBinaryOperator()</title>
+<indexterm><primary>visitBinaryOperator</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitBinaryOperator</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitBinaryOperator (BinaryOperator &amp; inst)</computeroutput></para>
+<para>Visit Binary Operator </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a8afe9cfdcad2b2a961660fb1f8acd0d7"/>    <section>
+    <title>visitBranchInst()</title>
+<indexterm><primary>visitBranchInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitBranchInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitBranchInst (BranchInst &amp; inst)</computeroutput></para>
+<para>Branch and switch instructions are treated as UnaryOP br cmp label if.then, label if.else </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1abe51d51b7bd29f223552643010df586b"/>    <section>
+    <title>visitCallSite()</title>
+<indexterm><primary>visitCallSite</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitCallSite</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitCallSite (CallSite cs)</computeroutput></para>
+<para>Collect callsite arguments and returns</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1ae6f28734ad5b933d347f6ebc95dcd2f2"/>    <section>
+    <title>visitCmpInst()</title>
+<indexterm><primary>visitCmpInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitCmpInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitCmpInst (CmpInst &amp; inst)</computeroutput></para>
+<para>Visit compare instruction </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a5b7b565582e046a3acb279e315dd5318"/>    <section>
+    <title>visitExtractElementInst()</title>
+<indexterm><primary>visitExtractElementInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitExtractElementInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitExtractElementInst (ExtractElementInst &amp; inst)</computeroutput></para>
+<para>The �extractelement� instruction extracts a single scalar element from a vector at a specified index. TODO: for now we just assume the pointer after extraction points to blackhole The first operand of an �extractelement� instruction is a value of vector type. The second operand is an index indicating the position from which to extract the element.</para>
+
+<para>&lt;result&gt; = extractelement &lt;4 x i32&gt; vec, i32 0 ; yields i32 </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a54bab83475c617d969b6525f08d68e0c"/>    <section>
+    <title>visitExtractValueInst()</title>
+<indexterm><primary>visitExtractValueInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitExtractValueInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitExtractValueInst (ExtractValueInst &amp; inst)</computeroutput></para>
+<para>visit extract value instructions for structures in registers TODO: for now we just assume the pointer after extraction points to blackhole for example %24 = extractvalue { i32, struct.s_hash* } call34, 0 %24 is a pointer points to first field of a register value call34 however we can not create call34 as an memory object, as it is register value. Is that necessary treat extract value as getelementptr instruction later to get more precise results? </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a0385ab439c9f8788678f0490565f6396"/>    <section>
+    <title>visitGetElementPtrInst()</title>
+<indexterm><primary>visitGetElementPtrInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitGetElementPtrInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitGetElementPtrInst (GetElementPtrInst &amp; inst)</computeroutput></para>
+<para>Visit getelementptr instructions </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a7247d100cc4f652d7dc4ca356b0f2538"/>    <section>
+    <title>visitGlobal()</title>
+<indexterm><primary>visitGlobal</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitGlobal</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitGlobal (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * svfModule)</computeroutput></para><para>
+
+<para>Handle globals including (global variable and functions) </para>
+</para>
+
+<para>Visit global variables for building <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> </para>
+
+<para>initialize global variable</para>
+
+<para>initialize global functions</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a77a96e3bad770eab314403b9d02b263f"/>    <section>
+    <title>visitPHINode()</title>
+<indexterm><primary>visitPHINode</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitPHINode</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitPHINode (PHINode &amp; inst)</computeroutput></para>
+<para>Visit phi instructions </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1af56d19f29650c772bddeaee3d700b0a7"/>    <section>
+    <title>visitReturnInst()</title>
+<indexterm><primary>visitReturnInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitReturnInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitReturnInst (ReturnInst &amp; inst)</computeroutput></para>
+<para>Visit return instructions of a function </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a614aeca6530b697c0d67eb2b3173059c"/>    <section>
+    <title>visitSelectInst()</title>
+<indexterm><primary>visitSelectInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitSelectInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitSelectInst (SelectInst &amp; inst)</computeroutput></para>
+<para>Visit select instructions </para>
+
+<para>Two operands have same incoming basic block, both are the current BB</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a767d67bbcf32288c3a255b20f3d236bc"/>    <section>
+    <title>visitStoreInst()</title>
+<indexterm><primary>visitStoreInst</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitStoreInst</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitStoreInst (StoreInst &amp; inst)</computeroutput></para>
+<para>Visit store instructions </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_a_g_builder_1a7dfed8e95ae4bccdeac53e9c2d3b3cca"/>    <section>
+    <title>visitUnaryOperator()</title>
+<indexterm><primary>visitUnaryOperator</primary><secondary>SVF::PAGBuilder</secondary></indexterm>
+<indexterm><primary>SVF::PAGBuilder</primary><secondary>visitUnaryOperator</secondary></indexterm>
+<para><computeroutput>void PAGBuilder::visitUnaryOperator (UnaryOperator &amp; inst)</computeroutput></para>
+<para>Visit Unary Operator </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/SVF-FE/PAGBuilder.hlib/SVF-FE/PAGBuilder.cpp</section>
+</section>

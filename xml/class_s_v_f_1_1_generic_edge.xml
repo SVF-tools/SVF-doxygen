@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_generic_edge" kind="class" language="C++" prot="public">
+    <compoundname>SVF::GenericEdge</compoundname>
+    <derivedcompoundref refid="class_s_v_f_1_1_c_h_edge" prot="public" virt="non-virtual">SVF::CHEdge</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_constraint_edge" prot="public" virt="non-virtual">SVF::ConstraintEdge</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_i_c_f_g_edge" prot="public" virt="non-virtual">SVF::ICFGEdge</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_p_a_g_edge" prot="public" virt="non-virtual">SVF::PAGEdge</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_p_t_a_call_graph_edge" prot="public" virt="non-virtual">SVF::PTACallGraphEdge</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_t_c_t_edge" prot="public" virt="non-virtual">SVF::TCTEdge</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_v_f_g_edge" prot="public" virt="non-virtual">SVF::VFGEdge</derivedcompoundref>
+    <includes refid="_generic_graph_8h" local="no">GenericGraph.h</includes>
+    <innerclass refid="struct_s_v_f_1_1_generic_edge_1_1equal_g_edge" prot="public">SVF::GenericEdge::equalGEdge</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class NodeTy</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_s_v_f_1_1_generic_edge_1aff95460d4b859e657a9198b7c5e5c736" prot="public" static="no">
+        <type>NodeTy</type>
+        <definition>typedef NodeTy SVF::GenericEdge&lt; NodeTy &gt;::NodeType</definition>
+        <argsstring></argsstring>
+        <name>NodeType</name>
+        <briefdescription>
+<para>Node type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="47" column="20" bodyfile="include/Graphs/GenericGraph.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614" prot="public" static="no">
+        <type>u64_t</type>
+        <definition>typedef u64_t SVF::GenericEdge&lt; NodeTy &gt;::GEdgeFlag</definition>
+        <argsstring></argsstring>
+        <name>GEdgeFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Edge Flag Edge format as follows (from lowest bit): (1) 0-7 bits encode an edge kind (allow maximum 16 kinds) (2) 8-63 bits encode a callsite instruction </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="52" column="19" bodyfile="include/Graphs/GenericGraph.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_generic_edge_1a7eb93c9018c80057672a8ce71615dc0d" prot="public" static="no">
+        <type>s32_t</type>
+        <definition>typedef s32_t SVF::GenericEdge&lt; NodeTy &gt;::GEdgeKind</definition>
+        <argsstring></argsstring>
+        <name>GEdgeKind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="53" column="19" bodyfile="include/Graphs/GenericGraph.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_generic_edge_1a0e8736f88ee75da025d874f92328ca71" prot="private" static="no" mutable="no">
+        <type>NodeTy *</type>
+        <definition>NodeTy* SVF::GenericEdge&lt; NodeTy &gt;::src</definition>
+        <argsstring></argsstring>
+        <name>src</name>
+        <briefdescription>
+<para>source node </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="55" column="12" bodyfile="include/Graphs/GenericGraph.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_generic_edge_1aa41cb7482bdab1ba328f4b94f30f3ee4" prot="private" static="no" mutable="no">
+        <type>NodeTy *</type>
+        <definition>NodeTy* SVF::GenericEdge&lt; NodeTy &gt;::dst</definition>
+        <argsstring></argsstring>
+        <name>dst</name>
+        <briefdescription>
+<para>destination node </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="56" column="12" bodyfile="include/Graphs/GenericGraph.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_generic_edge_1aa1f446e93750580dce04a127231dd1a3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614" kindref="member">GEdgeFlag</ref></type>
+        <definition>GEdgeFlag SVF::GenericEdge&lt; NodeTy &gt;::edgeFlag</definition>
+        <argsstring></argsstring>
+        <name>edgeFlag</name>
+        <briefdescription>
+<para>edge kind </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="57" column="15" bodyfile="include/Graphs/GenericGraph.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_generic_edge_1af1c2fd4b5ef1d7b7605572bf2489c298" prot="protected" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr unsigned char</type>
+        <definition>constexpr unsigned char SVF::GenericEdge&lt; NodeTy &gt;::EdgeKindMaskBits</definition>
+        <argsstring></argsstring>
+        <name>EdgeKindMaskBits</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+<para>We use the lower 8 bits to denote edge kind. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="119" column="36" bodyfile="include/Graphs/GenericGraph.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_generic_edge_1a93dec4c27088242a4b1b6aa82cea46b9" prot="protected" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr u64_t</type>
+        <definition>constexpr u64_t SVF::GenericEdge&lt; NodeTy &gt;::EdgeKindMask</definition>
+        <argsstring></argsstring>
+        <name>EdgeKindMask</name>
+        <initializer>= (~0ULL) &gt;&gt; (64 - <ref refid="class_s_v_f_1_1_generic_edge_1af1c2fd4b5ef1d7b7605572bf2489c298" kindref="member">EdgeKindMaskBits</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="120" column="28" bodyfile="include/Graphs/GenericGraph.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_generic_edge_1a6764973569c281d483afab17a75cb4dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::GenericEdge&lt; NodeTy &gt;::GenericEdge</definition>
+        <argsstring>(NodeTy *s, NodeTy *d, GEdgeFlag k)</argsstring>
+        <name>GenericEdge</name>
+        <param>
+          <type>NodeTy *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>NodeTy *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614" kindref="member">GEdgeFlag</ref></type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="61" column="5" bodyfile="include/Graphs/GenericGraph.h" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_generic_edge_1a548daea0cac6491de91d4840b7297741" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SVF::GenericEdge&lt; NodeTy &gt;::~GenericEdge</definition>
+        <argsstring>()</argsstring>
+        <name>~GenericEdge</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="67" column="13" bodyfile="include/Graphs/GenericGraph.h" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_generic_edge_1ae6792506a0150a9400d635eceab7f9e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeID</type>
+        <definition>NodeID SVF::GenericEdge&lt; NodeTy &gt;::getSrcID</definition>
+        <argsstring>() const</argsstring>
+        <name>getSrcID</name>
+        <briefdescription>
+<para>get methods of the components </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="73" column="19" bodyfile="include/Graphs/GenericGraph.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_generic_edge_1ad9edb45e74ae675d9da82f5acf02d56e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeID</type>
+        <definition>NodeID SVF::GenericEdge&lt; NodeTy &gt;::getDstID</definition>
+        <argsstring>() const</argsstring>
+        <name>getDstID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="77" column="19" bodyfile="include/Graphs/GenericGraph.h" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_generic_edge_1abe8525c542def8162b094c169a01993b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>GEdgeKind</type>
+        <definition>GEdgeKind SVF::GenericEdge&lt; NodeTy &gt;::getEdgeKind</definition>
+        <argsstring>() const</argsstring>
+        <name>getEdgeKind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="81" column="22" bodyfile="include/Graphs/GenericGraph.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_generic_edge_1ab47ca533c415841ef75456cbad439589" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_generic_edge_1aff95460d4b859e657a9198b7c5e5c736" kindref="member">NodeType</ref> *</type>
+        <definition>NodeType* SVF::GenericEdge&lt; NodeTy &gt;::getSrcNode</definition>
+        <argsstring>() const</argsstring>
+        <name>getSrcNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="85" column="14" bodyfile="include/Graphs/GenericGraph.h" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_generic_edge_1aeaa31a2c8479e831b36ce2e2582ceb86" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_generic_edge_1aff95460d4b859e657a9198b7c5e5c736" kindref="member">NodeType</ref> *</type>
+        <definition>NodeType* SVF::GenericEdge&lt; NodeTy &gt;::getDstNode</definition>
+        <argsstring>() const</argsstring>
+        <name>getDstNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="89" column="14" bodyfile="include/Graphs/GenericGraph.h" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_generic_edge_1a88b2086dcebb60bc86bca0fb94f49fca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::GenericEdge&lt; NodeTy &gt;::operator==</definition>
+        <argsstring>(const GenericEdge&lt; NodeType &gt; *rhs) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_generic_edge" kindref="compound">GenericEdge</ref>&lt; <ref refid="class_s_v_f_1_1_generic_edge_1aff95460d4b859e657a9198b7c5e5c736" kindref="member">NodeType</ref> &gt; *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/GenericGraph.h" line="111" column="17" bodyfile="include/Graphs/GenericGraph.h" bodystart="111" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Generic edge on the graph as base class </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="39">
+        <label>SVF::RetDirSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_ret_dir_s_v_f_g_edge"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>SVF::VFGEdge&lt; VFGNode &gt;</label>
+        <link refid="class_s_v_f_1_1_v_f_g_edge"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SVF::StoreCGEdge</label>
+        <link refid="class_s_v_f_1_1_store_c_g_edge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>SVF::AddrPE</label>
+        <link refid="class_s_v_f_1_1_addr_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>SVF::IntraDirSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_intra_dir_s_v_f_g_edge"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>SVF::HareParForEdge</label>
+        <link refid="class_s_v_f_1_1_hare_par_for_edge"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>SVF::VariantGepPE</label>
+        <link refid="class_s_v_f_1_1_variant_gep_p_e"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>SVF::IntraIndSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_intra_ind_s_v_f_g_edge"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>SVF::TDForkPE</label>
+        <link refid="class_s_v_f_1_1_t_d_fork_p_e"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SVF::CHEdge&lt; CHNode &gt;</label>
+        <link refid="class_s_v_f_1_1_c_h_edge"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SVF::VariantGepCGEdge</label>
+        <link refid="class_s_v_f_1_1_variant_gep_c_g_edge"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>SVF::BinaryOPPE</label>
+        <link refid="class_s_v_f_1_1_binary_o_p_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SVF::AddrCGEdge</label>
+        <link refid="class_s_v_f_1_1_addr_c_g_edge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>SVF::ThreadJoinEdge</label>
+        <link refid="class_s_v_f_1_1_thread_join_edge"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>SVF::RetPE</label>
+        <link refid="class_s_v_f_1_1_ret_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>SVF::DirectSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_direct_s_v_f_g_edge"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>SVF::GepPE</label>
+        <link refid="class_s_v_f_1_1_gep_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>SVF::UnaryOPPE</label>
+        <link refid="class_s_v_f_1_1_unary_o_p_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>SVF::TCTEdge&lt; TCTNode &gt;</label>
+        <link refid="class_s_v_f_1_1_t_c_t_edge"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>SVF::RetIndSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_ret_ind_s_v_f_g_edge"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>SVF::RetCFGEdge</label>
+        <link refid="class_s_v_f_1_1_ret_c_f_g_edge"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SVF::ConstraintEdge&lt; ConstraintNode &gt;</label>
+        <link refid="class_s_v_f_1_1_constraint_edge"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>SVF::IntraCFGEdge</label>
+        <link refid="class_s_v_f_1_1_intra_c_f_g_edge"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SVF::CallPE</label>
+        <link refid="class_s_v_f_1_1_call_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SVF::LoadCGEdge</label>
+        <link refid="class_s_v_f_1_1_load_c_g_edge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>SVF::LoadPE</label>
+        <link refid="class_s_v_f_1_1_load_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>SVF::CmpPE</label>
+        <link refid="class_s_v_f_1_1_cmp_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>SVF::CallDirSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_call_dir_s_v_f_g_edge"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>SVF::StorePE</label>
+        <link refid="class_s_v_f_1_1_store_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SVF::NormalGepCGEdge</label>
+        <link refid="class_s_v_f_1_1_normal_gep_c_g_edge"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SVF::PAGEdge&lt; PAGNode &gt;</label>
+        <link refid="class_s_v_f_1_1_p_a_g_edge"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SVF::CopyCGEdge</label>
+        <link refid="class_s_v_f_1_1_copy_c_g_edge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>SVF::PTACallGraphEdge&lt; PTACallGraphNode &gt;</label>
+        <link refid="class_s_v_f_1_1_p_t_a_call_graph_edge"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>SVF::ThreadForkEdge</label>
+        <link refid="class_s_v_f_1_1_thread_fork_edge"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>SVF::CallIndSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_call_ind_s_v_f_g_edge"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>SVF::ThreadMHPIndSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_thread_m_h_p_ind_s_v_f_g_edge"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>SVF::NormalGepPE</label>
+        <link refid="class_s_v_f_1_1_normal_gep_p_e"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SVF::GepCGEdge</label>
+        <link refid="class_s_v_f_1_1_gep_c_g_edge"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SVF::CallCFGEdge</label>
+        <link refid="class_s_v_f_1_1_call_c_f_g_edge"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>SVF::TDJoinPE</label>
+        <link refid="class_s_v_f_1_1_t_d_join_p_e"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>SVF::IndirectSVFGEdge</label>
+        <link refid="class_s_v_f_1_1_indirect_s_v_f_g_edge"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>SVF::CopyPE</label>
+        <link refid="class_s_v_f_1_1_copy_p_e"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SVF::GenericEdge&lt; NodeTy &gt;</label>
+        <link refid="class_s_v_f_1_1_generic_edge"/>
+      </node>
+      <node id="11">
+        <label>SVF::ICFGEdge&lt; ICFGNode &gt;</label>
+        <link refid="class_s_v_f_1_1_i_c_f_g_edge"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/Graphs/GenericGraph.h" line="42" column="1" bodyfile="include/Graphs/GenericGraph.h" bodystart="43" bodyend="121"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_generic_edge_1aa41cb7482bdab1ba328f4b94f30f3ee4" prot="private" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>dst</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1aa1f446e93750580dce04a127231dd1a3" prot="private" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>edgeFlag</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a93dec4c27088242a4b1b6aa82cea46b9" prot="protected" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>EdgeKindMask</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1af1c2fd4b5ef1d7b7605572bf2489c298" prot="protected" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>EdgeKindMaskBits</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>GEdgeFlag</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a7eb93c9018c80057672a8ce71615dc0d" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>GEdgeKind</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a6764973569c281d483afab17a75cb4dc" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>GenericEdge</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1ad9edb45e74ae675d9da82f5acf02d56e" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>getDstID</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1aeaa31a2c8479e831b36ce2e2582ceb86" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>getDstNode</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1abe8525c542def8162b094c169a01993b" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>getEdgeKind</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1ae6792506a0150a9400d635eceab7f9e7" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>getSrcID</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1ab47ca533c415841ef75456cbad439589" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>getSrcNode</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1aff95460d4b859e657a9198b7c5e5c736" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>NodeType</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a88b2086dcebb60bc86bca0fb94f49fca" prot="public" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>operator==</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a0e8736f88ee75da025d874f92328ca71" prot="private" virt="non-virtual"><scope>SVF::GenericEdge</scope><name>src</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a548daea0cac6491de91d4840b7297741" prot="public" virt="virtual"><scope>SVF::GenericEdge</scope><name>~GenericEdge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

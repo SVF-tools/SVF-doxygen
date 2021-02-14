@@ -1,0 +1,414 @@
+.TH "SVF::SymbolTableInfo" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::SymbolTableInfo
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SymbolTableInfo\&.h>\fP
+.PP
+Inherited by \fBSVF::LocSymTableInfo\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef OrderedMap< const Value *, SymID > \fBValueToIDMapTy\fP"
+.br
+.RI "various maps defined "
+.ti -1c
+.RI "typedef OrderedMap< SymID, \fBMemObj\fP * > \fBIDToMemMapTy\fP"
+.br
+.RI "sym id to memory object map "
+.ti -1c
+.RI "typedef OrderedMap< const Function *, SymID > \fBFunToIDMapTy\fP"
+.br
+.RI "function to sym id map "
+.ti -1c
+.RI "typedef OrderedMap< SymID, \fBSYMTYPE\fP > \fBIDToSymTyMapTy\fP"
+.br
+.RI "sym id to sym type map "
+.ti -1c
+.RI "typedef OrderedMap< const Type *, \fBStInfo\fP * > \fBTypeToFieldInfoMap\fP"
+.br
+.RI "struct type to struct info map "
+.ti -1c
+.RI "typedef Set< CallSite > \fBCallSiteSet\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< const Instruction *, CallSiteID > \fBCallSiteToIDMapTy\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< CallSiteID, const Instruction * > \fBIDToCallSiteMapTy\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetModelConstants\fP (bool _modelConstants)"
+.br
+.RI "Set / Get modelConstants\&. "
+.ti -1c
+.RI "bool \fBgetModelConstants\fP () const"
+.br
+.ti -1c
+.RI "const CallSiteSet & \fBgetCallSiteSet\fP () const"
+.br
+.RI "Get callsite set\&. "
+.ti -1c
+.RI "\fBSVFModule\fP * \fBgetModule\fP ()"
+.br
+.RI "Module\&. "
+.ti -1c
+.RI "u32_t \fBgetTypeSizeInBytes\fP (const Type *type)"
+.br
+.RI "Helper method to get the size of the type from target data layout\&. "
+.ti -1c
+.RI "u32_t \fBgetTypeSizeInBytes\fP (const \fBStructType\fP *sty, u32_t field_index)"
+.br
+.ti -1c
+.RI "void \fBbuildMemModel\fP (\fBSVFModule\fP *svfModule)"
+.br
+.RI "Start building memory model\&. "
+.ti -1c
+.RI "void \fBcollectSym\fP (const Value *val)"
+.br
+.RI "collect the syms "
+.ti -1c
+.RI "void \fBcollectVal\fP (const Value *val)"
+.br
+.ti -1c
+.RI "void \fBcollectObj\fP (const Value *val)"
+.br
+.ti -1c
+.RI "void \fBcollectRet\fP (const Function *val)"
+.br
+.ti -1c
+.RI "void \fBcollectVararg\fP (const Function *val)"
+.br
+.ti -1c
+.RI "bool \fBisConstantObjSym\fP (const Value *val)"
+.br
+.ti -1c
+.RI "void \fBcreateBlkOrConstantObj\fP (SymID symId)"
+.br
+.ti -1c
+.RI "\fBMemObj\fP * \fBgetBlkObj\fP () const"
+.br
+.ti -1c
+.RI "\fBMemObj\fP * \fBgetConstantObj\fP () const"
+.br
+.ti -1c
+.RI "SymID \fBblkPtrSymID\fP () const"
+.br
+.ti -1c
+.RI "SymID \fBnullPtrSymID\fP () const"
+.br
+.ti -1c
+.RI "SymID \fBconstantSymID\fP () const"
+.br
+.ti -1c
+.RI "SymID \fBblackholeSymID\fP () const"
+.br
+.ti -1c
+.RI "const \fBMemObj\fP * \fBcreateDummyObj\fP (SymID symId, const Type *type)"
+.br
+.RI "Can only be invoked by PAG::addDummyNode() when creaing \fBPAG\fP from file\&. "
+.ti -1c
+.RI "void \fBhandleGlobalCE\fP (const GlobalVariable *G)"
+.br
+.RI "Handle constant expression\&. "
+.ti -1c
+.RI "void \fBhandleGlobalInitializerCE\fP (const Constant *C, u32_t offset)"
+.br
+.ti -1c
+.RI "void \fBhandleCE\fP (const Value *val)"
+.br
+.ti -1c
+.RI "SymID \fBgetValSym\fP (const Value *val)"
+.br
+.RI "Get different kinds of syms\&. "
+.ti -1c
+.RI "bool \fBhasValSym\fP (const Value *val)"
+.br
+.ti -1c
+.RI "const Value * \fBgetGlobalRep\fP (const Value *val) const"
+.br
+.RI "find the unique defined global across multiple modules "
+.ti -1c
+.RI "SymID \fBgetObjSym\fP (const Value *val) const"
+.br
+.ti -1c
+.RI "\fBMemObj\fP * \fBgetObj\fP (SymID id) const"
+.br
+.ti -1c
+.RI "SymID \fBgetRetSym\fP (const Function *val) const"
+.br
+.ti -1c
+.RI "SymID \fBgetVarargSym\fP (const Function *val) const"
+.br
+.ti -1c
+.RI "Size_t \fBgetTotalSymNum\fP () const"
+.br
+.RI "Statistics\&. "
+.ti -1c
+.RI "u32_t \fBgetMaxStructSize\fP () const"
+.br
+.ti -1c
+.RI "\fBValueToIDMapTy\fP & \fBvalSyms\fP ()"
+.br
+.RI "Get different kinds of syms maps\&. "
+.ti -1c
+.RI "\fBValueToIDMapTy\fP & \fBobjSyms\fP ()"
+.br
+.ti -1c
+.RI "\fBIDToMemMapTy\fP & \fBidToObjMap\fP ()"
+.br
+.ti -1c
+.RI "\fBFunToIDMapTy\fP & \fBretSyms\fP ()"
+.br
+.ti -1c
+.RI "\fBFunToIDMapTy\fP & \fBvarargSyms\fP ()"
+.br
+.ti -1c
+.RI "TypeToFieldInfoMap::iterator \fBgetStructInfoIter\fP (const Type *T)"
+.br
+.RI "Get struct info\&. "
+.ti -1c
+.RI "\fBStInfo\fP * \fBgetStructInfo\fP (const Type *T)"
+.br
+.RI "Get a reference to StructInfo\&. "
+.ti -1c
+.RI "const std::vector< u32_t > & \fBgetFattenFieldIdxVec\fP (const Type *T)"
+.br
+.RI "Get a reference to the components of struct_info\&. "
+.ti -1c
+.RI "const std::vector< u32_t > & \fBgetFattenFieldOffsetVec\fP (const Type *T)"
+.br
+.ti -1c
+.RI "const std::vector< \fBFieldInfo\fP > & \fBgetFlattenFieldInfoVec\fP (const Type *T)"
+.br
+.ti -1c
+.RI "const Type * \fBgetOrigSubTypeWithFldInx\fP (const Type *baseType, u32_t field_idx)"
+.br
+.ti -1c
+.RI "const Type * \fBgetOrigSubTypeWithByteOffset\fP (const Type *baseType, u32_t byteOffset)"
+.br
+.ti -1c
+.RI "virtual bool \fBcomputeGepOffset\fP (const User *V, \fBLocationSet\fP &ls)"
+.br
+.RI "Compute gep offset\&. "
+.ti -1c
+.RI "const Type * \fBgetBaseTypeAndFlattenedFields\fP (const Value *V, std::vector< \fBLocationSet\fP > &fields)"
+.br
+.RI "Get the base type and max offset\&. "
+.ti -1c
+.RI "u32_t \fBgetFields\fP (std::vector< \fBLocationSet\fP > &fields, const Type *T, u32_t msz)"
+.br
+.RI "Replace fields with flatten fields of T if the number of its fields is larger than msz\&. "
+.ti -1c
+.RI "void \fBcollectTypeInfo\fP (const Type *T)"
+.br
+.RI "Collect type info\&. "
+.ti -1c
+.RI "virtual \fBLocationSet\fP \fBgetModulusOffset\fP (const \fBMemObj\fP *obj, const \fBLocationSet\fP &ls)"
+.br
+.RI "Given an offset from a Gep Instruction, return it modulus offset by considering memory layout\&. "
+.ti -1c
+.RI "void \fBprintFlattenFields\fP (const Type *type)"
+.br
+.RI "Debug method\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSymbolTableInfo\fP * \fBSymbolInfo\fP ()"
+.br
+.RI "Singleton design here to make sure we only have one instance during any analysis\&. "
+.ti -1c
+.RI "static void \fBreleaseSymbolInfo\fP ()"
+.br
+.ti -1c
+.RI "static \fBDataLayout\fP * \fBgetDataLayout\fP (Module *mod)"
+.br
+.RI "Get target machine data layout\&. "
+.ti -1c
+.RI "static bool \fBisNullPtrSym\fP (const Value *val)"
+.br
+.RI "special value "
+.ti -1c
+.RI "static bool \fBisBlackholeSym\fP (const Value *val)"
+.br
+.ti -1c
+.RI "static bool \fBisBlkPtr\fP (NodeID id)"
+.br
+.ti -1c
+.RI "static bool \fBisNullPtr\fP (NodeID id)"
+.br
+.ti -1c
+.RI "static bool \fBisBlkObj\fP (NodeID id)"
+.br
+.ti -1c
+.RI "static bool \fBisConstantObj\fP (NodeID id)"
+.br
+.ti -1c
+.RI "static bool \fBisBlkObjOrConstantObj\fP (NodeID id)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static SymID \fBtotalSymNum\fP = 0"
+.br
+.RI "Statistics\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSymbolTableInfo\fP (void)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual void \fBcollectStructInfo\fP (const \fBStructType\fP *T)"
+.br
+.RI "Collect the struct info\&. "
+.ti -1c
+.RI "virtual void \fBcollectArrayInfo\fP (const ArrayType *T)"
+.br
+.RI "Collect the array info\&. "
+.ti -1c
+.RI "virtual void \fBcollectSimpleTypeInfo\fP (const Type *T)"
+.br
+.RI "Collect simple type (non-aggregate) info\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTypeToFieldInfoMap\fP \fBtypeToFieldInfo\fP"
+.br
+.ti -1c
+.RI "const Type * \fBmaxStruct\fP"
+.br
+.RI "The struct type with the most fields\&. "
+.ti -1c
+.RI "u32_t \fBmaxStSize\fP"
+.br
+.RI "The number of fields in max_struct\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Symbol table of the memory model for analysis 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef OrderedMap<const Value *, SymID> \fBSVF::SymbolTableInfo::ValueToIDMapTy\fP"
+
+.PP
+various maps defined llvm value to sym id map local (%) and global (@) identifiers are pointer types which have a value node id\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SymbolTableInfo::buildMemModel (\fBSVFModule\fP * svfModule)"
+
+.PP
+Start building memory model\&. This method identify which is value sym and which is object sym if (SVFUtil::isa<InlineAsm>(Callee))
+.SS "void SymbolTableInfo::collectArrayInfo (const ArrayType * ty)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Collect the array info\&. Fill in \fBStInfo\fP for an array type\&. Array itself only has one field which is the inner most element
+.PP
+Array's flatten field infor is the same as its element's flatten infor\&.
+.PP
+append the additional number
+.PP
+Reimplemented in \fBSVF::LocSymTableInfo\fP\&.
+.SS "void SymbolTableInfo::collectObj (const Value * val)"
+Get memory object sym, if not available create a new one 
+.SS "void SymbolTableInfo::collectRet (const Function * val)"
+Create unique return sym, if not available create a new one 
+.SS "void SymbolTableInfo::collectSimpleTypeInfo (const Type * ty)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Collect simple type (non-aggregate) info\&. Collect simple type (non-aggregate) info Only one field
+.SS "void SymbolTableInfo::collectStructInfo (const \fBStructType\fP * sty)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Collect the struct info\&. Fill in struct_info for T\&. Given a Struct type, we recursively extend and record its fields and types\&. The struct info should not be processed before
+.PP
+FIXME: As the layout size is uint_64, here we assume offset with uint_32 (Size_t) is large enough and will not cause overflow
+.PP
+Reimplemented in \fBSVF::LocSymTableInfo\fP\&.
+.SS "void SymbolTableInfo::collectSym (const Value * val)"
+
+.PP
+collect the syms Collect symbols, including value and object syms 
+.SS "void SymbolTableInfo::collectTypeInfo (const Type * ty)"
+
+.PP
+Collect type info\&. Collect a LLVM type info 
+.SS "void SymbolTableInfo::collectVal (const Value * val)"
+Get value sym, if not available create a new one handle global constant expression here
+.SS "void SymbolTableInfo::collectVararg (const Function * val)"
+Create vararg sym, if not available create a new one 
+.SS "bool SymbolTableInfo::computeGepOffset (const User * V, \fBLocationSet\fP & ls)\fC [virtual]\fP"
+
+.PP
+Compute gep offset\&. Compute gep offset given a gep edge p = q + i,
+.PP
+Reimplemented in \fBSVF::LocSymTableInfo\fP\&.
+.SS "const Type * SymbolTableInfo::getBaseTypeAndFlattenedFields (const Value * V, std::vector< \fBLocationSet\fP > & fields)"
+
+.PP
+Get the base type and max offset\&. Find the base type and the max possible offset for an object pointed to by (V)\&. 
+.SS "u32_t SymbolTableInfo::getFields (std::vector< \fBLocationSet\fP > & fields, const Type * T, u32_t msz)"
+
+.PP
+Replace fields with flatten fields of T if the number of its fields is larger than msz\&. Replace fields with flatten fields of T if the number of its fields is larger than msz\&. Replace fields with T's flatten fields\&.
+.SS "\fBLocationSet\fP SymbolTableInfo::getModulusOffset (const \fBMemObj\fP * obj, const \fBLocationSet\fP & ls)\fC [virtual]\fP"
+
+.PP
+Given an offset from a Gep Instruction, return it modulus offset by considering memory layout\&. Get modulus offset given the type information if the offset is negative, it's possible that we're looking for an obj node out of range of current struct\&. Make the offset positive so we can still get a node within current struct to represent this obj\&.
+.PP
+Reimplemented in \fBSVF::LocSymTableInfo\fP\&.
+.SS "TypeToFieldInfoMap::iterator SVF::SymbolTableInfo::getStructInfoIter (const Type * T)\fC [inline]\fP"
+
+.PP
+Get struct info\&. Get an iterator for StructInfo, designed as internal methods 
+.SS "u32_t SymbolTableInfo::getTypeSizeInBytes (const \fBStructType\fP * sty, u32_t field_index)"
+if this struct type does not have any element, i\&.e\&., opaque
+.SS "void SymbolTableInfo::handleCE (const Value * val)"
+Handle constant expression 
+.SS "void SymbolTableInfo::handleGlobalCE (const GlobalVariable * G)"
+
+.PP
+Handle constant expression\&. Handle global constant expression 
+.SS "void SymbolTableInfo::handleGlobalInitializerCE (const Constant * C, u32_t offset)"
+Handle global variable initialization 
+.SS "bool SymbolTableInfo::isBlackholeSym (const Value * val)\fC [static]\fP"
+Check whether this value is a black hole 
+.SS "bool SymbolTableInfo::isConstantObjSym (const Value * val)"
+Check whether this value points-to a constant object 
+.SS "bool SymbolTableInfo::isNullPtrSym (const Value * val)\fC [static]\fP"
+
+.PP
+special value Check whether this value is null pointer 
+.SS "void SymbolTableInfo::printFlattenFields (const Type * type)"
+
+.PP
+Debug method\&. All rest types are scalar type?
+.SS "\fBSymbolTableInfo\fP * SymbolTableInfo::SymbolInfo ()\fC [static]\fP"
+
+.PP
+Singleton design here to make sure we only have one instance during any analysis\&. Get the symbol table instance 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTypeToFieldInfoMap\fP SVF::SymbolTableInfo::typeToFieldInfo\fC [protected]\fP"
+Every type T is mapped to \fBStInfo\fP which contains size (fsize) , offset(foffset) fsize[i] is the number of fields in the largest such struct, else fsize[i] = 1\&. fsize[0] is always the size of the expanded struct\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

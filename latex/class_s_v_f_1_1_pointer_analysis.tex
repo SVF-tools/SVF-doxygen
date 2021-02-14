@@ -1,0 +1,694 @@
+\hypertarget{class_s_v_f_1_1_pointer_analysis}{}\doxysection{SVF\+::Pointer\+Analysis Class Reference}
+\label{class_s_v_f_1_1_pointer_analysis}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+Inheritance diagram for SVF\+::Pointer\+Analysis\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.883408cm]{class_s_v_f_1_1_pointer_analysis}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85}{PTATY}} \{ \newline
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a9a25374fb6d2218c6c59de0482548f49}{Andersen\+\_\+\+BASE}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ab68615784a520e39856be5237930e6a6}{Andersen\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac7c033efd59e2b5fcded79fc3ebdb9d4}{Andersen\+LCD\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a46f5e74d5f4b0a2d134e68d262079c3f}{Andersen\+HCD\+\_\+\+WPA}}
+, \newline
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a99d50c1712075e4c3278fc4fa4c9cd2f}{Andersen\+HLCD\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a6c06b12c95a4aa57edc6bef57514a7e1}{Andersen\+SCD\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85accfa4ed42d3a3ac5e4abc403e738427b}{Andersen\+SFR\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85abf2f61ee9a5f6228db6587a8182ec9f2}{Andersen\+Wave\+Diff\+\_\+\+WPA}}
+, \newline
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac581e279a4bd69c059b0e5987f839a1f}{Andersen\+Wave\+Diff\+With\+Type\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ad24ef5326c26db858c73432aa7e67a0a}{Steensgaard\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac9e931f254fa3471f5f5337cbca1de09}{CSCall\+String\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85adf8fe4349f84779601a0b41659ca8e27}{CSSummary\+\_\+\+WPA}}
+, \newline
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a62281bc39fea50a88e55edf605620322}{FSDATAFLOW\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ad6ccf1ce66083278349c5c3111172d78}{FSSPARSE\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a088dda60195ab259693977af8414f203}{FSTBHC\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a412254a7738029bf3ee96f5c15a6bec9}{VFS\+\_\+\+WPA}}
+, \newline
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a43837619e78e03dc95ec6e88959faf82}{FSCS\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a30826fb1ddb602fd4439ca84eb73e8f4}{FSCSPS\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a859290ec941a06029f84ef249a5d2fda}{ADAPTFSCS\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a42d52c9444028e72ea8e6dc0c8c08ada}{ADAPTFSCSPS\+\_\+\+WPA}}
+, \newline
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85acc2e7cbdd04a614a3b6189d2f01042f3}{Type\+CPP\+\_\+\+WPA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85abe1d8104c77bfe4bbc201a64410c7f61}{Field\+S\+\_\+\+DDA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85aa43c83e2f0df003c158d4b1325b50b18}{Flow\+S\+\_\+\+DDA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85acaf0c0774025005647deaf59582b9d58}{Path\+S\+\_\+\+DDA}}
+, \newline
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a0ab6564c48897595c9d23382a026e0a8}{Cxt\+\_\+\+DDA}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85adb3d4cbd8c38c1c498bc51198626a790}{Default\+\_\+\+PTA}}
+ \}
+\begin{DoxyCompactList}\small\item\em Pointer analysis type list. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4d}{PTAImpl\+Ty}} \{ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da66b132e5ab8c8746eb22e58d199b4c2a}{Base\+Impl}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da84705167ea3a7162ecb9470a8a77b5d8}{BVData\+Impl}}
+, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da88380bb05f60a1349e192364ba6c5292}{Cond\+Impl}}
+ \}
+\begin{DoxyCompactList}\small\item\em Implementation type\+: \mbox{\hyperlink{class_s_v_f_1_1_b_v_data_p_t_a_impl}{BVData\+PTAImpl}} or \mbox{\hyperlink{class_s_v_f_1_1_cond_p_t_a_impl}{Cond\+PTAImpl}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac87eb408daafd5d556ecd8633f7d4f1f}\label{class_s_v_f_1_1_pointer_analysis_ac87eb408daafd5d556ecd8633f7d4f1f}} 
+typedef llvm\+::\+Alias\+Analysis \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac87eb408daafd5d556ecd8633f7d4f1f}{Alias\+Analysis}}
+\begin{DoxyCompactList}\small\item\em Indirect call edges type, map a callsite to a set of callees. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a1f5f2ecf1e893759633ffec1b23d5650}\label{class_s_v_f_1_1_pointer_analysis_a1f5f2ecf1e893759633ffec1b23d5650}} 
+typedef Set$<$ const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$ $>$ {\bfseries Call\+Site\+Set}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_afc2e412fe96c1fad268ba0255a2042e7}\label{class_s_v_f_1_1_pointer_analysis_afc2e412fe96c1fad268ba0255a2042e7}} 
+typedef PAG\+::\+Call\+Site\+To\+Fun\+Ptr\+Map {\bfseries Call\+Site\+To\+Fun\+Ptr\+Map}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac1422cd8b449fdb4a1f7c539364e4c41}\label{class_s_v_f_1_1_pointer_analysis_ac1422cd8b449fdb4a1f7c539364e4c41}} 
+typedef Set$<$ const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$ $>$ {\bfseries Function\+Set}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aa9661d26d1ae9c829a9296d1b6d874f4}\label{class_s_v_f_1_1_pointer_analysis_aa9661d26d1ae9c829a9296d1b6d874f4}} 
+typedef Ordered\+Map$<$ const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$, Function\+Set $>$ {\bfseries Call\+Edge\+Map}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac4ad73782f42f90ad7ac9c66edb27c69}\label{class_s_v_f_1_1_pointer_analysis_ac4ad73782f42f90ad7ac9c66edb27c69}} 
+typedef \mbox{\hyperlink{class_s_v_f_1_1_s_c_c_detection}{SCCDetection}}$<$ \mbox{\hyperlink{class_s_v_f_1_1_p_t_a_call_graph}{PTACall\+Graph}} $\ast$ $>$ {\bfseries Call\+Graph\+SCC}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_af46f4b99fc2d5061c9266a7f45aafaca}\label{class_s_v_f_1_1_pointer_analysis_af46f4b99fc2d5061c9266a7f45aafaca}} 
+typedef Set$<$ const Global\+Value $\ast$ $>$ {\bfseries VTable\+Set}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aa7f15c74eb438be78fcc028534477478}\label{class_s_v_f_1_1_pointer_analysis_aa7f15c74eb438be78fcc028534477478}} 
+typedef Set$<$ const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$ $>$ {\bfseries VFun\+Set}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac522df904e702381222a4d9b205c775b}\label{class_s_v_f_1_1_pointer_analysis_ac522df904e702381222a4d9b205c775b}} 
+Size\+\_\+t \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac522df904e702381222a4d9b205c775b}{get\+Num\+Of\+Resolved\+Ind\+Call\+Edge}} () const
+\begin{DoxyCompactList}\small\item\em Return number of resolved indirect call edges. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a7c9b7e5fe37ae31ba84d167945ca57df}\label{class_s_v_f_1_1_pointer_analysis_a7c9b7e5fe37ae31ba84d167945ca57df}} 
+\mbox{\hyperlink{class_s_v_f_1_1_p_t_a_call_graph}{PTACall\+Graph}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a7c9b7e5fe37ae31ba84d167945ca57df}{get\+PTACall\+Graph}} () const
+\begin{DoxyCompactList}\small\item\em Return call graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0bddf297a2d8cd59ce9a232f0229f248}\label{class_s_v_f_1_1_pointer_analysis_a0bddf297a2d8cd59ce9a232f0229f248}} 
+\mbox{\hyperlink{class_s_v_f_1_1_s_c_c_detection}{Call\+Graph\+SCC}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0bddf297a2d8cd59ce9a232f0229f248}{get\+Call\+Graph\+SCC}} () const
+\begin{DoxyCompactList}\small\item\em Return call graph SCC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_af42ef08568b1fa892f8f98c4421a0477}{Pointer\+Analysis}} (\mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}} $\ast$\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a8771956f7595b66d825b3dc459d1ae49}{pag}}, \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85}{PTATY}} ty=\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85adb3d4cbd8c38c1c498bc51198626a790}{Default\+\_\+\+PTA}}, bool alias\+\_\+check=true)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac23f71c1307cda9cba44acc40059f0a3}\label{class_s_v_f_1_1_pointer_analysis_ac23f71c1307cda9cba44acc40059f0a3}} 
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85}{PTATY}} \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac23f71c1307cda9cba44acc40059f0a3}{get\+Analysis\+Ty}} () const
+\begin{DoxyCompactList}\small\item\em Type of pointer analysis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac0f821cfe4fb9c9c8816e7a1b1bc0c5e}\label{class_s_v_f_1_1_pointer_analysis_ac0f821cfe4fb9c9c8816e7a1b1bc0c5e}} 
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4d}{PTAImpl\+Ty}} \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac0f821cfe4fb9c9c8816e7a1b1bc0c5e}{get\+Impl\+Ty}} () const
+\begin{DoxyCompactList}\small\item\em Return implementation type of the pointer analysis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a4880571f57542afc50da506dfe273183}\label{class_s_v_f_1_1_pointer_analysis_a4880571f57542afc50da506dfe273183}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a4880571f57542afc50da506dfe273183}{print\+Stat}} ()
+\begin{DoxyCompactList}\small\item\em Whether print statistics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_af44b14fed89918847c0228c1100c56d2}\label{class_s_v_f_1_1_pointer_analysis_af44b14fed89918847c0228c1100c56d2}} 
+void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_af44b14fed89918847c0228c1100c56d2}{disable\+Print\+Stat}} ()
+\begin{DoxyCompactList}\small\item\em Whether print statistics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a1ca30dfa42702071b65d363c76d25cbe}\label{class_s_v_f_1_1_pointer_analysis_a1ca30dfa42702071b65d363c76d25cbe}} 
+Call\+Edge\+Map \& \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a1ca30dfa42702071b65d363c76d25cbe}{get\+Ind\+Call\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Get callees from an indirect callsite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a8d3a457efb1963f8d87305bf33c02754}\label{class_s_v_f_1_1_pointer_analysis_a8d3a457efb1963f8d87305bf33c02754}} 
+bool {\bfseries has\+Ind\+CSCallees} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs) const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a9e473e97a0bad49996faacbc05be7e68}\label{class_s_v_f_1_1_pointer_analysis_a9e473e97a0bad49996faacbc05be7e68}} 
+const Function\+Set \& {\bfseries get\+Ind\+CSCallees} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs) const
+\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_acca7b86bb199f9b3da72f100c3e55e0f}{resolve\+Ind\+Calls}} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs, const Points\+To \&target, Call\+Edge\+Map \&new\+Edges, LLVMCall\+Graph $\ast$callgraph=NULL)
+\begin{DoxyCompactList}\small\item\em Resolve indirect call edges. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a521f99705f67e3fea7167728a4e37129}{match\+Args}} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs, const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$callee)
+\begin{DoxyCompactList}\small\item\em Match arguments for callsite at caller and callee. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_aafa5df4aa576a144476e547b1da35795}{call\+Graph\+SCCDetection}} ()
+\begin{DoxyCompactList}\small\item\em Call\+Graph SCC related methods. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ae8190ce12fb0c6360953f4b05047fbe8}\label{class_s_v_f_1_1_pointer_analysis_ae8190ce12fb0c6360953f4b05047fbe8}} 
+Node\+ID \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ae8190ce12fb0c6360953f4b05047fbe8}{get\+Call\+Graph\+SCCRep\+Node}} (Node\+ID id) const
+\begin{DoxyCompactList}\small\item\em Get SCC rep node of a \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_g}{SVFG}} node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ae58c2b25494ec51e714c83c6cfd5dd67}\label{class_s_v_f_1_1_pointer_analysis_ae58c2b25494ec51e714c83c6cfd5dd67}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ae58c2b25494ec51e714c83c6cfd5dd67}{in\+Same\+Call\+Graph\+SCC}} (const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$fun1, const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$fun2)
+\begin{DoxyCompactList}\small\item\em Return TRUE if this edge is inside a Call\+Graph SCC, i.\+e., src node and dst node are in the same SCC on the \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_g}{SVFG}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aa725a0c9426e8615cbc078c88561f66a}\label{class_s_v_f_1_1_pointer_analysis_aa725a0c9426e8615cbc078c88561f66a}} 
+bool {\bfseries is\+In\+Recursion} (const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$fun) const
+\item 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a108380f6f0b67654bb7c7676686096c8}{is\+Local\+Var\+In\+Recursive\+Fun}} (Node\+ID id) const
+\begin{DoxyCompactList}\small\item\em Whether a local variable is in function recursions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aed4e5066f6ddef83afaf60adbcc11de0}\label{class_s_v_f_1_1_pointer_analysis_aed4e5066f6ddef83afaf60adbcc11de0}} 
+virtual const std\+::string \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_aed4e5066f6ddef83afaf60adbcc11de0}{PTAName}} () const
+\begin{DoxyCompactList}\small\item\em Return PTA name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ae2cc7cd0803dbd90639140e71b06b1b5}\label{class_s_v_f_1_1_pointer_analysis_ae2cc7cd0803dbd90639140e71b06b1b5}} 
+\mbox{\hyperlink{class_s_v_f_1_1_common_c_h_graph}{Common\+CHGraph}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ae2cc7cd0803dbd90639140e71b06b1b5}{get\+CHGraph}} () const
+\begin{DoxyCompactList}\small\item\em get \mbox{\hyperlink{class_s_v_f_1_1_c_h_graph}{CHGraph}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0e09e07ee52ba605dc386ae1d7b965e2}\label{class_s_v_f_1_1_pointer_analysis_a0e09e07ee52ba605dc386ae1d7b965e2}} 
+void {\bfseries get\+VFns\+From\+CHA} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs, VFun\+Set \&vfns)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a8fa5b8a7b410faf63106a879ff72bf51}\label{class_s_v_f_1_1_pointer_analysis_a8fa5b8a7b410faf63106a879ff72bf51}} 
+void {\bfseries get\+VFns\+From\+Pts} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs, const Points\+To \&target, VFun\+Set \&vfns)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a8ff3f219b9f118a4f06360750408c9cb}\label{class_s_v_f_1_1_pointer_analysis_a8ff3f219b9f118a4f06360750408c9cb}} 
+void {\bfseries connect\+VCall\+To\+VFns} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs, const VFun\+Set \&vfns, Call\+Edge\+Map \&new\+Edges)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac9f54859eabff4c1e1f5785d57a0c818}\label{class_s_v_f_1_1_pointer_analysis_ac9f54859eabff4c1e1f5785d57a0c818}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac9f54859eabff4c1e1f5785d57a0c818}{resolve\+CPPInd\+Calls}} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs, const Points\+To \&target, Call\+Edge\+Map \&new\+Edges)
+\begin{DoxyCompactList}\small\item\em Resolve cpp indirect call edges. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ae615dd279fbf681e3c15e7209e3adfbe}\label{class_s_v_f_1_1_pointer_analysis_ae615dd279fbf681e3c15e7209e3adfbe}} 
+const \mbox{\hyperlink{class_s_v_f_1_1_type_system}{Type\+System}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ae615dd279fbf681e3c15e7209e3adfbe}{get\+Type\+System}} () const
+\begin{DoxyCompactList}\small\item\em get \mbox{\hyperlink{class_s_v_f_1_1_type_system}{Type\+System}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a7648a0358e2c0798db1c547ec7aa7c64}\label{class_s_v_f_1_1_pointer_analysis_a7648a0358e2c0798db1c547ec7aa7c64}} 
+static const std\+::string {\bfseries alias\+Test\+May\+Alias} = \char`\"{}MAYALIAS\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a13ce6b930a35877f17bffd4b89e22654}\label{class_s_v_f_1_1_pointer_analysis_a13ce6b930a35877f17bffd4b89e22654}} 
+static const std\+::string {\bfseries alias\+Test\+May\+Alias\+Mangled} = \char`\"{}\+\_\+\+Z8\+MAYALIASPv\+S\+\_\+\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac353221cc7aced590dcf3550a24b1570}\label{class_s_v_f_1_1_pointer_analysis_ac353221cc7aced590dcf3550a24b1570}} 
+static const std\+::string {\bfseries alias\+Test\+No\+Alias} = \char`\"{}NOALIAS\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0e68883e2ee328315af29e59bb2008cd}\label{class_s_v_f_1_1_pointer_analysis_a0e68883e2ee328315af29e59bb2008cd}} 
+static const std\+::string {\bfseries alias\+Test\+No\+Alias\+Mangled} = \char`\"{}\+\_\+\+Z7\+NOALIASPv\+S\+\_\+\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a83b0a51d88fa7aadff6e9267765d07a5}\label{class_s_v_f_1_1_pointer_analysis_a83b0a51d88fa7aadff6e9267765d07a5}} 
+static const std\+::string {\bfseries alias\+Test\+Partial\+Alias} = \char`\"{}PARTIALALIAS\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_acbb517523fd30708ed1a93f306cd3545}\label{class_s_v_f_1_1_pointer_analysis_acbb517523fd30708ed1a93f306cd3545}} 
+static const std\+::string {\bfseries alias\+Test\+Partial\+Alias\+Mangled} = \char`\"{}\+\_\+\+Z12\+PARTIALALIASPv\+S\+\_\+\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a7477a4301d548b93958e57df389cbba0}\label{class_s_v_f_1_1_pointer_analysis_a7477a4301d548b93958e57df389cbba0}} 
+static const std\+::string {\bfseries alias\+Test\+Must\+Alias} = \char`\"{}MUSTALIAS\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aec884481726cfaf19c4ab8ec8d9195b7}\label{class_s_v_f_1_1_pointer_analysis_aec884481726cfaf19c4ab8ec8d9195b7}} 
+static const std\+::string {\bfseries alias\+Test\+Must\+Alias\+Mangled} = \char`\"{}\+\_\+\+Z9\+MUSTALIASPv\+S\+\_\+\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a32c6f12ce8bc0554dbb6aafa36f9a235}\label{class_s_v_f_1_1_pointer_analysis_a32c6f12ce8bc0554dbb6aafa36f9a235}} 
+static const std\+::string {\bfseries alias\+Test\+Fail\+May\+Alias} = \char`\"{}EXPECTEDFAIL\+\_\+\+MAYALIAS\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a651cc82379c2d18cc2f69f25b2ae08db}\label{class_s_v_f_1_1_pointer_analysis_a651cc82379c2d18cc2f69f25b2ae08db}} 
+static const std\+::string {\bfseries alias\+Test\+Fail\+May\+Alias\+Mangled} = \char`\"{}\+\_\+\+Z21\+EXPECTEDFAIL\+\_\+\+MAYALIASPv\+S\+\_\+\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a18347e41bc66b16e3f42c7c52811ad42}\label{class_s_v_f_1_1_pointer_analysis_a18347e41bc66b16e3f42c7c52811ad42}} 
+static const std\+::string {\bfseries alias\+Test\+Fail\+No\+Alias} = \char`\"{}EXPECTEDFAIL\+\_\+\+NOALIAS\char`\"{}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aefd4e9ea66da5ad84a45efead823eb22}\label{class_s_v_f_1_1_pointer_analysis_aefd4e9ea66da5ad84a45efead823eb22}} 
+static const std\+::string {\bfseries alias\+Test\+Fail\+No\+Alias\+Mangled} = \char`\"{}\+\_\+\+Z20\+EXPECTEDFAIL\+\_\+\+NOALIASPv\+S\+\_\+\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a3550ea3f087ec557a6fe076bc443b05d}{print\+\_\+stat}}
+\begin{DoxyCompactList}\small\item\em User input flags. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aac1a133d478bd14c74309d9c4eaf0c8e}\label{class_s_v_f_1_1_pointer_analysis_aac1a133d478bd14c74309d9c4eaf0c8e}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_aac1a133d478bd14c74309d9c4eaf0c8e}{alias\+\_\+validation}}
+\begin{DoxyCompactList}\small\item\em Flag for validating points-\/to/alias results. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_afc320fbf269404fe128e69c98e6f9cac}\label{class_s_v_f_1_1_pointer_analysis_afc320fbf269404fe128e69c98e6f9cac}} 
+u32\+\_\+t \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_afc320fbf269404fe128e69c98e6f9cac}{On\+The\+Fly\+Iter\+Budget\+For\+Stat}}
+\begin{DoxyCompactList}\small\item\em Flag for iteration budget for on-\/the-\/fly statistics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a7e8b3f6843e5ea75fd189162d2cd60a5}\label{class_s_v_f_1_1_pointer_analysis_a7e8b3f6843e5ea75fd189162d2cd60a5}} 
+\mbox{\hyperlink{class_s_v_f_1_1_s_v_f_module}{SVFModule}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a7e8b3f6843e5ea75fd189162d2cd60a5}{svf\+Mod}}
+\begin{DoxyCompactList}\small\item\em Module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ade83738ac754d5ffc2a3b497b600cad4}\label{class_s_v_f_1_1_pointer_analysis_ade83738ac754d5ffc2a3b497b600cad4}} 
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85}{PTATY}} \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ade83738ac754d5ffc2a3b497b600cad4}{pta\+Ty}}
+\begin{DoxyCompactList}\small\item\em Pointer analysis Type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a5d3c3094e263bf16a4f312a118c1bd36}\label{class_s_v_f_1_1_pointer_analysis_a5d3c3094e263bf16a4f312a118c1bd36}} 
+\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4d}{PTAImpl\+Ty}} \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a5d3c3094e263bf16a4f312a118c1bd36}{pta\+Impl\+Ty}}
+\begin{DoxyCompactList}\small\item\em PTA implementation type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a5ec3d9bf1fc81346c9df29638daedc0f}\label{class_s_v_f_1_1_pointer_analysis_a5ec3d9bf1fc81346c9df29638daedc0f}} 
+\mbox{\hyperlink{class_s_v_f_1_1_p_t_a_stat}{PTAStat}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a5ec3d9bf1fc81346c9df29638daedc0f}{stat}}
+\begin{DoxyCompactList}\small\item\em Statistics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ad47b39252e02c68dfb466d4f42dc7ebe}\label{class_s_v_f_1_1_pointer_analysis_ad47b39252e02c68dfb466d4f42dc7ebe}} 
+\mbox{\hyperlink{class_s_v_f_1_1_p_t_a_call_graph}{PTACall\+Graph}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ad47b39252e02c68dfb466d4f42dc7ebe}{pta\+Call\+Graph}}
+\begin{DoxyCompactList}\small\item\em Call graph used for pointer analysis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ae3b651799345d9d92b6d736dafb03f63}\label{class_s_v_f_1_1_pointer_analysis_ae3b651799345d9d92b6d736dafb03f63}} 
+\mbox{\hyperlink{class_s_v_f_1_1_s_c_c_detection}{Call\+Graph\+SCC}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ae3b651799345d9d92b6d736dafb03f63}{call\+Graph\+SCC}}
+\begin{DoxyCompactList}\small\item\em SCC for Call\+Graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a962cc91e4d68b25ce201072c384d8fc2}\label{class_s_v_f_1_1_pointer_analysis_a962cc91e4d68b25ce201072c384d8fc2}} 
+\mbox{\hyperlink{class_s_v_f_1_1_i_c_f_g}{ICFG}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a962cc91e4d68b25ce201072c384d8fc2}{icfg}}
+\begin{DoxyCompactList}\small\item\em Interprocedural control-\/flow graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a219baed92b811d5519b056ad393fceed}\label{class_s_v_f_1_1_pointer_analysis_a219baed92b811d5519b056ad393fceed}} 
+\mbox{\hyperlink{class_s_v_f_1_1_type_system}{Type\+System}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a219baed92b811d5519b056ad393fceed}{type\+System}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_v_f_1_1_type_system}{Type\+System}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a8771956f7595b66d825b3dc459d1ae49}\label{class_s_v_f_1_1_pointer_analysis_a8771956f7595b66d825b3dc459d1ae49}} 
+static \mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a8771956f7595b66d825b3dc459d1ae49}{pag}} = NULL
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a251638a947815a8ff91a507486cadfcd}\label{class_s_v_f_1_1_pointer_analysis_a251638a947815a8ff91a507486cadfcd}} 
+static \mbox{\hyperlink{class_s_v_f_1_1_common_c_h_graph}{Common\+CHGraph}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a251638a947815a8ff91a507486cadfcd}{chgraph}} = NULL
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_v_f_1_1_c_h_graph}{CHGraph}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_aaf6b41f44da3a4caea1fa395e41edf71}{get\+PAG}} () const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0ebf1138011aa526d92470c1931313ad}\label{class_s_v_f_1_1_pointer_analysis_a0ebf1138011aa526d92470c1931313ad}} 
+\mbox{\hyperlink{class_s_v_f_1_1_p_t_a_stat}{PTAStat}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0ebf1138011aa526d92470c1931313ad}{get\+Stat}} () const
+\begin{DoxyCompactList}\small\item\em Get PTA stat. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ad8b71cebf46deaf60e2cd4f6d6bb9433}\label{class_s_v_f_1_1_pointer_analysis_ad8b71cebf46deaf60e2cd4f6d6bb9433}} 
+\mbox{\hyperlink{class_s_v_f_1_1_s_v_f_module}{SVFModule}} $\ast$ \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ad8b71cebf46deaf60e2cd4f6d6bb9433}{get\+Module}} () const
+\begin{DoxyCompactList}\small\item\em Module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a60b111647e000cc983aa52513f90afbc}\label{class_s_v_f_1_1_pointer_analysis_a60b111647e000cc983aa52513f90afbc}} 
+Ordered\+Node\+Set \& \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a60b111647e000cc983aa52513f90afbc}{get\+All\+Valid\+Ptrs}} ()
+\begin{DoxyCompactList}\small\item\em Get all Valid Pointers for resolution. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a4aeca84393c5586eea7a480737daf17c}{$\sim$\+Pointer\+Analysis}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a431ec4f85eb0f029e5740b92fd9ceb32}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialization of a pointer analysis, including building symbol table and \mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}} etc. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a118dabc50024b5cd91095814ade47166}{finalize}} ()
+\begin{DoxyCompactList}\small\item\em Finalization of a pointer analysis, including checking alias correctness. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ae1e217dc18be0ce70bee5ad930cb54c6}\label{class_s_v_f_1_1_pointer_analysis_ae1e217dc18be0ce70bee5ad930cb54c6}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ae1e217dc18be0ce70bee5ad930cb54c6}{analyze}} ()=0
+\begin{DoxyCompactList}\small\item\em Start Analysis here (main part of pointer analysis). It needs to be implemented in child class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0bb90b398ef85504bcd816ae57bee01d}\label{class_s_v_f_1_1_pointer_analysis_a0bb90b398ef85504bcd816ae57bee01d}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0bb90b398ef85504bcd816ae57bee01d}{compute\+DDAPts}} (Node\+ID)
+\begin{DoxyCompactList}\small\item\em Compute points-\/to results on-\/demand, overridden by derived classes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_abd9da46106d820721a24201caaa164e1}\label{class_s_v_f_1_1_pointer_analysis_abd9da46106d820721a24201caaa164e1}} 
+virtual Alias\+Result \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_abd9da46106d820721a24201caaa164e1}{alias}} (const Memory\+Location \&LocA, const Memory\+Location \&LocB)=0
+\begin{DoxyCompactList}\small\item\em Interface exposed to users of our pointer analysis, given Location infos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a6c01f259ad2379a422d7106ce0255eb8}\label{class_s_v_f_1_1_pointer_analysis_a6c01f259ad2379a422d7106ce0255eb8}} 
+virtual Alias\+Result \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a6c01f259ad2379a422d7106ce0255eb8}{alias}} (const Value $\ast$V1, const Value $\ast$V2)=0
+\begin{DoxyCompactList}\small\item\em Interface exposed to users of our pointer analysis, given Value infos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0f712ead1f31750879948c36b2fc77cf}\label{class_s_v_f_1_1_pointer_analysis_a0f712ead1f31750879948c36b2fc77cf}} 
+virtual Alias\+Result \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0f712ead1f31750879948c36b2fc77cf}{alias}} (Node\+ID node1, Node\+ID node2)=0
+\begin{DoxyCompactList}\small\item\em Interface exposed to users of our pointer analysis, given PAGNode\+ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a4dfb43679e9fa794ebad99b6584c32ec}\label{class_s_v_f_1_1_pointer_analysis_a4dfb43679e9fa794ebad99b6584c32ec}} 
+virtual const Points\+To \& \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a4dfb43679e9fa794ebad99b6584c32ec}{get\+Pts}} (Node\+ID ptr)=0
+\begin{DoxyCompactList}\small\item\em Get points-\/to targets of a pointer. It needs to be implemented in child class. \end{DoxyCompactList}\item 
+virtual const Node\+Set \& \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ad9af9655a13f3faeaf265ba370d1f280}{get\+Rev\+Pts}} (Node\+ID node\+Id)=0
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a3f78f60e1947a6d6fbcd3a0ee11e262a}\label{class_s_v_f_1_1_pointer_analysis_a3f78f60e1947a6d6fbcd3a0ee11e262a}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a3f78f60e1947a6d6fbcd3a0ee11e262a}{clear\+Pts}} ()
+\begin{DoxyCompactList}\small\item\em Clear points-\/to data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a28bcd16249c04eea2d13fafd2bcaf9d9}{print\+Ind\+CSTargets}} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs, const Function\+Set \&targets)
+\begin{DoxyCompactList}\small\item\em Print targets of a function pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a627bdc95485fd65e8846fcaa5e89559f}\label{class_s_v_f_1_1_pointer_analysis_a627bdc95485fd65e8846fcaa5e89559f}} 
+virtual void {\bfseries dump\+Top\+Level\+Pts\+To} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a861554c2fdeaa406131c2c920b4c7908}\label{class_s_v_f_1_1_pointer_analysis_a861554c2fdeaa406131c2c920b4c7908}} 
+virtual void {\bfseries dump\+All\+Pts} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ad409cbf61271743394b9e5868f3fd197}\label{class_s_v_f_1_1_pointer_analysis_ad409cbf61271743394b9e5868f3fd197}} 
+virtual void {\bfseries dump\+CPts} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a1a6cee7e690ccb3e53cdc4c3e67b386d}{dump\+Pts}} (Node\+ID ptr, const Points\+To \&pts)
+\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a062f1f2d6d47694caa9ac64a9e68c7b3}{print\+Ind\+CSTargets}} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a08399de593c073b6dd848a8d849dad27}\label{class_s_v_f_1_1_pointer_analysis_a08399de593c073b6dd848a8d849dad27}} 
+void {\bfseries dump\+All\+Types} ()
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ab83b827ea42d3a61aad20b1a1485d866}\label{class_s_v_f_1_1_pointer_analysis_ab83b827ea42d3a61aad20b1a1485d866}} 
+void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ab83b827ea42d3a61aad20b1a1485d866}{dump\+Stat}} ()
+\begin{DoxyCompactList}\small\item\em Dump the statistics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a56368369bc37e37b13f19e5eb1890063}\label{class_s_v_f_1_1_pointer_analysis_a56368369bc37e37b13f19e5eb1890063}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a56368369bc37e37b13f19e5eb1890063}{contain\+Black\+Hole\+Node}} (const Points\+To \&pts)
+\begin{DoxyCompactList}\small\item\em Determine whether a points-\/to contains a black hole or constant node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_afa7d9f6209904acd7893ae583e28dafd}\label{class_s_v_f_1_1_pointer_analysis_afa7d9f6209904acd7893ae583e28dafd}} 
+bool {\bfseries contain\+Constant\+Node} (const Points\+To \&pts)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a45462312a746339fff8b990a093d9a1b}\label{class_s_v_f_1_1_pointer_analysis_a45462312a746339fff8b990a093d9a1b}} 
+virtual bool {\bfseries is\+Blk\+Obj\+Or\+Constant\+Obj} (Node\+ID ptd) const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a9d3b20c9883d734537fb98b57b5372b9}\label{class_s_v_f_1_1_pointer_analysis_a9d3b20c9883d734537fb98b57b5372b9}} 
+bool {\bfseries is\+Non\+Pointer\+Obj} (Node\+ID ptd) const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ae6ea391ac44dffeb6899bb44323c5361}\label{class_s_v_f_1_1_pointer_analysis_ae6ea391ac44dffeb6899bb44323c5361}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ae6ea391ac44dffeb6899bb44323c5361}{is\+Heap\+Mem\+Obj}} (Node\+ID id) const
+\begin{DoxyCompactList}\small\item\em Whether this object is heap or array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a89dfeedf8e3e91603a1e9c73e3608a73}\label{class_s_v_f_1_1_pointer_analysis_a89dfeedf8e3e91603a1e9c73e3608a73}} 
+bool {\bfseries is\+Array\+Mem\+Obj} (Node\+ID id) const
+\item 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_af90d2ccb01402c5ca9d7a059f345c816}{is\+FIObj\+Node}} (Node\+ID id) const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a8008bdef087708de961a37a8bf458fc7}\label{class_s_v_f_1_1_pointer_analysis_a8008bdef087708de961a37a8bf458fc7}} 
+Node\+ID {\bfseries get\+Base\+Obj\+Node} (Node\+ID id)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a15494d0aa074ae2e89470b3c9f407cc4}\label{class_s_v_f_1_1_pointer_analysis_a15494d0aa074ae2e89470b3c9f407cc4}} 
+Node\+ID {\bfseries get\+FIObj\+Node} (Node\+ID id)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a6423e0d1bc9a5ee6bfea27a4a358574f}\label{class_s_v_f_1_1_pointer_analysis_a6423e0d1bc9a5ee6bfea27a4a358574f}} 
+Node\+ID {\bfseries get\+Gep\+Obj\+Node} (Node\+ID id, const \mbox{\hyperlink{class_s_v_f_1_1_location_set}{Location\+Set}} \&ls)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aeec490de5955497af1a2a9cd429f0d5d}\label{class_s_v_f_1_1_pointer_analysis_aeec490de5955497af1a2a9cd429f0d5d}} 
+virtual const Node\+BS \& {\bfseries get\+All\+Fields\+Obj\+Node} (Node\+ID id)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac5683fe2e24b393ccc5cb6d8bc92cf2b}\label{class_s_v_f_1_1_pointer_analysis_ac5683fe2e24b393ccc5cb6d8bc92cf2b}} 
+void {\bfseries set\+Obj\+Field\+Insensitive} (Node\+ID id)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0f71e4cd0948b294c7d33a690bde7dbe}\label{class_s_v_f_1_1_pointer_analysis_a0f71e4cd0948b294c7d33a690bde7dbe}} 
+bool {\bfseries is\+Field\+Insensitive} (Node\+ID id) const
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a9d3e7753643166465b0d647a75bc145a}\label{class_s_v_f_1_1_pointer_analysis_a9d3e7753643166465b0d647a75bc145a}} 
+const Call\+Site\+To\+Fun\+Ptr\+Map \& \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a9d3e7753643166465b0d647a75bc145a}{get\+Indirect\+Callsites}} () const
+\begin{DoxyCompactList}\small\item\em Return all indirect callsites. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a74df51017ceaa389de2c2f33f3522fc3}\label{class_s_v_f_1_1_pointer_analysis_a74df51017ceaa389de2c2f33f3522fc3}} 
+Node\+ID \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a74df51017ceaa389de2c2f33f3522fc3}{get\+Fun\+Ptr}} (const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$cs) const
+\begin{DoxyCompactList}\small\item\em Return function pointer \mbox{\hyperlink{class_s_v_f_1_1_p_a_g_node}{PAGNode}} at a callsite cs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0454332c89e60729956bb7d69a1a24df}{validate\+Tests}} ()
+\begin{DoxyCompactList}\small\item\em Alias check functions to verify correctness of pointer analysis. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a7accf4e4db4001716e53d98ce5217ac8}{validate\+Success\+Tests}} (std\+::string fun)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ab982e6bbd99a2f9a0a3abbebeeb00dcc}{validate\+Expected\+Failure\+Tests}} (std\+::string fun)
+\item 
+bool \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a3fd44d3cfc3f4ab18506870c65df32f5}{dump\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Whether to dump the graph for debugging purpose. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a73fb8e595473e0c7df1dd0de4968ad13}{reset\+Obj\+Field\+Sensitive}} ()
+\begin{DoxyCompactList}\small\item\em Reset all object node as field-\/sensitive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4d}\label{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4d}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!PTAImplTy@{PTAImplTy}}
+\index{PTAImplTy@{PTAImplTy}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{PTAImplTy}{PTAImplTy}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4d}{SVF\+::\+Pointer\+Analysis\+::\+PTAImpl\+Ty}}}
+
+
+
+Implementation type\+: \mbox{\hyperlink{class_s_v_f_1_1_b_v_data_p_t_a_impl}{BVData\+PTAImpl}} or \mbox{\hyperlink{class_s_v_f_1_1_cond_p_t_a_impl}{Cond\+PTAImpl}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BaseImpl@{BaseImpl}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!BaseImpl@{BaseImpl}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da66b132e5ab8c8746eb22e58d199b4c2a}\label{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da66b132e5ab8c8746eb22e58d199b4c2a}} 
+Base\+Impl&Represents Pointer\+Analaysis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BVDataImpl@{BVDataImpl}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!BVDataImpl@{BVDataImpl}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da84705167ea3a7162ecb9470a8a77b5d8}\label{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da84705167ea3a7162ecb9470a8a77b5d8}} 
+BVData\+Impl&Represents \mbox{\hyperlink{class_s_v_f_1_1_b_v_data_p_t_a_impl}{BVData\+PTAImpl}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CondImpl@{CondImpl}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!CondImpl@{CondImpl}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da88380bb05f60a1349e192364ba6c5292}\label{class_s_v_f_1_1_pointer_analysis_ac0c0855918cb2cdc3d8ebc175acfbd4da88380bb05f60a1349e192364ba6c5292}} 
+Cond\+Impl&Represents \mbox{\hyperlink{class_s_v_f_1_1_cond_p_t_a_impl}{Cond\+PTAImpl}}. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!PTATY@{PTATY}}
+\index{PTATY@{PTATY}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{PTATY}{PTATY}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85}{SVF\+::\+Pointer\+Analysis\+::\+PTATY}}}
+
+
+
+Pointer analysis type list. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Andersen\_BASE@{Andersen\_BASE}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!Andersen\_BASE@{Andersen\_BASE}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a9a25374fb6d2218c6c59de0482548f49}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a9a25374fb6d2218c6c59de0482548f49}} 
+Andersen\+\_\+\+BASE&Base \mbox{\hyperlink{class_s_v_f_1_1_andersen}{Andersen}} PTA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Andersen\_WPA@{Andersen\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!Andersen\_WPA@{Andersen\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ab68615784a520e39856be5237930e6a6}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ab68615784a520e39856be5237930e6a6}} 
+Andersen\+\_\+\+WPA&\mbox{\hyperlink{class_s_v_f_1_1_andersen}{Andersen}} PTA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AndersenLCD\_WPA@{AndersenLCD\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!AndersenLCD\_WPA@{AndersenLCD\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac7c033efd59e2b5fcded79fc3ebdb9d4}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac7c033efd59e2b5fcded79fc3ebdb9d4}} 
+Andersen\+LCD\+\_\+\+WPA&Lazy cycle detection andersen-\/style WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AndersenHCD\_WPA@{AndersenHCD\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!AndersenHCD\_WPA@{AndersenHCD\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a46f5e74d5f4b0a2d134e68d262079c3f}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a46f5e74d5f4b0a2d134e68d262079c3f}} 
+Andersen\+HCD\+\_\+\+WPA&Hybird cycle detection andersen-\/style WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AndersenHLCD\_WPA@{AndersenHLCD\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!AndersenHLCD\_WPA@{AndersenHLCD\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a99d50c1712075e4c3278fc4fa4c9cd2f}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a99d50c1712075e4c3278fc4fa4c9cd2f}} 
+Andersen\+HLCD\+\_\+\+WPA&Hybird lazy cycle detection andersen-\/style WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AndersenSCD\_WPA@{AndersenSCD\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!AndersenSCD\_WPA@{AndersenSCD\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a6c06b12c95a4aa57edc6bef57514a7e1}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a6c06b12c95a4aa57edc6bef57514a7e1}} 
+Andersen\+SCD\+\_\+\+WPA&Selective cycle detection andersen-\/style WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AndersenSFR\_WPA@{AndersenSFR\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!AndersenSFR\_WPA@{AndersenSFR\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85accfa4ed42d3a3ac5e4abc403e738427b}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85accfa4ed42d3a3ac5e4abc403e738427b}} 
+Andersen\+SFR\+\_\+\+WPA&Stride-\/based field representation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AndersenWaveDiff\_WPA@{AndersenWaveDiff\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!AndersenWaveDiff\_WPA@{AndersenWaveDiff\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85abf2f61ee9a5f6228db6587a8182ec9f2}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85abf2f61ee9a5f6228db6587a8182ec9f2}} 
+Andersen\+Wave\+Diff\+\_\+\+WPA&Diff wave propagation andersen-\/style WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AndersenWaveDiffWithType\_WPA@{AndersenWaveDiffWithType\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!AndersenWaveDiffWithType\_WPA@{AndersenWaveDiffWithType\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac581e279a4bd69c059b0e5987f839a1f}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac581e279a4bd69c059b0e5987f839a1f}} 
+Andersen\+Wave\+Diff\+With\+Type\+\_\+\+WPA&Diff wave propagation with type info andersen-\/style WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Steensgaard\_WPA@{Steensgaard\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!Steensgaard\_WPA@{Steensgaard\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ad24ef5326c26db858c73432aa7e67a0a}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ad24ef5326c26db858c73432aa7e67a0a}} 
+Steensgaard\+\_\+\+WPA&\mbox{\hyperlink{class_s_v_f_1_1_steensgaard}{Steensgaard}} PTA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CSCallString\_WPA@{CSCallString\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!CSCallString\_WPA@{CSCallString\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac9e931f254fa3471f5f5337cbca1de09}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ac9e931f254fa3471f5f5337cbca1de09}} 
+CSCall\+String\+\_\+\+WPA&Call string based context sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CSSummary\_WPA@{CSSummary\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!CSSummary\_WPA@{CSSummary\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85adf8fe4349f84779601a0b41659ca8e27}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85adf8fe4349f84779601a0b41659ca8e27}} 
+CSSummary\+\_\+\+WPA&Summary based context sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSDATAFLOW\_WPA@{FSDATAFLOW\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!FSDATAFLOW\_WPA@{FSDATAFLOW\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a62281bc39fea50a88e55edf605620322}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a62281bc39fea50a88e55edf605620322}} 
+FSDATAFLOW\+\_\+\+WPA&Traditional Dataflow-\/based flow sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSSPARSE\_WPA@{FSSPARSE\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!FSSPARSE\_WPA@{FSSPARSE\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ad6ccf1ce66083278349c5c3111172d78}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85ad6ccf1ce66083278349c5c3111172d78}} 
+FSSPARSE\+\_\+\+WPA&Sparse flow sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSTBHC\_WPA@{FSTBHC\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!FSTBHC\_WPA@{FSTBHC\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a088dda60195ab259693977af8414f203}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a088dda60195ab259693977af8414f203}} 
+FSTBHC\+\_\+\+WPA&Sparse flow-\/sensitive type-\/based heap cloning WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VFS\_WPA@{VFS\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!VFS\_WPA@{VFS\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a412254a7738029bf3ee96f5c15a6bec9}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a412254a7738029bf3ee96f5c15a6bec9}} 
+VFS\+\_\+\+WPA&Versioned sparse flow-\/sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSCS\_WPA@{FSCS\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!FSCS\_WPA@{FSCS\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a43837619e78e03dc95ec6e88959faf82}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a43837619e78e03dc95ec6e88959faf82}} 
+FSCS\+\_\+\+WPA&Flow-\/, context-\/ sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSCSPS\_WPA@{FSCSPS\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!FSCSPS\_WPA@{FSCSPS\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a30826fb1ddb602fd4439ca84eb73e8f4}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a30826fb1ddb602fd4439ca84eb73e8f4}} 
+FSCSPS\+\_\+\+WPA&Flow-\/, context-\/, path-\/ sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADAPTFSCS\_WPA@{ADAPTFSCS\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!ADAPTFSCS\_WPA@{ADAPTFSCS\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a859290ec941a06029f84ef249a5d2fda}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a859290ec941a06029f84ef249a5d2fda}} 
+ADAPTFSCS\+\_\+\+WPA&Adaptive Flow-\/, context-\/, sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADAPTFSCSPS\_WPA@{ADAPTFSCSPS\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!ADAPTFSCSPS\_WPA@{ADAPTFSCSPS\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a42d52c9444028e72ea8e6dc0c8c08ada}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a42d52c9444028e72ea8e6dc0c8c08ada}} 
+ADAPTFSCSPS\+\_\+\+WPA&Adaptive Flow-\/, context-\/, path-\/ sensitive WPA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TypeCPP\_WPA@{TypeCPP\_WPA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!TypeCPP\_WPA@{TypeCPP\_WPA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85acc2e7cbdd04a614a3b6189d2f01042f3}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85acc2e7cbdd04a614a3b6189d2f01042f3}} 
+Type\+CPP\+\_\+\+WPA&Type-\/based analysis for C++. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FieldS\_DDA@{FieldS\_DDA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!FieldS\_DDA@{FieldS\_DDA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85abe1d8104c77bfe4bbc201a64410c7f61}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85abe1d8104c77bfe4bbc201a64410c7f61}} 
+Field\+S\+\_\+\+DDA&Field sensitive DDA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FlowS\_DDA@{FlowS\_DDA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!FlowS\_DDA@{FlowS\_DDA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85aa43c83e2f0df003c158d4b1325b50b18}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85aa43c83e2f0df003c158d4b1325b50b18}} 
+Flow\+S\+\_\+\+DDA&Flow sensitive DDA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PathS\_DDA@{PathS\_DDA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!PathS\_DDA@{PathS\_DDA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85acaf0c0774025005647deaf59582b9d58}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85acaf0c0774025005647deaf59582b9d58}} 
+Path\+S\+\_\+\+DDA&Guarded value-\/flow DDA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cxt\_DDA@{Cxt\_DDA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!Cxt\_DDA@{Cxt\_DDA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a0ab6564c48897595c9d23382a026e0a8}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85a0ab6564c48897595c9d23382a026e0a8}} 
+Cxt\+\_\+\+DDA&context sensitive DDA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Default\_PTA@{Default\_PTA}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!Default\_PTA@{Default\_PTA}}}\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85adb3d4cbd8c38c1c498bc51198626a790}\label{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85adb3d4cbd8c38c1c498bc51198626a790}} 
+Default\+\_\+\+PTA&default pta without any analysis \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_af42ef08568b1fa892f8f98c4421a0477}\label{class_s_v_f_1_1_pointer_analysis_af42ef08568b1fa892f8f98c4421a0477}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!PointerAnalysis@{PointerAnalysis}}
+\index{PointerAnalysis@{PointerAnalysis}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{PointerAnalysis()}{PointerAnalysis()}}
+{\footnotesize\ttfamily Pointer\+Analysis\+::\+Pointer\+Analysis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85}{PTATY}}}]{ty = {\ttfamily \mbox{\hyperlink{class_s_v_f_1_1_pointer_analysis_a0b182ac680cce0547dbe7714c870ca85adb3d4cbd8c38c1c498bc51198626a790}{Default\+\_\+\+PTA}}},  }\item[{bool}]{alias\+\_\+check = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a4aeca84393c5586eea7a480737daf17c}\label{class_s_v_f_1_1_pointer_analysis_a4aeca84393c5586eea7a480737daf17c}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!````~PointerAnalysis@{$\sim$PointerAnalysis}}
+\index{````~PointerAnalysis@{$\sim$PointerAnalysis}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{$\sim$PointerAnalysis()}{~PointerAnalysis()}}
+{\footnotesize\ttfamily Pointer\+Analysis\+::$\sim$\+Pointer\+Analysis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aafa5df4aa576a144476e547b1da35795}\label{class_s_v_f_1_1_pointer_analysis_aafa5df4aa576a144476e547b1da35795}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!callGraphSCCDetection@{callGraphSCCDetection}}
+\index{callGraphSCCDetection@{callGraphSCCDetection}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{callGraphSCCDetection()}{callGraphSCCDetection()}}
+{\footnotesize\ttfamily void SVF\+::\+Pointer\+Analysis\+::call\+Graph\+SCCDetection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call\+Graph SCC related methods. 
+
+Call\+Graph SCC detection \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a3fd44d3cfc3f4ab18506870c65df32f5}\label{class_s_v_f_1_1_pointer_analysis_a3fd44d3cfc3f4ab18506870c65df32f5}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!dumpGraph@{dumpGraph}}
+\index{dumpGraph@{dumpGraph}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{dumpGraph()}{dumpGraph()}}
+{\footnotesize\ttfamily bool Pointer\+Analysis\+::dump\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Whether to dump the graph for debugging purpose. 
+
+Flag in order to dump graph \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a1a6cee7e690ccb3e53cdc4c3e67b386d}\label{class_s_v_f_1_1_pointer_analysis_a1a6cee7e690ccb3e53cdc4c3e67b386d}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!dumpPts@{dumpPts}}
+\index{dumpPts@{dumpPts}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{dumpPts()}{dumpPts()}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::dump\+Pts (\begin{DoxyParamCaption}\item[{Node\+ID}]{ptr,  }\item[{const Points\+To \&}]{pts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Dump points-\/to of top-\/level pointers (\mbox{\hyperlink{class_s_v_f_1_1_val_p_n}{Val\+PN}}) print the points-\/to set of node which has the maximum pts size.\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a118dabc50024b5cd91095814ade47166}\label{class_s_v_f_1_1_pointer_analysis_a118dabc50024b5cd91095814ade47166}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!finalize@{finalize}}
+\index{finalize@{finalize}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::finalize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finalization of a pointer analysis, including checking alias correctness. 
+
+Finalize the analysis after solving Given the alias results, verify whether it is correct or not using alias check functions Print statistics
+
+Dump results
+
+Reimplemented in \mbox{\hyperlink{class_s_v_f_1_1_versioned_flow_sensitive_ad955fda89f4f749151a1bd14562b03f6}{SVF\+::\+Versioned\+Flow\+Sensitive}}, \mbox{\hyperlink{class_s_v_f_1_1_flow_sensitive_t_b_h_c_a3564d6ad7e12e0a833b4cea203a809e4}{SVF\+::\+Flow\+Sensitive\+TBHC}}, \mbox{\hyperlink{class_s_v_f_1_1_flow_d_d_a_a5abae08577ab24684653421dc712431a}{SVF\+::\+Flow\+DDA}}, \mbox{\hyperlink{class_s_v_f_1_1_context_d_d_a_ae34cd06ee3b7d763c81ec418af76d244}{SVF\+::\+Context\+DDA}}, \mbox{\hyperlink{class_s_v_f_1_1_type_analysis_a8efef079c8b33e2215f92ac3629789e6}{SVF\+::\+Type\+Analysis}}, \mbox{\hyperlink{class_s_v_f_1_1_flow_sensitive_afed358369102f01f6fe88b1433e704c3}{SVF\+::\+Flow\+Sensitive}}, \mbox{\hyperlink{class_s_v_f_1_1_andersen_ad90c8cf193bd81870ce8dd88c9580e2c}{SVF\+::\+Andersen}}, \mbox{\hyperlink{class_s_v_f_1_1_andersen_base_a099dad1149eb2e3f8068ef23870005a8}{SVF\+::\+Andersen\+Base}}, \mbox{\hyperlink{class_s_v_f_1_1_cond_p_t_a_impl_a9bdc3a50c695029a28371116ddc3ef8d}{SVF\+::\+Cond\+PTAImpl$<$ Cond $>$}}, and \mbox{\hyperlink{class_s_v_f_1_1_cond_p_t_a_impl_a9bdc3a50c695029a28371116ddc3ef8d}{SVF\+::\+Cond\+PTAImpl$<$ Context\+Cond $>$}}.
+
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_aaf6b41f44da3a4caea1fa395e41edf71}\label{class_s_v_f_1_1_pointer_analysis_aaf6b41f44da3a4caea1fa395e41edf71}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!getPAG@{getPAG}}
+\index{getPAG@{getPAG}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{getPAG()}{getPAG()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}}$\ast$ SVF\+::\+Pointer\+Analysis\+::get\+PAG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get/set \mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}} \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ad9af9655a13f3faeaf265ba370d1f280}\label{class_s_v_f_1_1_pointer_analysis_ad9af9655a13f3faeaf265ba370d1f280}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!getRevPts@{getRevPts}}
+\index{getRevPts@{getRevPts}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{getRevPts()}{getRevPts()}}
+{\footnotesize\ttfamily virtual const Node\+Set\& SVF\+::\+Pointer\+Analysis\+::get\+Rev\+Pts (\begin{DoxyParamCaption}\item[{Node\+ID}]{node\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Given an object, get all the nodes having whose pointsto contains the object. Similar to get\+Pts, this also needs to be implemented in child classes. 
+
+Implemented in \mbox{\hyperlink{class_s_v_f_1_1_cond_p_t_a_impl_aa266eef30817c557882de19aefe135a9}{SVF\+::\+Cond\+PTAImpl$<$ Cond $>$}}, \mbox{\hyperlink{class_s_v_f_1_1_cond_p_t_a_impl_aa266eef30817c557882de19aefe135a9}{SVF\+::\+Cond\+PTAImpl$<$ Context\+Cond $>$}}, and \mbox{\hyperlink{class_s_v_f_1_1_b_v_data_p_t_a_impl_a58113943e4e7144d94d26991dcc8bcc7}{SVF\+::\+BVData\+PTAImpl}}.
+
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a431ec4f85eb0f029e5740b92fd9ceb32}\label{class_s_v_f_1_1_pointer_analysis_a431ec4f85eb0f029e5740b92fd9ceb32}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!initialize@{initialize}}
+\index{initialize@{initialize}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization of a pointer analysis, including building symbol table and \mbox{\hyperlink{class_s_v_f_1_1_p_a_g}{PAG}} etc. 
+
+Initialization of pointer analysis initialise pta call graph for every pointer analysis instance
+
+Reimplemented in \mbox{\hyperlink{class_s_v_f_1_1_versioned_flow_sensitive_a81d3528fd082018e4345f0b026bf3584}{SVF\+::\+Versioned\+Flow\+Sensitive}}, \mbox{\hyperlink{class_s_v_f_1_1_flow_sensitive_t_b_h_c_a4c5fb70aafc3a589b7b1e82ba8f61a6f}{SVF\+::\+Flow\+Sensitive\+TBHC}}, \mbox{\hyperlink{class_s_v_f_1_1_flow_d_d_a_af1fcf058a9feefeda63f07d4189513a1}{SVF\+::\+Flow\+DDA}}, \mbox{\hyperlink{class_s_v_f_1_1_context_d_d_a_adb9f21a86daeb2dd79537f3939c393cf}{SVF\+::\+Context\+DDA}}, \mbox{\hyperlink{class_s_v_f_1_1_type_analysis_a34177236a41f7a2b432243062f829985}{SVF\+::\+Type\+Analysis}}, \mbox{\hyperlink{class_s_v_f_1_1_flow_sensitive_ad6243c1317503bed39411dab47c83da7}{SVF\+::\+Flow\+Sensitive}}, \mbox{\hyperlink{class_s_v_f_1_1_andersen_s_f_r_a3b255068b3ea53041af94fd373a53bd4}{SVF\+::\+Andersen\+SFR}}, \mbox{\hyperlink{class_s_v_f_1_1_andersen_h_l_c_d_a5926080868429040f5142843f01a2a5c}{SVF\+::\+Andersen\+HLCD}}, \mbox{\hyperlink{class_s_v_f_1_1_andersen_h_c_d_aaac9cac7fc5696adb585abd9d67f8c14}{SVF\+::\+Andersen\+HCD}}, \mbox{\hyperlink{class_s_v_f_1_1_andersen_a20617a69c112ad423b1b5021e48a8548}{SVF\+::\+Andersen}}, and \mbox{\hyperlink{class_s_v_f_1_1_andersen_base_a4d3496c305281d7fb423db21e38cf690}{SVF\+::\+Andersen\+Base}}.
+
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_af90d2ccb01402c5ca9d7a059f345c816}\label{class_s_v_f_1_1_pointer_analysis_af90d2ccb01402c5ca9d7a059f345c816}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!isFIObjNode@{isFIObjNode}}
+\index{isFIObjNode@{isFIObjNode}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{isFIObjNode()}{isFIObjNode()}}
+{\footnotesize\ttfamily bool SVF\+::\+Pointer\+Analysis\+::is\+FIObj\+Node (\begin{DoxyParamCaption}\item[{Node\+ID}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+For field-\/sensitivity \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a108380f6f0b67654bb7c7676686096c8}\label{class_s_v_f_1_1_pointer_analysis_a108380f6f0b67654bb7c7676686096c8}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!isLocalVarInRecursiveFun@{isLocalVarInRecursiveFun}}
+\index{isLocalVarInRecursiveFun@{isLocalVarInRecursiveFun}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{isLocalVarInRecursiveFun()}{isLocalVarInRecursiveFun()}}
+{\footnotesize\ttfamily bool Pointer\+Analysis\+::is\+Local\+Var\+In\+Recursive\+Fun (\begin{DoxyParamCaption}\item[{Node\+ID}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Whether a local variable is in function recursions. 
+
+Return TRUE if this node is a local variable of recursive function. \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a521f99705f67e3fea7167728a4e37129}\label{class_s_v_f_1_1_pointer_analysis_a521f99705f67e3fea7167728a4e37129}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!matchArgs@{matchArgs}}
+\index{matchArgs@{matchArgs}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{matchArgs()}{matchArgs()}}
+{\footnotesize\ttfamily bool Pointer\+Analysis\+::match\+Args (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$}]{cs,  }\item[{const \mbox{\hyperlink{class_s_v_f_1_1_s_v_f_function}{SVFFunction}} $\ast$}]{callee }\end{DoxyParamCaption})}
+
+
+
+Match arguments for callsite at caller and callee. 
+
+Match arguments for callsite at caller and callee \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a062f1f2d6d47694caa9ac64a9e68c7b3}\label{class_s_v_f_1_1_pointer_analysis_a062f1f2d6d47694caa9ac64a9e68c7b3}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!printIndCSTargets@{printIndCSTargets}}
+\index{printIndCSTargets@{printIndCSTargets}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{printIndCSTargets()}{printIndCSTargets()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::print\+Ind\+CSTargets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print all indirect callsites \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a28bcd16249c04eea2d13fafd2bcaf9d9}\label{class_s_v_f_1_1_pointer_analysis_a28bcd16249c04eea2d13fafd2bcaf9d9}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!printIndCSTargets@{printIndCSTargets}}
+\index{printIndCSTargets@{printIndCSTargets}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{printIndCSTargets()}{printIndCSTargets()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::print\+Ind\+CSTargets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$}]{cs,  }\item[{const Function\+Set \&}]{targets }\end{DoxyParamCaption})}
+
+
+
+Print targets of a function pointer. 
+
+Print indirect call targets at an indirect callsite \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a73fb8e595473e0c7df1dd0de4968ad13}\label{class_s_v_f_1_1_pointer_analysis_a73fb8e595473e0c7df1dd0de4968ad13}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!resetObjFieldSensitive@{resetObjFieldSensitive}}
+\index{resetObjFieldSensitive@{resetObjFieldSensitive}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{resetObjFieldSensitive()}{resetObjFieldSensitive()}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::reset\+Obj\+Field\+Sensitive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reset all object node as field-\/sensitive. 
+
+Reset field sensitivity \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_acca7b86bb199f9b3da72f100c3e55e0f}\label{class_s_v_f_1_1_pointer_analysis_acca7b86bb199f9b3da72f100c3e55e0f}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!resolveIndCalls@{resolveIndCalls}}
+\index{resolveIndCalls@{resolveIndCalls}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{resolveIndCalls()}{resolveIndCalls()}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::resolve\+Ind\+Calls (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_v_f_1_1_call_block_node}{Call\+Block\+Node}} $\ast$}]{cs,  }\item[{const Points\+To \&}]{target,  }\item[{Call\+Edge\+Map \&}]{new\+Edges,  }\item[{LLVMCall\+Graph $\ast$}]{callgraph = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolve indirect call edges. 
+
+Resolve indirect calls discover indirect pointer target
+
+if the arg size does not match then we do not need to connect this parameter even if the callee is a variadic function (the first parameter of variadic function is its paramter number)\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_ab982e6bbd99a2f9a0a3abbebeeb00dcc}\label{class_s_v_f_1_1_pointer_analysis_ab982e6bbd99a2f9a0a3abbebeeb00dcc}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!validateExpectedFailureTests@{validateExpectedFailureTests}}
+\index{validateExpectedFailureTests@{validateExpectedFailureTests}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{validateExpectedFailureTests()}{validateExpectedFailureTests()}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::validate\+Expected\+Failure\+Tests (\begin{DoxyParamCaption}\item[{std\+::string}]{fun }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Pointer analysis validator \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a7accf4e4db4001716e53d98ce5217ac8}\label{class_s_v_f_1_1_pointer_analysis_a7accf4e4db4001716e53d98ce5217ac8}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!validateSuccessTests@{validateSuccessTests}}
+\index{validateSuccessTests@{validateSuccessTests}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{validateSuccessTests()}{validateSuccessTests()}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::validate\+Success\+Tests (\begin{DoxyParamCaption}\item[{std\+::string}]{fun }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Find the alias check functions annotated in the C files check whether the alias analysis results consistent with the alias check function itself \mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a0454332c89e60729956bb7d69a1a24df}\label{class_s_v_f_1_1_pointer_analysis_a0454332c89e60729956bb7d69a1a24df}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!validateTests@{validateTests}}
+\index{validateTests@{validateTests}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{validateTests()}{validateTests()}}
+{\footnotesize\ttfamily void Pointer\+Analysis\+::validate\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Alias check functions to verify correctness of pointer analysis. 
+
+Validate test cases 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_s_v_f_1_1_pointer_analysis_a3550ea3f087ec557a6fe076bc443b05d}\label{class_s_v_f_1_1_pointer_analysis_a3550ea3f087ec557a6fe076bc443b05d}} 
+\index{SVF::PointerAnalysis@{SVF::PointerAnalysis}!print\_stat@{print\_stat}}
+\index{print\_stat@{print\_stat}!SVF::PointerAnalysis@{SVF::PointerAnalysis}}
+\doxysubsubsection{\texorpdfstring{print\_stat}{print\_stat}}
+{\footnotesize\ttfamily bool SVF\+::\+Pointer\+Analysis\+::print\+\_\+stat\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+User input flags. 
+
+Flag for printing the statistic results 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Memory\+Model/Pointer\+Analysis.\+h\item 
+lib/\+Memory\+Model/Pointer\+Analysis.\+cpp\end{DoxyCompactItemize}

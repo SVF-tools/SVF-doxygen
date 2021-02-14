@@ -1,0 +1,359 @@
+.TH "SVF::ConstraintGraph" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::ConstraintGraph
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ConsG\&.h>\fP
+.PP
+Inherits \fBSVF::GenericGraph< ConstraintNode, ConstraintEdge >\fP\&.
+.PP
+Inherited by \fBSVF::OfflineConsG\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Map< NodeID, \fBConstraintNode\fP * > \fBConstraintNodeIDToNodeMapTy\fP"
+.br
+.ti -1c
+.RI "typedef ConstraintEdge::ConstraintEdgeSetTy::iterator \fBConstraintNodeIter\fP"
+.br
+.ti -1c
+.RI "typedef Map< NodeID, NodeID > \fBNodeToRepMap\fP"
+.br
+.ti -1c
+.RI "typedef Map< NodeID, NodeBS > \fBNodeToSubsMap\fP"
+.br
+.ti -1c
+.RI "typedef \fBFIFOWorkList\fP< NodeID > \fBWorkList\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConstraintGraph\fP (\fBPAG\fP *p)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~ConstraintGraph\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "\fBConstraintNode\fP * \fBgetConstraintNode\fP (NodeID id) const"
+.br
+.RI "Get/add/remove constraint node\&. "
+.ti -1c
+.RI "void \fBaddConstraintNode\fP (\fBConstraintNode\fP *node, NodeID id)"
+.br
+.ti -1c
+.RI "bool \fBhasConstraintNode\fP (NodeID id) const"
+.br
+.ti -1c
+.RI "void \fBremoveConstraintNode\fP (\fBConstraintNode\fP *node)"
+.br
+.ti -1c
+.RI "bool \fBhasEdge\fP (\fBConstraintNode\fP *src, \fBConstraintNode\fP *dst, \fBConstraintEdge::ConstraintEdgeK\fP kind)"
+.br
+.ti -1c
+.RI "\fBConstraintEdge\fP * \fBgetEdge\fP (\fBConstraintNode\fP *src, \fBConstraintNode\fP *dst, \fBConstraintEdge::ConstraintEdgeK\fP kind)"
+.br
+.RI "Get an edge via its src and dst nodes and kind\&. "
+.ti -1c
+.RI "\fBAddrCGEdge\fP * \fBaddAddrCGEdge\fP (NodeID src, NodeID dst)"
+.br
+.RI "Add a \fBPAG\fP edge into Edge map\&. "
+.ti -1c
+.RI "\fBCopyCGEdge\fP * \fBaddCopyCGEdge\fP (NodeID src, NodeID dst)"
+.br
+.RI "Add Copy edge\&. "
+.ti -1c
+.RI "\fBNormalGepCGEdge\fP * \fBaddNormalGepCGEdge\fP (NodeID src, NodeID dst, const \fBLocationSet\fP &ls)"
+.br
+.RI "Add Gep edge\&. "
+.ti -1c
+.RI "\fBVariantGepCGEdge\fP * \fBaddVariantGepCGEdge\fP (NodeID src, NodeID dst)"
+.br
+.ti -1c
+.RI "\fBLoadCGEdge\fP * \fBaddLoadCGEdge\fP (NodeID src, NodeID dst)"
+.br
+.RI "Add Load edge\&. "
+.ti -1c
+.RI "\fBStoreCGEdge\fP * \fBaddStoreCGEdge\fP (NodeID src, NodeID dst)"
+.br
+.RI "Add Store edge\&. "
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetAddrCGEdges\fP ()"
+.br
+.RI "Get \fBPAG\fP edge\&. "
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetDirectCGEdges\fP ()"
+.br
+.RI "Get Copy/call/ret/gep edges\&. "
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetLoadCGEdges\fP ()"
+.br
+.RI "Get Load edges\&. "
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP & \fBgetStoreCGEdges\fP ()"
+.br
+.RI "Get Store edges\&. "
+.ti -1c
+.RI "void \fBreTargetDstOfEdge\fP (\fBConstraintEdge\fP *edge, \fBConstraintNode\fP *newDstNode)"
+.br
+.RI "Used for cycle elimination\&. "
+.ti -1c
+.RI "void \fBreTargetSrcOfEdge\fP (\fBConstraintEdge\fP *edge, \fBConstraintNode\fP *newSrcNode)"
+.br
+.RI "Remove edge from old src target, change edge dst id and add modifed edge into new src\&. "
+.ti -1c
+.RI "void \fBremoveAddrEdge\fP (\fBAddrCGEdge\fP *edge)"
+.br
+.RI "Remove addr edge from their src and dst edge sets\&. "
+.ti -1c
+.RI "void \fBremoveDirectEdge\fP (\fBConstraintEdge\fP *edge)"
+.br
+.RI "Remove direct edge from their src and dst edge sets\&. "
+.ti -1c
+.RI "void \fBremoveLoadEdge\fP (\fBLoadCGEdge\fP *edge)"
+.br
+.RI "Remove load edge from their src and dst edge sets\&. "
+.ti -1c
+.RI "void \fBremoveStoreEdge\fP (\fBStoreCGEdge\fP *edge)"
+.br
+.RI "Remove store edge from their src and dst edge sets\&. "
+.ti -1c
+.RI "NodeID \fBsccRepNode\fP (NodeID id) const"
+.br
+.RI "SCC rep/sub nodes methods\&. "
+.ti -1c
+.RI "NodeBS & \fBsccSubNodes\fP (NodeID id)"
+.br
+.ti -1c
+.RI "void \fBsetRep\fP (NodeID node, NodeID rep)"
+.br
+.ti -1c
+.RI "void \fBsetSubs\fP (NodeID node, NodeBS &subs)"
+.br
+.ti -1c
+.RI "void \fBresetSubs\fP (NodeID node)"
+.br
+.ti -1c
+.RI "bool \fBmoveInEdgesToRepNode\fP (\fBConstraintNode\fP *node, \fBConstraintNode\fP *rep)"
+.br
+.ti -1c
+.RI "bool \fBmoveOutEdgesToRepNode\fP (\fBConstraintNode\fP *node, \fBConstraintNode\fP *rep)"
+.br
+.ti -1c
+.RI "bool \fBmoveEdgesToRepNode\fP (\fBConstraintNode\fP *node, \fBConstraintNode\fP *rep)"
+.br
+.ti -1c
+.RI "bool \fBisZeroOffsettedGepCGEdge\fP (\fBConstraintEdge\fP *edge) const"
+.br
+.RI "Check if a given edge is a \fBNormalGepCGEdge\fP with 0 offset\&. "
+.ti -1c
+.RI "const PAG::CallSiteToFunPtrMap & \fBgetIndirectCallsites\fP () const"
+.br
+.RI "Wrappers for invoking \fBPAG\fP methods\&. "
+.ti -1c
+.RI "NodeID \fBgetBlackHoleNode\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisBlkObjOrConstantObj\fP (NodeID id)"
+.br
+.ti -1c
+.RI "NodeBS & \fBgetAllFieldsObjNode\fP (NodeID id)"
+.br
+.ti -1c
+.RI "NodeID \fBgetBaseObjNode\fP (NodeID id)"
+.br
+.ti -1c
+.RI "bool \fBisSingleFieldObj\fP (NodeID id) const"
+.br
+.ti -1c
+.RI "NodeID \fBgetGepObjNode\fP (NodeID id, const \fBLocationSet\fP &ls)"
+.br
+.RI "Get a field of a memory object\&. "
+.ti -1c
+.RI "NodeID \fBgetFIObjNode\fP (NodeID id)"
+.br
+.RI "Get a field-insensitive node of a memory object\&. "
+.ti -1c
+.RI "bool \fBisPWCNode\fP (NodeID nodeId)"
+.br
+.RI "Check/Set PWC (positive weight cycle) flag\&. "
+.ti -1c
+.RI "void \fBsetPWCNode\fP (NodeID nodeId)"
+.br
+.ti -1c
+.RI "bool \fBhasNodesToBeCollapsed\fP () const"
+.br
+.RI "Add/get nodes to be collapsed\&. "
+.ti -1c
+.RI "void \fBaddNodeToBeCollapsed\fP (NodeID id)"
+.br
+.ti -1c
+.RI "NodeID \fBgetNextCollapseNode\fP ()"
+.br
+.ti -1c
+.RI "void \fBdump\fP (std::string name)"
+.br
+.RI "Dump graph into dot file\&. "
+.ti -1c
+.RI "void \fBprint\fP ()"
+.br
+.RI "Print CG into terminal\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuildCG\fP ()"
+.br
+.ti -1c
+.RI "void \fBdestroy\fP ()"
+.br
+.ti -1c
+.RI "PAGEdge::PAGEdgeSetTy & \fBgetPAGEdgeSet\fP (\fBPAGEdge::PEDGEK\fP kind)"
+.br
+.ti -1c
+.RI "NodeID \fBgetValueNode\fP (const Value *value) const"
+.br
+.RI "Wappers used internally, not expose to Andernsen Pass\&. "
+.ti -1c
+.RI "NodeID \fBgetReturnNode\fP (const \fBSVFFunction\fP *value) const"
+.br
+.ti -1c
+.RI "NodeID \fBgetVarargNode\fP (const \fBSVFFunction\fP *value) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPAG\fP * \fBpag\fP"
+.br
+.ti -1c
+.RI "NodeToRepMap \fBnodeToRepMap\fP"
+.br
+.ti -1c
+.RI "NodeToSubsMap \fBnodeToSubsMap\fP"
+.br
+.ti -1c
+.RI "\fBWorkList\fP \fBnodesToBeCollapsed\fP"
+.br
+.ti -1c
+.RI "EdgeID \fBedgeIndex\fP"
+.br
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP \fBAddrCGEdgeSet\fP"
+.br
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP \fBdirectEdgeSet\fP"
+.br
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP \fBLoadCGEdgeSet\fP"
+.br
+.ti -1c
+.RI "\fBConstraintEdge::ConstraintEdgeSetTy\fP \fBStoreCGEdgeSet\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Constraint graph for \fBAndersen\fP's analysis ConstraintNodes are same as PAGNodes ConstraintEdges are self-defined edges (initialized with ConstraintEdges) 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBAddrCGEdge\fP * ConstraintGraph::addAddrCGEdge (NodeID src, NodeID dst)"
+
+.PP
+Add a \fBPAG\fP edge into Edge map\&. Add Address edge
+.PP
+Add an address edge 
+.SS "\fBCopyCGEdge\fP * ConstraintGraph::addCopyCGEdge (NodeID src, NodeID dst)"
+
+.PP
+Add Copy edge\&. Add Copy edge 
+.SS "\fBLoadCGEdge\fP * ConstraintGraph::addLoadCGEdge (NodeID src, NodeID dst)"
+
+.PP
+Add Load edge\&. Add Load edge 
+.SS "\fBNormalGepCGEdge\fP * ConstraintGraph::addNormalGepCGEdge (NodeID src, NodeID dst, const \fBLocationSet\fP & ls)"
+
+.PP
+Add Gep edge\&. Add Gep edge 
+.SS "\fBStoreCGEdge\fP * ConstraintGraph::addStoreCGEdge (NodeID src, NodeID dst)"
+
+.PP
+Add Store edge\&. Add Store edge 
+.SS "\fBVariantGepCGEdge\fP * ConstraintGraph::addVariantGepCGEdge (NodeID src, NodeID dst)"
+Add variant gep edge 
+.SS "void ConstraintGraph::buildCG ()\fC [protected]\fP"
+Start building constraint graph 
+.SS "void ConstraintGraph::destroy ()\fC [protected]\fP"
+Memory has been cleaned up at \fBGenericGraph\fP 
+.SS "void ConstraintGraph::dump (std::string name)"
+
+.PP
+Dump graph into dot file\&. Dump constraint graph 
+.SS "\fBConstraintEdge::ConstraintEdgeSetTy\fP& SVF::ConstraintGraph::getAddrCGEdges ()\fC [inline]\fP"
+
+.PP
+Get \fBPAG\fP edge\&. Get Address edges 
+.SS "NodeID SVF::ConstraintGraph::getFIObjNode (NodeID id)\fC [inline]\fP"
+
+.PP
+Get a field-insensitive node of a memory object\&. Create a node when it is (1) not exist on graph and (2) not merged
+.SS "NodeID SVF::ConstraintGraph::getGepObjNode (NodeID id, const \fBLocationSet\fP & ls)\fC [inline]\fP"
+
+.PP
+Get a field of a memory object\&. Create a node when it is (1) not exist on graph and (2) not merged
+.SS "bool SVF::ConstraintGraph::moveEdgesToRepNode (\fBConstraintNode\fP * node, \fBConstraintNode\fP * rep)\fC [inline]\fP"
+\fBMove\fP incoming/outgoing direct edges of a sub node to its rep node Return TRUE if there's a gep edge inside this SCC (PWC)\&. 
+.SS "bool ConstraintGraph::moveInEdgesToRepNode (\fBConstraintNode\fP * node, \fBConstraintNode\fP * rep)"
+\fBMove\fP incoming direct edges of a sub node which is outside the SCC to its rep node Remove incoming direct edges of a sub node which is inside the SCC from its rep node Return TRUE if there's a gep edge inside this SCC (PWC)\&.
+.PP
+\fBMove\fP incoming direct edges of a sub node which is outside SCC to its rep node Remove incoming direct edges of a sub node which is inside SCC from its rep node only copy and gep edge can be removed
+.SS "bool ConstraintGraph::moveOutEdgesToRepNode (\fBConstraintNode\fP * node, \fBConstraintNode\fP * rep)"
+\fBMove\fP outgoing direct edges of a sub node which is outside the SCC to its rep node Remove outgoing direct edges of sub node which is inside the SCC from its rep node Return TRUE if there's a gep edge inside this SCC (PWC)\&.
+.PP
+\fBMove\fP outgoing direct edges of a sub node which is outside SCC to its rep node Remove outgoing direct edges of a sub node which is inside SCC from its rep node only copy and gep edge can be removed
+.SS "void ConstraintGraph::print ()"
+
+.PP
+Print CG into terminal\&. Print this constraint graph including its nodes and edges 
+.SS "void ConstraintGraph::removeAddrEdge (\fBAddrCGEdge\fP * edge)"
+
+.PP
+Remove addr edge from their src and dst edge sets\&. Remove addr edge from their src and dst edge sets 
+.SS "void ConstraintGraph::removeDirectEdge (\fBConstraintEdge\fP * edge)"
+
+.PP
+Remove direct edge from their src and dst edge sets\&. Remove edges from their src and dst edge sets 
+.SS "void ConstraintGraph::removeLoadEdge (\fBLoadCGEdge\fP * edge)"
+
+.PP
+Remove load edge from their src and dst edge sets\&. Remove load edge from their src and dst edge sets 
+.SS "void ConstraintGraph::removeStoreEdge (\fBStoreCGEdge\fP * edge)"
+
+.PP
+Remove store edge from their src and dst edge sets\&. Remove store edge from their src and dst edge sets 
+.SS "void ConstraintGraph::reTargetDstOfEdge (\fBConstraintEdge\fP * edge, \fBConstraintNode\fP * newDstNode)"
+
+.PP
+Used for cycle elimination\&. Remove edge from old dst target, change edge dst id and add modifed edge into new dst
+.PP
+Re-target dst node of an edge
+.PP
+(1) Remove edge from old dst target, (2) Change edge dst id and (3) Add modifed edge into new dst 
+.SS "void ConstraintGraph::reTargetSrcOfEdge (\fBConstraintEdge\fP * edge, \fBConstraintNode\fP * newSrcNode)"
+
+.PP
+Remove edge from old src target, change edge dst id and add modifed edge into new src\&. Re-target src node of an edge (1) Remove edge from old src target, (2) Change edge src id and (3) Add modified edge into new src 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

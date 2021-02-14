@@ -1,0 +1,304 @@
+.TH "SVF::LockAnalysis" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::LockAnalysis
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LockAnalysis\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBValDomain\fP { \fBEmpty\fP, \fBTDLocked\fP, \fBTDUnlocked\fP }"
+.br
+.RI "semilattice Empty==>TDUnlocked==>TDLocked "
+.ti -1c
+.RI "typedef \fBCxtStmt\fP \fBCxtLock\fP"
+.br
+.ti -1c
+.RI "typedef \fBCxtProc\fP \fBCxtLockProc\fP"
+.br
+.ti -1c
+.RI "typedef NodeBS \fBLockSet\fP"
+.br
+.ti -1c
+.RI "typedef TCT::InstVec \fBInstVec\fP"
+.br
+.ti -1c
+.RI "typedef Set< const Instruction * > \fBInstSet\fP"
+.br
+.ti -1c
+.RI "typedef InstSet \fBCISpan\fP"
+.br
+.ti -1c
+.RI "typedef Map< const Instruction *, CISpan > \fBCILockToSpan\fP"
+.br
+.ti -1c
+.RI "typedef Set< const Function * > \fBFunSet\fP"
+.br
+.ti -1c
+.RI "typedef Map< const Instruction *, InstSet > \fBInstToInstSetMap\fP"
+.br
+.ti -1c
+.RI "typedef Map< const \fBCxtStmt\fP, \fBValDomain\fP > \fBCxtStmtToLockFlagMap\fP"
+.br
+.ti -1c
+.RI "typedef \fBFIFOWorkList\fP< \fBCxtStmt\fP > \fBCxtStmtWorkList\fP"
+.br
+.ti -1c
+.RI "typedef Set< \fBCxtStmt\fP > \fBLockSpan\fP"
+.br
+.ti -1c
+.RI "typedef Set< \fBCxtStmt\fP > \fBCxtStmtSet\fP"
+.br
+.ti -1c
+.RI "typedef Set< \fBCxtLock\fP > \fBCxtLockSet\fP"
+.br
+.ti -1c
+.RI "typedef Map< \fBCxtLock\fP, LockSpan > \fBCxtLockToSpan\fP"
+.br
+.ti -1c
+.RI "typedef Map< \fBCxtLock\fP, NodeBS > \fBCxtLockToLockSet\fP"
+.br
+.ti -1c
+.RI "typedef Map< const Instruction *, NodeBS > \fBLockSiteToLockSet\fP"
+.br
+.ti -1c
+.RI "typedef Map< const Instruction *, LockSpan > \fBInstToCxtStmtSet\fP"
+.br
+.ti -1c
+.RI "typedef Map< const \fBCxtStmt\fP, CxtLockSet > \fBCxtStmtToCxtLockSet\fP"
+.br
+.ti -1c
+.RI "typedef \fBFIFOWorkList\fP< \fBCxtLockProc\fP > \fBCxtLockProcVec\fP"
+.br
+.ti -1c
+.RI "typedef set< \fBCxtLockProc\fP > \fBCxtLockProcSet\fP"
+.br
+.ti -1c
+.RI "typedef std::pair< const Function *, const Function * > \fBFuncPair\fP"
+.br
+.ti -1c
+.RI "typedef Map< FuncPair, bool > \fBFuncPairToBool\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLockAnalysis\fP (\fBTCT\fP *t)"
+.br
+.ti -1c
+.RI "void \fBanalyze\fP ()"
+.br
+.ti -1c
+.RI "void \fBanalyzeIntraProcedualLock\fP ()"
+.br
+.ti -1c
+.RI "bool \fBintraForwardTraverse\fP (const Instruction *lock, InstSet &unlockset, InstSet &forwardInsts)"
+.br
+.ti -1c
+.RI "bool \fBintraBackwardTraverse\fP (const InstSet &unlockset, InstSet &backwardInsts)"
+.br
+.ti -1c
+.RI "void \fBcollectCxtLock\fP ()"
+.br
+.ti -1c
+.RI "void \fBanalyzeLockSpanCxtStmt\fP ()"
+.br
+.ti -1c
+.RI "void \fBcollectLockUnlocksites\fP ()"
+.br
+.ti -1c
+.RI "void \fBbuildCandidateFuncSetforLock\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisIntraLock\fP (const Instruction *lock) const"
+.br
+.RI "Intraprocedural locks\&. "
+.ti -1c
+.RI "void \fBaddIntraLock\fP (const Instruction *lockSite, const InstSet &stmts)"
+.br
+.RI "Add intra-procedural lock\&. "
+.ti -1c
+.RI "void \fBaddCondIntraLock\fP (const Instruction *lockSite, const InstSet &stmts)"
+.br
+.RI "Add intra-procedural lock\&. "
+.ti -1c
+.RI "bool \fBisInsideIntraLock\fP (const Instruction *stmt) const"
+.br
+.RI "Return true if a statement is inside an intra-procedural lock\&. "
+.ti -1c
+.RI "bool \fBisInsideCondIntraLock\fP (const Instruction *stmt) const"
+.br
+.RI "Return true if a statement is inside a partial lock/unlock pair (conditional lock with unconditional unlock) "
+.ti -1c
+.RI "const InstSet & \fBgetIntraLockSet\fP (const Instruction *stmt) const"
+.br
+.ti -1c
+.RI "void \fBaddCxtLock\fP (const CallStrCxt &cxt, const Instruction *inst)"
+.br
+.RI "Context-sensitive locks\&. "
+.ti -1c
+.RI "bool \fBhasCxtLock\fP (const \fBCxtLock\fP &cxtLock) const"
+.br
+.RI "Get context-sensitive lock\&. "
+.ti -1c
+.RI "bool \fBintersects\fP (const CxtLockSet &lockset1, const CxtLockSet &lockset2) const"
+.br
+.RI "Return true if the intersection of two locksets is not empty\&. "
+.ti -1c
+.RI "bool \fBalias\fP (const CxtLockSet &lockset1, const CxtLockSet &lockset2)"
+.br
+.RI "Return true if two locksets has at least one alias lock\&. "
+.ti -1c
+.RI "bool \fBisLockCandidateFun\fP (const Function *fun) const"
+.br
+.RI "Return true if it is a candidate function\&. "
+.ti -1c
+.RI "bool \fBhasCxtStmtfromInst\fP (const Instruction *inst) const"
+.br
+.RI "Context-sensitive statement and lock spans\&. "
+.ti -1c
+.RI "const CxtStmtSet & \fBgetCxtStmtfromInst\fP (const Instruction *inst) const"
+.br
+.ti -1c
+.RI "bool \fBhasCxtLockfromCxtStmt\fP (const \fBCxtStmt\fP &cts) const"
+.br
+.ti -1c
+.RI "const CxtLockSet & \fBgetCxtLockfromCxtStmt\fP (const \fBCxtStmt\fP &cts) const"
+.br
+.ti -1c
+.RI "CxtLockSet & \fBgetCxtLockfromCxtStmt\fP (const \fBCxtStmt\fP &cts)"
+.br
+.ti -1c
+.RI "bool \fBaddCxtStmtToSpan\fP (const \fBCxtStmt\fP &cts, const \fBCxtLock\fP &cl)"
+.br
+.RI "Add context-sensitive statement\&. "
+.ti -1c
+.RI "bool \fBremoveCxtStmtToSpan\fP (\fBCxtStmt\fP &cts, const \fBCxtLock\fP &cl)"
+.br
+.RI "Add context-sensitive statement\&. "
+.ti -1c
+.RI "void \fBtouchCxtStmt\fP (\fBCxtStmt\fP &cts)"
+.br
+.RI "Touch this context statement\&. "
+.ti -1c
+.RI "bool \fBhasSpanfromCxtLock\fP (const \fBCxtLock\fP &cl)"
+.br
+.ti -1c
+.RI "LockSpan & \fBgetSpanfromCxtLock\fP (const \fBCxtLock\fP &cl)"
+.br
+.ti -1c
+.RI "bool \fBhasOneCxtInLockSpan\fP (const Instruction *I, LockSpan lspan) const"
+.br
+.RI "Check if one instruction's context stmt is in a lock span\&. "
+.ti -1c
+.RI "bool \fBhasAllCxtInLockSpan\fP (const Instruction *I, LockSpan lspan) const"
+.br
+.ti -1c
+.RI "bool \fBisProtectedByCommonLock\fP (const Instruction *i1, const Instruction *i2)"
+.br
+.ti -1c
+.RI "bool \fBisProtectedByCommonCxtLock\fP (const Instruction *i1, const Instruction *i2)"
+.br
+.ti -1c
+.RI "bool \fBisProtectedByCommonCxtLock\fP (const \fBCxtStmt\fP &cxtStmt1, const \fBCxtStmt\fP &cxtStmt2)"
+.br
+.ti -1c
+.RI "bool \fBisProtectedByCommonCILock\fP (const Instruction *i1, const Instruction *i2)"
+.br
+.ti -1c
+.RI "bool \fBisInSameSpan\fP (const Instruction *I1, const Instruction *I2)"
+.br
+.ti -1c
+.RI "bool \fBisInSameCSSpan\fP (const Instruction *i1, const Instruction *i2) const"
+.br
+.ti -1c
+.RI "bool \fBisInSameCSSpan\fP (const \fBCxtStmt\fP &cxtStmt1, const \fBCxtStmt\fP &cxtStmt2) const"
+.br
+.ti -1c
+.RI "bool \fBisInSameCISpan\fP (const Instruction *i1, const Instruction *i2) const"
+.br
+.ti -1c
+.RI "u32_t \fBgetNumOfCxtLocks\fP ()"
+.br
+.ti -1c
+.RI "void \fBprintLocks\fP (const \fBCxtStmt\fP &cts)"
+.br
+.RI "Print locks and spans\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBlockTime\fP"
+.br
+.ti -1c
+.RI "u32_t \fBnumOfTotalQueries\fP"
+.br
+.ti -1c
+.RI "u32_t \fBnumOfLockedQueries\fP"
+.br
+.ti -1c
+.RI "double \fBlockQueriesTime\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Lock analysis 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SVF::LockAnalysis::addCxtLock (const CallStrCxt & cxt, const Instruction * inst)\fC [inline]\fP"
+
+.PP
+Context-sensitive locks\&. Add inter-procedural context-sensitive lock 
+.SS "void LockAnalysis::analyze ()"
+context-sensitive forward traversal from each lock site\&. Generate following results (1) context-sensitive lock site, (2) maps a context-sensitive lock site to its corresponding lock span\&. 
+.SS "void LockAnalysis::analyzeIntraProcedualLock ()"
+Analyze intraprocedural locks A lock is intraprocedural if its lock span is within a procedural FIXME:Should we intersect forwardInsts and backwardInsts?
+.SS "void LockAnalysis::buildCandidateFuncSetforLock ()"
+Collect candidate functions for context-sensitive lock analysis 
+.SS "void LockAnalysis::collectLockUnlocksites ()"
+Collect lock/unlock sites 
+.SS "bool SVF::LockAnalysis::hasCxtStmtfromInst (const Instruction * inst) const\fC [inline]\fP"
+
+.PP
+Context-sensitive statement and lock spans\&. Get LockSet and LockSpan 
+.SS "bool LockAnalysis::intraBackwardTraverse (const InstSet & unlockSet, InstSet & backwardInsts)"
+Intra-procedural backward traversal 
+.SS "bool LockAnalysis::intraForwardTraverse (const Instruction * lockSite, InstSet & unlockSet, InstSet & forwardInsts)"
+Intra-procedural forward traversal 
+.SS "bool LockAnalysis::isInSameCISpan (const Instruction * i1, const Instruction * i2) const"
+Return true if two instructions are inside same context-insensitive lock span 
+.SS "bool LockAnalysis::isInSameCSSpan (const \fBCxtStmt\fP & cxtStmt1, const \fBCxtStmt\fP & cxtStmt2) const"
+Return true if two context-sensitive instructions are inside same context-insensitive lock spa 
+.SS "bool LockAnalysis::isInSameCSSpan (const Instruction * I1, const Instruction * I2) const"
+Return true if two instructions are inside at least one common contex-sensitive lock span 
+.SS "bool LockAnalysis::isInSameSpan (const Instruction * i1, const Instruction * i2)"
+Return true if two instructions are inside at least one common lock span 
+.SS "bool SVF::LockAnalysis::isIntraLock (const Instruction * lock) const\fC [inline]\fP"
+
+.PP
+Intraprocedural locks\&. Return true if the lock is an intra-procedural lock 
+.SS "bool LockAnalysis::isProtectedByCommonCILock (const Instruction * i1, const Instruction * i2)"
+Protected by at least one common context-insensitive lock 
+.SS "bool LockAnalysis::isProtectedByCommonCxtLock (const \fBCxtStmt\fP & cxtStmt1, const \fBCxtStmt\fP & cxtStmt2)"
+Protected by at least one common context-sensitive lock 
+.SS "bool LockAnalysis::isProtectedByCommonCxtLock (const Instruction * i1, const Instruction * i2)"
+Protected by at least one common context-sensitive lock under each context 
+.SS "bool LockAnalysis::isProtectedByCommonLock (const Instruction * i1, const Instruction * i2)"
+Check if two Instructions are protected by common locks echo inst may have multiple cxt stmt we check whether every cxt stmt of instructions is protected by a common lock\&.
+.PP
+Protected by at least one common lock under every context 
+.SS "void LockAnalysis::printLocks (const \fBCxtStmt\fP & cts)"
+
+.PP
+Print locks and spans\&. Print context-insensitive and context-sensitive locks 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

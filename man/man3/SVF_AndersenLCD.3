@@ -1,0 +1,95 @@
+.TH "SVF::AndersenLCD" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::AndersenLCD
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::Andersen\fP\&.
+.PP
+Inherited by \fBSVF::AndersenHLCD\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAndersenLCD\fP (\fBPAG\fP *_pag, \fBPTATY\fP type=\fBAndersenLCD_WPA\fP)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBAndersenLCD\fP * \fBcreateAndersenLCD\fP (\fBPAG\fP *_pag)"
+.br
+.RI "Create an singleton instance directly instead of invoking llvm pass manager\&. "
+.ti -1c
+.RI "static void \fBreleaseAndersenLCD\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBhasLCDCandidate\fP () const"
+.br
+.ti -1c
+.RI "void \fBcleanLCDCandidate\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddLCDCandidate\fP (NodeID nodeId)"
+.br
+.ti -1c
+.RI "bool \fBisMetEdge\fP (\fBConstraintEdge\fP *edge) const"
+.br
+.ti -1c
+.RI "void \fBaddMetEdge\fP (\fBConstraintEdge\fP *edge)"
+.br
+.ti -1c
+.RI "void \fBsolveWorklist\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBhandleCopyGep\fP (\fBConstraintNode\fP *node)"
+.br
+.ti -1c
+.RI "virtual void \fBmergeSCC\fP ()"
+.br
+.ti -1c
+.RI "NodeStack & \fBSCCDetect\fP ()"
+.br
+.ti -1c
+.RI "bool \fBmergeSrcToTgt\fP (NodeID nodeId, NodeID newRepId)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void AndersenLCD::handleCopyGep (\fBConstraintNode\fP * node)\fC [protected]\fP, \fC [virtual]\fP"
+Process copy and gep edges 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.PP
+Reimplemented in \fBSVF::AndersenHLCD\fP\&.
+.SS "void AndersenLCD::mergeSCC ()\fC [protected]\fP, \fC [virtual]\fP"
+Collapse nodes and fields based on 'lcdCandidates' 
+.SS "bool AndersenLCD::mergeSrcToTgt (NodeID nodeId, NodeID newRepId)\fC [protected]\fP, \fC [virtual]\fP"
+merge nodeId to newRepId\&. Return true if the newRepId is a PWC node union pts of node to rep
+.PP
+move the edges from node to rep, and remove the node
+.PP
+set rep and sub relations
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.PP
+Reimplemented in \fBSVF::AndersenHLCD\fP\&.
+.SS "NodeStack & AndersenLCD::SCCDetect ()\fC [protected]\fP, \fC [virtual]\fP"
+\fBAndersenLCD\fP specified SCC detector, need to input a nodeStack 'lcdCandidate' Detect SCC cycles
+.PP
+Merge SCC cycles
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

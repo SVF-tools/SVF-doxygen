@@ -1,0 +1,357 @@
+.TH "SVF::Andersen" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::Andersen
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Andersen\&.h>\fP
+.PP
+Inherits \fBSVF::AndersenBase\fP\&.
+.PP
+Inherited by \fBSVF::AndersenHCD\fP\fC [virtual]\fP, \fBSVF::AndersenLCD\fP\fC [virtual]\fP, \fBSVF::AndersenSCD\fP, and \fBSVF::AndersenWaveDiff\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBSCCDetection\fP< \fBConstraintGraph\fP * > \fBCGSCC\fP"
+.br
+.ti -1c
+.RI "typedef OrderedMap< CallSite, NodeID > \fBCallSite2DummyValPN\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAndersen\fP (\fBPAG\fP *_pag, \fBPTATY\fP type=\fBAndersen_WPA\fP, bool alias_check=true)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~Andersen\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual void \fBinitialize\fP ()"
+.br
+.RI "Initialize analysis\&. "
+.ti -1c
+.RI "virtual void \fBfinalize\fP ()"
+.br
+.RI "Finalize analysis\&. "
+.ti -1c
+.RI "void \fBresetData\fP ()"
+.br
+.RI "Reset data\&. "
+.ti -1c
+.RI "NodeID \fBsccRepNode\fP (NodeID id) const"
+.br
+.RI "SCC methods\&. "
+.ti -1c
+.RI "NodeBS & \fBsccSubNodes\fP (NodeID repId)"
+.br
+.ti -1c
+.RI "virtual const PointsTo & \fBgetPts\fP (NodeID id)"
+.br
+.RI "Operation of points-to set\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (NodeID id, const PointsTo &target)"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (NodeID id, NodeID ptd)"
+.br
+.ti -1c
+.RI "void \fBdumpTopLevelPtsTo\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPWCOpt\fP (bool flag)"
+.br
+.ti -1c
+.RI "bool \fBmergePWC\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDiffOpt\fP (bool flag)"
+.br
+.ti -1c
+.RI "bool \fBenableDiff\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBAndersen\fP *)"
+.br
+.RI "Methods for support type inquiry through isa, cast, and dyn_cast: "
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPointerAnalysis\fP *pta)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBheapAllocatorViaIndCall\fP (CallSite cs, NodePairSet &cpySrcNodes)"
+.br
+.ti -1c
+.RI "virtual void \fBcomputeDiffPts\fP (NodeID id)"
+.br
+.RI "Handle diff points-to set\&. "
+.ti -1c
+.RI "virtual const PointsTo & \fBgetDiffPts\fP (NodeID id)"
+.br
+.ti -1c
+.RI "void \fBupdatePropaPts\fP (NodeID dstId, NodeID srcId)"
+.br
+.RI "Handle propagated points-to set\&. "
+.ti -1c
+.RI "void \fBclearPropaPts\fP (NodeID src)"
+.br
+.ti -1c
+.RI "virtual void \fBinitWorklist\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBsetSCCEdgeFlag\fP (ConstraintNode::SCCEdgeFlag f)"
+.br
+.ti -1c
+.RI "virtual void \fBprocessNode\fP (NodeID nodeId)"
+.br
+.RI "Override \fBWPASolver\fP function in order to use the default solver\&. "
+.ti -1c
+.RI "void \fBprocessAllAddr\fP ()"
+.br
+.RI "handling various constraints "
+.ti -1c
+.RI "virtual bool \fBprocessLoad\fP (NodeID node, const \fBConstraintEdge\fP *load)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessStore\fP (NodeID node, const \fBConstraintEdge\fP *load)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessCopy\fP (NodeID node, const \fBConstraintEdge\fP *edge)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessGep\fP (NodeID node, const \fBGepCGEdge\fP *edge)"
+.br
+.ti -1c
+.RI "virtual void \fBhandleCopyGep\fP (\fBConstraintNode\fP *node)"
+.br
+.ti -1c
+.RI "virtual void \fBhandleLoadStore\fP (\fBConstraintNode\fP *node)"
+.br
+.ti -1c
+.RI "virtual void \fBprocessAddr\fP (const \fBAddrCGEdge\fP *addr)"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessGepPts\fP (const PointsTo &pts, const \fBGepCGEdge\fP *edge)"
+.br
+.ti -1c
+.RI "virtual bool \fBaddCopyEdge\fP (NodeID src, NodeID dst)"
+.br
+.RI "Add copy edge on constraint graph\&. "
+.ti -1c
+.RI "virtual bool \fBupdateCallGraph\fP (const CallSiteToFunPtrMap &callsites)"
+.br
+.RI "Update call graph for the input indirect callsites\&. "
+.ti -1c
+.RI "virtual bool \fBupdateCallGraph\fP ()"
+.br
+.RI "Update call graph for all the indirect callsites\&. "
+.ti -1c
+.RI "void \fBconnectCaller2CalleeParams\fP (CallSite cs, const \fBSVFFunction\fP *F, NodePairSet &cpySrcNodes)"
+.br
+.RI "Connect formal and actual parameters for indirect callsites\&. "
+.ti -1c
+.RI "virtual void \fBmergeNodeToRep\fP (NodeID nodeId, NodeID newRepId)"
+.br
+.RI "Merge sub node to its rep\&. "
+.ti -1c
+.RI "virtual bool \fBmergeSrcToTgt\fP (NodeID srcId, NodeID tgtId)"
+.br
+.ti -1c
+.RI "void \fBmergeSccNodes\fP (NodeID repNodeId, const NodeBS &subNodes)"
+.br
+.RI "Merge sub node in a SCC cycle to their rep node\&. "
+.ti -1c
+.RI "void \fBmergeSccCycle\fP ()"
+.br
+.ti -1c
+.RI "void \fBcollapsePWCNode\fP (NodeID nodeId)"
+.br
+.RI "Collapse a field object into its base for field insensitive anlaysis\&. "
+.ti -1c
+.RI "void \fBcollapseFields\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcollapseNodePts\fP (NodeID nodeId)"
+.br
+.ti -1c
+.RI "bool \fBcollapseField\fP (NodeID nodeId)"
+.br
+.ti -1c
+.RI "void \fBupdateNodeRepAndSubs\fP (NodeID nodeId, NodeID newRepId)"
+.br
+.RI "Updates subnodes of its rep, and rep node of its subs\&. "
+.ti -1c
+.RI "virtual NodeStack & \fBSCCDetect\fP ()"
+.br
+.RI "SCC detection\&. "
+.ti -1c
+.RI "void \fBsanitizePts\fP ()"
+.br
+.RI "Sanitize pts for field insensitive objects\&. "
+.ti -1c
+.RI "virtual const std::string \fBPTAName\fP () const"
+.br
+.RI "Get PTA name\&. "
+.ti -1c
+.RI "virtual bool \fBmatchType\fP (NodeID, NodeID, const \fBNormalGepCGEdge\fP *)"
+.br
+.RI "match types for Gep Edges "
+.ti -1c
+.RI "virtual void \fBaddTypeForGepObjNode\fP (NodeID, const \fBNormalGepCGEdge\fP *)"
+.br
+.RI "add type for newly created GepObjNode "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "CallSite2DummyValPN \fBcallsite2DummyValPN\fP"
+.br
+.RI "Map an instruction to a dummy obj which created at an indirect callsite, which invokes a heap allocator\&. "
+.ti -1c
+.RI "bool \fBpwcOpt\fP"
+.br
+.ti -1c
+.RI "bool \fBdiffOpt\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Inclusion-based Pointer Analysis 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Andersen::collapseField (NodeID nodeId)\fC [protected]\fP"
+Collapse field\&. make struct with the same base as nodeId become field-insensitive\&. Black hole doesn't have structures, no collapse is needed\&. In later versions, instead of using base node to represent the struct, we'll create new field-insensitive node\&. To avoid creating a new 'black hole' node, do not collapse field for black hole node\&.
+.SS "bool Andersen::collapseNodePts (NodeID nodeId)\fC [protected]\fP"
+Collapse node's points-to set\&. Change all points-to elements into field-insensitive\&. Points to set may be changed during collapse, so use a clone instead\&.
+.SS "void Andersen::collapsePWCNode (NodeID nodeId)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Collapse a field object into its base for field insensitive anlaysis\&. Detect and collapse PWC nodes produced by processing gep edges, under the constraint of field limit\&. 
+.PP
+Reimplemented from \fBSVF::WPASolver< GraphType >\fP\&.
+.SS "void Andersen::connectCaller2CalleeParams (CallSite cs, const \fBSVFFunction\fP * F, NodePairSet & cpySrcNodes)\fC [protected]\fP"
+
+.PP
+Connect formal and actual parameters for indirect callsites\&. Connect formal and actual parameters for indirect callsites 
+.SS "void Andersen::dumpTopLevelPtsTo ()\fC [virtual]\fP"
+Print pag nodes' pts by an ascending order 
+.PP
+Reimplemented from \fBSVF::BVDataPTAImpl\fP\&.
+.SS "void Andersen::finalize (void)\fC [virtual]\fP"
+
+.PP
+Finalize analysis\&. Finalize analysis sanitize field insensitive obj TODO: Fields has been collapsed during \fBAndersen::collapseField()\fP\&.
+.PP
+Reimplemented from \fBSVF::AndersenBase\fP\&.
+.SS "void Andersen::handleCopyGep (\fBConstraintNode\fP * node)\fC [protected]\fP, \fC [virtual]\fP"
+Process copy and gep edges 
+.PP
+Reimplemented in \fBSVF::AndersenSCD\fP, \fBSVF::AndersenHLCD\fP, \fBSVF::AndersenLCD\fP, and \fBSVF::AndersenWaveDiff\fP\&.
+.SS "void Andersen::handleLoadStore (\fBConstraintNode\fP * node)\fC [protected]\fP, \fC [virtual]\fP"
+Process load and store edges 
+.PP
+Reimplemented in \fBSVF::AndersenSCD\fP\&.
+.SS "void Andersen::initialize ()\fC [virtual]\fP"
+
+.PP
+Initialize analysis\&. Initilize analysis Initialize worklist
+.PP
+Reimplemented from \fBSVF::AndersenBase\fP\&.
+.PP
+Reimplemented in \fBSVF::AndersenSFR\fP, \fBSVF::AndersenHLCD\fP, and \fBSVF::AndersenHCD\fP\&.
+.SS "void Andersen::mergeNodeToRep (NodeID nodeId, NodeID newRepId)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Merge sub node to its rep\&. 
+.IP "1." 4
+if find gep edges inside SCC cycle, the rep node will become a PWC node and its pts should be collapsed later\&.
+.IP "2." 4
+if the node to be merged is already a PWC node, the rep node will also become a PWC node as it will have a self-cycle gep edge\&.
+.PP
+
+.PP
+Reimplemented in \fBSVF::AndersenWaveDiff\fP\&.
+.SS "void Andersen::mergeSccNodes (NodeID repNodeId, const NodeBS & subNodes)\fC [protected]\fP"
+
+.PP
+Merge sub node in a SCC cycle to their rep node\&. Union points-to of subscc nodes into its rep nodes \fBMove\fP incoming/outgoing direct edges of sub node to rep node 
+.SS "bool Andersen::mergeSrcToTgt (NodeID nodeId, NodeID newRepId)\fC [protected]\fP, \fC [virtual]\fP"
+merge nodeId to newRepId\&. Return true if the newRepId is a PWC node union pts of node to rep
+.PP
+move the edges from node to rep, and remove the node
+.PP
+set rep and sub relations
+.PP
+Reimplemented in \fBSVF::AndersenSFR\fP, \fBSVF::AndersenHLCD\fP, and \fBSVF::AndersenLCD\fP\&.
+.SS "void Andersen::processAddr (const \fBAddrCGEdge\fP * addr)\fC [protected]\fP, \fC [virtual]\fP"
+Process address edges 
+.PP
+Reimplemented in \fBSVF::AndersenSCD\fP\&.
+.SS "void Andersen::processAllAddr ()\fC [protected]\fP"
+
+.PP
+handling various constraints Process address edges 
+.SS "bool Andersen::processCopy (NodeID node, const \fBConstraintEdge\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+Process copy edges src --copy--> dst, union pts(dst) with pts(src) 
+.PP
+Reimplemented in \fBSVF::AndersenWaveDiff\fP\&.
+.SS "bool Andersen::processGep (NodeID node, const \fBGepCGEdge\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+Process gep edges src --gep--> dst, for each srcPtdNode \\in pts(src) ==> add fieldSrcPtdNode into tmpDstPts union pts(dst) with tmpDstPts 
+.SS "bool Andersen::processGepPts (const PointsTo & pts, const \fBGepCGEdge\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+Compute points-to for gep edges 
+.SS "bool Andersen::processLoad (NodeID node, const \fBConstraintEdge\fP * load)\fC [protected]\fP, \fC [virtual]\fP"
+Process load edges src --load--> dst, node \\in pts(src) ==> node--copy-->dst TODO: New copy edges are also added for black hole obj node to make gcc in spec 2000 pass the flow-sensitive analysis\&. Try to handle black hole obj in an appropiate way\&.
+.SS "void Andersen::processNode (NodeID nodeId)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Override \fBWPASolver\fP function in order to use the default solver\&. Start constraint solving 
+.PP
+Reimplemented from \fBSVF::WPASolver< GraphType >\fP\&.
+.PP
+Reimplemented in \fBSVF::AndersenWaveDiff\fP\&.
+.SS "bool Andersen::processStore (NodeID node, const \fBConstraintEdge\fP * store)\fC [protected]\fP, \fC [virtual]\fP"
+Process store edges src --store--> dst, node \\in pts(dst) ==> src--copy-->node TODO: New copy edges are also added for black hole obj node to make gcc in spec 2000 pass the flow-sensitive analysis\&. Try to handle black hole obj in an appropiate way
+.SS "NodeStack & Andersen::SCCDetect ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+SCC detection\&. SCC detection on constraint graph 
+.PP
+Reimplemented from \fBSVF::WPASolver< GraphType >\fP\&.
+.PP
+Reimplemented in \fBSVF::AndersenSCD\fP, \fBSVF::AndersenLCD\fP, and \fBSVF::AndersenWaveDiffWithType\fP\&.
+.SS "virtual bool SVF::Andersen::unionPts (NodeID id, const PointsTo & target)\fC [inline]\fP, \fC [virtual]\fP"
+Union/add points-to\&. Add the reverse points-to for node collapse purpose To be noted that adding reverse pts might incur 10% total overhead during solving 
+.PP
+Reimplemented from \fBSVF::BVDataPTAImpl\fP\&.
+.SS "bool Andersen::updateCallGraph (const CallSiteToFunPtrMap & callsites)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Update call graph for the input indirect callsites\&. Update call graph for the input indirect callsites nodes as a src of a generated new copy edge
+.PP
+Reimplemented from \fBSVF::BVDataPTAImpl\fP\&.
+.PP
+Reimplemented in \fBSVF::AndersenSCD\fP\&.
+.SS "void Andersen::updateNodeRepAndSubs (NodeID nodeId, NodeID newRepId)\fC [protected]\fP"
+
+.PP
+Updates subnodes of its rep, and rep node of its subs\&. update nodeToRepMap, for each subs of current node updates its rep to newRepId
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

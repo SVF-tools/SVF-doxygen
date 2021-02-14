@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_type_based_heap_cloning" xml:lang="en-US">
+<title>SVF::TypeBasedHeapCloning Class Reference</title>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary></indexterm>
+<para>Inheritance diagram for SVF::TypeBasedHeapCloning:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_type_based_heap_cloning.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a21d2fd8bbef0c6f6ddddb5387569a7fa"/>static const MDNode * <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a21d2fd8bbef0c6f6ddddb5387569a7fa">getRawCTirMetadata</link> (const Value *)</para>
+
+<para>Returns raw ctir metadata of a Value. Returns null if it doesn&apos;t exist. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1af4d0abf53755a070478c142add3322d8"/><link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1af4d0abf53755a070478c142add3322d8">TypeBasedHeapCloning</link> (<link linkend="_class_s_v_f_1_1_b_v_data_p_t_a_impl">BVDataPTAImpl</link> *pta)</para>
+
+<para>Constructor. pta is the pointer analysis using this object (i.e. that which is extending). </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a1d48cd7ccbcd9bdf1470a5d9aca3298d">backPropagate</link> (NodeID clone)=0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1aaaf50870e50b45b44d4ecaaaab662770"/>void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1aaaf50870e50b45b44d4ecaaaab662770">setDCHG</link> (<link linkend="_class_s_v_f_1_1_d_c_h_graph">DCHGraph</link> *<link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a465e67781977e83526df7e36d576e539">dchg</link>)</para>
+
+<para>DCHG <emphasis>must</emphasis> be set by extending class once the DCHG is available. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a4ae27b3d09bbb83b21ed6c7fd6c4e653"/>void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a4ae27b3d09bbb83b21ed6c7fd6c4e653">setPAG</link> (<link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> *pag)</para>
+
+<para><link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> <emphasis>must</emphasis> be set by extending class once the <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> is available. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a59a9c7b8a7ec392ac609f10c8dac8d7f">isBlkObjOrConstantObj</link> (NodeID o) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1add00f1c20a524c0be903af679bd6f638">isBase</link> (const DIType *a, const DIType *b) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1abce2ba326af69312c5971246cc4c10dc"/>bool <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1abce2ba326af69312c5971246cc4c10dc">isClone</link> (NodeID o) const</para>
+
+<para>Returns true if o is a clone. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ac51cd735739a2499196a87323172a6a6"/>void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ac51cd735739a2499196a87323172a6a6">setType</link> (NodeID o, const DIType *t)</para>
+
+<para>Sets the type (in objToType) of o. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a219edef6c013a953ed12ee3c56bde6de"/>const DIType * <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a219edef6c013a953ed12ee3c56bde6de">getType</link> (NodeID o) const</para>
+
+<para>Returns the type (from objToType) of o. Asserts existence. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a006243a1416f4950de254d0d62ba40b0"/>void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a006243a1416f4950de254d0d62ba40b0">setAllocationSite</link> (NodeID o, NodeID site)</para>
+
+<para>Sets the allocation site (in objToAllocation) of o. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a5681d78630ca8770dd493ef3841ec683"/>NodeID <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a5681d78630ca8770dd493ef3841ec683">getAllocationSite</link> (NodeID o) const</para>
+
+<para>Returns the allocation site (from objToAllocation) of o. Asserts existence. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ad1c67da3aac128ca8a69907fdad53fcd"/>const NodeBS <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ad1c67da3aac128ca8a69907fdad53fcd">getObjsWithClones</link> (void)</para>
+
+<para>Returns objects that have clones (any key in objToClones). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ae83ef821386b3fd4b86f29477cdda3e1"/>void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ae83ef821386b3fd4b86f29477cdda3e1">addClone</link> (NodeID o, NodeID c)</para>
+
+<para>Add a clone c to object o. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1af127bed600087b1ace26088a76ca8998"/>const NodeBS &amp; <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1af127bed600087b1ace26088a76ca8998">getClones</link> (NodeID o)</para>
+
+<para>Returns all the clones of o. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a14027d92c4f8e33d7487fe81acce6a85"/>void <emphasis role="strong">setOriginalObj</emphasis> (NodeID c, NodeID o)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1aeea7089c6f54b44f0509d41686b649f6"/>NodeID <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1aeea7089c6f54b44f0509d41686b649f6">getOriginalObj</link> (NodeID c) const</para>
+
+<para>Returns the original object c is cloned from. If c is not a clone, returns itself. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ae520e0551e63223a908f92a6b9667356"/>PointsTo &amp; <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ae520e0551e63223a908f92a6b9667356">getFilterSet</link> (NodeID loc)</para>
+
+<para>Returns the filter set of a location. Not const; could create empty PointsTo. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ad07fb204258fccda89053514338e3804"/>void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ad07fb204258fccda89053514338e3804">addGepToObj</link> (NodeID gep, NodeID base, unsigned offset)</para>
+
+<para>Associates gep with base (through objToGeps and memObjToGeps). </para>
+</listitem>
+            <listitem><para>const NodeBS &amp; <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ad043ab95900849a5a894ca4bada4e032">getGepObjsFromMemObj</link> (const <link linkend="_class_s_v_f_1_1_mem_obj">MemObj</link> *memObj, unsigned offset)</para>
+</listitem>
+            <listitem><para>const NodeBS &amp; <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1afe416f9ec57923f34ef1db3890a3f9e1">getGepObjs</link> (NodeID base)</para>
+</listitem>
+            <listitem><para>const NodeBS <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1aa175b5db473eb57c03b6f908791d1133">getGepObjClones</link> (NodeID base, unsigned offset)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a34064efe336ada815b31050f683c7ce1">init</link> (NodeID loc, NodeID p, const DIType *tildet, bool reuse, bool gep=false)</para>
+</listitem>
+            <listitem><para>NodeID <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a11c3d1b7f10e4aad2525d428f5855db5">cloneObject</link> (NodeID o, const DIType *type, bool reuse)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ac6ebb2fd24fc4272faf5db6ddd1e464b"/>NodeID <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ac6ebb2fd24fc4272faf5db6ddd1e464b">addCloneDummyObjNode</link> (const <link linkend="_class_s_v_f_1_1_mem_obj">MemObj</link> *mem)</para>
+
+<para>Add clone dummy object node to <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a16ad9c601a044731b982305a177dbda3"/>NodeID <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a16ad9c601a044731b982305a177dbda3">addCloneGepObjNode</link> (const <link linkend="_class_s_v_f_1_1_mem_obj">MemObj</link> *mem, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp;l)</para>
+
+<para>Add clone GEP object node to <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a83fb1e2a7b66d5f33fa34698a52250af"/>NodeID <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a83fb1e2a7b66d5f33fa34698a52250af">addCloneFIObjNode</link> (const <link linkend="_class_s_v_f_1_1_mem_obj">MemObj</link> *mem)</para>
+
+<para>Add clone FI object node to <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link>. </para>
+</listitem>
+            <listitem><para>const DIType * <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ac4565775cced4444ba007e310c4a02d8">getTypeFromCTirMetadata</link> (const Value *)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ae42ec334a7dfc96a5ead2d2845ca3b22">validateTBHCTests</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *svfMod)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a1a7b51e7d959795c00383721b013834d"/>void <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a1a7b51e7d959795c00383721b013834d">dumpStats</link> (void)</para>
+
+<para>Dump some statistics we tracked. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_s_v_f_1_1_d_c_h_graph">DCHGraph</link> * <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a465e67781977e83526df7e36d576e539">dchg</link> = nullptr</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a6363466e64eee4405806568d26206d2e"/>static const DIType * <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a6363466e64eee4405806568d26206d2e">undefType</link> = nullptr</para>
+
+<para>The undefined type (•); void. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a03ef2decb80ba07f4d98cae0a4497212"/>static const std::string <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1a03ef2decb80ba07f4d98cae0a4497212">derefFnName</link> = &quot;deref&quot;</para>
+
+<para>deref function for TBHC alias tests. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ab1467e374b238b0f68d3fdd8f3ef6596"/>static const std::string <link linkend="_class_s_v_f_1_1_type_based_heap_cloning_1ab1467e374b238b0f68d3fdd8f3ef6596">mangledDerefFnName</link> = &quot;_Z5derefv&quot;</para>
+
+<para>deref function (mangled) for TBHC alias tests. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a1d48cd7ccbcd9bdf1470a5d9aca3298d"/>    <section>
+    <title>backPropagate()</title>
+<indexterm><primary>backPropagate</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>backPropagate</secondary></indexterm>
+<para><computeroutput>virtual void SVF::TypeBasedHeapCloning::backPropagate (NodeID clone)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Required by user. Handles back-propagation of newly created clone after all metadata has been set. Used by cloneObject. </para>
+<para>
+Implemented in <link linkend="_class_s_v_f_1_1_flow_sensitive_t_b_h_c_1a81ce8b1e98db245d3f4ccf189ca11e47">SVF::FlowSensitiveTBHC</link>.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a11c3d1b7f10e4aad2525d428f5855db5"/>    <section>
+    <title>cloneObject()</title>
+<indexterm><primary>cloneObject</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>cloneObject</secondary></indexterm>
+<para><computeroutput>NodeID TypeBasedHeapCloning::cloneObject (NodeID o, const DIType * type, bool reuse)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Returns a clone of o with type type. reuse indicates whether we are cloning as a result of reuse. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1aa175b5db473eb57c03b6f908791d1133"/>    <section>
+    <title>getGepObjClones()</title>
+<indexterm><primary>getGepObjClones</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>getGepObjClones</secondary></indexterm>
+<para><computeroutput>const NodeBS TypeBasedHeapCloning::getGepObjClones (NodeID base, unsigned offset)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Returns the GEP object node(s) of base for ls. This may include clones. If there are no GEP objects, then getGepObjNode is called on the <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> (through base&apos;s getGepObjNode) which will create one. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1afe416f9ec57923f34ef1db3890a3f9e1"/>    <section>
+    <title>getGepObjs()</title>
+<indexterm><primary>getGepObjs</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>getGepObjs</secondary></indexterm>
+<para><computeroutput>const NodeBS &amp; TypeBasedHeapCloning::getGepObjs (NodeID base)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Returns all gep objects under an object. Not const; could create empty set. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ad043ab95900849a5a894ca4bada4e032"/>    <section>
+    <title>getGepObjsFromMemObj()</title>
+<indexterm><primary>getGepObjsFromMemObj</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>getGepObjsFromMemObj</secondary></indexterm>
+<para><computeroutput>const NodeBS &amp; TypeBasedHeapCloning::getGepObjsFromMemObj (const <link linkend="_class_s_v_f_1_1_mem_obj">MemObj</link> * memObj, unsigned offset)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Returns all gep objects at a particular offset for memory object. Not const; could create empty set. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ac4565775cced4444ba007e310c4a02d8"/>    <section>
+    <title>getTypeFromCTirMetadata()</title>
+<indexterm><primary>getTypeFromCTirMetadata</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>getTypeFromCTirMetadata</secondary></indexterm>
+<para><computeroutput>const DIType * TypeBasedHeapCloning::getTypeFromCTirMetadata (const Value * v)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Returns the ctir type attached to the value, nullptr if non-existant. Not static because it needs the DCHG to return the canonical type. Not static because we need dchg&apos;s getCanonicalType. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a34064efe336ada815b31050f683c7ce1"/>    <section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>bool TypeBasedHeapCloning::init (NodeID loc, NodeID p, const DIType * tildet, bool reuse, bool gep = <computeroutput>false</computeroutput>
+)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Initialise the pointees of p at loc (which is type tildet *). reuse indicates whether reuse is a possibility for this initialisation. Returns whether p changed. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1add00f1c20a524c0be903af679bd6f638"/>    <section>
+    <title>isBase()</title>
+<indexterm><primary>isBase</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>isBase</secondary></indexterm>
+<para><computeroutput>bool TypeBasedHeapCloning::isBase (const DIType * a, const DIType * b) const<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Wrapper around <link linkend="_class_s_v_f_1_1_d_c_h_graph_1ab33f9af6ad22eb99dd0d9950fb0e50e6">DCHGraph::isBase</link>. Purpose is to keep our conditions clean by only passing two parameters like the rules. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a59a9c7b8a7ec392ac609f10c8dac8d7f"/>    <section>
+    <title>isBlkObjOrConstantObj()</title>
+<indexterm><primary>isBlkObjOrConstantObj</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>isBlkObjOrConstantObj</secondary></indexterm>
+<para><computeroutput>bool TypeBasedHeapCloning::isBlkObjOrConstantObj (NodeID o) const<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Check if an object is a black hole obj or a constant object. Required since other implementations obviously do not account for clones. </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1ae42ec334a7dfc96a5ead2d2845ca3b22"/>    <section>
+    <title>validateTBHCTests()</title>
+<indexterm><primary>validateTBHCTests</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>validateTBHCTests</secondary></indexterm>
+<para><computeroutput>void TypeBasedHeapCloning::validateTBHCTests (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * svfMod)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Runs tests on MAYALIAS, NOALIAS, etc. built from TBHC_MAYALIAS, TBHC_NOALIAS, etc. macros. TBHC_XALIAS macros produce: call XALIAS(...) %1 = load ... ... n = load p store ... n-1, ...* n !ctir !t1 call deref() n+1 = load ... ... n+n = load q store ... n+n-1, ...* n+n !ctir !t2 call deref() We want to test the points-to sets of n and n+n after filtering with !t1 and !t2 respectively. </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_type_based_heap_cloning_1a465e67781977e83526df7e36d576e539"/>    <section>
+    <title>dchg</title>
+<indexterm><primary>dchg</primary><secondary>SVF::TypeBasedHeapCloning</secondary></indexterm>
+<indexterm><primary>SVF::TypeBasedHeapCloning</primary><secondary>dchg</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_d_c_h_graph">DCHGraph</link>* SVF::TypeBasedHeapCloning::dchg = nullptr<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Class hierarchy graph built from debug information. Required, CHG from IR is insufficient. </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/Util/TypeBasedHeapCloning.hlib/Util/TypeBasedHeapCloning.cpp</section>
+</section>

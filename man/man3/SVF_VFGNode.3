@@ -1,0 +1,77 @@
+.TH "SVF::VFGNode" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::VFGNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::GenericNode< NodeTy, EdgeTy >\fP\&.
+.PP
+Inherited by \fBSVF::ArgumentVFGNode\fP, \fBSVF::BinaryOPVFGNode\fP, \fBSVF::CmpVFGNode\fP, \fBSVF::MRSVFGNode\fP, \fBSVF::NullPtrVFGNode\fP, \fBSVF::PHIVFGNode\fP, \fBSVF::StmtVFGNode\fP, and \fBSVF::UnaryOPVFGNode\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBVFGNodeK\fP { \fBAddr\fP, \fBCopy\fP, \fBGep\fP, \fBStore\fP, \fBLoad\fP, \fBCmp\fP, \fBBinaryOp\fP, \fBUnaryOp\fP, \fBTPhi\fP, \fBTIntraPhi\fP, \fBTInterPhi\fP, \fBMPhi\fP, \fBMIntraPhi\fP, \fBMInterPhi\fP, \fBFRet\fP, \fBARet\fP, \fBAParm\fP, \fBFParm\fP, \fBFunRet\fP, \fBAPIN\fP, \fBAPOUT\fP, \fBFPIN\fP, \fBFPOUT\fP, \fBNPtr\fP }"
+.br
+.ti -1c
+.RI "typedef VFGEdge::VFGEdgeSetTy::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef VFGEdge::VFGEdgeSetTy::const_iterator \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef Set< const \fBCallPE\fP * > \fBCallPESet\fP"
+.br
+.ti -1c
+.RI "typedef Set< const \fBRetPE\fP * > \fBRetPESet\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVFGNode\fP (NodeID i, \fBVFGNodeK\fP k)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual const \fBICFGNode\fP * \fBgetICFGNode\fP () const"
+.br
+.RI "Return corresponding \fBICFG\fP node\&. "
+.ti -1c
+.RI "virtual void \fBsetICFGNode\fP (const \fBICFGNode\fP *node)"
+.br
+.RI "Set corresponding \fBICFG\fP node\&. "
+.ti -1c
+.RI "virtual const \fBSVFFunction\fP * \fBgetFun\fP () const"
+.br
+.RI "Get the function of this SVFGNode\&. "
+.ti -1c
+.RI "virtual const std::string \fBtoString\fP () const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBICFGNode\fP * \fBicfgNode\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBraw_ostream\fP & \fBoperator<<\fP (\fBraw_ostream\fP &o, const \fBVFGNode\fP &node)"
+.br
+.RI "Overloading operator << for dumping \fBICFG\fP node ID\&. "
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSVF::VFGNode::VFGNodeK\fP"
+24 kinds of \fBICFG\fP node Gep represents offset edge for field sensitivity 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

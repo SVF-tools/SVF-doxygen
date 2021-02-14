@@ -1,0 +1,99 @@
+.TH "SVF::BddCondManager" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::BddCondManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Conditions\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBddCondManager\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fB~BddCondManager\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "\fBDdNode\fP * \fBCudd_bdd\fP (u32_t i)"
+.br
+.ti -1c
+.RI "unsigned \fBBddVarNum\fP ()"
+.br
+.ti -1c
+.RI "\fBDdNode\fP * \fBgetTrueCond\fP () const"
+.br
+.ti -1c
+.RI "\fBDdNode\fP * \fBgetFalseCond\fP () const"
+.br
+.ti -1c
+.RI "u32_t \fBgetBDDMemUsage\fP ()"
+.br
+.ti -1c
+.RI "u32_t \fBgetCondNumber\fP ()"
+.br
+.ti -1c
+.RI "u32_t \fBgetMaxLiveCondNumber\fP ()"
+.br
+.ti -1c
+.RI "void \fBmarkForRelease\fP (\fBDdNode\fP *cond)"
+.br
+.ti -1c
+.RI "\fBDdNode\fP * \fBAND\fP (\fBDdNode\fP *lhs, \fBDdNode\fP *rhs)"
+.br
+.RI "Operations on conditions\&. "
+.ti -1c
+.RI "\fBDdNode\fP * \fBOR\fP (\fBDdNode\fP *lhs, \fBDdNode\fP *rhs)"
+.br
+.ti -1c
+.RI "\fBDdNode\fP * \fBNEG\fP (\fBDdNode\fP *lhs)"
+.br
+.ti -1c
+.RI "void \fBddClearFlag\fP (\fBDdNode\fP *f) const"
+.br
+.ti -1c
+.RI "void \fBBddSupportStep\fP (\fBDdNode\fP *f, NodeBS &support) const"
+.br
+.ti -1c
+.RI "void \fBBddSupport\fP (\fBDdNode\fP *f, NodeBS &support) const"
+.br
+.ti -1c
+.RI "void \fBdump\fP (\fBDdNode\fP *lhs, \fBraw_ostream\fP &O)"
+.br
+.ti -1c
+.RI "std::string \fBdumpStr\fP (\fBDdNode\fP *lhs) const"
+.br
+.ti -1c
+.RI "void \fBprintMinterms\fP (\fBDdNode\fP *d)"
+.br
+.RI "print minterms and debug information for the Ddnode "
+.ti -1c
+.RI "void \fBprintDbg\fP (\fBDdNode\fP *d)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Using Cudd as conditions\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBDdNode\fP * BddCondManager::AND (\fBDdNode\fP * lhs, \fBDdNode\fP * rhs)"
+
+.PP
+Operations on conditions\&. use Cudd_bddAndLimit interface to avoid bdds blow up drop the rhs condition
+.SS "void BddCondManager::ddClearFlag (\fBDdNode\fP * f) const"
+Utilities for dumping conditions\&. These methods use global functions from CUDD package and they can be removed outside this class scope to be used by others\&. 
+.SS "void BddCondManager::dump (\fBDdNode\fP * lhs, \fBraw_ostream\fP & O)"
+Dump BDD 
+.SS "std::string BddCondManager::dumpStr (\fBDdNode\fP * lhs) const"
+Dump BDD 
+.SS "\fBDdNode\fP * BddCondManager::OR (\fBDdNode\fP * lhs, \fBDdNode\fP * rhs)"
+Use Cudd_bddOrLimit interface to avoid bdds blow up drop the two conditions here
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

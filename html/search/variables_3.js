@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['callgraphscc_3636',['callGraphSCC',['../class_s_v_f_1_1_pointer_analysis.html#ae3b651799345d9d92b6d736dafb03f63',1,'SVF::PointerAnalysis']]],
+  ['callinsttocallgraphedgesmap_3637',['callinstToCallGraphEdgesMap',['../class_s_v_f_1_1_p_t_a_call_graph.html#ab29003352d8152b9d0fd37919ac212c5',1,'SVF::PTACallGraph']]],
+  ['callsite2dummyvalpn_3638',['callsite2DummyValPN',['../class_s_v_f_1_1_andersen.html#a2f88b6035ecb480f7d11afe6bc666541',1,'SVF::Andersen']]],
+  ['candidatequeries_3639',['candidateQueries',['../class_s_v_f_1_1_d_d_a_client.html#aa6fdff97be2e1a886237b515406d2e61',1,'SVF::DDAClient::candidateQueries()'],['../class_s_v_f_1_1_d_d_a_v_f_solver.html#ae0e78fafb7eec0fbc1a02d24547335e9',1,'SVF::DDAVFSolver::candidateQueries()']]],
+  ['canonicaltypemap_3640',['canonicalTypeMap',['../class_s_v_f_1_1_d_c_h_graph.html#a498a18fe8702251b6f2a4e6379e5cbb1',1,'SVF::DCHGraph']]],
+  ['canonicaltypes_3641',['canonicalTypes',['../class_s_v_f_1_1_d_c_h_graph.html#a10225f56b21eb7f0870fdc433de3c393',1,'SVF::DCHGraph']]],
+  ['chaffmap_3642',['chaFFMap',['../class_s_v_f_1_1_d_c_h_graph.html#abe8d313b501182ab62f2276a19d670a4',1,'SVF::DCHGraph']]],
+  ['chamap_3643',['chaMap',['../class_s_v_f_1_1_d_c_h_graph.html#ac0d5f1e10f642aac5b64792bf5fcbd9d',1,'SVF::DCHGraph']]],
+  ['chgraph_3644',['chgraph',['../class_s_v_f_1_1_pointer_analysis.html#a251638a947815a8ff91a507486cadfcd',1,'SVF::PointerAnalysis']]],
+  ['conscg_3645',['consCG',['../class_s_v_f_1_1_andersen_base.html#ae21e38a06a4397d11cdd17b0f8f282fd',1,'SVF::AndersenBase']]],
+  ['containingaggs_3646',['containingAggs',['../class_s_v_f_1_1_d_c_h_graph.html#adc7a17f70ac3fa89624ad874dbd16ff9',1,'SVF::DCHGraph']]],
+  ['copytime_3647',['copyTime',['../class_s_v_f_1_1_flow_sensitive.html#a888d6334e5e226c634680e4c0674dcfb',1,'SVF::FlowSensitive']]],
+  ['cptstorepcptsmap_3648',['cptsToRepCPtsMap',['../class_s_v_f_1_1_m_r_generator.html#ab4d1ff0357d389a65ff1c2112ce631a1',1,'SVF::MRGenerator']]],
+  ['cschamap_3649',['csCHAMap',['../class_s_v_f_1_1_d_c_h_graph.html#ad79a569e77f94fa8494eed3f18e07e90',1,'SVF::DCHGraph']]],
+  ['curptr_3650',['curPtr',['../class_s_v_f_1_1_d_d_a_client.html#a6a133cf24ef65eaf58c82ec213f3f6cb',1,'SVF::DDAClient']]],
+  ['cursccid_3651',['curSCCID',['../class_s_v_f_1_1_w_p_a_s_c_c_solver.html#a28973d7e1301c36254b67c695e8431aa',1,'SVF::WPASCCSolver']]]
+];

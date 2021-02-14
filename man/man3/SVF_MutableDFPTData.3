@@ -1,0 +1,283 @@
+.TH "SVF::MutableDFPTData< Key, Datum, Data >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::MutableDFPTData< Key, Datum, Data >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::DFPTData< Key, Datum, Data >\fP\&.
+.PP
+Inherited by \fBSVF::IncMutableDFPTData< Key, Datum, Data >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPTData\fP< Key, Datum, Data > \fBBasePTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBMutablePTData\fP< Key, Datum, Data > \fBBaseMutPTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBDFPTData\fP< Key, Datum, Data > \fBBaseDFPTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBBasePTData::PTDataTy\fP \fBPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef BasePTData::KeySet \fBKeySet\fP"
+.br
+.ti -1c
+.RI "typedef BaseDFPTData::LocID \fBLocID\fP"
+.br
+.ti -1c
+.RI "typedef BaseMutPTData::PtsMap \fBPtsMap\fP"
+.br
+.ti -1c
+.RI "typedef BaseMutPTData::PtsMapConstIter \fBPtsMapConstIter\fP"
+.br
+.ti -1c
+.RI "typedef Map< LocID, PtsMap > \fBDFPtsMap\fP"
+.br
+.RI "Data-flow point-to map\&. "
+.ti -1c
+.RI "typedef DFPtsMap::iterator \fBDFPtsMapIter\fP"
+.br
+.ti -1c
+.RI "typedef DFPtsMap::const_iterator \fBDFPtsMapconstIter\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMutableDFPTData\fP (bool reversePT=true, \fBPTDataTy\fP ty=BaseDFPTData::MutDataFlow)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual const PtsMap & \fBgetPtsMap\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBclear\fP () override"
+.br
+.RI "Clears all points-to sets as if nothing is stored\&. "
+.ti -1c
+.RI "virtual const Data & \fBgetPts\fP (const Key &var) override"
+.br
+.RI "Get points-to set of var\&. "
+.ti -1c
+.RI "virtual const KeySet & \fBgetRevPts\fP (const Datum &datum) override"
+.br
+.RI "Get reverse points-to set of datum\&. "
+.ti -1c
+.RI "virtual bool \fBhasDFInSet\fP (LocID loc) const override"
+.br
+.ti -1c
+.RI "virtual bool \fBhasDFOutSet\fP (LocID loc) const override"
+.br
+.ti -1c
+.RI "virtual bool \fBhasDFInSet\fP (LocID loc, const Key &var) const override"
+.br
+.ti -1c
+.RI "virtual bool \fBhasDFOutSet\fP (LocID loc, const Key &var) const override"
+.br
+.ti -1c
+.RI "virtual Data & \fBgetDFInPtsSet\fP (LocID loc, const Key &var) override"
+.br
+.ti -1c
+.RI "virtual Data & \fBgetDFOutPtsSet\fP (LocID loc, const Key &var) override"
+.br
+.ti -1c
+.RI "virtual bool \fBupdateDFInFromIn\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.ti -1c
+.RI "virtual bool \fBupdateDFInFromOut\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Union (IN[dstLoc:dstVar], OUT[srcLoc:srcVar])\&. "
+.ti -1c
+.RI "virtual bool \fBupdateDFOutFromIn\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Union (OUT[dstLoc:dstVar], IN[srcLoc:srcVar])\&. "
+.ti -1c
+.RI "virtual bool \fBupdateAllDFInFromOut\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Union (IN[dstLoc::dstVar], OUT[srcLoc:srcVar]\&. There is no flag check, unlike the above\&. "
+.ti -1c
+.RI "virtual bool \fBupdateAllDFInFromIn\fP (LocID srcLoc, const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Union (IN[dstLoc::dstVar], IN[srcLoc:srcVar]\&. There is no flag check, unlike the above\&. "
+.ti -1c
+.RI "virtual bool \fBupdateAllDFOutFromIn\fP (LocID loc, const Key &singleton, bool strongUpdates) override"
+.br
+.RI "For each variable var in IN at loc, do updateDFOutFromIn(loc, var, loc, var)\&. "
+.ti -1c
+.RI "virtual bool \fBupdateTLVPts\fP (LocID srcLoc, const Key &srcVar, const Key &dstVar) override"
+.br
+.RI "Update points-to set of top-level pointers with IN[srcLoc:srcVar]\&. "
+.ti -1c
+.RI "virtual bool \fBupdateATVPts\fP (const Key &srcVar, LocID dstLoc, const Key &dstVar) override"
+.br
+.RI "Update address-taken variables OUT[dstLoc:dstVar] with points-to of top-level pointers\&. "
+.ti -1c
+.RI "virtual void \fBclearAllDFOutUpdatedVar\fP (LocID) override"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "const PtsMap & \fBgetDFInPtsMap\fP (LocID loc)"
+.br
+.ti -1c
+.RI "const PtsMap & \fBgetDFOutPtsMap\fP (LocID loc)"
+.br
+.ti -1c
+.RI "const \fBDFPtsMap\fP & \fBgetDFIn\fP ()"
+.br
+.ti -1c
+.RI "const \fBDFPtsMap\fP & \fBgetDFOut\fP ()"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual bool \fBaddPts\fP (const Key &dstKey, const Key &srcKey) override"
+.br
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstKey, const Key &srcKey) override"
+.br
+.RI "Performs pts(dstVar) = pts(dstVar) U pts(srcVar)\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstKey, const Data &srcData) override"
+.br
+.RI "Performs pts(dstVar) = pts(dstVar) U srcData\&. "
+.ti -1c
+.RI "virtual void \fBclearPts\fP (const Key &var, const Datum &element) override"
+.br
+.RI "Clears element from the points-to set of var\&. "
+.ti -1c
+.RI "virtual void \fBclearFullPts\fP (const Key &var) override"
+.br
+.RI "Fully clears the points-to set of var\&. "
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual void \fBdumpPTData\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBdumpPts\fP (const PtsMap &ptsSet, \fBraw_ostream\fP &O=SVFUtil::outs()) const"
+.br
+.in -1c
+.in -1c
+.SS "Static Public Member Functions"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBMutableDFPTData\fP< Key, Datum, Data > *)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPTData\fP< Key, Datum, Data > *ptd)"
+.br
+.in -1c
+.in -1c
+.SS "Protected Member Functions"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "bool \fBunionPts\fP (Data &dstData, const Data &srcData)"
+.br
+.ti -1c
+.RI "bool \fBaddPts\fP (Data &d, const Datum &e)"
+.br
+.in -1c
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDFPtsMap\fP \fBdfInPtsMap\fP"
+.br
+.RI "Data-flow IN set\&. "
+.ti -1c
+.RI "\fBDFPtsMap\fP \fBdfOutPtsMap\fP"
+.br
+.RI "Data-flow OUT set\&. "
+.ti -1c
+.RI "\fBMutablePTData\fP< Key, Datum, Data > \fBmutPTData\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Key , typename Datum , typename Data > virtual bool \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::addPts (const Key & dstKey, const Key & srcKey)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Override the methods defined in \fBPTData\fP\&. Union/add points-to without adding reverse points-to, used internally 
+.SS "template<typename Key , typename Datum , typename Data > static bool \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::classof (const \fBMutableDFPTData\fP< Key, Datum, Data > *)\fC [inline]\fP, \fC [static]\fP"
+Methods to support type inquiry through isa, cast, and dyn_cast: 
+.SS "template<typename Key , typename Datum , typename Data > virtual void \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::dumpPTData ()\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Dump the DF IN/OUT set information for debugging purpose dump points-to of top-level pointers
+.PP
+dump points-to of address-taken variables
+.PP
+Implements \fBSVF::PTData< Key, Datum, Data >\fP\&.
+.SS "template<typename Key , typename Datum , typename Data > const PtsMap& \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::getDFInPtsMap (LocID loc)\fC [inline]\fP"
+Get internal flow-sensitive data structures\&. 
+.SS "template<typename Key , typename Datum , typename Data > virtual bool \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::hasDFInSet (LocID loc) const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Determine whether the DF IN/OUT sets have points-to sets\&. 
+.PP
+Implements \fBSVF::DFPTData< Key, Datum, Data >\fP\&.
+.SS "template<typename Key , typename Datum , typename Data > virtual bool \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::hasDFOutSet (LocID loc, const Key & var) const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Access points-to set from data-flow IN/OUT set\&. 
+.PP
+Implements \fBSVF::DFPTData< Key, Datum, Data >\fP\&.
+.SS "template<typename Key , typename Datum , typename Data > bool \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::unionPts (Data & dstData, const Data & srcData)\fC [inline]\fP, \fC [protected]\fP"
+Internal union/add points-to helper methods\&. 
+.SS "template<typename Key , typename Datum , typename Data > virtual bool \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::updateAllDFOutFromIn (LocID loc, const Key & singleton, bool strongUpdates)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+For each variable var in IN at loc, do updateDFOutFromIn(loc, var, loc, var)\&. Only variables has new pts from IN set need to be updated\&.
+.PP
+Enable strong updates if it is required to do so
+.PP
+Implements \fBSVF::DFPTData< Key, Datum, Data >\fP\&.
+.PP
+Reimplemented in \fBSVF::IncMutableDFPTData< Key, Datum, Data >\fP\&.
+.SS "template<typename Key , typename Datum , typename Data > virtual bool \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::updateDFInFromIn (LocID srcLoc, const Key & srcVar, LocID dstLoc, const Key & dstVar)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Update points-to for IN/OUT set IN[loc:var] represents the points-to of variable var in the IN set of location loc\&. union(ptsDst, ptsSrc) represents ptsDst = ptsDst U ptsSrc\&.
+.PP
+Union (IN[dstLoc:dstVar], IN[srcLoc:srcVar])\&. 
+.PP
+Implements \fBSVF::DFPTData< Key, Datum, Data >\fP\&.
+.PP
+Reimplemented in \fBSVF::IncMutableDFPTData< Key, Datum, Data >\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename Key , typename Datum , typename Data > \fBMutablePTData\fP<Key, Datum, Data> \fBSVF::MutableDFPTData\fP< Key, Datum, Data >::mutPTData\fC [protected]\fP"
+Backing to implement the basic \fBPTData\fP methods which are not overridden\&. This allows us to avoid multiple-inheritance\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

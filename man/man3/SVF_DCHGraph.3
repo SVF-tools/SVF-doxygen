@@ -1,0 +1,167 @@
+.TH "SVF::DCHGraph" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::DCHGraph \- Dwarf based CHG\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DCHG\&.h>\fP
+.PP
+Inherits \fBSVF::CommonCHGraph\fP, and \fBSVF::GenericGraph< DCHNode, DCHEdge >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDCHGraph\fP (const \fBSVFModule\fP *svfMod)"
+.br
+.ti -1c
+.RI "virtual void \fBbuildCHG\fP (bool extend)"
+.br
+.ti -1c
+.RI "void \fBdump\fP (const std::string &filename)"
+.br
+.ti -1c
+.RI "void \fBprint\fP (void)"
+.br
+.ti -1c
+.RI "virtual bool \fBcsHasVFnsBasedonCHA\fP (CallSite cs) override"
+.br
+.ti -1c
+.RI "virtual const VFunSet & \fBgetCSVFsBasedonCHA\fP (CallSite cs) override"
+.br
+.ti -1c
+.RI "virtual bool \fBcsHasVtblsBasedonCHA\fP (CallSite cs) override"
+.br
+.ti -1c
+.RI "virtual const VTableSet & \fBgetCSVtblsBasedonCHA\fP (CallSite cs) override"
+.br
+.ti -1c
+.RI "virtual void \fBgetVFnsFromVtbls\fP (CallSite cs, const VTableSet &vtbls, VFunSet &virtualFunctions) override"
+.br
+.ti -1c
+.RI "virtual bool \fBisBase\fP (const DIType *a, const DIType *b, bool firstField)"
+.br
+.ti -1c
+.RI "virtual bool \fBisFieldOf\fP (const DIType *f, const DIType *b)"
+.br
+.RI "Returns true if f is a field of b (fields from getFieldTypes)\&. "
+.ti -1c
+.RI "const DIType * \fBgetCanonicalType\fP (const DIType *t)"
+.br
+.ti -1c
+.RI "const DIType * \fBgetFieldType\fP (const DIType *base, unsigned idx)"
+.br
+.RI "Returns the type of field number idx (flattened) in base\&. "
+.ti -1c
+.RI "const std::vector< const DIType * > & \fBgetFieldTypes\fP (const DIType *base)"
+.br
+.RI "Returns a vector of the types of all fields in base\&. "
+.ti -1c
+.RI "unsigned \fBgetNumFields\fP (const DIType *base)"
+.br
+.ti -1c
+.RI "const Set< const DIType * > & \fBgetAggs\fP (const DIType *base)"
+.br
+.RI "Returns all the aggregates contained (transitively) in base\&. "
+.ti -1c
+.RI "bool \fBisFirstField\fP (const DIType *f, const DIType *b)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const DIType * \fBstripQualifiers\fP (const DIType *)"
+.br
+.RI "Returns the DIType beneath the qualifiers\&. Does not strip away 'DW_TAG_members'\&. "
+.ti -1c
+.RI "static const DIType * \fBstripArray\fP (const DIType *)"
+.br
+.RI "Returns the DIType beneath all qualifiers and arrays\&. "
+.ti -1c
+.RI "static bool \fBteq\fP (const DIType *t1, const DIType *t2)"
+.br
+.ti -1c
+.RI "static std::string \fBdiTypeToStr\fP (const DIType *)"
+.br
+.RI "Returns a human-readable version of the DIType\&. "
+.ti -1c
+.RI "static bool \fBisAgg\fP (const DIType *t)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBCommonCHGraph\fP *chg)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBSVFModule\fP * \fBsvfModule\fP"
+.br
+.RI "\fBSVF\fP Module this CHG is built from\&. "
+.ti -1c
+.RI "bool \fBextended\fP = false"
+.br
+.RI "Whether this CHG is an extended CHG (first-field)\&. Set by buildCHG\&. "
+.ti -1c
+.RI "Map< const DIType *, \fBDCHNode\fP * > \fBdiTypeToNodeMap\fP"
+.br
+.RI "Maps DITypes to their nodes\&. "
+.ti -1c
+.RI "Map< const GlobalValue *, const DIType * > \fBvtblToTypeMap\fP"
+.br
+.RI "Maps VTables to the DIType associated with them\&. "
+.ti -1c
+.RI "Map< const DIType *, NodeBS > \fBchaMap\fP"
+.br
+.RI "Maps types to all children (i\&.e\&. CHA)\&. "
+.ti -1c
+.RI "Map< const DIType *, NodeBS > \fBchaFFMap\fP"
+.br
+.RI "Maps types to all children but also considering first field\&. "
+.ti -1c
+.RI "Map< const DIType *, VTableSet > \fBvtblCHAMap\fP"
+.br
+.RI "Maps types to a set with their vtable and all their children's\&. "
+.ti -1c
+.RI "Map< CallSite, VFunSet > \fBcsCHAMap\fP"
+.br
+.RI "Maps callsites to a set of potential virtual functions based on CHA\&. "
+.ti -1c
+.RI "Map< const DIType *, const DIType * > \fBcanonicalTypeMap\fP"
+.br
+.RI "Maps types to their canonical type (many-to-one)\&. "
+.ti -1c
+.RI "Set< const DIType * > \fBcanonicalTypes\fP"
+.br
+.RI "Set of all possible canonical types (i\&.e\&. values of canonicalTypeMap)\&. "
+.ti -1c
+.RI "Map< const DIType *, std::vector< const DIType * > > \fBfieldTypes\fP"
+.br
+.RI "Maps types to their flattened fields' types\&. "
+.ti -1c
+.RI "Map< const DIType *, Set< const DIType * > > \fBcontainingAggs\fP"
+.br
+.RI "Maps aggregate types to all the aggregate types it transitively contains\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Dwarf based CHG\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void DCHGraph::buildCHG (bool extend)\fC [virtual]\fP"
+Builds the CHG from DWARF debug information\&. extend determines whether to extend the CHG with first field edges\&. 
+.SS "const DIType * DCHGraph::getCanonicalType (const DIType * t)"
+Returns the type representing all qualifier-variations of t\&. This should only matter in the case of DerivedTypes where qualifiers and have qualified base types cause a mess\&. 
+.SS "bool DCHGraph::isBase (const DIType * a, const DIType * b, bool firstField)\fC [virtual]\fP"
+Returns true if a is a transitive base of b\&. firstField determines whether to consider first-field edges\&. 
+.SS "bool DCHGraph::teq (const DIType * t1, const DIType * t2)\fC [static]\fP"
+Returns true if t1 and t2 are equivalent, ignoring qualifiers\&. For equality\&.\&.\&. Tags always need to be equal\&. DIBasicType: shallow pointer equality\&. DIDerivedType: base types (teq)\&. DICompositeType: shallow pointer equality\&. DISubroutineType: shallow pointer equality\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

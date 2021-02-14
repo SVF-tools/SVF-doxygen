@@ -1,0 +1,96 @@
+.TH "SVF::Annotator" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::Annotator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Annotator\&.h>\fP
+.PP
+Inherited by \fBSVF::MTAAnnotator\fP, and \fBSVF::SaberAnnotator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAnnotator\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~Annotator\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "bool \fBhasSBSourceFlag\fP (Instruction *inst) const"
+.br
+.RI "SB Has flag methods\&. "
+.ti -1c
+.RI "bool \fBhasSBSinkFlag\fP (Instruction *inst) const"
+.br
+.ti -1c
+.RI "bool \fBhasDRNotCheckFlag\fP (Instruction *inst) const"
+.br
+.RI "Race Detection Has flag methods\&. "
+.ti -1c
+.RI "bool \fBhasDRNotCheckFlag\fP (const Instruction *inst) const"
+.br
+.ti -1c
+.RI "bool \fBhasDRCheckFlag\fP (Instruction *inst) const"
+.br
+.ti -1c
+.RI "bool \fBhasDRCheckFlag\fP (const Instruction *inst) const"
+.br
+.ti -1c
+.RI "void \fBaddMDTag\fP (Instruction *inst, std::string str)"
+.br
+.RI "Simple add/remove meta data information\&. "
+.ti -1c
+.RI "void \fBremoveMDTag\fP (Instruction *inst, std::string str)"
+.br
+.ti -1c
+.RI "void \fBaddMDTag\fP (Instruction *inst, Value *val, std::string str)"
+.br
+.RI "manipulate llvm meta data on instructions for a specific value "
+.ti -1c
+.RI "void \fBremoveMDTag\fP (Instruction *inst, Value *val, std::string str)"
+.br
+.RI "remove flag from llvm metadata "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBSB_SLICESOURCE\fP"
+.br
+.RI "Saber annotations\&. "
+.ti -1c
+.RI "const char * \fBSB_SLICESINK\fP"
+.br
+.ti -1c
+.RI "const char * \fBSB_FESIBLE\fP"
+.br
+.ti -1c
+.RI "const char * \fBSB_INFESIBLE\fP"
+.br
+.ti -1c
+.RI "const char * \fBDR_NOT_CHECK\fP"
+.br
+.RI "Race Detection annotations\&. "
+.ti -1c
+.RI "const char * \fBDR_CHECK\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Program annotator to write meta data information on LLVM IR 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SVF::Annotator::addMDTag (Instruction * inst, Value * val, std::string str)\fC [inline]\fP"
+
+.PP
+manipulate llvm meta data on instructions for a specific value add flag to llvm metadata 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

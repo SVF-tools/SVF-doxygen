@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_m_t_a_result_validator" xml:lang="en-US">
+<title>MTAResultValidator Class Reference</title>
+<indexterm><primary>MTAResultValidator</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MTAResultValidator.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a7b461a9384c6b55776a0558307f07217"/>typedef int <emphasis role="strong">INTERLEV_FLAG</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1af785ad6160c214a7bf5654c0b90ba247"/><emphasis role="strong">MTAResultValidator</emphasis> (MHP *mh)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a462f1554e058b656861abfb0aa2e47ff"/>void <emphasis role="strong">analyze</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a73db9ad234b263b6e644e4b38be14fe6"/>std::vector&lt; std::string &gt; &amp; <emphasis role="strong">split</emphasis> (const std::string &amp;s, char delim, std::vector&lt; std::string &gt; &amp;elems)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a7dad63ce2a85142a56d13926f10fde47"/>std::vector&lt; std::string &gt; <emphasis role="strong">split</emphasis> (const std::string &amp;s, char delim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a4ff908be3569c18528fb6f6ff98cd11a"/>NodeID <emphasis role="strong">getIntArg</emphasis> (const Instruction *inst, unsigned int arg_num)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a1ac51d2847f9bdee27092ab22211bb61"/>std::vector&lt; std::string &gt; <emphasis role="strong">getStringArg</emphasis> (const Instruction *inst, unsigned int arg_num)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1afb110fec926967ba334bf2635d58a339"/>CallStrCxt <emphasis role="strong">getCxtArg</emphasis> (const Instruction *inst, unsigned int arg_num)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1ab3ba3c6d9c40e97febdab0e7d4ad9a3e"/>const Instruction * <emphasis role="strong">getPreviousMemoryAccessInst</emphasis> (const Instruction *I)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a6306899b5360e106dd090bea571027bf"/>bool <emphasis role="strong">matchCxt</emphasis> (const CallStrCxt cxt1, const CallStrCxt cxt2) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1ae7d61becd14123f60976fd7261d0c84d"/>void <emphasis role="strong">dumpCxt</emphasis> (const CallStrCxt &amp;cxt) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a1af033b5742fa9cc1e4f9873184775b7"/>void <emphasis role="strong">dumpInterlev</emphasis> (NodeBS &amp;lev)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a9c9baeb57a645b57cc9053b3071f0602"/>std::string <emphasis role="strong">getOutput</emphasis> (const char *scenario, bool analysisRes)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1ac24a8a6922d9dc9edecab3bc45bc9204"/>std::string <emphasis role="strong">getOutputforInterlevAnalysis</emphasis> (const char *scenario, INTERLEV_FLAG analysisRes)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a1fc4116b134aa87420d055b193208e68"/>bool <emphasis role="strong">collectCallsiteTargets</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a430c03371b2b5b7300c5c3a68d633909"/>bool <emphasis role="strong">collectCxtThreadTargets</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1abdf31e8fca824b56a53788de525042a6"/>bool <emphasis role="strong">collectTCTTargets</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a3c3eacff786230d093d27615ff360ed4"/>bool <emphasis role="strong">collectInterleavingTargets</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1afa01b108b67ec2ac05a6444b55dbfe01"/>bool <emphasis role="strong">validateCxtThread</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1ae6a18cbaf113ee8e28c3e8dca458d4be"/>bool <emphasis role="strong">validateTCT</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_m_t_a_result_validator_1a373b5227fbfa82ac070f55db999afb28"/>INTERLEV_FLAG <emphasis role="strong">validateInterleaving</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Validate the result of context-sensitive analysis, including context-sensitive thread detection and thread interleaving. </para>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/MTA/MTAResultValidator.hlib/MTA/MTAResultValidator.cpp</section>
+</section>

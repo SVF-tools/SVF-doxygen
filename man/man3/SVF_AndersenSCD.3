@@ -1,0 +1,124 @@
+.TH "SVF::AndersenSCD" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::AndersenSCD
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AndersenSFR\&.h>\fP
+.PP
+Inherits \fBSVF::Andersen\fP\&.
+.PP
+Inherited by \fBSVF::AndersenSFR\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Map< NodeID, NodeID > \fBNodeToNodeMap\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAndersenSCD\fP (\fBPAG\fP *_pag, \fBPTATY\fP type=\fBAndersenSCD_WPA\fP)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBAndersenSCD\fP * \fBcreateAndersenSCD\fP (\fBPAG\fP *_pag)"
+.br
+.RI "Create an singleton instance directly instead of invoking llvm pass manager\&. "
+.ti -1c
+.RI "static void \fBreleaseAndersenSCD\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddSccCandidate\fP (NodeID nodeId)"
+.br
+.ti -1c
+.RI "virtual NodeStack & \fBSCCDetect\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBPWCDetect\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBsolveWorklist\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBhandleLoadStore\fP (\fBConstraintNode\fP *node)"
+.br
+.ti -1c
+.RI "virtual void \fBprocessAddr\fP (const \fBAddrCGEdge\fP *addr)"
+.br
+.ti -1c
+.RI "virtual bool \fBaddCopyEdge\fP (NodeID src, NodeID dst)"
+.br
+.ti -1c
+.RI "virtual bool \fBupdateCallGraph\fP (const CallSiteToFunPtrMap &callsites)"
+.br
+.ti -1c
+.RI "virtual void \fBprocessPWC\fP (\fBConstraintNode\fP *rep)"
+.br
+.ti -1c
+.RI "virtual void \fBhandleCopyGep\fP (\fBConstraintNode\fP *node)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "NodeSet \fBsccCandidates\fP"
+.br
+.ti -1c
+.RI "NodeToNodeMap \fBpwcReps\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBAndersenSCD\fP * \fBscdAndersen\fP = NULL"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Selective Cycle Detection Based \fBAndersen\fP Analysis 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool AndersenSCD::addCopyEdge (NodeID src, NodeID dst)\fC [protected]\fP, \fC [virtual]\fP"
+If one copy edge is successful added, the src node should be added into SCC detection 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "void AndersenSCD::handleCopyGep (\fBConstraintNode\fP * node)\fC [protected]\fP, \fC [virtual]\fP"
+Compute diff points-to set before propagation 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "void AndersenSCD::handleLoadStore (\fBConstraintNode\fP * node)\fC [protected]\fP, \fC [virtual]\fP"
+Source nodes of new added edges are pushed into sccCandidates\&. Source nodes of new added edges whose pts differ from those of dst nodes are pushed into worklist\&. 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "void AndersenSCD::processAddr (const \fBAddrCGEdge\fP * addr)\fC [protected]\fP, \fC [virtual]\fP"
+Initialize worklist via processing addrs 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "NodeStack & AndersenSCD::SCCDetect ()\fC [protected]\fP, \fC [virtual]\fP"
+SCC detection for SCD 
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+.SS "bool AndersenSCD::updateCallGraph (const CallSiteToFunPtrMap & callsites)\fC [protected]\fP, \fC [virtual]\fP"
+Update call graph for the input indirect callsites nodes as a src of a generated new copy edge
+.PP
+Reimplemented from \fBSVF::Andersen\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

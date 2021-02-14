@@ -1,0 +1,82 @@
+.TH "SVF::MSSAMU< Cond >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::MSSAMU< Cond >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MSSAMuChi\&.h>\fP
+.PP
+Inherited by \fBSVF::CallMU< Cond >\fP, \fBSVF::LoadMU< Cond >\fP, and \fBSVF::RetMU< Cond >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMUTYPE\fP { \fBLoadMSSAMU\fP, \fBCallMSSAMU\fP, \fBRetMSSAMU\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMSSAMU\fP (MUTYPE t, const \fBMemRegion\fP *m, Cond c)"
+.br
+.RI "Constructor/Destructor for MU\&. "
+.ti -1c
+.RI "const \fBMemRegion\fP * \fBgetMR\fP () const"
+.br
+.RI "Return MR\&. "
+.ti -1c
+.RI "MUTYPE \fBgetType\fP () const"
+.br
+.RI "Return type\&. "
+.ti -1c
+.RI "void \fBsetVer\fP (\fBMRVer\fP *v)"
+.br
+.RI "Set Ver\&. "
+.ti -1c
+.RI "\fBMRVer\fP * \fBgetVer\fP () const"
+.br
+.RI "Get Ver\&. "
+.ti -1c
+.RI "Cond \fBgetCond\fP () const"
+.br
+.RI "Return condition\&. "
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBMSSAMU\fP &rhs) const"
+.br
+.RI "Avoid adding duplicated mus\&. "
+.ti -1c
+.RI "virtual void \fBdump\fP ()"
+.br
+.RI "Print MU\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "MUTYPE \fBtype\fP"
+.br
+.ti -1c
+.RI "const \fBMemRegion\fP * \fBmr\fP"
+.br
+.ti -1c
+.RI "\fBMRVer\fP * \fBver\fP"
+.br
+.ti -1c
+.RI "Cond \fBcond\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class Cond>
+.br
+class SVF::MSSAMU< Cond >"
+Indirect Memory Read 1) \fBLoadMU\fP at each store instruction 2) \fBCallMU\fP at callsite 3) \fBRetMU\fP at function return 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

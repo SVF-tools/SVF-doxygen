@@ -1,0 +1,99 @@
+.TH "SVF::VFGEdge" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::VFGEdge
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::GenericEdge< NodeTy >\fP\&.
+.PP
+Inherited by \fBSVF::DirectSVFGEdge\fP, and \fBSVF::IndirectSVFGEdge\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBVFGEdgeK\fP { \fBIntraDirectVF\fP, \fBIntraIndirectVF\fP, \fBCallDirVF\fP, \fBRetDirVF\fP, \fBCallIndVF\fP, \fBRetIndVF\fP, \fBTheadMHPIndirectVF\fP }"
+.br
+.ti -1c
+.RI "typedef \fBVFGEdgeK\fP \fBSVFGEdgeK\fP"
+.br
+.ti -1c
+.RI "typedef \fBGenericNode\fP< \fBVFGNode\fP, \fBVFGEdge\fP >::GEdgeSetTy \fBVFGEdgeSetTy\fP"
+.br
+.ti -1c
+.RI "typedef VFGEdgeSetTy \fBSVFGEdgeSetTy\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVFGEdge\fP (\fBVFGNode\fP *s, \fBVFGNode\fP *d, \fBGEdgeFlag\fP k)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fB~VFGEdge\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "bool \fBisDirectVFGEdge\fP () const"
+.br
+.RI "Get methods of the components\&. "
+.ti -1c
+.RI "bool \fBisIndirectVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisCallVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisRetVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisCallDirectVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisRetDirectVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisCallIndirectVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisRetIndirectVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisIntraVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisThreadMHPIndirectVFGEdge\fP () const"
+.br
+.ti -1c
+.RI "virtual const std::string \fBtoString\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBGEdgeFlag\fP \fBmakeEdgeFlagWithInvokeID\fP (GEdgeKind k, CallSiteID cs)"
+.br
+.RI "Compute the unique edgeFlag value from edge kind and CallSiteID\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBraw_ostream\fP & \fBoperator<<\fP (\fBraw_ostream\fP &o, const \fBVFGEdge\fP &edge)"
+.br
+.RI "Overloading operator << for dumping \fBICFG\fP node ID\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSVF::VFGEdge::VFGEdgeK\fP"
+seven types of \fBICFG\fP edge four types of direct value-flow edges three types of indirect value-flow edges 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

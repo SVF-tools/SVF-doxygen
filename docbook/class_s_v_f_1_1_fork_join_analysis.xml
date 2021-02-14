@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_fork_join_analysis" xml:lang="en-US">
+<title>SVF::ForkJoinAnalysis Class Reference</title>
+<indexterm><primary>SVF::ForkJoinAnalysis</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a8d40e687caf8999369621ed385dfc631"/>enum <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a8d40e687caf8999369621ed385dfc631">ValDomain</link> { <emphasis role="strong">Empty</emphasis>
+, <emphasis role="strong">TDAlive</emphasis>
+, <emphasis role="strong">TDDead</emphasis>
+ }</para>
+
+<para>semilattice Empty==&gt;TDDead==&gt;TDAlive </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a613d763731058899e6819acdb2d7315f"/>typedef TCT::InstVec <emphasis role="strong">InstVec</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a8e0f7a646ab6b0295d9a990c91725b50"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link>, <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a8d40e687caf8999369621ed385dfc631">ValDomain</link> &gt; <emphasis role="strong">CxtStmtToAliveFlagMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a27168ab02991978299cd312f6d223774"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link>, NodeBS &gt; <emphasis role="strong">CxtStmtToTIDMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a7fb8df483e619337e77088e8543a9846"/>typedef Set&lt; NodePair &gt; <emphasis role="strong">ThreadPairSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a2cf27e4045ca5fdaedb8f0d26ca007a3"/>typedef Map&lt; const <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link>, const Loop * &gt; <emphasis role="strong">CxtStmtToLoopMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a0ec0920d324604e3672db4d8dff93b1e"/>typedef <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">FIFOWorkList</link>&lt; <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link> &gt; <emphasis role="strong">CxtStmtWorkList</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1acd98a293bb20064cf5d0bb71c619fc54"/>typedef Map&lt; const Instruction *, <link linkend="_class_s_v_f_1_1_p_t_a_s_c_e_v">PTASCEV</link> &gt; <emphasis role="strong">forkjoinToPTASCEVMap</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a431ec90a12a62bb892e8b78f66a8f9dc"/><emphasis role="strong">ForkJoinAnalysis</emphasis> (<link linkend="_class_s_v_f_1_1_t_c_t">TCT</link> *t)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a731ece7e21bfa2b08ae16780b55f9f5f">collectSCEVInfo</link> ()</para>
+
+<para>functions </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a16061e7c28e7a9177d9ab798c102b815">analyzeForkJoinPair</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a819ef18524ee9104b920d1a465c61da1"/>NodeBS &amp; <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a819ef18524ee9104b920d1a465c61da1">getDirectlyJoinedTid</link> (const <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link> &amp;cs)</para>
+
+<para>Get directly joined threadIDs based on a context-sensitive join site. </para>
+</listitem>
+            <listitem><para>NodeBS <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a34ec31a6859cd94b525bfa26e549d8c1">getDirAndIndJoinedTid</link> (const <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link> &amp;cs)</para>
+
+<para>Get directly and indirectly joined threadIDs based on a context-sensitive join site. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a4e058b920c3648f943f85099690ff44f"/>const Loop * <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a4e058b920c3648f943f85099690ff44f">isJoinInSymmetricLoop</link> (const <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link> &amp;cs) const</para>
+
+<para>Whether a context-sensitive join satisfies symmetric loop pattern. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a86c68ce5fd8825b1593d92a5a5bad389"/>bool <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a86c68ce5fd8825b1593d92a5a5bad389">isHBPair</link> (NodeID tid1, NodeID tid2)</para>
+
+<para>Whether thread t1 happens-before thread t2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1ab55532eefbcef639ced957ad82fbd340"/>bool <link linkend="_class_s_v_f_1_1_fork_join_analysis_1ab55532eefbcef639ced957ad82fbd340">isFullJoin</link> (NodeID tid1, NodeID tid2)</para>
+
+<para>Whether t1 fully joins t2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1acc178bd423dbb21bd46a9fae9ed0351c"/>const Instruction * <link linkend="_class_s_v_f_1_1_fork_join_analysis_1acc178bd423dbb21bd46a9fae9ed0351c">getExitInstOfParentRoutineFun</link> (NodeID tid) const</para>
+
+<para>Get exit instruction of the start routine function of tid&apos;s parent thread. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a3449439792a54c847c67b3041094db49"/>const Loop * <link linkend="_class_s_v_f_1_1_fork_join_analysis_1a3449439792a54c847c67b3041094db49">getJoinLoop</link> (const Instruction *inst)</para>
+
+<para>Get loop for join site. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1ad3db3e7a2ebe7646675aab16103691e7"/>ScalarEvolution * <link linkend="_class_s_v_f_1_1_fork_join_analysis_1ad3db3e7a2ebe7646675aab16103691e7">getSE</link> (const Instruction *inst)</para>
+
+<para>Get SE for function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a16061e7c28e7a9177d9ab798c102b815"/>    <section>
+    <title>analyzeForkJoinPair()</title>
+<indexterm><primary>analyzeForkJoinPair</primary><secondary>SVF::ForkJoinAnalysis</secondary></indexterm>
+<indexterm><primary>SVF::ForkJoinAnalysis</primary><secondary>analyzeForkJoinPair</secondary></indexterm>
+<para><computeroutput>void ForkJoinAnalysis::analyzeForkJoinPair ( )</computeroutput></para>
+<para>context-sensitive forward traversal from each fork site. Generate following results (1) fork join pair, maps a context-sensitive join site to its corresponding thread ids (2) never happen-in-parallel thread pairs</para>
+
+<para>Context-sensitive forward traversal from each fork site </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a731ece7e21bfa2b08ae16780b55f9f5f"/>    <section>
+    <title>collectSCEVInfo()</title>
+<indexterm><primary>collectSCEVInfo</primary><secondary>SVF::ForkJoinAnalysis</secondary></indexterm>
+<indexterm><primary>SVF::ForkJoinAnalysis</primary><secondary>collectSCEVInfo</secondary></indexterm>
+<para><computeroutput>void ForkJoinAnalysis::collectSCEVInfo ( )</computeroutput></para><para>
+
+<para>functions </para>
+</para>
+
+<para>Collect SCEV pass information for pointers at fork/join sites Because ScalarEvolution is a function pass, previous knowledge of a function may be overwritten when analyzing a new function. We use a internal wrapper class <link linkend="_class_s_v_f_1_1_p_t_a_s_c_e_v">PTASCEV</link> to record all the necessary information for determining symmetric fork/join inside loops </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_fork_join_analysis_1a34ec31a6859cd94b525bfa26e549d8c1"/>    <section>
+    <title>getDirAndIndJoinedTid()</title>
+<indexterm><primary>getDirAndIndJoinedTid</primary><secondary>SVF::ForkJoinAnalysis</secondary></indexterm>
+<indexterm><primary>SVF::ForkJoinAnalysis</primary><secondary>getDirAndIndJoinedTid</secondary></indexterm>
+<para><computeroutput>NodeBS ForkJoinAnalysis::getDirAndIndJoinedTid (const <link linkend="_class_s_v_f_1_1_cxt_stmt">CxtStmt</link> &amp; cs)</computeroutput></para><para>
+
+<para>Get directly and indirectly joined threadIDs based on a context-sensitive join site. </para>
+</para>
+
+<para>Return thread id(s) which are joined at this join site (1) thread t1 directly joins thread t2 (2) thread t1 indirectly joins thread t3 via directly joining t2 (t2 fully joins its child thread t3) </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/MTA/MHP.hlib/MTA/MHP.cpp</section>
+</section>

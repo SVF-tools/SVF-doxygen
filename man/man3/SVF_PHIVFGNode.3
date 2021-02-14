@@ -1,0 +1,81 @@
+.TH "SVF::PHIVFGNode" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::PHIVFGNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::VFGNode\fP\&.
+.PP
+Inherited by \fBSVF::InterPHIVFGNode\fP, and \fBSVF::IntraPHIVFGNode\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Map< u32_t, const \fBPAGNode\fP * > \fBOPVers\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPHIVFGNode\fP (NodeID id, const \fBPAGNode\fP *r, \fBVFGNodeK\fP k=TPhi)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "bool \fBisPTANode\fP () const"
+.br
+.RI "Whether this phi node is of pointer type (used for pointer analysis)\&. "
+.ti -1c
+.RI "const \fBPAGNode\fP * \fBgetOpVer\fP (u32_t pos) const"
+.br
+.RI "Operands at a llvm PHINode\&. "
+.ti -1c
+.RI "void \fBsetOpVer\fP (u32_t pos, const \fBPAGNode\fP *node)"
+.br
+.ti -1c
+.RI "const \fBPAGNode\fP * \fBgetRes\fP () const"
+.br
+.ti -1c
+.RI "u32_t \fBgetOpVerNum\fP () const"
+.br
+.ti -1c
+.RI "OPVers::const_iterator \fBopVerBegin\fP () const"
+.br
+.ti -1c
+.RI "OPVers::const_iterator \fBopVerEnd\fP () const"
+.br
+.ti -1c
+.RI "virtual const std::string \fBtoString\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPHIVFGNode\fP *)"
+.br
+.RI "Methods for support type inquiry through isa, cast, and dyn_cast: "
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBGenericVFGNodeTy\fP *node)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBPAGNode\fP * \fBres\fP"
+.br
+.ti -1c
+.RI "OPVers \fBopVers\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

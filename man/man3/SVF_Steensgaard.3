@@ -1,0 +1,104 @@
+.TH "SVF::Steensgaard" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::Steensgaard
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSVF::AndersenBase\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Map< NodeID, NodeID > \fBNodeToEquivClassMap\fP"
+.br
+.ti -1c
+.RI "typedef Map< NodeID, Set< NodeID > > \fBNodeToSubsMap\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSteensgaard\fP (\fBPAG\fP *_pag)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual void \fBsolveWorklist\fP ()"
+.br
+.ti -1c
+.RI "void \fBprocessAllAddr\fP ()"
+.br
+.ti -1c
+.RI "void \fBecUnion\fP (NodeID id, NodeID ec)"
+.br
+.RI "merge node into equiv class and merge node's pts into ec's pts "
+.ti -1c
+.RI "virtual const PointsTo & \fBgetPts\fP (NodeID id)"
+.br
+.RI "Operation of points-to set\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (NodeID id, const PointsTo &target)"
+.br
+.RI "pts(id) = pts(id) U target "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (NodeID id, NodeID ptd)"
+.br
+.RI "pts(id) = pts(id) U pts(ptd) "
+.ti -1c
+.RI "NodeID \fBgetECNode\fP (NodeID id) const"
+.br
+.ti -1c
+.RI "void \fBsetEC\fP (NodeID node, NodeID rep)"
+.br
+.ti -1c
+.RI "Set< NodeID > & \fBgetSubNodes\fP (NodeID id)"
+.br
+.ti -1c
+.RI "void \fBaddSubNode\fP (NodeID node, NodeID sub)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSteensgaard\fP * \fBcreateSteensgaard\fP (\fBPAG\fP *_pag)"
+.br
+.RI "Create an singleton instance\&. "
+.ti -1c
+.RI "static void \fBreleaseSteensgaard\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBSteensgaard\fP *)"
+.br
+.RI "Methods for support type inquiry through isa, cast, and dyn_cast: "
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBAndersenBase\fP *pta)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPointerAnalysis\fP *pta)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "NodeID SVF::Steensgaard::getECNode (NodeID id) const\fC [inline]\fP"
+API for equivalence class operations Every constraint node maps to an unique equivalence class EC An equivalence class has a set of sub constraint nodes\&. 
+.SS "void Steensgaard::processAllAddr ()"
+Process address edges 
+.SS "void Steensgaard::solveWorklist ()\fC [virtual]\fP"
+\fBSteensgaard\fP analysis foreach ptd \\in pts(p)
+.PP
+*p = q : EC(o) == EC(q)
+.PP
+q = p : EC(q) == EC(p)
+.PP
+q = &p->f : EC(q) == EC(p)
+.PP
+Reimplemented from \fBSVF::WPASolver< GraphType >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

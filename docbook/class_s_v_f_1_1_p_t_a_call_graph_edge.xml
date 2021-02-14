@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge" xml:lang="en-US">
+<title>SVF::PTACallGraphEdge Class Reference</title>
+<indexterm><primary>SVF::PTACallGraphEdge</primary></indexterm>
+<para>Inheritance diagram for SVF::PTACallGraphEdge:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_p_t_a_call_graph_edge.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a9738544725458bb022b8d5f2dbd281f7"/>enum <emphasis role="strong">CEDGEK</emphasis> { <emphasis role="strong">CallRetEdge</emphasis>
+, <emphasis role="strong">TDForkEdge</emphasis>
+, <emphasis role="strong">TDJoinEdge</emphasis>
+, <emphasis role="strong">HareParForEdge</emphasis>
+ }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1aca11d1b778309a72e9d345bd02324459"/>typedef Set&lt; const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> * &gt; <emphasis role="strong">CallInstSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1aa96d6bc3ffd3a5537b871a4c87c65888"/>typedef <link linkend="_class_s_v_f_1_1_generic_node">GenericNode</link>&lt; <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link>, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge">PTACallGraphEdge</link> &gt;::GEdgeSetTy <emphasis role="strong">CallGraphEdgeSet</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1aa34123e6c62c3f152b579510c09984e6"/><link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge_1aa34123e6c62c3f152b579510c09984e6">PTACallGraphEdge</link> (<link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *s, <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_node">PTACallGraphNode</link> *d, CEDGEK kind, CallSiteID cs)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1af17fd69ee1061b7348af1b2739f145a9"/>virtual <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge_1af17fd69ee1061b7348af1b2739f145a9">~PTACallGraphEdge</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1af9ca9cfffbba3b68838d41be62c914ac"/>CallSiteID <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge_1af9ca9cfffbba3b68838d41be62c914ac">getCallSiteID</link> () const</para>
+
+<para>Get direct and indirect calls. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a8c46ccaa41f6792ca4a31a56548a554a"/>bool <emphasis role="strong">isDirectCallEdge</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a74692d47f929dc2188eede497acb91b7"/>bool <emphasis role="strong">isIndirectCallEdge</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1af0e9f86be3cf263b868f80d374641fc9"/>CallInstSet &amp; <emphasis role="strong">getDirectCalls</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a76aa19edf03a4cacfa3e27a21abfcd07"/>CallInstSet &amp; <emphasis role="strong">getIndirectCalls</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a6310e7684d6b6ecd345f557eda899160"/>const CallInstSet &amp; <emphasis role="strong">getDirectCalls</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a51dbd8a7b9d0a4602215f71e3fdfee5f"/>const CallInstSet &amp; <emphasis role="strong">getIndirectCalls</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a9f2ef4c539e31e91f26a3af2ffae26de"/>void <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a9f2ef4c539e31e91f26a3af2ffae26de">addDirectCallSite</link> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *call)</para>
+
+<para>Add direct and indirect callsite. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1aad95920da19b78c0211e68caadba6d39"/>void <emphasis role="strong">addInDirectCallSite</emphasis> (const <link linkend="_class_s_v_f_1_1_call_block_node">CallBlockNode</link> *call)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a750e50a9022451e406c4819979edffa5"/>CallInstSet::const_iterator <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a750e50a9022451e406c4819979edffa5">directCallsBegin</link> () const</para>
+
+<para>Iterators for direct and indirect callsites. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1acc4fcacefdc9be9a214dfcc455fe7970"/>CallInstSet::const_iterator <emphasis role="strong">directCallsEnd</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1afbdb582d20ab953b2de1f3efacb74679"/>CallInstSet::const_iterator <emphasis role="strong">indirectCallsBegin</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a494bc8bacca5ca8d266286f3fb303495"/>CallInstSet::const_iterator <emphasis role="strong">indirectCallsEnd</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a27979e812ced26f114369b46e1536b02"/>virtual const std::string <emphasis role="strong">toString</emphasis> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a4eaeb2765fdcc455116537dbe2119800"/>static <link linkend="_class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</link> <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a4eaeb2765fdcc455116537dbe2119800">makeEdgeFlagWithInvokeID</link> (GEdgeKind k, CallSiteID cs)</para>
+
+<para>Compute the unique edgeFlag value from edge kind and CallSiteID. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1adb10c32eff8a794d9f2b1b4a47d85d21"/>static bool <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge_1adb10c32eff8a794d9f2b1b4a47d85d21">classof</link> (const <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge">PTACallGraphEdge</link> *)</para>
+
+<para>ClassOf. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1afb092fc0502837b52ebcaa3c0dedb736"/>static bool <emphasis role="strong">classof</emphasis> (const <link linkend="_class_s_v_f_1_1_generic_edge">GenericCallGraphEdgeTy</link> *edge)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a65b897bc0d878c6228feca008fa1fcb1"/><link linkend="_namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71">raw_ostream</link> &amp; <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge_1a65b897bc0d878c6228feca008fa1fcb1">operator&lt;&lt;</link> (<link linkend="_namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71">raw_ostream</link> &amp;o, const <link linkend="_class_s_v_f_1_1_p_t_a_call_graph_edge">PTACallGraphEdge</link> &amp;edge)</para>
+
+<para>Overloading operator &lt;&lt; for dumping <link linkend="_class_s_v_f_1_1_i_c_f_g">ICFG</link> node ID. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/Graphs/PTACallGraph.hlib/Graphs/PTACallGraph.cpp</section>

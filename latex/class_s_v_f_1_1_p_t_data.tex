@@ -1,0 +1,91 @@
+\hypertarget{class_s_v_f_1_1_p_t_data}{}\doxysection{SVF\+::PTData$<$ Key, Datum, Data $>$ Class Template Reference}
+\label{class_s_v_f_1_1_p_t_data}\index{SVF::PTData$<$ Key, Datum, Data $>$@{SVF::PTData$<$ Key, Datum, Data $>$}}
+
+
+{\ttfamily \#include $<$Abstract\+Points\+To\+DS.\+h$>$}
+
+Inheritance diagram for SVF\+::PTData$<$ Key, Datum, Data $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.906149cm]{class_s_v_f_1_1_p_t_data}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a74ce29609c51f2be34a0b5b7650a9848}\label{class_s_v_f_1_1_p_t_data_a74ce29609c51f2be34a0b5b7650a9848}} 
+enum \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a74ce29609c51f2be34a0b5b7650a9848}{PTData\+Ty}} \{ \newline
+{\bfseries Base}
+, {\bfseries Mut\+Base}
+, {\bfseries Diff}
+, {\bfseries Mut\+Diff}
+, \newline
+{\bfseries Data\+Flow}
+, {\bfseries Mut\+Data\+Flow}
+, {\bfseries Inc\+Mut\+Data\+Flow}
+, {\bfseries Versioned}
+, \newline
+{\bfseries Mut\+Versioned}
+ \}
+\begin{DoxyCompactList}\small\item\em Types of a points-\/to data structures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_ae53ed7301014b43bf1d215208a702a8b}\label{class_s_v_f_1_1_p_t_data_ae53ed7301014b43bf1d215208a702a8b}} 
+typedef Set$<$ Key $>$ {\bfseries Key\+Set}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a4481e26740c77bd69239552badf85614}\label{class_s_v_f_1_1_p_t_data_a4481e26740c77bd69239552badf85614}} 
+{\bfseries PTData} (bool reverse\+PT=true, \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a74ce29609c51f2be34a0b5b7650a9848}{PTData\+Ty}} ty=PTData\+Ty\+::\+Base)
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a22b25cb7e65dd9989dbb4c1819d68dee}\label{class_s_v_f_1_1_p_t_data_a22b25cb7e65dd9989dbb4c1819d68dee}} 
+\mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a74ce29609c51f2be34a0b5b7650a9848}{PTData\+Ty}} \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a22b25cb7e65dd9989dbb4c1819d68dee}{get\+PTDTY}} () const
+\begin{DoxyCompactList}\small\item\em Get the type of points-\/to data structure that this is. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a3cdec1f0be962716508d3922dce058d5}\label{class_s_v_f_1_1_p_t_data_a3cdec1f0be962716508d3922dce058d5}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a3cdec1f0be962716508d3922dce058d5}{clear}} ()=0
+\begin{DoxyCompactList}\small\item\em Clears all points-\/to sets as if nothing is stored. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a86a93186b51b6ce9dccffecad8381281}\label{class_s_v_f_1_1_p_t_data_a86a93186b51b6ce9dccffecad8381281}} 
+virtual const Data \& \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a86a93186b51b6ce9dccffecad8381281}{get\+Pts}} (const Key \&var)=0
+\begin{DoxyCompactList}\small\item\em Get points-\/to set of var. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a5ac0805846fb6bac6c58c0fefb106c5f}\label{class_s_v_f_1_1_p_t_data_a5ac0805846fb6bac6c58c0fefb106c5f}} 
+virtual const Key\+Set \& \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a5ac0805846fb6bac6c58c0fefb106c5f}{get\+Rev\+Pts}} (const Datum \&datum)=0
+\begin{DoxyCompactList}\small\item\em Get reverse points-\/to set of datum. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a1365146d19ee927f870a7384c0d1db6b}\label{class_s_v_f_1_1_p_t_data_a1365146d19ee927f870a7384c0d1db6b}} 
+virtual bool \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a1365146d19ee927f870a7384c0d1db6b}{add\+Pts}} (const Key \&var, const Datum \&element)=0
+\begin{DoxyCompactList}\small\item\em Adds element to the points-\/to set associated with var. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a482eda0b2ea6a8e1326ee1a0c25c1fdc}\label{class_s_v_f_1_1_p_t_data_a482eda0b2ea6a8e1326ee1a0c25c1fdc}} 
+virtual bool \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a482eda0b2ea6a8e1326ee1a0c25c1fdc}{union\+Pts}} (const Key \&dst\+Var, const Key \&src\+Var)=0
+\begin{DoxyCompactList}\small\item\em Performs pts(dst\+Var) = pts(dst\+Var) U pts(src\+Var). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_ab378c0f2171f6de9b8aa076b43f88e89}\label{class_s_v_f_1_1_p_t_data_ab378c0f2171f6de9b8aa076b43f88e89}} 
+virtual bool \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_ab378c0f2171f6de9b8aa076b43f88e89}{union\+Pts}} (const Key \&dst\+Var, const Data \&src\+Data)=0
+\begin{DoxyCompactList}\small\item\em Performs pts(dst\+Var) = pts(dst\+Var) U src\+Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a2ee28cb51800a57a7646d72f1b92e6ac}\label{class_s_v_f_1_1_p_t_data_a2ee28cb51800a57a7646d72f1b92e6ac}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a2ee28cb51800a57a7646d72f1b92e6ac}{clear\+Pts}} (const Key \&var, const Datum \&element)=0
+\begin{DoxyCompactList}\small\item\em Clears element from the points-\/to set of var. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a4a27923265487dac1eede5a57cc0c9a5}\label{class_s_v_f_1_1_p_t_data_a4a27923265487dac1eede5a57cc0c9a5}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a4a27923265487dac1eede5a57cc0c9a5}{clear\+Full\+Pts}} (const Key \&var)=0
+\begin{DoxyCompactList}\small\item\em Fully clears the points-\/to set of var. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_affb0e613229679f926c52c37b3c141ea}\label{class_s_v_f_1_1_p_t_data_affb0e613229679f926c52c37b3c141ea}} 
+virtual void \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_affb0e613229679f926c52c37b3c141ea}{dump\+PTData}} ()=0
+\begin{DoxyCompactList}\small\item\em Dump stored keys and points-\/to sets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_aea15e71384244f3ad556e9924a1d0d21}\label{class_s_v_f_1_1_p_t_data_aea15e71384244f3ad556e9924a1d0d21}} 
+bool \mbox{\hyperlink{class_s_v_f_1_1_p_t_data_aea15e71384244f3ad556e9924a1d0d21}{rev}}
+\begin{DoxyCompactList}\small\item\em Whether we maintain reverse points-\/to sets or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_v_f_1_1_p_t_data_a11120561456b00e1a6210e5105e8f718}\label{class_s_v_f_1_1_p_t_data_a11120561456b00e1a6210e5105e8f718}} 
+\mbox{\hyperlink{class_s_v_f_1_1_p_t_data_a74ce29609c51f2be34a0b5b7650a9848}{PTData\+Ty}} {\bfseries ptd\+Ty}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename Datum, typename Data$>$\newline
+class SVF\+::\+PTData$<$ Key, Datum, Data $>$}
+
+Basic points-\/to data structure Given a key (variable/condition variable), return its points-\/to data (pts/condition pts) It is designed flexible for different context, heap and path sensitive analysis Context Insensitive Key -\/-\/$>$ Variable, Data -\/-\/$>$ Points\+To Context sensitive\+: Key -\/-\/$>$ \mbox{\hyperlink{class_s_v_f_1_1_cond_var}{Cond\+Var}}, Data -\/-\/$>$ Points\+To Heap sensitive\+: Key -\/-\/$>$ Variable Data -\/-\/$>$ \mbox{\hyperlink{class_s_v_f_1_1_cond_points_to_set}{Cond\+Points\+To\+Set}} Context and heap sensitive\+: Key -\/-\/$>$ \mbox{\hyperlink{class_s_v_f_1_1_cond_var}{Cond\+Var}}, Data -\/-\/$>$ \mbox{\hyperlink{class_s_v_f_1_1_cond_points_to_set}{Cond\+Points\+To\+Set}}
+
+This class is abstract to allow for multiple methods of actually storing points-\/to sets. Key\+: \char`\"{}owning\char`\"{} variable of a points-\/to set. Datum\+: elements in points-\/to sets. Data\+: the points-\/to set; a collection of Datums. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Memory\+Model/Abstract\+Points\+To\+DS.\+h\end{DoxyCompactItemize}

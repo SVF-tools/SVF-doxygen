@@ -1,0 +1,90 @@
+.TH "SVF::SVFGOPT" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::SVFGOPT
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SVFGOPT\&.h>\fP
+.PP
+Inherits \fBSVF::SVFG\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSVFGOPT\fP (\fBMemSSA\fP *_mssa, \fBVFGK\fP kind)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~SVFGOPT\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBsetTokeepActualOutFormalIn\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTokeepAllSelfCycle\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTokeepContextSelfCycle\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBbuildSVFG\fP ()"
+.br
+.RI "Start building \fBSVFG\fP\&. "
+.ti -1c
+.RI "virtual void \fBconnectAParamAndFParam\fP (const \fBPAGNode\fP *cs_arg, const \fBPAGNode\fP *fun_arg, const \fBCallBlockNode\fP *, CallSiteID csId, SVFGEdgeSetTy &edges)"
+.br
+.RI "Connect \fBSVFG\fP nodes between caller and callee for indirect call sites\&. "
+.ti -1c
+.RI "virtual void \fBconnectFRetAndARet\fP (const \fBPAGNode\fP *fun_ret, const \fBPAGNode\fP *cs_ret, CallSiteID csId, SVFGEdgeSetTy &edges)"
+.br
+.RI "Connect formal-ret and actual ret\&. "
+.ti -1c
+.RI "virtual void \fBconnectAInAndFIn\fP (const \fBActualINSVFGNode\fP *actualIn, const \fBFormalINSVFGNode\fP *formalIn, CallSiteID csId, SVFGEdgeSetTy &edges)"
+.br
+.RI "Connect actual-in and formal-in\&. "
+.ti -1c
+.RI "virtual void \fBconnectFOutAndAOut\fP (const \fBFormalOUTSVFGNode\fP *formalOut, const \fBActualOUTSVFGNode\fP *actualOut, CallSiteID csId, SVFGEdgeSetTy &edges)"
+.br
+.RI "Connect formal-out and actual-out\&. "
+.ti -1c
+.RI "NodeID \fBgetActualINDef\fP (NodeID ai) const"
+.br
+.RI "Get def-site of actual-in/formal-out\&. "
+.ti -1c
+.RI "NodeID \fBgetFormalOUTDef\fP (NodeID fo) const"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Optimised \fBSVFG\fP\&.
+.IP "1." 4
+FormalParam/ActualRet is converted into Phi\&. ActualParam/FormalRet becomes the operands of Phi nodes created at callee/caller's entry/callsite\&.
+.IP "2." 4
+ActualIns/ActualOuts resides at direct call sites id removed\&. Sources of its incoming edges are connected with the destinations of its outgoing edges directly\&.
+.IP "3." 4
+FormalIns/FormalOuts reside at the entry/exit of non-address-taken functions is removed as ActualIn/ActualOuts\&.
+.IP "4." 4
+\fBMSSAPHI\fP nodes are removed if it have no self cycle\&. Otherwise depends on user option\&. 
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void SVFGOPT::buildSVFG ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Start building \fBSVFG\fP\&. Build \fBSVFG\fP 1) build \fBSVFG\fP nodes a) statements for top level pointers (PAGEdges) b) operators of address-taken variables (\fBMSSAPHI\fP and \fBMSSACHI\fP) 2) connect \fBSVFG\fP edges a) between two statements (PAGEdges) b) between two memory SSA operators (\fBMSSAPHI\fP \fBMSSAMU\fP and \fBMSSACHI\fP) 
+.PP
+Reimplemented from \fBSVF::SVFG\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_w_p_a_pass" xml:lang="en-US">
+<title>SVF::WPAPass Class Reference</title>
+<indexterm><primary>SVF::WPAPass</primary></indexterm>
+<para>
+<computeroutput>#include &lt;WPAPass.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::WPAPass:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_w_p_a_pass.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394d">AliasCheckRule</link> { <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394da498ba80d25733b291f391a94500dd4c7">Conservative</link>
+, <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394dabb45a604558e2ebff460adb77b4a5d7c">Veto</link>
+, <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394daa6dd95cbf907a36a9ec001af338ec54c">Precise</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a3fc957e01a3ac7c242c030c6f6846fa9"/><link linkend="_class_s_v_f_1_1_w_p_a_pass_1a3fc957e01a3ac7c242c030c6f6846fa9">WPAPass</link> ()</para>
+
+<para>Constructor needs TargetLibraryInfo to be passed to the AliasAnalysis. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a7ea8006b7e9237a470dfd34ad633826b">~WPAPass</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_w_p_a_pass_1abe0750901c2e0305b3ced5e523489a4f">getAnalysisUsage</link> (AnalysisUsage &amp;au) const</para>
+
+<para>LLVM analysis usage. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1ace88ef31b3b43af9f516860ad914053b"/>virtual void * <link linkend="_class_s_v_f_1_1_w_p_a_pass_1ace88ef31b3b43af9f516860ad914053b">getAdjustedAnalysisPointer</link> (AnalysisID)</para>
+
+<para>Get adjusted analysis for alias analysis. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1af339db8bffc554be7dd5cb6b100649e7"/>virtual AliasResult <link linkend="_class_s_v_f_1_1_w_p_a_pass_1af339db8bffc554be7dd5cb6b100649e7">alias</link> (const MemoryLocation &amp;LocA, const MemoryLocation &amp;LocB)</para>
+
+<para>Interface expose to users of our pointer analysis, given Location infos. </para>
+</listitem>
+            <listitem><para>virtual AliasResult <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a5a71ab4d4bd993ff52da60c730d7b57f">alias</link> (const Value *V1, const Value *V2)</para>
+
+<para>Interface expose to users of our pointer analysis, given Value infos. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1abb6e0c5cc5de312ee0285d1854550752"/>virtual void <link linkend="_class_s_v_f_1_1_w_p_a_pass_1abb6e0c5cc5de312ee0285d1854550752">PrintAliasPairs</link> (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> *pta)</para>
+
+<para>Print all alias pairs. </para>
+</listitem>
+            <listitem><para>virtual ModRefInfo <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a567f818fa7b29142b18cb39e5c063a4e">getModRefInfo</link> (const CallInst *callInst)</para>
+
+<para>Interface of mod-ref analysis to determine whether a CallSite instruction can mod or ref any memory location. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a6d86f4ef6ad2f14c2dbf57b759e2950f"/>virtual ModRefInfo <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a6d86f4ef6ad2f14c2dbf57b759e2950f">getModRefInfo</link> (const CallInst *callInst, const MemoryLocation &amp;Loc)</para>
+
+<para>Interface of mod-ref analysis to determine whether a CallSite instruction can mod or ref a specific memory location, given Location infos. </para>
+</listitem>
+            <listitem><para>virtual ModRefInfo <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a81277c93b6a89c01a7a1f476bc3d744d">getModRefInfo</link> (const CallInst *callInst, const Value *V)</para>
+
+<para>Interface of mod-ref analysis to determine whether a CallSite instruction can mod or ref a specific memory location, given Value infos. </para>
+</listitem>
+            <listitem><para>virtual ModRefInfo <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a148cd86101e402e7ed8d3b3dae151d79">getModRefInfo</link> (const CallInst *callInst1, const CallInst *callInst2)</para>
+
+<para>Interface of mod-ref analysis between two CallSite instructions. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a394dcd976c1ef08d9cadcba8f5d07c75">runOnModule</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *svfModule)</para>
+
+<para>Run pointer analysis on <link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link>. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a1f47c1cb5a64bab9a6b8ac38103416ac">runOnModule</link> (Module &amp;module)</para>
+
+<para>Run pointer analysis on LLVM module. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a12fda9849e3d9e4eb71e0bff8d0696f8"/>virtual StringRef <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a12fda9849e3d9e4eb71e0bff8d0696f8">getPassName</link> () const</para>
+
+<para>PTA name. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a2674527c92cdef223e655d449f0811d4"/>static char <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a2674527c92cdef223e655d449f0811d4">ID</link> = 0</para>
+
+<para>Pass ID. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Whole program pointer analysis. This class performs various pointer analysis on the given module. </para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394d"/>    <section>
+    <title>AliasCheckRule</title>
+<indexterm><primary>AliasCheckRule</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>AliasCheckRule</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394d">SVF::WPAPass::AliasCheckRule</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Conservative</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>Conservative</secondary></indexterm>
+<anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394da498ba80d25733b291f391a94500dd4c7"/>Conservative</entry><entry>
+<para>return MayAlias if any pta says alias </para>
+</entry></row><row><entry><indexterm><primary>Veto</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>Veto</secondary></indexterm>
+<anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394dabb45a604558e2ebff460adb77b4a5d7c"/>Veto</entry><entry>
+<para>return NoAlias if any pta says no alias </para>
+</entry></row><row><entry><indexterm><primary>Precise</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>Precise</secondary></indexterm>
+<anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a4505a1882956feda3cf83c788149394daa6dd95cbf907a36a9ec001af338ec54c"/>Precise</entry><entry>
+<para>return alias result by the most precise pta </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a7ea8006b7e9237a470dfd34ad633826b"/>    <section>
+    <title>~WPAPass()</title>
+<indexterm><primary>~WPAPass</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>~WPAPass</secondary></indexterm>
+<para><computeroutput>WPAPass::~WPAPass ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Destructor </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a5a71ab4d4bd993ff52da60c730d7b57f"/>    <section>
+    <title>alias()</title>
+<indexterm><primary>alias</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>alias</secondary></indexterm>
+<para><computeroutput>AliasResult WPAPass::alias (const Value * V1, const Value * V2)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Interface expose to users of our pointer analysis, given Value infos. </para>
+</para>
+
+<para>Return alias results based on our points-to/alias analysis TODO: Need to handle PartialAlias and MustAlias here. </para>
+
+<para>TODO: When this method is invoked during compiler optimizations, the IR used for pointer analysis may been changed, so some Values may not find corresponding <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> node. In this case, we only check alias between two Values if they both have <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> nodes. Otherwise, MayAlias will be returned.</para>
+
+<para>Veto is used by default</para>
+
+<para>Return NoAlias if any PTA gives NoAlias result</para>
+
+<para>Return MayAlias if any PTA gives MayAlias result</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1abe0750901c2e0305b3ced5e523489a4f"/>    <section>
+    <title>getAnalysisUsage()</title>
+<indexterm><primary>getAnalysisUsage</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>getAnalysisUsage</secondary></indexterm>
+<para><computeroutput>virtual void SVF::WPAPass::getAnalysisUsage (AnalysisUsage &amp; au) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>LLVM analysis usage. </para>
+</para>
+
+<para>do not intend to change the IR in this pass,</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a567f818fa7b29142b18cb39e5c063a4e"/>    <section>
+    <title>getModRefInfo()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>getModRefInfo</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>getModRefInfo</secondary></indexterm>
+<para><computeroutput>ModRefInfo WPAPass::getModRefInfo (const CallInst * callInst)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Interface of mod-ref analysis to determine whether a CallSite instruction can mod or ref any memory location. </para>
+</para>
+
+<para>Return mod-ref result of a CallInst </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a81277c93b6a89c01a7a1f476bc3d744d"/>    <section>
+    <title>getModRefInfo()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>getModRefInfo</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>getModRefInfo</secondary></indexterm>
+<para><computeroutput>ModRefInfo WPAPass::getModRefInfo (const CallInst * callInst, const Value * V)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Interface of mod-ref analysis to determine whether a CallSite instruction can mod or ref a specific memory location, given Value infos. </para>
+</para>
+
+<para>Return mod-ref results of a CallInst to a specific memory location </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a148cd86101e402e7ed8d3b3dae151d79"/>    <section>
+    <title>getModRefInfo()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>getModRefInfo</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>getModRefInfo</secondary></indexterm>
+<para><computeroutput>ModRefInfo WPAPass::getModRefInfo (const CallInst * callInst1, const CallInst * callInst2)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Interface of mod-ref analysis between two CallSite instructions. </para>
+</para>
+
+<para>Return mod-ref result between two CallInsts </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a1f47c1cb5a64bab9a6b8ac38103416ac"/>    <section>
+    <title>runOnModule()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>runOnModule</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>runOnModule</secondary></indexterm>
+<para><computeroutput>bool WPAPass::runOnModule (Module &amp; module)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Run pointer analysis on LLVM module. </para>
+</para>
+
+<para>We start from here </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_w_p_a_pass_1a394dcd976c1ef08d9cadcba8f5d07c75"/>    <section>
+    <title>runOnModule()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>runOnModule</primary><secondary>SVF::WPAPass</secondary></indexterm>
+<indexterm><primary>SVF::WPAPass</primary><secondary>runOnModule</secondary></indexterm>
+<para><computeroutput>void WPAPass::runOnModule (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * svfModule)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Run pointer analysis on <link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link>. </para>
+</para>
+
+<para>We start from here </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/WPA/WPAPass.hlib/WPA/WPAPass.cpp</section>
+</section>

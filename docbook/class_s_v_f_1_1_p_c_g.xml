@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_p_c_g" xml:lang="en-US">
+<title>SVF::PCG Class Reference</title>
+<indexterm><primary>SVF::PCG</primary></indexterm>
+<para>
+<computeroutput>#include &lt;PCG.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a0dea1e31042fa960f7a259949e142bcf"/>typedef Set&lt; const Function * &gt; <emphasis role="strong">FunSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1aca2efdefda1f95a6450eca4a781cbefa"/>typedef std::vector&lt; const Function * &gt; <emphasis role="strong">FunVec</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a866cab5d550f60984d66068474755e2d"/>typedef Set&lt; const Instruction * &gt; <emphasis role="strong">CallInstSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a19fea9790fffea9861c0dc7817b60a3e"/>typedef <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">FIFOWorkList</link>&lt; const Function * &gt; <emphasis role="strong">FunWorkList</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a05759205f1362b6d72041cf669cf028d"/>typedef <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">FIFOWorkList</link>&lt; const BasicBlock * &gt; <emphasis role="strong">BBWorkList</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a482925e80c66f258e0fb863ee6948081"/><link linkend="_class_s_v_f_1_1_p_c_g_1a482925e80c66f258e0fb863ee6948081">PCG</link> (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> *an)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_p_c_g_1a50b677ec622247a464cee7f0f45c5a53">analyze</link> ()</para>
+
+<para>We start the pass here. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a3986717a8a3e1515747c3ab2c3e93ca7"/>virtual <link linkend="_class_s_v_f_1_1_p_c_g_1a3986717a8a3e1515747c3ab2c3e93ca7">~PCG</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a0a1d0abba4f0775a5d1e9b13aad2f2d0"/>virtual bool <link linkend="_class_s_v_f_1_1_p_c_g_1a0a1d0abba4f0775a5d1e9b13aad2f2d0">mayHappenInParallel</link> (const Instruction *i1, const Instruction *i2) const</para>
+
+<para>Interface to query whether two function may happen-in-parallel. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a4cab54d7273424c8b26376d8daf15e06"/>bool <emphasis role="strong">mayHappenInParallelBetweenFunctions</emphasis> (const Function *fun1, const Function *fun2) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a3106e03b7df8b34f50c769e1417f341c"/>const FunSet &amp; <emphasis role="strong">getMHPFunctions</emphasis> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1a23752f0a9fe4f01698808d0a50ccc896">initFromThreadAPI</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *module)</para>
+
+<para>Initialize spawner and spawnee sets with threadAPI. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1adff1702e1b0a902de7ded742846fe137">inferFromCallGraph</link> ()</para>
+
+<para>Infer spawner spawnee and followers sets by traversing on callGraph. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1aef06745128e4e99c8e3bab226a337041">collectSpawners</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1a8cff88e2a6cee5f655e491f9f2967460">collectSpawnees</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1a075370a557f111219530e166df745c15">collectFollowers</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1ae5ee8cf8cfe42854407190f30f3b6c1b">identifyFollowers</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a6efd56a0a1810cf9036dd9203ea5e71e"/>const FunSet &amp; <link linkend="_class_s_v_f_1_1_p_c_g_1a6efd56a0a1810cf9036dd9203ea5e71e">getSpawners</link> () const</para>
+
+<para>Get spawners/spawnees/followers. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a4aee985ede8e6ed6dd92574494101df9"/>const FunSet &amp; <emphasis role="strong">getSpawnees</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a1312d734609f82230d3c00a99b189db9"/>const FunSet &amp; <emphasis role="strong">getFollowers</emphasis> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a927e1e778e3ff04309575e9ddcf16838"/>FunSet::iterator <link linkend="_class_s_v_f_1_1_p_c_g_1a927e1e778e3ff04309575e9ddcf16838">spawnersBegin</link> (const Function *fun) const</para>
+
+<para>Iterators for thread properties of a procedure. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1ab65dabef051a679798afe3b2fd8f2cdc"/>FunSet::iterator <emphasis role="strong">spawnersEnd</emphasis> (const Function *fun) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a52ca6555ed9c9b3e96de908124608cb4"/>FunSet::iterator <emphasis role="strong">spawneesBegin</emphasis> (const Function *fun) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a8a246ccebd77a07a2b05fab308639def"/>FunSet::iterator <emphasis role="strong">spawneesEnd</emphasis> (const Function *fun) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a563c10fdc1563df64db830f9df6c29a4"/>FunSet::iterator <emphasis role="strong">followersBegin</emphasis> (const Function *fun) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a861bfe225847dbe7ffc88f53677363aa"/>FunSet::iterator <emphasis role="strong">followersEnd</emphasis> (const Function *fun) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1a057887f3d5fd3b9b414e573b3f9f4548">interferenceAnalysis</link> ()</para>
+
+<para>Thread interferenceAnalysis. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1ab8a16eb34da91f2b7cd5a456653b1da0">printResults</link> ()</para>
+
+<para>Print analysis results. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_p_c_g_1af8af0a2a2159261bf05abe226c43006e">printTDFuns</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class serves as a base may-happen in parallel analysis for multithreaded program It distinguish thread spawner, spawnee, follower in procedure level by modeling pthread_create, pthread_join, pthread_exit, pthread_cancel synchronization operations </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_p_c_g_1a50b677ec622247a464cee7f0f45c5a53"/>    <section>
+    <title>analyze()</title>
+<indexterm><primary>analyze</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>analyze</secondary></indexterm>
+<para><computeroutput>bool PCG::analyze ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>We start the pass here. </para>
+</para>
+
+<para>Whether two functions may happen in parallel </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a075370a557f111219530e166df745c15"/>    <section>
+    <title>collectFollowers()</title>
+<indexterm><primary>collectFollowers</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>collectFollowers</secondary></indexterm>
+<para><computeroutput>void PCG::collectFollowers ( )</computeroutput></para>
+<para>collect follower procedures which may be called after pthread_create is invoked directly or indirectly a procedure which is called from a follower is also a follower. </para>
+
+<para>identify initial followers</para>
+
+<para>find all the followers recursively on call graph</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a8cff88e2a6cee5f655e491f9f2967460"/>    <section>
+    <title>collectSpawnees()</title>
+<indexterm><primary>collectSpawnees</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>collectSpawnees</secondary></indexterm>
+<para><computeroutput>void PCG::collectSpawnees ( )</computeroutput></para>
+<para>spawnee: given a spawnee, all its callees on callgraph are spawnees </para>
+
+<para>find all the spawnees recursively on call graph</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1aef06745128e4e99c8e3bab226a337041"/>    <section>
+    <title>collectSpawners()</title>
+<indexterm><primary>collectSpawners</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>collectSpawners</secondary></indexterm>
+<para><computeroutput>void PCG::collectSpawners ( )</computeroutput></para>
+<para>spawner: given a spawner, all its callers on callgraph are spawners </para>
+
+<para>find all the spawners recursively on call graph</para>
+
+<para>add all the callsites from callers to callee (spawner) as a spawn site.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1ae5ee8cf8cfe42854407190f30f3b6c1b"/>    <section>
+    <title>identifyFollowers()</title>
+<indexterm><primary>identifyFollowers</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>identifyFollowers</secondary></indexterm>
+<para><computeroutput>void PCG::identifyFollowers ( )</computeroutput></para>
+<para>Identify initial followers a procedure whose callsite lies in a control flow path that starts just after a spawner&apos;s callsite </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1adff1702e1b0a902de7ded742846fe137"/>    <section>
+    <title>inferFromCallGraph()</title>
+<indexterm><primary>inferFromCallGraph</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>inferFromCallGraph</secondary></indexterm>
+<para><computeroutput>void PCG::inferFromCallGraph ( )</computeroutput></para><para>
+
+<para>Infer spawner spawnee and followers sets by traversing on callGraph. </para>
+</para>
+
+<para>Infer spawners and spawnees from call graph. The inference are recursively done spawners: procedures may create a thread and return with the created thread still running spawnees: procedures may be executed as a spawned thread followers: procedures may be invoked by a thread after the thread returns from a spawner (procedure may be called after pthread_creat is called). </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a23752f0a9fe4f01698808d0a50ccc896"/>    <section>
+    <title>initFromThreadAPI()</title>
+<indexterm><primary>initFromThreadAPI</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>initFromThreadAPI</secondary></indexterm>
+<para><computeroutput>void PCG::initFromThreadAPI (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * module)</computeroutput></para><para>
+
+<para>Initialize spawner and spawnee sets with threadAPI. </para>
+</para>
+
+<para>Initialize thread spawners and spawnees from threadAPI functions a procedure is a spawner if it creates a thread and the created thread is still existent on its return a procedure is a spawnee if it is created by fork call </para>
+
+<para>TODO: handle indirect call here for the fork Fun</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1a057887f3d5fd3b9b414e573b3f9f4548"/>    <section>
+    <title>interferenceAnalysis()</title>
+<indexterm><primary>interferenceAnalysis</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>interferenceAnalysis</secondary></indexterm>
+<para><computeroutput>void PCG::interferenceAnalysis ( )</computeroutput></para><para>
+
+<para>Thread interferenceAnalysis. </para>
+</para>
+
+<para>Thread interference analysis, Suppose we have a undirected graph G = {F,E,I} F denotes procedure, E represents interference edge (x,y) \in E, x \in F, y \in F means execution of x in one thread may overlap execution of y in another thread I(x,y) is a set of memory locations for this interference edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1ab8a16eb34da91f2b7cd5a456653b1da0"/>    <section>
+    <title>printResults()</title>
+<indexterm><primary>printResults</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>printResults</secondary></indexterm>
+<para><computeroutput>void PCG::printResults ( )</computeroutput></para><para>
+
+<para>Print analysis results. </para>
+</para>
+
+<para>Print analysis results </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_p_c_g_1af8af0a2a2159261bf05abe226c43006e"/>    <section>
+    <title>printTDFuns()</title>
+<indexterm><primary>printTDFuns</primary><secondary>SVF::PCG</secondary></indexterm>
+<indexterm><primary>SVF::PCG</primary><secondary>printTDFuns</secondary></indexterm>
+<para><computeroutput>void PCG::printTDFuns ( )</computeroutput></para>
+<para>Print Thread sensitive properties for each function </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/MTA/PCG.hlib/MTA/PCG.cpp</section>
+</section>

@@ -1,0 +1,774 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_p_a_g_edge" kind="class" language="C++" prot="public">
+    <compoundname>SVF::PAGEdge</compoundname>
+    <basecompoundref refid="class_s_v_f_1_1_generic_edge" prot="public" virt="non-virtual">SVF::GenericEdge&lt; PAGNode &gt;</basecompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_addr_p_e" prot="public" virt="non-virtual">SVF::AddrPE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_binary_o_p_p_e" prot="public" virt="non-virtual">SVF::BinaryOPPE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_call_p_e" prot="public" virt="non-virtual">SVF::CallPE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_cmp_p_e" prot="public" virt="non-virtual">SVF::CmpPE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_copy_p_e" prot="public" virt="non-virtual">SVF::CopyPE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_gep_p_e" prot="public" virt="non-virtual">SVF::GepPE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_load_p_e" prot="public" virt="non-virtual">SVF::LoadPE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_ret_p_e" prot="public" virt="non-virtual">SVF::RetPE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_store_p_e" prot="public" virt="non-virtual">SVF::StorePE</derivedcompoundref>
+    <derivedcompoundref refid="class_s_v_f_1_1_unary_o_p_p_e" prot="public" virt="non-virtual">SVF::UnaryOPPE</derivedcompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PEDGEK</name>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6ac29bb583428e3c20d758bb9cf2d2d626" prot="public">
+          <name>Addr</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6af447071283803d3aee763fe20783f4a4" prot="public">
+          <name>Copy</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6aca20a2c4d9809736d43b18f3cb53e8cf" prot="public">
+          <name>Store</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a8fcebc849a231c3c87dddbf0ab5a2167" prot="public">
+          <name>Load</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a5f4c2c1ec167425622d40133ec15448d" prot="public">
+          <name>Call</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a99fe431c7a635d39b5558d1048a94c05" prot="public">
+          <name>Ret</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a4b8b2eb7125c259d8d550dd83c51147b" prot="public">
+          <name>NormalGep</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6ad1f40a044008babd44bff30af846550c" prot="public">
+          <name>VariantGep</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a1070b34fd19259725d752aa3b5adc73b" prot="public">
+          <name>ThreadFork</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a8ec550e2cbb5ba5847a0eb0760be165b" prot="public">
+          <name>ThreadJoin</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a90aa1e3ce21dcd54cf433610b427ba96" prot="public">
+          <name>Cmp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6aab0965e92d7414417a77f925efb79dac" prot="public">
+          <name>BinaryOp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6afad5f112c36b6e35baf38054c14ae597" prot="public">
+          <name>UnaryOp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thirteen kinds of <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> edges Gep represents offset edge for field sensitivity ThreadFork/ThreadJoin is to model parameter passings between thread spawners and spawnees. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="54" column="5" bodyfile="include/Graphs/PAGEdge.h" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_p_a_g_edge_1a59eb693c90848382efa1cccb56fe82d3" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_generic_node" kindref="compound">GenericNode</ref>&lt; <ref refid="class_s_v_f_1_1_p_a_g_node" kindref="compound">PAGNode</ref>, <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> &gt;::GEdgeSetTy</type>
+        <definition>typedef GenericNode&lt;PAGNode,PAGEdge&gt;::GEdgeSetTy SVF::PAGEdge::PAGEdgeSetTy</definition>
+        <argsstring></argsstring>
+        <name>PAGEdgeSetTy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="169" column="38" bodyfile="include/Graphs/PAGEdge.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_p_a_g_edge_1a8c1ca8ef92ae08a3a0253c6f29819702" prot="public" static="no">
+        <type>Map&lt; EdgeID, PAGEdgeSetTy &gt;</type>
+        <definition>typedef Map&lt;EdgeID, PAGEdgeSetTy&gt; SVF::PAGEdge::PAGEdgeToSetMapTy</definition>
+        <argsstring></argsstring>
+        <name>PAGEdgeToSetMapTy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="170" column="17" bodyfile="include/Graphs/PAGEdge.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_p_a_g_edge_1ac42a778eef6bd1c088233da9a8552a84" prot="public" static="no">
+        <type>PAGEdgeToSetMapTy</type>
+        <definition>typedef PAGEdgeToSetMapTy SVF::PAGEdge::PAGKindToEdgeSetMapTy</definition>
+        <argsstring></argsstring>
+        <name>PAGKindToEdgeSetMapTy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="171" column="31" bodyfile="include/Graphs/PAGEdge.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_s_v_f_1_1_p_a_g_edge_1aea1cb2d45d301eea27d451241fa8ddd1" prot="private" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_i_c_f_g_node" kindref="compound">ICFGNode</ref> *, u32_t &gt;</type>
+        <definition>typedef Map&lt;const ICFGNode*, u32_t&gt; SVF::PAGEdge::Inst2LabelMap</definition>
+        <argsstring></argsstring>
+        <name>Inst2LabelMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="174" column="17" bodyfile="include/Graphs/PAGEdge.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_p_a_g_edge_1a8b10bded7a25c801dc48926319da0525" prot="private" static="no" mutable="no">
+        <type>const Value *</type>
+        <definition>const Value* SVF::PAGEdge::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>LLVM value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="60" column="17" bodyfile="include/Graphs/PAGEdge.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_p_a_g_edge_1a7784fff25cfa1ab342cca239c9915647" prot="private" static="no" mutable="no">
+        <type>const BasicBlock *</type>
+        <definition>const BasicBlock* SVF::PAGEdge::basicBlock</definition>
+        <argsstring></argsstring>
+        <name>basicBlock</name>
+        <briefdescription>
+<para>LLVM BasicBlock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="61" column="22" bodyfile="include/Graphs/PAGEdge.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_p_a_g_edge_1a0c787966cecc76de70bec251658d9e57" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_i_c_f_g_node" kindref="compound">ICFGNode</ref> *</type>
+        <definition>ICFGNode* SVF::PAGEdge::icfgNode</definition>
+        <argsstring></argsstring>
+        <name>icfgNode</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_i_c_f_g_node" kindref="compound">ICFGNode</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="62" column="14" bodyfile="include/Graphs/PAGEdge.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_p_a_g_edge_1ad38d3486f99325bd0438e4b4bacbda8a" prot="private" static="no" mutable="no">
+        <type>EdgeID</type>
+        <definition>EdgeID SVF::PAGEdge::edgeId</definition>
+        <argsstring></argsstring>
+        <name>edgeId</name>
+        <briefdescription>
+<para>Edge ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="63" column="12" bodyfile="include/Graphs/PAGEdge.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_p_a_g_edge_1ab93916c244480413ccc13438133656c8" prot="public" static="yes" mutable="no">
+        <type>Size_t</type>
+        <definition>Size_t SVF::PAGEdge::totalEdgeNum</definition>
+        <argsstring></argsstring>
+        <name>totalEdgeNum</name>
+        <briefdescription>
+<para>Total edge number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="65" column="19" bodyfile="include/Graphs/PAGEdge.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_p_a_g_edge_1a5c7605aa20425ef49294e6f153842a56" prot="private" static="yes" mutable="no">
+        <type>Inst2LabelMap</type>
+        <definition>PAGEdge::Inst2LabelMap PAGEdge::inst2LabelMap</definition>
+        <argsstring></argsstring>
+        <name>inst2LabelMap</name>
+        <briefdescription>
+<para>Call site Instruction to label map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="175" column="26" bodyfile="include/Graphs/PAGEdge.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_p_a_g_edge_1a5205f3ccb0e28047e03b759a85fc744a" prot="private" static="yes" mutable="no">
+        <type>u64_t</type>
+        <definition>u64_t PAGEdge::callEdgeLabelCounter</definition>
+        <argsstring></argsstring>
+        <name>callEdgeLabelCounter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Call site Instruction counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="176" column="18" bodyfile="include/Graphs/PAGEdge.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_p_a_g_edge_1a6086285794f9fcab46458c37a79d962f" prot="private" static="yes" mutable="no">
+        <type>u64_t</type>
+        <definition>u64_t PAGEdge::storeEdgeLabelCounter</definition>
+        <argsstring></argsstring>
+        <name>storeEdgeLabelCounter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Store Instruction counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="177" column="18" bodyfile="include/Graphs/PAGEdge.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1ab686138c420a0b03cf8f1c1dff044318" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PAGEdge::PAGEdge</definition>
+        <argsstring>(PAGNode *s, PAGNode *d, GEdgeFlag k)</argsstring>
+        <name>PAGEdge</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_p_a_g_node" kindref="compound">PAGNode</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_p_a_g_node" kindref="compound">PAGNode</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614" kindref="member">GEdgeFlag</ref></type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="68" column="5" bodyfile="lib/Graphs/PAG.cpp" bodystart="938" bodyend="943"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1adb1dd2d06c0861095071d7f533935550" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SVF::PAGEdge::~PAGEdge</definition>
+        <argsstring>()</argsstring>
+        <name>~PAGEdge</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="70" column="5" bodyfile="include/Graphs/PAGEdge.h" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1a32df70a9a56dde960bef60b77db92da6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>EdgeID</type>
+        <definition>EdgeID SVF::PAGEdge::getEdgeID</definition>
+        <argsstring>() const</argsstring>
+        <name>getEdgeID</name>
+        <briefdescription>
+<para>Return Edge ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="99" column="19" bodyfile="include/Graphs/PAGEdge.h" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1a3d5a75d4f3792f90bf6ee58776512154" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PAGEdge::isPTAEdge</definition>
+        <argsstring>() const</argsstring>
+        <name>isPTAEdge</name>
+        <briefdescription>
+<para>Whether src and dst nodes are both of pointer type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether src and dst nodes are both pointer type </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="104" column="10" bodyfile="lib/Graphs/PAG.cpp" bodystart="948" bodyend="951"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1af140a9966c06933da4be6f6a1354efbf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Instruction *</type>
+        <definition>const Instruction* SVF::PAGEdge::getInst</definition>
+        <argsstring>() const</argsstring>
+        <name>getInst</name>
+        <briefdescription>
+<para>Get/set methods for llvm instruction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="108" column="30" bodyfile="include/Graphs/PAGEdge.h" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1a7865f4f968f3d736b865d262e3e9a57f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::PAGEdge::setValue</definition>
+        <argsstring>(const Value *val)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>const Value *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="112" column="17" bodyfile="include/Graphs/PAGEdge.h" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1aa0adbe8548303302425bc6b276445f30" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* SVF::PAGEdge::getValue</definition>
+        <argsstring>() const</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="116" column="24" bodyfile="include/Graphs/PAGEdge.h" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1a5fc7be3c1c2085a1575612e7d3e7679e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::PAGEdge::setBB</definition>
+        <argsstring>(const BasicBlock *bb)</argsstring>
+        <name>setBB</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="120" column="17" bodyfile="include/Graphs/PAGEdge.h" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1ab0938f40f245b07ee2f6ca587086b373" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BasicBlock *</type>
+        <definition>const BasicBlock* SVF::PAGEdge::getBB</definition>
+        <argsstring>() const</argsstring>
+        <name>getBB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="124" column="29" bodyfile="include/Graphs/PAGEdge.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1a4cbbf44ec07d829f3c6d75dee2a30cee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::PAGEdge::setICFGNode</definition>
+        <argsstring>(ICFGNode *node)</argsstring>
+        <name>setICFGNode</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_i_c_f_g_node" kindref="compound">ICFGNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="128" column="17" bodyfile="include/Graphs/PAGEdge.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1a939676ad1ada4a91515b2182c40215e4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_i_c_f_g_node" kindref="compound">ICFGNode</ref> *</type>
+        <definition>ICFGNode* SVF::PAGEdge::getICFGNode</definition>
+        <argsstring>() const</argsstring>
+        <name>getICFGNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="132" column="21" bodyfile="include/Graphs/PAGEdge.h" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1a85c0939ab55d744d32f5fda2b54f07e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string PAGEdge::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <reimplementedby refid="class_s_v_f_1_1_addr_p_e_1a202747525079d2946a26f43e71a7c194">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_copy_p_e_1ac1232ca5d43be2c7f68ed86d9e158c72">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_cmp_p_e_1a69fa89fb9e2137e32555d2ce3a510752">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_binary_o_p_p_e_1a88ed686dbd153c863e9063471722f337">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_unary_o_p_p_e_1af81c662850dbe211a476fdf65aaef378">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_store_p_e_1a5fa112e5ed76a41effb11343a433c8c1">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_load_p_e_1a827b665b667174b9aa5fbde846207d5f">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_gep_p_e_1a72bfaa84a4ee1e5f194b4b32b9d79f20">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_normal_gep_p_e_1ac83263efe5e7f66dc3d9ed496c099a16">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_variant_gep_p_e_1a6b07bff6314141157f0a965cc8383730">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_call_p_e_1acf586dd6d455c381d1b6f6e95ef228e4">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_ret_p_e_1ad8d044af7c089cddae99d8ac24a7969a">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_t_d_fork_p_e_1aa385dc7e7e439cb4d8ee1524c8fbf9fe">toString</reimplementedby>
+        <reimplementedby refid="class_s_v_f_1_1_t_d_join_p_e_1accac29adba7ca4883ae161c223a1703d">toString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="157" column="31" bodyfile="lib/Graphs/PAG.cpp" bodystart="166" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1abbb6e04f1c285b7c4e0b878f98572d21" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SVF::PAGEdge::classof</definition>
+        <argsstring>(const PAGEdge *)</argsstring>
+        <name>classof</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> *</type>
+        </param>
+        <briefdescription>
+<para>ClassOf. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="76" column="24" bodyfile="include/Graphs/PAGEdge.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1a1fdd75799d9a6112d50be9bd40e94328" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SVF::PAGEdge::classof</definition>
+        <argsstring>(const GenericPAGEdgeTy *edge)</argsstring>
+        <name>classof</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_generic_edge" kindref="compound">GenericPAGEdgeTy</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="80" column="24" bodyfile="include/Graphs/PAGEdge.h" bodystart="80" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1af112ad6555179a592c97a13100f725e5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614" kindref="member">GEdgeFlag</ref></type>
+        <definition>static GEdgeFlag SVF::PAGEdge::makeEdgeFlagWithCallInst</definition>
+        <argsstring>(GEdgeKind k, const ICFGNode *cs)</argsstring>
+        <name>makeEdgeFlagWithCallInst</name>
+        <param>
+          <type>GEdgeKind</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_i_c_f_g_node" kindref="compound">ICFGNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+<para>Compute the unique edgeFlag value from edge kind and call site Instruction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="139" column="29" bodyfile="include/Graphs/PAGEdge.h" bodystart="139" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_p_a_g_edge_1af820acc617bcfec5d5f46627fce7dae8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614" kindref="member">GEdgeFlag</ref></type>
+        <definition>static GEdgeFlag SVF::PAGEdge::makeEdgeFlagWithStoreInst</definition>
+        <argsstring>(GEdgeKind k, const ICFGNode *store)</argsstring>
+        <name>makeEdgeFlagWithStoreInst</name>
+        <param>
+          <type>GEdgeKind</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_i_c_f_g_node" kindref="compound">ICFGNode</ref> *</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the unique edgeFlag value from edge kind and store Instruction. Two store instructions may share the same StorePAGEdge </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="149" column="29" bodyfile="include/Graphs/PAGEdge.h" bodystart="149" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_s_v_f_1_1_p_a_g_edge_1a12c41e81e9695989dc8a13261f1d1ee9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71" kindref="member">raw_ostream</ref> &amp;</type>
+        <definition>raw_ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(raw_ostream &amp;o, const PAGEdge &amp;edge)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71" kindref="member">raw_ostream</ref> &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> &amp;</type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>Overloading operator &lt;&lt; for dumping <ref refid="class_s_v_f_1_1_p_a_g_node" kindref="compound">PAGNode</ref> value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Graphs/PAGEdge.h" line="162" column="12" bodyfile="include/Graphs/PAGEdge.h" bodystart="162" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>SVF::AddrPE</label>
+        <link refid="class_s_v_f_1_1_addr_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>SVF::VariantGepPE</label>
+        <link refid="class_s_v_f_1_1_variant_gep_p_e"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SVF::TDForkPE</label>
+        <link refid="class_s_v_f_1_1_t_d_fork_p_e"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SVF::BinaryOPPE</label>
+        <link refid="class_s_v_f_1_1_binary_o_p_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>SVF::RetPE</label>
+        <link refid="class_s_v_f_1_1_ret_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SVF::PAGEdge</label>
+        <link refid="class_s_v_f_1_1_p_a_g_edge"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SVF::GepPE</label>
+        <link refid="class_s_v_f_1_1_gep_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>SVF::UnaryOPPE</label>
+        <link refid="class_s_v_f_1_1_unary_o_p_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SVF::CallPE</label>
+        <link refid="class_s_v_f_1_1_call_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SVF::LoadPE</label>
+        <link refid="class_s_v_f_1_1_load_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SVF::CmpPE</label>
+        <link refid="class_s_v_f_1_1_cmp_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SVF::StorePE</label>
+        <link refid="class_s_v_f_1_1_store_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SVF::NormalGepPE</label>
+        <link refid="class_s_v_f_1_1_normal_gep_p_e"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GenericPAGEdgeTy</label>
+        <link refid="class_s_v_f_1_1_generic_edge"/>
+      </node>
+      <node id="14">
+        <label>SVF::TDJoinPE</label>
+        <link refid="class_s_v_f_1_1_t_d_join_p_e"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SVF::CopyPE</label>
+        <link refid="class_s_v_f_1_1_copy_p_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SVF::PAGEdge</label>
+        <link refid="class_s_v_f_1_1_p_a_g_edge"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GenericPAGEdgeTy</label>
+        <link refid="class_s_v_f_1_1_generic_edge"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/Graphs/PAGEdge.h" line="47" column="1" bodyfile="include/Graphs/PAGEdge.h" bodystart="48" bodyend="178"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6ac29bb583428e3c20d758bb9cf2d2d626" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>Addr</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a7784fff25cfa1ab342cca239c9915647" prot="private" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>basicBlock</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6aab0965e92d7414417a77f925efb79dac" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>BinaryOp</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a5f4c2c1ec167425622d40133ec15448d" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>Call</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a5205f3ccb0e28047e03b759a85fc744a" prot="private" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>callEdgeLabelCounter</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1abbb6e04f1c285b7c4e0b878f98572d21" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>classof</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a1fdd75799d9a6112d50be9bd40e94328" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>classof</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a90aa1e3ce21dcd54cf433610b427ba96" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>Cmp</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6af447071283803d3aee763fe20783f4a4" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>Copy</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1ad38d3486f99325bd0438e4b4bacbda8a" prot="private" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>edgeId</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a93dec4c27088242a4b1b6aa82cea46b9" prot="protected" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>EdgeKindMask</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1af1c2fd4b5ef1d7b7605572bf2489c298" prot="protected" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>EdgeKindMaskBits</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1aab8892b73370c32b48621cd1d0cce614" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>GEdgeFlag</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a7eb93c9018c80057672a8ce71615dc0d" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>GEdgeKind</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a6764973569c281d483afab17a75cb4dc" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>GenericEdge</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1ab0938f40f245b07ee2f6ca587086b373" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getBB</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1ad9edb45e74ae675d9da82f5acf02d56e" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getDstID</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1aeaa31a2c8479e831b36ce2e2582ceb86" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getDstNode</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a32df70a9a56dde960bef60b77db92da6" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getEdgeID</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1abe8525c542def8162b094c169a01993b" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getEdgeKind</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a939676ad1ada4a91515b2182c40215e4" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getICFGNode</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1af140a9966c06933da4be6f6a1354efbf" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getInst</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1ae6792506a0150a9400d635eceab7f9e7" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getSrcID</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1ab47ca533c415841ef75456cbad439589" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getSrcNode</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1aa0adbe8548303302425bc6b276445f30" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>getValue</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a0c787966cecc76de70bec251658d9e57" prot="private" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>icfgNode</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a5c7605aa20425ef49294e6f153842a56" prot="private" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>inst2LabelMap</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1aea1cb2d45d301eea27d451241fa8ddd1" prot="private" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>Inst2LabelMap</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a3d5a75d4f3792f90bf6ee58776512154" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>isPTAEdge</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a8fcebc849a231c3c87dddbf0ab5a2167" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>Load</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1af112ad6555179a592c97a13100f725e5" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>makeEdgeFlagWithCallInst</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1af820acc617bcfec5d5f46627fce7dae8" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>makeEdgeFlagWithStoreInst</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1aff95460d4b859e657a9198b7c5e5c736" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>NodeType</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a4b8b2eb7125c259d8d550dd83c51147b" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>NormalGep</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a12c41e81e9695989dc8a13261f1d1ee9" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a88b2086dcebb60bc86bca0fb94f49fca" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>operator==</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1ab686138c420a0b03cf8f1c1dff044318" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>PAGEdge</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a59eb693c90848382efa1cccb56fe82d3" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>PAGEdgeSetTy</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a8c1ca8ef92ae08a3a0253c6f29819702" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>PAGEdgeToSetMapTy</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1ac42a778eef6bd1c088233da9a8552a84" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>PAGKindToEdgeSetMapTy</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>PEDGEK</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a99fe431c7a635d39b5558d1048a94c05" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>Ret</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a5fc7be3c1c2085a1575612e7d3e7679e" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>setBB</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a4cbbf44ec07d829f3c6d75dee2a30cee" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>setICFGNode</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a7865f4f968f3d736b865d262e3e9a57f" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>setValue</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6aca20a2c4d9809736d43b18f3cb53e8cf" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>Store</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a6086285794f9fcab46458c37a79d962f" prot="private" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>storeEdgeLabelCounter</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a1070b34fd19259725d752aa3b5adc73b" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>ThreadFork</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6a8ec550e2cbb5ba5847a0eb0760be165b" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>ThreadJoin</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a85c0939ab55d744d32f5fda2b54f07e3" prot="public" virt="virtual"><scope>SVF::PAGEdge</scope><name>toString</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1ab93916c244480413ccc13438133656c8" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>totalEdgeNum</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6afad5f112c36b6e35baf38054c14ae597" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>UnaryOp</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a8b10bded7a25c801dc48926319da0525" prot="private" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>value</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6ad1f40a044008babd44bff30af846550c" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>VariantGep</name></member>
+      <member refid="class_s_v_f_1_1_generic_edge_1a548daea0cac6491de91d4840b7297741" prot="public" virt="virtual"><scope>SVF::PAGEdge</scope><name>~GenericEdge</name></member>
+      <member refid="class_s_v_f_1_1_p_a_g_edge_1adb1dd2d06c0861095071d7f533935550" prot="public" virt="non-virtual"><scope>SVF::PAGEdge</scope><name>~PAGEdge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

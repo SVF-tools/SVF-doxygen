@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_m_t_a_annotator" xml:lang="en-US">
+<title>SVF::MTAAnnotator Class Reference</title>
+<indexterm><primary>SVF::MTAAnnotator</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MTAAnnotator.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::MTAAnnotator:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_m_t_a_annotator.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a95f4607624dac40e9d62f37e6b16fcf0"/>typedef Set&lt; const Instruction * &gt; <emphasis role="strong">InstSet</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a37ae5e04b0f5560d0f6c2f143b325cd4"/><link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a37ae5e04b0f5560d0f6c2f143b325cd4">MTAAnnotator</link> ()</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a1dc12d846adf07265a9b6a5c2694c84d"/>virtual <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a1dc12d846adf07265a9b6a5c2694c84d">~MTAAnnotator</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a5513a9f2a5b89ab5f90549552fb2b20f">annotateDRCheck</link> (Instruction *inst)</para>
+
+<para>Annotation. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a108616cc98f15af3010ca45b91f32c04"/>void <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a108616cc98f15af3010ca45b91f32c04">initialize</link> (<link linkend="_class_s_v_f_1_1_m_h_p">MHP</link> *mhp, <link linkend="_class_s_v_f_1_1_lock_analysis">LockAnalysis</link> *lsa)</para>
+
+<para>Initialize. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1af469d79fcc3bebd9360f72696a242d4e">pruneThreadLocal</link> (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> *pta)</para>
+
+<para>Prune candidate instructions that are thread local. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a0ed08b6a94483a750c95eef6c2523dc6">pruneAliasMHP</link> (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> *pta)</para>
+
+<para>Prune candidate instructions that non-mhp and non-alias with others. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a4e25b3ef3e4e91f14c35841d0138d888"/>void <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a4e25b3ef3e4e91f14c35841d0138d888">performAnnotate</link> ()</para>
+
+<para>Perform annotation. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1ab84e4295f1137090bdf9e0608a4c2077"/>void <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1ab84e4295f1137090bdf9e0608a4c2077">collectLoadStoreInst</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *mod)</para>
+
+<para>Collect all load and store instruction. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a49434afd0d7beb9f5d6580e8f672889c"/>const Value * <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a49434afd0d7beb9f5d6580e8f672889c">getStoreOperand</link> (const Instruction *inst)</para>
+
+<para>Get operand of store and load. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a399e53d065bc34af428a1ba89a04972b"/>const Value * <emphasis role="strong">getLoadOperand</emphasis> (const Instruction *inst)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a36eb47b716c3b44ba5c459052bb0ed93"/>bool <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a36eb47b716c3b44ba5c459052bb0ed93">isMemset</link> (const Instruction *I)</para>
+
+<para>Check if Function &quot;F&quot; is memset. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1aee9e5ebac543d9a2aab511410b047898"/>bool <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1aee9e5ebac543d9a2aab511410b047898">isMemcpy</link> (const Instruction *I)</para>
+
+<para>Check if Function &quot;F&quot; is memcpy. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1aa0149b932b4148b14b36e2c5cf9b614b"/>u32_t <emphasis role="strong">numOfAllSt</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a5c1743a40d54fdbde2f9dadb612de608"/>u32_t <emphasis role="strong">numOfAllLd</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a3c07f9964623b3895b1bab59a63dccfb"/>u32_t <emphasis role="strong">numOfNonLocalSt</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1ad53ac0cec797f84d3bc14bdb6bab1ab3"/>u32_t <emphasis role="strong">numOfNonLocalLd</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a71178ddc585c9ca7c9e5c3b52378cd7d"/>u32_t <emphasis role="strong">numOfAliasSt</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1aa1572c2a9f260ff66c9da661fd669a5f"/>u32_t <emphasis role="strong">numOfAliasLd</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a3a53e90b4f361d1298983bc89795b3d2"/>u32_t <emphasis role="strong">numOfMHPSt</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a29e0123620ab072fddc45331c6aa46e8"/>u32_t <emphasis role="strong">numOfMHPLd</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1afbb8c25a126362ab0a4101866b4fc0ee"/>u32_t <emphasis role="strong">numOfAnnotatedSt</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a57df091dbdd4fc947cc5e7aaec123700"/>u32_t <emphasis role="strong">numOfAnnotatedLd</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a4e10dbbb742125ebcbdc079ad647b87b"/>static const u32_t <link linkend="_class_s_v_f_1_1_m_t_a_annotator_1a4e10dbbb742125ebcbdc079ad647b87b">ANNO_MHP</link> = 0x04</para>
+
+<para>Constant INTERLEV_FLAG values. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a27f54c50256fc4a2f96fa2305ad04eb1"/>static const u32_t <emphasis role="strong">ANNO_ALIAS</emphasis> = 0x02</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1aded5add82485d493d57e293fd59bf960"/>static const u32_t <emphasis role="strong">ANNO_LOCAL</emphasis> = 0x01</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_s_v_f_1_1_m_t_a">MTA</link> annotation </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a5513a9f2a5b89ab5f90549552fb2b20f"/>    <section>
+    <title>annotateDRCheck()</title>
+<indexterm><primary>annotateDRCheck</primary><secondary>SVF::MTAAnnotator</secondary></indexterm>
+<indexterm><primary>SVF::MTAAnnotator</primary><secondary>annotateDRCheck</secondary></indexterm>
+<para><computeroutput>void MTAAnnotator::annotateDRCheck (Instruction * inst)</computeroutput></para><para>
+
+<para>Annotation. </para>
+</para>
+
+<para>memcpy and memset is not annotated</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1a0ed08b6a94483a750c95eef6c2523dc6"/>    <section>
+    <title>pruneAliasMHP()</title>
+<indexterm><primary>pruneAliasMHP</primary><secondary>SVF::MTAAnnotator</secondary></indexterm>
+<indexterm><primary>SVF::MTAAnnotator</primary><secondary>pruneAliasMHP</secondary></indexterm>
+<para><computeroutput>void MTAAnnotator::pruneAliasMHP (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> * pta)</computeroutput></para><para>
+
+<para>Prune candidate instructions that non-mhp and non-alias with others. </para>
+</para>
+
+<para>if it1 == it2, mhp analysis will annotate it1 that locates in loop or recursion. but alias analysis fails to determine whether it1 is in loop or recursion, that means all store instructions will be annotated by alias analysis to guarantee sound.</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_t_a_annotator_1af469d79fcc3bebd9360f72696a242d4e"/>    <section>
+    <title>pruneThreadLocal()</title>
+<indexterm><primary>pruneThreadLocal</primary><secondary>SVF::MTAAnnotator</secondary></indexterm>
+<indexterm><primary>SVF::MTAAnnotator</primary><secondary>pruneThreadLocal</secondary></indexterm>
+<para><computeroutput>void MTAAnnotator::pruneThreadLocal (<link linkend="_class_s_v_f_1_1_pointer_analysis">PointerAnalysis</link> * pta)</computeroutput></para><para>
+
+<para>Prune candidate instructions that are thread local. </para>
+</para>
+
+<para>find fork arguments&apos; objects</para>
+
+<para>find global pointer-to objects</para>
+
+<para>find all non-local objects that are transitively pointed by global and fork arguments.</para>
+
+<para>compute all store and load instructions that may operate a non-local object.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/MTA/MTAAnnotator.hlib/MTA/MTAAnnotator.cpp</section>
+</section>

@@ -1,0 +1,286 @@
+.TH "SVF::SrcSnkDDA" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::SrcSnkDDA
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SrcSnkDDA\&.h>\fP
+.PP
+Inherits \fBSVF::CFLSolver< GraphType, DPIm >\fP\&.
+.PP
+Inherited by \fBSVF::LeakChecker\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef ProgSlice::SVFGNodeSet \fBSVFGNodeSet\fP"
+.br
+.ti -1c
+.RI "typedef Map< const \fBSVFGNode\fP *, \fBProgSlice\fP * > \fBSVFGNodeToSliceMap\fP"
+.br
+.ti -1c
+.RI "typedef SVFGNodeSet::const_iterator \fBSVFGNodeSetIter\fP"
+.br
+.ti -1c
+.RI "typedef \fBCxtDPItem\fP \fBDPIm\fP"
+.br
+.ti -1c
+.RI "typedef Set< \fBDPIm\fP > \fBDPImSet\fP"
+.br
+.RI "dpitem set "
+.ti -1c
+.RI "typedef Map< const \fBSVFGNode\fP *, \fBDPImSet\fP > \fBSVFGNodeToDPItemsMap\fP"
+.br
+.RI "map a SVFGNode to its visited dpitems "
+.ti -1c
+.RI "typedef Set< const \fBCallBlockNode\fP * > \fBCallSiteSet\fP"
+.br
+.ti -1c
+.RI "typedef NodeBS \fBSVFGNodeBS\fP"
+.br
+.ti -1c
+.RI "typedef \fBProgSlice::VFWorkList\fP \fBWorkList\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSrcSnkDDA\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual \fB~SrcSnkDDA\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual void \fBanalyze\fP (\fBSVFModule\fP *module)"
+.br
+.RI "Start analysis here\&. "
+.ti -1c
+.RI "virtual void \fBinitialize\fP (\fBSVFModule\fP *module)"
+.br
+.RI "Initialize analysis\&. "
+.ti -1c
+.RI "virtual void \fBfinalize\fP ()"
+.br
+.RI "Finalize analysis\&. "
+.ti -1c
+.RI "\fBPAG\fP * \fBgetPAG\fP () const"
+.br
+.RI "Get \fBPAG\fP\&. "
+.ti -1c
+.RI "const \fBSVFG\fP * \fBgetSVFG\fP () const"
+.br
+.RI "Get \fBSVFG\fP\&. "
+.ti -1c
+.RI "\fBPTACallGraph\fP * \fBgetCallgraph\fP () const"
+.br
+.RI "Get Callgraph\&. "
+.ti -1c
+.RI "bool \fBisGlobalSVFGNode\fP (const \fBSVFGNode\fP *node) const"
+.br
+.RI "Whether this svfg node may access global variable\&. "
+.ti -1c
+.RI "virtual void \fBsetCurSlice\fP (const \fBSVFGNode\fP *src)"
+.br
+.RI "Slice operations\&. "
+.ti -1c
+.RI "\fBProgSlice\fP * \fBgetCurSlice\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddSinkToCurSlice\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "bool \fBisInCurForwardSlice\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "bool \fBisInCurBackwardSlice\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "void \fBaddToCurForwardSlice\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "void \fBaddToCurBackwardSlice\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "bool \fBisInAWrapper\fP (const \fBSVFGNode\fP *src, CallSiteSet &csIdSet)"
+.br
+.RI "Identify allocation wrappers\&. "
+.ti -1c
+.RI "virtual void \fBreportBug\fP (\fBProgSlice\fP *slice)=0"
+.br
+.RI "report bug on the current analyzed slice "
+.ti -1c
+.RI "const SVFGNodeSet & \fBgetSources\fP () const"
+.br
+.RI "Get sources/sinks\&. "
+.ti -1c
+.RI "SVFGNodeSetIter \fBsourcesBegin\fP () const"
+.br
+.ti -1c
+.RI "SVFGNodeSetIter \fBsourcesEnd\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddToSources\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "const SVFGNodeSet & \fBgetSinks\fP () const"
+.br
+.ti -1c
+.RI "SVFGNodeSetIter \fBsinksBegin\fP () const"
+.br
+.ti -1c
+.RI "SVFGNodeSetIter \fBsinksEnd\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddToSinks\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "\fBPathCondAllocator\fP * \fBgetPathAllocator\fP () const"
+.br
+.RI "Get path condition allocator\&. "
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual void \fBinitSrcs\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBinitSnks\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisSourceLikeFun\fP (const \fBSVFFunction\fP *fun)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisSinkLikeFun\fP (const \fBSVFFunction\fP *fun)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisSource\fP (const \fBSVFGNode\fP *node)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisSink\fP (const \fBSVFGNode\fP *node)=0"
+.br
+.in -1c
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBFWProcessCurNode\fP (const \fBDPIm\fP &item)"
+.br
+.RI "Forward traverse\&. "
+.ti -1c
+.RI "virtual void \fBBWProcessCurNode\fP (const \fBDPIm\fP &item)"
+.br
+.RI "Backward traverse\&. "
+.ti -1c
+.RI "virtual void \fBFWProcessOutgoingEdge\fP (const \fBDPIm\fP &item, \fBSVFGEdge\fP *edge)"
+.br
+.RI "Propagate information forward by matching context\&. "
+.ti -1c
+.RI "virtual void \fBBWProcessIncomingEdge\fP (const \fBDPIm\fP &item, \fBSVFGEdge\fP *edge)"
+.br
+.RI "Propagate information backward without matching context, as forward analysis already did it\&. "
+.ti -1c
+.RI "bool \fBforwardVisited\fP (const \fBSVFGNode\fP *node, const \fBDPIm\fP &item)"
+.br
+.RI "Whether has been visited or not, in order to avoid recursion on \fBSVFG\fP\&. "
+.ti -1c
+.RI "void \fBaddForwardVisited\fP (const \fBSVFGNode\fP *node, const \fBDPIm\fP &item)"
+.br
+.ti -1c
+.RI "bool \fBbackwardVisited\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "void \fBaddBackwardVisited\fP (const \fBSVFGNode\fP *node)"
+.br
+.ti -1c
+.RI "void \fBclearVisitedMap\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisAllPathReachable\fP ()"
+.br
+.RI "Whether it is all path reachable from a source\&. "
+.ti -1c
+.RI "virtual bool \fBisSomePathReachable\fP ()"
+.br
+.RI "Whether it is some path reachable from a source\&. "
+.ti -1c
+.RI "void \fBdumpSlices\fP ()"
+.br
+.RI "Dump \fBSVFG\fP with annotated slice informaiton\&. "
+.ti -1c
+.RI "void \fBannotateSlice\fP (\fBProgSlice\fP *slice)"
+.br
+.ti -1c
+.RI "void \fBprintBDDStat\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSaberSVFGBuilder\fP \fBmemSSA\fP"
+.br
+.ti -1c
+.RI "\fBSVFG\fP * \fBsvfg\fP"
+.br
+.ti -1c
+.RI "\fBPTACallGraph\fP * \fBptaCallGraph\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+General source-sink analysis, which serves as a base analysis to be extended for various clients 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual SVF::SrcSnkDDA::~SrcSnkDDA ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Destructor\&. the following shared by multiple checkers, thus can not be released\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void SrcSnkDDA::analyze (\fBSVFModule\fP * module)\fC [virtual]\fP"
+
+.PP
+Start analysis here\&. do not consider there is bug when reaching a global SVFGNode if we touch a global, then we assume the client uses this memory until the program exits\&.
+.SS "void SrcSnkDDA::BWProcessIncomingEdge (const \fBDPIm\fP & item, \fBSVFGEdge\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Propagate information backward without matching context, as forward analysis already did it\&. Propagate information backward without matching context, as forward analysis already did it 
+.SS "void SrcSnkDDA::FWProcessOutgoingEdge (const \fBDPIm\fP & item, \fBSVFGEdge\fP * edge)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Propagate information forward by matching context\&. Propagate information forward by matching context handle globals here
+.PP
+perform context sensitive reachability
+.PP
+whether this dstNode has been visited or not
+.SS "void SrcSnkDDA::initialize (\fBSVFModule\fP * module)\fC [virtual]\fP"
+
+.PP
+Initialize analysis\&. allocate control-flow graph branch conditions
+.SS "virtual void SVF::SrcSnkDDA::initSrcs ()\fC [pure virtual]\fP"
+Initialize sources and sinks 
+.PP
+Implemented in \fBSVF::LeakChecker\fP\&.
+.SS "bool SrcSnkDDA::isInAWrapper (const \fBSVFGNode\fP * src, CallSiteSet & csIdSet)"
+
+.PP
+Identify allocation wrappers\&. determine whether a SVFGNode n is in a allocation wrapper function, if so, return all SVFGNodes which receive the value of node n 
+.SS "void SrcSnkDDA::setCurSlice (const \fBSVFGNode\fP * src)\fC [virtual]\fP"
+
+.PP
+Slice operations\&. Set current slice\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

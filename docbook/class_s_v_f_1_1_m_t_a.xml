@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_m_t_a" xml:lang="en-US">
+<title>SVF::MTA Class Reference</title>
+<indexterm><primary>SVF::MTA</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MTA.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::MTA:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_m_t_a.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a80356495b6c45bac59dc15fd7a99730b"/>typedef Set&lt; const LoadInst * &gt; <emphasis role="strong">LoadSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a891e56104b9c2daa8b052e3821e85b9b"/>typedef Set&lt; const StoreInst * &gt; <emphasis role="strong">StoreSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a2c92809f1395aa064c80aef0c3e4c944"/>typedef Map&lt; const Function *, ScalarEvolution * &gt; <emphasis role="strong">FunToSEMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a2473be56f2861ad101f65a65e02dff8d"/>typedef Map&lt; const Function *, LoopInfo * &gt; <emphasis role="strong">FunToLoopInfoMap</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1ab25d605ed6040a9ad6ed6fcec4e8d338"/><link linkend="_class_s_v_f_1_1_m_t_a_1ab25d605ed6040a9ad6ed6fcec4e8d338">MTA</link> ()</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a77b2f1d3de217219ea9346b5bbce4b5f"/>virtual <link linkend="_class_s_v_f_1_1_m_t_a_1a77b2f1d3de217219ea9346b5bbce4b5f">~MTA</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a9c4b9eb2c04de305a30114019c3b1dae"/>virtual bool <link linkend="_class_s_v_f_1_1_m_t_a_1a9c4b9eb2c04de305a30114019c3b1dae">runOnModule</link> (Module &amp;module)</para>
+
+<para>We start the pass here. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_s_v_f_1_1_m_t_a_1a32f6beffb47e5c2ac86f5c3b8a1bd9ba">runOnModule</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *module)</para>
+
+<para>We start the pass here. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a4f2f17975aabd2c4b9a3b2fbf3b1a487"/>virtual <link linkend="_class_s_v_f_1_1_m_h_p">MHP</link> * <link linkend="_class_s_v_f_1_1_m_t_a_1a4f2f17975aabd2c4b9a3b2fbf3b1a487">computeMHP</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *module)</para>
+
+<para>Compute <link linkend="_class_s_v_f_1_1_m_h_p">MHP</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_s_v_f_1_1_lock_analysis">LockAnalysis</link> * <link linkend="_class_s_v_f_1_1_m_t_a_1a0f4805f195ebd42d81127b1a79333c75">computeLocksets</link> (<link linkend="_class_s_v_f_1_1_t_c_t">TCT</link> *tct)</para>
+
+<para>Compute locksets. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a5adab2e3b400190ecc9fa2a158203cb3"/>virtual void <link linkend="_class_s_v_f_1_1_m_t_a_1a5adab2e3b400190ecc9fa2a158203cb3">detect</link> (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> *module)</para>
+
+<para>Perform detection. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a45ca7724c876baabef88e6d4e32633d0"/>virtual StringRef <link linkend="_class_s_v_f_1_1_m_t_a_1a45ca7724c876baabef88e6d4e32633d0">getPassName</link> () const</para>
+
+<para>Pass name. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a2ced024c7e0785d3d78d19c3c52d0f75"/>void <emphasis role="strong">dump</emphasis> (Module &amp;module, <link linkend="_class_s_v_f_1_1_m_h_p">MHP</link> *mhp, <link linkend="_class_s_v_f_1_1_lock_analysis">LockAnalysis</link> *lsa)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_s_v_f_1_1_m_t_a_1ab059d92eaed415d6d0ffdd655a633826">getAnalysisUsage</link> (AnalysisUsage &amp;au) const</para>
+
+<para>Get analysis usage. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a7cb2fd230ed5839b59f650cc87de192e"/>static ScalarEvolution * <emphasis role="strong">getSE</emphasis> (const Function *F)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a5ce0b3247bd412e5267a42be0646471b"/>static char <link linkend="_class_s_v_f_1_1_m_t_a_1a5ce0b3247bd412e5267a42be0646471b">ID</link> = 0</para>
+
+<para>Pass ID. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a3dd09dcdcf58ae8ee1745634cefbb8aa"/>static ModulePass * <emphasis role="strong">modulePass</emphasis> = NULL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Base data race detector </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_m_t_a_1a0f4805f195ebd42d81127b1a79333c75"/>    <section>
+    <title>computeLocksets()</title>
+<indexterm><primary>computeLocksets</primary><secondary>SVF::MTA</secondary></indexterm>
+<indexterm><primary>SVF::MTA</primary><secondary>computeLocksets</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_lock_analysis">LockAnalysis</link> * MTA::computeLocksets (<link linkend="_class_s_v_f_1_1_t_c_t">TCT</link> * tct)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Compute locksets. </para>
+</para>
+
+<para>Compute lock sets </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_t_a_1ab059d92eaed415d6d0ffdd655a633826"/>    <section>
+    <title>getAnalysisUsage()</title>
+<indexterm><primary>getAnalysisUsage</primary><secondary>SVF::MTA</secondary></indexterm>
+<indexterm><primary>SVF::MTA</primary><secondary>getAnalysisUsage</secondary></indexterm>
+<para><computeroutput>virtual void SVF::MTA::getAnalysisUsage (AnalysisUsage &amp; au) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Get analysis usage. </para>
+</para>
+
+<para>do not intend to change the IR in this pass,</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_m_t_a_1a32f6beffb47e5c2ac86f5c3b8a1bd9ba"/>    <section>
+    <title>runOnModule()</title>
+<indexterm><primary>runOnModule</primary><secondary>SVF::MTA</secondary></indexterm>
+<indexterm><primary>SVF::MTA</primary><secondary>runOnModule</secondary></indexterm>
+<para><computeroutput>bool MTA::runOnModule (<link linkend="_class_s_v_f_1_1_s_v_f_module">SVFModule</link> * module)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>We start the pass here. </para>
+</para>
+
+<para>Perform data race detection </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/MTA/MTA.hlib/MTA/MTA.cpp</section>
+</section>

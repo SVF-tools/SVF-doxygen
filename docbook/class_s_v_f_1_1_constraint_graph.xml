@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_v_f_1_1_constraint_graph" xml:lang="en-US">
+<title>SVF::ConstraintGraph Class Reference</title>
+<indexterm><primary>SVF::ConstraintGraph</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ConsG.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SVF::ConstraintGraph:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_s_v_f_1_1_constraint_graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1af2dcf9fd0bc3d353c8582849cdabdf54"/>typedef Map&lt; NodeID, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * &gt; <emphasis role="strong">ConstraintNodeIDToNodeMapTy</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a15bc278f76cdfcf38e623cedbc80d025"/>typedef ConstraintEdge::ConstraintEdgeSetTy::iterator <emphasis role="strong">ConstraintNodeIter</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1afe34ca6bdbb22b188799a4297fd19004"/>typedef Map&lt; NodeID, NodeID &gt; <emphasis role="strong">NodeToRepMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1ac7d24753491a9bab39a13b32bb65f139"/>typedef Map&lt; NodeID, NodeBS &gt; <emphasis role="strong">NodeToSubsMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1ae80fc7e5d68e103d8f3a82bc9ffb0f00"/>typedef <link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">FIFOWorkList</link>&lt; NodeID &gt; <emphasis role="strong">WorkList</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a6ce1bb9ad2c2b9da7c39d572816a06da"/><link linkend="_class_s_v_f_1_1_constraint_graph_1a6ce1bb9ad2c2b9da7c39d572816a06da">ConstraintGraph</link> (<link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> *p)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a171331edb83de1fd118eebb3a0fa1662"/>virtual <link linkend="_class_s_v_f_1_1_constraint_graph_1a171331edb83de1fd118eebb3a0fa1662">~ConstraintGraph</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a26722666cc8f2fce61bed73f086a0e87"/><link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * <link linkend="_class_s_v_f_1_1_constraint_graph_1a26722666cc8f2fce61bed73f086a0e87">getConstraintNode</link> (NodeID id) const</para>
+
+<para>Get/add/remove constraint node. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a5ea9c47d232f36b66d985f979f33293b"/>void <emphasis role="strong">addConstraintNode</emphasis> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *node, NodeID id)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aad6c37476edfd9ae92dc8c0d004d782d"/>bool <emphasis role="strong">hasConstraintNode</emphasis> (NodeID id) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a9e21bc9b86080b4059f0907e9a7b33f3"/>void <emphasis role="strong">removeConstraintNode</emphasis> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *node)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a5f57823a4918f6c6bfee9c18beddda51"/>bool <emphasis role="strong">hasEdge</emphasis> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *src, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *dst, <link linkend="_class_s_v_f_1_1_constraint_edge_1a663af27955ba0c545f34fa1f076b7375">ConstraintEdge::ConstraintEdgeK</link> kind)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a04a57ef9803917346cb966e05ecd0de4"/><link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> * <link linkend="_class_s_v_f_1_1_constraint_graph_1a04a57ef9803917346cb966e05ecd0de4">getEdge</link> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *src, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *dst, <link linkend="_class_s_v_f_1_1_constraint_edge_1a663af27955ba0c545f34fa1f076b7375">ConstraintEdge::ConstraintEdgeK</link> kind)</para>
+
+<para>Get an edge via its src and dst nodes and kind. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_addr_c_g_edge">AddrCGEdge</link> * <link linkend="_class_s_v_f_1_1_constraint_graph_1a56cfcc39637cf5208f65297a63dde266">addAddrCGEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add a <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edge into Edge map. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_copy_c_g_edge">CopyCGEdge</link> * <link linkend="_class_s_v_f_1_1_constraint_graph_1a60bb27100e8c264be2add004069d1758">addCopyCGEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Copy edge. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_normal_gep_c_g_edge">NormalGepCGEdge</link> * <link linkend="_class_s_v_f_1_1_constraint_graph_1a5aac453464955185ca0d47e91db9df7b">addNormalGepCGEdge</link> (NodeID src, NodeID dst, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp;ls)</para>
+
+<para>Add Gep edge. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_variant_gep_c_g_edge">VariantGepCGEdge</link> * <link linkend="_class_s_v_f_1_1_constraint_graph_1a6902cabb252b1eaadb3c8220b4581a2f">addVariantGepCGEdge</link> (NodeID src, NodeID dst)</para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_load_c_g_edge">LoadCGEdge</link> * <link linkend="_class_s_v_f_1_1_constraint_graph_1a1e5a23fbd08cf4186775baffbd6a7934">addLoadCGEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Load edge. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_store_c_g_edge">StoreCGEdge</link> * <link linkend="_class_s_v_f_1_1_constraint_graph_1a633666953f8d6675961981c4eab1adb0">addStoreCGEdge</link> (NodeID src, NodeID dst)</para>
+
+<para>Add Store edge. </para>
+</listitem>
+            <listitem><para><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link> &amp; <link linkend="_class_s_v_f_1_1_constraint_graph_1adee52f15f5ff58dd455e419c2643f89b">getAddrCGEdges</link> ()</para>
+
+<para>Get <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edge. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1ad7196d5f05192d9468ee0ca93b6b66ee"/><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link> &amp; <link linkend="_class_s_v_f_1_1_constraint_graph_1ad7196d5f05192d9468ee0ca93b6b66ee">getDirectCGEdges</link> ()</para>
+
+<para>Get Copy/call/ret/gep edges. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1afb849d8f3425ff36497d062ecefd2cc1"/><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link> &amp; <link linkend="_class_s_v_f_1_1_constraint_graph_1afb849d8f3425ff36497d062ecefd2cc1">getLoadCGEdges</link> ()</para>
+
+<para>Get Load edges. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a61ef90be6ccc01634e5440f22a0f746e"/><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link> &amp; <link linkend="_class_s_v_f_1_1_constraint_graph_1a61ef90be6ccc01634e5440f22a0f746e">getStoreCGEdges</link> ()</para>
+
+<para>Get Store edges. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1a4db3484e3710c3f5cc86ec32dd643722">reTargetDstOfEdge</link> (<link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> *edge, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *newDstNode)</para>
+
+<para>Used for cycle elimination. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1aaae56afed424f7cd59fddb3fcb2f7214">reTargetSrcOfEdge</link> (<link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> *edge, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *newSrcNode)</para>
+
+<para>Remove edge from old src target, change edge dst id and add modifed edge into new src. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1acc23df2db1fa7b8e0270d8a04f08f2ee">removeAddrEdge</link> (<link linkend="_class_s_v_f_1_1_addr_c_g_edge">AddrCGEdge</link> *edge)</para>
+
+<para>Remove addr edge from their src and dst edge sets. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1a9fc73676ea133651604e2528fe1d8244">removeDirectEdge</link> (<link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> *edge)</para>
+
+<para>Remove direct edge from their src and dst edge sets. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1aa4bca2422049413439cb0c3400f2ce28">removeLoadEdge</link> (<link linkend="_class_s_v_f_1_1_load_c_g_edge">LoadCGEdge</link> *edge)</para>
+
+<para>Remove load edge from their src and dst edge sets. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1aad3d05c949c33a587b3ac6d627f5a0a2">removeStoreEdge</link> (<link linkend="_class_s_v_f_1_1_store_c_g_edge">StoreCGEdge</link> *edge)</para>
+
+<para>Remove store edge from their src and dst edge sets. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a39b973543acdcdc5493832cc9d0f586f"/>NodeID <link linkend="_class_s_v_f_1_1_constraint_graph_1a39b973543acdcdc5493832cc9d0f586f">sccRepNode</link> (NodeID id) const</para>
+
+<para>SCC rep/sub nodes methods. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aed605b010e313f4b11e95b83fe50e3b3"/>NodeBS &amp; <emphasis role="strong">sccSubNodes</emphasis> (NodeID id)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1abea65bf6dd43aa312082f8d4c7c3e3cb"/>void <emphasis role="strong">setRep</emphasis> (NodeID node, NodeID rep)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a148235bd1355a700d3ce187702e89bc8"/>void <emphasis role="strong">setSubs</emphasis> (NodeID node, NodeBS &amp;subs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a5fe3815a7990e16b99cf46e90529f8b3"/>void <emphasis role="strong">resetSubs</emphasis> (NodeID node)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_constraint_graph_1a081bf1238121eb52a0c9ad60f77ecbcd">moveInEdgesToRepNode</link> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *node, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *rep)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_constraint_graph_1aa436aac95be84d1946169f4984deae59">moveOutEdgesToRepNode</link> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *node, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *rep)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_s_v_f_1_1_constraint_graph_1aabe2861fcbc364e2c8aa8114d4879c39">moveEdgesToRepNode</link> (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *node, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> *rep)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1af790af4146197682dd4f9abfad1434f6"/>bool <link linkend="_class_s_v_f_1_1_constraint_graph_1af790af4146197682dd4f9abfad1434f6">isZeroOffsettedGepCGEdge</link> (<link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> *edge) const</para>
+
+<para>Check if a given edge is a <link linkend="_class_s_v_f_1_1_normal_gep_c_g_edge">NormalGepCGEdge</link> with 0 offset. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a003e68319c41fb32df9ab6f2fe02d8d2"/>const PAG::CallSiteToFunPtrMap &amp; <link linkend="_class_s_v_f_1_1_constraint_graph_1a003e68319c41fb32df9ab6f2fe02d8d2">getIndirectCallsites</link> () const</para>
+
+<para>Wrappers for invoking <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> methods. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1ab2b4725a8fcae8a1bc3c026d236005b8"/>NodeID <emphasis role="strong">getBlackHoleNode</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a8ba74f82c1e796f2888ba34bc8355ce9"/>bool <emphasis role="strong">isBlkObjOrConstantObj</emphasis> (NodeID id)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a8200b7cbd600958c662f24169ccbc8d6"/>NodeBS &amp; <emphasis role="strong">getAllFieldsObjNode</emphasis> (NodeID id)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a2337fa70dc5b0b13dbba4cd776404c6b"/>NodeID <emphasis role="strong">getBaseObjNode</emphasis> (NodeID id)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a38fd07dd86f6187a7671f9f85565fccc"/>bool <emphasis role="strong">isSingleFieldObj</emphasis> (NodeID id) const</para>
+</listitem>
+            <listitem><para>NodeID <link linkend="_class_s_v_f_1_1_constraint_graph_1a4a42759f8a39ff4495c8691f3c87e443">getGepObjNode</link> (NodeID id, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp;ls)</para>
+
+<para>Get a field of a memory object. </para>
+</listitem>
+            <listitem><para>NodeID <link linkend="_class_s_v_f_1_1_constraint_graph_1a5fbbfb7b935e0b8867f7beab32ab7763">getFIObjNode</link> (NodeID id)</para>
+
+<para>Get a field-insensitive node of a memory object. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a84468bc9355d31e8c3e18369036ddf5c"/>bool <link linkend="_class_s_v_f_1_1_constraint_graph_1a84468bc9355d31e8c3e18369036ddf5c">isPWCNode</link> (NodeID nodeId)</para>
+
+<para>Check/Set PWC (positive weight cycle) flag. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a03f9fe8ae7094c39937f47f422276724"/>void <emphasis role="strong">setPWCNode</emphasis> (NodeID nodeId)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aa867ffe0f3639a0ef5b5c36696e733be"/>bool <link linkend="_class_s_v_f_1_1_constraint_graph_1aa867ffe0f3639a0ef5b5c36696e733be">hasNodesToBeCollapsed</link> () const</para>
+
+<para>Add/get nodes to be collapsed. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a19e69dabc1f5d16129bfedc81e6e7ceb"/>void <emphasis role="strong">addNodeToBeCollapsed</emphasis> (NodeID id)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a006667ed55132ca0909c0e9118fea704"/>NodeID <emphasis role="strong">getNextCollapseNode</emphasis> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1af9fc8308845628fe8900528573e30462">dump</link> (std::string name)</para>
+
+<para>Dump graph into dot file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1aa87bf07fc538c2cf425138727e7acbce">print</link> ()</para>
+
+<para>Print CG into terminal. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1a1973126243ff619033a78a3782944278">buildCG</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_s_v_f_1_1_constraint_graph_1a77ba38543b1ee164f1ae95589d5dbc44">destroy</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1ad5d89d94b16c167a593aa2a0c8e6ad9c"/>PAGEdge::PAGEdgeSetTy &amp; <emphasis role="strong">getPAGEdgeSet</emphasis> (<link linkend="_class_s_v_f_1_1_p_a_g_edge_1a79080505b4744aa8806b55215ac2b0f6">PAGEdge::PEDGEK</link> kind)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a00242eb1c1204abf1f5eb0cae759a38c"/>NodeID <link linkend="_class_s_v_f_1_1_constraint_graph_1a00242eb1c1204abf1f5eb0cae759a38c">getValueNode</link> (const Value *value) const</para>
+
+<para>Wappers used internally, not expose to Andernsen Pass. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a802d7aa5c5bdc5c8720120f71d316b68"/>NodeID <emphasis role="strong">getReturnNode</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *value) const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a527342ce5ac3b9491d7ad4302145cec5"/>NodeID <emphasis role="strong">getVarargNode</emphasis> (const <link linkend="_class_s_v_f_1_1_s_v_f_function">SVFFunction</link> *value) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1adcafd4b3c58e882bb4143e3a4fb96688"/><link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> * <emphasis role="strong">pag</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1ab1b5ee9202bd9f5d738f9850b42a45d2"/>NodeToRepMap <emphasis role="strong">nodeToRepMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1af91f1027cd5de591ae40865f691c5f60"/>NodeToSubsMap <emphasis role="strong">nodeToSubsMap</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1af3406f1e191d9d6d9c33d23bdd2d564b"/><link linkend="_class_s_v_f_1_1_f_i_f_o_work_list">WorkList</link> <emphasis role="strong">nodesToBeCollapsed</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1ac246dc91562d4b1e168b7c39b2c2720f"/>EdgeID <emphasis role="strong">edgeIndex</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a5bbd6df25027d26911f5d8d6a10881dc"/><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link> <emphasis role="strong">AddrCGEdgeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a1be3ebb84b3d334daf98f7e6f5b82256"/><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link> <emphasis role="strong">directEdgeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a1cb9124b29720e7a5b39d83419f9cc17"/><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link> <emphasis role="strong">LoadCGEdgeSet</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a0f9d5eef25827ac1d380e5d8bd225025"/><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link> <emphasis role="strong">StoreCGEdgeSet</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Constraint graph for <link linkend="_class_s_v_f_1_1_andersen">Andersen</link>&apos;s analysis ConstraintNodes are same as PAGNodes ConstraintEdges are self-defined edges (initialized with ConstraintEdges) </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a56cfcc39637cf5208f65297a63dde266"/>    <section>
+    <title>addAddrCGEdge()</title>
+<indexterm><primary>addAddrCGEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>addAddrCGEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_addr_c_g_edge">AddrCGEdge</link> * ConstraintGraph::addAddrCGEdge (NodeID src, NodeID dst)</computeroutput></para><para>
+
+<para>Add a <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edge into Edge map. </para>
+</para>
+
+<para>Add Address edge</para>
+
+<para>Add an address edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a60bb27100e8c264be2add004069d1758"/>    <section>
+    <title>addCopyCGEdge()</title>
+<indexterm><primary>addCopyCGEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>addCopyCGEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_copy_c_g_edge">CopyCGEdge</link> * ConstraintGraph::addCopyCGEdge (NodeID src, NodeID dst)</computeroutput></para><para>
+
+<para>Add Copy edge. </para>
+</para>
+
+<para>Add Copy edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a1e5a23fbd08cf4186775baffbd6a7934"/>    <section>
+    <title>addLoadCGEdge()</title>
+<indexterm><primary>addLoadCGEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>addLoadCGEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_load_c_g_edge">LoadCGEdge</link> * ConstraintGraph::addLoadCGEdge (NodeID src, NodeID dst)</computeroutput></para><para>
+
+<para>Add Load edge. </para>
+</para>
+
+<para>Add Load edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a5aac453464955185ca0d47e91db9df7b"/>    <section>
+    <title>addNormalGepCGEdge()</title>
+<indexterm><primary>addNormalGepCGEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>addNormalGepCGEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_normal_gep_c_g_edge">NormalGepCGEdge</link> * ConstraintGraph::addNormalGepCGEdge (NodeID src, NodeID dst, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp; ls)</computeroutput></para><para>
+
+<para>Add Gep edge. </para>
+</para>
+
+<para>Add Gep edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a633666953f8d6675961981c4eab1adb0"/>    <section>
+    <title>addStoreCGEdge()</title>
+<indexterm><primary>addStoreCGEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>addStoreCGEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_store_c_g_edge">StoreCGEdge</link> * ConstraintGraph::addStoreCGEdge (NodeID src, NodeID dst)</computeroutput></para><para>
+
+<para>Add Store edge. </para>
+</para>
+
+<para>Add Store edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a6902cabb252b1eaadb3c8220b4581a2f"/>    <section>
+    <title>addVariantGepCGEdge()</title>
+<indexterm><primary>addVariantGepCGEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>addVariantGepCGEdge</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_variant_gep_c_g_edge">VariantGepCGEdge</link> * ConstraintGraph::addVariantGepCGEdge (NodeID src, NodeID dst)</computeroutput></para>
+<para>Add variant gep edge </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a1973126243ff619033a78a3782944278"/>    <section>
+    <title>buildCG()</title>
+<indexterm><primary>buildCG</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>buildCG</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::buildCG ( )<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Start building constraint graph </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a77ba38543b1ee164f1ae95589d5dbc44"/>    <section>
+    <title>destroy()</title>
+<indexterm><primary>destroy</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>destroy</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::destroy ( )<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Memory has been cleaned up at <link linkend="_class_s_v_f_1_1_generic_graph">GenericGraph</link> </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1af9fc8308845628fe8900528573e30462"/>    <section>
+    <title>dump()</title>
+<indexterm><primary>dump</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>dump</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::dump (std::string name)</computeroutput></para><para>
+
+<para>Dump graph into dot file. </para>
+</para>
+
+<para>Dump constraint graph </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1adee52f15f5ff58dd455e419c2643f89b"/>    <section>
+    <title>getAddrCGEdges()</title>
+<indexterm><primary>getAddrCGEdges</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>getAddrCGEdges</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_v_f_1_1_constraint_edge_1ad155e1ed2473cc4f5f57128d282ac541">ConstraintEdge::ConstraintEdgeSetTy</link>&amp; SVF::ConstraintGraph::getAddrCGEdges ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get <link linkend="_class_s_v_f_1_1_p_a_g">PAG</link> edge. </para>
+</para>
+
+<para>Get Address edges </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a5fbbfb7b935e0b8867f7beab32ab7763"/>    <section>
+    <title>getFIObjNode()</title>
+<indexterm><primary>getFIObjNode</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>getFIObjNode</secondary></indexterm>
+<para><computeroutput>NodeID SVF::ConstraintGraph::getFIObjNode (NodeID id)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get a field-insensitive node of a memory object. </para>
+</para>
+
+<para>Create a node when it is (1) not exist on graph and (2) not merged</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a4a42759f8a39ff4495c8691f3c87e443"/>    <section>
+    <title>getGepObjNode()</title>
+<indexterm><primary>getGepObjNode</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>getGepObjNode</secondary></indexterm>
+<para><computeroutput>NodeID SVF::ConstraintGraph::getGepObjNode (NodeID id, const <link linkend="_class_s_v_f_1_1_location_set">LocationSet</link> &amp; ls)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get a field of a memory object. </para>
+</para>
+
+<para>Create a node when it is (1) not exist on graph and (2) not merged</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aabe2861fcbc364e2c8aa8114d4879c39"/>    <section>
+    <title>moveEdgesToRepNode()</title>
+<indexterm><primary>moveEdgesToRepNode</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>moveEdgesToRepNode</secondary></indexterm>
+<para><computeroutput>bool SVF::ConstraintGraph::moveEdgesToRepNode (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * node, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * rep)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para><link linkend="_struct_move">Move</link> incoming/outgoing direct edges of a sub node to its rep node Return TRUE if there&apos;s a gep edge inside this SCC (PWC). </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a081bf1238121eb52a0c9ad60f77ecbcd"/>    <section>
+    <title>moveInEdgesToRepNode()</title>
+<indexterm><primary>moveInEdgesToRepNode</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>moveInEdgesToRepNode</secondary></indexterm>
+<para><computeroutput>bool ConstraintGraph::moveInEdgesToRepNode (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * node, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * rep)</computeroutput></para>
+<para><link linkend="_struct_move">Move</link> incoming direct edges of a sub node which is outside the SCC to its rep node Remove incoming direct edges of a sub node which is inside the SCC from its rep node Return TRUE if there&apos;s a gep edge inside this SCC (PWC).</para>
+
+<para><link linkend="_struct_move">Move</link> incoming direct edges of a sub node which is outside SCC to its rep node Remove incoming direct edges of a sub node which is inside SCC from its rep node </para>
+
+<para>only copy and gep edge can be removed</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aa436aac95be84d1946169f4984deae59"/>    <section>
+    <title>moveOutEdgesToRepNode()</title>
+<indexterm><primary>moveOutEdgesToRepNode</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>moveOutEdgesToRepNode</secondary></indexterm>
+<para><computeroutput>bool ConstraintGraph::moveOutEdgesToRepNode (<link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * node, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * rep)</computeroutput></para>
+<para><link linkend="_struct_move">Move</link> outgoing direct edges of a sub node which is outside the SCC to its rep node Remove outgoing direct edges of sub node which is inside the SCC from its rep node Return TRUE if there&apos;s a gep edge inside this SCC (PWC).</para>
+
+<para><link linkend="_struct_move">Move</link> outgoing direct edges of a sub node which is outside SCC to its rep node Remove outgoing direct edges of a sub node which is inside SCC from its rep node </para>
+
+<para>only copy and gep edge can be removed</para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aa87bf07fc538c2cf425138727e7acbce"/>    <section>
+    <title>print()</title>
+<indexterm><primary>print</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>print</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::print ( )</computeroutput></para><para>
+
+<para>Print CG into terminal. </para>
+</para>
+
+<para>Print this constraint graph including its nodes and edges </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1acc23df2db1fa7b8e0270d8a04f08f2ee"/>    <section>
+    <title>removeAddrEdge()</title>
+<indexterm><primary>removeAddrEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>removeAddrEdge</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::removeAddrEdge (<link linkend="_class_s_v_f_1_1_addr_c_g_edge">AddrCGEdge</link> * edge)</computeroutput></para><para>
+
+<para>Remove addr edge from their src and dst edge sets. </para>
+</para>
+
+<para>Remove addr edge from their src and dst edge sets </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a9fc73676ea133651604e2528fe1d8244"/>    <section>
+    <title>removeDirectEdge()</title>
+<indexterm><primary>removeDirectEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>removeDirectEdge</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::removeDirectEdge (<link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> * edge)</computeroutput></para><para>
+
+<para>Remove direct edge from their src and dst edge sets. </para>
+</para>
+
+<para>Remove edges from their src and dst edge sets </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aa4bca2422049413439cb0c3400f2ce28"/>    <section>
+    <title>removeLoadEdge()</title>
+<indexterm><primary>removeLoadEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>removeLoadEdge</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::removeLoadEdge (<link linkend="_class_s_v_f_1_1_load_c_g_edge">LoadCGEdge</link> * edge)</computeroutput></para><para>
+
+<para>Remove load edge from their src and dst edge sets. </para>
+</para>
+
+<para>Remove load edge from their src and dst edge sets </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aad3d05c949c33a587b3ac6d627f5a0a2"/>    <section>
+    <title>removeStoreEdge()</title>
+<indexterm><primary>removeStoreEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>removeStoreEdge</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::removeStoreEdge (<link linkend="_class_s_v_f_1_1_store_c_g_edge">StoreCGEdge</link> * edge)</computeroutput></para><para>
+
+<para>Remove store edge from their src and dst edge sets. </para>
+</para>
+
+<para>Remove store edge from their src and dst edge sets </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1a4db3484e3710c3f5cc86ec32dd643722"/>    <section>
+    <title>reTargetDstOfEdge()</title>
+<indexterm><primary>reTargetDstOfEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>reTargetDstOfEdge</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::reTargetDstOfEdge (<link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> * edge, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * newDstNode)</computeroutput></para><para>
+
+<para>Used for cycle elimination. </para>
+</para>
+
+<para>Remove edge from old dst target, change edge dst id and add modifed edge into new dst</para>
+
+<para>Re-target dst node of an edge</para>
+
+<para>(1) Remove edge from old dst target, (2) Change edge dst id and (3) Add modifed edge into new dst </para>
+    </section><anchor xml:id="_class_s_v_f_1_1_constraint_graph_1aaae56afed424f7cd59fddb3fcb2f7214"/>    <section>
+    <title>reTargetSrcOfEdge()</title>
+<indexterm><primary>reTargetSrcOfEdge</primary><secondary>SVF::ConstraintGraph</secondary></indexterm>
+<indexterm><primary>SVF::ConstraintGraph</primary><secondary>reTargetSrcOfEdge</secondary></indexterm>
+<para><computeroutput>void ConstraintGraph::reTargetSrcOfEdge (<link linkend="_class_s_v_f_1_1_constraint_edge">ConstraintEdge</link> * edge, <link linkend="_class_s_v_f_1_1_constraint_node">ConstraintNode</link> * newSrcNode)</computeroutput></para><para>
+
+<para>Remove edge from old src target, change edge dst id and add modifed edge into new src. </para>
+</para>
+
+<para>Re-target src node of an edge (1) Remove edge from old src target, (2) Change edge src id and (3) Add modified edge into new src </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+include/Graphs/ConsG.hlib/Graphs/ConsG.cpp</section>
+</section>

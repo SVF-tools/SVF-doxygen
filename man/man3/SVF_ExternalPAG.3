@@ -1,0 +1,82 @@
+.TH "SVF::ExternalPAG" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::ExternalPAG
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ExternalPAG\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExternalPAG\fP (std::string functionName)"
+.br
+.ti -1c
+.RI "std::string \fBgetFunctionName\fP () const"
+.br
+.ti -1c
+.RI "NodeSet & \fBgetValueNodes\fP ()"
+.br
+.ti -1c
+.RI "NodeSet & \fBgetObjectNodes\fP ()"
+.br
+.ti -1c
+.RI "OrderedSet< std::tuple< NodeID, NodeID, std::string, int > > & \fBgetEdges\fP ()"
+.br
+.ti -1c
+.RI "Map< int, NodeID > & \fBgetArgNodes\fP ()"
+.br
+.ti -1c
+.RI "NodeID \fBgetReturnNode\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetReturnNode\fP (NodeID returnNode)"
+.br
+.ti -1c
+.RI "bool \fBhasReturnNode\fP () const"
+.br
+.RI "Does this function have a return node? "
+.ti -1c
+.RI "bool \fBaddExternalPAG\fP (const \fBSVFFunction\fP *function)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBinitialise\fP (\fBSVFModule\fP *svfModule)"
+.br
+.ti -1c
+.RI "static bool \fBconnectCallsiteToExternalPAG\fP (CallSite *cs)"
+.br
+.ti -1c
+.RI "static bool \fBhasExternalPAG\fP (const \fBSVFFunction\fP *function)"
+.br
+.RI "Whether an external \fBPAG\fP implementing function exists\&. "
+.ti -1c
+.RI "static void \fBdumpFunctions\fP (std::vector< std::string > functions)"
+.br
+.RI "Dump individual PAGs of specified functions\&. Currently to outs()\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents the \fBPAG\fP of a function loaded externally (i\&.e\&. from file)\&. It's purpose is to be attached to the main \fBPAG\fP (almost) seamlessly\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ExternalPAG::addExternalPAG (const \fBSVFFunction\fP * function)"
+Adds (creates new equivalents) all the nodes and edges of this extpag to the main \fBPAG\fP\&. function is used as a key for future lookups\&. Returns true on success, false otherwise (incl\&. if it already exists)\&. 
+.SS "bool ExternalPAG::connectCallsiteToExternalPAG (CallSite * cs)\fC [static]\fP"
+Connects callsite if a external \fBPAG\fP implementing the relevant function has been added\&. Returns true on success, false otherwise\&. 
+.SS "void ExternalPAG::dumpFunctions (std::vector< std::string > functions)\fC [static]\fP"
+
+.PP
+Dump individual PAGs of specified functions\&. Currently to outs()\&. Dump PAGs for the functions 
+.SS "void ExternalPAG::initialise (\fBSVFModule\fP * svfModule)\fC [static]\fP"
+Parses command line arguments and attaches external PAGs to main \fBPAG\fP\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

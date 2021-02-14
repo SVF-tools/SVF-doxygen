@@ -1,0 +1,2034 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_s_v_f_1_1_mem_s_s_a" kind="class" language="C++" prot="public">
+    <compoundname>SVF::MemSSA</compoundname>
+      <sectiondef kind="user-defined">
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1acf840b71b67cabe831f01f2d358f27fa" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" kindref="member">MRSet</ref></type>
+        <definition>MRSet SVF::MemSSA::usedRegs</definition>
+        <argsstring></argsstring>
+        <name>usedRegs</name>
+        <briefdescription>
+<para>The following three set are used for prune SSA phi insertion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Collects used memory regions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="139" column="11" bodyfile="include/MSSA/MemSSA.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1add1d4ff17d0860906d2f5f7172176121" prot="private" static="no" mutable="no">
+        <type>MemRegToBBsMap</type>
+        <definition>MemRegToBBsMap SVF::MemSSA::reg2BBMap</definition>
+        <argsstring></argsstring>
+        <name>reg2BBMap</name>
+        <briefdescription>
+<para>Maps memory region to its basic block. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="141" column="20" bodyfile="include/MSSA/MemSSA.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1ae64f97a984765a43f05df26b57a43a43" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" kindref="member">MRSet</ref></type>
+        <definition>MRSet SVF::MemSSA::varKills</definition>
+        <argsstring></argsstring>
+        <name>varKills</name>
+        <briefdescription>
+<para>Collect memory regions whose definition killed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="143" column="11" bodyfile="include/MSSA/MemSSA.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a3d6096aeb4155444b532b02bb8559113" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MemSSA::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+<para>Release the memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clean up memory </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="147" column="10" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="398" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a381a35d48ce2f8e348ddbbb9ce526ca8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_ver" kindref="compound">MRVer</ref> *</type>
+        <definition>MRVer * MemSSA::newSSAName</definition>
+        <argsstring>(const MemRegion *mr, MSSADEF *def)</argsstring>
+        <name>newSSAName</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_m_s_s_a_d_e_f" kindref="compound">MSSADEF</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>Get a new SSA name of a memory region. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="150" column="11" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="381" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1ad550a453d5b2daa6c72e7752f6b5ea79" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_ver" kindref="compound">MRVer</ref> *</type>
+        <definition>MRVer* SVF::MemSSA::getTopStackVer</definition>
+        <argsstring>(const MemRegion *mr)</argsstring>
+        <name>getTopStackVer</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+<para>Get the last version of the SSA ver of memory region. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="153" column="18" bodyfile="include/MSSA/MemSSA.h" bodystart="153" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a8032c530b44e264544881d53d2fac390" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::collectRegUses</definition>
+        <argsstring>(const MemRegion *mr)</argsstring>
+        <name>collectRegUses</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+<para>Collect region uses and region defs according to mus/chis, in order to insert phis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="162" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="162" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a7c0bb1406f0e583c38e522ca06dfa73a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::collectRegDefs</definition>
+        <argsstring>(const BasicBlock *bb, const MemRegion *mr)</argsstring>
+        <name>collectRegDefs</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="167" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="167" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a9f4c84dbffb28eea74a0bc03fda9fc51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddLoadMU</definition>
+        <argsstring>(const BasicBlock *bb, const LoadPE *load, const MRSet &amp;mrSet)</argsstring>
+        <name>AddLoadMU</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_load_p_e" kindref="compound">LoadPE</ref> *</type>
+          <declname>load</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" kindref="member">MRSet</ref> &amp;</type>
+          <declname>mrSet</declname>
+        </param>
+        <briefdescription>
+<para>Add methods for mus/chis/phis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="176" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="176" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a71fe305891acfaad16d510dc11a764fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddStoreCHI</definition>
+        <argsstring>(const BasicBlock *bb, const StorePE *store, const MRSet &amp;mrSet)</argsstring>
+        <name>AddStoreCHI</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_store_p_e" kindref="compound">StorePE</ref> *</type>
+          <declname>store</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" kindref="member">MRSet</ref> &amp;</type>
+          <declname>mrSet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="181" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="181" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a1aa05f81640286a796db0ded4e10c7ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddCallSiteMU</definition>
+        <argsstring>(const CallBlockNode *cs, const MRSet &amp;mrSet)</argsstring>
+        <name>AddCallSiteMU</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" kindref="member">MRSet</ref> &amp;</type>
+          <declname>mrSet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="186" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="186" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1ac6f2171f92e0bdd5dbdb58efed144c18" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddCallSiteCHI</definition>
+        <argsstring>(const CallBlockNode *cs, const MRSet &amp;mrSet)</argsstring>
+        <name>AddCallSiteCHI</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" kindref="member">MRSet</ref> &amp;</type>
+          <declname>mrSet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="191" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="191" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a606aaf7a76ca71cb32adc9af7291ae6e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddMSSAPHI</definition>
+        <argsstring>(const BasicBlock *bb, const MRSet &amp;mrSet)</argsstring>
+        <name>AddMSSAPHI</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" kindref="member">MRSet</ref> &amp;</type>
+          <declname>mrSet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="196" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="196" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a62a4bdd739d502b56fdea932e1248b51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddLoadMU</definition>
+        <argsstring>(const BasicBlock *bb, const LoadPE *load, const MemRegion *mr)</argsstring>
+        <name>AddLoadMU</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_load_p_e" kindref="compound">LoadPE</ref> *</type>
+          <declname>load</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="201" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="201" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a0b3314736ed1d9a8ac0ba8c437fad211" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddStoreCHI</definition>
+        <argsstring>(const BasicBlock *bb, const StorePE *store, const MemRegion *mr)</argsstring>
+        <name>AddStoreCHI</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_store_p_e" kindref="compound">StorePE</ref> *</type>
+          <declname>store</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="207" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="207" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1ab393093a1499564cfd62ff8587a3ade1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddCallSiteMU</definition>
+        <argsstring>(const CallBlockNode *cs, const MemRegion *mr)</argsstring>
+        <name>AddCallSiteMU</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="214" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="214" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a96556440a0e65e8aa073f944e059cc9c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddCallSiteCHI</definition>
+        <argsstring>(const CallBlockNode *cs, const MemRegion *mr)</argsstring>
+        <name>AddCallSiteCHI</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="220" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="220" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a3af850d2fe9b2e75b2705c6d1355eda2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::AddMSSAPHI</definition>
+        <argsstring>(const BasicBlock *bb, const MemRegion *mr)</argsstring>
+        <name>AddMSSAPHI</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *</type>
+          <declname>mr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="227" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a2527b76b92dffa8f8513ebfdcc8d8133" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::RenameMuSet</definition>
+        <argsstring>(const MUSet &amp;muSet)</argsstring>
+        <name>RenameMuSet</name>
+        <param>
+          <type>const MUSet &amp;</type>
+          <declname>muSet</declname>
+        </param>
+        <briefdescription>
+<para>Rename mus, chis and phis. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rename mu set </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="236" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="236" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a6066364112e665c33cbf2ec50ae1e3a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::RenameChiSet</definition>
+        <argsstring>(const CHISet &amp;chiSet, MRVector &amp;memRegs)</argsstring>
+        <name>RenameChiSet</name>
+        <param>
+          <type>const CHISet &amp;</type>
+          <declname>chiSet</declname>
+        </param>
+        <param>
+          <type>MRVector &amp;</type>
+          <declname>memRegs</declname>
+        </param>
+        <briefdescription>
+<para>Rename chi set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="247" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="247" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a630be375832b1477989af85dce6760f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::RenamePhiRes</definition>
+        <argsstring>(const PHISet &amp;phiSet, MRVector &amp;memRegs)</argsstring>
+        <name>RenamePhiRes</name>
+        <param>
+          <type>const PHISet &amp;</type>
+          <declname>phiSet</declname>
+        </param>
+        <param>
+          <type>MRVector &amp;</type>
+          <declname>memRegs</declname>
+        </param>
+        <briefdescription>
+<para>Rename result (LHS) of phis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="260" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="260" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a0ed34f7a27db045c624c5db61d53132b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVF::MemSSA::RenamePhiOps</definition>
+        <argsstring>(const PHISet &amp;phiSet, u32_t pos, MRVector &amp;)</argsstring>
+        <name>RenamePhiOps</name>
+        <param>
+          <type>const PHISet &amp;</type>
+          <declname>phiSet</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>MRVector &amp;</type>
+        </param>
+        <briefdescription>
+<para>Rename operands (RHS) of phis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="272" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="272" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a36e9cf7394c3ece8a5f2f9bfc512956a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_s_v_f_1ab44d20f806be99699895260b14a942d7" kindref="member">DominanceFrontier</ref> *</type>
+        <definition>DominanceFrontier* SVF::MemSSA::getDF</definition>
+        <argsstring>(const SVFFunction &amp;)</argsstring>
+        <name>getDF</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Get/set methods for dominace frontier/tree. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="285" column="23" bodyfile="include/MSSA/MemSSA.h" bodystart="285" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a9741a8d0540ba4c27cb667590d246197" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DominatorTree *</type>
+        <definition>DominatorTree* SVF::MemSSA::getDT</definition>
+        <argsstring>(const SVFFunction &amp;)</argsstring>
+        <name>getDT</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="289" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="289" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a11e1e9a74a6764131fc8aae27d8bde5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MemSSA::setCurrentDFDT</definition>
+        <argsstring>(DominanceFrontier *f, DominatorTree *t)</argsstring>
+        <name>setCurrentDFDT</name>
+        <param>
+          <type><ref refid="namespace_s_v_f_1ab44d20f806be99699895260b14a942d7" kindref="member">DominanceFrontier</ref> *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>DominatorTree *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set DF/DT </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="293" column="10" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a6bd57451370f5f4c92ce212be4cddd15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MemSSA::MemSSA</definition>
+        <argsstring>(BVDataPTAImpl *p, bool ptrOnlyMSSA)</argsstring>
+        <name>MemSSA</name>
+        <param>
+          <type><ref refid="class_s_v_f_1_1_b_v_data_p_t_a_impl" kindref="compound">BVDataPTAImpl</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ptrOnlyMSSA</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Generate whole program memory regions</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="298" column="5" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="59" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1ae09603b40c7359c4cd2f644d3efc40cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SVF::MemSSA::~MemSSA</definition>
+        <argsstring>()</argsstring>
+        <name>~MemSSA</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="301" column="13" bodyfile="include/MSSA/MemSSA.h" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a37ba6ead86bce47f97adeff1e8cdb564" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> *</type>
+        <definition>PAG* SVF::MemSSA::getPAG</definition>
+        <argsstring>()</argsstring>
+        <name>getPAG</name>
+        <briefdescription>
+<para>Return <ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="306" column="16" bodyfile="include/MSSA/MemSSA.h" bodystart="306" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1ad40617a1907b9a6b8cc24888ce54a0ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_b_v_data_p_t_a_impl" kindref="compound">BVDataPTAImpl</ref> *</type>
+        <definition>BVDataPTAImpl* SVF::MemSSA::getPTA</definition>
+        <argsstring>() const</argsstring>
+        <name>getPTA</name>
+        <briefdescription>
+<para>Return PTA. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="311" column="26" bodyfile="include/MSSA/MemSSA.h" bodystart="311" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1ab2dfdcf6fb50ba6cacad1254350a5b09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator" kindref="compound">MRGenerator</ref> *</type>
+        <definition>MRGenerator* SVF::MemSSA::getMRGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>getMRGenerator</name>
+        <briefdescription>
+<para>Return <ref refid="class_s_v_f_1_1_m_r_generator" kindref="compound">MRGenerator</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="316" column="24" bodyfile="include/MSSA/MemSSA.h" bodystart="316" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1ae56d1878046c119d1857727ca3609d74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MemSSA::buildMemSSA</definition>
+        <argsstring>(const SVFFunction &amp;fun, DominanceFrontier *, DominatorTree *)</argsstring>
+        <name>buildMemSSA</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> &amp;</type>
+          <declname>fun</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_v_f_1ab44d20f806be99699895260b14a942d7" kindref="member">DominanceFrontier</ref> *</type>
+          <defname>f</defname>
+        </param>
+        <param>
+          <type>DominatorTree *</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>We start from here. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Start building memory SSA </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Create mus/chis for loads/stores/calls for memory regions</para>
+<para>Insert PHI for memory regions</para>
+<para>SSA rename for memory regions</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="321" column="18" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="105" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a89c40c8fad70f3aead6531261e5a3cc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MemSSA::performStat</definition>
+        <argsstring>()</argsstring>
+        <name>performStat</name>
+        <briefdescription>
+<para>Perform statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform statistics </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="324" column="10" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="481" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1af5e356e82c3f93b65bd89908e0f465dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MemSSA::hasMU</definition>
+        <argsstring>(const PAGEdge *inst) const</argsstring>
+        <name>hasMU</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+<para>Has mu/chi methods. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="328" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="328" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1abfb338ce36ad46a9654d50dd6e2b07f1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MemSSA::hasCHI</definition>
+        <argsstring>(const PAGEdge *inst) const</argsstring>
+        <name>hasCHI</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_p_a_g_edge" kindref="compound">PAGEdge</ref> *</type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="339" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="339" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a480f37f70e9c3ff8ce7750a4d5f6f05b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MemSSA::hasMU</definition>
+        <argsstring>(const CallBlockNode *cs) const</argsstring>
+        <name>hasMU</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="351" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="351" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a51b8381b80b23590e638489c2a6760a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MemSSA::hasCHI</definition>
+        <argsstring>(const CallBlockNode *cs) const</argsstring>
+        <name>hasCHI</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="355" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="355" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1aec75259d035e3b5589e6fcbbcdfe4b2c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MemSSA::hasFuncEntryChi</definition>
+        <argsstring>(const SVFFunction *fun) const</argsstring>
+        <name>hasFuncEntryChi</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Has function entry chi or return mu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="363" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="363" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a3400d9a921672b3872656acecc3eac9f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MemSSA::hasReturnMu</definition>
+        <argsstring>(const SVFFunction *fun) const</argsstring>
+        <name>hasReturnMu</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="367" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="367" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a10743fe9c116ee624387c0473815b800" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CHISet &amp;</type>
+        <definition>CHISet&amp; SVF::MemSSA::getFuncEntryChiSet</definition>
+        <argsstring>(const SVFFunction *fun)</argsstring>
+        <name>getFuncEntryChiSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="372" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="372" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1af8c38a7ff8da4206f19c038024606d93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MUSet &amp;</type>
+        <definition>MUSet&amp; SVF::MemSSA::getReturnMuSet</definition>
+        <argsstring>(const SVFFunction *fun)</argsstring>
+        <name>getReturnMuSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="376" column="18" bodyfile="include/MSSA/MemSSA.h" bodystart="376" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1aea0fc1d2e5407f86e0211d8e253fa24e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MUSet &amp;</type>
+        <definition>MUSet&amp; SVF::MemSSA::getMUSet</definition>
+        <argsstring>(const LoadPE *ld)</argsstring>
+        <name>getMUSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_load_p_e" kindref="compound">LoadPE</ref> *</type>
+          <declname>ld</declname>
+        </param>
+        <briefdescription>
+<para>Get methods of mu/chi/phi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="384" column="18" bodyfile="include/MSSA/MemSSA.h" bodystart="384" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a24dd10cbd41df4f57d8d6fa9ca6a3083" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CHISet &amp;</type>
+        <definition>CHISet&amp; SVF::MemSSA::getCHISet</definition>
+        <argsstring>(const StorePE *st)</argsstring>
+        <name>getCHISet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_store_p_e" kindref="compound">StorePE</ref> *</type>
+          <declname>st</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="388" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="388" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a59392ba4cc987f5fefa4eca0ebe411fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MUSet &amp;</type>
+        <definition>MUSet&amp; SVF::MemSSA::getMUSet</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getMUSet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="392" column="18" bodyfile="include/MSSA/MemSSA.h" bodystart="392" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1ae7b0f618fb36bbc8e9439d70b377cf6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CHISet &amp;</type>
+        <definition>CHISet&amp; SVF::MemSSA::getCHISet</definition>
+        <argsstring>(const CallBlockNode *cs)</argsstring>
+        <name>getCHISet</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="396" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="396" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a964f3fe39ece9a7b8b2033428b75a274" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PHISet &amp;</type>
+        <definition>PHISet&amp; SVF::MemSSA::getPHISet</definition>
+        <argsstring>(const BasicBlock *bb)</argsstring>
+        <name>getPHISet</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="400" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="400" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a552bb17f0435e012b7393fb641c19298" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SVF::MemSSA::hasPHISet</definition>
+        <argsstring>(const BasicBlock *bb) const</argsstring>
+        <name>hasPHISet</name>
+        <param>
+          <type>const BasicBlock *</type>
+          <declname>bb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="404" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="404" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a70dd35ef458c452330dfebcdde17b84c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_mem_s_s_a_1ac5a9b2218c946ec17b478a95ab60ec6b" kindref="member">LoadToMUSetMap</ref> &amp;</type>
+        <definition>LoadToMUSetMap&amp; SVF::MemSSA::getLoadToMUSetMap</definition>
+        <argsstring>()</argsstring>
+        <name>getLoadToMUSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="408" column="27" bodyfile="include/MSSA/MemSSA.h" bodystart="408" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a97166aa7102816a16734d7e2f1c130b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>StoreToChiSetMap &amp;</type>
+        <definition>StoreToChiSetMap&amp; SVF::MemSSA::getStoreToChiSetMap</definition>
+        <argsstring>()</argsstring>
+        <name>getStoreToChiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="412" column="29" bodyfile="include/MSSA/MemSSA.h" bodystart="412" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a44cbdb1231c2709c24d19ad2bae2475a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FunToReturnMuSetMap &amp;</type>
+        <definition>FunToReturnMuSetMap&amp; SVF::MemSSA::getFunToRetMuSetMap</definition>
+        <argsstring>()</argsstring>
+        <name>getFunToRetMuSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="416" column="32" bodyfile="include/MSSA/MemSSA.h" bodystart="416" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1afd4787df4466c24948d8384e3a756198" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_v_f_1_1_mem_s_s_a_1ac34aa1ac96600bfc27b3c2eb0b1510ca" kindref="member">FunToEntryChiSetMap</ref> &amp;</type>
+        <definition>FunToEntryChiSetMap&amp; SVF::MemSSA::getFunToEntryChiSetMap</definition>
+        <argsstring>()</argsstring>
+        <name>getFunToEntryChiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="420" column="32" bodyfile="include/MSSA/MemSSA.h" bodystart="420" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a06081aa029b1fe3f9427f85a0261fd43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CallSiteToMUSetMap &amp;</type>
+        <definition>CallSiteToMUSetMap&amp; SVF::MemSSA::getCallSiteToMuSetMap</definition>
+        <argsstring>()</argsstring>
+        <name>getCallSiteToMuSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="424" column="31" bodyfile="include/MSSA/MemSSA.h" bodystart="424" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a8f88acad31782bfa962e4349d8f4185d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CallSiteToCHISetMap &amp;</type>
+        <definition>CallSiteToCHISetMap&amp; SVF::MemSSA::getCallSiteToChiSetMap</definition>
+        <argsstring>()</argsstring>
+        <name>getCallSiteToChiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="428" column="32" bodyfile="include/MSSA/MemSSA.h" bodystart="428" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a966477062a453901da3631015fcf737d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BBToPhiSetMap &amp;</type>
+        <definition>BBToPhiSetMap&amp; SVF::MemSSA::getBBToPhiSetMap</definition>
+        <argsstring>()</argsstring>
+        <name>getBBToPhiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="432" column="26" bodyfile="include/MSSA/MemSSA.h" bodystart="432" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1aafc83f7f22ebf3b3683607440c488bef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t MemSSA::getLoadMuNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getLoadMuNum</name>
+        <briefdescription>
+<para>Stat methods. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get loadMU numbers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="440" column="11" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="490" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1aa8c45b455e6fc60cab955534c3e50bfa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t MemSSA::getStoreChiNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getStoreChiNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get <ref refid="class_s_v_f_1_1_store_c_h_i" kindref="compound">StoreCHI</ref> numbers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="441" column="11" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="507" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a15272a4ed019d1c323d1826c1bedb70f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t MemSSA::getFunEntryChiNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getFunEntryChiNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get <ref refid="class_s_v_f_1_1_entry_c_h_i" kindref="compound">EntryCHI</ref> numbers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="442" column="11" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="524" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a67175188232e08f5c5374f92ff61810f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t MemSSA::getFunRetMuNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getFunRetMuNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get <ref refid="class_s_v_f_1_1_ret_m_u" kindref="compound">RetMU</ref> numbers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="443" column="11" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="541" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a9e8c5b85957485635d0f72c2f48bb8b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t MemSSA::getCallSiteMuNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getCallSiteMuNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get <ref refid="class_s_v_f_1_1_call_m_u" kindref="compound">CallMU</ref> numbers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="444" column="11" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="558" bodyend="569"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a2c65795ca63a53c833f5ac17a752b6dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t MemSSA::getCallSiteChiNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getCallSiteChiNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get <ref refid="class_s_v_f_1_1_call_c_h_i" kindref="compound">CallCHI</ref> numbers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="445" column="11" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="575" bodyend="586"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a9bb6512999cbf9c7c03153be77c8af20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>u32_t</type>
+        <definition>u32_t MemSSA::getBBPhiNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getBBPhiNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get PHI numbers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="446" column="11" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="592" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a9f9ac433d9c9348ceb5be8893d814ebd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MemSSA::dumpMSSA</definition>
+        <argsstring>(raw_ostream &amp;Out=SVFUtil::outs())</argsstring>
+        <name>dumpMSSA</name>
+        <param>
+          <type><ref refid="namespace_s_v_f_1a424cc053c29ad7303699c529d1a2cc71" kindref="member">raw_ostream</ref> &amp;</type>
+          <declname>Out</declname>
+          <defval>SVFUtil::outs()</defval>
+        </param>
+        <briefdescription>
+<para>Print Memory SSA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Print SSA </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="450" column="10" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="608" bodyend="743"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" prot="public" static="no">
+        <type><ref refid="struct_dd_node" kindref="compound">MemRegion::Condition</ref></type>
+        <definition>typedef MemRegion::Condition SVF::MemSSA::Condition</definition>
+        <argsstring></argsstring>
+        <name>Condition</name>
+        <briefdescription>
+<para>define condition here changes needed if we add new type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="52" column="34" bodyfile="include/MSSA/MemSSA.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a2b4f3b19b32ac61dd1932faa82b93d8b" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_m_s_s_a_m_u" kindref="compound">MSSAMU</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef MSSAMU&lt;Condition&gt; SVF::MemSSA::MU</definition>
+        <argsstring></argsstring>
+        <name>MU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="53" column="20" bodyfile="include/MSSA/MemSSA.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a953a56a65ee36fd1c78b29179cd3f33a" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_ret_m_u" kindref="compound">RetMU</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef RetMU&lt;Condition&gt; SVF::MemSSA::RETMU</definition>
+        <argsstring></argsstring>
+        <name>RETMU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="54" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a4717016109fd3bc80f3095d11afff5b1" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_load_m_u" kindref="compound">LoadMU</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef LoadMU&lt;Condition&gt; SVF::MemSSA::LOADMU</definition>
+        <argsstring></argsstring>
+        <name>LOADMU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="55" column="20" bodyfile="include/MSSA/MemSSA.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a7be50dd82679b45a8c400f5a12056a25" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_call_m_u" kindref="compound">CallMU</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef CallMU&lt;Condition&gt; SVF::MemSSA::CALLMU</definition>
+        <argsstring></argsstring>
+        <name>CALLMU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="56" column="20" bodyfile="include/MSSA/MemSSA.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a503f2fda873c330ef2cc5561f396ea6e" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_m_s_s_a_c_h_i" kindref="compound">MSSACHI</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef MSSACHI&lt;Condition&gt; SVF::MemSSA::CHI</definition>
+        <argsstring></argsstring>
+        <name>CHI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="57" column="21" bodyfile="include/MSSA/MemSSA.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a6a20da24d82ace1888be49a2ae0f6bd5" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_entry_c_h_i" kindref="compound">EntryCHI</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef EntryCHI&lt;Condition&gt; SVF::MemSSA::ENTRYCHI</definition>
+        <argsstring></argsstring>
+        <name>ENTRYCHI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="58" column="22" bodyfile="include/MSSA/MemSSA.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a150e9d53ced1c143bba2d1026f739fa4" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_store_c_h_i" kindref="compound">StoreCHI</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef StoreCHI&lt;Condition&gt; SVF::MemSSA::STORECHI</definition>
+        <argsstring></argsstring>
+        <name>STORECHI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="59" column="22" bodyfile="include/MSSA/MemSSA.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a56ffeb1f76c73766d06aedd60235c8d9" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_call_c_h_i" kindref="compound">CallCHI</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef CallCHI&lt;Condition&gt; SVF::MemSSA::CALLCHI</definition>
+        <argsstring></argsstring>
+        <name>CALLCHI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="60" column="21" bodyfile="include/MSSA/MemSSA.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a8e948ea7778158107657fdd8195530e1" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_m_s_s_a_p_h_i" kindref="compound">MSSAPHI</ref>&lt; <ref refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" kindref="member">Condition</ref> &gt;</type>
+        <definition>typedef MSSAPHI&lt;Condition&gt; SVF::MemSSA::PHI</definition>
+        <argsstring></argsstring>
+        <name>PHI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="61" column="21" bodyfile="include/MSSA/MemSSA.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a57e68097212e88568eea829fb998fe0c" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_m_s_s_a_d_e_f" kindref="compound">MSSADEF</ref></type>
+        <definition>typedef MSSADEF SVF::MemSSA::MDEF</definition>
+        <argsstring></argsstring>
+        <name>MDEF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="62" column="21" bodyfile="include/MSSA/MemSSA.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a81bba824495a882b49e687683954b112" prot="public" static="no">
+        <type>Set&lt; <ref refid="class_s_v_f_1_1_m_s_s_a_m_u" kindref="compound">MU</ref> * &gt;</type>
+        <definition>typedef Set&lt;MU*&gt; SVF::MemSSA::MUSet</definition>
+        <argsstring></argsstring>
+        <name>MUSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="64" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1af9cf084e3070456d8cca491e1391b0c4" prot="public" static="no">
+        <type>Set&lt; <ref refid="class_s_v_f_1_1_m_s_s_a_c_h_i" kindref="compound">CHI</ref> * &gt;</type>
+        <definition>typedef Set&lt;CHI*&gt; SVF::MemSSA::CHISet</definition>
+        <argsstring></argsstring>
+        <name>CHISet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="65" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a8a5d3597f3dba9744e170cc8c32bf25f" prot="public" static="no">
+        <type>Set&lt; <ref refid="class_s_v_f_1_1_m_s_s_a_p_h_i" kindref="compound">PHI</ref> * &gt;</type>
+        <definition>typedef Set&lt;PHI*&gt; SVF::MemSSA::PHISet</definition>
+        <argsstring></argsstring>
+        <name>PHISet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="66" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" prot="public" static="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator_1a98ac3bf264e6a85d172c2c4264ea908f" kindref="member">MRGenerator::MRSet</ref></type>
+        <definition>typedef MRGenerator::MRSet SVF::MemSSA::MRSet</definition>
+        <argsstring></argsstring>
+        <name>MRSet</name>
+        <briefdescription>
+<para>Define mem region set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="69" column="32" bodyfile="include/MSSA/MemSSA.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a7c3fda6f082231350524c2d7c16f067e" prot="public" static="no">
+        <type>std::vector&lt; const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> * &gt;</type>
+        <definition>typedef std::vector&lt;const MemRegion*&gt; SVF::MemSSA::MRVector</definition>
+        <argsstring></argsstring>
+        <name>MRVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="70" column="25" bodyfile="include/MSSA/MemSSA.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1ac5a9b2218c946ec17b478a95ab60ec6b" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_load_p_e" kindref="compound">LoadPE</ref> *, MUSet &gt;</type>
+        <definition>typedef Map&lt;const LoadPE*, MUSet&gt; SVF::MemSSA::LoadToMUSetMap</definition>
+        <argsstring></argsstring>
+        <name>LoadToMUSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Map loads/stores to its mem regions, TODO:visitAtomicCmpXchgInst, visitAtomicRMWInst?? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="74" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a00fc1f85bd92da6f0033a1a385c792ad" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_store_p_e" kindref="compound">StorePE</ref> *, CHISet &gt;</type>
+        <definition>typedef Map&lt;const StorePE*, CHISet&gt; SVF::MemSSA::StoreToChiSetMap</definition>
+        <argsstring></argsstring>
+        <name>StoreToChiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="75" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1af7d3abb0b38f83c6f0a3c6a9e1ebff97" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *, MUSet &gt;</type>
+        <definition>typedef Map&lt;const CallBlockNode*, MUSet&gt; SVF::MemSSA::CallSiteToMUSetMap</definition>
+        <argsstring></argsstring>
+        <name>CallSiteToMUSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="76" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1ab985012d7730beed71a5e77595d29548" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_call_block_node" kindref="compound">CallBlockNode</ref> *, CHISet &gt;</type>
+        <definition>typedef Map&lt;const CallBlockNode*, CHISet&gt; SVF::MemSSA::CallSiteToCHISetMap</definition>
+        <argsstring></argsstring>
+        <name>CallSiteToCHISetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="77" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a59cca6cbd8f18c9521027d8ddd13ffc5" prot="public" static="no">
+        <type>Map&lt; const BasicBlock *, PHISet &gt;</type>
+        <definition>typedef Map&lt;const BasicBlock*, PHISet&gt; SVF::MemSSA::BBToPhiSetMap</definition>
+        <argsstring></argsstring>
+        <name>BBToPhiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="78" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1ac34aa1ac96600bfc27b3c2eb0b1510ca" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *, CHISet &gt;</type>
+        <definition>typedef Map&lt;const SVFFunction*, CHISet&gt; SVF::MemSSA::FunToEntryChiSetMap</definition>
+        <argsstring></argsstring>
+        <name>FunToEntryChiSetMap</name>
+        <briefdescription>
+<para>Map from fun to its entry chi set and return mu set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="82" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a3cfc6d7134f98e5876c16c6c043a3d92" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> *, MUSet &gt;</type>
+        <definition>typedef Map&lt;const SVFFunction*, MUSet&gt; SVF::MemSSA::FunToReturnMuSetMap</definition>
+        <argsstring></argsstring>
+        <name>FunToReturnMuSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="83" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a66e693af7b37e4e58b4834898d6a34fa" prot="public" static="no">
+        <type>std::vector&lt; const BasicBlock * &gt;</type>
+        <definition>typedef std::vector&lt;const BasicBlock*&gt; SVF::MemSSA::BBList</definition>
+        <argsstring></argsstring>
+        <name>BBList</name>
+        <briefdescription>
+<para>For phi insertion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="87" column="25" bodyfile="include/MSSA/MemSSA.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a4d4f7039c2972e671dc15b8c75abad14" prot="public" static="no">
+        <type>Map&lt; const BasicBlock *, <ref refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" kindref="member">MRSet</ref> &gt;</type>
+        <definition>typedef Map&lt;const BasicBlock*, MRSet&gt; SVF::MemSSA::BBToMRSetMap</definition>
+        <argsstring></argsstring>
+        <name>BBToMRSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="88" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1a8d0c1a00d7db194da66c685d79e73de5" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *, <ref refid="class_s_v_f_1_1_mem_s_s_a_1a66e693af7b37e4e58b4834898d6a34fa" kindref="member">BBList</ref> &gt;</type>
+        <definition>typedef Map&lt;const MemRegion*, BBList&gt; SVF::MemSSA::MemRegToBBsMap</definition>
+        <argsstring></argsstring>
+        <name>MemRegToBBsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="89" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1aa9dbaf51f0498f3bd878827744208899" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *, std::vector&lt; <ref refid="class_s_v_f_1_1_m_r_ver" kindref="compound">MRVer</ref> * &gt; &gt;</type>
+        <definition>typedef Map&lt;const MemRegion*, std::vector&lt;MRVer*&gt; &gt; SVF::MemSSA::MemRegToVerStackMap</definition>
+        <argsstring></argsstring>
+        <name>MemRegToVerStackMap</name>
+        <briefdescription>
+<para>For SSA renaming. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="93" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1ae1aca020147c270deca2a1241e3847d0" prot="public" static="no">
+        <type>Map&lt; const <ref refid="class_s_v_f_1_1_mem_region" kindref="compound">MemRegion</ref> *, MRVERSION &gt;</type>
+        <definition>typedef Map&lt;const MemRegion*, MRVERSION&gt; SVF::MemSSA::MemRegToCounterMap</definition>
+        <argsstring></argsstring>
+        <name>MemRegToCounterMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="94" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_s_v_f_1_1_mem_s_s_a_1ac04de5e349ced05d7289b8ee55c86e34" prot="public" static="no">
+        <type>PAG::PAGEdgeList</type>
+        <definition>typedef PAG::PAGEdgeList SVF::MemSSA::PAGEdgeList</definition>
+        <argsstring></argsstring>
+        <name>PAGEdgeList</name>
+        <briefdescription>
+<para><ref refid="class_s_v_f_1_1_p_a_g" kindref="compound">PAG</ref> edge list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="97" column="30" bodyfile="include/MSSA/MemSSA.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a37dca8a7d155de4870358146d219b5e5" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double MemSSA::timeOfGeneratingMemRegions</definition>
+        <argsstring></argsstring>
+        <name>timeOfGeneratingMemRegions</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Time for allocating regions.</para>
+<para>Time for allocating regions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="101" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a4d2418b7df74f23d8fd328f66e29f198" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double MemSSA::timeOfCreateMUCHI</definition>
+        <argsstring></argsstring>
+        <name>timeOfCreateMUCHI</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Time for generating mu/chi for load/store/calls. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="102" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a3c7b5fa73fdc7c805ee3673fbe812b44" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double MemSSA::timeOfInsertingPHI</definition>
+        <argsstring></argsstring>
+        <name>timeOfInsertingPHI</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Time for inserting phis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="103" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a97ccd5e0b9ab6144415e26bdf95cbabd" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double MemSSA::timeOfSSARenaming</definition>
+        <argsstring></argsstring>
+        <name>timeOfSSARenaming</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Time for SSA rename. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="104" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a468e1481926df6865678b7232bb79bf3" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_b_v_data_p_t_a_impl" kindref="compound">BVDataPTAImpl</ref> *</type>
+        <definition>BVDataPTAImpl* SVF::MemSSA::pta</definition>
+        <argsstring></argsstring>
+        <name>pta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="108" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a213ebe634bbdbe33460ccd941c1dc6a5" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_m_r_generator" kindref="compound">MRGenerator</ref> *</type>
+        <definition>MRGenerator* SVF::MemSSA::mrGen</definition>
+        <argsstring></argsstring>
+        <name>mrGen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="109" column="17" bodyfile="include/MSSA/MemSSA.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1ac0aeb79ec4f86f55c97bd397509acd05" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespace_s_v_f_1ab44d20f806be99699895260b14a942d7" kindref="member">DominanceFrontier</ref> *</type>
+        <definition>DominanceFrontier* SVF::MemSSA::df</definition>
+        <argsstring></argsstring>
+        <name>df</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="110" column="23" bodyfile="include/MSSA/MemSSA.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a52b1598f44fe6a6e30095f596bf85cb0" prot="protected" static="no" mutable="no">
+        <type>DominatorTree *</type>
+        <definition>DominatorTree* SVF::MemSSA::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="111" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a4fc930040ec54eb60629da18fb6a4d04" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_mem_s_s_a_stat" kindref="compound">MemSSAStat</ref> *</type>
+        <definition>MemSSAStat* SVF::MemSSA::stat</definition>
+        <argsstring></argsstring>
+        <name>stat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="112" column="16" bodyfile="include/MSSA/MemSSA.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a5cf94edea3a5c35b3c1d9c6ae4b5f9d6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_mem_s_s_a_1ac5a9b2218c946ec17b478a95ab60ec6b" kindref="member">LoadToMUSetMap</ref></type>
+        <definition>LoadToMUSetMap SVF::MemSSA::load2MuSetMap</definition>
+        <argsstring></argsstring>
+        <name>load2MuSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="123" column="20" bodyfile="include/MSSA/MemSSA.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a73d7465cf166d9ffa9d234d15edb375a" prot="private" static="no" mutable="no">
+        <type>StoreToChiSetMap</type>
+        <definition>StoreToChiSetMap SVF::MemSSA::store2ChiSetMap</definition>
+        <argsstring></argsstring>
+        <name>store2ChiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="124" column="22" bodyfile="include/MSSA/MemSSA.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1aba54e534d18f68fbb97b26befd06ba1a" prot="private" static="no" mutable="no">
+        <type>CallSiteToMUSetMap</type>
+        <definition>CallSiteToMUSetMap SVF::MemSSA::callsiteToMuSetMap</definition>
+        <argsstring></argsstring>
+        <name>callsiteToMuSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="125" column="24" bodyfile="include/MSSA/MemSSA.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a1be5a6776c8785f26573b597881c8195" prot="private" static="no" mutable="no">
+        <type>CallSiteToCHISetMap</type>
+        <definition>CallSiteToCHISetMap SVF::MemSSA::callsiteToChiSetMap</definition>
+        <argsstring></argsstring>
+        <name>callsiteToChiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="126" column="25" bodyfile="include/MSSA/MemSSA.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a190061a6f7423461f4292fc326330f23" prot="private" static="no" mutable="no">
+        <type>BBToPhiSetMap</type>
+        <definition>BBToPhiSetMap SVF::MemSSA::bb2PhiSetMap</definition>
+        <argsstring></argsstring>
+        <name>bb2PhiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="127" column="19" bodyfile="include/MSSA/MemSSA.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a59314f6ce17919574d687a08a38b55ec" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_mem_s_s_a_1ac34aa1ac96600bfc27b3c2eb0b1510ca" kindref="member">FunToEntryChiSetMap</ref></type>
+        <definition>FunToEntryChiSetMap SVF::MemSSA::funToEntryChiSetMap</definition>
+        <argsstring></argsstring>
+        <name>funToEntryChiSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="129" column="25" bodyfile="include/MSSA/MemSSA.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1abae2396bf8a37a22be9365d368fe455c" prot="private" static="no" mutable="no">
+        <type>FunToReturnMuSetMap</type>
+        <definition>FunToReturnMuSetMap SVF::MemSSA::funToReturnMuSetMap</definition>
+        <argsstring></argsstring>
+        <name>funToReturnMuSetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="130" column="25" bodyfile="include/MSSA/MemSSA.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1ae4c7b17d8da8278dca362af79f9f268d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_f_1_1_mem_s_s_a_1aa9dbaf51f0498f3bd878827744208899" kindref="member">MemRegToVerStackMap</ref></type>
+        <definition>MemRegToVerStackMap SVF::MemSSA::mr2VerStackMap</definition>
+        <argsstring></argsstring>
+        <name>mr2VerStackMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="132" column="25" bodyfile="include/MSSA/MemSSA.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_f_1_1_mem_s_s_a_1a22e2dd0fc78877bdedd207a40540a634" prot="private" static="no" mutable="no">
+        <type>MemRegToCounterMap</type>
+        <definition>MemRegToCounterMap SVF::MemSSA::mr2CounterMap</definition>
+        <argsstring></argsstring>
+        <name>mr2CounterMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="133" column="24" bodyfile="include/MSSA/MemSSA.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a695adf83e8c40b9628b1866053f68033" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MemSSA::createMUCHI</definition>
+        <argsstring>(const SVFFunction &amp;fun)</argsstring>
+        <name>createMUCHI</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> &amp;</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Create mu chi for candidate regions in a function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Create mu/chi according to memory regions collect used mrs in usedRegs and construction map from region to BB for prune SSA phi insertion </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>get all reachable basic blocks from function entry ignore dead basic blocks</para>
+<para>if the function does not have a reachable return instruction from function entry then we won&apos;t create return mu for it</para>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="115" column="18" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="139" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1acc6f72d96cf29e36093ba08ea86b8983" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MemSSA::insertPHI</definition>
+        <argsstring>(const SVFFunction &amp;fun)</argsstring>
+        <name>insertPHI</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> &amp;</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Insert phi for candidate regions in a fucntion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="117" column="18" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="229" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a16114eb55775f6ee812c1648dcaede0c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MemSSA::SSARename</definition>
+        <argsstring>(const SVFFunction &amp;fun)</argsstring>
+        <name>SSARename</name>
+        <param>
+          <type>const <ref refid="class_s_v_f_1_1_s_v_f_function" kindref="compound">SVFFunction</ref> &amp;</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>SSA rename for a function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>SSA construction algorithm </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="119" column="18" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="279" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_f_1_1_mem_s_s_a_1a271c20725d49dd65b95c062938ffde4c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MemSSA::SSARenameBB</definition>
+        <argsstring>(const BasicBlock &amp;bb)</argsstring>
+        <name>SSARenameBB</name>
+        <param>
+          <type>const BasicBlock &amp;</type>
+          <declname>bb</declname>
+        </param>
+        <briefdescription>
+<para>SSA rename for a basic block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Renaming for each memory regions See the renaming algorithm in book Engineering A Compiler (Figure 9.12) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MSSA/MemSSA.h" line="121" column="18" bodyfile="lib/MSSA/MemSSA.cpp" bodystart="292" bodyend="379"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>SVF::MRGenerator</label>
+        <link refid="class_s_v_f_1_1_m_r_generator"/>
+      </node>
+      <node id="7">
+        <label>GenericICFGTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="9">
+        <label>GenericCallGraphTy</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="11">
+        <label>SVF::PAG</label>
+        <link refid="class_s_v_f_1_1_p_a_g"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SVF::SCCDetection&lt; GraphType &gt;</label>
+        <link refid="class_s_v_f_1_1_s_c_c_detection"/>
+      </node>
+      <node id="14">
+        <label>SVF::PTAStat</label>
+        <link refid="class_s_v_f_1_1_p_t_a_stat"/>
+      </node>
+      <node id="10">
+        <label>SVF::CommonCHGraph</label>
+        <link refid="class_s_v_f_1_1_common_c_h_graph"/>
+      </node>
+      <node id="1">
+        <label>SVF::MemSSA</label>
+        <link refid="class_s_v_f_1_1_mem_s_s_a"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>pta</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>mrGen</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SVF::ICFG</label>
+        <link refid="class_s_v_f_1_1_i_c_f_g"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SVF::MemSSAStat</label>
+        <link refid="class_s_v_f_1_1_mem_s_s_a_stat"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SVF::GenericGraph&lt; PAGNode, PAGEdge &gt;</label>
+        <link refid="class_s_v_f_1_1_generic_graph"/>
+      </node>
+      <node id="5">
+        <label>SVF::SVFModule</label>
+        <link refid="class_s_v_f_1_1_s_v_f_module"/>
+      </node>
+      <node id="13">
+        <label>SVF::TypeSystem</label>
+        <link refid="class_s_v_f_1_1_type_system"/>
+      </node>
+      <node id="2">
+        <label>SVF::BVDataPTAImpl</label>
+        <link refid="class_s_v_f_1_1_b_v_data_p_t_a_impl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SVF::PTACallGraph</label>
+        <link refid="class_s_v_f_1_1_p_t_a_call_graph"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SVF::PointerAnalysis</label>
+        <link refid="class_s_v_f_1_1_pointer_analysis"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>callGraphSCC</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>svfMod</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>icfg</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>ptaCallGraph</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>chgraph</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>pag</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>typeSystem</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/MSSA/MemSSA.h" line="46" column="1" bodyfile="include/MSSA/MemSSA.h" bodystart="47" bodyend="451"/>
+    <listofallmembers>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ac6f2171f92e0bdd5dbdb58efed144c18" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddCallSiteCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a96556440a0e65e8aa073f944e059cc9c" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddCallSiteCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a1aa05f81640286a796db0ded4e10c7ac" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddCallSiteMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ab393093a1499564cfd62ff8587a3ade1" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddCallSiteMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a9f4c84dbffb28eea74a0bc03fda9fc51" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddLoadMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a62a4bdd739d502b56fdea932e1248b51" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddLoadMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a606aaf7a76ca71cb32adc9af7291ae6e" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddMSSAPHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a3af850d2fe9b2e75b2705c6d1355eda2" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddMSSAPHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a71fe305891acfaad16d510dc11a764fc" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddStoreCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a0b3314736ed1d9a8ac0ba8c437fad211" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>AddStoreCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a190061a6f7423461f4292fc326330f23" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>bb2PhiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a66e693af7b37e4e58b4834898d6a34fa" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>BBList</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a4d4f7039c2972e671dc15b8c75abad14" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>BBToMRSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a59cca6cbd8f18c9521027d8ddd13ffc5" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>BBToPhiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ae56d1878046c119d1857727ca3609d74" prot="public" virt="virtual"><scope>SVF::MemSSA</scope><name>buildMemSSA</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a56ffeb1f76c73766d06aedd60235c8d9" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>CALLCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a7be50dd82679b45a8c400f5a12056a25" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>CALLMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ab985012d7730beed71a5e77595d29548" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>CallSiteToCHISetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a1be5a6776c8785f26573b597881c8195" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>callsiteToChiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1af7d3abb0b38f83c6f0a3c6a9e1ebff97" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>CallSiteToMUSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1aba54e534d18f68fbb97b26befd06ba1a" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>callsiteToMuSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a503f2fda873c330ef2cc5561f396ea6e" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>CHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1af9cf084e3070456d8cca491e1391b0c4" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>CHISet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a7c0bb1406f0e583c38e522ca06dfa73a" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>collectRegDefs</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a8032c530b44e264544881d53d2fac390" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>collectRegUses</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ac0c8f70b6283e26e70dafe02fcb5180a" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>Condition</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a695adf83e8c40b9628b1866053f68033" prot="protected" virt="virtual"><scope>SVF::MemSSA</scope><name>createMUCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a3d6096aeb4155444b532b02bb8559113" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>destroy</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ac0aeb79ec4f86f55c97bd397509acd05" prot="protected" virt="non-virtual"><scope>SVF::MemSSA</scope><name>df</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a52b1598f44fe6a6e30095f596bf85cb0" prot="protected" virt="non-virtual"><scope>SVF::MemSSA</scope><name>dt</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a9f9ac433d9c9348ceb5be8893d814ebd" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>dumpMSSA</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a6a20da24d82ace1888be49a2ae0f6bd5" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>ENTRYCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ac34aa1ac96600bfc27b3c2eb0b1510ca" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>FunToEntryChiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a59314f6ce17919574d687a08a38b55ec" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>funToEntryChiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1abae2396bf8a37a22be9365d368fe455c" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>funToReturnMuSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a3cfc6d7134f98e5876c16c6c043a3d92" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>FunToReturnMuSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a9bb6512999cbf9c7c03153be77c8af20" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getBBPhiNum</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a966477062a453901da3631015fcf737d" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getBBToPhiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a2c65795ca63a53c833f5ac17a752b6dc" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getCallSiteChiNum</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a9e8c5b85957485635d0f72c2f48bb8b5" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getCallSiteMuNum</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a8f88acad31782bfa962e4349d8f4185d" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getCallSiteToChiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a06081aa029b1fe3f9427f85a0261fd43" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getCallSiteToMuSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a24dd10cbd41df4f57d8d6fa9ca6a3083" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getCHISet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ae7b0f618fb36bbc8e9439d70b377cf6b" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getCHISet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a36e9cf7394c3ece8a5f2f9bfc512956a" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getDF</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a9741a8d0540ba4c27cb667590d246197" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getDT</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a10743fe9c116ee624387c0473815b800" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getFuncEntryChiSet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a15272a4ed019d1c323d1826c1bedb70f" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getFunEntryChiNum</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a67175188232e08f5c5374f92ff61810f" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getFunRetMuNum</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1afd4787df4466c24948d8384e3a756198" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getFunToEntryChiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a44cbdb1231c2709c24d19ad2bae2475a" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getFunToRetMuSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1aafc83f7f22ebf3b3683607440c488bef" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getLoadMuNum</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a70dd35ef458c452330dfebcdde17b84c" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getLoadToMUSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ab2dfdcf6fb50ba6cacad1254350a5b09" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getMRGenerator</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1aea0fc1d2e5407f86e0211d8e253fa24e" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getMUSet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a59392ba4cc987f5fefa4eca0ebe411fe" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getMUSet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a37ba6ead86bce47f97adeff1e8cdb564" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getPAG</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a964f3fe39ece9a7b8b2033428b75a274" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getPHISet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ad40617a1907b9a6b8cc24888ce54a0ac" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getPTA</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1af8c38a7ff8da4206f19c038024606d93" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getReturnMuSet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1aa8c45b455e6fc60cab955534c3e50bfa" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getStoreChiNum</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a97166aa7102816a16734d7e2f1c130b0" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getStoreToChiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ad550a453d5b2daa6c72e7752f6b5ea79" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>getTopStackVer</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1abfb338ce36ad46a9654d50dd6e2b07f1" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>hasCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a51b8381b80b23590e638489c2a6760a4" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>hasCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1aec75259d035e3b5589e6fcbbcdfe4b2c" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>hasFuncEntryChi</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1af5e356e82c3f93b65bd89908e0f465dc" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>hasMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a480f37f70e9c3ff8ce7750a4d5f6f05b" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>hasMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a552bb17f0435e012b7393fb641c19298" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>hasPHISet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a3400d9a921672b3872656acecc3eac9f" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>hasReturnMu</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1acc6f72d96cf29e36093ba08ea86b8983" prot="protected" virt="virtual"><scope>SVF::MemSSA</scope><name>insertPHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a5cf94edea3a5c35b3c1d9c6ae4b5f9d6" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>load2MuSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a4717016109fd3bc80f3095d11afff5b1" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>LOADMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ac5a9b2218c946ec17b478a95ab60ec6b" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>LoadToMUSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a57e68097212e88568eea829fb998fe0c" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MDEF</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a8d0c1a00d7db194da66c685d79e73de5" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MemRegToBBsMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ae1aca020147c270deca2a1241e3847d0" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MemRegToCounterMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1aa9dbaf51f0498f3bd878827744208899" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MemRegToVerStackMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a6bd57451370f5f4c92ce212be4cddd15" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MemSSA</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a22e2dd0fc78877bdedd207a40540a634" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>mr2CounterMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ae4c7b17d8da8278dca362af79f9f268d" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>mr2VerStackMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a213ebe634bbdbe33460ccd941c1dc6a5" prot="protected" virt="non-virtual"><scope>SVF::MemSSA</scope><name>mrGen</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a37b84780f57cbee50cf957cfbab195c1" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MRSet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a7c3fda6f082231350524c2d7c16f067e" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MRVector</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a2b4f3b19b32ac61dd1932faa82b93d8b" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a81bba824495a882b49e687683954b112" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>MUSet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a381a35d48ce2f8e348ddbbb9ce526ca8" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>newSSAName</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ac04de5e349ced05d7289b8ee55c86e34" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>PAGEdgeList</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a89c40c8fad70f3aead6531261e5a3cc3" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>performStat</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a8e948ea7778158107657fdd8195530e1" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>PHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a8a5d3597f3dba9744e170cc8c32bf25f" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>PHISet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a468e1481926df6865678b7232bb79bf3" prot="protected" virt="non-virtual"><scope>SVF::MemSSA</scope><name>pta</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1add1d4ff17d0860906d2f5f7172176121" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>reg2BBMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a6066364112e665c33cbf2ec50ae1e3a8" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>RenameChiSet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a2527b76b92dffa8f8513ebfdcc8d8133" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>RenameMuSet</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a0ed34f7a27db045c624c5db61d53132b" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>RenamePhiOps</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a630be375832b1477989af85dce6760f3" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>RenamePhiRes</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a953a56a65ee36fd1c78b29179cd3f33a" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>RETMU</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a11e1e9a74a6764131fc8aae27d8bde5e" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>setCurrentDFDT</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a16114eb55775f6ee812c1648dcaede0c" prot="protected" virt="virtual"><scope>SVF::MemSSA</scope><name>SSARename</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a271c20725d49dd65b95c062938ffde4c" prot="protected" virt="virtual"><scope>SVF::MemSSA</scope><name>SSARenameBB</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a4fc930040ec54eb60629da18fb6a4d04" prot="protected" virt="non-virtual"><scope>SVF::MemSSA</scope><name>stat</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a73d7465cf166d9ffa9d234d15edb375a" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>store2ChiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a150e9d53ced1c143bba2d1026f739fa4" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>STORECHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a00fc1f85bd92da6f0033a1a385c792ad" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>StoreToChiSetMap</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a4d2418b7df74f23d8fd328f66e29f198" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>timeOfCreateMUCHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a37dca8a7d155de4870358146d219b5e5" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>timeOfGeneratingMemRegions</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a3c7b5fa73fdc7c805ee3673fbe812b44" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>timeOfInsertingPHI</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1a97ccd5e0b9ab6144415e26bdf95cbabd" prot="public" virt="non-virtual"><scope>SVF::MemSSA</scope><name>timeOfSSARenaming</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1acf840b71b67cabe831f01f2d358f27fa" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>usedRegs</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ae64f97a984765a43f05df26b57a43a43" prot="private" virt="non-virtual"><scope>SVF::MemSSA</scope><name>varKills</name></member>
+      <member refid="class_s_v_f_1_1_mem_s_s_a_1ae09603b40c7359c4cd2f644d3efc40cc" prot="public" virt="virtual"><scope>SVF::MemSSA</scope><name>~MemSSA</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

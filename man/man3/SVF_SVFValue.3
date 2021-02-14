@@ -1,0 +1,67 @@
+.TH "SVF::SVFValue" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::SVFValue
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBSVF::SVFBasicBlock\fP, \fBSVF::SVFFunction\fP, \fBSVF::SVFGlobal\fP, and \fBSVF::SVFInstruction\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSVFValKind\fP { \fBSVFVal\fP, \fBSVFFunc\fP, \fBSVFGlob\fP, \fBSVFBB\fP, \fBSVFInst\fP }"
+.br
+.ti -1c
+.RI "typedef s32_t \fBGNodeK\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSVFValue\fP (const std::string &val, SVFValKind k)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "GNodeK \fBgetKind\fP () const"
+.br
+.RI "Get the type of this \fBSVFValue\fP\&. "
+.ti -1c
+.RI "bool \fBoperator()\fP (const \fBSVFValue\fP *lhs, const \fBSVFValue\fP *rhs) const"
+.br
+.RI "Add the hash function for std::set (we also can overload operator< to implement this) "
+.ti -1c
+.RI "bool \fBoperator==\fP (\fBSVFValue\fP *rhs) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (\fBSVFValue\fP *rhs) const"
+.br
+.ti -1c
+.RI "const llvm::StringRef \fBgetName\fP () const"
+.br
+.ti -1c
+.RI "const std::string & \fBgetValue\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBSVFValue\fP *node)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "llvm::raw_ostream & \fBoperator<<\fP (llvm::raw_ostream &o, const \fBSVFValue\fP &node)"
+.br
+.RI "Overloading operator << for dumping \fBICFG\fP node ID\&. "
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.

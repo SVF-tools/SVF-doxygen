@@ -1,0 +1,144 @@
+.TH "SVF::MutablePTData< Key, Datum, Data >" 3 "Sun Feb 14 2021" "SVF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SVF::MutablePTData< Key, Datum, Data > \- \fBPTData\fP implemented using points-to sets which are created once and updated continuously\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MutablePointsToDS\&.h>\fP
+.PP
+Inherits \fBSVF::PTData< Key, Datum, Data >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPTData\fP< Key, Datum, Data > \fBBasePTData\fP"
+.br
+.ti -1c
+.RI "typedef \fBBasePTData::PTDataTy\fP \fBPTDataTy\fP"
+.br
+.ti -1c
+.RI "typedef BasePTData::KeySet \fBKeySet\fP"
+.br
+.ti -1c
+.RI "typedef Map< Key, Data > \fBPtsMap\fP"
+.br
+.ti -1c
+.RI "typedef Map< Datum, KeySet > \fBRevPtsMap\fP"
+.br
+.ti -1c
+.RI "typedef PtsMap::iterator \fBPtsMapIter\fP"
+.br
+.ti -1c
+.RI "typedef PtsMap::const_iterator \fBPtsMapConstIter\fP"
+.br
+.ti -1c
+.RI "typedef Data::iterator \fBiterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMutablePTData\fP (bool reversePT=true, \fBPTDataTy\fP ty=PTDataTy::MutBase)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "virtual const PtsMap & \fBgetPtsMap\fP () const"
+.br
+.RI "Return Points-to map\&. "
+.ti -1c
+.RI "virtual void \fBclear\fP () override"
+.br
+.RI "Clears all points-to sets as if nothing is stored\&. "
+.ti -1c
+.RI "virtual const Data & \fBgetPts\fP (const Key &var) override"
+.br
+.RI "Get points-to set of var\&. "
+.ti -1c
+.RI "virtual const KeySet & \fBgetRevPts\fP (const Datum &datum) override"
+.br
+.RI "Get reverse points-to set of datum\&. "
+.ti -1c
+.RI "virtual bool \fBaddPts\fP (const Key &dstKey, const Datum &element) override"
+.br
+.RI "Adds element to the points-to set associated with var\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstKey, const Key &srcKey) override"
+.br
+.RI "Performs pts(dstVar) = pts(dstVar) U pts(srcVar)\&. "
+.ti -1c
+.RI "virtual bool \fBunionPts\fP (const Key &dstKey, const Data &srcData) override"
+.br
+.RI "Performs pts(dstVar) = pts(dstVar) U srcData\&. "
+.ti -1c
+.RI "virtual void \fBdumpPTData\fP () override"
+.br
+.RI "Dump stored keys and points-to sets\&. "
+.ti -1c
+.RI "virtual void \fBclearPts\fP (const Key &var, const Datum &element) override"
+.br
+.RI "Clears element from the points-to set of var\&. "
+.ti -1c
+.RI "virtual void \fBclearFullPts\fP (const Key &var) override"
+.br
+.RI "Fully clears the points-to set of var\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBMutablePTData\fP< Key, Datum, Data > *)"
+.br
+.ti -1c
+.RI "static bool \fBclassof\fP (const \fBPTData\fP< Key, Datum, Data > *ptd)"
+.br
+.in -1c
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBdumpPts\fP (const PtsMap &ptsSet, \fBraw_ostream\fP &O=SVFUtil::outs()) const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "PtsMap \fBptsMap\fP"
+.br
+.ti -1c
+.RI "RevPtsMap \fBrevPtsMap\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBMutableDFPTData< Key, Datum, Data >\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Key, typename Datum, typename Data>
+.br
+class SVF::MutablePTData< Key, Datum, Data >"
+\fBPTData\fP implemented using points-to sets which are created once and updated continuously\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Key , typename Datum , typename Data > static bool \fBSVF::MutablePTData\fP< Key, Datum, Data >::classof (const \fBMutablePTData\fP< Key, Datum, Data > *)\fC [inline]\fP, \fC [static]\fP"
+Methods to support type inquiry through isa, cast, and dyn_cast: 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SVF from the source code\&.
