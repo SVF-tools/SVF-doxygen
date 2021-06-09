@@ -71,7 +71,7 @@ var searchData=
   ['getblkptr',['getBlkPtr',['../classSVF_1_1PAG.html#a67dc43e25a29ff81f3e12c7b70061261',1,'SVF::PAG']]],
   ['getblockicfgnode',['getBlockICFGNode',['../classSVF_1_1ICFG.html#ab7b0b3088b46ad65451905cc4f567a7b',1,'SVF::ICFG']]],
   ['getbranchcond',['getBranchCond',['../classSVF_1_1PathCondAllocator.html#a4d00c3306b92e59568b54a6a72afdb74',1,'SVF::PathCondAllocator']]],
-  ['getbranchcondtion',['getBranchCondtion',['../classSVF_1_1IntraCFGEdge.html#a6566fce687cd2e6a0cd4be98b0205953',1,'SVF::IntraCFGEdge']]],
+  ['getbranchcondtion',['getBranchCondtion',['../classSVF_1_1IntraCFGEdge.html#a52eb526a6066c4b909e250bd430c14ef',1,'SVF::IntraCFGEdge']]],
   ['getbvpointsto',['getBVPointsTo',['../classSVF_1_1CondPTAImpl.html#a94f3e4d073b8c5bab3c46058ddba3f43',1,'SVF::CondPTAImpl']]],
   ['getbyteoffset',['getByteOffset',['../classSVF_1_1LocationSet.html#a5322dcda48d6980c3f7aafa169fcd77d',1,'SVF::LocationSet']]],
   ['getcachedadpointsto',['getCachedADPointsTo',['../classSVF_1_1DDAVFSolver.html#a2a2b3783074c9f509fc265b97b979704',1,'SVF::DDAVFSolver']]],
