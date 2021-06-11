@@ -27,5 +27,6 @@ var searchData=
   ['outofbudgetdpms',['outOfBudgetDpms',['../classSVF_1_1DDAVFSolver.html#aad57a954473f3099188cf8c8fba87880',1,'SVF::DDAVFSolver']]],
   ['outofbudgetquery',['outOfBudgetQuery',['../classSVF_1_1DDAVFSolver.html#afdecfbacc64cb8d694268aa73ec8a7b6',1,'SVF::DDAVFSolver']]],
   ['outupdatedvarmap',['outUpdatedVarMap',['../classSVF_1_1IncMutableDFPTData.html#aa69b01a0e7ec78cff7f6f41427e535b2',1,'SVF::IncMutableDFPTData']]],
+  ['ovm',['ovm',['../structSVF_1_1VersionedFlowSensitive_1_1VersionCache.html#a6cda550f5fe99fe2407ac9bf73d59319',1,'SVF::VersionedFlowSensitive::VersionCache']]],
   ['owned_5fmodules',['owned_modules',['../classSVF_1_1LLVMModuleSet.html#ae365189769640adb919a23c36978e5e2',1,'SVF::LLVMModuleSet']]]
 ];

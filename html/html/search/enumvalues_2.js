@@ -23,7 +23,6 @@ var searchData=
   ['const_5fstruct_5fobj',['CONST_STRUCT_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830a6443b9fadd2d34e00832b2215a120ebd',1,'SVF::ObjTypeInfo']]],
   ['constantobj',['ConstantObj',['../namespaceSVF.html#afe243912c982fde7d6beb4d046f9d42ba63aceec1f561583962d854e7606810e5',1,'SVF']]],
   ['constructor',['CONSTRUCTOR',['../classSVF_1_1CHGraph.html#a2a1da7f262a2f11653fb583154a93a22a331376f6d22d2346039db7a9c9a311c2',1,'SVF::CHGraph']]],
-  ['consume',['CONSUME',['../classSVF_1_1VersionedFlowSensitive.html#a9d5fd2c683484053f5e7c0ab94cb766ba8b7299eff5f95e29385c0137268042e4',1,'SVF::VersionedFlowSensitive']]],
   ['context_5fleak',['CONTEXT_LEAK',['../classSVF_1_1LeakChecker.html#a42f54433e5ca60928f3c329ab545842da1524077f4425b7e2d6cc32917a02c356',1,'SVF::LeakChecker']]],
   ['copy',['Copy',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375a29b0aa3353f866ef1655ab6d4716feb9',1,'SVF::ConstraintEdge::Copy()'],['../classSVF_1_1ConstraintNode.html#a6e59b815d784bc1a9437290ff0e1e28ca4b202c80793ae965686b9d275a5c586a',1,'SVF::ConstraintNode::Copy()'],['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6af447071283803d3aee763fe20783f4a4',1,'SVF::PAGEdge::Copy()'],['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75af589a053fdb7efc728b68a324fc58b2b',1,'SVF::VFGNode::Copy()']]],
   ['cpp_5feft_5fa0r_5fa1',['CPP_EFT_A0R_A1',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094ae3e90095a170aa15d9b6c305469e32af',1,'SVF::ExtAPI']]],

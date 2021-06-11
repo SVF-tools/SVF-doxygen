@@ -10,6 +10,7 @@ var searchData=
   ['vastartinst',['VAStartInst',['../namespaceSVF.html#ad92e392a50e7c6c1f635fe2dcebd1adc',1,'SVF']]],
   ['vectortype',['VectorType',['../namespaceSVF.html#a1eaed46fa67cf1a51e438c5f8f523418',1,'SVF']]],
   ['version',['Version',['../namespaceSVF.html#a9ec7a8dc63411ee3724a25a59191be0c',1,'SVF']]],
+  ['versioncache',['VersionCache',['../classSVF_1_1VersionedFlowSensitive.html#a8509e73c41aa3369c0d05fa38c846960',1,'SVF::VersionedFlowSensitive']]],
   ['versionedptdataty',['VersionedPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#ac5b377ba5f7b57857a23386803e69a3a',1,'SVF::BVDataPTAImpl']]],
   ['versionedvar',['VersionedVar',['../namespaceSVF.html#a32489632f53dce062ca2e8bff42c65cf',1,'SVF']]],
   ['versionreliancemap',['VersionRelianceMap',['../classSVF_1_1VersionedFlowSensitive.html#aab24817adb8dca1b918f4d23f4821186',1,'SVF::VersionedFlowSensitive']]],

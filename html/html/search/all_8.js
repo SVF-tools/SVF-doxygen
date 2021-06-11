@@ -146,7 +146,6 @@ var searchData=
   ['hasvalue',['hasValue',['../classSVF_1_1PAGNode.html#a071f592f2b811c136db5e05a6169aa99',1,'SVF::PAGNode']]],
   ['hasvaluenode',['hasValueNode',['../classSVF_1_1PAG.html#ae3cdf8c2139ba043595b420624f25427',1,'SVF::PAG']]],
   ['hasvarsfortype',['hasVarsForType',['../classSVF_1_1TypeSystem.html#a5006938c789d97d2d1c4de3fa7a4b9a8',1,'SVF::TypeSystem']]],
-  ['hasversion',['hasVersion',['../classSVF_1_1VersionedFlowSensitive.html#a4388dad20b20accb2edbdff32405f7e6',1,'SVF::VersionedFlowSensitive']]],
   ['hasvfedge',['hasVFEdge',['../classSVF_1_1VFPathCond.html#a64edbab728287b8a263ea25670671724',1,'SVF::VFPathCond']]],
   ['hasvfgnode',['hasVFGNode',['../classSVF_1_1VFG.html#a30eb9d717ad5bc8a9109a7bdef38f4a1',1,'SVF::VFG']]],
   ['hasvfgnodes',['hasVFGNodes',['../classSVF_1_1VFG.html#a76af43e28630eb56a1aa5971f516d43d',1,'SVF::VFG']]],
