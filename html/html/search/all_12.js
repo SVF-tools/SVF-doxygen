@@ -158,7 +158,7 @@ var searchData=
   ['returnnode',['returnNode',['../classSVF_1_1ExternalPAG.html#a72d638670931f9984cea132f38cdce5a',1,'SVF::ExternalPAG']]],
   ['returnsymmap',['returnSymMap',['../classSVF_1_1SymbolTableInfo.html#ae6f8a4dbe09ff4756983ffdbed6d0681',1,'SVF::SymbolTableInfo']]],
   ['rev',['rev',['../classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219',1,'SVF::PTData']]],
-  ['revptsmap',['RevPtsMap',['../classSVF_1_1MutablePTData.html#a6d491581d17876625d0265cd26acd8e1',1,'SVF::MutablePTData::RevPtsMap()'],['../classSVF_1_1MutablePTData.html#ad8c9fc1b290372ed9c68e54687724b64',1,'SVF::MutablePTData::revPtsMap()']]],
+  ['revptsmap',['revPtsMap',['../classSVF_1_1MutablePTData.html#ad8c9fc1b290372ed9c68e54687724b64',1,'SVF::MutablePTData::revPtsMap()'],['../classSVF_1_1MutablePTData.html#a6d491581d17876625d0265cd26acd8e1',1,'SVF::MutablePTData::RevPtsMap()']]],
   ['rfinept',['RFINEPT',['../dda_8cpp.html#a3abc2ce6737d192a5c3f967734fe8389',1,'dda.cpp']]],
   ['rid',['rid',['../classSVF_1_1MemRegion.html#aeb8ba1e0c907aeb3de84d8bd899c98b4',1,'SVF::MemRegion']]],
   ['rlimit_5fdata_5fdefault',['RLIMIT_DATA_DEFAULT',['../datalimit_8c.html#a078d50c5bc23076e0d2af8d96156aeae',1,'datalimit.c']]],

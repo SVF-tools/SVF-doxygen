@@ -54,7 +54,7 @@ var searchData=
   ['loadpe',['LoadPE',['../classSVF_1_1LoadPE.html',1,'SVF::LoadPE'],['../classSVF_1_1LoadPE.html#a1d0bc42c2bb9d19e2427d17f1627f9eb',1,'SVF::LoadPE::LoadPE()'],['../classSVF_1_1LoadPE.html#ade066a690dbf51edbe6b9585e02ddd42',1,'SVF::LoadPE::LoadPE(const LoadPE &amp;)'],['../classSVF_1_1LoadPE.html#ad0678fd591a21f67f613f42365e7bfa8',1,'SVF::LoadPE::LoadPE(PAGNode *s, PAGNode *d)']]],
   ['loadset',['LoadSet',['../classSVF_1_1MTA.html#a80356495b6c45bac59dc15fd7a99730b',1,'SVF::MTA::LoadSet()'],['../classSVF_1_1MTAAnnotator.html#a469851829bf1105fe8faac44b4abbfdd',1,'SVF::MTAAnnotator::loadset()']]],
   ['loadsrcnodes',['loadSrcNodes',['../classSVF_1_1AliasDDAClient.html#a246448efd1ff5da683a6ffe9f759e282',1,'SVF::AliasDDAClient']]],
-  ['loadstomrsmap',['loadsToMRsMap',['../classSVF_1_1MRGenerator.html#a0d8229b1f0b8428708e923d19096e4ba',1,'SVF::MRGenerator::loadsToMRsMap()'],['../classSVF_1_1MRGenerator.html#a72f55ad36f4ce46c5eee4bf0ce736cee',1,'SVF::MRGenerator::LoadsToMRsMap()']]],
+  ['loadstomrsmap',['LoadsToMRsMap',['../classSVF_1_1MRGenerator.html#a72f55ad36f4ce46c5eee4bf0ce736cee',1,'SVF::MRGenerator::LoadsToMRsMap()'],['../classSVF_1_1MRGenerator.html#a0d8229b1f0b8428708e923d19096e4ba',1,'SVF::MRGenerator::loadsToMRsMap()']]],
   ['loadstopointstomap',['loadsToPointsToMap',['../classSVF_1_1MRGenerator.html#af47e15d6b8c15d547a718f3577513975',1,'SVF::MRGenerator::loadsToPointsToMap()'],['../classSVF_1_1MRGenerator.html#af500450901135fd31ceb2ab497ca1086',1,'SVF::MRGenerator::LoadsToPointsToMap()']]],
   ['loadsvfgnode',['LoadSVFGNode',['../namespaceSVF.html#a3ce49be3724e1e8423ccdfa726fbf6c8',1,'SVF']]],
   ['loadtime',['loadTime',['../classSVF_1_1FlowSensitive.html#aab4f70210eb1e6447a24697d3b459067',1,'SVF::FlowSensitive']]],
