@@ -37,7 +37,7 @@ var searchData=
   ['returnnode',['returnNode',['../classSVF_1_1ExternalPAG.html#a72d638670931f9984cea132f38cdce5a',1,'SVF::ExternalPAG']]],
   ['returnsymmap',['returnSymMap',['../classSVF_1_1SymbolTableInfo.html#ae6f8a4dbe09ff4756983ffdbed6d0681',1,'SVF::SymbolTableInfo']]],
   ['rev',['rev',['../classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219',1,'SVF::PTData']]],
-  ['revptsmap',['revPtsMap',['../classSVF_1_1MutablePTData.html#ad8c9fc1b290372ed9c68e54687724b64',1,'SVF::MutablePTData']]],
+  ['revptsmap',['revPtsMap',['../classSVF_1_1MutablePTData.html#ad8c9fc1b290372ed9c68e54687724b64',1,'SVF::MutablePTData::revPtsMap()'],['../classSVF_1_1PersistentPTData.html#a7b43ad5045ebdaa86f2587ea3f2f9563',1,'SVF::PersistentPTData::revPtsMap()']]],
   ['rid',['rid',['../classSVF_1_1MemRegion.html#aeb8ba1e0c907aeb3de84d8bd899c98b4',1,'SVF::MemRegion']]],
   ['root',['root',['../classSVF_1_1ProgSlice.html#ada13c2389d43973ff7db18b7fca90087',1,'SVF::ProgSlice']]],
   ['rthdtochildren',['rthdToChildren',['../classMTAResultValidator.html#adcdb134b8f322f1682e99f34868279f4',1,'MTAResultValidator']]],

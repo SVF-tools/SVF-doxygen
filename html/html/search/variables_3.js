@@ -64,6 +64,7 @@ var searchData=
   ['cnext',['cnext',['../structDdQueueItem.html#a5500eae904c7432f4e08452c93c501fa',1,'DdQueueItem']]],
   ['collapsetime',['CollapseTime',['../classSVF_1_1AndersenStat.html#a3f5739454b1f4e03b4388a4ba5730e15',1,'SVF::AndersenStat']]],
   ['compare',['compare',['../structst__table.html#a7c3c545f36a953ff2d8668c394f4fcb5',1,'st_table']]],
+  ['complementcache',['complementCache',['../classSVF_1_1PersistentPointsToCache.html#adef498f8a0d4c75023382e6312a85a58',1,'SVF::PersistentPointsToCache']]],
   ['computed',['computed',['../cuddGenetic_8c.html#a40cfa3fddea607393205b428c33f032a',1,'cuddGenetic.c']]],
   ['concretecxt',['concreteCxt',['../classSVF_1_1ContextCond.html#a453722fc2b9b4ae4be0dfc1f020390eb',1,'SVF::ContextCond']]],
   ['cond',['cond',['../classSVF_1_1MSSAMU.html#a8e828af79da08528166b1f53165bc5b2',1,'SVF::MSSAMU::cond()'],['../classSVF_1_1MSSACHI.html#addeee3fb0c5e6b1c68c30da111c26759',1,'SVF::MSSACHI::cond()'],['../classSVF_1_1MSSAPHI.html#a348e69bf48ee7a959cd0bb117ba1dc9f',1,'SVF::MSSAPHI::cond()']]],

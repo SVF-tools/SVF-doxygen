@@ -1,7 +1,6 @@
 var searchData=
 [
   ['in',['IN',['../classSVF_1_1FlowSensitiveStat.html#ab11996ab5606f51c977b9b1385c13d71ad0b57a5d90c72b67337a68c04ae34739',1,'SVF::FlowSensitiveStat']]],
-  ['incmutdataflow',['IncMutDataFlow',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a4a6468ad7e8c6877a0294f394b6592b0',1,'SVF::PTData']]],
   ['inheritance',['INHERITANCE',['../classSVF_1_1CHEdge.html#a26280c3b724551036f7e3ba2b5922676a78df5157ac61c49a724af5aa03d36d0c',1,'SVF::CHEdge::INHERITANCE()'],['../classSVF_1_1DCHEdge.html#afb5545209188e5f62affeee5946a2614a9c05805c60fe04033bd9815968059e90',1,'SVF::DCHEdge::INHERITANCE()']]],
   ['instance',['INSTANCE',['../classSVF_1_1DCHEdge.html#afb5545209188e5f62affeee5946a2614a3e807b4caeb170c5cd1e855ac1a92d77',1,'SVF::DCHEdge']]],
   ['instantce',['INSTANTCE',['../classSVF_1_1CHEdge.html#a26280c3b724551036f7e3ba2b5922676a8721eaefd547d6ba5229463d644815f4',1,'SVF::CHEdge']]],

@@ -78,8 +78,9 @@ Inheritance diagram for SVF::VersionedPTData&lt; Key, KeySet, Data, DataSet, Ver
  <div class="center">
   <img src="classSVF_1_1VersionedPTData.png" usemap="#SVF::VersionedPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_2C_20VersionedKey_2C_20VersionedKeySet_20_3E_map" alt=""/>
   <map id="SVF::VersionedPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_2C_20VersionedKey_2C_20VersionedKeySet_20_3E_map" name="SVF::VersionedPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_2C_20VersionedKey_2C_20VersionedKeySet_20_3E_map">
-<area href="classSVF_1_1PTData.html" alt="SVF::PTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,0,566,24"/>
-<area href="classSVF_1_1MutableVersionedPTData.html" alt="SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;" shape="rect" coords="0,112,566,136"/>
+<area href="classSVF_1_1PTData.html" alt="SVF::PTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="293,0,869,24"/>
+<area href="classSVF_1_1MutableVersionedPTData.html" alt="SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;" shape="rect" coords="0,112,576,136"/>
+<area href="classSVF_1_1PersistentVersionedPTData.html" alt="SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;" shape="rect" coords="586,112,1162,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -98,10 +99,16 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848acb817cbf655c365c02af3675588f06cc">DataFlow</a>, 
 <a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62">MutDataFlow</a>, 
-<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a4a6468ad7e8c6877a0294f394b6592b0">IncMutDataFlow</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c">MutIncDataFlow</a>, 
 <a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a33bb78ff686c2cd774e127ce77f9cb67">Versioned</a>, 
 <br />
-&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5">MutVersioned</a>
+&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5">MutVersioned</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a7873d1da786c9ec286266e58504f13b5">PersBase</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848ada752eff76493c0121473ac4c18c9b03">PersDiff</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848af7d68d3c87acd1e3169c09fbf855fd1f">PersDataFlow</a>, 
+<br />
+&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a3f0b959f73825d56c2aebcb699f3a08a">PersIncDataFlow</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a15e53fc2443dac125c703ccd7eef1a03">PersVersioned</a>
 <br />
  }<tr class="memdesc:a74ce29609c51f2be34a0b5b7650a9848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of a points-to data structures.  <a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848">More...</a><br /></td></tr>
 </td></tr>
@@ -190,7 +197,7 @@ class SVF::VersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, Version
 
 <p><a class="el" href="classSVF_1_1PTData.html">PTData</a> with normal keys and versioned keys. Replicates the <a class="el" href="classSVF_1_1PTData.html">PTData</a> interface for versioned keys too. Intended to be used for versioned flow-sensitive PTA&ndash;hence the name&ndash;but can be used anywhere where there are two types of keys at play. </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00217">217</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00226">226</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a9833b47df24ed821a55d5ce9a3917f1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9833b47df24ed821a55d5ce9a3917f1f">&#9670;&nbsp;</a></span>BasePTData</h2>
@@ -206,7 +213,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00220">220</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00229">229</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +231,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00221">221</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00230">230</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
@@ -265,8 +272,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00223">223</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;: <a class="code" href="classSVF_1_1VersionedPTData.html#a9833b47df24ed821a55d5ce9a3917f1f">BasePTData</a>(reversePT, ty) { }</div><div class="ttc" id="classSVF_1_1VersionedPTData_html_a9833b47df24ed821a55d5ce9a3917f1f"><div class="ttname"><a href="classSVF_1_1VersionedPTData.html#a9833b47df24ed821a55d5ce9a3917f1f">SVF::VersionedPTData::BasePTData</a></div><div class="ttdeci">PTData&lt; Key, KeySet, Data, DataSet &gt; BasePTData</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00220">AbstractPointsToDS.h:220</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00232">232</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;: <a class="code" href="classSVF_1_1VersionedPTData.html#a9833b47df24ed821a55d5ce9a3917f1f">BasePTData</a>(reversePT, ty) { }</div><div class="ttc" id="classSVF_1_1VersionedPTData_html_a9833b47df24ed821a55d5ce9a3917f1f"><div class="ttname"><a href="classSVF_1_1VersionedPTData.html#a9833b47df24ed821a55d5ce9a3917f1f">SVF::VersionedPTData::BasePTData</a></div><div class="ttdeci">PTData&lt; Key, KeySet, Data, DataSet &gt; BasePTData</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00229">AbstractPointsToDS.h:229</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -295,8 +302,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00225">225</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{ }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00234">234</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{ }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -336,7 +343,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#af39232f64ff0ede20161c7f265da6cf5">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#af39232f64ff0ede20161c7f265da6cf5">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#ae4877cf4db5b1da5e7d05fe65ae8ed32">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>
@@ -367,8 +374,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </div><div class="memdoc">
 <p>Methods to support type inquiry through isa, cast, and dyn_cast: </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00242">242</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    {</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00251">251</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    {</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a69ceac8acdf820486a45fc4444f78d04"></a>
@@ -397,8 +404,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00247">247</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    {</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">return</span> ptd-&gt;getPTDTY() == PTDataTy::Versioned || ptd-&gt;getPTDTY() == PTDataTy::MutVersioned;</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00256">256</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    {</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">return</span> ptd-&gt;getPTDTY() == PTDataTy::Versioned</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;               || ptd-&gt;getPTDTY() == PTDataTy::MutVersioned</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;               || ptd-&gt;getPTDTY() == PTDataTy::PersVersioned;</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a4bfd083fae6ff689945ed34632e208e9"></a>
@@ -427,7 +434,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aaf3df7501f84233f6a687ef9f2f0ae90">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aaf3df7501f84233f6a687ef9f2f0ae90">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a78f2b0ee440ed5b358928ee775e95564">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>
@@ -467,7 +474,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a21e823484199946541b8b79d736b2601">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a21e823484199946541b8b79d736b2601">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#afe724603022a8fed7469f9ecd633febc">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>
@@ -497,7 +504,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#afcc34f6cedca6a8f151b1a7251832818">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#afcc34f6cedca6a8f151b1a7251832818">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a9b81d20e54d08e36edbff43549b1e820">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>
@@ -527,7 +534,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#afaef5c61bee74cbd649c787cfdef2a03">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#afaef5c61bee74cbd649c787cfdef2a03">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a2adcebb6cf561eb00e3e05d486c86a9c">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>
@@ -567,7 +574,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a56e752a83620f482a4b1e2f8d395dd75">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a56e752a83620f482a4b1e2f8d395dd75">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#ab0299bcfee10af8b6ea59444c4d0299d">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>
@@ -607,7 +614,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a5647b7fad5c14f7ec57d3de3480758eb">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a5647b7fad5c14f7ec57d3de3480758eb">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a8ba8e547bf572cd7403cb4fe52c19908">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>
@@ -647,7 +654,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a9967c530d3955a0a726b7a00653ef0ba">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a9967c530d3955a0a726b7a00653ef0ba">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a83b7e86c11b03889d70b4dff46138987">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>
@@ -687,7 +694,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet , 
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aa9d24a4defb025c075e4ec5bc7f3b618">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aa9d24a4defb025c075e4ec5bc7f3b618">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a74f9e76f7596e98c196bd3d4cdb28ed6">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>.</p>
 
 </div>
 </div>

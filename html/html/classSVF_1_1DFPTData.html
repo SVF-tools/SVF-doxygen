@@ -78,9 +78,11 @@ Inheritance diagram for SVF::DFPTData&lt; Key, KeySet, Data, DataSet &gt;:</div>
  <div class="center">
   <img src="classSVF_1_1DFPTData.png" usemap="#SVF::DFPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_20_3E_map" alt=""/>
   <map id="SVF::DFPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_20_3E_map" name="SVF::DFPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_20_3E_map">
-<area href="classSVF_1_1PTData.html" alt="SVF::PTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,0,346,24"/>
-<area href="classSVF_1_1MutableDFPTData.html" alt="SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,112,346,136"/>
-<area href="classSVF_1_1IncMutableDFPTData.html" title="Incremental version of the mutable data-flow points-to data structure. " alt="SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,168,346,192"/>
+<area href="classSVF_1_1PTData.html" alt="SVF::PTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="183,0,539,24"/>
+<area href="classSVF_1_1MutableDFPTData.html" alt="SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,112,356,136"/>
+<area href="classSVF_1_1PersistentDFPTData.html" title="DFPTData backed by a PersistentPointsToCache. " alt="SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="366,112,722,136"/>
+<area href="classSVF_1_1MutableIncDFPTData.html" title="Incremental version of the mutable data-flow points-to data structure. " alt="SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,168,356,192"/>
+<area href="classSVF_1_1PersistentIncDFPTData.html" title="Incremental version of the persistent data-flow points-to data structure. " alt="SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="366,168,722,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -101,10 +103,16 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848acb817cbf655c365c02af3675588f06cc">DataFlow</a>, 
 <a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62">MutDataFlow</a>, 
-<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a4a6468ad7e8c6877a0294f394b6592b0">IncMutDataFlow</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c">MutIncDataFlow</a>, 
 <a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a33bb78ff686c2cd774e127ce77f9cb67">Versioned</a>, 
 <br />
-&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5">MutVersioned</a>
+&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5">MutVersioned</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a7873d1da786c9ec286266e58504f13b5">PersBase</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848ada752eff76493c0121473ac4c18c9b03">PersDiff</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848af7d68d3c87acd1e3169c09fbf855fd1f">PersDataFlow</a>, 
+<br />
+&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a3f0b959f73825d56c2aebcb699f3a08a">PersIncDataFlow</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a15e53fc2443dac125c703ccd7eef1a03">PersVersioned</a>
 <br />
  }<tr class="memdesc:a74ce29609c51f2be34a0b5b7650a9848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of a points-to data structures.  <a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848">More...</a><br /></td></tr>
 </td></tr>
@@ -216,7 +224,7 @@ class SVF::DFPTData&lt; Key, KeySet, Data, DataSet &gt;</h3>
 
 <p>Data-flow points-to data structure for flow-sensitive analysis as defined by Hardekopf and Lin (CGO 11). Points-to information is maintained at each program point (statement). For address-taken variables, every program point has two sets: IN and OUT points-to sets. For top-level variables, points-to sets are maintained flow-insensitively via getPts(var). </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00144">144</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00151">151</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a6d5193ea9e77b3945cb0716978dc75be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d5193ea9e77b3945cb0716978dc75be">&#9670;&nbsp;</a></span>BasePTData</h2>
@@ -232,7 +240,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00147">147</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00154">154</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
@@ -250,7 +258,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00150">150</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00157">157</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
@@ -268,7 +276,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00148">148</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00155">155</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
@@ -311,8 +319,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00153">153</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;: <a class="code" href="classSVF_1_1DFPTData.html#a6d5193ea9e77b3945cb0716978dc75be">BasePTData</a>(reversePT, ty) { }</div><div class="ttc" id="classSVF_1_1DFPTData_html_a6d5193ea9e77b3945cb0716978dc75be"><div class="ttname"><a href="classSVF_1_1DFPTData.html#a6d5193ea9e77b3945cb0716978dc75be">SVF::DFPTData::BasePTData</a></div><div class="ttdeci">PTData&lt; Key, KeySet, Data, DataSet &gt; BasePTData</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00147">AbstractPointsToDS.h:147</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00160">160</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;: <a class="code" href="classSVF_1_1DFPTData.html#a6d5193ea9e77b3945cb0716978dc75be">BasePTData</a>(reversePT, ty) { }</div><div class="ttc" id="classSVF_1_1DFPTData_html_a6d5193ea9e77b3945cb0716978dc75be"><div class="ttname"><a href="classSVF_1_1DFPTData.html#a6d5193ea9e77b3945cb0716978dc75be">SVF::DFPTData::BasePTData</a></div><div class="ttdeci">PTData&lt; Key, KeySet, Data, DataSet &gt; BasePTData</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00154">AbstractPointsToDS.h:154</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,8 +349,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00155">155</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{ }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00162">162</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{ }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -373,8 +381,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </div><div class="memdoc">
 <p>Methods to support type inquiry through isa, cast, and dyn_cast: </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00199">199</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00206">206</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    {</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="abea003e1262f3e03967939e4028694a4"></a>
@@ -403,10 +411,12 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00204">204</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> ptd-&gt;getPTDTY() == <a class="code" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848acb817cbf655c365c02af3675588f06cc">BasePTData::DataFlow</a></div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;               || ptd-&gt;getPTDTY() == <a class="code" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62">BasePTData::MutDataFlow</a></div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;               || ptd-&gt;getPTDTY() == <a class="code" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a4a6468ad7e8c6877a0294f394b6592b0">BasePTData::IncMutDataFlow</a>;</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div><div class="ttc" id="classSVF_1_1PTData_html_a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62"><div class="ttname"><a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62">SVF::PTData::MutDataFlow</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00051">AbstractPointsToDS.h:51</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00211">211</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">return</span> ptd-&gt;getPTDTY() == <a class="code" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848acb817cbf655c365c02af3675588f06cc">BasePTData::DataFlow</a></div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;               || ptd-&gt;getPTDTY() == <a class="code" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62">BasePTData::MutDataFlow</a></div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;               || ptd-&gt;getPTDTY() == <a class="code" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c">BasePTData::MutIncDataFlow</a></div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;               || ptd-&gt;getPTDTY() == <a class="code" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848af7d68d3c87acd1e3169c09fbf855fd1f">BasePTData::PersDataFlow</a></div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;               || ptd-&gt;getPTDTY() == <a class="code" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a3f0b959f73825d56c2aebcb699f3a08a">BasePTData::PersIncDataFlow</a>;</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div><div class="ttc" id="classSVF_1_1PTData_html_a74ce29609c51f2be34a0b5b7650a9848a3f0b959f73825d56c2aebcb699f3a08a"><div class="ttname"><a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a3f0b959f73825d56c2aebcb699f3a08a">SVF::PTData::PersIncDataFlow</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00058">AbstractPointsToDS.h:58</a></div></div>
+<div class="ttc" id="classSVF_1_1PTData_html_a74ce29609c51f2be34a0b5b7650a9848af7d68d3c87acd1e3169c09fbf855fd1f"><div class="ttname"><a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848af7d68d3c87acd1e3169c09fbf855fd1f">SVF::PTData::PersDataFlow</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00057">AbstractPointsToDS.h:57</a></div></div>
+<div class="ttc" id="classSVF_1_1PTData_html_a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62"><div class="ttname"><a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62">SVF::PTData::MutDataFlow</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00051">AbstractPointsToDS.h:51</a></div></div>
 <div class="ttc" id="classSVF_1_1PTData_html_a74ce29609c51f2be34a0b5b7650a9848acb817cbf655c365c02af3675588f06cc"><div class="ttname"><a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848acb817cbf655c365c02af3675588f06cc">SVF::PTData::DataFlow</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00050">AbstractPointsToDS.h:50</a></div></div>
-<div class="ttc" id="classSVF_1_1PTData_html_a74ce29609c51f2be34a0b5b7650a9848a4a6468ad7e8c6877a0294f394b6592b0"><div class="ttname"><a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a4a6468ad7e8c6877a0294f394b6592b0">SVF::PTData::IncMutDataFlow</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00052">AbstractPointsToDS.h:52</a></div></div>
+<div class="ttc" id="classSVF_1_1PTData_html_a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c"><div class="ttname"><a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c">SVF::PTData::MutIncDataFlow</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00052">AbstractPointsToDS.h:52</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -436,7 +446,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#a62b3967ee1c3768bc618cf631b6050d6">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a43a45997f6147245fe8a552b42f3f632">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#ac9ff175dbdf75232a104e2aa34f87d43">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a815a7c54c1533f16c3efd0796044afc2">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a43a45997f6147245fe8a552b42f3f632">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#ad7a4b3c68c4b8b70268ee7c919c624d5">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -476,7 +486,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDFPTData.html#a44aad57ac0de594e404a6c4ceff0bd53">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1PersistentDFPTData.html#a26ca6565c4766e3d6ea6bf435ae910a3">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a44aad57ac0de594e404a6c4ceff0bd53">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -516,7 +526,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDFPTData.html#ab6b0496d0c34642ddd2707142334f4a2">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1PersistentDFPTData.html#aea89a705aed7e02ddbf73f861506536e">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#ab6b0496d0c34642ddd2707142334f4a2">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -547,7 +557,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </div><div class="memdoc">
 <p>Determine whether the DF IN/OUT sets have points-to sets. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDFPTData.html#a9a9641305c9d670e09f02b71a3e384a9">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1PersistentDFPTData.html#a6e7d072fd2d420870bb959b68c200137">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a9a9641305c9d670e09f02b71a3e384a9">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -587,7 +597,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDFPTData.html#aa8b85dee2b70031a2f97e1a36c9b25de">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1PersistentDFPTData.html#ab490fd81739f2bd6dddabd5ce5beac3b">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#aa8b85dee2b70031a2f97e1a36c9b25de">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -617,7 +627,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDFPTData.html#ac6d487a4af529ecb30366be54b29260a">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1PersistentDFPTData.html#a67c4dec1150bdd8458046696578e5069">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#ac6d487a4af529ecb30366be54b29260a">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -658,7 +668,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </div><div class="memdoc">
 <p>Access points-to set from data-flow IN/OUT set. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDFPTData.html#af6d234ae2b0aa91b510f3a2fba877340">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1PersistentDFPTData.html#ace47d00f778bc4a714fc4f9d0cbd063c">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#af6d234ae2b0aa91b510f3a2fba877340">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -712,7 +722,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Union (IN[dstLoc::dstVar], IN[srcLoc:srcVar]. There is no flag check, unlike the above. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#a521fc039264f855c66e1d8c1dcfedcab">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a23fca889a29399a91dfc916f5fab46ee">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#ad68b23ed56b2c18bf75c23a658523404">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a2259da9defa195350b3f70cd16c3f2ec">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a23fca889a29399a91dfc916f5fab46ee">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#a9e2dcff79d55b92bc84ec2bb42d851ac">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -766,7 +776,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Union (IN[dstLoc::dstVar], OUT[srcLoc:srcVar]. There is no flag check, unlike the above. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#a0a9cc6eadb2b2809615f9d82531fff0c">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a7c7eff549ea0d153e7a72ed5bf79c30e">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#a2dd9dad547c389d5cd488b165dd145eb">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a218ebd39a42b5de8910b98bef9d04f7d">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a7c7eff549ea0d153e7a72ed5bf79c30e">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#a67a72d34b62884dee72e0b48b07a7e9f">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -814,7 +824,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>For each variable var in IN at loc, do updateDFOutFromIn(loc, var, loc, var). </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#a118c82b54af2494f5b72fa5da558fa31">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a51365299a34e3386798e78a076d6e1f5">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#a3f397aaf4f3d6d04ec005c2577652e04">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a6a59e2297b72cc30553db5e45da70f46">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a51365299a34e3386798e78a076d6e1f5">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#ad341c691c11bbdeaa13cfe23919ed070">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -862,7 +872,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Update address-taken variables OUT[dstLoc:dstVar] with points-to of top-level pointers. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#ab238a4b205a0e5e8e7a9e44f39e34ebe">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a0ce585790bba942291bb7c7ffcaa3914">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#aa8fdf0f82d3d94af34d5bc1386ed21f9">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a002e6d234d0ad0c74a0976046e440f71">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a0ce585790bba942291bb7c7ffcaa3914">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#a6761733754abf061e92125988a684fa3">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -916,7 +926,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 <p>Update points-to for IN/OUT set IN[loc:var] represents the points-to of variable var in the IN set of location loc. union(ptsDst, ptsSrc) represents ptsDst = ptsDst U ptsSrc.</p>
 <p>Union (IN[dstLoc:dstVar], IN[srcLoc:srcVar]). </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#ab66539d3bae9d63d9b9d6bebb8a5cce5">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#ac3ebc5afa531118b2b4446d23e3b8c7a">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#a775ef6458314a1febef3f7372f6a2bbc">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a5b015e6801e4320e45e7942f9db82a42">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#ac3ebc5afa531118b2b4446d23e3b8c7a">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#a9b61c0557c6b1460af2328709011b32e">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -970,7 +980,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Union (IN[dstLoc:dstVar], OUT[srcLoc:srcVar]). </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#aeacfa02642afde20dcfd1bac009f5083">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a85c0d93ee01d2c93c255e5a369248d1b">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#ad199b4b84f7aab48ff1510b118e2982f">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a9191992b978b643f2d51633b2e330ec6">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a85c0d93ee01d2c93c255e5a369248d1b">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#abfacbe37d9e0b5f05eabec66c60c2e2b">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1034,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Union (OUT[dstLoc:dstVar], IN[srcLoc:srcVar]). </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#a6724b9a6ae3ddf4bbe8a8c08b2da9148">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#ab3c517be91b4711ace581df075d4647a">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#aa326ac77577a8a4a0ce3e29cc03a3989">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a6a26ddacfd726c7078ae560a6b50ad6b">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#ab3c517be91b4711ace581df075d4647a">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#a81e6d2d313d7f23fcc2a3d0f5344317f">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -1072,7 +1082,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Update points-to set of top-level pointers with IN[srcLoc:srcVar]. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1IncMutableDFPTData.html#a7945a31f163bb8d5d03ba4e472c82cd5">SVF::IncMutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutableDFPTData.html#a21b29c2d3e429017d910025e4ec73fc6">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableIncDFPTData.html#a7778be60515fa3ff247b6d2cec138cfc">SVF::MutableIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#ae4732dd1897883fafa98454b46134bfb">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a21b29c2d3e429017d910025e4ec73fc6">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDFPTData.html#aa9d13ece84d5f519031b4f3cdb429d61">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>

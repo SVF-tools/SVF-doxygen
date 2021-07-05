@@ -3,6 +3,7 @@ var searchData=
   ['neg',['NEG',['../classSVF_1_1BddCondManager.html#a3aa554033b2b7e1719788d04759c0950',1,'SVF::BddCondManager']]],
   ['newcond',['newCond',['../classSVF_1_1PathCondAllocator.html#a3cd08242b82129e6074b2f30a19b5c17',1,'SVF::PathCondAllocator']]],
   ['newmeldversion',['newMeldVersion',['../classSVF_1_1VersionedFlowSensitive.html#a24746dcada35f10cb387c94860930e84',1,'SVF::VersionedFlowSensitive']]],
+  ['newpointstoid',['newPointsToId',['../classSVF_1_1PersistentPointsToCache.html#a52ec4a787a199bb4d7553e8bafa9c127',1,'SVF::PersistentPointsToCache']]],
   ['newssaname',['newSSAName',['../classSVF_1_1MemSSA.html#a381a35d48ce2f8e348ddbbb9ce526ca8',1,'SVF::MemSSA']]],
   ['no_5fstruct_5falloc',['no_struct_alloc',['../classSVF_1_1ExtAPI.html#a235ef40373e36583004eb6d289ce63f9',1,'SVF::ExtAPI']]],
   ['node',['Node',['../classSVF_1_1SCCDetection.html#a6458c27c625add944fcb8a3ef7b536a6',1,'SVF::SCCDetection::Node()'],['../classSVF_1_1WPASolver.html#a5fd488d74e04aa9e66ca4eb42c6dbbf4',1,'SVF::WPASolver::Node()']]],

@@ -93,6 +93,7 @@ var searchData=
   ['mustalias',['mustAlias',['../classSVF_1_1CondPTAImpl.html#a3b5877fec52bbfa7c83bab6c9bc95684',1,'SVF::CondPTAImpl']]],
   ['mutabledfptdata',['MutableDFPTData',['../classSVF_1_1MutableDFPTData.html#aed141fb836cb22e02032ea46e3e5f51b',1,'SVF::MutableDFPTData']]],
   ['mutablediffptdata',['MutableDiffPTData',['../classSVF_1_1MutableDiffPTData.html#ae087d0307844312710c2d4c05535ea86',1,'SVF::MutableDiffPTData']]],
+  ['mutableincdfptdata',['MutableIncDFPTData',['../classSVF_1_1MutableIncDFPTData.html#a9b06421a9043dc61485acf51cfc26a91',1,'SVF::MutableIncDFPTData']]],
   ['mutableptdata',['MutablePTData',['../classSVF_1_1MutablePTData.html#a5086e718e98482a7a0330ed05993feaa',1,'SVF::MutablePTData']]],
   ['mutableversionedptdata',['MutableVersionedPTData',['../classSVF_1_1MutableVersionedPTData.html#ad2f9950ad71a39c400a4835e6e84fcd9',1,'SVF::MutableVersionedPTData']]]
 ];

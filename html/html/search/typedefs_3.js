@@ -1,8 +1,9 @@
 var searchData=
 [
   ['datadeque',['DataDeque',['../classSVF_1_1FIFOWorkList.html#a2907cd4515b2072aae0a88e972e93fc4',1,'SVF::FIFOWorkList']]],
-  ['dataiter',['DataIter',['../classSVF_1_1IncMutableDFPTData.html#a3217fc4af9b33a7e341064b126741883',1,'SVF::IncMutableDFPTData']]],
+  ['dataiter',['DataIter',['../classSVF_1_1MutableIncDFPTData.html#a1fc4dff28f9044234fdfeede6f4b1cb0',1,'SVF::MutableIncDFPTData']]],
   ['datalayout',['DataLayout',['../namespaceSVF.html#a03db82b8a7914367024723dba4d6ca3c',1,'SVF']]],
+  ['dataop',['DataOp',['../classSVF_1_1PersistentPointsToCache.html#a5a0f1b93f29ce62ad13042ab8435c62c',1,'SVF::PersistentPointsToCache']]],
   ['dataset',['DataSet',['../classSVF_1_1List.html#a8f8a9dff1d1213a747f0d7ce8b1802e9',1,'SVF::List::DataSet()'],['../classSVF_1_1FIFOWorkList.html#a4803dc3b7f3ab57261261acb20551579',1,'SVF::FIFOWorkList::DataSet()'],['../classSVF_1_1FILOWorkList.html#abe04c596453280fe15cadde868ded798',1,'SVF::FILOWorkList::DataSet()']]],
   ['datavector',['DataVector',['../classSVF_1_1FILOWorkList.html#a41d3d71633adc6a1282922b4e4929a7f',1,'SVF::FILOWorkList']]],
   ['dchedgesetty',['DCHEdgeSetTy',['../classSVF_1_1DCHEdge.html#a2580878ab964494ee5c7840e16ef84b3',1,'SVF::DCHEdge']]],
@@ -38,6 +39,7 @@ var searchData=
   ['derefedge',['DerefEdge',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#affe7daa608ca18bdd2a3129a05f6b7ae',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::DerefEdge()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#ab514112f993e5f78491ff27767db6356',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::DerefEdge()']]],
   ['derefval',['DerefVal',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#ae1698f3377948d74ac3ecf3e5fecfa92',1,'llvm::GraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;']]],
   ['dfinoutmap',['DFInOutMap',['../classSVF_1_1FlowSensitive.html#af9a2bd5b490f1cc5335ce696173c78dd',1,'SVF::FlowSensitive::DFInOutMap()'],['../classSVF_1_1FlowSensitiveStat.html#a55d45e82ea3d338114e50da877bcfb75',1,'SVF::FlowSensitiveStat::DFInOutMap()']]],
+  ['dfkeytoidmap',['DFKeyToIDMap',['../classSVF_1_1PersistentDFPTData.html#a0d0318fa192eac88a4307112e30e9d90',1,'SVF::PersistentDFPTData']]],
   ['dfptdataty',['DFPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a795ba231e33724a5f9bd6cd536827bc9',1,'SVF::BVDataPTAImpl']]],
   ['dfptsmap',['DFPtsMap',['../classSVF_1_1MutableDFPTData.html#a0c73427f957d310bc85955bec6654352',1,'SVF::MutableDFPTData']]],
   ['dfptsmapconstiter',['DFPtsMapconstIter',['../classSVF_1_1MutableDFPTData.html#adb30678f5bbdea0f196d3b0ab67d2bad',1,'SVF::MutableDFPTData']]],

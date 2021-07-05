@@ -78,8 +78,9 @@ Inheritance diagram for SVF::DiffPTData&lt; Key, KeySet, Data, DataSet &gt;:</di
  <div class="center">
   <img src="classSVF_1_1DiffPTData.png" usemap="#SVF::DiffPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_20_3E_map" alt=""/>
   <map id="SVF::DiffPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_20_3E_map" name="SVF::DiffPTData_3C_20Key_2C_20KeySet_2C_20Data_2C_20DataSet_20_3E_map">
-<area href="classSVF_1_1PTData.html" alt="SVF::PTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,0,332,24"/>
-<area href="classSVF_1_1MutableDiffPTData.html" title="DiffPTData implemented with points-to sets which are updated continuously. " alt="SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,112,332,136"/>
+<area href="classSVF_1_1PTData.html" alt="SVF::PTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="176,0,518,24"/>
+<area href="classSVF_1_1MutableDiffPTData.html" title="DiffPTData implemented with points-to sets which are updated continuously. " alt="SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="0,112,342,136"/>
+<area href="classSVF_1_1PersistentDiffPTData.html" title="DiffPTData implemented with a persistent points-to backing. " alt="SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;" shape="rect" coords="352,112,694,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -98,10 +99,16 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848acb817cbf655c365c02af3675588f06cc">DataFlow</a>, 
 <a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62">MutDataFlow</a>, 
-<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a4a6468ad7e8c6877a0294f394b6592b0">IncMutDataFlow</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c">MutIncDataFlow</a>, 
 <a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a33bb78ff686c2cd774e127ce77f9cb67">Versioned</a>, 
 <br />
-&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5">MutVersioned</a>
+&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5">MutVersioned</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a7873d1da786c9ec286266e58504f13b5">PersBase</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848ada752eff76493c0121473ac4c18c9b03">PersDiff</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848af7d68d3c87acd1e3169c09fbf855fd1f">PersDataFlow</a>, 
+<br />
+&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a3f0b959f73825d56c2aebcb699f3a08a">PersIncDataFlow</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a15e53fc2443dac125c703ccd7eef1a03">PersVersioned</a>
 <br />
  }<tr class="memdesc:a74ce29609c51f2be34a0b5b7650a9848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of a points-to data structures.  <a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848">More...</a><br /></td></tr>
 </td></tr>
@@ -182,7 +189,7 @@ class SVF::DiffPTData&lt; Key, KeySet, Data, DataSet &gt;</h3>
 
 <p>Abstract diff points-to data with cached information. This is an optimisation on top of the base points-to data structure. The points-to information is propagated incrementally only for the different parts. </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00101">101</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00106">106</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae61c0f266f26a22077c1e8409f6ba991"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae61c0f266f26a22077c1e8409f6ba991">&#9670;&nbsp;</a></span>BasePTData</h2>
@@ -198,7 +205,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00104">104</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00109">109</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
@@ -216,7 +223,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00105">105</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00110">110</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
@@ -257,8 +264,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00107">107</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;: <a class="code" href="classSVF_1_1DiffPTData.html#ae61c0f266f26a22077c1e8409f6ba991">BasePTData</a>(reversePT, ty) { }</div><div class="ttc" id="classSVF_1_1DiffPTData_html_ae61c0f266f26a22077c1e8409f6ba991"><div class="ttname"><a href="classSVF_1_1DiffPTData.html#ae61c0f266f26a22077c1e8409f6ba991">SVF::DiffPTData::BasePTData</a></div><div class="ttdeci">PTData&lt; Key, KeySet, Data, DataSet &gt; BasePTData</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00104">AbstractPointsToDS.h:104</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00112">112</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;: <a class="code" href="classSVF_1_1DiffPTData.html#ae61c0f266f26a22077c1e8409f6ba991">BasePTData</a>(reversePT, ty) { }</div><div class="ttc" id="classSVF_1_1DiffPTData_html_ae61c0f266f26a22077c1e8409f6ba991"><div class="ttname"><a href="classSVF_1_1DiffPTData.html#ae61c0f266f26a22077c1e8409f6ba991">SVF::DiffPTData::BasePTData</a></div><div class="ttdeci">PTData&lt; Key, KeySet, Data, DataSet &gt; BasePTData</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00109">AbstractPointsToDS.h:109</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -287,8 +294,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00109">109</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{ }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00114">114</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{ }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -319,8 +326,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </div><div class="memdoc">
 <p>Methods to support type inquiry through isa, cast, and dyn_cast: </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00128">128</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00133">133</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="af182fd3695fee155abac8c2f0c402a17"></a>
@@ -349,8 +356,8 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00132">132</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> ptd-&gt;getPTDTY() == PTDataTy::Diff || ptd-&gt;getPTDTY() == PTDataTy::MutDiff;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00137">137</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    {</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> ptd-&gt;getPTDTY() == PTDataTy::Diff</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;               || ptd-&gt;getPTDTY() == PTDataTy::MutDiff</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;               || ptd-&gt;getPTDTY() == PTDataTy::PersDiff;</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a7784c4a76aa41149975840af8b32c2a9"></a>
@@ -381,7 +388,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Clear propagated points-to set of var. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDiffPTData.html#a3946e3b737d95539cb57b10e53d356fc">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableDiffPTData.html#a3946e3b737d95539cb57b10e53d356fc">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDiffPTData.html#aa00e0bfaf2d46f2aa83a37c7c9514edb">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -425,7 +432,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 <li>update propagated pts: propa = all. </li>
 </ol>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDiffPTData.html#ac97bd53101f306c46ab4349a808f67c9">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableDiffPTData.html#ac97bd53101f306c46ab4349a808f67c9">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDiffPTData.html#ae42379dbabbd66dfd91e305673788ed3">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -457,7 +464,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 
 <p>Get diff points to. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDiffPTData.html#a83dd3047c72cd1cd6ceb044cd1a924e4">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableDiffPTData.html#a83dd3047c72cd1cd6ceb044cd1a924e4">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a76ae2ef87bc32c2f6466e7bc2dfad726">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -498,7 +505,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 </div><div class="memdoc">
 <p>Update dst's propagated points-to set with src's. The final result is the intersection of these two sets. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableDiffPTData.html#a2feb36e64e27e6f0bcc0e108da433278">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableDiffPTData.html#a2feb36e64e27e6f0bcc0e108da433278">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentDiffPTData.html#adb2c450f2c93fbf630d91b8c2697fa06">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>

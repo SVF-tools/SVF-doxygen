@@ -26,7 +26,7 @@ var searchData=
   ['outedges',['OutEdges',['../classSVF_1_1GenericNode.html#a04aa14df71ffa60a54c870842c552889',1,'SVF::GenericNode']]],
   ['outofbudgetdpms',['outOfBudgetDpms',['../classSVF_1_1DDAVFSolver.html#aad57a954473f3099188cf8c8fba87880',1,'SVF::DDAVFSolver']]],
   ['outofbudgetquery',['outOfBudgetQuery',['../classSVF_1_1DDAVFSolver.html#afdecfbacc64cb8d694268aa73ec8a7b6',1,'SVF::DDAVFSolver']]],
-  ['outupdatedvarmap',['outUpdatedVarMap',['../classSVF_1_1IncMutableDFPTData.html#aa69b01a0e7ec78cff7f6f41427e535b2',1,'SVF::IncMutableDFPTData']]],
+  ['outupdatedvarmap',['outUpdatedVarMap',['../classSVF_1_1MutableIncDFPTData.html#af5f7db6c55037a0e117a36982736039e',1,'SVF::MutableIncDFPTData::outUpdatedVarMap()'],['../classSVF_1_1PersistentIncDFPTData.html#a054f8e2a0668387c092b2802e64a4df0',1,'SVF::PersistentIncDFPTData::outUpdatedVarMap()']]],
   ['ovm',['ovm',['../structSVF_1_1VersionedFlowSensitive_1_1VersionCache.html#a6cda550f5fe99fe2407ac9bf73d59319',1,'SVF::VersionedFlowSensitive::VersionCache']]],
   ['owned_5fmodules',['owned_modules',['../classSVF_1_1LLVMModuleSet.html#ae365189769640adb919a23c36978e5e2',1,'SVF::LLVMModuleSet']]]
 ];

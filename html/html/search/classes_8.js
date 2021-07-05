@@ -8,7 +8,6 @@ var searchData=
   ['icfgstat',['ICFGStat',['../classSVF_1_1ICFGStat.html',1,'SVF']]],
   ['ieeedoublestruct',['IeeeDoubleStruct',['../structIeeeDoubleStruct.html',1,'']]],
   ['ieeenanstruct',['IeeeNanStruct',['../structIeeeNanStruct.html',1,'']]],
-  ['incmutabledfptdata',['IncMutableDFPTData',['../classSVF_1_1IncMutableDFPTData.html',1,'SVF']]],
   ['indirectsvfgedge',['IndirectSVFGEdge',['../classSVF_1_1IndirectSVFGEdge.html',1,'SVF']]],
   ['interblocknode',['InterBlockNode',['../classSVF_1_1InterBlockNode.html',1,'SVF']]],
   ['interdisjointmrg',['InterDisjointMRG',['../classSVF_1_1InterDisjointMRG.html',1,'SVF']]],

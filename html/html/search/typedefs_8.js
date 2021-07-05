@@ -11,7 +11,6 @@ var searchData=
   ['idtosymtymapty',['IDToSymTyMapTy',['../classSVF_1_1SymbolTableInfo.html#a9353c7d2c0d6ae7dc495911b1ce24e06',1,'SVF::SymbolTableInfo']]],
   ['ieeedouble',['IeeeDouble',['../epd_8h.html#a393f1276121f029397eef86ec7d4fac5',1,'epd.h']]],
   ['ieeenan',['IeeeNan',['../epd_8h.html#a6bcc381f10c8368cabcd2bb6ccde5985',1,'epd.h']]],
-  ['incmutdfptdataty',['IncMutDFPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a302589e74f21ae04911fca6e36ab35dd',1,'SVF::BVDataPTAImpl']]],
   ['indextoconditionmap',['IndexToConditionMap',['../classSVF_1_1PathCondAllocator.html#a7761a4dd6da8b36b15dcc0b89a9ec6b3',1,'SVF::PathCondAllocator']]],
   ['insertelementinst',['InsertElementInst',['../namespaceSVF.html#a6b857824fb3c39ff6de953651260a326',1,'SVF']]],
   ['insertvalueinst',['InsertValueInst',['../namespaceSVF.html#a485b10fc29e76fdb6f31a56ebbde8f24',1,'SVF']]],

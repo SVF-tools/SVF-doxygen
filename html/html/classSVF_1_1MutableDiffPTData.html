@@ -112,10 +112,16 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848acb817cbf655c365c02af3675588f06cc">DataFlow</a>, 
 <a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62">MutDataFlow</a>, 
-<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a4a6468ad7e8c6877a0294f394b6592b0">IncMutDataFlow</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c">MutIncDataFlow</a>, 
 <a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a33bb78ff686c2cd774e127ce77f9cb67">Versioned</a>, 
 <br />
-&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5">MutVersioned</a>
+&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5">MutVersioned</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a7873d1da786c9ec286266e58504f13b5">PersBase</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848ada752eff76493c0121473ac4c18c9b03">PersDiff</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848af7d68d3c87acd1e3169c09fbf855fd1f">PersDataFlow</a>, 
+<br />
+&#160;&#160;<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a3f0b959f73825d56c2aebcb699f3a08a">PersIncDataFlow</a>, 
+<a class="el" href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a15e53fc2443dac125c703ccd7eef1a03">PersVersioned</a>
 <br />
  }<tr class="memdesc:a74ce29609c51f2be34a0b5b7650a9848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of a points-to data structures.  <a href="classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848">More...</a><br /></td></tr>
 </td></tr>
@@ -917,7 +923,7 @@ template&lt;typename Key , typename KeySet , typename Data , typename DataSet &g
 <p class="definition">Definition at line <a class="el" href="MutablePointsToDS_8h_source.html#l00205">205</a> of file <a class="el" href="MutablePointsToDS_8h_source.html">MutablePointsToDS.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>(this-&gt;<a class="code" href="classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219">rev</a> &amp;&amp; <span class="stringliteral">&quot;MutableDiffPTData::getRevPts: constructed without reverse PT support!&quot;</span>);</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1MutableDiffPTData.html#a3603cb4baf60b1aa83b7807ac5591484">mutPTData</a>.getRevPts(datum);</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div><div class="ttc" id="util_8h_html_a07d17d6d5d1074c0969bc5d3c3d1d84a"><div class="ttname"><a href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a></div><div class="ttdeci">#define assert(ex)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00141">util.h:141</a></div></div>
 <div class="ttc" id="classSVF_1_1MutableDiffPTData_html_a3603cb4baf60b1aa83b7807ac5591484"><div class="ttname"><a href="classSVF_1_1MutableDiffPTData.html#a3603cb4baf60b1aa83b7807ac5591484">SVF::MutableDiffPTData::mutPTData</a></div><div class="ttdeci">MutablePTData&lt; Key, KeySet, Data, DataSet &gt; mutPTData</div><div class="ttdoc">Backing to implement the basic PTData methods. This allows us to avoid multiple-inheritance. </div><div class="ttdef"><b>Definition:</b> <a href="MutablePointsToDS_8h_source.html#l00298">MutablePointsToDS.h:298</a></div></div>
-<div class="ttc" id="classSVF_1_1PTData_html_a46fa3ec6462f3dda19549340281bb219"><div class="ttname"><a href="classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219">SVF::PTData::rev</a></div><div class="ttdeci">bool rev</div><div class="ttdoc">Whether we maintain reverse points-to sets or not. </div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00093">AbstractPointsToDS.h:93</a></div></div>
+<div class="ttc" id="classSVF_1_1PTData_html_a46fa3ec6462f3dda19549340281bb219"><div class="ttname"><a href="classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219">SVF::PTData::rev</a></div><div class="ttdeci">bool rev</div><div class="ttdoc">Whether we maintain reverse points-to sets or not. </div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00098">AbstractPointsToDS.h:98</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
