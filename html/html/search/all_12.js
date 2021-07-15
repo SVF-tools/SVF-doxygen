@@ -107,7 +107,7 @@ var searchData=
   ['replacefparamaretwithphi',['replaceFParamARetWithPHI',['../classSVF_1_1SVFGOPT.html#a1fd6d26203d7d574b5664b8fcae54c1a',1,'SVF::SVFGOPT']]],
   ['repnode',['repNode',['../classSVF_1_1SCCDetection.html#a3a5fdc9330a657240f77199f5aee602d',1,'SVF::SCCDetection']]],
   ['repnodes',['repNodes',['../classSVF_1_1SCCDetection.html#a2b9605126ebb2abb1e16b3ccf99cf04b',1,'SVF::SCCDetection']]],
-  ['reportbug',['reportBug',['../classSVF_1_1DoubleFreeChecker.html#aa6bde3be780876317dcdcdf26d2ece2a',1,'SVF::DoubleFreeChecker::reportBug()'],['../classSVF_1_1FileChecker.html#a88ffc46ca954b77463de4c94c4eace54',1,'SVF::FileChecker::reportBug()'],['../classSVF_1_1LeakChecker.html#a5d8f0d698b354f4c28fef9c51ac39bb6',1,'SVF::LeakChecker::reportBug()'],['../classSVF_1_1SrcSnkDDA.html#aa87e9ca3c9a9dc6ae5cc88a0182a8154',1,'SVF::SrcSnkDDA::reportBug()']]],
+  ['reportbug',['reportBug',['../classSVF_1_1DoubleFreeChecker.html#aa6bde3be780876317dcdcdf26d2ece2a',1,'SVF::DoubleFreeChecker::reportBug()'],['../classSVF_1_1FileChecker.html#a88ffc46ca954b77463de4c94c4eace54',1,'SVF::FileChecker::reportBug()'],['../classSVF_1_1LeakChecker.html#aa8bd31ae91ed1e9890203f865982a065',1,'SVF::LeakChecker::reportBug()'],['../classSVF_1_1SrcSnkDDA.html#aa87e9ca3c9a9dc6ae5cc88a0182a8154',1,'SVF::SrcSnkDDA::reportBug()']]],
   ['reportmemoryusagekb',['reportMemoryUsageKB',['../namespaceSVF_1_1SVFUtil.html#a766d74e857f39789af3ebc8a6dae0c95',1,'SVF::SVFUtil']]],
   ['reportneverclose',['reportNeverClose',['../classSVF_1_1FileChecker.html#ac6b092dd119642f435c21a708b160b49',1,'SVF::FileChecker']]],
   ['reportneverfree',['reportNeverFree',['../classSVF_1_1LeakChecker.html#a7b6710c3b56141a249bfc29fb6181583',1,'SVF::LeakChecker']]],
