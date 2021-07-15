@@ -320,6 +320,7 @@ var searchData=
   ['dirvfedgestart',['dirVFEdgeStart',['../classSVF_1_1SVFGStat.html#a169d75c0fd09f69d86939d84db67e590',1,'SVF::SVFGStat']]],
   ['disableprintstat',['disablePrintStat',['../classSVF_1_1PointerAnalysis.html#af44b14fed89918847c0228c1100c56d2',1,'SVF::PointerAnalysis']]],
   ['disablewarn',['DisableWarn',['../classSVF_1_1Options.html#ab4206ecb79fdcd2d5211bfbd2537cacb',1,'SVF::Options']]],
+  ['distinct',['Distinct',['../classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a9da5f4ad2a43befdbc4be319bffc80ea',1,'SVF::MemSSA']]],
   ['distinctmrg',['DistinctMRG',['../classSVF_1_1DistinctMRG.html',1,'SVF::DistinctMRG'],['../classSVF_1_1DistinctMRG.html#ad7e4959327aa45932fd788bacca0de01',1,'SVF::DistinctMRG::DistinctMRG()']]],
   ['disubprogram',['DISubprogram',['../namespaceSVF.html#a89c7208bfc0b57873dfa574f52050295',1,'SVF']]],
   ['disubrange',['DISubrange',['../namespaceSVF.html#a99bc1228f07429855c81a720be862dc6',1,'SVF']]],
