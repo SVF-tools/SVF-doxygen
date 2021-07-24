@@ -22,7 +22,6 @@ var searchData=
   ['nodetorefmap',['nodeToRefMap',['../classSVF_1_1OfflineConsG.html#aebeb8a44fcfbb677a738fa04c8e9c5e1',1,'SVF::OfflineConsG']]],
   ['nodetorepmap',['nodeToRepMap',['../classSVF_1_1ConstraintGraph.html#ab1b5ee9202bd9f5d738f9850b42a45d2',1,'SVF::ConstraintGraph']]],
   ['nodetosubsmap',['nodeToSubsMap',['../classSVF_1_1ConstraintGraph.html#af91f1027cd5de591ae40865f691c5f60',1,'SVF::ConstraintGraph::nodeToSubsMap()'],['../classSVF_1_1Steensgaard.html#aca87fc74b6acb096a7165f105b14854b',1,'SVF::Steensgaard::nodeToSubsMap()']]],
-  ['noncandidatefunclockrelmap',['nonCandidateFuncLockRelMap',['../classSVF_1_1LockAnalysis.html#a0eb9ee82e74e0e1646b0259554293a36',1,'SVF::LockAnalysis']]],
   ['noncandidatefuncmhprelmap',['nonCandidateFuncMHPRelMap',['../classSVF_1_1MHP.html#a1f057ef082484a1997cb02287e063f00',1,'SVF::MHP']]],
   ['normalized',['normalized',['../classSVF_1_1CondPTAImpl.html#ab4115f25e2e477bfd73d01f069f47241',1,'SVF::CondPTAImpl']]],
   ['nortorepmap',['norToRepMap',['../classSVF_1_1OfflineConsG.html#a6eff43757344f75cd3775d473f14fd9c',1,'SVF::OfflineConsG']]],

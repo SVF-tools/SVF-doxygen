@@ -97,7 +97,7 @@ var searchData=
   ['csc',['csc',['../classSVF_1_1AndersenSFR.html#aa39c668b1473ac4fb99da3aa736c9edb',1,'SVF::AndersenSFR']]],
   ['cschamap',['csCHAMap',['../classSVF_1_1DCHGraph.html#ad79a569e77f94fa8494eed3f18e07e90',1,'SVF::DCHGraph']]],
   ['csid',['csId',['../classSVF_1_1PTACallGraphEdge.html#a7488c5125d55e56ec427ef0d8ee88999',1,'SVF::PTACallGraphEdge::csId()'],['../classSVF_1_1CallIndSVFGEdge.html#adb7796f5c1094379ed295e92bf4a79b9',1,'SVF::CallIndSVFGEdge::csId()'],['../classSVF_1_1RetIndSVFGEdge.html#a49e231a4606fda4429d0bae5656fa3e1',1,'SVF::RetIndSVFGEdge::csId()'],['../classSVF_1_1CallDirSVFGEdge.html#a2cbaf86c3e65eb9d02d3843706fc178b',1,'SVF::CallDirSVFGEdge::csId()'],['../classSVF_1_1RetDirSVFGEdge.html#a10929c8f605a05c1a471f77936d31902',1,'SVF::RetDirSVFGEdge::csId()']]],
-  ['csnumtoinstmap',['csnumToInstMap',['../classMTAResultValidator.html#a5a8c57c7e8e1c522f54dbaef06fa8d71',1,'MTAResultValidator']]],
+  ['csnumtoinstmap',['csnumToInstMap',['../classSVF_1_1MTAResultValidator.html#ae2717c467dc7c49fab0ec93bfa4baaab',1,'SVF::MTAResultValidator']]],
   ['cstocallnodemap',['CSToCallNodeMap',['../classSVF_1_1ICFG.html#af0434d6ffd247eeaf73b9294e659a3f9',1,'SVF::ICFG']]],
   ['cstocallsiteargsptsmap',['csToCallSiteArgsPtsMap',['../classSVF_1_1MRGenerator.html#a145cccd6355dd479e8a0c744584cef9a',1,'SVF::MRGenerator']]],
   ['cstocallsiteretptsmap',['csToCallSiteRetPtsMap',['../classSVF_1_1MRGenerator.html#a9368636daea4542fa36fff822ff39104',1,'SVF::MRGenerator']]],
@@ -127,14 +127,14 @@ var searchData=
   ['curty',['CurTy',['../classllvm_1_1generic__bridge__gep__type__iterator.html#aa602c207fe08960b24fc496ca1d34509',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['curval',['curVal',['../classSVF_1_1PAGBuilder.html#a7a83bd8bf69747c8225301f5cc65d2da',1,'SVF::PAGBuilder']]],
   ['cxt',['cxt',['../classSVF_1_1CxtStmt.html#ae451ee5a61dbdd2367a04cee304bbcb1',1,'SVF::CxtStmt::cxt()'],['../classSVF_1_1CxtThread.html#ae8e5c401e008739bf018f1d618c08ea5',1,'SVF::CxtThread::cxt()'],['../classSVF_1_1CxtProc.html#af5f186c71d815dabcbfab6bae7c57b59',1,'SVF::CxtProc::cxt()']]],
-  ['cxt_5fthread',['CXT_THREAD',['../classMTAResultValidator.html#a349e41fa243f41e05155bca2adbe144c',1,'MTAResultValidator']]],
+  ['cxt_5fthread',['CXT_THREAD',['../classSVF_1_1MTAResultValidator.html#a251e16fc1fb663c238122dd6d2ba02e1',1,'SVF::MTAResultValidator']]],
   ['cxtbudget',['CxtBudget',['../classSVF_1_1Options.html#a7b9af13feccc116377aeb107640ae874',1,'SVF::Options']]],
   ['cxtjoininloop',['cxtJoinInLoop',['../classSVF_1_1ForkJoinAnalysis.html#a63da48d338683ec95709a6bd95238707',1,'SVF::ForkJoinAnalysis']]],
   ['cxtlimit',['CxtLimit',['../classSVF_1_1Options.html#a21cbaab292e9f5bd39109f774fcc88d4',1,'SVF::Options']]],
-  ['cxtlockset',['cxtLockset',['../classSVF_1_1LockAnalysis.html#a3081e7c7165908ed4aa282f398c5236d',1,'SVF::LockAnalysis']]],
+  ['cxtlockset',['cxtLockset',['../classSVF_1_1LockAnalysis.html#a3081e7c7165908ed4aa282f398c5236d',1,'SVF::LockAnalysis::cxtLockset()'],['../classSVF_1_1LockResultValidator.html#a51e6f48be9f2a65b390e4e0350eb12a9',1,'SVF::LockResultValidator::cxtLockSet()']]],
   ['cxtlocktospan',['cxtLocktoSpan',['../classSVF_1_1LockAnalysis.html#a2fd796765f16cc7094f36d68c0ff70a0',1,'SVF::LockAnalysis']]],
   ['cxts',['cxts',['../classSVF_1_1LLVMModuleSet.html#ad06a92bf8bc556de742e0ffdf79ffafe',1,'SVF::LLVMModuleSet']]],
   ['cxtstmtlist',['cxtStmtList',['../classSVF_1_1LockAnalysis.html#a109293f282e9b920b0b13c58026f6f1d',1,'SVF::LockAnalysis::cxtStmtList()'],['../classSVF_1_1MHP.html#a0300d46dd22ee7cc8c62fada694d3acb',1,'SVF::MHP::cxtStmtList()'],['../classSVF_1_1ForkJoinAnalysis.html#acccf53d174cac3275da0d79c89a73916',1,'SVF::ForkJoinAnalysis::cxtStmtList()']]],
   ['cxtstmttoaliveflagmap',['cxtStmtToAliveFlagMap',['../classSVF_1_1ForkJoinAnalysis.html#aa31b3f3d51b963ccd475e66b77143dba',1,'SVF::ForkJoinAnalysis']]],
-  ['cxtstmttocxtlockset',['cxtStmtToCxtLockSet',['../classSVF_1_1LockAnalysis.html#ae256a84fd63947a6f81bee030bdbe7fc',1,'SVF::LockAnalysis']]]
+  ['cxtstmttocxtlockset',['cxtStmtToCxtLockSet',['../classSVF_1_1LockAnalysis.html#ae256a84fd63947a6f81bee030bdbe7fc',1,'SVF::LockAnalysis::cxtStmtToCxtLockSet()'],['../classSVF_1_1LockResultValidator.html#ad8a03181445edeb835fed08c88f6e0bb',1,'SVF::LockResultValidator::cxtStmtToCxtLockSet()']]]
 ];

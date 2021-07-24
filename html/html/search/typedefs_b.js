@@ -17,6 +17,7 @@ var searchData=
   ['loadtomusetmap',['LoadToMUSetMap',['../classSVF_1_1MemSSA.html#ac5a9b2218c946ec17b478a95ab60ec6b',1,'SVF::MemSSA']]],
   ['locdpitem',['LocDPItem',['../namespaceSVF.html#aa50ee8563f99ba1eb897301f55e9d855',1,'SVF']]],
   ['locid',['LocID',['../classSVF_1_1DFPTData.html#a298a5ef6cfffbe10b9d05af0ad12e786',1,'SVF::DFPTData::LocID()'],['../classSVF_1_1MutableDFPTData.html#ae847b982baec8115ede5d7d28cd91d34',1,'SVF::MutableDFPTData::LocID()'],['../classSVF_1_1MutableIncDFPTData.html#a74d9f271ea0fa69e56ddbe16f10f3241',1,'SVF::MutableIncDFPTData::LocID()'],['../classSVF_1_1PersistentDFPTData.html#a76d8a4f907269e9980f39c531806e96b',1,'SVF::PersistentDFPTData::LocID()'],['../classSVF_1_1PersistentIncDFPTData.html#a77bdc80a999296bcfa8d9f1f92c933d1',1,'SVF::PersistentIncDFPTData::LocID()']]],
+  ['lock_5fflag',['LOCK_FLAG',['../classSVF_1_1LockResultValidator.html#a3b7d25dfe5251f49afbb733c25eee70f',1,'SVF::LockResultValidator']]],
   ['lockset',['LockSet',['../classSVF_1_1LockAnalysis.html#a4bde0f39a6b5cf83e0011d7ef272c685',1,'SVF::LockAnalysis']]],
   ['locksitetolockset',['LockSiteToLockSet',['../classSVF_1_1LockAnalysis.html#a1f9ae41c4ed7450d0d8b29cd20a6ef25',1,'SVF::LockAnalysis']]],
   ['lockspan',['LockSpan',['../classSVF_1_1LockAnalysis.html#a07b7d49e1fbe3e5dc694b6aadbee05b8',1,'SVF::LockAnalysis::LockSpan()'],['../classSVF_1_1MHP.html#a08ba219ec02b07b1bbd91a88ebb4acd7',1,'SVF::MHP::LockSpan()']]],

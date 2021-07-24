@@ -10,7 +10,7 @@ var searchData=
   ['loadvfgnode',['LoadVFGNode',['../classSVF_1_1LoadVFGNode.html',1,'SVF']]],
   ['locationset',['LocationSet',['../classSVF_1_1LocationSet.html',1,'SVF']]],
   ['lockanalysis',['LockAnalysis',['../classSVF_1_1LockAnalysis.html',1,'SVF']]],
-  ['lockvalidator',['LockValidator',['../classSVF_1_1LockValidator.html',1,'SVF']]],
+  ['lockresultvalidator',['LockResultValidator',['../classSVF_1_1LockResultValidator.html',1,'SVF']]],
   ['locobjtypeinfo',['LocObjTypeInfo',['../classSVF_1_1LocObjTypeInfo.html',1,'SVF']]],
   ['locsymtableinfo',['LocSymTableInfo',['../classSVF_1_1LocSymTableInfo.html',1,'SVF']]]
 ];

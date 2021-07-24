@@ -19,7 +19,7 @@ var searchData=
   ['mssaphisvfgnode',['MSSAPHISVFGNode',['../classSVF_1_1MSSAPHISVFGNode.html',1,'SVF']]],
   ['mta',['MTA',['../classSVF_1_1MTA.html',1,'SVF']]],
   ['mtaannotator',['MTAAnnotator',['../classSVF_1_1MTAAnnotator.html',1,'SVF']]],
-  ['mtaresultvalidator',['MTAResultValidator',['../classMTAResultValidator.html',1,'']]],
+  ['mtaresultvalidator',['MTAResultValidator',['../classSVF_1_1MTAResultValidator.html',1,'SVF']]],
   ['mtastat',['MTAStat',['../classSVF_1_1MTAStat.html',1,'SVF']]],
   ['mtasvfgbuilder',['MTASVFGBuilder',['../classSVF_1_1MTASVFGBuilder.html',1,'SVF']]],
   ['mtrnode',['MtrNode',['../structMtrNode.html',1,'']]],

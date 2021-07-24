@@ -14,7 +14,7 @@ var searchData=
   ['loadvfgnode',['LoadVFGNode',['../classSVF_1_1LoadVFGNode.html#aca72f4582e33a2d4ef3a96dd2936f567',1,'SVF::LoadVFGNode::LoadVFGNode()'],['../classSVF_1_1LoadVFGNode.html#afe482a8a05b0efc45ceb4052ea87a039',1,'SVF::LoadVFGNode::LoadVFGNode(const LoadVFGNode &amp;)'],['../classSVF_1_1LoadVFGNode.html#a2e705c9f25182b990d3b7fb5fc825237',1,'SVF::LoadVFGNode::LoadVFGNode(NodeID id, const LoadPE *edge)']]],
   ['locationset',['LocationSet',['../classSVF_1_1LocationSet.html#ac07e93a10d3f981c2ef6fcc507118182',1,'SVF::LocationSet::LocationSet(Size_t o=0)'],['../classSVF_1_1LocationSet.html#a290c7fe38704552fd66ad06e5deeaca9',1,'SVF::LocationSet::LocationSet(const LocationSet &amp;ls)'],['../classSVF_1_1LocationSet.html#afd3b135453644cd42e869d378c270d23',1,'SVF::LocationSet::LocationSet(const FieldInfo &amp;fi)']]],
   ['lockanalysis',['LockAnalysis',['../classSVF_1_1LockAnalysis.html#af8aff31058caba691c127b8aef297b43',1,'SVF::LockAnalysis']]],
-  ['lockvalidator',['LockValidator',['../classSVF_1_1LockValidator.html#afc611082b4fa264f9ebcd863caaeaf6a',1,'SVF::LockValidator']]],
+  ['lockresultvalidator',['LockResultValidator',['../classSVF_1_1LockResultValidator.html#acfe0b43eee73c5e02f5744d8993cb529',1,'SVF::LockResultValidator']]],
   ['locobjtypeinfo',['LocObjTypeInfo',['../classSVF_1_1LocObjTypeInfo.html#aec1aceb9d7d69423b8103c37c277f6ee',1,'SVF::LocObjTypeInfo']]],
   ['locsymtableinfo',['LocSymTableInfo',['../classSVF_1_1LocSymTableInfo.html#a6ae1ada9c99ceb53fb41f3b59696423e',1,'SVF::LocSymTableInfo']]]
 ];

@@ -11,7 +11,7 @@ var searchData=
   ['mhp_2ecpp',['MHP.cpp',['../MHP_8cpp.html',1,'']]],
   ['mhp_2eh',['MHP.h',['../MHP_8h.html',1,'']]],
   ['mssamuchi_2eh',['MSSAMuChi.h',['../MSSAMuChi_8h.html',1,'']]],
-  ['mta_2ecpp',['MTA.cpp',['../MTA_8cpp.html',1,'']]],
+  ['mta_2ecpp',['MTA.cpp',['../MTA_8cpp.html',1,'(Global Namespace)'],['../mta_8cpp.html',1,'(Global Namespace)']]],
   ['mta_2eh',['MTA.h',['../MTA_8h.html',1,'']]],
   ['mtaannotator_2ecpp',['MTAAnnotator.cpp',['../MTAAnnotator_8cpp.html',1,'']]],
   ['mtaannotator_2eh',['MTAAnnotator.h',['../MTAAnnotator_8h.html',1,'']]],

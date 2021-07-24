@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['racedetecor',['RACEDETECOR',['../MTA_8cpp.html#a559601b7513ac51edf98a3999e2d03ed',1,'MTA.cpp']]],
+  ['racedetecor',['RACEDETECOR',['../MTA_8cpp.html#a722a3314000546677382be2b285e04d8',1,'MTA.cpp']]],
+  ['racevalidator',['RaceValidator',['../classSVF_1_1RaceValidator.html#a7ec5d97155d170033398757af56691ad',1,'SVF::RaceValidator']]],
   ['rand_5fint',['rand_int',['../cuddGenetic_8c.html#a08c36691817205004514f669bfa72afe',1,'cuddGenetic.c']]],
   ['random_5fgenerator',['random_generator',['../cuddAnneal_8c.html#a77a931cdec27ae26f4d8e4b9152ff7e6',1,'cuddAnneal.c']]],
   ['readfromfile',['readFromFile',['../classSVF_1_1ExternalPAG.html#ae010036c742cfdf95fad5355f0100984',1,'SVF::ExternalPAG::readFromFile()'],['../classSVF_1_1BVDataPTAImpl.html#a290501006cb700db0e07dc577429c928',1,'SVF::BVDataPTAImpl::readFromFile()']]],
@@ -15,7 +16,7 @@ var searchData=
   ['recordtypemismatchedgep',['recordTypeMismatchedGep',['../classSVF_1_1AndersenWaveDiffWithType.html#a5ec70e91d9d588688a6cbe06cdb2979f',1,'SVF::AndersenWaveDiffWithType']]],
   ['regpt',['REGPT',['../dda_8cpp.html#a5ed1de5ad06cf459c1b4e63685316618',1,'dda.cpp']]],
   ['rehash',['rehash',['../st_8c.html#aa935648640f20c4160b61b68edcd313d',1,'st.c']]],
-  ['release',['release',['../classRaceResultValidator.html#ae218778896057b975597948a59a46607',1,'RaceResultValidator']]],
+  ['release',['release',['../classSVF_1_1RaceResultValidator.html#a64f61b58f59eba5f3e7c69f90edc68df',1,'SVF::RaceResultValidator']]],
   ['releaseandersenhcd',['releaseAndersenHCD',['../classSVF_1_1AndersenHCD.html#ad2cb6f353fef40a99ae9fba112663b84',1,'SVF::AndersenHCD']]],
   ['releaseandersenhlcd',['releaseAndersenHLCD',['../classSVF_1_1AndersenHLCD.html#a23f7e4f0b51bd6474644f566998d367f',1,'SVF::AndersenHLCD']]],
   ['releaseandersenlcd',['releaseAndersenLCD',['../classSVF_1_1AndersenLCD.html#a583b062b7c221bd50e5f37b7cb9b7a62',1,'SVF::AndersenLCD']]],

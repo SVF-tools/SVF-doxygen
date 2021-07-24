@@ -23,6 +23,7 @@ var searchData=
   ['svfg',['SVFG',['../classSVF_1_1SVFG.html',1,'SVF']]],
   ['svfgbuilder',['SVFGBuilder',['../classSVF_1_1SVFGBuilder.html',1,'SVF']]],
   ['svfglobal',['SVFGlobal',['../classSVF_1_1SVFGlobal.html',1,'SVF']]],
+  ['svfgnodelockspan',['SVFGNodeLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html',1,'SVF']]],
   ['svfgopt',['SVFGOPT',['../classSVF_1_1SVFGOPT.html',1,'SVF']]],
   ['svfgstat',['SVFGStat',['../classSVF_1_1SVFGStat.html',1,'SVF']]],
   ['svfinstruction',['SVFInstruction',['../classSVF_1_1SVFInstruction.html',1,'SVF']]],
