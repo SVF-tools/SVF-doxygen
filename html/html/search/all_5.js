@@ -3,7 +3,7 @@ var searchData=
   ['e',['E',['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren']]],
   ['ecunion',['ecUnion',['../classSVF_1_1Steensgaard.html#a191e77e62916d868b2af730264e26dd8',1,'SVF::Steensgaard']]],
   ['edge2pts',['edge2pts',['../classSVF_1_1MTASVFGBuilder.html#a1c0de33bba2f05f14140d872c345ab38',1,'SVF::MTASVFGBuilder']]],
-  ['edge_5funary_5ffunction',['edge_unary_function',['../structllvm_1_1edge__unary__function.html',1,'llvm']]],
+  ['edge_5fdest',['edge_dest',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a84cc3da79c2c9c5bcdf50da4b919b7da',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::edge_dest()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#a1b463e94c43d2966b8d6cf096b3d04cd',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::edge_dest()']]],
   ['edgeflag',['edgeFlag',['../classSVF_1_1GenericEdge.html#aa1f446e93750580dce04a127231dd1a3',1,'SVF::GenericEdge']]],
   ['edgeid',['edgeId',['../classSVF_1_1ConstraintEdge.html#af51f8e9b3c1dd68855581d0d1739ba29',1,'SVF::ConstraintEdge::edgeId()'],['../classSVF_1_1PAGEdge.html#ad38d3486f99325bd0438e4b4bacbda8a',1,'SVF::PAGEdge::edgeId()'],['../namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94',1,'SVF::EdgeID()']]],
   ['edgeincallgraphscc',['edgeInCallGraphSCC',['../classSVF_1_1ContextDDA.html#ad54f523bf5f2504c1924b4f94c5abbba',1,'SVF::ContextDDA::edgeInCallGraphSCC()'],['../classSVF_1_1DDAPass.html#aab60429398a89ec1c8663a305130376f',1,'SVF::DDAPass::edgeInCallGraphSCC()']]],

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['edge_5funary_5ffunction',['edge_unary_function',['../structllvm_1_1edge__unary__function.html',1,'llvm']]],
   ['entrychi',['EntryCHI',['../classSVF_1_1EntryCHI.html',1,'SVF']]],
   ['epdoublestruct',['EpDoubleStruct',['../structEpDoubleStruct.html',1,'']]],
   ['eptypeunion',['EpTypeUnion',['../unionEpTypeUnion.html',1,'']]],

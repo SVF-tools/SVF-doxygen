@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ecunion',['ecUnion',['../classSVF_1_1Steensgaard.html#a191e77e62916d868b2af730264e26dd8',1,'SVF::Steensgaard']]],
+  ['edge_5fdest',['edge_dest',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a84cc3da79c2c9c5bcdf50da4b919b7da',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::edge_dest()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#a1b463e94c43d2966b8d6cf096b3d04cd',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::edge_dest()']]],
   ['edgeincallgraphscc',['edgeInCallGraphSCC',['../classSVF_1_1ContextDDA.html#ad54f523bf5f2504c1924b4f94c5abbba',1,'SVF::ContextDDA::edgeInCallGraphSCC()'],['../classSVF_1_1DDAPass.html#aab60429398a89ec1c8663a305130376f',1,'SVF::DDAPass::edgeInCallGraphSCC()']]],
   ['edgeinsvfgscc',['edgeInSVFGSCC',['../classSVF_1_1DDAPass.html#a3810708c5e2695d2a0e36084b589e432',1,'SVF::DDAPass::edgeInSVFGSCC()'],['../classSVF_1_1DDAVFSolver.html#a034e3c8b2eec00aee9de439dfeeda332',1,'SVF::DDAVFSolver::edgeInSVFGSCC()']]],
   ['elemstridepairbegin',['elemStridePairBegin',['../classSVF_1_1FieldInfo.html#aee954809b1338d8a49670b6ac6cf25f3',1,'SVF::FieldInfo']]],

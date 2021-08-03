@@ -36,8 +36,6 @@ var searchData=
   ['ddsubtable',['DdSubtable',['../cuddInt_8h.html#a7bcad3d1c132c3e254445095a2aa0004',1,'cuddInt.h']]],
   ['ddtlcinfo',['DdTlcInfo',['../cudd_8h.html#abee817945068186156e2439a5d921a56',1,'cudd.h']]],
   ['debuginfofinder',['DebugInfoFinder',['../namespaceSVF.html#a5ae98f122c64b0114df2e5861b341321',1,'SVF']]],
-  ['derefedge',['DerefEdge',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#affe7daa608ca18bdd2a3129a05f6b7ae',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::DerefEdge()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#ab514112f993e5f78491ff27767db6356',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::DerefEdge()']]],
-  ['derefval',['DerefVal',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#ae1698f3377948d74ac3ecf3e5fecfa92',1,'llvm::GraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;']]],
   ['dfinoutmap',['DFInOutMap',['../classSVF_1_1FlowSensitive.html#af9a2bd5b490f1cc5335ce696173c78dd',1,'SVF::FlowSensitive::DFInOutMap()'],['../classSVF_1_1FlowSensitiveStat.html#a55d45e82ea3d338114e50da877bcfb75',1,'SVF::FlowSensitiveStat::DFInOutMap()']]],
   ['dfkeytoidmap',['DFKeyToIDMap',['../classSVF_1_1PersistentDFPTData.html#a0d0318fa192eac88a4307112e30e9d90',1,'SVF::PersistentDFPTData']]],
   ['dfptdataty',['DFPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a795ba231e33724a5f9bd6cd536827bc9',1,'SVF::BVDataPTAImpl']]],
