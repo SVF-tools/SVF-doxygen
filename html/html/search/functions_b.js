@@ -7,6 +7,7 @@ var searchData=
   ['makeedgeflagwithstoreinst',['makeEdgeFlagWithStoreInst',['../classSVF_1_1PAGEdge.html#af820acc617bcfec5d5f46627fce7dae8',1,'SVF::PAGEdge']]],
   ['malloc',['malloc',['../util_8h.html#ab2f9b020b045894653b341c1c28fe41a',1,'util.h']]],
   ['mapmeldversions',['mapMeldVersions',['../classSVF_1_1VersionedFlowSensitive.html#a8e836aaeab108002205d2a7631e8559f',1,'SVF::VersionedFlowSensitive']]],
+  ['mapvaluetoedge',['mapValueToEdge',['../classSVF_1_1PAG.html#a02f02a895816386501e5ba032c0c6e4c',1,'SVF::PAG']]],
   ['markbkvisited',['markbkVisited',['../classSVF_1_1DDAVFSolver.html#a7112ce6145be0855f8b035bb0d8a331c',1,'SVF::DDAVFSolver']]],
   ['markcxtstmtflag',['markCxtStmtFlag',['../classSVF_1_1LockAnalysis.html#a375cb175ec0068bacaa64cf40a49d485',1,'SVF::LockAnalysis::markCxtStmtFlag()'],['../classSVF_1_1ForkJoinAnalysis.html#ac483d3b0e9084c2033e177eda9ac9215',1,'SVF::ForkJoinAnalysis::markCxtStmtFlag(const CxtStmt &amp;tgr, ValDomain flag)'],['../classSVF_1_1ForkJoinAnalysis.html#a047fbff4be9f94ab12795cd371f60efa',1,'SVF::ForkJoinAnalysis::markCxtStmtFlag(const CxtStmt &amp;tgr, const CxtStmt &amp;src)']]],
   ['markforrelease',['markForRelease',['../classSVF_1_1BddCondManager.html#a47ace763ad44c64a5c053f64c82b1983',1,'SVF::BddCondManager::markForRelease()'],['../classSVF_1_1PathCondAllocator.html#a56b3391b06c89c38e58ba0184774eaf9',1,'SVF::PathCondAllocator::markForRelease()']]],

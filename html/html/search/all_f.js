@@ -43,7 +43,7 @@ var searchData=
   ['operator_3e',['operator&gt;',['../classSVF_1_1PTAType.html#a62d5423de98721dfa56705824c53c3b6',1,'SVF::PTAType']]],
   ['operator_5b_5d',['operator[]',['../classSVF_1_1ContextCond.html#a62cc1c7c01d454e9cbebd3f7f5f3aa1f',1,'SVF::ContextCond']]],
   ['operator_7c_3d',['operator|=',['../classSVF_1_1CondStdSet.html#a90e4c4ead1cbdca01c0be801a68b005b',1,'SVF::CondStdSet::operator|=()'],['../classSVF_1_1CondPointsToSet.html#a74c50cfaf788a828a4fc97eba703ec4e',1,'SVF::CondPointsToSet::operator|=()']]],
-  ['opincomingbbs',['opIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode::opIncomingBBs()'],['../classSVF_1_1IntraPHIVFGNode.html#a66928f6cc755bd2a048804d00f859a80',1,'SVF::IntraPHIVFGNode::OPIncomingBBs()']]],
+  ['opincomingbbs',['OPIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a66928f6cc755bd2a048804d00f859a80',1,'SVF::IntraPHIVFGNode::OPIncomingBBs()'],['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode::opIncomingBBs()']]],
   ['opit',['OpIt',['../classllvm_1_1generic__bridge__gep__type__iterator.html#aa3fd4dca27e09df9ee726879624ae47e',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['oppts',['opPts',['../classSVF_1_1PersistentPointsToCache.html#ac7865b3ea1d76d2c522b465cc8e86639',1,'SVF::PersistentPointsToCache']]],
   ['options',['Options',['../classSVF_1_1Options.html',1,'SVF::Options'],['../classSVF_1_1Options.html#a08c25694f8f9e31eb8b116ad58c1c078',1,'SVF::Options::Options()']]],

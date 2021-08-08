@@ -137,7 +137,7 @@ var searchData=
   ['exit',['exit',['../util_8h.html#a43b6ea6be735bb828bc062c70cadeff8',1,'util.h']]],
   ['expandfiobjs',['expandFIObjs',['../classSVF_1_1BVDataPTAImpl.html#a798c84d5e861de2b61bcb1a86385f721',1,'SVF::BVDataPTAImpl::expandFIObjs()'],['../classSVF_1_1CondPTAImpl.html#a87b48287d7edb97fc120200fe0e5218d',1,'SVF::CondPTAImpl::expandFIObjs()'],['../classSVF_1_1FlowSensitiveTBHC.html#a3af0297eb75ac4009433be44bb286d30',1,'SVF::FlowSensitiveTBHC::expandFIObjs()']]],
   ['exponent',['exponent',['../structIeeeDoubleStruct.html#ae7281389e351ea2e0e577144746d76e2',1,'IeeeDoubleStruct::exponent()'],['../structIeeeNanStruct.html#aeb28a08581e489042de6f647eb431e5a',1,'IeeeNanStruct::exponent()'],['../structEpDoubleStruct.html#ae626888fe53c8c26d65d4fa519b906c6',1,'EpDoubleStruct::exponent()']]],
-  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html',1,'SVF::ExtAPI'],['../classSVF_1_1ExtAPI.html#abe666dfdd9b3dea5ea89a5ed9ca4c618',1,'SVF::ExtAPI::extAPI()'],['../classSVF_1_1ExtAPI.html#af1c46b41e0088411a186228f760a99f3',1,'SVF::ExtAPI::ExtAPI()']]],
+  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html',1,'SVF::ExtAPI'],['../classSVF_1_1ExtAPI.html#af1c46b41e0088411a186228f760a99f3',1,'SVF::ExtAPI::ExtAPI()'],['../classSVF_1_1ExtAPI.html#abe666dfdd9b3dea5ea89a5ed9ca4c618',1,'SVF::ExtAPI::extAPI()']]],
   ['extapi_2ecpp',['ExtAPI.cpp',['../ExtAPI_8cpp.html',1,'']]],
   ['extapi_2eh',['ExtAPI.h',['../ExtAPI_8h.html',1,'']]],
   ['extcallty',['extCallTy',['../namespaceSVF_1_1SVFUtil.html#ac3e7507fb376b1625bc1573132ab9f06',1,'SVF::SVFUtil']]],
