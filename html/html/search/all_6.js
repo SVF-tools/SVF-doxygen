@@ -98,7 +98,7 @@ var searchData=
   ['freezeinst',['FreezeInst',['../namespaceSVF.html#a9868a60a9cc7b78965a23b5034100f88',1,'SVF']]],
   ['fret',['FRet',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ae1d2cab9f6995b89064c2405f8eaf053',1,'SVF::VFGNode']]],
   ['fromfile',['fromFile',['../classSVF_1_1PAG.html#a682355bd8e695faedbe5546f98636ee0',1,'SVF::PAG']]],
-  ['fromllvmvalue',['fromLLVMValue',['../classSVF_1_1SVFG.html#ac26a6053168ecb4091c0e78558d04ab7',1,'SVF::SVFG']]],
+  ['fromvalue',['fromValue',['../classSVF_1_1SVFG.html#ac9807bb37148459fe928cd67a7517c16',1,'SVF::SVFG']]],
   ['fsanno',['FSAnno',['../classSVF_1_1Options.html#ae444f90ff3b6a3cfec1c08e6ca6f263a',1,'SVF::Options']]],
   ['fscs_5fwpa',['FSCS_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a43837619e78e03dc95ec6e88959faf82',1,'SVF::PointerAnalysis']]],
   ['fscsps_5fwpa',['FSCSPS_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a30826fb1ddb602fd4439ca84eb73e8f4',1,'SVF::PointerAnalysis']]],
