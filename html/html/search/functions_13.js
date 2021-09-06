@@ -31,7 +31,7 @@ var searchData=
   ['vfgedge',['VFGEdge',['../classSVF_1_1VFGEdge.html#a9a29abd99da3465e07bd62470bd9bb56',1,'SVF::VFGEdge']]],
   ['vfgnode',['VFGNode',['../classSVF_1_1VFGNode.html#a775b3bd4c7558a18c5bc890fe711f03c',1,'SVF::VFGNode']]],
   ['vfgnodes',['VFGNodes',['../classSVF_1_1VFG.html#a43f4002b0beb00ed2026f7edd9ebbb1c',1,'SVF::VFG']]],
-  ['vfpathcond',['VFPathCond',['../classSVF_1_1VFPathCond.html#ac103b1478b15083b989969d5461db212',1,'SVF::VFPathCond::VFPathCond(PathCond *p=PathCondAllocator::trueCond())'],['../classSVF_1_1VFPathCond.html#ab6826c1ee28ed96fa736cdf7323f600c',1,'SVF::VFPathCond::VFPathCond(const VFPathCond &amp;cond)']]],
+  ['vfpathcond',['VFPathCond',['../classSVF_1_1VFPathCond.html#ab54d59837160b5499992d7ea0a19723c',1,'SVF::VFPathCond::VFPathCond(PathCond *p=CondManager::getTrueCond())'],['../classSVF_1_1VFPathCond.html#ab6826c1ee28ed96fa736cdf7323f600c',1,'SVF::VFPathCond::VFPathCond(const VFPathCond &amp;cond)']]],
   ['view',['view',['../classSVF_1_1ConstraintGraph.html#a27d8078577d479c84f2a87b44f015d1c',1,'SVF::ConstraintGraph::view()'],['../classSVF_1_1ICFG.html#a0d16e302515ffa0033e02ee8f6b3b590',1,'SVF::ICFG::view()'],['../classSVF_1_1PAG.html#a287461961353d4c8b5b3947fe62ad388',1,'SVF::PAG::view()'],['../classSVF_1_1PTACallGraph.html#a7c2d28b4707d7feaabf62977cef90d27',1,'SVF::PTACallGraph::view()'],['../classSVF_1_1VFG.html#ae4350f68e960bfef87f44587628b1929',1,'SVF::VFG::view()'],['../classSVF_1_1CHGraph.html#a87a7d8c281490fbd2377d64b0115d262',1,'SVF::CHGraph::view()']]],
   ['viewcfg',['viewCFG',['../classSVF_1_1SVFFunction.html#a10bba41af683e8902f65aa1b736411dd',1,'SVF::SVFFunction']]],
   ['viewcfgonly',['viewCFGOnly',['../classSVF_1_1SVFFunction.html#af9dfd6804b5ebda0d4a963b1ce5e6887',1,'SVF::SVFFunction']]],

@@ -14,7 +14,7 @@ var searchData=
   ['incycle',['incycle',['../classSVF_1_1CxtThread.html#a97d876697e682b23211a8f930fed7f32',1,'SVF::CxtThread']]],
   ['indcallsitetofunptrmap',['indCallSiteToFunPtrMap',['../classSVF_1_1PAG.html#a704bbd07934ac14c08ab891946292c04',1,'SVF::PAG']]],
   ['index',['index',['../structDdNode.html#abbd39b25b9abe4b4d53cd267a4103bda',1,'DdNode::index()'],['../structMtrNode.html#ad10fa600c59f13e195d295dac071e807',1,'MtrNode::index()'],['../structst__generator.html#af2fe4c02d62ac650ad39cc28a424b798',1,'st_generator::index()']]],
-  ['indextoddnodemap',['indexToDDNodeMap',['../classSVF_1_1PathCondAllocator.html#a27f89f89bd6eda0355ccdcc5c5df6f32',1,'SVF::PathCondAllocator']]],
+  ['indextocondmap',['indexToCondMap',['../classSVF_1_1PathCondAllocator.html#af92d7e02266aac99ef2a65e3949624e4',1,'SVF::PathCondAllocator']]],
   ['indirectcalllimit',['IndirectCallLimit',['../classSVF_1_1Options.html#ad6c29b05188c9e06aa89623c61865ed8',1,'SVF::Options']]],
   ['indirectcallmap',['indirectCallMap',['../classSVF_1_1PTACallGraph.html#adcae44bd6788954e2e4e007bff03462c',1,'SVF::PTACallGraph']]],
   ['indirectcalls',['indirectCalls',['../classSVF_1_1PTACallGraphEdge.html#a66491523e4ccfdf2ff57e10cfd6f3074',1,'SVF::PTACallGraphEdge']]],

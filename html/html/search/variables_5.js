@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['e',['E',['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren']]],
+  ['e',['e',['../classSVF_1_1CondExpr.html#aa730ac78b531e785b9c16b62a9cf0fa1',1,'SVF::CondExpr::e()'],['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren::E()']]],
   ['edge2pts',['edge2pts',['../classSVF_1_1MTASVFGBuilder.html#a1c0de33bba2f05f14140d872c345ab38',1,'SVF::MTASVFGBuilder']]],
   ['edgeflag',['edgeFlag',['../classSVF_1_1GenericEdge.html#aa1f446e93750580dce04a127231dd1a3',1,'SVF::GenericEdge']]],
   ['edgeid',['edgeId',['../classSVF_1_1ConstraintEdge.html#af51f8e9b3c1dd68855581d0d1739ba29',1,'SVF::ConstraintEdge::edgeId()'],['../classSVF_1_1PAGEdge.html#ad38d3486f99325bd0438e4b4bacbda8a',1,'SVF::PAGEdge::edgeId()']]],

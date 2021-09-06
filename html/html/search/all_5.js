@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['e',['E',['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren']]],
+  ['e',['e',['../classSVF_1_1CondExpr.html#aa730ac78b531e785b9c16b62a9cf0fa1',1,'SVF::CondExpr::e()'],['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren::E()']]],
   ['ecunion',['ecUnion',['../classSVF_1_1Steensgaard.html#a191e77e62916d868b2af730264e26dd8',1,'SVF::Steensgaard']]],
   ['edge2pts',['edge2pts',['../classSVF_1_1MTASVFGBuilder.html#a1c0de33bba2f05f14140d872c345ab38',1,'SVF::MTASVFGBuilder']]],
   ['edge_5fdest',['edge_dest',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a84cc3da79c2c9c5bcdf50da4b919b7da',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::edge_dest()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#a1b463e94c43d2966b8d6cf096b3d04cd',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::edge_dest()']]],
@@ -69,7 +69,7 @@ var searchData=
   ['endsymbolallocation',['endSymbolAllocation',['../classSVF_1_1NodeIDAllocator.html#ae42c5bb7db4d2142adc2e7e904eb36c7',1,'SVF::NodeIDAllocator']]],
   ['endtime',['endTime',['../classSVF_1_1PTAStat.html#a267ba4aac2e7ceb65f008f9486d3d9f7',1,'SVF::PTAStat']]],
   ['entry',['entry',['../structst__generator.html#a950d044c22c5ee51f1dc00fbc82f7e35',1,'st_generator::entry()'],['../cuddGroup_8c.html#aef8c63519ad43f7d8c5f40f8807b886e',1,'entry():&#160;cuddGroup.c'],['../cuddLinear_8c.html#aef8c63519ad43f7d8c5f40f8807b886e',1,'entry():&#160;cuddLinear.c'],['../cuddReorder_8c.html#aef8c63519ad43f7d8c5f40f8807b886e',1,'entry():&#160;cuddReorder.c'],['../cuddSymmetry_8c.html#aef8c63519ad43f7d8c5f40f8807b886e',1,'entry():&#160;cuddSymmetry.c'],['../cuddZddGroup_8c.html#aef8c63519ad43f7d8c5f40f8807b886e',1,'entry():&#160;cuddZddGroup.c']]],
-  ['entrychi',['EntryCHI',['../classSVF_1_1EntryCHI.html',1,'SVF::EntryCHI&lt; Cond &gt;'],['../classSVF_1_1SVFG.html#a101c5a8b31baf5c5613144f6e277abe9',1,'SVF::SVFG::ENTRYCHI()'],['../classSVF_1_1MemSSA.html#a6a20da24d82ace1888be49a2ae0f6bd5',1,'SVF::MemSSA::ENTRYCHI()'],['../classSVF_1_1EntryCHI.html#aedc341c0463de21f5e0b766b7a7f672e',1,'SVF::EntryCHI::EntryCHI()']]],
+  ['entrychi',['EntryCHI',['../classSVF_1_1EntryCHI.html',1,'SVF::EntryCHI&lt; Cond &gt;'],['../classSVF_1_1SVFG.html#a101c5a8b31baf5c5613144f6e277abe9',1,'SVF::SVFG::ENTRYCHI()'],['../classSVF_1_1MemSSA.html#a6a20da24d82ace1888be49a2ae0f6bd5',1,'SVF::MemSSA::ENTRYCHI()'],['../classSVF_1_1EntryCHI.html#a0ba7181ad2a793bf11e40b7c7092e28b',1,'SVF::EntryCHI::EntryCHI()']]],
   ['entryfuncset',['entryFuncSet',['../classSVF_1_1TCT.html#a140eaf9440ae9d52dbfb659967aa449a',1,'SVF::TCT']]],
   ['entrymssachi',['EntryMSSACHI',['../classSVF_1_1MSSADEF.html#a32682e20c9c08d2bdd5abc62ea17af18af0a554492277c9964a67ab9cd23071d3',1,'SVF::MSSADEF']]],
   ['enum_5finout',['ENUM_INOUT',['../classSVF_1_1FlowSensitiveStat.html#ab11996ab5606f51c977b9b1385c13d71',1,'SVF::FlowSensitiveStat']]],
@@ -137,7 +137,7 @@ var searchData=
   ['exit',['exit',['../util_8h.html#a43b6ea6be735bb828bc062c70cadeff8',1,'util.h']]],
   ['expandfiobjs',['expandFIObjs',['../classSVF_1_1BVDataPTAImpl.html#a798c84d5e861de2b61bcb1a86385f721',1,'SVF::BVDataPTAImpl::expandFIObjs()'],['../classSVF_1_1CondPTAImpl.html#a87b48287d7edb97fc120200fe0e5218d',1,'SVF::CondPTAImpl::expandFIObjs()'],['../classSVF_1_1FlowSensitiveTBHC.html#a3af0297eb75ac4009433be44bb286d30',1,'SVF::FlowSensitiveTBHC::expandFIObjs()']]],
   ['exponent',['exponent',['../structIeeeDoubleStruct.html#ae7281389e351ea2e0e577144746d76e2',1,'IeeeDoubleStruct::exponent()'],['../structIeeeNanStruct.html#aeb28a08581e489042de6f647eb431e5a',1,'IeeeNanStruct::exponent()'],['../structEpDoubleStruct.html#ae626888fe53c8c26d65d4fa519b906c6',1,'EpDoubleStruct::exponent()']]],
-  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html',1,'SVF::ExtAPI'],['../classSVF_1_1ExtAPI.html#af1c46b41e0088411a186228f760a99f3',1,'SVF::ExtAPI::ExtAPI()'],['../classSVF_1_1ExtAPI.html#abe666dfdd9b3dea5ea89a5ed9ca4c618',1,'SVF::ExtAPI::extAPI()']]],
+  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html',1,'SVF::ExtAPI'],['../classSVF_1_1ExtAPI.html#abe666dfdd9b3dea5ea89a5ed9ca4c618',1,'SVF::ExtAPI::extAPI()'],['../classSVF_1_1ExtAPI.html#af1c46b41e0088411a186228f760a99f3',1,'SVF::ExtAPI::ExtAPI()']]],
   ['extapi_2ecpp',['ExtAPI.cpp',['../ExtAPI_8cpp.html',1,'']]],
   ['extapi_2eh',['ExtAPI.h',['../ExtAPI_8h.html',1,'']]],
   ['extcallty',['extCallTy',['../namespaceSVF_1_1SVFUtil.html#ac3e7507fb376b1625bc1573132ab9f06',1,'SVF::SVFUtil']]],
@@ -149,5 +149,6 @@ var searchData=
   ['externalpagargs',['ExternalPAGArgs',['../ExternalPAG_8cpp.html#a2431eebebb81cd05cc1872e2b7b3744a',1,'ExternalPAG.cpp']]],
   ['extf_5ft',['extf_t',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094',1,'SVF::ExtAPI']]],
   ['extractelementinst',['ExtractElementInst',['../namespaceSVF.html#afb88c4d723dd7c51bdfc7ba5893cb356',1,'SVF']]],
+  ['extractsubconds',['extractSubConds',['../classSVF_1_1CondManager.html#a1f785b882130c63a0fd58e93317f8a32',1,'SVF::CondManager::extractSubConds()'],['../classSVF_1_1BddCondManager.html#a523b398151421ae958f639d3047057c5',1,'SVF::BddCondManager::extractSubConds()']]],
   ['extractvalueinst',['ExtractValueInst',['../namespaceSVF.html#ace1fd4c32134018e2f6d5da193524986',1,'SVF']]]
 ];
