@@ -50,6 +50,7 @@ var searchData=
   ['postprocessnode',['postProcessNode',['../classSVF_1_1AndersenWaveDiff.html#aa0659a2787c1f9b1b6ec62900313475e',1,'SVF::AndersenWaveDiff']]],
   ['prelabel',['prelabel',['../classSVF_1_1VersionedFlowSensitive.html#a7d86bc18060c0114a783aa1c3a7e9dda',1,'SVF::VersionedFlowSensitive']]],
   ['prepassschedule',['prePassSchedule',['../classSVF_1_1LLVMModuleSet.html#a8b5f24c873db1f6a0614d1dac48bb4bb',1,'SVF::LLVMModuleSet']]],
+  ['preprocessbcs',['preProcessBCs',['../classSVF_1_1LLVMModuleSet.html#a2fdc1bd61b8f6cdf6c07a5059b641b04',1,'SVF::LLVMModuleSet']]],
   ['print',['print',['../classSVF_1_1ConstraintGraph.html#aa87bf07fc538c2cf425138727e7acbce',1,'SVF::ConstraintGraph::print()'],['../classSVF_1_1PAG.html#aa432bbc7c4e83abecdc8706972a9635b',1,'SVF::PAG::print()'],['../classSVF_1_1TCT.html#abf2a992a66de9832915b1f959b8988e4',1,'SVF::TCT::print()'],['../classSVF_1_1DCHGraph.html#a5f08ed4cbba3e4b7a348d5ad77664726',1,'SVF::DCHGraph::print()']]],
   ['printaliaspairs',['PrintAliasPairs',['../classSVF_1_1WPAPass.html#abb6e0c5cc5de312ee0285d1854550752',1,'SVF::WPAPass']]],
   ['printbddstat',['printBDDStat',['../classSVF_1_1SrcSnkDDA.html#ae3d665ff1e796348131e797eb0283bfb',1,'SVF::SrcSnkDDA']]],
