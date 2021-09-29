@@ -559,6 +559,7 @@ var searchData=
   ['getprevnodes',['getPrevNodes',['../classSVF_1_1MTASVFGBuilder.html#a7b034f9f8f01823ecfb7f6c17e47b502',1,'SVF::MTASVFGBuilder']]],
   ['getproc',['getProc',['../classSVF_1_1CxtProc.html#ab9ac6459c90873b7dea35e0a22700189',1,'SVF::CxtProc']]],
   ['getprogentryfunction',['getProgEntryFunction',['../namespaceSVF_1_1SVFUtil.html#aa8017e3e5100b3f63ee338b66118d266',1,'SVF::SVFUtil']]],
+  ['getprogfunction',['getProgFunction',['../namespaceSVF_1_1SVFUtil.html#a6f82e03d880257527bd9cb5978e05604',1,'SVF::SVFUtil']]],
   ['getpropapts',['getPropaPts',['../classSVF_1_1MutableDiffPTData.html#a450ed4470b1d83d44218904dd391fd75',1,'SVF::MutableDiffPTData']]],
   ['getpta',['getPTA',['../classSVF_1_1DDAStat.html#a55fa3ce574d128a89c1aa5f6a7dc17c6',1,'SVF::DDAStat::getPTA()'],['../classSVF_1_1SVFG.html#ab6c337637ccc9bbf0bcc7153b427f7ca',1,'SVF::SVFG::getPTA()'],['../classSVF_1_1MemSSA.html#ad40617a1907b9a6b8cc24888ce54a0ac',1,'SVF::MemSSA::getPTA()'],['../classSVF_1_1TCT.html#a5b087b42340d1a1b2ee37339637709d3',1,'SVF::TCT::getPTA()']]],
   ['getptacallgraph',['getPTACallGraph',['../classSVF_1_1PointerAnalysis.html#a7c9b7e5fe37ae31ba84d167945ca57df',1,'SVF::PointerAnalysis']]],

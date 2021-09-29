@@ -200,7 +200,7 @@ var searchData=
   ['svfgnodelockspan',['SVFGNodeLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a43f4d595b31259576b141cb99883938e',1,'SVF::SVFGNodeLockSpan']]],
   ['svfgopt',['SVFGOPT',['../classSVF_1_1SVFGOPT.html#a239475c15b39d54c632427307b8e9350',1,'SVF::SVFGOPT']]],
   ['svfgsccdetection',['SVFGSCCDetection',['../classSVF_1_1DDAVFSolver.html#aba0ec611a5cfd096ac0b8b11e0bd5580',1,'SVF::DDAVFSolver']]],
-  ['svfgstat',['svfgStat',['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()'],['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()']]],
+  ['svfgstat',['SVFGStat',['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()'],['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()']]],
   ['svfinstruction',['SVFInstruction',['../classSVF_1_1SVFInstruction.html#aadf4790ce7be8e1a95803e25cd4af424',1,'SVF::SVFInstruction']]],
   ['svfmodule',['SVFModule',['../classSVF_1_1SVFModule.html#a22b214595dd7841eb974e7c633ed8bb1',1,'SVF::SVFModule']]],
   ['svfvalue',['SVFValue',['../classSVF_1_1SVFValue.html#a2a85562586efde20be8ac1ccbd1a5ee6',1,'SVF::SVFValue']]],

@@ -14,7 +14,7 @@ var searchData=
   ['validatesuccesstests',['validateSuccessTests',['../classSVF_1_1PointerAnalysis.html#a7accf4e4db4001716e53d98ce5217ac8',1,'SVF::PointerAnalysis::validateSuccessTests()'],['../classSVF_1_1LeakChecker.html#a0aa051a956b61cad9ec5419f33829e6a',1,'SVF::LeakChecker::validateSuccessTests()']]],
   ['validatetbhctests',['validateTBHCTests',['../classSVF_1_1TypeBasedHeapCloning.html#ae42ec334a7dfc96a5ead2d2845ca3b22',1,'SVF::TypeBasedHeapCloning']]],
   ['validatetct',['validateTCT',['../classSVF_1_1MTAResultValidator.html#ae6a18cbaf113ee8e28c3e8dca458d4be',1,'SVF::MTAResultValidator']]],
-  ['validatetests',['ValidateTests',['../classSVF_1_1Options.html#aec491143ded97649da1ed61b8fda796c',1,'SVF::Options::ValidateTests()'],['../classSVF_1_1PointerAnalysis.html#a0454332c89e60729956bb7d69a1a24df',1,'SVF::PointerAnalysis::validateTests()']]],
+  ['validatetests',['validateTests',['../classSVF_1_1PointerAnalysis.html#a0454332c89e60729956bb7d69a1a24df',1,'SVF::PointerAnalysis::validateTests()'],['../classSVF_1_1Options.html#aec491143ded97649da1ed61b8fda796c',1,'SVF::Options::ValidateTests()']]],
   ['valnode',['ValNode',['../classSVF_1_1PAGNode.html#a5cc5327ba68c3f11ed4bef47d89c3dfda3ec7c7a77326c63c845463e36d278698',1,'SVF::PAGNode']]],
   ['valpn',['ValPN',['../classSVF_1_1ValPN.html',1,'SVF::ValPN'],['../classSVF_1_1ValPN.html#a1123ae17ef8497f3baa73b15d19a6cf4',1,'SVF::ValPN::ValPN()']]],
   ['valsym',['ValSym',['../namespaceSVF.html#afe243912c982fde7d6beb4d046f9d42ba4981e1f7cdb8b22323295da5b8b774da',1,'SVF']]],

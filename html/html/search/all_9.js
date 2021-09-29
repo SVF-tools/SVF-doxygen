@@ -107,7 +107,7 @@ var searchData=
   ['insertphi',['insertPHI',['../classSVF_1_1MemSSA.html#acc6f72d96cf29e36093ba08ea86b8983',1,'SVF::MemSSA']]],
   ['insertvalueinst',['InsertValueInst',['../namespaceSVF.html#a485b10fc29e76fdb6f31a56ebbde8f24',1,'SVF']]],
   ['inst',['inst',['../classSVF_1_1IntraBlockNode.html#a2381ce8fea9eb3213bd2f2d00db0086d',1,'SVF::IntraBlockNode::inst()'],['../classSVF_1_1CallPE.html#a86b76d7390dc0f650ec2428c394bf41a',1,'SVF::CallPE::inst()'],['../classSVF_1_1RetPE.html#ad78a287bde15c03eec8d633d363e2ed2',1,'SVF::RetPE::inst()'],['../classSVF_1_1LoadMU.html#aea021fa025a51b1ee663ea3a6dfbae2a',1,'SVF::LoadMU::inst()'],['../classSVF_1_1StoreCHI.html#a787017e8aab6f713a409cdec76549293',1,'SVF::StoreCHI::inst()'],['../classSVF_1_1CxtStmt.html#a237b8738885e57d5a9b984221f611567',1,'SVF::CxtStmt::inst()']]],
-  ['inst2labelmap',['inst2LabelMap',['../classSVF_1_1PAGEdge.html#a5c7605aa20425ef49294e6f153842a56',1,'SVF::PAGEdge::inst2LabelMap()'],['../classSVF_1_1PAGEdge.html#aea1cb2d45d301eea27d451241fa8ddd1',1,'SVF::PAGEdge::Inst2LabelMap()']]],
+  ['inst2labelmap',['Inst2LabelMap',['../classSVF_1_1PAGEdge.html#aea1cb2d45d301eea27d451241fa8ddd1',1,'SVF::PAGEdge::Inst2LabelMap()'],['../classSVF_1_1PAGEdge.html#a5c7605aa20425ef49294e6f153842a56',1,'SVF::PAGEdge::inst2LabelMap()']]],
   ['inst2pagedgesmap',['inst2PAGEdgesMap',['../classSVF_1_1PAG.html#ace643a606d59eb972d0f55590745bd5f',1,'SVF::PAG::inst2PAGEdgesMap()'],['../classSVF_1_1PAG.html#a8fb39e9156bb5cf07dc2329bfcfcd6f7',1,'SVF::PAG::Inst2PAGEdgesMap()']]],
   ['inst2ptapagedgesmap',['inst2PTAPAGEdgesMap',['../classSVF_1_1PAG.html#a925ccfc7169d5c03bffbe945dedc90b6',1,'SVF::PAG']]],
   ['inst_5fiterator',['inst_iterator',['../namespaceSVF.html#a255af6ff30782cb9a548feadb0fe7d6b',1,'SVF']]],
