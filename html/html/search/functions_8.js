@@ -73,6 +73,7 @@ var searchData=
   ['intraphivfgnode',['IntraPHIVFGNode',['../classSVF_1_1IntraPHIVFGNode.html#a65222075e49bb88601a6f1ac51cdace3',1,'SVF::IntraPHIVFGNode']]],
   ['invalidateconsumecache',['invalidateConsumeCache',['../classSVF_1_1VersionedFlowSensitive.html#ab89fb73e63f7766cbaf7735921b0cf4b',1,'SVF::VersionedFlowSensitive']]],
   ['invalidateyieldcache',['invalidateYieldCache',['../classSVF_1_1VersionedFlowSensitive.html#a13f00fd438df4feed73f43d6a0d55e0d',1,'SVF::VersionedFlowSensitive']]],
+  ['irannotator',['IRAnnotator',['../classSVF_1_1IRAnnotator.html#aa54df3d6c0c20c26be90bb68546dc93d',1,'SVF::IRAnnotator']]],
   ['is_5falloc',['is_alloc',['../classSVF_1_1ExtAPI.html#a9ac1ce8f2796d1e70005c6999c9772de',1,'SVF::ExtAPI']]],
   ['is_5farg_5falloc',['is_arg_alloc',['../classSVF_1_1ExtAPI.html#add48f7a9bcb7227727969e944ffe3fc8',1,'SVF::ExtAPI']]],
   ['is_5fdealloc',['is_dealloc',['../classSVF_1_1ExtAPI.html#af09ae44b9311d3dfd9eafd41da8c31be',1,'SVF::ExtAPI']]],

@@ -59,6 +59,7 @@ var searchData=
   ['_7eicfgedge',['~ICFGEdge',['../classSVF_1_1ICFGEdge.html#a6dea0df51f68b621fcabef6a3ce9e778',1,'SVF::ICFGEdge']]],
   ['_7einterdisjointmrg',['~InterDisjointMRG',['../classSVF_1_1InterDisjointMRG.html#a664e831aa98e3c894e794273fbb78591',1,'SVF::InterDisjointMRG']]],
   ['_7eintradisjointmrg',['~IntraDisjointMRG',['../classSVF_1_1IntraDisjointMRG.html#ad92695f6ff2cb62f58b48d68b0b6fb0e',1,'SVF::IntraDisjointMRG']]],
+  ['_7eirannotator',['~IRAnnotator',['../classSVF_1_1IRAnnotator.html#a6e0454ebd200005fd161cf6a2a0e1c26',1,'SVF::IRAnnotator']]],
   ['_7eiterateddominancefrontier',['~IteratedDominanceFrontier',['../classSVF_1_1IteratedDominanceFrontier.html#ab4844d80db9046eb41d033d11fbdefc1',1,'SVF::IteratedDominanceFrontier']]],
   ['_7eleakchecker',['~LeakChecker',['../classSVF_1_1LeakChecker.html#a1c47ce036a7ffcd7cbe5d5e372a30208',1,'SVF::LeakChecker']]],
   ['_7elist',['~List',['../classSVF_1_1List.html#afd8edd0acf606e0c3470bab424083b45',1,'SVF::List']]],

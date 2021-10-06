@@ -21,6 +21,8 @@ var searchData=
   ['addaddrpe',['addAddrPE',['../classSVF_1_1PAG.html#a6ac3b5eb1f34ac2257d0ba2556ed52c0',1,'SVF::PAG']]],
   ['addaddrvfgnode',['addAddrVFGNode',['../classSVF_1_1VFG.html#a7b0d533f3ccce8fc64deae6077f3d959',1,'SVF::VFG']]],
   ['addaliasset',['addAliasSet',['../classSVF_1_1SVFModule.html#a9b28f106dfedb917c6c757d5d0a6771e',1,'SVF::SVFModule']]],
+  ['addandersenmetadata',['addAndersenMetadata',['../classSVF_1_1IRAnnotator.html#aa36cd38b0518a9c9a3b57cea9b07b227',1,'SVF::IRAnnotator']]],
+  ['addandersennamedmetdata',['addAndersenNamedMetdata',['../classSVF_1_1IRAnnotator.html#af48723d319bbe2ecfd0c4777c1c92dc1',1,'SVF::IRAnnotator']]],
   ['addbackwardvisited',['addBackwardVisited',['../classSVF_1_1SrcSnkDDA.html#aa061e2d72d3045c9712512c6df002544',1,'SVF::SrcSnkDDA']]],
   ['addbinarynode',['addBinaryNode',['../classSVF_1_1PAG.html#ad7b5d745134fa564934aa892f38a6990',1,'SVF::PAG']]],
   ['addbinaryopedge',['addBinaryOPEdge',['../classSVF_1_1PAGBuilder.html#a1e1a7ac8b5c26cc4a571a602eace6b87',1,'SVF::PAGBuilder']]],
