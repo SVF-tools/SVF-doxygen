@@ -26,7 +26,7 @@ var searchData=
   ['readprecisiontdedge',['ReadPrecisionTDEdge',['../classSVF_1_1Options.html#a6bec8aed8673d10d65cc3df9fad3383b',1,'SVF::Options']]],
   ['realign',['realign',['../structDdManager.html#ab50e58f446cce13dd36cf63230e2d836',1,'DdManager']]],
   ['realignz',['realignZ',['../structDdManager.html#aeb6927b50fc978391e3eda5161df8c5c',1,'DdManager']]],
-  ['realloc',['REALLOC',['../util_8h.html#ac3d02b1026db1997f09067d47aed16a8',1,'REALLOC():&#160;util.h'],['../util_8h.html#af6ef63a39a975856bc39bf0f3d13b292',1,'realloc():&#160;util.h']]],
+  ['realloc',['realloc',['../util_8h.html#af6ef63a39a975856bc39bf0f3d13b292',1,'realloc():&#160;util.h'],['../util_8h.html#ac3d02b1026db1997f09067d47aed16a8',1,'REALLOC():&#160;util.h']]],
   ['reanalyze',['reanalyze',['../classSVF_1_1WPASolver.html#ac460772d9236a2fefe17b2557023b883',1,'SVF::WPASolver']]],
   ['reclaimed',['reclaimed',['../structDdManager.html#a4ab47b179b205207c8e738f4b6ed1ebd',1,'DdManager']]],
   ['recomb',['recomb',['../structDdManager.html#a38b89daefdc8aab944fbc2ff2aece2f4',1,'DdManager']]],

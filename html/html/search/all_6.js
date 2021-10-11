@@ -91,7 +91,7 @@ var searchData=
   ['fpin',['FPIN',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a3c58aedc46cdafac26b47ec9674c2ac5',1,'SVF::VFGNode']]],
   ['fpnodes',['FPNodes',['../classSVF_1_1FunEntryBlockNode.html#afc829a259f3c15524a71cef27d294949',1,'SVF::FunEntryBlockNode']]],
   ['fpout',['FPOUT',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ac2c5b04acc4f754e70a782adee522e09',1,'SVF::VFGNode']]],
-  ['free',['FREE',['../util_8h.html#aa279a8302d25fa9dfeb3e00161aee784',1,'FREE():&#160;util.h'],['../util_8h.html#a3110dcad20c2a6616d360901b94e06a1',1,'free(void *):&#160;util.h']]],
+  ['free',['free',['../util_8h.html#a3110dcad20c2a6616d360901b94e06a1',1,'free(void *):&#160;util.h'],['../util_8h.html#aa279a8302d25fa9dfeb3e00161aee784',1,'FREE():&#160;util.h']]],
   ['freelist',['freelist',['../structDdLevelQueue.html#aa70e5645d52749160c718d38ea0c06ba',1,'DdLevelQueue']]],
   ['freematrix',['freeMatrix',['../cuddExact_8c.html#ae61a29ea2e8e94b45114dbb698e14ac7',1,'cuddExact.c']]],
   ['freepathpair',['freePathPair',['../cuddSat_8c.html#a498f7e0ebf19b278dd9e7d9651b82eef',1,'cuddSat.c']]],
