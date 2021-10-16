@@ -27,9 +27,9 @@ var searchData=
   ['mtrnode',['MtrNode',['../mtr_8h.html#aafb75b12600810457fa5a03c5adcf84d',1,'mtr.h']]],
   ['mu',['MU',['../classSVF_1_1SVFG.html#a7f4deffe7e13352b8c13eab110c834cc',1,'SVF::SVFG::MU()'],['../classSVF_1_1MemSSA.html#a2b4f3b19b32ac61dd1932faa82b93d8b',1,'SVF::MemSSA::MU()']]],
   ['muset',['MUSet',['../classSVF_1_1SVFG.html#acdbe1c510273107b708935061b6c4127',1,'SVF::SVFG::MUSet()'],['../classSVF_1_1MemSSA.html#a81bba824495a882b49e687683954b112',1,'SVF::MemSSA::MUSet()']]],
-  ['mutdfptdataty',['MutDFPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a6958d92886a6a68a6f3d41f20e566f47',1,'SVF::BVDataPTAImpl::MutDFPTDataTy()'],['../classSVF_1_1FlowSensitive.html#a03a3178d88db4efc0593fedb22938e7d',1,'SVF::FlowSensitive::MutDFPTDataTy()']]],
-  ['mutdiffptdataty',['MutDiffPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a6a22840a3742033176a068302216c953',1,'SVF::BVDataPTAImpl']]],
-  ['mutincdfptdataty',['MutIncDFPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a08168ec29da1cc896ce3fb44a3aa1cb3',1,'SVF::BVDataPTAImpl']]],
-  ['mutptdataty',['MutPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a78f6ae3aca9cea57cfe66eb7bf85857b',1,'SVF::BVDataPTAImpl::MutPTDataTy()'],['../classSVF_1_1CondPTAImpl.html#af3ae2748edfdefaa08a73930bd012d6c',1,'SVF::CondPTAImpl::MutPTDataTy()']]],
-  ['mutversionedptdataty',['MutVersionedPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a39a3041e513a2c9c3791635529c5c620',1,'SVF::BVDataPTAImpl']]]
+  ['mutdfptdataty',['MutDFPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#ac130bf326911b8e5396f57daa78566e7',1,'SVF::BVDataPTAImpl::MutDFPTDataTy()'],['../classSVF_1_1FlowSensitive.html#a03a3178d88db4efc0593fedb22938e7d',1,'SVF::FlowSensitive::MutDFPTDataTy()']]],
+  ['mutdiffptdataty',['MutDiffPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#ac4e74e6dfee9d08198e0f7e3d76a0646',1,'SVF::BVDataPTAImpl']]],
+  ['mutincdfptdataty',['MutIncDFPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a639446e6bf9712afa439d089b94aefae',1,'SVF::BVDataPTAImpl']]],
+  ['mutptdataty',['MutPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a533384bd2eb8a1589ba8b7695c759073',1,'SVF::BVDataPTAImpl::MutPTDataTy()'],['../classSVF_1_1CondPTAImpl.html#af3ae2748edfdefaa08a73930bd012d6c',1,'SVF::CondPTAImpl::MutPTDataTy()']]],
+  ['mutversionedptdataty',['MutVersionedPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a7fde3e9b189e988cd0a24d567b136e13',1,'SVF::BVDataPTAImpl']]]
 ];
