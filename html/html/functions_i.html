@@ -139,6 +139,9 @@ $(function() {
 <li>IDToCallSiteMapTy
 : <a class="el" href="classSVF_1_1SymbolTableInfo.html#a5af399ccac6ec809ade8f778379027bb">SVF::SymbolTableInfo</a>
 </li>
+<li>IDToCondExprMap
+: <a class="el" href="classSVF_1_1CondManager.html#a1f6aceb4d48a37bcb0e2f1776116b760">SVF::CondManager</a>
+</li>
 <li>idToCSMap
 : <a class="el" href="classSVF_1_1PTACallGraph.html#a5d6f63baad19589a9fd1e069631e18fa">SVF::PTACallGraph</a>
 </li>
@@ -216,12 +219,6 @@ $(function() {
 : <a class="el" href="structDdNode.html#abbd39b25b9abe4b4d53cd267a4103bda">DdNode</a>
 , <a class="el" href="structMtrNode.html#ad10fa600c59f13e195d295dac071e807">MtrNode</a>
 , <a class="el" href="structst__generator.html#af2fe4c02d62ac650ad39cc28a424b798">st_generator</a>
-</li>
-<li>IndexToConditionMap
-: <a class="el" href="classSVF_1_1PathCondAllocator.html#a7761a4dd6da8b36b15dcc0b89a9ec6b3">SVF::PathCondAllocator</a>
-</li>
-<li>indexToCondMap
-: <a class="el" href="classSVF_1_1PathCondAllocator.html#af92d7e02266aac99ef2a65e3949624e4">SVF::PathCondAllocator</a>
 </li>
 <li>IndirectCallLimit
 : <a class="el" href="classSVF_1_1Options.html#ad6c29b05188c9e06aa89623c61865ed8">SVF::Options</a>
@@ -638,7 +635,9 @@ $(function() {
 : <a class="el" href="classSVF_1_1MRGenerator.html#acd1759ce72edc748e6628d7e82458473">SVF::MRGenerator</a>
 </li>
 <li>isAllPathReachable()
-: <a class="el" href="classSVF_1_1SrcSnkDDA.html#a6ae0d47bac09163e90b8b2e773ad69f0">SVF::SrcSnkDDA</a>
+: <a class="el" href="classSVF_1_1CondManager.html#a6151817a6f671fa1e7814e74f7ce2e51">SVF::CondManager</a>
+, <a class="el" href="classSVF_1_1PathCondAllocator.html#a51c55809f28eee5b8432ab4508f9a887">SVF::PathCondAllocator</a>
+, <a class="el" href="classSVF_1_1SrcSnkDDA.html#a6ae0d47bac09163e90b8b2e773ad69f0">SVF::SrcSnkDDA</a>
 </li>
 <li>isAllReachable()
 : <a class="el" href="classSVF_1_1ProgSlice.html#a2f96f034b7236791fe1d4d351174722e">SVF::ProgSlice</a>
@@ -787,6 +786,11 @@ $(function() {
 </li>
 <li>isEQCmp()
 : <a class="el" href="classSVF_1_1PathCondAllocator.html#af93358a02bf4ef8020091532e0c5b5af">SVF::PathCondAllocator</a>
+</li>
+<li>isEquivalentBranchCond()
+: <a class="el" href="classSVF_1_1CondManager.html#adef2474c65a7f9d96b27ee670136a240">SVF::CondManager</a>
+, <a class="el" href="classSVF_1_1PathCondAllocator.html#ad92e8909172d960de8a25f6ff0272261">SVF::PathCondAllocator</a>
+, <a class="el" href="classSVF_1_1ProgSlice.html#a52ecc421c235a8854792ca92829312e4">SVF::ProgSlice</a>
 </li>
 <li>isext_cache
 : <a class="el" href="classSVF_1_1ExtAPI.html#a329882c608e9a6b10a758bcd1ca7a0b5">SVF::ExtAPI</a>
@@ -1083,7 +1087,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1LockAnalysis.html#a842ddef4d1cb9c45555d949375627a48">SVF::LockAnalysis</a>
 </li>
 <li>isProtectedByCommonCxtLock()
-: <a class="el" href="classSVF_1_1LockAnalysis.html#a56405fa1fec68717958ed1c05dd34287">SVF::LockAnalysis</a>
+: <a class="el" href="classSVF_1_1LockAnalysis.html#a3e2e629a588b44ed39e529babb59a4f9">SVF::LockAnalysis</a>
 </li>
 <li>isProtectedByCommonLock()
 : <a class="el" href="classSVF_1_1LockAnalysis.html#a4d4501d62bf51475662b6ba66e6380aa">SVF::LockAnalysis</a>
@@ -1137,6 +1141,10 @@ $(function() {
 </li>
 <li>isSameVar()
 : <a class="el" href="classSVF_1_1CondPTAImpl.html#a7a1be735c76ba4a6b235264fe8ec6c28">SVF::CondPTAImpl&lt; Cond &gt;</a>
+</li>
+<li>isSatisfiable()
+: <a class="el" href="classSVF_1_1CondManager.html#a725d9c0a3aad4ebea3f06edf433f04ea">SVF::CondManager</a>
+, <a class="el" href="classSVF_1_1PathCondAllocator.html#aaed1bbfcac68a5e48d2850ef395e7da7">SVF::PathCondAllocator</a>
 </li>
 <li>isSatisfiableForAll()
 : <a class="el" href="classSVF_1_1ProgSlice.html#a62a9f2c107f27d6c04c30ef153ffb8ed">SVF::ProgSlice</a>
@@ -1206,23 +1214,23 @@ $(function() {
 : <a class="el" href="classSVF_1_1DDAVFSolver.html#add7daee4a0ecae479a5ab015130c8c93">SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;</a>
 </li>
 <li>isTailofSpan()
-: <a class="el" href="classSVF_1_1MTASVFGBuilder.html#af8ea2da28e9818d4f9e4e9528997f023">SVF::MTASVFGBuilder</a>
+: <a class="el" href="classSVF_1_1MTASVFGBuilder.html#ac8339229ade604f4205b111bfc99f23f">SVF::MTASVFGBuilder</a>
 </li>
 <li>isTDAcquire()
 : <a class="el" href="classSVF_1_1LockAnalysis.html#a5521de9933ce74d0954a942dfceae772">SVF::LockAnalysis</a>
-, <a class="el" href="classSVF_1_1ThreadAPI.html#a9db4df7968ec179e5012794c58fdee70">SVF::ThreadAPI</a>
+, <a class="el" href="classSVF_1_1ThreadAPI.html#a608f0cb60a665745748b6a6654a6e837">SVF::ThreadAPI</a>
 </li>
 <li>isTDBarWait()
 : <a class="el" href="classSVF_1_1ThreadAPI.html#af3aa58dc83dca382162df67c12169585">SVF::ThreadAPI</a>
 </li>
 <li>isTDExit()
-: <a class="el" href="classSVF_1_1ThreadAPI.html#ae87d129560d7015966336f06a516db23">SVF::ThreadAPI</a>
+: <a class="el" href="classSVF_1_1ThreadAPI.html#a22d6c0cf0ba19af0661b106a8859024f">SVF::ThreadAPI</a>
 </li>
 <li>isTDFork()
 : <a class="el" href="classSVF_1_1ForkJoinAnalysis.html#aff32f240a03421937c2fc606359dca9b">SVF::ForkJoinAnalysis</a>
 , <a class="el" href="classSVF_1_1LockAnalysis.html#a6e34f3138e8ee558bb00d9d808afba16">SVF::LockAnalysis</a>
 , <a class="el" href="classSVF_1_1MHP.html#aeabf2e9ec8b1ec874503c83cc65e1205">SVF::MHP</a>
-, <a class="el" href="classSVF_1_1ThreadAPI.html#a261eb3c2f7e44a81edf4feddfc65a3cc">SVF::ThreadAPI</a>
+, <a class="el" href="classSVF_1_1ThreadAPI.html#a9da276dca5092d18f4f22d32e5ab6cdf">SVF::ThreadAPI</a>
 </li>
 <li>isTDJoin()
 : <a class="el" href="classSVF_1_1ForkJoinAnalysis.html#aac722a42dc6e03e771a7a80de5f8ec94">SVF::ForkJoinAnalysis</a>

@@ -288,7 +288,7 @@ var searchData=
   ['analyzeintraproceduallock',['analyzeIntraProcedualLock',['../classSVF_1_1LockAnalysis.html#a8a34f7544f22a87e1caf010c34abda75',1,'SVF::LockAnalysis']]],
   ['analyzelockspancxtstmt',['analyzeLockSpanCxtStmt',['../classSVF_1_1LockAnalysis.html#a00ccd89eff3fe8fec397df101f927cbe',1,'SVF::LockAnalysis']]],
   ['analyzevtables',['analyzeVTables',['../classSVF_1_1CHGraph.html#a0685bd653851a903f765e21aec0fdbd1',1,'SVF::CHGraph']]],
-  ['and',['AND',['../classSVF_1_1CondManager.html#ae938b73e6f11f145df5e1ef954deeddd',1,'SVF::CondManager::AND()'],['../classSVF_1_1BddCondManager.html#a7439d48e29f497c5a1606dec0288ee40',1,'SVF::BddCondManager::AND()']]],
+  ['and',['AND',['../classSVF_1_1BranchCondManager.html#a739f4206abf4f367dc796e9fd35d4d04',1,'SVF::BranchCondManager::AND()'],['../classSVF_1_1CondManager.html#a4b88160366a7c7b2bf7e2ab632ed04c7',1,'SVF::CondManager::AND()']]],
   ['andersen',['Andersen',['../classSVF_1_1Andersen.html#aed87dd498ba5daf263624a74118ef007',1,'SVF::Andersen']]],
   ['andersenbase',['AndersenBase',['../classSVF_1_1AndersenBase.html#a16f177cfcb4a203a55c954c05125f267',1,'SVF::AndersenBase']]],
   ['andersenhcd',['AndersenHCD',['../classSVF_1_1AndersenHCD.html#a37c2429f238adf0aa6e89bc2d20ee8df',1,'SVF::AndersenHCD']]],

@@ -67,5 +67,5 @@ var searchData=
   ['extcallty',['extCallTy',['../namespaceSVF_1_1SVFUtil.html#ac3e7507fb376b1625bc1573132ab9f06',1,'SVF::SVFUtil']]],
   ['externalpag',['ExternalPAG',['../classSVF_1_1ExternalPAG.html#a7401db95a642fc218e6337dce61b98e1',1,'SVF::ExternalPAG']]],
   ['externalpagargs',['ExternalPAGArgs',['../ExternalPAG_8cpp.html#a2431eebebb81cd05cc1872e2b7b3744a',1,'ExternalPAG.cpp']]],
-  ['extractsubconds',['extractSubConds',['../classSVF_1_1CondManager.html#a1f785b882130c63a0fd58e93317f8a32',1,'SVF::CondManager::extractSubConds()'],['../classSVF_1_1BddCondManager.html#a523b398151421ae958f639d3047057c5',1,'SVF::BddCondManager::extractSubConds()']]]
+  ['extractsubconds',['extractSubConds',['../classSVF_1_1BranchCondManager.html#aa241ee8c9d8ef17029dba67b737d8beb',1,'SVF::BranchCondManager::extractSubConds()'],['../classSVF_1_1CondManager.html#acd773bd9dbf5161e488c827b0b71481d',1,'SVF::CondManager::extractSubConds()']]]
 ];

@@ -26,6 +26,7 @@ var searchData=
   ['releaseandersensfr',['releaseAndersenSFR',['../classSVF_1_1AndersenSFR.html#a4aa1607b7d84a6de151c19ae84b913b9',1,'SVF::AndersenSFR']]],
   ['releaseandersenwavediff',['releaseAndersenWaveDiff',['../classSVF_1_1AndersenWaveDiff.html#a5da6abb1a7f0ef3e3871ea6e5a623625',1,'SVF::AndersenWaveDiff']]],
   ['releaseandersenwavediffwithtype',['releaseAndersenWaveDiffWithType',['../classSVF_1_1AndersenWaveDiffWithType.html#ab82dc509ba29728b0827e20931aca7fc',1,'SVF::AndersenWaveDiffWithType']]],
+  ['releasecondmgr',['releaseCondMgr',['../classSVF_1_1CondManager.html#a2748338b4a5b122b5bbf4a9cb1f54211',1,'SVF::CondManager']]],
   ['releasefsmpta',['releaseFSMPTA',['../classSVF_1_1FSMPTA.html#aea3ec49d7c12dc7e884600d1eddc99f0',1,'SVF::FSMPTA']]],
   ['releasefswpa',['releaseFSWPA',['../classSVF_1_1FlowSensitive.html#ae6aed22a79ac6567446dfcba82cb17b8',1,'SVF::FlowSensitive']]],
   ['releasellvmmoduleset',['releaseLLVMModuleSet',['../classSVF_1_1LLVMModuleSet.html#a2f8e91c075d90be66412a079fe73e936',1,'SVF::LLVMModuleSet']]],

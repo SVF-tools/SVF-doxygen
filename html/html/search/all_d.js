@@ -1,7 +1,7 @@
 var searchData=
 [
   ['m',['M',['../classSVF_1_1RaceResultValidator.html#abd3ad42a71357dfd1483e6e0d18d5ebd',1,'SVF::RaceResultValidator']]],
-  ['m_5fbdd_5fmgr',['m_bdd_mgr',['../classSVF_1_1BddCondManager.html#a3c12ca3172cd7fecea6a9389187c0117',1,'SVF::BddCondManager']]],
+  ['m_5fbdd_5fmgr',['m_bdd_mgr',['../classSVF_1_1BranchCondManager.html#a0c6278a5b4419e16c8fb5d3f8f8162a2',1,'SVF::BranchCondManager']]],
   ['m_5fcond',['m_cond',['../classSVF_1_1CondVar.html#a90b13685d2126f8c10dde4a504bb28df',1,'SVF::CondVar']]],
   ['m_5fid',['m_id',['../classSVF_1_1CondVar.html#a26fd04b3f2d45f0c230e1823f3eea49a',1,'SVF::CondVar']]],
   ['main',['main',['../dda_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;dda.cpp'],['../svf-ex_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;svf-ex.cpp'],['../mta_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mta.cpp'],['../saber_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;saber.cpp'],['../wpa_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;wpa.cpp']]],

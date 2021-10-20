@@ -150,6 +150,6 @@ var searchData=
   ['externalpagargs',['ExternalPAGArgs',['../ExternalPAG_8cpp.html#a2431eebebb81cd05cc1872e2b7b3744a',1,'ExternalPAG.cpp']]],
   ['extf_5ft',['extf_t',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094',1,'SVF::ExtAPI']]],
   ['extractelementinst',['ExtractElementInst',['../namespaceSVF.html#afb88c4d723dd7c51bdfc7ba5893cb356',1,'SVF']]],
-  ['extractsubconds',['extractSubConds',['../classSVF_1_1CondManager.html#a1f785b882130c63a0fd58e93317f8a32',1,'SVF::CondManager::extractSubConds()'],['../classSVF_1_1BddCondManager.html#a523b398151421ae958f639d3047057c5',1,'SVF::BddCondManager::extractSubConds()']]],
+  ['extractsubconds',['extractSubConds',['../classSVF_1_1BranchCondManager.html#aa241ee8c9d8ef17029dba67b737d8beb',1,'SVF::BranchCondManager::extractSubConds()'],['../classSVF_1_1CondManager.html#acd773bd9dbf5161e488c827b0b71481d',1,'SVF::CondManager::extractSubConds()']]],
   ['extractvalueinst',['ExtractValueInst',['../namespaceSVF.html#ace1fd4c32134018e2f6d5da193524986',1,'SVF']]]
 ];
