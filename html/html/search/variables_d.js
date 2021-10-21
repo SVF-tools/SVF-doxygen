@@ -68,7 +68,7 @@ var searchData=
   ['mindead',['minDead',['../structDdManager.html#a6cd4e44cf6d9a86bf2f75c34c3e2254b',1,'DdManager']]],
   ['minhit',['minHit',['../structDdLocalCache.html#a0de25f5b28a2b0d37be72e53fac4ae56',1,'DdLocalCache::minHit()'],['../structDdManager.html#a6a9381bd220537413b68918593e83dae',1,'DdManager::minHit()']]],
   ['minusinfinity',['minusinfinity',['../structDdManager.html#a801d4f3177fdf9c8cc956c2cc71039d3',1,'DdManager']]],
-  ['mmoutofmemory',['MMoutOfMemory',['../util_8h.html#af76722b9c78f324a2cd1a57318e0eea1',1,'MMoutOfMemory():&#160;safe_mem.c'],['../safe__mem_8c.html#af76722b9c78f324a2cd1a57318e0eea1',1,'MMoutOfMemory():&#160;safe_mem.c']]],
+  ['mmoutofmemory',['MMoutOfMemory',['../util_8h.html#af76722b9c78f324a2cd1a57318e0eea1',1,'MMoutOfMemory():&#160;util.c'],['../util_8c.html#af76722b9c78f324a2cd1a57318e0eea1',1,'MMoutOfMemory():&#160;util.c']]],
   ['mod',['mod',['../classSVF_1_1MTAResultValidator.html#a8d54a1e8d1703d0c9ba541bcf997e900',1,'SVF::MTAResultValidator::mod()'],['../classSVF_1_1PCG.html#a985b0c790c582d15e6242950ac66f574',1,'SVF::PCG::mod()'],['../classSVF_1_1SymbolTableInfo.html#af8fdaaa03cd2ae9b7d50f57bc678b8ba',1,'SVF::SymbolTableInfo::mod()']]],
   ['modelconstants',['modelConstants',['../classSVF_1_1SymbolTableInfo.html#ad20ccb90e8f9dee488a8aec0600399dc',1,'SVF::SymbolTableInfo']]],
   ['modelconsts',['ModelConsts',['../classSVF_1_1Options.html#a5c051cf6a93a87a07aa1d31e302a2877',1,'SVF::Options']]],
@@ -86,7 +86,7 @@ var searchData=
   ['mssa',['mssa',['../classSVF_1_1SVFG.html#a6f07410ee34e4bf1079e3b5902c81d28',1,'SVF::SVFG::mssa()'],['../classSVF_1_1MemSSAStat.html#ab29515f4e5b1f090c06a6e39761d3394',1,'SVF::MemSSAStat::mssa()']]],
   ['mssafun',['MSSAFun',['../classSVF_1_1Options.html#a4ac0e6b77fc9ccc18b269268b3cd046d',1,'SVF::Options']]],
   ['mssavartodefmap',['MSSAVarToDefMap',['../classSVF_1_1SVFG.html#aafa1b445bd3578daaba8f82e517745f1',1,'SVF::SVFG']]],
-  ['mtr_5funused',['MTR_UNUSED',['../mtrBasic_8c.html#a71385e18c061c8783c806fedd390bb6a',1,'MTR_UNUSED():&#160;mtrBasic.c'],['../mtrGroup_8c.html#a71385e18c061c8783c806fedd390bb6a',1,'MTR_UNUSED():&#160;mtrGroup.c']]],
+  ['mtr_5funused',['MTR_UNUSED',['../mtr_8c.html#a71385e18c061c8783c806fedd390bb6a',1,'mtr.c']]],
   ['mu',['mu',['../classSVF_1_1FormalOUTSVFGNode.html#a14445344f2354b4752807642c4401c10',1,'SVF::FormalOUTSVFGNode::mu()'],['../classSVF_1_1ActualINSVFGNode.html#a04adf013b9a50583841b2cf62f978295',1,'SVF::ActualINSVFGNode::mu()']]],
   ['multiforked',['multiforked',['../classSVF_1_1TCTNode.html#a414f4b98fb8fd36d2cb381ff56eb98d8',1,'SVF::TCTNode']]],
   ['mutptdata',['mutPTData',['../classSVF_1_1MutableDiffPTData.html#a3603cb4baf60b1aa83b7807ac5591484',1,'SVF::MutableDiffPTData::mutPTData()'],['../classSVF_1_1MutableDFPTData.html#acf40f716470f73095d44a1b9e3bb939e',1,'SVF::MutableDFPTData::mutPTData()']]]

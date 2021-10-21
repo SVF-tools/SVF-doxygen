@@ -1,7 +1,7 @@
 var searchData=
 [
   ['h',['h',['../structDdCache.html#adcf343a00c090b91bb78b105ac51e4be',1,'DdCache']]],
-  ['hack',['hack',['../unionhack.html',1,'hack'],['../cuddTable_8c.html#a8130f92b5439f01dd3b73b41b0b5deae',1,'hack():&#160;cuddTable.c']]],
+  ['hack',['hack',['../unionhack.html',1,'hack'],['../cuddInt_8c.html#a8130f92b5439f01dd3b73b41b0b5deae',1,'hack():&#160;cuddInt.c']]],
   ['handblackhole',['HandBlackHole',['../classSVF_1_1Options.html#ad2d3db3e407a53956a5a59cc24eb8d40',1,'SVF::Options']]],
   ['handleaddr',['handleAddr',['../classSVF_1_1ContextDDA.html#a26031c81d3eba5b3ff3ebd51d89510ae',1,'SVF::ContextDDA::handleAddr()'],['../classSVF_1_1DDAVFSolver.html#acfe7d961caac8f0f558881a9a006b1fa',1,'SVF::DDAVFSolver::handleAddr()'],['../classSVF_1_1FlowDDA.html#a1b8d66dbe8c6587e74d70f5d231eb69d',1,'SVF::FlowDDA::handleAddr()']]],
   ['handlebkcondition',['handleBKCondition',['../classSVF_1_1ContextDDA.html#aa8a7b6e99b92abfa5c2404515b703a2d',1,'SVF::ContextDDA::handleBKCondition()'],['../classSVF_1_1DDAVFSolver.html#a601282325e55badc15f3ba9141816af5',1,'SVF::DDAVFSolver::handleBKCondition()'],['../classSVF_1_1FlowDDA.html#addb412dc03c7684889693ce263585867',1,'SVF::FlowDDA::handleBKCondition()']]],
@@ -156,9 +156,9 @@ var searchData=
   ['hasvfedge',['hasVFEdge',['../classSVF_1_1VFPathCond.html#a64edbab728287b8a263ea25670671724',1,'SVF::VFPathCond']]],
   ['hasvfgnode',['hasVFGNode',['../classSVF_1_1VFG.html#a30eb9d717ad5bc8a9109a7bdef38f4a1',1,'SVF::VFG']]],
   ['hasvfgnodes',['hasVFGNodes',['../classSVF_1_1VFG.html#a76af43e28630eb56a1aa5971f516d43d',1,'SVF::VFG']]],
-  ['have_5fgetrlimit',['HAVE_GETRLIMIT',['../datalimit_8c.html#a30a57d379e02246aa63b4d32e683ec53',1,'datalimit.c']]],
-  ['have_5fsys_5fresource_5fh',['HAVE_SYS_RESOURCE_H',['../datalimit_8c.html#a6e7be09e66bc8d1260031bde86fef17b',1,'datalimit.c']]],
-  ['have_5fsys_5ftime_5fh',['HAVE_SYS_TIME_H',['../datalimit_8c.html#a2aae46056558e9d6fef6380f9678ffe3',1,'datalimit.c']]],
+  ['have_5fgetrlimit',['HAVE_GETRLIMIT',['../util_8c.html#a30a57d379e02246aa63b4d32e683ec53',1,'util.c']]],
+  ['have_5fsys_5fresource_5fh',['HAVE_SYS_RESOURCE_H',['../util_8c.html#a6e7be09e66bc8d1260031bde86fef17b',1,'util.c']]],
+  ['have_5fsys_5ftime_5fh',['HAVE_SYS_TIME_H',['../util_8c.html#a2aae46056558e9d6fef6380f9678ffe3',1,'util.c']]],
   ['hbpair',['HBPair',['../classSVF_1_1ForkJoinAnalysis.html#aad3e722ecaa4a39aef0e1cabfa2b8019',1,'SVF::ForkJoinAnalysis']]],
   ['hcdandersen',['hcdAndersen',['../classSVF_1_1AndersenHCD.html#a2356a7f8215725d2ee035630b1487b05',1,'SVF::AndersenHCD']]],
   ['head',['head',['../classSVF_1_1List.html#a41d52072edb2b75ab15d67bf2663312a',1,'SVF::List']]],

@@ -2,8 +2,8 @@ var searchData=
 [
   ['racedetecor',['RACEDETECOR',['../MTA_8cpp.html#a722a3314000546677382be2b285e04d8',1,'MTA.cpp']]],
   ['racevalidator',['RaceValidator',['../classSVF_1_1RaceValidator.html#a7ec5d97155d170033398757af56691ad',1,'SVF::RaceValidator']]],
-  ['rand_5fint',['rand_int',['../cuddGenetic_8c.html#a08c36691817205004514f669bfa72afe',1,'cuddGenetic.c']]],
-  ['random_5fgenerator',['random_generator',['../cuddAnneal_8c.html#a77a931cdec27ae26f4d8e4b9152ff7e6',1,'cuddAnneal.c']]],
+  ['rand_5fint',['rand_int',['../cuddInt_8c.html#a08c36691817205004514f669bfa72afe',1,'cuddInt.c']]],
+  ['random_5fgenerator',['random_generator',['../cuddInt_8c.html#a77a931cdec27ae26f4d8e4b9152ff7e6',1,'cuddInt.c']]],
   ['readfromfile',['readFromFile',['../classSVF_1_1ExternalPAG.html#ae010036c742cfdf95fad5355f0100984',1,'SVF::ExternalPAG::readFromFile()'],['../classSVF_1_1BVDataPTAImpl.html#a290501006cb700db0e07dc577429c928',1,'SVF::BVDataPTAImpl::readFromFile()']]],
   ['readfrommodule',['readFromModule',['../classSVF_1_1BVDataPTAImpl.html#a857cdacfc8cafdeb1431bdfa077ef9b5',1,'SVF::BVDataPTAImpl']]],
   ['readinheritancemetadatafrommodule',['readInheritanceMetadataFromModule',['../classSVF_1_1CHGraph.html#a315f0dc381d62f99bede32f08aa9cde8',1,'SVF::CHGraph']]],
@@ -91,7 +91,7 @@ var searchData=
   ['resolvecppindcalls',['resolveCPPIndCalls',['../classSVF_1_1PointerAnalysis.html#ac9f54859eabff4c1e1f5785d57a0c818',1,'SVF::PointerAnalysis']]],
   ['resolvefunptr',['resolveFunPtr',['../classSVF_1_1DDAVFSolver.html#afcc074be34dd0c45418ff16b3d9d4192',1,'SVF::DDAVFSolver']]],
   ['resolveindcalls',['resolveIndCalls',['../classSVF_1_1PointerAnalysis.html#a40738643202ca6301671f51da3fc1137',1,'SVF::PointerAnalysis']]],
-  ['restoreorder',['restoreOrder',['../cuddAnneal_8c.html#abaafb7c0229190195fb598d60afb53ff',1,'cuddAnneal.c']]],
+  ['restoreorder',['restoreOrder',['../cuddInt_8c.html#abaafb7c0229190195fb598d60afb53ff',1,'cuddInt.c']]],
   ['retargetdstofedge',['reTargetDstOfEdge',['../classSVF_1_1ConstraintGraph.html#a4db3484e3710c3f5cc86ec32dd643722',1,'SVF::ConstraintGraph']]],
   ['retargetedgesofainfout',['retargetEdgesOfAInFOut',['../classSVF_1_1SVFGOPT.html#abefe3efa0232106f1843351ff6dd1063',1,'SVF::SVFGOPT']]],
   ['retargetedgesofaoutfin',['retargetEdgesOfAOutFIn',['../classSVF_1_1SVFGOPT.html#a2285d20f7c4d128a8ede2e7f4f41f798',1,'SVF::SVFGOPT']]],
@@ -110,7 +110,7 @@ var searchData=
   ['rmderefdirsvfgedges',['rmDerefDirSVFGEdges',['../classSVF_1_1SaberSVFGBuilder.html#ad8f4f63d2071be4eb5f6fb2fdf29a10a',1,'SVF::SaberSVFGBuilder']]],
   ['rminterleavingthread',['rmInterleavingThread',['../classSVF_1_1MHP.html#a5546cb50ca769218a871cdda08a25d18',1,'SVF::MHP']]],
   ['rmsustat',['rmSUStat',['../classSVF_1_1DDAVFSolver.html#a7d0775354df32f293e98578ed071d33c',1,'SVF::DDAVFSolver']]],
-  ['roulette',['roulette',['../cuddGenetic_8c.html#a0ee54fe3ba94db4fcf887b2fea02d461',1,'cuddGenetic.c']]],
+  ['roulette',['roulette',['../cuddInt_8c.html#a0ee54fe3ba94db4fcf887b2fea02d461',1,'cuddInt.c']]],
   ['runondt',['runOnDT',['../classSVF_1_1MemSSADF.html#a050e6010673cb24d4ef689100213594b',1,'SVF::MemSSADF']]],
   ['runonmodule',['runOnModule',['../classSVF_1_1DDAPass.html#af196994d6ec7f5cead72212407842103',1,'SVF::DDAPass::runOnModule(SVFModule *module)'],['../classSVF_1_1DDAPass.html#a7bc2c9a62b7d97b8e19bee0c4625aea3',1,'SVF::DDAPass::runOnModule(Module &amp;module)'],['../classSVF_1_1MTA.html#a9c4b9eb2c04de305a30114019c3b1dae',1,'SVF::MTA::runOnModule(Module &amp;module)'],['../classSVF_1_1MTA.html#a32f6beffb47e5c2ac86f5c3b8a1bd9ba',1,'SVF::MTA::runOnModule(SVFModule *module)'],['../classSVF_1_1DoubleFreeChecker.html#a71c9f9450e369d1196c49b7d9019dbda',1,'SVF::DoubleFreeChecker::runOnModule()'],['../classSVF_1_1FileChecker.html#a98a68536b8ffdb2250bbb01437598ac3',1,'SVF::FileChecker::runOnModule()'],['../classSVF_1_1LeakChecker.html#ab3bb79d88d73c8b881d714921e7b5e12',1,'SVF::LeakChecker::runOnModule()'],['../classSVF_1_1BreakConstantGEPs.html#ae99ceb7923161d54e7d0a687f4f68e1a',1,'SVF::BreakConstantGEPs::runOnModule()'],['../classSVF_1_1MergeFunctionRets.html#a8fe74477a43f80104fb3461d006ad392',1,'SVF::MergeFunctionRets::runOnModule()'],['../classSVF_1_1FlowSensitive.html#a611608ccc9659bd320670f1ec31ad18e',1,'SVF::FlowSensitive::runOnModule()'],['../classSVF_1_1WPAPass.html#a394dcd976c1ef08d9cadcba8f5d07c75',1,'SVF::WPAPass::runOnModule(SVFModule *svfModule)'],['../classSVF_1_1WPAPass.html#a1f47c1cb5a64bab9a6b8ac38103416ac',1,'SVF::WPAPass::runOnModule(Module &amp;module)']]],
   ['runpointeranalysis',['runPointerAnalysis',['../classSVF_1_1DDAPass.html#a13ff3107a0e4f8749b166fa9b8165167',1,'SVF::DDAPass::runPointerAnalysis()'],['../classSVF_1_1WPAPass.html#a2d6a270c3a71b5963eaed37839355fd3',1,'SVF::WPAPass::runPointerAnalysis()']]]

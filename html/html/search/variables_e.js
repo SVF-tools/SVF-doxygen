@@ -160,6 +160,6 @@ var searchData=
   ['numtbwu',['numTBWU',['../classSVF_1_1TypeBasedHeapCloning.html#ad971bec1a044bbb979b96b0d91278afd',1,'SVF::TypeBasedHeapCloning']]],
   ['numtypes',['numTypes',['../classSVF_1_1DCHGraph.html#a76fd3154a31584bb64683f2d762cc56c',1,'SVF::DCHGraph']]],
   ['numvalues',['numValues',['../classSVF_1_1NodeIDAllocator.html#a001c25f6998b8b0a9a7e5e00810e155f',1,'SVF::NodeIDAllocator']]],
-  ['numvars',['numvars',['../cuddGenetic_8c.html#a14fc223abdac78a50158a2d66979c75e',1,'cuddGenetic.c']]],
+  ['numvars',['numvars',['../cuddInt_8c.html#a14fc223abdac78a50158a2d66979c75e',1,'cuddInt.c']]],
   ['nvthunkfunlabel',['NVThunkFunLabel',['../CPPUtil_8cpp.html#aa2f5766925ff00cfecffb533af221144',1,'CPPUtil.cpp']]]
 ];
