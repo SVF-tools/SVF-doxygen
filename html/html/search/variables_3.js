@@ -122,7 +122,7 @@ var searchData=
   ['cuddrand2',['cuddRand2',['../cuddInt_8c.html#a8e2b851d75e2ae18506df56207fba18e',1,'cuddInt.c']]],
   ['cur',['cur',['../classSVF_1_1DPItem.html#a82d2a11fb456192ec88fcb5ffe239d80',1,'SVF::DPItem']]],
   ['curbb',['curBB',['../classSVF_1_1PAGBuilder.html#aaae667a9481adac1ce3d757b9c31be24',1,'SVF::PAGBuilder']]],
-  ['curevalval',['curEvalVal',['../classSVF_1_1PathCondAllocator.html#aa1e1b83c3a2c760a00bcd6bf5e63482b',1,'SVF::PathCondAllocator']]],
+  ['curevalsvfgnode',['curEvalSVFGNode',['../classSVF_1_1PathCondAllocator.html#a165e0a354b7679ce582c15f4a3faf6e0',1,'SVF::PathCondAllocator']]],
   ['curloc',['curloc',['../classSVF_1_1StmtDPItem.html#a9e20ebd5ae8272a4aef74914098f97ef',1,'SVF::StmtDPItem']]],
   ['curptr',['curPtr',['../classSVF_1_1DDAClient.html#a6a133cf24ef65eaf58c82ec213f3f6cb',1,'SVF::DDAClient']]],
   ['cursccid',['curSCCID',['../classSVF_1_1WPASCCSolver.html#a28973d7e1301c36254b67c695e8431aa',1,'SVF::WPASCCSolver']]],

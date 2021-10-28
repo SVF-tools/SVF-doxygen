@@ -108,6 +108,7 @@ var searchData=
   ['retsyms',['retSyms',['../classSVF_1_1SymbolTableInfo.html#aafd4da7cef6387bb974abe20185b7b96',1,'SVF::SymbolTableInfo']]],
   ['rfinept',['RFINEPT',['../dda_8cpp.html#a3abc2ce6737d192a5c3f967734fe8389',1,'dda.cpp']]],
   ['rmderefdirsvfgedges',['rmDerefDirSVFGEdges',['../classSVF_1_1SaberSVFGBuilder.html#ad8f4f63d2071be4eb5f6fb2fdf29a10a',1,'SVF::SaberSVFGBuilder']]],
+  ['rmincomingedgeforsustore',['rmIncomingEdgeForSUStore',['../classSVF_1_1SaberSVFGBuilder.html#ae0a9c42c850bda29aeae2f47ad2b8f4a',1,'SVF::SaberSVFGBuilder']]],
   ['rminterleavingthread',['rmInterleavingThread',['../classSVF_1_1MHP.html#a5546cb50ca769218a871cdda08a25d18',1,'SVF::MHP']]],
   ['rmsustat',['rmSUStat',['../classSVF_1_1DDAVFSolver.html#a7d0775354df32f293e98578ed071d33c',1,'SVF::DDAVFSolver']]],
   ['roulette',['roulette',['../cuddInt_8c.html#a0ee54fe3ba94db4fcf887b2fea02d461',1,'cuddInt.c']]],

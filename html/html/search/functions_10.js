@@ -25,7 +25,7 @@ var searchData=
   ['setcfcond',['setCFCond',['../classSVF_1_1PathCondAllocator.html#a4cb61914dff693e284091e97ab8c8878',1,'SVF::PathCondAllocator']]],
   ['setcondinst',['setCondInst',['../classSVF_1_1CondManager.html#a1fbf7dd446309e13671d838c91da26bf',1,'SVF::CondManager::setCondInst()'],['../classSVF_1_1PathCondAllocator.html#ab85a1ab3580958361ea5ec29efc75874',1,'SVF::PathCondAllocator::setCondInst()']]],
   ['setconsume',['setConsume',['../classSVF_1_1VersionedFlowSensitive.html#aabc0a5a7a31b8d880e019773ba960741',1,'SVF::VersionedFlowSensitive']]],
-  ['setcurevalval',['setCurEvalVal',['../classSVF_1_1PathCondAllocator.html#a03181424d76aa68e634e0f8e155feec7',1,'SVF::PathCondAllocator']]],
+  ['setcurevalsvfgnode',['setCurEvalSVFGNode',['../classSVF_1_1PathCondAllocator.html#a68f93a9271efcbb4728066a8d5639628',1,'SVF::PathCondAllocator']]],
   ['setcurnodeid',['setCurNodeID',['../classSVF_1_1DPItem.html#a5fbde30cae2cb09bd9dc9a6969ea4b90',1,'SVF::DPItem']]],
   ['setcurrentbbandvalueforpagedge',['setCurrentBBAndValueForPAGEdge',['../classSVF_1_1PAGBuilder.html#abad522a6e5d90b6d59baf667a6ec8f32',1,'SVF::PAGBuilder']]],
   ['setcurrentdfdt',['setCurrentDFDT',['../classSVF_1_1MemSSA.html#a11e1e9a74a6764131fc8aae27d8bde5e',1,'SVF::MemSSA']]],

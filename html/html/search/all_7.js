@@ -214,7 +214,7 @@ var searchData=
   ['getcsvfsbasedoncha',['getCSVFsBasedonCHA',['../classSVF_1_1CHGraph.html#a1c0ca4e6a466ad317daf00a6c7de8e31',1,'SVF::CHGraph::getCSVFsBasedonCHA()'],['../classSVF_1_1CommonCHGraph.html#abe9232b9cada361e0434f7c4390a7864',1,'SVF::CommonCHGraph::getCSVFsBasedonCHA()'],['../classSVF_1_1DCHGraph.html#ad398e58286af020fb4dcc03644f2a24f',1,'SVF::DCHGraph::getCSVFsBasedonCHA()']]],
   ['getcsvtblsbasedoncha',['getCSVtblsBasedonCHA',['../classSVF_1_1CHGraph.html#a9878df891d2e20d09b65096060d2c148',1,'SVF::CHGraph::getCSVtblsBasedonCHA()'],['../classSVF_1_1CommonCHGraph.html#ae90f9a2152ab07aa0df16badd733f1fd',1,'SVF::CommonCHGraph::getCSVtblsBasedonCHA()'],['../classSVF_1_1DCHGraph.html#a3383b841bb79ee39cb108b9906fca6a9',1,'SVF::DCHGraph::getCSVtblsBasedonCHA()']]],
   ['getcube',['getCube',['../cuddInt_8c.html#ac4564d7da48b5f6457d7adca5e619b4c',1,'cuddInt.c']]],
-  ['getcurevalval',['getCurEvalVal',['../classSVF_1_1PathCondAllocator.html#a44568cacc5dfa248020aaf5dd340829e',1,'SVF::PathCondAllocator']]],
+  ['getcurevalsvfgnode',['getCurEvalSVFGNode',['../classSVF_1_1PathCondAllocator.html#a0fa615ec0ccc48933b84d09b8e359da7',1,'SVF::PathCondAllocator']]],
   ['getcurnodeid',['getCurNodeID',['../classSVF_1_1DPItem.html#a03a90eca842c0e83d874902103f6fdb2',1,'SVF::DPItem']]],
   ['getcurrentbb',['getCurrentBB',['../classSVF_1_1PAGBuilder.html#abc50396b684b2c5d066974916b07424b',1,'SVF::PAGBuilder']]],
   ['getcurrentvalue',['getCurrentValue',['../classSVF_1_1PAGBuilder.html#a5147c8d5e072bf2e30b943e56a537925',1,'SVF::PAGBuilder']]],

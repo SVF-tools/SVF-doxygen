@@ -3,7 +3,7 @@ var searchData=
   ['namedmdnode',['NamedMDNode',['../namespaceSVF.html#a3011dbac9102f044ad5f36a4ad3d4a71',1,'SVF']]],
   ['nametochnodesmap',['NameToCHNodesMap',['../classSVF_1_1CHGraph.html#aedb20aca2fa11a070cfe28e14fd3552b',1,'SVF::CHGraph']]],
   ['nan',['nan',['../unionEpTypeUnion.html#a110c7a597a2ccf931b674e2338c64885',1,'EpTypeUnion']]],
-  ['neg',['neg',['../structcuddPathPair.html#a968dc3d34b592da2876517a687873281',1,'cuddPathPair::neg()'],['../classSVF_1_1BranchCondManager.html#ad7832b33b3b73fcaca5c8278ed4d3e7f',1,'SVF::BranchCondManager::NEG()'],['../classSVF_1_1CondManager.html#a5751792e45c8abd5ffd3610d94e9f0b7',1,'SVF::CondManager::NEG()']]],
+  ['neg',['NEG',['../classSVF_1_1BranchCondManager.html#ad7832b33b3b73fcaca5c8278ed4d3e7f',1,'SVF::BranchCondManager::NEG()'],['../classSVF_1_1CondManager.html#a5751792e45c8abd5ffd3610d94e9f0b7',1,'SVF::CondManager::NEG()'],['../structcuddPathPair.html#a968dc3d34b592da2876517a687873281',1,'cuddPathPair::neg()']]],
   ['never_5ffree_5fleak',['NEVER_FREE_LEAK',['../classSVF_1_1LeakChecker.html#a42f54433e5ca60928f3c329ab545842da3ec849f333df9530fb0a6a285c26b86d',1,'SVF::LeakChecker']]],
   ['newcond',['newCond',['../classSVF_1_1PathCondAllocator.html#a3cd08242b82129e6074b2f30a19b5c17',1,'SVF::PathCondAllocator']]],
   ['newexpand',['newExpand',['../classSVF_1_1ConstraintNode.html#af760652ba65eb5a0d0d2731b6e1961b8',1,'SVF::ConstraintNode']]],
