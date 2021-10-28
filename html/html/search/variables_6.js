@@ -49,6 +49,8 @@ var searchData=
   ['functoptsmap',['funcToPtsMap',['../classSVF_1_1IntraDisjointMRG.html#a4b05180c942c1d049e70f8050f4186f6',1,'SVF::IntraDisjointMRG']]],
   ['fundecltodefmap',['FunDeclToDefMap',['../classSVF_1_1LLVMModuleSet.html#aee80b29e5246e3eaa0e30e165346101f',1,'SVF::LLVMModuleSet']]],
   ['fundeftodeclsmap',['FunDefToDeclsMap',['../classSVF_1_1LLVMModuleSet.html#a377cefaad4b688ab6edf94ba4abe00ee',1,'SVF::LLVMModuleSet']]],
+  ['funentrynode',['funEntryNode',['../classSVF_1_1FormalINSVFGNode.html#ace06f0de65274270f993b810e27943db',1,'SVF::FormalINSVFGNode']]],
+  ['funexitnode',['funExitNode',['../classSVF_1_1FormalOUTSVFGNode.html#a0d888af907e0c434b968653e09f05938',1,'SVF::FormalOUTSVFGNode']]],
   ['funptrtocallsitesmap',['funPtrToCallSitesMap',['../classSVF_1_1PAG.html#a6cf9a9e75749e898d39026cb8c225c92',1,'SVF::PAG']]],
   ['funretmap',['funRetMap',['../classSVF_1_1PAG.html#a2742d22cfc819f0c8f7e6880c0cfbaf4',1,'SVF::PAG']]],
   ['funtocallgraphnodemap',['funToCallGraphNodeMap',['../classSVF_1_1PTACallGraph.html#a97986d6e6732c78b04cc053f0e9d1367',1,'SVF::PTACallGraph']]],

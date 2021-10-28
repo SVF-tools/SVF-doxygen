@@ -17,7 +17,7 @@ var searchData=
   ['maxcachehard',['maxCacheHard',['../structDdManager.html#a1b53bee9cf86fc1131c420c2aef7e473',1,'DdManager']]],
   ['maxcontextlen',['MaxContextLen',['../classSVF_1_1Options.html#a2e53156bd075d7802d390672f129c6a8',1,'SVF::Options']]],
   ['maxcxtsize',['MaxCxtSize',['../classSVF_1_1TCT.html#aaae41663b1d1f4d38b047c50c156defb',1,'SVF::TCT']]],
-  ['maxfieldlimit',['maxFieldLimit',['../classSVF_1_1StInfo.html#a4cd926bd095254dd287f1cf26e02483e',1,'SVF::StInfo::maxFieldLimit()'],['../classSVF_1_1SymbolTableInfo.html#a9b8b7ecb217c7395025231b04e7b4c26',1,'SVF::SymbolTableInfo::maxFieldLimit()'],['../classSVF_1_1Options.html#adfc1a5c6098d3867e29fc65ca9ffa1cc',1,'SVF::Options::MaxFieldLimit()']]],
+  ['maxfieldlimit',['MaxFieldLimit',['../classSVF_1_1Options.html#adfc1a5c6098d3867e29fc65ca9ffa1cc',1,'SVF::Options::MaxFieldLimit()'],['../classSVF_1_1StInfo.html#a4cd926bd095254dd287f1cf26e02483e',1,'SVF::StInfo::maxFieldLimit()'],['../classSVF_1_1SymbolTableInfo.html#a9b8b7ecb217c7395025231b04e7b4c26',1,'SVF::SymbolTableInfo::maxFieldLimit()']]],
   ['maxgrowth',['maxGrowth',['../structDdManager.html#a8a6a4238d1bc8a87eabd2c3eabd233d7',1,'DdManager']]],
   ['maxgrowthalt',['maxGrowthAlt',['../structDdManager.html#a2926e48e488cec20a61e9b0dc6b91795',1,'DdManager']]],
   ['maximumbudget',['maximumBudget',['../classSVF_1_1DPItem.html#a5dbb0e6010b38c5b937ff06cb40cd0ef',1,'SVF::DPItem']]],
@@ -39,7 +39,7 @@ var searchData=
   ['maxpointstosetsize',['MaxPointsToSetSize',['../classSVF_1_1PTAStat.html#af2b45aab2eee96a1cabba3025e4375a2',1,'SVF::PTAStat::MaxPointsToSetSize()'],['../classSVF_1_1AndersenBase.html#a7cfafe54d564c9401f435362d44d3f9c',1,'SVF::AndersenBase::MaxPointsToSetSize()']]],
   ['maxreorderings',['maxReorderings',['../structDdManager.html#a61170edf6d08bb1c4bacab68823a825d',1,'DdManager']]],
   ['maxsccsize',['maxSCCSize',['../classSVF_1_1FlowSensitive.html#a90deaa3c1afa762f568ceab0fe174353',1,'SVF::FlowSensitive']]],
-  ['maxsize',['maxSize',['../structDdManager.html#aa4d0701dc4e6f11b30085ae30c09fab6',1,'DdManager::maxSize()'],['../structDdHashTable.html#aba376a6d310dcead9f74cfc459f4a248',1,'DdHashTable::maxsize()'],['../structDdLevelQueue.html#acb7146e9f3dd73a052340c0e4010e6b6',1,'DdLevelQueue::maxsize()']]],
+  ['maxsize',['maxsize',['../structDdHashTable.html#aba376a6d310dcead9f74cfc459f4a248',1,'DdHashTable::maxsize()'],['../structDdLevelQueue.html#acb7146e9f3dd73a052340c0e4010e6b6',1,'DdLevelQueue::maxsize()'],['../structDdManager.html#aa4d0701dc4e6f11b30085ae30c09fab6',1,'DdManager::maxSize()']]],
   ['maxsizez',['maxSizeZ',['../structDdManager.html#a4a0b8f95d02bc99557fb55140e9b0963',1,'DdManager']]],
   ['maxslots',['maxslots',['../structDdLocalCache.html#af4379636b29a9bfe4a55708ac637545a',1,'DdLocalCache']]],
   ['maxstepinwrapper',['MaxStepInWrapper',['../classSVF_1_1Options.html#a0b82f16ee0c7e6566a6ae20662525e84',1,'SVF::Options']]],
@@ -88,7 +88,6 @@ var searchData=
   ['mssafun',['MSSAFun',['../classSVF_1_1Options.html#a4ac0e6b77fc9ccc18b269268b3cd046d',1,'SVF::Options']]],
   ['mssavartodefmap',['MSSAVarToDefMap',['../classSVF_1_1SVFG.html#aafa1b445bd3578daaba8f82e517745f1',1,'SVF::SVFG']]],
   ['mtr_5funused',['MTR_UNUSED',['../mtr_8c.html#a71385e18c061c8783c806fedd390bb6a',1,'mtr.c']]],
-  ['mu',['mu',['../classSVF_1_1FormalOUTSVFGNode.html#a14445344f2354b4752807642c4401c10',1,'SVF::FormalOUTSVFGNode::mu()'],['../classSVF_1_1ActualINSVFGNode.html#a04adf013b9a50583841b2cf62f978295',1,'SVF::ActualINSVFGNode::mu()']]],
   ['multiforked',['multiforked',['../classSVF_1_1TCTNode.html#a414f4b98fb8fd36d2cb381ff56eb98d8',1,'SVF::TCTNode']]],
   ['mutptdata',['mutPTData',['../classSVF_1_1MutableDiffPTData.html#a3603cb4baf60b1aa83b7807ac5591484',1,'SVF::MutableDiffPTData::mutPTData()'],['../classSVF_1_1MutableDFPTData.html#acf40f716470f73095d44a1b9e3bb939e',1,'SVF::MutableDFPTData::mutPTData()']]]
 ];
