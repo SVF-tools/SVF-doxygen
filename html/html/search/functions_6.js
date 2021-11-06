@@ -124,7 +124,7 @@ var searchData=
   ['getclassnamefromtype',['getClassNameFromType',['../namespaceSVF_1_1cppUtil.html#a891719bac36ebb6c001f073dfa5a9e7b',1,'SVF::cppUtil']]],
   ['getclassnamefromvtblobj',['getClassNameFromVtblObj',['../namespaceSVF_1_1cppUtil.html#ad83c097f1c77cdf52fc219ef07ee0b1a',1,'SVF::cppUtil']]],
   ['getclassnameofthisptr',['getClassNameOfThisPtr',['../namespaceSVF_1_1cppUtil.html#a3bed7bc0a0ae580841ca049f91690ff7',1,'SVF::cppUtil']]],
-  ['getclk',['getClk',['../classSVF_1_1PTAStat.html#aea47f02f3f56b089ba8ed45270e16eb4',1,'SVF::PTAStat']]],
+  ['getclk',['getClk',['../classSVF_1_1PTAStat.html#a3c4eaa1695ea13405911ae1621f98edc',1,'SVF::PTAStat']]],
   ['getclones',['getClones',['../classSVF_1_1TypeBasedHeapCloning.html#af127bed600087b1ace26088a76ca8998',1,'SVF::TypeBasedHeapCloning']]],
   ['getcmpnodemap',['getCmpNodeMap',['../classSVF_1_1PAG.html#a667b240e083d720b486a47308e36ae55',1,'SVF::PAG']]],
   ['getcmppes',['getCmpPEs',['../classSVF_1_1PAG.html#a8154e4aef8e24147d9b945958aca8b18',1,'SVF::PAG']]],
