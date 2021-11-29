@@ -498,7 +498,7 @@ var searchData=
   ['getphicopypes',['getPhiCopyPEs',['../classSVF_1_1PAG.html#a582b8b5ca32b0fbb984e62c55b408bfc',1,'SVF::PAG']]],
   ['getphinodemap',['getPhiNodeMap',['../classSVF_1_1PAG.html#ad81e9de87891387c6fc860d964316d4f',1,'SVF::PAG']]],
   ['getphiset',['getPHISet',['../classSVF_1_1MemSSA.html#a964f3fe39ece9a7b8b2033428b75a274',1,'SVF::MemSSA']]],
-  ['getpointsto',['getPointsTo',['../classSVF_1_1IndirectSVFGEdge.html#abfabfa0478515d18e43ae47214e38cc6',1,'SVF::IndirectSVFGEdge::getPointsTo()'],['../classSVF_1_1MRSVFGNode.html#a59a85a4adee33bc5452996840e30cdd0',1,'SVF::MRSVFGNode::getPointsTo()'],['../classSVF_1_1MemRegion.html#a1e5befaa1a46943e101b33adaf141ca1',1,'SVF::MemRegion::getPointsTo()']]],
+  ['getpointsto',['getPointsTo',['../classSVF_1_1IndirectSVFGEdge.html#a30aca718d25924f1babdf348bb0ace71',1,'SVF::IndirectSVFGEdge::getPointsTo()'],['../classSVF_1_1MRSVFGNode.html#a28fe266d0e4618aa4448aa218495a332',1,'SVF::MRSVFGNode::getPointsTo()'],['../classSVF_1_1MemRegion.html#a1e5befaa1a46943e101b33adaf141ca1',1,'SVF::MemRegion::getPointsTo()']]],
   ['getpointstolist',['getPointsToList',['../classSVF_1_1MRGenerator.html#a6d86c8ebe87cb54f39e52daa7ffb0e2e',1,'SVF::MRGenerator']]],
   ['getpostdt',['getPostDT',['../classSVF_1_1TCT.html#ae4d26d2a77e45104523cfc481012bccc',1,'SVF::TCT::getPostDT()'],['../classSVF_1_1PTACFInfoBuilder.html#a00e3339dab62325354e8ecd8251da0f1',1,'SVF::PTACFInfoBuilder::getPostDT()'],['../classSVF_1_1PathCondAllocator.html#a1295e2c2c0a9c1a3744ba3927b95363e',1,'SVF::PathCondAllocator::getPostDT()']]],
   ['getprevinsts',['getPrevInsts',['../namespaceSVF_1_1SVFUtil.html#a7e3a8d6cb1715db9518579fb60181d5b',1,'SVF::SVFUtil']]],

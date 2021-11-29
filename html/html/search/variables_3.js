@@ -90,7 +90,7 @@ var searchData=
   ['copytime',['copyTime',['../classSVF_1_1FlowSensitive.html#a888d6334e5e226c634680e4c0674dcfb',1,'SVF::FlowSensitive']]],
   ['count',['count',['../structDdHashItem.html#aa5bce9f94fb976df2a1768f0f0c7d50c',1,'DdHashItem']]],
   ['countdead',['countDead',['../structDdManager.html#adcbc5af2bbf3df86223e5f0b3bc03e76',1,'DdManager']]],
-  ['cpts',['cpts',['../classSVF_1_1IndirectSVFGEdge.html#ac730b7fd9dfe729a184d9f3065c33dfc',1,'SVF::IndirectSVFGEdge::cpts()'],['../classSVF_1_1MRSVFGNode.html#a3fc32c474e542ebb3c91adb6b5c1bb1f',1,'SVF::MRSVFGNode::cpts()']]],
+  ['cpts',['cpts',['../classSVF_1_1IndirectSVFGEdge.html#a2d54c1c3567ef6676ba15f88c622e5b7',1,'SVF::IndirectSVFGEdge::cpts()'],['../classSVF_1_1MRSVFGNode.html#a640153ff592bf0058882a0d05a76b1ba',1,'SVF::MRSVFGNode::cpts()']]],
   ['cptsset',['cptsSet',['../classSVF_1_1MemRegion.html#a77a18bcce56cf48d1c338e852a2be9bc',1,'SVF::MemRegion']]],
   ['cptstorepcptsmap',['cptsToRepCPtsMap',['../classSVF_1_1MRGenerator.html#ab4d1ff0357d389a65ff1c2112ce631a1',1,'SVF::MRGenerator']]],
   ['cross',['cross',['../cuddInt_8c.html#a73050ff1210fb3cff7be47e75d647f03',1,'cuddInt.c']]],

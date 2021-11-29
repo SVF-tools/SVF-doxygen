@@ -23,7 +23,7 @@ var searchData=
   ['globalsvfg',['globalSvfg',['../classSVF_1_1SVFGBuilder.html#a31b754a303116f33d679dfcd886c4bed',1,'SVF::SVFGBuilder']]],
   ['globalvfgnodes',['globalVFGNodes',['../classSVF_1_1VFG.html#a6c3daf2777cc5f76ce07241f803720f3',1,'SVF::VFG']]],
   ['globpagedgesset',['globPAGEdgesSet',['../classSVF_1_1PAG.html#a1235a44b3fed25e3d3bcfc868948822f',1,'SVF::PAG']]],
-  ['globs',['globs',['../classSVF_1_1SaberSVFGBuilder.html#aa17b6decf323982b2efa28c5585b9835',1,'SVF::SaberSVFGBuilder']]],
+  ['globs',['globs',['../classSVF_1_1SaberSVFGBuilder.html#a967dba864a6032e448222525aedb1f2a',1,'SVF::SaberSVFGBuilder']]],
   ['globsvfgnodes',['globSVFGNodes',['../classSVF_1_1SaberSVFGBuilder.html#a9431a9dcbcf88b78e721b0347046e997',1,'SVF::SaberSVFGBuilder']]],
   ['graph',['graph',['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat']]],
   ['graphtxt',['Graphtxt',['../classSVF_1_1Options.html#aa5c4bc8e55a056adcd7a6f8946ad5f38',1,'SVF::Options']]],
