@@ -11,7 +11,7 @@ var searchData=
   ['objtotype',['objToType',['../classSVF_1_1TypeBasedHeapCloning.html#a477492fb699d742c33007a6ca934b5c1',1,'SVF::TypeBasedHeapCloning']]],
   ['ocg',['oCG',['../classSVF_1_1AndersenHCD.html#af5fe01816e65ece685a3c3537ebd0137',1,'SVF::AndersenHCD']]],
   ['ocgdotgraph',['OCGDotGraph',['../classSVF_1_1Options.html#a2780c16611375631cd48bf9487f9e0bf',1,'SVF::Options']]],
-  ['offset',['offset',['../classSVF_1_1DCHEdge.html#a16869c90d4e735bc09b8bceda90b99ed',1,'SVF::DCHEdge']]],
+  ['offset',['offset',['../classSVF_1_1DCHEdge.html#a16869c90d4e735bc09b8bceda90b99ed',1,'SVF::DCHEdge::offset()'],['../classSVF_1_1CoreBitVector.html#a79dfa9f4c2efb6a0a2de18c6359c41bd',1,'SVF::CoreBitVector::offset()']]],
   ['offset2typemap',['offset2TypeMap',['../classSVF_1_1StInfo.html#a2fc773eac63f959c78957dc407cccaa2',1,'SVF::StInfo']]],
   ['one',['one',['../structDdManager.html#a239bd99ee654742adc79b8299c2bc92e',1,'DdManager::one()'],['../cuddInt_8c.html#a49e3c7508be54a84ae83273ed240e31c',1,'one():&#160;cuddInt.c']]],
   ['ontheflyiterbudgetforstat',['OnTheFlyIterBudgetForStat',['../classSVF_1_1PointerAnalysis.html#afc320fbf269404fe128e69c98e6f9cac',1,'SVF::PointerAnalysis']]],

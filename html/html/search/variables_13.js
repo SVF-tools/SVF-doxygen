@@ -4,6 +4,8 @@ var searchData=
   ['sb_5finfesible',['SB_INFESIBLE',['../classSVF_1_1Annotator.html#a556138c152d52921d6f0a709a826a93a',1,'SVF::Annotator']]],
   ['sb_5fslicesink',['SB_SLICESINK',['../classSVF_1_1Annotator.html#a3edacb8703c74abf42c4a29761a3437f',1,'SVF::Annotator']]],
   ['sb_5fslicesource',['SB_SLICESOURCE',['../classSVF_1_1Annotator.html#a01900f5ada5948361cc18857aee26744',1,'SVF::Annotator']]],
+  ['sbv',['sbv',['../classSVF_1_1PointsTo.html#aecd6b98c0687de59aebb297ec38a7084',1,'SVF::PointsTo']]],
+  ['sbvit',['sbvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#ac13245e140ab7c488c776b8dd97facf4',1,'SVF::PointsTo::PointsToIterator']]],
   ['scc',['scc',['../classSVF_1_1WPASolver.html#a21709a0f33b6238afe735cc9fe49ff70',1,'SVF::WPASolver']]],
   ['scccandidates',['sccCandidates',['../classSVF_1_1AndersenSCD.html#aeb0b3644c3bfbfa5768b92c99aeeef40',1,'SVF::AndersenSCD']]],
   ['sccdetectiontime',['SCCDetectionTime',['../classSVF_1_1PTAStat.html#ad4c1cf3750341f73987c37745f3bd2aa',1,'SVF::PTAStat']]],

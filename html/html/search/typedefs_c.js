@@ -1,6 +1,7 @@
 var searchData=
 [
   ['map',['Map',['../namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1',1,'SVF']]],
+  ['mappingptr',['MappingPtr',['../classSVF_1_1PointsTo.html#a849f670b38cb6f65fc23707a212591c7',1,'SVF::PointsTo']]],
   ['mdef',['MDEF',['../classSVF_1_1MemSSA.html#a57e68097212e88568eea829fb998fe0c',1,'SVF::MemSSA']]],
   ['mdnode',['MDNode',['../namespaceSVF.html#ad3d3cec1813411f039211c86236f7adb',1,'SVF']]],
   ['mdstring',['MDString',['../namespaceSVF.html#a28eec26ec8edaa5e96aecfeb01f6c0d4',1,'SVF']]],

@@ -13,6 +13,7 @@ var searchData=
   ['binarynodemap',['binaryNodeMap',['../classSVF_1_1PAG.html#ac312c15d6c41f4c97e1a5f66b0036c06',1,'SVF::PAG']]],
   ['bindvar',['bindVar',['../structDdSubtable.html#a54a4f8f090e30084c77362e5de3ee591',1,'DdSubtable']]],
   ['bins',['bins',['../structst__table.html#a8924d9633a796c5e6c03925c5344c1ad',1,'st_table']]],
+  ['bit',['bit',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a853b685cf022839c183df46f1cafe638',1,'SVF::CoreBitVector::CoreBitVectorIterator']]],
   ['bits',['bits',['../unionEpTypeUnion.html#ad93dc9fbbc709d52d46e1e8ec78bb391',1,'EpTypeUnion::bits()'],['../unionhack.html#ac9f31214d556c4a179ba01f23036bc91',1,'hack::bits()']]],
   ['blackholeobjectid',['blackHoleObjectId',['../classSVF_1_1NodeIDAllocator.html#a79ee84d7efb8abbfcd80d31d966ce20b',1,'SVF::NodeIDAllocator']]],
   ['blackholepointerid',['blackHolePointerId',['../classSVF_1_1NodeIDAllocator.html#a535be344f97496d8086e2861ea6dc2ea',1,'SVF::NodeIDAllocator']]],
@@ -24,5 +25,7 @@ var searchData=
   ['bucket',['bucket',['../structDdHashTable.html#a14e9b750bdad0f77294dd8e18f18d32c',1,'DdHashTable']]],
   ['buckets',['buckets',['../structDdLevelQueue.html#a10750bfd3e96d25ce4d69eb476b64e9f',1,'DdLevelQueue']]],
   ['buildingchgtime',['buildingCHGTime',['../classSVF_1_1CHGraph.html#ab5bd2348e4418fcb2f3b18227fccd836',1,'SVF::CHGraph']]],
+  ['bv',['bv',['../classSVF_1_1PointsTo.html#a668be9270539fdfc5dbf3efb9cc17587',1,'SVF::PointsTo']]],
+  ['bvit',['bvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#aa420a44769d1c25e083975e3cd04d699',1,'SVF::PointsTo::PointsToIterator']]],
   ['byteoffset',['byteOffset',['../classSVF_1_1FieldInfo.html#a9625e4618046dd38ebd78ee2d134bc71',1,'SVF::FieldInfo::byteOffset()'],['../classSVF_1_1LocationSet.html#a9fafaf5f69baa5c125d6c3fd89381301',1,'SVF::LocationSet::byteOffset()']]]
 ];

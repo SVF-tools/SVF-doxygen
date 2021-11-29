@@ -104,6 +104,7 @@ var searchData=
   ['_7epersistentptdata',['~PersistentPTData',['../classSVF_1_1PersistentPTData.html#a66a9367f0b965d18be8bb1247e1c2548',1,'SVF::PersistentPTData']]],
   ['_7epersistentversionedptdata',['~PersistentVersionedPTData',['../classSVF_1_1PersistentVersionedPTData.html#a2252fcbc06243787b6854d826373da1d',1,'SVF::PersistentVersionedPTData']]],
   ['_7epointeranalysis',['~PointerAnalysis',['../classSVF_1_1PointerAnalysis.html#a4aeca84393c5586eea7a480737daf17c',1,'SVF::PointerAnalysis']]],
+  ['_7epointsto',['~PointsTo',['../classSVF_1_1PointsTo.html#a2a12ab349a01314b0d7b4074a0c28677',1,'SVF::PointsTo']]],
   ['_7eprogslice',['~ProgSlice',['../classSVF_1_1ProgSlice.html#ad761a9848d2dab7700a7fdeb91c2454d',1,'SVF::ProgSlice']]],
   ['_7eptacallgraph',['~PTACallGraph',['../classSVF_1_1PTACallGraph.html#a7f1ee630caa4ec5e7ad309e1f3865e2e',1,'SVF::PTACallGraph']]],
   ['_7eptacallgraphedge',['~PTACallGraphEdge',['../classSVF_1_1PTACallGraphEdge.html#af17fd69ee1061b7348af1b2739f145a9',1,'SVF::PTACallGraphEdge']]],

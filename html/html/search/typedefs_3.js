@@ -41,6 +41,7 @@ var searchData=
   ['dibasictype',['DIBasicType',['../namespaceSVF.html#ada0513be7e25325325ccc9183aeca278',1,'SVF']]],
   ['dicompositetype',['DICompositeType',['../namespaceSVF.html#aded9b991c77acc5284ccead0739e84f1',1,'SVF']]],
   ['diderivedtype',['DIDerivedType',['../namespaceSVF.html#a852e75c562139237fcc754c7461533e6',1,'SVF']]],
+  ['difference_5ftype',['difference_type',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a79da80a016d68d70b63bcaa884cf53cb',1,'SVF::PointsTo::PointsToIterator::difference_type()'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#aeabc3acd9ce15b8beff0db8a49d8781f',1,'SVF::CoreBitVector::CoreBitVectorIterator::difference_type()']]],
   ['diffptdataty',['DiffPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#abd8bb73e9beac5e39667091b1e211bd3',1,'SVF::BVDataPTAImpl']]],
   ['dinode',['DINode',['../namespaceSVF.html#a758f3bee97ed46a719d64a2d4f2bc62d',1,'SVF']]],
   ['dinodearray',['DINodeArray',['../namespaceSVF.html#a0f825e73d115173b05ca54fb8ec65003',1,'SVF']]],

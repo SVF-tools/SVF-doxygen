@@ -7,6 +7,7 @@ var searchData=
   ['callmssachi',['CallMSSACHI',['../classSVF_1_1MSSADEF.html#a32682e20c9c08d2bdd5abc62ea17af18acdf2b1261a1be8a4a923a22311ecd1e4',1,'SVF::MSSADEF']]],
   ['callmssamu',['CallMSSAMU',['../classSVF_1_1MSSAMU.html#a82c66f3e2b7d2d9dd391a947719bda9ba5e02921dfd30772024d77915d9f15f18',1,'SVF::MSSAMU']]],
   ['callretedge',['CallRetEdge',['../classSVF_1_1PTACallGraphEdge.html#a9738544725458bb022b8d5f2dbd281f7aa968b68fb87a0135833105f4e6413c69',1,'SVF::PTACallGraphEdge']]],
+  ['cbv',['CBV',['../classSVF_1_1PointsTo.html#a8f757f92ebf0a2ebdb5e6b001606923ea0397c2678894d1792fcd3432a7aa64fb',1,'SVF::PointsTo']]],
   ['ck_5falloc',['CK_ALLOC',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056acd7e3bca6e36e08205576482b1b0221e',1,'SVF::SaberCheckerAPI']]],
   ['ck_5fdummy',['CK_DUMMY',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056a7e06261f283161194d11f4d27c417c45',1,'SVF::SaberCheckerAPI']]],
   ['ck_5ffclose',['CK_FCLOSE',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056a731dcaf32786abf31c43be180dd366cb',1,'SVF::SaberCheckerAPI']]],

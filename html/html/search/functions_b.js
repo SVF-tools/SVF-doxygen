@@ -47,6 +47,7 @@ var searchData=
   ['mergespan',['mergeSpan',['../classSVF_1_1MTASVFGBuilder.html#ae028fe894e3c6e7fd0ad6feeaa64320e',1,'SVF::MTASVFGBuilder']]],
   ['mergesrctotgt',['mergeSrcToTgt',['../classSVF_1_1Andersen.html#ae6b1e54a389abc68994219e39539127e',1,'SVF::Andersen::mergeSrcToTgt()'],['../classSVF_1_1AndersenLCD.html#ac78efb1e4246c06c64dad1d368ed032d',1,'SVF::AndersenLCD::mergeSrcToTgt()'],['../classSVF_1_1AndersenHLCD.html#a59da289c87f9ab815a15e0a745bdc31f',1,'SVF::AndersenHLCD::mergeSrcToTgt()'],['../classSVF_1_1AndersenSFR.html#ac5f406db5610347564fceff4d36f6a6f',1,'SVF::AndersenSFR::mergeSrcToTgt()']]],
   ['mergetypeofnodes',['mergeTypeOfNodes',['../classSVF_1_1AndersenWaveDiffWithType.html#ac6801af3f3ffde939930995de9340cce',1,'SVF::AndersenWaveDiffWithType']]],
+  ['metasame',['metaSame',['../classSVF_1_1PointsTo.html#aa1e773b7abda97441d6ffe39c668d4ec',1,'SVF::PointsTo']]],
   ['mhp',['MHP',['../classSVF_1_1MHP.html#abf1f5a7c365dfb95b42015b7b2ad6fbe',1,'SVF::MHP']]],
   ['mhpvalidator',['MHPValidator',['../classSVF_1_1MHPValidator.html#ab00f7f49e626f55184101acbe28cf3b1',1,'SVF::MHPValidator']]],
   ['mmalloc',['MMalloc',['../util_8h.html#a2953fa50b9fc185d81128574151f317f',1,'MMalloc(long):&#160;util.c'],['../util_8c.html#a001c3a26d8e4b9e339eafb51172bba88',1,'MMalloc(long):&#160;util.c']]],

@@ -46,6 +46,8 @@ var searchData=
   ['copycgedge',['CopyCGEdge',['../classSVF_1_1CopyCGEdge.html',1,'SVF']]],
   ['copype',['CopyPE',['../classSVF_1_1CopyPE.html',1,'SVF']]],
   ['copyvfgnode',['CopyVFGNode',['../classSVF_1_1CopyVFGNode.html',1,'SVF']]],
+  ['corebitvector',['CoreBitVector',['../classSVF_1_1CoreBitVector.html',1,'SVF']]],
+  ['corebitvectoriterator',['CoreBitVectorIterator',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html',1,'SVF::CoreBitVector']]],
   ['csc',['CSC',['../classSVF_1_1CSC.html',1,'SVF']]],
   ['cuddpathpair',['cuddPathPair',['../structcuddPathPair.html',1,'']]],
   ['cxtdpitem',['CxtDPItem',['../classSVF_1_1CxtDPItem.html',1,'SVF']]],

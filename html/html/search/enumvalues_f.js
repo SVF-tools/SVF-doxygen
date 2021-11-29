@@ -1,6 +1,7 @@
 var searchData=
 [
   ['same',['Same',['../classSVF_1_1LocationSet.html#a002a0c8ec2528835d809bf7eb3ebc83fa9b2a5e3c7f7873ac4491ff231e0601d2',1,'SVF::LocationSet']]],
+  ['sbv',['SBV',['../classSVF_1_1PointsTo.html#a8f757f92ebf0a2ebdb5e6b001606923eacccb6e19f3e8db5f5b5b8858b22da61a',1,'SVF::PointsTo']]],
   ['scalar',['SCALAR',['../classSVF_1_1DCHNode.html#a029988e54846db9aca2584e1c10283e3ad5c99cf0681af30e8ed4cc59cc2371cb',1,'SVF::DCHNode']]],
   ['seq',['SEQ',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228a85142db6ed24203f054117f3a5110e2f',1,'SVF::NodeIDAllocator']]],
   ['ssachi',['SSACHI',['../classSVF_1_1MSSADEF.html#a32682e20c9c08d2bdd5abc62ea17af18aeebaf47309ac06cd04ae69979f4c2580',1,'SVF::MSSADEF']]],
@@ -11,7 +12,7 @@ var searchData=
   ['stack_5fobj',['STACK_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830aad918042d1f04a5e3960817d55ccb5d5',1,'SVF::ObjTypeInfo']]],
   ['standard',['Standard',['../classSVF_1_1CommonCHGraph.html#a6a1feb9e268fb56b0de3efc39cfc8db8afa3f4c3017fb95011bfdc11b147eae0c',1,'SVF::CommonCHGraph']]],
   ['static_5fobj',['STATIC_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830a4e7606afe2dabdef9c9836ae798a9d98',1,'SVF::ObjTypeInfo']]],
-  ['std_5fdef',['STD_DEF',['../classSVF_1_1DCHEdge.html#afb5545209188e5f62affeee5946a2614a8b07351616a1798fa34ec3828f485ebb',1,'SVF::DCHEdge']]],
+  ['std_5fdef',['STD_DEF',['../classSVF_1_1DCHEdge.html#a9ab4cd83d9ee475d3d8445cd91839726a8b07351616a1798fa34ec3828f485ebb',1,'SVF::DCHEdge']]],
   ['steensgaard_5fwpa',['Steensgaard_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85ad24ef5326c26db858c73432aa7e67a0a',1,'SVF::PointerAnalysis']]],
   ['store',['Store',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375a20d6a102ddc06257a822ffffcc5a3b47',1,'SVF::ConstraintEdge::Store()'],['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6aca20a2c4d9809736d43b18f3cb53e8cf',1,'SVF::PAGEdge::Store()'],['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a6df1bb8732d5402a6f40209ea8b803e8',1,'SVF::VFGNode::Store()']]],
   ['storemssachi',['StoreMSSACHI',['../classSVF_1_1MSSADEF.html#a32682e20c9c08d2bdd5abc62ea17af18ac9b53519d32443a72c04e771489aba43',1,'SVF::MSSADEF']]],

@@ -153,9 +153,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a877888f12d9f8048002cc0e6b83d45ac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1PTData.html#a877888f12d9f8048002cc0e6b83d45ac">clearFullPts</a> (const Key &amp;var)=0</td></tr>
 <tr class="memdesc:a877888f12d9f8048002cc0e6b83d45ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fully clears the points-to set of var.  <a href="#a877888f12d9f8048002cc0e6b83d45ac">More...</a><br /></td></tr>
 <tr class="separator:a877888f12d9f8048002cc0e6b83d45ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f176027169e18730848c7a583aed93"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1PTData.html#af2f176027169e18730848c7a583aed93">remapAllPts</a> (void)=0</td></tr>
+<tr class="memdesc:af2f176027169e18730848c7a583aed93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remaps all points-to sets to use the current mapping.  <a href="#af2f176027169e18730848c7a583aed93">More...</a><br /></td></tr>
+<tr class="separator:af2f176027169e18730848c7a583aed93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b898e3547eecfbf1ab155d183734bf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1PTData.html#a91b898e3547eecfbf1ab155d183734bf">dumpPTData</a> ()=0</td></tr>
 <tr class="memdesc:a91b898e3547eecfbf1ab155d183734bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump stored keys and points-to sets.  <a href="#a91b898e3547eecfbf1ab155d183734bf">More...</a><br /></td></tr>
 <tr class="separator:a91b898e3547eecfbf1ab155d183734bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe2b955f119871b54dc502de84b94c4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map</a>&lt; DataSet, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1PTData.html#adbe2b955f119871b54dc502de84b94c4">getAllPts</a> (bool liveOnly) const =0</td></tr>
+<tr class="separator:adbe2b955f119871b54dc502de84b94c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -169,7 +174,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt;<br />
 class SVF::PTData&lt; Key, KeySet, Data, DataSet &gt;</h3>
 
-<p>Basic points-to data structure Given a key (variable/condition variable), return its points-to data (pts/condition pts) It is designed flexible for different context, heap and path sensitive analysis Context Insensitive Key &ndash;&gt; Variable, DataSet &ndash;&gt; PointsTo Context sensitive: Key &ndash;&gt; <a class="el" href="classSVF_1_1CondVar.html">CondVar</a>, DataSet &ndash;&gt; PointsTo Heap sensitive: Key &ndash;&gt; Variable DataSet &ndash;&gt; <a class="el" href="classSVF_1_1CondPointsToSet.html">CondPointsToSet</a> Context and heap sensitive: Key &ndash;&gt; <a class="el" href="classSVF_1_1CondVar.html">CondVar</a>, DataSet &ndash;&gt; <a class="el" href="classSVF_1_1CondPointsToSet.html">CondPointsToSet</a></p>
+<p>Basic points-to data structure Given a key (variable/condition variable), return its points-to data (pts/condition pts) It is designed flexible for different context, heap and path sensitive analysis Context Insensitive Key &ndash;&gt; Variable, DataSet &ndash;&gt; <a class="el" href="classSVF_1_1PointsTo.html">PointsTo</a> Context sensitive: Key &ndash;&gt; <a class="el" href="classSVF_1_1CondVar.html">CondVar</a>, DataSet &ndash;&gt; <a class="el" href="classSVF_1_1PointsTo.html">PointsTo</a> Heap sensitive: Key &ndash;&gt; Variable DataSet &ndash;&gt; <a class="el" href="classSVF_1_1CondPointsToSet.html">CondPointsToSet</a> Context and heap sensitive: Key &ndash;&gt; <a class="el" href="classSVF_1_1CondVar.html">CondVar</a>, DataSet &ndash;&gt; <a class="el" href="classSVF_1_1CondPointsToSet.html">CondPointsToSet</a></p>
 <p>This class is abstract to allow for multiple methods of actually storing points-to sets. Key: "owning" variable of a points-to set. KeySet: collection of keys. Data: elements in points-to sets. DataSet: the points-to set; a collection of Data. </p>
 
 <p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00040">40</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
@@ -262,8 +267,8 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00062">62</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;: <a class="code" href="classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219">rev</a>(reversePT), <a class="code" href="classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28">ptdTy</a>(ty) { }</div><div class="ttc" id="classSVF_1_1PTData_html_abe01b39afed97b540c9bb8a8634afa28"><div class="ttname"><a href="classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28">SVF::PTData::ptdTy</a></div><div class="ttdeci">PTDataTy ptdTy</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00099">AbstractPointsToDS.h:99</a></div></div>
-<div class="ttc" id="classSVF_1_1PTData_html_a46fa3ec6462f3dda19549340281bb219"><div class="ttname"><a href="classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219">SVF::PTData::rev</a></div><div class="ttdeci">bool rev</div><div class="ttdoc">Whether we maintain reverse points-to sets or not. </div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00098">AbstractPointsToDS.h:98</a></div></div>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;: <a class="code" href="classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219">rev</a>(reversePT), <a class="code" href="classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28">ptdTy</a>(ty) { }</div><div class="ttc" id="classSVF_1_1PTData_html_abe01b39afed97b540c9bb8a8634afa28"><div class="ttname"><a href="classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28">SVF::PTData::ptdTy</a></div><div class="ttdeci">PTDataTy ptdTy</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00108">AbstractPointsToDS.h:108</a></div></div>
+<div class="ttc" id="classSVF_1_1PTData_html_a46fa3ec6462f3dda19549340281bb219"><div class="ttname"><a href="classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219">SVF::PTData::rev</a></div><div class="ttdeci">bool rev</div><div class="ttdoc">Whether we maintain reverse points-to sets or not. </div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00107">AbstractPointsToDS.h:107</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -335,7 +340,7 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 
 <p>Adds element to the points-to set associated with var. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a00a88cc3e802921c6a0951801ec712a6">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a7f3730473af9218bea520ec0498fb4ac">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#a95df7d565ba8e990b61b1c932c8d4273">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#a717c166c5efdf2e1d71be1772fc0898d">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a9f748619f67f3ff9c4c4a429e6614989">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#aab4a2eec11e83beca70b016102431ab1">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a8d53322eadc657ed88a8b724647070b2">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#aab4a2eec11e83beca70b016102431ab1">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentPTData.html#a8d53322eadc657ed88a8b724647070b2">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a00a88cc3e802921c6a0951801ec712a6">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a7f3730473af9218bea520ec0498fb4ac">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#a95df7d565ba8e990b61b1c932c8d4273">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#a717c166c5efdf2e1d71be1772fc0898d">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a9f748619f67f3ff9c4c4a429e6614989">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a8d53322eadc657ed88a8b724647070b2">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a8d53322eadc657ed88a8b724647070b2">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#aab4a2eec11e83beca70b016102431ab1">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutablePTData.html#aab4a2eec11e83beca70b016102431ab1">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -366,7 +371,7 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 
 <p>Clears all points-to sets as if nothing is stored. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#ab476e1b59aead37b440fd5735df3814b">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#ac563829c0d6d091c905bfe16580ceb47">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a5e8036d18088ed272ab052b5cd6ef1ce">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a446112803c54ca937f8b85e42a4a1381">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#ab070b1baa6a01800edac36dc075107fd">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#a8ae9624ac7fb1502eaa43173dacbe7b7">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a10504f854b1b390818f8ee12182d857c">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#ac8da1a3357c3bc529f6ca85615486951">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#ac8da1a3357c3bc529f6ca85615486951">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#abf836f1b063b869215c7e9b53b013d3f">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentPTData.html#abf836f1b063b869215c7e9b53b013d3f">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#ab476e1b59aead37b440fd5735df3814b">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#ac563829c0d6d091c905bfe16580ceb47">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentIncDFPTData.html#a5e8036d18088ed272ab052b5cd6ef1ce">SVF::PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a446112803c54ca937f8b85e42a4a1381">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#ab070b1baa6a01800edac36dc075107fd">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#a8ae9624ac7fb1502eaa43173dacbe7b7">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a10504f854b1b390818f8ee12182d857c">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#ac8da1a3357c3bc529f6ca85615486951">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#abf836f1b063b869215c7e9b53b013d3f">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#ac8da1a3357c3bc529f6ca85615486951">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentPTData.html#abf836f1b063b869215c7e9b53b013d3f">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -475,6 +480,37 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 
 </div>
 </div>
+<a id="adbe2b955f119871b54dc502de84b94c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe2b955f119871b54dc502de84b94c4">&#9670;&nbsp;</a></span>getAllPts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map</a>&lt;DataSet, unsigned&gt; <a class="el" href="classSVF_1_1PTData.html">SVF::PTData</a>&lt; Key, KeySet, Data, DataSet &gt;::getAllPts </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>liveOnly</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a mapping of points-to sets to the number of times they are stored. liveOnly indicates whether to include only points-to sets which correspond to a variable (matters when dealing with non-GC persistent PT). </p>
+
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a6cac338e74f869d0e708c7e2b356b5d7">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a6c9ad3635f73b805289cc1f14cdcf09a">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#ac9120fbb056e23cdf84646a37d809a8d">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#a98f84bffeba6bd7dc140f1d5b63ff368">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#adb89579b46a478f6d0e30e790838dca9">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a3bad0126e25b0a7134e8ef25869bd40e">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#aadba2724dfe3cb745d9e9d73b8c3de67">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#aadba2724dfe3cb745d9e9d73b8c3de67">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#ad20254ace6d9976da2099413f5790458">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutablePTData.html#ad20254ace6d9976da2099413f5790458">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
+
+</div>
+</div>
 <a id="adfcbaefe1c058d9ddf14aa3da07e1daf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfcbaefe1c058d9ddf14aa3da07e1daf">&#9670;&nbsp;</a></span>getPTDTY()</h2>
 
@@ -503,7 +539,7 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 <p>Get the type of points-to data structure that this is. </p>
 
 <p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00067">67</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28">ptdTy</a>;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div><div class="ttc" id="classSVF_1_1PTData_html_abe01b39afed97b540c9bb8a8634afa28"><div class="ttname"><a href="classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28">SVF::PTData::ptdTy</a></div><div class="ttdeci">PTDataTy ptdTy</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00099">AbstractPointsToDS.h:99</a></div></div>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28">ptdTy</a>;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div><div class="ttc" id="classSVF_1_1PTData_html_abe01b39afed97b540c9bb8a8634afa28"><div class="ttname"><a href="classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28">SVF::PTData::ptdTy</a></div><div class="ttdeci">PTDataTy ptdTy</div><div class="ttdef"><b>Definition:</b> <a href="AbstractPointsToDS_8h_source.html#l00108">AbstractPointsToDS.h:108</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -535,7 +571,7 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 
 <p>Get points-to set of var. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aaf519166d2e0ca3c81088b52a1cf3066">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#afe80884fa8227e50f28631e20aa6fdf6">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a4cbb9131a89c5c48367fb927693b5c6b">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#a5f6a01d0bb40a718bc14f2cc1bb98a13">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#ac2f494da9379c336bb81a0dc438b5af9">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a9982ecf42416756a0729a28e8713cfed">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#abe4230f3ba78fc660ea291fda36ffa62">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#abe4230f3ba78fc660ea291fda36ffa62">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a34f8226202e1654d4e67916b21ec4d99">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentPTData.html#a34f8226202e1654d4e67916b21ec4d99">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aaf519166d2e0ca3c81088b52a1cf3066">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#afe80884fa8227e50f28631e20aa6fdf6">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a4cbb9131a89c5c48367fb927693b5c6b">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#a5f6a01d0bb40a718bc14f2cc1bb98a13">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#ac2f494da9379c336bb81a0dc438b5af9">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a9982ecf42416756a0729a28e8713cfed">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#abe4230f3ba78fc660ea291fda36ffa62">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a34f8226202e1654d4e67916b21ec4d99">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#abe4230f3ba78fc660ea291fda36ffa62">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentPTData.html#a34f8226202e1654d4e67916b21ec4d99">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -567,7 +603,39 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 
 <p>Get reverse points-to set of a datum. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a7de508c0d83895aee785524d28eac8b9">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#aafa09ff01060e43f08278963179eec30">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a2f98940bd8266ad37a975c6d30d948b4">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#a50c3d871edb13ac5b3f0d625deb6449a">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#ad9bd6762fc6525afaed4a6c6da63688d">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a7a12f89c0de40dbcb5fe48219a7c121b">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#a36aa05b8f5c308035315d6df7036c096">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a916017f2cc924b10e72120d1d87afd34">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#a36aa05b8f5c308035315d6df7036c096">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1PersistentPTData.html#a916017f2cc924b10e72120d1d87afd34">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a7de508c0d83895aee785524d28eac8b9">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#aafa09ff01060e43f08278963179eec30">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#a2f98940bd8266ad37a975c6d30d948b4">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#a50c3d871edb13ac5b3f0d625deb6449a">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#ad9bd6762fc6525afaed4a6c6da63688d">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a7a12f89c0de40dbcb5fe48219a7c121b">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a916017f2cc924b10e72120d1d87afd34">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a916017f2cc924b10e72120d1d87afd34">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#a36aa05b8f5c308035315d6df7036c096">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutablePTData.html#a36aa05b8f5c308035315d6df7036c096">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
+
+</div>
+</div>
+<a id="af2f176027169e18730848c7a583aed93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f176027169e18730848c7a583aed93">&#9670;&nbsp;</a></span>remapAllPts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classSVF_1_1PTData.html">SVF::PTData</a>&lt; Key, KeySet, Data, DataSet &gt;::remapAllPts </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remaps all points-to sets to use the current mapping. </p>
+
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#a72cbf33b77f5a19221ad265691065695">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a0b4feff5bc406088216d9e45941fe3ef">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#ad34e442581dfe57ce7f1add25c8414b2">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#aac817d88beae87fcc961a2df7904e61c">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#a80142c1961d5e71c8f0dbadbb3c82184">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#add8c649853678b6c7acfa4217f1b7ee0">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#af8084d77fb666933fd0efe0df983074d">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#af8084d77fb666933fd0efe0df983074d">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#a3b4cd5b4f8704a5b0049923d22ce7665">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutablePTData.html#a3b4cd5b4f8704a5b0049923d22ce7665">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -651,7 +719,7 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 
 <p>Performs pts(dstVar) = pts(dstVar) U srcDataSet. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aa9ab46b7afc7f47df20e74bda300dc42">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a4354e855ee742df51b4407cf2bdefa54">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#ab675653138960b16f23c801298e80f48">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#adbe7c95dad75d473649de96d52cac117">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#a746c384cf4633c3b07b4362e7b6c087a">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#a08c8b6ac7f53539c816dc773bca8e29c">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a9414aeb024e2c367b9777522aadd5d83">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a9414aeb024e2c367b9777522aadd5d83">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#a124e8cc8d2dbbd70682a4b7845e5d600">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutablePTData.html#a124e8cc8d2dbbd70682a4b7845e5d600">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aa9ab46b7afc7f47df20e74bda300dc42">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#a00151507a86b71f99e43fa87b59d65bb">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>, <a class="el" href="classSVF_1_1MutableDFPTData.html#ab675653138960b16f23c801298e80f48">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDFPTData.html#a780dc63003f8a0a4c66c1548138fdd86">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutableDiffPTData.html#a746c384cf4633c3b07b4362e7b6c087a">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentDiffPTData.html#aa9aac7ff120abf87e7edfe233691f00f">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a9414aeb024e2c367b9777522aadd5d83">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1PersistentPTData.html#a9414aeb024e2c367b9777522aadd5d83">SVF::PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>, <a class="el" href="classSVF_1_1MutablePTData.html#a124e8cc8d2dbbd70682a4b7845e5d600">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>, and <a class="el" href="classSVF_1_1MutablePTData.html#a124e8cc8d2dbbd70682a4b7845e5d600">SVF::MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;</a>.</p>
 
 </div>
 </div>
@@ -678,7 +746,7 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00099">99</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00108">108</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
@@ -706,7 +774,7 @@ template&lt;typename Key, typename KeySet, typename Data, typename DataSet&gt; <
 
 <p>Whether we maintain reverse points-to sets or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00098">98</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractPointsToDS_8h_source.html#l00107">107</a> of file <a class="el" href="AbstractPointsToDS_8h_source.html">AbstractPointsToDS.h</a>.</p>
 
 </div>
 </div>
