@@ -35,7 +35,7 @@ var searchData=
   ['pointertype',['PointerType',['../structSVF_1_1SVFUtil_1_1cast__retty__impl_3_01To_00_01std_1_1unique__ptr_3_01From_01_4_01_4.html#a9d08abc346f3b77c487eba144f3cbd8d',1,'SVF::SVFUtil::cast_retty_impl&lt; To, std::unique_ptr&lt; From &gt; &gt;::PointerType()'],['../namespaceSVF.html#aa962cc1d782cc46553251e96b64a754b',1,'SVF::PointerType()']]],
   ['pointsto',['PointsTo',['../namespaceSVF.html#a0c6594b4bae7924369bb61943c1da4fb',1,'SVF']]],
   ['pointstoid',['PointsToID',['../namespaceSVF.html#ae545a88267bd2246de827cf590675aca',1,'SVF']]],
-  ['pointstolist',['PointsToList',['../classSVF_1_1MRGenerator.html#a2a9b87b7b9a567a7fd94e9267f3eb054',1,'SVF::MRGenerator::PointsToList()'],['../namespaceSVF_1_1SVFUtil.html#a4740b14abf7d308e7806a0d6d6c42ee2',1,'SVF::SVFUtil::PointsToList()']]],
+  ['pointstolist',['PointsToList',['../classSVF_1_1MRGenerator.html#a8b254a0c5063e25f297d1b00fb0b515e',1,'SVF::MRGenerator::PointsToList()'],['../namespaceSVF_1_1SVFUtil.html#a798b7f30608d8c1688d4fdce2c3097f4',1,'SVF::SVFUtil::PointsToList()']]],
   ['postdominatortree',['PostDominatorTree',['../namespaceSVF.html#ab34383ee87cd45eb485fa29db482ffef',1,'SVF']]],
   ['postdominatortreewrapperpass',['PostDominatorTreeWrapperPass',['../namespaceSVF.html#a7f570d09953aa4ec60fd1d5f7f71b521',1,'SVF']]],
   ['ptacgnodeset',['PTACGNodeSet',['../classSVF_1_1TCT.html#afb579a5bdcc0a1c6b075bb9aae36c237',1,'SVF::TCT']]],
@@ -51,6 +51,6 @@ var searchData=
   ['ptsmapconstiter',['PtsMapConstIter',['../classSVF_1_1MutablePTData.html#ae9c96f369fbe955a841badcf3fcfcc03',1,'SVF::MutablePTData::PtsMapConstIter()'],['../classSVF_1_1MutableDFPTData.html#a3f234abc0def4815a03de164fa258f24',1,'SVF::MutableDFPTData::PtsMapConstIter()']]],
   ['ptsmapiter',['PtsMapIter',['../classSVF_1_1MutablePTData.html#ad08dbfa28cd0d622322091d6600748ed',1,'SVF::MutablePTData']]],
   ['ptstoidmap',['PTSToIDMap',['../classSVF_1_1PersistentPointsToCache.html#a9a1b0d0d215c048c7200da0e8f816943',1,'SVF::PersistentPointsToCache']]],
-  ['ptstorepptssetmap',['PtsToRepPtsSetMap',['../classSVF_1_1MRGenerator.html#a429b45a55b948d6d1ffd73ea0ac6c04c',1,'SVF::MRGenerator']]],
-  ['ptstosubptsmap',['PtsToSubPtsMap',['../classSVF_1_1IntraDisjointMRG.html#a95e5cc07c8e1838f9336c6a2f0aa941a',1,'SVF::IntraDisjointMRG']]]
+  ['ptstorepptssetmap',['PtsToRepPtsSetMap',['../classSVF_1_1MRGenerator.html#a665836fd866c6393fc4a251eb4929dae',1,'SVF::MRGenerator']]],
+  ['ptstosubptsmap',['PtsToSubPtsMap',['../classSVF_1_1IntraDisjointMRG.html#a5ff8d1cade33445ef7c17f0aedd6a4d1',1,'SVF::IntraDisjointMRG']]]
 ];

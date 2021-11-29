@@ -62,11 +62,11 @@ var searchData=
   ['funtofunentrynodemap',['FunToFunEntryNodeMap',['../classSVF_1_1ICFG.html#a69076849bd256fb0ca59711a59a7c092',1,'SVF::ICFG']]],
   ['funtofunexitnodemap',['FunToFunExitNodeMap',['../classSVF_1_1ICFG.html#ab87a90adae3e9db06da7ecc0bd9d920f',1,'SVF::ICFG']]],
   ['funtoloopinfomap',['funToLoopInfoMap',['../classSVF_1_1PTACFInfoBuilder.html#a155db92ff5057abcb929c0ca8e8bee89',1,'SVF::PTACFInfoBuilder']]],
-  ['funtomodsmap',['funToModsMap',['../classSVF_1_1MRGenerator.html#aeb185d6d9c7bfe4b98c7440db6b8bbc4',1,'SVF::MRGenerator']]],
+  ['funtomodsmap',['funToModsMap',['../classSVF_1_1MRGenerator.html#a2c94bfa19ad8d1d6360b12693c8b891d',1,'SVF::MRGenerator']]],
   ['funtomrsmap',['funToMRsMap',['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator']]],
   ['funtopdtmap',['funToPDTMap',['../classSVF_1_1PTACFInfoBuilder.html#a11a1bb877406f45ea4c8f7c4678bfa15',1,'SVF::PTACFInfoBuilder']]],
-  ['funtopointstomap',['funToPointsToMap',['../classSVF_1_1MRGenerator.html#acaf48288039d19bf0bb9f2e506fbfd8d',1,'SVF::MRGenerator']]],
-  ['funtorefsmap',['funToRefsMap',['../classSVF_1_1MRGenerator.html#afe018918c8acc83cd128b4c56ff42075',1,'SVF::MRGenerator']]],
+  ['funtopointstomap',['funToPointsToMap',['../classSVF_1_1MRGenerator.html#a05c7a5ddbe3079f63be76c35298d1c2b',1,'SVF::MRGenerator']]],
+  ['funtorefsmap',['funToRefsMap',['../classSVF_1_1MRGenerator.html#af6d58e2971c4a8d3ee03f9dfd9072a3a',1,'SVF::MRGenerator']]],
   ['funtoreturnmusetmap',['funToReturnMuSetMap',['../classSVF_1_1MemSSA.html#abae2396bf8a37a22be9365d368fe455c',1,'SVF::MemSSA']]],
   ['funtovfgnodesmap',['funToVFGNodesMap',['../classSVF_1_1VFG.html#a9a99ae86d16ffe69bff9d52de769d049',1,'SVF::VFG']]]
 ];

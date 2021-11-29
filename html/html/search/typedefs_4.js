@@ -11,7 +11,8 @@ var searchData=
   ['eptype',['EpType',['../epd_8h.html#a618ccbef690a6439abf31cd8b30330e9',1,'epd.h']]],
   ['equalgedge',['equalGEdge',['../classSVF_1_1GenericEdge.html#a69accb303ee67733e065350e4452cbca',1,'SVF::GenericEdge']]],
   ['equalmemregion',['equalMemRegion',['../classSVF_1_1MemRegion.html#af0a0b4a5862a136ef4f203f19139da65',1,'SVF::MemRegion']]],
-  ['equalpointsto',['equalPointsTo',['../classSVF_1_1MemRegion.html#a52b14094d018fb5d9f024c154ab61b8e',1,'SVF::MemRegion::equalPointsTo()'],['../namespaceSVF_1_1SVFUtil.html#a68302f07b13f6e1f39aace5699762c41',1,'SVF::SVFUtil::equalPointsTo()']]],
+  ['equalnodebs',['equalNodeBS',['../namespaceSVF_1_1SVFUtil.html#a5c2b39ae857d78ed9dda83880e703b0f',1,'SVF::SVFUtil']]],
+  ['equalpointsto',['equalPointsTo',['../namespaceSVF_1_1SVFUtil.html#a68302f07b13f6e1f39aace5699762c41',1,'SVF::SVFUtil']]],
   ['extractelementinst',['ExtractElementInst',['../namespaceSVF.html#afb88c4d723dd7c51bdfc7ba5893cb356',1,'SVF']]],
   ['extractvalueinst',['ExtractValueInst',['../namespaceSVF.html#ace1fd4c32134018e2f6d5da193524986',1,'SVF']]]
 ];

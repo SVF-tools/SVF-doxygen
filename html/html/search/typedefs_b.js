@@ -12,7 +12,7 @@ var searchData=
   ['loadmu',['LOADMU',['../classSVF_1_1SVFG.html#a86d4a41a881a3d2e5def103d7ba8bb2f',1,'SVF::SVFG::LOADMU()'],['../classSVF_1_1MemSSA.html#a4717016109fd3bc80f3095d11afff5b1',1,'SVF::MemSSA::LOADMU()']]],
   ['loadset',['LoadSet',['../classSVF_1_1MTA.html#a80356495b6c45bac59dc15fd7a99730b',1,'SVF::MTA']]],
   ['loadstomrsmap',['LoadsToMRsMap',['../classSVF_1_1MRGenerator.html#a72f55ad36f4ce46c5eee4bf0ce736cee',1,'SVF::MRGenerator']]],
-  ['loadstopointstomap',['LoadsToPointsToMap',['../classSVF_1_1MRGenerator.html#af500450901135fd31ceb2ab497ca1086',1,'SVF::MRGenerator']]],
+  ['loadstopointstomap',['LoadsToPointsToMap',['../classSVF_1_1MRGenerator.html#a7b9b1c326d075a9be473680fef6a9616',1,'SVF::MRGenerator']]],
   ['loadsvfgnode',['LoadSVFGNode',['../namespaceSVF.html#a3ce49be3724e1e8423ccdfa726fbf6c8',1,'SVF']]],
   ['loadtomusetmap',['LoadToMUSetMap',['../classSVF_1_1MemSSA.html#ac5a9b2218c946ec17b478a95ab60ec6b',1,'SVF::MemSSA']]],
   ['locdpitem',['LocDPItem',['../namespaceSVF.html#aa50ee8563f99ba1eb897301f55e9d855',1,'SVF']]],

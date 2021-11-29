@@ -86,7 +86,7 @@ var searchData=
   ['isagg',['isAgg',['../classSVF_1_1DCHGraph.html#a9d2be5aec5216cbc1d1709b41f79c44b',1,'SVF::DCHGraph']]],
   ['isaliasedforkjoin',['isAliasedForkJoin',['../classSVF_1_1ForkJoinAnalysis.html#a3655131add43346a175576b023e32509',1,'SVF::ForkJoinAnalysis']]],
   ['isaliasedlocks',['isAliasedLocks',['../classSVF_1_1LockAnalysis.html#add9272ead87ca994ee4e08dfa30fa0f4',1,'SVF::LockAnalysis::isAliasedLocks(const CxtLock &amp;cl1, const CxtLock &amp;cl2)'],['../classSVF_1_1LockAnalysis.html#ab5a541fb1585d475a89590cce66ba3b4',1,'SVF::LockAnalysis::isAliasedLocks(const Instruction *i1, const Instruction *i2)']]],
-  ['isaliasedmr',['isAliasedMR',['../classSVF_1_1MRGenerator.html#acd1759ce72edc748e6628d7e82458473',1,'SVF::MRGenerator']]],
+  ['isaliasedmr',['isAliasedMR',['../classSVF_1_1MRGenerator.html#a28130cc55ab317d383ba6593f323b12a',1,'SVF::MRGenerator']]],
   ['isaliastestfunction',['isAliasTestFunction',['../TypeBasedHeapCloning_8cpp.html#a2be9728908f88e4e16b1e6218801fa06',1,'TypeBasedHeapCloning.cpp']]],
   ['isallpathreachable',['isAllPathReachable',['../classSVF_1_1SrcSnkDDA.html#a6ae0d47bac09163e90b8b2e773ad69f0',1,'SVF::SrcSnkDDA::isAllPathReachable()'],['../classSVF_1_1CondManager.html#a6151817a6f671fa1e7814e74f7ce2e51',1,'SVF::CondManager::isAllPathReachable()'],['../classSVF_1_1PathCondAllocator.html#a51c55809f28eee5b8432ab4508f9a887',1,'SVF::PathCondAllocator::isAllPathReachable()']]],
   ['isallreachable',['isAllReachable',['../classSVF_1_1ProgSlice.html#a2f96f034b7236791fe1d4d351174722e',1,'SVF::ProgSlice']]],
