@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['pedgek',['PEDGEK',['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6',1,'SVF::PAGEdge']]],
-  ['pnodek',['PNODEK',['../classSVF_1_1PAGNode.html#a5cc5327ba68c3f11ed4bef47d89c3dfd',1,'SVF::PAGNode']]],
-  ['ptaimplty',['PTAImplTy',['../classSVF_1_1PointerAnalysis.html#ac0c0855918cb2cdc3d8ebc175acfbd4d',1,'SVF::PointerAnalysis']]],
-  ['ptaty',['PTATY',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85',1,'SVF::PointerAnalysis']]],
-  ['ptbackingtype',['PTBackingType',['../classSVF_1_1BVDataPTAImpl.html#ad76328a8543b02784992afc2d5501d8a',1,'SVF::BVDataPTAImpl']]],
-  ['ptdataty',['PTDataTy',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848',1,'SVF::PTData']]]
+  ['mempartition',['MemPartition',['../classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671',1,'SVF::MemSSA']]],
+  ['memtype',['MEMTYPE',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830',1,'SVF::ObjTypeInfo']]],
+  ['mutype',['MUTYPE',['../classSVF_1_1MSSAMU.html#a82c66f3e2b7d2d9dd391a947719bda9b',1,'SVF::MSSAMU']]]
 ];
