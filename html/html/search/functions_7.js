@@ -132,5 +132,6 @@ var searchData=
   ['hasvfgnode',['hasVFGNode',['../classSVF_1_1VFG.html#a30eb9d717ad5bc8a9109a7bdef38f4a1',1,'SVF::VFG']]],
   ['hasvfgnodes',['hasVFGNodes',['../classSVF_1_1VFG.html#a76af43e28630eb56a1aa5971f516d43d',1,'SVF::VFG']]],
   ['hclust_5ffast',['hclust_fast',['../fastcluster_8h.html#acccd226cbdf0944b5c9e24c84a4599c9',1,'hclust_fast(int n, double *distmat, int method, int *merge, double *height):&#160;fastcluster.cpp'],['../fastcluster_8cpp.html#acccd226cbdf0944b5c9e24c84a4599c9',1,'hclust_fast(int n, double *distmat, int method, int *merge, double *height):&#160;fastcluster.cpp']]],
+  ['hclustmethodtostring',['hclustMethodToString',['../namespaceSVF_1_1SVFUtil.html#a14a4c5124f2fd03ca3d898e2acd54160',1,'SVF::SVFUtil']]],
   ['heapallocatorviaindcall',['heapAllocatorViaIndCall',['../classSVF_1_1Andersen.html#a7b1b9e9b25b5643440aca77e23a8de07',1,'SVF::Andersen']]]
 ];

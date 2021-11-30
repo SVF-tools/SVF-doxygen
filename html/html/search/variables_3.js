@@ -37,6 +37,7 @@ var searchData=
   ['callsitetorefmrsmap',['callsiteToRefMRsMap',['../classSVF_1_1MRGenerator.html#a7a7ed21181c2486b60170a479a5a534e',1,'SVF::MRGenerator']]],
   ['callsitetorefpointstomap',['callsiteToRefPointsToMap',['../classSVF_1_1MRGenerator.html#a34967cda51699f948a581b9f88fa3b10',1,'SVF::MRGenerator']]],
   ['candidatefuncset',['candidateFuncSet',['../classSVF_1_1TCT.html#a720a934088dddda2b134cabcc59ef43d',1,'SVF::TCT']]],
+  ['candidatemappings',['candidateMappings',['../classSVF_1_1FlowSensitive.html#adba7ffe68ae7edce9b3aa896f978da6b',1,'SVF::FlowSensitive']]],
   ['candidatepointers',['candidatePointers',['../classSVF_1_1PAG.html#aada10ac92c40951586031271478248c2',1,'SVF::PAG']]],
   ['candidatequeries',['candidateQueries',['../classSVF_1_1DDAClient.html#aa6fdff97be2e1a886237b515406d2e61',1,'SVF::DDAClient::candidateQueries()'],['../classSVF_1_1DDAVFSolver.html#ae0e78fafb7eec0fbc1a02d24547335e9',1,'SVF::DDAVFSolver::candidateQueries()']]],
   ['candidates',['candidates',['../classSVF_1_1WPAMinimumSolver.html#a3e26f894660fb22f7d2f342bb4338ff8',1,'SVF::WPAMinimumSolver']]],

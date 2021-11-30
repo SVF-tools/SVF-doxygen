@@ -27,6 +27,7 @@ var searchData=
   ['clonedummyobjpn',['CloneDummyObjPN',['../classSVF_1_1CloneDummyObjPN.html',1,'SVF']]],
   ['clonefiobjpn',['CloneFIObjPN',['../classSVF_1_1CloneFIObjPN.html',1,'SVF']]],
   ['clonegepobjpn',['CloneGepObjPN',['../classSVF_1_1CloneGepObjPN.html',1,'SVF']]],
+  ['clusterer',['Clusterer',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html',1,'SVF::NodeIDAllocator']]],
   ['cmppe',['CmpPE',['../classSVF_1_1CmpPE.html',1,'SVF']]],
   ['cmpvfgnode',['CmpVFGNode',['../classSVF_1_1CmpVFGNode.html',1,'SVF']]],
   ['commonchgraph',['CommonCHGraph',['../classSVF_1_1CommonCHGraph.html',1,'SVF']]],

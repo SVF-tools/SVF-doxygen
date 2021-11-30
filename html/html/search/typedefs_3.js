@@ -45,6 +45,7 @@ var searchData=
   ['diffptdataty',['DiffPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#abd8bb73e9beac5e39667091b1e211bd3',1,'SVF::BVDataPTAImpl']]],
   ['dinode',['DINode',['../namespaceSVF.html#a758f3bee97ed46a719d64a2d4f2bc62d',1,'SVF']]],
   ['dinodearray',['DINodeArray',['../namespaceSVF.html#a0f825e73d115173b05ca54fb8ec65003',1,'SVF']]],
+  ['distoccmap',['DistOccMap',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1f74f1e72a844166f742d2d46efbbb5e',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['disubprogram',['DISubprogram',['../namespaceSVF.html#a89c7208bfc0b57873dfa574f52050295',1,'SVF']]],
   ['disubrange',['DISubrange',['../namespaceSVF.html#a99bc1228f07429855c81a720be862dc6',1,'SVF']]],
   ['disubroutinetype',['DISubroutineType',['../namespaceSVF.html#a090e0791e8c200104ed3ab6bab157129',1,'SVF']]],

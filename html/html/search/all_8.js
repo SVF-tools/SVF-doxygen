@@ -171,6 +171,7 @@ var searchData=
   ['hclust_5fmethod_5fmedian',['HCLUST_METHOD_MEDIAN',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913ddaa453b79910d9c6f7f57a179bcdf63474',1,'fastcluster.h']]],
   ['hclust_5fmethod_5fsingle',['HCLUST_METHOD_SINGLE',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913ddad16cc6362447cc32292c4af4c6fe8024',1,'fastcluster.h']]],
   ['hclust_5fmethod_5fsvf_5fbest',['HCLUST_METHOD_SVF_BEST',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dda66ab3fde95842ef6da0dae1f702a9618',1,'fastcluster.h']]],
+  ['hclustmethodtostring',['hclustMethodToString',['../namespaceSVF_1_1SVFUtil.html#a14a4c5124f2fd03ca3d898e2acd54160',1,'SVF::SVFUtil']]],
   ['head',['head',['../classSVF_1_1List.html#a41d52072edb2b75ab15d67bf2663312a',1,'SVF::List']]],
   ['headmap',['headmap',['../classSVF_1_1MTASVFGBuilder.html#ac92452c257052706b1cf1737b266eec1',1,'SVF::MTASVFGBuilder']]],
   ['heap_5fobj',['HEAP_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830a692b4b0df23bad19ea04d18b01bf445c',1,'SVF::ObjTypeInfo']]],

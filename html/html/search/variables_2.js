@@ -10,6 +10,7 @@ var searchData=
   ['bb2phisetmap',['bb2PhiSetMap',['../classSVF_1_1MemSSA.html#a190061a6f7423461f4292fc326330f23',1,'SVF::MemSSA']]],
   ['bbconds',['bbConds',['../classSVF_1_1PathCondAllocator.html#aff611b2797d61155c8c2f9d8ac4030bc',1,'SVF::PathCondAllocator']]],
   ['bbtocondmap',['bbToCondMap',['../classSVF_1_1PathCondAllocator.html#ac3a0aa27f317d7d9214181b599f19f24',1,'SVF::PathCondAllocator']]],
+  ['bestcandidate',['BestCandidate',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a3556bdda6725b72d0ca88364daeae32e',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['binarynodemap',['binaryNodeMap',['../classSVF_1_1PAG.html#ac312c15d6c41f4c97e1a5f66b0036c06',1,'SVF::PAG']]],
   ['bindvar',['bindVar',['../structDdSubtable.html#a54a4f8f090e30084c77362e5de3ee591',1,'DdSubtable']]],
   ['bins',['bins',['../structst__table.html#a8924d9633a796c5e6c03925c5344c1ad',1,'st_table']]],

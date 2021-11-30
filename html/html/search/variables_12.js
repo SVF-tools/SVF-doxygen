@@ -23,6 +23,7 @@ var searchData=
   ['reg2bbmap',['reg2BBMap',['../classSVF_1_1MemSSA.html#add1d4ff17d0860906d2f5f7172176121',1,'SVF::MemSSA']]],
   ['regionalign',['RegionAlign',['../classSVF_1_1Options.html#a88550ed8c4ec2ccc5d5e40869499787b',1,'SVF::Options']]],
   ['regionedclustering',['RegionedClustering',['../classSVF_1_1Options.html#ab6115b28808af348e1f6a6b58b4cd84f',1,'SVF::Options']]],
+  ['regioningtime',['RegioningTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ad5f733cad8a103a64e80270acb67567a',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['reliancetime',['relianceTime',['../classSVF_1_1VersionedFlowSensitive.html#a80535bb813f8bf240a0b54ac6ad4b257',1,'SVF::VersionedFlowSensitive']]],
   ['reordcycle',['reordCycle',['../structDdManager.html#aab2156c5c7271dc0aecf7ffc18e68e5f',1,'DdManager']]],
   ['reorder_5fflag',['reorder_flag',['../structst__table.html#a0b4d6444e7e22ff9a68f75f6cccb75cd',1,'st_table']]],

@@ -41,6 +41,7 @@ var searchData=
   ['errs',['errs',['../namespaceSVF_1_1SVFUtil.html#af0f447732c67402037a86ea29006efc2',1,'SVF::SVFUtil']]],
   ['evalfinalcond',['evalFinalCond',['../classSVF_1_1ProgSlice.html#afac06b0be2b04cb8a65af21fd697b756',1,'SVF::ProgSlice']]],
   ['evalmdtag',['evalMDTag',['../classSVF_1_1Annotator.html#a571eca4d816ffb519f256b7f37209ddb',1,'SVF::Annotator']]],
+  ['evaluate',['evaluate',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#acbbc5c04c79846fe1cc46a3bd5a65aba',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['evaluatebranchcond',['evaluateBranchCond',['../classSVF_1_1PathCondAllocator.html#a283788ca2886b03803829434150d11fe',1,'SVF::PathCondAllocator']]],
   ['evaluateloopexitbranch',['evaluateLoopExitBranch',['../classSVF_1_1PathCondAllocator.html#a623e6ec670e5f6aeedee26b146ad5a0d',1,'SVF::PathCondAllocator']]],
   ['evaluateprogexit',['evaluateProgExit',['../classSVF_1_1PathCondAllocator.html#a9dbca0e012336e20064693f508bc54b8',1,'SVF::PathCondAllocator']]],
