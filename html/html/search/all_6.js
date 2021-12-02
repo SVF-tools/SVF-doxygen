@@ -183,7 +183,7 @@ var searchData=
   ['funtonodebsmap',['FunToNodeBSMap',['../classSVF_1_1MRGenerator.html#ab01e492f002c73e2c89eb0b4c8f9647d',1,'SVF::MRGenerator']]],
   ['funtopagedgesetmap',['FunToPAGEdgeSetMap',['../classSVF_1_1PAG.html#a369ea2832e74716757a7d4afa7cb5d60',1,'SVF::PAG']]],
   ['funtopdtmap',['funToPDTMap',['../classSVF_1_1PTACFInfoBuilder.html#a11a1bb877406f45ea4c8f7c4678bfa15',1,'SVF::PTACFInfoBuilder']]],
-  ['funtopointstomap',['funToPointsToMap',['../classSVF_1_1MRGenerator.html#a05c7a5ddbe3079f63be76c35298d1c2b',1,'SVF::MRGenerator::funToPointsToMap()'],['../classSVF_1_1MRGenerator.html#ad492e2940936fc7df06127f0cb94d47a',1,'SVF::MRGenerator::FunToPointsToMap()']]],
+  ['funtopointstomap',['FunToPointsToMap',['../classSVF_1_1MRGenerator.html#ad492e2940936fc7df06127f0cb94d47a',1,'SVF::MRGenerator::FunToPointsToMap()'],['../classSVF_1_1MRGenerator.html#a05c7a5ddbe3079f63be76c35298d1c2b',1,'SVF::MRGenerator::funToPointsToMap()']]],
   ['funtopointstosmap',['FunToPointsTosMap',['../classSVF_1_1MRGenerator.html#a6b8bbb60126105cc77c1a6a4c46677fd',1,'SVF::MRGenerator']]],
   ['funtopostdtmap',['FunToPostDTMap',['../classSVF_1_1PTACFInfoBuilder.html#a8e4d95e3c98ad17b060844063a494946',1,'SVF::PTACFInfoBuilder']]],
   ['funtoptsmap',['FunToPtsMap',['../classSVF_1_1IntraDisjointMRG.html#a824dec1bb1df5052252e7fe0dd55a894',1,'SVF::IntraDisjointMRG']]],
