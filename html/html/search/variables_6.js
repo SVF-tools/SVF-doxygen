@@ -26,7 +26,7 @@ var searchData=
   ['forksites',['forksites',['../classSVF_1_1ThreadCallGraph.html#a69b86668a04dc3e5bb85ab4f3f0fce27',1,'SVF::ThreadCallGraph']]],
   ['formalouttodefmap',['formalOutToDefMap',['../classSVF_1_1SVFGOPT.html#abbd6ac28826b9cc4c4981271393c8b19',1,'SVF::SVFGOPT']]],
   ['formalret',['formalRet',['../classSVF_1_1FunExitBlockNode.html#a77c46d6089369ea040efa346e0b3de25',1,'SVF::FunExitBlockNode']]],
-  ['forwardslice',['forwardslice',['../classSVF_1_1ProgSlice.html#ac12dc4caa0c764ae69175e787efad2ab',1,'SVF::ProgSlice::forwardslice()'],['../classSVF_1_1SVFGStat.html#a1e5ec005dda8dc918422eaf33f3145f8',1,'SVF::SVFGStat::forwardSlice()']]],
+  ['forwardslice',['forwardSlice',['../classSVF_1_1SVFGStat.html#a1e5ec005dda8dc918422eaf33f3145f8',1,'SVF::SVFGStat::forwardSlice()'],['../classSVF_1_1ProgSlice.html#ac12dc4caa0c764ae69175e787efad2ab',1,'SVF::ProgSlice::forwardslice()']]],
   ['fpnodes',['FPNodes',['../classSVF_1_1FunEntryBlockNode.html#afc829a259f3c15524a71cef27d294949',1,'SVF::FunEntryBlockNode']]],
   ['freelist',['freelist',['../structDdLevelQueue.html#aa70e5645d52749160c718d38ea0c06ba',1,'DdLevelQueue']]],
   ['fromfile',['fromFile',['../classSVF_1_1PAG.html#a682355bd8e695faedbe5546f98636ee0',1,'SVF::PAG']]],
