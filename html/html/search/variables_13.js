@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['saberfullsvfg',['SABERFULLSVFG',['../classSVF_1_1Options.html#a5fb7733fd66ecad30eea8ced3839e590',1,'SVF::Options']]],
   ['sb_5ffesible',['SB_FESIBLE',['../classSVF_1_1Annotator.html#ac58473072d90baa6dc377b45f18d0da5',1,'SVF::Annotator']]],
   ['sb_5finfesible',['SB_INFESIBLE',['../classSVF_1_1Annotator.html#a556138c152d52921d6f0a709a826a93a',1,'SVF::Annotator']]],
   ['sb_5fslicesink',['SB_SLICESINK',['../classSVF_1_1Annotator.html#a3edacb8703c74abf42c4a29761a3437f',1,'SVF::Annotator']]],
