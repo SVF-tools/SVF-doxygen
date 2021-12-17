@@ -59,6 +59,7 @@ var searchData=
   ['classnametoinstanddescsmap',['classNameToInstAndDescsMap',['../classSVF_1_1CHGraph.html#aaec4bdde66e4a7a63ea3f3c6ec0bd045',1,'SVF::CHGraph']]],
   ['classnametonodemap',['classNameToNodeMap',['../classSVF_1_1CHGraph.html#aa040bc0a5653843419d24777343e1650',1,'SVF::CHGraph']]],
   ['classnum',['classNum',['../classSVF_1_1CHGraph.html#adb99b732d20cfc8cc0f078cda6753bc0',1,'SVF::CHGraph']]],
+  ['clocktype',['ClockType',['../classSVF_1_1Options.html#a6a62b34de8ec23899a8024e0450c43df',1,'SVF::Options']]],
   ['clonetooriginalobj',['cloneToOriginalObj',['../classSVF_1_1TypeBasedHeapCloning.html#accbf71007be662ee2436ca3d76b903ed',1,'SVF::TypeBasedHeapCloning']]],
   ['clplist',['clpList',['../classSVF_1_1LockAnalysis.html#afff2c5699e08badf5265e8183b18a02e',1,'SVF::LockAnalysis']]],
   ['clsname',['clsName',['../CPPUtil_8cpp.html#a7622b99b57e87ceef06c0d154fae281b',1,'CPPUtil.cpp']]],
