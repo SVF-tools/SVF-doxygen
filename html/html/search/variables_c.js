@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['l',['l',['../structSVF_1_1VersionedFlowSensitive_1_1VersionCache.html#abbc4b4beea4318f9ccb81dbdeed239b7',1,'SVF::VersionedFlowSensitive::VersionCache']]],
   ['large',['large',['../cuddInt_8c.html#a134b3b75fc389f1772e03372004cfeff',1,'cuddInt.c']]],
   ['largestregion',['LargestRegion',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a172d72ae4ae45fa2baf2f20ff2b499dc',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['last',['last',['../structDdLevelQueue.html#acf28d01edde7bf6634b4213299f487b3',1,'DdLevelQueue']]],
@@ -47,6 +46,7 @@ var searchData=
   ['loopinfobuilder',['loopInfoBuilder',['../classSVF_1_1ContextDDA.html#afb57381096ffc49b2065de6d9bf00895',1,'SVF::ContextDDA::loopInfoBuilder()'],['../classSVF_1_1FlowDDA.html#a7d56edc750cef8d523c04a68f0d08e0d',1,'SVF::FlowDDA::loopInfoBuilder()'],['../classSVF_1_1TCT.html#ae64d6203b41c92d4ca617b8e976b88b2',1,'SVF::TCT::loopInfoBuilder()']]],
   ['looseupto',['looseUpTo',['../structDdManager.html#a08442885cc19bd4e63ee8ca294669efa',1,'DdManager']]],
   ['low',['low',['../structMtrNode.html#a589c940a5262c8da11bf843a369bb2db',1,'MtrNode']]],
+  ['lowlink',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
   ['ls',['ls',['../classSVF_1_1NormalGepCGEdge.html#a7cbcaa28acde49ef0b03a8554a41344b',1,'SVF::NormalGepCGEdge::ls()'],['../classSVF_1_1NormalGepPE.html#abb2e135f44a20e5f9005a83fb8f72e7d',1,'SVF::NormalGepPE::ls()'],['../classSVF_1_1GepValPN.html#afb8bad0c8d61cd59410d99a405dfa9e8',1,'SVF::GepValPN::ls()'],['../classSVF_1_1GepObjPN.html#ab7a3961b0a3f6a8cc89c3cd81168180b',1,'SVF::GepObjPN::ls()']]],
   ['lsa',['lsa',['../classSVF_1_1MTAAnnotator.html#a42a5c0eac879be5e300583aa7d07beb0',1,'SVF::MTAAnnotator::lsa()'],['../classSVF_1_1RaceValidator.html#a6982b72e3e2551deab80d9e3fefaab64',1,'SVF::RaceValidator::lsa()']]]
 ];

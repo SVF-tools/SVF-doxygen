@@ -87,7 +87,6 @@ var searchData=
   ['constantobjectid',['constantObjectId',['../classSVF_1_1NodeIDAllocator.html#a6a300a5b455fe4b8bace2f1d66fb5f9d',1,'SVF::NodeIDAllocator']]],
   ['constants',['constants',['../structDdManager.html#aa8d293b6a4f69f6b4795e2fc24ede216',1,'DdManager']]],
   ['consume',['consume',['../classSVF_1_1VersionedFlowSensitive.html#a2e4e6a84cbfd553ad9cca8fdf9fd4a8d',1,'SVF::VersionedFlowSensitive']]],
-  ['consumecache',['consumeCache',['../classSVF_1_1VersionedFlowSensitive.html#a6da3d01bd4f8b58c3dac952bba4ee958',1,'SVF::VersionedFlowSensitive']]],
   ['containingaggs',['containingAggs',['../classSVF_1_1DCHGraph.html#adc7a17f70ac3fa89624ad874dbd16ff9',1,'SVF::DCHGraph']]],
   ['context',['context',['../classSVF_1_1ContextCond.html#ac431eae00244cc7792b6e7e00634d535',1,'SVF::ContextCond::context()'],['../classSVF_1_1CxtStmtDPItem.html#a96f1d7c309e3b69af66200e2cfb5a466',1,'SVF::CxtStmtDPItem::context()'],['../classSVF_1_1CxtDPItem.html#ab89e9f588054ad8a99d9af8e756c951b',1,'SVF::CxtDPItem::context()']]],
   ['contextdda',['contextDDA',['../classSVF_1_1DDAStat.html#ac3fb8b15c5308c926209a941c7cf62e1',1,'SVF::DDAStat']]],

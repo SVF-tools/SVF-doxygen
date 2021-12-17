@@ -21,9 +21,8 @@ var searchData=
   ['lockset',['LockSet',['../classSVF_1_1LockAnalysis.html#a4bde0f39a6b5cf83e0011d7ef272c685',1,'SVF::LockAnalysis']]],
   ['locksitetolockset',['LockSiteToLockSet',['../classSVF_1_1LockAnalysis.html#a1f9ae41c4ed7450d0d8b29cd20a6ef25',1,'SVF::LockAnalysis']]],
   ['lockspan',['LockSpan',['../classSVF_1_1LockAnalysis.html#a07b7d49e1fbe3e5dc694b6aadbee05b8',1,'SVF::LockAnalysis::LockSpan()'],['../classSVF_1_1MHP.html#a08ba219ec02b07b1bbd91a88ebb4acd7',1,'SVF::MHP::LockSpan()']]],
-  ['locmeldversionmap',['LocMeldVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#a31f2c86285f3366d0fc06590eb2a24bd',1,'SVF::VersionedFlowSensitive']]],
   ['loctodpmvecmap',['LocToDPMVecMap',['../classSVF_1_1DDAVFSolver.html#aab76f98ae4f0c1f62f101ac5c5fdbf83',1,'SVF::DDAVFSolver']]],
-  ['locversionmap',['LocVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#a0ea2cc21f9de287746ca2216b08e22b4',1,'SVF::VersionedFlowSensitive']]],
+  ['locversionmap',['LocVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#aa689d29ead80303b1ef1e1a91f31c296',1,'SVF::VersionedFlowSensitive']]],
   ['loop',['Loop',['../namespaceSVF.html#abf85e29310b2e4df8925d00a5c081314',1,'SVF']]],
   ['loopinfo',['LoopInfo',['../namespaceSVF.html#a77e088bfe47c0b0ddcbbe0693dec6fe5',1,'SVF']]],
   ['loopinfowrapperpass',['LoopInfoWrapperPass',['../namespaceSVF.html#a023d6e6043174fffaf29d75b38877ed0',1,'SVF']]]

@@ -109,6 +109,7 @@ var searchData=
   ['equalmemregion',['equalMemRegion',['../structSVF_1_1MemRegion_1_1equalMemRegion.html',1,'SVF::MemRegion::equalMemRegion'],['../classSVF_1_1MemRegion.html#af0a0b4a5862a136ef4f203f19139da65',1,'SVF::MemRegion::equalMemRegion()']]],
   ['equalnodebs',['equalNodeBS',['../structSVF_1_1SVFUtil_1_1equalNodeBS.html',1,'SVF::SVFUtil::equalNodeBS'],['../namespaceSVF_1_1SVFUtil.html#a5c2b39ae857d78ed9dda83880e703b0f',1,'SVF::SVFUtil::equalNodeBS()']]],
   ['equalpointsto',['equalPointsTo',['../structSVF_1_1SVFUtil_1_1equalPointsTo.html',1,'SVF::SVFUtil::equalPointsTo'],['../namespaceSVF_1_1SVFUtil.html#a68302f07b13f6e1f39aace5699762c41',1,'SVF::SVFUtil::equalPointsTo()']]],
+  ['equivalentobject',['equivalentObject',['../classSVF_1_1VersionedFlowSensitive.html#a2d451d89f99a4bff828b682723df477f',1,'SVF::VersionedFlowSensitive']]],
   ['err',['err',['../structDdManager.html#a6b0364070de52e689fe3485a86bb2825',1,'DdManager']]],
   ['errmsg',['errMsg',['../namespaceSVF_1_1SVFUtil.html#a5d4bb92f5df30417f414397f8e58cf01',1,'SVF::SVFUtil']]],
   ['errorcode',['errorCode',['../structDdManager.html#ae0690f123fc2c3f0ca9a1cfd18923a37',1,'DdManager']]],

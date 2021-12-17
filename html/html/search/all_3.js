@@ -368,7 +368,6 @@ var searchData=
   ['constructor',['CONSTRUCTOR',['../classSVF_1_1CHGraph.html#a2a1da7f262a2f11653fb583154a93a22a331376f6d22d2346039db7a9c9a311c2',1,'SVF::CHGraph']]],
   ['constsvfgedgeset',['ConstSVFGEdgeSet',['../classSVF_1_1DDAVFSolver.html#aef98e8e9144a69bb7481fef5d2dcb303',1,'SVF::DDAVFSolver']]],
   ['consume',['consume',['../classSVF_1_1VersionedFlowSensitive.html#a2e4e6a84cbfd553ad9cca8fdf9fd4a8d',1,'SVF::VersionedFlowSensitive']]],
-  ['consumecache',['consumeCache',['../classSVF_1_1VersionedFlowSensitive.html#a6da3d01bd4f8b58c3dac952bba4ee958',1,'SVF::VersionedFlowSensitive']]],
   ['containblackholenode',['containBlackHoleNode',['../classSVF_1_1PointerAnalysis.html#a56368369bc37e37b13f19e5eb1890063',1,'SVF::PointerAnalysis::containBlackHoleNode()'],['../classSVF_1_1CondPTAImpl.html#a8cd7b08bd978513cb0faacc47bbaf578',1,'SVF::CondPTAImpl::containBlackHoleNode()']]],
   ['containcallstr',['containCallStr',['../classSVF_1_1ContextCond.html#a6f5b0bbc0978220aaa990f5fd0ddce8d',1,'SVF::ContextCond']]],
   ['containconstantnode',['containConstantNode',['../classSVF_1_1PointerAnalysis.html#afa7d9f6209904acd7893ae583e28dafd',1,'SVF::PointerAnalysis::containConstantNode()'],['../classSVF_1_1CondPTAImpl.html#a3a10f3327d6473c348df5b62a5d6683f',1,'SVF::CondPTAImpl::containConstantNode()']]],

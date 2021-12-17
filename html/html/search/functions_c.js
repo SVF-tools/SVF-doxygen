@@ -2,7 +2,6 @@ var searchData=
 [
   ['neg',['NEG',['../classSVF_1_1BranchCondManager.html#ad7832b33b3b73fcaca5c8278ed4d3e7f',1,'SVF::BranchCondManager::NEG()'],['../classSVF_1_1CondManager.html#a5751792e45c8abd5ffd3610d94e9f0b7',1,'SVF::CondManager::NEG()']]],
   ['newcond',['newCond',['../classSVF_1_1PathCondAllocator.html#a3cd08242b82129e6074b2f30a19b5c17',1,'SVF::PathCondAllocator']]],
-  ['newmeldversion',['newMeldVersion',['../classSVF_1_1VersionedFlowSensitive.html#a24746dcada35f10cb387c94860930e84',1,'SVF::VersionedFlowSensitive']]],
   ['newpointstoid',['newPointsToId',['../classSVF_1_1PersistentPointsToCache.html#a52ec4a787a199bb4d7553e8bafa9c127',1,'SVF::PersistentPointsToCache']]],
   ['newssaname',['newSSAName',['../classSVF_1_1MemSSA.html#a381a35d48ce2f8e348ddbbb9ce526ca8',1,'SVF::MemSSA']]],
   ['nextsetindex',['nextSetIndex',['../classSVF_1_1CoreBitVector.html#a087f69adea5e9e83bd908a1ab0ee1383',1,'SVF::CoreBitVector']]],

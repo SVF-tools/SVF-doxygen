@@ -15,6 +15,8 @@ var searchData=
   ['deathrowdepth',['deathRowDepth',['../structDdManager.html#a61aa0ca7d1b7e22fe1450444b03aeab7',1,'DdManager']]],
   ['def',['def',['../classSVF_1_1MRVer.html#a3398bb8d3189413c275b62d5cb7a5fc4',1,'SVF::MRVer']]],
   ['defnodes',['defNodes',['../classSVF_1_1SVFGOPT.html#abd524dca72261bbcc7ebb1103b693a2b',1,'SVF::SVFGOPT']]],
+  ['deltamap',['deltaMap',['../classSVF_1_1VersionedFlowSensitive.html#a11ddfa1faebf56e74e6dcc53e16142e1',1,'SVF::VersionedFlowSensitive']]],
+  ['deltasourcemap',['deltaSourceMap',['../classSVF_1_1VersionedFlowSensitive.html#aee97e196225aaad29c0bd31d3ccbabf6',1,'SVF::VersionedFlowSensitive']]],
   ['dendrogramtraversaltime',['DendrogramTraversalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a67ab9cffacc1584b2e7bae5d1b08c541',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['dereffnname',['derefFnName',['../classSVF_1_1TypeBasedHeapCloning.html#a03ef2decb80ba07f4d98cae0a4497212',1,'SVF::TypeBasedHeapCloning']]],
   ['derefmdname',['derefMDName',['../namespaceSVF_1_1cppUtil_1_1ctir.html#a0cd5347bc8043d4306e66a4a96005ace',1,'SVF::cppUtil::ctir']]],

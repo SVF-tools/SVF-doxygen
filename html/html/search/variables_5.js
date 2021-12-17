@@ -22,6 +22,7 @@ var searchData=
   ['entry',['entry',['../structst__generator.html#a950d044c22c5ee51f1dc00fbc82f7e35',1,'st_generator::entry()'],['../cuddInt_8c.html#a936a27e51e66afb57c2b3a12d78a238e',1,'entry():&#160;cuddInt.c']]],
   ['entryfuncset',['entryFuncSet',['../classSVF_1_1TCT.html#a140eaf9440ae9d52dbfb659967aa449a',1,'SVF::TCT']]],
   ['epsilon',['epsilon',['../structDdManager.html#ad495ea9a4104c2be5b4ca850a1da8c28',1,'DdManager']]],
+  ['equivalentobject',['equivalentObject',['../classSVF_1_1VersionedFlowSensitive.html#a2d451d89f99a4bff828b682723df477f',1,'SVF::VersionedFlowSensitive']]],
   ['err',['err',['../structDdManager.html#a6b0364070de52e689fe3485a86bb2825',1,'DdManager']]],
   ['errorcode',['errorCode',['../structDdManager.html#ae0690f123fc2c3f0ca9a1cfd18923a37',1,'DdManager']]],
   ['evaltime',['EvalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1d98862e19affdd08740f85490d0d856',1,'SVF::NodeIDAllocator::Clusterer']]],

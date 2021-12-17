@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['l',['l',['../structSVF_1_1VersionedFlowSensitive_1_1VersionCache.html#abbc4b4beea4318f9ccb81dbdeed239b7',1,'SVF::VersionedFlowSensitive::VersionCache']]],
   ['landingpadinst',['LandingPadInst',['../namespaceSVF.html#afa513a3c76371907221ee2b1ef289c71',1,'SVF']]],
   ['large',['large',['../cuddInt_8c.html#a134b3b75fc389f1772e03372004cfeff',1,'cuddInt.c']]],
   ['largest',['largest',['../cuddInt_8c.html#ae1fb84f2a4466a90328a944b5f1a810d',1,'cuddInt.c']]],
@@ -89,7 +88,6 @@ var searchData=
   ['lockspan',['LockSpan',['../classSVF_1_1LockAnalysis.html#a07b7d49e1fbe3e5dc694b6aadbee05b8',1,'SVF::LockAnalysis::LockSpan()'],['../classSVF_1_1MHP.html#a08ba219ec02b07b1bbd91a88ebb4acd7',1,'SVF::MHP::LockSpan()'],['../classSVF_1_1SVFGNodeLockSpan.html#a762505799b9257bbcb766fccdce40fd4',1,'SVF::SVFGNodeLockSpan::lockSpan()']]],
   ['locktime',['lockTime',['../classSVF_1_1LockAnalysis.html#adadee129c04b82576b4ca3c7594cdcb2',1,'SVF::LockAnalysis']]],
   ['lockvalid',['LockValid',['../classSVF_1_1Options.html#a78b3b44f2c0dc94dc1363ca57ee76d66',1,'SVF::Options']]],
-  ['locmeldversionmap',['LocMeldVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#a31f2c86285f3366d0fc06590eb2a24bd',1,'SVF::VersionedFlowSensitive']]],
   ['locmemmodel',['LocMemModel',['../classSVF_1_1Options.html#a8c7ece61e55940be1a0d310bd2cf77f8',1,'SVF::Options']]],
   ['locmemmodel_2ecpp',['LocMemModel.cpp',['../LocMemModel_8cpp.html',1,'']]],
   ['locmemmodel_2eh',['LocMemModel.h',['../LocMemModel_8h.html',1,'']]],
@@ -98,7 +96,7 @@ var searchData=
   ['loctodpmsetmap',['locToDpmSetMap',['../classSVF_1_1DDAVFSolver.html#aa724698d499615bce7caf8f312b746a7',1,'SVF::DDAVFSolver']]],
   ['loctodpmvecmap',['LocToDPMVecMap',['../classSVF_1_1DDAVFSolver.html#aab76f98ae4f0c1f62f101ac5c5fdbf83',1,'SVF::DDAVFSolver']]],
   ['loctofilterset',['locToFilterSet',['../classSVF_1_1TypeBasedHeapCloning.html#a848e59ab22069367a97009f1fdebc4d9',1,'SVF::TypeBasedHeapCloning']]],
-  ['locversionmap',['LocVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#a0ea2cc21f9de287746ca2216b08e22b4',1,'SVF::VersionedFlowSensitive']]],
+  ['locversionmap',['LocVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#aa689d29ead80303b1ef1e1a91f31c296',1,'SVF::VersionedFlowSensitive']]],
   ['logbpl',['LOGBPL',['../cuddInt_8c.html#acae1cfa779e6e7550496f3889b5cbb25',1,'LOGBPL():&#160;cuddInt.c'],['../cuddInt_8c.html#acae1cfa779e6e7550496f3889b5cbb25',1,'LOGBPL():&#160;cuddInt.c']]],
   ['lookupcomplements',['lookupComplements',['../classSVF_1_1PersistentPointsToCache.html#a47f4e8ef1461396afb2e1c3cbe055e95',1,'SVF::PersistentPointsToCache']]],
   ['lookupintersections',['lookupIntersections',['../classSVF_1_1PersistentPointsToCache.html#a15d3235017b35f4a5c668d0b6626faff',1,'SVF::PersistentPointsToCache']]],
@@ -110,6 +108,7 @@ var searchData=
   ['loopinfowrapperpass',['LoopInfoWrapperPass',['../namespaceSVF.html#a023d6e6043174fffaf29d75b38877ed0',1,'SVF']]],
   ['looseupto',['looseUpTo',['../structDdManager.html#a08442885cc19bd4e63ee8ca294669efa',1,'DdManager']]],
   ['low',['low',['../structMtrNode.html#a589c940a5262c8da11bf843a369bb2db',1,'MtrNode']]],
+  ['lowlink',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
   ['ls',['ls',['../classSVF_1_1NormalGepCGEdge.html#a7cbcaa28acde49ef0b03a8554a41344b',1,'SVF::NormalGepCGEdge::ls()'],['../classSVF_1_1NormalGepPE.html#abb2e135f44a20e5f9005a83fb8f72e7d',1,'SVF::NormalGepPE::ls()'],['../classSVF_1_1GepValPN.html#afb8bad0c8d61cd59410d99a405dfa9e8',1,'SVF::GepValPN::ls()'],['../classSVF_1_1GepObjPN.html#ab7a3961b0a3f6a8cc89c3cd81168180b',1,'SVF::GepObjPN::ls()']]],
   ['lsa',['lsa',['../classSVF_1_1MTAAnnotator.html#a42a5c0eac879be5e300583aa7d07beb0',1,'SVF::MTAAnnotator::lsa()'],['../classSVF_1_1RaceValidator.html#a6982b72e3e2551deab80d9e3fefaab64',1,'SVF::RaceValidator::lsa()']]],
   ['lsrelation',['LSRelation',['../classSVF_1_1LocationSet.html#a002a0c8ec2528835d809bf7eb3ebc83f',1,'SVF::LocationSet']]]

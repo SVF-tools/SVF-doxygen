@@ -47,6 +47,7 @@ var searchData=
   ['ppag',['ppag',['../classSVF_1_1TypeBasedHeapCloning.html#a6b1b4570c4f674340cb9f3fcc8f3c4eb',1,'SVF::TypeBasedHeapCloning']]],
   ['predictptocc',['PredictPtOcc',['../classSVF_1_1Options.html#af34d8a738db4f40addc1de930e79654f',1,'SVF::Options']]],
   ['pregchook',['preGCHook',['../structDdManager.html#a6e7664b46763e45c7388778e6e786a0e',1,'DdManager']]],
+  ['prelabeledobjects',['prelabeledObjects',['../classSVF_1_1VersionedFlowSensitive.html#aaae8c6858593ed050dcf2c9220228e3e',1,'SVF::VersionedFlowSensitive']]],
   ['prelabelingtime',['prelabelingTime',['../classSVF_1_1VersionedFlowSensitive.html#a77a5dd9578def9a8e2b48e8b90d9b996',1,'SVF::VersionedFlowSensitive']]],
   ['preprocessed',['preProcessed',['../classSVF_1_1LLVMModuleSet.html#a14b0b55d397d6f8a5dfe3b574021f801',1,'SVF::LLVMModuleSet']]],
   ['prereorderinghook',['preReorderingHook',['../structDdManager.html#a227987a65d97bf4b8f3c905d6cc79024',1,'DdManager']]],

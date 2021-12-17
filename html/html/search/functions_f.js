@@ -41,6 +41,7 @@ var searchData=
   ['remappointstosets',['remapPointsToSets',['../classSVF_1_1BVDataPTAImpl.html#a7a87ca1a439e871896f92e4342befa2c',1,'SVF::BVDataPTAImpl']]],
   ['removeaddredge',['removeAddrEdge',['../classSVF_1_1ConstraintGraph.html#acc23df2db1fa7b8e0270d8a04f08f2ee',1,'SVF::ConstraintGraph']]],
   ['removealledges',['removeAllEdges',['../classSVF_1_1SVFGOPT.html#ac15b3c2cb127b17ebad3a30fc04b6f40',1,'SVF::SVFGOPT']]],
+  ['removeallindirectsvfgedges',['removeAllIndirectSVFGEdges',['../classSVF_1_1VersionedFlowSensitive.html#a275095f60640d862034ad173af3371c3',1,'SVF::VersionedFlowSensitive']]],
   ['removecandidates',['removeCandidates',['../classSVF_1_1WPAMinimumSolver.html#aa6d8de95ddf703fdac33ef1216ce4aff',1,'SVF::WPAMinimumSolver']]],
   ['removeconstraintnode',['removeConstraintNode',['../classSVF_1_1ConstraintGraph.html#a9e21bc9b86080b4059f0907e9a7b33f3',1,'SVF::ConstraintGraph']]],
   ['removecxtstmttospan',['removeCxtStmtToSpan',['../classSVF_1_1LockAnalysis.html#a0b21446e6d5dfc1b5d0ebd75895225dd',1,'SVF::LockAnalysis']]],
