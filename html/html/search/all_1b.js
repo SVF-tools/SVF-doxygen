@@ -2,7 +2,7 @@ var searchData=
 [
   ['_7ealiasddaclient',['~AliasDDAClient',['../classSVF_1_1AliasDDAClient.html#ae312529998fff1a063ed12a980370716',1,'SVF::AliasDDAClient']]],
   ['_7eandersen',['~Andersen',['../classSVF_1_1Andersen.html#a15218a84e653baf2cd7f1dc95ccfb77d',1,'SVF::Andersen']]],
-  ['_7eandersenbase',['~AndersenBase',['../classSVF_1_1AndersenBase.html#abd9b91b2cfe1e30ab3bdb6ac26466c1f',1,'SVF::AndersenBase']]],
+  ['_7eandersenbase',['~AndersenBase',['../classSVF_1_1AndersenBase.html#a8da8746b38c55561d3f6904e8fd0a9aa',1,'SVF::AndersenBase']]],
   ['_7eandersensfr',['~AndersenSFR',['../classSVF_1_1AndersenSFR.html#aabdafa8234569219fc5d96bb44ca8ef0',1,'SVF::AndersenSFR']]],
   ['_7eandersenstat',['~AndersenStat',['../classSVF_1_1AndersenStat.html#a31c59fe771f44b32a7d58145eb44a971',1,'SVF::AndersenStat']]],
   ['_7eannotator',['~Annotator',['../classSVF_1_1Annotator.html#a77ae10cccf9eeece8adf7dd00821e836',1,'SVF::Annotator']]],
@@ -11,7 +11,7 @@ var searchData=
   ['_7ecallchi',['~CallCHI',['../classSVF_1_1CallCHI.html#a9ae4f818ff29ebaccc0d82a0170577b5',1,'SVF::CallCHI']]],
   ['_7ecallmu',['~CallMU',['../classSVF_1_1CallMU.html#a408184b7a6c625d67a4b660e140b10c5',1,'SVF::CallMU']]],
   ['_7ecflsolver',['~CFLSolver',['../classSVF_1_1CFLSolver.html#ac37d5e6e81edcc0a6c53e02d7d343f5b',1,'SVF::CFLSolver']]],
-  ['_7echgraph',['~CHGraph',['../classSVF_1_1CHGraph.html#ae50fcba9fb131bc1956bcd6053bb7354',1,'SVF::CHGraph']]],
+  ['_7echgraph',['~CHGraph',['../classSVF_1_1CHGraph.html#a63c4f42eea94e786090a546fc2195a00',1,'SVF::CHGraph']]],
   ['_7echnode',['~CHNode',['../classSVF_1_1CHNode.html#aff05589899b58112119af68df5d1997e',1,'SVF::CHNode']]],
   ['_7ecommonchgraph',['~CommonCHGraph',['../classSVF_1_1CommonCHGraph.html#aeb7e79b36c74bcded008fe227952c335',1,'SVF::CommonCHGraph']]],
   ['_7econdexpr',['~CondExpr',['../classSVF_1_1CondExpr.html#a034728ff201af843f9ae980bbb872086',1,'SVF::CondExpr']]],
