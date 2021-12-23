@@ -125,6 +125,7 @@ var searchData=
   ['_7esvfgnodelockspan',['~SVFGNodeLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#ae91a897133c8d79cbc2d6a656ff92676',1,'SVF::SVFGNodeLockSpan']]],
   ['_7esvfgopt',['~SVFGOPT',['../classSVF_1_1SVFGOPT.html#af45feec9a906f9df86e244bb62f603b8',1,'SVF::SVFGOPT']]],
   ['_7esvfgstat',['~SVFGStat',['../classSVF_1_1SVFGStat.html#ad70617b64bb651c0c16943a8b016399e',1,'SVF::SVFGStat']]],
+  ['_7esvfmodule',['~SVFModule',['../classSVF_1_1SVFModule.html#a1eb570539328976351d95ca93cb7aa02',1,'SVF::SVFModule']]],
   ['_7esymboltableinfo',['~SymbolTableInfo',['../classSVF_1_1SymbolTableInfo.html#a6efac0ae8ebf2865067136675be5a340',1,'SVF::SymbolTableInfo']]],
   ['_7etct',['~TCT',['../classSVF_1_1TCT.html#aee699da702973dd42398b42a2ec65e59',1,'SVF::TCT']]],
   ['_7etctedge',['~TCTEdge',['../classSVF_1_1TCTEdge.html#aa6dd0ee903a741c287e34ae80961d369',1,'SVF::TCTEdge']]],
