@@ -21,7 +21,6 @@ var searchData=
   ['variantgeppe',['VariantGepPE',['../classSVF_1_1VariantGepPE.html#a8eb7b6288efb3f9ab6061efb414a82b0',1,'SVF::VariantGepPE::VariantGepPE()'],['../classSVF_1_1VariantGepPE.html#a6e0036ed08360c5e4b18ac83aa20ca89',1,'SVF::VariantGepPE::VariantGepPE(const VariantGepPE &amp;)'],['../classSVF_1_1VariantGepPE.html#ac1b48fa2541b7371afeadd3281006f7d',1,'SVF::VariantGepPE::VariantGepPE(PAGNode *s, PAGNode *d)']]],
   ['vcallinctorordtor',['VCallInCtorOrDtor',['../namespaceSVF_1_1cppUtil.html#abcba23ffa41fe5b456289e528d1b4c4e',1,'SVF::cppUtil']]],
   ['verifycallgraph',['verifyCallGraph',['../classSVF_1_1PTACallGraph.html#ac695d78f0a78e2e5f1fb4f93264e52b8',1,'SVF::PTACallGraph']]],
-  ['verifystructsize',['verifyStructSize',['../classSVF_1_1LocSymTableInfo.html#a1b4b45547634b0c68c363ce21870e610',1,'SVF::LocSymTableInfo']]],
   ['versionedflowsensitive',['VersionedFlowSensitive',['../classSVF_1_1VersionedFlowSensitive.html#af52cafc2bb393823f51ca89a0abacec4',1,'SVF::VersionedFlowSensitive']]],
   ['versionedflowsensitivestat',['VersionedFlowSensitiveStat',['../classSVF_1_1VersionedFlowSensitiveStat.html#a762c964e76d181716e1a3833dc4c0706',1,'SVF::VersionedFlowSensitiveStat']]],
   ['versionedptdata',['VersionedPTData',['../classSVF_1_1VersionedPTData.html#a2cc5ee586042f19aa698fd8ec48e33b5',1,'SVF::VersionedPTData']]],

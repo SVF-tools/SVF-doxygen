@@ -29,7 +29,7 @@ var searchData=
   ['memcmp',['memcmp',['../util_8h.html#a65c3e6b23d6855c86acaf147853c82cc',1,'util.h']]],
   ['memcpy',['memcpy',['../util_8h.html#a13050899d2d81aa69b56529e7264e238',1,'util.h']]],
   ['memmove',['memmove',['../util_8h.html#afb434ca60c6699bb20fd11a71be5b0e0',1,'util.h']]],
-  ['memobj',['MemObj',['../classSVF_1_1MemObj.html#ab22373574ae9dff2f8ffbef16d5b339c',1,'SVF::MemObj::MemObj(const Value *val, SymID id)'],['../classSVF_1_1MemObj.html#a1303b79b7e15db0fac202ad686584915',1,'SVF::MemObj::MemObj(SymID id, const Type *type=nullptr)']]],
+  ['memobj',['MemObj',['../classSVF_1_1MemObj.html#afc62b5dbcaf790e561c852f567ca5bd1',1,'SVF::MemObj']]],
   ['memregion',['MemRegion',['../classSVF_1_1MemRegion.html#a1d8189977196da687f50cfa6df98394b',1,'SVF::MemRegion']]],
   ['memset',['memset',['../util_8h.html#a311babf232e543aa49200c238d683486',1,'util.h']]],
   ['memssa',['MemSSA',['../classSVF_1_1MemSSA.html#a6bd57451370f5f4c92ce212be4cddd15',1,'SVF::MemSSA']]],

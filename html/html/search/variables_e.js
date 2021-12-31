@@ -70,7 +70,7 @@ var searchData=
   ['numofentrychi',['NumOfEntryChi',['../classSVF_1_1MemSSAStat.html#ad96437d0c28f8088c711a718d2f2730e',1,'SVF::MemSSAStat']]],
   ['numofentrynodes',['numOfEntryNodes',['../classSVF_1_1ICFGStat.html#ad37793e64fe58a8faba201c18d876685',1,'SVF::ICFGStat']]],
   ['numofexitnodes',['numOfExitNodes',['../classSVF_1_1ICFGStat.html#ad7e00680fb8ca31afbd166f9a4adc5ec',1,'SVF::ICFGStat']]],
-  ['numoffieldexpand',['NumOfFieldExpand',['../classSVF_1_1PTAStat.html#a1745e5c3c026a130a70954da9c0074b1',1,'SVF::PTAStat::NumOfFieldExpand()'],['../classSVF_1_1AndersenBase.html#ad21fc4e60abc4e6030880f8197e1c93f',1,'SVF::AndersenBase::numOfFieldExpand()']]],
+  ['numoffieldexpand',['numOfFieldExpand',['../classSVF_1_1AndersenBase.html#ad21fc4e60abc4e6030880f8197e1c93f',1,'SVF::AndersenBase::numOfFieldExpand()'],['../classSVF_1_1PTAStat.html#a1745e5c3c026a130a70954da9c0074b1',1,'SVF::PTAStat::NumOfFieldExpand()']]],
   ['numofformalin',['numOfFormalIn',['../classSVF_1_1SVFGStat.html#abc5e079242666bb55ec7dbc7f258b3db',1,'SVF::SVFGStat']]],
   ['numofformalout',['numOfFormalOut',['../classSVF_1_1SVFGStat.html#ab20900eb0ecb0d2e1e601755848ac531',1,'SVF::SVFGStat']]],
   ['numofformalparam',['numOfFormalParam',['../classSVF_1_1SVFGStat.html#a1e9ddd5678b05e145af41a6d53f47748',1,'SVF::SVFGStat']]],

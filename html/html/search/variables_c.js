@@ -36,7 +36,7 @@ var searchData=
   ['lockspan',['lockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a762505799b9257bbcb766fccdce40fd4',1,'SVF::SVFGNodeLockSpan']]],
   ['locktime',['lockTime',['../classSVF_1_1LockAnalysis.html#adadee129c04b82576b4ca3c7594cdcb2',1,'SVF::LockAnalysis']]],
   ['lockvalid',['LockValid',['../classSVF_1_1Options.html#a78b3b44f2c0dc94dc1363ca57ee76d66',1,'SVF::Options']]],
-  ['locmemmodel',['LocMemModel',['../classSVF_1_1Options.html#a8c7ece61e55940be1a0d310bd2cf77f8',1,'SVF::Options']]],
+  ['locmemmodel',['LocMemModel',['../classSVF_1_1Options.html#aba8e13f8bb26cf6a0718282e6f9a1940',1,'SVF::Options']]],
   ['loctodpmsetmap',['locToDpmSetMap',['../classSVF_1_1DDAVFSolver.html#aa724698d499615bce7caf8f312b746a7',1,'SVF::DDAVFSolver']]],
   ['loctofilterset',['locToFilterSet',['../classSVF_1_1TypeBasedHeapCloning.html#a848e59ab22069367a97009f1fdebc4d9',1,'SVF::TypeBasedHeapCloning']]],
   ['lookupcomplements',['lookupComplements',['../classSVF_1_1PersistentPointsToCache.html#a47f4e8ef1461396afb2e1c3cbe055e95',1,'SVF::PersistentPointsToCache']]],
