@@ -52,7 +52,7 @@ var searchData=
   ['buildglobaldeftorepmap',['buildGlobalDefToRepMap',['../classSVF_1_1LLVMModuleSet.html#aaab03cb6ff665bc008c67b866ba81e47',1,'SVF::LLVMModuleSet']]],
   ['buildinternalmaps',['buildInternalMaps',['../classSVF_1_1CHGraph.html#ab55b057a7be74ad03514dc15b6f01131',1,'SVF::CHGraph']]],
   ['buildisstoreloadmaps',['buildIsStoreLoadMaps',['../classSVF_1_1VersionedFlowSensitive.html#a8da4b9bd9d0c640a6857b4dc4991817c',1,'SVF::VersionedFlowSensitive']]],
-  ['buildmemmodel',['buildMemModel',['../classSVF_1_1SymbolTableInfo.html#a74481bb26d77d8c8bca91efd3e23c08e',1,'SVF::SymbolTableInfo']]],
+  ['buildmemmodel',['buildMemModel',['../classSVF_1_1MemModelBuilder.html#aa38a3ce969852945fb914bab56fe8850',1,'SVF::MemModelBuilder']]],
   ['buildmemssa',['buildMemSSA',['../classSVF_1_1MemSSA.html#ae56d1878046c119d1857727ca3609d74',1,'SVF::MemSSA']]],
   ['buildmssa',['buildMSSA',['../classSVF_1_1SVFGBuilder.html#a49cee21be46d6a3f65eec638714038ed',1,'SVF::SVFGBuilder']]],
   ['buildofflinecg',['buildOfflineCG',['../classSVF_1_1OfflineConsG.html#ac6197a5515ace76b2d51451f5149aef7',1,'SVF::OfflineConsG']]],

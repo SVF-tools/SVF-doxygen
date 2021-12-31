@@ -62,6 +62,7 @@ var searchData=
   ['setmemusagebefore',['setMemUsageBefore',['../classSVF_1_1DDAStat.html#accadfa44f7cf9f107e4c8d100ce8db0d',1,'SVF::DDAStat']]],
   ['setmergednode',['setMergedNode',['../classSVF_1_1AndersenHCD.html#a6d6d770848a42c6291db663ab138461d',1,'SVF::AndersenHCD']]],
   ['setmodelconstants',['setModelConstants',['../classSVF_1_1SymbolTableInfo.html#a4decfc9e7f5dc096d7bfa42d6965763d',1,'SVF::SymbolTableInfo']]],
+  ['setmodule',['setModule',['../classSVF_1_1SymbolTableInfo.html#a4f916c64ca04c4db30bd19fb8505724d',1,'SVF::SymbolTableInfo']]],
   ['setmultiforked',['setMultiforked',['../classSVF_1_1TCTNode.html#a0fafde34cdffde6d38bb9efca9b7a9a1',1,'SVF::TCTNode']]],
   ['setmultiforkedattrs',['setMultiForkedAttrs',['../classSVF_1_1TCT.html#a11e36f9b58646dee4014e12e55c70508',1,'SVF::TCT']]],
   ['setmultiinheritance',['setMultiInheritance',['../classSVF_1_1CHNode.html#a5d751a3a0d88c0de374bfeb526051440',1,'SVF::CHNode::setMultiInheritance()'],['../classSVF_1_1DCHNode.html#a798e80f0cc5951789474abc3a0999166',1,'SVF::DCHNode::setMultiInheritance()']]],

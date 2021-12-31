@@ -505,7 +505,7 @@ var searchData=
   ['getobjectnode',['getObjectNode',['../classSVF_1_1PAG.html#a9e35f1d6a30c6200fb3c0c43ba4f36cb',1,'SVF::PAG::getObjectNode(const Value *V)'],['../classSVF_1_1PAG.html#a12be35fbe2d830fb23fd0173eb66c108',1,'SVF::PAG::getObjectNode(const MemObj *mem)'],['../classSVF_1_1PAGBuilder.html#a442ca853e750396d088aa736cc39356f',1,'SVF::PAGBuilder::getObjectNode()']]],
   ['getobjectnodenum',['getObjectNodeNum',['../classSVF_1_1PAG.html#afe02872115f15623178cb1ed8f737992',1,'SVF::PAG']]],
   ['getobjectnodes',['getObjectNodes',['../classSVF_1_1ExternalPAG.html#acb3156be31f4dd45590d931b0f9279f5',1,'SVF::ExternalPAG']]],
-  ['getobjsize',['getObjSize',['../classSVF_1_1SymbolTableInfo.html#a2f8ec960e3462cef867b1ac6e524dea8',1,'SVF::SymbolTableInfo']]],
+  ['getobjsize',['getObjSize',['../classSVF_1_1MemModelBuilder.html#a5e423694e9c1400d805b5c08b0ea7abc',1,'SVF::MemModelBuilder']]],
   ['getobjswithclones',['getObjsWithClones',['../classSVF_1_1TypeBasedHeapCloning.html#ad1c67da3aac128ca8a69907fdad53fcd',1,'SVF::TypeBasedHeapCloning']]],
   ['getobjsym',['getObjSym',['../classSVF_1_1SymbolTableInfo.html#afca5a68d1825326e3ec6302ce0afee66',1,'SVF::SymbolTableInfo']]],
   ['getocgrep',['getOCGRep',['../classSVF_1_1OfflineConsG.html#a3f390900ee8761055c6d59107bc0ad27',1,'SVF::OfflineConsG']]],

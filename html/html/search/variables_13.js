@@ -85,7 +85,7 @@ var searchData=
   ['svfmain',['SVFMain',['../classSVF_1_1Options.html#a868fa5069b01b7a7dfbc5fb99cb76385',1,'SVF::Options']]],
   ['svfmod',['svfMod',['../classSVF_1_1PointerAnalysis.html#a7e8b3f6843e5ea75fd189162d2cd60a5',1,'SVF::PointerAnalysis::svfMod()'],['../classSVF_1_1CHGraph.html#a62a3ccdbc55381d5f8d96dc23141f2e5',1,'SVF::CHGraph::svfMod()'],['../classSVF_1_1PAGBuilder.html#a7c197702fff05b1b6cd744b70a4a278c',1,'SVF::PAGBuilder::svfMod()']]],
   ['svfmodule',['svfModule',['../classSVF_1_1DCHGraph.html#a85a3c9a6a60a4379717773f8722ae42e',1,'SVF::DCHGraph::svfModule()'],['../classSVF_1_1LLVMModuleSet.html#a43832e93a42ae43d44b0cc160981678f',1,'SVF::LLVMModuleSet::svfModule()']]],
-  ['syminfo',['symInfo',['../classSVF_1_1PAG.html#acebd1174f9bbeeb35ccfdf87a8f0998a',1,'SVF::PAG::symInfo()'],['../classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c',1,'SVF::SymbolTableInfo::symInfo()']]],
+  ['syminfo',['symInfo',['../classSVF_1_1PAG.html#acebd1174f9bbeeb35ccfdf87a8f0998a',1,'SVF::PAG::symInfo()'],['../classSVF_1_1MemModelBuilder.html#a9ac2873486cc2d9698d2d0c762119574',1,'SVF::MemModelBuilder::symInfo()'],['../classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c',1,'SVF::SymbolTableInfo::symInfo()']]],
   ['symmviolation',['symmviolation',['../structDdManager.html#a4a8e54350702f269411399762cb958e1',1,'DdManager']]],
   ['symtabprint',['SymTabPrint',['../classSVF_1_1Options.html#abbfd1d7e985483c486394d8db85b6a85',1,'SVF::Options']]],
   ['symtymap',['symTyMap',['../classSVF_1_1SymbolTableInfo.html#a2680e554af6153cbe8521425c1fbb123',1,'SVF::SymbolTableInfo']]]

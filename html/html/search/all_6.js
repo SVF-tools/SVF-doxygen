@@ -167,7 +167,7 @@ var searchData=
   ['funtoargslistmap',['FunToArgsListMap',['../classSVF_1_1PAG.html#a11b3e5d1aacf8a199b4ad35ce8cbca04',1,'SVF::PAG']]],
   ['funtocallgraphnodemap',['FunToCallGraphNodeMap',['../classSVF_1_1PTACallGraph.html#a049bc978a93f0db1fe91efb6feb22b14',1,'SVF::PTACallGraph::FunToCallGraphNodeMap()'],['../classSVF_1_1PTACallGraph.html#a97986d6e6732c78b04cc053f0e9d1367',1,'SVF::PTACallGraph::funToCallGraphNodeMap()']]],
   ['funtodtmap',['FunToDTMap',['../classSVF_1_1PTACFInfoBuilder.html#a69109de5fddf4042037bc6d66563a9e5',1,'SVF::PTACFInfoBuilder::FunToDTMap()'],['../classSVF_1_1PTACFInfoBuilder.html#a99580fd5a2cc7185d26198c53efe422d',1,'SVF::PTACFInfoBuilder::funToDTMap()']]],
-  ['funtoentrychisetmap',['funToEntryChiSetMap',['../classSVF_1_1MemSSA.html#a59314f6ce17919574d687a08a38b55ec',1,'SVF::MemSSA::funToEntryChiSetMap()'],['../classSVF_1_1MemSSA.html#ac34aa1ac96600bfc27b3c2eb0b1510ca',1,'SVF::MemSSA::FunToEntryChiSetMap()']]],
+  ['funtoentrychisetmap',['FunToEntryChiSetMap',['../classSVF_1_1MemSSA.html#ac34aa1ac96600bfc27b3c2eb0b1510ca',1,'SVF::MemSSA::FunToEntryChiSetMap()'],['../classSVF_1_1MemSSA.html#a59314f6ce17919574d687a08a38b55ec',1,'SVF::MemSSA::funToEntryChiSetMap()']]],
   ['funtoexitbbsmap',['FunToExitBBsMap',['../classSVF_1_1PathCondAllocator.html#a0753fb35cb8fd37cfe8fd795d01e5275',1,'SVF::PathCondAllocator::FunToExitBBsMap()'],['../classSVF_1_1PathCondAllocator.html#ad35f1bdb406a85c5bfdcbbc15642853b',1,'SVF::PathCondAllocator::funToExitBBsMap()']]],
   ['funtoformalinmap',['funToFormalINMap',['../classSVF_1_1SVFG.html#ae51cd0493e4e767848b96b69045762fd',1,'SVF::SVFG']]],
   ['funtoformaloutmap',['funToFormalOUTMap',['../classSVF_1_1SVFG.html#a7d58f9fe97071ec9936174689cb99301',1,'SVF::SVFG']]],
