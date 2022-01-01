@@ -32,7 +32,7 @@ var searchData=
   ['timeofprocessloadstore',['timeOfProcessLoadStore',['../classSVF_1_1AndersenBase.html#a9fe738f1e11c80006d540f246a80bfdf',1,'SVF::AndersenBase']]],
   ['timeofsccdetection',['timeOfSCCDetection',['../classSVF_1_1AndersenBase.html#a6b7d0e57f741c446d0bf178939960143',1,'SVF::AndersenBase']]],
   ['timeofsccmerges',['timeOfSCCMerges',['../classSVF_1_1AndersenBase.html#a02c5a50b214d36921e1404784e76704d',1,'SVF::AndersenBase']]],
-  ['timeofssarenaming',['TimeOfSSARenaming',['../classSVF_1_1MemSSAStat.html#a887ff23a7ea1a18f08b1744ff30da773',1,'SVF::MemSSAStat::TimeOfSSARenaming()'],['../classSVF_1_1MemSSA.html#a97ccd5e0b9ab6144415e26bdf95cbabd',1,'SVF::MemSSA::timeOfSSARenaming()']]],
+  ['timeofssarenaming',['timeOfSSARenaming',['../classSVF_1_1MemSSA.html#a97ccd5e0b9ab6144415e26bdf95cbabd',1,'SVF::MemSSA::timeOfSSARenaming()'],['../classSVF_1_1MemSSAStat.html#a887ff23a7ea1a18f08b1744ff30da773',1,'SVF::MemSSAStat::TimeOfSSARenaming()']]],
   ['timeofupdatecallgraph',['timeOfUpdateCallGraph',['../classSVF_1_1AndersenBase.html#a2afb49f513c9534fd051117b59dc056b',1,'SVF::AndersenBase']]],
   ['timestatmap',['timeStatMap',['../classSVF_1_1PTAStat.html#a3724756ac0527ba3d199be32e38c6337',1,'SVF::PTAStat']]],
   ['tlptdata',['tlPTData',['../classSVF_1_1MutableVersionedPTData.html#a01974968b7cf60a4231cc83c93b26d7f',1,'SVF::MutableVersionedPTData::tlPTData()'],['../classSVF_1_1PersistentVersionedPTData.html#a29104a2d53d94805e142f778d3d21ad5',1,'SVF::PersistentVersionedPTData::tlPTData()']]],
@@ -70,14 +70,11 @@ var searchData=
   ['treez',['treeZ',['../structDdManager.html#a748a046ca1743d33b4cfaea560cc4d48',1,'DdManager']]],
   ['tripcount',['tripcount',['../classSVF_1_1PTASCEV.html#aa92f2da24c8b6d3548f8b4920a8d157f',1,'SVF::PTASCEV']]],
   ['truecond',['trueCond',['../classSVF_1_1CondManager.html#aed854ecc55a568597f7d7f1f78fb92f4',1,'SVF::CondManager']]],
-  ['type',['type',['../structDdNode.html#ac7e82d45498ac66d16e74db9a7971d9b',1,'DdNode::type()'],['../structDdGen.html#ab08569c7ba12c63288a09a92109aa81d',1,'DdGen::type()'],['../structEpDoubleStruct.html#ad715bfed9d5d6ebd3333b0f9d36030c6',1,'EpDoubleStruct::type()'],['../classSVF_1_1ObjTypeInfo.html#a6e7780d4e2639c089ff6c853d8d78a4d',1,'SVF::ObjTypeInfo::type()'],['../classSVF_1_1PointsTo.html#aaa9c956187f2c04a7a242ce440d1416f',1,'SVF::PointsTo::type()'],['../classSVF_1_1PTAType.html#a748b82b463001ba95f08a7ec229c412b',1,'SVF::PTAType::type()'],['../classSVF_1_1MSSAMU.html#a3cbe5ca0cb91090ef0e8b331e2f15f7c',1,'SVF::MSSAMU::type()'],['../classSVF_1_1MSSADEF.html#a9e8a03dc2c2f76ef6bc095f21911f5b6',1,'SVF::MSSADEF::type()']]],
+  ['type',['type',['../structDdNode.html#ac7e82d45498ac66d16e74db9a7971d9b',1,'DdNode::type()'],['../structDdGen.html#ab08569c7ba12c63288a09a92109aa81d',1,'DdGen::type()'],['../structEpDoubleStruct.html#ad715bfed9d5d6ebd3333b0f9d36030c6',1,'EpDoubleStruct::type()'],['../classSVF_1_1ObjTypeInfo.html#a6e7780d4e2639c089ff6c853d8d78a4d',1,'SVF::ObjTypeInfo::type()'],['../classSVF_1_1PointsTo.html#aaa9c956187f2c04a7a242ce440d1416f',1,'SVF::PointsTo::type()'],['../classSVF_1_1MSSAMU.html#a3cbe5ca0cb91090ef0e8b331e2f15f7c',1,'SVF::MSSAMU::type()'],['../classSVF_1_1MSSADEF.html#a9e8a03dc2c2f76ef6bc095f21911f5b6',1,'SVF::MSSADEF::type()']]],
   ['typedefs',['typedefs',['../classSVF_1_1DCHNode.html#abafa483be12690549fbcccaf4c3fa511',1,'SVF::DCHNode']]],
   ['typeinfo',['typeInfo',['../classSVF_1_1MemObj.html#a750770ea992d39b22c8b2dda9aff2eaf',1,'SVF::MemObj']]],
-  ['typemismatchedobjtoedges',['typeMismatchedObjToEdges',['../classSVF_1_1AndersenWaveDiffWithType.html#a56c4bf81440df5d1b2565055ac3ab84b',1,'SVF::AndersenWaveDiffWithType']]],
   ['typename',['typeName',['../classSVF_1_1DCHNode.html#a8a7b412262af7a90c9ef583b6a8c10fc',1,'SVF::DCHNode']]],
   ['typeprint',['TypePrint',['../classSVF_1_1Options.html#affd0cb6e0cb91e096537a3d3198bf4e5',1,'SVF::Options']]],
-  ['typeset',['typeSet',['../classSVF_1_1TypeSet.html#a29161e8ed226190892c02cbd7eb5dcce',1,'SVF::TypeSet']]],
   ['typesystem',['typeSystem',['../classSVF_1_1PointerAnalysis.html#a219baed92b811d5519b056ad393fceed',1,'SVF::PointerAnalysis']]],
-  ['typetofieldinfo',['typeToFieldInfo',['../classSVF_1_1SymbolTableInfo.html#ad8b9fa0a4e4b91efb80586e692bd0dcd',1,'SVF::SymbolTableInfo']]],
-  ['typetovarsmap',['typeToVarsMap',['../classSVF_1_1TypeSystem.html#ae418e2ee701744813447350f9ece4f80',1,'SVF::TypeSystem']]]
+  ['typetofieldinfo',['typeToFieldInfo',['../classSVF_1_1SymbolTableInfo.html#ad8b9fa0a4e4b91efb80586e692bd0dcd',1,'SVF::SymbolTableInfo']]]
 ];

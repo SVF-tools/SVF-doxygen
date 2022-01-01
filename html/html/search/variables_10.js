@@ -93,6 +93,7 @@ var searchData=
   ['ptronlymssa',['ptrOnlyMSSA',['../classSVF_1_1MRGenerator.html#a6a62d2dede5d2506c19b2d058d1cd9d3',1,'SVF::MRGenerator']]],
   ['ptrtobvptsmap',['ptrToBVPtsMap',['../classSVF_1_1CondPTAImpl.html#a30b9ee7b1dcd04285f92cf7accd05b2e',1,'SVF::CondPTAImpl']]],
   ['ptrtocptsmap',['ptrToCPtsMap',['../classSVF_1_1CondPTAImpl.html#a61167fcdb2005090de1b38e53450431a',1,'SVF::CondPTAImpl']]],
+  ['ptrvar',['ptrVar',['../classSVF_1_1GepStmt.html#a8770e87d804f36e1d19ef4a85c3e13a5',1,'SVF::GepStmt']]],
   ['ptsallprint',['PTSAllPrint',['../classSVF_1_1Options.html#a113ee30422ef08b6790eed9a83277b9c',1,'SVF::Options']]],
   ['ptsdiff',['PtsDiff',['../classSVF_1_1Options.html#acf7262c0b0bd91e6dab56a631be51206',1,'SVF::Options']]],
   ['ptsmap',['ptsMap',['../classSVF_1_1MutablePTData.html#a5ee6e307acd4edbf4f7c2b063032d942',1,'SVF::MutablePTData::ptsMap()'],['../classSVF_1_1PersistentPTData.html#a483c690c6cf19e258bdf7bb13e77976e',1,'SVF::PersistentPTData::ptsMap()']]],

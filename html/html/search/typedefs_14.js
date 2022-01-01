@@ -8,7 +8,6 @@ var searchData=
   ['valuetoedgemap',['ValueToEdgeMap',['../classSVF_1_1PAG.html#a9849898bac3644021638380b60f96891',1,'SVF::PAG']]],
   ['valuetoidmapty',['ValueToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#a03a11c48d748990ddac1ac5866ecb48e',1,'SVF::SymbolTableInfo']]],
   ['vartopropnodemap',['VarToPropNodeMap',['../classSVF_1_1VersionedFlowSensitive.html#a9ee5add09f2b446c6c6bcb84da0f75b3',1,'SVF::VersionedFlowSensitive']]],
-  ['vartotypesetmapty',['VarToTypeSetMapTy',['../classSVF_1_1TypeSystem.html#ae3bb1f41445bc7258f32feadbf20f64e',1,'SVF::TypeSystem']]],
   ['vastartinst',['VAStartInst',['../namespaceSVF.html#ad92e392a50e7c6c1f635fe2dcebd1adc',1,'SVF']]],
   ['vectortype',['VectorType',['../namespaceSVF.html#a1eaed46fa67cf1a51e438c5f8f523418',1,'SVF']]],
   ['version',['Version',['../namespaceSVF.html#a9ec7a8dc63411ee3724a25a59191be0c',1,'SVF']]],

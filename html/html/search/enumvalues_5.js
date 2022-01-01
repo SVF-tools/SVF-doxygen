@@ -19,6 +19,6 @@ var searchData=
   ['function_5fobj',['FUNCTION_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830af5f94b2a41dab25fa08c94a989fb9515',1,'SVF::ObjTypeInfo']]],
   ['funentryblock',['FunEntryBlock',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376ad2fb9517b64addcced67efe9cc83b994',1,'SVF::ICFGNode']]],
   ['funexitblock',['FunExitBlock',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376acf25925678f7fa5fba01766bd06a1fb8',1,'SVF::ICFGNode']]],
-  ['funret',['FunRet',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ac8494021a71efb0f6df237ff12561c8d',1,'SVF::VFGNode']]],
+  ['funret',['FunRet',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ac8494021a71efb0f6df237ff12561c8d',1,'SVF::VFGNode::FunRet()'],['../classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a6d968bd70a0184214204aac3329c6221',1,'SVF::SVFStmt::FunRet()']]],
   ['funretblock',['FunRetBlock',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376ac731cdb9d1269f6c25e1c80159154921',1,'SVF::ICFGNode']]]
 ];

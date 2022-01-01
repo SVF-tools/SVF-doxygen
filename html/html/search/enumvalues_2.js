@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['call',['Call',['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6a5f4c2c1ec167425622d40133ec15448d',1,'SVF::PAGEdge']]],
+  ['call',['Call',['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6a5f4c2c1ec167425622d40133ec15448d',1,'SVF::PAGEdge::Call()'],['../classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a97ca16eba4c5f92e16388f0cdbcfcc00',1,'SVF::SVFStmt::Call()']]],
   ['callcf',['CallCF',['../classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429a3486c9d9a182f2ba5d986fe74439ec2e',1,'SVF::ICFGEdge']]],
   ['calldirvf',['CallDirVF',['../classSVF_1_1VFGEdge.html#a156ae6a8b3a033f505c18c6b162e7cf5a8383c27feab3f1acc67cacef9744c04a',1,'SVF::VFGEdge']]],
   ['callindvf',['CallIndVF',['../classSVF_1_1VFGEdge.html#a156ae6a8b3a033f505c18c6b162e7cf5a978c857fcc06d2f988bc9ce16ce10145',1,'SVF::VFGEdge']]],
@@ -16,7 +16,7 @@ var searchData=
   ['clonedummyobjnode',['CloneDummyObjNode',['../classSVF_1_1PAGNode.html#a5cc5327ba68c3f11ed4bef47d89c3dfda2b633e41b4f1515ba25862f0bae0165c',1,'SVF::PAGNode']]],
   ['clonefiobjnode',['CloneFIObjNode',['../classSVF_1_1PAGNode.html#a5cc5327ba68c3f11ed4bef47d89c3dfda988291beb55638d5558be338c3771c31',1,'SVF::PAGNode']]],
   ['clonegepobjnode',['CloneGepObjNode',['../classSVF_1_1PAGNode.html#a5cc5327ba68c3f11ed4bef47d89c3dfda4b4c88fe6b73ec2f09441e7abd4766c6',1,'SVF::PAGNode']]],
-  ['cmp',['Cmp',['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6a90aa1e3ce21dcd54cf433610b427ba96',1,'SVF::PAGEdge::Cmp()'],['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a98fd43afc6615f418d2d96209eb31828',1,'SVF::VFGNode::Cmp()']]],
+  ['cmp',['Cmp',['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6a90aa1e3ce21dcd54cf433610b427ba96',1,'SVF::PAGEdge::Cmp()'],['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a98fd43afc6615f418d2d96209eb31828',1,'SVF::VFGNode::Cmp()'],['../classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a610d6662d1814cffbf23db29e7e620c0',1,'SVF::SVFStmt::Cmp()']]],
   ['condimpl',['CondImpl',['../classSVF_1_1PointerAnalysis.html#ac0c0855918cb2cdc3d8ebc175acfbd4da88380bb05f60a1349e192364ba6c5292',1,'SVF::PointerAnalysis']]],
   ['conservative',['Conservative',['../classSVF_1_1WPAPass.html#a4505a1882956feda3cf83c788149394da498ba80d25733b291f391a94500dd4c7',1,'SVF::WPAPass']]],
   ['const_5farray_5fobj',['CONST_ARRAY_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830aff4142c0c411dea07b484a19af514047',1,'SVF::ObjTypeInfo']]],
@@ -25,7 +25,7 @@ var searchData=
   ['constantobj',['ConstantObj',['../namespaceSVF.html#afe243912c982fde7d6beb4d046f9d42ba63aceec1f561583962d854e7606810e5',1,'SVF']]],
   ['constructor',['CONSTRUCTOR',['../classSVF_1_1CHGraph.html#a2a1da7f262a2f11653fb583154a93a22a331376f6d22d2346039db7a9c9a311c2',1,'SVF::CHGraph']]],
   ['context_5fleak',['CONTEXT_LEAK',['../classSVF_1_1LeakChecker.html#a42f54433e5ca60928f3c329ab545842da1524077f4425b7e2d6cc32917a02c356',1,'SVF::LeakChecker']]],
-  ['copy',['Copy',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375a29b0aa3353f866ef1655ab6d4716feb9',1,'SVF::ConstraintEdge::Copy()'],['../classSVF_1_1ConstraintNode.html#a6e59b815d784bc1a9437290ff0e1e28ca4b202c80793ae965686b9d275a5c586a',1,'SVF::ConstraintNode::Copy()'],['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6af447071283803d3aee763fe20783f4a4',1,'SVF::PAGEdge::Copy()'],['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75af589a053fdb7efc728b68a324fc58b2b',1,'SVF::VFGNode::Copy()']]],
+  ['copy',['Copy',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375a29b0aa3353f866ef1655ab6d4716feb9',1,'SVF::ConstraintEdge::Copy()'],['../classSVF_1_1ConstraintNode.html#a6e59b815d784bc1a9437290ff0e1e28ca4b202c80793ae965686b9d275a5c586a',1,'SVF::ConstraintNode::Copy()'],['../classSVF_1_1PAGEdge.html#a79080505b4744aa8806b55215ac2b0f6af447071283803d3aee763fe20783f4a4',1,'SVF::PAGEdge::Copy()'],['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75af589a053fdb7efc728b68a324fc58b2b',1,'SVF::VFGNode::Copy()'],['../classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ad3469cdfb64f05163b5310b731b221da',1,'SVF::SVFStmt::Copy()']]],
   ['cpp_5feft_5fa0r_5fa1',['CPP_EFT_A0R_A1',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094ae3e90095a170aa15d9b6c305469e32af',1,'SVF::ExtAPI']]],
   ['cpp_5feft_5fa0r_5fa1r',['CPP_EFT_A0R_A1R',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a7f75d2265448acf50cd59151a1241054',1,'SVF::ExtAPI']]],
   ['cpp_5feft_5fa1r',['CPP_EFT_A1R',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a3eb7d75552ce138f55c840b6635d32ed',1,'SVF::ExtAPI']]],

@@ -43,6 +43,7 @@ var searchData=
   ['spawners',['spawners',['../classSVF_1_1PCG.html#a3f7f0c7aaa768f7e834b4763b18d8223',1,'SVF::PCG']]],
   ['src',['src',['../classSVF_1_1GenericEdge.html#a0e8736f88ee75da025d874f92328ca71',1,'SVF::GenericEdge']]],
   ['srctocsidmap',['srcToCSIDMap',['../classSVF_1_1LeakChecker.html#a46b4447bf1bf34d3b8e56cce93e04852',1,'SVF::LeakChecker']]],
+  ['srcvar',['srcVar',['../classSVF_1_1AllocStmt.html#a425bb7a4ad0d83b7da9b9605058715b7',1,'SVF::AllocStmt::srcVar()'],['../classSVF_1_1CopyStmt.html#a211841f490ac3612b7219d651fa3b178',1,'SVF::CopyStmt::srcVar()'],['../classSVF_1_1LoadStmt.html#a0e43b97154081c7d28149f2fedad9b77',1,'SVF::LoadStmt::srcVar()'],['../classSVF_1_1StoreStmt.html#af25423a7ca93e20cb7940ad78bd4ace2',1,'SVF::StoreStmt::srcVar()']]],
   ['stack',['stack',['../structDdGen.html#a50762b8a4bc39e9094a414d41da2613b',1,'DdGen::stack()'],['../structDdGen.html#af405420fc6648aa758b180a7a1b5f557',1,'DdGen::stack()'],['../structDdManager.html#af99ce33d5dcd3dcf67f10bd7da6a5aa5',1,'DdManager::stack()']]],
   ['start',['start',['../classSVF_1_1PTASCEV.html#a0de1531fc72f5aa0bafc59101faae68d',1,'SVF::PTASCEV']]],
   ['starttime',['startTime',['../structDdManager.html#a7436169471f7648c313c0c4a3674942c',1,'DdManager::startTime()'],['../classSVF_1_1PTAStat.html#a59e0fe6fa506f1cf319b5acaf9d28be9',1,'SVF::PTAStat::startTime()']]],
@@ -85,7 +86,7 @@ var searchData=
   ['svfmain',['SVFMain',['../classSVF_1_1Options.html#a868fa5069b01b7a7dfbc5fb99cb76385',1,'SVF::Options']]],
   ['svfmod',['svfMod',['../classSVF_1_1PointerAnalysis.html#a7e8b3f6843e5ea75fd189162d2cd60a5',1,'SVF::PointerAnalysis::svfMod()'],['../classSVF_1_1CHGraph.html#a62a3ccdbc55381d5f8d96dc23141f2e5',1,'SVF::CHGraph::svfMod()'],['../classSVF_1_1PAGBuilder.html#a7c197702fff05b1b6cd744b70a4a278c',1,'SVF::PAGBuilder::svfMod()']]],
   ['svfmodule',['svfModule',['../classSVF_1_1DCHGraph.html#a85a3c9a6a60a4379717773f8722ae42e',1,'SVF::DCHGraph::svfModule()'],['../classSVF_1_1LLVMModuleSet.html#a43832e93a42ae43d44b0cc160981678f',1,'SVF::LLVMModuleSet::svfModule()']]],
-  ['syminfo',['symInfo',['../classSVF_1_1PAG.html#acebd1174f9bbeeb35ccfdf87a8f0998a',1,'SVF::PAG::symInfo()'],['../classSVF_1_1MemModelBuilder.html#a9ac2873486cc2d9698d2d0c762119574',1,'SVF::MemModelBuilder::symInfo()'],['../classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c',1,'SVF::SymbolTableInfo::symInfo()']]],
+  ['syminfo',['symInfo',['../classSVF_1_1PAG.html#acebd1174f9bbeeb35ccfdf87a8f0998a',1,'SVF::PAG::symInfo()'],['../classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c',1,'SVF::SymbolTableInfo::symInfo()'],['../classSVF_1_1SymbolTableBuilder.html#a3100246d9b0a58e53f2dbc8acf231afb',1,'SVF::SymbolTableBuilder::symInfo()']]],
   ['symmviolation',['symmviolation',['../structDdManager.html#a4a8e54350702f269411399762cb958e1',1,'DdManager']]],
   ['symtabprint',['SymTabPrint',['../classSVF_1_1Options.html#abbfd1d7e985483c486394d8db85b6a85',1,'SVF::Options']]],
   ['symtymap',['symTyMap',['../classSVF_1_1SymbolTableInfo.html#a2680e554af6153cbe8521425c1fbb123',1,'SVF::SymbolTableInfo']]]

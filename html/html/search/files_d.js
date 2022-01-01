@@ -26,10 +26,14 @@ var searchData=
   ['svfgopt_2eh',['SVFGOPT.h',['../SVFGOPT_8h.html',1,'']]],
   ['svfgstat_2ecpp',['SVFGStat.cpp',['../SVFGStat_8cpp.html',1,'']]],
   ['svfgstat_2eh',['SVFGStat.h',['../SVFGStat_8h.html',1,'']]],
+  ['svfir_2ecpp',['SVFIR.cpp',['../SVFIR_8cpp.html',1,'']]],
+  ['svfir_2eh',['SVFIR.h',['../SVFIR_8h.html',1,'']]],
   ['svfmodule_2ecpp',['SVFModule.cpp',['../SVFModule_8cpp.html',1,'']]],
   ['svfmodule_2eh',['SVFModule.h',['../SVFModule_8h.html',1,'']]],
   ['svfutil_2ecpp',['SVFUtil.cpp',['../SVFUtil_8cpp.html',1,'']]],
   ['svfutil_2eh',['SVFUtil.h',['../SVFUtil_8h.html',1,'']]],
+  ['symboltablebuilder_2ecpp',['SymbolTableBuilder.cpp',['../SymbolTableBuilder_8cpp.html',1,'']]],
+  ['symboltablebuilder_2eh',['SymbolTableBuilder.h',['../SymbolTableBuilder_8h.html',1,'']]],
   ['symboltableinfo_2ecpp',['SymbolTableInfo.cpp',['../SymbolTableInfo_8cpp.html',1,'']]],
   ['symboltableinfo_2eh',['SymbolTableInfo.h',['../SymbolTableInfo_8h.html',1,'']]]
 ];

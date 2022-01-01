@@ -12,7 +12,5 @@ var searchData=
   ['threadjoinedge',['ThreadJoinEdge',['../classSVF_1_1ThreadJoinEdge.html',1,'SVF']]],
   ['threadmhpindsvfgedge',['ThreadMHPIndSVFGEdge',['../classSVF_1_1ThreadMHPIndSVFGEdge.html',1,'SVF']]],
   ['typeanalysis',['TypeAnalysis',['../classSVF_1_1TypeAnalysis.html',1,'SVF']]],
-  ['typebasedheapcloning',['TypeBasedHeapCloning',['../classSVF_1_1TypeBasedHeapCloning.html',1,'SVF']]],
-  ['typeset',['TypeSet',['../classSVF_1_1TypeSet.html',1,'SVF']]],
-  ['typesystem',['TypeSystem',['../classSVF_1_1TypeSystem.html',1,'SVF']]]
+  ['typebasedheapcloning',['TypeBasedHeapCloning',['../classSVF_1_1TypeBasedHeapCloning.html',1,'SVF']]]
 ];

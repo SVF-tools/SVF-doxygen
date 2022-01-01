@@ -26,6 +26,5 @@ var searchData=
   ['ptacallgraph_2ecpp',['PTACallGraph.cpp',['../PTACallGraph_8cpp.html',1,'']]],
   ['ptacallgraph_2eh',['PTACallGraph.h',['../PTACallGraph_8h.html',1,'']]],
   ['ptastat_2ecpp',['PTAStat.cpp',['../PTAStat_8cpp.html',1,'']]],
-  ['ptastat_2eh',['PTAStat.h',['../PTAStat_8h.html',1,'']]],
-  ['ptatype_2eh',['PTAType.h',['../PTAType_8h.html',1,'']]]
+  ['ptastat_2eh',['PTAStat.h',['../PTAStat_8h.html',1,'']]]
 ];

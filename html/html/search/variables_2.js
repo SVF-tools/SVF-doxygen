@@ -18,6 +18,8 @@ var searchData=
   ['bits',['bits',['../unionEpTypeUnion.html#ad93dc9fbbc709d52d46e1e8ec78bb391',1,'EpTypeUnion::bits()'],['../unionhack.html#ac9f31214d556c4a179ba01f23036bc91',1,'hack::bits()']]],
   ['blackholeobjectid',['blackHoleObjectId',['../classSVF_1_1NodeIDAllocator.html#a79ee84d7efb8abbfcd80d31d966ce20b',1,'SVF::NodeIDAllocator']]],
   ['blackholepointerid',['blackHolePointerId',['../classSVF_1_1NodeIDAllocator.html#a535be344f97496d8086e2861ea6dc2ea',1,'SVF::NodeIDAllocator']]],
+  ['br1',['br1',['../classSVF_1_1BranchStmt.html#a3876324546c28b6454cf32de81370dc3',1,'SVF::BranchStmt']]],
+  ['br2',['br2',['../classSVF_1_1BranchStmt.html#a593d9ac2dcefbeb4061c20eeee37a228',1,'SVF::BranchStmt']]],
   ['branchcond',['branchCond',['../classSVF_1_1BranchCondExpr.html#a99b54ea1152131f8e0991374043ffced',1,'SVF::BranchCondExpr']]],
   ['branchcondmanager',['branchCondManager',['../classSVF_1_1CondManager.html#ac735eb27ed4328f97ced87494683f7f1',1,'SVF::CondManager']]],
   ['branchcondtocondexpr',['branchCondToCondExpr',['../classSVF_1_1CondManager.html#afd01891f45e085e990c9dbba5cbf3914',1,'SVF::CondManager']]],

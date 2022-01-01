@@ -10,8 +10,5 @@ var searchData=
   ['timestatmap',['TIMEStatMap',['../classSVF_1_1PTAStat.html#a28f304e7095f3843ca4cc017bc1f7b10',1,'SVF::PTAStat']]],
   ['tooloutputfile',['ToolOutputFile',['../namespaceSVF.html#acde6a1d496f1b655088ccbe023820277',1,'SVF']]],
   ['type',['Type',['../namespaceSVF.html#a1d008c0666c145622b81d427be64c52d',1,'SVF']]],
-  ['typemismatchedobjtoedgety',['TypeMismatchedObjToEdgeTy',['../classSVF_1_1AndersenWaveDiffWithType.html#a2e64b8836d73363049b9bb24d560d2e7',1,'SVF::AndersenWaveDiffWithType']]],
-  ['typesetty',['TypeSetTy',['../classSVF_1_1TypeSet.html#a0d173b719fbae32eac326f067b1c2653',1,'SVF::TypeSet']]],
-  ['typetofieldinfomap',['TypeToFieldInfoMap',['../classSVF_1_1SymbolTableInfo.html#a9c9a9da876d41ab48e55f25efc266494',1,'SVF::SymbolTableInfo']]],
-  ['typetovarsmapty',['TypeToVarsMapTy',['../classSVF_1_1TypeSystem.html#a74e6c7885929b86eb4fa3d2c587d9631',1,'SVF::TypeSystem']]]
+  ['typetofieldinfomap',['TypeToFieldInfoMap',['../classSVF_1_1SymbolTableInfo.html#a9c9a9da876d41ab48e55f25efc266494',1,'SVF::SymbolTableInfo']]]
 ];

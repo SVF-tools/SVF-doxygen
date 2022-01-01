@@ -11,6 +11,5 @@ var searchData=
   ['andersensfr_2eh',['AndersenSFR.h',['../AndersenSFR_8h.html',1,'']]],
   ['andersenstat_2ecpp',['AndersenStat.cpp',['../AndersenStat_8cpp.html',1,'']]],
   ['andersenwavediff_2ecpp',['AndersenWaveDiff.cpp',['../AndersenWaveDiff_8cpp.html',1,'']]],
-  ['andersenwavediffwithtype_2ecpp',['AndersenWaveDiffWithType.cpp',['../AndersenWaveDiffWithType_8cpp.html',1,'']]],
   ['annotator_2eh',['Annotator.h',['../Annotator_8h.html',1,'']]]
 ];
