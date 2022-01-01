@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['memmodel_2ecpp',['MemModel.cpp',['../MemModel_8cpp.html',1,'']]],
-  ['memmodel_2eh',['MemModel.h',['../MemModel_8h.html',1,'']]],
   ['mempartition_2ecpp',['MemPartition.cpp',['../MemPartition_8cpp.html',1,'']]],
   ['mempartition_2eh',['MemPartition.h',['../MemPartition_8h.html',1,'']]],
   ['memregion_2ecpp',['MemRegion.cpp',['../MemRegion_8cpp.html',1,'']]],

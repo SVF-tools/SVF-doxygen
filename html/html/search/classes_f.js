@@ -32,6 +32,7 @@ var searchData=
   ['svfmodule',['SVFModule',['../classSVF_1_1SVFModule.html',1,'SVF']]],
   ['svfstmt',['SVFStmt',['../classSVF_1_1SVFStmt.html',1,'SVF']]],
   ['svfvalue',['SVFValue',['../classSVF_1_1SVFValue.html',1,'SVF']]],
+  ['svfvar',['SVFVar',['../classSVF_1_1SVFVar.html',1,'SVF']]],
   ['symboltablebuilder',['SymbolTableBuilder',['../classSVF_1_1SymbolTableBuilder.html',1,'SVF']]],
   ['symboltableinfo',['SymbolTableInfo',['../classSVF_1_1SymbolTableInfo.html',1,'SVF']]]
 ];

@@ -20,6 +20,7 @@ var searchData=
   ['intraindsvfgedge',['IntraIndSVFGEdge',['../classSVF_1_1IntraIndSVFGEdge.html',1,'SVF']]],
   ['intramssaphisvfgnode',['IntraMSSAPHISVFGNode',['../classSVF_1_1IntraMSSAPHISVFGNode.html',1,'SVF']]],
   ['intraphivfgnode',['IntraPHIVFGNode',['../classSVF_1_1IntraPHIVFGNode.html',1,'SVF']]],
+  ['intrinsicsym',['IntrinsicSym',['../classSVF_1_1IntrinsicSym.html',1,'SVF']]],
   ['irannotator',['IRAnnotator',['../classSVF_1_1IRAnnotator.html',1,'SVF']]],
   ['is_5fsimple_5ftype',['is_simple_type',['../structSVF_1_1SVFUtil_1_1is__simple__type.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl',['isa_impl',['../structSVF_1_1SVFUtil_1_1isa__impl.html',1,'SVF::SVFUtil']]],

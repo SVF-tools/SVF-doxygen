@@ -79,6 +79,7 @@ var searchData=
   ['nullpointerid',['nullPointerId',['../classSVF_1_1NodeIDAllocator.html#a1e3a98be74d5dfd3b4c1b5f9c0941353',1,'SVF::NodeIDAllocator']]],
   ['nullptr',['NullPtr',['../namespaceSVF.html#afe243912c982fde7d6beb4d046f9d42ba21301438d5e1788db46a84e720e80a68',1,'SVF']]],
   ['nullptrsvfgnode',['NullPtrSVFGNode',['../namespaceSVF.html#aeccd0bd024319173c1cda5ff1a79c5ae',1,'SVF']]],
+  ['nullptrsym',['NullPtrSym',['../classSVF_1_1NullPtrSym.html',1,'SVF::NullPtrSym'],['../classSVF_1_1NullPtrSym.html#ac90682c50c2f4316d9c292b1151e8771',1,'SVF::NullPtrSym::NullPtrSym()']]],
   ['nullptrsymid',['nullPtrSymID',['../classSVF_1_1SymbolTableInfo.html#adaed6e68c2f53260ed4c4fc38b5c4721',1,'SVF::SymbolTableInfo']]],
   ['nullptrvfgnode',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html',1,'SVF::NullPtrVFGNode'],['../classSVF_1_1NullPtrVFGNode.html#a5bbcd7ba5ac40efefbd1ef99bea86639',1,'SVF::NullPtrVFGNode::NullPtrVFGNode()']]],
   ['num_5fbins',['num_bins',['../structst__table.html#a82a6c5cde11a832171b4c3e8fec57c36',1,'st_table']]],

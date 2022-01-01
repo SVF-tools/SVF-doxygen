@@ -4,6 +4,8 @@ var searchData=
   ['binaryopvfgnode',['BinaryOPVFGNode',['../classSVF_1_1BinaryOPVFGNode.html',1,'SVF']]],
   ['binarystmt',['BinaryStmt',['../classSVF_1_1BinaryStmt.html',1,'SVF']]],
   ['bitvector',['BitVector',['../classSVF_1_1BitVector.html',1,'SVF']]],
+  ['blackholesym',['BlackHoleSym',['../classSVF_1_1BlackHoleSym.html',1,'SVF']]],
+  ['blkptrsym',['BlkPtrSym',['../classSVF_1_1BlkPtrSym.html',1,'SVF']]],
   ['branchcondexpr',['BranchCondExpr',['../classSVF_1_1BranchCondExpr.html',1,'SVF']]],
   ['branchcondmanager',['BranchCondManager',['../classSVF_1_1BranchCondManager.html',1,'SVF']]],
   ['branchstmt',['BranchStmt',['../classSVF_1_1BranchStmt.html',1,'SVF']]],

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['memobj',['MemObj',['../classSVF_1_1MemObj.html',1,'SVF']]],
   ['memregion',['MemRegion',['../classSVF_1_1MemRegion.html',1,'SVF']]],
   ['memssa',['MemSSA',['../classSVF_1_1MemSSA.html',1,'SVF']]],
   ['memssadf',['MemSSADF',['../classSVF_1_1MemSSADF.html',1,'SVF']]],

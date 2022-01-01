@@ -108,6 +108,7 @@ var searchData=
   ['retpebegin',['retPEBegin',['../classSVF_1_1FormalRetVFGNode.html#ad81c6e6579293352ecb59345538b2132',1,'SVF::FormalRetVFGNode']]],
   ['retpeend',['retPEEnd',['../classSVF_1_1FormalRetVFGNode.html#adae36045df1057e551d92aa7bfb236f9',1,'SVF::FormalRetVFGNode']]],
   ['retpn',['RetPN',['../classSVF_1_1RetPN.html#ac551c1aaf9ec3cb77814aa4664d61a23',1,'SVF::RetPN']]],
+  ['retsym',['RetSym',['../classSVF_1_1RetSym.html#a3fe4e33388a1b993b30d05ec876ad31c',1,'SVF::RetSym']]],
   ['retsyms',['retSyms',['../classSVF_1_1SymbolTableInfo.html#aafd4da7cef6387bb974abe20185b7b96',1,'SVF::SymbolTableInfo']]],
   ['rfinept',['RFINEPT',['../dda_8cpp.html#a3abc2ce6737d192a5c3f967734fe8389',1,'dda.cpp']]],
   ['rmderefdirsvfgedges',['rmDerefDirSVFGEdges',['../classSVF_1_1SaberSVFGBuilder.html#ad8f4f63d2071be4eb5f6fb2fdf29a10a',1,'SVF::SaberSVFGBuilder']]],

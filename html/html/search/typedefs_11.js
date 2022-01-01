@@ -59,5 +59,6 @@ var searchData=
   ['svfgnodevec',['SVFGNodeVec',['../classSVF_1_1MTASVFGBuilder.html#a2d0e5077ce9ae6148845db607f086312',1,'SVF::MTASVFGBuilder']]],
   ['svfgscc',['SVFGSCC',['../classSVF_1_1DDAPass.html#a5e51ac666db439865846b835bcea9d21',1,'SVF::DDAPass::SVFGSCC()'],['../classSVF_1_1DDAVFSolver.html#a502207f81ed22fa42f9e18ccba83ad4e',1,'SVF::DDAVFSolver::SVFGSCC()'],['../classSVF_1_1SVFGStat.html#a149edd19cd5adafec13cbb49c590f0a8',1,'SVF::SVFGStat::SVFGSCC()']]],
   ['switchinst',['SwitchInst',['../namespaceSVF.html#a412280b134578905248ce0122c5db7c9',1,'SVF']]],
-  ['symid',['SymID',['../namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48',1,'SVF']]]
+  ['symid',['SymID',['../namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48',1,'SVF']]],
+  ['symset',['SymSet',['../classSVF_1_1SymbolTableInfo.html#a61ca0d1df0125cf7f14a3217f6bf1bdd',1,'SVF::SymbolTableInfo']]]
 ];

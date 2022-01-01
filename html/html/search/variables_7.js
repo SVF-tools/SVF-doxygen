@@ -28,6 +28,5 @@ var searchData=
   ['graph',['graph',['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat']]],
   ['graphtxt',['Graphtxt',['../classSVF_1_1Options.html#aa5c4bc8e55a056adcd7a6f8946ad5f38',1,'SVF::Options']]],
   ['groupcheck',['groupcheck',['../structDdManager.html#ac7cc9100fc0deb8d4e5cdf92b96f075b',1,'DdManager']]],
-  ['grow_5ffactor',['grow_factor',['../structst__table.html#a33a7ea1dabc05f109a41d076fc835b02',1,'st_table']]],
-  ['gsymid',['GSymID',['../classSVF_1_1MemObj.html#a93ab11a1150b015bd7f88f70d4c80054',1,'SVF::MemObj']]]
+  ['grow_5ffactor',['grow_factor',['../structst__table.html#a33a7ea1dabc05f109a41d076fc835b02',1,'st_table']]]
 ];

@@ -19,7 +19,7 @@ var searchData=
   ['redundantgepnodes',['redundantGepNodes',['../classSVF_1_1AndersenBase.html#a6c3d6b4c004d9e43690c3807502eed74',1,'SVF::AndersenBase']]],
   ['ref',['ref',['../structDdNode.html#a530470565dbead9303a714e120c35b70',1,'DdNode']]],
   ['refnodes',['refNodes',['../classSVF_1_1OfflineConsG.html#a381e656d0034b91935f62aeb7924dd4e',1,'SVF::OfflineConsG']]],
-  ['refval',['refVal',['../classSVF_1_1MemObj.html#a011f324448f2796acaff6d2e388582e9',1,'SVF::MemObj']]],
+  ['refval',['refVal',['../classSVF_1_1SVFVar.html#aac6145b031ed65c12a3a9b19e8dc1713',1,'SVF::SVFVar']]],
   ['reg2bbmap',['reg2BBMap',['../classSVF_1_1MemSSA.html#add1d4ff17d0860906d2f5f7172176121',1,'SVF::MemSSA']]],
   ['regionalign',['RegionAlign',['../classSVF_1_1Options.html#a88550ed8c4ec2ccc5d5e40869499787b',1,'SVF::Options']]],
   ['regionedclustering',['RegionedClustering',['../classSVF_1_1Options.html#ab6115b28808af348e1f6a6b58b4cd84f',1,'SVF::Options']]],

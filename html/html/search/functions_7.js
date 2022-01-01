@@ -105,7 +105,7 @@ var searchData=
   ['hasphiset',['hasPHISet',['../classSVF_1_1MemSSA.html#a552bb17f0435e012b7393fb641c19298',1,'SVF::MemSSA']]],
   ['haspointsto',['hasPointsTo',['../classSVF_1_1CondPointsToSet.html#ab1d20dfe6f243f7a09a8e2face097cc0',1,'SVF::CondPointsToSet']]],
   ['hasptapagedgelist',['hasPTAPAGEdgeList',['../classSVF_1_1PAG.html#ad6d3a47e27f3aa9f3729fd9097da27d4',1,'SVF::PAG']]],
-  ['hasptrobj',['hasPtrObj',['../classSVF_1_1ObjTypeInfo.html#ac5bae1e7917f415193a805e8d2e29320',1,'SVF::ObjTypeInfo::hasPtrObj()'],['../classSVF_1_1MemObj.html#a1ecb652416c602e1c5e3d9e7be580c3c',1,'SVF::MemObj::hasPtrObj()']]],
+  ['hasptrobj',['hasPtrObj',['../classSVF_1_1ObjSym.html#a4db197e94834f1b4bd9cfbaf5b240df6',1,'SVF::ObjSym::hasPtrObj()'],['../classSVF_1_1ObjTypeInfo.html#ac5bae1e7917f415193a805e8d2e29320',1,'SVF::ObjTypeInfo::hasPtrObj()']]],
   ['hasptsmap',['hasPtsMap',['../classSVF_1_1CondPTAImpl.html#a597e9c4e76f358c36d4b820c4d69ebc6',1,'SVF::CondPTAImpl']]],
   ['hasref',['hasRef',['../classSVF_1_1OfflineConsG.html#a576cfa438bb109b7e451b410cd3a8569',1,'SVF::OfflineConsG']]],
   ['hasrefmrset',['hasRefMRSet',['../classSVF_1_1MRGenerator.html#aeed8bcf54d2a72c640e464e256249630',1,'SVF::MRGenerator']]],
