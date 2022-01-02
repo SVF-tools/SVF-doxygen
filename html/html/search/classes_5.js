@@ -24,6 +24,5 @@ var searchData=
   ['fsmpta',['FSMPTA',['../classSVF_1_1FSMPTA.html',1,'SVF']]],
   ['funentryblocknode',['FunEntryBlockNode',['../classSVF_1_1FunEntryBlockNode.html',1,'SVF']]],
   ['funexitblocknode',['FunExitBlockNode',['../classSVF_1_1FunExitBlockNode.html',1,'SVF']]],
-  ['funptrddaclient',['FunptrDDAClient',['../classSVF_1_1FunptrDDAClient.html',1,'SVF']]],
-  ['funretstmt',['FunRetStmt',['../classSVF_1_1FunRetStmt.html',1,'SVF']]]
+  ['funptrddaclient',['FunptrDDAClient',['../classSVF_1_1FunptrDDAClient.html',1,'SVF']]]
 ];

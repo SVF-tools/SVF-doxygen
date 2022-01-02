@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['pag',['PAG',['../classSVF_1_1PAG.html',1,'SVF']]],
-  ['pagbuilder',['PAGBuilder',['../classSVF_1_1PAGBuilder.html',1,'SVF']]],
   ['pagbuilderfromfile',['PAGBuilderFromFile',['../classSVF_1_1PAGBuilderFromFile.html',1,'SVF']]],
-  ['pagedge',['PAGEdge',['../classSVF_1_1PAGEdge.html',1,'SVF']]],
-  ['pagnode',['PAGNode',['../classSVF_1_1PAGNode.html',1,'SVF']]],
   ['pathcondallocator',['PathCondAllocator',['../classSVF_1_1PathCondAllocator.html',1,'SVF']]],
   ['pathstmtdpitem',['PathStmtDPItem',['../classSVF_1_1PathStmtDPItem.html',1,'SVF']]],
   ['pcg',['PCG',['../classSVF_1_1PCG.html',1,'SVF']]],
@@ -17,7 +13,6 @@ var searchData=
   ['persistentptdata',['PersistentPTData',['../classSVF_1_1PersistentPTData.html',1,'SVF']]],
   ['persistentptdata_3c_20versionedkey_2c_20versionedkeyset_2c_20data_2c_20dataset_20_3e',['PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;',['../classSVF_1_1PersistentPTData.html',1,'SVF']]],
   ['persistentversionedptdata',['PersistentVersionedPTData',['../classSVF_1_1PersistentVersionedPTData.html',1,'SVF']]],
-  ['phistmt',['PhiStmt',['../classSVF_1_1PhiStmt.html',1,'SVF']]],
   ['phivfgnode',['PHIVFGNode',['../classSVF_1_1PHIVFGNode.html',1,'SVF']]],
   ['pointeranalysis',['PointerAnalysis',['../classSVF_1_1PointerAnalysis.html',1,'SVF']]],
   ['pointsto',['PointsTo',['../classSVF_1_1PointsTo.html',1,'SVF']]],

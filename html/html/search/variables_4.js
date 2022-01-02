@@ -45,7 +45,6 @@ var searchData=
   ['dr_5fcheck',['DR_CHECK',['../classSVF_1_1Annotator.html#a64fa6f1cac79c47c66b16ac29d2ac3f4',1,'SVF::Annotator']]],
   ['dr_5fnot_5fcheck',['DR_NOT_CHECK',['../classSVF_1_1Annotator.html#af220da6fe6fc879d15cc34ab397c5ba1',1,'SVF::Annotator']]],
   ['dst',['dst',['../classSVF_1_1GenericEdge.html#aa41cb7482bdab1ba328f4b94f30f3ee4',1,'SVF::GenericEdge']]],
-  ['dstvar',['dstVar',['../classSVF_1_1AllocStmt.html#ac9cb56b32114a2f72aef54641f1b072b',1,'SVF::AllocStmt::dstVar()'],['../classSVF_1_1CopyStmt.html#a6320bf15a9dc6a69b90916b4d73540ef',1,'SVF::CopyStmt::dstVar()'],['../classSVF_1_1LoadStmt.html#ac71cbd88f8aab24f829e9281418ff74e',1,'SVF::LoadStmt::dstVar()'],['../classSVF_1_1StoreStmt.html#ad76bbf2b841fc734fade164b849d11d8',1,'SVF::StoreStmt::dstVar()']]],
   ['dt',['dt',['../classSVF_1_1MemSSA.html#a52b1598f44fe6a6e30095f596bf85cb0',1,'SVF::MemSSA']]],
   ['dumpcha',['DumpCHA',['../classSVF_1_1Options.html#ab13a47f6dd4eedfaa607d36448a1d456',1,'SVF::Options']]],
   ['dumpfree',['DumpFree',['../classSVF_1_1Options.html#a2ef679d4177438655577e7fef7c0cc90',1,'SVF::Options']]],

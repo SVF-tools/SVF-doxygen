@@ -7,5 +7,7 @@ var searchData=
   ['icfgedge_2eh',['ICFGEdge.h',['../ICFGEdge_8h.html',1,'']]],
   ['icfgnode_2eh',['ICFGNode.h',['../ICFGNode_8h.html',1,'']]],
   ['icfgstat_2eh',['ICFGStat.h',['../ICFGStat_8h.html',1,'']]],
-  ['irannotator_2eh',['IRAnnotator.h',['../IRAnnotator_8h.html',1,'']]]
+  ['irannotator_2eh',['IRAnnotator.h',['../IRAnnotator_8h.html',1,'']]],
+  ['irgraph_2ecpp',['IRGraph.cpp',['../IRGraph_8cpp.html',1,'']]],
+  ['irgraph_2eh',['IRGraph.h',['../IRGraph_8h.html',1,'']]]
 ];

@@ -8,6 +8,5 @@ var searchData=
   ['retindsvfgedge',['RetIndSVFGEdge',['../classSVF_1_1RetIndSVFGEdge.html',1,'SVF']]],
   ['retmu',['RetMU',['../classSVF_1_1RetMU.html',1,'SVF']]],
   ['retpe',['RetPE',['../classSVF_1_1RetPE.html',1,'SVF']]],
-  ['retpn',['RetPN',['../classSVF_1_1RetPN.html',1,'SVF']]],
-  ['retsym',['RetSym',['../classSVF_1_1RetSym.html',1,'SVF']]]
+  ['retpn',['RetPN',['../classSVF_1_1RetPN.html',1,'SVF']]]
 ];

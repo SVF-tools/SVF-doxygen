@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['pag_2ecpp',['PAG.cpp',['../PAG_8cpp.html',1,'']]],
-  ['pag_2eh',['PAG.h',['../PAG_8h.html',1,'']]],
-  ['pagbuilder_2ecpp',['PAGBuilder.cpp',['../PAGBuilder_8cpp.html',1,'']]],
-  ['pagbuilder_2eh',['PAGBuilder.h',['../PAGBuilder_8h.html',1,'']]],
   ['pagbuilderfromfile_2ecpp',['PAGBuilderFromFile.cpp',['../PAGBuilderFromFile_8cpp.html',1,'']]],
   ['pagbuilderfromfile_2eh',['PAGBuilderFromFile.h',['../PAGBuilderFromFile_8h.html',1,'']]],
-  ['pagedge_2eh',['PAGEdge.h',['../PAGEdge_8h.html',1,'']]],
-  ['pagnode_2eh',['PAGNode.h',['../PAGNode_8h.html',1,'']]],
   ['pathcondallocator_2ecpp',['PathCondAllocator.cpp',['../PathCondAllocator_8cpp.html',1,'']]],
   ['pathcondallocator_2eh',['PathCondAllocator.h',['../PathCondAllocator_8h.html',1,'']]],
   ['pathdpitem_2eh',['PathDPItem.h',['../PathDPItem_8h.html',1,'']]],

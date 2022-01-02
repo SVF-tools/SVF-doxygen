@@ -5,7 +5,7 @@ var searchData=
   ['vaendinst',['VAEndInst',['../namespaceSVF.html#adb305e32f35af19b870b07711ba5b913',1,'SVF']]],
   ['value',['Value',['../namespaceSVF.html#a90b263fd2f541eca78135078114cabda',1,'SVF']]],
   ['value_5ftype',['value_type',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#ab81cda692bb6ad451276f571a25c0751',1,'SVF::PointsTo::PointsToIterator::value_type()'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a6a59f0e97fc9cf278ed22b0a4c109ae1',1,'SVF::CoreBitVector::CoreBitVectorIterator::value_type()']]],
-  ['valuetoedgemap',['ValueToEdgeMap',['../classSVF_1_1PAG.html#a9849898bac3644021638380b60f96891',1,'SVF::PAG']]],
+  ['valuetoedgemap',['ValueToEdgeMap',['../classSVF_1_1IRGraph.html#a833015e6a332b0d97b9a7de37dce5fab',1,'SVF::IRGraph']]],
   ['valuetoidmapty',['ValueToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#a03a11c48d748990ddac1ac5866ecb48e',1,'SVF::SymbolTableInfo']]],
   ['vartopropnodemap',['VarToPropNodeMap',['../classSVF_1_1VersionedFlowSensitive.html#a9ee5add09f2b446c6c6bcb84da0f75b3',1,'SVF::VersionedFlowSensitive']]],
   ['vastartinst',['VAStartInst',['../namespaceSVF.html#ad92e392a50e7c6c1f635fe2dcebd1adc',1,'SVF']]],

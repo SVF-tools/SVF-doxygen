@@ -1,7 +1,7 @@
 var searchData=
 [
   ['fields_5fdda',['FieldS_DDA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85abe1d8104c77bfe4bbc201a64410c7f61',1,'SVF::PointerAnalysis']]],
-  ['fiobjnode',['FIObjNode',['../classSVF_1_1PAGNode.html#a5cc5327ba68c3f11ed4bef47d89c3dfda727e569faa3b18cd01afe78b81f86d22',1,'SVF::PAGNode']]],
+  ['fiobjnode',['FIObjNode',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6',1,'SVF::SVFVar']]],
   ['first_5ffield',['FIRST_FIELD',['../classSVF_1_1DCHEdge.html#a9ab4cd83d9ee475d3d8445cd91839726a3b49b95b713f585b717810dce5ac6564',1,'SVF::DCHEdge']]],
   ['flows_5fdda',['FlowS_DDA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85aa43c83e2f0df003c158d4b1325b50b18',1,'SVF::PointerAnalysis']]],
   ['fparm',['FParm',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75aeb82378d1c11bd6bf1776eb884cc4db7',1,'SVF::VFGNode']]],
@@ -19,6 +19,6 @@ var searchData=
   ['function_5fobj',['FUNCTION_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830af5f94b2a41dab25fa08c94a989fb9515',1,'SVF::ObjTypeInfo']]],
   ['funentryblock',['FunEntryBlock',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376ad2fb9517b64addcced67efe9cc83b994',1,'SVF::ICFGNode']]],
   ['funexitblock',['FunExitBlock',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376acf25925678f7fa5fba01766bd06a1fb8',1,'SVF::ICFGNode']]],
-  ['funret',['FunRet',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ac8494021a71efb0f6df237ff12561c8d',1,'SVF::VFGNode::FunRet()'],['../classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a6d968bd70a0184214204aac3329c6221',1,'SVF::SVFStmt::FunRet()']]],
+  ['funret',['FunRet',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ac8494021a71efb0f6df237ff12561c8d',1,'SVF::VFGNode']]],
   ['funretblock',['FunRetBlock',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376ac731cdb9d1269f6c25e1c80159154921',1,'SVF::ICFGNode']]]
 ];

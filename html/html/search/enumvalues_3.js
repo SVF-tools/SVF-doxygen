@@ -9,7 +9,7 @@ var searchData=
   ['diff',['Diff',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a03a155517b9587d79c3f0b6dc3b72447',1,'SVF::PTData']]],
   ['direct',['Direct',['../classSVF_1_1ConstraintNode.html#a6e59b815d784bc1a9437290ff0e1e28ca7f8c92a2f50277fee80899235ae477f9',1,'SVF::ConstraintNode']]],
   ['distinct',['Distinct',['../classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a9da5f4ad2a43befdbc4be319bffc80ea',1,'SVF::MemSSA']]],
-  ['dummyobjnode',['DummyObjNode',['../classSVF_1_1PAGNode.html#a5cc5327ba68c3f11ed4bef47d89c3dfdad90c3ebe36773e94bcc116ab221a134b',1,'SVF::PAGNode']]],
-  ['dummyvalnode',['DummyValNode',['../classSVF_1_1PAGNode.html#a5cc5327ba68c3f11ed4bef47d89c3dfdaa82b7fff975b0513e429eaeb18866e6e',1,'SVF::PAGNode']]],
+  ['dummyobjnode',['DummyObjNode',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af',1,'SVF::SVFVar']]],
+  ['dummyvalnode',['DummyValNode',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8',1,'SVF::SVFVar']]],
   ['dummyvprop',['DummyVProp',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a6b262331878a44019af8a8539a5ddad2',1,'SVF::VFGNode']]]
 ];

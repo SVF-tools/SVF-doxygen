@@ -63,108 +63,312 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classSVF_1_1SVFVar-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SVF::SVFVar Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SVF::SVFVar:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classSVF_1_1SVFVar.png" usemap="#SVF::SVFVar_map" alt=""/>
   <map id="SVF::SVFVar_map" name="SVF::SVFVar_map">
-<area href="classSVF_1_1IntrinsicSym.html" alt="SVF::IntrinsicSym" shape="rect" coords="73,56,209,80"/>
-<area href="classSVF_1_1ObjSym.html" alt="SVF::ObjSym" shape="rect" coords="365,56,501,80"/>
-<area href="classSVF_1_1ValSym.html" alt="SVF::ValSym" shape="rect" coords="657,56,793,80"/>
-<area href="classSVF_1_1RetSym.html" alt="SVF::RetSym" shape="rect" coords="0,112,136,136"/>
-<area href="classSVF_1_1VarargSym.html" alt="SVF::VarargSym" shape="rect" coords="146,112,282,136"/>
-<area href="classSVF_1_1BlackHoleSym.html" alt="SVF::BlackHoleSym" shape="rect" coords="292,112,428,136"/>
-<area href="classSVF_1_1ConstantObjSym.html" alt="SVF::ConstantObjSym" shape="rect" coords="438,112,574,136"/>
-<area href="classSVF_1_1BlkPtrSym.html" alt="SVF::BlkPtrSym" shape="rect" coords="584,112,720,136"/>
-<area href="classSVF_1_1NullPtrSym.html" alt="SVF::NullPtrSym" shape="rect" coords="730,112,866,136"/>
+<area href="classSVF_1_1GenericNode.html" alt="SVF::GenericNode&lt; NodeTy, EdgeTy &gt;" shape="rect" coords="701,0,946,24"/>
+<area href="classSVF_1_1ObjPN.html" alt="SVF::ObjPN" shape="rect" coords="255,112,500,136"/>
+<area href="classSVF_1_1RetPN.html" alt="SVF::RetPN" shape="rect" coords="510,112,755,136"/>
+<area href="classSVF_1_1ValPN.html" alt="SVF::ValPN" shape="rect" coords="892,112,1137,136"/>
+<area href="classSVF_1_1VarArgPN.html" alt="SVF::VarArgPN" shape="rect" coords="1147,112,1392,136"/>
+<area href="classSVF_1_1DummyObjPN.html" alt="SVF::DummyObjPN" shape="rect" coords="0,168,245,192"/>
+<area href="classSVF_1_1FIObjPN.html" alt="SVF::FIObjPN" shape="rect" coords="255,168,500,192"/>
+<area href="classSVF_1_1GepObjPN.html" alt="SVF::GepObjPN" shape="rect" coords="510,168,755,192"/>
+<area href="classSVF_1_1DummyValPN.html" alt="SVF::DummyValPN" shape="rect" coords="765,168,1010,192"/>
+<area href="classSVF_1_1GepValPN.html" alt="SVF::GepValPN" shape="rect" coords="1020,168,1265,192"/>
+<area href="classSVF_1_1CloneDummyObjPN.html" alt="SVF::CloneDummyObjPN" shape="rect" coords="0,224,245,248"/>
+<area href="classSVF_1_1CloneFIObjPN.html" alt="SVF::CloneFIObjPN" shape="rect" coords="255,224,500,248"/>
+<area href="classSVF_1_1CloneGepObjPN.html" alt="SVF::CloneGepObjPN" shape="rect" coords="510,224,755,248"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a283f7c0c2eaae07c6865f73a0daafeff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeff">PNODEK</a> { <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66">ValNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffae21504009be26916ccdfcb5de42e3e11">ObjNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98">RetNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf">VarargNode</a>, 
+<br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa288e3f5d01c94d5c5d685d43f08a6c4a">GepValNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaf3364b22f497146f06d1f4175a839f4f">GepObjNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6">FIObjNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8">DummyValNode</a>, 
+<br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af">DummyObjNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffabf9e21e7cbec690ad318a68cd5d756dc">CloneGepObjNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa2ca0654308fd181afcb1f20519a0247a">CloneFIObjNode</a>, 
+<a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482">CloneDummyObjNode</a>
+<br />
+ }</td></tr>
+<tr class="separator:a283f7c0c2eaae07c6865f73a0daafeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classSVF_1_1GenericNode"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classSVF_1_1GenericNode')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classSVF_1_1GenericNode.html">SVF::GenericNode&lt; NodeTy, EdgeTy &gt;</a></td></tr>
+<tr class="memitem:ad63e862eb1d1369bd69318fe698e4a22 inherit pub_types_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">typedef NodeTy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#ad63e862eb1d1369bd69318fe698e4a22">NodeType</a></td></tr>
+<tr class="separator:ad63e862eb1d1369bd69318fe698e4a22 inherit pub_types_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458c626543431b4314f5f4f532eb51de inherit pub_types_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">typedef EdgeTy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a></td></tr>
+<tr class="separator:a458c626543431b4314f5f4f532eb51de inherit pub_types_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a363b90ab02cce2ebc3ede8e5b7cc141c inherit pub_types_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c">GNodeK</a></td></tr>
+<tr class="memdesc:a363b90ab02cce2ebc3ede8e5b7cc141c inherit pub_types_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edge kind.  <a href="classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c">More...</a><br /></td></tr>
+<tr class="separator:a363b90ab02cce2ebc3ede8e5b7cc141c inherit pub_types_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c6da4a73c47f84f5c5b47252bc339a inherit pub_types_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceSVF.html#a4f21e91ff8eaea5207afe5c60dbd78d7">OrderedSet</a>&lt; <a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *, typename EdgeType::equalGEdge &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a03c6da4a73c47f84f5c5b47252bc339a">GEdgeSetTy</a></td></tr>
+<tr class="separator:a03c6da4a73c47f84f5c5b47252bc339a inherit pub_types_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5471985dfe62bc9ded830a693ab153 inherit pub_types_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">typedef GEdgeSetTy::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a></td></tr>
+<tr class="separator:a2f5471985dfe62bc9ded830a693ab153 inherit pub_types_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6dc1ae41ae23b383f8add474caa7429 inherit pub_types_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">typedef GEdgeSetTy::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a></td></tr>
+<tr class="separator:ab6dc1ae41ae23b383f8add474caa7429 inherit pub_types_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a735d2f514739bceb0cedfd1ee4397b83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a735d2f514739bceb0cedfd1ee4397b83">SVFVar</a> (<a class="el" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> id, <a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> k, const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *val)</td></tr>
-<tr class="memdesc:a735d2f514739bceb0cedfd1ee4397b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a735d2f514739bceb0cedfd1ee4397b83">More...</a><br /></td></tr>
-<tr class="separator:a735d2f514739bceb0cedfd1ee4397b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24daf5faa4b1d159c193e61951d17414"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a24daf5faa4b1d159c193e61951d17414">SVFVar</a> (const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *val, <a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> i, <a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeff">PNODEK</a> k)</td></tr>
+<tr class="memdesc:a24daf5faa4b1d159c193e61951d17414"><td class="mdescLeft">&#160;</td><td class="mdescRight">address-taken pointer  <a href="#a24daf5faa4b1d159c193e61951d17414">More...</a><br /></td></tr>
+<tr class="separator:a24daf5faa4b1d159c193e61951d17414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab76f9dea1559bd9b10b870dbc7bb454a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#ab76f9dea1559bd9b10b870dbc7bb454a">~SVFVar</a> ()</td></tr>
 <tr class="memdesc:ab76f9dea1559bd9b10b870dbc7bb454a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#ab76f9dea1559bd9b10b870dbc7bb454a">More...</a><br /></td></tr>
 <tr class="separator:ab76f9dea1559bd9b10b870dbc7bb454a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaa33caa8d2a306f6741d9d066243e40"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#afaa33caa8d2a306f6741d9d066243e40">getValue</a> () const</td></tr>
-<tr class="memdesc:afaa33caa8d2a306f6741d9d066243e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the reference value to this object.  <a href="#afaa33caa8d2a306f6741d9d066243e40">More...</a><br /></td></tr>
-<tr class="separator:afaa33caa8d2a306f6741d9d066243e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8478c6eea893d9cc2e22329f0c25250b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a8478c6eea893d9cc2e22329f0c25250b">getId</a> () const</td></tr>
-<tr class="memdesc:a8478c6eea893d9cc2e22329f0c25250b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the memory object id.  <a href="#a8478c6eea893d9cc2e22329f0c25250b">More...</a><br /></td></tr>
-<tr class="separator:a8478c6eea893d9cc2e22329f0c25250b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a3199f2045fb0ddc543af32b36e45ad"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a2a3199f2045fb0ddc543af32b36e45ad">toString</a> () const =0</td></tr>
-<tr class="separator:a2a3199f2045fb0ddc543af32b36e45ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a588cc9ab65fef48ab0f2c67b2d3cf69d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a588cc9ab65fef48ab0f2c67b2d3cf69d">getKind</a> () const</td></tr>
-<tr class="separator:a588cc9ab65fef48ab0f2c67b2d3cf69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ac8cadefa8c9dc284c0951ae0ca26a4fe"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#ac8cadefa8c9dc284c0951ae0ca26a4fe">classof</a> (const <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> *)</td></tr>
-<tr class="memdesc:ac8cadefa8c9dc284c0951ae0ca26a4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">ClassOf.  <a href="#ac8cadefa8c9dc284c0951ae0ca26a4fe">More...</a><br /></td></tr>
-<tr class="separator:ac8cadefa8c9dc284c0951ae0ca26a4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa33caa8d2a306f6741d9d066243e40"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#afaa33caa8d2a306f6741d9d066243e40">getValue</a> () const</td></tr>
+<tr class="memdesc:afaa33caa8d2a306f6741d9d066243e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get/has methods of the components.  <a href="#afaa33caa8d2a306f6741d9d066243e40">More...</a><br /></td></tr>
+<tr class="separator:afaa33caa8d2a306f6741d9d066243e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaaf24b8b6ec06476cea112533c24066"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#adaaf24b8b6ec06476cea112533c24066">getType</a> () const</td></tr>
+<tr class="memdesc:adaaf24b8b6ec06476cea112533c24066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type of the value.  <a href="#adaaf24b8b6ec06476cea112533c24066">More...</a><br /></td></tr>
+<tr class="separator:adaaf24b8b6ec06476cea112533c24066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ace69053c2c4436fd78d5624bd0086a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a1ace69053c2c4436fd78d5624bd0086a">hasValue</a> () const</td></tr>
+<tr class="separator:a1ace69053c2c4436fd78d5624bd0086a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b61042079a6c9dc395f38925c6a1271"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a3b61042079a6c9dc395f38925c6a1271">isPointer</a> () const</td></tr>
+<tr class="memdesc:a3b61042079a6c9dc395f38925c6a1271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether it is a pointer.  <a href="#a3b61042079a6c9dc395f38925c6a1271">More...</a><br /></td></tr>
+<tr class="separator:a3b61042079a6c9dc395f38925c6a1271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bed99a7fd939873118698b058ccc4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a60bed99a7fd939873118698b058ccc4a">isTopLevelPtr</a> () const</td></tr>
+<tr class="memdesc:a60bed99a7fd939873118698b058ccc4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether it is a top-level pointer.  <a href="#a60bed99a7fd939873118698b058ccc4a">More...</a><br /></td></tr>
+<tr class="separator:a60bed99a7fd939873118698b058ccc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482652e097c8e7921b4db2e75eb71efc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a482652e097c8e7921b4db2e75eb71efc">isAddressTakenPtr</a> () const</td></tr>
+<tr class="memdesc:a482652e097c8e7921b4db2e75eb71efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether it is an address-taken pointer.  <a href="#a482652e097c8e7921b4db2e75eb71efc">More...</a><br /></td></tr>
+<tr class="separator:a482652e097c8e7921b4db2e75eb71efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51b134720986c39fce7f033a49df6f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#ab51b134720986c39fce7f033a49df6f0">isConstantData</a> () const</td></tr>
+<tr class="separator:ab51b134720986c39fce7f033a49df6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf194658d2cbdaf3f26f2af6c325fad7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#acf194658d2cbdaf3f26f2af6c325fad7">isIsolatedNode</a> () const</td></tr>
+<tr class="memdesc:acf194658d2cbdaf3f26f2af6c325fad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this is an isoloated node on the <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> graph.  <a href="#acf194658d2cbdaf3f26f2af6c325fad7">More...</a><br /></td></tr>
+<tr class="separator:acf194658d2cbdaf3f26f2af6c325fad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b2a5ed3ed21e54eaf04182f0338333"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a54b2a5ed3ed21e54eaf04182f0338333">getValueName</a> () const =0</td></tr>
+<tr class="memdesc:a54b2a5ed3ed21e54eaf04182f0338333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of the LLVM value.  <a href="#a54b2a5ed3ed21e54eaf04182f0338333">More...</a><br /></td></tr>
+<tr class="separator:a54b2a5ed3ed21e54eaf04182f0338333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53439a493963d16e5a1b5ed36ab6d33e"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a53439a493963d16e5a1b5ed36ab6d33e">getFunction</a> () const</td></tr>
+<tr class="memdesc:a53439a493963d16e5a1b5ed36ab6d33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the function that this <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> resides in. Return nullptr if it is a global or constantexpr node.  <a href="#a53439a493963d16e5a1b5ed36ab6d33e">More...</a><br /></td></tr>
+<tr class="separator:a53439a493963d16e5a1b5ed36ab6d33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0deeb2f08b7681c63ad91a04a4b4c6c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1SVFStmt.html#af02857ff13e61f81d332d83eb376bdb4">SVFStmt::PAGEdgeSetTy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a0deeb2f08b7681c63ad91a04a4b4c6c9">getIncomingEdges</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind)</td></tr>
+<tr class="memdesc:a0deeb2f08b7681c63ad91a04a4b4c6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get incoming <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges.  <a href="#a0deeb2f08b7681c63ad91a04a4b4c6c9">More...</a><br /></td></tr>
+<tr class="separator:a0deeb2f08b7681c63ad91a04a4b4c6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af41e3da7f7d6918f58785446d715fec6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1SVFStmt.html#af02857ff13e61f81d332d83eb376bdb4">SVFStmt::PAGEdgeSetTy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#af41e3da7f7d6918f58785446d715fec6">getOutgoingEdges</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind)</td></tr>
+<tr class="memdesc:af41e3da7f7d6918f58785446d715fec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get outgoing <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges.  <a href="#af41e3da7f7d6918f58785446d715fec6">More...</a><br /></td></tr>
+<tr class="separator:af41e3da7f7d6918f58785446d715fec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747b2c92c81d32fcd357e80d2d8fe7cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a747b2c92c81d32fcd357e80d2d8fe7cc">hasIncomingEdges</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind) const</td></tr>
+<tr class="memdesc:a747b2c92c81d32fcd357e80d2d8fe7cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has incoming <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges.  <a href="#a747b2c92c81d32fcd357e80d2d8fe7cc">More...</a><br /></td></tr>
+<tr class="separator:a747b2c92c81d32fcd357e80d2d8fe7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e4fd7a1271a17e971ed90044e6da24"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a71e4fd7a1271a17e971ed90044e6da24">hasIncomingVariantGepEdge</a> () const</td></tr>
+<tr class="memdesc:a71e4fd7a1271a17e971ed90044e6da24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has incoming VariantGepEdges.  <a href="#a71e4fd7a1271a17e971ed90044e6da24">More...</a><br /></td></tr>
+<tr class="separator:a71e4fd7a1271a17e971ed90044e6da24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab137b1def56c6539b5048c84dfd92c7b"><td class="memItemLeft" align="right" valign="top">SVFStmt::PAGEdgeSetTy::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#ab137b1def56c6539b5048c84dfd92c7b">getIncomingEdgesBegin</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind) const</td></tr>
+<tr class="memdesc:ab137b1def56c6539b5048c84dfd92c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get incoming <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> iterator.  <a href="#ab137b1def56c6539b5048c84dfd92c7b">More...</a><br /></td></tr>
+<tr class="separator:ab137b1def56c6539b5048c84dfd92c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cfd409bdb445cc1a7e50ed958b7d25"><td class="memItemLeft" align="right" valign="top">SVFStmt::PAGEdgeSetTy::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#ab6cfd409bdb445cc1a7e50ed958b7d25">getIncomingEdgesEnd</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind) const</td></tr>
+<tr class="memdesc:ab6cfd409bdb445cc1a7e50ed958b7d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get incoming <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> iterator.  <a href="#ab6cfd409bdb445cc1a7e50ed958b7d25">More...</a><br /></td></tr>
+<tr class="separator:ab6cfd409bdb445cc1a7e50ed958b7d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b00f9b5f8ad2422162f4396e2d8fa42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a9b00f9b5f8ad2422162f4396e2d8fa42">hasOutgoingEdges</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind) const</td></tr>
+<tr class="memdesc:a9b00f9b5f8ad2422162f4396e2d8fa42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has outgoing <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges.  <a href="#a9b00f9b5f8ad2422162f4396e2d8fa42">More...</a><br /></td></tr>
+<tr class="separator:a9b00f9b5f8ad2422162f4396e2d8fa42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb1f35a6f8db19c48cf7fd6c8f4a8ff3"><td class="memItemLeft" align="right" valign="top">SVFStmt::PAGEdgeSetTy::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#adb1f35a6f8db19c48cf7fd6c8f4a8ff3">getOutgoingEdgesBegin</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind) const</td></tr>
+<tr class="memdesc:adb1f35a6f8db19c48cf7fd6c8f4a8ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get outgoing <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> iterator.  <a href="#adb1f35a6f8db19c48cf7fd6c8f4a8ff3">More...</a><br /></td></tr>
+<tr class="separator:adb1f35a6f8db19c48cf7fd6c8f4a8ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec782d2f9d055b0dbcb56f511e75c24"><td class="memItemLeft" align="right" valign="top">SVFStmt::PAGEdgeSetTy::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#adec782d2f9d055b0dbcb56f511e75c24">getOutgoingEdgesEnd</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind) const</td></tr>
+<tr class="memdesc:adec782d2f9d055b0dbcb56f511e75c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get outgoing <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> iterator.  <a href="#adec782d2f9d055b0dbcb56f511e75c24">More...</a><br /></td></tr>
+<tr class="separator:adec782d2f9d055b0dbcb56f511e75c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a9376133075b0d44ff09876af933c8618"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a9376133075b0d44ff09876af933c8618">addInEdge</a> (<a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *inEdge)</td></tr>
+<tr class="memdesc:a9376133075b0d44ff09876af933c8618"><td class="mdescLeft">&#160;</td><td class="mdescRight">add methods of the components  <a href="#a9376133075b0d44ff09876af933c8618">More...</a><br /></td></tr>
+<tr class="separator:a9376133075b0d44ff09876af933c8618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a44c7a30e4e3743f6c3186fd7dbe8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a21a44c7a30e4e3743f6c3186fd7dbe8f">addOutEdge</a> (<a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *outEdge)</td></tr>
+<tr class="separator:a21a44c7a30e4e3743f6c3186fd7dbe8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada932ef2ae0a3e712174df479c35b0dd"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#ada932ef2ae0a3e712174df479c35b0dd">toString</a> () const</td></tr>
+<tr class="separator:ada932ef2ae0a3e712174df479c35b0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34b2230655db9c4195e44e1c437bbc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#aa34b2230655db9c4195e44e1c437bbc6">dump</a> () const</td></tr>
+<tr class="memdesc:aa34b2230655db9c4195e44e1c437bbc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump to console for debugging.  <a href="#aa34b2230655db9c4195e44e1c437bbc6">More...</a><br /></td></tr>
+<tr class="separator:aa34b2230655db9c4195e44e1c437bbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classSVF_1_1GenericNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSVF_1_1GenericNode')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSVF_1_1GenericNode.html">SVF::GenericNode&lt; NodeTy, EdgeTy &gt;</a></td></tr>
+<tr class="memitem:acdca5baae3e9e4208a60322fec9c9d3f inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#acdca5baae3e9e4208a60322fec9c9d3f">GenericNode</a> (<a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> i, <a class="el" href="classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c">GNodeK</a> k)</td></tr>
+<tr class="memdesc:acdca5baae3e9e4208a60322fec9c9d3f inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classSVF_1_1GenericNode.html#acdca5baae3e9e4208a60322fec9c9d3f">More...</a><br /></td></tr>
+<tr class="separator:acdca5baae3e9e4208a60322fec9c9d3f inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a8d05b81b5c8099c3f3d1f2c4983a9 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a48a8d05b81b5c8099c3f3d1f2c4983a9">~GenericNode</a> ()</td></tr>
+<tr class="memdesc:a48a8d05b81b5c8099c3f3d1f2c4983a9 inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classSVF_1_1GenericNode.html#a48a8d05b81b5c8099c3f3d1f2c4983a9">More...</a><br /></td></tr>
+<tr class="separator:a48a8d05b81b5c8099c3f3d1f2c4983a9 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e55ef37aefb411ea4c87b1aa3b1895 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#ac3e55ef37aefb411ea4c87b1aa3b1895">getId</a> () const</td></tr>
+<tr class="memdesc:ac3e55ef37aefb411ea4c87b1aa3b1895 inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID.  <a href="classSVF_1_1GenericNode.html#ac3e55ef37aefb411ea4c87b1aa3b1895">More...</a><br /></td></tr>
+<tr class="separator:ac3e55ef37aefb411ea4c87b1aa3b1895 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a391e996d695b114530120723da1d003e inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c">GNodeK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a391e996d695b114530120723da1d003e">getNodeKind</a> () const</td></tr>
+<tr class="memdesc:a391e996d695b114530120723da1d003e inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get node kind.  <a href="classSVF_1_1GenericNode.html#a391e996d695b114530120723da1d003e">More...</a><br /></td></tr>
+<tr class="separator:a391e996d695b114530120723da1d003e inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d9cd758d6f8c5189d9b90b74f43e009 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1GenericNode.html#a03c6da4a73c47f84f5c5b47252bc339a">GEdgeSetTy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a2d9cd758d6f8c5189d9b90b74f43e009">getOutEdges</a> () const</td></tr>
+<tr class="separator:a2d9cd758d6f8c5189d9b90b74f43e009 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8b5f86d7795b6a0dfc0687d942d79b inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1GenericNode.html#a03c6da4a73c47f84f5c5b47252bc339a">GEdgeSetTy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#afc8b5f86d7795b6a0dfc0687d942d79b">getInEdges</a> () const</td></tr>
+<tr class="separator:afc8b5f86d7795b6a0dfc0687d942d79b inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a7373b11143e709784de784fa476fe inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a> () const</td></tr>
+<tr class="memdesc:a06a7373b11143e709784de784fa476fe inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has incoming/outgoing edge set.  <a href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">More...</a><br /></td></tr>
+<tr class="separator:a06a7373b11143e709784de784fa476fe inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0931220d7a38e03f206cbdc6465d32ad inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a> () const</td></tr>
+<tr class="separator:a0931220d7a38e03f206cbdc6465d32ad inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f103330118c8976bf95e4bf53416eb inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a> ()</td></tr>
+<tr class="memdesc:aa4f103330118c8976bf95e4bf53416eb inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterators  <a href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">More...</a><br /></td></tr>
+<tr class="separator:aa4f103330118c8976bf95e4bf53416eb inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a3366fd8a58290d0c740c46c3dcb3d inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a> ()</td></tr>
+<tr class="separator:a19a3366fd8a58290d0c740c46c3dcb3d inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b113921530eee6afe58a65d8e5b3a7 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#ae5b113921530eee6afe58a65d8e5b3a7">InEdgeBegin</a> ()</td></tr>
+<tr class="separator:ae5b113921530eee6afe58a65d8e5b3a7 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6a7b286d9af4992f41b59612fd2900 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#afe6a7b286d9af4992f41b59612fd2900">InEdgeEnd</a> ()</td></tr>
+<tr class="separator:afe6a7b286d9af4992f41b59612fd2900 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50219c203fb5a8a44fe22428699f26e7 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a50219c203fb5a8a44fe22428699f26e7">OutEdgeBegin</a> () const</td></tr>
+<tr class="separator:a50219c203fb5a8a44fe22428699f26e7 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace88b6c7561f61f747ff08f61e2c18bc inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#ace88b6c7561f61f747ff08f61e2c18bc">OutEdgeEnd</a> () const</td></tr>
+<tr class="separator:ace88b6c7561f61f747ff08f61e2c18bc inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0ff80b1c0ae8b76fc620f21495ca39 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a7c0ff80b1c0ae8b76fc620f21495ca39">InEdgeBegin</a> () const</td></tr>
+<tr class="separator:a7c0ff80b1c0ae8b76fc620f21495ca39 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0118fbeb2b314dcdcb53c56a2a13ab07 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a0118fbeb2b314dcdcb53c56a2a13ab07">InEdgeEnd</a> () const</td></tr>
+<tr class="separator:a0118fbeb2b314dcdcb53c56a2a13ab07 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e258d3a92dae367f2809a6f16c80db inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#aa0e258d3a92dae367f2809a6f16c80db">directOutEdgeBegin</a> ()</td></tr>
+<tr class="memdesc:aa0e258d3a92dae367f2809a6f16c80db inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterators used for SCC detection, overwrite it in child class if necessory.  <a href="classSVF_1_1GenericNode.html#aa0e258d3a92dae367f2809a6f16c80db">More...</a><br /></td></tr>
+<tr class="separator:aa0e258d3a92dae367f2809a6f16c80db inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5950d69d4ba6c2122dd06b93911e4992 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a5950d69d4ba6c2122dd06b93911e4992">directOutEdgeEnd</a> ()</td></tr>
+<tr class="separator:a5950d69d4ba6c2122dd06b93911e4992 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab1f2e5db301e4a37215905a22e6476 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a4ab1f2e5db301e4a37215905a22e6476">directInEdgeBegin</a> ()</td></tr>
+<tr class="separator:a4ab1f2e5db301e4a37215905a22e6476 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19599627ba095b5452373284deab7f6c inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSVF_1_1GenericNode.html#a2f5471985dfe62bc9ded830a693ab153">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a19599627ba095b5452373284deab7f6c">directInEdgeEnd</a> ()</td></tr>
+<tr class="separator:a19599627ba095b5452373284deab7f6c inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfae7a2809931cbd62b6f47c4813510d inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#acfae7a2809931cbd62b6f47c4813510d">directOutEdgeBegin</a> () const</td></tr>
+<tr class="separator:acfae7a2809931cbd62b6f47c4813510d inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f914b128f7839483efc9ad56834e7c2 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a7f914b128f7839483efc9ad56834e7c2">directOutEdgeEnd</a> () const</td></tr>
+<tr class="separator:a7f914b128f7839483efc9ad56834e7c2 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab331402aed245c33bad841df2bc21f7b inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#ab331402aed245c33bad841df2bc21f7b">directInEdgeBegin</a> () const</td></tr>
+<tr class="separator:ab331402aed245c33bad841df2bc21f7b inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7be9ff204bf85bc3bf2fa4e078fcab2 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#aa7be9ff204bf85bc3bf2fa4e078fcab2">directInEdgeEnd</a> () const</td></tr>
+<tr class="separator:aa7be9ff204bf85bc3bf2fa4e078fcab2 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d217b0c9fd8008a2989ca2b4f3fbfb inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a93d217b0c9fd8008a2989ca2b4f3fbfb">addIncomingEdge</a> (<a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *inEdge)</td></tr>
+<tr class="memdesc:a93d217b0c9fd8008a2989ca2b4f3fbfb inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add incoming and outgoing edges.  <a href="classSVF_1_1GenericNode.html#a93d217b0c9fd8008a2989ca2b4f3fbfb">More...</a><br /></td></tr>
+<tr class="separator:a93d217b0c9fd8008a2989ca2b4f3fbfb inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74283fbc788665296a69e56f334557b inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#ae74283fbc788665296a69e56f334557b">addOutgoingEdge</a> (<a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *outEdge)</td></tr>
+<tr class="separator:ae74283fbc788665296a69e56f334557b inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56dff05dc2b3c5664d3b8fc1c6c927d5 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a2db29836a72e8d86e9baa6d8d55d2978">Size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a56dff05dc2b3c5664d3b8fc1c6c927d5">removeIncomingEdge</a> (<a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *edge)</td></tr>
+<tr class="separator:a56dff05dc2b3c5664d3b8fc1c6c927d5 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6192cb176bda3fad1819711302e468 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a2db29836a72e8d86e9baa6d8d55d2978">Size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#a7c6192cb176bda3fad1819711302e468">removeOutgoingEdge</a> (<a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *edge)</td></tr>
+<tr class="separator:a7c6192cb176bda3fad1819711302e468 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6b6b3bd45a9460335c5db9eda821b8 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#add6b6b3bd45a9460335c5db9eda821b8">hasIncomingEdge</a> (<a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *edge) const</td></tr>
+<tr class="memdesc:add6b6b3bd45a9460335c5db9eda821b8 inherit pub_methods_classSVF_1_1GenericNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find incoming and outgoing edges.  <a href="classSVF_1_1GenericNode.html#add6b6b3bd45a9460335c5db9eda821b8">More...</a><br /></td></tr>
+<tr class="separator:add6b6b3bd45a9460335c5db9eda821b8 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c40cb708b39300b3cb7354194e4993 inherit pub_methods_classSVF_1_1GenericNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericNode.html#aa0c40cb708b39300b3cb7354194e4993">hasOutgoingEdge</a> (<a class="el" href="classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de">EdgeType</a> *edge) const</td></tr>
+<tr class="separator:aa0c40cb708b39300b3cb7354194e4993 inherit pub_methods_classSVF_1_1GenericNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:aac6145b031ed65c12a3a9b19e8dc1713"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#aac6145b031ed65c12a3a9b19e8dc1713">refVal</a></td></tr>
-<tr class="memdesc:aac6145b031ed65c12a3a9b19e8dc1713"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique value of this symbol/variable.  <a href="#aac6145b031ed65c12a3a9b19e8dc1713">More...</a><br /></td></tr>
-<tr class="separator:aac6145b031ed65c12a3a9b19e8dc1713"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8684ebab1c5dc41a0eeb24b0f137e49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#ab8684ebab1c5dc41a0eeb24b0f137e49">symId</a></td></tr>
-<tr class="memdesc:ab8684ebab1c5dc41a0eeb24b0f137e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique id to represent this symbol.  <a href="#ab8684ebab1c5dc41a0eeb24b0f137e49">More...</a><br /></td></tr>
-<tr class="separator:ab8684ebab1c5dc41a0eeb24b0f137e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cac4d2826dc40b75d3972808d3dda76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a4cac4d2826dc40b75d3972808d3dda76">kind</a></td></tr>
-<tr class="memdesc:a4cac4d2826dc40b75d3972808d3dda76"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of this symbol/variable.  <a href="#a4cac4d2826dc40b75d3972808d3dda76">More...</a><br /></td></tr>
-<tr class="separator:a4cac4d2826dc40b75d3972808d3dda76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a7deb494ac20ed56fca31a4f1fd92deea"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a></td></tr>
+<tr class="memdesc:a7deb494ac20ed56fca31a4f1fd92deea"><td class="mdescLeft">&#160;</td><td class="mdescRight">value of this <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> node  <a href="#a7deb494ac20ed56fca31a4f1fd92deea">More...</a><br /></td></tr>
+<tr class="separator:a7deb494ac20ed56fca31a4f1fd92deea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fd453200fcf98b4e13e3f630774401"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1SVFStmt.html#a47a67e8aaae7059e353841a40b89e936">SVFStmt::PAGKindToEdgeSetMapTy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a></td></tr>
+<tr class="separator:a49fd453200fcf98b4e13e3f630774401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08ef88f516402ce512eb3cb7dab9271d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1SVFStmt.html#a47a67e8aaae7059e353841a40b89e936">SVFStmt::PAGKindToEdgeSetMapTy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a></td></tr>
+<tr class="separator:a08ef88f516402ce512eb3cb7dab9271d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb667f2af988479e93a6067c4e6e622"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#afeb667f2af988479e93a6067c4e6e622">isTLPointer</a></td></tr>
+<tr class="separator:afeb667f2af988479e93a6067c4e6e622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307c0f4d90308d5f77977d5635cad65d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a307c0f4d90308d5f77977d5635cad65d">isATPointer</a></td></tr>
+<tr class="memdesc:a307c0f4d90308d5f77977d5635cad65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">top-level pointer  <a href="#a307c0f4d90308d5f77977d5635cad65d">More...</a><br /></td></tr>
+<tr class="separator:a307c0f4d90308d5f77977d5635cad65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a76a2dbb3ec38c28cbd28e703e36eda96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71">raw_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a76a2dbb3ec38c28cbd28e703e36eda96">operator&lt;&lt;</a> (<a class="el" href="namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71">raw_ostream</a> &amp;o, const <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> &amp;var)</td></tr>
-<tr class="memdesc:a76a2dbb3ec38c28cbd28e703e36eda96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloading operator &lt;&lt; for printing.  <a href="#a76a2dbb3ec38c28cbd28e703e36eda96">More...</a><br /></td></tr>
-<tr class="separator:a76a2dbb3ec38c28cbd28e703e36eda96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985930fc3a53ae8ff5fcb07d378f354b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71">raw_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a985930fc3a53ae8ff5fcb07d378f354b">operator&lt;&lt;</a> (<a class="el" href="namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71">raw_ostream</a> &amp;o, const <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> &amp;node)</td></tr>
+<tr class="memdesc:a985930fc3a53ae8ff5fcb07d378f354b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloading operator &lt;&lt; for dumping <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> value.  <a href="#a985930fc3a53ae8ff5fcb07d378f354b">More...</a><br /></td></tr>
+<tr class="separator:a985930fc3a53ae8ff5fcb07d378f354b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00058">58</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a735d2f514739bceb0cedfd1ee4397b83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a735d2f514739bceb0cedfd1ee4397b83">&#9670;&nbsp;</a></span>SVFVar()</h2>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00046">46</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a283f7c0c2eaae07c6865f73a0daafeff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a283f7c0c2eaae07c6865f73a0daafeff">&#9670;&nbsp;</a></span>PNODEK</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SVF::SVFVar::SVFVar </td>
+          <td class="memname">enum <a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeff">SVF::SVFVar::PNODEK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nine kinds of <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> nodes ValNode: llvm pointer value ObjNode: memory object RetNode: unique return node Vararg: unique node for vararg parameter GepValNode: tempory gep value node for field sensitivity GepValNode: tempory gep obj node for field sensitivity FIObjNode: for field insensitive analysis DummyValNode and DummyObjNode: for non-llvm-value node Clone*Node: objects created by TBHC. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66"></a>ValNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffae21504009be26916ccdfcb5de42e3e11"></a>ObjNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98"></a>RetNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf"></a>VarargNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffa288e3f5d01c94d5c5d685d43f08a6c4a"></a>GepValNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffaf3364b22f497146f06d1f4175a839f4f"></a>GepObjNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6"></a>FIObjNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8"></a>DummyValNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af"></a>DummyObjNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffabf9e21e7cbec690ad318a68cd5d756dc"></a>CloneGepObjNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffa2ca0654308fd181afcb1f20519a0247a"></a>CloneFIObjNode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482"></a>CloneDummyObjNode&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00060">60</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66">ValNode</a>,</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffae21504009be26916ccdfcb5de42e3e11">ObjNode</a>,</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98">RetNode</a>,</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf">VarargNode</a>,</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa288e3f5d01c94d5c5d685d43f08a6c4a">GepValNode</a>,</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaf3364b22f497146f06d1f4175a839f4f">GepObjNode</a>,</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6">FIObjNode</a>,</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8">DummyValNode</a>,</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af">DummyObjNode</a>,</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffabf9e21e7cbec690ad318a68cd5d756dc">CloneGepObjNode</a>,   <span class="comment">// NOTE: only used for TBHC.</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa2ca0654308fd181afcb1f20519a0247a">CloneFIObjNode</a>,    <span class="comment">// NOTE: only used for TBHC.</span></div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482">CloneDummyObjNode</a>  <span class="comment">// NOTE: only used for TBHC.</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    };</div><div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6">SVF::SVFVar::FIObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00068">SVFVariables.h:68</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa288e3f5d01c94d5c5d685d43f08a6c4a"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa288e3f5d01c94d5c5d685d43f08a6c4a">SVF::SVFVar::GepValNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00066">SVFVariables.h:66</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffabf9e21e7cbec690ad318a68cd5d756dc"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffabf9e21e7cbec690ad318a68cd5d756dc">SVF::SVFVar::CloneGepObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00071">SVFVariables.h:71</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8">SVF::SVFVar::DummyValNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00069">SVFVariables.h:69</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffaf3364b22f497146f06d1f4175a839f4f"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaf3364b22f497146f06d1f4175a839f4f">SVF::SVFVar::GepObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00067">SVFVariables.h:67</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa2ca0654308fd181afcb1f20519a0247a"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa2ca0654308fd181afcb1f20519a0247a">SVF::SVFVar::CloneFIObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00072">SVFVariables.h:72</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af">SVF::SVFVar::DummyObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00070">SVFVariables.h:70</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffae21504009be26916ccdfcb5de42e3e11"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffae21504009be26916ccdfcb5de42e3e11">SVF::SVFVar::ObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00063">SVFVariables.h:63</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482">SVF::SVFVar::CloneDummyObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00073">SVFVariables.h:73</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98">SVF::SVFVar::RetNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00064">SVFVariables.h:64</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66">SVF::SVFVar::ValNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00062">SVFVariables.h:62</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf">SVF::SVFVar::VarargNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00065">SVFVariables.h:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a24daf5faa4b1d159c193e61951d17414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24daf5faa4b1d159c193e61951d17414">&#9670;&nbsp;</a></span>SVFVar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SVFVar::SVFVar </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>&#160;</td>
-          <td class="paramname"><em>k</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeff">PNODEK</a>&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -172,19 +376,30 @@ Friends</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructor. </p>
+<p>address-taken pointer </p>
+<p>Constructor</p>
+<p><a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00071">71</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                               : <a class="code" href="classSVF_1_1SVFVar.html#ab8684ebab1c5dc41a0eeb24b0f137e49">symId</a>(<span class="keywordtype">id</span>), <a class="code" href="classSVF_1_1SVFVar.html#aac6145b031ed65c12a3a9b19e8dc1713">refVal</a>(val), <a class="code" href="classSVF_1_1SVFVar.html#a4cac4d2826dc40b75d3972808d3dda76">kind</a>(k){</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a4cac4d2826dc40b75d3972808d3dda76"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a4cac4d2826dc40b75d3972808d3dda76">SVF::SVFVar::kind</a></div><div class="ttdeci">u32_t kind</div><div class="ttdoc">The type of this symbol/variable. </div><div class="ttdef"><b>Definition:</b> <a href="SVFSymbols_8h_source.html#l00067">SVFSymbols.h:67</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFVar_html_ab8684ebab1c5dc41a0eeb24b0f137e49"><div class="ttname"><a href="classSVF_1_1SVFVar.html#ab8684ebab1c5dc41a0eeb24b0f137e49">SVF::SVFVar::symId</a></div><div class="ttdeci">SymID symId</div><div class="ttdoc">The unique id to represent this symbol. </div><div class="ttdef"><b>Definition:</b> <a href="SVFSymbols_8h_source.html#l00065">SVFSymbols.h:65</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFVar_html_aac6145b031ed65c12a3a9b19e8dc1713"><div class="ttname"><a href="classSVF_1_1SVFVar.html#aac6145b031ed65c12a3a9b19e8dc1713">SVF::SVFVar::refVal</a></div><div class="ttdeci">const Value * refVal</div><div class="ttdoc">The unique value of this symbol/variable. </div><div class="ttdef"><b>Definition:</b> <a href="SVFSymbols_8h_source.html#l00063">SVFSymbols.h:63</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00040">40</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                                   :</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="namespaceSVF.html#a8d5e9e5137b04659ded32330e128df34">GenericPAGNodeTy</a>(i,k), <a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>(val)</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>( <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66">ValNode</a> &lt;= k &amp;&amp; k &lt;= <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482">CloneDummyObjNode</a> &amp;&amp; <span class="stringliteral">&quot;new SVFIR node kind?&quot;</span>);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">switch</span> (k)</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66">ValNode</a>:</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa288e3f5d01c94d5c5d685d43f08a6c4a">GepValNode</a>:</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>(val != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;value is nullptr for ValPN or GepValNode&quot;</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#afeb667f2af988479e93a6067c4e6e622">isTLPointer</a> = val-&gt;getType()-&gt;isPointerTy();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a307c0f4d90308d5f77977d5635cad65d">isATPointer</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98">RetNode</a>:</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>(val != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;value is nullptr for RetNode&quot;</span>);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#afeb667f2af988479e93a6067c4e6e622">isTLPointer</a> = SVFUtil::cast&lt;Function&gt;(val)-&gt;getReturnType()-&gt;isPointerTy();</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a307c0f4d90308d5f77977d5635cad65d">isATPointer</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf">VarargNode</a>:</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8">DummyValNode</a>:</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#afeb667f2af988479e93a6067c4e6e622">isTLPointer</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a307c0f4d90308d5f77977d5635cad65d">isATPointer</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffae21504009be26916ccdfcb5de42e3e11">ObjNode</a>:</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaf3364b22f497146f06d1f4175a839f4f">GepObjNode</a>:</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6">FIObjNode</a>:</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af">DummyObjNode</a>:</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffabf9e21e7cbec690ad318a68cd5d756dc">CloneGepObjNode</a>:</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa2ca0654308fd181afcb1f20519a0247a">CloneFIObjNode</a>:</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482">CloneDummyObjNode</a>:</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#afeb667f2af988479e93a6067c4e6e622">isTLPointer</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a307c0f4d90308d5f77977d5635cad65d">isATPointer</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div><div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaabe491b0a744825250b97f407962c4a6">SVF::SVFVar::FIObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00068">SVFVariables.h:68</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa288e3f5d01c94d5c5d685d43f08a6c4a"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa288e3f5d01c94d5c5d685d43f08a6c4a">SVF::SVFVar::GepValNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00066">SVFVariables.h:66</a></div></div>
+<div class="ttc" id="util_8h_html_a07d17d6d5d1074c0969bc5d3c3d1d84a"><div class="ttname"><a href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a></div><div class="ttdeci">#define assert(ex)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00141">util.h:141</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffabf9e21e7cbec690ad318a68cd5d756dc"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffabf9e21e7cbec690ad318a68cd5d756dc">SVF::SVFVar::CloneGepObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00071">SVFVariables.h:71</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8">SVF::SVFVar::DummyValNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00069">SVFVariables.h:69</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffaf3364b22f497146f06d1f4175a839f4f"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffaf3364b22f497146f06d1f4175a839f4f">SVF::SVFVar::GepObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00067">SVFVariables.h:67</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a307c0f4d90308d5f77977d5635cad65d"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a307c0f4d90308d5f77977d5635cad65d">SVF::SVFVar::isATPointer</a></div><div class="ttdeci">bool isATPointer</div><div class="ttdoc">top-level pointer </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00082">SVFVariables.h:82</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa2ca0654308fd181afcb1f20519a0247a"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa2ca0654308fd181afcb1f20519a0247a">SVF::SVFVar::CloneFIObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00072">SVFVariables.h:72</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af">SVF::SVFVar::DummyObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00070">SVFVariables.h:70</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffae21504009be26916ccdfcb5de42e3e11"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffae21504009be26916ccdfcb5de42e3e11">SVF::SVFVar::ObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00063">SVFVariables.h:63</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_afeb667f2af988479e93a6067c4e6e622"><div class="ttname"><a href="classSVF_1_1SVFVar.html#afeb667f2af988479e93a6067c4e6e622">SVF::SVFVar::isTLPointer</a></div><div class="ttdeci">bool isTLPointer</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00081">SVFVariables.h:81</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffab85277a3daeecc24c99b3da86108e482">SVF::SVFVar::CloneDummyObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00073">SVFVariables.h:73</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a7deb494ac20ed56fca31a4f1fd92deea"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">SVF::SVFVar::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">value of this SVFIR node </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00078">SVFVariables.h:78</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98">SVF::SVFVar::RetNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00064">SVFVariables.h:64</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66">SVF::SVFVar::ValNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00062">SVFVariables.h:62</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf">SVF::SVFVar::VarargNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00065">SVFVariables.h:65</a></div></div>
+<div class="ttc" id="namespaceSVF_html_a8d5e9e5137b04659ded32330e128df34"><div class="ttname"><a href="namespaceSVF.html#a8d5e9e5137b04659ded32330e128df34">SVF::GenericPAGNodeTy</a></div><div class="ttdeci">GenericNode&lt; SVFVar, SVFStmt &gt; GenericPAGNodeTy</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00041">SVFVariables.h:41</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -213,13 +428,13 @@ Friends</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00075">75</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00088">88</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac8cadefa8c9dc284c0951ae0ca26a4fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8cadefa8c9dc284c0951ae0ca26a4fe">&#9670;&nbsp;</a></span>classof()</h2>
+<a id="a9376133075b0d44ff09876af933c8618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9376133075b0d44ff09876af933c8618">&#9670;&nbsp;</a></span>addInEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,58 +443,31 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool SVF::SVFVar::classof </td>
+          <td class="memname">void SVF::SVFVar::addInEdge </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *&#160;</td>
+          <td class="paramname"><em>inEdge</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>ClassOf. </p>
-
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00093">93</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div></div><!-- fragment -->
-</div>
-</div>
-<a id="a8478c6eea893d9cc2e22329f0c25250b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8478c6eea893d9cc2e22329f0c25250b">&#9670;&nbsp;</a></span>getId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> SVF::SVFVar::getId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the memory object id. </p>
+<p>add methods of the components </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00086">86</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#ab8684ebab1c5dc41a0eeb24b0f137e49">symId</a>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_ab8684ebab1c5dc41a0eeb24b0f137e49"><div class="ttname"><a href="classSVF_1_1SVFVar.html#ab8684ebab1c5dc41a0eeb24b0f137e49">SVF::SVFVar::symId</a></div><div class="ttdeci">SymID symId</div><div class="ttdoc">The unique id to represent this symbol. </div><div class="ttdef"><b>Definition:</b> <a href="SVFSymbols_8h_source.html#l00065">SVFSymbols.h:65</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00238">238</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    {</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <a class="code" href="classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c">GNodeK</a> kind = inEdge-&gt;getEdgeKind();</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>[kind].insert(inEdge);</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="classSVF_1_1GenericNode.html#a93d217b0c9fd8008a2989ca2b4f3fbfb">addIncomingEdge</a>(inEdge);</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div><div class="ttc" id="classSVF_1_1GenericNode_html_a363b90ab02cce2ebc3ede8e5b7cc141c"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c">SVF::GenericNode::GNodeK</a></div><div class="ttdeci">s32_t GNodeK</div><div class="ttdoc">Edge kind. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00135">GenericGraph.h:135</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericNode_html_a93d217b0c9fd8008a2989ca2b4f3fbfb"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a93d217b0c9fd8008a2989ca2b4f3fbfb">SVF::GenericNode::addIncomingEdge</a></div><div class="ttdeci">bool addIncomingEdge(EdgeType *inEdge)</div><div class="ttdoc">Add incoming and outgoing edges. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00275">GenericGraph.h:275</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a49fd453200fcf98b4e13e3f630774401"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">SVF::SVFVar::InEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy InEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00079">SVFVariables.h:79</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a588cc9ab65fef48ab0f2c67b2d3cf69d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a588cc9ab65fef48ab0f2c67b2d3cf69d">&#9670;&nbsp;</a></span>getKind()</h2>
+<a id="a21a44c7a30e4e3743f6c3186fd7dbe8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a44c7a30e4e3743f6c3186fd7dbe8f">&#9670;&nbsp;</a></span>addOutEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,9 +476,128 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> SVF::SVFVar::getKind </td>
+          <td class="memname">void SVF::SVFVar::addOutEdge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *&#160;</td>
+          <td class="paramname"><em>outEdge</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00245">245</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    {</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c">GNodeK</a> kind = outEdge-&gt;getEdgeKind();</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <a class="code" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a>[kind].insert(outEdge);</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <a class="code" href="classSVF_1_1GenericNode.html#ae74283fbc788665296a69e56f334557b">addOutgoingEdge</a>(outEdge);</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div><div class="ttc" id="classSVF_1_1GenericNode_html_a363b90ab02cce2ebc3ede8e5b7cc141c"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c">SVF::GenericNode::GNodeK</a></div><div class="ttdeci">s32_t GNodeK</div><div class="ttdoc">Edge kind. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00135">GenericGraph.h:135</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a08ef88f516402ce512eb3cb7dab9271d"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">SVF::SVFVar::OutEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy OutEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00080">SVFVariables.h:80</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericNode_html_ae74283fbc788665296a69e56f334557b"><div class="ttname"><a href="classSVF_1_1GenericNode.html#ae74283fbc788665296a69e56f334557b">SVF::GenericNode::addOutgoingEdge</a></div><div class="ttdeci">bool addOutgoingEdge(EdgeType *outEdge)</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00279">GenericGraph.h:279</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa34b2230655db9c4195e44e1c437bbc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa34b2230655db9c4195e44e1c437bbc6">&#9670;&nbsp;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SVFVar::dump </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump to console for debugging. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00107">107</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        {</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#a85ab6b592fefc45a0674d3295e01638f">outs</a>() &lt;&lt; this-&gt;<a class="code" href="classSVF_1_1SVFVar.html#ada932ef2ae0a3e712174df479c35b0dd">toString</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div><div class="ttc" id="classSVF_1_1SVFVar_html_ada932ef2ae0a3e712174df479c35b0dd"><div class="ttname"><a href="classSVF_1_1SVFVar.html#ada932ef2ae0a3e712174df479c35b0dd">SVF::SVFVar::toString</a></div><div class="ttdeci">virtual const std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8cpp_source.html#l00100">SVFVariables.cpp:100</a></div></div>
+<div class="ttc" id="namespaceSVF_1_1SVFUtil_html_a85ab6b592fefc45a0674d3295e01638f"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a85ab6b592fefc45a0674d3295e01638f">SVF::SVFUtil::outs</a></div><div class="ttdeci">raw_ostream &amp; outs()</div><div class="ttdoc">Overwrite llvm::outs() </div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00049">SVFUtil.h:49</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a53439a493963d16e5a1b5ed36ab6d33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53439a493963d16e5a1b5ed36ab6d33e">&#9670;&nbsp;</a></span>getFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a>* SVF::SVFVar::getFunction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the function that this <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> resides in. Return nullptr if it is a global or constantexpr node. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00146">146</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>)</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a>* inst = SVFUtil::dyn_cast&lt;Instruction&gt;(<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>))</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">return</span> inst-&gt;getParent()-&gt;getParent();</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801">Argument</a>* arg = SVFUtil::dyn_cast&lt;Argument&gt;(<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>))</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keywordflow">return</span> arg-&gt;getParent();</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a>* fun = SVFUtil::dyn_cast&lt;Function&gt;(<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>))</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <span class="keywordflow">return</span> fun;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div><div class="ttc" id="namespaceSVF_html_a5faee14fa1dd41447bc73ac365fe33c1"><div class="ttname"><a href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">SVF::Function</a></div><div class="ttdeci">llvm::Function Function</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00076">BasicTypes.h:76</a></div></div>
+<div class="ttc" id="namespaceSVF_html_a7875172ff434b2210eea7cecfbbd959e"><div class="ttname"><a href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">SVF::Instruction</a></div><div class="ttdeci">llvm::Instruction Instruction</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00079">BasicTypes.h:79</a></div></div>
+<div class="ttc" id="namespaceSVF_html_a58cdfbc4160cae08745b67844ac29801"><div class="ttname"><a href="namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801">SVF::Argument</a></div><div class="ttdeci">llvm::Argument Argument</div><div class="ttdoc">LLVM Aliases and constants. </div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00122">BasicTypes.h:122</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a7deb494ac20ed56fca31a4f1fd92deea"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">SVF::SVFVar::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">value of this SVFIR node </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00078">SVFVariables.h:78</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0deeb2f08b7681c63ad91a04a4b4c6c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0deeb2f08b7681c63ad91a04a4b4c6c9">&#9670;&nbsp;</a></span>getIncomingEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSVF_1_1SVFStmt.html#af02857ff13e61f81d332d83eb376bdb4">SVFStmt::PAGEdgeSetTy</a>&amp; SVF::SVFVar::getIncomingEdges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get incoming <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00161">161</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>[kind];</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a49fd453200fcf98b4e13e3f630774401"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">SVF::SVFVar::InEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy InEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00079">SVFVariables.h:79</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab137b1def56c6539b5048c84dfd92c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab137b1def56c6539b5048c84dfd92c7b">&#9670;&nbsp;</a></span>getIncomingEdgesBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SVFStmt::PAGEdgeSetTy::iterator SVF::SVFVar::getIncomingEdgesBegin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -301,8 +608,170 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00110">110</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                 {</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#a4cac4d2826dc40b75d3972808d3dda76">kind</a>;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a4cac4d2826dc40b75d3972808d3dda76"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a4cac4d2826dc40b75d3972808d3dda76">SVF::SVFVar::kind</a></div><div class="ttdeci">u32_t kind</div><div class="ttdoc">The type of this symbol/variable. </div><div class="ttdef"><b>Definition:</b> <a href="SVFSymbols_8h_source.html#l00067">SVFSymbols.h:67</a></div></div>
+<p>Get incoming <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> iterator. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00194">194</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    {</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        SVFStmt::PAGKindToEdgeSetMapTy::const_iterator it = <a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>.find(kind);</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>(it!=<a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>.end() &amp;&amp; <span class="stringliteral">&quot;The node does not have such kind of edge&quot;</span>);</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">return</span> it-&gt;second.begin();</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div><div class="ttc" id="util_8h_html_a07d17d6d5d1074c0969bc5d3c3d1d84a"><div class="ttname"><a href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a></div><div class="ttdeci">#define assert(ex)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00141">util.h:141</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a49fd453200fcf98b4e13e3f630774401"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">SVF::SVFVar::InEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy InEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00079">SVFVariables.h:79</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab6cfd409bdb445cc1a7e50ed958b7d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cfd409bdb445cc1a7e50ed958b7d25">&#9670;&nbsp;</a></span>getIncomingEdgesEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SVFStmt::PAGEdgeSetTy::iterator SVF::SVFVar::getIncomingEdgesEnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get incoming <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> iterator. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00202">202</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        SVFStmt::PAGKindToEdgeSetMapTy::const_iterator it = <a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>.find(kind);</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>(it!=<a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>.end() &amp;&amp; <span class="stringliteral">&quot;The node does not have such kind of edge&quot;</span>);</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> it-&gt;second.end();</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div><div class="ttc" id="util_8h_html_a07d17d6d5d1074c0969bc5d3c3d1d84a"><div class="ttname"><a href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a></div><div class="ttdeci">#define assert(ex)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00141">util.h:141</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a49fd453200fcf98b4e13e3f630774401"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">SVF::SVFVar::InEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy InEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00079">SVFVariables.h:79</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af41e3da7f7d6918f58785446d715fec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af41e3da7f7d6918f58785446d715fec6">&#9670;&nbsp;</a></span>getOutgoingEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSVF_1_1SVFStmt.html#af02857ff13e61f81d332d83eb376bdb4">SVFStmt::PAGEdgeSetTy</a>&amp; SVF::SVFVar::getOutgoingEdges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get outgoing <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00167">167</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    {</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a>[kind];</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a08ef88f516402ce512eb3cb7dab9271d"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">SVF::SVFVar::OutEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy OutEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00080">SVFVariables.h:80</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adb1f35a6f8db19c48cf7fd6c8f4a8ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb1f35a6f8db19c48cf7fd6c8f4a8ff3">&#9670;&nbsp;</a></span>getOutgoingEdgesBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SVFStmt::PAGEdgeSetTy::iterator SVF::SVFVar::getOutgoingEdgesBegin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get outgoing <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> iterator. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00220">220</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        SVFStmt::PAGKindToEdgeSetMapTy::const_iterator it = <a class="code" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a>.find(kind);</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>(it!=<a class="code" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a>.end() &amp;&amp; <span class="stringliteral">&quot;The node does not have such kind of edge&quot;</span>);</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> it-&gt;second.begin();</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a08ef88f516402ce512eb3cb7dab9271d"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">SVF::SVFVar::OutEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy OutEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00080">SVFVariables.h:80</a></div></div>
+<div class="ttc" id="util_8h_html_a07d17d6d5d1074c0969bc5d3c3d1d84a"><div class="ttname"><a href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a></div><div class="ttdeci">#define assert(ex)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00141">util.h:141</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adec782d2f9d055b0dbcb56f511e75c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec782d2f9d055b0dbcb56f511e75c24">&#9670;&nbsp;</a></span>getOutgoingEdgesEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SVFStmt::PAGEdgeSetTy::iterator SVF::SVFVar::getOutgoingEdgesEnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get outgoing <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> iterator. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00228">228</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    {</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        SVFStmt::PAGKindToEdgeSetMapTy::const_iterator it = <a class="code" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a>.find(kind);</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>(it!=<a class="code" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a>.end() &amp;&amp; <span class="stringliteral">&quot;The node does not have such kind of edge&quot;</span>);</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">return</span> it-&gt;second.end();</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a08ef88f516402ce512eb3cb7dab9271d"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">SVF::SVFVar::OutEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy OutEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00080">SVFVariables.h:80</a></div></div>
+<div class="ttc" id="util_8h_html_a07d17d6d5d1074c0969bc5d3c3d1d84a"><div class="ttname"><a href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a></div><div class="ttdeci">#define assert(ex)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00141">util.h:141</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adaaf24b8b6ec06476cea112533c24066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaf24b8b6ec06476cea112533c24066">&#9670;&nbsp;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a>* SVF::SVFVar::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return type of the value. </p>
+
+<p>Reimplemented in <a class="el" href="classSVF_1_1GepObjPN.html#a685d6a3464890ba08d8d018ce2e8e3ff">SVF::GepObjPN</a>, <a class="el" href="classSVF_1_1GepValPN.html#aae597b40c984a5a0226d630f7564cefb">SVF::GepValPN</a>, and <a class="el" href="classSVF_1_1ObjPN.html#ab414eff6a3057b570109081a93fa6539">SVF::ObjPN</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00103">103</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>)</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>-&gt;getType();</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a7deb494ac20ed56fca31a4f1fd92deea"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">SVF::SVFVar::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">value of this SVFIR node </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00078">SVFVariables.h:78</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -329,15 +798,21 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the reference value to this object. </p>
+<p>Get/has methods of the components. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00080">80</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#aac6145b031ed65c12a3a9b19e8dc1713">refVal</a>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_aac6145b031ed65c12a3a9b19e8dc1713"><div class="ttname"><a href="classSVF_1_1SVFVar.html#aac6145b031ed65c12a3a9b19e8dc1713">SVF::SVFVar::refVal</a></div><div class="ttdeci">const Value * refVal</div><div class="ttdoc">The unique value of this symbol/variable. </div><div class="ttdef"><b>Definition:</b> <a href="SVFSymbols_8h_source.html#l00063">SVFSymbols.h:63</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00094">94</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>((this-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a391e996d695b114530120723da1d003e">getNodeKind</a>() != <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8">DummyValNode</a> &amp;&amp; this-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a391e996d695b114530120723da1d003e">getNodeKind</a>() != <a class="code" href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af">DummyObjNode</a>) &amp;&amp; <span class="stringliteral">&quot;dummy node do not have value!&quot;</span>);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>((<a class="code" href="classSVF_1_1SymbolTableInfo.html#a2fc4bfb83b71a4c14e16168382cb8f5d">SymbolTableInfo::isBlkObjOrConstantObj</a>(this-&gt;<a class="code" href="classSVF_1_1GenericNode.html#ac3e55ef37aefb411ea4c87b1aa3b1895">getId</a>())==<span class="keyword">false</span>) &amp;&amp; <span class="stringliteral">&quot;blackhole and constant obj do not have value&quot;</span>);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a>(<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a> &amp;&amp; <span class="stringliteral">&quot;value is null (GepObjNode whose basenode is a DummyObj?)&quot;</span>);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div><div class="ttc" id="util_8h_html_a07d17d6d5d1074c0969bc5d3c3d1d84a"><div class="ttname"><a href="util_8h.html#a07d17d6d5d1074c0969bc5d3c3d1d84a">assert</a></div><div class="ttdeci">#define assert(ex)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00141">util.h:141</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8">SVF::SVFVar::DummyValNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00069">SVFVariables.h:69</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericNode_html_a391e996d695b114530120723da1d003e"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a391e996d695b114530120723da1d003e">SVF::GenericNode::getNodeKind</a></div><div class="ttdeci">GNodeK getNodeKind() const</div><div class="ttdoc">Get node kind. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00171">GenericGraph.h:171</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af">SVF::SVFVar::DummyObjNode</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00070">SVFVariables.h:70</a></div></div>
+<div class="ttc" id="classSVF_1_1SymbolTableInfo_html_a2fc4bfb83b71a4c14e16168382cb8f5d"><div class="ttname"><a href="classSVF_1_1SymbolTableInfo.html#a2fc4bfb83b71a4c14e16168382cb8f5d">SVF::SymbolTableInfo::isBlkObjOrConstantObj</a></div><div class="ttdeci">static bool isBlkObjOrConstantObj(NodeID id)</div><div class="ttdef"><b>Definition:</b> <a href="SymbolTableInfo_8h_source.html#l00206">SymbolTableInfo.h:206</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericNode_html_ac3e55ef37aefb411ea4c87b1aa3b1895"><div class="ttname"><a href="classSVF_1_1GenericNode.html#ac3e55ef37aefb411ea4c87b1aa3b1895">SVF::GenericNode::getId</a></div><div class="ttdeci">NodeID getId() const</div><div class="ttdoc">Get ID. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00165">GenericGraph.h:165</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a7deb494ac20ed56fca31a4f1fd92deea"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">SVF::SVFVar::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">value of this SVFIR node </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00078">SVFVariables.h:78</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a2a3199f2045fb0ddc543af32b36e45ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a3199f2045fb0ddc543af32b36e45ad">&#9670;&nbsp;</a></span>toString()</h2>
+<a id="a54b2a5ed3ed21e54eaf04182f0338333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b2a5ed3ed21e54eaf04182f0338333">&#9670;&nbsp;</a></span>getValueName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,7 +821,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::string SVF::SVFVar::toString </td>
+          <td class="memname">virtual const std::string SVF::SVFVar::getValueName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -359,13 +834,316 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSVF_1_1VarargSym.html#a525542889addd83b1ac76b2183556ec3">SVF::VarargSym</a>, <a class="el" href="classSVF_1_1RetSym.html#ac40619ae56515972cf0ed92f7def85fd">SVF::RetSym</a>, <a class="el" href="classSVF_1_1IntrinsicSym.html#ab797d2dc6609ee6ae78e0d9b7e9f890e">SVF::IntrinsicSym</a>, <a class="el" href="classSVF_1_1NullPtrSym.html#af77560a02e9474698cd6534c21ecb3d6">SVF::NullPtrSym</a>, <a class="el" href="classSVF_1_1BlkPtrSym.html#a413d54e9008bd895588b6a8e0a6591f6">SVF::BlkPtrSym</a>, <a class="el" href="classSVF_1_1ConstantObjSym.html#a71029ffae79da2591a0ddf3a3c6bc995">SVF::ConstantObjSym</a>, <a class="el" href="classSVF_1_1BlackHoleSym.html#ab22acfc205d4328aa0396c4be67d8cb4">SVF::BlackHoleSym</a>, <a class="el" href="classSVF_1_1ObjSym.html#ac04be8be2707c2ba07266fabfdf81e84">SVF::ObjSym</a>, and <a class="el" href="classSVF_1_1ValSym.html#a53c075cef325dfa9a480e8d2fbcf929b">SVF::ValSym</a>.</p>
+<p>Get name of the LLVM value. </p>
+
+<p>Implemented in <a class="el" href="classSVF_1_1CloneFIObjPN.html#a604e88030c2c32408f4fd99a69b97e6b">SVF::CloneFIObjPN</a>, <a class="el" href="classSVF_1_1CloneGepObjPN.html#ae6640a10e3fc58b057ed94f1d4c774ba">SVF::CloneGepObjPN</a>, <a class="el" href="classSVF_1_1CloneDummyObjPN.html#a2239f9e2aaa61bed50d0c33d3ad8e0ea">SVF::CloneDummyObjPN</a>, <a class="el" href="classSVF_1_1DummyObjPN.html#a3b3dabed91ed32ee99835324108061c7">SVF::DummyObjPN</a>, <a class="el" href="classSVF_1_1DummyValPN.html#ad43ed5282ca6f6cf546e60c37be968c9">SVF::DummyValPN</a>, <a class="el" href="classSVF_1_1VarArgPN.html#aec7ac87f5fff58b24daea998aaf0cc2a">SVF::VarArgPN</a>, <a class="el" href="classSVF_1_1RetPN.html#a48c099d2b441b4cc298166e2c5866c8f">SVF::RetPN</a>, <a class="el" href="classSVF_1_1FIObjPN.html#ae5c2e49f3fa0511b7fa00de2a682f0e1">SVF::FIObjPN</a>, <a class="el" href="classSVF_1_1GepObjPN.html#a498b7ee3cf8d26fa18062f2bae0749c5">SVF::GepObjPN</a>, <a class="el" href="classSVF_1_1GepValPN.html#a2ca8cf54bf67f76db2acd05cf7dcf1d1">SVF::GepValPN</a>, <a class="el" href="classSVF_1_1ObjPN.html#a7500f73cb499a5aa0d828075b179b709">SVF::ObjPN</a>, and <a class="el" href="classSVF_1_1ValPN.html#a6894944b680cfd7a45b1582169517d54">SVF::ValPN</a>.</p>
 
 </div>
 </div>
+<a id="a747b2c92c81d32fcd357e80d2d8fe7cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747b2c92c81d32fcd357e80d2d8fe7cc">&#9670;&nbsp;</a></span>hasIncomingEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::SVFVar::hasIncomingEdges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Has incoming <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00173">173</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        SVFStmt::PAGKindToEdgeSetMapTy::const_iterator it = <a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>.find(kind);</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">if</span> (it != <a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>.end())</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">return</span> (!it-&gt;second.empty());</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a49fd453200fcf98b4e13e3f630774401"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">SVF::SVFVar::InEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy InEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00079">SVFVariables.h:79</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a71e4fd7a1271a17e971ed90044e6da24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71e4fd7a1271a17e971ed90044e6da24">&#9670;&nbsp;</a></span>hasIncomingVariantGepEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::SVFVar::hasIncomingVariantGepEdge </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Has incoming VariantGepEdges. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00183">183</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        SVFStmt::PAGKindToEdgeSetMapTy::const_iterator it = <a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>.find(<a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2">SVFStmt::VariantGep</a>);</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span> (it != <a class="code" href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">InEdgeKindToSetMap</a>.end())</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">return</span> (!it-&gt;second.empty());</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2">SVF::SVFStmt::VariantGep</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a49fd453200fcf98b4e13e3f630774401"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a49fd453200fcf98b4e13e3f630774401">SVF::SVFVar::InEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy InEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00079">SVFVariables.h:79</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9b00f9b5f8ad2422162f4396e2d8fa42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b00f9b5f8ad2422162f4396e2d8fa42">&#9670;&nbsp;</a></span>hasOutgoingEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::SVFVar::hasOutgoingEdges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Has outgoing <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00210">210</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        SVFStmt::PAGKindToEdgeSetMapTy::const_iterator it = <a class="code" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a>.find(kind);</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span> (it != <a class="code" href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">OutEdgeKindToSetMap</a>.end())</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">return</span> (!it-&gt;second.empty());</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a08ef88f516402ce512eb3cb7dab9271d"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a08ef88f516402ce512eb3cb7dab9271d">SVF::SVFVar::OutEdgeKindToSetMap</a></div><div class="ttdeci">SVFStmt::PAGKindToEdgeSetMapTy OutEdgeKindToSetMap</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00080">SVFVariables.h:80</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1ace69053c2c4436fd78d5624bd0086a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ace69053c2c4436fd78d5624bd0086a">&#9670;&nbsp;</a></span>hasValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::SVFVar::hasValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00110">110</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>!=<span class="keyword">nullptr</span>;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a7deb494ac20ed56fca31a4f1fd92deea"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">SVF::SVFVar::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">value of this SVFIR node </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00078">SVFVariables.h:78</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a482652e097c8e7921b4db2e75eb71efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482652e097c8e7921b4db2e75eb71efc">&#9670;&nbsp;</a></span>isAddressTakenPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::SVFVar::isAddressTakenPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether it is an address-taken pointer. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00125">125</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#a307c0f4d90308d5f77977d5635cad65d">isATPointer</a>;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a307c0f4d90308d5f77977d5635cad65d"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a307c0f4d90308d5f77977d5635cad65d">SVF::SVFVar::isATPointer</a></div><div class="ttdeci">bool isATPointer</div><div class="ttdoc">top-level pointer </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00082">SVFVariables.h:82</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab51b134720986c39fce7f033a49df6f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51b134720986c39fce7f033a49df6f0">&#9670;&nbsp;</a></span>isConstantData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::SVFVar::isConstantData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether it is constant data, i.e., "0", "1.001", "str" or llvm's metadata, i.e., metadata !4087 </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00131">131</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1SVFVar.html#a1ace69053c2c4436fd78d5624bd0086a">hasValue</a>())</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1SVFUtil.html#a9e85d445e8b7b205134acd3874bba388">SVFUtil::isConstantData</a>(<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>);</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a1ace69053c2c4436fd78d5624bd0086a"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a1ace69053c2c4436fd78d5624bd0086a">SVF::SVFVar::hasValue</a></div><div class="ttdeci">bool hasValue() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00110">SVFVariables.h:110</a></div></div>
+<div class="ttc" id="namespaceSVF_1_1SVFUtil_html_a9e85d445e8b7b205134acd3874bba388"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a9e85d445e8b7b205134acd3874bba388">SVF::SVFUtil::isConstantData</a></div><div class="ttdeci">bool isConstantData(const Value *val)</div><div class="ttdoc">Return true if the value refers to constant data, e.g., i32 0. </div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00392">LLVMUtil.h:392</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a7deb494ac20ed56fca31a4f1fd92deea"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">SVF::SVFVar::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">value of this SVFIR node </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00078">SVFVariables.h:78</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acf194658d2cbdaf3f26f2af6c325fad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf194658d2cbdaf3f26f2af6c325fad7">&#9670;&nbsp;</a></span>isIsolatedNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVFVar::isIsolatedNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether this is an isoloated node on the <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> graph. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00088">88</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                 {</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1GenericNode.html#afc8b5f86d7795b6a0dfc0687d942d79b">getInEdges</a>().<a class="code" href="cuddInt_8c.html#a5beb39637a978181c7c17714ac96672e">empty</a>() &amp;&amp; <a class="code" href="classSVF_1_1GenericNode.html#a2d9cd758d6f8c5189d9b90b74f43e009">getOutEdges</a>().<a class="code" href="cuddInt_8c.html#a5beb39637a978181c7c17714ac96672e">empty</a>())</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1SVFVar.html#ab51b134720986c39fce7f033a49df6f0">isConstantData</a>())</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a> &amp;&amp; SVFUtil::isa&lt;Function&gt;(<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>))</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1SVFUtil.html#ad2c53be5490882768d51aa894b37cbf1">SVFUtil::isIntrinsicFun</a>(SVFUtil::cast&lt;Function&gt;(<a class="code" href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">value</a>));</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div><div class="ttc" id="classSVF_1_1GenericNode_html_afc8b5f86d7795b6a0dfc0687d942d79b"><div class="ttname"><a href="classSVF_1_1GenericNode.html#afc8b5f86d7795b6a0dfc0687d942d79b">SVF::GenericNode::getInEdges</a></div><div class="ttdeci">const GEdgeSetTy &amp; getInEdges() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00182">GenericGraph.h:182</a></div></div>
+<div class="ttc" id="cuddInt_8c_html_a5beb39637a978181c7c17714ac96672e"><div class="ttname"><a href="cuddInt_8c.html#a5beb39637a978181c7c17714ac96672e">empty</a></div><div class="ttdeci">static DdNode * empty</div><div class="ttdef"><b>Definition:</b> <a href="cuddInt_8c_source.html#l28567">cuddInt.c:28567</a></div></div>
+<div class="ttc" id="namespaceSVF_1_1SVFUtil_html_ad2c53be5490882768d51aa894b37cbf1"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ad2c53be5490882768d51aa894b37cbf1">SVF::SVFUtil::isIntrinsicFun</a></div><div class="ttdeci">bool isIntrinsicFun(const Function *func)</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00167">SVFUtil.h:167</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericNode_html_a2d9cd758d6f8c5189d9b90b74f43e009"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a2d9cd758d6f8c5189d9b90b74f43e009">SVF::GenericNode::getOutEdges</a></div><div class="ttdeci">const GEdgeSetTy &amp; getOutEdges() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00178">GenericGraph.h:178</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_ab51b134720986c39fce7f033a49df6f0"><div class="ttname"><a href="classSVF_1_1SVFVar.html#ab51b134720986c39fce7f033a49df6f0">SVF::SVFVar::isConstantData</a></div><div class="ttdeci">bool isConstantData() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00131">SVFVariables.h:131</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a7deb494ac20ed56fca31a4f1fd92deea"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a7deb494ac20ed56fca31a4f1fd92deea">SVF::SVFVar::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">value of this SVFIR node </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00078">SVFVariables.h:78</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3b61042079a6c9dc395f38925c6a1271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b61042079a6c9dc395f38925c6a1271">&#9670;&nbsp;</a></span>isPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SVF::SVFVar::isPointer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether it is a pointer. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00115">115</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#a60bed99a7fd939873118698b058ccc4a">isTopLevelPtr</a>() || <a class="code" href="classSVF_1_1SVFVar.html#a482652e097c8e7921b4db2e75eb71efc">isAddressTakenPtr</a>();</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_a60bed99a7fd939873118698b058ccc4a"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a60bed99a7fd939873118698b058ccc4a">SVF::SVFVar::isTopLevelPtr</a></div><div class="ttdeci">bool isTopLevelPtr() const</div><div class="ttdoc">Whether it is a top-level pointer. </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00120">SVFVariables.h:120</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFVar_html_a482652e097c8e7921b4db2e75eb71efc"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a482652e097c8e7921b4db2e75eb71efc">SVF::SVFVar::isAddressTakenPtr</a></div><div class="ttdeci">bool isAddressTakenPtr() const</div><div class="ttdoc">Whether it is an address-taken pointer. </div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00125">SVFVariables.h:125</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a60bed99a7fd939873118698b058ccc4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60bed99a7fd939873118698b058ccc4a">&#9670;&nbsp;</a></span>isTopLevelPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::SVFVar::isTopLevelPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether it is a top-level pointer. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00120">120</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#afeb667f2af988479e93a6067c4e6e622">isTLPointer</a>;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFVar_html_afeb667f2af988479e93a6067c4e6e622"><div class="ttname"><a href="classSVF_1_1SVFVar.html#afeb667f2af988479e93a6067c4e6e622">SVF::SVFVar::isTLPointer</a></div><div class="ttdeci">bool isTLPointer</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00081">SVFVariables.h:81</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ada932ef2ae0a3e712174df479c35b0dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada932ef2ae0a3e712174df479c35b0dd">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string SVFVar::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classSVF_1_1CloneFIObjPN.html#aa2b28fe8abd1d131849e95708a640934">SVF::CloneFIObjPN</a>, <a class="el" href="classSVF_1_1CloneGepObjPN.html#a77863cea018e2489e7cb05cb38cae654">SVF::CloneGepObjPN</a>, <a class="el" href="classSVF_1_1CloneDummyObjPN.html#a30dc38493f8d078b58e684f62a1834e7">SVF::CloneDummyObjPN</a>, <a class="el" href="classSVF_1_1DummyObjPN.html#a1f355f6eeeaaba782d24ba3db48adea4">SVF::DummyObjPN</a>, <a class="el" href="classSVF_1_1DummyValPN.html#a4ae5839912059488b0fdd94875cf5df5">SVF::DummyValPN</a>, <a class="el" href="classSVF_1_1VarArgPN.html#a617077176f0ea586a0cf9a4a1034e99d">SVF::VarArgPN</a>, <a class="el" href="classSVF_1_1RetPN.html#a9824061477c142e5dba14af14fa53aa2">SVF::RetPN</a>, <a class="el" href="classSVF_1_1FIObjPN.html#ace2095db79e359533b0cca78f5c1751d">SVF::FIObjPN</a>, <a class="el" href="classSVF_1_1GepObjPN.html#ab7229c3e69880a6872fddac805bd6ee8">SVF::GepObjPN</a>, <a class="el" href="classSVF_1_1GepValPN.html#ab2423c5ca6f7487d30e2a10e933db946">SVF::GepValPN</a>, <a class="el" href="classSVF_1_1ObjPN.html#aca96a0173b40f7917ebc814a5a0b1372">SVF::ObjPN</a>, and <a class="el" href="classSVF_1_1ValPN.html#a417f15b3dba7f5e36fb5c8ed46dccd8e">SVF::ValPN</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00100">100</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                       {</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    std::string str;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="namespaceSVF.html#a726981481ac082dcda3e4921416b65a0">raw_string_ostream</a> rawstr(str);</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;SVFVar ID: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericNode.html#ac3e55ef37aefb411ea4c87b1aa3b1895">getId</a>();</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div><div class="ttc" id="namespaceSVF_html_a726981481ac082dcda3e4921416b65a0"><div class="ttname"><a href="namespaceSVF.html#a726981481ac082dcda3e4921416b65a0">SVF::raw_string_ostream</a></div><div class="ttdeci">llvm::raw_string_ostream raw_string_ostream</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00100">BasicTypes.h:100</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericNode_html_ac3e55ef37aefb411ea4c87b1aa3b1895"><div class="ttname"><a href="classSVF_1_1GenericNode.html#ac3e55ef37aefb411ea4c87b1aa3b1895">SVF::GenericNode::getId</a></div><div class="ttdeci">NodeID getId() const</div><div class="ttdoc">Get ID. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00165">GenericGraph.h:165</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a76a2dbb3ec38c28cbd28e703e36eda96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76a2dbb3ec38c28cbd28e703e36eda96">&#9670;&nbsp;</a></span>operator<<</h2>
+<a id="a985930fc3a53ae8ff5fcb07d378f354b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985930fc3a53ae8ff5fcb07d378f354b">&#9670;&nbsp;</a></span>operator<<</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +1161,7 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> &amp;&#160;</td>
-          <td class="paramname"><em>var</em>&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -398,15 +1176,15 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Overloading operator &lt;&lt; for printing. </p>
+<p>Overloading operator &lt;&lt; for dumping <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> value. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00103">103</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        o &lt;&lt; var.toString();</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> o;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00260">260</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        o &lt;&lt; node.toString();</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> o;</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a4cac4d2826dc40b75d3972808d3dda76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cac4d2826dc40b75d3972808d3dda76">&#9670;&nbsp;</a></span>kind</h2>
+<a id="a49fd453200fcf98b4e13e3f630774401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49fd453200fcf98b4e13e3f630774401">&#9670;&nbsp;</a></span>InEdgeKindToSetMap</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,24 +1193,22 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> SVF::SVFVar::kind</td>
+          <td class="memname"><a class="el" href="classSVF_1_1SVFStmt.html#a47a67e8aaae7059e353841a40b89e936">SVFStmt::PAGKindToEdgeSetMapTy</a> SVF::SVFVar::InEdgeKindToSetMap</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>The type of this symbol/variable. </p>
-
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00067">67</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00079">79</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
 
 </div>
 </div>
-<a id="aac6145b031ed65c12a3a9b19e8dc1713"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac6145b031ed65c12a3a9b19e8dc1713">&#9670;&nbsp;</a></span>refVal</h2>
+<a id="a307c0f4d90308d5f77977d5635cad65d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307c0f4d90308d5f77977d5635cad65d">&#9670;&nbsp;</a></span>isATPointer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,24 +1217,24 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* SVF::SVFVar::refVal</td>
+          <td class="memname">bool SVF::SVFVar::isATPointer</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>The unique value of this symbol/variable. </p>
+<p>top-level pointer </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00063">63</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00082">82</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
 
 </div>
 </div>
-<a id="ab8684ebab1c5dc41a0eeb24b0f137e49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8684ebab1c5dc41a0eeb24b0f137e49">&#9670;&nbsp;</a></span>symId</h2>
+<a id="afeb667f2af988479e93a6067c4e6e622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb667f2af988479e93a6067c4e6e622">&#9670;&nbsp;</a></span>isTLPointer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,24 +1243,73 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> SVF::SVFVar::symId</td>
+          <td class="memname">bool SVF::SVFVar::isTLPointer</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>The unique id to represent this symbol. </p>
-
-<p class="definition">Definition at line <a class="el" href="SVFSymbols_8h_source.html#l00065">65</a> of file <a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00081">81</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/SVF/SVF/include/MemoryModel/<a class="el" href="SVFSymbols_8h_source.html">SVFSymbols.h</a></li>
+<a id="a08ef88f516402ce512eb3cb7dab9271d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ef88f516402ce512eb3cb7dab9271d">&#9670;&nbsp;</a></span>OutEdgeKindToSetMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSVF_1_1SVFStmt.html#a47a67e8aaae7059e353841a40b89e936">SVFStmt::PAGKindToEdgeSetMapTy</a> SVF::SVFVar::OutEdgeKindToSetMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00080">80</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+
+</div>
+</div>
+<a id="a7deb494ac20ed56fca31a4f1fd92deea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7deb494ac20ed56fca31a4f1fd92deea">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* SVF::SVFVar::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>value of this <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> node </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00078">78</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/runner/work/SVF/SVF/include/MemoryModel/<a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a></li>
+<li>/home/runner/work/SVF/SVF/lib/MemoryModel/<a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

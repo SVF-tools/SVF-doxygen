@@ -65,133 +65,205 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classSVF_1_1SVFStmt-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SVF::SVFStmt Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="SVFIR_8h_source.html">SVFIR.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SVF::SVFStmt:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classSVF_1_1SVFStmt.png" usemap="#SVF::SVFStmt_map" alt=""/>
   <map id="SVF::SVFStmt_map" name="SVF::SVFStmt_map">
-<area href="classSVF_1_1AllocStmt.html" alt="SVF::AllocStmt" shape="rect" coords="117,56,224,80"/>
-<area href="classSVF_1_1BinaryStmt.html" alt="SVF::BinaryStmt" shape="rect" coords="117,112,224,136"/>
-<area href="classSVF_1_1BranchStmt.html" alt="SVF::BranchStmt" shape="rect" coords="117,168,224,192"/>
-<area href="classSVF_1_1CallStmt.html" alt="SVF::CallStmt" shape="rect" coords="117,224,224,248"/>
-<area href="classSVF_1_1CmpStmt.html" alt="SVF::CmpStmt" shape="rect" coords="117,280,224,304"/>
-<area href="classSVF_1_1CopyStmt.html" alt="SVF::CopyStmt" shape="rect" coords="117,336,224,360"/>
-<area href="classSVF_1_1FunRetStmt.html" alt="SVF::FunRetStmt" shape="rect" coords="117,392,224,416"/>
-<area href="classSVF_1_1GepStmt.html" alt="SVF::GepStmt" shape="rect" coords="117,448,224,472"/>
-<area href="classSVF_1_1LoadStmt.html" alt="SVF::LoadStmt" shape="rect" coords="117,504,224,528"/>
-<area href="classSVF_1_1PhiStmt.html" alt="SVF::PhiStmt" shape="rect" coords="117,560,224,584"/>
-<area href="classSVF_1_1StoreStmt.html" alt="SVF::StoreStmt" shape="rect" coords="117,616,224,640"/>
-<area href="classSVF_1_1UnaryStmt.html" alt="SVF::UnaryStmt" shape="rect" coords="117,672,224,696"/>
+<area href="classSVF_1_1GenericEdge.html" alt="SVF::GenericEdge&lt; NodeTy &gt;" shape="rect" coords="0,0,187,24"/>
+<area href="classSVF_1_1AddrPE.html" alt="SVF::AddrPE" shape="rect" coords="197,112,384,136"/>
+<area href="classSVF_1_1BinaryOPPE.html" alt="SVF::BinaryOPPE" shape="rect" coords="197,168,384,192"/>
+<area href="classSVF_1_1CallPE.html" alt="SVF::CallPE" shape="rect" coords="197,224,384,248"/>
+<area href="classSVF_1_1CmpPE.html" alt="SVF::CmpPE" shape="rect" coords="197,280,384,304"/>
+<area href="classSVF_1_1CopyPE.html" alt="SVF::CopyPE" shape="rect" coords="197,336,384,360"/>
+<area href="classSVF_1_1GepPE.html" alt="SVF::GepPE" shape="rect" coords="197,392,384,416"/>
+<area href="classSVF_1_1LoadPE.html" alt="SVF::LoadPE" shape="rect" coords="197,448,384,472"/>
+<area href="classSVF_1_1RetPE.html" alt="SVF::RetPE" shape="rect" coords="197,504,384,528"/>
+<area href="classSVF_1_1StorePE.html" alt="SVF::StorePE" shape="rect" coords="197,560,384,584"/>
+<area href="classSVF_1_1UnaryOPPE.html" alt="SVF::UnaryOPPE" shape="rect" coords="197,616,384,640"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a38855244bb9af2407eda6dbd33140487"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487">SVFSTMTK</a> { <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a46f338c32b6d575490c06ee48f53b3bf">Alloc</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ad3469cdfb64f05163b5310b731b221da">Copy</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a6b3cd98eeb47c8475e7ee64480dcdee9">Phi</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487aa0f700b514c431ec5329aec49df56dcc">Store</a>, 
+<tr class="memitem:a0ab8621e75e75f03425c323b3ed62ce9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">PEDGEK</a> { <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197">Addr</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad3469cdfb64f05163b5310b731b221da">Copy</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc">Store</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5">Load</a>, 
 <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a62ac8480c43fcc657c631ec0003b15d5">Load</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a97ca16eba4c5f92e16388f0cdbcfcc00">Call</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a6d968bd70a0184214204aac3329c6221">FunRet</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a20d960c19118d1ed319e0dbea94405e8">Gep</a>, 
+&#160;&#160;<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a97ca16eba4c5f92e16388f0cdbcfcc00">Call</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a8d269a45adf13e69468f0357222ab2af">Ret</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ac2089ffeab3f27354b2094758c805746">NormalGep</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2">VariantGep</a>, 
 <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a610d6662d1814cffbf23db29e7e620c0">Cmp</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487af78eeaf10e5bc6c4d446c030c859c868">Binary</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ac913852e284a7bf1ffc257b11d891326">Unary</a>, 
-<a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ad52703e3ec09b6a4f565e5d82279b6a3">Branch</a>
+&#160;&#160;<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a375b956af2119d7abca8f1995f7701fd">ThreadFork</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a3c3f8883c2d3b50aef6331d5da97ffb0">ThreadJoin</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0">Cmp</a>, 
+<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13">BinaryOp</a>, 
+<br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad2a5e6fe0f2b5fefb53abb9e91c57688">UnaryOp</a>
 <br />
  }</td></tr>
-<tr class="separator:a38855244bb9af2407eda6dbd33140487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a0ab8621e75e75f03425c323b3ed62ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af02857ff13e61f81d332d83eb376bdb4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classSVF_1_1GenericNode.html">GenericNode</a>&lt; <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a>, <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> &gt;::GEdgeSetTy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#af02857ff13e61f81d332d83eb376bdb4">PAGEdgeSetTy</a></td></tr>
+<tr class="separator:af02857ff13e61f81d332d83eb376bdb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ef5ff6adebbbc13e5c8db6e622bc03"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map</a>&lt; <a class="el" href="namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94">EdgeID</a>, <a class="el" href="classSVF_1_1SVFStmt.html#af02857ff13e61f81d332d83eb376bdb4">PAGEdgeSetTy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a79ef5ff6adebbbc13e5c8db6e622bc03">PAGEdgeToSetMapTy</a></td></tr>
+<tr class="separator:a79ef5ff6adebbbc13e5c8db6e622bc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a67e8aaae7059e353841a40b89e936"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classSVF_1_1SVFStmt.html#a79ef5ff6adebbbc13e5c8db6e622bc03">PAGEdgeToSetMapTy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a47a67e8aaae7059e353841a40b89e936">PAGKindToEdgeSetMapTy</a></td></tr>
+<tr class="separator:a47a67e8aaae7059e353841a40b89e936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classSVF_1_1GenericEdge"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classSVF_1_1GenericEdge')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classSVF_1_1GenericEdge.html">SVF::GenericEdge&lt; NodeTy &gt;</a></td></tr>
+<tr class="memitem:aff95460d4b859e657a9198b7c5e5c736 inherit pub_types_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">typedef NodeTy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#aff95460d4b859e657a9198b7c5e5c736">NodeType</a></td></tr>
+<tr class="memdesc:aff95460d4b859e657a9198b7c5e5c736 inherit pub_types_classSVF_1_1GenericEdge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node type.  <a href="classSVF_1_1GenericEdge.html#aff95460d4b859e657a9198b7c5e5c736">More...</a><br /></td></tr>
+<tr class="separator:aff95460d4b859e657a9198b7c5e5c736 inherit pub_types_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8892b73370c32b48621cd1d0cce614 inherit pub_types_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</a></td></tr>
+<tr class="separator:aab8892b73370c32b48621cd1d0cce614 inherit pub_types_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb93c9018c80057672a8ce71615dc0d inherit pub_types_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#a7eb93c9018c80057672a8ce71615dc0d">GEdgeKind</a></td></tr>
+<tr class="separator:a7eb93c9018c80057672a8ce71615dc0d inherit pub_types_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69accb303ee67733e065350e4452cbca inherit pub_types_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structSVF_1_1GenericEdge_1_1equalGEdge.html">SVF::GenericEdge::equalGEdge</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#a69accb303ee67733e065350e4452cbca">equalGEdge</a></td></tr>
+<tr class="memdesc:a69accb303ee67733e065350e4452cbca inherit pub_types_classSVF_1_1GenericEdge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the hash function for std::set (we also can overload operator&lt; to implement this)  <a href="classSVF_1_1GenericEdge.html#a69accb303ee67733e065350e4452cbca">More...</a><br /></td></tr>
+<tr class="separator:a69accb303ee67733e065350e4452cbca inherit pub_types_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad5ab92b5eb294da9eb3422ebb067d301"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#ad5ab92b5eb294da9eb3422ebb067d301">SVFStmt</a> (<a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> k)</td></tr>
-<tr class="separator:ad5ab92b5eb294da9eb3422ebb067d301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47102f72115d41bff899b1b2ffec75b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a47102f72115d41bff899b1b2ffec75b1">SVFStmt</a> (<a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> *s, <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> *d, <a class="el" href="classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</a> k)</td></tr>
+<tr class="memdesc:a47102f72115d41bff899b1b2ffec75b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a47102f72115d41bff899b1b2ffec75b1">More...</a><br /></td></tr>
+<tr class="separator:a47102f72115d41bff899b1b2ffec75b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac79c7e8d390f297002782afb0ba3ff0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#aac79c7e8d390f297002782afb0ba3ff0">~SVFStmt</a> ()</td></tr>
+<tr class="memdesc:aac79c7e8d390f297002782afb0ba3ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#aac79c7e8d390f297002782afb0ba3ff0">More...</a><br /></td></tr>
+<tr class="separator:aac79c7e8d390f297002782afb0ba3ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bb0d687fc61cae1de639c88e472491"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94">EdgeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#af7bb0d687fc61cae1de639c88e472491">getEdgeID</a> () const</td></tr>
+<tr class="memdesc:af7bb0d687fc61cae1de639c88e472491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return Edge ID.  <a href="#af7bb0d687fc61cae1de639c88e472491">More...</a><br /></td></tr>
+<tr class="separator:af7bb0d687fc61cae1de639c88e472491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b6c03af568b70903da6b200ac86c951"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a0b6c03af568b70903da6b200ac86c951">isPTAEdge</a> () const</td></tr>
+<tr class="memdesc:a0b6c03af568b70903da6b200ac86c951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether src and dst nodes are both of pointer type.  <a href="#a0b6c03af568b70903da6b200ac86c951">More...</a><br /></td></tr>
+<tr class="separator:a0b6c03af568b70903da6b200ac86c951"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0b4dbe87e009518f22360c48b0d0c22"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#ad0b4dbe87e009518f22360c48b0d0c22">toString</a> () const</td></tr>
 <tr class="separator:ad0b4dbe87e009518f22360c48b0d0c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66f33c62bac865781c28517db92e3416"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a66f33c62bac865781c28517db92e3416">getKind</a> () const</td></tr>
-<tr class="separator:a66f33c62bac865781c28517db92e3416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a86628ea173dec4934322f5d1caf2e1db"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a86628ea173dec4934322f5d1caf2e1db">getInst</a> () const</td></tr>
+<tr class="memdesc:a86628ea173dec4934322f5d1caf2e1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get/set methods for llvm instruction.  <a href="#a86628ea173dec4934322f5d1caf2e1db">More...</a><br /></td></tr>
+<tr class="separator:a86628ea173dec4934322f5d1caf2e1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24dddb4e346a6e569908e3efe8a6ecc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a24dddb4e346a6e569908e3efe8a6ecc0">setValue</a> (const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *val)</td></tr>
+<tr class="separator:a24dddb4e346a6e569908e3efe8a6ecc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ee8b43a3a4999eb112a197d1a9f882"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a65ee8b43a3a4999eb112a197d1a9f882">getValue</a> () const</td></tr>
+<tr class="separator:a65ee8b43a3a4999eb112a197d1a9f882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a852730edf374d18a3fb3985211ed7623"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a852730edf374d18a3fb3985211ed7623">setBB</a> (const <a class="el" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a> *bb)</td></tr>
+<tr class="separator:a852730edf374d18a3fb3985211ed7623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793c53e0b4f9a58099c096f0a0856495"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a793c53e0b4f9a58099c096f0a0856495">getBB</a> () const</td></tr>
+<tr class="separator:a793c53e0b4f9a58099c096f0a0856495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb92a92f5c878576dff26cb38eab8c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#adb92a92f5c878576dff26cb38eab8c8c">setICFGNode</a> (<a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *node)</td></tr>
+<tr class="separator:adb92a92f5c878576dff26cb38eab8c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa809a57c8cdaaa35dfc3cc0f3b33b52b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#aa809a57c8cdaaa35dfc3cc0f3b33b52b">getICFGNode</a> () const</td></tr>
+<tr class="separator:aa809a57c8cdaaa35dfc3cc0f3b33b52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classSVF_1_1GenericEdge"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSVF_1_1GenericEdge')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSVF_1_1GenericEdge.html">SVF::GenericEdge&lt; NodeTy &gt;</a></td></tr>
+<tr class="memitem:a6764973569c281d483afab17a75cb4dc inherit pub_methods_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#a6764973569c281d483afab17a75cb4dc">GenericEdge</a> (NodeTy *s, NodeTy *d, <a class="el" href="classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</a> k)</td></tr>
+<tr class="memdesc:a6764973569c281d483afab17a75cb4dc inherit pub_methods_classSVF_1_1GenericEdge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classSVF_1_1GenericEdge.html#a6764973569c281d483afab17a75cb4dc">More...</a><br /></td></tr>
+<tr class="separator:a6764973569c281d483afab17a75cb4dc inherit pub_methods_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548daea0cac6491de91d4840b7297741 inherit pub_methods_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#a548daea0cac6491de91d4840b7297741">~GenericEdge</a> ()</td></tr>
+<tr class="memdesc:a548daea0cac6491de91d4840b7297741 inherit pub_methods_classSVF_1_1GenericEdge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classSVF_1_1GenericEdge.html#a548daea0cac6491de91d4840b7297741">More...</a><br /></td></tr>
+<tr class="separator:a548daea0cac6491de91d4840b7297741 inherit pub_methods_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6792506a0150a9400d635eceab7f9e7 inherit pub_methods_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#ae6792506a0150a9400d635eceab7f9e7">getSrcID</a> () const</td></tr>
+<tr class="memdesc:ae6792506a0150a9400d635eceab7f9e7 inherit pub_methods_classSVF_1_1GenericEdge"><td class="mdescLeft">&#160;</td><td class="mdescRight">get methods of the components  <a href="classSVF_1_1GenericEdge.html#ae6792506a0150a9400d635eceab7f9e7">More...</a><br /></td></tr>
+<tr class="separator:ae6792506a0150a9400d635eceab7f9e7 inherit pub_methods_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9edb45e74ae675d9da82f5acf02d56e inherit pub_methods_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">getDstID</a> () const</td></tr>
+<tr class="separator:ad9edb45e74ae675d9da82f5acf02d56e inherit pub_methods_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe8525c542def8162b094c169a01993b inherit pub_methods_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericEdge.html#a7eb93c9018c80057672a8ce71615dc0d">GEdgeKind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">getEdgeKind</a> () const</td></tr>
+<tr class="separator:abe8525c542def8162b094c169a01993b inherit pub_methods_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47ca533c415841ef75456cbad439589 inherit pub_methods_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericEdge.html#aff95460d4b859e657a9198b7c5e5c736">NodeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#ab47ca533c415841ef75456cbad439589">getSrcNode</a> () const</td></tr>
+<tr class="separator:ab47ca533c415841ef75456cbad439589 inherit pub_methods_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa31a2c8479e831b36ce2e2582ceb86 inherit pub_methods_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1GenericEdge.html#aff95460d4b859e657a9198b7c5e5c736">NodeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">getDstNode</a> () const</td></tr>
+<tr class="separator:aeaa31a2c8479e831b36ce2e2582ceb86 inherit pub_methods_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b2086dcebb60bc86bca0fb94f49fca inherit pub_methods_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#a88b2086dcebb60bc86bca0fb94f49fca">operator==</a> (const <a class="el" href="classSVF_1_1GenericEdge.html">GenericEdge</a>&lt; <a class="el" href="classSVF_1_1GenericEdge.html#aff95460d4b859e657a9198b7c5e5c736">NodeType</a> &gt; *rhs) const</td></tr>
+<tr class="separator:a88b2086dcebb60bc86bca0fb94f49fca inherit pub_methods_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4513c6e66b46c36219ba6d7403f3eb00"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a4513c6e66b46c36219ba6d7403f3eb00">makeEdgeFlagWithCallInst</a> (<a class="el" href="classSVF_1_1GenericEdge.html#a7eb93c9018c80057672a8ce71615dc0d">GEdgeKind</a> k, const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *cs)</td></tr>
+<tr class="memdesc:a4513c6e66b46c36219ba6d7403f3eb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the unique edgeFlag value from edge kind and call site Instruction.  <a href="#a4513c6e66b46c36219ba6d7403f3eb00">More...</a><br /></td></tr>
+<tr class="separator:a4513c6e66b46c36219ba6d7403f3eb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad61722f886afaaee722ac55a4eed4d18"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#ad61722f886afaaee722ac55a4eed4d18">makeEdgeFlagWithStoreInst</a> (<a class="el" href="classSVF_1_1GenericEdge.html#a7eb93c9018c80057672a8ce71615dc0d">GEdgeKind</a> k, const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *store)</td></tr>
+<tr class="separator:ad61722f886afaaee722ac55a4eed4d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ac517a3166a3afe45d04480534ac3bb50"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#ac517a3166a3afe45d04480534ac3bb50">classof</a> (const <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *)</td></tr>
 <tr class="memdesc:ac517a3166a3afe45d04480534ac3bb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">ClassOf.  <a href="#ac517a3166a3afe45d04480534ac3bb50">More...</a><br /></td></tr>
 <tr class="separator:ac517a3166a3afe45d04480534ac3bb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00339663741d9f581d2f3ecae5a3e7e3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a00339663741d9f581d2f3ecae5a3e7e3">classof</a> (const <a class="el" href="namespaceSVF.html#ab502ff5e204678640c1081d104f60971">GenericPAGEdgeTy</a> *edge)</td></tr>
+<tr class="separator:a00339663741d9f581d2f3ecae5a3e7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aa306e817648ab5def47e83473e99b3d3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceSVF.html#a2db29836a72e8d86e9baa6d8d55d2978">Size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#aa306e817648ab5def47e83473e99b3d3">totalEdgeNum</a></td></tr>
+<tr class="memdesc:aa306e817648ab5def47e83473e99b3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total edge number.  <a href="#aa306e817648ab5def47e83473e99b3d3">More...</a><br /></td></tr>
+<tr class="separator:aa306e817648ab5def47e83473e99b3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a5a3db6b1335b4adc55b961a6f480f228"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map</a>&lt; const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *, <a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a5a3db6b1335b4adc55b961a6f480f228">Inst2LabelMap</a></td></tr>
+<tr class="separator:a5a3db6b1335b4adc55b961a6f480f228"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ac3f7aee85f1753431021f97c36dbe3aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#ac3f7aee85f1753431021f97c36dbe3aa">kind</a></td></tr>
-<tr class="separator:ac3f7aee85f1753431021f97c36dbe3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a689f62af301bd6ac09d7019aba1c17"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">value</a></td></tr>
+<tr class="memdesc:a6a689f62af301bd6ac09d7019aba1c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLVM value.  <a href="#a6a689f62af301bd6ac09d7019aba1c17">More...</a><br /></td></tr>
+<tr class="separator:a6a689f62af301bd6ac09d7019aba1c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877c7137875233e147faeb1198243f36"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a877c7137875233e147faeb1198243f36">basicBlock</a></td></tr>
+<tr class="memdesc:a877c7137875233e147faeb1198243f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLVM BasicBlock.  <a href="#a877c7137875233e147faeb1198243f36">More...</a><br /></td></tr>
+<tr class="separator:a877c7137875233e147faeb1198243f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50046a1500ec6e2819ef55162e70cc71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a50046a1500ec6e2819ef55162e70cc71">icfgNode</a></td></tr>
+<tr class="memdesc:a50046a1500ec6e2819ef55162e70cc71"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a>.  <a href="#a50046a1500ec6e2819ef55162e70cc71">More...</a><br /></td></tr>
+<tr class="separator:a50046a1500ec6e2819ef55162e70cc71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593cc8136f2138a518476405e667e060"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94">EdgeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a593cc8136f2138a518476405e667e060">edgeId</a></td></tr>
+<tr class="memdesc:a593cc8136f2138a518476405e667e060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edge ID.  <a href="#a593cc8136f2138a518476405e667e060">More...</a><br /></td></tr>
+<tr class="separator:a593cc8136f2138a518476405e667e060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:abb83549118bcd7216a053d82f7180d1c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSVF_1_1SVFStmt.html#a5a3db6b1335b4adc55b961a6f480f228">Inst2LabelMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c">inst2LabelMap</a></td></tr>
+<tr class="memdesc:abb83549118bcd7216a053d82f7180d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call site Instruction to label map.  <a href="#abb83549118bcd7216a053d82f7180d1c">More...</a><br /></td></tr>
+<tr class="separator:abb83549118bcd7216a053d82f7180d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24227d7f1dd472f47bf94cb5db8505c4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a24227d7f1dd472f47bf94cb5db8505c4">callEdgeLabelCounter</a> = 0</td></tr>
+<tr class="memdesc:a24227d7f1dd472f47bf94cb5db8505c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call site Instruction counter.  <a href="#a24227d7f1dd472f47bf94cb5db8505c4">More...</a><br /></td></tr>
+<tr class="separator:a24227d7f1dd472f47bf94cb5db8505c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b7e0d8666e37c23dc2c7d0fc931f27"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#a53b7e0d8666e37c23dc2c7d0fc931f27">storeEdgeLabelCounter</a> = 0</td></tr>
+<tr class="memdesc:a53b7e0d8666e37c23dc2c7d0fc931f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store Instruction counter.  <a href="#a53b7e0d8666e37c23dc2c7d0fc931f27">More...</a><br /></td></tr>
+<tr class="separator:a53b7e0d8666e37c23dc2c7d0fc931f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:acaeee54cc5b1a48db172fafafbb58874"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71">raw_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#acaeee54cc5b1a48db172fafafbb58874">operator&lt;&lt;</a> (<a class="el" href="namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71">raw_ostream</a> &amp;o, const <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> &amp;stmt)</td></tr>
-<tr class="memdesc:acaeee54cc5b1a48db172fafafbb58874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloading operator &lt;&lt; for printing.  <a href="#acaeee54cc5b1a48db172fafafbb58874">More...</a><br /></td></tr>
-<tr class="separator:acaeee54cc5b1a48db172fafafbb58874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad75e4c84f7d37824eb096aacca930ead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71">raw_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFStmt.html#ad75e4c84f7d37824eb096aacca930ead">operator&lt;&lt;</a> (<a class="el" href="namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71">raw_ostream</a> &amp;o, const <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> &amp;edge)</td></tr>
+<tr class="memdesc:ad75e4c84f7d37824eb096aacca930ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloading operator &lt;&lt; for dumping <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> value.  <a href="#ad75e4c84f7d37824eb096aacca930ead">More...</a><br /></td></tr>
+<tr class="separator:ad75e4c84f7d37824eb096aacca930ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_static_attribs_classSVF_1_1GenericEdge"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classSVF_1_1GenericEdge')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classSVF_1_1GenericEdge.html">SVF::GenericEdge&lt; NodeTy &gt;</a></td></tr>
+<tr class="memitem:af1c2fd4b5ef1d7b7605572bf2489c298 inherit pro_static_attribs_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298">EdgeKindMaskBits</a> = 8</td></tr>
+<tr class="memdesc:af1c2fd4b5ef1d7b7605572bf2489c298 inherit pro_static_attribs_classSVF_1_1GenericEdge"><td class="mdescLeft">&#160;</td><td class="mdescRight">We use the lower 8 bits to denote edge kind.  <a href="classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298">More...</a><br /></td></tr>
+<tr class="separator:af1c2fd4b5ef1d7b7605572bf2489c298 inherit pro_static_attribs_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93dec4c27088242a4b1b6aa82cea46b9 inherit pro_static_attribs_classSVF_1_1GenericEdge"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1GenericEdge.html#a93dec4c27088242a4b1b6aa82cea46b9">EdgeKindMask</a> = (~0ULL) &gt;&gt; (64 - EdgeKindMaskBits)</td></tr>
+<tr class="separator:a93dec4c27088242a4b1b6aa82cea46b9 inherit pro_static_attribs_classSVF_1_1GenericEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SVFIR_8h_source.html#l00040">40</a> of file <a class="el" href="SVFIR_8h_source.html">SVFIR.h</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a38855244bb9af2407eda6dbd33140487"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38855244bb9af2407eda6dbd33140487">&#9670;&nbsp;</a></span>SVFSTMTK</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487">SVF::SVFStmt::SVFSTMTK</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487a46f338c32b6d575490c06ee48f53b3bf"></a>Alloc&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487ad3469cdfb64f05163b5310b731b221da"></a>Copy&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487a6b3cd98eeb47c8475e7ee64480dcdee9"></a>Phi&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487aa0f700b514c431ec5329aec49df56dcc"></a>Store&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487a62ac8480c43fcc657c631ec0003b15d5"></a>Load&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487a97ca16eba4c5f92e16388f0cdbcfcc00"></a>Call&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487a6d968bd70a0184214204aac3329c6221"></a>FunRet&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487a20d960c19118d1ed319e0dbea94405e8"></a>Gep&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487a610d6662d1814cffbf23db29e7e620c0"></a>Cmp&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487af78eeaf10e5bc6c4d446c030c859c868"></a>Binary&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487ac913852e284a7bf1ffc257b11d891326"></a>Unary&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38855244bb9af2407eda6dbd33140487ad52703e3ec09b6a4f565e5d82279b6a3"></a>Branch&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="SVFIR_8h_source.html#l00043">43</a> of file <a class="el" href="SVFIR_8h_source.html">SVFIR.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a46f338c32b6d575490c06ee48f53b3bf">Alloc</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ad3469cdfb64f05163b5310b731b221da">Copy</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a6b3cd98eeb47c8475e7ee64480dcdee9">Phi</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487aa0f700b514c431ec5329aec49df56dcc">Store</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a62ac8480c43fcc657c631ec0003b15d5">Load</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a97ca16eba4c5f92e16388f0cdbcfcc00">Call</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a6d968bd70a0184214204aac3329c6221">FunRet</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a20d960c19118d1ed319e0dbea94405e8">Gep</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a610d6662d1814cffbf23db29e7e620c0">Cmp</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487af78eeaf10e5bc6c4d446c030c859c868">Binary</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ac913852e284a7bf1ffc257b11d891326">Unary</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ad52703e3ec09b6a4f565e5d82279b6a3">Branch</a></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487ad52703e3ec09b6a4f565e5d82279b6a3"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ad52703e3ec09b6a4f565e5d82279b6a3">SVF::SVFStmt::Branch</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487ac913852e284a7bf1ffc257b11d891326"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ac913852e284a7bf1ffc257b11d891326">SVF::SVFStmt::Unary</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487ad3469cdfb64f05163b5310b731b221da"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487ad3469cdfb64f05163b5310b731b221da">SVF::SVFStmt::Copy</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487af78eeaf10e5bc6c4d446c030c859c868"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487af78eeaf10e5bc6c4d446c030c859c868">SVF::SVFStmt::Binary</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487a46f338c32b6d575490c06ee48f53b3bf"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a46f338c32b6d575490c06ee48f53b3bf">SVF::SVFStmt::Alloc</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487a6d968bd70a0184214204aac3329c6221"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a6d968bd70a0184214204aac3329c6221">SVF::SVFStmt::FunRet</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487aa0f700b514c431ec5329aec49df56dcc"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487aa0f700b514c431ec5329aec49df56dcc">SVF::SVFStmt::Store</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487a97ca16eba4c5f92e16388f0cdbcfcc00"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a97ca16eba4c5f92e16388f0cdbcfcc00">SVF::SVFStmt::Call</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487a610d6662d1814cffbf23db29e7e620c0"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a610d6662d1814cffbf23db29e7e620c0">SVF::SVFStmt::Cmp</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487a20d960c19118d1ed319e0dbea94405e8"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a20d960c19118d1ed319e0dbea94405e8">SVF::SVFStmt::Gep</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487a6b3cd98eeb47c8475e7ee64480dcdee9"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a6b3cd98eeb47c8475e7ee64480dcdee9">SVF::SVFStmt::Phi</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-<div class="ttc" id="classSVF_1_1SVFStmt_html_a38855244bb9af2407eda6dbd33140487a62ac8480c43fcc657c631ec0003b15d5"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a38855244bb9af2407eda6dbd33140487a62ac8480c43fcc657c631ec0003b15d5">SVF::SVFStmt::Load</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00045">SVFIR.h:45</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad5ab92b5eb294da9eb3422ebb067d301"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5ab92b5eb294da9eb3422ebb067d301">&#9670;&nbsp;</a></span>SVFStmt()</h2>
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00047">47</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a5a3db6b1335b4adc55b961a6f480f228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a3db6b1335b4adc55b961a6f480f228">&#9670;&nbsp;</a></span>Inst2LabelMap</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,10 +272,175 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SVF::SVFStmt::SVFStmt </td>
+          <td class="memname">typedef <a class="el" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map</a>&lt;const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a>*, <a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>&gt; <a class="el" href="classSVF_1_1SVFStmt.html#a5a3db6b1335b4adc55b961a6f480f228">SVF::SVFStmt::Inst2LabelMap</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00174">174</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="af02857ff13e61f81d332d83eb376bdb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af02857ff13e61f81d332d83eb376bdb4">&#9670;&nbsp;</a></span>PAGEdgeSetTy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classSVF_1_1GenericNode.html">GenericNode</a>&lt;<a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a>,<a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a>&gt;::GEdgeSetTy <a class="el" href="classSVF_1_1SVFStmt.html#af02857ff13e61f81d332d83eb376bdb4">SVF::SVFStmt::PAGEdgeSetTy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00169">169</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="a79ef5ff6adebbbc13e5c8db6e622bc03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ef5ff6adebbbc13e5c8db6e622bc03">&#9670;&nbsp;</a></span>PAGEdgeToSetMapTy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map</a>&lt;<a class="el" href="namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94">EdgeID</a>, <a class="el" href="classSVF_1_1SVFStmt.html#af02857ff13e61f81d332d83eb376bdb4">PAGEdgeSetTy</a>&gt; <a class="el" href="classSVF_1_1SVFStmt.html#a79ef5ff6adebbbc13e5c8db6e622bc03">SVF::SVFStmt::PAGEdgeToSetMapTy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00170">170</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="a47a67e8aaae7059e353841a40b89e936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a67e8aaae7059e353841a40b89e936">&#9670;&nbsp;</a></span>PAGKindToEdgeSetMapTy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classSVF_1_1SVFStmt.html#a79ef5ff6adebbbc13e5c8db6e622bc03">PAGEdgeToSetMapTy</a> <a class="el" href="classSVF_1_1SVFStmt.html#a47a67e8aaae7059e353841a40b89e936">SVF::SVFStmt::PAGKindToEdgeSetMapTy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00171">171</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a0ab8621e75e75f03425c323b3ed62ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab8621e75e75f03425c323b3ed62ce9">&#9670;&nbsp;</a></span>PEDGEK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVF::SVFStmt::PEDGEK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Thirteen kinds of <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> edges Gep represents offset edge for field sensitivity ThreadFork/ThreadJoin is to model parameter passings between thread spawners and spawnees. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197"></a>Addr&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9ad3469cdfb64f05163b5310b731b221da"></a>Copy&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc"></a>Store&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5"></a>Load&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9a97ca16eba4c5f92e16388f0cdbcfcc00"></a>Call&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9a8d269a45adf13e69468f0357222ab2af"></a>Ret&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9ac2089ffeab3f27354b2094758c805746"></a>NormalGep&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2"></a>VariantGep&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9a375b956af2119d7abca8f1995f7701fd"></a>ThreadFork&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9a3c3f8883c2d3b50aef6331d5da97ffb0"></a>ThreadJoin&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0"></a>Cmp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13"></a>BinaryOp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0ab8621e75e75f03425c323b3ed62ce9ad2a5e6fe0f2b5fefb53abb9e91c57688"></a>UnaryOp&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00054">54</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197">Addr</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad3469cdfb64f05163b5310b731b221da">Copy</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc">Store</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5">Load</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a97ca16eba4c5f92e16388f0cdbcfcc00">Call</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a8d269a45adf13e69468f0357222ab2af">Ret</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ac2089ffeab3f27354b2094758c805746">NormalGep</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2">VariantGep</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a375b956af2119d7abca8f1995f7701fd">ThreadFork</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a3c3f8883c2d3b50aef6331d5da97ffb0">ThreadJoin</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0">Cmp</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13">BinaryOp</a>, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad2a5e6fe0f2b5fefb53abb9e91c57688">UnaryOp</a></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9ad2a5e6fe0f2b5fefb53abb9e91c57688"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad2a5e6fe0f2b5fefb53abb9e91c57688">SVF::SVFStmt::UnaryOp</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a97ca16eba4c5f92e16388f0cdbcfcc00"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a97ca16eba4c5f92e16388f0cdbcfcc00">SVF::SVFStmt::Call</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5">SVF::SVFStmt::Load</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0">SVF::SVFStmt::Cmp</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197">SVF::SVFStmt::Addr</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2">SVF::SVFStmt::VariantGep</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9ad3469cdfb64f05163b5310b731b221da"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad3469cdfb64f05163b5310b731b221da">SVF::SVFStmt::Copy</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a8d269a45adf13e69468f0357222ab2af"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a8d269a45adf13e69468f0357222ab2af">SVF::SVFStmt::Ret</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a3c3f8883c2d3b50aef6331d5da97ffb0"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a3c3f8883c2d3b50aef6331d5da97ffb0">SVF::SVFStmt::ThreadJoin</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9ac2089ffeab3f27354b2094758c805746"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ac2089ffeab3f27354b2094758c805746">SVF::SVFStmt::NormalGep</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a375b956af2119d7abca8f1995f7701fd"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a375b956af2119d7abca8f1995f7701fd">SVF::SVFStmt::ThreadFork</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13">SVF::SVFStmt::BinaryOp</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc">SVF::SVFStmt::Store</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a47102f72115d41bff899b1b2ffec75b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47102f72115d41bff899b1b2ffec75b1">&#9670;&nbsp;</a></span>SVFStmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SVFStmt::SVFStmt </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>&#160;</td>
-          <td class="paramname"><em>k</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</a>&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p><a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> constructor </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8cpp_source.html#l00045">45</a> of file <a class="el" href="SVFStatements_8cpp_source.html">SVFStatements.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                                  :</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="namespaceSVF.html#ab502ff5e204678640c1081d104f60971">GenericPAGEdgeTy</a>(s,d,k),<a class="code" href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">value</a>(<span class="keyword">nullptr</span>),<a class="code" href="classSVF_1_1SVFStmt.html#a877c7137875233e147faeb1198243f36">basicBlock</a>(<span class="keyword">nullptr</span>),<a class="code" href="classSVF_1_1SVFStmt.html#a50046a1500ec6e2819ef55162e70cc71">icfgNode</a>(<span class="keyword">nullptr</span>)</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classSVF_1_1SVFStmt.html#a593cc8136f2138a518476405e667e060">edgeId</a> = <a class="code" href="classSVF_1_1SVFIR.html#a37cfa2aa4e7b98ef9dc8179f581a2362">SVFIR::getPAG</a>()-&gt;<a class="code" href="classSVF_1_1GenericGraph.html#a29cab1426b0000bd87c026ab8c9979c0">getTotalEdgeNum</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html#a37cfa2aa4e7b98ef9dc8179f581a2362">SVFIR::getPAG</a>()-&gt;<a class="code" href="classSVF_1_1GenericGraph.html#a2f2bca8219c7d769f6d2937e5cd40d14">incEdgeNum</a>();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div><div class="ttc" id="classSVF_1_1GenericGraph_html_a29cab1426b0000bd87c026ab8c9979c0"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a29cab1426b0000bd87c026ab8c9979c0">SVF::GenericGraph::getTotalEdgeNum</a></div><div class="ttdeci">u32_t getTotalEdgeNum() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00418">GenericGraph.h:418</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFIR_html_a37cfa2aa4e7b98ef9dc8179f581a2362"><div class="ttname"><a href="classSVF_1_1SVFIR.html#a37cfa2aa4e7b98ef9dc8179f581a2362">SVF::SVFIR::getPAG</a></div><div class="ttdeci">static SVFIR * getPAG(bool buildFromFile=false)</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis. ...</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00116">SVFIR.h:116</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a6a689f62af301bd6ac09d7019aba1c17"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">SVF::SVFStmt::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">LLVM value. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00060">SVFStatements.h:60</a></div></div>
+<div class="ttc" id="namespaceSVF_html_ab502ff5e204678640c1081d104f60971"><div class="ttname"><a href="namespaceSVF.html#ab502ff5e204678640c1081d104f60971">SVF::GenericPAGEdgeTy</a></div><div class="ttdeci">GenericEdge&lt; SVFVar &gt; GenericPAGEdgeTy</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00041">SVFStatements.h:41</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a877c7137875233e147faeb1198243f36"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a877c7137875233e147faeb1198243f36">SVF::SVFStmt::basicBlock</a></div><div class="ttdeci">const BasicBlock * basicBlock</div><div class="ttdoc">LLVM BasicBlock. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00061">SVFStatements.h:61</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericGraph_html_a2f2bca8219c7d769f6d2937e5cd40d14"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a2f2bca8219c7d769f6d2937e5cd40d14">SVF::GenericGraph::incEdgeNum</a></div><div class="ttdeci">void incEdgeNum()</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00427">GenericGraph.h:427</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a593cc8136f2138a518476405e667e060"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a593cc8136f2138a518476405e667e060">SVF::SVFStmt::edgeId</a></div><div class="ttdeci">EdgeID edgeId</div><div class="ttdoc">Edge ID. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00063">SVFStatements.h:63</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a50046a1500ec6e2819ef55162e70cc71"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a50046a1500ec6e2819ef55162e70cc71">SVF::SVFStmt::icfgNode</a></div><div class="ttdeci">ICFGNode * icfgNode</div><div class="ttdoc">ICFGNode. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00062">SVFStatements.h:62</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac79c7e8d390f297002782afb0ba3ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac79c7e8d390f297002782afb0ba3ff0">&#9670;&nbsp;</a></span>~SVFStmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SVF::SVFStmt::~SVFStmt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -214,14 +451,15 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFIR_8h_source.html#l00048">48</a> of file <a class="el" href="SVFIR_8h_source.html">SVFIR.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    : <a class="code" href="classSVF_1_1SVFStmt.html#ac3f7aee85f1753431021f97c36dbe3aa">kind</a>(k){</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_ac3f7aee85f1753431021f97c36dbe3aa"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#ac3f7aee85f1753431021f97c36dbe3aa">SVF::SVFStmt::kind</a></div><div class="ttdeci">u32_t kind</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00076">SVFIR.h:76</a></div></div>
-</div><!-- fragment -->
+<p>Destructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00070">70</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac517a3166a3afe45d04480534ac3bb50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac517a3166a3afe45d04480534ac3bb50">&#9670;&nbsp;</a></span>classof()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac517a3166a3afe45d04480534ac3bb50">&#9670;&nbsp;</a></span>classof() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,12 +484,12 @@ Friends</h2></td></tr>
 
 <p>ClassOf. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFIR_8h_source.html#l00054">54</a> of file <a class="el" href="SVFIR_8h_source.html">SVFIR.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00076">76</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
-<a id="a66f33c62bac865781c28517db92e3416"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66f33c62bac865781c28517db92e3416">&#9670;&nbsp;</a></span>getKind()</h2>
+<a id="a00339663741d9f581d2f3ecae5a3e7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00339663741d9f581d2f3ecae5a3e7e3">&#9670;&nbsp;</a></span>classof() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +498,48 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> SVF::SVFStmt::getKind </td>
+          <td class="memname">static bool SVF::SVFStmt::classof </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceSVF.html#ab502ff5e204678640c1081d104f60971">GenericPAGEdgeTy</a> *&#160;</td>
+          <td class="paramname"><em>edge</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00080">80</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197">SVFStmt::Addr</a> ||</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad3469cdfb64f05163b5310b731b221da">SVFStmt::Copy</a> ||</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc">SVFStmt::Store</a> ||</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5">SVFStmt::Load</a> ||</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a97ca16eba4c5f92e16388f0cdbcfcc00">SVFStmt::Call</a> ||</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a8d269a45adf13e69468f0357222ab2af">SVFStmt::Ret</a> ||</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ac2089ffeab3f27354b2094758c805746">SVFStmt::NormalGep</a> ||</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2">SVFStmt::VariantGep</a> ||</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a375b956af2119d7abca8f1995f7701fd">SVFStmt::ThreadFork</a> ||</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a3c3f8883c2d3b50aef6331d5da97ffb0">SVFStmt::ThreadJoin</a> ||</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0">SVFStmt::Cmp</a> ||</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13">SVFStmt::BinaryOp</a> ||</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;               edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad2a5e6fe0f2b5fefb53abb9e91c57688">SVFStmt::UnaryOp</a>;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9ad2a5e6fe0f2b5fefb53abb9e91c57688"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad2a5e6fe0f2b5fefb53abb9e91c57688">SVF::SVFStmt::UnaryOp</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a97ca16eba4c5f92e16388f0cdbcfcc00"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a97ca16eba4c5f92e16388f0cdbcfcc00">SVF::SVFStmt::Call</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5">SVF::SVFStmt::Load</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0">SVF::SVFStmt::Cmp</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197">SVF::SVFStmt::Addr</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3a8902fc2aa68428e271012861a2a2">SVF::SVFStmt::VariantGep</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9ad3469cdfb64f05163b5310b731b221da"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad3469cdfb64f05163b5310b731b221da">SVF::SVFStmt::Copy</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a8d269a45adf13e69468f0357222ab2af"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a8d269a45adf13e69468f0357222ab2af">SVF::SVFStmt::Ret</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a3c3f8883c2d3b50aef6331d5da97ffb0"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a3c3f8883c2d3b50aef6331d5da97ffb0">SVF::SVFStmt::ThreadJoin</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9ac2089ffeab3f27354b2094758c805746"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ac2089ffeab3f27354b2094758c805746">SVF::SVFStmt::NormalGep</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9a375b956af2119d7abca8f1995f7701fd"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a375b956af2119d7abca8f1995f7701fd">SVF::SVFStmt::ThreadFork</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13">SVF::SVFStmt::BinaryOp</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc">SVF::SVFStmt::Store</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00056">SVFStatements.h:56</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a793c53e0b4f9a58099c096f0a0856495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a793c53e0b4f9a58099c096f0a0856495">&#9670;&nbsp;</a></span>getBB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a>* SVF::SVFStmt::getBB </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -273,8 +552,324 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFIR_8h_source.html#l00071">71</a> of file <a class="el" href="SVFIR_8h_source.html">SVFIR.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                 {</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFStmt.html#ac3f7aee85f1753431021f97c36dbe3aa">kind</a>;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_ac3f7aee85f1753431021f97c36dbe3aa"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#ac3f7aee85f1753431021f97c36dbe3aa">SVF::SVFStmt::kind</a></div><div class="ttdeci">u32_t kind</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00076">SVFIR.h:76</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00124">124</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFStmt.html#a877c7137875233e147faeb1198243f36">basicBlock</a>;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a877c7137875233e147faeb1198243f36"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a877c7137875233e147faeb1198243f36">SVF::SVFStmt::basicBlock</a></div><div class="ttdeci">const BasicBlock * basicBlock</div><div class="ttdoc">LLVM BasicBlock. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00061">SVFStatements.h:61</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af7bb0d687fc61cae1de639c88e472491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7bb0d687fc61cae1de639c88e472491">&#9670;&nbsp;</a></span>getEdgeID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94">EdgeID</a> SVF::SVFStmt::getEdgeID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return Edge ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00099">99</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFStmt.html#a593cc8136f2138a518476405e667e060">edgeId</a>;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a593cc8136f2138a518476405e667e060"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a593cc8136f2138a518476405e667e060">SVF::SVFStmt::edgeId</a></div><div class="ttdeci">EdgeID edgeId</div><div class="ttdoc">Edge ID. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00063">SVFStatements.h:63</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa809a57c8cdaaa35dfc3cc0f3b33b52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa809a57c8cdaaa35dfc3cc0f3b33b52b">&#9670;&nbsp;</a></span>getICFGNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* SVF::SVFStmt::getICFGNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00132">132</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFStmt.html#a50046a1500ec6e2819ef55162e70cc71">icfgNode</a>;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a50046a1500ec6e2819ef55162e70cc71"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a50046a1500ec6e2819ef55162e70cc71">SVF::SVFStmt::icfgNode</a></div><div class="ttdeci">ICFGNode * icfgNode</div><div class="ttdoc">ICFGNode. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00062">SVFStatements.h:62</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86628ea173dec4934322f5d1caf2e1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86628ea173dec4934322f5d1caf2e1db">&#9670;&nbsp;</a></span>getInst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a>* SVF::SVFStmt::getInst </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get/set methods for llvm instruction. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00108">108</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1SVFUtil.html#a8182be247907420db00837cef9bcfa70">SVFUtil::dyn_cast</a>&lt;<a class="code" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a>&gt;(<a class="code" href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">value</a>);</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a6a689f62af301bd6ac09d7019aba1c17"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">SVF::SVFStmt::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">LLVM value. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00060">SVFStatements.h:60</a></div></div>
+<div class="ttc" id="namespaceSVF_html_a7875172ff434b2210eea7cecfbbd959e"><div class="ttname"><a href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">SVF::Instruction</a></div><div class="ttdeci">llvm::Instruction Instruction</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00079">BasicTypes.h:79</a></div></div>
+<div class="ttc" id="namespaceSVF_1_1SVFUtil_html_a8182be247907420db00837cef9bcfa70"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a8182be247907420db00837cef9bcfa70">SVF::SVFUtil::dyn_cast</a></div><div class="ttdeci">LLVM_NODISCARD std::enable_if&lt;!is_simple_type&lt; Y &gt;::value, typename cast_retty&lt; X, const Y &gt;::ret_type &gt;::type dyn_cast(const Y &amp;Val)</div><div class="ttdef"><b>Definition:</b> <a href="Casting_8h_source.html#l00343">Casting.h:343</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a65ee8b43a3a4999eb112a197d1a9f882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ee8b43a3a4999eb112a197d1a9f882">&#9670;&nbsp;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* SVF::SVFStmt::getValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00116">116</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">value</a>;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a6a689f62af301bd6ac09d7019aba1c17"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">SVF::SVFStmt::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">LLVM value. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00060">SVFStatements.h:60</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0b6c03af568b70903da6b200ac86c951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b6c03af568b70903da6b200ac86c951">&#9670;&nbsp;</a></span>isPTAEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVFStmt::isPTAEdge </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether src and dst nodes are both of pointer type. </p>
+<p>Whether src and dst nodes are both pointer type </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8cpp_source.html#l00055">55</a> of file <a class="el" href="SVFStatements_8cpp_source.html">SVFStatements.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GenericEdge.html#ab47ca533c415841ef75456cbad439589">getSrcNode</a>()-&gt;isPointer() &amp;&amp; <a class="code" href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">getDstNode</a>()-&gt;isPointer();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div><div class="ttc" id="classSVF_1_1GenericEdge_html_aeaa31a2c8479e831b36ce2e2582ceb86"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">SVF::GenericEdge::getDstNode</a></div><div class="ttdeci">NodeType * getDstNode() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00089">GenericGraph.h:89</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericEdge_html_ab47ca533c415841ef75456cbad439589"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#ab47ca533c415841ef75456cbad439589">SVF::GenericEdge::getSrcNode</a></div><div class="ttdeci">NodeType * getSrcNode() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00085">GenericGraph.h:85</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4513c6e66b46c36219ba6d7403f3eb00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4513c6e66b46c36219ba6d7403f3eb00">&#9670;&nbsp;</a></span>makeEdgeFlagWithCallInst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</a> SVF::SVFStmt::makeEdgeFlagWithCallInst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1GenericEdge.html#a7eb93c9018c80057672a8ce71615dc0d">GEdgeKind</a>&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *&#160;</td>
+          <td class="paramname"><em>cs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the unique edgeFlag value from edge kind and call site Instruction. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00139">139</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        Inst2LabelMap::const_iterator iter = <a class="code" href="classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c">inst2LabelMap</a>.find(cs);</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a> label = (iter != <a class="code" href="classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c">inst2LabelMap</a>.end()) ?</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                      iter-&gt;second : <a class="code" href="classSVF_1_1SVFStmt.html#a24227d7f1dd472f47bf94cb5db8505c4">callEdgeLabelCounter</a>++;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        return (label &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298">EdgeKindMaskBits</a>) | k;</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a24227d7f1dd472f47bf94cb5db8505c4"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a24227d7f1dd472f47bf94cb5db8505c4">SVF::SVFStmt::callEdgeLabelCounter</a></div><div class="ttdeci">static u64_t callEdgeLabelCounter</div><div class="ttdoc">Call site Instruction counter. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00176">SVFStatements.h:176</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_abb83549118bcd7216a053d82f7180d1c"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c">SVF::SVFStmt::inst2LabelMap</a></div><div class="ttdeci">static Inst2LabelMap inst2LabelMap</div><div class="ttdoc">Call site Instruction to label map. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00175">SVFStatements.h:175</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericEdge_html_af1c2fd4b5ef1d7b7605572bf2489c298"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298">SVF::GenericEdge::EdgeKindMaskBits</a></div><div class="ttdeci">static constexpr unsigned char EdgeKindMaskBits</div><div class="ttdoc">We use the lower 8 bits to denote edge kind. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00119">GenericGraph.h:119</a></div></div>
+<div class="ttc" id="namespaceSVF_html_a366625858f450a1ea5f985a3c83e0f14"><div class="ttname"><a href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">SVF::u64_t</a></div><div class="ttdeci">unsigned long long u64_t</div><div class="ttdef"><b>Definition:</b> <a href="SVFBasicTypes_8h_source.html#l00076">SVFBasicTypes.h:76</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad61722f886afaaee722ac55a4eed4d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61722f886afaaee722ac55a4eed4d18">&#9670;&nbsp;</a></span>makeEdgeFlagWithStoreInst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614">GEdgeFlag</a> SVF::SVFStmt::makeEdgeFlagWithStoreInst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1GenericEdge.html#a7eb93c9018c80057672a8ce71615dc0d">GEdgeKind</a>&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *&#160;</td>
+          <td class="paramname"><em>store</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the unique edgeFlag value from edge kind and store Instruction. Two store instructions may share the same StorePAGEdge </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00149">149</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        Inst2LabelMap::const_iterator iter = <a class="code" href="classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c">inst2LabelMap</a>.find(store);</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a> label = (iter != <a class="code" href="classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c">inst2LabelMap</a>.end()) ?</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                      iter-&gt;second : <a class="code" href="classSVF_1_1SVFStmt.html#a53b7e0d8666e37c23dc2c7d0fc931f27">storeEdgeLabelCounter</a>++;</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        return (label &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298">EdgeKindMaskBits</a>) | k;</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a53b7e0d8666e37c23dc2c7d0fc931f27"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a53b7e0d8666e37c23dc2c7d0fc931f27">SVF::SVFStmt::storeEdgeLabelCounter</a></div><div class="ttdeci">static u64_t storeEdgeLabelCounter</div><div class="ttdoc">Store Instruction counter. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00177">SVFStatements.h:177</a></div></div>
+<div class="ttc" id="classSVF_1_1SVFStmt_html_abb83549118bcd7216a053d82f7180d1c"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c">SVF::SVFStmt::inst2LabelMap</a></div><div class="ttdeci">static Inst2LabelMap inst2LabelMap</div><div class="ttdoc">Call site Instruction to label map. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00175">SVFStatements.h:175</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericEdge_html_af1c2fd4b5ef1d7b7605572bf2489c298"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298">SVF::GenericEdge::EdgeKindMaskBits</a></div><div class="ttdeci">static constexpr unsigned char EdgeKindMaskBits</div><div class="ttdoc">We use the lower 8 bits to denote edge kind. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00119">GenericGraph.h:119</a></div></div>
+<div class="ttc" id="namespaceSVF_html_a366625858f450a1ea5f985a3c83e0f14"><div class="ttname"><a href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">SVF::u64_t</a></div><div class="ttdeci">unsigned long long u64_t</div><div class="ttdef"><b>Definition:</b> <a href="SVFBasicTypes_8h_source.html#l00076">SVFBasicTypes.h:76</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a852730edf374d18a3fb3985211ed7623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a852730edf374d18a3fb3985211ed7623">&#9670;&nbsp;</a></span>setBB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SVF::SVFStmt::setBB </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a> *&#160;</td>
+          <td class="paramname"><em>bb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00120">120</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="classSVF_1_1SVFStmt.html#a877c7137875233e147faeb1198243f36">basicBlock</a> = bb;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a877c7137875233e147faeb1198243f36"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a877c7137875233e147faeb1198243f36">SVF::SVFStmt::basicBlock</a></div><div class="ttdeci">const BasicBlock * basicBlock</div><div class="ttdoc">LLVM BasicBlock. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00061">SVFStatements.h:61</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adb92a92f5c878576dff26cb38eab8c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb92a92f5c878576dff26cb38eab8c8c">&#9670;&nbsp;</a></span>setICFGNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SVF::SVFStmt::setICFGNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00128">128</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="classSVF_1_1SVFStmt.html#a50046a1500ec6e2819ef55162e70cc71">icfgNode</a> = node;</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a50046a1500ec6e2819ef55162e70cc71"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a50046a1500ec6e2819ef55162e70cc71">SVF::SVFStmt::icfgNode</a></div><div class="ttdeci">ICFGNode * icfgNode</div><div class="ttdoc">ICFGNode. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00062">SVFStatements.h:62</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a24dddb4e346a6e569908e3efe8a6ecc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24dddb4e346a6e569908e3efe8a6ecc0">&#9670;&nbsp;</a></span>setValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SVF::SVFStmt::setValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00112">112</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">value</a> = val;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div><div class="ttc" id="classSVF_1_1SVFStmt_html_a6a689f62af301bd6ac09d7019aba1c17"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#a6a689f62af301bd6ac09d7019aba1c17">SVF::SVFStmt::value</a></div><div class="ttdeci">const Value * value</div><div class="ttdoc">LLVM value. </div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00060">SVFStatements.h:60</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -301,17 +896,18 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classSVF_1_1BranchStmt.html#a76671360e974d703c0ac883328bf654e">SVF::BranchStmt</a>, <a class="el" href="classSVF_1_1FunRetStmt.html#a8b42eaf94c4d3c4b21ee31f62effef47">SVF::FunRetStmt</a>, <a class="el" href="classSVF_1_1CallStmt.html#a0c26ad9c5d92df3c1d8fcd17d7876b79">SVF::CallStmt</a>, <a class="el" href="classSVF_1_1UnaryStmt.html#a12bde1b0ecbbfc97c89d4f4582c27311">SVF::UnaryStmt</a>, <a class="el" href="classSVF_1_1BinaryStmt.html#a9cb3411fac006f89dc15f70624a59187">SVF::BinaryStmt</a>, <a class="el" href="classSVF_1_1CmpStmt.html#aa617fb28a81447d7e800e0cb1b1c1a35">SVF::CmpStmt</a>, <a class="el" href="classSVF_1_1GepStmt.html#acae68ff97d408a1dd929b0348415c81d">SVF::GepStmt</a>, <a class="el" href="classSVF_1_1StoreStmt.html#a5f4095708fe9319cde8503df04f6b42f">SVF::StoreStmt</a>, <a class="el" href="classSVF_1_1LoadStmt.html#ac6c0844b2d64856048cf5aefb774d3c7">SVF::LoadStmt</a>, <a class="el" href="classSVF_1_1PhiStmt.html#ab099c7399cc1c21cf8f5de650e5af1c6">SVF::PhiStmt</a>, <a class="el" href="classSVF_1_1CopyStmt.html#a09c236d1aa5b0b2c45bba60b50e1e211">SVF::CopyStmt</a>, and <a class="el" href="classSVF_1_1AllocStmt.html#a768f4144f601abde58967de829538680">SVF::AllocStmt</a>.</p>
+<p>Reimplemented in <a class="el" href="classSVF_1_1TDJoinPE.html#accac29adba7ca4883ae161c223a1703d">SVF::TDJoinPE</a>, <a class="el" href="classSVF_1_1TDForkPE.html#aa385dc7e7e439cb4d8ee1524c8fbf9fe">SVF::TDForkPE</a>, <a class="el" href="classSVF_1_1RetPE.html#ad8d044af7c089cddae99d8ac24a7969a">SVF::RetPE</a>, <a class="el" href="classSVF_1_1CallPE.html#acf586dd6d455c381d1b6f6e95ef228e4">SVF::CallPE</a>, <a class="el" href="classSVF_1_1VariantGepPE.html#a6b07bff6314141157f0a965cc8383730">SVF::VariantGepPE</a>, <a class="el" href="classSVF_1_1NormalGepPE.html#ac83263efe5e7f66dc3d9ed496c099a16">SVF::NormalGepPE</a>, <a class="el" href="classSVF_1_1GepPE.html#a72bfaa84a4ee1e5f194b4b32b9d79f20">SVF::GepPE</a>, <a class="el" href="classSVF_1_1LoadPE.html#a827b665b667174b9aa5fbde846207d5f">SVF::LoadPE</a>, <a class="el" href="classSVF_1_1StorePE.html#a5fa112e5ed76a41effb11343a433c8c1">SVF::StorePE</a>, <a class="el" href="classSVF_1_1UnaryOPPE.html#af81c662850dbe211a476fdf65aaef378">SVF::UnaryOPPE</a>, <a class="el" href="classSVF_1_1BinaryOPPE.html#a88ed686dbd153c863e9063471722f337">SVF::BinaryOPPE</a>, <a class="el" href="classSVF_1_1CmpPE.html#a69fa89fb9e2137e32555d2ce3a510752">SVF::CmpPE</a>, <a class="el" href="classSVF_1_1CopyPE.html#ac1232ca5d43be2c7f68ed86d9e158c72">SVF::CopyPE</a>, and <a class="el" href="classSVF_1_1AddrPE.html#a202747525079d2946a26f43e71a7c194">SVF::AddrPE</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFIR_8cpp_source.html#l00036">36</a> of file <a class="el" href="SVFIR_8cpp_source.html">SVFIR.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                       {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::string str;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="namespaceSVF.html#a726981481ac082dcda3e4921416b65a0">raw_string_ostream</a> rawstr(str);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;SVFStmt type : &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1SVFStmt.html#ac3f7aee85f1753431021f97c36dbe3aa">kind</a> &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="classSVF_1_1SVFStmt_html_ac3f7aee85f1753431021f97c36dbe3aa"><div class="ttname"><a href="classSVF_1_1SVFStmt.html#ac3f7aee85f1753431021f97c36dbe3aa">SVF::SVFStmt::kind</a></div><div class="ttdeci">u32_t kind</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00076">SVFIR.h:76</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8cpp_source.html#l00060">60</a> of file <a class="el" href="SVFStatements_8cpp_source.html">SVFStatements.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                        {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::string str;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="namespaceSVF.html#a726981481ac082dcda3e4921416b65a0">raw_string_ostream</a> rawstr(str);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;SVFStmt: [&quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">getDstID</a>() &lt;&lt; <span class="stringliteral">&quot;&lt;--&quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#ae6792506a0150a9400d635eceab7f9e7">getSrcID</a>() &lt;&lt; <span class="stringliteral">&quot;]\t&quot;</span>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div><div class="ttc" id="classSVF_1_1GenericEdge_html_ad9edb45e74ae675d9da82f5acf02d56e"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">SVF::GenericEdge::getDstID</a></div><div class="ttdeci">NodeID getDstID() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00077">GenericGraph.h:77</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericEdge_html_ae6792506a0150a9400d635eceab7f9e7"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#ae6792506a0150a9400d635eceab7f9e7">SVF::GenericEdge::getSrcID</a></div><div class="ttdeci">NodeID getSrcID() const</div><div class="ttdoc">get methods of the components </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00073">GenericGraph.h:73</a></div></div>
 <div class="ttc" id="namespaceSVF_html_a726981481ac082dcda3e4921416b65a0"><div class="ttname"><a href="namespaceSVF.html#a726981481ac082dcda3e4921416b65a0">SVF::raw_string_ostream</a></div><div class="ttdeci">llvm::raw_string_ostream raw_string_ostream</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00100">BasicTypes.h:100</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="acaeee54cc5b1a48db172fafafbb58874"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaeee54cc5b1a48db172fafafbb58874">&#9670;&nbsp;</a></span>operator<<</h2>
+<a id="ad75e4c84f7d37824eb096aacca930ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75e4c84f7d37824eb096aacca930ead">&#9670;&nbsp;</a></span>operator<<</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +925,7 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classSVF_1_1SVFStmt.html">SVFStmt</a> &amp;&#160;</td>
-          <td class="paramname"><em>stmt</em>&#160;</td>
+          <td class="paramname"><em>edge</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -344,15 +940,15 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Overloading operator &lt;&lt; for printing. </p>
+<p>Overloading operator &lt;&lt; for dumping <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> value. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFIR_8h_source.html#l00064">64</a> of file <a class="el" href="SVFIR_8h_source.html">SVFIR.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        o &lt;&lt; stmt.toString();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> o;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00162">162</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        o &lt;&lt; edge.toString();</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">return</span> o;</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac3f7aee85f1753431021f97c36dbe3aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3f7aee85f1753431021f97c36dbe3aa">&#9670;&nbsp;</a></span>kind</h2>
+<a id="a877c7137875233e147faeb1198243f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a877c7137875233e147faeb1198243f36">&#9670;&nbsp;</a></span>basicBlock</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,7 +957,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> SVF::SVFStmt::kind</td>
+          <td class="memname">const <a class="el" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a>* SVF::SVFStmt::basicBlock</td>
         </tr>
       </table>
   </td>
@@ -371,13 +967,197 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFIR_8h_source.html#l00076">76</a> of file <a class="el" href="SVFIR_8h_source.html">SVFIR.h</a>.</p>
+<p>LLVM BasicBlock. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00061">61</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="a24227d7f1dd472f47bf94cb5db8505c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24227d7f1dd472f47bf94cb5db8505c4">&#9670;&nbsp;</a></span>callEdgeLabelCounter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a> SVFStmt::callEdgeLabelCounter = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Call site Instruction counter. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00176">176</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="a593cc8136f2138a518476405e667e060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593cc8136f2138a518476405e667e060">&#9670;&nbsp;</a></span>edgeId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94">EdgeID</a> SVF::SVFStmt::edgeId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Edge ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00063">63</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="a50046a1500ec6e2819ef55162e70cc71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50046a1500ec6e2819ef55162e70cc71">&#9670;&nbsp;</a></span>icfgNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* SVF::SVFStmt::icfgNode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00062">62</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="abb83549118bcd7216a053d82f7180d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb83549118bcd7216a053d82f7180d1c">&#9670;&nbsp;</a></span>inst2LabelMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSVF_1_1SVFStmt.html#a5a3db6b1335b4adc55b961a6f480f228">SVFStmt::Inst2LabelMap</a> SVFStmt::inst2LabelMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Call site Instruction to label map. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00175">175</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="a53b7e0d8666e37c23dc2c7d0fc931f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b7e0d8666e37c23dc2c7d0fc931f27">&#9670;&nbsp;</a></span>storeEdgeLabelCounter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a> SVFStmt::storeEdgeLabelCounter = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Store Instruction counter. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00177">177</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="aa306e817648ab5def47e83473e99b3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa306e817648ab5def47e83473e99b3d3">&#9670;&nbsp;</a></span>totalEdgeNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#a2db29836a72e8d86e9baa6d8d55d2978">Size_t</a> SVF::SVFStmt::totalEdgeNum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total edge number. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00065">65</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+
+</div>
+</div>
+<a id="a6a689f62af301bd6ac09d7019aba1c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a689f62af301bd6ac09d7019aba1c17">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* SVF::SVFStmt::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>LLVM value. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00060">60</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/SVF/SVF/include/MemoryModel/<a class="el" href="SVFIR_8h_source.html">SVFIR.h</a></li>
-<li>/home/runner/work/SVF/SVF/lib/MemoryModel/<a class="el" href="SVFIR_8cpp_source.html">SVFIR.cpp</a></li>
+<li>/home/runner/work/SVF/SVF/include/MemoryModel/<a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a></li>
+<li>/home/runner/work/SVF/SVF/lib/MemoryModel/<a class="el" href="SVFStatements_8cpp_source.html">SVFStatements.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
