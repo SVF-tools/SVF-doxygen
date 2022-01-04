@@ -86,7 +86,7 @@ var searchData=
   ['hasintervfgedge',['hasInterVFGEdge',['../classSVF_1_1VFG.html#ad86631f70bd702b5635bdbeab7d884b9',1,'SVF::VFG']]],
   ['hasintraicfgedge',['hasIntraICFGEdge',['../classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709',1,'SVF::ICFG']]],
   ['hasintravfgedge',['hasIntraVFGEdge',['../classSVF_1_1VFG.html#ac34c4529229404617c346f81cc6c141f',1,'SVF::VFG']]],
-  ['haslabelededge',['hasLabeledEdge',['../classSVF_1_1IRGraph.html#a192e584440eb141e0d35d8fed671bbe0',1,'SVF::IRGraph']]],
+  ['haslabelededge',['hasLabeledEdge',['../classSVF_1_1IRGraph.html#a192e584440eb141e0d35d8fed671bbe0',1,'SVF::IRGraph::hasLabeledEdge(SVFVar *src, SVFVar *dst, SVFStmt::PEDGEK kind, const ICFGNode *cs)'],['../classSVF_1_1IRGraph.html#a1c999e2fd771e4fda192af096e3ec92c',1,'SVF::IRGraph::hasLabeledEdge(SVFVar *src, SVFVar *op1, SVFStmt::PEDGEK kind, const SVFVar *op2)']]],
   ['haslcdcandidate',['hasLCDCandidate',['../classSVF_1_1AndersenLCD.html#ad3f4bd35f98c43a0642b91c6b0e7acb3',1,'SVF::AndersenLCD']]],
   ['hasmodmrset',['hasModMRSet',['../classSVF_1_1MRGenerator.html#a8868281e5f5b5f3a83acf8568971ad40',1,'SVF::MRGenerator']]],
   ['hasmodsideeffectofcallsite',['hasModSideEffectOfCallSite',['../classSVF_1_1MRGenerator.html#a07dc868039c5e2764b3cc34faff6d94a',1,'SVF::MRGenerator']]],

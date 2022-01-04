@@ -2,6 +2,7 @@ var searchData=
 [
   ['main',['main',['../dda_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;dda.cpp'],['../svf-ex_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;svf-ex.cpp'],['../mta_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mta.cpp'],['../saber_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;saber.cpp'],['../wpa_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;wpa.cpp']]],
   ['make_5frandom',['make_random',['../cuddInt_8c.html#ab9aad1b09fd466fd971fba854332d7d8',1,'cuddInt.c']]],
+  ['makeedgeflagwithaddionalopnd',['makeEdgeFlagWithAddionalOpnd',['../classSVF_1_1SVFStmt.html#a3b20523aed66ac8943d7d00ff777137b',1,'SVF::SVFStmt']]],
   ['makeedgeflagwithcallinst',['makeEdgeFlagWithCallInst',['../classSVF_1_1SVFStmt.html#a4513c6e66b46c36219ba6d7403f3eb00',1,'SVF::SVFStmt']]],
   ['makeedgeflagwithinvokeid',['makeEdgeFlagWithInvokeID',['../classSVF_1_1ICFGEdge.html#a00b2650d7afd8b98c108d6a168299993',1,'SVF::ICFGEdge::makeEdgeFlagWithInvokeID()'],['../classSVF_1_1PTACallGraphEdge.html#a4eaeb2765fdcc455116537dbe2119800',1,'SVF::PTACallGraphEdge::makeEdgeFlagWithInvokeID()'],['../classSVF_1_1VFGEdge.html#a30c07e8afb0853d4b46cfa722d912650',1,'SVF::VFGEdge::makeEdgeFlagWithInvokeID()']]],
   ['makeedgeflagwithstoreinst',['makeEdgeFlagWithStoreInst',['../classSVF_1_1SVFStmt.html#ad61722f886afaaee722ac55a4eed4d18',1,'SVF::SVFStmt']]],
@@ -81,6 +82,7 @@ var searchData=
   ['mtr_5fprintgroups',['Mtr_PrintGroups',['../mtr_8h.html#a2d9c3174966e8acd78d0d0664065c472',1,'Mtr_PrintGroups(MtrNode *root, int silent):&#160;mtr.c'],['../mtr_8c.html#a2d9c3174966e8acd78d0d0664065c472',1,'Mtr_PrintGroups(MtrNode *root, int silent):&#160;mtr.c']]],
   ['mtr_5fprinttree',['Mtr_PrintTree',['../mtr_8h.html#a2b74ec8b38ff7acb55691cb2a476bfe9',1,'Mtr_PrintTree(MtrNode *node):&#160;mtr.c'],['../mtr_8c.html#a2b74ec8b38ff7acb55691cb2a476bfe9',1,'Mtr_PrintTree(MtrNode *node):&#160;mtr.c']]],
   ['mtr_5freordergroups',['Mtr_ReorderGroups',['../mtr_8h.html#a92aa3faee3fcf01276d2a74314e2589e',1,'Mtr_ReorderGroups(MtrNode *treenode, int *permutation):&#160;mtr.c'],['../mtr_8c.html#a92aa3faee3fcf01276d2a74314e2589e',1,'Mtr_ReorderGroups(MtrNode *treenode, int *permutation):&#160;mtr.c']]],
+  ['multiopndstmt',['MultiOpndStmt',['../classSVF_1_1MultiOpndStmt.html#aad0c81aeb48e5d94dd8c60d87b41714c',1,'SVF::MultiOpndStmt']]],
   ['mustalias',['mustAlias',['../classSVF_1_1CondPTAImpl.html#a3b5877fec52bbfa7c83bab6c9bc95684',1,'SVF::CondPTAImpl']]],
   ['mutabledfptdata',['MutableDFPTData',['../classSVF_1_1MutableDFPTData.html#aed141fb836cb22e02032ea46e3e5f51b',1,'SVF::MutableDFPTData']]],
   ['mutablediffptdata',['MutableDiffPTData',['../classSVF_1_1MutableDiffPTData.html#ae087d0307844312710c2d4c05535ea86',1,'SVF::MutableDiffPTData']]],

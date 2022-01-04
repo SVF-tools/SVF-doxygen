@@ -49,8 +49,6 @@ var searchData=
   ['cilocktospan',['CILockToSpan',['../classSVF_1_1LockAnalysis.html#acdcc3fc4b90e7f67cfb9601ddc31d5f8',1,'SVF::LockAnalysis']]],
   ['cispan',['CISpan',['../classSVF_1_1LockAnalysis.html#ae675d0ebf4eac597487ce83e667a8229',1,'SVF::LockAnalysis']]],
   ['cmpinst',['CmpInst',['../namespaceSVF.html#a5d875a9d726bb9f68a17efa528dec0b4',1,'SVF']]],
-  ['cmpnodemap',['CmpNodeMap',['../classSVF_1_1SVFIR.html#a12df88c75f40c85bb9d2d230b1b1a58f',1,'SVF::SVFIR']]],
-  ['cmppelist',['CmpPEList',['../classSVF_1_1SVFIR.html#a04bd17589cde5b6f058705a2e8fb5719',1,'SVF::SVFIR']]],
   ['condition',['Condition',['../classSVF_1_1MemRegion.html#a7ed54700c976f9738012bc051b7f41f5',1,'SVF::MemRegion::Condition()'],['../classSVF_1_1MemSSA.html#ac0c8f70b6283e26e70dafe02fcb5180a',1,'SVF::MemSSA::Condition()'],['../classSVF_1_1PathCondAllocator.html#aade2bc55c3882a6cacc3c4a891a1c4a3',1,'SVF::PathCondAllocator::Condition()'],['../classSVF_1_1ProgSlice.html#a3dc89d666a0f369ca85e13632676e6aa',1,'SVF::ProgSlice::Condition()']]],
   ['condposmap',['CondPosMap',['../classSVF_1_1PathCondAllocator.html#a0d685cfd0f0652a0ff839969f763371b',1,'SVF::PathCondAllocator']]],
   ['condpts',['CondPts',['../classSVF_1_1CondPointsToSet.html#aaddc3f78a624de59dda6f078ba63ba52',1,'SVF::CondPointsToSet']]],

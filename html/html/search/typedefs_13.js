@@ -2,9 +2,7 @@ var searchData=
 [
   ['u32_5ft',['u32_t',['../namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af',1,'SVF']]],
   ['u64_5ft',['u64_t',['../namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14',1,'SVF']]],
-  ['unarynodemap',['UnaryNodeMap',['../classSVF_1_1SVFIR.html#a5458fee250c6f93de78bf4622dbf5f62',1,'SVF::SVFIR']]],
   ['unaryoperator',['UnaryOperator',['../namespaceSVF.html#a292a6e8c5b4f2023b5575879c57eca62',1,'SVF']]],
-  ['unaryoplist',['UnaryOPList',['../classSVF_1_1SVFIR.html#af25261d5aa1e0e7261d606e176248993',1,'SVF::SVFIR']]],
   ['undefvalue',['UndefValue',['../namespaceSVF.html#af4912ad47e19060e53b665f73e0ee6ec',1,'SVF']]],
   ['unifyfunctionexitnodes',['UnifyFunctionExitNodes',['../namespaceSVF.html#ae5853f7df76735b195ff93949ca4256b',1,'SVF']]],
   ['unreachableinst',['UnreachableInst',['../namespaceSVF.html#a8ac6a8ff90f47a93166fbdf15be2d721',1,'SVF']]],

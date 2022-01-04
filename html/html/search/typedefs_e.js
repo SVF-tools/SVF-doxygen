@@ -3,6 +3,7 @@ var searchData=
   ['objtoversionmap',['ObjToVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#af9a43f48b7d99cc6694f3ae3248fd8e0',1,'SVF::VersionedFlowSensitive']]],
   ['opcache',['OpCache',['../classSVF_1_1PersistentPointsToCache.html#a896bab5039f4bf2d0da71045e2c63ad7',1,'SVF::PersistentPointsToCache']]],
   ['opincomingbbs',['OPIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a66928f6cc755bd2a048804d00f859a80',1,'SVF::IntraPHIVFGNode']]],
+  ['opvars',['OPVars',['../classSVF_1_1MultiOpndStmt.html#acf8c7cfbf1c8baab672040635bb9a007',1,'SVF::MultiOpndStmt']]],
   ['opvers',['OPVers',['../classSVF_1_1MSSAPHISVFGNode.html#a300f37203eb84fc57e005c27ce0422fb',1,'SVF::MSSAPHISVFGNode::OPVers()'],['../classSVF_1_1CmpVFGNode.html#a0db4ada3c366c811962415454a859b22',1,'SVF::CmpVFGNode::OPVers()'],['../classSVF_1_1BinaryOPVFGNode.html#a880c8260e3acb3fbe431446f2c1f5990',1,'SVF::BinaryOPVFGNode::OPVers()'],['../classSVF_1_1UnaryOPVFGNode.html#af96b598342bbcbcd739e2603acfc5a41',1,'SVF::UnaryOPVFGNode::OPVers()'],['../classSVF_1_1PHIVFGNode.html#a44ba5254e5f4def007c99916cd58668c',1,'SVF::PHIVFGNode::OPVers()'],['../classSVF_1_1MSSAPHI.html#a622892bb1c3c151e646ae1a46838c3ba',1,'SVF::MSSAPHI::OPVers()']]],
   ['orderedmap',['OrderedMap',['../namespaceSVF.html#aedf0d6718ca176e0b9e17ab4b30729c6',1,'SVF']]],
   ['orderednodeset',['OrderedNodeSet',['../namespaceSVF.html#a3c2bd95727ec0d9c55c631b6617026c8',1,'SVF']]],

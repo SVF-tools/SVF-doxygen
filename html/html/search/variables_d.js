@@ -39,7 +39,7 @@ var searchData=
   ['maxpointstosetsize',['MaxPointsToSetSize',['../classSVF_1_1PTAStat.html#af2b45aab2eee96a1cabba3025e4375a2',1,'SVF::PTAStat::MaxPointsToSetSize()'],['../classSVF_1_1AndersenBase.html#a7cfafe54d564c9401f435362d44d3f9c',1,'SVF::AndersenBase::MaxPointsToSetSize()']]],
   ['maxreorderings',['maxReorderings',['../structDdManager.html#a61170edf6d08bb1c4bacab68823a825d',1,'DdManager']]],
   ['maxsccsize',['maxSCCSize',['../classSVF_1_1FlowSensitive.html#a90deaa3c1afa762f568ceab0fe174353',1,'SVF::FlowSensitive']]],
-  ['maxsize',['maxSize',['../structDdManager.html#aa4d0701dc4e6f11b30085ae30c09fab6',1,'DdManager::maxSize()'],['../structDdHashTable.html#aba376a6d310dcead9f74cfc459f4a248',1,'DdHashTable::maxsize()'],['../structDdLevelQueue.html#acb7146e9f3dd73a052340c0e4010e6b6',1,'DdLevelQueue::maxsize()']]],
+  ['maxsize',['maxsize',['../structDdHashTable.html#aba376a6d310dcead9f74cfc459f4a248',1,'DdHashTable::maxsize()'],['../structDdLevelQueue.html#acb7146e9f3dd73a052340c0e4010e6b6',1,'DdLevelQueue::maxsize()'],['../structDdManager.html#aa4d0701dc4e6f11b30085ae30c09fab6',1,'DdManager::maxSize()']]],
   ['maxsizez',['maxSizeZ',['../structDdManager.html#a4a0b8f95d02bc99557fb55140e9b0963',1,'DdManager']]],
   ['maxslots',['maxslots',['../structDdLocalCache.html#af4379636b29a9bfe4a55708ac637545a',1,'DdLocalCache']]],
   ['maxstepinwrapper',['MaxStepInWrapper',['../classSVF_1_1Options.html#a0b82f16ee0c7e6566a6ae20662525e84',1,'SVF::Options']]],
@@ -85,5 +85,6 @@ var searchData=
   ['mssavartodefmap',['MSSAVarToDefMap',['../classSVF_1_1SVFG.html#aafa1b445bd3578daaba8f82e517745f1',1,'SVF::SVFG']]],
   ['mtr_5funused',['MTR_UNUSED',['../mtr_8c.html#a71385e18c061c8783c806fedd390bb6a',1,'mtr.c']]],
   ['multiforked',['multiforked',['../classSVF_1_1TCTNode.html#a414f4b98fb8fd36d2cb381ff56eb98d8',1,'SVF::TCTNode']]],
+  ['multiopndlabelcounter',['multiOpndLabelCounter',['../classSVF_1_1SVFStmt.html#a9ea22adbfc307dddee42ffec07cc88ed',1,'SVF::SVFStmt']]],
   ['mutptdata',['mutPTData',['../classSVF_1_1MutableDiffPTData.html#a3603cb4baf60b1aa83b7807ac5591484',1,'SVF::MutableDiffPTData::mutPTData()'],['../classSVF_1_1MutableDFPTData.html#acf40f716470f73095d44a1b9e3bb939e',1,'SVF::MutableDFPTData::mutPTData()']]]
 ];

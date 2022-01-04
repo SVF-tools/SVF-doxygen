@@ -11,7 +11,6 @@ var searchData=
   ['bbconds',['bbConds',['../classSVF_1_1PathCondAllocator.html#aff611b2797d61155c8c2f9d8ac4030bc',1,'SVF::PathCondAllocator']]],
   ['bbtocondmap',['bbToCondMap',['../classSVF_1_1PathCondAllocator.html#ac3a0aa27f317d7d9214181b599f19f24',1,'SVF::PathCondAllocator']]],
   ['bestcandidate',['BestCandidate',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a3556bdda6725b72d0ca88364daeae32e',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['binarynodemap',['binaryNodeMap',['../classSVF_1_1SVFIR.html#a5ea6cfb0656b6a60d853a82b5ba99f5c',1,'SVF::SVFIR']]],
   ['bindvar',['bindVar',['../structDdSubtable.html#a54a4f8f090e30084c77362e5de3ee591',1,'DdSubtable']]],
   ['bins',['bins',['../structst__table.html#a8924d9633a796c5e6c03925c5344c1ad',1,'st_table']]],
   ['bit',['bit',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a853b685cf022839c183df46f1cafe638',1,'SVF::CoreBitVector::CoreBitVectorIterator']]],

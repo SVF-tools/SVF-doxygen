@@ -23,6 +23,7 @@ var searchData=
   ['mtastat',['MTAStat',['../classSVF_1_1MTAStat.html',1,'SVF']]],
   ['mtasvfgbuilder',['MTASVFGBuilder',['../classSVF_1_1MTASVFGBuilder.html',1,'SVF']]],
   ['mtrnode',['MtrNode',['../structMtrNode.html',1,'']]],
+  ['multiopndstmt',['MultiOpndStmt',['../classSVF_1_1MultiOpndStmt.html',1,'SVF']]],
   ['mutabledfptdata',['MutableDFPTData',['../classSVF_1_1MutableDFPTData.html',1,'SVF']]],
   ['mutablediffptdata',['MutableDiffPTData',['../classSVF_1_1MutableDiffPTData.html',1,'SVF']]],
   ['mutableincdfptdata',['MutableIncDFPTData',['../classSVF_1_1MutableIncDFPTData.html',1,'SVF']]],

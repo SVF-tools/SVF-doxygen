@@ -66,7 +66,6 @@ var searchData=
   ['clusterander',['ClusterAnder',['../classSVF_1_1Options.html#a8459d43a21bcf8a50fc55d14fcf5a81e',1,'SVF::Options']]],
   ['clusterfs',['ClusterFs',['../classSVF_1_1Options.html#a9dc372635fc6f5ea2d902fc5c49fca8a',1,'SVF::Options']]],
   ['clustermethod',['ClusterMethod',['../classSVF_1_1Options.html#a8e0538a7f2e3c5bece69bc69f7074819',1,'SVF::Options']]],
-  ['cmpnodemap',['cmpNodeMap',['../classSVF_1_1SVFIR.html#ac59e0cbd000c33430bd83b4978c777a3',1,'SVF::SVFIR']]],
   ['cnext',['cnext',['../structDdQueueItem.html#a5500eae904c7432f4e08452c93c501fa',1,'DdQueueItem']]],
   ['collapsetime',['CollapseTime',['../classSVF_1_1AndersenStat.html#a3f5739454b1f4e03b4388a4ba5730e15',1,'SVF::AndersenStat']]],
   ['compare',['compare',['../structst__table.html#a7c3c545f36a953ff2d8668c394f4fcb5',1,'st_table']]],

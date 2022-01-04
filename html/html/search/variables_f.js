@@ -19,6 +19,7 @@ var searchData=
   ['opincomingbbs',['opIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode']]],
   ['opit',['OpIt',['../classllvm_1_1generic__bridge__gep__type__iterator.html#aa3fd4dca27e09df9ee726879624ae47e',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['optsvfg',['OPTSVFG',['../classSVF_1_1Options.html#a7704ff30e6fc5043313adf5c655bcd4a',1,'SVF::Options']]],
+  ['opvars',['opVars',['../classSVF_1_1MultiOpndStmt.html#a172025849492f4de8f87564ef08f5880',1,'SVF::MultiOpndStmt']]],
   ['opver',['opVer',['../classSVF_1_1MSSACHI.html#a86f2f3f6e2215cdbe31caee048510757',1,'SVF::MSSACHI']]],
   ['opvers',['opVers',['../classSVF_1_1MSSAPHISVFGNode.html#a9c327923ab939e06877441ebde5c1139',1,'SVF::MSSAPHISVFGNode::opVers()'],['../classSVF_1_1CmpVFGNode.html#aae30d80fd848d62467476d21c691573c',1,'SVF::CmpVFGNode::opVers()'],['../classSVF_1_1BinaryOPVFGNode.html#ae803603f567cc28f5a7e1b66fb324cbc',1,'SVF::BinaryOPVFGNode::opVers()'],['../classSVF_1_1UnaryOPVFGNode.html#ae6fdb5759a0dfeb0635ffd758b752dc1',1,'SVF::UnaryOPVFGNode::opVers()'],['../classSVF_1_1PHIVFGNode.html#a08ccd55d0fb6ce33f69959349008daca',1,'SVF::PHIVFGNode::opVers()'],['../classSVF_1_1MSSAPHI.html#abdabd6dff67cd59622f18d48e8b34271',1,'SVF::MSSAPHI::opVers()']]],
   ['originalbvnumwords',['OriginalBvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#af2786eae11ee13845da336ad23bc97e9',1,'SVF::NodeIDAllocator::Clusterer']]],
