@@ -11,6 +11,7 @@ var searchData=
   ['pagnodetoactualparmmap',['PAGNodeToActualParmMap',['../classSVF_1_1VFG.html#a8b256a40e690f31b7a56308d55bad45a',1,'SVF::VFG']]],
   ['pagnodetoactualretmap',['PAGNodeToActualRetMap',['../classSVF_1_1VFG.html#a28c5f7e331a437e09682b972769acf66',1,'SVF::VFG']]],
   ['pagnodetobinaryopvfgnodemap',['PAGNodeToBinaryOPVFGNodeMap',['../classSVF_1_1VFG.html#a0f554fd778b338cbd7e4272eaefc96f6',1,'SVF::VFG']]],
+  ['pagnodetobranchvfgnodemap',['PAGNodeToBranchVFGNodeMap',['../classSVF_1_1VFG.html#af8c8d0eb778a2a94a33c0b97ee3704c1',1,'SVF::VFG']]],
   ['pagnodetocmpvfgnodemap',['PAGNodeToCmpVFGNodeMap',['../classSVF_1_1VFG.html#a9a16c7a7b0df273c1dcbe6ba3aef8fde',1,'SVF::VFG']]],
   ['pagnodetodefmap',['PAGNodeToDefMap',['../classSVF_1_1VFG.html#ac89b3917ed73ac70aac6205af8f7a4fe',1,'SVF::VFG']]],
   ['pagnodetoformalparmmap',['PAGNodeToFormalParmMap',['../classSVF_1_1VFG.html#ad014bc47ceba578c368da19e2d86b8f8',1,'SVF::VFG']]],
@@ -100,7 +101,7 @@ var searchData=
   ['ptsto',['ptsTo',['../classSVF_1_1IRAnnotator.html#afd8770eee0c14386c407cae026ce87b5',1,'SVF::IRAnnotator']]],
   ['ptstoid',['ptsToId',['../classSVF_1_1PersistentPointsToCache.html#a6a3b33721ae00efd2fdf2d71f3298e1c',1,'SVF::PersistentPointsToCache']]],
   ['pttype',['PtType',['../classSVF_1_1Options.html#abc02c7dc5e6cb3613856e0f774c6d304',1,'SVF::Options']]],
-  ['purevirtualfunname',['pureVirtualFunName',['../CHG_8cpp.html#a5b49460faf973332d3cbfc561c994c6c',1,'CHG.cpp']]],
+  ['purevirtualfunname',['pureVirtualFunName',['../CHGBuilder_8cpp.html#a5b49460faf973332d3cbfc561c994c6c',1,'CHGBuilder.cpp']]],
   ['pwcopt',['pwcOpt',['../classSVF_1_1Andersen.html#ab90350dc4788d8e282404bd7944dd263',1,'SVF::Andersen']]],
   ['pwcreps',['pwcReps',['../classSVF_1_1AndersenSCD.html#ac4bf67d35b56f010aeedb59777a83f0e',1,'SVF::AndersenSCD']]]
 ];

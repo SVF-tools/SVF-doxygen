@@ -22,6 +22,7 @@ var searchData=
   ['cast_5fretty_5fwrap_3c_20to_2c_20fromty_2c_20fromty_20_3e',['cast_retty_wrap&lt; To, FromTy, FromTy &gt;',['../structSVF_1_1SVFUtil_1_1cast__retty__wrap_3_01To_00_01FromTy_00_01FromTy_01_4.html',1,'SVF::SVFUtil']]],
   ['cflsolver',['CFLSolver',['../classSVF_1_1CFLSolver.html',1,'SVF']]],
   ['chedge',['CHEdge',['../classSVF_1_1CHEdge.html',1,'SVF']]],
+  ['chgbuilder',['CHGBuilder',['../classSVF_1_1CHGBuilder.html',1,'SVF']]],
   ['chgraph',['CHGraph',['../classSVF_1_1CHGraph.html',1,'SVF']]],
   ['chnode',['CHNode',['../classSVF_1_1CHNode.html',1,'SVF']]],
   ['clonedummyobjpn',['CloneDummyObjPN',['../classSVF_1_1CloneDummyObjPN.html',1,'SVF']]],

@@ -10,5 +10,5 @@ var searchData=
   ['keysize',['keysize',['../structDdLocalCache.html#ae19bf1b91307141a9cf0c2e43dadb033',1,'DdLocalCache::keysize()'],['../structDdHashTable.html#a1fad0c272a6a1f5b9100cec4a0f88016',1,'DdHashTable::keysize()']]],
   ['keysz',['keysZ',['../structDdManager.html#a84e69eadfd3165e15ccfd21c6821131d',1,'DdManager']]],
   ['kids',['kids',['../structDdNode.html#a4e99abf685381a90dcd5e9aa6a024791',1,'DdNode']]],
-  ['kind',['kind',['../classSVF_1_1PTACallGraph.html#a6a5927a58cc777a0745bd0ca635f25b1',1,'SVF::PTACallGraph::kind()'],['../classSVF_1_1VFG.html#a3867c591a231bad0aa2e6ab7c095a42f',1,'SVF::VFG::kind()'],['../classSVF_1_1CommonCHGraph.html#a4d3f2b9ed7ae8e87baf69525e9115071',1,'SVF::CommonCHGraph::kind()'],['../classSVF_1_1SVFValue.html#af9f71a3c0d055f5fed6831a6ecf40d67',1,'SVF::SVFValue::kind()']]]
+  ['kind',['kind',['../classSVF_1_1CommonCHGraph.html#a4d3f2b9ed7ae8e87baf69525e9115071',1,'SVF::CommonCHGraph::kind()'],['../classSVF_1_1PTACallGraph.html#a6a5927a58cc777a0745bd0ca635f25b1',1,'SVF::PTACallGraph::kind()'],['../classSVF_1_1VFG.html#a3867c591a231bad0aa2e6ab7c095a42f',1,'SVF::VFG::kind()'],['../classSVF_1_1SVFValue.html#af9f71a3c0d055f5fed6831a6ecf40d67',1,'SVF::SVFValue::kind()']]]
 ];

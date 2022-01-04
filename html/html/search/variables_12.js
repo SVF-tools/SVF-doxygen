@@ -36,7 +36,6 @@ var searchData=
   ['resver',['resVer',['../classSVF_1_1IntraMSSAPHISVFGNode.html#a84832f678de1f497b4f3d7720a0bc58a',1,'SVF::IntraMSSAPHISVFGNode::resVer()'],['../classSVF_1_1MSSADEF.html#a72560a998968ae2dbc6e5aa8a7e9f813',1,'SVF::MSSADEF::resVer()']]],
   ['ret',['ret',['../classSVF_1_1CallBlockNode.html#a3d0f509f08dd017efecc949f0a98e1af',1,'SVF::CallBlockNode']]],
   ['retpes',['retPEs',['../classSVF_1_1FormalRetVFGNode.html#a5fa2fc654385d0fab018053e89565157',1,'SVF::FormalRetVFGNode']]],
-  ['returnnode',['returnNode',['../classSVF_1_1ExternalPAG.html#a72d638670931f9984cea132f38cdce5a',1,'SVF::ExternalPAG']]],
   ['returnsymmap',['returnSymMap',['../classSVF_1_1SymbolTableInfo.html#ae6f8a4dbe09ff4756983ffdbed6d0681',1,'SVF::SymbolTableInfo']]],
   ['rev',['rev',['../classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219',1,'SVF::PTData']]],
   ['reversenodemapping',['reverseNodeMapping',['../classSVF_1_1PointsTo.html#a1ae4abe690d21eb5aaf2154243b604c1',1,'SVF::PointsTo']]],

@@ -15,6 +15,7 @@ var searchData=
   ['pagnodetoactualparmmapty',['PAGNodeToActualParmMapTy',['../classSVF_1_1VFG.html#abec730a1ec61532cd164f3d42aa107b0',1,'SVF::VFG']]],
   ['pagnodetoactualretmapty',['PAGNodeToActualRetMapTy',['../classSVF_1_1VFG.html#a999654aa377639db5c1e40f603e655a7',1,'SVF::VFG']]],
   ['pagnodetobinaryopvfgnodemapty',['PAGNodeToBinaryOPVFGNodeMapTy',['../classSVF_1_1VFG.html#a7cefa553955e208d6eb4fcd01ed3c383',1,'SVF::VFG']]],
+  ['pagnodetobranchvfgnodemapty',['PAGNodeToBranchVFGNodeMapTy',['../classSVF_1_1VFG.html#a6ec1a8b02ece25aa165699e10fac7991',1,'SVF::VFG']]],
   ['pagnodetocmpvfgnodemapty',['PAGNodeToCmpVFGNodeMapTy',['../classSVF_1_1VFG.html#a9c2446f54d3738b6c0e65632a1200ba0',1,'SVF::VFG']]],
   ['pagnodetodefmapty',['PAGNodeToDefMapTy',['../classSVF_1_1SVFG.html#a2590182f3b28c7fc8b2b53c09ec4305c',1,'SVF::SVFG::PAGNodeToDefMapTy()'],['../classSVF_1_1VFG.html#ab9381c54f2339b3738348ae8b0d6659f',1,'SVF::VFG::PAGNodeToDefMapTy()']]],
   ['pagnodetoformalparmmapty',['PAGNodeToFormalParmMapTy',['../classSVF_1_1VFG.html#a6eb72d2fe080def018d09604fe3affcf',1,'SVF::VFG']]],

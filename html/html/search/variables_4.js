@@ -50,7 +50,6 @@ var searchData=
   ['dumpfree',['DumpFree',['../classSVF_1_1Options.html#a2ef679d4177438655577e7fef7c0cc90',1,'SVF::Options']]],
   ['dumpicfg',['DumpICFG',['../classSVF_1_1Options.html#aea29a835c54fab800117e57de00e0b1e',1,'SVF::Options']]],
   ['dumpmssa',['DumpMSSA',['../classSVF_1_1Options.html#a097255cb1373feaaaf2fe60c998862d5',1,'SVF::Options']]],
-  ['dumppagfunctions',['DumpPAGFunctions',['../ExternalPAG_8h.html#acbba9510c89f3a87e7043cf6327ae7cb',1,'ExternalPAG.h']]],
   ['dumpslice',['DumpSlice',['../classSVF_1_1Options.html#ace1f2368a0a466f98c9e53def47db3ab',1,'SVF::Options']]],
   ['dumpsupts',['DumpSUPts',['../classSVF_1_1Options.html#ac2e5aab778f266c5de58cb6eb1939095',1,'SVF::Options']]],
   ['dumpsustore',['DumpSUStore',['../classSVF_1_1Options.html#aa24f52782c835452daf82138d0d69412',1,'SVF::Options']]],

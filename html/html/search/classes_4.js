@@ -7,6 +7,5 @@ var searchData=
   ['equalmemregion',['equalMemRegion',['../structSVF_1_1MemRegion_1_1equalMemRegion.html',1,'SVF::MemRegion']]],
   ['equalnodebs',['equalNodeBS',['../structSVF_1_1SVFUtil_1_1equalNodeBS.html',1,'SVF::SVFUtil']]],
   ['equalpointsto',['equalPointsTo',['../structSVF_1_1SVFUtil_1_1equalPointsTo.html',1,'SVF::SVFUtil']]],
-  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html',1,'SVF']]],
-  ['externalpag',['ExternalPAG',['../classSVF_1_1ExternalPAG.html',1,'SVF']]]
+  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html',1,'SVF']]]
 ];

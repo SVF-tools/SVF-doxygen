@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['externalpag',['ExternalPAG',['../classSVF_1_1SVFIR.html#a294bb5e174030882a385c790ab835bb3',1,'SVF::SVFIR']]]
+  ['ddastat',['DDAStat',['../classSVF_1_1DDAVFSolver.html#af83f88f2ae2456f2691e8822d56b1598',1,'SVF::DDAVFSolver']]],
+  ['ddasvfgbuilder',['DDASVFGBuilder',['../classSVF_1_1SVFG.html#a9ccd530dc4c49b0df372a2ce95b66921',1,'SVF::SVFG']]]
 ];

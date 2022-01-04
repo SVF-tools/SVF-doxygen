@@ -22,6 +22,8 @@ var searchData=
   ['branchcondtocondexpr',['branchCondToCondExpr',['../classSVF_1_1CondManager.html#afd01891f45e085e990c9dbba5cbf3914',1,'SVF::CondManager']]],
   ['brcondition',['brCondition',['../classSVF_1_1IntraCFGEdge.html#a1948630208ff0a67f28913ca928ba9b4',1,'SVF::IntraCFGEdge']]],
   ['briefconscgdotgraph',['BriefConsCGDotGraph',['../classSVF_1_1Options.html#a82370c2b8c9cd62b5767ceeaeeaa7177',1,'SVF::Options']]],
+  ['brinst',['brInst',['../classSVF_1_1BranchStmt.html#a33887345c00ffda9ca7dca59d61e184a',1,'SVF::BranchStmt']]],
+  ['brstmt',['brstmt',['../classSVF_1_1BranchVFGNode.html#ab2c5f49a3ac21d827b37b0e4b61f1a10',1,'SVF::BranchVFGNode']]],
   ['bucket',['bucket',['../structDdHashTable.html#a14e9b750bdad0f77294dd8e18f18d32c',1,'DdHashTable']]],
   ['buckets',['buckets',['../structDdLevelQueue.html#a10750bfd3e96d25ce4d69eb476b64e9f',1,'DdLevelQueue']]],
   ['buildingchgtime',['buildingCHGTime',['../classSVF_1_1CHGraph.html#ab5bd2348e4418fcb2f3b18227fccd836',1,'SVF::CHGraph']]],

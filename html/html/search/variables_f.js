@@ -1,7 +1,6 @@
 var searchData=
 [
   ['object',['object',['../classSVF_1_1DummyVersionPropSVFGNode.html#ad9a6fd01bf1a101da68eaacc61f420ee',1,'SVF::DummyVersionPropSVFGNode']]],
-  ['objectnodes',['objectNodes',['../classSVF_1_1ExternalPAG.html#a817a1204dd3469910ee0590679159b14',1,'SVF::ExternalPAG']]],
   ['objmap',['objMap',['../classSVF_1_1SymbolTableInfo.html#aeab14702eabde827923a692cba8f7f8a',1,'SVF::SymbolTableInfo']]],
   ['objsymmap',['objSymMap',['../classSVF_1_1SymbolTableInfo.html#a5840b742ed8c73ece548b9b4aede07ec',1,'SVF::SymbolTableInfo']]],
   ['objtoallocation',['objToAllocation',['../classSVF_1_1TypeBasedHeapCloning.html#a0a768e179a3a0c8c213ecca6f71a64c1',1,'SVF::TypeBasedHeapCloning']]],
@@ -16,6 +15,7 @@ var searchData=
   ['one',['one',['../structDdManager.html#a239bd99ee654742adc79b8299c2bc92e',1,'DdManager::one()'],['../cuddInt_8c.html#a49e3c7508be54a84ae83273ed240e31c',1,'one():&#160;cuddInt.c']]],
   ['onstack',['onStack',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a0eb5f6b9985b9b512a76537d55b092b5',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
   ['ontheflyiterbudgetforstat',['OnTheFlyIterBudgetForStat',['../classSVF_1_1PointerAnalysis.html#afc320fbf269404fe128e69c98e6f9cac',1,'SVF::PointerAnalysis']]],
+  ['opcode',['opcode',['../classSVF_1_1CmpPE.html#a4a79b74096650de3d42b8af538f1d163',1,'SVF::CmpPE::opcode()'],['../classSVF_1_1BinaryOPPE.html#a1c30f75eec7e5566612d0d7d940cd000',1,'SVF::BinaryOPPE::opcode()'],['../classSVF_1_1UnaryOPPE.html#a09724c2ba28387799ec49e9d8683f818',1,'SVF::UnaryOPPE::opcode()']]],
   ['opincomingbbs',['opIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode']]],
   ['opit',['OpIt',['../classllvm_1_1generic__bridge__gep__type__iterator.html#aa3fd4dca27e09df9ee726879624ae47e',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['optsvfg',['OPTSVFG',['../classSVF_1_1Options.html#a7704ff30e6fc5043313adf5c655bcd4a',1,'SVF::Options']]],

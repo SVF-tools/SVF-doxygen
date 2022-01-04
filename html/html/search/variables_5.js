@@ -8,7 +8,7 @@ var searchData=
   ['edgekindmask',['EdgeKindMask',['../classSVF_1_1GenericEdge.html#a93dec4c27088242a4b1b6aa82cea46b9',1,'SVF::GenericEdge']]],
   ['edgekindmaskbits',['EdgeKindMaskBits',['../classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298',1,'SVF::GenericEdge']]],
   ['edgenum',['edgeNum',['../classSVF_1_1GenericGraph.html#a2fbc96de5f066469c2739229307bcc0c',1,'SVF::GenericGraph']]],
-  ['edges',['edges',['../classSVF_1_1ExternalPAG.html#a6b937c69282317ddf07bdcaaf9c560d4',1,'SVF::ExternalPAG::edges()'],['../classSVF_1_1VFPathCond.html#acb14b65214b69176a9174ca76526d7a0',1,'SVF::VFPathCond::edges()']]],
+  ['edges',['edges',['../classSVF_1_1VFPathCond.html#acb14b65214b69176a9174ca76526d7a0',1,'SVF::VFPathCond']]],
   ['edgetype',['edgeType',['../classSVF_1_1CHEdge.html#a58ac14decda4041e773d723475f5c1c8',1,'SVF::CHEdge']]],
   ['ei_5fpairs',['ei_pairs',['../SaberCheckerAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;SaberCheckerAPI.cpp'],['../ExtAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;ExtAPI.cpp'],['../ThreadAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;ThreadAPI.cpp']]],
   ['elder',['elder',['../structMtrNode.html#a7c8ed9787ec60487fad7b2fede53df98',1,'MtrNode']]],
