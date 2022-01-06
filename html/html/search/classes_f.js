@@ -17,7 +17,7 @@ var searchData=
   ['stmtvfgnode',['StmtVFGNode',['../classSVF_1_1StmtVFGNode.html',1,'SVF']]],
   ['storecgedge',['StoreCGEdge',['../classSVF_1_1StoreCGEdge.html',1,'SVF']]],
   ['storechi',['StoreCHI',['../classSVF_1_1StoreCHI.html',1,'SVF']]],
-  ['storepe',['StorePE',['../classSVF_1_1StorePE.html',1,'SVF']]],
+  ['storestmt',['StoreStmt',['../classSVF_1_1StoreStmt.html',1,'SVF']]],
   ['storevfgnode',['StoreVFGNode',['../classSVF_1_1StoreVFGNode.html',1,'SVF']]],
   ['svfbasicblock',['SVFBasicBlock',['../classSVF_1_1SVFBasicBlock.html',1,'SVF']]],
   ['svffunction',['SVFFunction',['../classSVF_1_1SVFFunction.html',1,'SVF']]],

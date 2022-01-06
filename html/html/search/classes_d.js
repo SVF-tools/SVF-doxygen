@@ -13,7 +13,7 @@ var searchData=
   ['persistentptdata',['PersistentPTData',['../classSVF_1_1PersistentPTData.html',1,'SVF']]],
   ['persistentptdata_3c_20versionedkey_2c_20versionedkeyset_2c_20data_2c_20dataset_20_3e',['PersistentPTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;',['../classSVF_1_1PersistentPTData.html',1,'SVF']]],
   ['persistentversionedptdata',['PersistentVersionedPTData',['../classSVF_1_1PersistentVersionedPTData.html',1,'SVF']]],
-  ['phipe',['PhiPE',['../classSVF_1_1PhiPE.html',1,'SVF']]],
+  ['phistmt',['PhiStmt',['../classSVF_1_1PhiStmt.html',1,'SVF']]],
   ['phivfgnode',['PHIVFGNode',['../classSVF_1_1PHIVFGNode.html',1,'SVF']]],
   ['pointeranalysis',['PointerAnalysis',['../classSVF_1_1PointerAnalysis.html',1,'SVF']]],
   ['pointsto',['PointsTo',['../classSVF_1_1PointsTo.html',1,'SVF']]],

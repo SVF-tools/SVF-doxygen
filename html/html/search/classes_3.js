@@ -38,7 +38,7 @@ var searchData=
   ['dotgraphtraits_3c_20vfg_20_2a_20_3e',['DOTGraphTraits&lt; VFG * &gt;',['../structllvm_1_1DOTGraphTraits_3_01VFG_01_5_01_4.html',1,'llvm']]],
   ['doublefreechecker',['DoubleFreeChecker',['../classSVF_1_1DoubleFreeChecker.html',1,'SVF']]],
   ['dpitem',['DPItem',['../classSVF_1_1DPItem.html',1,'SVF']]],
-  ['dummyobjpn',['DummyObjPN',['../classSVF_1_1DummyObjPN.html',1,'SVF']]],
-  ['dummyvalpn',['DummyValPN',['../classSVF_1_1DummyValPN.html',1,'SVF']]],
+  ['dummyobjvar',['DummyObjVar',['../classSVF_1_1DummyObjVar.html',1,'SVF']]],
+  ['dummyvalvar',['DummyValVar',['../classSVF_1_1DummyValVar.html',1,'SVF']]],
   ['dummyversionpropsvfgnode',['DummyVersionPropSVFGNode',['../classSVF_1_1DummyVersionPropSVFGNode.html',1,'SVF']]]
 ];

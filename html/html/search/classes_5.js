@@ -11,7 +11,7 @@ var searchData=
   ['fifoworklist_3c_20nodeid_20_3e',['FIFOWorkList&lt; NodeID &gt;',['../classSVF_1_1FIFOWorkList.html',1,'SVF']]],
   ['filechecker',['FileChecker',['../classSVF_1_1FileChecker.html',1,'SVF']]],
   ['filoworklist',['FILOWorkList',['../classSVF_1_1FILOWorkList.html',1,'SVF']]],
-  ['fiobjpn',['FIObjPN',['../classSVF_1_1FIObjPN.html',1,'SVF']]],
+  ['fiobjvar',['FIObjVar',['../classSVF_1_1FIObjVar.html',1,'SVF']]],
   ['flowdda',['FlowDDA',['../classSVF_1_1FlowDDA.html',1,'SVF']]],
   ['flowsensitive',['FlowSensitive',['../classSVF_1_1FlowSensitive.html',1,'SVF']]],
   ['flowsensitivestat',['FlowSensitiveStat',['../classSVF_1_1FlowSensitiveStat.html',1,'SVF']]],

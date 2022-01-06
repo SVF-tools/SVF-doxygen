@@ -47,7 +47,7 @@ var searchData=
   ['maxstructsize',['MaxStructSize',['../classSVF_1_1PTAStat.html#af6a6e3ea4c7f8e1c984bea8d5fb9a7c0',1,'SVF::PTAStat']]],
   ['maxstsize',['maxStSize',['../classSVF_1_1SymbolTableInfo.html#abb8550c9ef856e45cb7675c3796f9a35',1,'SVF::SymbolTableInfo']]],
   ['meldlabelingtime',['meldLabelingTime',['../classSVF_1_1VersionedFlowSensitive.html#a4a594c8d6ccaa27b5328c6388fdb258d',1,'SVF::VersionedFlowSensitive']]],
-  ['mem',['mem',['../classSVF_1_1ObjPN.html#a7ec3165f6b61b089e25447f55ebf86a8',1,'SVF::ObjPN']]],
+  ['mem',['mem',['../classSVF_1_1ObjVar.html#a3d08dc1d15a449ff4b7018da4bfdcb88',1,'SVF::ObjVar']]],
   ['memobjtogeps',['memObjToGeps',['../classSVF_1_1TypeBasedHeapCloning.html#a882afb13844ed039d18d325e92819f77',1,'SVF::TypeBasedHeapCloning']]],
   ['memorylist',['memoryList',['../structDdHashTable.html#ac6afee68587d525006440d95abc9cbd5',1,'DdHashTable::memoryList()'],['../structDdManager.html#acd1165476d9c94202b6bf5b14fd0dd88',1,'DdManager::memoryList()']]],
   ['mempar',['MemPar',['../classSVF_1_1Options.html#a74b821736a04f89adb79d6fd5369cdc3',1,'SVF::Options']]],

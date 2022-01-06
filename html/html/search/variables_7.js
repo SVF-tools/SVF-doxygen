@@ -16,7 +16,7 @@ var searchData=
   ['geptime',['gepTime',['../classSVF_1_1FlowSensitive.html#a282126e5b67ed4e19aa40c81180b8290',1,'SVF::FlowSensitive']]],
   ['geptosvfgretrievers',['gepToSVFGRetrievers',['../classSVF_1_1FlowSensitiveTBHC.html#acd6ade2b73c19d1eb7faf0e457becba6',1,'SVF::FlowSensitiveTBHC']]],
   ['gepvalnodemap',['GepValNodeMap',['../classSVF_1_1SVFIR.html#ae5e06d403091c05df995aeea0a4f773d',1,'SVF::SVFIR']]],
-  ['gepvaltype',['gepValType',['../classSVF_1_1GepValPN.html#a41d083e2ed08dd926a8228df5c42a4d7',1,'SVF::GepValPN']]],
+  ['gepvaltype',['gepValType',['../classSVF_1_1GepValVar.html#aaf5f5d3734e1db83c6d4f38d560b2f45',1,'SVF::GepValVar']]],
   ['globalblocknode',['globalBlockNode',['../classSVF_1_1ICFG.html#a37ec47cd95cf25b18720c4267a9fd40c',1,'SVF::ICFG']]],
   ['globaldeftorepmap',['GlobalDefToRepMap',['../classSVF_1_1LLVMModuleSet.html#ae2a1fa0b908cf372c50af90e62c4bf2b',1,'SVF::LLVMModuleSet']]],
   ['globalset',['GlobalSet',['../classSVF_1_1SVFModule.html#a4ff4bbd1771615757fc6575282046e30',1,'SVF::SVFModule']]],

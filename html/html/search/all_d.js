@@ -79,7 +79,7 @@ var searchData=
   ['meldlabel',['meldLabel',['../classSVF_1_1VersionedFlowSensitive.html#aaff594c78d93f7ad632d344e5c1c7f6a',1,'SVF::VersionedFlowSensitive']]],
   ['meldlabelingtime',['meldLabelingTime',['../classSVF_1_1VersionedFlowSensitive.html#a4a594c8d6ccaa27b5328c6388fdb258d',1,'SVF::VersionedFlowSensitive']]],
   ['meldversion',['MeldVersion',['../classSVF_1_1VersionedFlowSensitive.html#a630eeca9c3344d24fa196f7de45bce18',1,'SVF::VersionedFlowSensitive']]],
-  ['mem',['mem',['../classSVF_1_1ObjPN.html#a7ec3165f6b61b089e25447f55ebf86a8',1,'SVF::ObjPN']]],
+  ['mem',['mem',['../classSVF_1_1ObjVar.html#a3d08dc1d15a449ff4b7018da4bfdcb88',1,'SVF::ObjVar']]],
   ['memccpy',['memccpy',['../util_8h.html#a0205fb37d444c425e6e4447f2ec2bd5d',1,'util.h']]],
   ['memchr',['memchr',['../util_8h.html#a550ca98f8f3cd9b4dc549d9391f7dab0',1,'util.h']]],
   ['memcmp',['memcmp',['../util_8h.html#a65c3e6b23d6855c86acaf147853c82cc',1,'util.h']]],
