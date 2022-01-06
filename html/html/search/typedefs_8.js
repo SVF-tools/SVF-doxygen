@@ -1,6 +1,7 @@
 var searchData=
 [
   ['icfgedgesetty',['ICFGEdgeSetTy',['../classSVF_1_1ICFG.html#a20ea3e37e9c3c7d3138ff593041a8e47',1,'SVF::ICFG::ICFGEdgeSetTy()'],['../classSVF_1_1ICFGEdge.html#a3da5a0bad1b4c08803f1f06393649f96',1,'SVF::ICFGEdge::ICFGEdgeSetTy()']]],
+  ['icfgnode2svfstmtsmap',['ICFGNode2SVFStmtsMap',['../classSVF_1_1SVFIR.html#a4666dabcbeb3f40f96a0694ce2f07eb0',1,'SVF::SVFIR']]],
   ['icfgnodeidtonodemapty',['ICFGNodeIDToNodeMapTy',['../classSVF_1_1ICFG.html#af1fe5708c6f67fd87fa1edaa6c73ff5d',1,'SVF::ICFG']]],
   ['icfgnodeset',['ICFGNodeSet',['../classSVF_1_1ICFGStat.html#a69670ae14f5ec47728e2ddc7dd4dec84',1,'SVF::ICFGStat']]],
   ['idtocallsitemap',['IdToCallSiteMap',['../classSVF_1_1PTACallGraph.html#a5f626f5c9254b9e643d943e59068efba',1,'SVF::PTACallGraph']]],
@@ -14,7 +15,6 @@ var searchData=
   ['insertelementinst',['InsertElementInst',['../namespaceSVF.html#a6b857824fb3c39ff6de953651260a326',1,'SVF']]],
   ['insertvalueinst',['InsertValueInst',['../namespaceSVF.html#a485b10fc29e76fdb6f31a56ebbde8f24',1,'SVF']]],
   ['inst2labelmap',['Inst2LabelMap',['../classSVF_1_1SVFStmt.html#a5a3db6b1335b4adc55b961a6f480f228',1,'SVF::SVFStmt']]],
-  ['inst2pagedgesmap',['Inst2PAGEdgesMap',['../classSVF_1_1SVFIR.html#a69c1d98135987a6246bb45c4f36c02ec',1,'SVF::SVFIR']]],
   ['inst_5fiterator',['inst_iterator',['../namespaceSVF.html#a255af6ff30782cb9a548feadb0fe7d6b',1,'SVF']]],
   ['instruction',['Instruction',['../namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e',1,'SVF']]],
   ['instset',['InstSet',['../classSVF_1_1ThreadCallGraph.html#ad48fad1fec75346c9eb79bbd6e8caee4',1,'SVF::ThreadCallGraph::InstSet()'],['../classSVF_1_1MTASVFGBuilder.html#acff9054fd525a5358532dd2e812171ce',1,'SVF::MTASVFGBuilder::InstSet()'],['../classSVF_1_1LockAnalysis.html#ae682eb30763f0f52184eb36c95fc3811',1,'SVF::LockAnalysis::InstSet()'],['../classSVF_1_1MHP.html#aa17ec09b08f8dc7927aa7fa00232dd2f',1,'SVF::MHP::InstSet()'],['../classSVF_1_1MTAAnnotator.html#a95f4607624dac40e9d62f37e6b16fcf0',1,'SVF::MTAAnnotator::InstSet()'],['../classSVF_1_1MTAStat.html#a424ec97192aa5681f9f92a0a6f3ee8a8',1,'SVF::MTAStat::InstSet()'],['../classSVF_1_1TCT.html#a3238d12557309967f8bdfdfc275b6710',1,'SVF::TCT::InstSet()']]],

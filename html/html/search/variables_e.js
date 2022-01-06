@@ -139,7 +139,7 @@ var searchData=
   ['numofretnodes',['numOfRetNodes',['../classSVF_1_1ICFGStat.html#ac9bfce40c058ed7ab178fe1f1818e9de',1,'SVF::ICFGStat']]],
   ['numofreturns',['NumOfReturns',['../classSVF_1_1PTAStat.html#a0a552611fcd20e1310290bdae404a514',1,'SVF::PTAStat']]],
   ['numofscc',['numOfSCC',['../classSVF_1_1FlowSensitive.html#ab6c2494ca36cefb5409c5c20befb326f',1,'SVF::FlowSensitive']]],
-  ['numofsccdetection',['numOfSCCDetection',['../classSVF_1_1AndersenBase.html#a6da6e1231a46fde6925493045b8b2490',1,'SVF::AndersenBase::numOfSCCDetection()'],['../classSVF_1_1PTAStat.html#ad1731b88c24bb79728f62cd3e9c55699',1,'SVF::PTAStat::NumOfSCCDetection()']]],
+  ['numofsccdetection',['NumOfSCCDetection',['../classSVF_1_1PTAStat.html#ad1731b88c24bb79728f62cd3e9c55699',1,'SVF::PTAStat::NumOfSCCDetection()'],['../classSVF_1_1AndersenBase.html#a6da6e1231a46fde6925493045b8b2490',1,'SVF::AndersenBase::numOfSCCDetection()']]],
   ['numofsfr',['NumOfSfr',['../classSVF_1_1PTAStat.html#a07a1db62ddba50bda787b2985ef8d135',1,'SVF::PTAStat']]],
   ['numofsfrs',['numOfSfrs',['../classSVF_1_1AndersenBase.html#aa31bc83cdeaa30dd0975976e29a5be12',1,'SVF::AndersenBase']]],
   ['numofstackobjs',['NumOfStackObjs',['../classSVF_1_1PTAStat.html#ae05503909688a17dc1f282d1d029d24e',1,'SVF::PTAStat']]],

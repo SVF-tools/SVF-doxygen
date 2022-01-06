@@ -45,6 +45,7 @@ var searchData=
   ['postgchook',['postGCHook',['../structDdManager.html#a1aaf2a374903e2cc91c65730d0cfc2e1',1,'DdManager']]],
   ['postreorderinghook',['postReorderingHook',['../structDdManager.html#a051721a550ae2f41b9838b8153d46b30',1,'DdManager']]],
   ['ppag',['ppag',['../classSVF_1_1TypeBasedHeapCloning.html#a629ad3cef8929865b7319fb9e389f7bf',1,'SVF::TypeBasedHeapCloning']]],
+  ['predicate',['predicate',['../classSVF_1_1CmpStmt.html#a26fc263da6ab3fee40a335d367419328',1,'SVF::CmpStmt']]],
   ['predictptocc',['PredictPtOcc',['../classSVF_1_1Options.html#af34d8a738db4f40addc1de930e79654f',1,'SVF::Options']]],
   ['preemptivecomplements',['preemptiveComplements',['../classSVF_1_1PersistentPointsToCache.html#ad9a761bcece141764322247cc326bcbe',1,'SVF::PersistentPointsToCache']]],
   ['preemptiveintersections',['preemptiveIntersections',['../classSVF_1_1PersistentPointsToCache.html#ae80c5037ff49f70d9a87a83a8fcb07c7',1,'SVF::PersistentPointsToCache']]],
