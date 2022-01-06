@@ -26,7 +26,7 @@ var searchData=
   ['genericvfgty',['GenericVFGTy',['../namespaceSVF.html#ab4f1d8a6715e791c94970e6f87b18f8f',1,'SVF']]],
   ['gep_5ftype_5fiterator',['gep_type_iterator',['../namespaceSVF.html#aa508c087703240dad69a9827e85ebd0b',1,'SVF']]],
   ['gepsvfgnode',['GepSVFGNode',['../namespaceSVF.html#a65a3be463427d1112a8b87f072f3d22f',1,'SVF']]],
-  ['gepvalpnmap',['GepValPNMap',['../classSVF_1_1SVFIR.html#a3cf5be37df32cdcd44fa7b1971fae2de',1,'SVF::SVFIR']]],
+  ['gepvaluevarmap',['GepValueVarMap',['../classSVF_1_1SVFIR.html#a52dfad2ac907db45a91752c53384fb3d',1,'SVF::SVFIR']]],
   ['getelementptrinst',['GetElementPtrInst',['../namespaceSVF.html#ac4e93e1fec646ff222940a663843921b',1,'SVF']]],
   ['global_5fiterator',['global_iterator',['../classSVF_1_1SVFModule.html#a4cf1ca2e9f045a0520b0a8a6cd5993f2',1,'SVF::SVFModule']]],
   ['globalalias',['GlobalAlias',['../namespaceSVF.html#a0fd33072b099f61eaa642e94ed0c03fc',1,'SVF']]],
