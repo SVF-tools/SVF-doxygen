@@ -115,7 +115,7 @@ var searchData=
   ['mergenodeandpts',['mergeNodeAndPts',['../classSVF_1_1AndersenHCD.html#afea4ecab92720da2f5dad27840ac1e57',1,'SVF::AndersenHCD']]],
   ['mergenodetorep',['mergeNodeToRep',['../classSVF_1_1Andersen.html#a36729160041bc3a3e2b0a92b29062848',1,'SVF::Andersen::mergeNodeToRep()'],['../classSVF_1_1AndersenWaveDiff.html#acdc82c72b14e012551a460fa91a634db',1,'SVF::AndersenWaveDiff::mergeNodeToRep()']]],
   ['mergeptsoccmaps',['mergePtsOccMaps',['../namespaceSVF_1_1SVFUtil.html#a36c91f952a69875c33d4bd0b05a27ff2',1,'SVF::SVFUtil']]],
-  ['mergepwc',['MergePWC',['../classSVF_1_1Options.html#a69579e2f37962afdbb292a36782511ed',1,'SVF::Options::MergePWC()'],['../classSVF_1_1Andersen.html#a44d62658bbd2efcef5ff479930b5dce9',1,'SVF::Andersen::mergePWC()']]],
+  ['mergepwc',['mergePWC',['../classSVF_1_1Andersen.html#a44d62658bbd2efcef5ff479930b5dce9',1,'SVF::Andersen::mergePWC()'],['../classSVF_1_1Options.html#a69579e2f37962afdbb292a36782511ed',1,'SVF::Options::MergePWC()']]],
   ['mergescc',['mergeSCC',['../classSVF_1_1AndersenLCD.html#a132fe3985f04b55b5e172649db7e44d7',1,'SVF::AndersenLCD::mergeSCC()'],['../classSVF_1_1AndersenHCD.html#a2bbd6a0af75b17a70b1451a69cc3d5d7',1,'SVF::AndersenHCD::mergeSCC()'],['../classSVF_1_1AndersenHLCD.html#a25cb6c99be1689006b39bd62e05c76ba',1,'SVF::AndersenHLCD::mergeSCC()']]],
   ['mergescccycle',['mergeSccCycle',['../classSVF_1_1Andersen.html#ac86ffd334568e4df5c08b3c827018bef',1,'SVF::Andersen']]],
   ['mergesccnodes',['mergeSccNodes',['../classSVF_1_1Andersen.html#a1ba1e1e36af289982146de06cf06ab0a',1,'SVF::Andersen']]],
