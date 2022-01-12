@@ -97,7 +97,7 @@ var searchData=
   ['timeofsccmerges',['timeOfSCCMerges',['../classSVF_1_1AndersenBase.html#a02c5a50b214d36921e1404784e76704d',1,'SVF::AndersenBase']]],
   ['timeofssarenaming',['timeOfSSARenaming',['../classSVF_1_1MemSSA.html#a97ccd5e0b9ab6144415e26bdf95cbabd',1,'SVF::MemSSA::timeOfSSARenaming()'],['../classSVF_1_1MemSSAStat.html#a887ff23a7ea1a18f08b1744ff30da773',1,'SVF::MemSSAStat::TimeOfSSARenaming()']]],
   ['timeofupdatecallgraph',['timeOfUpdateCallGraph',['../classSVF_1_1AndersenBase.html#a2afb49f513c9534fd051117b59dc056b',1,'SVF::AndersenBase']]],
-  ['timestatmap',['TIMEStatMap',['../classSVF_1_1PTAStat.html#a28f304e7095f3843ca4cc017bc1f7b10',1,'SVF::PTAStat::TIMEStatMap()'],['../classSVF_1_1PTAStat.html#a3724756ac0527ba3d199be32e38c6337',1,'SVF::PTAStat::timeStatMap()']]],
+  ['timestatmap',['timeStatMap',['../classSVF_1_1PTAStat.html#a3724756ac0527ba3d199be32e38c6337',1,'SVF::PTAStat::timeStatMap()'],['../classSVF_1_1PTAStat.html#a28f304e7095f3843ca4cc017bc1f7b10',1,'SVF::PTAStat::TIMEStatMap()']]],
   ['tinterphi',['TInterPhi',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75aa501e9891cbacea3950d80aa6071ec69',1,'SVF::VFGNode']]],
   ['tintraphi',['TIntraPhi',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a3d97c6d57d8d2e7387715f4eb719f727',1,'SVF::VFGNode']]],
   ['tlptdata',['tlPTData',['../classSVF_1_1MutableVersionedPTData.html#a01974968b7cf60a4231cc83c93b26d7f',1,'SVF::MutableVersionedPTData::tlPTData()'],['../classSVF_1_1PersistentVersionedPTData.html#a29104a2d53d94805e142f778d3d21ad5',1,'SVF::PersistentVersionedPTData::tlPTData()']]],
