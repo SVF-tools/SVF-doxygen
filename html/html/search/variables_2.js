@@ -3,7 +3,7 @@ var searchData=
   ['background',['background',['../structDdManager.html#af901aff58575a7fea75f7de35b4684b6',1,'DdManager::background()'],['../cuddInt_8c.html#aaf93dea94cfd93476e9c11d890891aff',1,'background():&#160;cuddInt.c']]],
   ['backwardslice',['backwardslice',['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice()'],['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice()']]],
   ['backwardvisited',['backwardVisited',['../classSVF_1_1DDAVFSolver.html#a63d04c3af4529d0e0f82acd76ed57f6c',1,'SVF::DDAVFSolver']]],
-  ['base',['base',['../classSVF_1_1GepObjPN.html#ae67e495253fc881c24ef21e1f87e2fa6',1,'SVF::GepObjPN']]],
+  ['base',['base',['../classSVF_1_1GepObjVar.html#aff50e1d96403eeacaa64f7adb07ce0a5',1,'SVF::GepObjVar']]],
   ['baseids',['baseIds',['../classSVF_1_1ConstraintNode.html#ac40ecefd565e029748fdacbc44c4cd54',1,'SVF::ConstraintNode']]],
   ['basicblock',['basicBlock',['../classSVF_1_1SVFStmt.html#a877c7137875233e147faeb1198243f36',1,'SVF::SVFStmt']]],
   ['bb',['bb',['../classSVF_1_1ICFGNode.html#ad3c5171fed4e28cfd35c1a6fb9697005',1,'SVF::ICFGNode::bb()'],['../classSVF_1_1LoadMU.html#ad5b6ecaf016a136c982291256687d4d2',1,'SVF::LoadMU::bb()'],['../classSVF_1_1StoreCHI.html#a3b1bcd4535e2199b57adc67fc283fb3f',1,'SVF::StoreCHI::bb()'],['../classSVF_1_1MSSAPHI.html#a39e68e1e74483dc07bd117bd2209da91',1,'SVF::MSSAPHI::bb()']]],
@@ -28,6 +28,5 @@ var searchData=
   ['buckets',['buckets',['../structDdLevelQueue.html#a10750bfd3e96d25ce4d69eb476b64e9f',1,'DdLevelQueue']]],
   ['buildingchgtime',['buildingCHGTime',['../classSVF_1_1CHGraph.html#ab5bd2348e4418fcb2f3b18227fccd836',1,'SVF::CHGraph']]],
   ['bv',['bv',['../classSVF_1_1PointsTo.html#a668be9270539fdfc5dbf3efb9cc17587',1,'SVF::PointsTo']]],
-  ['bvit',['bvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#aa420a44769d1c25e083975e3cd04d699',1,'SVF::PointsTo::PointsToIterator']]],
-  ['byteoffset',['byteOffset',['../classSVF_1_1FieldInfo.html#a9625e4618046dd38ebd78ee2d134bc71',1,'SVF::FieldInfo::byteOffset()'],['../classSVF_1_1LocationSet.html#a9fafaf5f69baa5c125d6c3fd89381301',1,'SVF::LocationSet::byteOffset()']]]
+  ['bvit',['bvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#aa420a44769d1c25e083975e3cd04d699',1,'SVF::PointsTo::PointsToIterator']]]
 ];

@@ -11,7 +11,7 @@ var searchData=
   ['genericnode_3c_20constraintnode_2c_20constraintedge_20_3e',['GenericNode&lt; ConstraintNode, ConstraintEdge &gt;',['../classSVF_1_1GenericNode.html',1,'SVF']]],
   ['genericnode_3c_20dchnode_2c_20dchedge_20_3e',['GenericNode&lt; DCHNode, DCHEdge &gt;',['../classSVF_1_1GenericNode.html',1,'SVF']]],
   ['gepcgedge',['GepCGEdge',['../classSVF_1_1GepCGEdge.html',1,'SVF']]],
-  ['gepobjpn',['GepObjPN',['../classSVF_1_1GepObjPN.html',1,'SVF']]],
+  ['gepobjvar',['GepObjVar',['../classSVF_1_1GepObjVar.html',1,'SVF']]],
   ['gepstmt',['GepStmt',['../classSVF_1_1GepStmt.html',1,'SVF']]],
   ['gepvalvar',['GepValVar',['../classSVF_1_1GepValVar.html',1,'SVF']]],
   ['gepvfgnode',['GepVFGNode',['../classSVF_1_1GepVFGNode.html',1,'SVF']]],

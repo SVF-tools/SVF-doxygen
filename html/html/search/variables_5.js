@@ -13,8 +13,6 @@ var searchData=
   ['ei_5fpairs',['ei_pairs',['../SaberCheckerAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;SaberCheckerAPI.cpp'],['../ExtAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;ExtAPI.cpp'],['../ThreadAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;ThreadAPI.cpp']]],
   ['elder',['elder',['../structMtrNode.html#a7c8ed9787ec60487fad7b2fede53df98',1,'MtrNode']]],
   ['elements',['elements',['../classSVF_1_1CondStdSet.html#a1caece9a66b6617b89037fd8211f2934',1,'SVF::CondStdSet']]],
-  ['elemnumstridepair',['elemNumStridePair',['../classSVF_1_1FieldInfo.html#a270bc2b3a3b7aaf1e1bfbbadd1130d86',1,'SVF::FieldInfo']]],
-  ['elemty',['elemTy',['../classSVF_1_1FieldInfo.html#acb93501d8250ae4c7ff6046c9fb1183d',1,'SVF::FieldInfo']]],
   ['empty',['empty',['../cuddInt_8c.html#a5beb39637a978181c7c17714ac96672e',1,'cuddInt.c']]],
   ['enablealiascheck',['EnableAliasCheck',['../classSVF_1_1Options.html#a4da18281b973b9ffb5068dd53060524c',1,'SVF::Options']]],
   ['enablethreadcallgraph',['EnableThreadCallGraph',['../classSVF_1_1Options.html#a153d42a480ef1763ad59fd7258ac3ac5',1,'SVF::Options']]],

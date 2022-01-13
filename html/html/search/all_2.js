@@ -15,7 +15,7 @@ var searchData=
   ['backwardvisited',['backwardVisited',['../classSVF_1_1DDAVFSolver.html#a63d04c3af4529d0e0f82acd76ed57f6c',1,'SVF::DDAVFSolver::backwardVisited()'],['../classSVF_1_1SrcSnkDDA.html#a32cc8a131b2448b5e8e1fe65d99fd286',1,'SVF::SrcSnkDDA::backwardVisited()']]],
   ['badc',['BADC',['../cuddInt_8c.html#af443a49990c3ce480d6d41cb65630c1f',1,'cuddInt.c']]],
   ['bang',['bang',['../cuddInt_8c.html#a6c2c4a63badba1daf2d17524b546d120',1,'cuddInt.c']]],
-  ['base',['base',['../classSVF_1_1GepObjPN.html#ae67e495253fc881c24ef21e1f87e2fa6',1,'SVF::GepObjPN::base()'],['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a347b03b12df7d51774b617f4e7399568',1,'SVF::PTData::Base()']]],
+  ['base',['base',['../classSVF_1_1GepObjVar.html#aff50e1d96403eeacaa64f7adb07ce0a5',1,'SVF::GepObjVar::base()'],['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a347b03b12df7d51774b617f4e7399568',1,'SVF::PTData::Base()']]],
   ['basedfptdata',['BaseDFPTData',['../classSVF_1_1MutableDFPTData.html#a17a5aa4a749a5ffc75c663d057454e4a',1,'SVF::MutableDFPTData::BaseDFPTData()'],['../classSVF_1_1MutableIncDFPTData.html#a4b944ec759d0e78a7a2238db587752a9',1,'SVF::MutableIncDFPTData::BaseDFPTData()'],['../classSVF_1_1PersistentDFPTData.html#af9facbe8f694b8447bb6ebe48b95ad17',1,'SVF::PersistentDFPTData::BaseDFPTData()'],['../classSVF_1_1PersistentIncDFPTData.html#ae56633d34e5fb4499c82d422646a91f0',1,'SVF::PersistentIncDFPTData::BaseDFPTData()']]],
   ['basediffptdata',['BaseDiffPTData',['../classSVF_1_1MutableDiffPTData.html#ab50b8026258c7c9103d2315ea3091340',1,'SVF::MutableDiffPTData::BaseDiffPTData()'],['../classSVF_1_1PersistentDiffPTData.html#a3a2cf38f220a831c4334614b835b57c6',1,'SVF::PersistentDiffPTData::BaseDiffPTData()']]],
   ['baseids',['baseIds',['../classSVF_1_1ConstraintNode.html#ac40ecefd565e029748fdacbc44c4cd54',1,'SVF::ConstraintNode']]],
@@ -142,6 +142,5 @@ var searchData=
   ['bvit',['bvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#aa420a44769d1c25e083975e3cd04d699',1,'SVF::PointsTo::PointsToIterator']]],
   ['bwprocesscurnode',['BWProcessCurNode',['../classSVF_1_1SrcSnkDDA.html#adc2ac209e2d5e561bcb594db4c77051b',1,'SVF::SrcSnkDDA::BWProcessCurNode()'],['../classSVF_1_1CFLSolver.html#ab444cce6a5c75c7e6c65d47039e567a8',1,'SVF::CFLSolver::BWProcessCurNode()']]],
   ['bwprocessincomingedge',['BWProcessIncomingEdge',['../classSVF_1_1SrcSnkDDA.html#a1ea0d4c4e53ff6986dd50d624ba2bff5',1,'SVF::SrcSnkDDA::BWProcessIncomingEdge()'],['../classSVF_1_1CFLSolver.html#a3d5550fbb149297022d5a1852f3229b3',1,'SVF::CFLSolver::BWProcessIncomingEdge()']]],
-  ['bypassmssaphinode',['bypassMSSAPHINode',['../classSVF_1_1SVFGOPT.html#a4f3890f637ffe03c2a1981e75e3d2e16',1,'SVF::SVFGOPT']]],
-  ['byteoffset',['byteOffset',['../classSVF_1_1FieldInfo.html#a9625e4618046dd38ebd78ee2d134bc71',1,'SVF::FieldInfo::byteOffset()'],['../classSVF_1_1LocationSet.html#a9fafaf5f69baa5c125d6c3fd89381301',1,'SVF::LocationSet::byteOffset()']]]
+  ['bypassmssaphinode',['bypassMSSAPHINode',['../classSVF_1_1SVFGOPT.html#a4f3890f637ffe03c2a1981e75e3d2e16',1,'SVF::SVFGOPT']]]
 ];

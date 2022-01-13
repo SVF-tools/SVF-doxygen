@@ -2,7 +2,6 @@ var searchData=
 [
   ['fc_5fisnan',['fc_isnan',['../fastcluster_8cpp.html#a8abcd9d66492e761592578e82ce2cba0',1,'fastcluster.cpp']]],
   ['fieldexpand',['fieldExpand',['../classSVF_1_1AndersenSFR.html#a78e48b3c3db39470ab47b92bbc577e7e',1,'SVF::AndersenSFR']]],
-  ['fieldinfo',['FieldInfo',['../classSVF_1_1FieldInfo.html#a167925e2aadbcdbc3017c6dc98cb83b4',1,'SVF::FieldInfo']]],
   ['fifoworklist',['FIFOWorkList',['../classSVF_1_1FIFOWorkList.html#a1d3ab8bea4d8f94b935d1bef3cf0c4ac',1,'SVF::FIFOWorkList']]],
   ['filechecker',['FileChecker',['../classSVF_1_1FileChecker.html#a283b5e46aba5e964f0a54abc33fcb7b6',1,'SVF::FileChecker::FileChecker()'],['../saber_8cpp.html#ae054770c30aa9b9ef72d5bc84084b472',1,'FILECHECKER():&#160;saber.cpp']]],
   ['filoworklist',['FILOWorkList',['../classSVF_1_1FILOWorkList.html#ab447c6c1a59cd81982626d25d00d57de',1,'SVF::FILOWorkList']]],
@@ -16,6 +15,7 @@ var searchData=
   ['firstcommonbit',['firstCommonBit',['../classSVF_1_1CoreBitVector.html#a1ca118240e4c7f678d52a6ca4b3e6b2f',1,'SVF::CoreBitVector']]],
   ['fixvartree',['fixVarTree',['../cuddInt_8c.html#a9a7571d0ca349667f3912593b8a7d8d1',1,'cuddInt.c']]],
   ['flatten',['flatten',['../classSVF_1_1DCHGraph.html#ab96874bc8f6461fe0c3eb53b7f5cedce',1,'SVF::DCHGraph']]],
+  ['flattenedfieldinfo',['FlattenedFieldInfo',['../classSVF_1_1FlattenedFieldInfo.html#a90af575af4fa8ed5646b790daaf421cd',1,'SVF::FlattenedFieldInfo']]],
   ['flowdda',['FlowDDA',['../classSVF_1_1FlowDDA.html#aab22d2c14b46963887f623d84e75bd7a',1,'SVF::FlowDDA']]],
   ['flowsensitive',['FlowSensitive',['../classSVF_1_1FlowSensitive.html#aac88b67b49cbd72912ff586d30197ffb',1,'SVF::FlowSensitive']]],
   ['flowsensitivestat',['FlowSensitiveStat',['../classSVF_1_1FlowSensitiveStat.html#a2a7ae289b0400e63fa217f8717f4ffa9',1,'SVF::FlowSensitiveStat']]],
