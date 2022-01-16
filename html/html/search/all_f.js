@@ -19,7 +19,7 @@ var searchData=
   ['offlineconsg',['OfflineConsG',['../classSVF_1_1OfflineConsG.html',1,'SVF::OfflineConsG'],['../classSVF_1_1OfflineConsG.html#ae61c4f509b90dd43f63a07560ba3562f',1,'SVF::OfflineConsG::OfflineConsG()']]],
   ['offlineconsg_2ecpp',['OfflineConsG.cpp',['../OfflineConsG_8cpp.html',1,'']]],
   ['offlineconsg_2eh',['OfflineConsG.h',['../OfflineConsG_8h.html',1,'']]],
-  ['offset',['offset',['../classSVF_1_1DCHEdge.html#a16869c90d4e735bc09b8bceda90b99ed',1,'SVF::DCHEdge::offset()'],['../classSVF_1_1CoreBitVector.html#a79dfa9f4c2efb6a0a2de18c6359c41bd',1,'SVF::CoreBitVector::offset()']]],
+  ['offset',['offset',['../classSVF_1_1DCHEdge.html#a41bd0d95d588aa7fb77e83dc91654493',1,'SVF::DCHEdge::offset()'],['../classSVF_1_1CoreBitVector.html#a79dfa9f4c2efb6a0a2de18c6359c41bd',1,'SVF::CoreBitVector::offset()']]],
   ['offsetvalues',['offsetValues',['../classSVF_1_1LocationSet.html#a5a2792b8b914557a9ccf0e57d0ed8b30',1,'SVF::LocationSet']]],
   ['offsetvaluevec',['OffsetValueVec',['../classSVF_1_1LocationSet.html#a9cfbfba21f40feb2cc7e0003d4aaaae5',1,'SVF::LocationSet']]],
   ['one',['one',['../structDdManager.html#a239bd99ee654742adc79b8299c2bc92e',1,'DdManager::one()'],['../cuddInt_8c.html#a49e3c7508be54a84ae83273ed240e31c',1,'one():&#160;cuddInt.c']]],

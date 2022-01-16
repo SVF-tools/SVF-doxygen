@@ -70,7 +70,7 @@ var searchData=
   ['setnonconcretecxt',['setNonConcreteCxt',['../classSVF_1_1ContextCond.html#ac80892cbef7a5d2c949e5f07682bc885',1,'SVF::ContextCond']]],
   ['setnorrep',['setNorRep',['../classSVF_1_1OfflineConsG.html#a3cb6384160b50bd0a94de3fd2eb6facd',1,'SVF::OfflineConsG']]],
   ['setobjfieldinsensitive',['setObjFieldInsensitive',['../classSVF_1_1PointerAnalysis.html#ac5683fe2e24b393ccc5cb6d8bc92cf2b',1,'SVF::PointerAnalysis']]],
-  ['setoffset',['setOffset',['../classSVF_1_1DCHEdge.html#a603f08c52473b025178d1bce67f39257',1,'SVF::DCHEdge']]],
+  ['setoffset',['setOffset',['../classSVF_1_1DCHEdge.html#a70f757826082c95766c8324c1264e977',1,'SVF::DCHEdge']]],
   ['setopver',['setOpVer',['../classSVF_1_1MSSAPHISVFGNode.html#a928a57d7f518c5af98a0245d9221e671',1,'SVF::MSSAPHISVFGNode::setOpVer()'],['../classSVF_1_1CmpVFGNode.html#a41bcdd6b46a31c8d15533342478dc236',1,'SVF::CmpVFGNode::setOpVer()'],['../classSVF_1_1BinaryOPVFGNode.html#a76c67d31ffb67c4ef102471898ae2709',1,'SVF::BinaryOPVFGNode::setOpVer()'],['../classSVF_1_1UnaryOPVFGNode.html#a3b082eef98b8393499908f6c430b8d6c',1,'SVF::UnaryOPVFGNode::setOpVer()'],['../classSVF_1_1PHIVFGNode.html#a36f469a129063b43161a8d1423414ce5',1,'SVF::PHIVFGNode::setOpVer()'],['../classSVF_1_1MSSACHI.html#a245d8ee9e81ba4fe6f41533baf471331',1,'SVF::MSSACHI::setOpVer()'],['../classSVF_1_1MSSAPHI.html#a74f663dc5ecc659e98542a53414b7988',1,'SVF::MSSAPHI::setOpVer()']]],
   ['setopverandbb',['setOpVerAndBB',['../classSVF_1_1IntraPHIVFGNode.html#a7e5fd83393224ece808de83cbf496882',1,'SVF::IntraPHIVFGNode']]],
   ['setoriginalobj',['setOriginalObj',['../classSVF_1_1TypeBasedHeapCloning.html#a14027d92c4f8e33d7487fe81acce6a85',1,'SVF::TypeBasedHeapCloning']]],

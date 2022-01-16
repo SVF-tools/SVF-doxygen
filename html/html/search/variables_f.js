@@ -10,7 +10,7 @@ var searchData=
   ['objtotype',['objToType',['../classSVF_1_1TypeBasedHeapCloning.html#a477492fb699d742c33007a6ca934b5c1',1,'SVF::TypeBasedHeapCloning']]],
   ['ocg',['oCG',['../classSVF_1_1AndersenHCD.html#af5fe01816e65ece685a3c3537ebd0137',1,'SVF::AndersenHCD']]],
   ['ocgdotgraph',['OCGDotGraph',['../classSVF_1_1Options.html#a2780c16611375631cd48bf9487f9e0bf',1,'SVF::Options']]],
-  ['offset',['offset',['../classSVF_1_1DCHEdge.html#a16869c90d4e735bc09b8bceda90b99ed',1,'SVF::DCHEdge::offset()'],['../classSVF_1_1CoreBitVector.html#a79dfa9f4c2efb6a0a2de18c6359c41bd',1,'SVF::CoreBitVector::offset()']]],
+  ['offset',['offset',['../classSVF_1_1DCHEdge.html#a41bd0d95d588aa7fb77e83dc91654493',1,'SVF::DCHEdge::offset()'],['../classSVF_1_1CoreBitVector.html#a79dfa9f4c2efb6a0a2de18c6359c41bd',1,'SVF::CoreBitVector::offset()']]],
   ['offsetvalues',['offsetValues',['../classSVF_1_1LocationSet.html#a5a2792b8b914557a9ccf0e57d0ed8b30',1,'SVF::LocationSet']]],
   ['one',['one',['../structDdManager.html#a239bd99ee654742adc79b8299c2bc92e',1,'DdManager::one()'],['../cuddInt_8c.html#a49e3c7508be54a84ae83273ed240e31c',1,'one():&#160;cuddInt.c']]],
   ['onstack',['onStack',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a0eb5f6b9985b9b512a76537d55b092b5',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
