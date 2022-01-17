@@ -175,7 +175,7 @@ var searchData=
   ['irannotator',['IRAnnotator',['../classSVF_1_1IRAnnotator.html',1,'SVF::IRAnnotator'],['../classSVF_1_1IRAnnotator.html#aa54df3d6c0c20c26be90bb68546dc93d',1,'SVF::IRAnnotator::IRAnnotator()']]],
   ['irannotator_2eh',['IRAnnotator.h',['../IRAnnotator_8h.html',1,'']]],
   ['irbuilder',['IRBuilder',['../namespaceSVF.html#a94824519e439aeef1568d415b6f7331c',1,'SVF']]],
-  ['irgraph',['IRGraph',['../classSVF_1_1IRGraph.html',1,'SVF::IRGraph'],['../classSVF_1_1IRGraph.html#a34f7644ccf88fc0911c0b4f625dc1f28',1,'SVF::IRGraph::IRGraph()']]],
+  ['irgraph',['IRGraph',['../classSVF_1_1IRGraph.html',1,'SVF::IRGraph'],['../classSVF_1_1SVFVar.html#a6755ed387e15f44ffb637f64a0af60bc',1,'SVF::SVFVar::IRGraph()'],['../classSVF_1_1IRGraph.html#a34f7644ccf88fc0911c0b4f625dc1f28',1,'SVF::IRGraph::IRGraph()']]],
   ['irgraph_2ecpp',['IRGraph.cpp',['../IRGraph_8cpp.html',1,'']]],
   ['irgraph_2eh',['IRGraph.h',['../IRGraph_8h.html',1,'']]],
   ['is_5falloc',['is_alloc',['../classSVF_1_1ExtAPI.html#a9ac1ce8f2796d1e70005c6999c9772de',1,'SVF::ExtAPI']]],
