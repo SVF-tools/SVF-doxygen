@@ -77,7 +77,7 @@ var searchData=
   ['getactualinsvfgnodes',['getActualINSVFGNodes',['../classSVF_1_1SVFG.html#ab767c329e7fccf9efe16818515199d65',1,'SVF::SVFG']]],
   ['getactualoutsvfgnodes',['getActualOUTSVFGNodes',['../classSVF_1_1SVFG.html#af0c86a9e83a1f2427dd8e80287be37ed',1,'SVF::SVFG']]],
   ['getactualparmatforksite',['getActualParmAtForkSite',['../classSVF_1_1ThreadAPI.html#a6bc40bc0b35c23e9d1874c844511449d',1,'SVF::ThreadAPI::getActualParmAtForkSite(const Instruction *inst) const'],['../classSVF_1_1ThreadAPI.html#ae8224e28db2323874fb9da8b05d3ab80',1,'SVF::ThreadAPI::getActualParmAtForkSite(CallSite cs) const'],['../namespaceSVF_1_1SVFUtil.html#aaeeb386d80b51d729322317065606454',1,'SVF::SVFUtil::getActualParmAtForkSite(const CallSite cs)'],['../namespaceSVF_1_1SVFUtil.html#a01119ea4e3a10ebecdef4d390a1c4c88',1,'SVF::SVFUtil::getActualParmAtForkSite(const Instruction *inst)']]],
-  ['getactualparms',['getActualParms',['../classSVF_1_1CallBlockNode.html#a20ed03cf52e284860210e4b53766b45f',1,'SVF::CallBlockNode']]],
+  ['getactualparms',['getActualParms',['../classSVF_1_1CallBlockNode.html#abfc30a2fc6e996c2e1b0902abc7c813b',1,'SVF::CallBlockNode']]],
   ['getactualparmvfgnode',['getActualParmVFGNode',['../classSVF_1_1VFG.html#a01b8694a5ab7acf8df0213225550791b',1,'SVF::VFG']]],
   ['getactualpts',['getActualPts',['../classSVF_1_1PersistentPointsToCache.html#ab2888b033a29de3af48d377dc2fe70aa',1,'SVF::PersistentPointsToCache']]],
   ['getactualret',['getActualRet',['../classSVF_1_1RetBlockNode.html#aa9ecd6854337dfa67a828d2416f3813f',1,'SVF::RetBlockNode']]],
