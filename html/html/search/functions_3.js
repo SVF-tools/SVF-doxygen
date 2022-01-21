@@ -142,7 +142,6 @@ var searchData=
   ['dumpcpts',['dumpCPts',['../classSVF_1_1PointerAnalysis.html#ad409cbf61271743394b9e5868f3fd197',1,'SVF::PointerAnalysis::dumpCPts()'],['../classSVF_1_1BVDataPTAImpl.html#ae20bbb7991f585deb2e6d0d8115b1b93',1,'SVF::BVDataPTAImpl::dumpCPts()'],['../classSVF_1_1CondPTAImpl.html#aa260a3275fbec7061295306a58763d24',1,'SVF::CondPTAImpl::dumpCPts()']]],
   ['dumpcptset',['dumpCPtSet',['../classSVF_1_1DDAVFSolver.html#aa4dc73ea65f736282a413a9d286141e5',1,'SVF::DDAVFSolver']]],
   ['dumpcxt',['dumpCxt',['../classSVF_1_1MTAResultValidator.html#ae7d61becd14123f60976fd7261d0c84d',1,'SVF::MTAResultValidator::dumpCxt()'],['../classSVF_1_1TCT.html#aa86c4422e17cf00408444f18687d555b',1,'SVF::TCT::dumpCxt()']]],
-  ['dumpgraph',['dumpGraph',['../classSVF_1_1PointerAnalysis.html#a3fd44d3cfc3f4ab18506870c65df32f5',1,'SVF::PointerAnalysis']]],
   ['dumpinterlev',['dumpInterlev',['../classSVF_1_1MTAResultValidator.html#a1af033b5742fa9cc1e4f9873184775b7',1,'SVF::MTAResultValidator']]],
   ['dumplocversionmaps',['dumpLocVersionMaps',['../classSVF_1_1VersionedFlowSensitive.html#a032acdcd8b84523a7ac2f0e46d21c62f',1,'SVF::VersionedFlowSensitive']]],
   ['dumpmeldversion',['dumpMeldVersion',['../classSVF_1_1VersionedFlowSensitive.html#a7565989371100f84ae5f9e2efa655fcb',1,'SVF::VersionedFlowSensitive']]],

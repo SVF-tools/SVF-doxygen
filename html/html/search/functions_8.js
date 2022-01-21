@@ -159,6 +159,7 @@ var searchData=
   ['isformalparmphi',['isFormalParmPHI',['../classSVF_1_1InterPHIVFGNode.html#a6049300f916dd23f34d9cacccc7e3ea7',1,'SVF::InterPHIVFGNode']]],
   ['isfulljoin',['isFullJoin',['../classSVF_1_1ForkJoinAnalysis.html#ab55532eefbcef639ced957ad82fbd340',1,'SVF::ForkJoinAnalysis']]],
   ['isfunction',['isFunction',['../classSVF_1_1MemObj.html#ae1d14e2bf0be36cdadebf119822f607b',1,'SVF::MemObj::isFunction()'],['../classSVF_1_1ObjTypeInfo.html#ac99fa14fdf7bc0dd3e9ff36c7a3a351f',1,'SVF::ObjTypeInfo::isFunction()']]],
+  ['isfunctionretphi',['isFunctionRetPhi',['../classSVF_1_1PhiStmt.html#a8e55ddef627096c78bb2c8b6f9c77140',1,'SVF::PhiStmt']]],
   ['isfunentrysvfgnode',['isFunEntrySVFGNode',['../classSVF_1_1SVFG.html#ae2cff3c963136f474fac0a66aa8cff7b',1,'SVF::SVFG']]],
   ['isfunentryvfgnode',['isFunEntryVFGNode',['../classSVF_1_1VFG.html#a8994194bca2edfd9528880390de795ab',1,'SVF::VFG']]],
   ['isfunptr',['isFunPtr',['../classSVF_1_1SVFIR.html#a9235a60e7332c8416e113e7360441d97',1,'SVF::SVFIR']]],

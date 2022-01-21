@@ -393,7 +393,6 @@ var searchData=
   ['dumpcptset',['dumpCPtSet',['../classSVF_1_1DDAVFSolver.html#aa4dc73ea65f736282a413a9d286141e5',1,'SVF::DDAVFSolver']]],
   ['dumpcxt',['dumpCxt',['../classSVF_1_1MTAResultValidator.html#ae7d61becd14123f60976fd7261d0c84d',1,'SVF::MTAResultValidator::dumpCxt()'],['../classSVF_1_1TCT.html#aa86c4422e17cf00408444f18687d555b',1,'SVF::TCT::dumpCxt()']]],
   ['dumpfree',['DumpFree',['../classSVF_1_1Options.html#a2ef679d4177438655577e7fef7c0cc90',1,'SVF::Options']]],
-  ['dumpgraph',['dumpGraph',['../classSVF_1_1PointerAnalysis.html#a3fd44d3cfc3f4ab18506870c65df32f5',1,'SVF::PointerAnalysis']]],
   ['dumpicfg',['DumpICFG',['../classSVF_1_1Options.html#aea29a835c54fab800117e57de00e0b1e',1,'SVF::Options']]],
   ['dumpinterlev',['dumpInterlev',['../classSVF_1_1MTAResultValidator.html#a1af033b5742fa9cc1e4f9873184775b7',1,'SVF::MTAResultValidator']]],
   ['dumplocversionmaps',['dumpLocVersionMaps',['../classSVF_1_1VersionedFlowSensitive.html#a032acdcd8b84523a7ac2f0e46d21c62f',1,'SVF::VersionedFlowSensitive']]],
