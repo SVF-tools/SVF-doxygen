@@ -49,7 +49,7 @@ var searchData=
   ['loadinst',['LoadInst',['../namespaceSVF.html#a5a6e8ab900d5cd17ef72661006a7fbe0',1,'SVF']]],
   ['loadmodules',['loadModules',['../classSVF_1_1LLVMModuleSet.html#a298966366b02d0a34f409c2c77da3789',1,'SVF::LLVMModuleSet']]],
   ['loadmssamu',['LoadMSSAMU',['../classSVF_1_1MSSAMU.html#a82c66f3e2b7d2d9dd391a947719bda9baca29c59204ea9d2e228cba3e349aa019',1,'SVF::MSSAMU']]],
-  ['loadmu',['LoadMU',['../classSVF_1_1LoadMU.html',1,'SVF::LoadMU&lt; Cond &gt;'],['../classSVF_1_1LoadMU.html#aaf916feaa76c3eaf96dcff576ef366ca',1,'SVF::LoadMU::LoadMU()'],['../classSVF_1_1SVFG.html#a86d4a41a881a3d2e5def103d7ba8bb2f',1,'SVF::SVFG::LOADMU()'],['../classSVF_1_1MemSSA.html#a4717016109fd3bc80f3095d11afff5b1',1,'SVF::MemSSA::LOADMU()']]],
+  ['loadmu',['LoadMU',['../classSVF_1_1LoadMU.html',1,'SVF::LoadMU&lt; Cond &gt;'],['../classSVF_1_1SVFG.html#a86d4a41a881a3d2e5def103d7ba8bb2f',1,'SVF::SVFG::LOADMU()'],['../classSVF_1_1MemSSA.html#a4717016109fd3bc80f3095d11afff5b1',1,'SVF::MemSSA::LOADMU()'],['../classSVF_1_1LoadMU.html#aaf916feaa76c3eaf96dcff576ef366ca',1,'SVF::LoadMU::LoadMU()']]],
   ['loadoutedges',['loadOutEdges',['../classSVF_1_1ConstraintNode.html#a85a6acbd708be0dfc63ea87050a4a934',1,'SVF::ConstraintNode']]],
   ['loadset',['LoadSet',['../classSVF_1_1MTA.html#a80356495b6c45bac59dc15fd7a99730b',1,'SVF::MTA::LoadSet()'],['../classSVF_1_1MTAAnnotator.html#a469851829bf1105fe8faac44b4abbfdd',1,'SVF::MTAAnnotator::loadset()']]],
   ['loadsrcnodes',['loadSrcNodes',['../classSVF_1_1AliasDDAClient.html#a246448efd1ff5da683a6ffe9f759e282',1,'SVF::AliasDDAClient']]],
