@@ -122,7 +122,7 @@ var searchData=
   ['setreachglobal',['setReachGlobal',['../classSVF_1_1ProgSlice.html#a397632ce0c523c4a54c5dc578606d14d',1,'SVF::ProgSlice']]],
   ['setrep',['setRep',['../classSVF_1_1ConstraintGraph.html#abea65bf6dd43aa312082f8d4c7c3e3cb',1,'SVF::ConstraintGraph']]],
   ['setresver',['setResVer',['../classSVF_1_1MSSADEF.html#a343eb4c9515dfbbbdadaacf5500e5f05',1,'SVF::MSSADEF']]],
-  ['setretblocknode',['setRetBlockNode',['../classSVF_1_1CallICFGNode.html#afe6a3855b59b406fe6c20beaeb9bdbd9',1,'SVF::CallICFGNode']]],
+  ['setreticfgnode',['setRetICFGNode',['../classSVF_1_1CallICFGNode.html#a91b38c6930f3c15b9b38121662fded20',1,'SVF::CallICFGNode']]],
   ['setscalar',['setScalar',['../classSVF_1_1DCHNode.html#a917265fa44ed08b66a6bd722f318bfa4',1,'SVF::DCHNode']]],
   ['setsccedgeflag',['setSCCEdgeFlag',['../classSVF_1_1ConstraintNode.html#ab8e02139108272c54171cd2e8833cd88',1,'SVF::ConstraintNode::setSCCEdgeFlag()'],['../classSVF_1_1Andersen.html#ab81b08574f80287803dd43b5ebe2adfa',1,'SVF::Andersen::setSCCEdgeFlag()']]],
   ['setsubs',['setSubs',['../classSVF_1_1ConstraintGraph.html#a148235bd1355a700d3ce187702e89bc8',1,'SVF::ConstraintGraph']]],
