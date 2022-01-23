@@ -2,7 +2,6 @@ var searchData=
 [
   ['pag',['pag',['../classSVF_1_1DDAClient.html#a5e02fa3c1e6fbd5ed54038b1eaeeaaff',1,'SVF::DDAClient::pag()'],['../classSVF_1_1ConstraintGraph.html#aa8b09f64c6e4bbd081c6062a1a0e8948',1,'SVF::ConstraintGraph::pag()'],['../classSVF_1_1VFG.html#a25c2bbbc2e966e2aaa59a5b83363557a',1,'SVF::VFG::pag()'],['../classSVF_1_1PAGBuilderFromFile.html#a79f00ac0ee4a67beec6e7ef45c504e4d',1,'SVF::PAGBuilderFromFile::pag()'],['../classSVF_1_1PointerAnalysis.html#adc7f5c71efb9cd1bec4f5ca9127654c3',1,'SVF::PointerAnalysis::pag()'],['../classSVF_1_1SVFIR.html#aaf86146b5e765d1f278b6d812bf913f5',1,'SVF::SVFIR::pag()'],['../classSVF_1_1SVFIRBuilder.html#a4ea94b0a8d6da904ff9a6c1b0341b9cb',1,'SVF::SVFIRBuilder::pag()']]],
   ['pagdotgraph',['PAGDotGraph',['../classSVF_1_1Options.html#a3a20311c732fb391332ae0ee1cb450a0',1,'SVF::Options']]],
-  ['pagdotgraphshorter',['PAGDotGraphShorter',['../classSVF_1_1Options.html#a8eba08052f7af57b762155a58844480c',1,'SVF::Options']]],
   ['pagedge',['pagEdge',['../classSVF_1_1StmtVFGNode.html#ab5f48de8258f92bb7b9d411e178beb49',1,'SVF::StmtVFGNode']]],
   ['pagedges',['pagEdges',['../classSVF_1_1ICFGNode.html#a12ce3aabc1bd3bae7caa9be9ec0a6a71',1,'SVF::ICFGNode']]],
   ['pagedgetofunmap',['pagEdgeToFunMap',['../classSVF_1_1MRGenerator.html#ab250a4950269f57027d8e8ef10089f58',1,'SVF::MRGenerator']]],

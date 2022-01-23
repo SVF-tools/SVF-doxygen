@@ -5,7 +5,6 @@ var searchData=
   ['pagbuilderfromfile_2ecpp',['PAGBuilderFromFile.cpp',['../PAGBuilderFromFile_8cpp.html',1,'']]],
   ['pagbuilderfromfile_2eh',['PAGBuilderFromFile.h',['../PAGBuilderFromFile_8h.html',1,'']]],
   ['pagdotgraph',['PAGDotGraph',['../classSVF_1_1Options.html#a3a20311c732fb391332ae0ee1cb450a0',1,'SVF::Options']]],
-  ['pagdotgraphshorter',['PAGDotGraphShorter',['../classSVF_1_1Options.html#a8eba08052f7af57b762155a58844480c',1,'SVF::Options']]],
   ['pagedge',['pagEdge',['../classSVF_1_1StmtVFGNode.html#ab5f48de8258f92bb7b9d411e178beb49',1,'SVF::StmtVFGNode::pagEdge()'],['../namespaceSVF.html#ae6ead95a66f69e1e4cfa1159f868a152',1,'SVF::PAGEdge()']]],
   ['pagedges',['pagEdges',['../classSVF_1_1ICFGNode.html#a12ce3aabc1bd3bae7caa9be9ec0a6a71',1,'SVF::ICFGNode']]],
   ['pagedgesetty',['PAGEdgeSetTy',['../classSVF_1_1SVFStmt.html#a2bdfa37167b5496629e5cae62705d5f2',1,'SVF::SVFStmt']]],

@@ -22,6 +22,7 @@ var searchData=
   ['sfrobjnodes',['sfrObjNodes',['../classSVF_1_1AndersenSFR.html#a0865c50224ffc1e053cf859122f83f75',1,'SVF::AndersenSFR']]],
   ['shift',['shift',['../structDdLocalCache.html#a20e93a93f7aa732e4a5a83c54284c921',1,'DdLocalCache::shift()'],['../structDdHashTable.html#a01e29792ea99268274deff4fc7ab6a6a',1,'DdHashTable::shift()'],['../structDdSubtable.html#ae89bb40a595ce1eda70d63fd78b23865',1,'DdSubtable::shift()'],['../structDdLevelQueue.html#af39270cc5ce8832e2c6667a0b174803a',1,'DdLevelQueue::shift()']]],
   ['showhiddennode',['ShowHiddenNode',['../classSVF_1_1Options.html#adec2012e10130f664fe0ea3acf39f78b',1,'SVF::Options']]],
+  ['showsvfirvalue',['ShowSVFIRValue',['../classSVF_1_1Options.html#a63c2ff1420867ea4ef0a94d28b3f0558',1,'SVF::Options']]],
   ['shuffleselect',['shuffleSelect',['../cuddInt_8c.html#aa2d42b930312818f9e36eafdd428b8a2',1,'cuddInt.c']]],
   ['shuffletable',['shuffleTable',['../cuddInt_8c.html#a7245623787b25f92a5c129e67ccdb404',1,'cuddInt.c']]],
   ['siftmaxswap',['siftMaxSwap',['../structDdManager.html#a6521157f9436fb77fcc6327b2035e422',1,'DdManager']]],
