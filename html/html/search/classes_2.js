@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['callblocknode',['CallBlockNode',['../classSVF_1_1CallBlockNode.html',1,'SVF']]],
   ['callcfgedge',['CallCFGEdge',['../classSVF_1_1CallCFGEdge.html',1,'SVF']]],
   ['callchi',['CallCHI',['../classSVF_1_1CallCHI.html',1,'SVF']]],
   ['calldirsvfgedge',['CallDirSVFGEdge',['../classSVF_1_1CallDirSVFGEdge.html',1,'SVF']]],
   ['callgraphbuilder',['CallGraphBuilder',['../classSVF_1_1CallGraphBuilder.html',1,'SVF']]],
+  ['callicfgnode',['CallICFGNode',['../classSVF_1_1CallICFGNode.html',1,'SVF']]],
   ['callindsvfgedge',['CallIndSVFGEdge',['../classSVF_1_1CallIndSVFGEdge.html',1,'SVF']]],
   ['callmu',['CallMU',['../classSVF_1_1CallMU.html',1,'SVF']]],
   ['callpe',['CallPE',['../classSVF_1_1CallPE.html',1,'SVF']]],

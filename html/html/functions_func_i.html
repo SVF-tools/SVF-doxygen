@@ -228,14 +228,14 @@ $(function() {
 <li>insertPHI()
 : <a class="el" href="classSVF_1_1MemSSA.html#acc6f72d96cf29e36093ba08ea86b8983">SVF::MemSSA</a>
 </li>
-<li>InterBlockNode()
-: <a class="el" href="classSVF_1_1InterBlockNode.html#a02b79c6ff51262d4c92a69597a8b46db">SVF::InterBlockNode</a>
-</li>
 <li>InterDisjointMRG()
 : <a class="el" href="classSVF_1_1InterDisjointMRG.html#a91e89081103f451945baadaea370b428">SVF::InterDisjointMRG</a>
 </li>
 <li>interferenceAnalysis()
 : <a class="el" href="classSVF_1_1PCG.html#a057887f3d5fd3b9b414e573b3f9f4548">SVF::PCG</a>
+</li>
+<li>InterICFGNode()
+: <a class="el" href="classSVF_1_1InterICFGNode.html#a192826ba075a80add6a39a039a32bc05">SVF::InterICFGNode</a>
 </li>
 <li>InterMSSAPHISVFGNode()
 : <a class="el" href="classSVF_1_1InterMSSAPHISVFGNode.html#a6deba5e75858c16682d4a21fa851d353">SVF::InterMSSAPHISVFGNode</a>
@@ -265,9 +265,6 @@ $(function() {
 <li>intraBackwardTraverse()
 : <a class="el" href="classSVF_1_1LockAnalysis.html#a5f693c893f3701e1e025881f91193d53">SVF::LockAnalysis</a>
 </li>
-<li>IntraBlockNode()
-: <a class="el" href="classSVF_1_1IntraBlockNode.html#a498e59de4ef7bc2ec8f76de43608a778">SVF::IntraBlockNode</a>
-</li>
 <li>IntraCFGEdge()
 : <a class="el" href="classSVF_1_1IntraCFGEdge.html#aeab701d63caadf8effabdbd23ac0cd49">SVF::IntraCFGEdge</a>
 </li>
@@ -279,6 +276,9 @@ $(function() {
 </li>
 <li>intraForwardTraverse()
 : <a class="el" href="classSVF_1_1LockAnalysis.html#a6febb0bb12f4983cd54b3bd310ce65d2">SVF::LockAnalysis</a>
+</li>
+<li>IntraICFGNode()
+: <a class="el" href="classSVF_1_1IntraICFGNode.html#ad8a53409330e7ea74c50cdeaf37acef8">SVF::IntraICFGNode</a>
 </li>
 <li>IntraIndSVFGEdge()
 : <a class="el" href="classSVF_1_1IntraIndSVFGEdge.html#ab2b1f7610737c6f0a5a94b8a7e629110">SVF::IntraIndSVFGEdge</a>
@@ -402,7 +402,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1VFGEdge.html#ae14a5f58064e6c08b53a3cffcc050077">SVF::VFGEdge</a>
 </li>
 <li>isCallSiteRetSVFGNode()
-: <a class="el" href="classSVF_1_1SVFG.html#ac75b83bdf3bcfecaae579716ab33dd61">SVF::SVFG</a>
+: <a class="el" href="classSVF_1_1SVFG.html#ad189e45b0c810e68566ccc3bdb3f2e59">SVF::SVFG</a>
 </li>
 <li>isCallVFGEdge()
 : <a class="el" href="classSVF_1_1VFGEdge.html#a4352297ef44c4eff1efe2f348cce6fe9">SVF::VFGEdge</a>
@@ -514,7 +514,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1SaberCheckerAPI.html#a0977378f6f2a782041c97912762deb5f">SVF::SaberCheckerAPI</a>
 </li>
 <li>isForksite()
-: <a class="el" href="classSVF_1_1ThreadCallGraph.html#aa5c29ac668359942a9bc31cacd0cd9c4">SVF::ThreadCallGraph</a>
+: <a class="el" href="classSVF_1_1ThreadCallGraph.html#a07d3db6ffe8d75effd6fbc3856c484fe">SVF::ThreadCallGraph</a>
 </li>
 <li>isFormalINPHI()
 : <a class="el" href="classSVF_1_1InterMSSAPHISVFGNode.html#a47d870a6c0f515139b1950e8985dc2d1">SVF::InterMSSAPHISVFGNode</a>
@@ -596,13 +596,13 @@ $(function() {
 : <a class="el" href="classSVF_1_1TCTNode.html#a42dde4c3714cc5605f7c0e76cfd4a74c">SVF::TCTNode</a>
 </li>
 <li>isIndirectCall()
-: <a class="el" href="classSVF_1_1CallBlockNode.html#a285c517dfd7fee5467606663a0fdd035">SVF::CallBlockNode</a>
+: <a class="el" href="classSVF_1_1CallICFGNode.html#aa11226a2e4fa6a7b1d78006cc8ca0518">SVF::CallICFGNode</a>
 </li>
 <li>isIndirectCallEdge()
 : <a class="el" href="classSVF_1_1PTACallGraphEdge.html#a74692d47f929dc2188eede497acb91b7">SVF::PTACallGraphEdge</a>
 </li>
 <li>isIndirectCallSites()
-: <a class="el" href="classSVF_1_1SVFIR.html#ad44e1ef13d047f8aea8f6ddf5510bd6c">SVF::SVFIR</a>
+: <a class="el" href="classSVF_1_1SVFIR.html#a3dbe0b17694daa74f648a70e77efaf23">SVF::SVFIR</a>
 </li>
 <li>isIndirectEdge()
 : <a class="el" href="classSVF_1_1ConstraintNode.html#a8c3e6dca7bf12fa941c4411f6a1f52c0">SVF::ConstraintNode</a>
@@ -672,7 +672,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1TCT.html#a65d0260b37ab60debb7fa84fa0b7a5d4">SVF::TCT</a>
 </li>
 <li>isJoinsite()
-: <a class="el" href="classSVF_1_1ThreadCallGraph.html#ac9dde4936d04321a17656af1af1108da">SVF::ThreadCallGraph</a>
+: <a class="el" href="classSVF_1_1ThreadCallGraph.html#ac75a38384cda8379c32b4d01d4d5d20a">SVF::ThreadCallGraph</a>
 </li>
 <li>isJoinSiteInRecursion()
 : <a class="el" href="classSVF_1_1TCT.html#a4ff016e5933a4d094989c600ad25dd99">SVF::TCT</a>
@@ -763,7 +763,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1DDAVFSolver.html#a7994236bff84ba8244592fdf5e546734">SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;</a>
 </li>
 <li>isParForSite()
-: <a class="el" href="classSVF_1_1ThreadCallGraph.html#af5ad00c7a5362aa288bddf4824601ab8">SVF::ThreadCallGraph</a>
+: <a class="el" href="classSVF_1_1ThreadCallGraph.html#ae18f0b3245694145f6d9262ee28c6453">SVF::ThreadCallGraph</a>
 </li>
 <li>isPartialReachable()
 : <a class="el" href="classSVF_1_1ProgSlice.html#a3822badbbe9ac808296d5248f2dbf8e2">SVF::ProgSlice</a>

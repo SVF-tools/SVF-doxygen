@@ -27,7 +27,7 @@ var searchData=
   ['vfpathvar',['VFPathVar',['../namespaceSVF.html#a4a4d1c207659cdb9efbcfd7a7af6d9cd',1,'SVF']]],
   ['vfunset',['VFunSet',['../classSVF_1_1PointerAnalysis.html#aa7f15c74eb438be78fcc028534477478',1,'SVF::PointerAnalysis::VFunSet()'],['../namespaceSVF.html#ad2b487757f1e1a1d81073120fc1d49c7',1,'SVF::VFunSet()']]],
   ['vfworklist',['VFWorkList',['../classSVF_1_1ProgSlice.html#a684e44ade783439c6f77a8d84eed282c',1,'SVF::ProgSlice']]],
-  ['vtableptrtocallsitemap',['VTablePtrToCallSiteMap',['../classSVF_1_1FunptrDDAClient.html#aaff8353fea6337d6236189d4a08a91e9',1,'SVF::FunptrDDAClient::VTablePtrToCallSiteMap()'],['../classSVF_1_1AliasDDAClient.html#aa9bb92cc906c04a82eba69494b05516c',1,'SVF::AliasDDAClient::VTablePtrToCallSiteMap()']]],
+  ['vtableptrtocallsitemap',['VTablePtrToCallSiteMap',['../classSVF_1_1FunptrDDAClient.html#ad195fbe1a6b422e67f16c9fde9d8e671',1,'SVF::FunptrDDAClient::VTablePtrToCallSiteMap()'],['../classSVF_1_1AliasDDAClient.html#a1eb12d17470a8b1ae7131470ace2daa2',1,'SVF::AliasDDAClient::VTablePtrToCallSiteMap()']]],
   ['vtableset',['VTableSet',['../classSVF_1_1PointerAnalysis.html#af46f4b99fc2d5061c9266a7f45aafaca',1,'SVF::PointerAnalysis::VTableSet()'],['../namespaceSVF.html#a53511f619c06836ee85acf12153810e2',1,'SVF::VTableSet()']]],
   ['vthdtocxtmap',['vthdToCxtMap',['../classSVF_1_1MTAResultValidator.html#a1392757f98b54057d33adb125fd48efa',1,'SVF::MTAResultValidator']]],
   ['vthdtorthdmap',['vthdTorthdMap',['../classSVF_1_1MTAResultValidator.html#a7fc576e83fa259d0ab06d54c3537c4ac',1,'SVF::MTAResultValidator']]]

@@ -22,7 +22,7 @@ var searchData=
   ['formalparmvfgnode',['FormalParmVFGNode',['../classSVF_1_1FormalParmVFGNode.html',1,'SVF']]],
   ['formalretvfgnode',['FormalRetVFGNode',['../classSVF_1_1FormalRetVFGNode.html',1,'SVF']]],
   ['fsmpta',['FSMPTA',['../classSVF_1_1FSMPTA.html',1,'SVF']]],
-  ['funentryblocknode',['FunEntryBlockNode',['../classSVF_1_1FunEntryBlockNode.html',1,'SVF']]],
-  ['funexitblocknode',['FunExitBlockNode',['../classSVF_1_1FunExitBlockNode.html',1,'SVF']]],
+  ['funentryicfgnode',['FunEntryICFGNode',['../classSVF_1_1FunEntryICFGNode.html',1,'SVF']]],
+  ['funexiticfgnode',['FunExitICFGNode',['../classSVF_1_1FunExitICFGNode.html',1,'SVF']]],
   ['funptrddaclient',['FunptrDDAClient',['../classSVF_1_1FunptrDDAClient.html',1,'SVF']]]
 ];

@@ -15,7 +15,7 @@ var searchData=
   ['gepstmt',['GepStmt',['../classSVF_1_1GepStmt.html',1,'SVF']]],
   ['gepvalvar',['GepValVar',['../classSVF_1_1GepValVar.html',1,'SVF']]],
   ['gepvfgnode',['GepVFGNode',['../classSVF_1_1GepVFGNode.html',1,'SVF']]],
-  ['globalblocknode',['GlobalBlockNode',['../classSVF_1_1GlobalBlockNode.html',1,'SVF']]],
+  ['globalicfgnode',['GlobalICFGNode',['../classSVF_1_1GlobalICFGNode.html',1,'SVF']]],
   ['gnodesccinfo',['GNodeSCCInfo',['../classSVF_1_1SCCDetection_1_1GNodeSCCInfo.html',1,'SVF::SCCDetection']]],
   ['graphprinter',['GraphPrinter',['../classllvm_1_1GraphPrinter.html',1,'llvm']]],
   ['graphtraits_3c_20inverse_3c_20svf_3a_3achnode_20_2a_20_3e_20_3e',['GraphTraits&lt; Inverse&lt; SVF::CHNode * &gt; &gt;',['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1CHNode_01_5_01_4_01_4.html',1,'llvm']]],
