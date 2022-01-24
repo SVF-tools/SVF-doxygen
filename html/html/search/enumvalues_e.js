@@ -6,5 +6,6 @@ var searchData=
   ['retindvf',['RetIndVF',['../classSVF_1_1VFGEdge.html#a156ae6a8b3a033f505c18c6b162e7cf5ac8124172b3f5f7fc94e895f6b192b668',1,'SVF::VFGEdge']]],
   ['retmssamu',['RetMSSAMU',['../classSVF_1_1MSSAMU.html#a82c66f3e2b7d2d9dd391a947719bda9ba255f3e3fc50f3a8d9a8bd5800b1b4594',1,'SVF::MSSAMU']]],
   ['retnode',['RetNode',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5de2a8fce9a85f31818d58992b381b98',1,'SVF::SVFVar']]],
-  ['retsymbol',['RetSymbol',['../classSVF_1_1SymbolTableInfo.html#afd2cf6ef6d7f2a583c709a72067be89ba8ac9528bf8b81f7942c1cdc0bf63ec35',1,'SVF::SymbolTableInfo']]]
+  ['retsymbol',['RetSymbol',['../classSVF_1_1SymbolTableInfo.html#afd2cf6ef6d7f2a583c709a72067be89ba8ac9528bf8b81f7942c1cdc0bf63ec35',1,'SVF::SymbolTableInfo']]],
+  ['reverse_5fdense',['REVERSE_DENSE',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228ae21bc1064d05499c2dc6051d153df9e6',1,'SVF::NodeIDAllocator']]]
 ];
