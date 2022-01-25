@@ -59,7 +59,7 @@ var searchData=
   ['autodynz',['autoDynZ',['../structDdManager.html#ac06486dc138c5f80434aa2d9f47ce892',1,'DdManager']]],
   ['automethod',['autoMethod',['../structDdManager.html#a20124711be407362dbe378648906ef89',1,'DdManager']]],
   ['automethodz',['autoMethodZ',['../structDdManager.html#a988678149a1dc49fe41c29846575a056',1,'DdManager']]],
-  ['averagepointstosetsize',['AveragePointsToSetSize',['../classSVF_1_1PTAStat.html#adb0edbe88a74e5e89921bcfafa4759c6',1,'SVF::PTAStat::AveragePointsToSetSize()'],['../classSVF_1_1AndersenBase.html#abdc249ea291d0247f6b91a8fcc7df341',1,'SVF::AndersenBase::AveragePointsToSetSize()']]],
+  ['averagepointstosetsize',['AveragePointsToSetSize',['../classSVF_1_1PTAStat.html#adb0edbe88a74e5e89921bcfafa4759c6',1,'SVF::PTAStat::AveragePointsToSetSize()'],['../classSVF_1_1AndersenBase.html#adaf738bee77a4b1fbb8d42911fabdb49',1,'SVF::AndersenBase::AveragePointsToSetSize()']]],
   ['averagetoplevpointstosetsize',['AverageTopLevPointsToSetSize',['../classSVF_1_1PTAStat.html#a1649c9f893c5b9ec2d57a399bc050030',1,'SVF::PTAStat']]],
   ['avgindegree',['avgInDegree',['../classSVF_1_1SVFGStat.html#a4328f75f379e692901b95bacdf8dd413',1,'SVF::SVFGStat']]],
   ['avgindindegree',['avgIndInDegree',['../classSVF_1_1SVFGStat.html#a364d684cbefed1793d7c4506fb1fa0fd',1,'SVF::SVFGStat']]],

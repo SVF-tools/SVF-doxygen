@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['s32_5ft',['s32_t',['../namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e',1,'SVF']]],
+  ['s64_5ft',['s64_t',['../namespaceSVF.html#abe09d99af006554a5c00803e9a89f9a6',1,'SVF']]],
   ['scalarevolution',['ScalarEvolution',['../namespaceSVF.html#ad8794eb3c00de3d3b5c5e43dded3fb42',1,'SVF']]],
   ['scalarevolutionwrapperpass',['ScalarEvolutionWrapperPass',['../namespaceSVF.html#a9f1aca0384166e42d14e2608009ebc01',1,'SVF']]],
   ['scc',['SCC',['../classSVF_1_1MRGenerator.html#af8d52e6c9884c6e1abc6dbcbc5e32629',1,'SVF::MRGenerator::SCC()'],['../classSVF_1_1WPASolver.html#a1352953966be14b2a1d6244f35e74a33',1,'SVF::WPASolver::SCC()']]],
@@ -13,7 +13,6 @@ var searchData=
   ['shufflevectorinst',['ShuffleVectorInst',['../namespaceSVF.html#a64e69f438b8c302c4cae27735319fa49',1,'SVF']]],
   ['simpletype',['SimpleType',['../structSVF_1_1SVFUtil_1_1simplify__type.html#a40c0d9a74681d3eaa7172ba137d489e4',1,'SVF::SVFUtil::simplify_type::SimpleType()'],['../structSVF_1_1SVFUtil_1_1simplify__type_3_01const_01From_01_4.html#afdc334dc0c584651f9ab538e38cf3aff',1,'SVF::SVFUtil::simplify_type&lt; const From &gt;::SimpleType()']]],
   ['singlecondvar',['SingleCondVar',['../classSVF_1_1CondPointsToSet.html#a0ef73bd2c1b42439ee6f265e07f17514',1,'SVF::CondPointsToSet']]],
-  ['size_5ft',['Size_t',['../namespaceSVF.html#a2db29836a72e8d86e9baa6d8d55d2978',1,'SVF']]],
   ['smallbbvector',['SmallBBVector',['../namespaceSVF.html#ad09d8882474ef59b50d1c6a6d3ba0b59',1,'SVF']]],
   ['smallvector',['SmallVector',['../namespaceSVF.html#aa408bbe668ca1208beceae0f842079b4',1,'SVF']]],
   ['smallvector16',['SmallVector16',['../namespaceSVF.html#a9893c2871f3e879e8e50c2ed157bc615',1,'SVF']]],

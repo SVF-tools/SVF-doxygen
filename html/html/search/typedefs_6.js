@@ -2,7 +2,7 @@ var searchData=
 [
   ['gedge',['GEDGE',['../classSVF_1_1CFLSolver.html#aaddd6c593ad39c117bd35ede711b9f36',1,'SVF::CFLSolver::GEDGE()'],['../classSVF_1_1WPASolver.html#ab7de73aabfa092b51b8dbe7b091e4c57',1,'SVF::WPASolver::GEDGE()']]],
   ['gedgeflag',['GEdgeFlag',['../classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614',1,'SVF::GenericEdge']]],
-  ['gedgekind',['GEdgeKind',['../classSVF_1_1GenericEdge.html#a7eb93c9018c80057672a8ce71615dc0d',1,'SVF::GenericEdge']]],
+  ['gedgekind',['GEdgeKind',['../classSVF_1_1GenericEdge.html#a5aceeb48929f54264807b36569019a8a',1,'SVF::GenericEdge']]],
   ['gedgesetty',['GEdgeSetTy',['../classSVF_1_1GenericNode.html#a03c6da4a73c47f84f5c5b47252bc339a',1,'SVF::GenericNode']]],
   ['genericcallgraphedgety',['GenericCallGraphEdgeTy',['../namespaceSVF.html#acd909bf6784bb6e2178aa0f5d27da0ca',1,'SVF']]],
   ['genericcallgraphnodety',['GenericCallGraphNodeTy',['../namespaceSVF.html#a673ed8bf673a4c426a9d91aa8987e31c',1,'SVF']]],
@@ -37,7 +37,7 @@ var searchData=
   ['globalvariable',['GlobalVariable',['../namespaceSVF.html#a09f5fa3bc44bf53612a085e3a611cc4e',1,'SVF']]],
   ['globalvfgnodeset',['GlobalVFGNodeSet',['../classSVF_1_1VFG.html#a113185086912213257b04daa4590bf13',1,'SVF::VFG']]],
   ['gnode',['GNODE',['../classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127',1,'SVF::CFLSolver::GNODE()'],['../classSVF_1_1SCCDetection.html#a7d7b354d8a7ce69b27dc775ccd192a62',1,'SVF::SCCDetection::GNODE()'],['../classSVF_1_1WPASCCSolver.html#aa40ff9a4090744e66034f9de38f7f45f',1,'SVF::WPASCCSolver::GNODE()'],['../classSVF_1_1WPAMinimumSolver.html#ab694f375b6b15991bc6a7c228db3242b',1,'SVF::WPAMinimumSolver::GNODE()'],['../classSVF_1_1WPASolver.html#a2b0c0c4d1f172e8eeae0230fa09f365e',1,'SVF::WPASolver::GNODE()']]],
-  ['gnodek',['GNodeK',['../classSVF_1_1GenericNode.html#a363b90ab02cce2ebc3ede8e5b7cc141c',1,'SVF::GenericNode::GNodeK()'],['../classSVF_1_1SVFValue.html#a7e98da47d88c46dfd2c7124c43f6a885',1,'SVF::SVFValue::GNodeK()']]],
+  ['gnodek',['GNodeK',['../classSVF_1_1GenericNode.html#a3f20339b5295e11beb0f9adb95c7aa5b',1,'SVF::GenericNode::GNodeK()'],['../classSVF_1_1SVFValue.html#a96b29b0f3f0048278b3ec9aa6b6540c4',1,'SVF::SVFValue::GNodeK()']]],
   ['gnodesccinfomap',['GNODESCCInfoMap',['../classSVF_1_1SCCDetection.html#a56c28264d14062354e3272a4a993a1ec',1,'SVF::SCCDetection']]],
   ['gnodestack',['GNodeStack',['../classSVF_1_1SCCDetection.html#a84fc3aef6f950471a539b7d9fa3c1289',1,'SVF::SCCDetection']]],
   ['graphprinter',['GraphPrinter',['../namespaceSVF.html#a2eae2d6648dd6715421bd7af67d57637',1,'SVF']]],
