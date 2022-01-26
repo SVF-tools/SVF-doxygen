@@ -3,7 +3,6 @@ var searchData=
   ['valvar',['ValVar',['../classSVF_1_1ValVar.html',1,'SVF']]],
   ['varargpn',['VarArgPN',['../classSVF_1_1VarArgPN.html',1,'SVF']]],
   ['variantgepcgedge',['VariantGepCGEdge',['../classSVF_1_1VariantGepCGEdge.html',1,'SVF']]],
-  ['variantgepstmt',['VariantGepStmt',['../classSVF_1_1VariantGepStmt.html',1,'SVF']]],
   ['versionedflowsensitive',['VersionedFlowSensitive',['../classSVF_1_1VersionedFlowSensitive.html',1,'SVF']]],
   ['versionedflowsensitivestat',['VersionedFlowSensitiveStat',['../classSVF_1_1VersionedFlowSensitiveStat.html',1,'SVF']]],
   ['versionedptdata',['VersionedPTData',['../classSVF_1_1VersionedPTData.html',1,'SVF']]],
