@@ -33,7 +33,7 @@ var searchData=
   ['addblackholeaddrstmt',['addBlackHoleAddrStmt',['../classSVF_1_1SVFIR.html#a33df5f5d9b7de3846cf973135b04f513',1,'SVF::SVFIR']]],
   ['addblackholeobjnode',['addBlackholeObjNode',['../classSVF_1_1SVFIR.html#a2b532a5db0197c579b512fbcdb4d6220',1,'SVF::SVFIR']]],
   ['addblackholeptrnode',['addBlackholePtrNode',['../classSVF_1_1SVFIR.html#a2b1de62f88588b068d4eed125049ed8d',1,'SVF::SVFIR']]],
-  ['addbranchstmt',['addBranchStmt',['../classSVF_1_1SVFIR.html#a4f0d318deff3b97a4bd5e7b9d53e42fd',1,'SVF::SVFIR::addBranchStmt()'],['../classSVF_1_1SVFIRBuilder.html#ae0a1f66dee058f6af0f6b074db38db8e',1,'SVF::SVFIRBuilder::addBranchStmt()']]],
+  ['addbranchstmt',['addBranchStmt',['../classSVF_1_1SVFIR.html#ae61030da4a84b5c9c47903804af9d107',1,'SVF::SVFIR::addBranchStmt()'],['../classSVF_1_1SVFIRBuilder.html#a9a5334fc4133b2eeadb9b5104635cca2',1,'SVF::SVFIRBuilder::addBranchStmt()']]],
   ['addbranchvfgnode',['addBranchVFGNode',['../classSVF_1_1VFG.html#a18afc4baf33eb700e0510928016019f5',1,'SVF::VFG']]],
   ['addcalledge',['addCallEdge',['../classSVF_1_1ICFG.html#abde033687317d47909ee45db7501723f',1,'SVF::ICFG::addCallEdge()'],['../classSVF_1_1VFG.html#aa01f63b17acdd52122a7f1ade329ccea',1,'SVF::VFG::addCallEdge()'],['../classSVF_1_1SVFIRBuilder.html#a5b41510e55eb48781a917e5a9c0e1462',1,'SVF::SVFIRBuilder::addCallEdge()']]],
   ['addcallgraphnode',['addCallGraphNode',['../classSVF_1_1PTACallGraph.html#a8a1621038edeb847bfc5a4a7be7620a3',1,'SVF::PTACallGraph']]],
