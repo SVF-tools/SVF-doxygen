@@ -70,6 +70,7 @@ var searchData=
   ['storetime',['storeTime',['../classSVF_1_1FlowSensitive.html#a82b76087363b26fbe749653935569de7',1,'SVF::FlowSensitive']]],
   ['storetodpms',['storeToDPMs',['../classSVF_1_1DDAVFSolver.html#af66895278f0ecbc882f9e4f43ef9c8a8',1,'SVF::DDAVFSolver']]],
   ['strategy',['strategy',['../classSVF_1_1NodeIDAllocator.html#a44420802f9db288515ee09771c3edd4d',1,'SVF::NodeIDAllocator']]],
+  ['stride',['stride',['../classSVF_1_1StInfo.html#a6c52ecbeeeeb0dda019c68aec687f2c2',1,'SVF::StInfo']]],
   ['strides',['strides',['../classSVF_1_1ConstraintNode.html#a873ba0c14dc57bd603c4a6b4d73e4278',1,'SVF::ConstraintNode']]],
   ['structname',['structName',['../CPPUtil_8cpp.html#a4f0d10054cce04a0f4dec52a337cdf3c',1,'CPPUtil.cpp']]],
   ['subtables',['subtables',['../structDdManager.html#a835661f21be3f5d8944d76e22995be1f',1,'DdManager']]],

@@ -121,6 +121,7 @@ var searchData=
   ['fstbhc_5fwpa',['FSTBHC_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a088dda60195ab259693977af8414f203',1,'SVF::PointerAnalysis']]],
   ['fstimelimit',['FsTimeLimit',['../classSVF_1_1Options.html#ad03c4697dd4da2b6adde112e3ee1884b',1,'SVF::Options']]],
   ['fulljoin',['fullJoin',['../classSVF_1_1ForkJoinAnalysis.html#a4193a30050195cd9aaafd58511b66ccc',1,'SVF::ForkJoinAnalysis']]],
+  ['fulloffsetvec',['fullOffsetVec',['../classSVF_1_1StInfo.html#a5a7987ced798a2194d8c74025547f407',1,'SVF::StInfo']]],
   ['fullreachable',['fullReachable',['../classSVF_1_1ProgSlice.html#a632db4b2e69848955925746ac721d94f',1,'SVF::ProgSlice']]],
   ['fullsvfg',['FULLSVFG',['../classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a5a28e6fd51e73e076091d4b6f4e61eaa',1,'SVF::VFG']]],
   ['fullsvfg_5fopt',['FULLSVFG_OPT',['../classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0',1,'SVF::VFG']]],
