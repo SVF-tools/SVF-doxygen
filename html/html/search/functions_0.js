@@ -85,7 +85,7 @@ var searchData=
   ['addedge',['addEdge',['../classSVF_1_1CHGraph.html#a3867db3e76f068bd8c4399b103dcd0b7',1,'SVF::CHGraph::addEdge()'],['../classSVF_1_1IRGraph.html#a722f32d0a0a3bafdd97fc74819d2621e',1,'SVF::IRGraph::addEdge()'],['../classSVF_1_1PTACallGraph.html#a3154bbc421fc85649e786ed67ca03750',1,'SVF::PTACallGraph::addEdge()'],['../classSVF_1_1PAGBuilderFromFile.html#ac34cd4f9426da0325e67bc1b3d7bcecd',1,'SVF::PAGBuilderFromFile::addEdge()'],['../classSVF_1_1DCHGraph.html#a294a2075c97e1db8003393fb472c1def',1,'SVF::DCHGraph::addEdge()'],['../classSVF_1_1SVFIRBuilder.html#abd980f840b613171e879eb03f6089eeb',1,'SVF::SVFIRBuilder::addEdge()']]],
   ['addextactualparmsvfgnodes',['AddExtActualParmSVFGNodes',['../classSVF_1_1SaberSVFGBuilder.html#ab6870d6f6f5abc5417dcea771eaa31f7',1,'SVF::SaberSVFGBuilder']]],
   ['addfiobjnode',['addFIObjNode',['../classSVF_1_1SVFIR.html#a06465449e58e14bfb1c3eee2c97d3242',1,'SVF::SVFIR']]],
-  ['addfldwithtype',['addFldWithType',['../classSVF_1_1StInfo.html#a5e46da2adce317d2cf58640d06d6b349',1,'SVF::StInfo']]],
+  ['addfldwithtype',['addFldWithType',['../classSVF_1_1StInfo.html#a1a8be773f23b5a5fd36d44698bae9986',1,'SVF::StInfo']]],
   ['addfollowerfun',['addFollowerFun',['../classSVF_1_1PCG.html#a53e95f74121cd6e35b73f345139f6b00',1,'SVF::PCG']]],
   ['addforksite',['addForksite',['../classSVF_1_1ThreadCallGraph.html#a563ebb1ece0adb4bafe5e14b2a024a91',1,'SVF::ThreadCallGraph']]],
   ['addformalinsvfgnode',['addFormalINSVFGNode',['../classSVF_1_1SVFG.html#ab4690114393820f580e805d2e0d6a41d',1,'SVF::SVFG']]],
