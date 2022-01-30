@@ -499,7 +499,7 @@ var searchData=
   ['getocgrep',['getOCGRep',['../classSVF_1_1OfflineConsG.html#a3f390900ee8761055c6d59107bc0ad27',1,'SVF::OfflineConsG']]],
   ['getocgrepmap',['getOCGRepMap',['../classSVF_1_1OfflineConsG.html#a4c27bd33977816db33d0e7d92036239a',1,'SVF::OfflineConsG']]],
   ['getofflinerep',['getOfflineRep',['../classSVF_1_1AndersenHCD.html#ac2e6a5acffff567e729b6aa9e9beeb55',1,'SVF::AndersenHCD']]],
-  ['getoffsetvaluevec',['getOffsetValueVec',['../classSVF_1_1LocationSet.html#a5a5ca0b81da0b34ab426bc6a28ed346c',1,'SVF::LocationSet']]],
+  ['getoffsetvaluevec',['getOffsetValueVec',['../classSVF_1_1LocationSet.html#a5a5ca0b81da0b34ab426bc6a28ed346c',1,'SVF::LocationSet::getOffsetValueVec()'],['../classSVF_1_1GepStmt.html#a37811e62495493454405cb33e4a2b904',1,'SVF::GepStmt::getOffsetValueVec()']]],
   ['getopcode',['getOpcode',['../classSVF_1_1BinaryOPStmt.html#ad0a7c5e87355d7a83176343322db448f',1,'SVF::BinaryOPStmt::getOpcode()'],['../classSVF_1_1UnaryOPStmt.html#af29723d5e777b10d53d48263a786f5b6',1,'SVF::UnaryOPStmt::getOpcode()']]],
   ['getoperand',['getOperand',['../classllvm_1_1generic__bridge__gep__type__iterator.html#a9494bbdc909dab98dd3fd23a416f3a31',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['getopincomingbb',['getOpIncomingBB',['../classSVF_1_1IntraPHIVFGNode.html#a3a6ef9d2b10a6f2f1ac1b25590f56a70',1,'SVF::IntraPHIVFGNode']]],
