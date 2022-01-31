@@ -16,6 +16,7 @@ var searchData=
   ['onstack',['onStack',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a0eb5f6b9985b9b512a76537d55b092b5',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
   ['ontheflyiterbudgetforstat',['OnTheFlyIterBudgetForStat',['../classSVF_1_1PointerAnalysis.html#afc320fbf269404fe128e69c98e6f9cac',1,'SVF::PointerAnalysis']]],
   ['opcode',['opcode',['../classSVF_1_1BinaryOPStmt.html#a0c4f900cf7321e8385b4f45e5cba3d1a',1,'SVF::BinaryOPStmt::opcode()'],['../classSVF_1_1UnaryOPStmt.html#a099df135a83d28a2e6f344e008fe1cc6',1,'SVF::UnaryOPStmt::opcode()']]],
+  ['opicfgnodes',['opICFGNodes',['../classSVF_1_1PhiStmt.html#a4c75a8f8430621aaec62a5189db136b5',1,'SVF::PhiStmt']]],
   ['opincomingbbs',['opIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode']]],
   ['opit',['OpIt',['../classllvm_1_1generic__bridge__gep__type__iterator.html#aa3fd4dca27e09df9ee726879624ae47e',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['optsvfg',['OPTSVFG',['../classSVF_1_1Options.html#a7704ff30e6fc5043313adf5c655bcd4a',1,'SVF::Options']]],
