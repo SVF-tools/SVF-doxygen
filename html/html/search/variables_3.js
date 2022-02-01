@@ -11,6 +11,7 @@ var searchData=
   ['cacheshift',['cacheShift',['../structDdManager.html#a37c6c4bc87d6ae814c0cbb178fa9a69a',1,'DdManager']]],
   ['cacheslack',['cacheSlack',['../structDdManager.html#a725c561349903b5f4642cd5db48f899c',1,'DdManager']]],
   ['cacheslots',['cacheSlots',['../structDdManager.html#ac977e490cd2ff8e2c4a0dc734c1b533b',1,'DdManager']]],
+  ['call',['call',['../classSVF_1_1CallPE.html#ace0704c65aa3637c50ff880f68808bba',1,'SVF::CallPE::call()'],['../classSVF_1_1RetPE.html#aa2d42edfce9d5a8c025c0bb529aee0f2',1,'SVF::RetPE::call()']]],
   ['callblocknode',['callBlockNode',['../classSVF_1_1RetICFGNode.html#a42f4b87f590b3a393059bcca5736c596',1,'SVF::RetICFGNode']]],
   ['calledgelabelcounter',['callEdgeLabelCounter',['../classSVF_1_1SVFStmt.html#a24227d7f1dd472f47bf94cb5db8505c4',1,'SVF::SVFStmt']]],
   ['callgraph',['callGraph',['../classSVF_1_1MRGenerator.html#a05005a166c39b1adea492655d77db519',1,'SVF::MRGenerator::callGraph()'],['../classSVF_1_1VFG.html#a0c8cf98b652b5eb97d22e2636576f92f',1,'SVF::VFG::callgraph()'],['../classSVF_1_1PCG.html#ae9026f717c442198ffa90ff66f482c92',1,'SVF::PCG::callgraph()'],['../classSVF_1_1CallGraphBuilder.html#a77ccca4e81eb1199c89d75e1b2d21af6',1,'SVF::CallGraphBuilder::callgraph()']]],
