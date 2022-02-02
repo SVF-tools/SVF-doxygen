@@ -85,7 +85,7 @@ var searchData=
   ['lockset',['LockSet',['../classSVF_1_1LockAnalysis.html#a4bde0f39a6b5cf83e0011d7ef272c685',1,'SVF::LockAnalysis']]],
   ['locksites',['locksites',['../classSVF_1_1LockAnalysis.html#a87c412a54f48e5314454cd1d44ef9b0e',1,'SVF::LockAnalysis']]],
   ['locksitetolockset',['LockSiteToLockSet',['../classSVF_1_1LockAnalysis.html#a1f9ae41c4ed7450d0d8b29cd20a6ef25',1,'SVF::LockAnalysis']]],
-  ['lockspan',['lockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a762505799b9257bbcb766fccdce40fd4',1,'SVF::SVFGNodeLockSpan::lockSpan()'],['../classSVF_1_1LockAnalysis.html#a07b7d49e1fbe3e5dc694b6aadbee05b8',1,'SVF::LockAnalysis::LockSpan()'],['../classSVF_1_1MHP.html#a08ba219ec02b07b1bbd91a88ebb4acd7',1,'SVF::MHP::LockSpan()']]],
+  ['lockspan',['LockSpan',['../classSVF_1_1LockAnalysis.html#a07b7d49e1fbe3e5dc694b6aadbee05b8',1,'SVF::LockAnalysis::LockSpan()'],['../classSVF_1_1MHP.html#a08ba219ec02b07b1bbd91a88ebb4acd7',1,'SVF::MHP::LockSpan()'],['../classSVF_1_1SVFGNodeLockSpan.html#a762505799b9257bbcb766fccdce40fd4',1,'SVF::SVFGNodeLockSpan::lockSpan()']]],
   ['locktime',['lockTime',['../classSVF_1_1LockAnalysis.html#adadee129c04b82576b4ca3c7594cdcb2',1,'SVF::LockAnalysis']]],
   ['lockvalid',['LockValid',['../classSVF_1_1Options.html#a78b3b44f2c0dc94dc1363ca57ee76d66',1,'SVF::Options']]],
   ['locmemmodel',['LocMemModel',['../classSVF_1_1Options.html#aba8e13f8bb26cf6a0718282e6f9a1940',1,'SVF::Options']]],
