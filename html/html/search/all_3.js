@@ -291,6 +291,7 @@ var searchData=
   ['conditionalpt_2eh',['ConditionalPT.h',['../ConditionalPT_8h.html',1,'']]],
   ['conditions_2ecpp',['Conditions.cpp',['../Conditions_8cpp.html',1,'']]],
   ['conditions_2eh',['Conditions.h',['../Conditions_8h.html',1,'']]],
+  ['conditionvar',['conditionVar',['../classSVF_1_1IntraCFGEdge.html#a1d49f742d3f93361c7ba1b69e074ceb5',1,'SVF::IntraCFGEdge']]],
   ['condmanager',['CondManager',['../classSVF_1_1CondManager.html',1,'SVF::CondManager'],['../classSVF_1_1CondManager.html#aa307bb05b92907ccf8859b4bac53b796',1,'SVF::CondManager::CondManager()']]],
   ['condmgr',['condMgr',['../classSVF_1_1PathCondAllocator.html#aacf96d4b7154f6c2dc12ab9e19702fcd',1,'SVF::PathCondAllocator::condMgr()'],['../classSVF_1_1CondManager.html#a1e48008a3fe3a562512e253133aa557f',1,'SVF::CondManager::condMgr()']]],
   ['condneg',['condNeg',['../classSVF_1_1PathCondAllocator.html#ac1ed60a8f59a55811c97c83def3bb739',1,'SVF::PathCondAllocator::condNeg()'],['../classSVF_1_1ProgSlice.html#af90dd6f54db7bef80cd7e5c97e8dd193',1,'SVF::ProgSlice::condNeg()']]],

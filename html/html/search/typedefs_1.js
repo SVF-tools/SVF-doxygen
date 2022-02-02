@@ -21,7 +21,6 @@ var searchData=
   ['bitcastinst',['BitCastInst',['../namespaceSVF.html#afc50da46a6ea7c2cf61683bbec4d7c8d',1,'SVF']]],
   ['blockaddress',['BlockAddress',['../namespaceSVF.html#a956458a8554bf734db1194f320fd4b4c',1,'SVF']]],
   ['branchcond',['BranchCond',['../classSVF_1_1BranchCondExpr.html#ad90fb1713be8b6a064e2423da5dd98b3',1,'SVF::BranchCondExpr::BranchCond()'],['../classSVF_1_1BranchCondManager.html#a37bec50768d5df6317a4ba6c790c569d',1,'SVF::BranchCondManager::BranchCond()'],['../classSVF_1_1CondManager.html#afb6c29587f01bf5b80878bae0850d2f6',1,'SVF::CondManager::BranchCond()']]],
-  ['branchcondition',['BranchCondition',['../classSVF_1_1IntraCFGEdge.html#a92c78050b62f802fff360bac02cd42dd',1,'SVF::IntraCFGEdge']]],
   ['branchcondtocondexprmap',['BranchCondToCondExprMap',['../classSVF_1_1CondManager.html#af2cf8e42c15d6a0640f13c55050f616f',1,'SVF::CondManager']]],
   ['branchinst',['BranchInst',['../namespaceSVF.html#ac9a05dd7ab16e998625037aa242cd30f',1,'SVF']]],
   ['bridge_5fgep_5fiterator',['bridge_gep_iterator',['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator()'],['../namespaceSVF.html#a3b6e84470681a9f731a81e8cf54680cc',1,'SVF::bridge_gep_iterator()']]]
