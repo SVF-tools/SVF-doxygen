@@ -1,7 +1,7 @@
 var searchData=
 [
   ['objsyms',['objSyms',['../classSVF_1_1SymbolTableInfo.html#a3f9612f32c651220386beb0514f8fcff',1,'SVF::SymbolTableInfo']]],
-  ['objtypeinfo',['ObjTypeInfo',['../classSVF_1_1ObjTypeInfo.html#a1a182e6a8710242f94729412d4683f8d',1,'SVF::ObjTypeInfo::ObjTypeInfo(const Value *, const Type *t, u32_t max)'],['../classSVF_1_1ObjTypeInfo.html#afa03172e8fe0af6b523e866d54235f3a',1,'SVF::ObjTypeInfo::ObjTypeInfo(u32_t max, const Type *t)']]],
+  ['objtypeinfo',['ObjTypeInfo',['../classSVF_1_1ObjTypeInfo.html#a351edf73b2b035ce61a99a10b3d9de87',1,'SVF::ObjTypeInfo']]],
   ['objvar',['ObjVar',['../classSVF_1_1ObjVar.html#a3ccbe6bbe3f565641e0cf46c5ecbb6bb',1,'SVF::ObjVar']]],
   ['offlineconsg',['OfflineConsG',['../classSVF_1_1OfflineConsG.html#ae61c4f509b90dd43f63a07560ba3562f',1,'SVF::OfflineConsG']]],
   ['ontheflycallgraphsolve',['onTheFlyCallGraphSolve',['../classSVF_1_1BVDataPTAImpl.html#a9830d4676fd424b633f8e4d918734296',1,'SVF::BVDataPTAImpl']]],

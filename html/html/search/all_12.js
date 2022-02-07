@@ -131,6 +131,7 @@ var searchData=
   ['resetquery',['resetQuery',['../classSVF_1_1DDAVFSolver.html#afe518d3d7f8051de5b9860f2460aa1b7',1,'SVF::DDAVFSolver']]],
   ['resetrep',['resetRep',['../classSVF_1_1ConstraintGraph.html#aa30231dab5b7c759e4e5d76422a5eb8e',1,'SVF::ConstraintGraph']]],
   ['resetsubs',['resetSubs',['../classSVF_1_1ConstraintGraph.html#a5fe3815a7990e16b99cf46e90529f8b3',1,'SVF::ConstraintGraph']]],
+  ['resettypeforheapstaticobj',['resetTypeForHeapStaticObj',['../classSVF_1_1ObjTypeInfo.html#a57d714a511273b8275374cd4c7f14373',1,'SVF::ObjTypeInfo']]],
   ['resolvecppindcalls',['resolveCPPIndCalls',['../classSVF_1_1PointerAnalysis.html#ac04b64a5884710508b304f93da88c7ba',1,'SVF::PointerAnalysis']]],
   ['resolvefunptr',['resolveFunPtr',['../classSVF_1_1DDAVFSolver.html#afcc074be34dd0c45418ff16b3d9d4192',1,'SVF::DDAVFSolver']]],
   ['resolveindcalls',['resolveIndCalls',['../classSVF_1_1PointerAnalysis.html#aa0a14fd11d7e69b2a3f91a3862f172cd',1,'SVF::PointerAnalysis']]],

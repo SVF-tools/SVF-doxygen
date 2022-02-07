@@ -12,7 +12,7 @@ var searchData=
   ['objtonsrevptsmap',['objToNSRevPtsMap',['../classSVF_1_1CondPTAImpl.html#a22c23f3ba1ee7e0aaccf0b8a1b58e33e',1,'SVF::CondPTAImpl']]],
   ['objtotype',['objToType',['../classSVF_1_1TypeBasedHeapCloning.html#a477492fb699d742c33007a6ca934b5c1',1,'SVF::TypeBasedHeapCloning']]],
   ['objtoversionmap',['ObjToVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#af9a43f48b7d99cc6694f3ae3248fd8e0',1,'SVF::VersionedFlowSensitive']]],
-  ['objtypeinfo',['ObjTypeInfo',['../classSVF_1_1ObjTypeInfo.html',1,'SVF::ObjTypeInfo'],['../classSVF_1_1ObjTypeInfo.html#a1a182e6a8710242f94729412d4683f8d',1,'SVF::ObjTypeInfo::ObjTypeInfo(const Value *, const Type *t, u32_t max)'],['../classSVF_1_1ObjTypeInfo.html#afa03172e8fe0af6b523e866d54235f3a',1,'SVF::ObjTypeInfo::ObjTypeInfo(u32_t max, const Type *t)']]],
+  ['objtypeinfo',['ObjTypeInfo',['../classSVF_1_1ObjTypeInfo.html',1,'SVF::ObjTypeInfo'],['../classSVF_1_1ObjTypeInfo.html#a351edf73b2b035ce61a99a10b3d9de87',1,'SVF::ObjTypeInfo::ObjTypeInfo()']]],
   ['objvar',['ObjVar',['../classSVF_1_1ObjVar.html',1,'SVF::ObjVar'],['../classSVF_1_1ObjVar.html#a3ccbe6bbe3f565641e0cf46c5ecbb6bb',1,'SVF::ObjVar::ObjVar()']]],
   ['ocg',['oCG',['../classSVF_1_1AndersenHCD.html#af5fe01816e65ece685a3c3537ebd0137',1,'SVF::AndersenHCD']]],
   ['ocgdotgraph',['OCGDotGraph',['../classSVF_1_1Options.html#a2780c16611375631cd48bf9487f9e0bf',1,'SVF::Options']]],

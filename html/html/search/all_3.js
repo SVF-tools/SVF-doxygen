@@ -432,7 +432,7 @@ var searchData=
   ['createmr',['createMR',['../classSVF_1_1MRGenerator.html#ac18324bd2b862c3cdbf65494bf69ecb5',1,'SVF::MRGenerator']]],
   ['createmuchi',['createMUCHI',['../classSVF_1_1MemSSA.html#a695adf83e8c40b9628b1866053f68033',1,'SVF::MemSSA']]],
   ['createnode',['createNode',['../classSVF_1_1CHGBuilder.html#a8e915f257224b1d8e40d0e4c9b5e1df0',1,'SVF::CHGBuilder']]],
-  ['createobjtypeinfo',['createObjTypeInfo',['../classSVF_1_1SymbolTableInfo.html#a76971ba9b579907ef937cd7adda89562',1,'SVF::SymbolTableInfo::createObjTypeInfo()'],['../classSVF_1_1SymbolTableBuilder.html#a31190ba1934f945abe8a1b4fcbb636b3',1,'SVF::SymbolTableBuilder::createObjTypeInfo()']]],
+  ['createobjtypeinfo',['createObjTypeInfo',['../classSVF_1_1SymbolTableInfo.html#a2b0f2c6745d14a9f6447ed96484dddac',1,'SVF::SymbolTableInfo::createObjTypeInfo()'],['../classSVF_1_1SymbolTableBuilder.html#a31190ba1934f945abe8a1b4fcbb636b3',1,'SVF::SymbolTableBuilder::createObjTypeInfo()']]],
   ['createrefnode',['createRefNode',['../classSVF_1_1OfflineConsG.html#a984e82f3185be03b8d1cb942685b2010',1,'SVF::OfflineConsG']]],
   ['createsteensgaard',['createSteensgaard',['../classSVF_1_1Steensgaard.html#acd5f31c3b1f9b47def458637f8e9389e',1,'SVF::Steensgaard']]],
   ['createvfswpa',['createVFSWPA',['../classSVF_1_1VersionedFlowSensitive.html#ae7cf16ad79c13104dd9981e6b984057e',1,'SVF::VersionedFlowSensitive']]],
