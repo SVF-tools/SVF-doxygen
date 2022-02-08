@@ -286,7 +286,7 @@ var searchData=
   ['ptronlysvfg',['PTRONLYSVFG',['../classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6ada8562b20e8d888a4b421c200957294d',1,'SVF::VFG']]],
   ['ptronlysvfg_5fopt',['PTRONLYSVFG_OPT',['../classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd',1,'SVF::VFG']]],
   ['ptrtobvptsmap',['ptrToBVPtsMap',['../classSVF_1_1CondPTAImpl.html#a30b9ee7b1dcd04285f92cf7accd05b2e',1,'SVF::CondPTAImpl::ptrToBVPtsMap()'],['../classSVF_1_1CondPTAImpl.html#aba828ca8e2aa2bd71b78be8b45a48c9b',1,'SVF::CondPTAImpl::PtrToBVPtsMap()']]],
-  ['ptrtocptsmap',['ptrToCPtsMap',['../classSVF_1_1CondPTAImpl.html#a61167fcdb2005090de1b38e53450431a',1,'SVF::CondPTAImpl::ptrToCPtsMap()'],['../classSVF_1_1CondPTAImpl.html#a5043e9d9255d31777d038c48c809bb09',1,'SVF::CondPTAImpl::PtrToCPtsMap()']]],
+  ['ptrtocptsmap',['PtrToCPtsMap',['../classSVF_1_1CondPTAImpl.html#a5043e9d9255d31777d038c48c809bb09',1,'SVF::CondPTAImpl::PtrToCPtsMap()'],['../classSVF_1_1CondPTAImpl.html#a61167fcdb2005090de1b38e53450431a',1,'SVF::CondPTAImpl::ptrToCPtsMap()']]],
   ['ptrtointinst',['PtrToIntInst',['../namespaceSVF.html#a3d5581c375ee3fe856327dc648c379f0',1,'SVF']]],
   ['ptrtonsmap',['PtrToNSMap',['../classSVF_1_1CondPTAImpl.html#a838c3f2be39d278072f7a9df7c0bcb4d',1,'SVF::CondPTAImpl']]],
   ['ptruint',['ptruint',['../cuddInt_8h.html#afd9afe0bf7ac5855fcd5eb42ea5fcb18',1,'cuddInt.h']]],
