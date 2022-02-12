@@ -16,6 +16,7 @@ var searchData=
   ['flags',['flags',['../structMove.html#a279868fb9de35a14b9b4a066487a5e68',1,'Move::flags()'],['../structMtrNode.html#a729ce47dfa70a8e041a89d478c6565f5',1,'MtrNode::flags()'],['../classSVF_1_1CHNode.html#a6844c89f715979709dc52d4854373e72',1,'SVF::CHNode::flags()'],['../classSVF_1_1ObjTypeInfo.html#abf6bbcccf73bfcd5b950803d349c4eb1',1,'SVF::ObjTypeInfo::flags()'],['../classSVF_1_1RaceResultValidator_1_1AccessPair.html#aafb0a0cd068e1632f0d643233cad8ad9',1,'SVF::RaceResultValidator::AccessPair::flags()'],['../classSVF_1_1DCHNode.html#a0b2c21429fd28c50965737a0baa2e90b',1,'SVF::DCHNode::flags()']]],
   ['flattenedelemty',['flattenedElemTy',['../classSVF_1_1FlattenedFieldInfo.html#a186f54bc7c43d9ca8c6d1ab152fb36fe',1,'SVF::FlattenedFieldInfo']]],
   ['flattenedfldidx',['flattenedFldIdx',['../classSVF_1_1FlattenedFieldInfo.html#a14d271fe9ce4a7d989871088d9daf83a',1,'SVF::FlattenedFieldInfo']]],
+  ['flattenelementtypes',['flattenElementTypes',['../classSVF_1_1StInfo.html#a8b24c6a35701a719cd5f1deef62421cd',1,'SVF::StInfo']]],
   ['fldidx',['fldIdx',['../classSVF_1_1LocationSet.html#a1937e1b9513135cb46c7f3f02fbe7d03',1,'SVF::LocationSet']]],
   ['fldidx2typemap',['fldIdx2TypeMap',['../classSVF_1_1StInfo.html#a3da859dcf2a5fe7078b1257dd5f1e479',1,'SVF::StInfo']]],
   ['fldidxvec',['fldIdxVec',['../classSVF_1_1StInfo.html#a77c94c0ab75b2d5af2132ff8e082cefe',1,'SVF::StInfo']]],

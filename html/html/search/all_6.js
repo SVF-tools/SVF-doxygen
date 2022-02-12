@@ -51,6 +51,7 @@ var searchData=
   ['flattenedelemty',['flattenedElemTy',['../classSVF_1_1FlattenedFieldInfo.html#a186f54bc7c43d9ca8c6d1ab152fb36fe',1,'SVF::FlattenedFieldInfo']]],
   ['flattenedfieldinfo',['FlattenedFieldInfo',['../classSVF_1_1FlattenedFieldInfo.html',1,'SVF::FlattenedFieldInfo'],['../classSVF_1_1FlattenedFieldInfo.html#a90af575af4fa8ed5646b790daaf421cd',1,'SVF::FlattenedFieldInfo::FlattenedFieldInfo()']]],
   ['flattenedfldidx',['flattenedFldIdx',['../classSVF_1_1FlattenedFieldInfo.html#a14d271fe9ce4a7d989871088d9daf83a',1,'SVF::FlattenedFieldInfo']]],
+  ['flattenelementtypes',['flattenElementTypes',['../classSVF_1_1StInfo.html#a8b24c6a35701a719cd5f1deef62421cd',1,'SVF::StInfo']]],
   ['fldidx',['fldIdx',['../classSVF_1_1LocationSet.html#a1937e1b9513135cb46c7f3f02fbe7d03',1,'SVF::LocationSet']]],
   ['fldidx2typemap',['fldIdx2TypeMap',['../classSVF_1_1StInfo.html#a3da859dcf2a5fe7078b1257dd5f1e479',1,'SVF::StInfo']]],
   ['fldidxvec',['fldIdxVec',['../classSVF_1_1StInfo.html#a77c94c0ab75b2d5af2132ff8e082cefe',1,'SVF::StInfo']]],
