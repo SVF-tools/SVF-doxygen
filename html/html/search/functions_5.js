@@ -15,7 +15,6 @@ var searchData=
   ['firstcommonbit',['firstCommonBit',['../classSVF_1_1CoreBitVector.html#a1ca118240e4c7f678d52a6ca4b3e6b2f',1,'SVF::CoreBitVector']]],
   ['fixvartree',['fixVarTree',['../cuddInt_8c.html#a9a7571d0ca349667f3912593b8a7d8d1',1,'cuddInt.c']]],
   ['flatten',['flatten',['../classSVF_1_1DCHGraph.html#ab96874bc8f6461fe0c3eb53b7f5cedce',1,'SVF::DCHGraph']]],
-  ['flattenedfieldinfo',['FlattenedFieldInfo',['../classSVF_1_1FlattenedFieldInfo.html#a90af575af4fa8ed5646b790daaf421cd',1,'SVF::FlattenedFieldInfo']]],
   ['flowdda',['FlowDDA',['../classSVF_1_1FlowDDA.html#aab22d2c14b46963887f623d84e75bd7a',1,'SVF::FlowDDA']]],
   ['flowsensitive',['FlowSensitive',['../classSVF_1_1FlowSensitive.html#aac88b67b49cbd72912ff586d30197ffb',1,'SVF::FlowSensitive']]],
   ['flowsensitivestat',['FlowSensitiveStat',['../classSVF_1_1FlowSensitiveStat.html#a2a7ae289b0400e63fa217f8717f4ffa9',1,'SVF::FlowSensitiveStat']]],
