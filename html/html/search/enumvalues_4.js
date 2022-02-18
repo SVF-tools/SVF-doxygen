@@ -13,6 +13,7 @@ var searchData=
   ['eft_5falloc',['EFT_ALLOC',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094ac57ade96d1d18b9f2d4d36bc6928c5c4',1,'SVF::ExtAPI']]],
   ['eft_5fcxa_5fbegin_5fcatch',['EFT_CXA_BEGIN_CATCH',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a9d9ec33eb5ecf285ccf2aa575bcba31a',1,'SVF::ExtAPI']]],
   ['eft_5ffree',['EFT_FREE',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a9b98279d1926e4ebfb237a43536c7b73',1,'SVF::ExtAPI']]],
+  ['eft_5ffree_5fmultilevel',['EFT_FREE_MULTILEVEL',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a66bcd64afcfaf09c49d2f445cd112f1d',1,'SVF::ExtAPI']]],
   ['eft_5fl_5fa0',['EFT_L_A0',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a6363df51947cab85ec4ae04b4e056f96',1,'SVF::ExtAPI']]],
   ['eft_5fl_5fa0_5f_5fa0r_5fa1',['EFT_L_A0__A0R_A1',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094aa0cecd43037de38c00ec6017b03bbb3f',1,'SVF::ExtAPI']]],
   ['eft_5fl_5fa0_5f_5fa0r_5fa1r',['EFT_L_A0__A0R_A1R',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a54aa3d7051aab7d65ee1154538bfbb48',1,'SVF::ExtAPI']]],
