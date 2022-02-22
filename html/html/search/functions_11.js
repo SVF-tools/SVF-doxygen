@@ -28,6 +28,7 @@ var searchData=
   ['traversedendrogram',['traverseDendrogram',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#abd44e3b07b0482bacf6b1a080fe650c6',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['traverseonicfg',['traverseOnICFG',['../svf-ex_8cpp.html#af45b449c07f1c975eea45d40d1cc37f6',1,'svf-ex.cpp']]],
   ['traverseonvfg',['traverseOnVFG',['../svf-ex_8cpp.html#a210d797e39e39071d420ba450727d6e4',1,'svf-ex.cpp']]],
+  ['type2string',['type2String',['../namespaceSVF_1_1SVFUtil.html#a817a63e8330530cb18e077556f7ce518',1,'SVF::SVFUtil']]],
   ['typeanalysis',['TypeAnalysis',['../classSVF_1_1TypeAnalysis.html#aaec66fea631bfe00064182e17dfb9db3',1,'SVF::TypeAnalysis']]],
   ['typebasedheapcloning',['TypeBasedHeapCloning',['../classSVF_1_1TypeBasedHeapCloning.html#af4d0abf53755a070478c142add3322d8',1,'SVF::TypeBasedHeapCloning']]]
 ];

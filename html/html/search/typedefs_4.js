@@ -12,6 +12,6 @@ var searchData=
   ['equalmemregion',['equalMemRegion',['../classSVF_1_1MemRegion.html#af0a0b4a5862a136ef4f203f19139da65',1,'SVF::MemRegion']]],
   ['equalnodebs',['equalNodeBS',['../namespaceSVF_1_1SVFUtil.html#a5c2b39ae857d78ed9dda83880e703b0f',1,'SVF::SVFUtil']]],
   ['equalpointsto',['equalPointsTo',['../namespaceSVF_1_1SVFUtil.html#a68302f07b13f6e1f39aace5699762c41',1,'SVF::SVFUtil']]],
-  ['extractelementinst',['ExtractElementInst',['../namespaceSVF.html#afb88c4d723dd7c51bdfc7ba5893cb356',1,'SVF']]],
-  ['extractvalueinst',['ExtractValueInst',['../namespaceSVF.html#ace1fd4c32134018e2f6d5da193524986',1,'SVF']]]
+  ['extractelementinst',['ExtractElementInst',['../SVF-FE_2BasicTypes_8h.html#af4efbd8e6f644628b41104e855b0541b',1,'BasicTypes.h']]],
+  ['extractvalueinst',['ExtractValueInst',['../SVF-FE_2BasicTypes_8h.html#a41c335e8362a500085923e4742a53f57',1,'BasicTypes.h']]]
 ];

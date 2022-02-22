@@ -56,7 +56,7 @@ var searchData=
   ['printctiraliasstats',['printCTirAliasStats',['../classSVF_1_1FlowSensitive.html#a023d0b492deaba40c593332cf1b2e3f6',1,'SVF::FlowSensitive']]],
   ['printdbg',['printDbg',['../classSVF_1_1CondManager.html#a385339096b4322654b5b2c7a37e852fe',1,'SVF::CondManager']]],
   ['printflattenfields',['printFlattenFields',['../classSVF_1_1SymbolTableInfo.html#aa40ff2fcaba3d4297d63269b74738737',1,'SVF::SymbolTableInfo']]],
-  ['printgraph',['PrintGraph',['../classllvm_1_1GraphPrinter.html#a2a459c98ab3725a0e92b0ec6405893bf',1,'llvm::GraphPrinter']]],
+  ['printgraph',['PrintGraph',['../classllvm_1_1GraphPrinter.html#ad950fc901ea4aabb6d6cdad8f883d381',1,'llvm::GraphPrinter']]],
   ['printicfgtojson',['printICFGToJson',['../classSVF_1_1ICFGPrinter.html#a5ef3cd8fa4c2dd99289725f1aa781721',1,'SVF::ICFGPrinter']]],
   ['printindcstargets',['printIndCSTargets',['../classSVF_1_1PointerAnalysis.html#a84edebc59e29f2cc1b89a699b8641f30',1,'SVF::PointerAnalysis::printIndCSTargets(const CallICFGNode *cs, const FunctionSet &amp;targets)'],['../classSVF_1_1PointerAnalysis.html#a062f1f2d6d47694caa9ac64a9e68c7b3',1,'SVF::PointerAnalysis::printIndCSTargets()']]],
   ['printinterleaving',['printInterleaving',['../classSVF_1_1MHP.html#a22f7dc5043fed97f1b4b273b8b710415',1,'SVF::MHP']]],

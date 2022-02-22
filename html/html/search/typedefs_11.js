@@ -18,7 +18,7 @@ var searchData=
   ['smallvector',['SmallVector',['../namespaceSVF.html#aa408bbe668ca1208beceae0f842079b4',1,'SVF']]],
   ['smallvector16',['SmallVector16',['../namespaceSVF.html#a9893c2871f3e879e8e50c2ed157bc615',1,'SVF']]],
   ['smallvector8',['SmallVector8',['../namespaceSVF.html#a5b2b380d8e5b1c790157dc4799d3f403',1,'SVF']]],
-  ['smdiagnostic',['SMDiagnostic',['../namespaceSVF.html#a86863d104a3930b3a806935d92ddbf30',1,'SVF']]],
+  ['smdiagnostic',['SMDiagnostic',['../SVF-FE_2BasicTypes_8h.html#a312d4d865f87a9bff58ce66b087c13d0',1,'BasicTypes.h']]],
   ['sparsebitvector',['SparseBitVector',['../namespaceSVF.html#ab6cf2115b54ef7135b031efc2f112b54',1,'SVF']]],
   ['st_5fgenerator',['st_generator',['../st_8h.html#a9247f69aea004a8ea6a07cd22bdae32d',1,'st.h']]],
   ['st_5fpficpcp',['ST_PFICPCP',['../st_8h.html#afb91ce58b9010645ed1cdf1ed2b76b03',1,'st.h']]],

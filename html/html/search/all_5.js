@@ -110,7 +110,7 @@ var searchData=
   ['err',['err',['../structDdManager.html#a6b0364070de52e689fe3485a86bb2825',1,'DdManager']]],
   ['errmsg',['errMsg',['../namespaceSVF_1_1SVFUtil.html#a5d4bb92f5df30417f414397f8e58cf01',1,'SVF::SVFUtil']]],
   ['errorcode',['errorCode',['../structDdManager.html#ae0690f123fc2c3f0ca9a1cfd18923a37',1,'DdManager']]],
-  ['errs',['errs',['../namespaceSVF_1_1SVFUtil.html#af0f447732c67402037a86ea29006efc2',1,'SVF::SVFUtil']]],
+  ['errs',['errs',['../namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc',1,'SVF::SVFUtil']]],
   ['evalfinalcond',['evalFinalCond',['../classSVF_1_1ProgSlice.html#afac06b0be2b04cb8a65af21fd697b756',1,'SVF::ProgSlice']]],
   ['evalmdtag',['evalMDTag',['../classSVF_1_1Annotator.html#a571eca4d816ffb519f256b7f37209ddb',1,'SVF::Annotator']]],
   ['evaltime',['EvalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1d98862e19affdd08740f85490d0d856',1,'SVF::NodeIDAllocator::Clusterer']]],
@@ -136,7 +136,7 @@ var searchData=
   ['extern',['EXTERN',['../util_8c.html#a77366c1bd428629dc898e188bfd182a3',1,'util.c']]],
   ['externalpag',['ExternalPAG',['../classSVF_1_1SVFIR.html#a294bb5e174030882a385c790ab835bb3',1,'SVF::SVFIR']]],
   ['extf_5ft',['extf_t',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094',1,'SVF::ExtAPI']]],
-  ['extractelementinst',['ExtractElementInst',['../namespaceSVF.html#afb88c4d723dd7c51bdfc7ba5893cb356',1,'SVF']]],
+  ['extractelementinst',['ExtractElementInst',['../SVF-FE_2BasicTypes_8h.html#af4efbd8e6f644628b41104e855b0541b',1,'BasicTypes.h']]],
   ['extractsubconds',['extractSubConds',['../classSVF_1_1BranchCondManager.html#aa241ee8c9d8ef17029dba67b737d8beb',1,'SVF::BranchCondManager::extractSubConds()'],['../classSVF_1_1CondManager.html#acd773bd9dbf5161e488c827b0b71481d',1,'SVF::CondManager::extractSubConds()']]],
-  ['extractvalueinst',['ExtractValueInst',['../namespaceSVF.html#ace1fd4c32134018e2f6d5da193524986',1,'SVF']]]
+  ['extractvalueinst',['ExtractValueInst',['../SVF-FE_2BasicTypes_8h.html#a41c335e8362a500085923e4742a53f57',1,'BasicTypes.h']]]
 ];

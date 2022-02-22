@@ -272,7 +272,7 @@ var searchData=
   ['alias_5fend',['alias_end',['../classSVF_1_1SVFModule.html#a3cfd0983849950099d1e8f8e0fda42bc',1,'SVF::SVFModule::alias_end()'],['../classSVF_1_1SVFModule.html#a1bb5c818ec63d81a238f3d242a89079f',1,'SVF::SVFModule::alias_end() const']]],
   ['aliasddaclient',['AliasDDAClient',['../classSVF_1_1AliasDDAClient.html#af55b1ccfa6cfaa6ec079b19d62288cb6',1,'SVF::AliasDDAClient']]],
   ['aliased',['aliased',['../classSVF_1_1CondPointsToSet.html#afcbb2cae75a5dd7947cb22c440b8fd0b',1,'SVF::CondPointsToSet']]],
-  ['aliasquery',['aliasQuery',['../svf-ex_8cpp.html#ac5b51f055ec3ed000c95a409a73403a7',1,'svf-ex.cpp']]],
+  ['aliasquery',['aliasQuery',['../svf-ex_8cpp.html#a5fe2142b121150867c08ee9bd8f65940',1,'svf-ex.cpp']]],
   ['allctir',['allCTir',['../classSVF_1_1LLVMModuleSet.html#a4e125a4acf17d42a24576df6499eb491',1,'SVF::LLVMModuleSet']]],
   ['allocate',['allocate',['../classSVF_1_1PathCondAllocator.html#a3fce010083b85a4421eed4c17eb54640',1,'SVF::PathCondAllocator']]],
   ['allocateforbb',['allocateForBB',['../classSVF_1_1PathCondAllocator.html#af854f880e76738a13d6cb937a257828f',1,'SVF::PathCondAllocator']]],

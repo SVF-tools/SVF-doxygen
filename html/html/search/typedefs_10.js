@@ -1,7 +1,6 @@
 var searchData=
 [
   ['raw_5ffd_5fostream',['raw_fd_ostream',['../namespaceSVF.html#a1c7c7ac12791c0ae386283c0a4f127ba',1,'SVF']]],
-  ['raw_5fostream',['raw_ostream',['../namespaceSVF.html#a424cc053c29ad7303699c529d1a2cc71',1,'SVF']]],
   ['raw_5fstring_5fostream',['raw_string_ostream',['../namespaceSVF.html#a726981481ac082dcda3e4921416b65a0',1,'SVF']]],
   ['rc_5fflag',['RC_FLAG',['../classSVF_1_1RaceResultValidator.html#ac57ae430ee5b6868fe810172ec658853',1,'SVF::RaceResultValidator']]],
   ['reference',['reference',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a28e12df86b7514e119e2b4f7bffd29c9',1,'SVF::PointsTo::PointsToIterator::reference()'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a65313b9702cf6767d2936852e09f04c5',1,'SVF::CoreBitVector::CoreBitVectorIterator::reference()']]],
