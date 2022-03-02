@@ -1,7 +1,7 @@
 var searchData=
 [
   ['s32_5ft',['s32_t',['../namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e',1,'SVF']]],
-  ['s64_5ft',['s64_t',['../namespaceSVF.html#abe09d99af006554a5c00803e9a89f9a6',1,'SVF']]],
+  ['s64_5ft',['s64_t',['../namespaceSVF.html#ad781b0b14e89773e774072b280658ef3',1,'SVF']]],
   ['scalarevolution',['ScalarEvolution',['../namespaceSVF.html#ad8794eb3c00de3d3b5c5e43dded3fb42',1,'SVF']]],
   ['scalarevolutionwrapperpass',['ScalarEvolutionWrapperPass',['../namespaceSVF.html#a9f1aca0384166e42d14e2608009ebc01',1,'SVF']]],
   ['scc',['SCC',['../classSVF_1_1MRGenerator.html#af8d52e6c9884c6e1abc6dbcbc5e32629',1,'SVF::MRGenerator::SCC()'],['../classSVF_1_1WPASolver.html#a1352953966be14b2a1d6244f35e74a33',1,'SVF::WPASolver::SCC()']]],
