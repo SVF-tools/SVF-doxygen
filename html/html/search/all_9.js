@@ -72,7 +72,7 @@ var searchData=
   ['inedgeend',['InEdgeEnd',['../classSVF_1_1GenericNode.html#afe6a7b286d9af4992f41b59612fd2900',1,'SVF::GenericNode::InEdgeEnd()'],['../classSVF_1_1GenericNode.html#a0118fbeb2b314dcdcb53c56a2a13ab07',1,'SVF::GenericNode::InEdgeEnd() const']]],
   ['inedgekindtosetmap',['InEdgeKindToSetMap',['../classSVF_1_1SVFVar.html#a0d918a6c8dd3b7b395d4c7161bcf9656',1,'SVF::SVFVar']]],
   ['inedges',['InEdges',['../classSVF_1_1GenericNode.html#a24971168130222400d9aa5f03610bff5',1,'SVF::GenericNode']]],
-  ['inferfieldidxfrombyteoffset',['inferFieldIdxFromByteOffset',['../classSVF_1_1SVFIRBuilder.html#a0dca1ee5a6ef5f109e6d9637e5b04a57',1,'SVF::SVFIRBuilder']]],
+  ['inferfieldidxfrombyteoffset',['inferFieldIdxFromByteOffset',['../classSVF_1_1SVFIRBuilder.html#a543276371db0120cabe8f63993a4839c',1,'SVF::SVFIRBuilder']]],
   ['inferfromcallgraph',['inferFromCallGraph',['../classSVF_1_1PCG.html#adff1702e1b0a902de7ded742846fe137',1,'SVF::PCG']]],
   ['infilter',['inFilter',['../classSVF_1_1LockResultValidator.html#a445dbda778198acac87fbbfa029b0dfb',1,'SVF::LockResultValidator']]],
   ['info',['info',['../classSVF_1_1ExtAPI.html#a21b103f723d914a95fd0eef28551a3ca',1,'SVF::ExtAPI']]],

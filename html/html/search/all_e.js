@@ -42,7 +42,7 @@ var searchData=
   ['nodemapping',['nodeMapping',['../classSVF_1_1PointsTo.html#acd7eab32125de90020c55c757d6adfda',1,'SVF::PointsTo']]],
   ['nodenum',['nodeNum',['../classSVF_1_1GenericGraph.html#a38122734cbe71551a420dfb7fee2012e',1,'SVF::GenericGraph']]],
   ['nodenumafterpagbuild',['nodeNumAfterPAGBuild',['../classSVF_1_1IRGraph.html#a80cf14bf43accb89cb82490b4f173598',1,'SVF::IRGraph']]],
-  ['nodeoffset',['NodeOffset',['../classSVF_1_1SVFIR.html#ad69ce40d95681d1bd8503e08228609c4',1,'SVF::SVFIR']]],
+  ['nodeoffset',['NodeOffset',['../classSVF_1_1SVFIR.html#a7e908658e66155313c3fbf5a52612b6a',1,'SVF::SVFIR']]],
   ['nodeoffsetmap',['NodeOffsetMap',['../classSVF_1_1SVFIR.html#ae683914bce36e2d387bc0bc97dfcb14d',1,'SVF::SVFIR']]],
   ['nodepair',['NodePair',['../namespaceSVF.html#af15e78ec0ab5bf5328d0f8e90c74fe4b',1,'SVF']]],
   ['nodepairmap',['NodePairMap',['../namespaceSVF.html#a56a7d652fccf3134748f3cb8e8334b76',1,'SVF']]],

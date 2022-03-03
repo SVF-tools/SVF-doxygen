@@ -62,7 +62,7 @@ var searchData=
   ['loadvfgnode',['LoadVFGNode',['../classSVF_1_1LoadVFGNode.html',1,'SVF::LoadVFGNode'],['../classSVF_1_1LoadVFGNode.html#aca72f4582e33a2d4ef3a96dd2936f567',1,'SVF::LoadVFGNode::LoadVFGNode()'],['../classSVF_1_1LoadVFGNode.html#afe482a8a05b0efc45ceb4052ea87a039',1,'SVF::LoadVFGNode::LoadVFGNode(const LoadVFGNode &amp;)'],['../classSVF_1_1LoadVFGNode.html#a8ae07c41215e9c7544c45e581c18c29b',1,'SVF::LoadVFGNode::LoadVFGNode(NodeID id, const LoadStmt *edge)']]],
   ['localcaches',['localCaches',['../structDdManager.html#a8f62071184b231f7320214e735b7fd0d',1,'DdManager']]],
   ['localvarinrecursion',['localVarInRecursion',['../classSVF_1_1PTAStat.html#a5b4095f427c9c7b9ec0db497ba33baea',1,'SVF::PTAStat']]],
-  ['locationset',['LocationSet',['../classSVF_1_1LocationSet.html',1,'SVF::LocationSet'],['../classSVF_1_1LocationSet.html#a7fb1dbff5cf3ec18977cc92ae9800d47',1,'SVF::LocationSet::LocationSet(s64_t o=0)'],['../classSVF_1_1LocationSet.html#a290c7fe38704552fd66ad06e5deeaca9',1,'SVF::LocationSet::LocationSet(const LocationSet &amp;ls)']]],
+  ['locationset',['LocationSet',['../classSVF_1_1LocationSet.html',1,'SVF::LocationSet'],['../classSVF_1_1LocationSet.html#a40cc38cbc1a9433d1d83724767dc41ba',1,'SVF::LocationSet::LocationSet(s32_t o=0)'],['../classSVF_1_1LocationSet.html#a290c7fe38704552fd66ad06e5deeaca9',1,'SVF::LocationSet::LocationSet(const LocationSet &amp;ls)']]],
   ['locationset_2ecpp',['LocationSet.cpp',['../LocationSet_8cpp.html',1,'']]],
   ['locationset_2eh',['LocationSet.h',['../LocationSet_8h.html',1,'']]],
   ['locdpitem',['LocDPItem',['../namespaceSVF.html#aa50ee8563f99ba1eb897301f55e9d855',1,'SVF']]],
