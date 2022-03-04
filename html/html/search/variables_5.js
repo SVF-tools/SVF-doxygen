@@ -14,6 +14,7 @@ var searchData=
   ['elder',['elder',['../structMtrNode.html#a7c8ed9787ec60487fad7b2fede53df98',1,'MtrNode']]],
   ['elements',['elements',['../classSVF_1_1CondStdSet.html#a1caece9a66b6617b89037fd8211f2934',1,'SVF::CondStdSet']]],
   ['elemidxvec',['elemIdxVec',['../classSVF_1_1StInfo.html#a807ae5cb4d277c79f8b2c9ecde5f12ea',1,'SVF::StInfo']]],
+  ['elemnum',['elemNum',['../classSVF_1_1ObjTypeInfo.html#a5fdcd5f3b7550e7bdc30c8c030c6226d',1,'SVF::ObjTypeInfo']]],
   ['empty',['empty',['../cuddInt_8c.html#a5beb39637a978181c7c17714ac96672e',1,'cuddInt.c']]],
   ['enablealiascheck',['EnableAliasCheck',['../classSVF_1_1Options.html#a4da18281b973b9ffb5068dd53060524c',1,'SVF::Options']]],
   ['enablethreadcallgraph',['EnableThreadCallGraph',['../classSVF_1_1Options.html#a153d42a480ef1763ad59fd7258ac3ac5',1,'SVF::Options']]],
