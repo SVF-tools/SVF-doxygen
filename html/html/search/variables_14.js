@@ -32,7 +32,7 @@ var searchData=
   ['timeofprocessloadstore',['timeOfProcessLoadStore',['../classSVF_1_1AndersenBase.html#a9fe738f1e11c80006d540f246a80bfdf',1,'SVF::AndersenBase']]],
   ['timeofsccdetection',['timeOfSCCDetection',['../classSVF_1_1AndersenBase.html#a6b7d0e57f741c446d0bf178939960143',1,'SVF::AndersenBase']]],
   ['timeofsccmerges',['timeOfSCCMerges',['../classSVF_1_1AndersenBase.html#a02c5a50b214d36921e1404784e76704d',1,'SVF::AndersenBase']]],
-  ['timeofssarenaming',['TimeOfSSARenaming',['../classSVF_1_1MemSSAStat.html#a887ff23a7ea1a18f08b1744ff30da773',1,'SVF::MemSSAStat::TimeOfSSARenaming()'],['../classSVF_1_1MemSSA.html#a97ccd5e0b9ab6144415e26bdf95cbabd',1,'SVF::MemSSA::timeOfSSARenaming()']]],
+  ['timeofssarenaming',['timeOfSSARenaming',['../classSVF_1_1MemSSA.html#a97ccd5e0b9ab6144415e26bdf95cbabd',1,'SVF::MemSSA::timeOfSSARenaming()'],['../classSVF_1_1MemSSAStat.html#a887ff23a7ea1a18f08b1744ff30da773',1,'SVF::MemSSAStat::TimeOfSSARenaming()']]],
   ['timeofupdatecallgraph',['timeOfUpdateCallGraph',['../classSVF_1_1AndersenBase.html#a2afb49f513c9534fd051117b59dc056b',1,'SVF::AndersenBase']]],
   ['timestatmap',['timeStatMap',['../classSVF_1_1PTAStat.html#a3724756ac0527ba3d199be32e38c6337',1,'SVF::PTAStat']]],
   ['tlptdata',['tlPTData',['../classSVF_1_1MutableVersionedPTData.html#a01974968b7cf60a4231cc83c93b26d7f',1,'SVF::MutableVersionedPTData::tlPTData()'],['../classSVF_1_1PersistentVersionedPTData.html#a29104a2d53d94805e142f778d3d21ad5',1,'SVF::PersistentVersionedPTData::tlPTData()']]],

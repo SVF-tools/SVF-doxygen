@@ -316,7 +316,7 @@ var searchData=
   ['storetodpms',['storeToDPMs',['../classSVF_1_1DDAVFSolver.html#af66895278f0ecbc882f9e4f43ef9c8a8',1,'SVF::DDAVFSolver']]],
   ['storetopmsetmap',['StoreToPMSetMap',['../classSVF_1_1DDAVFSolver.html#accaacd2dd680f92ff83cfe75eef6ffab',1,'SVF::DDAVFSolver']]],
   ['storevfgnode',['StoreVFGNode',['../classSVF_1_1StoreVFGNode.html',1,'SVF::StoreVFGNode'],['../classSVF_1_1StoreVFGNode.html#ab4b9182cb0f2ef7dfc1e15789a311ecd',1,'SVF::StoreVFGNode::StoreVFGNode()'],['../classSVF_1_1StoreVFGNode.html#a496607cda1cc26a8753d6a7af620e95a',1,'SVF::StoreVFGNode::StoreVFGNode(const StoreVFGNode &amp;)'],['../classSVF_1_1StoreVFGNode.html#ae7ee09f0e965b6487a38a58c4f51b20b',1,'SVF::StoreVFGNode::StoreVFGNode(NodeID id, const StoreStmt *edge)']]],
-  ['strategy',['Strategy',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228',1,'SVF::NodeIDAllocator::Strategy()'],['../classSVF_1_1NodeIDAllocator.html#a44420802f9db288515ee09771c3edd4d',1,'SVF::NodeIDAllocator::strategy()']]],
+  ['strategy',['strategy',['../classSVF_1_1NodeIDAllocator.html#a44420802f9db288515ee09771c3edd4d',1,'SVF::NodeIDAllocator::strategy()'],['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228',1,'SVF::NodeIDAllocator::Strategy()']]],
   ['strcat',['strcat',['../util_8h.html#ae726f8c6b65e180aacfb570a35dc8375',1,'util.h']]],
   ['strchr',['strchr',['../util_8h.html#ad015a6d0966888e16a0ea0eb360a2be2',1,'util.h']]],
   ['strcmp',['strcmp',['../util_8h.html#a7e3fe9a43bbdc5abae963874b6a63e6b',1,'util.h']]],
