@@ -33,7 +33,7 @@ var searchData=
   ['repnodes',['repNodes',['../classSVF_1_1SCCDetection.html#a2b9605126ebb2abb1e16b3ccf99cf04b',1,'SVF::SCCDetection']]],
   ['res',['res',['../classSVF_1_1CmpVFGNode.html#a9a358028cf15ba49b410e0c2a1fafe7c',1,'SVF::CmpVFGNode::res()'],['../classSVF_1_1BinaryOPVFGNode.html#a01ca492acb9b769eb6e1fe2137dff47d',1,'SVF::BinaryOPVFGNode::res()'],['../classSVF_1_1UnaryOPVFGNode.html#a4403fd618b01a26c7c1e8c5da2319db6',1,'SVF::UnaryOPVFGNode::res()'],['../classSVF_1_1PHIVFGNode.html#a513b2636967a86902f4243dc0d2e0e3f',1,'SVF::PHIVFGNode::res()']]],
   ['result',['result',['../cuddInt_8c.html#a8b2e13c78efca330f06b6ddcd7464b41',1,'cuddInt.c']]],
-  ['resver',['resVer',['../classSVF_1_1IntraMSSAPHISVFGNode.html#a84832f678de1f497b4f3d7720a0bc58a',1,'SVF::IntraMSSAPHISVFGNode::resVer()'],['../classSVF_1_1MSSADEF.html#a72560a998968ae2dbc6e5aa8a7e9f813',1,'SVF::MSSADEF::resVer()']]],
+  ['resver',['resVer',['../classSVF_1_1MSSADEF.html#a72560a998968ae2dbc6e5aa8a7e9f813',1,'SVF::MSSADEF']]],
   ['ret',['ret',['../classSVF_1_1CallICFGNode.html#a6c27c0d796b3d4becdebeba93f4fc785',1,'SVF::CallICFGNode']]],
   ['retpe',['retPE',['../classSVF_1_1RetCFGEdge.html#ad4bbb9881dff7b715c7a70b92baf376c',1,'SVF::RetCFGEdge']]],
   ['retpes',['retPEs',['../classSVF_1_1FormalRetVFGNode.html#a5fa2fc654385d0fab018053e89565157',1,'SVF::FormalRetVFGNode']]],
