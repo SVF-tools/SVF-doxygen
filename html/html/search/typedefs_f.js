@@ -35,7 +35,7 @@ var searchData=
   ['pointer',['pointer',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#aff5a4ee71f88ab9b0e1851d6e41e294f',1,'SVF::PointsTo::PointsToIterator::pointer()'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a6d8d22b1c8b4405a8e3caddacae6f8f5',1,'SVF::CoreBitVector::CoreBitVectorIterator::pointer()']]],
   ['pointertype',['PointerType',['../structSVF_1_1SVFUtil_1_1cast__retty__impl_3_01To_00_01std_1_1unique__ptr_3_01From_01_4_01_4.html#a9d08abc346f3b77c487eba144f3cbd8d',1,'SVF::SVFUtil::cast_retty_impl&lt; To, std::unique_ptr&lt; From &gt; &gt;::PointerType()'],['../namespaceSVF.html#aa962cc1d782cc46553251e96b64a754b',1,'SVF::PointerType()']]],
   ['pointstoid',['PointsToID',['../namespaceSVF.html#ae545a88267bd2246de827cf590675aca',1,'SVF']]],
-  ['pointstolist',['PointsToList',['../classSVF_1_1MRGenerator.html#a8b254a0c5063e25f297d1b00fb0b515e',1,'SVF::MRGenerator::PointsToList()'],['../namespaceSVF_1_1SVFUtil.html#a798b7f30608d8c1688d4fdce2c3097f4',1,'SVF::SVFUtil::PointsToList()']]],
+  ['pointstolist',['PointsToList',['../classSVF_1_1MRGenerator.html#a8b254a0c5063e25f297d1b00fb0b515e',1,'SVF::MRGenerator::PointsToList()'],['../namespaceSVF_1_1SVFUtil.html#a4740b14abf7d308e7806a0d6d6c42ee2',1,'SVF::SVFUtil::PointsToList()']]],
   ['postdominatortree',['PostDominatorTree',['../namespaceSVF.html#ab34383ee87cd45eb485fa29db482ffef',1,'SVF']]],
   ['postdominatortreewrapperpass',['PostDominatorTreeWrapperPass',['../namespaceSVF.html#a7f570d09953aa4ec60fd1d5f7f71b521',1,'SVF']]],
   ['ptacgnodeset',['PTACGNodeSet',['../classSVF_1_1TCT.html#afb579a5bdcc0a1c6b075bb9aae36c237',1,'SVF::TCT']]],
