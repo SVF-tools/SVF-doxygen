@@ -94,6 +94,7 @@ var searchData=
   ['getanalysisty',['getAnalysisTy',['../classSVF_1_1PointerAnalysis.html#ac23f71c1307cda9cba44acc40059f0a3',1,'SVF::PointerAnalysis']]],
   ['getancestorthread',['getAncestorThread',['../classSVF_1_1TCT.html#aeb7dff0c02a90cb338c8d054d2b78984',1,'SVF::TCT']]],
   ['getandersenanalysis',['getAndersenAnalysis',['../classSVF_1_1DDAVFSolver.html#ac39860015b45b9af6351d0343f8983bb',1,'SVF::DDAVFSolver']]],
+  ['getarg',['getArg',['../classSVF_1_1SVFFunction.html#a59b01d4e4d83db08e9df3e165e37c29a',1,'SVF::SVFFunction']]],
   ['getargoperand',['getArgOperand',['../classSVF_1_1CallSite.html#a5cd372d9fab846228fb0ee746001309a',1,'SVF::CallSite']]],
   ['getargument',['getArgument',['../classSVF_1_1CallSite.html#a26a594d36bbb5b77e7085502812d9ca2',1,'SVF::CallSite']]],
   ['getbackwardslicesize',['getBackwardSliceSize',['../classSVF_1_1ProgSlice.html#a967fa01a8baae0dd086b5c09ae0faa7b',1,'SVF::ProgSlice']]],
