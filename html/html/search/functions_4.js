@@ -53,5 +53,5 @@ var searchData=
   ['extendbackward',['extendBackward',['../classSVF_1_1CoreBitVector.html#ab6d789e3c68390a9026fd4f8c4cf344a',1,'SVF::CoreBitVector']]],
   ['extendforward',['extendForward',['../classSVF_1_1CoreBitVector.html#a5d3f1eb85bc388cb76c588b8d8b3c181',1,'SVF::CoreBitVector']]],
   ['extendto',['extendTo',['../classSVF_1_1CoreBitVector.html#a73e5b15854f4f56f50992ed0d0cc7349',1,'SVF::CoreBitVector']]],
-  ['extractsubconds',['extractSubConds',['../classSVF_1_1BranchCondManager.html#aa241ee8c9d8ef17029dba67b737d8beb',1,'SVF::BranchCondManager::extractSubConds()'],['../classSVF_1_1CondManager.html#acd773bd9dbf5161e488c827b0b71481d',1,'SVF::CondManager::extractSubConds()']]]
+  ['extractsubconds',['extractSubConds',['../classSVF_1_1CondManager.html#a66ed79e36f8c09ee3ae58fb9b4a6f3e3',1,'SVF::CondManager::extractSubConds()'],['../classSVF_1_1Z3Manager.html#aa6a78fc2f0a3ed9957230703fb8d730d',1,'SVF::Z3Manager::extractSubConds()'],['../classSVF_1_1BDDManager.html#a3fa608e37862e2702096c65fdb27c8c8',1,'SVF::BDDManager::extractSubConds()']]]
 ];

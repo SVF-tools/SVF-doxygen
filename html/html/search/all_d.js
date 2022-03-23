@@ -1,7 +1,7 @@
 var searchData=
 [
   ['m',['M',['../classSVF_1_1RaceResultValidator.html#abd3ad42a71357dfd1483e6e0d18d5ebd',1,'SVF::RaceResultValidator']]],
-  ['m_5fbdd_5fmgr',['m_bdd_mgr',['../classSVF_1_1BranchCondManager.html#a0c6278a5b4419e16c8fb5d3f8f8162a2',1,'SVF::BranchCondManager']]],
+  ['m_5fbdd_5fmgr',['m_bdd_mgr',['../classSVF_1_1BDDManager.html#aae62fd27ddc847758ea67000580efdb8',1,'SVF::BDDManager']]],
   ['m_5fcond',['m_cond',['../classSVF_1_1CondVar.html#a90b13685d2126f8c10dde4a504bb28df',1,'SVF::CondVar']]],
   ['m_5fid',['m_id',['../classSVF_1_1CondVar.html#a26fd04b3f2d45f0c230e1823f3eea49a',1,'SVF::CondVar']]],
   ['main',['main',['../dda_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;dda.cpp'],['../svf-ex_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;svf-ex.cpp'],['../mta_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mta.cpp'],['../saber_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;saber.cpp'],['../wpa_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;wpa.cpp']]],
@@ -59,7 +59,7 @@ var searchData=
   ['maxpointstosetsize',['MaxPointsToSetSize',['../classSVF_1_1PTAStat.html#af2b45aab2eee96a1cabba3025e4375a2',1,'SVF::PTAStat::MaxPointsToSetSize()'],['../classSVF_1_1AndersenBase.html#abd73e930450b7c605f478672bdf9bdae',1,'SVF::AndersenBase::MaxPointsToSetSize()']]],
   ['maxreorderings',['maxReorderings',['../structDdManager.html#a61170edf6d08bb1c4bacab68823a825d',1,'DdManager']]],
   ['maxsccsize',['maxSCCSize',['../classSVF_1_1FlowSensitive.html#aa3d4703756a6297ab5c0756172024fe4',1,'SVF::FlowSensitive']]],
-  ['maxsize',['maxsize',['../structDdHashTable.html#aba376a6d310dcead9f74cfc459f4a248',1,'DdHashTable::maxsize()'],['../structDdLevelQueue.html#acb7146e9f3dd73a052340c0e4010e6b6',1,'DdLevelQueue::maxsize()'],['../structDdManager.html#aa4d0701dc4e6f11b30085ae30c09fab6',1,'DdManager::maxSize()']]],
+  ['maxsize',['maxSize',['../structDdManager.html#aa4d0701dc4e6f11b30085ae30c09fab6',1,'DdManager::maxSize()'],['../structDdHashTable.html#aba376a6d310dcead9f74cfc459f4a248',1,'DdHashTable::maxsize()'],['../structDdLevelQueue.html#acb7146e9f3dd73a052340c0e4010e6b6',1,'DdLevelQueue::maxsize()']]],
   ['maxsizez',['maxSizeZ',['../structDdManager.html#a4a0b8f95d02bc99557fb55140e9b0963',1,'DdManager']]],
   ['maxslots',['maxslots',['../structDdLocalCache.html#af4379636b29a9bfe4a55708ac637545a',1,'DdLocalCache']]],
   ['maxstepinwrapper',['MaxStepInWrapper',['../classSVF_1_1Options.html#a0b82f16ee0c7e6566a6ae20662525e84',1,'SVF::Options']]],

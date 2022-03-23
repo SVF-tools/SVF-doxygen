@@ -121,6 +121,7 @@ var menudata={children:[
 {text:"u",url:"functions_func_u.html#index_u"},
 {text:"v",url:"functions_func_v.html#index_v"},
 {text:"w",url:"functions_func_w.html#index_w"},
+{text:"z",url:"functions_func_z.html#index_z"},
 {text:"~",url:"functions_func_0x7e.html#index_0x7e"}]},
 {text:"Variables",url:"functions_vars.html",children:[
 {text:"_",url:"functions_vars.html#index__"},
@@ -171,7 +172,8 @@ var menudata={children:[
 {text:"t",url:"functions_type_t.html#index_t"},
 {text:"u",url:"functions_type_u.html#index_u"},
 {text:"v",url:"functions_type_v.html#index_v"},
-{text:"w",url:"functions_type_w.html#index_w"}]},
+{text:"w",url:"functions_type_w.html#index_w"},
+{text:"z",url:"functions_type_z.html#index_z"}]},
 {text:"Enumerations",url:"functions_enum.html",children:[
 {text:"a",url:"functions_enum.html#index_a"},
 {text:"c",url:"functions_enum.html#index_c"},
@@ -205,7 +207,8 @@ var menudata={children:[
 {text:"t",url:"functions_eval_t.html#index_t"},
 {text:"u",url:"functions_eval_u.html#index_u"},
 {text:"v",url:"functions_eval_v.html#index_v"},
-{text:"w",url:"functions_eval_w.html#index_w"}]},
+{text:"w",url:"functions_eval_w.html#index_w"},
+{text:"z",url:"functions_eval_z.html#index_z"}]},
 {text:"Related Functions",url:"functions_rela.html",children:[
 {text:"c",url:"functions_rela.html#index_c"},
 {text:"d",url:"functions_rela.html#index_d"},

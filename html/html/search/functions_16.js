@@ -6,7 +6,7 @@ var searchData=
   ['_7eandersensfr',['~AndersenSFR',['../classSVF_1_1AndersenSFR.html#aabdafa8234569219fc5d96bb44ca8ef0',1,'SVF::AndersenSFR']]],
   ['_7eandersenstat',['~AndersenStat',['../classSVF_1_1AndersenStat.html#a31c59fe771f44b32a7d58145eb44a971',1,'SVF::AndersenStat']]],
   ['_7eannotator',['~Annotator',['../classSVF_1_1Annotator.html#a77ae10cccf9eeece8adf7dd00821e836',1,'SVF::Annotator']]],
-  ['_7ebranchcondmanager',['~BranchCondManager',['../classSVF_1_1BranchCondManager.html#a44bdc46bc43e657a545a5bedcfcae920',1,'SVF::BranchCondManager']]],
+  ['_7ebddmanager',['~BDDManager',['../classSVF_1_1BDDManager.html#aaede06df8ca879e9116a16ed690b2f8e',1,'SVF::BDDManager']]],
   ['_7ebvdataptaimpl',['~BVDataPTAImpl',['../classSVF_1_1BVDataPTAImpl.html#a06f211184d3e75f0ca351a4b8092a478',1,'SVF::BVDataPTAImpl']]],
   ['_7ecallchi',['~CallCHI',['../classSVF_1_1CallCHI.html#a9ae4f818ff29ebaccc0d82a0170577b5',1,'SVF::CallCHI']]],
   ['_7ecallmu',['~CallMU',['../classSVF_1_1CallMU.html#a408184b7a6c625d67a4b660e140b10c5',1,'SVF::CallMU']]],
@@ -15,7 +15,7 @@ var searchData=
   ['_7echnode',['~CHNode',['../classSVF_1_1CHNode.html#aff05589899b58112119af68df5d1997e',1,'SVF::CHNode']]],
   ['_7ecommonchgraph',['~CommonCHGraph',['../classSVF_1_1CommonCHGraph.html#aeb7e79b36c74bcded008fe227952c335',1,'SVF::CommonCHGraph']]],
   ['_7econdexpr',['~CondExpr',['../classSVF_1_1CondExpr.html#a034728ff201af843f9ae980bbb872086',1,'SVF::CondExpr']]],
-  ['_7econdmanager',['~CondManager',['../classSVF_1_1CondManager.html#a5677513376a78707de664c1cc85805aa',1,'SVF::CondManager']]],
+  ['_7econdmanager',['~CondManager',['../classSVF_1_1CondManager.html#ae17d57a0fdc02a5558120e65e11976d4',1,'SVF::CondManager']]],
   ['_7econdptaimpl',['~CondPTAImpl',['../classSVF_1_1CondPTAImpl.html#a01f64600bf6581403836019e4e5ae741',1,'SVF::CondPTAImpl']]],
   ['_7econdptssetiterator',['~CondPtsSetIterator',['../classSVF_1_1CondPointsToSet_1_1CondPtsSetIterator.html#a24ccc2dba1da8e241a595c84dde840ab',1,'SVF::CondPointsToSet::CondPtsSetIterator']]],
   ['_7econdstdset',['~CondStdSet',['../classSVF_1_1CondStdSet.html#abc67e77de2d1363af92c3bca2ccccbf1',1,'SVF::CondStdSet']]],
@@ -141,5 +141,7 @@ var searchData=
   ['_7ewpaminimumsolver',['~WPAMinimumSolver',['../classSVF_1_1WPAMinimumSolver.html#aabec5ac808a24b8d24aa008d8e15fc2a',1,'SVF::WPAMinimumSolver']]],
   ['_7ewpapass',['~WPAPass',['../classSVF_1_1WPAPass.html#a7ea8006b7e9237a470dfd34ad633826b',1,'SVF::WPAPass']]],
   ['_7ewpasccsolver',['~WPASCCSolver',['../classSVF_1_1WPASCCSolver.html#ab1d7c474209aab41d55fe8a3d13562a6',1,'SVF::WPASCCSolver']]],
-  ['_7ewpasolver',['~WPASolver',['../classSVF_1_1WPASolver.html#ac88ef07e88b453a1b35684b59a7dd04a',1,'SVF::WPASolver']]]
+  ['_7ewpasolver',['~WPASolver',['../classSVF_1_1WPASolver.html#ac88ef07e88b453a1b35684b59a7dd04a',1,'SVF::WPASolver']]],
+  ['_7ez3expr',['~Z3Expr',['../classSVF_1_1Z3Expr.html#a2abc206f11015c52db2eb189114b0dfc',1,'SVF::Z3Expr']]],
+  ['_7ez3manager',['~Z3Manager',['../classSVF_1_1Z3Manager.html#ad3d9d77ee64d84bb204fa66c1a51a01a',1,'SVF::Z3Manager']]]
 ];
