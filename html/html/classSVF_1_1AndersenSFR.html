@@ -1136,6 +1136,10 @@ Additional Inherited Members</h2></td></tr>
 <p>merge nodeId to newRepId. Return true if the newRepId is a PWC node </p>
 <p>union pts of node to rep</p>
 <p>move the edges from node to rep, and remove the node</p>
+<ol type="1">
+<li>if find gep edges inside SCC cycle, the rep node will become a PWC node and its pts should be collapsed later.</li>
+<li>if the node to be merged is already a PWC node, the rep node will also become a PWC node as it will have a self-cycle gep edge.</li>
+</ol>
 <p>set rep and sub relations </p>
 
 <p>Reimplemented from <a class="el" href="classSVF_1_1Andersen.html#ae6b1e54a389abc68994219e39539127e">SVF::Andersen</a>.</p>
