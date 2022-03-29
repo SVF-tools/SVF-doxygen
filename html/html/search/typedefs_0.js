@@ -14,6 +14,6 @@ var searchData=
   ['arg_5fiterator',['arg_iterator',['../classSVF_1_1CallSite.html#ac1cdfe5e54026960a23142e26b3150ff',1,'SVF::CallSite']]],
   ['argument',['Argument',['../namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801',1,'SVF']]],
   ['arraytype',['ArrayType',['../namespaceSVF.html#a146d286041987860388da3d8bc85cee3',1,'SVF']]],
-  ['atomiccmpxchginst',['AtomicCmpXchgInst',['../namespaceSVF.html#a582e3736a2bbb0540364c1693d831b49',1,'SVF']]],
-  ['atomicrmwinst',['AtomicRMWInst',['../namespaceSVF.html#a468154e0ab9e7be82afef1aa0a2fb9e0',1,'SVF']]]
+  ['atomiccmpxchginst',['AtomicCmpXchgInst',['../SVF-FE_2BasicTypes_8h.html#abafbd655050c8c70dc8947997c369294',1,'BasicTypes.h']]],
+  ['atomicrmwinst',['AtomicRMWInst',['../SVF-FE_2BasicTypes_8h.html#ab3bd63fdab8cc747227a32f88bd10370',1,'BasicTypes.h']]]
 ];

@@ -69,7 +69,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;llvm/IR/Instructions.h&gt;</code><br />
+<code>#include &lt;llvm/IR/IntrinsicInst.h&gt;</code><br />
 <code>#include &lt;llvm/IR/Metadata.h&gt;</code><br />
+<code>#include &lt;llvm/IR/DataLayout.h&gt;</code><br />
+<code>#include &lt;llvm/Analysis/MemoryLocation.h&gt;</code><br />
 <code>#include &lt;llvm/Support/SourceMgr.h&gt;</code><br />
 </div>
 <p><a href="SVF-FE_2BasicTypes_8h_source.html">Go to the source code of this file.</a></p>
@@ -78,20 +81,144 @@ $(function() {
 Typedefs</h2></td></tr>
 <tr class="memitem:a312d4d865f87a9bff58ce66b087c13d0"><td class="memItemLeft" align="right" valign="top">typedef llvm::SMDiagnostic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a312d4d865f87a9bff58ce66b087c13d0">SMDiagnostic</a></td></tr>
 <tr class="separator:a312d4d865f87a9bff58ce66b087c13d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41c335e8362a500085923e4742a53f57"><td class="memItemLeft" align="right" valign="top">typedef llvm::ExtractValueInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a41c335e8362a500085923e4742a53f57">ExtractValueInst</a></td></tr>
-<tr class="separator:a41c335e8362a500085923e4742a53f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4efbd8e6f644628b41104e855b0541b"><td class="memItemLeft" align="right" valign="top">typedef llvm::ExtractElementInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#af4efbd8e6f644628b41104e855b0541b">ExtractElementInst</a></td></tr>
-<tr class="separator:af4efbd8e6f644628b41104e855b0541b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6439506f12c106932f8db434ebaa761"><td class="memItemLeft" align="right" valign="top">typedef llvm::MetadataAsValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ae6439506f12c106932f8db434ebaa761">MetadataAsValue</a></td></tr>
 <tr class="separator:ae6439506f12c106932f8db434ebaa761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad29efa92ce4c6449b5ef7853994877bd"><td class="memItemLeft" align="right" valign="top">typedef llvm::BlockAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ad29efa92ce4c6449b5ef7853994877bd">BlockAddress</a></td></tr>
 <tr class="separator:ad29efa92ce4c6449b5ef7853994877bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8af3d6e4b75a3e3e108b636a48fbd3"><td class="memItemLeft" align="right" valign="top">typedef llvm::StructLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#aef8af3d6e4b75a3e3e108b636a48fbd3">StructLayout</a></td></tr>
+<tr class="separator:aef8af3d6e4b75a3e3e108b636a48fbd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39fea8c436d96d2b5a74f5e02cc5d952"><td class="memItemLeft" align="right" valign="top">typedef llvm::ConstantStruct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a39fea8c436d96d2b5a74f5e02cc5d952">ConstantStruct</a></td></tr>
+<tr class="separator:a39fea8c436d96d2b5a74f5e02cc5d952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9721de4c4754decc4f79d9f5b8c756"><td class="memItemLeft" align="right" valign="top">typedef llvm::MemoryLocation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a8c9721de4c4754decc4f79d9f5b8c756">MemoryLocation</a></td></tr>
+<tr class="separator:a8c9721de4c4754decc4f79d9f5b8c756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a586975ac48ba33219a901c5d9453da2c"><td class="memItemLeft" align="right" valign="top">typedef llvm::ConstantAggregate&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a586975ac48ba33219a901c5d9453da2c">ConstantAggregate</a></td></tr>
 <tr class="separator:a586975ac48ba33219a901c5d9453da2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4ed20ab05ea5735549d1ef4367735cd"><td class="memItemLeft" align="right" valign="top">typedef llvm::ConstantAggregateZero&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ae4ed20ab05ea5735549d1ef4367735cd">ConstantAggregateZero</a></td></tr>
 <tr class="separator:ae4ed20ab05ea5735549d1ef4367735cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66b2dbc1be121511c3b5b264f94558d3"><td class="memItemLeft" align="right" valign="top">typedef llvm::ConstantDataSequential&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a66b2dbc1be121511c3b5b264f94558d3">ConstantDataSequential</a></td></tr>
+<tr class="separator:a66b2dbc1be121511c3b5b264f94558d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60115de303225d173fb935cf7619a2cb"><td class="memItemLeft" align="right" valign="top">typedef llvm::ConstantExpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a60115de303225d173fb935cf7619a2cb">ConstantExpr</a></td></tr>
+<tr class="separator:a60115de303225d173fb935cf7619a2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafbd655050c8c70dc8947997c369294"><td class="memItemLeft" align="right" valign="top">typedef llvm::AtomicCmpXchgInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#abafbd655050c8c70dc8947997c369294">AtomicCmpXchgInst</a></td></tr>
+<tr class="separator:abafbd655050c8c70dc8947997c369294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bd63fdab8cc747227a32f88bd10370"><td class="memItemLeft" align="right" valign="top">typedef llvm::AtomicRMWInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ab3bd63fdab8cc747227a32f88bd10370">AtomicRMWInst</a></td></tr>
+<tr class="separator:ab3bd63fdab8cc747227a32f88bd10370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cddf2ff868c0a9ae99483640c9ecef"><td class="memItemLeft" align="right" valign="top">typedef llvm::BitCastInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ab8cddf2ff868c0a9ae99483640c9ecef">BitCastInst</a></td></tr>
+<tr class="separator:ab8cddf2ff868c0a9ae99483640c9ecef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7ea2b41c600e036569e18bd0719270"><td class="memItemLeft" align="right" valign="top">typedef llvm::CallBrInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ada7ea2b41c600e036569e18bd0719270">CallBrInst</a></td></tr>
+<tr class="separator:ada7ea2b41c600e036569e18bd0719270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b13f90796ee748f58e6c5faa7c63da"><td class="memItemLeft" align="right" valign="top">typedef llvm::CastInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a20b13f90796ee748f58e6c5faa7c63da">CastInst</a></td></tr>
+<tr class="separator:a20b13f90796ee748f58e6c5faa7c63da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02550b1e1110f4cfca868603ce243564"><td class="memItemLeft" align="right" valign="top">typedef llvm::CmpInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a02550b1e1110f4cfca868603ce243564">CmpInst</a></td></tr>
+<tr class="separator:a02550b1e1110f4cfca868603ce243564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c335e8362a500085923e4742a53f57"><td class="memItemLeft" align="right" valign="top">typedef llvm::ExtractValueInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a41c335e8362a500085923e4742a53f57">ExtractValueInst</a></td></tr>
+<tr class="separator:a41c335e8362a500085923e4742a53f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4efbd8e6f644628b41104e855b0541b"><td class="memItemLeft" align="right" valign="top">typedef llvm::ExtractElementInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#af4efbd8e6f644628b41104e855b0541b">ExtractElementInst</a></td></tr>
+<tr class="separator:af4efbd8e6f644628b41104e855b0541b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255d310b1b573ca5c69fd715d7815d79"><td class="memItemLeft" align="right" valign="top">typedef llvm::GetElementPtrInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a255d310b1b573ca5c69fd715d7815d79">GetElementPtrInst</a></td></tr>
+<tr class="separator:a255d310b1b573ca5c69fd715d7815d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa437c87b40ddb0d2b16631b00994ff75"><td class="memItemLeft" align="right" valign="top">typedef llvm::InvokeInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#aa437c87b40ddb0d2b16631b00994ff75">InvokeInst</a></td></tr>
+<tr class="separator:aa437c87b40ddb0d2b16631b00994ff75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd8814affe9b579237bd090561b4686"><td class="memItemLeft" align="right" valign="top">typedef llvm::ShuffleVectorInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#aebd8814affe9b579237bd090561b4686">ShuffleVectorInst</a></td></tr>
+<tr class="separator:aebd8814affe9b579237bd090561b4686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65732ea63bff4b444b225629ee7cf252"><td class="memItemLeft" align="right" valign="top">typedef llvm::PHINode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a65732ea63bff4b444b225629ee7cf252">PHINode</a></td></tr>
+<tr class="separator:a65732ea63bff4b444b225629ee7cf252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39fa3cd232776e9a7bd6337c6242b906"><td class="memItemLeft" align="right" valign="top">typedef llvm::IntToPtrInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a39fa3cd232776e9a7bd6337c6242b906">IntToPtrInst</a></td></tr>
+<tr class="separator:a39fa3cd232776e9a7bd6337c6242b906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef6dd0250254e2609a8f35ece1d57c5"><td class="memItemLeft" align="right" valign="top">typedef llvm::InsertValueInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a5ef6dd0250254e2609a8f35ece1d57c5">InsertValueInst</a></td></tr>
+<tr class="separator:a5ef6dd0250254e2609a8f35ece1d57c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a430043d6520ceac623115ab2fbf56"><td class="memItemLeft" align="right" valign="top">typedef llvm::FenceInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a43a430043d6520ceac623115ab2fbf56">FenceInst</a></td></tr>
+<tr class="separator:a43a430043d6520ceac623115ab2fbf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17cb164afe37512fdd064acc8ee7cc66"><td class="memItemLeft" align="right" valign="top">typedef llvm::FreezeInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a17cb164afe37512fdd064acc8ee7cc66">FreezeInst</a></td></tr>
+<tr class="separator:a17cb164afe37512fdd064acc8ee7cc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81608d3ff4a58a9a5d8fd522860b96f"><td class="memItemLeft" align="right" valign="top">typedef llvm::UnreachableInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ac81608d3ff4a58a9a5d8fd522860b96f">UnreachableInst</a></td></tr>
+<tr class="separator:ac81608d3ff4a58a9a5d8fd522860b96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8159b0dbaf5b71dc69b9d9c7b200ec"><td class="memItemLeft" align="right" valign="top">typedef llvm::InsertElementInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#aca8159b0dbaf5b71dc69b9d9c7b200ec">InsertElementInst</a></td></tr>
+<tr class="separator:aca8159b0dbaf5b71dc69b9d9c7b200ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b02d9efe63d84149e54736b81f922f1"><td class="memItemLeft" align="right" valign="top">typedef llvm::LandingPadInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a5b02d9efe63d84149e54736b81f922f1">LandingPadInst</a></td></tr>
+<tr class="separator:a5b02d9efe63d84149e54736b81f922f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd88a8942ad6c871c63a90b780afbd0"><td class="memItemLeft" align="right" valign="top">typedef llvm::ResumeInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a3fd88a8942ad6c871c63a90b780afbd0">ResumeInst</a></td></tr>
+<tr class="separator:a3fd88a8942ad6c871c63a90b780afbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb6cb29e5b213400fdb10525ee75504"><td class="memItemLeft" align="right" valign="top">typedef llvm::SelectInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#abbb6cb29e5b213400fdb10525ee75504">SelectInst</a></td></tr>
+<tr class="separator:abbb6cb29e5b213400fdb10525ee75504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c0a9085ca3ebff2760506df127f424"><td class="memItemLeft" align="right" valign="top">typedef llvm::VAArgInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a80c0a9085ca3ebff2760506df127f424">VAArgInst</a></td></tr>
+<tr class="separator:a80c0a9085ca3ebff2760506df127f424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85650eac31e26c9635644600eca6901e"><td class="memItemLeft" align="right" valign="top">typedef llvm::VACopyInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a85650eac31e26c9635644600eca6901e">VACopyInst</a></td></tr>
+<tr class="separator:a85650eac31e26c9635644600eca6901e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55dc13cb9e79b9c54d74234e0add670"><td class="memItemLeft" align="right" valign="top">typedef llvm::VAEndInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#aa55dc13cb9e79b9c54d74234e0add670">VAEndInst</a></td></tr>
+<tr class="separator:aa55dc13cb9e79b9c54d74234e0add670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487fbdac6711a95d28683e6644c457ac"><td class="memItemLeft" align="right" valign="top">typedef llvm::VAStartInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a487fbdac6711a95d28683e6644c457ac">VAStartInst</a></td></tr>
+<tr class="separator:a487fbdac6711a95d28683e6644c457ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58e9b290ff1defcedad101c3da8d8fd"><td class="memItemLeft" align="right" valign="top">typedef llvm::BinaryOperator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ab58e9b290ff1defcedad101c3da8d8fd">BinaryOperator</a></td></tr>
+<tr class="separator:ab58e9b290ff1defcedad101c3da8d8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cb332bc04ab932cba29fa9c9d5f3b2"><td class="memItemLeft" align="right" valign="top">typedef llvm::UnaryOperator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ab6cb332bc04ab932cba29fa9c9d5f3b2">UnaryOperator</a></td></tr>
+<tr class="separator:ab6cb332bc04ab932cba29fa9c9d5f3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="abafbd655050c8c70dc8947997c369294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abafbd655050c8c70dc8947997c369294">&#9670;&nbsp;</a></span>AtomicCmpXchgInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::AtomicCmpXchgInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#abafbd655050c8c70dc8947997c369294">AtomicCmpXchgInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00030">30</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="ab3bd63fdab8cc747227a32f88bd10370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bd63fdab8cc747227a32f88bd10370">&#9670;&nbsp;</a></span>AtomicRMWInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::AtomicRMWInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#ab3bd63fdab8cc747227a32f88bd10370">AtomicRMWInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00031">31</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="ab58e9b290ff1defcedad101c3da8d8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58e9b290ff1defcedad101c3da8d8fd">&#9670;&nbsp;</a></span>BinaryOperator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::BinaryOperator <a class="el" href="SVF-FE_2BasicTypes_8h.html#ab58e9b290ff1defcedad101c3da8d8fd">BinaryOperator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00055">55</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="ab8cddf2ff868c0a9ae99483640c9ecef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8cddf2ff868c0a9ae99483640c9ecef">&#9670;&nbsp;</a></span>BitCastInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::BitCastInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#ab8cddf2ff868c0a9ae99483640c9ecef">BitCastInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00032">32</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
 <a id="ad29efa92ce4c6449b5ef7853994877bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad29efa92ce4c6449b5ef7853994877bd">&#9670;&nbsp;</a></span>BlockAddress</h2>
 
@@ -104,7 +231,55 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00014">14</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00016">16</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="ada7ea2b41c600e036569e18bd0719270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7ea2b41c600e036569e18bd0719270">&#9670;&nbsp;</a></span>CallBrInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::CallBrInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#ada7ea2b41c600e036569e18bd0719270">CallBrInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00033">33</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a20b13f90796ee748f58e6c5faa7c63da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b13f90796ee748f58e6c5faa7c63da">&#9670;&nbsp;</a></span>CastInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::CastInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a20b13f90796ee748f58e6c5faa7c63da">CastInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00034">34</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a02550b1e1110f4cfca868603ce243564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02550b1e1110f4cfca868603ce243564">&#9670;&nbsp;</a></span>CmpInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::CmpInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a02550b1e1110f4cfca868603ce243564">CmpInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00035">35</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -120,7 +295,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00016">16</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00024">24</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -136,7 +311,55 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00017">17</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00025">25</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a66b2dbc1be121511c3b5b264f94558d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66b2dbc1be121511c3b5b264f94558d3">&#9670;&nbsp;</a></span>ConstantDataSequential</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ConstantDataSequential <a class="el" href="SVF-FE_2BasicTypes_8h.html#a66b2dbc1be121511c3b5b264f94558d3">ConstantDataSequential</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00026">26</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a60115de303225d173fb935cf7619a2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60115de303225d173fb935cf7619a2cb">&#9670;&nbsp;</a></span>ConstantExpr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ConstantExpr <a class="el" href="SVF-FE_2BasicTypes_8h.html#a60115de303225d173fb935cf7619a2cb">ConstantExpr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00027">27</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a39fea8c436d96d2b5a74f5e02cc5d952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39fea8c436d96d2b5a74f5e02cc5d952">&#9670;&nbsp;</a></span>ConstantStruct</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ConstantStruct <a class="el" href="SVF-FE_2BasicTypes_8h.html#a39fea8c436d96d2b5a74f5e02cc5d952">ConstantStruct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00020">20</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -152,7 +375,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00012">12</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00037">37</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -168,7 +391,151 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00011">11</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00036">36</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a43a430043d6520ceac623115ab2fbf56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a430043d6520ceac623115ab2fbf56">&#9670;&nbsp;</a></span>FenceInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::FenceInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a43a430043d6520ceac623115ab2fbf56">FenceInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00044">44</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a17cb164afe37512fdd064acc8ee7cc66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17cb164afe37512fdd064acc8ee7cc66">&#9670;&nbsp;</a></span>FreezeInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::FreezeInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a17cb164afe37512fdd064acc8ee7cc66">FreezeInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00045">45</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a255d310b1b573ca5c69fd715d7815d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255d310b1b573ca5c69fd715d7815d79">&#9670;&nbsp;</a></span>GetElementPtrInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::GetElementPtrInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a255d310b1b573ca5c69fd715d7815d79">GetElementPtrInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00038">38</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="aca8159b0dbaf5b71dc69b9d9c7b200ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8159b0dbaf5b71dc69b9d9c7b200ec">&#9670;&nbsp;</a></span>InsertElementInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::InsertElementInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#aca8159b0dbaf5b71dc69b9d9c7b200ec">InsertElementInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00047">47</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a5ef6dd0250254e2609a8f35ece1d57c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ef6dd0250254e2609a8f35ece1d57c5">&#9670;&nbsp;</a></span>InsertValueInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::InsertValueInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a5ef6dd0250254e2609a8f35ece1d57c5">InsertValueInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00043">43</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a39fa3cd232776e9a7bd6337c6242b906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39fa3cd232776e9a7bd6337c6242b906">&#9670;&nbsp;</a></span>IntToPtrInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::IntToPtrInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a39fa3cd232776e9a7bd6337c6242b906">IntToPtrInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00042">42</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="aa437c87b40ddb0d2b16631b00994ff75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa437c87b40ddb0d2b16631b00994ff75">&#9670;&nbsp;</a></span>InvokeInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::InvokeInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#aa437c87b40ddb0d2b16631b00994ff75">InvokeInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00039">39</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a5b02d9efe63d84149e54736b81f922f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b02d9efe63d84149e54736b81f922f1">&#9670;&nbsp;</a></span>LandingPadInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::LandingPadInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a5b02d9efe63d84149e54736b81f922f1">LandingPadInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00048">48</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a8c9721de4c4754decc4f79d9f5b8c756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9721de4c4754decc4f79d9f5b8c756">&#9670;&nbsp;</a></span>MemoryLocation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::MemoryLocation <a class="el" href="SVF-FE_2BasicTypes_8h.html#a8c9721de4c4754decc4f79d9f5b8c756">MemoryLocation</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00021">21</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -184,7 +551,71 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00013">13</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00015">15</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a65732ea63bff4b444b225629ee7cf252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65732ea63bff4b444b225629ee7cf252">&#9670;&nbsp;</a></span>PHINode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::PHINode <a class="el" href="SVF-FE_2BasicTypes_8h.html#a65732ea63bff4b444b225629ee7cf252">PHINode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00041">41</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a3fd88a8942ad6c871c63a90b780afbd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd88a8942ad6c871c63a90b780afbd0">&#9670;&nbsp;</a></span>ResumeInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ResumeInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a3fd88a8942ad6c871c63a90b780afbd0">ResumeInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00049">49</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="abbb6cb29e5b213400fdb10525ee75504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb6cb29e5b213400fdb10525ee75504">&#9670;&nbsp;</a></span>SelectInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::SelectInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#abbb6cb29e5b213400fdb10525ee75504">SelectInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00050">50</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="aebd8814affe9b579237bd090561b4686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd8814affe9b579237bd090561b4686">&#9670;&nbsp;</a></span>ShuffleVectorInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ShuffleVectorInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#aebd8814affe9b579237bd090561b4686">ShuffleVectorInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00040">40</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -200,7 +631,119 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00009">9</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00013">13</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="aef8af3d6e4b75a3e3e108b636a48fbd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8af3d6e4b75a3e3e108b636a48fbd3">&#9670;&nbsp;</a></span>StructLayout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::StructLayout <a class="el" href="SVF-FE_2BasicTypes_8h.html#aef8af3d6e4b75a3e3e108b636a48fbd3">StructLayout</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00019">19</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="ab6cb332bc04ab932cba29fa9c9d5f3b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cb332bc04ab932cba29fa9c9d5f3b2">&#9670;&nbsp;</a></span>UnaryOperator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::UnaryOperator <a class="el" href="SVF-FE_2BasicTypes_8h.html#ab6cb332bc04ab932cba29fa9c9d5f3b2">UnaryOperator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00056">56</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="ac81608d3ff4a58a9a5d8fd522860b96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81608d3ff4a58a9a5d8fd522860b96f">&#9670;&nbsp;</a></span>UnreachableInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::UnreachableInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#ac81608d3ff4a58a9a5d8fd522860b96f">UnreachableInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00046">46</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a80c0a9085ca3ebff2760506df127f424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c0a9085ca3ebff2760506df127f424">&#9670;&nbsp;</a></span>VAArgInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::VAArgInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a80c0a9085ca3ebff2760506df127f424">VAArgInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00051">51</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a85650eac31e26c9635644600eca6901e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85650eac31e26c9635644600eca6901e">&#9670;&nbsp;</a></span>VACopyInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::VACopyInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a85650eac31e26c9635644600eca6901e">VACopyInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00052">52</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="aa55dc13cb9e79b9c54d74234e0add670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55dc13cb9e79b9c54d74234e0add670">&#9670;&nbsp;</a></span>VAEndInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::VAEndInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#aa55dc13cb9e79b9c54d74234e0add670">VAEndInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00053">53</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a487fbdac6711a95d28683e6644c457ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a487fbdac6711a95d28683e6644c457ac">&#9670;&nbsp;</a></span>VAStartInst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::VAStartInst <a class="el" href="SVF-FE_2BasicTypes_8h.html#a487fbdac6711a95d28683e6644c457ac">VAStartInst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00054">54</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>

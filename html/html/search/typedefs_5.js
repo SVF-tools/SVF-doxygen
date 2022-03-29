@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fenceinst',['FenceInst',['../namespaceSVF.html#a61f0d928e58d4f7e21616f770ae1080b',1,'SVF']]],
+  ['fenceinst',['FenceInst',['../SVF-FE_2BasicTypes_8h.html#a43a430043d6520ceac623115ab2fbf56',1,'BasicTypes.h']]],
   ['fieldreps',['FieldReps',['../classSVF_1_1AndersenSFR.html#a52aa0c2a02a0db6700c4a7a8819d0a5d',1,'SVF::AndersenSFR']]],
   ['forkedgeset',['ForkEdgeSet',['../classSVF_1_1ThreadForkEdge.html#ad36696915ee802989b679dd058aaab68',1,'SVF::ThreadForkEdge::ForkEdgeSet()'],['../classSVF_1_1ThreadCallGraph.html#aa5efa630056c1db2bb0dadc868752ec8',1,'SVF::ThreadCallGraph::ForkEdgeSet()']]],
   ['forkjointoptascevmap',['forkjoinToPTASCEVMap',['../classSVF_1_1ForkJoinAnalysis.html#acd98a293bb20064cf5d0bb71c619fc54',1,'SVF::ForkJoinAnalysis']]],
@@ -9,7 +9,7 @@ var searchData=
   ['formalparmnodevec',['FormalParmNodeVec',['../classSVF_1_1FunEntryICFGNode.html#a0e8ff24e445a670f5ea1fef66ea928c5',1,'SVF::FunEntryICFGNode']]],
   ['formalparmsvfgnode',['FormalParmSVFGNode',['../namespaceSVF.html#ad466edced10faeafd48e96daf193b8a9',1,'SVF']]],
   ['formalretsvfgnode',['FormalRetSVFGNode',['../namespaceSVF.html#ae5987da3ffd5681e8ec4ef14ba54588e',1,'SVF']]],
-  ['freezeinst',['FreezeInst',['../namespaceSVF.html#a9868a60a9cc7b78965a23b5034100f88',1,'SVF']]],
+  ['freezeinst',['FreezeInst',['../SVF-FE_2BasicTypes_8h.html#a17cb164afe37512fdd064acc8ee7cc66',1,'BasicTypes.h']]],
   ['funcpair',['FuncPair',['../classSVF_1_1MHP.html#a570f93674511a93cdf2afb96df4947b6',1,'SVF::MHP']]],
   ['funcpairtobool',['FuncPairToBool',['../classSVF_1_1MHP.html#adff2785f9d46eb110ce5b429592b2a38',1,'SVF::MHP']]],
   ['function',['Function',['../namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1',1,'SVF']]],

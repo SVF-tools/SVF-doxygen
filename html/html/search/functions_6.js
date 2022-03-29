@@ -167,7 +167,7 @@ var searchData=
   ['getcxtofcxtthread',['getCxtOfCxtThread',['../classSVF_1_1TCT.html#ab4bc72ca330b315df06f2d4d2c1a7b4f',1,'SVF::TCT']]],
   ['getcxtstmtfrominst',['getCxtStmtfromInst',['../classSVF_1_1LockAnalysis.html#afc8c13fcff7c1199f63efc198a3b5a6d',1,'SVF::LockAnalysis']]],
   ['getcxtthread',['getCxtThread',['../classSVF_1_1TCTNode.html#a21591b19f6a9267151c31178f9543ee6',1,'SVF::TCTNode']]],
-  ['getdatalayout',['getDataLayout',['../classSVF_1_1SymbolTableInfo.html#a5fad3e11fbba831ed0940fb715e7dc2d',1,'SVF::SymbolTableInfo']]],
+  ['getdatalayout',['getDataLayout',['../namespaceSVF_1_1SVFUtil.html#abe0dde753f9f79e30296208eb4d97eed',1,'SVF::SVFUtil']]],
   ['getdeclaration',['getDeclaration',['../classSVF_1_1LLVMModuleSet.html#aa4a604e47daaaf95babc7aca68991000',1,'SVF::LLVMModuleSet::getDeclaration(const Function *fun) const'],['../classSVF_1_1LLVMModuleSet.html#ac0e82b950677c010a647f24245a6d127',1,'SVF::LLVMModuleSet::getDeclaration(const SVFFunction *fun) const']]],
   ['getdef',['getDef',['../classSVF_1_1SVFG.html#abd917826bf50ed409a307ce00562c97d',1,'SVF::SVFG::getDef(const PAGNode *pagNode) const'],['../classSVF_1_1SVFG.html#a55a26b88ffe786b04184a29ae72575e7',1,'SVF::SVFG::getDef(const MRVer *mvar) const'],['../classSVF_1_1VFG.html#a7343f970332391634f79b2023bba6650',1,'SVF::VFG::getDef()'],['../classSVF_1_1MRVer.html#a492211105abe8af8ed9ad7b30eabb852',1,'SVF::MRVer::getDef()']]],
   ['getdeffunformultiplemodule',['getDefFunForMultipleModule',['../namespaceSVF_1_1SVFUtil.html#a142e650415cb81011eb59dadd3cb0637',1,'SVF::SVFUtil']]],

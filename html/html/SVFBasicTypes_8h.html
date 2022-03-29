@@ -72,7 +72,9 @@ $(function() {
 <div class="title">SVFBasicTypes.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;llvm/ADT/SparseBitVector.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;llvm/IR/BasicBlock.h&gt;</code><br />
+<code>#include &lt;llvm/ADT/SmallVector.h&gt;</code><br />
+<code>#include &lt;llvm/ADT/SparseBitVector.h&gt;</code><br />
 <code>#include &lt;llvm/Support/CommandLine.h&gt;</code><br />
 <code>#include &lt;llvm/ADT/StringMap.h&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
@@ -102,9 +104,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFValue.html">SVF::SVFValue</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01SVF_1_1NodePair_01_4.html">std::hash&lt; SVF::NodePair &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01SVF_1_1SmallVector_3_01T_00_01N_01_4_01_4.html">std::hash&lt; SVF::SmallVector&lt; T, N &gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialise hash for SmallVectors.  <a href="structstd_1_1hash_3_01SVF_1_1SmallVector_3_01T_00_01N_01_4_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01llvm_1_1SparseBitVector_3_01N_01_4_01_4.html">std::hash&lt; llvm::SparseBitVector&lt; N &gt; &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialise hash for SparseBitVectors.  <a href="structstd_1_1hash_3_01llvm_1_1SparseBitVector_3_01N_01_4_01_4.html#details">More...</a><br /></td></tr>
@@ -208,9 +207,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aedf0d6718ca176e0b9e17ab4b30729c6"><td class="memTemplParams" colspan="2">template&lt;typename Key , typename Value , typename Compare  = std::less&lt;Key&gt;, typename Allocator  = std::allocator&lt;std::pair&lt;const Key, Value&gt;&gt;&gt; </td></tr>
 <tr class="memitem:aedf0d6718ca176e0b9e17ab4b30729c6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#aedf0d6718ca176e0b9e17ab4b30729c6">SVF::OrderedMap</a> = std::map&lt; Key, Value, Compare, Allocator &gt;</td></tr>
 <tr class="separator:aedf0d6718ca176e0b9e17ab4b30729c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa408bbe668ca1208beceae0f842079b4"><td class="memTemplParams" colspan="2">template&lt;typename T , unsigned N&gt; </td></tr>
-<tr class="memitem:aa408bbe668ca1208beceae0f842079b4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#aa408bbe668ca1208beceae0f842079b4">SVF::SmallVector</a> = llvm::SmallVector&lt; T, N &gt;</td></tr>
-<tr class="separator:aa408bbe668ca1208beceae0f842079b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02be4933b76c2baa7fdbe8b290e12bb3"><td class="memItemLeft" align="right" valign="top">typedef llvm::SmallVector&lt; llvm::BasicBlock *, 8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a02be4933b76c2baa7fdbe8b290e12bb3">SVF::SmallBBVector</a></td></tr>
+<tr class="separator:a02be4933b76c2baa7fdbe8b290e12bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af15e78ec0ab5bf5328d0f8e90c74fe4b"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; NodeID, NodeID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#af15e78ec0ab5bf5328d0f8e90c74fe4b">SVF::NodePair</a></td></tr>
 <tr class="separator:af15e78ec0ab5bf5328d0f8e90c74fe4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c2bd95727ec0d9c55c631b6617026c8"><td class="memItemLeft" align="right" valign="top">typedef OrderedSet&lt; NodeID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a3c2bd95727ec0d9c55c631b6617026c8">SVF::OrderedNodeSet</a></td></tr>
@@ -231,14 +229,10 @@ Typedefs</h2></td></tr>
 <tr class="separator:ab80cc7e84367e8c5a6a5a617880890f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35068c3650567d5051416db4aeb48e74"><td class="memItemLeft" align="right" valign="top">typedef std::deque&lt; NodeID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a35068c3650567d5051416db4aeb48e74">SVF::NodeDeque</a></td></tr>
 <tr class="separator:a35068c3650567d5051416db4aeb48e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9893c2871f3e879e8e50c2ed157bc615"><td class="memItemLeft" align="right" valign="top">typedef SmallVector&lt; u32_t, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a9893c2871f3e879e8e50c2ed157bc615">SVF::SmallVector16</a></td></tr>
-<tr class="separator:a9893c2871f3e879e8e50c2ed157bc615"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b2b380d8e5b1c790157dc4799d3f403"><td class="memItemLeft" align="right" valign="top">typedef SmallVector&lt; u32_t, 8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a5b2b380d8e5b1c790157dc4799d3f403">SVF::SmallVector8</a></td></tr>
-<tr class="separator:a5b2b380d8e5b1c790157dc4799d3f403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d2e17d5b07a50ed95e8f407cd6dd0be"><td class="memItemLeft" align="right" valign="top">typedef NodeSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a0d2e17d5b07a50ed95e8f407cd6dd0be">SVF::EdgeSet</a></td></tr>
 <tr class="separator:a0d2e17d5b07a50ed95e8f407cd6dd0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542c6d5483bfc74fa58b45ad06b65960"><td class="memItemLeft" align="right" valign="top">typedef SmallVector16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a542c6d5483bfc74fa58b45ad06b65960">SVF::CallStrCxt</a></td></tr>
-<tr class="separator:a542c6d5483bfc74fa58b45ad06b65960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab700523619b089b952498f39a7f5b6b1"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; u32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#ab700523619b089b952498f39a7f5b6b1">SVF::CallStrCxt</a></td></tr>
+<tr class="separator:ab700523619b089b952498f39a7f5b6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5ce5ddecac033fe5309cb929d8dea3a"><td class="memItemLeft" align="right" valign="top">typedef llvm::StringMap&lt; u32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#ad5ce5ddecac033fe5309cb929d8dea3a">SVF::StringMap</a></td></tr>
 <tr class="separator:ad5ce5ddecac033fe5309cb929d8dea3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ec7a8dc63411ee3724a25a59191be0c"><td class="memItemLeft" align="right" valign="top">typedef unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a9ec7a8dc63411ee3724a25a59191be0c">SVF::Version</a></td></tr>

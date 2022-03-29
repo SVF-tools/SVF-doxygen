@@ -19,8 +19,8 @@ var searchData=
   ['bbworklist',['BBWorkList',['../classSVF_1_1PCG.html#a05759205f1362b6d72041cf669cf028d',1,'SVF::PCG']]],
   ['bddcond',['BDDCond',['../classSVF_1_1BDDExpr.html#a8b8ff2750644582e55ff8a5d39826f9f',1,'SVF::BDDExpr::BDDCond()'],['../classSVF_1_1BDDManager.html#a7a1692324d6b152588ef4d52013f8d00',1,'SVF::BDDManager::BDDCond()']]],
   ['bddtobddcondexpr',['BDDToBDDCondExpr',['../classSVF_1_1BDDManager.html#a54716dd8be2691e3e0dbffc14461c1e8',1,'SVF::BDDManager']]],
-  ['binaryoperator',['BinaryOperator',['../namespaceSVF.html#aad5d26ab07a5d1314bdb8f54e0fcdb22',1,'SVF']]],
-  ['bitcastinst',['BitCastInst',['../namespaceSVF.html#afc50da46a6ea7c2cf61683bbec4d7c8d',1,'SVF']]],
+  ['binaryoperator',['BinaryOperator',['../SVF-FE_2BasicTypes_8h.html#ab58e9b290ff1defcedad101c3da8d8fd',1,'BasicTypes.h']]],
+  ['bitcastinst',['BitCastInst',['../SVF-FE_2BasicTypes_8h.html#ab8cddf2ff868c0a9ae99483640c9ecef',1,'BasicTypes.h']]],
   ['blockaddress',['BlockAddress',['../SVF-FE_2BasicTypes_8h.html#ad29efa92ce4c6449b5ef7853994877bd',1,'BasicTypes.h']]],
   ['branchinst',['BranchInst',['../namespaceSVF.html#ac9a05dd7ab16e998625037aa242cd30f',1,'SVF']]],
   ['bridge_5fgep_5fiterator',['bridge_gep_iterator',['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator()'],['../namespaceSVF.html#a3b6e84470681a9f731a81e8cf54680cc',1,'SVF::bridge_gep_iterator()']]]

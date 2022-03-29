@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['landingpadinst',['LandingPadInst',['../namespaceSVF.html#afa513a3c76371907221ee2b1ef289c71',1,'SVF']]],
+  ['landingpadinst',['LandingPadInst',['../SVF-FE_2BasicTypes_8h.html#a5b02d9efe63d84149e54736b81f922f1',1,'BasicTypes.h']]],
   ['large',['large',['../cuddInt_8c.html#a134b3b75fc389f1772e03372004cfeff',1,'cuddInt.c']]],
   ['largest',['largest',['../cuddInt_8c.html#ae1fb84f2a4466a90328a944b5f1a810d',1,'cuddInt.c']]],
   ['largestregion',['LargestRegion',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a172d72ae4ae45fa2baf2f20ff2b499dc',1,'SVF::NodeIDAllocator::Clusterer']]],
@@ -35,7 +35,7 @@ var searchData=
   ['llvmfunend',['llvmFunEnd',['../classSVF_1_1SVFModule.html#af38d0f831967d6d8391a4c84e58d6519',1,'SVF::SVFModule::llvmFunEnd()'],['../classSVF_1_1SVFModule.html#a7662ba877691e7e337af54835c15c3c5',1,'SVF::SVFModule::llvmFunEnd() const']]],
   ['llvmmodule_2ecpp',['LLVMModule.cpp',['../LLVMModule_8cpp.html',1,'']]],
   ['llvmmodule_2eh',['LLVMModule.h',['../LLVMModule_8h.html',1,'']]],
-  ['llvmmoduleset',['LLVMModuleSet',['../classSVF_1_1LLVMModuleSet.html',1,'SVF::LLVMModuleSet'],['../classSVF_1_1LLVMModuleSet.html#a8e70de9eefe2e188b10e214e073750e6',1,'SVF::LLVMModuleSet::LLVMModuleSet()'],['../classSVF_1_1LLVMModuleSet.html#ac59b07cafcbacc950eefea4082425b63',1,'SVF::LLVMModuleSet::llvmModuleSet()']]],
+  ['llvmmoduleset',['LLVMModuleSet',['../classSVF_1_1LLVMModuleSet.html',1,'SVF::LLVMModuleSet'],['../classSVF_1_1LLVMModuleSet.html#ac59b07cafcbacc950eefea4082425b63',1,'SVF::LLVMModuleSet::llvmModuleSet()'],['../classSVF_1_1LLVMModuleSet.html#a8e70de9eefe2e188b10e214e073750e6',1,'SVF::LLVMModuleSet::LLVMModuleSet()']]],
   ['llvmutil_2ecpp',['LLVMUtil.cpp',['../LLVMUtil_8cpp.html',1,'']]],
   ['llvmutil_2eh',['LLVMUtil.h',['../LLVMUtil_8h.html',1,'']]],
   ['load',['Load',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375a1bdeb9a06641d16b43391120812b40b2',1,'SVF::ConstraintEdge::Load()'],['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a0dfbaf92c48e11aebc85760e6e799d80',1,'SVF::VFGNode::Load()'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a62ac8480c43fcc657c631ec0003b15d5',1,'SVF::SVFStmt::Load()']]],
@@ -53,7 +53,7 @@ var searchData=
   ['loadset',['LoadSet',['../classSVF_1_1MTA.html#a80356495b6c45bac59dc15fd7a99730b',1,'SVF::MTA::LoadSet()'],['../classSVF_1_1MTAAnnotator.html#a469851829bf1105fe8faac44b4abbfdd',1,'SVF::MTAAnnotator::loadset()']]],
   ['loadsrcnodes',['loadSrcNodes',['../classSVF_1_1AliasDDAClient.html#a246448efd1ff5da683a6ffe9f759e282',1,'SVF::AliasDDAClient']]],
   ['loadstmt',['LoadStmt',['../classSVF_1_1LoadStmt.html',1,'SVF::LoadStmt'],['../classSVF_1_1LoadStmt.html#a4bd939005c7c6a5da4ed3b6be6ef1a22',1,'SVF::LoadStmt::LoadStmt()'],['../classSVF_1_1LoadStmt.html#a2efafa925a30de73735ca73b1632b5f8',1,'SVF::LoadStmt::LoadStmt(const LoadStmt &amp;)'],['../classSVF_1_1LoadStmt.html#a92c5817abfaa1f6fbc9ee911f458dfb2',1,'SVF::LoadStmt::LoadStmt(SVFVar *s, SVFVar *d)']]],
-  ['loadstomrsmap',['loadsToMRsMap',['../classSVF_1_1MRGenerator.html#a0d8229b1f0b8428708e923d19096e4ba',1,'SVF::MRGenerator::loadsToMRsMap()'],['../classSVF_1_1MRGenerator.html#a273b2634adcfa10a08924517e8d51175',1,'SVF::MRGenerator::LoadsToMRsMap()']]],
+  ['loadstomrsmap',['LoadsToMRsMap',['../classSVF_1_1MRGenerator.html#a273b2634adcfa10a08924517e8d51175',1,'SVF::MRGenerator::LoadsToMRsMap()'],['../classSVF_1_1MRGenerator.html#a0d8229b1f0b8428708e923d19096e4ba',1,'SVF::MRGenerator::loadsToMRsMap()']]],
   ['loadstopointstomap',['LoadsToPointsToMap',['../classSVF_1_1MRGenerator.html#acfadd565b5c978c9417e059b3ea7588c',1,'SVF::MRGenerator::LoadsToPointsToMap()'],['../classSVF_1_1MRGenerator.html#af47e15d6b8c15d547a718f3577513975',1,'SVF::MRGenerator::loadsToPointsToMap()']]],
   ['loadsvfgnode',['LoadSVFGNode',['../namespaceSVF.html#a3ce49be3724e1e8423ccdfa726fbf6c8',1,'SVF']]],
   ['loadtime',['loadTime',['../classSVF_1_1FlowSensitive.html#aab4f70210eb1e6447a24697d3b459067',1,'SVF::FlowSensitive']]],

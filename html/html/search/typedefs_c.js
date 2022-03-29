@@ -7,7 +7,7 @@ var searchData=
   ['mdstring',['MDString',['../namespaceSVF.html#a28eec26ec8edaa5e96aecfeb01f6c0d4',1,'SVF']]],
   ['meldversion',['MeldVersion',['../classSVF_1_1VersionedFlowSensitive.html#a630eeca9c3344d24fa196f7de45bce18',1,'SVF::VersionedFlowSensitive']]],
   ['memobjtofieldsmap',['MemObjToFieldsMap',['../classSVF_1_1SVFIR.html#ab6abb822445c9b3f5cb2b7206042e940',1,'SVF::SVFIR']]],
-  ['memorylocation',['MemoryLocation',['../namespaceSVF.html#a339bbddac9d9dffd5ef602200d34c403',1,'SVF']]],
+  ['memorylocation',['MemoryLocation',['../SVF-FE_2BasicTypes_8h.html#a8c9721de4c4754decc4f79d9f5b8c756',1,'BasicTypes.h']]],
   ['memregtobbsmap',['MemRegToBBsMap',['../classSVF_1_1MemSSA.html#a8d0c1a00d7db194da66c685d79e73de5',1,'SVF::MemSSA']]],
   ['memregtocountermap',['MemRegToCounterMap',['../classSVF_1_1MemSSA.html#ae1aca020147c270deca2a1241e3847d0',1,'SVF::MemSSA']]],
   ['memregtoverstackmap',['MemRegToVerStackMap',['../classSVF_1_1MemSSA.html#aa9dbaf51f0498f3bd878827744208899',1,'SVF::MemSSA']]],
