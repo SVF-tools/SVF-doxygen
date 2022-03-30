@@ -69,7 +69,7 @@ var searchData=
   ['setnodenumafterpagbuild',['setNodeNumAfterPAGBuild',['../classSVF_1_1IRGraph.html#a5fe12445ed0528183775747dec356db0',1,'SVF::IRGraph']]],
   ['setnonconcretecxt',['setNonConcreteCxt',['../classSVF_1_1ContextCond.html#ac80892cbef7a5d2c949e5f07682bc885',1,'SVF::ContextCond']]],
   ['setnorrep',['setNorRep',['../classSVF_1_1OfflineConsG.html#a3cb6384160b50bd0a94de3fd2eb6facd',1,'SVF::OfflineConsG']]],
-  ['setnumofelements',['setNumOfElements',['../classSVF_1_1ObjTypeInfo.html#aff17d13e520a731accedd06350af6221',1,'SVF::ObjTypeInfo']]],
+  ['setnumofelements',['setNumOfElements',['../classSVF_1_1MemObj.html#a904c5a96407574565e9c48eb2d31e869',1,'SVF::MemObj::setNumOfElements()'],['../classSVF_1_1ObjTypeInfo.html#aff17d13e520a731accedd06350af6221',1,'SVF::ObjTypeInfo::setNumOfElements()']]],
   ['setnumoffieldsandelems',['setNumOfFieldsAndElems',['../classSVF_1_1StInfo.html#a1a07c2b1415c29d7d70791c6dfe602a3',1,'SVF::StInfo']]],
   ['setobjfieldinsensitive',['setObjFieldInsensitive',['../classSVF_1_1PointerAnalysis.html#ac5683fe2e24b393ccc5cb6d8bc92cf2b',1,'SVF::PointerAnalysis']]],
   ['setoffset',['setOffset',['../classSVF_1_1DCHEdge.html#a70f757826082c95766c8324c1264e977',1,'SVF::DCHEdge']]],
