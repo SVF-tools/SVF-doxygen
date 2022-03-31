@@ -336,7 +336,7 @@ var searchData=
   ['allctir',['allCTir',['../classSVF_1_1LLVMModuleSet.html#a4e125a4acf17d42a24576df6499eb491',1,'SVF::LLVMModuleSet']]],
   ['allglobals',['allGlobals',['../classSVF_1_1MRGenerator.html#af46b82e45aa1ecdfb397325971206541',1,'SVF::MRGenerator']]],
   ['alloc',['ALLOC',['../util_8h.html#a21755cdb11c76954a33c653579810f3a',1,'util.h']]],
-  ['allocainst',['AllocaInst',['../namespaceSVF.html#a3bacb4f95c73e6d794901d01c6b65a83',1,'SVF']]],
+  ['allocainst',['AllocaInst',['../SVF-FE_2BasicTypes_8h.html#a5e06fe1b4b25113ac322dbeda71055dc',1,'BasicTypes.h']]],
   ['allocate',['allocate',['../classSVF_1_1PathCondAllocator.html#a3fce010083b85a4421eed4c17eb54640',1,'SVF::PathCondAllocator']]],
   ['allocated',['allocated',['../structDdManager.html#a3bc65a8323c85495c64877963eb34845',1,'DdManager']]],
   ['allocateforbb',['allocateForBB',['../classSVF_1_1PathCondAllocator.html#af854f880e76738a13d6cb937a257828f',1,'SVF::PathCondAllocator']]],

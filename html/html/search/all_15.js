@@ -8,7 +8,7 @@ var searchData=
   ['unaryopstmt',['UnaryOPStmt',['../classSVF_1_1UnaryOPStmt.html',1,'SVF::UnaryOPStmt'],['../classSVF_1_1UnaryOPStmt.html#a033d3ba05ce96e04b63f2cf455518582',1,'SVF::UnaryOPStmt::UnaryOPStmt()'],['../classSVF_1_1UnaryOPStmt.html#aaad7785c0e6ea468cf7df8eb39cfe327',1,'SVF::UnaryOPStmt::UnaryOPStmt(const UnaryOPStmt &amp;)'],['../classSVF_1_1UnaryOPStmt.html#a2b91333ac3d4b5e1099590aeb15d38ba',1,'SVF::UnaryOPStmt::UnaryOPStmt(SVFVar *s, SVFVar *d, u32_t oc)']]],
   ['unaryopvfgnode',['UnaryOPVFGNode',['../classSVF_1_1UnaryOPVFGNode.html',1,'SVF::UnaryOPVFGNode'],['../classSVF_1_1UnaryOPVFGNode.html#ae5298888e597b2a379f9c9ebb5bd9132',1,'SVF::UnaryOPVFGNode::UnaryOPVFGNode()'],['../classSVF_1_1UnaryOPVFGNode.html#a77b6cf315bdacb49e66bca15628a12b1',1,'SVF::UnaryOPVFGNode::UnaryOPVFGNode(const UnaryOPVFGNode &amp;)'],['../classSVF_1_1UnaryOPVFGNode.html#acefca73fdac419025ad5109c7b2c9b0c',1,'SVF::UnaryOPVFGNode::UnaryOPVFGNode(NodeID id, const PAGNode *r)']]],
   ['undeftype',['undefType',['../classSVF_1_1TypeBasedHeapCloning.html#a6363466e64eee4405806568d26206d2e',1,'SVF::TypeBasedHeapCloning']]],
-  ['undefvalue',['UndefValue',['../namespaceSVF.html#af4912ad47e19060e53b665f73e0ee6ec',1,'SVF']]],
+  ['undefvalue',['UndefValue',['../SVF-FE_2BasicTypes_8h.html#a1ab5636908738dc0987bc642604cbb4a',1,'BasicTypes.h']]],
   ['unifyfunctionexit',['UnifyFunctionExit',['../classSVF_1_1MergeFunctionRets.html#a8c04750179ee48d283c5db4d84b3eca1',1,'SVF::MergeFunctionRets']]],
   ['unifyfunctionexitnodes',['UnifyFunctionExitNodes',['../namespaceSVF.html#ae5853f7df76735b195ff93949ca4256b',1,'SVF']]],
   ['unioncache',['unionCache',['../classSVF_1_1PersistentPointsToCache.html#a6b601ce2055d83f2c1df0c7af039ce05',1,'SVF::PersistentPointsToCache']]],

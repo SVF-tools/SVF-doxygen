@@ -60,6 +60,6 @@ var searchData=
   ['svfstmtset',['SVFStmtSet',['../classSVF_1_1IRGraph.html#a28ea8f85b0923d00364a010c1fd4e416',1,'SVF::IRGraph::SVFStmtSet()'],['../classSVF_1_1VFG.html#a8e3633597a4dca714df20e0720b31f1e',1,'SVF::VFG::SVFStmtSet()']]],
   ['svfstmtsetty',['SVFStmtSetTy',['../classSVF_1_1SVFStmt.html#a8cd7b6c6fd8b030b1421d95a086359f4',1,'SVF::SVFStmt']]],
   ['svfvarlist',['SVFVarList',['../classSVF_1_1SVFIR.html#a64939d7ecfd8e2cf862782954a56596b',1,'SVF::SVFIR']]],
-  ['switchinst',['SwitchInst',['../namespaceSVF.html#a412280b134578905248ce0122c5db7c9',1,'SVF']]],
+  ['switchinst',['SwitchInst',['../SVF-FE_2BasicTypes_8h.html#a55ac065a1d559c907908492c6853dd53',1,'BasicTypes.h']]],
   ['symid',['SymID',['../namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48',1,'SVF']]]
 ];
