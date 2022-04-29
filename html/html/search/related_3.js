@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['flowsensitivestat',['FlowSensitiveStat',['../classSVF_1_1FlowSensitive.html#a88f9752372eabb71f47f13a89e4d6d9c',1,'SVF::FlowSensitive']]]
+  ['ddastat',['DDAStat',['../classSVF_1_1DDAVFSolver.html#af83f88f2ae2456f2691e8822d56b1598',1,'SVF::DDAVFSolver']]],
+  ['ddasvfgbuilder',['DDASVFGBuilder',['../classSVF_1_1SVFG.html#a9ccd530dc4c49b0df372a2ce95b66921',1,'SVF::SVFG']]]
 ];

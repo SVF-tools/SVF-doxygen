@@ -8,6 +8,5 @@ var searchData=
   ['versionedptdata',['VersionedPTData',['../classSVF_1_1VersionedPTData.html',1,'SVF']]],
   ['vfg',['VFG',['../classSVF_1_1VFG.html',1,'SVF']]],
   ['vfgedge',['VFGEdge',['../classSVF_1_1VFGEdge.html',1,'SVF']]],
-  ['vfgnode',['VFGNode',['../classSVF_1_1VFGNode.html',1,'SVF']]],
-  ['vfpathcond',['VFPathCond',['../classSVF_1_1VFPathCond.html',1,'SVF']]]
+  ['vfgnode',['VFGNode',['../classSVF_1_1VFGNode.html',1,'SVF']]]
 ];

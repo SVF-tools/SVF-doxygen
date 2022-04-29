@@ -19,7 +19,7 @@ var searchData=
   ['_5fcursvfgnode',['_curSVFGNode',['../classSVF_1_1ProgSlice.html#af3095788fc3d7798abfae10e3216968b',1,'SVF::ProgSlice']]],
   ['_5fd',['_D',['../classSVF_1_1SCCDetection.html#a58b7ae8ed203311628dc5a84e1e79a5e',1,'SVF::SCCDetection::_D()'],['../classSVF_1_1CSC.html#a0eaf3a742fb8003b031528ee7c1c4799',1,'SVF::CSC::_D()']]],
   ['_5fenditer',['_endIter',['../classSVF_1_1CondPointsToSet_1_1CondPtsSetIterator.html#a9ffed93e0d4ae4b1431689b7fa5d6082',1,'SVF::CondPointsToSet::CondPtsSetIterator']]],
-  ['_5fgraph',['_graph',['../classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141',1,'SVF::CFLSolver::_graph()'],['../classSVF_1_1SCCDetection.html#a2123596f26729d61b241cf468d8925d8',1,'SVF::SCCDetection::_graph()'],['../classSVF_1_1WPASolver.html#a87e9adb7fb0e0a42abaf90adac27a9c0',1,'SVF::WPASolver::_graph()']]],
+  ['_5fgraph',['_graph',['../classSVF_1_1SrcSnkSolver.html#a87242199e12fce5c5978ed0a4baa6b09',1,'SVF::SrcSnkSolver::_graph()'],['../classSVF_1_1SCCDetection.html#a2123596f26729d61b241cf468d8925d8',1,'SVF::SCCDetection::_graph()'],['../classSVF_1_1WPASolver.html#a87e9adb7fb0e0a42abaf90adac27a9c0',1,'SVF::WPASolver::_graph()']]],
   ['_5fi',['_I',['../classSVF_1_1SCCDetection.html#a9105051438f60587df95a9dba618d008',1,'SVF::SCCDetection::_I()'],['../classSVF_1_1CSC.html#af58e474ee7605663fd04fce58dc029d1',1,'SVF::CSC::_I()']]],
   ['_5finscc',['_inSCC',['../classSVF_1_1SCCDetection_1_1GNodeSCCInfo.html#af3290b2321a70b3acd00927afe87911d',1,'SVF::SCCDetection::GNodeSCCInfo']]],
   ['_5fispwcnode',['_isPWCNode',['../classSVF_1_1ConstraintNode.html#ab93b0083cd84702900dcdc853e511275',1,'SVF::ConstraintNode']]],

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['edgeid',['EdgeID',['../namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94',1,'SVF']]],
-  ['edgeset',['EdgeSet',['../classSVF_1_1VFPathCond.html#a17f76b046c8f968b559b2d3e4b2ddf57',1,'SVF::VFPathCond::EdgeSet()'],['../namespaceSVF.html#a0d2e17d5b07a50ed95e8f407cd6dd0be',1,'SVF::EdgeSet()']]],
+  ['edgeset',['EdgeSet',['../namespaceSVF.html#a0d2e17d5b07a50ed95e8f407cd6dd0be',1,'SVF']]],
   ['edgetype',['EdgeType',['../classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de',1,'SVF::GenericNode::EdgeType()'],['../classSVF_1_1GenericGraph.html#a12d493d6ad2b6c89f240c9ccfa3bdf30',1,'SVF::GenericGraph::EdgeType()'],['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#afc3616d9a36f7b26473f9211484e3e6c',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::EdgeType()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#a279f6f463a31f98fe8e1d5f4c78f9e6d',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::EdgeType()'],['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#a57c4c711251842dd9d969428ba5966f2',1,'llvm::GraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;::EdgeType()']]],
   ['edgevector',['EdgeVector',['../namespaceSVF.html#a4831992588252dc51c102e9e3f7d5e2e',1,'SVF']]],
   ['elementset',['ElementSet',['../classSVF_1_1CondStdSet.html#a3fcc7079d72b0b392731ae7bf1ef2939',1,'SVF::CondStdSet']]],

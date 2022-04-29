@@ -32,7 +32,7 @@ var searchData=
   ['formalretvfgnode',['FormalRetVFGNode',['../classSVF_1_1FormalRetVFGNode.html#a0155a71f08dfb1fb43f054084b2380c6',1,'SVF::FormalRetVFGNode::FormalRetVFGNode()'],['../classSVF_1_1FormalRetVFGNode.html#a527e3cac2e32f29d57b58db61c801cf3',1,'SVF::FormalRetVFGNode::FormalRetVFGNode(const FormalRetVFGNode &amp;)'],['../classSVF_1_1FormalRetVFGNode.html#a732fe0036d307a1dace2631219de38ef',1,'SVF::FormalRetVFGNode::FormalRetVFGNode(NodeID id, const PAGNode *n, const SVFFunction *f)']]],
   ['forwardslicebegin',['forwardSliceBegin',['../classSVF_1_1ProgSlice.html#ae482fcb138aaf345586a39daa34ff895',1,'SVF::ProgSlice']]],
   ['forwardsliceend',['forwardSliceEnd',['../classSVF_1_1ProgSlice.html#add10d8fd041ac7e6eb611df8a6b1384b',1,'SVF::ProgSlice']]],
-  ['forwardtraverse',['forwardTraverse',['../classSVF_1_1CFLSolver.html#ac9dc4e29fde45a19d42987360ee5f528',1,'SVF::CFLSolver']]],
+  ['forwardtraverse',['forwardTraverse',['../classSVF_1_1SrcSnkSolver.html#ab0a1ee24b5899d54b65f0c7a92b7b52d',1,'SVF::SrcSnkSolver']]],
   ['forwardvisited',['forwardVisited',['../classSVF_1_1SrcSnkDDA.html#a8c86d30498e86745883fbaea4f530eae',1,'SVF::SrcSnkDDA']]],
   ['free',['free',['../util_8h.html#a3110dcad20c2a6616d360901b94e06a1',1,'util.h']]],
   ['freematrix',['freeMatrix',['../cuddInt_8c.html#ae61a29ea2e8e94b45114dbb698e14ac7',1,'cuddInt.c']]],
@@ -44,6 +44,6 @@ var searchData=
   ['funexiticfgnode',['FunExitICFGNode',['../classSVF_1_1FunExitICFGNode.html#a84f43a81c2b6df125f32ddcb47b8858b',1,'SVF::FunExitICFGNode']]],
   ['funhasret',['funHasRet',['../classSVF_1_1SVFIR.html#afe8274c3b7317fccef5314662a182046',1,'SVF::SVFIR']]],
   ['funptrddaclient',['FunptrDDAClient',['../classSVF_1_1FunptrDDAClient.html#a5aae3bed289371605ad831ae5a6ad6b5',1,'SVF::FunptrDDAClient']]],
-  ['fwprocesscurnode',['FWProcessCurNode',['../classSVF_1_1SrcSnkDDA.html#abf20d02932b7ca983b9bd790812b1f40',1,'SVF::SrcSnkDDA::FWProcessCurNode()'],['../classSVF_1_1CFLSolver.html#a6d7361281bbf666a2f5da87f7ea869d2',1,'SVF::CFLSolver::FWProcessCurNode()']]],
-  ['fwprocessoutgoingedge',['FWProcessOutgoingEdge',['../classSVF_1_1SrcSnkDDA.html#ad2203ca5bd08c6fbebd31a8a010edebb',1,'SVF::SrcSnkDDA::FWProcessOutgoingEdge()'],['../classSVF_1_1CFLSolver.html#a39b079c9b8a1b4570176028de79e85a4',1,'SVF::CFLSolver::FWProcessOutgoingEdge()']]]
+  ['fwprocesscurnode',['FWProcessCurNode',['../classSVF_1_1SrcSnkDDA.html#abf20d02932b7ca983b9bd790812b1f40',1,'SVF::SrcSnkDDA::FWProcessCurNode()'],['../classSVF_1_1SrcSnkSolver.html#ab35190da65a3157a654a90afc7d793b5',1,'SVF::SrcSnkSolver::FWProcessCurNode()']]],
+  ['fwprocessoutgoingedge',['FWProcessOutgoingEdge',['../classSVF_1_1SrcSnkDDA.html#ad2203ca5bd08c6fbebd31a8a010edebb',1,'SVF::SrcSnkDDA::FWProcessOutgoingEdge()'],['../classSVF_1_1SrcSnkSolver.html#aa43dbc79bfde3199a73ce0257613f484',1,'SVF::SrcSnkSolver::FWProcessOutgoingEdge()']]]
 ];

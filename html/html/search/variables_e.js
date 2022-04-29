@@ -2,7 +2,6 @@ var searchData=
 [
   ['nan',['nan',['../unionEpTypeUnion.html#a110c7a597a2ccf931b674e2338c64885',1,'EpTypeUnion']]],
   ['neg',['neg',['../structcuddPathPair.html#a968dc3d34b592da2876517a687873281',1,'cuddPathPair']]],
-  ['negconds',['negConds',['../classSVF_1_1Z3Manager.html#abd4a010660942227d7db81533e80b2c3',1,'SVF::Z3Manager']]],
   ['newbvnumwords',['NewBvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#af3fe4b4098898ee38928c9db30ea0fe9',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['newexpand',['newExpand',['../classSVF_1_1ConstraintNode.html#af760652ba65eb5a0d0d2731b6e1961b8',1,'SVF::ConstraintNode']]],
   ['newsbvnumwords',['NewSbvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a779446e2fe92518401f1732fb809f066',1,'SVF::NodeIDAllocator::Clusterer']]],
@@ -104,7 +103,7 @@ var searchData=
   ['numofmhpld',['numOfMHPLd',['../classSVF_1_1MTAAnnotator.html#a29e0123620ab072fddc45331c6aa46e8',1,'SVF::MTAAnnotator']]],
   ['numofmhpqueries',['numOfMHPQueries',['../classSVF_1_1MHP.html#ab8bd382e0c70b0feb2a291ecc4043106',1,'SVF::MHP']]],
   ['numofmhpst',['numOfMHPSt',['../classSVF_1_1MTAAnnotator.html#a3a53e90b4f361d1298983bc89795b3d2',1,'SVF::MTAAnnotator']]],
-  ['numofmssaphi',['NumOfMSSAPhi',['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi()'],['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi()']]],
+  ['numofmssaphi',['numOfMSSAPhi',['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi()'],['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi()']]],
   ['numofnewsvfgedges',['numOfNewSVFGEdges',['../classSVF_1_1MTASVFGBuilder.html#a019a4597074fdad6e51d936ed4ead0d9',1,'SVF::MTASVFGBuilder']]],
   ['numofnodes',['numOfNodes',['../classSVF_1_1ICFGStat.html#a8e71a19c266aacd7acb1fee6bb339788',1,'SVF::ICFGStat::numOfNodes()'],['../classSVF_1_1SVFGStat.html#ab499c24856a990dd4adb366107eb3302',1,'SVF::SVFGStat::numOfNodes()']]],
   ['numofnodesincycles',['NumOfNodesInCycles',['../classSVF_1_1PTAStat.html#aea3e95097b3b9d326bef0d36f17e51a5',1,'SVF::PTAStat']]],

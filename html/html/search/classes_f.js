@@ -9,6 +9,7 @@ var searchData=
   ['simplify_5ftype',['simplify_type',['../structSVF_1_1SVFUtil_1_1simplify__type.html',1,'SVF::SVFUtil']]],
   ['simplify_5ftype_3c_20const_20from_20_3e',['simplify_type&lt; const From &gt;',['../structSVF_1_1SVFUtil_1_1simplify__type_3_01const_01From_01_4.html',1,'SVF::SVFUtil']]],
   ['srcsnkdda',['SrcSnkDDA',['../classSVF_1_1SrcSnkDDA.html',1,'SVF']]],
+  ['srcsnksolver',['SrcSnkSolver',['../classSVF_1_1SrcSnkSolver.html',1,'SVF']]],
   ['st_5fgenerator',['st_generator',['../structst__generator.html',1,'']]],
   ['st_5ftable',['st_table',['../structst__table.html',1,'']]],
   ['st_5ftable_5fentry',['st_table_entry',['../structst__table__entry.html',1,'']]],

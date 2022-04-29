@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['e',['e',['../classSVF_1_1Z3Expr.html#a12503523dc2ddbc8cd8ef658de6e3cb0',1,'SVF::Z3Expr::e()'],['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren::E()']]],
+  ['e',['E',['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren::E()'],['../classSVF_1_1Z3Expr.html#ae14d9fa0613b196420b90d20cc8df041',1,'SVF::Z3Expr::e()']]],
   ['ecunion',['ecUnion',['../classSVF_1_1Steensgaard.html#a191e77e62916d868b2af730264e26dd8',1,'SVF::Steensgaard']]],
   ['edge2pts',['edge2pts',['../classSVF_1_1MTASVFGBuilder.html#a1c0de33bba2f05f14140d872c345ab38',1,'SVF::MTASVFGBuilder']]],
   ['edge_5fdest',['edge_dest',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a84cc3da79c2c9c5bcdf50da4b919b7da',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::edge_dest()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#a1b463e94c43d2966b8d6cf096b3d04cd',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::edge_dest()']]],
@@ -12,8 +12,7 @@ var searchData=
   ['edgekindmask',['EdgeKindMask',['../classSVF_1_1GenericEdge.html#a93dec4c27088242a4b1b6aa82cea46b9',1,'SVF::GenericEdge']]],
   ['edgekindmaskbits',['EdgeKindMaskBits',['../classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298',1,'SVF::GenericEdge']]],
   ['edgenum',['edgeNum',['../classSVF_1_1GenericGraph.html#a2fbc96de5f066469c2739229307bcc0c',1,'SVF::GenericGraph']]],
-  ['edges',['edges',['../classSVF_1_1VFPathCond.html#acb14b65214b69176a9174ca76526d7a0',1,'SVF::VFPathCond']]],
-  ['edgeset',['EdgeSet',['../classSVF_1_1VFPathCond.html#a17f76b046c8f968b559b2d3e4b2ddf57',1,'SVF::VFPathCond::EdgeSet()'],['../namespaceSVF.html#a0d2e17d5b07a50ed95e8f407cd6dd0be',1,'SVF::EdgeSet()']]],
+  ['edgeset',['EdgeSet',['../namespaceSVF.html#a0d2e17d5b07a50ed95e8f407cd6dd0be',1,'SVF']]],
   ['edgetype',['EdgeType',['../classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de',1,'SVF::GenericNode::EdgeType()'],['../classSVF_1_1GenericGraph.html#a12d493d6ad2b6c89f240c9ccfa3bdf30',1,'SVF::GenericGraph::EdgeType()'],['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#afc3616d9a36f7b26473f9211484e3e6c',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::EdgeType()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#a279f6f463a31f98fe8e1d5f4c78f9e6d',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::EdgeType()'],['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#a57c4c711251842dd9d969428ba5966f2',1,'llvm::GraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;::EdgeType()'],['../classSVF_1_1CHEdge.html#a58ac14decda4041e773d723475f5c1c8',1,'SVF::CHEdge::edgeType()']]],
   ['edgevector',['EdgeVector',['../namespaceSVF.html#a4831992588252dc51c102e9e3f7d5e2e',1,'SVF']]],
   ['eft_5fa0r_5fnew',['EFT_A0R_NEW',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a035cf8a39c192608ec0e91d48e479899',1,'SVF::ExtAPI']]],
@@ -102,6 +101,7 @@ var searchData=
   ['epsilon',['epsilon',['../structDdManager.html#ad495ea9a4104c2be5b4ca850a1da8c28',1,'DdManager']]],
   ['eptype',['EpType',['../epd_8h.html#a618ccbef690a6439abf31cd8b30330e9',1,'epd.h']]],
   ['eptypeunion',['EpTypeUnion',['../unionEpTypeUnion.html',1,'']]],
+  ['eq',['eq',['../classSVF_1_1Z3Expr.html#ac50b99fca5e04e9c0d134e6371797402',1,'SVF::Z3Expr']]],
   ['equal',['EQUAL',['../st_8c.html#adf137c378b35c2dbab9579eeb5c03150',1,'st.c']]],
   ['equalgedge',['equalGEdge',['../structSVF_1_1GenericEdge_1_1equalGEdge.html',1,'SVF::GenericEdge&lt; NodeTy &gt;::equalGEdge'],['../classSVF_1_1GenericEdge.html#a69accb303ee67733e065350e4452cbca',1,'SVF::GenericEdge::equalGEdge()']]],
   ['equalmemregion',['equalMemRegion',['../structSVF_1_1MemRegion_1_1equalMemRegion.html',1,'SVF::MemRegion::equalMemRegion'],['../classSVF_1_1MemRegion.html#af0a0b4a5862a136ef4f203f19139da65',1,'SVF::MemRegion::equalMemRegion()']]],
@@ -123,6 +123,9 @@ var searchData=
   ['exactcondelem',['exactCondElem',['../classSVF_1_1PathCondAllocator.html#a61095843f86d1c5c14750a635fb3aacb',1,'SVF::PathCondAllocator']]],
   ['exc_5fprob',['EXC_PROB',['../cuddInt_8c.html#a2c0be8d31945920a5ffb6dae9115cbb8',1,'cuddInt.c']]],
   ['executedbythesamethread',['executedByTheSameThread',['../classSVF_1_1MHP.html#aab80f1bc5c359a7d3b03f249bafa1d40',1,'SVF::MHP']]],
+  ['exestate',['ExeState',['../classSVF_1_1ExeState.html',1,'SVF::ExeState'],['../classSVF_1_1ExeState.html#a83ce58a2551d511448d0224a96ca1bd7',1,'SVF::ExeState::ExeState()'],['../classSVF_1_1ExeState.html#a02e0a7dd5e66255be3838fa10e3e1cab',1,'SVF::ExeState::ExeState(const Z3Expr &amp;_pc, VarToValMap &amp;_varToValMap, LocToValMap &amp;_locToValMap)'],['../classSVF_1_1ExeState.html#a62bef487b31f2a4ca27b4e9b183bdef5',1,'SVF::ExeState::ExeState(const ExeState &amp;rhs)']]],
+  ['exestate_2ecpp',['ExeState.cpp',['../ExeState_8cpp.html',1,'']]],
+  ['exestate_2eh',['ExeState.h',['../ExeState_8h.html',1,'']]],
   ['exit',['exit',['../classSVF_1_1RetPE.html#a6f6ccda153150b6acdd81550e45f640f',1,'SVF::RetPE::exit()'],['../util_8h.html#a43b6ea6be735bb828bc062c70cadeff8',1,'exit():&#160;util.h']]],
   ['expandfiobjs',['expandFIObjs',['../classSVF_1_1BVDataPTAImpl.html#a798c84d5e861de2b61bcb1a86385f721',1,'SVF::BVDataPTAImpl::expandFIObjs(const PointsTo &amp;pts, PointsTo &amp;expandedPts)'],['../classSVF_1_1BVDataPTAImpl.html#aa6a7186152037452599406a74b05d0e1',1,'SVF::BVDataPTAImpl::expandFIObjs(const NodeBS &amp;pts, NodeBS &amp;expandedPts)'],['../classSVF_1_1CondPTAImpl.html#a87b48287d7edb97fc120200fe0e5218d',1,'SVF::CondPTAImpl::expandFIObjs()'],['../classSVF_1_1FlowSensitiveTBHC.html#a3af0297eb75ac4009433be44bb286d30',1,'SVF::FlowSensitiveTBHC::expandFIObjs()']]],
   ['exponent',['exponent',['../structIeeeDoubleStruct.html#ae7281389e351ea2e0e577144746d76e2',1,'IeeeDoubleStruct::exponent()'],['../structIeeeNanStruct.html#aeb28a08581e489042de6f647eb431e5a',1,'IeeeNanStruct::exponent()'],['../structEpDoubleStruct.html#ae626888fe53c8c26d65d4fa519b906c6',1,'EpDoubleStruct::exponent()']]],
@@ -138,6 +141,6 @@ var searchData=
   ['externalpag',['ExternalPAG',['../classSVF_1_1SVFIR.html#a294bb5e174030882a385c790ab835bb3',1,'SVF::SVFIR']]],
   ['extf_5ft',['extf_t',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094',1,'SVF::ExtAPI']]],
   ['extractelementinst',['ExtractElementInst',['../SVF-FE_2BasicTypes_8h.html#af4efbd8e6f644628b41104e855b0541b',1,'BasicTypes.h']]],
-  ['extractsubconds',['extractSubConds',['../classSVF_1_1CondManager.html#a66ed79e36f8c09ee3ae58fb9b4a6f3e3',1,'SVF::CondManager::extractSubConds()'],['../classSVF_1_1Z3Manager.html#aa6a78fc2f0a3ed9957230703fb8d730d',1,'SVF::Z3Manager::extractSubConds()'],['../classSVF_1_1BDDManager.html#a3fa608e37862e2702096c65fdb27c8c8',1,'SVF::BDDManager::extractSubConds()']]],
+  ['extractsubconds',['extractSubConds',['../classSVF_1_1BDDExprManager.html#a5bbd80a97aa794da9568716e456cf40c',1,'SVF::BDDExprManager']]],
   ['extractvalueinst',['ExtractValueInst',['../SVF-FE_2BasicTypes_8h.html#a41c335e8362a500085923e4742a53f57',1,'BasicTypes.h']]]
 ];

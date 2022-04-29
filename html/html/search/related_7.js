@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['pagbuilderfromfile',['PAGBuilderFromFile',['../classSVF_1_1SVFIR.html#a639210db7230cea2eeaf2d08c953d827',1,'SVF::SVFIR']]],
-  ['persistentdfptdata_3c_20key_2c_20keyset_2c_20data_2c_20dataset_20_3e',['PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;',['../classSVF_1_1PersistentPTData.html#aea8bb6da9d6d5a4ed65168aceee2f85a',1,'SVF::PersistentPTData']]],
-  ['persistentincdfptdata_3c_20key_2c_20keyset_2c_20data_2c_20dataset_20_3e',['PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;',['../classSVF_1_1PersistentPTData.html#a8386ddd5a45bd490860685ca18543287',1,'SVF::PersistentPTData']]],
-  ['persistentversionedptdata',['PersistentVersionedPTData',['../classSVF_1_1PersistentPTData.html#a5a0dfa2e5e989bcb30b913f37e561c35',1,'SVF::PersistentPTData']]]
+  ['mtasvfgbuilder',['MTASVFGBuilder',['../classSVF_1_1SVFG.html#ac0e43f4a2043538c9046f95826caa725',1,'SVF::SVFG']]],
+  ['mutabledfptdata_3c_20key_2c_20keyset_2c_20data_2c_20dataset_20_3e',['MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;',['../classSVF_1_1MutablePTData.html#ad92cfe345043b1bc8d6c7a03df43310f',1,'SVF::MutablePTData']]]
 ];

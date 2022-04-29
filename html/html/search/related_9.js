@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['sabersvfgbuilder',['SaberSVFGBuilder',['../classSVF_1_1SVFG.html#a93a4287b55425abc188e5f5f2de54297',1,'SVF::SVFG']]],
-  ['svfgbuilder',['SVFGBuilder',['../classSVF_1_1SVFG.html#ab2f81db3935389480baa5cb14e15e9d7',1,'SVF::SVFG']]],
-  ['svfir',['SVFIR',['../classSVF_1_1SVFVar.html#a6dbb40e8ee92033b77440c44acd8a868',1,'SVF::SVFVar']]],
-  ['svfirbuilder',['SVFIRBuilder',['../classSVF_1_1SVFIR.html#a46fadea4d08baefc8fbc1d8928da7f6b',1,'SVF::SVFIR']]],
-  ['symboltablebuilder',['SymbolTableBuilder',['../classSVF_1_1SymbolTableInfo.html#a9d9633d48431b80c078bd4a34c1e7fa0',1,'SVF::SymbolTableInfo::SymbolTableBuilder()'],['../classSVF_1_1ObjTypeInfo.html#a9d9633d48431b80c078bd4a34c1e7fa0',1,'SVF::ObjTypeInfo::SymbolTableBuilder()']]],
-  ['symboltableinfo',['SymbolTableInfo',['../classSVF_1_1LocationSet.html#a32ddec529ccbf4ea6336e5fd765164d8',1,'SVF::LocationSet']]]
+  ['pagbuilderfromfile',['PAGBuilderFromFile',['../classSVF_1_1SVFIR.html#a639210db7230cea2eeaf2d08c953d827',1,'SVF::SVFIR']]],
+  ['persistentdfptdata_3c_20key_2c_20keyset_2c_20data_2c_20dataset_20_3e',['PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;',['../classSVF_1_1PersistentPTData.html#aea8bb6da9d6d5a4ed65168aceee2f85a',1,'SVF::PersistentPTData']]],
+  ['persistentincdfptdata_3c_20key_2c_20keyset_2c_20data_2c_20dataset_20_3e',['PersistentIncDFPTData&lt; Key, KeySet, Data, DataSet &gt;',['../classSVF_1_1PersistentPTData.html#a8386ddd5a45bd490860685ca18543287',1,'SVF::PersistentPTData']]],
+  ['persistentversionedptdata',['PersistentVersionedPTData',['../classSVF_1_1PersistentPTData.html#a5a0dfa2e5e989bcb30b913f37e561c35',1,'SVF::PersistentPTData']]]
 ];

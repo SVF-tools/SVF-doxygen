@@ -2,7 +2,6 @@ var searchData=
 [
   ['pagbuilderfromfile',['PAGBuilderFromFile',['../classSVF_1_1PAGBuilderFromFile.html',1,'SVF']]],
   ['pathcondallocator',['PathCondAllocator',['../classSVF_1_1PathCondAllocator.html',1,'SVF']]],
-  ['pathstmtdpitem',['PathStmtDPItem',['../classSVF_1_1PathStmtDPItem.html',1,'SVF']]],
   ['pcg',['PCG',['../classSVF_1_1PCG.html',1,'SVF']]],
   ['persistentdfptdata',['PersistentDFPTData',['../classSVF_1_1PersistentDFPTData.html',1,'SVF']]],
   ['persistentdiffptdata',['PersistentDiffPTData',['../classSVF_1_1PersistentDiffPTData.html',1,'SVF']]],

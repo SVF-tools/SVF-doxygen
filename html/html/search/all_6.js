@@ -2,7 +2,7 @@ var searchData=
 [
   ['f',['f',['../structDdHook.html#a5b1bfe85ce0ac180fc160eb8c30094d7',1,'DdHook::f()'],['../structDdCache.html#a74c07792181f1d898f9fb4524c8942ad',1,'DdCache::f()']]],
   ['fail',['fail',['../util_8h.html#a71a6998301cde817b7ade39eff117424',1,'util.h']]],
-  ['falsecond',['falseCond',['../classSVF_1_1CondManager.html#a0ba3cf86743de62bcd5fd38d8166bc90',1,'SVF::CondManager']]],
+  ['falsecond',['falseCond',['../classSVF_1_1BDDExprManager.html#a7c9d970f02b142a5ca05f8d67e974269',1,'SVF::BDDExprManager']]],
   ['fastcluster_2ecpp',['fastcluster.cpp',['../fastcluster_8cpp.html',1,'']]],
   ['fastcluster_2eh',['fastcluster.h',['../fastcluster_8h.html',1,'']]],
   ['fastcluster_5fdm_2ecpp_2einc',['fastcluster_dm.cpp.inc',['../fastcluster__dm_8cpp_8inc.html',1,'']]],
@@ -52,6 +52,7 @@ var searchData=
   ['fldidx',['fldIdx',['../classSVF_1_1LocationSet.html#a5c2c1baa17a70b997824002e4c159cbd',1,'SVF::LocationSet']]],
   ['fldidx2typemap',['fldIdx2TypeMap',['../classSVF_1_1StInfo.html#a3da859dcf2a5fe7078b1257dd5f1e479',1,'SVF::StInfo']]],
   ['fldidxvec',['fldIdxVec',['../classSVF_1_1StInfo.html#a77c94c0ab75b2d5af2132ff8e082cefe',1,'SVF::StInfo']]],
+  ['flippedaddressmask',['FlippedAddressMask',['../ExeState_8h.html#aec682540f2c8aa9deb79f610e4399411',1,'ExeState.h']]],
   ['flowbudget',['FlowBudget',['../classSVF_1_1Options.html#a53b1a1ec4e5bbd9696ed9b680aa0c3c7',1,'SVF::Options']]],
   ['flowdda',['FlowDDA',['../classSVF_1_1FlowDDA.html',1,'SVF::FlowDDA'],['../classSVF_1_1FlowDDA.html#aab22d2c14b46963887f623d84e75bd7a',1,'SVF::FlowDDA::FlowDDA()'],['../classSVF_1_1ContextDDA.html#a2a23f0235fc49a177b2694f668b02551',1,'SVF::ContextDDA::flowDDA()'],['../classSVF_1_1DDAStat.html#a86e03ef25f150b98bc1f8c89bfd7fc77',1,'SVF::DDAStat::flowDDA()']]],
   ['flowdda_2ecpp',['FlowDDA.cpp',['../FlowDDA_8cpp.html',1,'']]],
@@ -91,7 +92,7 @@ var searchData=
   ['forwardslice',['forwardslice',['../classSVF_1_1ProgSlice.html#ac12dc4caa0c764ae69175e787efad2ab',1,'SVF::ProgSlice::forwardslice()'],['../classSVF_1_1SVFGStat.html#a1e5ec005dda8dc918422eaf33f3145f8',1,'SVF::SVFGStat::forwardSlice()']]],
   ['forwardslicebegin',['forwardSliceBegin',['../classSVF_1_1ProgSlice.html#ae482fcb138aaf345586a39daa34ff895',1,'SVF::ProgSlice']]],
   ['forwardsliceend',['forwardSliceEnd',['../classSVF_1_1ProgSlice.html#add10d8fd041ac7e6eb611df8a6b1384b',1,'SVF::ProgSlice']]],
-  ['forwardtraverse',['forwardTraverse',['../classSVF_1_1CFLSolver.html#ac9dc4e29fde45a19d42987360ee5f528',1,'SVF::CFLSolver']]],
+  ['forwardtraverse',['forwardTraverse',['../classSVF_1_1SrcSnkSolver.html#ab0a1ee24b5899d54b65f0c7a92b7b52d',1,'SVF::SrcSnkSolver']]],
   ['forwardvisited',['forwardVisited',['../classSVF_1_1SrcSnkDDA.html#a8c86d30498e86745883fbaea4f530eae',1,'SVF::SrcSnkDDA']]],
   ['fparm',['FParm',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75aeb82378d1c11bd6bf1776eb884cc4db7',1,'SVF::VFGNode']]],
   ['fpin',['FPIN',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a3c58aedc46cdafac26b47ec9674c2ac5',1,'SVF::VFGNode']]],
@@ -189,6 +190,6 @@ var searchData=
   ['funtovfgnodesmapty',['FunToVFGNodesMapTy',['../classSVF_1_1VFG.html#ad63218978f65ab91ae21bc24c882a716',1,'SVF::VFG']]],
   ['funvec',['FunVec',['../classSVF_1_1PCG.html#aca2efdefda1f95a6450eca4a781cbefa',1,'SVF::PCG']]],
   ['funworklist',['FunWorkList',['../classSVF_1_1PCG.html#a19fea9790fffea9861c0dc7817b60a3e',1,'SVF::PCG']]],
-  ['fwprocesscurnode',['FWProcessCurNode',['../classSVF_1_1SrcSnkDDA.html#abf20d02932b7ca983b9bd790812b1f40',1,'SVF::SrcSnkDDA::FWProcessCurNode()'],['../classSVF_1_1CFLSolver.html#a6d7361281bbf666a2f5da87f7ea869d2',1,'SVF::CFLSolver::FWProcessCurNode()']]],
-  ['fwprocessoutgoingedge',['FWProcessOutgoingEdge',['../classSVF_1_1SrcSnkDDA.html#ad2203ca5bd08c6fbebd31a8a010edebb',1,'SVF::SrcSnkDDA::FWProcessOutgoingEdge()'],['../classSVF_1_1CFLSolver.html#a39b079c9b8a1b4570176028de79e85a4',1,'SVF::CFLSolver::FWProcessOutgoingEdge()']]]
+  ['fwprocesscurnode',['FWProcessCurNode',['../classSVF_1_1SrcSnkDDA.html#abf20d02932b7ca983b9bd790812b1f40',1,'SVF::SrcSnkDDA::FWProcessCurNode()'],['../classSVF_1_1SrcSnkSolver.html#ab35190da65a3157a654a90afc7d793b5',1,'SVF::SrcSnkSolver::FWProcessCurNode()']]],
+  ['fwprocessoutgoingedge',['FWProcessOutgoingEdge',['../classSVF_1_1SrcSnkDDA.html#ad2203ca5bd08c6fbebd31a8a010edebb',1,'SVF::SrcSnkDDA::FWProcessOutgoingEdge()'],['../classSVF_1_1SrcSnkSolver.html#aa43dbc79bfde3199a73ce0257613f484',1,'SVF::SrcSnkSolver::FWProcessOutgoingEdge()']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['m',['M',['../classSVF_1_1RaceResultValidator.html#abd3ad42a71357dfd1483e6e0d18d5ebd',1,'SVF::RaceResultValidator']]],
-  ['m_5fbdd_5fmgr',['m_bdd_mgr',['../classSVF_1_1BDDManager.html#aae62fd27ddc847758ea67000580efdb8',1,'SVF::BDDManager']]],
+  ['m_5fbdd_5fmgr',['m_bdd_mgr',['../classSVF_1_1BDDExprManager.html#ae17830ea476e0ba786e98831bd2b4f50',1,'SVF::BDDExprManager']]],
   ['m_5fcond',['m_cond',['../classSVF_1_1CondVar.html#a90b13685d2126f8c10dde4a504bb28df',1,'SVF::CondVar']]],
   ['m_5fid',['m_id',['../classSVF_1_1CondVar.html#a26fd04b3f2d45f0c230e1823f3eea49a',1,'SVF::CondVar']]],
   ['main',['main',['../dda_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;dda.cpp'],['../svf-ex_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;svf-ex.cpp'],['../mta_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mta.cpp'],['../saber_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;saber.cpp'],['../wpa_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;wpa.cpp']]],
@@ -27,7 +27,7 @@ var searchData=
   ['markvalidvfedge',['markValidVFEdge',['../classSVF_1_1SVFGBuilder.html#a3f8fc56d5190ea59d06906b359640dae',1,'SVF::SVFGBuilder']]],
   ['match',['match',['../classSVF_1_1LockResultValidator.html#aa1b48d5792e596703f3283316e9f4c07',1,'SVF::LockResultValidator']]],
   ['matchargs',['matchArgs',['../classSVF_1_1PointerAnalysis.html#ab541df6fc703c0b21c2c308584c0b7ff',1,'SVF::PointerAnalysis']]],
-  ['matchcontext',['matchContext',['../classSVF_1_1ContextCond.html#ab816f854687999b8c01f5c02fcf6b8af',1,'SVF::ContextCond::matchContext()'],['../classSVF_1_1CxtStmtDPItem.html#a35c0c0d5194983769e313d6e31b3d7ec',1,'SVF::CxtStmtDPItem::matchContext()'],['../classSVF_1_1CxtDPItem.html#ad386861998e54ec754ca62f358f03e6a',1,'SVF::CxtDPItem::matchContext()'],['../classSVF_1_1PathStmtDPItem.html#a4a82650fe9bf2f655e4b7178ba063eda',1,'SVF::PathStmtDPItem::matchContext()']]],
+  ['matchcontext',['matchContext',['../classSVF_1_1ContextCond.html#ab816f854687999b8c01f5c02fcf6b8af',1,'SVF::ContextCond::matchContext()'],['../classSVF_1_1CxtStmtDPItem.html#a35c0c0d5194983769e313d6e31b3d7ec',1,'SVF::CxtStmtDPItem::matchContext()'],['../classSVF_1_1CxtDPItem.html#ad386861998e54ec754ca62f358f03e6a',1,'SVF::CxtDPItem::matchContext()']]],
   ['matchcxt',['matchCxt',['../classSVF_1_1LockAnalysis.html#a3299f1fe234e1d6b4341498575bddcbb',1,'SVF::LockAnalysis::matchCxt()'],['../classSVF_1_1MHP.html#afee99dd3ca2ff68789864423fc9358e0',1,'SVF::MHP::matchCxt()'],['../classSVF_1_1ForkJoinAnalysis.html#aea9ef584ce6c7129bcd1d5ecda2f1f74',1,'SVF::ForkJoinAnalysis::matchCxt()'],['../classSVF_1_1MTAResultValidator.html#a6306899b5360e106dd090bea571027bf',1,'SVF::MTAResultValidator::matchCxt()'],['../classSVF_1_1TCT.html#a9b6dda84d37afadaf80bc2e26986a52e',1,'SVF::TCT::matchCxt()']]],
   ['matchtype',['matchType',['../classSVF_1_1Andersen.html#af42fe6aeacfd31bbef7f5c80c8cf6173',1,'SVF::Andersen']]],
   ['max',['MAX',['../util_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'util.h']]],

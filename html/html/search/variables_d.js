@@ -1,7 +1,7 @@
 var searchData=
 [
   ['m',['M',['../classSVF_1_1RaceResultValidator.html#abd3ad42a71357dfd1483e6e0d18d5ebd',1,'SVF::RaceResultValidator']]],
-  ['m_5fbdd_5fmgr',['m_bdd_mgr',['../classSVF_1_1BDDManager.html#aae62fd27ddc847758ea67000580efdb8',1,'SVF::BDDManager']]],
+  ['m_5fbdd_5fmgr',['m_bdd_mgr',['../classSVF_1_1BDDExprManager.html#ae17830ea476e0ba786e98831bd2b4f50',1,'SVF::BDDExprManager']]],
   ['m_5fcond',['m_cond',['../classSVF_1_1CondVar.html#a90b13685d2126f8c10dde4a504bb28df',1,'SVF::CondVar']]],
   ['m_5fid',['m_id',['../classSVF_1_1CondVar.html#a26fd04b3f2d45f0c230e1823f3eea49a',1,'SVF::CondVar']]],
   ['mainmodule',['mainModule',['../classSVF_1_1IRAnnotator.html#a01462e9ee84f490514598c68e8c9557b',1,'SVF::IRAnnotator']]],

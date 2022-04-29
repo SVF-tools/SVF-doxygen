@@ -35,7 +35,6 @@ var searchData=
   ['size',['size',['../structDdGen.html#ab7fad933b3d07b8d355dfb2c9663451f',1,'DdGen::size()'],['../structDdHashTable.html#afc17f434d1edc18767e6da7a53d64f2e',1,'DdHashTable::size()'],['../structDdManager.html#a5fc169bc41431f1a0645f64c753457e3',1,'DdManager::size()'],['../structMove.html#a4841f4b30702d4d64d4bf1abc85a47b5',1,'Move::size()'],['../structDdLevelQueue.html#aa5d7bfda570a662d1fa39fbabb2c4e81',1,'DdLevelQueue::size()'],['../structMtrNode.html#ad1d0b76802143ff49d63c0a61b26dc62',1,'MtrNode::size()']]],
   ['sizez',['sizeZ',['../structDdManager.html#a97821fdc39438a00a9b26f2205b0b2f5',1,'DdManager']]],
   ['slots',['slots',['../structDdLocalCache.html#a81d92a3508761cdf2f169e421ca7b7ab',1,'DdLocalCache::slots()'],['../structDdSubtable.html#ab01ae39304c9a7ce2236584a78ff5856',1,'DdSubtable::slots()'],['../structDdManager.html#a8a0404c6d3d8c1e49ed84e4467c3387c',1,'DdManager::slots()']]],
-  ['sol',['sol',['../classSVF_1_1Z3Manager.html#ac6fe9310046274759c45c1435fcc85c6',1,'SVF::Z3Manager']]],
   ['solveall',['solveAll',['../classSVF_1_1DDAClient.html#aa8a67c60ec0395c9cfae178dcff638a8',1,'SVF::DDAClient']]],
   ['solvetime',['solveTime',['../classSVF_1_1FlowSensitive.html#a4202f837e863a48712765cc346d8b514',1,'SVF::FlowSensitive']]],
   ['sources',['sources',['../classSVF_1_1SVFGStat.html#a18a30f659c3a79d65b4ae7f3316c5f91',1,'SVF::SVFGStat::sources()'],['../classSVF_1_1SrcSnkDDA.html#a96c41d03d2615f952b58dca327a2866c',1,'SVF::SrcSnkDDA::sources()']]],

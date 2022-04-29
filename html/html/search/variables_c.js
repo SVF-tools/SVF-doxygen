@@ -39,6 +39,7 @@ var searchData=
   ['locmemmodel',['LocMemModel',['../classSVF_1_1Options.html#aba8e13f8bb26cf6a0718282e6f9a1940',1,'SVF::Options']]],
   ['loctodpmsetmap',['locToDpmSetMap',['../classSVF_1_1DDAVFSolver.html#aa724698d499615bce7caf8f312b746a7',1,'SVF::DDAVFSolver']]],
   ['loctofilterset',['locToFilterSet',['../classSVF_1_1TypeBasedHeapCloning.html#a848e59ab22069367a97009f1fdebc4d9',1,'SVF::TypeBasedHeapCloning']]],
+  ['loctoval',['locToVal',['../classSVF_1_1ExeState.html#a55464ae666ae16656ad8903894ec14da',1,'SVF::ExeState']]],
   ['lookupcomplements',['lookupComplements',['../classSVF_1_1PersistentPointsToCache.html#a47f4e8ef1461396afb2e1c3cbe055e95',1,'SVF::PersistentPointsToCache']]],
   ['lookupintersections',['lookupIntersections',['../classSVF_1_1PersistentPointsToCache.html#a15d3235017b35f4a5c668d0b6626faff',1,'SVF::PersistentPointsToCache']]],
   ['lookups',['lookUps',['../structDdLocalCache.html#a8ead01c431438c3c6efd103adaeba0b8',1,'DdLocalCache']]],

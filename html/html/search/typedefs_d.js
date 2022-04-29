@@ -3,7 +3,7 @@ var searchData=
   ['namedmdnode',['NamedMDNode',['../namespaceSVF.html#a3011dbac9102f044ad5f36a4ad3d4a71',1,'SVF']]],
   ['nametochnodesmap',['NameToCHNodesMap',['../classSVF_1_1CHGraph.html#aedb20aca2fa11a070cfe28e14fd3552b',1,'SVF::CHGraph']]],
   ['node',['Node',['../classSVF_1_1List.html#a4eba65b40d347ea80e2427320eb9c5a1',1,'SVF::List']]],
-  ['node_5fiterator',['node_iterator',['../classSVF_1_1CFLSolver.html#a586cfb2dd110d1853e70e534e0f66624',1,'SVF::CFLSolver::node_iterator()'],['../classSVF_1_1SCCDetection.html#abaf75ef45e8f5349b902dab063999ad8',1,'SVF::SCCDetection::node_iterator()']]],
+  ['node_5fiterator',['node_iterator',['../classSVF_1_1SrcSnkSolver.html#a14a76b28f06e167bf66e15b336570cd3',1,'SVF::SrcSnkSolver::node_iterator()'],['../classSVF_1_1SCCDetection.html#abaf75ef45e8f5349b902dab063999ad8',1,'SVF::SCCDetection::node_iterator()']]],
   ['nodebs',['NodeBS',['../namespaceSVF.html#a740396763e377643790c8b803ab3e4ea',1,'SVF']]],
   ['nodedata',['NodeData',['../classSVF_1_1VersionedFlowSensitive_1_1SCC.html#a3b4321bdd7924d05fd3b8506ec1c7c3c',1,'SVF::VersionedFlowSensitive::SCC']]],
   ['nodedeque',['NodeDeque',['../namespaceSVF.html#a35068c3650567d5051416db4aeb48e74',1,'SVF']]],

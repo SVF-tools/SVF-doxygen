@@ -46,6 +46,7 @@ var searchData=
   ['evaluatetestnulllikeexpr',['evaluateTestNullLikeExpr',['../classSVF_1_1PathCondAllocator.html#af595a4b93bd350f489bfe8635d86cfcc',1,'SVF::PathCondAllocator']]],
   ['exactcondelem',['exactCondElem',['../classSVF_1_1PathCondAllocator.html#a61095843f86d1c5c14750a635fb3aacb',1,'SVF::PathCondAllocator']]],
   ['executedbythesamethread',['executedByTheSameThread',['../classSVF_1_1MHP.html#aab80f1bc5c359a7d3b03f249bafa1d40',1,'SVF::MHP']]],
+  ['exestate',['ExeState',['../classSVF_1_1ExeState.html#a83ce58a2551d511448d0224a96ca1bd7',1,'SVF::ExeState::ExeState()'],['../classSVF_1_1ExeState.html#a02e0a7dd5e66255be3838fa10e3e1cab',1,'SVF::ExeState::ExeState(const Z3Expr &amp;_pc, VarToValMap &amp;_varToValMap, LocToValMap &amp;_locToValMap)'],['../classSVF_1_1ExeState.html#a62bef487b31f2a4ca27b4e9b183bdef5',1,'SVF::ExeState::ExeState(const ExeState &amp;rhs)']]],
   ['exit',['exit',['../util_8h.html#a43b6ea6be735bb828bc062c70cadeff8',1,'util.h']]],
   ['expandfiobjs',['expandFIObjs',['../classSVF_1_1BVDataPTAImpl.html#a798c84d5e861de2b61bcb1a86385f721',1,'SVF::BVDataPTAImpl::expandFIObjs(const PointsTo &amp;pts, PointsTo &amp;expandedPts)'],['../classSVF_1_1BVDataPTAImpl.html#aa6a7186152037452599406a74b05d0e1',1,'SVF::BVDataPTAImpl::expandFIObjs(const NodeBS &amp;pts, NodeBS &amp;expandedPts)'],['../classSVF_1_1CondPTAImpl.html#a87b48287d7edb97fc120200fe0e5218d',1,'SVF::CondPTAImpl::expandFIObjs()'],['../classSVF_1_1FlowSensitiveTBHC.html#a3af0297eb75ac4009433be44bb286d30',1,'SVF::FlowSensitiveTBHC::expandFIObjs()']]],
   ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html#af1c46b41e0088411a186228f760a99f3',1,'SVF::ExtAPI']]],
@@ -53,5 +54,5 @@ var searchData=
   ['extendbackward',['extendBackward',['../classSVF_1_1CoreBitVector.html#ab6d789e3c68390a9026fd4f8c4cf344a',1,'SVF::CoreBitVector']]],
   ['extendforward',['extendForward',['../classSVF_1_1CoreBitVector.html#a5d3f1eb85bc388cb76c588b8d8b3c181',1,'SVF::CoreBitVector']]],
   ['extendto',['extendTo',['../classSVF_1_1CoreBitVector.html#a73e5b15854f4f56f50992ed0d0cc7349',1,'SVF::CoreBitVector']]],
-  ['extractsubconds',['extractSubConds',['../classSVF_1_1CondManager.html#a66ed79e36f8c09ee3ae58fb9b4a6f3e3',1,'SVF::CondManager::extractSubConds()'],['../classSVF_1_1Z3Manager.html#aa6a78fc2f0a3ed9957230703fb8d730d',1,'SVF::Z3Manager::extractSubConds()'],['../classSVF_1_1BDDManager.html#a3fa608e37862e2702096c65fdb27c8c8',1,'SVF::BDDManager::extractSubConds()']]]
+  ['extractsubconds',['extractSubConds',['../classSVF_1_1BDDExprManager.html#a5bbd80a97aa794da9568716e456cf40c',1,'SVF::BDDExprManager']]]
 ];

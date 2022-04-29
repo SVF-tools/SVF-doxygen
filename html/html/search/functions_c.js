@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['neg',['NEG',['../classSVF_1_1CondManager.html#aecb97f6eb6ba2943b2eaa7a8212a9ba6',1,'SVF::CondManager::NEG()'],['../classSVF_1_1Z3Manager.html#a5fcfc5dcdd77d9860aaaff9cd9f43c55',1,'SVF::Z3Manager::NEG()'],['../classSVF_1_1BDDManager.html#a0dbbee1845fbf6ce660caf6c30438bef',1,'SVF::BDDManager::NEG()']]],
+  ['neg',['NEG',['../classSVF_1_1BDDExprManager.html#ace340608e136c33867b3e1a986d65c81',1,'SVF::BDDExprManager']]],
   ['newcond',['newCond',['../classSVF_1_1PathCondAllocator.html#a3cd08242b82129e6074b2f30a19b5c17',1,'SVF::PathCondAllocator']]],
   ['newpointstoid',['newPointsToId',['../classSVF_1_1PersistentPointsToCache.html#a52ec4a787a199bb4d7553e8bafa9c127',1,'SVF::PersistentPointsToCache']]],
   ['newssaname',['newSSAName',['../classSVF_1_1MemSSA.html#a381a35d48ce2f8e348ddbbb9ce526ca8',1,'SVF::MemSSA']]],
@@ -14,6 +14,7 @@ var searchData=
   ['nodes_5fend',['nodes_end',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#a8397bafa216b209b6bd2bcb20fec4322',1,'llvm::GraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;']]],
   ['normalgepcgedge',['NormalGepCGEdge',['../classSVF_1_1NormalGepCGEdge.html#a511d6bd2061e0ca441fc80abbf6075f7',1,'SVF::NormalGepCGEdge::NormalGepCGEdge()'],['../classSVF_1_1NormalGepCGEdge.html#a5d81c538e3747a7b760a80129581c49f',1,'SVF::NormalGepCGEdge::NormalGepCGEdge(const NormalGepCGEdge &amp;)'],['../classSVF_1_1NormalGepCGEdge.html#a4f5b8c292822670d2fea3d532cae5257',1,'SVF::NormalGepCGEdge::NormalGepCGEdge(ConstraintNode *s, ConstraintNode *d, const LocationSet &amp;l, EdgeID id)']]],
   ['normalizepointsto',['normalizePointsTo',['../classSVF_1_1BVDataPTAImpl.html#a2026cffd7043208333083ed1a6603e7b',1,'SVF::BVDataPTAImpl::normalizePointsTo()'],['../classSVF_1_1CondPTAImpl.html#aa945d068c8935fc6926833fdf102e21c',1,'SVF::CondPTAImpl::normalizePointsTo()'],['../classSVF_1_1AndersenBase.html#af37392229dab0a1f2f807a12186c3b39',1,'SVF::AndersenBase::normalizePointsTo()']]],
+  ['nullexpr',['nullExpr',['../classSVF_1_1Z3Expr.html#a9aa800372d57db519d484cc32ea1c5dc',1,'SVF::Z3Expr']]],
   ['nullptrsymid',['nullPtrSymID',['../classSVF_1_1SymbolTableInfo.html#adaed6e68c2f53260ed4c4fc38b5c4721',1,'SVF::SymbolTableInfo']]],
   ['nullptrvfgnode',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html#a5bbcd7ba5ac40efefbd1ef99bea86639',1,'SVF::NullPtrVFGNode']]],
   ['numelement',['numElement',['../classSVF_1_1CondPointsToSet.html#a8d8f9e91b62b94d876f34066de7944d4',1,'SVF::CondPointsToSet']]]

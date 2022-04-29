@@ -143,8 +143,8 @@ $(function() {
 : <a class="el" href="classSVF_1_1PathCondAllocator.html#a4cb61914dff693e284091e97ab8c8878">SVF::PathCondAllocator</a>
 </li>
 <li>setCondInst()
-: <a class="el" href="classSVF_1_1CondManager.html#a1fbf7dd446309e13671d838c91da26bf">SVF::CondManager</a>
-, <a class="el" href="classSVF_1_1PathCondAllocator.html#ab85a1ab3580958361ea5ec29efc75874">SVF::PathCondAllocator</a>
+: <a class="el" href="classSVF_1_1BDDExprManager.html#afc1d4301a3453c920f9b92ac53101bfe">SVF::BDDExprManager</a>
+, <a class="el" href="classSVF_1_1PathCondAllocator.html#a51feefd408094a69f0fbe97cba181bf9">SVF::PathCondAllocator</a>
 </li>
 <li>setConsume()
 : <a class="el" href="classSVF_1_1VersionedFlowSensitive.html#aabc0a5a7a31b8d880e019773ba960741">SVF::VersionedFlowSensitive</a>
@@ -216,7 +216,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1SVFGOPT.html#a3e2b811dd939c93bcf9fb94e91d553b1">SVF::SVFGOPT</a>
 </li>
 <li>setGraph()
-: <a class="el" href="classSVF_1_1CFLSolver.html#ae0a02179b2489f65988819666ec52a7c">SVF::CFLSolver&lt; GraphType, DPIm &gt;</a>
+: <a class="el" href="classSVF_1_1SrcSnkSolver.html#a49cae8f70144639f529956478a8fca2b">SVF::SrcSnkSolver&lt; GraphType, DPIm &gt;</a>
 , <a class="el" href="classSVF_1_1WPASolver.html#aa04deb39cd024c051f30ac43d1d62b34">SVF::WPASolver&lt; GraphType &gt;</a>
 </li>
 <li>setICFGNode()
@@ -275,9 +275,6 @@ $(function() {
 : <a class="el" href="classSVF_1_1CHNode.html#a5d751a3a0d88c0de374bfeb526051440">SVF::CHNode</a>
 , <a class="el" href="classSVF_1_1DCHNode.html#a798e80f0cc5951789474abc3a0999166">SVF::DCHNode</a>
 </li>
-<li>setNegCondInst()
-: <a class="el" href="classSVF_1_1Z3Manager.html#a7ec31e7f5d856ac7de8416573aef396f">SVF::Z3Manager</a>
-</li>
 <li>setNodeNumAfterPAGBuild()
 : <a class="el" href="classSVF_1_1IRGraph.html#a5fe12445ed0528183775747dec356db0">SVF::IRGraph</a>
 </li>
@@ -325,8 +322,8 @@ $(function() {
 <li>setPartialReachable()
 : <a class="el" href="classSVF_1_1ProgSlice.html#af6f137be08ca0e743424ff07d679777d">SVF::ProgSlice</a>
 </li>
-<li>setPaths()
-: <a class="el" href="classSVF_1_1VFPathCond.html#a77e2e07d2c428ac80fe6edafbbb3986b">SVF::VFPathCond</a>
+<li>setPathConstraint()
+: <a class="el" href="classSVF_1_1ExeState.html#abb73aa9e213818e89e1fb8abdd7a3309">SVF::ExeState</a>
 </li>
 <li>setPureAbstract()
 : <a class="el" href="classSVF_1_1CHNode.html#abac89987927dadd53dd646eae540a024">SVF::CHNode</a>
@@ -418,7 +415,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1SVFGStat.html#acb80953b39ce247679242df4f042ab79">SVF::SVFGStat</a>
 </li>
 <li>simplify()
-: <a class="el" href="classSVF_1_1Z3Manager.html#aa0fd8e460f4d89155da3487c0350f972">SVF::Z3Manager</a>
+: <a class="el" href="classSVF_1_1Z3Expr.html#afb3478316592a395c6d473791b5a0981">SVF::Z3Expr</a>
 </li>
 <li>sinksBegin()
 : <a class="el" href="classSVF_1_1ProgSlice.html#adf620c97daed49735d21b485c448b4a2">SVF::ProgSlice</a>
@@ -479,10 +476,13 @@ $(function() {
 </li>
 <li>split()
 : <a class="el" href="classSVF_1_1LockResultValidator.html#ad26006e14c866d694bc6e2ebaa41ded9">SVF::LockResultValidator</a>
-, <a class="el" href="classSVF_1_1MTAResultValidator.html#a7dad63ce2a85142a56d13926f10fde47">SVF::MTAResultValidator</a>
+, <a class="el" href="classSVF_1_1MTAResultValidator.html#a73db9ad234b263b6e644e4b38be14fe6">SVF::MTAResultValidator</a>
 </li>
 <li>SrcSnkDDA()
 : <a class="el" href="classSVF_1_1SrcSnkDDA.html#a73f6ddd4ba868e203109c52e4f3600bd">SVF::SrcSnkDDA</a>
+</li>
+<li>SrcSnkSolver()
+: <a class="el" href="classSVF_1_1SrcSnkSolver.html#a952450652e55f3325f24b8d237d2c37d">SVF::SrcSnkSolver&lt; GraphType, DPIm &gt;</a>
 </li>
 <li>SSARename()
 : <a class="el" href="classSVF_1_1MemSSA.html#a16114eb55775f6ee812c1648dcaede0c">SVF::MemSSA</a>
@@ -519,13 +519,16 @@ $(function() {
 : <a class="el" href="classSVF_1_1Steensgaard.html#ac79e21396243dfa969136daee5ecdbd4">SVF::Steensgaard</a>
 </li>
 <li>StInfo()
-: <a class="el" href="classSVF_1_1StInfo.html#acf028061b5a83c339766c30b19e8fc65">SVF::StInfo</a>
+: <a class="el" href="classSVF_1_1StInfo.html#a72dd2114d61e1489676a524b83ebb5ac">SVF::StInfo</a>
 </li>
 <li>StmtDPItem()
-: <a class="el" href="classSVF_1_1StmtDPItem.html#aed9239e5558569f6e957e691fa1872d7">SVF::StmtDPItem&lt; LocCond &gt;</a>
+: <a class="el" href="classSVF_1_1StmtDPItem.html#a3882dc175baaccfa1f811dcbfef98f71">SVF::StmtDPItem&lt; LocCond &gt;</a>
 </li>
 <li>StmtVFGNode()
 : <a class="el" href="classSVF_1_1StmtVFGNode.html#a03c4e0a31d2377ef4ffe46fe183ccd9d">SVF::StmtVFGNode</a>
+</li>
+<li>store()
+: <a class="el" href="classSVF_1_1ExeState.html#ade4fc12b40dd05bf840c313f2b723879">SVF::ExeState</a>
 </li>
 <li>StoreCGEdge()
 : <a class="el" href="classSVF_1_1StoreCGEdge.html#a0f873b0be0ac726e412171119c5b3a50">SVF::StoreCGEdge</a>
@@ -556,7 +559,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1SVFBasicBlock.html#abf53678f536d64c4d979600c9fe429d1">SVF::SVFBasicBlock</a>
 </li>
 <li>SVFFunction()
-: <a class="el" href="classSVF_1_1SVFFunction.html#aed73a0604a9fc5b6560ce87cfeaa3944">SVF::SVFFunction</a>
+: <a class="el" href="classSVF_1_1SVFFunction.html#ae7a55d86a87088f7d70254980e4325b3">SVF::SVFFunction</a>
 </li>
 <li>SVFG()
 : <a class="el" href="classSVF_1_1SVFG.html#a68965c5a9cc5136aa0b593851c60ff12">SVF::SVFG</a>
