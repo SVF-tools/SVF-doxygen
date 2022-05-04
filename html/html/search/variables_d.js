@@ -39,7 +39,7 @@ var searchData=
   ['maxpointstosetsize',['MaxPointsToSetSize',['../classSVF_1_1PTAStat.html#af2b45aab2eee96a1cabba3025e4375a2',1,'SVF::PTAStat::MaxPointsToSetSize()'],['../classSVF_1_1AndersenBase.html#abd73e930450b7c605f478672bdf9bdae',1,'SVF::AndersenBase::MaxPointsToSetSize()']]],
   ['maxreorderings',['maxReorderings',['../structDdManager.html#a61170edf6d08bb1c4bacab68823a825d',1,'DdManager']]],
   ['maxsccsize',['maxSCCSize',['../classSVF_1_1FlowSensitive.html#aa3d4703756a6297ab5c0756172024fe4',1,'SVF::FlowSensitive']]],
-  ['maxsize',['maxsize',['../structDdHashTable.html#aba376a6d310dcead9f74cfc459f4a248',1,'DdHashTable::maxsize()'],['../structDdLevelQueue.html#acb7146e9f3dd73a052340c0e4010e6b6',1,'DdLevelQueue::maxsize()'],['../structDdManager.html#aa4d0701dc4e6f11b30085ae30c09fab6',1,'DdManager::maxSize()']]],
+  ['maxsize',['maxSize',['../structDdManager.html#aa4d0701dc4e6f11b30085ae30c09fab6',1,'DdManager::maxSize()'],['../structDdHashTable.html#aba376a6d310dcead9f74cfc459f4a248',1,'DdHashTable::maxsize()'],['../structDdLevelQueue.html#acb7146e9f3dd73a052340c0e4010e6b6',1,'DdLevelQueue::maxsize()']]],
   ['maxsizez',['maxSizeZ',['../structDdManager.html#a4a0b8f95d02bc99557fb55140e9b0963',1,'DdManager']]],
   ['maxslots',['maxslots',['../structDdLocalCache.html#af4379636b29a9bfe4a55708ac637545a',1,'DdLocalCache']]],
   ['maxstepinwrapper',['MaxStepInWrapper',['../classSVF_1_1Options.html#a0b82f16ee0c7e6566a6ae20662525e84',1,'SVF::Options']]],

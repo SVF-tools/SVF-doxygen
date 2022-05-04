@@ -76,54 +76,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2d332c504284f0bc181289ee67479845"><td class="memItemLeft" align="right" valign="top">static llvm::cl::opt&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wpa_8cpp.html#a2d332c504284f0bc181289ee67479845">InputFilename</a> (cl::Positional, llvm::cl::desc(&quot;&lt;input bitcode&gt;&quot;), llvm::cl::init(&quot;-&quot;))</td></tr>
-<tr class="separator:a2d332c504284f0bc181289ee67479845"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wpa_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2d332c504284f0bc181289ee67479845"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d332c504284f0bc181289ee67479845">&#9670;&nbsp;</a></span>InputFilename()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static llvm::cl::opt&lt;std::string&gt; InputFilename </td>
-          <td>(</td>
-          <td class="paramtype">cl::Positional&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">llvm::cl::desc(&quot;&lt;input bitcode&gt;&quot;)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">llvm::cl::init(&quot;-&quot;)&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -150,8 +106,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="wpa_8cpp_source.html#l00041">41</a> of file <a class="el" href="wpa_8cpp_source.html">wpa.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> arg_num = 0;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">char</span> **arg_value = <span class="keyword">new</span> <span class="keywordtype">char</span>*[argc];</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::vector&lt;std::string&gt; moduleNameVec;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#a62ca9a79ce7b6960e3fc42d8b183bd50">SVFUtil::processArguments</a>(argc, argv, arg_num, arg_value, moduleNameVec);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    cl::ParseCommandLineOptions(arg_num, arg_value,</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                <span class="stringliteral">&quot;Whole Program Points-to Analysis\n&quot;</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (Options::WriteAnder == <span class="stringliteral">&quot;ir_annotator&quot;</span>)</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        LLVMModuleSet::getLLVMModuleSet()-&gt;preProcessBCs(moduleNameVec);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classSVF_1_1SVFModule.html">SVFModule</a>* svfModule = LLVMModuleSet::getLLVMModuleSet()-&gt;buildSVFModule(moduleNameVec);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    svfModule-&gt;<a class="code" href="classSVF_1_1SVFModule.html#aa03ab5272652290f30870c6e2d053d98">buildSymbolTableInfo</a>();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classSVF_1_1WPAPass.html">WPAPass</a> *wpa = <span class="keyword">new</span> <a class="code" href="classSVF_1_1WPAPass.html">WPAPass</a>();</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    wpa-&gt;<a class="code" href="classSVF_1_1WPAPass.html#a394dcd976c1ef08d9cadcba8f5d07c75">runOnModule</a>(svfModule);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="ttc" id="namespaceSVF_1_1SVFUtil_html_a62ca9a79ce7b6960e3fc42d8b183bd50"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a62ca9a79ce7b6960e3fc42d8b183bd50">SVF::SVFUtil::processArguments</a></div><div class="ttdeci">void processArguments(int argc, char **argv, int &amp;arg_num, char **arg_value, std::vector&lt; std::string &gt; &amp;moduleNameVec)</div><div class="ttdoc">Parse argument for multi-module analysis. </div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00387">LLVMUtil.cpp:387</a></div></div>
+<p class="definition">Definition at line <a class="el" href="wpa_8cpp_source.html#l00037">37</a> of file <a class="el" href="wpa_8cpp_source.html">wpa.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> arg_num = 0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">char</span> **arg_value = <span class="keyword">new</span> <span class="keywordtype">char</span>*[argc];</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::vector&lt;std::string&gt; moduleNameVec;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#a62ca9a79ce7b6960e3fc42d8b183bd50">SVFUtil::processArguments</a>(argc, argv, arg_num, arg_value, moduleNameVec);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    cl::ParseCommandLineOptions(arg_num, arg_value,</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                <span class="stringliteral">&quot;Whole Program Points-to Analysis\n&quot;</span>);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (Options::WriteAnder == <span class="stringliteral">&quot;ir_annotator&quot;</span>)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        LLVMModuleSet::getLLVMModuleSet()-&gt;preProcessBCs(moduleNameVec);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classSVF_1_1SVFModule.html">SVFModule</a>* svfModule = LLVMModuleSet::getLLVMModuleSet()-&gt;buildSVFModule(moduleNameVec);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    svfModule-&gt;<a class="code" href="classSVF_1_1SVFModule.html#aa03ab5272652290f30870c6e2d053d98">buildSymbolTableInfo</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classSVF_1_1WPAPass.html">WPAPass</a> *wpa = <span class="keyword">new</span> <a class="code" href="classSVF_1_1WPAPass.html">WPAPass</a>();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    wpa-&gt;<a class="code" href="classSVF_1_1WPAPass.html#a394dcd976c1ef08d9cadcba8f5d07c75">runOnModule</a>(svfModule);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div><div class="ttc" id="namespaceSVF_1_1SVFUtil_html_a62ca9a79ce7b6960e3fc42d8b183bd50"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a62ca9a79ce7b6960e3fc42d8b183bd50">SVF::SVFUtil::processArguments</a></div><div class="ttdeci">void processArguments(int argc, char **argv, int &amp;arg_num, char **arg_value, std::vector&lt; std::string &gt; &amp;moduleNameVec)</div><div class="ttdoc">Parse argument for multi-module analysis. </div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00387">LLVMUtil.cpp:387</a></div></div>
 <div class="ttc" id="classSVF_1_1SVFModule_html"><div class="ttname"><a href="classSVF_1_1SVFModule.html">SVF::SVFModule</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFModule_8h_source.html#l00041">SVFModule.h:41</a></div></div>
 <div class="ttc" id="classSVF_1_1WPAPass_html"><div class="ttname"><a href="classSVF_1_1WPAPass.html">SVF::WPAPass</a></div><div class="ttdef"><b>Definition:</b> <a href="WPAPass_8h_source.html#l00054">WPAPass.h:54</a></div></div>
 <div class="ttc" id="classSVF_1_1SVFModule_html_aa03ab5272652290f30870c6e2d053d98"><div class="ttname"><a href="classSVF_1_1SVFModule.html#aa03ab5272652290f30870c6e2d053d98">SVF::SVFModule::buildSymbolTableInfo</a></div><div class="ttdeci">void buildSymbolTableInfo()</div><div class="ttdef"><b>Definition:</b> <a href="SVFModule_8cpp_source.html#l00030">SVFModule.cpp:30</a></div></div>

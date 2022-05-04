@@ -25,7 +25,11 @@ var searchData=
   ['globs',['globs',['../classSVF_1_1SaberSVFGBuilder.html#a967dba864a6032e448222525aedb1f2a',1,'SVF::SaberSVFGBuilder']]],
   ['globsvfgnodes',['globSVFGNodes',['../classSVF_1_1SaberSVFGBuilder.html#a9431a9dcbcf88b78e721b0347046e997',1,'SVF::SaberSVFGBuilder']]],
   ['globsvfstmtset',['globSVFStmtSet',['../classSVF_1_1SVFIR.html#a71b51492b00e66e36266b9a76a842323',1,'SVF::SVFIR']]],
-  ['graph',['graph',['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat']]],
+  ['grammar',['grammar',['../classSVF_1_1CFLAlias.html#a31ffa49b8e0995b6ee9b8a1f5ecab7be',1,'SVF::CFLAlias::grammar()'],['../classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49',1,'SVF::CFLSolver::grammar()'],['../classSVF_1_1GrammarBuilder.html#a7b81810150ce896801e4e6a831ab98aa',1,'SVF::GrammarBuilder::grammar()']]],
+  ['grammarfilename',['GrammarFilename',['../classSVF_1_1Options.html#aa929e2ae2c0a78181c3a1311bfe73596',1,'SVF::Options']]],
+  ['grammarisebnf',['GrammarIsEBNF',['../classSVF_1_1Options.html#a5bbbe648c96c9600e9c825dd31585785',1,'SVF::Options']]],
+  ['graph',['graph',['../classSVF_1_1CFLAlias.html#abd4d8eb59209a1f1cedebcf41117914b',1,'SVF::CFLAlias::graph()'],['../classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2',1,'SVF::CFLSolver::graph()'],['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat::graph()']]],
+  ['graphisfromdot',['GraphIsFromDot',['../classSVF_1_1Options.html#a0d099b268241f4658eb06a14ef598888',1,'SVF::Options']]],
   ['graphtxt',['Graphtxt',['../classSVF_1_1Options.html#aa5c4bc8e55a056adcd7a6f8946ad5f38',1,'SVF::Options']]],
   ['groupcheck',['groupcheck',['../structDdManager.html#ac7cc9100fc0deb8d4e5cdf92b96f075b',1,'DdManager']]],
   ['grow_5ffactor',['grow_factor',['../structst__table.html#a33a7ea1dabc05f109a41d076fc835b02',1,'st_table']]]

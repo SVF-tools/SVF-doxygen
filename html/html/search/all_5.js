@@ -1,6 +1,9 @@
 var searchData=
 [
   ['e',['E',['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren::E()'],['../classSVF_1_1Z3Expr.html#ae14d9fa0613b196420b90d20cc8df041',1,'SVF::Z3Expr::e()']]],
+  ['ebnf_5fbin',['ebnf_bin',['../classSVF_1_1CFGNormalizer.html#a36b54b0f4c8c7af810df384ace76cbb2',1,'SVF::CFGNormalizer']]],
+  ['ebnf_5fbracket_5fmatch',['ebnf_bracket_match',['../classSVF_1_1CFGNormalizer.html#ab4560966c58d22d1d1c4a40499c41fca',1,'SVF::CFGNormalizer']]],
+  ['ebnf_5fsign_5freplace',['ebnf_sign_replace',['../classSVF_1_1CFGNormalizer.html#a4881d0ba187a0a9ddce61acaea33af0e',1,'SVF::CFGNormalizer']]],
   ['ecunion',['ecUnion',['../classSVF_1_1Steensgaard.html#a191e77e62916d868b2af730264e26dd8',1,'SVF::Steensgaard']]],
   ['edge2pts',['edge2pts',['../classSVF_1_1MTASVFGBuilder.html#a1c0de33bba2f05f14140d872c345ab38',1,'SVF::MTASVFGBuilder']]],
   ['edge_5fdest',['edge_dest',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a84cc3da79c2c9c5bcdf50da4b919b7da',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::edge_dest()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#a1b463e94c43d2966b8d6cf096b3d04cd',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::edge_dest()']]],
@@ -99,6 +102,7 @@ var searchData=
   ['epdpow2decimal',['EpdPow2Decimal',['../epd_8h.html#aa69188dd624691e44c14889eba0cd9ca',1,'EpdPow2Decimal(int n, EpDouble *epd):&#160;epd.c'],['../epd_8c.html#aa69188dd624691e44c14889eba0cd9ca',1,'EpdPow2Decimal(int n, EpDouble *epd):&#160;epd.c']]],
   ['epdsubtract3',['EpdSubtract3',['../epd_8h.html#a766747cec957171a7386fec2faf697cd',1,'EpdSubtract3(EpDouble *epd1, EpDouble *epd2, EpDouble *epd3):&#160;epd.c'],['../epd_8c.html#a766747cec957171a7386fec2faf697cd',1,'EpdSubtract3(EpDouble *epd1, EpDouble *epd2, EpDouble *epd3):&#160;epd.c']]],
   ['epsilon',['epsilon',['../structDdManager.html#ad495ea9a4104c2be5b4ca850a1da8c28',1,'DdManager']]],
+  ['epsilonprods',['epsilonProds',['../classSVF_1_1CFLGrammar.html#a2cc6beafd16acba439bc748287b598fa',1,'SVF::CFLGrammar']]],
   ['eptype',['EpType',['../epd_8h.html#a618ccbef690a6439abf31cd8b30330e9',1,'epd.h']]],
   ['eptypeunion',['EpTypeUnion',['../unionEpTypeUnion.html',1,'']]],
   ['eq',['eq',['../classSVF_1_1Z3Expr.html#ac50b99fca5e04e9c0d134e6371797402',1,'SVF::Z3Expr']]],
@@ -140,6 +144,7 @@ var searchData=
   ['extendto',['extendTo',['../classSVF_1_1CoreBitVector.html#a73e5b15854f4f56f50992ed0d0cc7349',1,'SVF::CoreBitVector']]],
   ['extern',['EXTERN',['../util_8c.html#a77366c1bd428629dc898e188bfd182a3',1,'util.c']]],
   ['externalpag',['ExternalPAG',['../classSVF_1_1SVFIR.html#a294bb5e174030882a385c790ab835bb3',1,'SVF::SVFIR']]],
+  ['externmap',['externMap',['../classSVF_1_1CFLGraph.html#a24ac3a18cb65431cd337a0f4326bff54',1,'SVF::CFLGraph']]],
   ['extf_5ft',['extf_t',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094',1,'SVF::ExtAPI']]],
   ['extractelementinst',['ExtractElementInst',['../SVF-FE_2BasicTypes_8h.html#af4efbd8e6f644628b41104e855b0541b',1,'BasicTypes.h']]],
   ['extractsubconds',['extractSubConds',['../classSVF_1_1BDDExprManager.html#a5bbd80a97aa794da9568716e456cf40c',1,'SVF::BDDExprManager']]],

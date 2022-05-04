@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Static Value-Flow Analysis: SVF::CFLSolver&lt; GraphType, DPIm &gt; Class Template Reference</title>
+<title>Static Value-Flow Analysis: SVF::CFLSolver Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,309 +64,171 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSVF_1_1CFLSolver-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">SVF::CFLSolver&lt; GraphType, DPIm &gt; Class Template Reference</div>  </div>
+<div class="title">SVF::CFLSolver Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for SVF::CFLSolver&lt; GraphType, DPIm &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classSVF_1_1CFLSolver.png" usemap="#SVF::CFLSolver_3C_20GraphType_2C_20DPIm_20_3E_map" alt=""/>
-  <map id="SVF::CFLSolver_3C_20GraphType_2C_20DPIm_20_3E_map" name="SVF::CFLSolver_3C_20GraphType_2C_20DPIm_20_3E_map">
-<area href="classSVF_1_1SrcSnkDDA.html" alt="SVF::SrcSnkDDA" shape="rect" coords="119,56,348,80"/>
-<area href="classSVF_1_1LeakChecker.html" alt="SVF::LeakChecker" shape="rect" coords="119,112,348,136"/>
-<area href="classSVF_1_1DoubleFreeChecker.html" alt="SVF::DoubleFreeChecker" shape="rect" coords="0,168,229,192"/>
-<area href="classSVF_1_1FileChecker.html" alt="SVF::FileChecker" shape="rect" coords="239,168,468,192"/>
-</map>
- </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:afdead1450dbc71d4430ab660733ff85c"><td class="memItemLeft" align="right" valign="top">typedef llvm::GraphTraits&lt; GraphType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#afdead1450dbc71d4430ab660733ff85c">GTraits</a></td></tr>
-<tr class="memdesc:afdead1450dbc71d4430ab660733ff85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the GTraits and node iterator.  <a href="#afdead1450dbc71d4430ab660733ff85c">More...</a><br /></td></tr>
-<tr class="separator:afdead1450dbc71d4430ab660733ff85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a180d7878fc7b4c055fa72298398127"><td class="memItemLeft" align="right" valign="top">typedef GTraits::NodeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">GNODE</a></td></tr>
-<tr class="separator:a7a180d7878fc7b4c055fa72298398127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaddd6c593ad39c117bd35ede711b9f36"><td class="memItemLeft" align="right" valign="top">typedef GTraits::EdgeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#aaddd6c593ad39c117bd35ede711b9f36">GEDGE</a></td></tr>
-<tr class="separator:aaddd6c593ad39c117bd35ede711b9f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a586cfb2dd110d1853e70e534e0f66624"><td class="memItemLeft" align="right" valign="top">typedef GTraits::nodes_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a586cfb2dd110d1853e70e534e0f66624">node_iterator</a></td></tr>
-<tr class="separator:a586cfb2dd110d1853e70e534e0f66624"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf0b96a758a29d5c3c46fcc48081b62c"><td class="memItemLeft" align="right" valign="top">typedef GTraits::ChildIteratorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#adf0b96a758a29d5c3c46fcc48081b62c">child_iterator</a></td></tr>
-<tr class="separator:adf0b96a758a29d5c3c46fcc48081b62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae507eecc97716000324820bb1a7a9573"><td class="memItemLeft" align="right" valign="top">typedef llvm::GraphTraits&lt; llvm::Inverse&lt; <a class="el" href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">GNODE</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#ae507eecc97716000324820bb1a7a9573">InvGTraits</a></td></tr>
-<tr class="memdesc:ae507eecc97716000324820bb1a7a9573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define inverse GTraits and note iterator.  <a href="#ae507eecc97716000324820bb1a7a9573">More...</a><br /></td></tr>
-<tr class="separator:ae507eecc97716000324820bb1a7a9573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98613e4d455a53183d1f16a58de6244e"><td class="memItemLeft" align="right" valign="top">typedef InvGTraits::ChildIteratorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a98613e4d455a53183d1f16a58de6244e">inv_child_iterator</a></td></tr>
-<tr class="separator:a98613e4d455a53183d1f16a58de6244e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a802e04eafce9adfd60506c44951c3d53"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classSVF_1_1FIFOWorkList.html">FIFOWorkList</a>&lt; DPIm &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a802e04eafce9adfd60506c44951c3d53">WorkList</a></td></tr>
-<tr class="memdesc:a802e04eafce9adfd60506c44951c3d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define worklist.  <a href="#a802e04eafce9adfd60506c44951c3d53">More...</a><br /></td></tr>
-<tr class="separator:a802e04eafce9adfd60506c44951c3d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194d2c4c801799b0ba9562e33ca5b695"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classSVF_1_1FIFOWorkList.html">FIFOWorkList</a>&lt; const <a class="el" href="classSVF_1_1CFLEdge.html">CFLEdge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a194d2c4c801799b0ba9562e33ca5b695">WorkList</a></td></tr>
+<tr class="memdesc:a194d2c4c801799b0ba9562e33ca5b695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define worklist.  <a href="#a194d2c4c801799b0ba9562e33ca5b695">More...</a><br /></td></tr>
+<tr class="separator:a194d2c4c801799b0ba9562e33ca5b695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ade6e3827c629c3cc3d22a101df7288"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classSVF_1_1GrammarBase.html#af384c960a5edc576cbfb60a869e346ec">CFLGrammar::Production</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a0ade6e3827c629c3cc3d22a101df7288">Production</a></td></tr>
+<tr class="separator:a0ade6e3827c629c3cc3d22a101df7288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e64c18559b4f311717203ac3fe1fcd"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classSVF_1_1GrammarBase.html#a98ae90215ba9aa3ddb0afdab459cb08f">CFLGrammar::Symbol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd">Symbol</a></td></tr>
+<tr class="separator:a06e64c18559b4f311717203ac3fe1fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a394ecf58da040648dda4adb8d0e7d75b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a394ecf58da040648dda4adb8d0e7d75b">CFLSolver</a> (<a class="el" href="classSVF_1_1CFLGraph.html">CFLGraph</a> *_graph, <a class="el" href="classSVF_1_1CFLGrammar.html">CFLGrammar</a> *_grammar)</td></tr>
+<tr class="separator:a394ecf58da040648dda4adb8d0e7d75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59bb656e9fc0f5c29feb2200bc198e41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a59bb656e9fc0f5c29feb2200bc198e41">~CFLSolver</a> ()</td></tr>
+<tr class="separator:a59bb656e9fc0f5c29feb2200bc198e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee3436c26ebdb2aaf790c25b1d8b5a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a2ee3436c26ebdb2aaf790c25b1d8b5a6">solve</a> ()</td></tr>
+<tr class="memdesc:a2ee3436c26ebdb2aaf790c25b1d8b5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start solving.  <a href="#a2ee3436c26ebdb2aaf790c25b1d8b5a6">More...</a><br /></td></tr>
+<tr class="separator:a2ee3436c26ebdb2aaf790c25b1d8b5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6bce1f73bcf5937a26e91a7daba33c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1CFLGraph.html">CFLGraph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a2c6bce1f73bcf5937a26e91a7daba33c">getGraph</a> () const</td></tr>
+<tr class="memdesc:a2c6bce1f73bcf5937a26e91a7daba33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return CFL Graph.  <a href="#a2c6bce1f73bcf5937a26e91a7daba33c">More...</a><br /></td></tr>
+<tr class="separator:a2c6bce1f73bcf5937a26e91a7daba33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99c0a6a2c55bb6eb7f8232399374c827"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1CFLGrammar.html">CFLGrammar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a99c0a6a2c55bb6eb7f8232399374c827">getGrammar</a> () const</td></tr>
+<tr class="memdesc:a99c0a6a2c55bb6eb7f8232399374c827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return CFL Grammar.  <a href="#a99c0a6a2c55bb6eb7f8232399374c827">More...</a><br /></td></tr>
+<tr class="separator:a99c0a6a2c55bb6eb7f8232399374c827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ab339e69dd2f2aa2f98fb549e979838af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#ab339e69dd2f2aa2f98fb549e979838af">CFLSolver</a> ()</td></tr>
-<tr class="memdesc:ab339e69dd2f2aa2f98fb549e979838af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ab339e69dd2f2aa2f98fb549e979838af">More...</a><br /></td></tr>
-<tr class="separator:ab339e69dd2f2aa2f98fb549e979838af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac37d5e6e81edcc0a6c53e02d7d343f5b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#ac37d5e6e81edcc0a6c53e02d7d343f5b">~CFLSolver</a> ()</td></tr>
-<tr class="memdesc:ac37d5e6e81edcc0a6c53e02d7d343f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#ac37d5e6e81edcc0a6c53e02d7d343f5b">More...</a><br /></td></tr>
-<tr class="separator:ac37d5e6e81edcc0a6c53e02d7d343f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaa8ca9296ec3e9b6ec544a105296d22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">GNODE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#adaa8ca9296ec3e9b6ec544a105296d22">getNode</a> (<a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> id) const</td></tr>
-<tr class="separator:adaa8ca9296ec3e9b6ec544a105296d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31199503d0ed7aff97d4620b3599dea6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a31199503d0ed7aff97d4620b3599dea6">getNodeIDFromItem</a> (const DPIm &amp;item) const</td></tr>
-<tr class="separator:a31199503d0ed7aff97d4620b3599dea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9dc4e29fde45a19d42987360ee5f528"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#ac9dc4e29fde45a19d42987360ee5f528">forwardTraverse</a> (DPIm &amp;it)</td></tr>
-<tr class="memdesc:ac9dc4e29fde45a19d42987360ee5f528"><td class="mdescLeft">&#160;</td><td class="mdescRight">CFL forward traverse solve.  <a href="#ac9dc4e29fde45a19d42987360ee5f528">More...</a><br /></td></tr>
-<tr class="separator:ac9dc4e29fde45a19d42987360ee5f528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf651315ae100f9d4df5d183f7d43c68"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#abf651315ae100f9d4df5d183f7d43c68">backwardTraverse</a> (DPIm &amp;it)</td></tr>
-<tr class="memdesc:abf651315ae100f9d4df5d183f7d43c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">CFL forward traverse solve.  <a href="#abf651315ae100f9d4df5d183f7d43c68">More...</a><br /></td></tr>
-<tr class="separator:abf651315ae100f9d4df5d183f7d43c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a9fc4cbe8985d4c25845d408ffcac13e4"><td class="memItemLeft" align="right" valign="top">const GraphType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a9fc4cbe8985d4c25845d408ffcac13e4">graph</a> () const</td></tr>
-<tr class="memdesc:a9fc4cbe8985d4c25845d408ffcac13e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get/Set graph methods.  <a href="#a9fc4cbe8985d4c25845d408ffcac13e4">More...</a><br /></td></tr>
-<tr class="separator:a9fc4cbe8985d4c25845d408ffcac13e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0a02179b2489f65988819666ec52a7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#ae0a02179b2489f65988819666ec52a7c">setGraph</a> (GraphType g)</td></tr>
-<tr class="separator:ae0a02179b2489f65988819666ec52a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a6d7361281bbf666a2f5da87f7ea869d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a6d7361281bbf666a2f5da87f7ea869d2">FWProcessCurNode</a> (const DPIm &amp;)</td></tr>
-<tr class="memdesc:a6d7361281bbf666a2f5da87f7ea869d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the DP item.  <a href="#a6d7361281bbf666a2f5da87f7ea869d2">More...</a><br /></td></tr>
-<tr class="separator:a6d7361281bbf666a2f5da87f7ea869d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab444cce6a5c75c7e6c65d47039e567a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#ab444cce6a5c75c7e6c65d47039e567a8">BWProcessCurNode</a> (const DPIm &amp;)</td></tr>
-<tr class="separator:ab444cce6a5c75c7e6c65d47039e567a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a39b079c9b8a1b4570176028de79e85a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a39b079c9b8a1b4570176028de79e85a4">FWProcessOutgoingEdge</a> (const DPIm &amp;item, <a class="el" href="classSVF_1_1CFLSolver.html#aaddd6c593ad39c117bd35ede711b9f36">GEDGE</a> *edge)</td></tr>
-<tr class="memdesc:a39b079c9b8a1b4570176028de79e85a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propagation for the solving, to be implemented in the child class.  <a href="#a39b079c9b8a1b4570176028de79e85a4">More...</a><br /></td></tr>
-<tr class="separator:a39b079c9b8a1b4570176028de79e85a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d5550fbb149297022d5a1852f3229b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a3d5550fbb149297022d5a1852f3229b3">BWProcessIncomingEdge</a> (const DPIm &amp;item, <a class="el" href="classSVF_1_1CFLSolver.html#aaddd6c593ad39c117bd35ede711b9f36">GEDGE</a> *edge)</td></tr>
-<tr class="separator:a3d5550fbb149297022d5a1852f3229b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a88f770b4762d44e50d72cd50bb504078"><td class="memItemLeft" align="right" valign="top">DPIm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a88f770b4762d44e50d72cd50bb504078">popFromWorklist</a> ()</td></tr>
-<tr class="memdesc:a88f770b4762d44e50d72cd50bb504078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worklist operations.  <a href="#a88f770b4762d44e50d72cd50bb504078">More...</a><br /></td></tr>
-<tr class="separator:a88f770b4762d44e50d72cd50bb504078"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28cd2677717b19c9cd8ab3c1c441d409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">pushIntoWorklist</a> (DPIm &amp;item)</td></tr>
-<tr class="separator:a28cd2677717b19c9cd8ab3c1c441d409"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f35edfc7c4e4a35c9948ab5abd1a6ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a4f35edfc7c4e4a35c9948ab5abd1a6ad">isWorklistEmpty</a> ()</td></tr>
-<tr class="separator:a4f35edfc7c4e4a35c9948ab5abd1a6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a435454f52e5be39c960052f1947b984d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a435454f52e5be39c960052f1947b984d">isInWorklist</a> (DPIm &amp;item)</td></tr>
-<tr class="separator:a435454f52e5be39c960052f1947b984d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95573e91816f426ff7b45afb7b7c821e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1CFLEdge.html">CFLEdge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a95573e91816f426ff7b45afb7b7c821e">popFromWorklist</a> ()</td></tr>
+<tr class="memdesc:a95573e91816f426ff7b45afb7b7c821e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worklist operations.  <a href="#a95573e91816f426ff7b45afb7b7c821e">More...</a><br /></td></tr>
+<tr class="separator:a95573e91816f426ff7b45afb7b7c821e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc745dc72fd0572a145a78fe6a93ae5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#afc745dc72fd0572a145a78fe6a93ae5c">pushIntoWorklist</a> (const <a class="el" href="classSVF_1_1CFLEdge.html">CFLEdge</a> *item)</td></tr>
+<tr class="separator:afc745dc72fd0572a145a78fe6a93ae5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fe4563081c29f8a715bd67d454c8bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#ac1fe4563081c29f8a715bd67d454c8bb">isWorklistEmpty</a> ()</td></tr>
+<tr class="separator:ac1fe4563081c29f8a715bd67d454c8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e112c2290b3ba4e61da6b1fe9ac506d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a0e112c2290b3ba4e61da6b1fe9ac506d">isInWorklist</a> (const <a class="el" href="classSVF_1_1CFLEdge.html">CFLEdge</a> *item)</td></tr>
+<tr class="separator:a0e112c2290b3ba4e61da6b1fe9ac506d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a26e81753961ccb80b08d5c3ef7c4a141"><td class="memItemLeft" align="right" valign="top">GraphType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">_graph</a></td></tr>
-<tr class="memdesc:a26e81753961ccb80b08d5c3ef7c4a141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graph.  <a href="#a26e81753961ccb80b08d5c3ef7c4a141">More...</a><br /></td></tr>
-<tr class="separator:a26e81753961ccb80b08d5c3ef7c4a141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d3cbcb9db049e3069b6553ab17ccf5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1CFLSolver.html#a802e04eafce9adfd60506c44951c3d53">WorkList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">worklist</a></td></tr>
-<tr class="memdesc:a9d3cbcb9db049e3069b6553ab17ccf5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worklist for resolution.  <a href="#a9d3cbcb9db049e3069b6553ab17ccf5b">More...</a><br /></td></tr>
-<tr class="separator:a9d3cbcb9db049e3069b6553ab17ccf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd6c605c4c381c738f4c6682c40d9f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1CFLGraph.html">CFLGraph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a></td></tr>
+<tr class="separator:aedd6c605c4c381c738f4c6682c40d9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad88cf557ec43127de859b765505df49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1CFLGrammar.html">CFLGrammar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a></td></tr>
+<tr class="separator:aad88cf557ec43127de859b765505df49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211bb78846886aa9ccd4b160da81e02e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1CFLSolver.html#a194d2c4c801799b0ba9562e33ca5b695">WorkList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">worklist</a></td></tr>
+<tr class="memdesc:a211bb78846886aa9ccd4b160da81e02e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worklist for resolution.  <a href="#a211bb78846886aa9ccd4b160da81e02e">More...</a><br /></td></tr>
+<tr class="separator:a211bb78846886aa9ccd4b160da81e02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class GraphType, class DPIm = DPItem&gt;<br />
-class SVF::CFLSolver&lt; GraphType, DPIm &gt;</h3>
-
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00044">44</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00037">37</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="adf0b96a758a29d5c3c46fcc48081b62c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf0b96a758a29d5c3c46fcc48081b62c">&#9670;&nbsp;</a></span>child_iterator</h2>
+<a id="a0ade6e3827c629c3cc3d22a101df7288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ade6e3827c629c3cc3d22a101df7288">&#9670;&nbsp;</a></span>Production</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef GTraits::ChildIteratorType <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html#adf0b96a758a29d5c3c46fcc48081b62c">child_iterator</a></td>
+          <td class="memname">typedef <a class="el" href="classSVF_1_1GrammarBase.html#af384c960a5edc576cbfb60a869e346ec">CFLGrammar::Production</a> <a class="el" href="classSVF_1_1CFLSolver.html#a0ade6e3827c629c3cc3d22a101df7288">SVF::CFLSolver::Production</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00053">53</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00042">42</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
 
 </div>
 </div>
-<a id="aaddd6c593ad39c117bd35ede711b9f36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaddd6c593ad39c117bd35ede711b9f36">&#9670;&nbsp;</a></span>GEDGE</h2>
+<a id="a06e64c18559b4f311717203ac3fe1fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e64c18559b4f311717203ac3fe1fcd">&#9670;&nbsp;</a></span>Symbol</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef GTraits::EdgeType <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html#aaddd6c593ad39c117bd35ede711b9f36">GEDGE</a></td>
+          <td class="memname">typedef <a class="el" href="classSVF_1_1GrammarBase.html#a98ae90215ba9aa3ddb0afdab459cb08f">CFLGrammar::Symbol</a> <a class="el" href="classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd">SVF::CFLSolver::Symbol</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00051">51</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00043">43</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
 
 </div>
 </div>
-<a id="a7a180d7878fc7b4c055fa72298398127"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a180d7878fc7b4c055fa72298398127">&#9670;&nbsp;</a></span>GNODE</h2>
+<a id="a194d2c4c801799b0ba9562e33ca5b695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194d2c4c801799b0ba9562e33ca5b695">&#9670;&nbsp;</a></span>WorkList</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef GTraits::NodeType <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">GNODE</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00050">50</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-
-</div>
-</div>
-<a id="afdead1450dbc71d4430ab660733ff85c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdead1450dbc71d4430ab660733ff85c">&#9670;&nbsp;</a></span>GTraits</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef llvm::GraphTraits&lt;GraphType&gt; <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html#afdead1450dbc71d4430ab660733ff85c">GTraits</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Define the GTraits and node iterator. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00049">49</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-
-</div>
-</div>
-<a id="a98613e4d455a53183d1f16a58de6244e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98613e4d455a53183d1f16a58de6244e">&#9670;&nbsp;</a></span>inv_child_iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef InvGTraits::ChildIteratorType <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html#a98613e4d455a53183d1f16a58de6244e">inv_child_iterator</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00057">57</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-
-</div>
-</div>
-<a id="ae507eecc97716000324820bb1a7a9573"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae507eecc97716000324820bb1a7a9573">&#9670;&nbsp;</a></span>InvGTraits</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef llvm::GraphTraits&lt;llvm::Inverse&lt;<a class="el" href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">GNODE</a> *&gt; &gt; <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html#ae507eecc97716000324820bb1a7a9573">InvGTraits</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Define inverse GTraits and note iterator. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00056">56</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-
-</div>
-</div>
-<a id="a586cfb2dd110d1853e70e534e0f66624"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a586cfb2dd110d1853e70e534e0f66624">&#9670;&nbsp;</a></span>node_iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef GTraits::nodes_iterator <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html#a586cfb2dd110d1853e70e534e0f66624">node_iterator</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00052">52</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-
-</div>
-</div>
-<a id="a802e04eafce9adfd60506c44951c3d53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a802e04eafce9adfd60506c44951c3d53">&#9670;&nbsp;</a></span>WorkList</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classSVF_1_1FIFOWorkList.html">FIFOWorkList</a>&lt;DPIm&gt; <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html#a802e04eafce9adfd60506c44951c3d53">WorkList</a></td>
+          <td class="memname">typedef <a class="el" href="classSVF_1_1FIFOWorkList.html">FIFOWorkList</a>&lt;const <a class="el" href="classSVF_1_1CFLEdge.html">CFLEdge</a>*&gt; <a class="el" href="classSVF_1_1CFLSolver.html#a194d2c4c801799b0ba9562e33ca5b695">SVF::CFLSolver::WorkList</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Define worklist. </p>
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00060">60</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00041">41</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab339e69dd2f2aa2f98fb549e979838af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab339e69dd2f2aa2f98fb549e979838af">&#9670;&nbsp;</a></span>CFLSolver()</h2>
+<a id="a394ecf58da040648dda4adb8d0e7d75b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394ecf58da040648dda4adb8d0e7d75b">&#9670;&nbsp;</a></span>CFLSolver()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::<a class="el" href="classSVF_1_1CFLSolver.html">CFLSolver</a> </td>
+          <td class="memname">SVF::CFLSolver::CFLSolver </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1CFLGraph.html">CFLGraph</a> *&#160;</td>
+          <td class="paramname"><em>_graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1CFLGrammar.html">CFLGrammar</a> *&#160;</td>
+          <td class="paramname"><em>_grammar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00065">65</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;               : <a class="code" href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">_graph</a>(<span class="keyword">nullptr</span>)</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a26e81753961ccb80b08d5c3ef7c4a141"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">SVF::CFLSolver::_graph</a></div><div class="ttdeci">GraphType _graph</div><div class="ttdoc">Graph. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00177">CFLSolver.h:177</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00045">45</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                                     : <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>(_graph), <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>(_grammar)</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_aedd6c605c4c381c738f4c6682c40d9f2"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">SVF::CFLSolver::graph</a></div><div class="ttdeci">CFLGraph * graph</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00088">CFLSolver.h:88</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLSolver_html_aad88cf557ec43127de859b765505df49"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">SVF::CFLSolver::grammar</a></div><div class="ttdeci">CFLGrammar * grammar</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00089">CFLSolver.h:89</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ac37d5e6e81edcc0a6c53e02d7d343f5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac37d5e6e81edcc0a6c53e02d7d343f5b">&#9670;&nbsp;</a></span>~CFLSolver()</h2>
+<a id="a59bb656e9fc0f5c29feb2200bc198e41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59bb656e9fc0f5c29feb2200bc198e41">&#9670;&nbsp;</a></span>~CFLSolver()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::~<a class="el" href="classSVF_1_1CFLSolver.html">CFLSolver</a> </td>
+          <td class="memname">SVF::CFLSolver::~CFLSolver </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -374,320 +236,27 @@ template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00069">69</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00049">49</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abf651315ae100f9d4df5d183f7d43c68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf651315ae100f9d4df5d183f7d43c68">&#9670;&nbsp;</a></span>backwardTraverse()</h2>
+<a id="a99c0a6a2c55bb6eb7f8232399374c827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99c0a6a2c55bb6eb7f8232399374c827">&#9670;&nbsp;</a></span>getGrammar()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::backwardTraverse </td>
-          <td>(</td>
-          <td class="paramtype">DPIm &amp;&#160;</td>
-          <td class="paramname"><em>it</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>CFL forward traverse solve. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00112">112</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">pushIntoWorklist</a>(it);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">while</span> (!<a class="code" href="classSVF_1_1CFLSolver.html#a4f35edfc7c4e4a35c9948ab5abd1a6ad">isWorklistEmpty</a>())</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            DPIm item = <a class="code" href="classSVF_1_1CFLSolver.html#a88f770b4762d44e50d72cd50bb504078">popFromWorklist</a>();</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#ab444cce6a5c75c7e6c65d47039e567a8">BWProcessCurNode</a>(item);</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">GNODE</a>* v = <a class="code" href="classSVF_1_1CFLSolver.html#adaa8ca9296ec3e9b6ec544a105296d22">getNode</a>(<a class="code" href="classSVF_1_1CFLSolver.html#a31199503d0ed7aff97d4620b3599dea6">getNodeIDFromItem</a>(item));</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#a98613e4d455a53183d1f16a58de6244e">inv_child_iterator</a> EI = InvGTraits::child_begin(v);</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#a98613e4d455a53183d1f16a58de6244e">inv_child_iterator</a> EE = InvGTraits::child_end(v);</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">for</span> (; EI != EE; ++EI)</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            {</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <a class="code" href="classSVF_1_1CFLSolver.html#a3d5550fbb149297022d5a1852f3229b3">BWProcessIncomingEdge</a>(item,*(EI.getCurrent()) );</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            }</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_adaa8ca9296ec3e9b6ec544a105296d22"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#adaa8ca9296ec3e9b6ec544a105296d22">SVF::CFLSolver::getNode</a></div><div class="ttdeci">GNODE * getNode(NodeID id) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00084">CFLSolver.h:84</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a3d5550fbb149297022d5a1852f3229b3"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a3d5550fbb149297022d5a1852f3229b3">SVF::CFLSolver::BWProcessIncomingEdge</a></div><div class="ttdeci">virtual void BWProcessIncomingEdge(const DPIm &amp;item, GEDGE *edge)</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00147">CFLSolver.h:147</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a4f35edfc7c4e4a35c9948ab5abd1a6ad"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a4f35edfc7c4e4a35c9948ab5abd1a6ad">SVF::CFLSolver::isWorklistEmpty</a></div><div class="ttdeci">bool isWorklistEmpty()</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00164">CFLSolver.h:164</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a28cd2677717b19c9cd8ab3c1c441d409"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">SVF::CFLSolver::pushIntoWorklist</a></div><div class="ttdeci">bool pushIntoWorklist(DPIm &amp;item)</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00160">CFLSolver.h:160</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a31199503d0ed7aff97d4620b3599dea6"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a31199503d0ed7aff97d4620b3599dea6">SVF::CFLSolver::getNodeIDFromItem</a></div><div class="ttdeci">virtual NodeID getNodeIDFromItem(const DPIm &amp;item) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00088">CFLSolver.h:88</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a7a180d7878fc7b4c055fa72298398127"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">SVF::CFLSolver::GNODE</a></div><div class="ttdeci">GTraits::NodeType GNODE</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00050">CFLSolver.h:50</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a98613e4d455a53183d1f16a58de6244e"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a98613e4d455a53183d1f16a58de6244e">SVF::CFLSolver::inv_child_iterator</a></div><div class="ttdeci">InvGTraits::ChildIteratorType inv_child_iterator</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00057">CFLSolver.h:57</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_ab444cce6a5c75c7e6c65d47039e567a8"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#ab444cce6a5c75c7e6c65d47039e567a8">SVF::CFLSolver::BWProcessCurNode</a></div><div class="ttdeci">virtual void BWProcessCurNode(const DPIm &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00135">CFLSolver.h:135</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a88f770b4762d44e50d72cd50bb504078"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a88f770b4762d44e50d72cd50bb504078">SVF::CFLSolver::popFromWorklist</a></div><div class="ttdeci">DPIm popFromWorklist()</div><div class="ttdoc">Worklist operations. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00156">CFLSolver.h:156</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ab444cce6a5c75c7e6c65d47039e567a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab444cce6a5c75c7e6c65d47039e567a8">&#9670;&nbsp;</a></span>BWProcessCurNode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::BWProcessCurNode </td>
-          <td>(</td>
-          <td class="paramtype">const DPIm &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00135">135</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div></div><!-- fragment -->
-</div>
-</div>
-<a id="a3d5550fbb149297022d5a1852f3229b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d5550fbb149297022d5a1852f3229b3">&#9670;&nbsp;</a></span>BWProcessIncomingEdge()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::BWProcessIncomingEdge </td>
-          <td>(</td>
-          <td class="paramtype">const DPIm &amp;&#160;</td>
-          <td class="paramname"><em>item</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classSVF_1_1CFLSolver.html#aaddd6c593ad39c117bd35ede711b9f36">GEDGE</a> *&#160;</td>
-          <td class="paramname"><em>edge</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00147">147</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        DPIm newItem(item);</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        newItem.setCurNodeID(edge-&gt;getSrcID());</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">pushIntoWorklist</a>(newItem);</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a28cd2677717b19c9cd8ab3c1c441d409"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">SVF::CFLSolver::pushIntoWorklist</a></div><div class="ttdeci">bool pushIntoWorklist(DPIm &amp;item)</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00160">CFLSolver.h:160</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ac9dc4e29fde45a19d42987360ee5f528"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9dc4e29fde45a19d42987360ee5f528">&#9670;&nbsp;</a></span>forwardTraverse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::forwardTraverse </td>
-          <td>(</td>
-          <td class="paramtype">DPIm &amp;&#160;</td>
-          <td class="paramname"><em>it</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>CFL forward traverse solve. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00093">93</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">pushIntoWorklist</a>(it);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">while</span> (!<a class="code" href="classSVF_1_1CFLSolver.html#a4f35edfc7c4e4a35c9948ab5abd1a6ad">isWorklistEmpty</a>())</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            DPIm item = <a class="code" href="classSVF_1_1CFLSolver.html#a88f770b4762d44e50d72cd50bb504078">popFromWorklist</a>();</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#a6d7361281bbf666a2f5da87f7ea869d2">FWProcessCurNode</a>(item);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">GNODE</a>* v = <a class="code" href="classSVF_1_1CFLSolver.html#adaa8ca9296ec3e9b6ec544a105296d22">getNode</a>(<a class="code" href="classSVF_1_1CFLSolver.html#a31199503d0ed7aff97d4620b3599dea6">getNodeIDFromItem</a>(item));</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#adf0b96a758a29d5c3c46fcc48081b62c">child_iterator</a> EI = GTraits::child_begin(v);</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#adf0b96a758a29d5c3c46fcc48081b62c">child_iterator</a> EE = GTraits::child_end(v);</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">for</span> (; EI != EE; ++EI)</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <a class="code" href="classSVF_1_1CFLSolver.html#a39b079c9b8a1b4570176028de79e85a4">FWProcessOutgoingEdge</a>(item,*(EI.getCurrent()) );</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            }</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_adaa8ca9296ec3e9b6ec544a105296d22"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#adaa8ca9296ec3e9b6ec544a105296d22">SVF::CFLSolver::getNode</a></div><div class="ttdeci">GNODE * getNode(NodeID id) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00084">CFLSolver.h:84</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a39b079c9b8a1b4570176028de79e85a4"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a39b079c9b8a1b4570176028de79e85a4">SVF::CFLSolver::FWProcessOutgoingEdge</a></div><div class="ttdeci">virtual void FWProcessOutgoingEdge(const DPIm &amp;item, GEDGE *edge)</div><div class="ttdoc">Propagation for the solving, to be implemented in the child class. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00141">CFLSolver.h:141</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a6d7361281bbf666a2f5da87f7ea869d2"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a6d7361281bbf666a2f5da87f7ea869d2">SVF::CFLSolver::FWProcessCurNode</a></div><div class="ttdeci">virtual void FWProcessCurNode(const DPIm &amp;)</div><div class="ttdoc">Process the DP item. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00132">CFLSolver.h:132</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a4f35edfc7c4e4a35c9948ab5abd1a6ad"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a4f35edfc7c4e4a35c9948ab5abd1a6ad">SVF::CFLSolver::isWorklistEmpty</a></div><div class="ttdeci">bool isWorklistEmpty()</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00164">CFLSolver.h:164</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a28cd2677717b19c9cd8ab3c1c441d409"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">SVF::CFLSolver::pushIntoWorklist</a></div><div class="ttdeci">bool pushIntoWorklist(DPIm &amp;item)</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00160">CFLSolver.h:160</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a31199503d0ed7aff97d4620b3599dea6"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a31199503d0ed7aff97d4620b3599dea6">SVF::CFLSolver::getNodeIDFromItem</a></div><div class="ttdeci">virtual NodeID getNodeIDFromItem(const DPIm &amp;item) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00088">CFLSolver.h:88</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a7a180d7878fc7b4c055fa72298398127"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">SVF::CFLSolver::GNODE</a></div><div class="ttdeci">GTraits::NodeType GNODE</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00050">CFLSolver.h:50</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a88f770b4762d44e50d72cd50bb504078"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a88f770b4762d44e50d72cd50bb504078">SVF::CFLSolver::popFromWorklist</a></div><div class="ttdeci">DPIm popFromWorklist()</div><div class="ttdoc">Worklist operations. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00156">CFLSolver.h:156</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_adf0b96a758a29d5c3c46fcc48081b62c"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#adf0b96a758a29d5c3c46fcc48081b62c">SVF::CFLSolver::child_iterator</a></div><div class="ttdeci">GTraits::ChildIteratorType child_iterator</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00053">CFLSolver.h:53</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a6d7361281bbf666a2f5da87f7ea869d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d7361281bbf666a2f5da87f7ea869d2">&#9670;&nbsp;</a></span>FWProcessCurNode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::FWProcessCurNode </td>
-          <td>(</td>
-          <td class="paramtype">const DPIm &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Process the DP item. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00132">132</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div></div><!-- fragment -->
-</div>
-</div>
-<a id="a39b079c9b8a1b4570176028de79e85a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39b079c9b8a1b4570176028de79e85a4">&#9670;&nbsp;</a></span>FWProcessOutgoingEdge()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::FWProcessOutgoingEdge </td>
-          <td>(</td>
-          <td class="paramtype">const DPIm &amp;&#160;</td>
-          <td class="paramname"><em>item</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classSVF_1_1CFLSolver.html#aaddd6c593ad39c117bd35ede711b9f36">GEDGE</a> *&#160;</td>
-          <td class="paramname"><em>edge</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Propagation for the solving, to be implemented in the child class. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00141">141</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        DPIm newItem(item);</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        newItem.setCurNodeID(edge-&gt;getDstID());</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">pushIntoWorklist</a>(newItem);</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a28cd2677717b19c9cd8ab3c1c441d409"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a28cd2677717b19c9cd8ab3c1c441d409">SVF::CFLSolver::pushIntoWorklist</a></div><div class="ttdeci">bool pushIntoWorklist(DPIm &amp;item)</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00160">CFLSolver.h:160</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="adaa8ca9296ec3e9b6ec544a105296d22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaa8ca9296ec3e9b6ec544a105296d22">&#9670;&nbsp;</a></span>getNode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSVF_1_1CFLSolver.html#a7a180d7878fc7b4c055fa72298398127">GNODE</a>* <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::getNode </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00084">84</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">_graph</a>-&gt;getGNode(<span class="keywordtype">id</span>);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a26e81753961ccb80b08d5c3ef7c4a141"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">SVF::CFLSolver::_graph</a></div><div class="ttdeci">GraphType _graph</div><div class="ttdoc">Graph. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00177">CFLSolver.h:177</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a31199503d0ed7aff97d4620b3599dea6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31199503d0ed7aff97d4620b3599dea6">&#9670;&nbsp;</a></span>getNodeIDFromItem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::getNodeIDFromItem </td>
-          <td>(</td>
-          <td class="paramtype">const DPIm &amp;&#160;</td>
-          <td class="paramname"><em>item</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00088">88</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> item.getCurNodeID();</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div></div><!-- fragment -->
-</div>
-</div>
-<a id="a9fc4cbe8985d4c25845d408ffcac13e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fc4cbe8985d4c25845d408ffcac13e4">&#9670;&nbsp;</a></span>graph()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const GraphType <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::graph </td>
+          <td class="memname">const <a class="el" href="classSVF_1_1CFLGrammar.html">CFLGrammar</a>* SVF::CFLSolver::getGrammar </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -695,33 +264,61 @@ template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get/Set graph methods. </p>
+<p>Return CFL Grammar. </p>
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00074">74</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">_graph</a>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a26e81753961ccb80b08d5c3ef7c4a141"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">SVF::CFLSolver::_graph</a></div><div class="ttdeci">GraphType _graph</div><div class="ttdoc">Graph. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00177">CFLSolver.h:177</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00062">62</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                                {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_aad88cf557ec43127de859b765505df49"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">SVF::CFLSolver::grammar</a></div><div class="ttdeci">CFLGrammar * grammar</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00089">CFLSolver.h:89</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a435454f52e5be39c960052f1947b984d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a435454f52e5be39c960052f1947b984d">&#9670;&nbsp;</a></span>isInWorklist()</h2>
+<a id="a2c6bce1f73bcf5937a26e91a7daba33c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6bce1f73bcf5937a26e91a7daba33c">&#9670;&nbsp;</a></span>getGraph()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::isInWorklist </td>
+          <td class="memname">const <a class="el" href="classSVF_1_1CFLGraph.html">CFLGraph</a>* SVF::CFLSolver::getGraph </td>
           <td>(</td>
-          <td class="paramtype">DPIm &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return CFL Graph. </p>
+
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00057">57</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                            {</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_aedd6c605c4c381c738f4c6682c40d9f2"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">SVF::CFLSolver::graph</a></div><div class="ttdeci">CFLGraph * graph</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00088">CFLSolver.h:88</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0e112c2290b3ba4e61da6b1fe9ac506d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e112c2290b3ba4e61da6b1fe9ac506d">&#9670;&nbsp;</a></span>isInWorklist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::CFLSolver::isInWorklist </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSVF_1_1CFLEdge.html">CFLEdge</a> *&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
           <td></td>
         </tr>
@@ -733,25 +330,23 @@ template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00168">168</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">worklist</a>.<a class="code" href="classSVF_1_1FIFOWorkList.html#a86f2393b1cce7969d6974b53970ead54">find</a>(item);</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a9d3cbcb9db049e3069b6553ab17ccf5b"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">SVF::CFLSolver::worklist</a></div><div class="ttdeci">WorkList worklist</div><div class="ttdoc">Worklist for resolution. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00180">CFLSolver.h:180</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00081">81</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">worklist</a>.<a class="code" href="classSVF_1_1FIFOWorkList.html#a86f2393b1cce7969d6974b53970ead54">find</a>(item);</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a211bb78846886aa9ccd4b160da81e02e"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">SVF::CFLSolver::worklist</a></div><div class="ttdeci">WorkList worklist</div><div class="ttdoc">Worklist for resolution. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00091">CFLSolver.h:91</a></div></div>
 <div class="ttc" id="classSVF_1_1FIFOWorkList_html_a86f2393b1cce7969d6974b53970ead54"><div class="ttname"><a href="classSVF_1_1FIFOWorkList.html#a86f2393b1cce7969d6974b53970ead54">SVF::FIFOWorkList::find</a></div><div class="ttdeci">bool find(Data data) const</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00151">WorkList.h:151</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a4f35edfc7c4e4a35c9948ab5abd1a6ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f35edfc7c4e4a35c9948ab5abd1a6ad">&#9670;&nbsp;</a></span>isWorklistEmpty()</h2>
+<a id="ac1fe4563081c29f8a715bd67d454c8bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1fe4563081c29f8a715bd67d454c8bb">&#9670;&nbsp;</a></span>isWorklistEmpty()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::isWorklistEmpty </td>
+          <td class="memname">bool SVF::CFLSolver::isWorklistEmpty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -764,25 +359,23 @@ template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00164">164</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">worklist</a>.<a class="code" href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">empty</a>();</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div><div class="ttc" id="classSVF_1_1FIFOWorkList_html_a7056704c224dfb4b57287fe90c004aa8"><div class="ttname"><a href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">SVF::FIFOWorkList::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00146">WorkList.h:146</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a9d3cbcb9db049e3069b6553ab17ccf5b"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">SVF::CFLSolver::worklist</a></div><div class="ttdeci">WorkList worklist</div><div class="ttdoc">Worklist for resolution. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00180">CFLSolver.h:180</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00077">77</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">worklist</a>.<a class="code" href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">empty</a>();</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a211bb78846886aa9ccd4b160da81e02e"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">SVF::CFLSolver::worklist</a></div><div class="ttdeci">WorkList worklist</div><div class="ttdoc">Worklist for resolution. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00091">CFLSolver.h:91</a></div></div>
+<div class="ttc" id="classSVF_1_1FIFOWorkList_html_a7056704c224dfb4b57287fe90c004aa8"><div class="ttname"><a href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">SVF::FIFOWorkList::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00146">WorkList.h:146</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a88f770b4762d44e50d72cd50bb504078"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88f770b4762d44e50d72cd50bb504078">&#9670;&nbsp;</a></span>popFromWorklist()</h2>
+<a id="a95573e91816f426ff7b45afb7b7c821e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95573e91816f426ff7b45afb7b7c821e">&#9670;&nbsp;</a></span>popFromWorklist()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DPIm <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::popFromWorklist </td>
+          <td class="memname">const <a class="el" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* SVF::CFLSolver::popFromWorklist </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -797,27 +390,25 @@ template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 
 <p>Worklist operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00156">156</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">worklist</a>.<a class="code" href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">pop</a>();</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a9d3cbcb9db049e3069b6553ab17ccf5b"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">SVF::CFLSolver::worklist</a></div><div class="ttdeci">WorkList worklist</div><div class="ttdoc">Worklist for resolution. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00180">CFLSolver.h:180</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00069">69</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">worklist</a>.<a class="code" href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">pop</a>();</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a211bb78846886aa9ccd4b160da81e02e"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">SVF::CFLSolver::worklist</a></div><div class="ttdeci">WorkList worklist</div><div class="ttdoc">Worklist for resolution. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00091">CFLSolver.h:91</a></div></div>
 <div class="ttc" id="classSVF_1_1FIFOWorkList_html_a8fa72918fce7e9c0b2dc34b683a797c6"><div class="ttname"><a href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">SVF::FIFOWorkList::pop</a></div><div class="ttdeci">Data pop()</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00174">WorkList.h:174</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a28cd2677717b19c9cd8ab3c1c441d409"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28cd2677717b19c9cd8ab3c1c441d409">&#9670;&nbsp;</a></span>pushIntoWorklist()</h2>
+<a id="afc745dc72fd0572a145a78fe6a93ae5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc745dc72fd0572a145a78fe6a93ae5c">&#9670;&nbsp;</a></span>pushIntoWorklist()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::pushIntoWorklist </td>
+          <td class="memname">bool SVF::CFLSolver::pushIntoWorklist </td>
           <td>(</td>
-          <td class="paramtype">DPIm &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classSVF_1_1CFLEdge.html">CFLEdge</a> *&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
           <td></td>
         </tr>
@@ -829,57 +420,78 @@ template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00160">160</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">worklist</a>.<a class="code" href="classSVF_1_1FIFOWorkList.html#ad4c6a48b60c870d63049fe7272cc7eb8">push</a>(item);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div><div class="ttc" id="classSVF_1_1FIFOWorkList_html_ad4c6a48b60c870d63049fe7272cc7eb8"><div class="ttname"><a href="classSVF_1_1FIFOWorkList.html#ad4c6a48b60c870d63049fe7272cc7eb8">SVF::FIFOWorkList::push</a></div><div class="ttdeci">bool push(Data data)</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00159">WorkList.h:159</a></div></div>
-<div class="ttc" id="classSVF_1_1CFLSolver_html_a9d3cbcb9db049e3069b6553ab17ccf5b"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a9d3cbcb9db049e3069b6553ab17ccf5b">SVF::CFLSolver::worklist</a></div><div class="ttdeci">WorkList worklist</div><div class="ttdoc">Worklist for resolution. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00180">CFLSolver.h:180</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00073">73</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">worklist</a>.<a class="code" href="classSVF_1_1FIFOWorkList.html#ad4c6a48b60c870d63049fe7272cc7eb8">push</a>(item);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a211bb78846886aa9ccd4b160da81e02e"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a211bb78846886aa9ccd4b160da81e02e">SVF::CFLSolver::worklist</a></div><div class="ttdeci">WorkList worklist</div><div class="ttdoc">Worklist for resolution. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00091">CFLSolver.h:91</a></div></div>
+<div class="ttc" id="classSVF_1_1FIFOWorkList_html_ad4c6a48b60c870d63049fe7272cc7eb8"><div class="ttname"><a href="classSVF_1_1FIFOWorkList.html#ad4c6a48b60c870d63049fe7272cc7eb8">SVF::FIFOWorkList::push</a></div><div class="ttdeci">bool push(Data data)</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00159">WorkList.h:159</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ae0a02179b2489f65988819666ec52a7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0a02179b2489f65988819666ec52a7c">&#9670;&nbsp;</a></span>setGraph()</h2>
+<a id="a2ee3436c26ebdb2aaf790c25b1d8b5a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee3436c26ebdb2aaf790c25b1d8b5a6">&#9670;&nbsp;</a></span>solve()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::setGraph </td>
+          <td class="memname">void CFLSolver::solve </td>
           <td>(</td>
-          <td class="paramtype">GraphType&#160;</td>
-          <td class="paramname"><em>g</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00078">78</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">_graph</a> = g;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div><div class="ttc" id="classSVF_1_1CFLSolver_html_a26e81753961ccb80b08d5c3ef7c4a141"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a26e81753961ccb80b08d5c3ef7c4a141">SVF::CFLSolver::_graph</a></div><div class="ttdeci">GraphType _graph</div><div class="ttdoc">Graph. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00177">CFLSolver.h:177</a></div></div>
+<p>Start solving. </p>
+<p>initial worklist</p>
+<p>Foreach production X -&gt; epsilon add X(i,i) if not exist to E and to worklist</p>
+<p>Select and remove an edge Y(i,j) from worklist</p>
+<p>For each production X -&gt; Y add X(i,j) if not exist to E and to worklist</p>
+<p>For each production X -&gt; Y Z Foreach outgoing edge Z(j,k) from node j do add X(i,k) if not exist to E and to worklist</p>
+<p>For each production X -&gt; Z Y Foreach incoming edge Z(k,i) to node i do add X(k,j) if not exist to E and to worklist </p>
+
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8cpp_source.html#l00034">34</a> of file <a class="el" href="CFLSolver_8cpp_source.html">CFLSolver.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                     {</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>-&gt;<a class="code" href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">begin</a>(); it!= <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>-&gt;<a class="code" href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">end</a>(); it++){</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* edge : (*it).second-&gt;getOutEdges()){</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#afc745dc72fd0572a145a78fe6a93ae5c">pushIntoWorklist</a>(edge);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLSolver.html#a0ade6e3827c629c3cc3d22a101df7288">Production</a>&amp; prod : <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#aa27c7e9e4ffcbbf95edddfe3f9faf719">getEpsilonProds</a>()){</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>-&gt;<a class="code" href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">begin</a>(); it!= <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>-&gt;<a class="code" href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">end</a>(); it++){</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd">Symbol</a> X = <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#a6b7598e35c7f50257c7f074a5e07b230">getLHSSymbol</a>(prod);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="classSVF_1_1CFLNode.html">CFLNode</a>* i = (*it).second;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* edge = <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>-&gt;<a class="code" href="classSVF_1_1CFLGraph.html#a9eea8083dbeaf898948595b1d75cfee2">addCFLEdge</a>(i, i, X))</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <a class="code" href="classSVF_1_1CFLSolver.html#afc745dc72fd0572a145a78fe6a93ae5c">pushIntoWorklist</a>(edge);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">while</span>(!<a class="code" href="classSVF_1_1CFLSolver.html#ac1fe4563081c29f8a715bd67d454c8bb">isWorklistEmpty</a>()){</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* Y_edge = <a class="code" href="classSVF_1_1CFLSolver.html#a95573e91816f426ff7b45afb7b7c821e">popFromWorklist</a>();</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classSVF_1_1CFLNode.html">CFLNode</a>* i = Y_edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#ab47ca533c415841ef75456cbad439589">getSrcNode</a>();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classSVF_1_1CFLNode.html">CFLNode</a>* j = Y_edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">getDstNode</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd">Symbol</a> Y = Y_edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">getEdgeKind</a>();</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#a087cd7538e2565fc00f95221d44c2463">hasProdsFromSingleRHS</a>(Y))</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLSolver.html#a0ade6e3827c629c3cc3d22a101df7288">Production</a>&amp; prod : <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#a7284e7262bedad317a6f8b35b6f62e45">getProdsFromSingleRHS</a>(Y)){</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <a class="code" href="classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd">Symbol</a> X = <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#a6b7598e35c7f50257c7f074a5e07b230">getLHSSymbol</a>(prod);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* newEdge = <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>-&gt;<a class="code" href="classSVF_1_1CFLGraph.html#a9eea8083dbeaf898948595b1d75cfee2">addCFLEdge</a>(i, j, X))</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <a class="code" href="classSVF_1_1CFLSolver.html#afc745dc72fd0572a145a78fe6a93ae5c">pushIntoWorklist</a>(newEdge);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#ae7fc8b9b6e3b5be1d5d1e98b19dc95e7">hasProdsFromFirstRHS</a>(Y))</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLSolver.html#a0ade6e3827c629c3cc3d22a101df7288">Production</a>&amp; prod : <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#ad623cfee9bade475fcdc64fab349f332">getProdsFromFirstRHS</a>(Y)){</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd">Symbol</a> X = <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#a6b7598e35c7f50257c7f074a5e07b230">getLHSSymbol</a>(prod);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* Z_edge : j-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a2d9cd758d6f8c5189d9b90b74f43e009">getOutEdges</a>()){</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="keywordflow">if</span> (Z_edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#afc6e719553df005ea14cca953602d28b">getSecondRHSSymbol</a>(prod))</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    {</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        <a class="code" href="classSVF_1_1CFLNode.html">CFLNode</a>* k = Z_edge-&gt;getDstNode();</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* newEdge = <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>-&gt;<a class="code" href="classSVF_1_1CFLGraph.html#a9eea8083dbeaf898948595b1d75cfee2">addCFLEdge</a>(i, k, X))</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                            <a class="code" href="classSVF_1_1CFLSolver.html#afc745dc72fd0572a145a78fe6a93ae5c">pushIntoWorklist</a>(newEdge);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        }</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                }</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#af9b7e2baa487898ad9a890606216d0c1">hasProdsFromSecondRHS</a>(Y))</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLSolver.html#a0ade6e3827c629c3cc3d22a101df7288">Production</a>&amp; prod : <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#a060244b3b41208d9eb80ddee658cdc68">getProdsFromSecondRHS</a>(Y)){</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <a class="code" href="classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd">Symbol</a> X = <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#a6b7598e35c7f50257c7f074a5e07b230">getLHSSymbol</a>(prod);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* Z_edge : i-&gt;<a class="code" href="classSVF_1_1GenericNode.html#afc8b5f86d7795b6a0dfc0687d942d79b">getInEdges</a>()){</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    <span class="keywordflow">if</span>(Z_edge-&gt;getEdgeKind() == <a class="code" href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFLGrammar.html#af26cd720d34bdf7e37c0be603fcc9921">getFirstRHSSymbol</a>(prod))</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    {</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        <a class="code" href="classSVF_1_1CFLNode.html">CFLNode</a>* k = Z_edge-&gt;getSrcNode();</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CFLEdge.html">CFLEdge</a>* newEdge = <a class="code" href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">graph</a>-&gt;<a class="code" href="classSVF_1_1CFLGraph.html#a9eea8083dbeaf898948595b1d75cfee2">addCFLEdge</a>(k, j, X))</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        {</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                            <a class="code" href="classSVF_1_1CFLSolver.html#afc745dc72fd0572a145a78fe6a93ae5c">pushIntoWorklist</a>(newEdge);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        }</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    }</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                }</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            }</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div><div class="ttc" id="classSVF_1_1GenericGraph_html_a0d9744b1b0e7a09a6f7af29188e243b7"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">SVF::GenericGraph::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdoc">Iterators. </div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00361">GenericGraph.h:361</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericEdge_html_abe8525c542def8162b094c169a01993b"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">SVF::GenericEdge::getEdgeKind</a></div><div class="ttdeci">GEdgeKind getEdgeKind() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00081">GenericGraph.h:81</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLSolver_html_a06e64c18559b4f311717203ac3fe1fcd"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd">SVF::CFLSolver::Symbol</a></div><div class="ttdeci">CFLGrammar::Symbol Symbol</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00043">CFLSolver.h:43</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericNode_html_afc8b5f86d7795b6a0dfc0687d942d79b"><div class="ttname"><a href="classSVF_1_1GenericNode.html#afc8b5f86d7795b6a0dfc0687d942d79b">SVF::GenericNode::getInEdges</a></div><div class="ttdeci">const GEdgeSetTy &amp; getInEdges() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00182">GenericGraph.h:182</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLSolver_html_afc745dc72fd0572a145a78fe6a93ae5c"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#afc745dc72fd0572a145a78fe6a93ae5c">SVF::CFLSolver::pushIntoWorklist</a></div><div class="ttdeci">bool pushIntoWorklist(const CFLEdge *item)</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00073">CFLSolver.h:73</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_a6b7598e35c7f50257c7f074a5e07b230"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#a6b7598e35c7f50257c7f074a5e07b230">SVF::CFLGrammar::getLHSSymbol</a></div><div class="ttdeci">Symbol getLHSSymbol(const Production &amp;prod)</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00106">CFLGrammar.h:106</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGraph_html_a9eea8083dbeaf898948595b1d75cfee2"><div class="ttname"><a href="classSVF_1_1CFLGraph.html#a9eea8083dbeaf898948595b1d75cfee2">SVF::CFLGraph::addCFLEdge</a></div><div class="ttdeci">virtual const CFLEdge * addCFLEdge(CFLNode *src, CFLNode *dst, CFLEdge::GEdgeFlag label)</div><div class="ttdef"><b>Definition:</b> <a href="CFLGraph_8cpp_source.html#l00046">CFLGraph.cpp:46</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericGraph_html_a4bef15157423cef48dc7333a803cd27d"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">SVF::GenericGraph::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00365">GenericGraph.h:365</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLNode_html"><div class="ttname"><a href="classSVF_1_1CFLNode.html">SVF::CFLNode</a></div><div class="ttdef"><b>Definition:</b> <a href="CFLGraph_8h_source.html#l00058">CFLGraph.h:58</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLSolver_html_aedd6c605c4c381c738f4c6682c40d9f2"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2">SVF::CFLSolver::graph</a></div><div class="ttdeci">CFLGraph * graph</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00088">CFLSolver.h:88</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericEdge_html_aeaa31a2c8479e831b36ce2e2582ceb86"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">SVF::GenericEdge::getDstNode</a></div><div class="ttdeci">NodeType * getDstNode() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00089">GenericGraph.h:89</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_ae7fc8b9b6e3b5be1d5d1e98b19dc95e7"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#ae7fc8b9b6e3b5be1d5d1e98b19dc95e7">SVF::CFLGrammar::hasProdsFromFirstRHS</a></div><div class="ttdeci">const bool hasProdsFromFirstRHS(Symbol sym) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00073">CFLGrammar.h:73</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_a7284e7262bedad317a6f8b35b6f62e45"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#a7284e7262bedad317a6f8b35b6f62e45">SVF::CFLGrammar::getProdsFromSingleRHS</a></div><div class="ttdeci">const Productions &amp; getProdsFromSingleRHS(Symbol sym) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00088">CFLGrammar.h:88</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_a087cd7538e2565fc00f95221d44c2463"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#a087cd7538e2565fc00f95221d44c2463">SVF::CFLGrammar::hasProdsFromSingleRHS</a></div><div class="ttdeci">const bool hasProdsFromSingleRHS(Symbol sym) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00078">CFLGrammar.h:78</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericNode_html_a2d9cd758d6f8c5189d9b90b74f43e009"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a2d9cd758d6f8c5189d9b90b74f43e009">SVF::GenericNode::getOutEdges</a></div><div class="ttdeci">const GEdgeSetTy &amp; getOutEdges() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00178">GenericGraph.h:178</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLSolver_html_aad88cf557ec43127de859b765505df49"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#aad88cf557ec43127de859b765505df49">SVF::CFLSolver::grammar</a></div><div class="ttdeci">CFLGrammar * grammar</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00089">CFLSolver.h:89</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_aa27c7e9e4ffcbbf95edddfe3f9faf719"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#aa27c7e9e4ffcbbf95edddfe3f9faf719">SVF::CFLGrammar::getEpsilonProds</a></div><div class="ttdeci">const Productions &amp; getEpsilonProds() const</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00069">CFLGrammar.h:69</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLSolver_html_a95573e91816f426ff7b45afb7b7c821e"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a95573e91816f426ff7b45afb7b7c821e">SVF::CFLSolver::popFromWorklist</a></div><div class="ttdeci">const CFLEdge * popFromWorklist()</div><div class="ttdoc">Worklist operations. </div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00069">CFLSolver.h:69</a></div></div>
+<div class="ttc" id="classSVF_1_1GenericEdge_html_ab47ca533c415841ef75456cbad439589"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#ab47ca533c415841ef75456cbad439589">SVF::GenericEdge::getSrcNode</a></div><div class="ttdeci">NodeType * getSrcNode() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00085">GenericGraph.h:85</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLSolver_html_ac1fe4563081c29f8a715bd67d454c8bb"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#ac1fe4563081c29f8a715bd67d454c8bb">SVF::CFLSolver::isWorklistEmpty</a></div><div class="ttdeci">bool isWorklistEmpty()</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00077">CFLSolver.h:77</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_af26cd720d34bdf7e37c0be603fcc9921"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#af26cd720d34bdf7e37c0be603fcc9921">SVF::CFLGrammar::getFirstRHSSymbol</a></div><div class="ttdeci">Symbol getFirstRHSSymbol(const Production &amp;prod)</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00110">CFLGrammar.h:110</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLEdge_html"><div class="ttname"><a href="classSVF_1_1CFLEdge.html">SVF::CFLEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="CFLGraph_8h_source.html#l00046">CFLGraph.h:46</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLSolver_html_a0ade6e3827c629c3cc3d22a101df7288"><div class="ttname"><a href="classSVF_1_1CFLSolver.html#a0ade6e3827c629c3cc3d22a101df7288">SVF::CFLSolver::Production</a></div><div class="ttdeci">CFLGrammar::Production Production</div><div class="ttdef"><b>Definition:</b> <a href="CFLSolver_8h_source.html#l00042">CFLSolver.h:42</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_a060244b3b41208d9eb80ddee658cdc68"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#a060244b3b41208d9eb80ddee658cdc68">SVF::CFLGrammar::getProdsFromSecondRHS</a></div><div class="ttdeci">const Productions &amp; getProdsFromSecondRHS(Symbol sym) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00100">CFLGrammar.h:100</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_afc6e719553df005ea14cca953602d28b"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#afc6e719553df005ea14cca953602d28b">SVF::CFLGrammar::getSecondRHSSymbol</a></div><div class="ttdeci">Symbol getSecondRHSSymbol(const Production &amp;prod)</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00114">CFLGrammar.h:114</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_ad623cfee9bade475fcdc64fab349f332"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#ad623cfee9bade475fcdc64fab349f332">SVF::CFLGrammar::getProdsFromFirstRHS</a></div><div class="ttdeci">const Productions &amp; getProdsFromFirstRHS(Symbol sym) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00094">CFLGrammar.h:94</a></div></div>
+<div class="ttc" id="classSVF_1_1CFLGrammar_html_af9b7e2baa487898ad9a890606216d0c1"><div class="ttname"><a href="classSVF_1_1CFLGrammar.html#af9b7e2baa487898ad9a890606216d0c1">SVF::CFLGrammar::hasProdsFromSecondRHS</a></div><div class="ttdeci">const bool hasProdsFromSecondRHS(Symbol sym) const</div><div class="ttdef"><b>Definition:</b> <a href="CFLGrammar_8h_source.html#l00083">CFLGrammar.h:83</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a26e81753961ccb80b08d5c3ef7c4a141"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26e81753961ccb80b08d5c3ef7c4a141">&#9670;&nbsp;</a></span>_graph</h2>
+<a id="aad88cf557ec43127de859b765505df49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad88cf557ec43127de859b765505df49">&#9670;&nbsp;</a></span>grammar</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GraphType <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::_graph</td>
+          <td class="memname"><a class="el" href="classSVF_1_1CFLGrammar.html">CFLGrammar</a>* SVF::CFLSolver::grammar</td>
         </tr>
       </table>
   </td>
@@ -889,25 +501,45 @@ template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Graph. </p>
-
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00177">177</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00089">89</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
 
 </div>
 </div>
-<a id="a9d3cbcb9db049e3069b6553ab17ccf5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d3cbcb9db049e3069b6553ab17ccf5b">&#9670;&nbsp;</a></span>worklist</h2>
+<a id="aedd6c605c4c381c738f4c6682c40d9f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd6c605c4c381c738f4c6682c40d9f2">&#9670;&nbsp;</a></span>graph</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSVF_1_1CFLSolver.html#a802e04eafce9adfd60506c44951c3d53">WorkList</a> <a class="el" href="classSVF_1_1CFLSolver.html">SVF::CFLSolver</a>&lt; GraphType, DPIm &gt;::worklist</td>
+          <td class="memname"><a class="el" href="classSVF_1_1CFLGraph.html">CFLGraph</a>* SVF::CFLSolver::graph</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00088">88</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+
+</div>
+</div>
+<a id="a211bb78846886aa9ccd4b160da81e02e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211bb78846886aa9ccd4b160da81e02e">&#9670;&nbsp;</a></span>worklist</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSVF_1_1CFLSolver.html#a194d2c4c801799b0ba9562e33ca5b695">WorkList</a> SVF::CFLSolver::worklist</td>
         </tr>
       </table>
   </td>
@@ -919,12 +551,13 @@ template&lt;class GraphType , class DPIm  = DPItem&gt; </div>
 
 <p>Worklist for resolution. </p>
 
-<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00180">180</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CFLSolver_8h_source.html#l00091">91</a> of file <a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/SVF/SVF/include/Util/<a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/runner/work/SVF/SVF/include/CFL/<a class="el" href="CFLSolver_8h_source.html">CFLSolver.h</a></li>
+<li>/home/runner/work/SVF/SVF/lib/CFL/<a class="el" href="CFLSolver_8cpp_source.html">CFLSolver.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

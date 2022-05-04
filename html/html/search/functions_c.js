@@ -13,9 +13,11 @@ var searchData=
   ['nodes_5fbegin',['nodes_begin',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#ae71d73a9d9d6f11f96aed422757c00c3',1,'llvm::GraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;']]],
   ['nodes_5fend',['nodes_end',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#a8397bafa216b209b6bd2bcb20fec4322',1,'llvm::GraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;']]],
   ['normalgepcgedge',['NormalGepCGEdge',['../classSVF_1_1NormalGepCGEdge.html#a511d6bd2061e0ca441fc80abbf6075f7',1,'SVF::NormalGepCGEdge::NormalGepCGEdge()'],['../classSVF_1_1NormalGepCGEdge.html#a5d81c538e3747a7b760a80129581c49f',1,'SVF::NormalGepCGEdge::NormalGepCGEdge(const NormalGepCGEdge &amp;)'],['../classSVF_1_1NormalGepCGEdge.html#a4f5b8c292822670d2fea3d532cae5257',1,'SVF::NormalGepCGEdge::NormalGepCGEdge(ConstraintNode *s, ConstraintNode *d, const LocationSet &amp;l, EdgeID id)']]],
+  ['normalize',['normalize',['../classSVF_1_1CFGNormalizer.html#ae8e2b22944e9d3d2ec14cd6aaa8b93c9',1,'SVF::CFGNormalizer']]],
   ['normalizepointsto',['normalizePointsTo',['../classSVF_1_1BVDataPTAImpl.html#a2026cffd7043208333083ed1a6603e7b',1,'SVF::BVDataPTAImpl::normalizePointsTo()'],['../classSVF_1_1CondPTAImpl.html#aa945d068c8935fc6926833fdf102e21c',1,'SVF::CondPTAImpl::normalizePointsTo()'],['../classSVF_1_1AndersenBase.html#af37392229dab0a1f2f807a12186c3b39',1,'SVF::AndersenBase::normalizePointsTo()']]],
   ['nullexpr',['nullExpr',['../classSVF_1_1Z3Expr.html#a9aa800372d57db519d484cc32ea1c5dc',1,'SVF::Z3Expr']]],
   ['nullptrsymid',['nullPtrSymID',['../classSVF_1_1SymbolTableInfo.html#adaed6e68c2f53260ed4c4fc38b5c4721',1,'SVF::SymbolTableInfo']]],
   ['nullptrvfgnode',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html#a5bbcd7ba5ac40efefbd1ef99bea86639',1,'SVF::NullPtrVFGNode']]],
+  ['num_5fgenerator',['num_generator',['../classSVF_1_1CFLGrammar.html#a29d757bc4f0d236f421e332e51fe6d8b',1,'SVF::CFLGrammar']]],
   ['numelement',['numElement',['../classSVF_1_1CondPointsToSet.html#a8d8f9e91b62b94d876f34066de7944d4',1,'SVF::CondPointsToSet']]]
 ];

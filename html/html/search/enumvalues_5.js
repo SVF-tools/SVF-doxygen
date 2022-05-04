@@ -9,7 +9,6 @@ var searchData=
   ['fpout',['FPOUT',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ac2c5b04acc4f754e70a782adee522e09',1,'SVF::VFGNode']]],
   ['fret',['FRet',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ae1d2cab9f6995b89064c2405f8eaf053',1,'SVF::VFGNode']]],
   ['fscs_5fwpa',['FSCS_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a43837619e78e03dc95ec6e88959faf82',1,'SVF::PointerAnalysis']]],
-  ['fscsps_5fwpa',['FSCSPS_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a30826fb1ddb602fd4439ca84eb73e8f4',1,'SVF::PointerAnalysis']]],
   ['fsdataflow_5fwpa',['FSDATAFLOW_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a62281bc39fea50a88e55edf605620322',1,'SVF::PointerAnalysis']]],
   ['fssparse_5fwpa',['FSSPARSE_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85ad6ccf1ce66083278349c5c3111172d78',1,'SVF::PointerAnalysis']]],
   ['fstbhc_5fwpa',['FSTBHC_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a088dda60195ab259693977af8414f203',1,'SVF::PointerAnalysis']]],
