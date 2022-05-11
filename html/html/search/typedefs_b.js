@@ -3,7 +3,7 @@ var searchData=
   ['landingpadinst',['LandingPadInst',['../SVF-FE_2BasicTypes_8h.html#a5b02d9efe63d84149e54736b81f922f1',1,'BasicTypes.h']]],
   ['llvm_5fconst_5fiterator',['llvm_const_iterator',['../classSVF_1_1SVFModule.html#ab86e221a93bec67a2ecb7cb53315f569',1,'SVF::SVFModule']]],
   ['llvm_5fiterator',['llvm_iterator',['../classSVF_1_1SVFModule.html#aa5a0780c5c69a1e9a0ba902b4ad49714',1,'SVF::SVFModule']]],
-  ['llvmcontext',['LLVMContext',['../namespaceSVF.html#affba423b674a0aba723e33101826e297',1,'SVF']]],
+  ['llvmcontext',['LLVMContext',['../SVF-FE_2BasicTypes_8h.html#a9f19a521d06397d1b6dc52c0388513d9',1,'BasicTypes.h']]],
   ['llvmfun2svffunmap',['LLVMFun2SVFFunMap',['../classSVF_1_1SVFModule.html#a767c49e07c29cbea81c35b164a8c9cab',1,'SVF::SVFModule']]],
   ['llvmfunctionsettype',['LLVMFunctionSetType',['../classSVF_1_1SVFModule.html#a63040f378cf2874ad127f7609d28ada7',1,'SVF::SVFModule']]],
   ['loadedges',['LoadEdges',['../classSVF_1_1OfflineConsG.html#a832953ac86452c45f55aa6ff3c545f36',1,'SVF::OfflineConsG']]],

@@ -33,7 +33,6 @@ var searchData=
   ['storesvfgnode',['StoreSVFGNode',['../namespaceSVF.html#a54c5725186e66ead6faf53c10a288714',1,'SVF']]],
   ['storetochisetmap',['StoreToChiSetMap',['../classSVF_1_1MemSSA.html#acfee1bb5534026ce991a1ab5e796c6b9',1,'SVF::MemSSA']]],
   ['storetopmsetmap',['StoreToPMSetMap',['../classSVF_1_1DDAVFSolver.html#accaacd2dd680f92ff83cfe75eef6ffab',1,'SVF::DDAVFSolver']]],
-  ['stringmap',['StringMap',['../namespaceSVF.html#ad5ce5ddecac033fe5309cb929d8dea3a',1,'SVF']]],
   ['stringref',['StringRef',['../namespaceSVF.html#a88fd7387fcf16caf70abe265cdcf90b9',1,'SVF']]],
   ['structlayout',['StructLayout',['../SVF-FE_2BasicTypes_8h.html#aef8af3d6e4b75a3e3e108b636a48fbd3',1,'BasicTypes.h']]],
   ['structtype',['StructType',['../namespaceSVF.html#a2bf58575ac7d068e0f1a4cf953b9e6cb',1,'SVF']]],

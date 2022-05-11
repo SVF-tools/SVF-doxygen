@@ -154,7 +154,7 @@ var searchData=
   ['startnewptcompfromloadsrc',['startNewPTCompFromLoadSrc',['../classSVF_1_1DDAVFSolver.html#acd694c2092adf8c516d1aba5f798cec7',1,'SVF::DDAVFSolver']]],
   ['startnewptcompfromstoredst',['startNewPTCompFromStoreDst',['../classSVF_1_1DDAVFSolver.html#aff744e724dcf06a2b1cdd7ba2b1093f1',1,'SVF::DDAVFSolver']]],
   ['stataddrvarptssize',['statAddrVarPtsSize',['../classSVF_1_1FlowSensitiveStat.html#a81785227a688389c68171a1fbd55fa9b',1,'SVF::FlowSensitiveStat']]],
-  ['statinit',['statInit',['../classSVF_1_1ThreadAPI.html#ac07a0ae387ad9ff483fb9e2993d4b69e',1,'SVF::ThreadAPI']]],
+  ['statinit',['statInit',['../classSVF_1_1ThreadAPI.html#a8a4ab0b1dcb2e3897b7740868e0d955d',1,'SVF::ThreadAPI']]],
   ['statinoutptssize',['statInOutPtsSize',['../classSVF_1_1FlowSensitiveStat.html#a8ae7448f6210b6c759a33e6fc8a8cee8',1,'SVF::FlowSensitiveStat']]],
   ['statistic',['STATISTIC',['../BreakConstantExpr_8cpp.html#a53fcf89c33901a1e4bf09351eb612a6a',1,'STATISTIC(GEPChanges, &quot;Number of Converted GEP Constant Expressions&quot;):&#160;BreakConstantExpr.cpp'],['../BreakConstantExpr_8cpp.html#a908d11ca6b0a342e6ddcdcced200cab3',1,'STATISTIC(TotalChanges, &quot;Number of Converted Constant Expressions&quot;):&#160;BreakConstantExpr.cpp']]],
   ['statnullptr',['statNullPtr',['../classSVF_1_1AndersenStat.html#a898f091cd9aeed4b0cf5b338b8a3b1d3',1,'SVF::AndersenStat::statNullPtr()'],['../classSVF_1_1FlowSensitiveStat.html#a36f7be42772b2df6f7594c51b7dc4770',1,'SVF::FlowSensitiveStat::statNullPtr()']]],

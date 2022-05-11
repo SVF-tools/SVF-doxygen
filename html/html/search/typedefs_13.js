@@ -9,7 +9,7 @@ var searchData=
   ['updatedvarconstiter',['UpdatedVarconstIter',['../classSVF_1_1MutableIncDFPTData.html#af815dd2108c16e1dfddbcd5bdbcceeb6',1,'SVF::MutableIncDFPTData']]],
   ['updatedvarmap',['UpdatedVarMap',['../classSVF_1_1MutableIncDFPTData.html#a67c24cebffdcea9c8059f6769c7f9798',1,'SVF::MutableIncDFPTData::UpdatedVarMap()'],['../classSVF_1_1PersistentIncDFPTData.html#abad78c2ef84371b693dca206ebbb63ab',1,'SVF::PersistentIncDFPTData::UpdatedVarMap()']]],
   ['updatedvarmapiter',['UpdatedVarMapIter',['../classSVF_1_1MutableIncDFPTData.html#a8b30326d3fa3f4054e67268f512aec9e',1,'SVF::MutableIncDFPTData']]],
-  ['use',['Use',['../namespaceSVF.html#a334998718813a19a7697daf4ba282faf',1,'SVF']]],
+  ['use',['Use',['../SVF-FE_2BasicTypes_8h.html#a9c01c67684e99545d8e0403321594977',1,'BasicTypes.h']]],
   ['user',['User',['../namespaceSVF.html#afc1b50355821e7299df03b026e36f1df',1,'SVF']]],
   ['util_5fptrint',['util_ptrint',['../util_8h.html#ab5e824003d402df8f53fcd7bd935ab0f',1,'util.h']]]
 ];
