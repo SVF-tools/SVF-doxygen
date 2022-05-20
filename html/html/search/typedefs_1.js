@@ -22,5 +22,5 @@ var searchData=
   ['bitcastinst',['BitCastInst',['../SVF-FE_2BasicTypes_8h.html#ab8cddf2ff868c0a9ae99483640c9ecef',1,'BasicTypes.h']]],
   ['blockaddress',['BlockAddress',['../SVF-FE_2BasicTypes_8h.html#ad29efa92ce4c6449b5ef7853994877bd',1,'BasicTypes.h']]],
   ['branchinst',['BranchInst',['../SVF-FE_2BasicTypes_8h.html#adeac5db1db4ed03898d30f205fd02264',1,'BasicTypes.h']]],
-  ['bridge_5fgep_5fiterator',['bridge_gep_iterator',['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator()'],['../namespaceSVF.html#a3b6e84470681a9f731a81e8cf54680cc',1,'SVF::bridge_gep_iterator()']]]
+  ['bridge_5fgep_5fiterator',['bridge_gep_iterator',['../SVF-FE_2BasicTypes_8h.html#af43699df9f7bdcb9565574b588e3f5ae',1,'bridge_gep_iterator():&#160;BasicTypes.h'],['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator()']]]
 ];

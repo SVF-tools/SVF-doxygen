@@ -11,7 +11,7 @@ var searchData=
   ['vartopropnodemap',['VarToPropNodeMap',['../classSVF_1_1VersionedFlowSensitive.html#a9ee5add09f2b446c6c6bcb84da0f75b3',1,'SVF::VersionedFlowSensitive']]],
   ['vartovalmap',['VarToValMap',['../classSVF_1_1ExeState.html#afc4aad166cd39a6cfbd8e9b897104f3f',1,'SVF::ExeState']]],
   ['vastartinst',['VAStartInst',['../SVF-FE_2BasicTypes_8h.html#a487fbdac6711a95d28683e6644c457ac',1,'BasicTypes.h']]],
-  ['vectortype',['VectorType',['../namespaceSVF.html#a1eaed46fa67cf1a51e438c5f8f523418',1,'SVF']]],
+  ['vectortype',['VectorType',['../SVF-FE_2BasicTypes_8h.html#a720813d613d926a5963d6632532105ac',1,'BasicTypes.h']]],
   ['version',['Version',['../namespaceSVF.html#a9ec7a8dc63411ee3724a25a59191be0c',1,'SVF']]],
   ['versionedkeytoidmap',['VersionedKeyToIDMap',['../classSVF_1_1PersistentVersionedPTData.html#a2ee473a1654b7d134a602268a2b70248',1,'SVF::PersistentVersionedPTData']]],
   ['versionedptdataty',['VersionedPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a8bc5e039958280b18e5a00a56e0bdc94',1,'SVF::BVDataPTAImpl']]],

@@ -144,7 +144,6 @@ var searchData=
   ['populationsize',['populationSize',['../structDdManager.html#a66eb055276b611db6849baf52f8766ef',1,'DdManager']]],
   ['pos',['pos',['../structcuddPathPair.html#adf2ec174fe645c74c4d045a9109364f4',1,'cuddPathPair']]],
   ['postdominatortree',['PostDominatorTree',['../namespaceSVF.html#ab34383ee87cd45eb485fa29db482ffef',1,'SVF']]],
-  ['postdominatortreewrapperpass',['PostDominatorTreeWrapperPass',['../namespaceSVF.html#a7f570d09953aa4ec60fd1d5f7f71b521',1,'SVF']]],
   ['postgchook',['postGCHook',['../structDdManager.html#a1aaf2a374903e2cc91c65730d0cfc2e1',1,'DdManager']]],
   ['postprocessnode',['postProcessNode',['../classSVF_1_1AndersenWaveDiff.html#aa0659a2787c1f9b1b6ec62900313475e',1,'SVF::AndersenWaveDiff']]],
   ['postreorderinghook',['postReorderingHook',['../structDdManager.html#a051721a550ae2f41b9838b8153d46b30',1,'DdManager']]],

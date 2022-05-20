@@ -24,6 +24,5 @@ var searchData=
   ['loctovalmap',['LocToValMap',['../classSVF_1_1ExeState.html#a887d6f9108cbbe7dca68dea67f70c392',1,'SVF::ExeState']]],
   ['locversionmap',['LocVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#aa689d29ead80303b1ef1e1a91f31c296',1,'SVF::VersionedFlowSensitive']]],
   ['loop',['Loop',['../namespaceSVF.html#abf85e29310b2e4df8925d00a5c081314',1,'SVF']]],
-  ['loopinfo',['LoopInfo',['../namespaceSVF.html#a77e088bfe47c0b0ddcbbe0693dec6fe5',1,'SVF']]],
-  ['loopinfowrapperpass',['LoopInfoWrapperPass',['../namespaceSVF.html#a023d6e6043174fffaf29d75b38877ed0',1,'SVF']]]
+  ['loopinfo',['LoopInfo',['../namespaceSVF.html#a77e088bfe47c0b0ddcbbe0693dec6fe5',1,'SVF']]]
 ];

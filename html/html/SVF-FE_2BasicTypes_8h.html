@@ -68,12 +68,22 @@ $(function() {
 <div class="title">BasicTypes.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;llvm/IR/Instructions.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="GEPTypeBridgeIterator_8h_source.html">SVF-FE/GEPTypeBridgeIterator.h</a>&quot;</code><br />
+<code>#include &lt;llvm/Pass.h&gt;</code><br />
+<code>#include &lt;llvm/IR/Instructions.h&gt;</code><br />
 <code>#include &lt;llvm/IR/IntrinsicInst.h&gt;</code><br />
 <code>#include &lt;llvm/IR/LLVMContext.h&gt;</code><br />
 <code>#include &lt;llvm/IR/Metadata.h&gt;</code><br />
 <code>#include &lt;llvm/IR/DataLayout.h&gt;</code><br />
+<code>#include &lt;llvm/IR/IRBuilder.h&gt;</code><br />
+<code>#include &lt;llvm/IR/DebugInfo.h&gt;</code><br />
+<code>#include &lt;llvm/IR/InstIterator.h&gt;</code><br />
+<code>#include &lt;llvm/IR/GetElementPtrTypeIterator.h&gt;</code><br />
+<code>#include &lt;llvm/IR/DerivedTypes.h&gt;</code><br />
 <code>#include &lt;llvm/Analysis/MemoryLocation.h&gt;</code><br />
+<code>#include &lt;llvm/Analysis/ScalarEvolution.h&gt;</code><br />
+<code>#include &lt;llvm/Analysis/ScalarEvolutionExpressions.h&gt;</code><br />
+<code>#include &lt;llvm/Transforms/Utils/UnifyFunctionExitNodes.h&gt;</code><br />
 <code>#include &lt;llvm/Support/SourceMgr.h&gt;</code><br />
 </div>
 <p><a href="SVF-FE_2BasicTypes_8h_source.html">Go to the source code of this file.</a></p>
@@ -84,12 +94,20 @@ Typedefs</h2></td></tr>
 <tr class="separator:a9f19a521d06397d1b6dc52c0388513d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c01c67684e99545d8e0403321594977"><td class="memItemLeft" align="right" valign="top">typedef llvm::Use&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a9c01c67684e99545d8e0403321594977">Use</a></td></tr>
 <tr class="separator:a9c01c67684e99545d8e0403321594977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0fa4afbccc902de3ae55c65fb8b007"><td class="memItemLeft" align="right" valign="top">typedef llvm::ModulePass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a2e0fa4afbccc902de3ae55c65fb8b007">ModulePass</a></td></tr>
+<tr class="separator:a2e0fa4afbccc902de3ae55c65fb8b007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71269a3564eca6be7bc0efb5202275f0"><td class="memItemLeft" align="right" valign="top">typedef llvm::IRBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a71269a3564eca6be7bc0efb5202275f0">IRBuilder</a></td></tr>
+<tr class="separator:a71269a3564eca6be7bc0efb5202275f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66384f66e64322087e7bdab0b50840f2"><td class="memItemLeft" align="right" valign="top">typedef llvm::UnifyFunctionExitNodes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a66384f66e64322087e7bdab0b50840f2">UnifyFunctionExitNodes</a></td></tr>
+<tr class="separator:a66384f66e64322087e7bdab0b50840f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a312d4d865f87a9bff58ce66b087c13d0"><td class="memItemLeft" align="right" valign="top">typedef llvm::SMDiagnostic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a312d4d865f87a9bff58ce66b087c13d0">SMDiagnostic</a></td></tr>
 <tr class="separator:a312d4d865f87a9bff58ce66b087c13d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6439506f12c106932f8db434ebaa761"><td class="memItemLeft" align="right" valign="top">typedef llvm::MetadataAsValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ae6439506f12c106932f8db434ebaa761">MetadataAsValue</a></td></tr>
-<tr class="separator:ae6439506f12c106932f8db434ebaa761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad29efa92ce4c6449b5ef7853994877bd"><td class="memItemLeft" align="right" valign="top">typedef llvm::BlockAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ad29efa92ce4c6449b5ef7853994877bd">BlockAddress</a></td></tr>
 <tr class="separator:ad29efa92ce4c6449b5ef7853994877bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79dfa1a3c9502e187c036ed3b41f937c"><td class="memItemLeft" align="right" valign="top">typedef llvm::MDString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a79dfa1a3c9502e187c036ed3b41f937c">MDString</a></td></tr>
+<tr class="separator:a79dfa1a3c9502e187c036ed3b41f937c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6439506f12c106932f8db434ebaa761"><td class="memItemLeft" align="right" valign="top">typedef llvm::MetadataAsValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ae6439506f12c106932f8db434ebaa761">MetadataAsValue</a></td></tr>
+<tr class="separator:ae6439506f12c106932f8db434ebaa761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef8af3d6e4b75a3e3e108b636a48fbd3"><td class="memItemLeft" align="right" valign="top">typedef llvm::StructLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#aef8af3d6e4b75a3e3e108b636a48fbd3">StructLayout</a></td></tr>
 <tr class="separator:aef8af3d6e4b75a3e3e108b636a48fbd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39fea8c436d96d2b5a74f5e02cc5d952"><td class="memItemLeft" align="right" valign="top">typedef llvm::ConstantStruct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a39fea8c436d96d2b5a74f5e02cc5d952">ConstantStruct</a></td></tr>
@@ -104,6 +122,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a66b2dbc1be121511c3b5b264f94558d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60115de303225d173fb935cf7619a2cb"><td class="memItemLeft" align="right" valign="top">typedef llvm::ConstantExpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a60115de303225d173fb935cf7619a2cb">ConstantExpr</a></td></tr>
 <tr class="separator:a60115de303225d173fb935cf7619a2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8006ceeea7c796af22da70c5cb93a0"><td class="memItemLeft" align="right" valign="top">typedef llvm::ConstantDataArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a7d8006ceeea7c796af22da70c5cb93a0">ConstantDataArray</a></td></tr>
+<tr class="separator:a7d8006ceeea7c796af22da70c5cb93a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e06fe1b4b25113ac322dbeda71055dc"><td class="memItemLeft" align="right" valign="top">typedef llvm::AllocaInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a5e06fe1b4b25113ac322dbeda71055dc">AllocaInst</a></td></tr>
 <tr class="separator:a5e06fe1b4b25113ac322dbeda71055dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abafbd655050c8c70dc8947997c369294"><td class="memItemLeft" align="right" valign="top">typedef llvm::AtomicCmpXchgInst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#abafbd655050c8c70dc8947997c369294">AtomicCmpXchgInst</a></td></tr>
@@ -168,6 +188,42 @@ Typedefs</h2></td></tr>
 <tr class="separator:ab6cb332bc04ab932cba29fa9c9d5f3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ab5636908738dc0987bc642604cbb4a"><td class="memItemLeft" align="right" valign="top">typedef llvm::UndefValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a1ab5636908738dc0987bc642604cbb4a">UndefValue</a></td></tr>
 <tr class="separator:a1ab5636908738dc0987bc642604cbb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ec1ba901eeebe7a242f18510831788"><td class="memItemLeft" align="right" valign="top">typedef llvm::DebugInfoFinder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a36ec1ba901eeebe7a242f18510831788">DebugInfoFinder</a></td></tr>
+<tr class="separator:a36ec1ba901eeebe7a242f18510831788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad46bd16008ebbc81e632f4fc69b3ea9"><td class="memItemLeft" align="right" valign="top">typedef llvm::DISubroutineType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#aad46bd16008ebbc81e632f4fc69b3ea9">DISubroutineType</a></td></tr>
+<tr class="separator:aad46bd16008ebbc81e632f4fc69b3ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f7968b31d2b29b589360067cf48e625"><td class="memItemLeft" align="right" valign="top">typedef llvm::DIBasicType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a5f7968b31d2b29b589360067cf48e625">DIBasicType</a></td></tr>
+<tr class="separator:a5f7968b31d2b29b589360067cf48e625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e8955a3dbfb0a836bfe64466411e4e"><td class="memItemLeft" align="right" valign="top">typedef llvm::DISubrange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#ab0e8955a3dbfb0a836bfe64466411e4e">DISubrange</a></td></tr>
+<tr class="separator:ab0e8955a3dbfb0a836bfe64466411e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358cd7e78ebc504972b73cd5ee80fac2"><td class="memItemLeft" align="right" valign="top">typedef llvm::DINode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a358cd7e78ebc504972b73cd5ee80fac2">DINode</a></td></tr>
+<tr class="separator:a358cd7e78ebc504972b73cd5ee80fac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98bb9afb9385eac16d7c78da796fd601"><td class="memItemLeft" align="right" valign="top">typedef llvm::DINodeArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a98bb9afb9385eac16d7c78da796fd601">DINodeArray</a></td></tr>
+<tr class="separator:a98bb9afb9385eac16d7c78da796fd601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc3b60432a782f5eb5ea73f20d34333"><td class="memItemLeft" align="right" valign="top">typedef llvm::DITypeRefArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#abfc3b60432a782f5eb5ea73f20d34333">DITypeRefArray</a></td></tr>
+<tr class="separator:abfc3b60432a782f5eb5ea73f20d34333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160997c1a0fb1000445d04b89d9c1323"><td class="memItemLeft" align="right" valign="top">typedef llvm::inst_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a160997c1a0fb1000445d04b89d9c1323">inst_iterator</a></td></tr>
+<tr class="separator:a160997c1a0fb1000445d04b89d9c1323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c08909930c80e172b5580fa0cc629f"><td class="memItemLeft" align="right" valign="top">typedef llvm::gep_type_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a61c08909930c80e172b5580fa0cc629f">gep_type_iterator</a></td></tr>
+<tr class="separator:a61c08909930c80e172b5580fa0cc629f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af43699df9f7bdcb9565574b588e3f5ae"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespacellvm.html#af77a7ec045719d1f075cf6c591902522">llvm::bridge_gep_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#af43699df9f7bdcb9565574b588e3f5ae">bridge_gep_iterator</a></td></tr>
+<tr class="separator:af43699df9f7bdcb9565574b588e3f5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4df49ba7ca3ad32d65e5ecf2dad707"><td class="memItemLeft" align="right" valign="top">typedef llvm::const_inst_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a9a4df49ba7ca3ad32d65e5ecf2dad707">const_inst_iterator</a></td></tr>
+<tr class="separator:a9a4df49ba7ca3ad32d65e5ecf2dad707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45136b941670180e9ba248bb4e52f09f"><td class="memItemLeft" align="right" valign="top">typedef llvm::const_pred_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a45136b941670180e9ba248bb4e52f09f">const_pred_iterator</a></td></tr>
+<tr class="separator:a45136b941670180e9ba248bb4e52f09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26413e6481a8551035d13215b29ea779"><td class="memItemLeft" align="right" valign="top">typedef llvm::ScalarEvolutionWrapperPass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a26413e6481a8551035d13215b29ea779">ScalarEvolutionWrapperPass</a></td></tr>
+<tr class="separator:a26413e6481a8551035d13215b29ea779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7182e2c93e2218f62abceae861a4e787"><td class="memItemLeft" align="right" valign="top">typedef llvm::SCEVAddRecExpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a7182e2c93e2218f62abceae861a4e787">SCEVAddRecExpr</a></td></tr>
+<tr class="separator:a7182e2c93e2218f62abceae861a4e787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff62eefea1b967cc90608517891644eb"><td class="memItemLeft" align="right" valign="top">typedef llvm::SCEVConstant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#aff62eefea1b967cc90608517891644eb">SCEVConstant</a></td></tr>
+<tr class="separator:aff62eefea1b967cc90608517891644eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e646200d8836461877804ee4a203d1"><td class="memItemLeft" align="right" valign="top">typedef llvm::ScalarEvolution&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a14e646200d8836461877804ee4a203d1">ScalarEvolution</a></td></tr>
+<tr class="separator:a14e646200d8836461877804ee4a203d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926a4429043d19e5b5fb425a31631d12"><td class="memItemLeft" align="right" valign="top">typedef llvm::SCEV&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a926a4429043d19e5b5fb425a31631d12">SCEV</a></td></tr>
+<tr class="separator:a926a4429043d19e5b5fb425a31631d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720813d613d926a5963d6632532105ac"><td class="memItemLeft" align="right" valign="top">typedef llvm::VectorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVF-FE_2BasicTypes_8h.html#a720813d613d926a5963d6632532105ac">VectorType</a></td></tr>
+<tr class="separator:a720813d613d926a5963d6632532105ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a5e06fe1b4b25113ac322dbeda71055dc"></a>
@@ -182,7 +238,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00034">34</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00059">59</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -198,7 +254,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00035">35</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00060">60</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -214,7 +270,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00036">36</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00061">61</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +286,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00063">63</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00088">88</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -246,7 +302,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00037">37</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00062">62</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +318,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00020">20</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00040">40</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -278,7 +334,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00038">38</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00063">63</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="af43699df9f7bdcb9565574b588e3f5ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af43699df9f7bdcb9565574b588e3f5ae">&#9670;&nbsp;</a></span>bridge_gep_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="namespacellvm.html#af77a7ec045719d1f075cf6c591902522">llvm::bridge_gep_iterator</a> <a class="el" href="SVF-FE_2BasicTypes_8h.html#af43699df9f7bdcb9565574b588e3f5ae">bridge_gep_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00104">104</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -294,7 +366,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00040">40</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00065">65</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -310,7 +382,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00042">42</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00067">67</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -326,7 +398,39 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00043">43</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00068">68</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a9a4df49ba7ca3ad32d65e5ecf2dad707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4df49ba7ca3ad32d65e5ecf2dad707">&#9670;&nbsp;</a></span>const_inst_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::const_inst_iterator <a class="el" href="SVF-FE_2BasicTypes_8h.html#a9a4df49ba7ca3ad32d65e5ecf2dad707">const_inst_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00105">105</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a45136b941670180e9ba248bb4e52f09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45136b941670180e9ba248bb4e52f09f">&#9670;&nbsp;</a></span>const_pred_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::const_pred_iterator <a class="el" href="SVF-FE_2BasicTypes_8h.html#a45136b941670180e9ba248bb4e52f09f">const_pred_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00106">106</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -342,7 +446,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00028">28</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00052">52</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +462,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00029">29</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00053">53</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a7d8006ceeea7c796af22da70c5cb93a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d8006ceeea7c796af22da70c5cb93a0">&#9670;&nbsp;</a></span>ConstantDataArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ConstantDataArray <a class="el" href="SVF-FE_2BasicTypes_8h.html#a7d8006ceeea7c796af22da70c5cb93a0">ConstantDataArray</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00056">56</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -374,7 +494,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00030">30</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00054">54</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -390,7 +510,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00031">31</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00055">55</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +526,119 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00024">24</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00048">48</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a36ec1ba901eeebe7a242f18510831788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ec1ba901eeebe7a242f18510831788">&#9670;&nbsp;</a></span>DebugInfoFinder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::DebugInfoFinder <a class="el" href="SVF-FE_2BasicTypes_8h.html#a36ec1ba901eeebe7a242f18510831788">DebugInfoFinder</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00093">93</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a5f7968b31d2b29b589360067cf48e625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7968b31d2b29b589360067cf48e625">&#9670;&nbsp;</a></span>DIBasicType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::DIBasicType <a class="el" href="SVF-FE_2BasicTypes_8h.html#a5f7968b31d2b29b589360067cf48e625">DIBasicType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00095">95</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a358cd7e78ebc504972b73cd5ee80fac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358cd7e78ebc504972b73cd5ee80fac2">&#9670;&nbsp;</a></span>DINode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::DINode <a class="el" href="SVF-FE_2BasicTypes_8h.html#a358cd7e78ebc504972b73cd5ee80fac2">DINode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00097">97</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a98bb9afb9385eac16d7c78da796fd601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98bb9afb9385eac16d7c78da796fd601">&#9670;&nbsp;</a></span>DINodeArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::DINodeArray <a class="el" href="SVF-FE_2BasicTypes_8h.html#a98bb9afb9385eac16d7c78da796fd601">DINodeArray</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00098">98</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="ab0e8955a3dbfb0a836bfe64466411e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e8955a3dbfb0a836bfe64466411e4e">&#9670;&nbsp;</a></span>DISubrange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::DISubrange <a class="el" href="SVF-FE_2BasicTypes_8h.html#ab0e8955a3dbfb0a836bfe64466411e4e">DISubrange</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00096">96</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="aad46bd16008ebbc81e632f4fc69b3ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad46bd16008ebbc81e632f4fc69b3ea9">&#9670;&nbsp;</a></span>DISubroutineType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::DISubroutineType <a class="el" href="SVF-FE_2BasicTypes_8h.html#aad46bd16008ebbc81e632f4fc69b3ea9">DISubroutineType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00094">94</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="abfc3b60432a782f5eb5ea73f20d34333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc3b60432a782f5eb5ea73f20d34333">&#9670;&nbsp;</a></span>DITypeRefArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::DITypeRefArray <a class="el" href="SVF-FE_2BasicTypes_8h.html#abfc3b60432a782f5eb5ea73f20d34333">DITypeRefArray</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00099">99</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -422,7 +654,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00045">45</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00070">70</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -438,7 +670,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00044">44</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00069">69</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -454,7 +686,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00052">52</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00077">77</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +702,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00053">53</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00078">78</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a61c08909930c80e172b5580fa0cc629f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c08909930c80e172b5580fa0cc629f">&#9670;&nbsp;</a></span>gep_type_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::gep_type_iterator <a class="el" href="SVF-FE_2BasicTypes_8h.html#a61c08909930c80e172b5580fa0cc629f">gep_type_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00103">103</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -486,7 +734,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00046">46</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00071">71</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -502,7 +750,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00055">55</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00080">80</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -518,7 +766,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00051">51</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00076">76</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a160997c1a0fb1000445d04b89d9c1323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160997c1a0fb1000445d04b89d9c1323">&#9670;&nbsp;</a></span>inst_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::inst_iterator <a class="el" href="SVF-FE_2BasicTypes_8h.html#a160997c1a0fb1000445d04b89d9c1323">inst_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00102">102</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -534,7 +798,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00050">50</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00075">75</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -550,7 +814,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00047">47</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00072">72</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a71269a3564eca6be7bc0efb5202275f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71269a3564eca6be7bc0efb5202275f0">&#9670;&nbsp;</a></span>IRBuilder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::IRBuilder <a class="el" href="SVF-FE_2BasicTypes_8h.html#a71269a3564eca6be7bc0efb5202275f0">IRBuilder</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00030">30</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -566,7 +846,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00056">56</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00081">81</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -582,7 +862,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00014">14</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00027">27</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a79dfa1a3c9502e187c036ed3b41f937c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79dfa1a3c9502e187c036ed3b41f937c">&#9670;&nbsp;</a></span>MDString</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::MDString <a class="el" href="SVF-FE_2BasicTypes_8h.html#a79dfa1a3c9502e187c036ed3b41f937c">MDString</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00043">43</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -598,7 +894,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00025">25</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00049">49</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -614,7 +910,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00019">19</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00044">44</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a2e0fa4afbccc902de3ae55c65fb8b007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0fa4afbccc902de3ae55c65fb8b007">&#9670;&nbsp;</a></span>ModulePass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ModulePass <a class="el" href="SVF-FE_2BasicTypes_8h.html#a2e0fa4afbccc902de3ae55c65fb8b007">ModulePass</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00029">29</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -630,7 +942,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00049">49</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00074">74</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -646,7 +958,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00057">57</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00082">82</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -662,7 +974,87 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00041">41</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00066">66</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a14e646200d8836461877804ee4a203d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e646200d8836461877804ee4a203d1">&#9670;&nbsp;</a></span>ScalarEvolution</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ScalarEvolution <a class="el" href="SVF-FE_2BasicTypes_8h.html#a14e646200d8836461877804ee4a203d1">ScalarEvolution</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00112">112</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a26413e6481a8551035d13215b29ea779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26413e6481a8551035d13215b29ea779">&#9670;&nbsp;</a></span>ScalarEvolutionWrapperPass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::ScalarEvolutionWrapperPass <a class="el" href="SVF-FE_2BasicTypes_8h.html#a26413e6481a8551035d13215b29ea779">ScalarEvolutionWrapperPass</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00109">109</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a926a4429043d19e5b5fb425a31631d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a926a4429043d19e5b5fb425a31631d12">&#9670;&nbsp;</a></span>SCEV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::SCEV <a class="el" href="SVF-FE_2BasicTypes_8h.html#a926a4429043d19e5b5fb425a31631d12">SCEV</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00113">113</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a7182e2c93e2218f62abceae861a4e787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7182e2c93e2218f62abceae861a4e787">&#9670;&nbsp;</a></span>SCEVAddRecExpr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::SCEVAddRecExpr <a class="el" href="SVF-FE_2BasicTypes_8h.html#a7182e2c93e2218f62abceae861a4e787">SCEVAddRecExpr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00110">110</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="aff62eefea1b967cc90608517891644eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff62eefea1b967cc90608517891644eb">&#9670;&nbsp;</a></span>SCEVConstant</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::SCEVConstant <a class="el" href="SVF-FE_2BasicTypes_8h.html#aff62eefea1b967cc90608517891644eb">SCEVConstant</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00111">111</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -678,7 +1070,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00058">58</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00083">83</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -694,7 +1086,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00048">48</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00073">73</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -710,7 +1102,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00017">17</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00038">38</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +1118,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00023">23</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00047">47</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -742,7 +1134,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00039">39</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00064">64</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -758,7 +1150,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00064">64</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00089">89</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -774,7 +1166,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00065">65</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00090">90</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a66384f66e64322087e7bdab0b50840f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66384f66e64322087e7bdab0b50840f2">&#9670;&nbsp;</a></span>UnifyFunctionExitNodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::UnifyFunctionExitNodes <a class="el" href="SVF-FE_2BasicTypes_8h.html#a66384f66e64322087e7bdab0b50840f2">UnifyFunctionExitNodes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00034">34</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -790,7 +1198,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00054">54</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00079">79</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -806,7 +1214,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00015">15</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00028">28</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -822,7 +1230,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00059">59</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00084">84</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -838,7 +1246,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00060">60</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00085">85</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -854,7 +1262,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00061">61</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00086">86</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -870,7 +1278,23 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00062">62</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00087">87</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
+
+</div>
+</div>
+<a id="a720813d613d926a5963d6632532105ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720813d613d926a5963d6632532105ac">&#9670;&nbsp;</a></span>VectorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef llvm::VectorType <a class="el" href="SVF-FE_2BasicTypes_8h.html#a720813d613d926a5963d6632532105ac">VectorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVF-FE_2BasicTypes_8h_source.html#l00116">116</a> of file <a class="el" href="SVF-FE_2BasicTypes_8h_source.html">BasicTypes.h</a>.</p>
 
 </div>
 </div>
