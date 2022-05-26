@@ -93,6 +93,7 @@ var searchData=
   ['svfmain',['SVFMain',['../classSVF_1_1Options.html#a868fa5069b01b7a7dfbc5fb99cb76385',1,'SVF::Options']]],
   ['svfmod',['svfMod',['../classSVF_1_1CHGraph.html#a62a3ccdbc55381d5f8d96dc23141f2e5',1,'SVF::CHGraph::svfMod()'],['../classSVF_1_1PointerAnalysis.html#a7e8b3f6843e5ea75fd189162d2cd60a5',1,'SVF::PointerAnalysis::svfMod()'],['../classSVF_1_1SVFIRBuilder.html#aa67bbd366b93fb1ec7a540c83566c977',1,'SVF::SVFIRBuilder::svfMod()']]],
   ['svfmodule',['svfModule',['../classSVF_1_1DCHGraph.html#a85a3c9a6a60a4379717773f8722ae42e',1,'SVF::DCHGraph::svfModule()'],['../classSVF_1_1LLVMModuleSet.html#a43832e93a42ae43d44b0cc160981678f',1,'SVF::LLVMModuleSet::svfModule()']]],
+  ['sym2labelmap',['sym2LabelMap',['../classSVF_1_1CFLGraph.html#afee9f94bba68694cc03f96c85535eea2',1,'SVF::CFLGraph']]],
   ['symid',['symId',['../classSVF_1_1MemObj.html#a37f4e34b7f7dd6bfd4379cf3552e9046',1,'SVF::MemObj']]],
   ['syminfo',['symInfo',['../classSVF_1_1IRGraph.html#a679145e7bf818b0a19005dc8e2845fe1',1,'SVF::IRGraph::symInfo()'],['../classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c',1,'SVF::SymbolTableInfo::symInfo()'],['../classSVF_1_1SymbolTableBuilder.html#a3100246d9b0a58e53f2dbc8acf231afb',1,'SVF::SymbolTableBuilder::symInfo()']]],
   ['symmviolation',['symmviolation',['../structDdManager.html#a4a8e54350702f269411399762cb958e1',1,'DdManager']]],

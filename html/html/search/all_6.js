@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['f',['f',['../structDdHook.html#a5b1bfe85ce0ac180fc160eb8c30094d7',1,'DdHook::f()'],['../structDdCache.html#a74c07792181f1d898f9fb4524c8942ad',1,'DdCache::f()']]],
+  ['f',['f',['../structDdHook.html#a5b1bfe85ce0ac180fc160eb8c30094d7',1,'DdHook::f()'],['../structDdCache.html#a74c07792181f1d898f9fb4524c8942ad',1,'DdCache::f()'],['../CFLGrammar_8txt.html#acc7b4cf736579c4d83be2316d5a9e5f2',1,'F():&#160;CFLGrammar.txt'],['../CFLGrammar_8txt.html#a5526c6e27f7632db909dee64f361d2c9',1,'F(Store V Load) *:&#160;CFLGrammar.txt']]],
   ['fail',['fail',['../util_8h.html#a71a6998301cde817b7ade39eff117424',1,'util.h']]],
   ['falsecond',['falseCond',['../classSVF_1_1BDDExprManager.html#a7c9d970f02b142a5ca05f8d67e974269',1,'SVF::BDDExprManager']]],
   ['fastcluster_2ecpp',['fastcluster.cpp',['../fastcluster_8cpp.html',1,'']]],
@@ -8,6 +8,7 @@ var searchData=
   ['fastcluster_5fdm_2ecpp_2einc',['fastcluster_dm.cpp.inc',['../fastcluster__dm_8cpp_8inc.html',1,'']]],
   ['fastcluster_5fr_5fdm_2ecpp_2einc',['fastcluster_R_dm.cpp.inc',['../fastcluster__R__dm_8cpp_8inc.html',1,'']]],
   ['fastclustertime',['FastClusterTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ae78d2b60035350c634f6f58d7a043c22',1,'SVF::NodeIDAllocator::Clusterer']]],
+  ['fbar',['Fbar',['../CFLGrammar_8txt.html#a6fd7ba961de09e32f8086ffb5c1d49cb',1,'Fbar(Copybar) *:&#160;CFLGrammar.txt'],['../CFLGrammar_8txt.html#a4154da66867aeecdfb16bff361b9d1ce',1,'Fbar(Loadbar V Storebar) *:&#160;CFLGrammar.txt']]],
   ['fc_5fisnan',['fc_isnan',['../fastcluster_8cpp.html#a8abcd9d66492e761592578e82ce2cba0',1,'fastcluster.cpp']]],
   ['fenceinst',['FenceInst',['../SVF-FE_2BasicTypes_8h.html#a43a430043d6520ceac623115ab2fbf56',1,'BasicTypes.h']]],
   ['fieldexpand',['fieldExpand',['../classSVF_1_1AndersenSFR.html#aa768e5cd0a762d17e2ec2baaad0486bf',1,'SVF::AndersenSFR']]],
@@ -28,6 +29,7 @@ var searchData=
   ['filechecker_2ecpp',['FileChecker.cpp',['../FileChecker_8cpp.html',1,'']]],
   ['filechecker_2eh',['FileChecker.h',['../FileChecker_8h.html',1,'']]],
   ['filename',['fileName',['../classSVF_1_1GrammarBuilder.html#aa0f5135a232adc1ca42d4f51a3c70704',1,'SVF::GrammarBuilder']]],
+  ['fillattribute',['fillAttribute',['../classSVF_1_1CFGNormalizer.html#a956c59895389cdc2a63f6f708a0ba987',1,'SVF::CFGNormalizer']]],
   ['filoworklist',['FILOWorkList',['../classSVF_1_1FILOWorkList.html',1,'SVF::FILOWorkList&lt; Data &gt;'],['../classSVF_1_1FILOWorkList.html#ab447c6c1a59cd81982626d25d00d57de',1,'SVF::FILOWorkList::FILOWorkList()']]],
   ['filterfun',['filterFun',['../classSVF_1_1LockResultValidator.html#a70cdb993b3e90c70cc083fb8ed93fb91',1,'SVF::LockResultValidator']]],
   ['finalbit',['finalBit',['../classSVF_1_1CoreBitVector.html#a8825e54f584be8aa0ff627335064244e',1,'SVF::CoreBitVector']]],
@@ -58,7 +60,7 @@ var searchData=
   ['flexsymmap',['FlexSymMap',['../classSVF_1_1Options.html#a79dff5235e82e1313fa4b053f866f357',1,'SVF::Options']]],
   ['flippedaddressmask',['FlippedAddressMask',['../ExeState_8h.html#aec682540f2c8aa9deb79f610e4399411',1,'ExeState.h']]],
   ['flowbudget',['FlowBudget',['../classSVF_1_1Options.html#a53b1a1ec4e5bbd9696ed9b680aa0c3c7',1,'SVF::Options']]],
-  ['flowdda',['FlowDDA',['../classSVF_1_1FlowDDA.html',1,'SVF::FlowDDA'],['../classSVF_1_1FlowDDA.html#aab22d2c14b46963887f623d84e75bd7a',1,'SVF::FlowDDA::FlowDDA()'],['../classSVF_1_1ContextDDA.html#a2a23f0235fc49a177b2694f668b02551',1,'SVF::ContextDDA::flowDDA()'],['../classSVF_1_1DDAStat.html#a86e03ef25f150b98bc1f8c89bfd7fc77',1,'SVF::DDAStat::flowDDA()']]],
+  ['flowdda',['FlowDDA',['../classSVF_1_1FlowDDA.html',1,'SVF::FlowDDA'],['../classSVF_1_1ContextDDA.html#a2a23f0235fc49a177b2694f668b02551',1,'SVF::ContextDDA::flowDDA()'],['../classSVF_1_1DDAStat.html#a86e03ef25f150b98bc1f8c89bfd7fc77',1,'SVF::DDAStat::flowDDA()'],['../classSVF_1_1FlowDDA.html#aab22d2c14b46963887f623d84e75bd7a',1,'SVF::FlowDDA::FlowDDA()']]],
   ['flowdda_2ecpp',['FlowDDA.cpp',['../FlowDDA_8cpp.html',1,'']]],
   ['flowdda_2eh',['FlowDDA.h',['../FlowDDA_8h.html',1,'']]],
   ['flows_5fdda',['FlowS_DDA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85aa43c83e2f0df003c158d4b1325b50b18',1,'SVF::PointerAnalysis']]],

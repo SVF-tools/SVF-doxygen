@@ -25,6 +25,7 @@ var searchData=
   ['addaliasset',['addAliasSet',['../classSVF_1_1SVFModule.html#a9b28f106dfedb917c6c757d5d0a6771e',1,'SVF::SVFModule']]],
   ['addandersenmetadata',['addAndersenMetadata',['../classSVF_1_1IRAnnotator.html#aa36cd38b0518a9c9a3b57cea9b07b227',1,'SVF::IRAnnotator']]],
   ['addandersennamedmetdata',['addAndersenNamedMetdata',['../classSVF_1_1IRAnnotator.html#af48723d319bbe2ecfd0c4777c1c92dc1',1,'SVF::IRAnnotator']]],
+  ['addattribute',['addAttribute',['../classSVF_1_1CFLGraph.html#abaa3dc3cd6bbfcfc39efd58af9e14a9c',1,'SVF::CFLGraph']]],
   ['addbackwardvisited',['addBackwardVisited',['../classSVF_1_1SrcSnkDDA.html#aa061e2d72d3045c9712512c6df002544',1,'SVF::SrcSnkDDA']]],
   ['addbinaryopedge',['addBinaryOPEdge',['../classSVF_1_1SVFIRBuilder.html#a3f954c61381fe31088e791772c334105',1,'SVF::SVFIRBuilder']]],
   ['addbinaryopstmt',['addBinaryOPStmt',['../classSVF_1_1SVFIR.html#a955a2f93cf9eef857e40f19bc24edb2f',1,'SVF::SVFIR']]],
