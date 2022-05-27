@@ -335,7 +335,7 @@ var searchData=
   ['striparray',['stripArray',['../classSVF_1_1DCHGraph.html#a6c276e661e5e63c1c84387f84c8a62e4',1,'SVF::DCHGraph']]],
   ['stripconstantcasts',['stripConstantCasts',['../namespaceSVF_1_1SVFUtil.html#a86763e6a3606598580cd0172aecb5bc7',1,'SVF::SVFUtil']]],
   ['stripqualifiers',['stripQualifiers',['../classSVF_1_1DCHGraph.html#a175ed6ad0c9b23d5617f755ab96c76c4',1,'SVF::DCHGraph']]],
-  ['stripspace',['stripSpace',['../classSVF_1_1GrammarBuilder.html#ad13b1ea2f23edbd25d9ba00b38ca3ff2',1,'SVF::GrammarBuilder']]],
+  ['stripspace',['stripSpace',['../classSVF_1_1GrammarBuilder.html#a6de372fbe80d33a5688cada0adca0bb8',1,'SVF::GrammarBuilder']]],
   ['strlen',['strlen',['../util_8h.html#a492442620ce65db20fe7297b43cbca65',1,'util.h']]],
   ['strncat',['strncat',['../util_8h.html#a32dde458da69c9bcbc1a9acfdf28099b',1,'util.h']]],
   ['strncmp',['strncmp',['../util_8h.html#a08bcce7a814043fd848fdc0fe52d028e',1,'util.h']]],
