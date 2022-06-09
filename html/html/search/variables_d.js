@@ -80,7 +80,6 @@ var searchData=
   ['mr2countermap',['mr2CounterMap',['../classSVF_1_1MemSSA.html#a22e2dd0fc78877bdedd207a40540a634',1,'SVF::MemSSA']]],
   ['mr2verstackmap',['mr2VerStackMap',['../classSVF_1_1MemSSA.html#ae4c7b17d8da8278dca362af79f9f268d',1,'SVF::MemSSA']]],
   ['mrgen',['mrGen',['../classSVF_1_1MemSSA.html#a213ebe634bbdbe33460ccd941c1dc6a5',1,'SVF::MemSSA']]],
-  ['mrs',['mrs',['../classSVF_1_1IndirectSVFGEdge.html#afb265822e2581e4d7fccc47d1b8b2a5c',1,'SVF::IndirectSVFGEdge']]],
   ['mssa',['mssa',['../classSVF_1_1SVFG.html#a6f07410ee34e4bf1079e3b5902c81d28',1,'SVF::SVFG::mssa()'],['../classSVF_1_1MemSSAStat.html#ab29515f4e5b1f090c06a6e39761d3394',1,'SVF::MemSSAStat::mssa()']]],
   ['mssafun',['MSSAFun',['../classSVF_1_1Options.html#a4ac0e6b77fc9ccc18b269268b3cd046d',1,'SVF::Options']]],
   ['mssavartodefmap',['MSSAVarToDefMap',['../classSVF_1_1SVFG.html#aafa1b445bd3578daaba8f82e517745f1',1,'SVF::SVFG']]],

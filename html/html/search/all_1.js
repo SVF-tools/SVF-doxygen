@@ -191,7 +191,6 @@ var searchData=
   ['addmodelflag',['AddModelFlag',['../classSVF_1_1Options.html#af129d2ff94af3f6830c0678cb4b72371',1,'SVF::Options']]],
   ['addmodsideeffectofcallsite',['addModSideEffectOfCallSite',['../classSVF_1_1MRGenerator.html#a915486be8b119c1f1cc87143a2a5180e',1,'SVF::MRGenerator']]],
   ['addmodsideeffectoffunction',['addModSideEffectOfFunction',['../classSVF_1_1MRGenerator.html#a39604645ca9ba10607ada3872b14705a',1,'SVF::MRGenerator']]],
-  ['addmrver',['addMrVer',['../classSVF_1_1IndirectSVFGEdge.html#a7ac57ccfe31b6cd6bbc6f15ed22a6531',1,'SVF::IndirectSVFGEdge']]],
   ['addmssaphi',['AddMSSAPHI',['../classSVF_1_1MemSSA.html#a606aaf7a76ca71cb32adc9af7291ae6e',1,'SVF::MemSSA::AddMSSAPHI(const BasicBlock *bb, const MRSet &amp;mrSet)'],['../classSVF_1_1MemSSA.html#a3af850d2fe9b2e75b2705c6d1355eda2',1,'SVF::MemSSA::AddMSSAPHI(const BasicBlock *bb, const MemRegion *mr)']]],
   ['addmultiplicitygroups',['addMultiplicityGroups',['../cuddInt_8c.html#a29f5c23b943bb38144362698dc8b60ed',1,'cuddInt.c']]],
   ['addnewcandidate',['addNewCandidate',['../classSVF_1_1WPAMinimumSolver.html#a9f7d45208d70631ba8fa76220f13c6e4',1,'SVF::WPAMinimumSolver']]],
