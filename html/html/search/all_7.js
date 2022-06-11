@@ -754,7 +754,7 @@ var searchData=
   ['globaldeftorepmap',['GlobalDefToRepMap',['../classSVF_1_1LLVMModuleSet.html#ae2a1fa0b908cf372c50af90e62c4bf2b',1,'SVF::LLVMModuleSet']]],
   ['globaldeftorepmapty',['GlobalDefToRepMapTy',['../classSVF_1_1LLVMModuleSet.html#a4dc808f3f69a87c74933d1f6183d1459',1,'SVF::LLVMModuleSet']]],
   ['globalicfgnode',['GlobalICFGNode',['../classSVF_1_1GlobalICFGNode.html',1,'SVF::GlobalICFGNode'],['../classSVF_1_1GlobalICFGNode.html#a01e8a9844fcad1cc5faa22d8b0e0efd7',1,'SVF::GlobalICFGNode::GlobalICFGNode()']]],
-  ['globalobject',['GlobalObject',['../namespaceSVF.html#af157dc77830b6cc804338df7430cbbb3',1,'SVF']]],
+  ['globalobject',['GlobalObject',['../SVF-FE_2BasicTypes_8h.html#a16adea95b46c741a8990d92d29f33bb6',1,'BasicTypes.h']]],
   ['globalset',['GlobalSet',['../classSVF_1_1SVFModule.html#a4ff4bbd1771615757fc6575282046e30',1,'SVF::SVFModule']]],
   ['globalsettype',['GlobalSetType',['../classSVF_1_1SVFModule.html#a5df72b0e3f0697069d65a9c1d7470d35',1,'SVF::SVFModule']]],
   ['globalsvfg',['globalSvfg',['../classSVF_1_1SVFGBuilder.html#a31b754a303116f33d679dfcd886c4bed',1,'SVF::SVFGBuilder']]],
