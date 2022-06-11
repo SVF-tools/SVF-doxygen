@@ -374,7 +374,7 @@ var searchData=
   ['getloadtomusetmap',['getLoadToMUSetMap',['../classSVF_1_1MemSSA.html#a70dd35ef458c452330dfebcdde17b84c',1,'SVF::MemSSA']]],
   ['getloc',['getLoc',['../classSVF_1_1StmtDPItem.html#a3616c94c4394b61c757ffcd39888d5b9',1,'SVF::StmtDPItem']]],
   ['getlocationset',['getLocationSet',['../classSVF_1_1NormalGepCGEdge.html#ac469605b74fa8cd38e1959c8b948864b',1,'SVF::NormalGepCGEdge::getLocationSet()'],['../classSVF_1_1GepStmt.html#abec33091e0dac0cdd5b95b6d7b0db3d8',1,'SVF::GepStmt::getLocationSet()'],['../classSVF_1_1GepObjVar.html#a553e648804b39c503e7288dd0434c339',1,'SVF::GepObjVar::getLocationSet()']]],
-  ['getlocationsetfrombasenode',['getLocationSetFromBaseNode',['../classSVF_1_1SVFIR.html#a8b36d077c30fb2830a253ded82413c2d',1,'SVF::SVFIR']]],
+  ['getlocationsetfrombasenode',['getLocationSetFromBaseNode',['../classSVF_1_1SVFIRBuilder.html#acdb0cc97c0a0df00a6bf73cdb5cab5ba',1,'SVF::SVFIRBuilder']]],
   ['getlockspan',['getLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a4e6207b3b64a60993e1e02f6ef125452',1,'SVF::SVFGNodeLockSpan']]],
   ['getlockval',['getLockVal',['../classSVF_1_1LockAnalysis.html#a785616f9c744d7249fd1080e5ed04d29',1,'SVF::LockAnalysis::getLockVal()'],['../classSVF_1_1ThreadAPI.html#a8f1c869eb42f7c89697cf2c7452ba9e9',1,'SVF::ThreadAPI::getLockVal(const Instruction *inst) const'],['../classSVF_1_1ThreadAPI.html#ad1d43e47f5036138e85068a1714f6c48',1,'SVF::ThreadAPI::getLockVal(CallSite cs) const']]],
   ['getloctodpmvecmap',['getLocToDPMVecMap',['../classSVF_1_1DDAVFSolver.html#ad849ae4509e88832f784c748468ab959',1,'SVF::DDAVFSolver']]],

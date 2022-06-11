@@ -24,7 +24,7 @@ var searchData=
   ['valuetoedgemap',['ValueToEdgeMap',['../classSVF_1_1IRGraph.html#addfc2131699f5ecee3a45d65cda46c24',1,'SVF::IRGraph::ValueToEdgeMap()'],['../classSVF_1_1IRGraph.html#a1308b5d3001c6676e8a8be6a8b118704',1,'SVF::IRGraph::valueToEdgeMap()']]],
   ['valuetoidmapty',['ValueToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#a03a11c48d748990ddac1ac5866ecb48e',1,'SVF::SymbolTableInfo']]],
   ['valvar',['ValVar',['../classSVF_1_1ValVar.html',1,'SVF::ValVar'],['../classSVF_1_1ValVar.html#ae5dc21b3327a100ffe3e0e2c876ba1bb',1,'SVF::ValVar::ValVar()']]],
-  ['var2labelmap',['var2LabelMap',['../classSVF_1_1SVFStmt.html#a24c64109d27ef7549d1c7a07c391e007',1,'SVF::SVFStmt::var2LabelMap()'],['../classSVF_1_1SVFStmt.html#ad178ccbc7800527c3dc406ad5fa069bb',1,'SVF::SVFStmt::Var2LabelMap()']]],
+  ['var2labelmap',['Var2LabelMap',['../classSVF_1_1SVFStmt.html#ad178ccbc7800527c3dc406ad5fa069bb',1,'SVF::SVFStmt::Var2LabelMap()'],['../classSVF_1_1SVFStmt.html#a24c64109d27ef7549d1c7a07c391e007',1,'SVF::SVFStmt::var2LabelMap()']]],
   ['var_5farray_5fobj',['VAR_ARRAY_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830adedc43e0fcaebf433120869aa9307b1c',1,'SVF::ObjTypeInfo']]],
   ['var_5fstruct_5fobj',['VAR_STRUCT_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830aaf98981bd15b41f543fd99d0c6222f08',1,'SVF::ObjTypeInfo']]],
   ['varargnode',['VarargNode',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa5a13a457f037424f61e74165a9cdcebf',1,'SVF::SVFVar']]],
