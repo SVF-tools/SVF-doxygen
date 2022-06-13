@@ -48,7 +48,6 @@ var searchData=
   ['genericvfgedgety',['GenericVFGEdgeTy',['../namespaceSVF.html#a30dcaf83718f2652012f98b192dcf437',1,'SVF']]],
   ['genericvfgnodety',['GenericVFGNodeTy',['../namespaceSVF.html#a3b4bbc4b72e982a79c23fd3ec26410b6',1,'SVF']]],
   ['genericvfgty',['GenericVFGTy',['../namespaceSVF.html#ab4f1d8a6715e791c94970e6f87b18f8f',1,'SVF']]],
-  ['genicfg',['GenICFG',['../classSVF_1_1Options.html#a5d839932d78bedf6f5eb75358699732f',1,'SVF::Options']]],
   ['gep',['Gep',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75aa2dffaa8741582ce06e591cbaf9257d7',1,'SVF::VFGNode::Gep()'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a20d960c19118d1ed319e0dbea94405e8',1,'SVF::SVFStmt::Gep()']]],
   ['gep_5fi',['Gep_i',['../CFLGrammar_8txt.html#a3570ef0c1d906134e5aa6077d39fef04',1,'CFLGrammar.txt']]],
   ['gep_5ftype_5fiterator',['gep_type_iterator',['../SVF-FE_2BasicTypes_8h.html#a61c08909930c80e172b5580fa0cc629f',1,'BasicTypes.h']]],
