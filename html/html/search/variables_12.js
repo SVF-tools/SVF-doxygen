@@ -10,6 +10,7 @@ var searchData=
   ['reachglob',['reachGlob',['../classSVF_1_1ProgSlice.html#ab36bc2aa24a2a90555a9714dcbfc83e5',1,'SVF::ProgSlice']]],
   ['readander',['ReadAnder',['../classSVF_1_1Options.html#a98a521e5c99c5248eae8f8234453b116',1,'SVF::Options']]],
   ['readprecisiontdedge',['ReadPrecisionTDEdge',['../classSVF_1_1Options.html#a6bec8aed8673d10d65cc3df9fad3383b',1,'SVF::Options']]],
+  ['readsvfg',['ReadSVFG',['../classSVF_1_1Options.html#a1608ded89f829a780d67cb82e1e62944',1,'SVF::Options']]],
   ['realign',['realign',['../structDdManager.html#ab50e58f446cce13dd36cf63230e2d836',1,'DdManager']]],
   ['realignz',['realignZ',['../structDdManager.html#aeb6927b50fc978391e3eda5161df8c5c',1,'DdManager']]],
   ['reanalyze',['reanalyze',['../classSVF_1_1WPASolver.html#ac460772d9236a2fefe17b2557023b883',1,'SVF::WPASolver']]],

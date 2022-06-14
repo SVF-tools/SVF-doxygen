@@ -8,7 +8,7 @@ var searchData=
   ['wpasolver',['WPASolver',['../classSVF_1_1WPASolver.html#a0c5616b0e340955dafc2ab2f21740abd',1,'SVF::WPASolver']]],
   ['writegraphtofile',['WriteGraphToFile',['../classllvm_1_1GraphPrinter.html#af6ed328e74882d2b5e2b4039cb836928',1,'llvm::GraphPrinter']]],
   ['writepaggepnode',['writePAGgepNode',['../classSVF_1_1IRAnnotator.html#a958e9af846c882ef3eeba4d71ff7ef7d',1,'SVF::IRAnnotator']]],
-  ['writetofile',['writeToFile',['../classSVF_1_1BVDataPTAImpl.html#a25c68f9d2b88437778e854ff0d741d1b',1,'SVF::BVDataPTAImpl']]],
+  ['writetofile',['writeToFile',['../classSVF_1_1SVFG.html#a7ce9ec638995467c211958262be08ee1',1,'SVF::SVFG::writeToFile()'],['../classSVF_1_1BVDataPTAImpl.html#a25c68f9d2b88437778e854ff0d741d1b',1,'SVF::BVDataPTAImpl::writeToFile()']]],
   ['writetomodule',['writeToModule',['../classSVF_1_1BVDataPTAImpl.html#aa0ca07204a31004fb876c6e18d1ac1ca',1,'SVF::BVDataPTAImpl']]],
   ['writewrnmsg',['writeWrnMsg',['../namespaceSVF_1_1SVFUtil.html#a077caa1b10ab84d101d79fc7ea50db2d',1,'SVF::SVFUtil']]],
   ['wrnmsg',['wrnMsg',['../namespaceSVF_1_1SVFUtil.html#a6c06020737f7dff22a666b75c28c5e7d',1,'SVF::SVFUtil']]]

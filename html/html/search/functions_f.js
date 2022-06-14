@@ -4,6 +4,7 @@ var searchData=
   ['racevalidator',['RaceValidator',['../classSVF_1_1RaceValidator.html#a7ec5d97155d170033398757af56691ad',1,'SVF::RaceValidator']]],
   ['rand_5fint',['rand_int',['../cuddInt_8c.html#a08c36691817205004514f669bfa72afe',1,'cuddInt.c']]],
   ['random_5fgenerator',['random_generator',['../cuddInt_8c.html#a77a931cdec27ae26f4d8e4b9152ff7e6',1,'cuddInt.c']]],
+  ['readfile',['readFile',['../classSVF_1_1SVFG.html#a9da50b8f467066b478143af64f7c9858',1,'SVF::SVFG']]],
   ['readfromfile',['readFromFile',['../classSVF_1_1BVDataPTAImpl.html#a290501006cb700db0e07dc577429c928',1,'SVF::BVDataPTAImpl']]],
   ['readfrommodule',['readFromModule',['../classSVF_1_1BVDataPTAImpl.html#a857cdacfc8cafdeb1431bdfa077ef9b5',1,'SVF::BVDataPTAImpl']]],
   ['readinheritancemetadatafrommodule',['readInheritanceMetadataFromModule',['../classSVF_1_1CHGBuilder.html#a443b021eb2b08b92164515750385b058',1,'SVF::CHGBuilder']]],
