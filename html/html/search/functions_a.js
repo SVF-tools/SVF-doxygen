@@ -7,6 +7,7 @@ var searchData=
   ['listnode',['ListNode',['../classSVF_1_1List_1_1ListNode.html#ab5a3ef6fe687d646d402516c85b53853',1,'SVF::List::ListNode']]],
   ['llvmfunbegin',['llvmFunBegin',['../classSVF_1_1SVFModule.html#a648542aa5c4b487ad5aa12a39d15e951',1,'SVF::SVFModule::llvmFunBegin()'],['../classSVF_1_1SVFModule.html#a83ed76263dbe297ee0ecaf672c3a1805',1,'SVF::SVFModule::llvmFunBegin() const']]],
   ['llvmfunend',['llvmFunEnd',['../classSVF_1_1SVFModule.html#af38d0f831967d6d8391a4c84e58d6519',1,'SVF::SVFModule::llvmFunEnd()'],['../classSVF_1_1SVFModule.html#a7662ba877691e7e337af54835c15c3c5',1,'SVF::SVFModule::llvmFunEnd() const']]],
+  ['llvmloopanalysis',['LLVMLoopAnalysis',['../classSVF_1_1LLVMLoopAnalysis.html#a93161bbdb47c74fce1d8e54a45df2df8',1,'SVF::LLVMLoopAnalysis']]],
   ['llvmmoduleset',['LLVMModuleSet',['../classSVF_1_1LLVMModuleSet.html#a8e70de9eefe2e188b10e214e073750e6',1,'SVF::LLVMModuleSet']]],
   ['load',['load',['../classSVF_1_1ExeState.html#a80bd7f3746198459bbcb59274cebc013',1,'SVF::ExeState::load(const Z3Expr &amp;loc)'],['../classSVF_1_1ExeState.html#a8b58d74bd718d66cde9ad7e868d6137a',1,'SVF::ExeState::load(u32_t objId)']]],
   ['loadcgedge',['LoadCGEdge',['../classSVF_1_1LoadCGEdge.html#a74ccf27a1e90fb8f47e9cecf7bd38cf7',1,'SVF::LoadCGEdge::LoadCGEdge()'],['../classSVF_1_1LoadCGEdge.html#a7dd1e2dd057e0985fd837222f8042019',1,'SVF::LoadCGEdge::LoadCGEdge(const LoadCGEdge &amp;)'],['../classSVF_1_1LoadCGEdge.html#a36a21551732bbe3f7ff4babc0804bff2',1,'SVF::LoadCGEdge::LoadCGEdge(ConstraintNode *s, ConstraintNode *d, EdgeID id)']]],

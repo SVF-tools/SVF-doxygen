@@ -29,6 +29,7 @@ var searchData=
   ['out',['out',['../structDdManager.html#af318bea3248f8e99d7889f028be4ec8f',1,'DdManager']]],
   ['outedgekindtosetmap',['OutEdgeKindToSetMap',['../classSVF_1_1SVFVar.html#a3775dd07e89ea6b25950a8b900a4ceab',1,'SVF::SVFVar']]],
   ['outedges',['OutEdges',['../classSVF_1_1GenericNode.html#a04aa14df71ffa60a54c870842c552889',1,'SVF::GenericNode']]],
+  ['outicfgedges',['outICFGEdges',['../classSVF_1_1SVFLoop.html#ad17edf0d1dcca5eebc9789a5015c769d',1,'SVF::SVFLoop']]],
   ['outofbudgetdpms',['outOfBudgetDpms',['../classSVF_1_1DDAVFSolver.html#aad57a954473f3099188cf8c8fba87880',1,'SVF::DDAVFSolver']]],
   ['outofbudgetquery',['outOfBudgetQuery',['../classSVF_1_1DDAVFSolver.html#afdecfbacc64cb8d694268aa73ec8a7b6',1,'SVF::DDAVFSolver']]],
   ['outupdatedvarmap',['outUpdatedVarMap',['../classSVF_1_1MutableIncDFPTData.html#af5f7db6c55037a0e117a36982736039e',1,'SVF::MutableIncDFPTData::outUpdatedVarMap()'],['../classSVF_1_1PersistentIncDFPTData.html#a054f8e2a0668387c092b2802e64a4df0',1,'SVF::PersistentIncDFPTData::outUpdatedVarMap()']]],

@@ -13,7 +13,7 @@ var searchData=
   ['validatesuccesstests',['validateSuccessTests',['../classSVF_1_1PointerAnalysis.html#a7accf4e4db4001716e53d98ce5217ac8',1,'SVF::PointerAnalysis::validateSuccessTests()'],['../classSVF_1_1LeakChecker.html#a0aa051a956b61cad9ec5419f33829e6a',1,'SVF::LeakChecker::validateSuccessTests()']]],
   ['validatetbhctests',['validateTBHCTests',['../classSVF_1_1TypeBasedHeapCloning.html#ae42ec334a7dfc96a5ead2d2845ca3b22',1,'SVF::TypeBasedHeapCloning']]],
   ['validatetct',['validateTCT',['../classSVF_1_1MTAResultValidator.html#ae6a18cbaf113ee8e28c3e8dca458d4be',1,'SVF::MTAResultValidator']]],
-  ['validatetests',['ValidateTests',['../classSVF_1_1Options.html#aec491143ded97649da1ed61b8fda796c',1,'SVF::Options::ValidateTests()'],['../classSVF_1_1PointerAnalysis.html#a0454332c89e60729956bb7d69a1a24df',1,'SVF::PointerAnalysis::validateTests()']]],
+  ['validatetests',['validateTests',['../classSVF_1_1PointerAnalysis.html#a0454332c89e60729956bb7d69a1a24df',1,'SVF::PointerAnalysis::validateTests()'],['../classSVF_1_1Options.html#aec491143ded97649da1ed61b8fda796c',1,'SVF::Options::ValidateTests()']]],
   ['valnode',['ValNode',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa32d22852d39756992f87bd02def75f66',1,'SVF::SVFVar']]],
   ['valsymbol',['ValSymbol',['../classSVF_1_1SymbolTableInfo.html#afd2cf6ef6d7f2a583c709a72067be89ba23583f8cf79d3fd142f8550664ad8247',1,'SVF::SymbolTableInfo']]],
   ['valsymmap',['valSymMap',['../classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08',1,'SVF::SymbolTableInfo']]],

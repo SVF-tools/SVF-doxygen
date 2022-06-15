@@ -3,6 +3,7 @@ var searchData=
   ['leakchecker',['LeakChecker',['../classSVF_1_1LeakChecker.html',1,'SVF']]],
   ['list',['List',['../classSVF_1_1List.html',1,'SVF']]],
   ['listnode',['ListNode',['../classSVF_1_1List_1_1ListNode.html',1,'SVF::List']]],
+  ['llvmloopanalysis',['LLVMLoopAnalysis',['../classSVF_1_1LLVMLoopAnalysis.html',1,'SVF']]],
   ['llvmmoduleset',['LLVMModuleSet',['../classSVF_1_1LLVMModuleSet.html',1,'SVF']]],
   ['loadcgedge',['LoadCGEdge',['../classSVF_1_1LoadCGEdge.html',1,'SVF']]],
   ['loadmu',['LoadMU',['../classSVF_1_1LoadMU.html',1,'SVF']]],

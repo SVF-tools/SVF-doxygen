@@ -18,6 +18,8 @@ var searchData=
   ['endclk',['endClk',['../classSVF_1_1PTAStat.html#afe854f7416ea408104721a083ee9fee0',1,'SVF::PTAStat']]],
   ['endsymbolallocation',['endSymbolAllocation',['../classSVF_1_1NodeIDAllocator.html#a92b053f79cfa1259603836cb0aacad7d',1,'SVF::NodeIDAllocator']]],
   ['entrychi',['EntryCHI',['../classSVF_1_1EntryCHI.html#a0ba7181ad2a793bf11e40b7c7092e28b',1,'SVF::EntryCHI']]],
+  ['entryicfgedgesbegin',['entryICFGEdgesBegin',['../classSVF_1_1SVFLoop.html#ae837960286e6861697b99cf7c2ba79e5',1,'SVF::SVFLoop']]],
+  ['entryicfgedgesend',['entryICFGEdgesEnd',['../classSVF_1_1SVFLoop.html#aa9defde1da46995b6e870b80c1f9ae01',1,'SVF::SVFLoop']]],
   ['epdadd3',['EpdAdd3',['../epd_8h.html#afa1ea5db2ee414c65f06709aaad4c676',1,'EpdAdd3(EpDouble *epd1, EpDouble *epd2, EpDouble *epd3):&#160;epd.c'],['../epd_8c.html#afa1ea5db2ee414c65f06709aaad4c676',1,'EpdAdd3(EpDouble *epd1, EpDouble *epd2, EpDouble *epd3):&#160;epd.c']]],
   ['epdalloc',['EpdAlloc',['../epd_8h.html#a660d7b3c89a57b16874fbf0c1fc59254',1,'EpdAlloc(void):&#160;epd.c'],['../epd_8c.html#a660d7b3c89a57b16874fbf0c1fc59254',1,'EpdAlloc(void):&#160;epd.c']]],
   ['epdconvert',['EpdConvert',['../epd_8h.html#ad2740ef110f1edc78e12a068c89505cf',1,'EpdConvert(double value, EpDouble *epd):&#160;epd.c'],['../epd_8c.html#ad2740ef110f1edc78e12a068c89505cf',1,'EpdConvert(double value, EpDouble *epd):&#160;epd.c']]],

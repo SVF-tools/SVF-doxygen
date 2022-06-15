@@ -39,6 +39,8 @@ var searchData=
   ['outgoingloadsend',['outgoingLoadsEnd',['../classSVF_1_1ConstraintNode.html#a134e8ed040d7749c2b9a02662115f746',1,'SVF::ConstraintNode']]],
   ['outgoingstoresbegin',['outgoingStoresBegin',['../classSVF_1_1ConstraintNode.html#a99c3aaef8cb899d5691b9d9a3bd6c0e5',1,'SVF::ConstraintNode']]],
   ['outgoingstoresend',['outgoingStoresEnd',['../classSVF_1_1ConstraintNode.html#a5ee086dfa49e82309dfe37f167bcb8b4',1,'SVF::ConstraintNode']]],
+  ['outicfgedgesbegin',['outICFGEdgesBegin',['../classSVF_1_1SVFLoop.html#a6d8b825b5f16dbec6cc0cf2c748f305a',1,'SVF::SVFLoop']]],
+  ['outicfgedgesend',['outICFGEdgesEnd',['../classSVF_1_1SVFLoop.html#a7399c4be1125ab8ea9d0d4880dbb28e6',1,'SVF::SVFLoop']]],
   ['outs',['outs',['../namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61',1,'SVF::SVFUtil']]],
   ['overlap',['overlap',['../classSVF_1_1CondPTAImpl.html#adf0acbb0c605278e43d88787d651bbd8',1,'SVF::CondPTAImpl']]]
 ];

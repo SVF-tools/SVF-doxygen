@@ -31,6 +31,7 @@ var searchData=
   ['svfgstat',['SVFGStat',['../classSVF_1_1SVFGStat.html',1,'SVF']]],
   ['svfir',['SVFIR',['../classSVF_1_1SVFIR.html',1,'SVF']]],
   ['svfirbuilder',['SVFIRBuilder',['../classSVF_1_1SVFIRBuilder.html',1,'SVF']]],
+  ['svfloop',['SVFLoop',['../classSVF_1_1SVFLoop.html',1,'SVF']]],
   ['svfmodule',['SVFModule',['../classSVF_1_1SVFModule.html',1,'SVF']]],
   ['svfstmt',['SVFStmt',['../classSVF_1_1SVFStmt.html',1,'SVF']]],
   ['svfvalue',['SVFValue',['../classSVF_1_1SVFValue.html',1,'SVF']]],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['background',['background',['../structDdManager.html#af901aff58575a7fea75f7de35b4684b6',1,'DdManager::background()'],['../cuddInt_8c.html#aaf93dea94cfd93476e9c11d890891aff',1,'background():&#160;cuddInt.c']]],
+  ['backicfgedges',['backICFGEdges',['../classSVF_1_1SVFLoop.html#aed4400521f825802719ac97a18452230',1,'SVF::SVFLoop']]],
   ['backwardslice',['backwardslice',['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice()'],['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice()']]],
   ['backwardvisited',['backwardVisited',['../classSVF_1_1DDAVFSolver.html#a63d04c3af4529d0e0f82acd76ed57f6c',1,'SVF::DDAVFSolver']]],
   ['base',['base',['../classSVF_1_1GepObjVar.html#aff50e1d96403eeacaa64f7adb07ce0a5',1,'SVF::GepObjVar']]],

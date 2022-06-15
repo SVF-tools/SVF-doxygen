@@ -20,6 +20,7 @@ var searchData=
   ['endtime',['endTime',['../classSVF_1_1PTAStat.html#a267ba4aac2e7ceb65f008f9486d3d9f7',1,'SVF::PTAStat']]],
   ['entry',['entry',['../structst__generator.html#a950d044c22c5ee51f1dc00fbc82f7e35',1,'st_generator::entry()'],['../classSVF_1_1CallPE.html#a88e420e259b8d7d34c9850ddde53d372',1,'SVF::CallPE::entry()'],['../cuddInt_8c.html#a936a27e51e66afb57c2b3a12d78a238e',1,'entry():&#160;cuddInt.c']]],
   ['entryfuncset',['entryFuncSet',['../classSVF_1_1TCT.html#a140eaf9440ae9d52dbfb659967aa449a',1,'SVF::TCT']]],
+  ['entryicfgedges',['entryICFGEdges',['../classSVF_1_1SVFLoop.html#a681d712db88d105c8a2f758de3d7e72e',1,'SVF::SVFLoop']]],
   ['epsilon',['epsilon',['../structDdManager.html#ad495ea9a4104c2be5b4ca850a1da8c28',1,'DdManager::epsilon()'],['../CFLGrammar_8txt.html#abfbccbf1bba0b616329918c7ed19d936',1,'epsilon():&#160;CFLGrammar.txt']]],
   ['epsilonprods',['epsilonProds',['../classSVF_1_1CFLGrammar.html#a9aa7b030d56b5c7358ffa2d4a5da8fa7',1,'SVF::CFLGrammar']]],
   ['equivalentobject',['equivalentObject',['../classSVF_1_1VersionedFlowSensitive.html#a2d451d89f99a4bff828b682723df477f',1,'SVF::VersionedFlowSensitive']]],
