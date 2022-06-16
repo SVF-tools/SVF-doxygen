@@ -21,7 +21,7 @@ var searchData=
   ['entry',['entry',['../structst__generator.html#a950d044c22c5ee51f1dc00fbc82f7e35',1,'st_generator::entry()'],['../classSVF_1_1CallPE.html#a88e420e259b8d7d34c9850ddde53d372',1,'SVF::CallPE::entry()'],['../cuddInt_8c.html#a936a27e51e66afb57c2b3a12d78a238e',1,'entry():&#160;cuddInt.c']]],
   ['entryfuncset',['entryFuncSet',['../classSVF_1_1TCT.html#a140eaf9440ae9d52dbfb659967aa449a',1,'SVF::TCT']]],
   ['entryicfgedges',['entryICFGEdges',['../classSVF_1_1SVFLoop.html#a681d712db88d105c8a2f758de3d7e72e',1,'SVF::SVFLoop']]],
-  ['epsilon',['epsilon',['../structDdManager.html#ad495ea9a4104c2be5b4ca850a1da8c28',1,'DdManager::epsilon()'],['../CFLGrammar_8txt.html#abfbccbf1bba0b616329918c7ed19d936',1,'epsilon():&#160;CFLGrammar.txt']]],
+  ['epsilon',['epsilon',['../structDdManager.html#ad495ea9a4104c2be5b4ca850a1da8c28',1,'DdManager::epsilon()'],['../CFLGrammar_8txt.html#ac2933a97eaa2fb70d499347016ae1636',1,'epsilon():&#160;CFLGrammar.txt'],['../CFLGrammarDev_8txt.html#ac2933a97eaa2fb70d499347016ae1636',1,'epsilon():&#160;CFLGrammarDev.txt']]],
   ['epsilonprods',['epsilonProds',['../classSVF_1_1CFLGrammar.html#a9aa7b030d56b5c7358ffa2d4a5da8fa7',1,'SVF::CFLGrammar']]],
   ['equivalentobject',['equivalentObject',['../classSVF_1_1VersionedFlowSensitive.html#a2d451d89f99a4bff828b682723df477f',1,'SVF::VersionedFlowSensitive']]],
   ['err',['err',['../structDdManager.html#a6b0364070de52e689fe3485a86bb2825',1,'DdManager']]],
@@ -31,5 +31,5 @@ var searchData=
   ['exponent',['exponent',['../structIeeeDoubleStruct.html#ae7281389e351ea2e0e577144746d76e2',1,'IeeeDoubleStruct::exponent()'],['../structIeeeNanStruct.html#aeb28a08581e489042de6f647eb431e5a',1,'IeeeNanStruct::exponent()'],['../structEpDoubleStruct.html#ae626888fe53c8c26d65d4fa519b906c6',1,'EpDoubleStruct::exponent()']]],
   ['extapi',['extAPI',['../classSVF_1_1ExtAPI.html#abe666dfdd9b3dea5ea89a5ed9ca4c618',1,'SVF::ExtAPI']]],
   ['extended',['extended',['../classSVF_1_1DCHGraph.html#aa6f49dfc9e3580d3f2d8c257395eb11e',1,'SVF::DCHGraph']]],
-  ['externmap',['externMap',['../classSVF_1_1CFLGraph.html#a24ac3a18cb65431cd337a0f4326bff54',1,'SVF::CFLGraph']]]
+  ['externmap',['externMap',['../classSVF_1_1CFLGraphBuilder.html#a91f1f0e8abc8d781eaf8b1a4f025c18e',1,'SVF::CFLGraphBuilder']]]
 ];

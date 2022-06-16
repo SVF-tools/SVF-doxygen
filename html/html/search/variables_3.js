@@ -133,7 +133,7 @@ var searchData=
   ['curevalsvfgnode',['curEvalSVFGNode',['../classSVF_1_1PathCondAllocator.html#a165e0a354b7679ce582c15f4a3faf6e0',1,'SVF::PathCondAllocator']]],
   ['curloc',['curloc',['../classSVF_1_1StmtDPItem.html#a9e20ebd5ae8272a4aef74914098f97ef',1,'SVF::StmtDPItem']]],
   ['curptr',['curPtr',['../classSVF_1_1DDAClient.html#a6a133cf24ef65eaf58c82ec213f3f6cb',1,'SVF::DDAClient']]],
-  ['current',['current',['../classSVF_1_1CFLGraph.html#a4ae1d3576cfef62444087e321dc110b2',1,'SVF::CFLGraph']]],
+  ['current',['current',['../classSVF_1_1CFLGraphBuilder.html#aace800bfe6aa59723b3b4af3b9a86436',1,'SVF::CFLGraphBuilder']]],
   ['currentbestnodemapping',['currentBestNodeMapping',['../classSVF_1_1PointsTo.html#a98781dd444ada40af7eef9aefe76123d',1,'SVF::PointsTo']]],
   ['currentbestreversenodemapping',['currentBestReverseNodeMapping',['../classSVF_1_1PointsTo.html#a53e1230c87912d26604990eb8b0cbc0c',1,'SVF::PointsTo']]],
   ['cursccid',['curSCCID',['../classSVF_1_1WPASCCSolver.html#a28973d7e1301c36254b67c695e8431aa',1,'SVF::WPASCCSolver']]],

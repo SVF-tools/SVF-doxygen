@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['label2symmap',['label2SymMap',['../classSVF_1_1CFLGraph.html#afb6fe6ac26adb93b0123012891cdd139',1,'SVF::CFLGraph']]],
+  ['label2kindmap',['label2KindMap',['../classSVF_1_1CFLGraphBuilder.html#a7117dbeceeef7a9fcaeee0a84a171590',1,'SVF::CFLGraphBuilder']]],
   ['large',['large',['../cuddInt_8c.html#a134b3b75fc389f1772e03372004cfeff',1,'cuddInt.c']]],
   ['largestregion',['LargestRegion',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a172d72ae4ae45fa2baf2f20ff2b499dc',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['last',['last',['../structDdLevelQueue.html#acf28d01edde7bf6634b4213299f487b3',1,'DdLevelQueue']]],
@@ -46,7 +46,7 @@ var searchData=
   ['lookups',['lookUps',['../structDdLocalCache.html#a8ead01c431438c3c6efd103adaeba0b8',1,'DdLocalCache']]],
   ['lookupunions',['lookupUnions',['../classSVF_1_1PersistentPointsToCache.html#ace976f138cf1b8ab6bbf7a5c5d0b60b8',1,'SVF::PersistentPointsToCache']]],
   ['loopanalysis',['LoopAnalysis',['../classSVF_1_1Options.html#a420e6656b02fd900430d51b8b4a5c6c1',1,'SVF::Options']]],
-  ['loopbound',['LoopBound',['../classSVF_1_1Options.html#ab7161ca7a809792af82e5aabdfcc3bfb',1,'SVF::Options::LoopBound()'],['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()']]],
+  ['loopbound',['loopBound',['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()'],['../classSVF_1_1Options.html#ab7161ca7a809792af82e5aabdfcc3bfb',1,'SVF::Options::LoopBound()']]],
   ['loopinfobuilder',['loopInfoBuilder',['../classSVF_1_1TCT.html#ae64d6203b41c92d4ca617b8e976b88b2',1,'SVF::TCT']]],
   ['looseupto',['looseUpTo',['../structDdManager.html#a08442885cc19bd4e63ee8ca294669efa',1,'DdManager']]],
   ['low',['low',['../structMtrNode.html#a589c940a5262c8da11bf843a369bb2db',1,'MtrNode']]],
