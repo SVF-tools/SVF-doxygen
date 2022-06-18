@@ -274,6 +274,7 @@ var searchData=
   ['collectmodrefforcall',['collectModRefForCall',['../classSVF_1_1MRGenerator.html#a502f8379620378b36bc12d9a91b408d2',1,'SVF::MRGenerator']]],
   ['collectmodrefforloadstore',['collectModRefForLoadStore',['../classSVF_1_1MRGenerator.html#a207dfa4c9f044764665478142c6e6b22',1,'SVF::MRGenerator']]],
   ['collectmultiforkedthreads',['collectMultiForkedThreads',['../classSVF_1_1TCT.html#ad15753a9c20d738325e5c0edea6c9c56',1,'SVF::TCT']]],
+  ['collectnullptrblackholesyms',['collectNullPtrBlackholeSyms',['../classSVF_1_1SymbolTableBuilder.html#a1186ed5d52a12f8495d3b64df78f3052',1,'SVF::SymbolTableBuilder']]],
   ['collectobj',['collectObj',['../classSVF_1_1SymbolTableBuilder.html#a891bfea437256d1b7aa957d32797e419',1,'SVF::SymbolTableBuilder']]],
   ['collectptschain',['CollectPtsChain',['../classSVF_1_1MRGenerator.html#a81bd687d34eea884dfcf68274fcec7b5',1,'SVF::MRGenerator::CollectPtsChain()'],['../classSVF_1_1SaberSVFGBuilder.html#a411e168e2a6c27e15186c609c5e216b3',1,'SVF::SaberSVFGBuilder::CollectPtsChain()']]],
   ['collectregdefs',['collectRegDefs',['../classSVF_1_1MemSSA.html#a7c0bb1406f0e583c38e522ca06dfa73a',1,'SVF::MemSSA']]],
