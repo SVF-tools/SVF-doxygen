@@ -80,6 +80,7 @@ var searchData=
   ['blackholeobjectid',['blackHoleObjectId',['../classSVF_1_1NodeIDAllocator.html#a79ee84d7efb8abbfcd80d31d966ce20b',1,'SVF::NodeIDAllocator']]],
   ['blackholepointerid',['blackHolePointerId',['../classSVF_1_1NodeIDAllocator.html#a535be344f97496d8086e2861ea6dc2ea',1,'SVF::NodeIDAllocator']]],
   ['blackholesymid',['blackholeSymID',['../classSVF_1_1SymbolTableInfo.html#a05ca2987d9f8716c24e489bec53502f4',1,'SVF::SymbolTableInfo']]],
+  ['blackholesyms',['blackholeSyms',['../classSVF_1_1SymbolTableInfo.html#a3f661249c4543c7bdb7ed17706b086cc',1,'SVF::SymbolTableInfo']]],
   ['blkptr',['BlkPtr',['../classSVF_1_1SymbolTableInfo.html#afd2cf6ef6d7f2a583c709a72067be89ba9a9d3f03f58ccd4fdaaf08327a74aa03',1,'SVF::SymbolTableInfo']]],
   ['blkptrsymid',['blkPtrSymID',['../classSVF_1_1SymbolTableInfo.html#a1689fa03795200b501ae3887906e7e72',1,'SVF::SymbolTableInfo']]],
   ['blockaddress',['BlockAddress',['../SVF-FE_2BasicTypes_8h.html#ad29efa92ce4c6449b5ef7853994877bd',1,'BasicTypes.h']]],

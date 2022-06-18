@@ -19,6 +19,7 @@ var searchData=
   ['bits',['bits',['../unionEpTypeUnion.html#ad93dc9fbbc709d52d46e1e8ec78bb391',1,'EpTypeUnion::bits()'],['../unionhack.html#ac9f31214d556c4a179ba01f23036bc91',1,'hack::bits()']]],
   ['blackholeobjectid',['blackHoleObjectId',['../classSVF_1_1NodeIDAllocator.html#a79ee84d7efb8abbfcd80d31d966ce20b',1,'SVF::NodeIDAllocator']]],
   ['blackholepointerid',['blackHolePointerId',['../classSVF_1_1NodeIDAllocator.html#a535be344f97496d8086e2861ea6dc2ea',1,'SVF::NodeIDAllocator']]],
+  ['blackholesyms',['blackholeSyms',['../classSVF_1_1SymbolTableInfo.html#a3f661249c4543c7bdb7ed17706b086cc',1,'SVF::SymbolTableInfo']]],
   ['branchcondval',['branchCondVal',['../classSVF_1_1IntraCFGEdge.html#aa1c91aad3dec610100b1f2f4b9826d10',1,'SVF::IntraCFGEdge']]],
   ['briefconscgdotgraph',['BriefConsCGDotGraph',['../classSVF_1_1Options.html#a82370c2b8c9cd62b5767ceeaeeaa7177',1,'SVF::Options']]],
   ['brinst',['brInst',['../classSVF_1_1BranchStmt.html#a33887345c00ffda9ca7dca59d61e184a',1,'SVF::BranchStmt']]],
