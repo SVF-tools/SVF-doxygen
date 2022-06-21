@@ -41,7 +41,7 @@ var searchData=
   ['freematrix',['freeMatrix',['../cuddInt_8c.html#ae61a29ea2e8e94b45114dbb698e14ac7',1,'cuddInt.c']]],
   ['freepathpair',['freePathPair',['../cuddInt_8c.html#a498f7e0ebf19b278dd9e7d9651b82eef',1,'cuddInt.c']]],
   ['fsmpta',['FSMPTA',['../classSVF_1_1FSMPTA.html#a551da3b02d2387cd551365e4c61e4d35',1,'SVF::FSMPTA']]],
-  ['functiondoesnotret',['functionDoesNotRet',['../namespaceSVF_1_1SVFUtil.html#a7a7e06e90a215086696effb5f5537baf',1,'SVF::SVFUtil']]],
+  ['functiondoesnotret',['functionDoesNotRet',['../namespaceSVF_1_1LLVMUtil.html#a651b6a1cf3665277d2241220bb145aed',1,'SVF::LLVMUtil']]],
   ['funentryicfgnode',['FunEntryICFGNode',['../classSVF_1_1FunEntryICFGNode.html#a15fd95468e2200d92d650625d4fa2f31',1,'SVF::FunEntryICFGNode']]],
   ['funexiticfgnode',['FunExitICFGNode',['../classSVF_1_1FunExitICFGNode.html#a84f43a81c2b6df125f32ddcb47b8858b',1,'SVF::FunExitICFGNode']]],
   ['funhasret',['funHasRet',['../classSVF_1_1SVFIR.html#afe8274c3b7317fccef5314662a182046',1,'SVF::SVFIR']]],

@@ -72,7 +72,7 @@ var searchData=
   ['processalladdr',['processAllAddr',['../classSVF_1_1Andersen.html#adccf6acf63abc9cafc92b2148396fd10',1,'SVF::Andersen::processAllAddr()'],['../classSVF_1_1Steensgaard.html#ada542b3e393f23938d37e479008e8cc0',1,'SVF::Steensgaard::processAllAddr()']]],
   ['processandersenresults',['processAndersenResults',['../classSVF_1_1IRAnnotator.html#a1dfd230ddbc751ddf6833a6dc22b84f7',1,'SVF::IRAnnotator']]],
   ['processargumentnode',['processArgumentNode',['../classSVF_1_1IRAnnotator.html#a79ce14045e7321569b95cff0b4800c08',1,'SVF::IRAnnotator']]],
-  ['processarguments',['processArguments',['../namespaceSVF_1_1SVFUtil.html#a62ca9a79ce7b6960e3fc42d8b183bd50',1,'SVF::SVFUtil']]],
+  ['processarguments',['processArguments',['../namespaceSVF_1_1LLVMUtil.html#accdd44093d6d145dc92edeaaff3f5732',1,'SVF::LLVMUtil']]],
   ['processbasicblocknode',['processBasicBlockNode',['../classSVF_1_1IRAnnotator.html#a6da6bf2db9dd582739e621aefc72025f',1,'SVF::IRAnnotator']]],
   ['processcast',['processCast',['../classSVF_1_1AndersenWaveDiff.html#a57c7c12ebcf06f2912e93c802c6cdd02',1,'SVF::AndersenWaveDiff']]],
   ['processce',['processCE',['../classSVF_1_1SVFIRBuilder.html#a5adf8baa546292434ba1fec48db2d0a7',1,'SVF::SVFIRBuilder']]],
