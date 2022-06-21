@@ -131,6 +131,7 @@ var searchData=
   ['_7esvfstmt',['~SVFStmt',['../classSVF_1_1SVFStmt.html#aac79c7e8d390f297002782afb0ba3ff0',1,'SVF::SVFStmt']]],
   ['_7esvfvar',['~SVFVar',['../classSVF_1_1SVFVar.html#ab76f9dea1559bd9b10b870dbc7bb454a',1,'SVF::SVFVar']]],
   ['_7esymboltableinfo',['~SymbolTableInfo',['../classSVF_1_1SymbolTableInfo.html#a6efac0ae8ebf2865067136675be5a340',1,'SVF::SymbolTableInfo']]],
+  ['_7esymstate',['~SymState',['../classSVF_1_1SymState.html#a52cd2f2c22f6e9cf610d74ba07164fbb',1,'SVF::SymState']]],
   ['_7etct',['~TCT',['../classSVF_1_1TCT.html#aee699da702973dd42398b42a2ec65e59',1,'SVF::TCT']]],
   ['_7etctedge',['~TCTEdge',['../classSVF_1_1TCTEdge.html#aa6dd0ee903a741c287e34ae80961d369',1,'SVF::TCTEdge']]],
   ['_7ethreadcallgraph',['~ThreadCallGraph',['../classSVF_1_1ThreadCallGraph.html#a7991ee2d70e1c9f1f8bdf5e46d56802c',1,'SVF::ThreadCallGraph']]],

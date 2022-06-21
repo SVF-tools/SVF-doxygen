@@ -37,5 +37,6 @@ var searchData=
   ['svfvalue',['SVFValue',['../classSVF_1_1SVFValue.html',1,'SVF']]],
   ['svfvar',['SVFVar',['../classSVF_1_1SVFVar.html',1,'SVF']]],
   ['symboltablebuilder',['SymbolTableBuilder',['../classSVF_1_1SymbolTableBuilder.html',1,'SVF']]],
-  ['symboltableinfo',['SymbolTableInfo',['../classSVF_1_1SymbolTableInfo.html',1,'SVF']]]
+  ['symboltableinfo',['SymbolTableInfo',['../classSVF_1_1SymbolTableInfo.html',1,'SVF']]],
+  ['symstate',['SymState',['../classSVF_1_1SymState.html',1,'SVF']]]
 ];

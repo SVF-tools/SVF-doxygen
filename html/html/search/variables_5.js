@@ -27,6 +27,7 @@ var searchData=
   ['err',['err',['../structDdManager.html#a6b0364070de52e689fe3485a86bb2825',1,'DdManager']]],
   ['errorcode',['errorCode',['../structDdManager.html#ae0690f123fc2c3f0ca9a1cfd18923a37',1,'DdManager']]],
   ['evaltime',['EvalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1d98862e19affdd08740f85490d0d856',1,'SVF::NodeIDAllocator::Clusterer']]],
+  ['exestate',['exeState',['../classSVF_1_1SymState.html#ab9ee5f993809fc026ffd270b0e9a6db4',1,'SVF::SymState']]],
   ['exit',['exit',['../classSVF_1_1RetPE.html#a6f6ccda153150b6acdd81550e45f640f',1,'SVF::RetPE']]],
   ['exponent',['exponent',['../structIeeeDoubleStruct.html#ae7281389e351ea2e0e577144746d76e2',1,'IeeeDoubleStruct::exponent()'],['../structIeeeNanStruct.html#aeb28a08581e489042de6f647eb431e5a',1,'IeeeNanStruct::exponent()'],['../structEpDoubleStruct.html#ae626888fe53c8c26d65d4fa519b906c6',1,'EpDoubleStruct::exponent()']]],
   ['extapi',['extAPI',['../classSVF_1_1ExtAPI.html#abe666dfdd9b3dea5ea89a5ed9ca4c618',1,'SVF::ExtAPI']]],

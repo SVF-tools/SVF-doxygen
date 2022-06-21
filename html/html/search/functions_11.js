@@ -212,7 +212,7 @@ var searchData=
   ['svfgnodelockspan',['SVFGNodeLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a43f4d595b31259576b141cb99883938e',1,'SVF::SVFGNodeLockSpan']]],
   ['svfgopt',['SVFGOPT',['../classSVF_1_1SVFGOPT.html#a239475c15b39d54c632427307b8e9350',1,'SVF::SVFGOPT']]],
   ['svfgsccdetection',['SVFGSCCDetection',['../classSVF_1_1DDAVFSolver.html#aba0ec611a5cfd096ac0b8b11e0bd5580',1,'SVF::DDAVFSolver']]],
-  ['svfgstat',['SVFGStat',['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()'],['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()']]],
+  ['svfgstat',['svfgStat',['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()'],['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()']]],
   ['svfir',['SVFIR',['../classSVF_1_1SVFIR.html#abf511f82cdbf7a6d9b6da167aee57636',1,'SVF::SVFIR']]],
   ['svfirbuilder',['SVFIRBuilder',['../classSVF_1_1SVFIRBuilder.html#a8c25c3903cda26312f182014f29069fc',1,'SVF::SVFIRBuilder']]],
   ['svfloop',['SVFLoop',['../classSVF_1_1SVFLoop.html#a25b9a079f48aa0374c91be6a1e9697f8',1,'SVF::SVFLoop']]],
@@ -224,6 +224,7 @@ var searchData=
   ['symbolinfo',['SymbolInfo',['../classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11',1,'SVF::SymbolTableInfo']]],
   ['symboltablebuilder',['SymbolTableBuilder',['../classSVF_1_1SymbolTableBuilder.html#ad39b982a2a91a10b4f22ee6150e9cebf',1,'SVF::SymbolTableBuilder']]],
   ['symboltableinfo',['SymbolTableInfo',['../classSVF_1_1SymbolTableInfo.html#aff272bc1d00f2e57b7677d1826a31237',1,'SVF::SymbolTableInfo']]],
+  ['symstate',['SymState',['../classSVF_1_1SymState.html#aee986d8fbccf71a606284d8467f450e4',1,'SVF::SymState::SymState(const ExeState &amp;_es, const AbstractState &amp;_as)'],['../classSVF_1_1SymState.html#a74011f042d561221c30fcd176490abad',1,'SVF::SymState::SymState(const SymState &amp;symState)']]],
   ['system',['system',['../util_8h.html#a6d50e2f4b997abb218cea9a87e543c39',1,'util.h']]],
   ['szudzik',['szudzik',['../structSVF_1_1Hash_3_01std_1_1pair_3_01S_00_01T_01_4_01_4.html#adf5f19b1b32c117571fe74035cdcdbe2',1,'SVF::Hash&lt; std::pair&lt; S, T &gt; &gt;']]]
 ];
