@@ -18,6 +18,7 @@ var searchData=
   ['deltamap',['deltaMap',['../classSVF_1_1VersionedFlowSensitive.html#a11ddfa1faebf56e74e6dcc53e16142e1',1,'SVF::VersionedFlowSensitive']]],
   ['deltasourcemap',['deltaSourceMap',['../classSVF_1_1VersionedFlowSensitive.html#aee97e196225aaad29c0bd31d3ccbabf6',1,'SVF::VersionedFlowSensitive']]],
   ['dendrogramtraversaltime',['DendrogramTraversalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a67ab9cffacc1584b2e7bae5d1b08c541',1,'SVF::NodeIDAllocator::Clusterer']]],
+  ['depth',['depth',['../structparse__buffer.html#af613c4ed7d73f76c60c50d1bcf4c67a0',1,'parse_buffer::depth()'],['../structprintbuffer.html#aa7311b5da38ff8d1737824c611b48732',1,'printbuffer::depth()']]],
   ['dereffnname',['derefFnName',['../classSVF_1_1TypeBasedHeapCloning.html#a03ef2decb80ba07f4d98cae0a4497212',1,'SVF::TypeBasedHeapCloning']]],
   ['derefmdname',['derefMDName',['../namespaceSVF_1_1cppUtil_1_1ctir.html#a0cd5347bc8043d4306e66a4a96005ace',1,'SVF::cppUtil::ctir']]],
   ['df',['df',['../classSVF_1_1MemSSA.html#ac0aeb79ec4f86f55c97bd397509acd05',1,'SVF::MemSSA::df()'],['../classSVF_1_1IteratedDominanceFrontier.html#aa50321ef8e3c9ee5e0b04f95a5a72e24',1,'SVF::IteratedDominanceFrontier::DF()']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['a',['a',['../cJSON_8cpp.html#a8a1a0a26c50cc4becfc754bb68d1dc6b',1,'cJSON.cpp']]],
   ['abc',['ABC',['../cuddInt_8c.html#ad465153e576ab547226923829da4a96b',1,'cuddInt.c']]],
   ['abcd',['ABCD',['../cuddInt_8c.html#ab9e8e3ba70c511da1d618fba8436a879',1,'cuddInt.c']]],
   ['abdc',['ABDC',['../cuddInt_8c.html#a271dcf5d4bc6a78e2aa007bbb90251dc',1,'cuddInt.c']]],
@@ -33,6 +34,8 @@ var searchData=
   ['actualretvfgnode',['ActualRetVFGNode',['../classSVF_1_1ActualRetVFGNode.html',1,'SVF::ActualRetVFGNode'],['../classSVF_1_1ActualRetVFGNode.html#adc425f00b03e7a59725161ce1a78b349',1,'SVF::ActualRetVFGNode::ActualRetVFGNode()'],['../classSVF_1_1ActualRetVFGNode.html#a2974c14c972559b366a3bbdfe08b4ea9',1,'SVF::ActualRetVFGNode::ActualRetVFGNode(const ActualRetVFGNode &amp;)'],['../classSVF_1_1ActualRetVFGNode.html#a35a0ac96ef0678286705a6c4981a4225',1,'SVF::ActualRetVFGNode::ActualRetVFGNode(NodeID id, const PAGNode *n, const CallICFGNode *c)']]],
   ['adbc',['ADBC',['../cuddInt_8c.html#a52c43fe881800162290764f1e683c9fa',1,'cuddInt.c']]],
   ['adcb',['ADCB',['../cuddInt_8c.html#a765e16a0d0856b8f4a0d91fecb05efd7',1,'cuddInt.c']]],
+  ['add_5fitem_5fto_5farray',['add_item_to_array',['../cJSON_8cpp.html#a816d10c908af6be844a1f8277363e2f1',1,'cJSON.cpp']]],
+  ['add_5fitem_5fto_5fobject',['add_item_to_object',['../cJSON_8cpp.html#acc48bef0e1b495898d9489e577b91d5c',1,'cJSON.cpp']]],
   ['addactualinsvfgnode',['addActualINSVFGNode',['../classSVF_1_1SVFG.html#a923924d3887c668b355f4029502a3754',1,'SVF::SVFG']]],
   ['addactualoutsvfgnode',['addActualOUTSVFGNode',['../classSVF_1_1SVFG.html#a74aa824a68f99756ac3e65231c7bc2e9',1,'SVF::SVFG']]],
   ['addactualparms',['addActualParms',['../classSVF_1_1CallICFGNode.html#ab389873c50b952b67aeafe7204864d59',1,'SVF::CallICFGNode']]],
@@ -313,6 +316,7 @@ var searchData=
   ['addvfgnode',['addVFGNode',['../classSVF_1_1ICFGNode.html#aff18898b9bbd85d08b00d64d48eea6a5',1,'SVF::ICFGNode::addVFGNode()'],['../classSVF_1_1VFG.html#ad8c76cdb73541eed5aa1c2ba9de60383',1,'SVF::VFG::addVFGNode()']]],
   ['addvfgnodes',['addVFGNodes',['../classSVF_1_1VFG.html#a3544cc0380964f238c964a0e7b417862',1,'SVF::VFG']]],
   ['addvirtualfunctionvector',['addVirtualFunctionVector',['../classSVF_1_1CHNode.html#a8c51571df92b5e152cc42e9aaf712dc9',1,'SVF::CHNode']]],
+  ['after_5finserted',['after_inserted',['../cJSON_8cpp.html#a38b1dcebd0d04ad6f2ee1872ec39d53d',1,'cJSON.cpp']]],
   ['alias',['alias',['../classSVF_1_1CFLAlias.html#a0575c3badff6a158a6043e3e940af507',1,'SVF::CFLAlias::alias(const Value *v1, const Value *v2)'],['../classSVF_1_1CFLAlias.html#afb96040a903b9b889fcf23b26cb4565a',1,'SVF::CFLAlias::alias(NodeID node1, NodeID node2)'],['../classSVF_1_1DDAPass.html#a242575c5bd8a8f17fdc802e5ba80e7b0',1,'SVF::DDAPass::alias(const Value *V1, const Value *V2)'],['../classSVF_1_1DDAPass.html#a96de481dd2af7b39428aff38158c1d4e',1,'SVF::DDAPass::alias(NodeID V1, NodeID V2)'],['../classSVF_1_1PointerAnalysis.html#a6c01f259ad2379a422d7106ce0255eb8',1,'SVF::PointerAnalysis::alias(const Value *V1, const Value *V2)=0'],['../classSVF_1_1PointerAnalysis.html#a0f712ead1f31750879948c36b2fc77cf',1,'SVF::PointerAnalysis::alias(NodeID node1, NodeID node2)=0'],['../classSVF_1_1BVDataPTAImpl.html#adaba5a41a60e32d18d964bdb8ae5b2df',1,'SVF::BVDataPTAImpl::alias(const Value *V1, const Value *V2)'],['../classSVF_1_1BVDataPTAImpl.html#a949533e5c99698c7f9862aae5de23687',1,'SVF::BVDataPTAImpl::alias(NodeID node1, NodeID node2)'],['../classSVF_1_1BVDataPTAImpl.html#a25720f154731a8c745da10aa76ab8517',1,'SVF::BVDataPTAImpl::alias(const PointsTo &amp;pts1, const PointsTo &amp;pts2)'],['../classSVF_1_1CondPTAImpl.html#a171918ada9b679b0114b27476caa5ee6',1,'SVF::CondPTAImpl::alias(const Value *V1, const Value *V2)'],['../classSVF_1_1CondPTAImpl.html#ac18e1dc9c6fc8cc952f67a93c2491876',1,'SVF::CondPTAImpl::alias(NodeID node1, NodeID node2)'],['../classSVF_1_1CondPTAImpl.html#adb1ed3728d53a13c94402392155e9913',1,'SVF::CondPTAImpl::alias(const CVar &amp;var1, const CVar &amp;var2)'],['../classSVF_1_1CondPTAImpl.html#a8e48e9fe6f7e21da49a155f8f6893944',1,'SVF::CondPTAImpl::alias(const CPtSet &amp;pts1, const CPtSet &amp;pts2)'],['../classSVF_1_1LockAnalysis.html#a4424f27444c12dce8071c56a95c664bf',1,'SVF::LockAnalysis::alias()'],['../classSVF_1_1WPAPass.html#a5a71ab4d4bd993ff52da60c730d7b57f',1,'SVF::WPAPass::alias()']]],
   ['alias_5fbegin',['alias_begin',['../classSVF_1_1SVFModule.html#a7f2b4647c8d69c8328b63e576cb6d065',1,'SVF::SVFModule::alias_begin()'],['../classSVF_1_1SVFModule.html#a0e28f6eaf32efc6f2c0987e64f1df852',1,'SVF::SVFModule::alias_begin() const']]],
   ['alias_5fend',['alias_end',['../classSVF_1_1SVFModule.html#a3cfd0983849950099d1e8f8e0fda42bc',1,'SVF::SVFModule::alias_end()'],['../classSVF_1_1SVFModule.html#a1bb5c818ec63d81a238f3d242a89079f',1,'SVF::SVFModule::alias_end() const']]],
@@ -343,7 +347,7 @@ var searchData=
   ['allglobals',['allGlobals',['../classSVF_1_1MRGenerator.html#af46b82e45aa1ecdfb397325971206541',1,'SVF::MRGenerator']]],
   ['alloc',['ALLOC',['../util_8h.html#a21755cdb11c76954a33c653579810f3a',1,'util.h']]],
   ['allocainst',['AllocaInst',['../SVF-FE_2BasicTypes_8h.html#a5e06fe1b4b25113ac322dbeda71055dc',1,'BasicTypes.h']]],
-  ['allocate',['allocate',['../classSVF_1_1PathCondAllocator.html#a3fce010083b85a4421eed4c17eb54640',1,'SVF::PathCondAllocator']]],
+  ['allocate',['allocate',['../classSVF_1_1PathCondAllocator.html#a3fce010083b85a4421eed4c17eb54640',1,'SVF::PathCondAllocator::allocate()'],['../structinternal__hooks.html#a872a0c28217b451331d24b8e0484b293',1,'internal_hooks::allocate()']]],
   ['allocated',['allocated',['../structDdManager.html#a3bc65a8323c85495c64877963eb34845',1,'DdManager']]],
   ['allocateforbb',['allocateForBB',['../classSVF_1_1PathCondAllocator.html#af854f880e76738a13d6cb937a257828f',1,'SVF::PathCondAllocator']]],
   ['allocategepobjectid',['allocateGepObjectId',['../classSVF_1_1NodeIDAllocator.html#abaff066537f06c4891c199ebfc9624e3',1,'SVF::NodeIDAllocator']]],

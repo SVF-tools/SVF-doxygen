@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['leqa1',['LEQA1',['../cuddInt_8c.html#ad536bbe3cf7c563beb632f9a2873ee74',1,'cuddInt.c']]],
-  ['leqa2',['LEQA2',['../cuddInt_8c.html#a1234a96cbc700be724f6b7123eee73b2',1,'cuddInt.c']]],
-  ['leqq1',['LEQQ1',['../cuddInt_8c.html#ae51c8d2df6537ba8ca17782d2551cd39',1,'cuddInt.c']]],
-  ['leqq2',['LEQQ2',['../cuddInt_8c.html#a3922e3cbb3f5a996cdec86b57fd9cebb',1,'cuddInt.c']]],
-  ['leqr1',['LEQR1',['../cuddInt_8c.html#a9dbaa4f61345fe29372903e5f46296ce',1,'cuddInt.c']]],
-  ['leqr2',['LEQR2',['../cuddInt_8c.html#acc94b275fe971a3b3fa4f0961e3ddafd',1,'cuddInt.c']]],
-  ['logbpl',['LOGBPL',['../cuddInt_8c.html#acae1cfa779e6e7550496f3889b5cbb25',1,'LOGBPL():&#160;cuddInt.c'],['../cuddInt_8c.html#acae1cfa779e6e7550496f3889b5cbb25',1,'LOGBPL():&#160;cuddInt.c']]]
+  ['kblu',['KBLU',['../SVFUtil_8cpp.html#a3f838f2fc3a9a3b434be606fc908964b',1,'SVFUtil.cpp']]],
+  ['kcya',['KCYA',['../SVFUtil_8cpp.html#add84f76d7bfbbc2b00215d7195f8d3bd',1,'SVFUtil.cpp']]],
+  ['kgrn',['KGRN',['../SVFUtil_8cpp.html#ac081c83b067273757f7a2e54a5957d41',1,'SVFUtil.cpp']]],
+  ['knrm',['KNRM',['../SVFUtil_8cpp.html#a137aa83ec74421d226a90c92ec032ac9',1,'SVFUtil.cpp']]],
+  ['kpur',['KPUR',['../SVFUtil_8cpp.html#a326cbc9ef8d75aa44a591bf476c9835b',1,'SVFUtil.cpp']]],
+  ['kred',['KRED',['../SVFUtil_8cpp.html#a66290957baed5df3930ada4cb8caccf1',1,'SVFUtil.cpp']]],
+  ['kwht',['KWHT',['../SVFUtil_8cpp.html#af0036c8022c9980079ab17e5c87fd478',1,'SVFUtil.cpp']]],
+  ['kyel',['KYEL',['../SVFUtil_8cpp.html#a897b10d246533c95ba86cb79f92e465a',1,'SVFUtil.cpp']]]
 ];

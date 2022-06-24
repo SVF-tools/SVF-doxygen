@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['realloc',['REALLOC',['../util_8h.html#ac3d02b1026db1997f09067d47aed16a8',1,'util.h']]],
-  ['rlimit_5fdata_5fdefault',['RLIMIT_DATA_DEFAULT',['../util_8c.html#a078d50c5bc23076e0d2af8d96156aeae',1,'util.c']]]
+  ['project_5fpath',['PROJECT_PATH',['../config_8h.html#a799965f801bbe1f540c3100566f78d81',1,'config.h']]],
+  ['ptr_5fnot_5fequal',['PTR_NOT_EQUAL',['../st_8c.html#adc63a1b1f02f0b457c85154dc513d626',1,'st.c']]]
 ];

@@ -9,11 +9,12 @@ var searchData=
   ['edgekindmaskbits',['EdgeKindMaskBits',['../classSVF_1_1GrammarBase.html#adc1413dc2e875a6e74bdb5b985cdd39f',1,'SVF::GrammarBase::EdgeKindMaskBits()'],['../classSVF_1_1GenericEdge.html#af1c2fd4b5ef1d7b7605572bf2489c298',1,'SVF::GenericEdge::EdgeKindMaskBits()']]],
   ['edgenum',['edgeNum',['../classSVF_1_1GenericGraph.html#a2fbc96de5f066469c2739229307bcc0c',1,'SVF::GenericGraph']]],
   ['edgetype',['edgeType',['../classSVF_1_1CHEdge.html#a58ac14decda4041e773d723475f5c1c8',1,'SVF::CHEdge']]],
-  ['ei_5fpairs',['ei_pairs',['../SaberCheckerAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;SaberCheckerAPI.cpp'],['../ExtAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;ExtAPI.cpp'],['../ThreadAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;ThreadAPI.cpp']]],
+  ['ei_5fpairs',['ei_pairs',['../SaberCheckerAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;SaberCheckerAPI.cpp'],['../ThreadAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs():&#160;ThreadAPI.cpp']]],
   ['elder',['elder',['../structMtrNode.html#a7c8ed9787ec60487fad7b2fede53df98',1,'MtrNode']]],
   ['elements',['elements',['../classSVF_1_1CondStdSet.html#a1caece9a66b6617b89037fd8211f2934',1,'SVF::CondStdSet']]],
   ['elemidxvec',['elemIdxVec',['../classSVF_1_1StInfo.html#a807ae5cb4d277c79f8b2c9ecde5f12ea',1,'SVF::StInfo']]],
   ['elemnum',['elemNum',['../classSVF_1_1ObjTypeInfo.html#a5fdcd5f3b7550e7bdc30c8c030c6226d',1,'SVF::ObjTypeInfo']]],
+  ['else',['else',['../cJSON_8cpp.html#a0544c3fe466e421738dae463968b70ba',1,'cJSON.cpp']]],
   ['empty',['empty',['../cuddInt_8c.html#a5beb39637a978181c7c17714ac96672e',1,'cuddInt.c']]],
   ['enablealiascheck',['EnableAliasCheck',['../classSVF_1_1Options.html#a4da18281b973b9ffb5068dd53060524c',1,'SVF::Options']]],
   ['enablethreadcallgraph',['EnableThreadCallGraph',['../classSVF_1_1Options.html#a153d42a480ef1763ad59fd7258ac3ac5',1,'SVF::Options']]],
@@ -30,7 +31,7 @@ var searchData=
   ['exestate',['exeState',['../classSVF_1_1SymState.html#ab9ee5f993809fc026ffd270b0e9a6db4',1,'SVF::SymState']]],
   ['exit',['exit',['../classSVF_1_1RetPE.html#a6f6ccda153150b6acdd81550e45f640f',1,'SVF::RetPE']]],
   ['exponent',['exponent',['../structIeeeDoubleStruct.html#ae7281389e351ea2e0e577144746d76e2',1,'IeeeDoubleStruct::exponent()'],['../structIeeeNanStruct.html#aeb28a08581e489042de6f647eb431e5a',1,'IeeeNanStruct::exponent()'],['../structEpDoubleStruct.html#ae626888fe53c8c26d65d4fa519b906c6',1,'EpDoubleStruct::exponent()']]],
-  ['extapi',['extAPI',['../classSVF_1_1ExtAPI.html#abe666dfdd9b3dea5ea89a5ed9ca4c618',1,'SVF::ExtAPI']]],
   ['extended',['extended',['../classSVF_1_1DCHGraph.html#aa6f49dfc9e3580d3f2d8c257395eb11e',1,'SVF::DCHGraph']]],
-  ['externmap',['externMap',['../classSVF_1_1CFLGraphBuilder.html#a91f1f0e8abc8d781eaf8b1a4f025c18e',1,'SVF::CFLGraphBuilder']]]
+  ['externmap',['externMap',['../classSVF_1_1CFLGraphBuilder.html#a91f1f0e8abc8d781eaf8b1a4f025c18e',1,'SVF::CFLGraphBuilder']]],
+  ['extop',['extOp',['../classSVF_1_1ExtAPI.html#a552feab663622681db231d5b48f00d75',1,'SVF::ExtAPI']]]
 ];

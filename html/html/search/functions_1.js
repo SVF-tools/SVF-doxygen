@@ -34,6 +34,7 @@ var searchData=
   ['breakconstantgeps',['BreakConstantGEPs',['../classSVF_1_1BreakConstantGEPs.html#a5397ce21e78d09c8d1cdc3f912d53a7f',1,'SVF::BreakConstantGEPs']]],
   ['bridge_5fgep_5fbegin',['bridge_gep_begin',['../namespacellvm.html#acfe99e9d441434240c79f6d76b73fe0a',1,'llvm::bridge_gep_begin(const User *GEP)'],['../namespacellvm.html#abbab4f4ed7ffae3e7e715990a0b416fe',1,'llvm::bridge_gep_begin(const User &amp;GEP)']]],
   ['bridge_5fgep_5fend',['bridge_gep_end',['../namespacellvm.html#a7cfc92a12082d69711c97bb3d1b99c48',1,'llvm::bridge_gep_end(const User *GEP)'],['../namespacellvm.html#adcacad81533beb6331d1cd4b1bbcf0d8',1,'llvm::bridge_gep_end(const User &amp;GEP)'],['../namespacellvm.html#af784337dc495897cf05f28fd95f07477',1,'llvm::bridge_gep_end(Type *, ArrayRef&lt; T &gt; A)']]],
+  ['buffer_5fskip_5fwhitespace',['buffer_skip_whitespace',['../cJSON_8cpp.html#a029a2c33fa2744a7cc5cf061f28d2cfc',1,'cJSON.cpp']]],
   ['bugmsg1',['bugMsg1',['../namespaceSVF_1_1SVFUtil.html#af6c66553e2559eebfe4f98c0c7ec4b08',1,'SVF::SVFUtil']]],
   ['bugmsg2',['bugMsg2',['../namespaceSVF_1_1SVFUtil.html#a054c3e668ce8b265bbc5d923f6243ce7',1,'SVF::SVFUtil']]],
   ['bugmsg3',['bugMsg3',['../namespaceSVF_1_1SVFUtil.html#aabbca7c40d2da6bd2374ea53d5de0553',1,'SVF::SVFUtil']]],

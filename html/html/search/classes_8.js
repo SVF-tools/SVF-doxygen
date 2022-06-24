@@ -12,6 +12,7 @@ var searchData=
   ['interdisjointmrg',['InterDisjointMRG',['../classSVF_1_1InterDisjointMRG.html',1,'SVF']]],
   ['intericfgnode',['InterICFGNode',['../classSVF_1_1InterICFGNode.html',1,'SVF']]],
   ['intermssaphisvfgnode',['InterMSSAPHISVFGNode',['../classSVF_1_1InterMSSAPHISVFGNode.html',1,'SVF']]],
+  ['internal_5fhooks',['internal_hooks',['../structinternal__hooks.html',1,'']]],
   ['interphivfgnode',['InterPHIVFGNode',['../classSVF_1_1InterPHIVFGNode.html',1,'SVF']]],
   ['intracfgedge',['IntraCFGEdge',['../classSVF_1_1IntraCFGEdge.html',1,'SVF']]],
   ['intradirsvfgedge',['IntraDirSVFGEdge',['../classSVF_1_1IntraDirSVFGEdge.html',1,'SVF']]],

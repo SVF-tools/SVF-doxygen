@@ -43,8 +43,8 @@ var searchData=
   ['handletypedef',['handleTypedef',['../classSVF_1_1DCHGraph.html#a6d97a772afe16c1483e65eea81f82603',1,'SVF::DCHGraph']]],
   ['hare_5fpar_5ffor',['HARE_PAR_FOR',['../classSVF_1_1ThreadAPI.html#a38a7516702c55ab418167b7c850516b3a4690967fd6d32fb82c5de637846a3476',1,'SVF::ThreadAPI']]],
   ['hareparforedge',['HareParForEdge',['../classSVF_1_1HareParForEdge.html',1,'SVF::HareParForEdge'],['../classSVF_1_1PTACallGraphEdge.html#a9738544725458bb022b8d5f2dbd281f7a17e0d58fd42d0d493087e698d4ecd838',1,'SVF::PTACallGraphEdge::HareParForEdge()'],['../classSVF_1_1HareParForEdge.html#a097ccd687d7ca511a4a453dd56b7c665',1,'SVF::HareParForEdge::HareParForEdge()']]],
-  ['has_5fstatic',['has_static',['../classSVF_1_1ExtAPI.html#ae439994d7a92c4cb3bf5c9fa80fa31e8',1,'SVF::ExtAPI']]],
-  ['has_5fstatic2',['has_static2',['../classSVF_1_1ExtAPI.html#aab5731ba773144c7cbb5609e9b807eae',1,'SVF::ExtAPI']]],
+  ['has_5fstatic',['has_static',['../classSVF_1_1ExtAPI.html#ae20ea24cce02de87d89a2d0b773a2357',1,'SVF::ExtAPI']]],
+  ['has_5fstatic2',['has_static2',['../classSVF_1_1ExtAPI.html#ad3eefa086aa514e4d245a975ea3d45b5',1,'SVF::ExtAPI']]],
   ['hasactualinsvfgnodes',['hasActualINSVFGNodes',['../classSVF_1_1SVFG.html#a21577bc4b4e55b23aa55083f5321b399',1,'SVF::SVFG']]],
   ['hasactualoutsvfgnodes',['hasActualOUTSVFGNodes',['../classSVF_1_1SVFG.html#ab1fde654cc464c5b4d1bafff83d346ed',1,'SVF::SVFG']]],
   ['hasallcxtinlockspan',['hasAllCxtInLockSpan',['../classSVF_1_1LockAnalysis.html#a33740d6dc51d24af2d0c8cb2fbf27db6',1,'SVF::LockAnalysis']]],
@@ -179,6 +179,6 @@ var searchData=
   ['heapallocatorviaindcall',['heapAllocatorViaIndCall',['../classSVF_1_1Andersen.html#a7b1b9e9b25b5643440aca77e23a8de07',1,'SVF::Andersen']]],
   ['hits',['hits',['../structDdLocalCache.html#aeb0c91dbe5e63a318436df1d716810b6',1,'DdLocalCache']]],
   ['hlcdandersen',['hlcdAndersen',['../classSVF_1_1AndersenHLCD.html#ad22c1990d8faad9c7cae6d779c7de94a',1,'SVF::AndersenHLCD']]],
-  ['hooks',['hooks',['../structDdManager.html#adb322122f7a8874e4c0704fb1a022e00',1,'DdManager']]],
+  ['hooks',['hooks',['../structDdManager.html#adb322122f7a8874e4c0704fb1a022e00',1,'DdManager::hooks()'],['../structparse__buffer.html#a2c3e99b15da2935fc5d58124ffb4a894',1,'parse_buffer::hooks()'],['../structprintbuffer.html#a43a8b3bcc644432f12f5aed5159d2520',1,'printbuffer::hooks()'],['../cJSON_8cpp.html#a182a7b0d4467e799ca4ea26235b1cf74',1,'hooks():&#160;cJSON.cpp']]],
   ['hppair',['HPPair',['../classSVF_1_1ForkJoinAnalysis.html#a4ad5c7a21ca994d908d648ca9d9e1833',1,'SVF::ForkJoinAnalysis']]]
 ];

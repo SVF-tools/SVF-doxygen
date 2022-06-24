@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['b',['b',['../cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c',1,'b():&#160;cJSON.h'],['../cJSON_8cpp.html#a1a175e87536301df98c805ac0636ad7c',1,'b():&#160;cJSON.cpp']]],
   ['bac',['BAC',['../cuddInt_8c.html#a31c96ef8dde939ca7e2e3e08cedcabc4',1,'cuddInt.c']]],
   ['bacd',['BACD',['../cuddInt_8c.html#a28d189a1b369b46600c83ab6f47b1515',1,'cuddInt.c']]],
   ['background',['background',['../structDdManager.html#af901aff58575a7fea75f7de35b4684b6',1,'DdManager::background()'],['../cuddInt_8c.html#aaf93dea94cfd93476e9c11d890891aff',1,'background():&#160;cuddInt.c']]],
@@ -84,6 +85,7 @@ var searchData=
   ['blkptr',['BlkPtr',['../classSVF_1_1SymbolTableInfo.html#afd2cf6ef6d7f2a583c709a72067be89ba9a9d3f03f58ccd4fdaaf08327a74aa03',1,'SVF::SymbolTableInfo']]],
   ['blkptrsymid',['blkPtrSymID',['../classSVF_1_1SymbolTableInfo.html#a1689fa03795200b501ae3887906e7e72',1,'SVF::SymbolTableInfo']]],
   ['blockaddress',['BlockAddress',['../SVF-FE_2BasicTypes_8h.html#ad29efa92ce4c6449b5ef7853994877bd',1,'BasicTypes.h']]],
+  ['boolean',['boolean',['../cJSON_8h.html#a08f076c86f430b6f0e301fcf94223b38',1,'boolean():&#160;cJSON.h'],['../cJSON_8cpp.html#a08f076c86f430b6f0e301fcf94223b38',1,'boolean():&#160;cJSON.cpp']]],
   ['bothinteredges',['bothInterEdges',['../classSVF_1_1SVFGOPT.html#a6d5cdb3b78e4ed482b0da4c64323b463',1,'SVF::SVFGOPT']]],
   ['bpl',['BPL',['../cuddInt_8c.html#a43a59b49336ac8ad13af90916f2ff4a0',1,'BPL():&#160;cuddInt.c'],['../cuddInt_8c.html#a43a59b49336ac8ad13af90916f2ff4a0',1,'BPL():&#160;cuddInt.c']]],
   ['branch',['Branch',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a7e37444f61c10c22b694a86064ae4f01',1,'SVF::VFGNode::Branch()'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad52703e3ec09b6a4f565e5d82279b6a3',1,'SVF::SVFStmt::Branch()']]],
@@ -103,6 +105,10 @@ var searchData=
   ['brstmt',['brstmt',['../classSVF_1_1BranchVFGNode.html#ab2c5f49a3ac21d827b37b0e4b61f1a10',1,'SVF::BranchVFGNode']]],
   ['bucket',['bucket',['../structDdHashTable.html#a14e9b750bdad0f77294dd8e18f18d32c',1,'DdHashTable']]],
   ['buckets',['buckets',['../structDdLevelQueue.html#a10750bfd3e96d25ce4d69eb476b64e9f',1,'DdLevelQueue']]],
+  ['buffer',['buffer',['../structprintbuffer.html#a754f63618e91db99f7ab6cfc4e629013',1,'printbuffer::buffer()'],['../cJSON_8h.html#a503753140aa27b00f99a3501280b2746',1,'buffer():&#160;cJSON.h'],['../cJSON_8cpp.html#a503753140aa27b00f99a3501280b2746',1,'buffer():&#160;cJSON.cpp']]],
+  ['buffer_5fat_5foffset',['buffer_at_offset',['../cJSON_8cpp.html#ac538057ef78677344d222b763251af5e',1,'cJSON.cpp']]],
+  ['buffer_5flength',['buffer_length',['../cJSON_8h.html#a7beaf9b4ef5e4c7254cc3298a3424354',1,'buffer_length():&#160;cJSON.h'],['../cJSON_8cpp.html#a7beaf9b4ef5e4c7254cc3298a3424354',1,'buffer_length():&#160;cJSON.cpp']]],
+  ['buffer_5fskip_5fwhitespace',['buffer_skip_whitespace',['../cJSON_8cpp.html#a029a2c33fa2744a7cc5cf061f28d2cfc',1,'cJSON.cpp']]],
   ['bugmsg1',['bugMsg1',['../namespaceSVF_1_1SVFUtil.html#af6c66553e2559eebfe4f98c0c7ec4b08',1,'SVF::SVFUtil']]],
   ['bugmsg2',['bugMsg2',['../namespaceSVF_1_1SVFUtil.html#a054c3e668ce8b265bbc5d923f6243ce7',1,'SVF::SVFUtil']]],
   ['bugmsg3',['bugMsg3',['../namespaceSVF_1_1SVFUtil.html#aabbca7c40d2da6bd2374ea53d5de0553',1,'SVF::SVFUtil']]],

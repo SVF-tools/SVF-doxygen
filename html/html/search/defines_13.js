@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zdd_5fmv_5foom',['ZDD_MV_OOM',['../cuddInt_8c.html#ac19b2d7f1544a758234402c66b1c2898',1,'cuddInt.c']]]
+  ['weight',['WEIGHT',['../cuddInt_8c.html#aa0c21b2677d4dc06dfd0dd175bb1a718',1,'cuddInt.c']]]
 ];

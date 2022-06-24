@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['b',['b',['../cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c',1,'b():&#160;cJSON.h'],['../cJSON_8cpp.html#a1a175e87536301df98c805ac0636ad7c',1,'b():&#160;cJSON.cpp']]],
   ['background',['background',['../structDdManager.html#af901aff58575a7fea75f7de35b4684b6',1,'DdManager::background()'],['../cuddInt_8c.html#aaf93dea94cfd93476e9c11d890891aff',1,'background():&#160;cuddInt.c']]],
   ['backicfgedges',['backICFGEdges',['../classSVF_1_1SVFLoop.html#aed4400521f825802719ac97a18452230',1,'SVF::SVFLoop']]],
   ['backwardslice',['backwardslice',['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice()'],['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice()']]],
@@ -20,12 +21,15 @@ var searchData=
   ['blackholeobjectid',['blackHoleObjectId',['../classSVF_1_1NodeIDAllocator.html#a79ee84d7efb8abbfcd80d31d966ce20b',1,'SVF::NodeIDAllocator']]],
   ['blackholepointerid',['blackHolePointerId',['../classSVF_1_1NodeIDAllocator.html#a535be344f97496d8086e2861ea6dc2ea',1,'SVF::NodeIDAllocator']]],
   ['blackholesyms',['blackholeSyms',['../classSVF_1_1SymbolTableInfo.html#a3f661249c4543c7bdb7ed17706b086cc',1,'SVF::SymbolTableInfo']]],
+  ['boolean',['boolean',['../cJSON_8h.html#a08f076c86f430b6f0e301fcf94223b38',1,'boolean():&#160;cJSON.h'],['../cJSON_8cpp.html#a08f076c86f430b6f0e301fcf94223b38',1,'boolean():&#160;cJSON.cpp']]],
   ['branchcondval',['branchCondVal',['../classSVF_1_1IntraCFGEdge.html#aa1c91aad3dec610100b1f2f4b9826d10',1,'SVF::IntraCFGEdge']]],
   ['briefconscgdotgraph',['BriefConsCGDotGraph',['../classSVF_1_1Options.html#a82370c2b8c9cd62b5767ceeaeeaa7177',1,'SVF::Options']]],
   ['brinst',['brInst',['../classSVF_1_1BranchStmt.html#a33887345c00ffda9ca7dca59d61e184a',1,'SVF::BranchStmt']]],
   ['brstmt',['brstmt',['../classSVF_1_1BranchVFGNode.html#ab2c5f49a3ac21d827b37b0e4b61f1a10',1,'SVF::BranchVFGNode']]],
   ['bucket',['bucket',['../structDdHashTable.html#a14e9b750bdad0f77294dd8e18f18d32c',1,'DdHashTable']]],
   ['buckets',['buckets',['../structDdLevelQueue.html#a10750bfd3e96d25ce4d69eb476b64e9f',1,'DdLevelQueue']]],
+  ['buffer',['buffer',['../structprintbuffer.html#a754f63618e91db99f7ab6cfc4e629013',1,'printbuffer::buffer()'],['../cJSON_8h.html#a503753140aa27b00f99a3501280b2746',1,'buffer():&#160;cJSON.h'],['../cJSON_8cpp.html#a503753140aa27b00f99a3501280b2746',1,'buffer():&#160;cJSON.cpp']]],
+  ['buffer_5flength',['buffer_length',['../cJSON_8h.html#a7beaf9b4ef5e4c7254cc3298a3424354',1,'buffer_length():&#160;cJSON.h'],['../cJSON_8cpp.html#a7beaf9b4ef5e4c7254cc3298a3424354',1,'buffer_length():&#160;cJSON.cpp']]],
   ['buildingchgtime',['buildingCHGTime',['../classSVF_1_1CHGraph.html#ab5bd2348e4418fcb2f3b18227fccd836',1,'SVF::CHGraph']]],
   ['bv',['bv',['../classSVF_1_1PointsTo.html#a668be9270539fdfc5dbf3efb9cc17587',1,'SVF::PointsTo']]],
   ['bvit',['bvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#aa420a44769d1c25e083975e3cd04d699',1,'SVF::PointsTo::PointsToIterator']]]

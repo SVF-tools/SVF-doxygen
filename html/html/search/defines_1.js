@@ -10,5 +10,6 @@ var searchData=
   ['bdac',['BDAC',['../cuddInt_8c.html#a69f0b7297d052b1adc888ee7ee4c7424',1,'cuddInt.c']]],
   ['bdca',['BDCA',['../cuddInt_8c.html#aac659dd8666fb65150f374777cab856c',1,'cuddInt.c']]],
   ['beta',['BETA',['../cuddInt_8c.html#a1b996515309fc3c03449912bb33046e3',1,'cuddInt.c']]],
-  ['bpl',['BPL',['../cuddInt_8c.html#a43a59b49336ac8ad13af90916f2ff4a0',1,'BPL():&#160;cuddInt.c'],['../cuddInt_8c.html#a43a59b49336ac8ad13af90916f2ff4a0',1,'BPL():&#160;cuddInt.c']]]
+  ['bpl',['BPL',['../cuddInt_8c.html#a43a59b49336ac8ad13af90916f2ff4a0',1,'BPL():&#160;cuddInt.c'],['../cuddInt_8c.html#a43a59b49336ac8ad13af90916f2ff4a0',1,'BPL():&#160;cuddInt.c']]],
+  ['buffer_5fat_5foffset',['buffer_at_offset',['../cJSON_8cpp.html#ac538057ef78677344d222b763251af5e',1,'cJSON.cpp']]]
 ];

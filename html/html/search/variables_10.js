@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['p',['p',['../cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae',1,'cJSON.cpp']]],
   ['pag',['pag',['../classSVF_1_1DDAClient.html#a5e02fa3c1e6fbd5ed54038b1eaeeaaff',1,'SVF::DDAClient::pag()'],['../classSVF_1_1ConstraintGraph.html#aa8b09f64c6e4bbd081c6062a1a0e8948',1,'SVF::ConstraintGraph::pag()'],['../classSVF_1_1VFG.html#a25c2bbbc2e966e2aaa59a5b83363557a',1,'SVF::VFG::pag()'],['../classSVF_1_1PAGBuilderFromFile.html#a79f00ac0ee4a67beec6e7ef45c504e4d',1,'SVF::PAGBuilderFromFile::pag()'],['../classSVF_1_1PointerAnalysis.html#adc7f5c71efb9cd1bec4f5ca9127654c3',1,'SVF::PointerAnalysis::pag()'],['../classSVF_1_1SVFIR.html#aaf86146b5e765d1f278b6d812bf913f5',1,'SVF::SVFIR::pag()'],['../classSVF_1_1SVFIRBuilder.html#a4ea94b0a8d6da904ff9a6c1b0341b9cb',1,'SVF::SVFIRBuilder::pag()']]],
   ['pagdotgraph',['PAGDotGraph',['../classSVF_1_1Options.html#a3a20311c732fb391332ae0ee1cb450a0',1,'SVF::Options']]],
   ['pagedge',['pagEdge',['../classSVF_1_1StmtVFGNode.html#ab5f48de8258f92bb7b9d411e178beb49',1,'SVF::StmtVFGNode']]],
@@ -41,9 +42,11 @@ var searchData=
   ['popsize',['popsize',['../cuddInt_8c.html#a39b91d14c896ad650180ce6a73a63437',1,'cuddInt.c']]],
   ['populationsize',['populationSize',['../structDdManager.html#a66eb055276b611db6849baf52f8766ef',1,'DdManager']]],
   ['pos',['pos',['../structcuddPathPair.html#adf2ec174fe645c74c4d045a9109364f4',1,'cuddPathPair']]],
+  ['position',['position',['../structerror.html#a24de70a4d517ab351d80c18582cadb66',1,'error::position()'],['../cJSON_8cpp.html#a1c3580b00311725af8eb560f18555e0a',1,'position():&#160;cJSON.cpp']]],
   ['postgchook',['postGCHook',['../structDdManager.html#a1aaf2a374903e2cc91c65730d0cfc2e1',1,'DdManager']]],
   ['postreorderinghook',['postReorderingHook',['../structDdManager.html#a051721a550ae2f41b9838b8153d46b30',1,'DdManager']]],
   ['ppag',['ppag',['../classSVF_1_1TypeBasedHeapCloning.html#a629ad3cef8929865b7319fb9e389f7bf',1,'SVF::TypeBasedHeapCloning']]],
+  ['prebuffer',['prebuffer',['../cJSON_8h.html#a039dc262c2ae63f95cfe193245f8ee7e',1,'prebuffer():&#160;cJSON.h'],['../cJSON_8cpp.html#a039dc262c2ae63f95cfe193245f8ee7e',1,'prebuffer():&#160;cJSON.cpp']]],
   ['predicate',['predicate',['../classSVF_1_1CmpStmt.html#a26fc263da6ab3fee40a335d367419328',1,'SVF::CmpStmt']]],
   ['predictptocc',['PredictPtOcc',['../classSVF_1_1Options.html#af34d8a738db4f40addc1de930e79654f',1,'SVF::Options']]],
   ['preemptivecomplements',['preemptiveComplements',['../classSVF_1_1PersistentPointsToCache.html#ad9a761bcece141764322247cc326bcbe',1,'SVF::PersistentPointsToCache']]],
@@ -54,6 +57,7 @@ var searchData=
   ['prelabelingtime',['prelabelingTime',['../classSVF_1_1VersionedFlowSensitive.html#a77a5dd9578def9a8e2b48e8b90d9b996',1,'SVF::VersionedFlowSensitive']]],
   ['preprocessed',['preProcessed',['../classSVF_1_1LLVMModuleSet.html#a14b0b55d397d6f8a5dfe3b574021f801',1,'SVF::LLVMModuleSet']]],
   ['prereorderinghook',['preReorderingHook',['../structDdManager.html#a227987a65d97bf4b8f3c905d6cc79024',1,'DdManager']]],
+  ['prev',['prev',['../structcJSON.html#a488a393f610347821fce8e985e79fc2f',1,'cJSON::prev()'],['../cJSON_8cpp.html#a8f132000c2609a05d1bfd83e25db97d5',1,'prev():&#160;cJSON.cpp']]],
   ['prevset',['prevset',['../classSVF_1_1MTASVFGBuilder.html#a26f850fc0fe434f1972c151d7c3ad9fd',1,'SVF::MTASVFGBuilder']]],
   ['primaryvtable',['primaryVTable',['../classSVF_1_1DCHNode.html#a56659a23b59051eba77c9a532f4489a1',1,'SVF::DCHNode']]],
   ['primes',['primes',['../structDdGen.html#ad4877a7bacda3f22812dd00af85879bf',1,'DdGen']]],

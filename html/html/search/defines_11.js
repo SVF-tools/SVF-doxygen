@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['void_5for_5fchar',['VOID_OR_CHAR',['../util_8h.html#a97ba5606b96ef10cee313ae47ece8674',1,'util.h']]],
-  ['void_5for_5fint',['VOID_OR_INT',['../util_8h.html#ab98c118630d03869c77347eb973ecb0f',1,'util.h']]]
+  ['util_5finline',['UTIL_INLINE',['../util_8h.html#a3f9a7db4d2d7bcc67c240b46c633493a',1,'util.h']]],
+  ['util_5funused',['UTIL_UNUSED',['../util_8h.html#a87240b9a8c602f39bcbe0246c9e6ec42',1,'util.h']]]
 ];

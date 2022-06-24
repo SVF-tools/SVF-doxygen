@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['weight',['WEIGHT',['../cuddInt_8c.html#aa0c21b2677d4dc06dfd0dd175bb1a718',1,'cuddInt.c']]]
+  ['void_5for_5fchar',['VOID_OR_CHAR',['../util_8h.html#a97ba5606b96ef10cee313ae47ece8674',1,'util.h']]],
+  ['void_5for_5fint',['VOID_OR_INT',['../util_8h.html#ab98c118630d03869c77347eb973ecb0f',1,'util.h']]]
 ];
