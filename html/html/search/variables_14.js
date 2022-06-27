@@ -52,7 +52,7 @@ var searchData=
   ['totalindretedge',['totalIndRetEdge',['../classSVF_1_1SVFGStat.html#afd0f43a7d7138a8013930fd103ce7c47',1,'SVF::SVFGStat']]],
   ['totalinedge',['totalInEdge',['../classSVF_1_1SVFGStat.html#a7929d8ba565ecb04efd236ccb19a4658',1,'SVF::SVFGStat']]],
   ['totalintersections',['totalIntersections',['../classSVF_1_1PersistentPointsToCache.html#a099c2319277797ac96aeee859ded9b22',1,'SVF::PersistentPointsToCache']]],
-  ['totalkind',['totalKind',['../classSVF_1_1GrammarBase.html#a7b0a2c88e1ae1a09aa7efe526821c52a',1,'SVF::GrammarBase']]],
+  ['totalkind',['totalKind',['../classSVF_1_1GrammarBase.html#ac9f86b0861e93eee2548aa7f5f3b7b7f',1,'SVF::GrammarBase']]],
   ['totalmrnum',['totalMRNum',['../classSVF_1_1MemRegion.html#a23857f301395cbbad10f6f93256a7398',1,'SVF::MemRegion']]],
   ['totalnumofedges',['TotalNumOfEdges',['../classSVF_1_1PTAStat.html#a3afc0a36232a0388d8aa42c68219cb26',1,'SVF::PTAStat']]],
   ['totalnumoffieldobjects',['TotalNumOfFieldObjects',['../classSVF_1_1PTAStat.html#ac0e0a1c49d33e02f5cc0f21565ce627d',1,'SVF::PTAStat']]],

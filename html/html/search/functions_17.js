@@ -12,6 +12,7 @@ var searchData=
   ['_7ecallmu',['~CallMU',['../classSVF_1_1CallMU.html#a408184b7a6c625d67a4b660e140b10c5',1,'SVF::CallMU']]],
   ['_7ecflalias',['~CFLAlias',['../classSVF_1_1CFLAlias.html#a0e8b474695b21c55a11e71ff59d646d5',1,'SVF::CFLAlias']]],
   ['_7ecfledge',['~CFLEdge',['../classSVF_1_1CFLEdge.html#a8754c9d2a2a8b342d614383ee5829e70',1,'SVF::CFLEdge']]],
+  ['_7ecflfifoworklist',['~CFLFIFOWorkList',['../classSVF_1_1CFLFIFOWorkList.html#a1dadae237fbfb576ddb60cad60530b9e',1,'SVF::CFLFIFOWorkList']]],
   ['_7ecflgraph',['~CFLGraph',['../classSVF_1_1CFLGraph.html#a887f27836a2fb5eca3c33fb95f3990d3',1,'SVF::CFLGraph']]],
   ['_7ecflnode',['~CFLNode',['../classSVF_1_1CFLNode.html#acdb5d04eae48b26bb21f8738c62cd3bf',1,'SVF::CFLNode']]],
   ['_7ecflsolver',['~CFLSolver',['../classSVF_1_1CFLSolver.html#a59bb656e9fc0f5c29feb2200bc198e41',1,'SVF::CFLSolver']]],

@@ -60,6 +60,8 @@ var searchData=
   ['svfstmtsetty',['SVFStmtSetTy',['../classSVF_1_1SVFStmt.html#a8cd7b6c6fd8b030b1421d95a086359f4',1,'SVF::SVFStmt']]],
   ['svfvarlist',['SVFVarList',['../classSVF_1_1SVFIR.html#a64939d7ecfd8e2cf862782954a56596b',1,'SVF::SVFIR']]],
   ['switchinst',['SwitchInst',['../SVF-FE_2BasicTypes_8h.html#a55ac065a1d559c907908492c6853dd53',1,'BasicTypes.h']]],
-  ['symbol',['Symbol',['../classSVF_1_1GrammarBase.html#a98ae90215ba9aa3ddb0afdab459cb08f',1,'SVF::GrammarBase::Symbol()'],['../classSVF_1_1CFLGraphBuilder.html#a36c5b874527e7694f7fb2fd7291da0da',1,'SVF::CFLGraphBuilder::Symbol()'],['../classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd',1,'SVF::CFLSolver::Symbol()'],['../classSVF_1_1CFLGraph.html#a87671d8f952e7dd65dabe2d5ce6764e3',1,'SVF::CFLGraph::Symbol()']]],
+  ['symbol',['Symbol',['../classSVF_1_1GrammarBase.html#ad4f53184d04d9f7a737b19f63d002550',1,'SVF::GrammarBase::Symbol()'],['../classSVF_1_1CFLGraphBuilder.html#a36c5b874527e7694f7fb2fd7291da0da',1,'SVF::CFLGraphBuilder::Symbol()'],['../classSVF_1_1CFLSolver.html#a06e64c18559b4f311717203ac3fe1fcd',1,'SVF::CFLSolver::Symbol()'],['../classSVF_1_1CFLGraph.html#a87671d8f952e7dd65dabe2d5ce6764e3',1,'SVF::CFLGraph::Symbol()']]],
+  ['symbolmap',['SymbolMap',['../classSVF_1_1GrammarBase.html#a4405933cc8ed8cf30b98ee16fc14c112',1,'SVF::GrammarBase']]],
+  ['symbolset',['SymbolSet',['../classSVF_1_1GrammarBase.html#a8687586451b07458d591120cdee9f6a3',1,'SVF::GrammarBase']]],
   ['symid',['SymID',['../namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48',1,'SVF']]]
 ];

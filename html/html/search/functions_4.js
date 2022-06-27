@@ -1,14 +1,14 @@
 var searchData=
 [
   ['ebnf_5fbin',['ebnf_bin',['../classSVF_1_1CFGNormalizer.html#a8906f8bfe0a4a431f355b825f15efbe0',1,'SVF::CFGNormalizer']]],
-  ['ebnf_5fbracket_5fmatch',['ebnf_bracket_match',['../classSVF_1_1CFGNormalizer.html#a98869c5ec5cd83d652a1471c1969c8c9',1,'SVF::CFGNormalizer']]],
-  ['ebnf_5fsign_5freplace',['ebnf_sign_replace',['../classSVF_1_1CFGNormalizer.html#a4bd48b57dfd6989b595dd1fe0cbc802f',1,'SVF::CFGNormalizer']]],
+  ['ebnfbracketmatch',['ebnfBracketMatch',['../classSVF_1_1CFGNormalizer.html#a8eddaa57527c0e5e538b1d207da7adc0',1,'SVF::CFGNormalizer']]],
+  ['ebnfsignreplace',['ebnfSignReplace',['../classSVF_1_1CFGNormalizer.html#a37f4a6a11af608439596752d20667648',1,'SVF::CFGNormalizer']]],
   ['ecunion',['ecUnion',['../classSVF_1_1Steensgaard.html#a191e77e62916d868b2af730264e26dd8',1,'SVF::Steensgaard']]],
   ['edge_5fdest',['edge_dest',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a84cc3da79c2c9c5bcdf50da4b919b7da',1,'llvm::GraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::edge_dest()'],['../structllvm_1_1GraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#a1b463e94c43d2966b8d6cf096b3d04cd',1,'llvm::GraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::edge_dest()']]],
   ['edgeincallgraphscc',['edgeInCallGraphSCC',['../classSVF_1_1ContextDDA.html#ad54f523bf5f2504c1924b4f94c5abbba',1,'SVF::ContextDDA::edgeInCallGraphSCC()'],['../classSVF_1_1DDAPass.html#aab60429398a89ec1c8663a305130376f',1,'SVF::DDAPass::edgeInCallGraphSCC()']]],
   ['edgeinsvfgscc',['edgeInSVFGSCC',['../classSVF_1_1DDAPass.html#a3810708c5e2695d2a0e36084b589e432',1,'SVF::DDAPass::edgeInSVFGSCC()'],['../classSVF_1_1DDAVFSolver.html#a034e3c8b2eec00aee9de439dfeeda332',1,'SVF::DDAVFSolver::edgeInSVFGSCC()']]],
   ['emplacepts',['emplacePts',['../classSVF_1_1PersistentPointsToCache.html#a98d176e384469e0308bfee2061ef84b5',1,'SVF::PersistentPointsToCache']]],
-  ['empty',['empty',['../classSVF_1_1CondStdSet.html#a0305cbf452b4e858e464023727417d76',1,'SVF::CondStdSet::empty()'],['../classSVF_1_1CondPointsToSet.html#aca84f0f9e09686d9f30f309d36267aff',1,'SVF::CondPointsToSet::empty()'],['../classSVF_1_1PointsTo.html#ac4688413177b49b37dbbfd3ed188d59b',1,'SVF::PointsTo::empty()'],['../classSVF_1_1LLVMModuleSet.html#ae19e38054c55d5822dfc83a12f12aa60',1,'SVF::LLVMModuleSet::empty()'],['../classSVF_1_1CoreBitVector.html#a98b9795b4fdc74d9d2efa9a3f2ecb62f',1,'SVF::CoreBitVector::empty()'],['../classSVF_1_1List.html#a063246d2aa23e389e513c5498ff33aca',1,'SVF::List::empty()'],['../classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8',1,'SVF::FIFOWorkList::empty()'],['../classSVF_1_1FILOWorkList.html#a071a624c91def82a4bbbf3806c7b7eea',1,'SVF::FILOWorkList::empty()']]],
+  ['empty',['empty',['../classSVF_1_1CFLFIFOWorkList.html#aa0ce832f5eeae74d52260fd8954d545f',1,'SVF::CFLFIFOWorkList::empty()'],['../classSVF_1_1CondStdSet.html#a0305cbf452b4e858e464023727417d76',1,'SVF::CondStdSet::empty()'],['../classSVF_1_1CondPointsToSet.html#aca84f0f9e09686d9f30f309d36267aff',1,'SVF::CondPointsToSet::empty()'],['../classSVF_1_1PointsTo.html#ac4688413177b49b37dbbfd3ed188d59b',1,'SVF::PointsTo::empty()'],['../classSVF_1_1LLVMModuleSet.html#ae19e38054c55d5822dfc83a12f12aa60',1,'SVF::LLVMModuleSet::empty()'],['../classSVF_1_1CoreBitVector.html#a98b9795b4fdc74d9d2efa9a3f2ecb62f',1,'SVF::CoreBitVector::empty()'],['../classSVF_1_1List.html#a063246d2aa23e389e513c5498ff33aca',1,'SVF::List::empty()'],['../classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8',1,'SVF::FIFOWorkList::empty()'],['../classSVF_1_1FILOWorkList.html#a071a624c91def82a4bbbf3806c7b7eea',1,'SVF::FILOWorkList::empty()']]],
   ['emptypointstoid',['emptyPointsToId',['../classSVF_1_1PersistentPointsToCache.html#a921a4ef4c72ccde5724860f98ad62a57',1,'SVF::PersistentPointsToCache']]],
   ['enablecontext',['ENABLECONTEXT',['../dda_8cpp.html#a1fe1900e000a62ca91dc0651bfa3a24f',1,'dda.cpp']]],
   ['enablediff',['enableDiff',['../classSVF_1_1Andersen.html#a6804284abb4b63f44eefdaf044a301f7',1,'SVF::Andersen']]],
@@ -59,5 +59,7 @@ var searchData=
   ['extendbackward',['extendBackward',['../classSVF_1_1CoreBitVector.html#ab6d789e3c68390a9026fd4f8c4cf344a',1,'SVF::CoreBitVector']]],
   ['extendforward',['extendForward',['../classSVF_1_1CoreBitVector.html#a5d3f1eb85bc388cb76c588b8d8b3c181',1,'SVF::CoreBitVector']]],
   ['extendto',['extendTo',['../classSVF_1_1CoreBitVector.html#a73e5b15854f4f56f50992ed0d0cc7349',1,'SVF::CoreBitVector']]],
+  ['extractattributestrfromsymbolstr',['extractAttributeStrFromSymbolStr',['../classSVF_1_1GrammarBase.html#a9f56cebea336079e35f5f3a288eb356f',1,'SVF::GrammarBase']]],
+  ['extractkindstrfromsymbolstr',['extractKindStrFromSymbolStr',['../classSVF_1_1GrammarBase.html#a9cc406edc117b3abd07a85f66ca892a0',1,'SVF::GrammarBase']]],
   ['extractsubconds',['extractSubConds',['../classSVF_1_1BDDExprManager.html#a5bbd80a97aa794da9568716e456cf40c',1,'SVF::BDDExprManager']]]
 ];

@@ -8,6 +8,7 @@ var searchData=
   ['valuetoedgemap',['ValueToEdgeMap',['../classSVF_1_1IRGraph.html#addfc2131699f5ecee3a45d65cda46c24',1,'SVF::IRGraph']]],
   ['valuetoidmapty',['ValueToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#a03a11c48d748990ddac1ac5866ecb48e',1,'SVF::SymbolTableInfo']]],
   ['var2labelmap',['Var2LabelMap',['../classSVF_1_1SVFStmt.html#ad178ccbc7800527c3dc406ad5fa069bb',1,'SVF::SVFStmt']]],
+  ['variableattribute',['VariableAttribute',['../classSVF_1_1GrammarBase.html#a716ce662e6a3f2febf3ab378c4217759',1,'SVF::GrammarBase']]],
   ['vartopropnodemap',['VarToPropNodeMap',['../classSVF_1_1VersionedFlowSensitive.html#a9ee5add09f2b446c6c6bcb84da0f75b3',1,'SVF::VersionedFlowSensitive']]],
   ['vartovalmap',['VarToValMap',['../classSVF_1_1ExeState.html#afc4aad166cd39a6cfbd8e9b897104f3f',1,'SVF::ExeState']]],
   ['vastartinst',['VAStartInst',['../SVF-FE_2BasicTypes_8h.html#a487fbdac6711a95d28683e6644c457ac',1,'BasicTypes.h']]],

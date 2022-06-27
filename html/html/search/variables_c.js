@@ -14,6 +14,7 @@ var searchData=
   ['llvmfunc2svffunc',['LLVMFunc2SVFFunc',['../classSVF_1_1SVFModule.html#ac96e0c68e0c951acaaa586dd56418335',1,'SVF::SVFModule']]],
   ['llvmfunctionset',['LLVMFunctionSet',['../classSVF_1_1SVFModule.html#a7fa23a5c422ffed3634503c3e5b812af',1,'SVF::SVFModule']]],
   ['llvmmoduleset',['llvmModuleSet',['../classSVF_1_1LLVMModuleSet.html#ac59b07cafcbacc950eefea4082425b63',1,'SVF::LLVMModuleSet']]],
+  ['load',['Load',['../CFLGrammar_8txt.html#aac550daeb926fa3c77376959d6712fc6',1,'CFLGrammar.txt']]],
   ['load2musetmap',['load2MuSetMap',['../classSVF_1_1MemSSA.html#a5cf94edea3a5c35b3c1d9c6ae4b5f9d6',1,'SVF::MemSSA']]],
   ['loadcgedgeset',['LoadCGEdgeSet',['../classSVF_1_1ConstraintGraph.html#a1cb9124b29720e7a5b39d83419f9cc17',1,'SVF::ConstraintGraph']]],
   ['loadgeps',['loadGeps',['../classSVF_1_1FlowSensitiveTBHC.html#a5c96229c2da784a3db98ecbdd3137434',1,'SVF::FlowSensitiveTBHC']]],
