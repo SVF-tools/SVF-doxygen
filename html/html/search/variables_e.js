@@ -50,7 +50,7 @@ var searchData=
   ['numinit',['numInit',['../classSVF_1_1TypeBasedHeapCloning.html#a4c658be1ade99ad1e848cd80332e38ce',1,'SVF::TypeBasedHeapCloning']]],
   ['numnodes',['numNodes',['../classSVF_1_1NodeIDAllocator.html#a8e76e0da58f0a5bdbd8118ac419cfa62',1,'SVF::NodeIDAllocator']]],
   ['numnontrivialregionobjects',['NumNonTrivialRegionObjects',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1bf9461c717e8dabaee6a57f3d76d61f',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['numobjects',['NumObjects',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#afa74c5ccd22bebe0b76db33066d8b498',1,'SVF::NodeIDAllocator::Clusterer::NumObjects()'],['../classSVF_1_1NodeIDAllocator.html#a190c729a3f3f622f82cee4917946b50f',1,'SVF::NodeIDAllocator::numObjects()']]],
+  ['numobjects',['numObjects',['../classSVF_1_1NodeIDAllocator.html#a190c729a3f3f622f82cee4917946b50f',1,'SVF::NodeIDAllocator::numObjects()'],['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#afa74c5ccd22bebe0b76db33066d8b498',1,'SVF::NodeIDAllocator::Clusterer::NumObjects()']]],
   ['numofactualin',['numOfActualIn',['../classSVF_1_1SVFGStat.html#a5365744d2ec3594e2255d274f7256569',1,'SVF::SVFGStat']]],
   ['numofactualout',['numOfActualOut',['../classSVF_1_1SVFGStat.html#a122555f5c4b9746cc2b7f38c7cd6b505',1,'SVF::SVFGStat']]],
   ['numofactualparam',['numOfActualParam',['../classSVF_1_1SVFGStat.html#a0494c59483520b57acdca95952c93d76',1,'SVF::SVFGStat']]],

@@ -269,6 +269,7 @@ var searchData=
   ['isouticfgedge',['isOutICFGEdge',['../classSVF_1_1SVFLoop.html#a5b2ff96defd83686c2737cafa0e1cc83',1,'SVF::SVFLoop']]],
   ['isoutofbudgetdpm',['isOutOfBudgetDpm',['../classSVF_1_1DDAVFSolver.html#a0b1f774883adc7d535f8363bf3c8b1e8',1,'SVF::DDAVFSolver']]],
   ['isoutofbudgetquery',['isOutOfBudgetQuery',['../classSVF_1_1DDAVFSolver.html#a7994236bff84ba8244592fdf5e546734',1,'SVF::DDAVFSolver']]],
+  ['isoverwrittenappfunction',['isOverwrittenAppFunction',['../classSVF_1_1ExtAPI.html#a5ef7edb1664ab87f00418e7808d00258',1,'SVF::ExtAPI']]],
   ['isparforsite',['isParForSite',['../classSVF_1_1ThreadCallGraph.html#ae18f0b3245694145f6d9262ee28c6453',1,'SVF::ThreadCallGraph']]],
   ['ispartialreachable',['isPartialReachable',['../classSVF_1_1ProgSlice.html#a3822badbbe9ac808296d5248f2dbf8e2',1,'SVF::ProgSlice']]],
   ['isphicopyedge',['isPhiCopyEdge',['../classSVF_1_1VFG.html#a8ddf15d89a1b11a7f7720b671f4f0295',1,'SVF::VFG']]],

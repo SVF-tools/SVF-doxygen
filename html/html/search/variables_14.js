@@ -27,7 +27,7 @@ var searchData=
   ['timelimit',['timeLimit',['../structDdManager.html#a6c14f932c4a66c6234e6b19bd8b6647f',1,'DdManager']]],
   ['timeofcollapse',['timeOfCollapse',['../classSVF_1_1AndersenBase.html#ad40b196c2c699bd115529b806d20de25',1,'SVF::AndersenBase']]],
   ['timeofcreatemuchi',['TimeOfCreateMUCHI',['../classSVF_1_1MemSSAStat.html#a48c70f0ed1c7d031a3cd528035162e52',1,'SVF::MemSSAStat::TimeOfCreateMUCHI()'],['../classSVF_1_1MemSSA.html#a4d2418b7df74f23d8fd328f66e29f198',1,'SVF::MemSSA::timeOfCreateMUCHI()']]],
-  ['timeofgeneratingmemregions',['TimeOfGeneratingMemRegions',['../classSVF_1_1MemSSAStat.html#a74c36654b7452aa94aa241881f0a83c5',1,'SVF::MemSSAStat::TimeOfGeneratingMemRegions()'],['../classSVF_1_1MemSSA.html#a37dca8a7d155de4870358146d219b5e5',1,'SVF::MemSSA::timeOfGeneratingMemRegions()']]],
+  ['timeofgeneratingmemregions',['timeOfGeneratingMemRegions',['../classSVF_1_1MemSSA.html#a37dca8a7d155de4870358146d219b5e5',1,'SVF::MemSSA::timeOfGeneratingMemRegions()'],['../classSVF_1_1MemSSAStat.html#a74c36654b7452aa94aa241881f0a83c5',1,'SVF::MemSSAStat::TimeOfGeneratingMemRegions()']]],
   ['timeofinsertingphi',['TimeOfInsertingPHI',['../classSVF_1_1MemSSAStat.html#a0c24822c8549af6a96e82312954fab9b',1,'SVF::MemSSAStat::TimeOfInsertingPHI()'],['../classSVF_1_1MemSSA.html#a3c7b5fa73fdc7c805ee3673fbe812b44',1,'SVF::MemSSA::timeOfInsertingPHI()']]],
   ['timeofprocesscopygep',['timeOfProcessCopyGep',['../classSVF_1_1AndersenBase.html#aae14de6fbca9280d8d0290326aa493f0',1,'SVF::AndersenBase']]],
   ['timeofprocessloadstore',['timeOfProcessLoadStore',['../classSVF_1_1AndersenBase.html#a9fe738f1e11c80006d540f246a80bfdf',1,'SVF::AndersenBase']]],
