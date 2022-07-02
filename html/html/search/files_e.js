@@ -7,7 +7,5 @@ var searchData=
   ['threadcallgraph_2ecpp',['ThreadCallGraph.cpp',['../ThreadCallGraph_8cpp.html',1,'']]],
   ['threadcallgraph_2eh',['ThreadCallGraph.h',['../ThreadCallGraph_8h.html',1,'']]],
   ['typeanalysis_2ecpp',['TypeAnalysis.cpp',['../TypeAnalysis_8cpp.html',1,'']]],
-  ['typeanalysis_2eh',['TypeAnalysis.h',['../TypeAnalysis_8h.html',1,'']]],
-  ['typebasedheapcloning_2ecpp',['TypeBasedHeapCloning.cpp',['../TypeBasedHeapCloning_8cpp.html',1,'']]],
-  ['typebasedheapcloning_2eh',['TypeBasedHeapCloning.h',['../TypeBasedHeapCloning_8h.html',1,'']]]
+  ['typeanalysis_2eh',['TypeAnalysis.h',['../TypeAnalysis_8h.html',1,'']]]
 ];

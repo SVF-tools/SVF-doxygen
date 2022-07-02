@@ -7,7 +7,6 @@ var searchData=
   ['backicfgedges',['backICFGEdges',['../classSVF_1_1SVFLoop.html#aed4400521f825802719ac97a18452230',1,'SVF::SVFLoop']]],
   ['backicfgedgesbegin',['backICFGEdgesBegin',['../classSVF_1_1SVFLoop.html#a8b0341ca427d106c28b56d8b340a1e45',1,'SVF::SVFLoop']]],
   ['backicfgedgesend',['backICFGEdgesEnd',['../classSVF_1_1SVFLoop.html#a6eaf768ba9f537d81095c4df021c4825',1,'SVF::SVFLoop']]],
-  ['backpropagate',['backPropagate',['../classSVF_1_1FlowSensitiveTBHC.html#a81ce8b1e98db245d3f4ccf189ca11e47',1,'SVF::FlowSensitiveTBHC::backPropagate()'],['../classSVF_1_1TypeBasedHeapCloning.html#a1d48cd7ccbcd9bdf1470a5d9aca3298d',1,'SVF::TypeBasedHeapCloning::backPropagate()']]],
   ['backtracealongdirectvf',['backtraceAlongDirectVF',['../classSVF_1_1DDAVFSolver.html#a7a6af30f30f32d55fc910f2ae4909791',1,'SVF::DDAVFSolver']]],
   ['backtracealongindirectvf',['backtraceAlongIndirectVF',['../classSVF_1_1DDAVFSolver.html#a040bc02742836b0a6d46ce3c3e89fa46',1,'SVF::DDAVFSolver']]],
   ['backtracetostoresrc',['backtraceToStoreSrc',['../classSVF_1_1DDAVFSolver.html#adbd209b4a2327b2b068fbb56e12042f7',1,'SVF::DDAVFSolver']]],

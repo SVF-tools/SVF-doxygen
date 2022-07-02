@@ -7,7 +7,6 @@ var searchData=
   ['validateresults',['validateResults',['../classSVF_1_1LockAnalysis.html#a935128c9952714fcc98febed491ee85d',1,'SVF::LockAnalysis::validateResults()'],['../classSVF_1_1MHP.html#a6990ff8e3efe5af365c8205b7ced38ed',1,'SVF::MHP::validateResults()']]],
   ['validatestmtinlock',['validateStmtInLock',['../classSVF_1_1LockResultValidator.html#acddd2f9d118cbf448d92626d281fdaf9',1,'SVF::LockResultValidator']]],
   ['validatesuccesstests',['validateSuccessTests',['../classSVF_1_1PointerAnalysis.html#a7accf4e4db4001716e53d98ce5217ac8',1,'SVF::PointerAnalysis::validateSuccessTests()'],['../classSVF_1_1LeakChecker.html#a0aa051a956b61cad9ec5419f33829e6a',1,'SVF::LeakChecker::validateSuccessTests()']]],
-  ['validatetbhctests',['validateTBHCTests',['../classSVF_1_1TypeBasedHeapCloning.html#ae42ec334a7dfc96a5ead2d2845ca3b22',1,'SVF::TypeBasedHeapCloning']]],
   ['validatetct',['validateTCT',['../classSVF_1_1MTAResultValidator.html#ae6a18cbaf113ee8e28c3e8dca458d4be',1,'SVF::MTAResultValidator']]],
   ['validatetests',['validateTests',['../classSVF_1_1PointerAnalysis.html#a0454332c89e60729956bb7d69a1a24df',1,'SVF::PointerAnalysis']]],
   ['valsyms',['valSyms',['../classSVF_1_1SymbolTableInfo.html#a8f3cb8a1db34dd692ee04561f4edeebf',1,'SVF::SymbolTableInfo']]],

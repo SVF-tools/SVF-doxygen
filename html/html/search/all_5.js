@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['e',['E',['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren::E()'],['../classSVF_1_1Z3Expr.html#ae14d9fa0613b196420b90d20cc8df041',1,'SVF::Z3Expr::e()']]],
+  ['e',['e',['../classSVF_1_1Z3Expr.html#ae14d9fa0613b196420b90d20cc8df041',1,'SVF::Z3Expr::e()'],['../structDdChildren.html#aedecad6f1bca3d6b46c71b0a011e51c5',1,'DdChildren::E()']]],
   ['ebnf_5fbin',['ebnf_bin',['../classSVF_1_1CFGNormalizer.html#a8906f8bfe0a4a431f355b825f15efbe0',1,'SVF::CFGNormalizer']]],
   ['ebnfbracketmatch',['ebnfBracketMatch',['../classSVF_1_1CFGNormalizer.html#a8eddaa57527c0e5e538b1d207da7adc0',1,'SVF::CFGNormalizer']]],
   ['ebnfsignreplace',['ebnfSignReplace',['../classSVF_1_1CFGNormalizer.html#a37f4a6a11af608439596752d20667648',1,'SVF::CFGNormalizer']]],
@@ -138,7 +138,7 @@ var searchData=
   ['exestate_2ecpp',['ExeState.cpp',['../ExeState_8cpp.html',1,'']]],
   ['exestate_2eh',['ExeState.h',['../ExeState_8h.html',1,'']]],
   ['exit',['exit',['../classSVF_1_1RetPE.html#a6f6ccda153150b6acdd81550e45f640f',1,'SVF::RetPE::exit()'],['../util_8h.html#a43b6ea6be735bb828bc062c70cadeff8',1,'exit():&#160;util.h']]],
-  ['expandfiobjs',['expandFIObjs',['../classSVF_1_1BVDataPTAImpl.html#a798c84d5e861de2b61bcb1a86385f721',1,'SVF::BVDataPTAImpl::expandFIObjs(const PointsTo &amp;pts, PointsTo &amp;expandedPts)'],['../classSVF_1_1BVDataPTAImpl.html#aa6a7186152037452599406a74b05d0e1',1,'SVF::BVDataPTAImpl::expandFIObjs(const NodeBS &amp;pts, NodeBS &amp;expandedPts)'],['../classSVF_1_1CondPTAImpl.html#a87b48287d7edb97fc120200fe0e5218d',1,'SVF::CondPTAImpl::expandFIObjs()'],['../classSVF_1_1FlowSensitiveTBHC.html#a3af0297eb75ac4009433be44bb286d30',1,'SVF::FlowSensitiveTBHC::expandFIObjs()']]],
+  ['expandfiobjs',['expandFIObjs',['../classSVF_1_1BVDataPTAImpl.html#a798c84d5e861de2b61bcb1a86385f721',1,'SVF::BVDataPTAImpl::expandFIObjs(const PointsTo &amp;pts, PointsTo &amp;expandedPts)'],['../classSVF_1_1BVDataPTAImpl.html#aa6a7186152037452599406a74b05d0e1',1,'SVF::BVDataPTAImpl::expandFIObjs(const NodeBS &amp;pts, NodeBS &amp;expandedPts)'],['../classSVF_1_1CondPTAImpl.html#a87b48287d7edb97fc120200fe0e5218d',1,'SVF::CondPTAImpl::expandFIObjs()']]],
   ['exponent',['exponent',['../structIeeeDoubleStruct.html#ae7281389e351ea2e0e577144746d76e2',1,'IeeeDoubleStruct::exponent()'],['../structIeeeNanStruct.html#aeb28a08581e489042de6f647eb431e5a',1,'IeeeNanStruct::exponent()'],['../structEpDoubleStruct.html#ae626888fe53c8c26d65d4fa519b906c6',1,'EpDoubleStruct::exponent()']]],
   ['ext_5faddr',['EXT_ADDR',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094aedaa8f975941f17692f993d8a8b6dd30',1,'SVF::ExtAPI']]],
   ['ext_5fcomplex',['EXT_COMPLEX',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094aa9e95e42adbdc4db3dd5e76785916154',1,'SVF::ExtAPI']]],

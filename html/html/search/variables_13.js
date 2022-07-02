@@ -66,7 +66,6 @@ var searchData=
   ['storeedgelabelcounter',['storeEdgeLabelCounter',['../classSVF_1_1SVFStmt.html#a53b7e0d8666e37c23dc2c7d0fc931f27',1,'SVF::SVFStmt']]],
   ['storeinedges',['storeInEdges',['../classSVF_1_1ConstraintNode.html#aa57ef34caf4e8c37baec9405f4457e57',1,'SVF::ConstraintNode']]],
   ['storeoutedges',['storeOutEdges',['../classSVF_1_1ConstraintNode.html#a8d28c94a72acf221177aeae135f73ec1',1,'SVF::ConstraintNode']]],
-  ['storereuse',['storeReuse',['../classSVF_1_1FlowSensitiveTBHC.html#ac7ed9100533dc399c71cdf017bfa2462',1,'SVF::FlowSensitiveTBHC']]],
   ['storeset',['storeset',['../classSVF_1_1MTAAnnotator.html#a37df9f2416685c535be2faa01e162f3a',1,'SVF::MTAAnnotator']]],
   ['storestomrsmap',['storesToMRsMap',['../classSVF_1_1MRGenerator.html#a255551fd3ff8fb33bcea93d0b00280b3',1,'SVF::MRGenerator']]],
   ['storestopointstomap',['storesToPointsToMap',['../classSVF_1_1MRGenerator.html#a7d86f708743a59aa31c0a9fd6de45dac',1,'SVF::MRGenerator']]],

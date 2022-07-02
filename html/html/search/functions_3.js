@@ -105,7 +105,6 @@ var searchData=
   ['detect',['detect',['../classSVF_1_1MTA.html#af9558955c068ce922872c259dde1786e',1,'SVF::MTA']]],
   ['detectsccs',['detectSCCs',['../classSVF_1_1VersionedFlowSensitive_1_1SCC.html#ad52f6f586168ca4ceaf85cca8dfab825',1,'SVF::VersionedFlowSensitive::SCC']]],
   ['determinebestmapping',['determineBestMapping',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a3f86e733cc075180e9682887c554b8fa',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['determinewhichgepsareloads',['determineWhichGepsAreLoads',['../classSVF_1_1FlowSensitiveTBHC.html#a80052c89d1a9f54cfbf8f9790110899d',1,'SVF::FlowSensitiveTBHC']]],
   ['dfptdata',['DFPTData',['../classSVF_1_1DFPTData.html#a40016a7e3dac46d9ba854d336c7aae83',1,'SVF::DFPTData']]],
   ['dfreechecker',['DFREECHECKER',['../saber_8cpp.html#ae783b2330e99490ef5d366605d1098cf',1,'saber.cpp']]],
   ['diffptdata',['DiffPTData',['../classSVF_1_1DiffPTData.html#ac7e9661cfb4d5af3ef35d323ddc35558',1,'SVF::DiffPTData']]],
@@ -155,7 +154,6 @@ var searchData=
   ['dumpslices',['dumpSlices',['../classSVF_1_1SrcSnkDDA.html#acae985068ff1c20fb81c4c9ba730aaba',1,'SVF::SrcSnkDDA']]],
   ['dumpsparseset',['dumpSparseSet',['../namespaceSVF_1_1SVFUtil.html#ab30a35713852a0a525c52ae5dd463442',1,'SVF::SVFUtil']]],
   ['dumpstat',['dumpStat',['../classSVF_1_1PointerAnalysis.html#ab83b827ea42d3a61aad20b1a1485d866',1,'SVF::PointerAnalysis']]],
-  ['dumpstats',['dumpStats',['../classSVF_1_1TypeBasedHeapCloning.html#a1a7b51e7d959795c00383721b013834d',1,'SVF::TypeBasedHeapCloning']]],
   ['dumpstr',['dumpStr',['../classSVF_1_1CondPointsToSet.html#abcd2c01ec21e30caa91dba06386912cb',1,'SVF::CondPointsToSet::dumpStr()'],['../classSVF_1_1MemRegion.html#adad8c2b08ab6a512f0c3aa90b4416f60',1,'SVF::MemRegion::dumpStr()'],['../classSVF_1_1BDDExprManager.html#aa42ab1c5e6b2774be528bb33f0ca3c7b',1,'SVF::BDDExprManager::dumpStr()']]],
   ['dumptoplevelptsto',['dumpTopLevelPtsTo',['../classSVF_1_1PointerAnalysis.html#a627bdc95485fd65e8846fcaa5e89559f',1,'SVF::PointerAnalysis::dumpTopLevelPtsTo()'],['../classSVF_1_1BVDataPTAImpl.html#a8d6cea841b6ded0f80ef2b5784e9b752',1,'SVF::BVDataPTAImpl::dumpTopLevelPtsTo()'],['../classSVF_1_1CondPTAImpl.html#a80daa422e0dacf75aceb4fe5b4687c04',1,'SVF::CondPTAImpl::dumpTopLevelPtsTo()'],['../classSVF_1_1Andersen.html#a43858bd242c7f2c5f33c3c0f6445376a',1,'SVF::Andersen::dumpTopLevelPtsTo()']]],
   ['dyn_5fcast',['dyn_cast',['../namespaceSVF_1_1SVFUtil.html#a8182be247907420db00837cef9bcfa70',1,'SVF::SVFUtil::dyn_cast(const Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a52d852ba8fa569e858565b3bba403656',1,'SVF::SVFUtil::dyn_cast(Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a105c5c5e97d56533fb2b3ba7a0bc59f3',1,'SVF::SVFUtil::dyn_cast(Y *Val)']]]
