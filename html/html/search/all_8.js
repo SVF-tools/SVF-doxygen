@@ -176,7 +176,7 @@ var searchData=
   ['head',['head',['../classSVF_1_1List.html#a41d52072edb2b75ab15d67bf2663312a',1,'SVF::List']]],
   ['headmap',['headmap',['../classSVF_1_1MTASVFGBuilder.html#ac92452c257052706b1cf1737b266eec1',1,'SVF::MTASVFGBuilder']]],
   ['heap_5fobj',['HEAP_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830a692b4b0df23bad19ea04d18b01bf445c',1,'SVF::ObjTypeInfo']]],
-  ['heapallocatorviaindcall',['heapAllocatorViaIndCall',['../classSVF_1_1Andersen.html#a7b1b9e9b25b5643440aca77e23a8de07',1,'SVF::Andersen']]],
+  ['heapallocatorviaindcall',['heapAllocatorViaIndCall',['../classSVF_1_1CFLAlias.html#a40841c2b47cf690af5c13ba7662d0863',1,'SVF::CFLAlias::heapAllocatorViaIndCall()'],['../classSVF_1_1Andersen.html#a7b1b9e9b25b5643440aca77e23a8de07',1,'SVF::Andersen::heapAllocatorViaIndCall()']]],
   ['hits',['hits',['../structDdLocalCache.html#aeb0c91dbe5e63a318436df1d716810b6',1,'DdLocalCache']]],
   ['hlcdandersen',['hlcdAndersen',['../classSVF_1_1AndersenHLCD.html#ad22c1990d8faad9c7cae6d779c7de94a',1,'SVF::AndersenHLCD']]],
   ['hooks',['hooks',['../structDdManager.html#adb322122f7a8874e4c0704fb1a022e00',1,'DdManager::hooks()'],['../structparse__buffer.html#a2c3e99b15da2935fc5d58124ffb4a894',1,'parse_buffer::hooks()'],['../structprintbuffer.html#a43a8b3bcc644432f12f5aed5159d2520',1,'printbuffer::hooks()'],['../cJSON_8cpp.html#a182a7b0d4467e799ca4ea26235b1cf74',1,'hooks():&#160;cJSON.cpp']]],

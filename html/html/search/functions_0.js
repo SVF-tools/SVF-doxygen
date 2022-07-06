@@ -62,7 +62,7 @@ var searchData=
   ['addconstantobjnode',['addConstantObjNode',['../classSVF_1_1SVFIR.html#aff3f3ff198e7511576484dfda7bf051b',1,'SVF::SVFIR']]],
   ['addconstraintnode',['addConstraintNode',['../classSVF_1_1ConstraintGraph.html#a5ea9c47d232f36b66d985f979f33293b',1,'SVF::ConstraintGraph']]],
   ['addcopycgedge',['addCopyCGEdge',['../classSVF_1_1ConstraintGraph.html#a60bb27100e8c264be2add004069d1758',1,'SVF::ConstraintGraph']]],
-  ['addcopyedge',['addCopyEdge',['../classSVF_1_1SVFIRBuilder.html#a140defeb309d895394822f8780deda16',1,'SVF::SVFIRBuilder::addCopyEdge()'],['../classSVF_1_1Andersen.html#a8ba593bd16d4436310f2f25e75687c57',1,'SVF::Andersen::addCopyEdge()'],['../classSVF_1_1AndersenSCD.html#a0b5990e8b0230c019a2bcedbab354cba',1,'SVF::AndersenSCD::addCopyEdge()']]],
+  ['addcopyedge',['addCopyEdge',['../classSVF_1_1CFLAlias.html#a1fb9134ce0a8e901bb86c4a1954b17f2',1,'SVF::CFLAlias::addCopyEdge()'],['../classSVF_1_1SVFIRBuilder.html#a140defeb309d895394822f8780deda16',1,'SVF::SVFIRBuilder::addCopyEdge()'],['../classSVF_1_1Andersen.html#a8ba593bd16d4436310f2f25e75687c57',1,'SVF::Andersen::addCopyEdge()'],['../classSVF_1_1AndersenSCD.html#a0b5990e8b0230c019a2bcedbab354cba',1,'SVF::AndersenSCD::addCopyEdge()']]],
   ['addcopystmt',['addCopyStmt',['../classSVF_1_1SVFIR.html#aa54b93ebf36944b548aaa74dbf8a144f',1,'SVF::SVFIR']]],
   ['addcopyvfgnode',['addCopyVFGNode',['../classSVF_1_1VFG.html#a49d35213a281859ca64398760c485a85',1,'SVF::VFG']]],
   ['addcptstocallsitemods',['addCPtsToCallSiteMods',['../classSVF_1_1MRGenerator.html#ab5b92ca898739f613f965fc05f86f094',1,'SVF::MRGenerator']]],

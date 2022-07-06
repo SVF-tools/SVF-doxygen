@@ -62,6 +62,7 @@ var searchData=
   ['primes',['primes',['../structDdGen.html#ad4877a7bacda3f22812dd00af85879bf',1,'DdGen']]],
   ['print_5fstat',['print_stat',['../classSVF_1_1PointerAnalysis.html#a3550ea3f087ec557a6fe076bc443b05d',1,'SVF::PointerAnalysis']]],
   ['printaliases',['PrintAliases',['../classSVF_1_1Options.html#a1b1d1ad6b3a6c48a9fa07161b582c7fe',1,'SVF::Options']]],
+  ['printcfl',['PrintCFL',['../classSVF_1_1Options.html#a0beb2da0f9ab691c0b7729bb42f8354c',1,'SVF::Options']]],
   ['printcggraph',['PrintCGGraph',['../classSVF_1_1Options.html#a87516daebb3d1b5fee9037068d60e268',1,'SVF::Options']]],
   ['printcpts',['PrintCPts',['../classSVF_1_1Options.html#aee5e47ee3ca9bacb514f9dfbcb3abf24',1,'SVF::Options']]],
   ['printdchg',['PrintDCHG',['../classSVF_1_1Options.html#adf6c289ef9f2d0196984dd4024ea4316',1,'SVF::Options']]],
