@@ -55,6 +55,7 @@ var searchData=
   ['mmout_5fof_5fmemory',['MMout_of_memory',['../util_8h.html#a91fa18c33c4b7591e0479bad4f455017',1,'MMout_of_memory(long):&#160;util.c'],['../util_8c.html#a91fa18c33c4b7591e0479bad4f455017',1,'MMout_of_memory(long):&#160;util.c']]],
   ['mmrealloc',['MMrealloc',['../util_8h.html#a22a3800f4699bb89ba29dc8a5a8fdaaa',1,'MMrealloc(char *, long):&#160;util.c'],['../util_8c.html#a5c4d3de481b4e749f7d0a384e3e71532',1,'MMrealloc(char *, long):&#160;util.c']]],
   ['modrefanalysis',['modRefAnalysis',['../classSVF_1_1MRGenerator.html#adc9d530e6f010596d91cd3711dc1358b',1,'SVF::MRGenerator']]],
+  ['move',['move',['../namespaceSVF_1_1SVFUtil.html#ac5ca4c51589285ed63b2902471e5594b',1,'SVF::SVFUtil']]],
   ['moveedgestorepnode',['moveEdgesToRepNode',['../classSVF_1_1ConstraintGraph.html#aabe2861fcbc364e2c8aa8114d4879c39',1,'SVF::ConstraintGraph']]],
   ['moveinedgestorepnode',['moveInEdgesToRepNode',['../classSVF_1_1ConstraintGraph.html#a081bf1238121eb52a0c9ad60f77ecbcd',1,'SVF::ConstraintGraph']]],
   ['moveoutedgestorepnode',['moveOutEdgesToRepNode',['../classSVF_1_1ConstraintGraph.html#aa436aac95be84d1946169f4984deae59',1,'SVF::ConstraintGraph']]],

@@ -158,7 +158,7 @@ var searchData=
   ['modules',['modules',['../classSVF_1_1LLVMModuleSet.html#acde6292e719c80f93d3d1c344ab442cd',1,'SVF::LLVMModuleSet']]],
   ['modulus1',['MODULUS1',['../cuddInt_8c.html#a4b0bfe94cfc1d904f790b73ccbbcb618',1,'cuddInt.c']]],
   ['modulus2',['MODULUS2',['../cuddInt_8c.html#aa18fd420e3aea20f837650582dd0ec2d',1,'cuddInt.c']]],
-  ['move',['Move',['../structMove.html',1,'Move'],['../cuddInt_8h.html#a5ed3609998001d0a3c8c0e625809a89b',1,'Move():&#160;cuddInt.h']]],
+  ['move',['Move',['../structMove.html',1,'Move'],['../cuddInt_8h.html#a5ed3609998001d0a3c8c0e625809a89b',1,'Move():&#160;cuddInt.h'],['../namespaceSVF_1_1SVFUtil.html#ac5ca4c51589285ed63b2902471e5594b',1,'SVF::SVFUtil::move()']]],
   ['moveedgestorepnode',['moveEdgesToRepNode',['../classSVF_1_1ConstraintGraph.html#aabe2861fcbc364e2c8aa8114d4879c39',1,'SVF::ConstraintGraph']]],
   ['moveinedgestorepnode',['moveInEdgesToRepNode',['../classSVF_1_1ConstraintGraph.html#a081bf1238121eb52a0c9ad60f77ecbcd',1,'SVF::ConstraintGraph']]],
   ['moveoutedgestorepnode',['moveOutEdgesToRepNode',['../classSVF_1_1ConstraintGraph.html#aa436aac95be84d1946169f4984deae59',1,'SVF::ConstraintGraph']]],
