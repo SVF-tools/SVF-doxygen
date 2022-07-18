@@ -150,7 +150,7 @@ var searchData=
   ['ext_5floadstore',['EXT_LOADSTORE',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a9b961a2cf28f4ae48e8a120a65721669',1,'SVF::ExtAPI']]],
   ['ext_5fother',['EXT_OTHER',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a894fdba1a423fe49fa357f87ea69cf69',1,'SVF::ExtAPI']]],
   ['ext_5fstore',['EXT_STORE',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a501a7dadb95aa1a97b8fe111c7838900',1,'SVF::ExtAPI']]],
-  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html',1,'SVF']]],
+  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html',1,'SVF::ExtAPI'],['../classSVF_1_1ExtAPI.html#ab793be4b6f8f0a025599e76f5df2a4eb',1,'SVF::ExtAPI::ExtAPI()']]],
   ['extapi_2ecpp',['ExtAPI.cpp',['../ExtAPI_8cpp.html',1,'']]],
   ['extapi_2eh',['ExtAPI.h',['../ExtAPI_8h.html',1,'']]],
   ['extapi_5fjson_5fpath',['EXTAPI_JSON_PATH',['../ExtAPI_8h.html#ad9bef4304f41728bb3edf259c6b67668',1,'ExtAPI.h']]],

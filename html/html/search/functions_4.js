@@ -56,6 +56,7 @@ var searchData=
   ['exestate',['ExeState',['../classSVF_1_1ExeState.html#a83ce58a2551d511448d0224a96ca1bd7',1,'SVF::ExeState::ExeState()'],['../classSVF_1_1ExeState.html#a02e0a7dd5e66255be3838fa10e3e1cab',1,'SVF::ExeState::ExeState(const Z3Expr &amp;_pc, VarToValMap &amp;_varToValMap, LocToValMap &amp;_locToValMap)'],['../classSVF_1_1ExeState.html#a62bef487b31f2a4ca27b4e9b183bdef5',1,'SVF::ExeState::ExeState(const ExeState &amp;rhs)']]],
   ['exit',['exit',['../util_8h.html#a43b6ea6be735bb828bc062c70cadeff8',1,'util.h']]],
   ['expandfiobjs',['expandFIObjs',['../classSVF_1_1BVDataPTAImpl.html#a798c84d5e861de2b61bcb1a86385f721',1,'SVF::BVDataPTAImpl::expandFIObjs(const PointsTo &amp;pts, PointsTo &amp;expandedPts)'],['../classSVF_1_1BVDataPTAImpl.html#aa6a7186152037452599406a74b05d0e1',1,'SVF::BVDataPTAImpl::expandFIObjs(const NodeBS &amp;pts, NodeBS &amp;expandedPts)'],['../classSVF_1_1CondPTAImpl.html#a87b48287d7edb97fc120200fe0e5218d',1,'SVF::CondPTAImpl::expandFIObjs()']]],
+  ['extapi',['ExtAPI',['../classSVF_1_1ExtAPI.html#ab793be4b6f8f0a025599e76f5df2a4eb',1,'SVF::ExtAPI']]],
   ['extendbackward',['extendBackward',['../classSVF_1_1CoreBitVector.html#ab6d789e3c68390a9026fd4f8c4cf344a',1,'SVF::CoreBitVector']]],
   ['extendforward',['extendForward',['../classSVF_1_1CoreBitVector.html#a5d3f1eb85bc388cb76c588b8d8b3c181',1,'SVF::CoreBitVector']]],
   ['extendto',['extendTo',['../classSVF_1_1CoreBitVector.html#a73e5b15854f4f56f50992ed0d0cc7349',1,'SVF::CoreBitVector']]],

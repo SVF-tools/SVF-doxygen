@@ -7,7 +7,7 @@ var searchData=
   ['uniqueunions',['uniqueUnions',['../classSVF_1_1PersistentPointsToCache.html#aacebdd87b1dd45250391d035b032f9d4',1,'SVF::PersistentPointsToCache']]],
   ['univ',['univ',['../structDdManager.html#ab21d56989b9a13502aeb84228de45df0',1,'DdManager']]],
   ['unlocksites',['unlocksites',['../classSVF_1_1LockAnalysis.html#aec459af1d1624df55ffc95cd75655780',1,'SVF::LockAnalysis']]],
-  ['updatecallgraphtime',['UpdateCallGraphTime',['../classSVF_1_1PTAStat.html#a8aedfeb35f76e6d33135637156468894',1,'SVF::PTAStat::UpdateCallGraphTime()'],['../classSVF_1_1FlowSensitive.html#afc140b6c8e78dc2d962f64fdf53b1e07',1,'SVF::FlowSensitive::updateCallGraphTime()']]],
+  ['updatecallgraphtime',['updateCallGraphTime',['../classSVF_1_1FlowSensitive.html#afc140b6c8e78dc2d962f64fdf53b1e07',1,'SVF::FlowSensitive::updateCallGraphTime()'],['../classSVF_1_1PTAStat.html#a8aedfeb35f76e6d33135637156468894',1,'SVF::PTAStat::UpdateCallGraphTime()']]],
   ['updatetime',['updateTime',['../classSVF_1_1FlowSensitive.html#af5a94d14096ae2bbc47b3b3b9f723226',1,'SVF::FlowSensitive']]],
   ['usedregs',['usedRegs',['../classSVF_1_1MemSSA.html#acf840b71b67cabe831f01f2d358f27fa',1,'SVF::MemSSA']]],
   ['usepcg',['UsePCG',['../classSVF_1_1Options.html#af2f66307e1d51947676f622c98ef0762',1,'SVF::Options']]],
