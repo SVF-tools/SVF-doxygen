@@ -149,7 +149,7 @@ var searchData=
   ['cflgrammar_2ecpp',['CFLGrammar.cpp',['../CFLGrammar_8cpp.html',1,'']]],
   ['cflgrammar_2eh',['CFLGrammar.h',['../CFLGrammar_8h.html',1,'']]],
   ['cflgrammar_2etxt',['CFLGrammar.txt',['../CFLGrammar_8txt.html',1,'']]],
-  ['cflgraph',['CFLGraph',['../classSVF_1_1CFLGraph.html',1,'SVF::CFLGraph'],['../classSVF_1_1CFLGraph.html#a3dddc713969a95943d1f9b1e31ec71bc',1,'SVF::CFLGraph::CFLGraph()']]],
+  ['cflgraph',['CFLGraph',['../classSVF_1_1CFLGraph.html',1,'SVF::CFLGraph'],['../classSVF_1_1Options.html#a87b63f1f8f4f65cdf6647f9f056ffc53',1,'SVF::Options::CFLGraph()'],['../classSVF_1_1CFLGraph.html#a3dddc713969a95943d1f9b1e31ec71bc',1,'SVF::CFLGraph::CFLGraph()']]],
   ['cflgraph_2ecpp',['CFLGraph.cpp',['../CFLGraph_8cpp.html',1,'']]],
   ['cflgraph_2eh',['CFLGraph.h',['../CFLGraph_8h.html',1,'']]],
   ['cflgraphbuilder',['CFLGraphBuilder',['../classSVF_1_1CFLGraphBuilder.html',1,'SVF']]],

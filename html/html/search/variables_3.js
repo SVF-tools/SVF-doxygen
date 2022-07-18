@@ -50,6 +50,7 @@ var searchData=
   ['cbvit',['cbvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a4db2c62eb3ad789ab7aaf7506cd340b2',1,'SVF::PointsTo::PointsToIterator']]],
   ['cfinfobuilder',['cfInfoBuilder',['../classSVF_1_1PathCondAllocator.html#a4949fb25fe4cd461de8aec90756b1fea',1,'SVF::PathCondAllocator']]],
   ['cfledgeset',['cflEdgeSet',['../classSVF_1_1CFLGraph.html#afb41039ad53899fa64fedcef8b7aa7fe',1,'SVF::CFLGraph']]],
+  ['cflgraph',['CFLGraph',['../classSVF_1_1Options.html#a87b63f1f8f4f65cdf6647f9f056ffc53',1,'SVF::Options']]],
   ['chaffmap',['chaFFMap',['../classSVF_1_1DCHGraph.html#abe8d313b501182ab62f2276a19d670a4',1,'SVF::DCHGraph']]],
   ['chamap',['chaMap',['../classSVF_1_1DCHGraph.html#ac0d5f1e10f642aac5b64792bf5fcbd9d',1,'SVF::DCHGraph']]],
   ['chg',['chg',['../classSVF_1_1CHGBuilder.html#ab3471cc9afba5976c7e5fbd07dfb22dc',1,'SVF::CHGBuilder']]],
