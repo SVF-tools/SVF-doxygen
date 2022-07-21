@@ -2,6 +2,7 @@ var searchData=
 [
   ['weakupdateoutfromin',['weakUpdateOutFromIn',['../classSVF_1_1FlowSensitive.html#ab492c283e2264b4cbd4c192e805b7750',1,'SVF::FlowSensitive']]],
   ['while',['while',['../cJSON_8cpp.html#a209b15238c5803bc547b2d77e02f29b4',1,'cJSON.cpp']]],
+  ['word',['word',['../structSVF_1_1SparseBitVectorElement.html#a5d43d980591d14d3a3d0782be034ed4f',1,'SVF::SparseBitVectorElement']]],
   ['wpafssolver',['WPAFSSolver',['../classSVF_1_1WPAFSSolver.html#a3bab50f0e94f516204d6622420de7db7',1,'SVF::WPAFSSolver']]],
   ['wpaminimumsolver',['WPAMinimumSolver',['../classSVF_1_1WPAMinimumSolver.html#aaf8b6410ba9667f7a46fc4ca05900ed3',1,'SVF::WPAMinimumSolver']]],
   ['wpapass',['WPAPass',['../classSVF_1_1WPAPass.html#a3fc957e01a3ac7c242c030c6f6846fa9',1,'SVF::WPAPass']]],

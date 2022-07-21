@@ -11,5 +11,6 @@ var searchData=
   ['threadforkedge',['ThreadForkEdge',['../classSVF_1_1ThreadForkEdge.html',1,'SVF']]],
   ['threadjoinedge',['ThreadJoinEdge',['../classSVF_1_1ThreadJoinEdge.html',1,'SVF']]],
   ['threadmhpindsvfgedge',['ThreadMHPIndSVFGEdge',['../classSVF_1_1ThreadMHPIndSVFGEdge.html',1,'SVF']]],
+  ['trailingzeroscounter',['TrailingZerosCounter',['../structSVF_1_1TrailingZerosCounter.html',1,'SVF']]],
   ['typeanalysis',['TypeAnalysis',['../classSVF_1_1TypeAnalysis.html',1,'SVF']]]
 ];

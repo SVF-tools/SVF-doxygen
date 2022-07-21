@@ -18,6 +18,8 @@ var searchData=
   ['pointeranalysis',['PointerAnalysis',['../classSVF_1_1PointerAnalysis.html',1,'SVF']]],
   ['pointsto',['PointsTo',['../classSVF_1_1PointsTo.html',1,'SVF']]],
   ['pointstoiterator',['PointsToIterator',['../classSVF_1_1PointsTo_1_1PointsToIterator.html',1,'SVF::PointsTo']]],
+  ['populationcounter',['PopulationCounter',['../structSVF_1_1PopulationCounter.html',1,'SVF']]],
+  ['populationcounter_3c_20t_2c_208_20_3e',['PopulationCounter&lt; T, 8 &gt;',['../structSVF_1_1PopulationCounter_3_01T_00_018_01_4.html',1,'SVF']]],
   ['printbuffer',['printbuffer',['../structprintbuffer.html',1,'']]],
   ['progslice',['ProgSlice',['../classSVF_1_1ProgSlice.html',1,'SVF']]],
   ['ptacallgraph',['PTACallGraph',['../classSVF_1_1PTACallGraph.html',1,'SVF']]],

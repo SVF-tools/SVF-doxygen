@@ -56,7 +56,7 @@ var searchData=
   ['annotationtime',['AnnotationTime',['../classSVF_1_1MTAStat.html#a51e1ba35f81d89e210a937942f516839',1,'SVF::MTAStat']]],
   ['apnodes',['APNodes',['../classSVF_1_1CallICFGNode.html#a07615cb6245a9dccbba2cc70bde9bf22',1,'SVF::CallICFGNode']]],
   ['arcviolation',['arcviolation',['../structDdManager.html#aa0b71843baf33ac9815c7bddeb327aa6',1,'DdManager']]],
-  ['atend',['atEnd',['../classSVF_1_1CondPointsToSet_1_1CondPtsSetIterator.html#ad22614f30570619802e23715d1d5eaf0',1,'SVF::CondPointsToSet::CondPtsSetIterator']]],
+  ['atend',['atEnd',['../classSVF_1_1CondPointsToSet_1_1CondPtsSetIterator.html#ad22614f30570619802e23715d1d5eaf0',1,'SVF::CondPointsToSet::CondPtsSetIterator::atEnd()'],['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#aa28c3c88d66d8bc3dbf96e2f4bd84fab',1,'SVF::SparseBitVector::SparseBitVectorIterator::AtEnd()']]],
   ['atptdata',['atPTData',['../classSVF_1_1MutableVersionedPTData.html#a3e5337d4189e98f11305491a9ef3c439',1,'SVF::MutableVersionedPTData::atPTData()'],['../classSVF_1_1PersistentVersionedPTData.html#a61b44f6d63cca013da2b278f47298473',1,'SVF::PersistentVersionedPTData::atPTData()']]],
   ['attribute',['attribute',['../structSVF_1_1GrammarBase_1_1Symbol.html#a756bed7c50c6d3251cc4832247c8691d',1,'SVF::GrammarBase::Symbol']]],
   ['attributedkindmaskbits',['AttributedKindMaskBits',['../classSVF_1_1GrammarBase.html#a2dcb7647b5be7b3ab1dad2c494828854',1,'SVF::GrammarBase']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['leadingzeroscounter',['LeadingZerosCounter',['../structSVF_1_1LeadingZerosCounter.html',1,'SVF']]],
   ['leakchecker',['LeakChecker',['../classSVF_1_1LeakChecker.html',1,'SVF']]],
   ['list',['List',['../classSVF_1_1List.html',1,'SVF']]],
   ['listnode',['ListNode',['../classSVF_1_1List_1_1ListNode.html',1,'SVF::List']]],

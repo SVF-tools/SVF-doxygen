@@ -63,5 +63,6 @@ var searchData=
   ['isthunkfunc',['isThunkFunc',['../structSVF_1_1cppUtil_1_1DemangledName.html#af6117df8aec7f4c077058fa8f00b0243',1,'SVF::cppUtil::DemangledName']]],
   ['item',['item',['../structDdLocalCache.html#a5b894c8287e08c2b3ff59ab7d208d2e4',1,'DdLocalCache::item()'],['../cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14',1,'item():&#160;cJSON.h'],['../cJSON_8cpp.html#ac011de571ff16ba220d2e0d757e4e8b0',1,'item():&#160;cJSON.cpp']]],
   ['itemsize',['itemsize',['../structDdLocalCache.html#a37fb6f0ae8dda9e85c9422c75409045d',1,'DdLocalCache::itemsize()'],['../structDdHashTable.html#a2026671f87d19816564455bee089eb31',1,'DdHashTable::itemsize()'],['../structDdLevelQueue.html#aee04a106792fd63d37d287cc820c0729',1,'DdLevelQueue::itemsize()']]],
+  ['iter',['Iter',['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#a3627077086baa18bd0ae25efd981c18f',1,'SVF::SparseBitVector::SparseBitVectorIterator']]],
   ['iterationforprintstat',['iterationForPrintStat',['../classSVF_1_1WPASolver.html#aa7c0636780a86f376e9222bce771e859',1,'SVF::WPASolver']]]
 ];

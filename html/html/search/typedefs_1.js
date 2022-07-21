@@ -20,6 +20,7 @@ var searchData=
   ['bddexpr',['BDDExpr',['../classSVF_1_1BDDExprManager.html#a90e685c420e4ac20104498883dbed9ea',1,'SVF::BDDExprManager']]],
   ['binaryoperator',['BinaryOperator',['../SVF-FE_2BasicTypes_8h.html#ab58e9b290ff1defcedad101c3da8d8fd',1,'BasicTypes.h']]],
   ['bitcastinst',['BitCastInst',['../SVF-FE_2BasicTypes_8h.html#ab8cddf2ff868c0a9ae99483640c9ecef',1,'BasicTypes.h']]],
+  ['bitword',['BitWord',['../structSVF_1_1SparseBitVectorElement.html#af9014ab5077a2d9c1aed1e9b1460390d',1,'SVF::SparseBitVectorElement']]],
   ['blockaddress',['BlockAddress',['../SVF-FE_2BasicTypes_8h.html#ad29efa92ce4c6449b5ef7853994877bd',1,'BasicTypes.h']]],
   ['branchinst',['BranchInst',['../SVF-FE_2BasicTypes_8h.html#adeac5db1db4ed03898d30f205fd02264',1,'BasicTypes.h']]],
   ['bridge_5fgep_5fiterator',['bridge_gep_iterator',['../SVF-FE_2BasicTypes_8h.html#af43699df9f7bdcb9565574b588e3f5ae',1,'bridge_gep_iterator():&#160;BasicTypes.h'],['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator()']]]

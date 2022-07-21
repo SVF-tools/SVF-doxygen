@@ -135,6 +135,7 @@ var searchData=
   ['curevalsvfgnode',['curEvalSVFGNode',['../classSVF_1_1PathCondAllocator.html#a165e0a354b7679ce582c15f4a3faf6e0',1,'SVF::PathCondAllocator']]],
   ['curloc',['curloc',['../classSVF_1_1StmtDPItem.html#a9e20ebd5ae8272a4aef74914098f97ef',1,'SVF::StmtDPItem']]],
   ['curptr',['curPtr',['../classSVF_1_1DDAClient.html#a6a133cf24ef65eaf58c82ec213f3f6cb',1,'SVF::DDAClient']]],
+  ['currelementiter',['CurrElementIter',['../classSVF_1_1SparseBitVector.html#ada7cb2e144c2fccd0d50138778b152dd',1,'SVF::SparseBitVector']]],
   ['current',['current',['../classSVF_1_1CFLGraphBuilder.html#aad408d6ecb776fd763c9b9221a1bed18',1,'SVF::CFLGraphBuilder']]],
   ['currentbestnodemapping',['currentBestNodeMapping',['../classSVF_1_1PointsTo.html#a98781dd444ada40af7eef9aefe76123d',1,'SVF::PointsTo']]],
   ['currentbestreversenodemapping',['currentBestReverseNodeMapping',['../classSVF_1_1PointsTo.html#a53e1230c87912d26604990eb8b0cbc0c',1,'SVF::PointsTo']]],

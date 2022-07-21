@@ -74,8 +74,8 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;llvm/IR/BasicBlock.h&gt;</code><br />
 <code>#include &lt;llvm/ADT/SmallVector.h&gt;</code><br />
-<code>#include &lt;llvm/ADT/SparseBitVector.h&gt;</code><br />
 <code>#include &lt;llvm/Support/CommandLine.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="SparseBitVector_8h_source.html">Util/SparseBitVector.h</a>&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;list&gt;</code><br />
@@ -104,8 +104,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01SVF_1_1NodePair_01_4.html">std::hash&lt; SVF::NodePair &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01llvm_1_1SparseBitVector_3_01N_01_4_01_4.html">std::hash&lt; llvm::SparseBitVector&lt; N &gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialise hash for SparseBitVectors.  <a href="structstd_1_1hash_3_01llvm_1_1SparseBitVector_3_01N_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html">std::hash&lt; SVF::SparseBitVector&lt; N &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialise hash for SparseBitVectors.  <a href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01std_1_1vector_3_01T_01_4_01_4.html">std::hash&lt; std::vector&lt; T &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,10 +186,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a03d88a0302bcd253387690f13f693f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10cddb090690c82a2aab31a480253d35"><td class="memItemLeft" align="right" valign="top">typedef unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a10cddb090690c82a2aab31a480253d35">SVF::ThreadID</a></td></tr>
 <tr class="separator:a10cddb090690c82a2aab31a480253d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a740396763e377643790c8b803ab3e4ea"><td class="memItemLeft" align="right" valign="top">typedef llvm::SparseBitVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a740396763e377643790c8b803ab3e4ea">SVF::NodeBS</a></td></tr>
-<tr class="separator:a740396763e377643790c8b803ab3e4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6cf2115b54ef7135b031efc2f112b54"><td class="memItemLeft" align="right" valign="top">typedef llvm::SparseBitVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#ab6cf2115b54ef7135b031efc2f112b54">SVF::SparseBitVector</a></td></tr>
-<tr class="separator:ab6cf2115b54ef7135b031efc2f112b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b6a13e52671de8524b130738aeb564"><td class="memItemLeft" align="right" valign="top">typedef SparseBitVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#aa7b6a13e52671de8524b130738aeb564">SVF::NodeBS</a></td></tr>
+<tr class="separator:aa7b6a13e52671de8524b130738aeb564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b2887cf75225bc9127338b4cf30aa85"><td class="memItemLeft" align="right" valign="top">typedef PointsTo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#a2b2887cf75225bc9127338b4cf30aa85">SVF::AliasSet</a></td></tr>
 <tr class="separator:a2b2887cf75225bc9127338b4cf30aa85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae545a88267bd2246de827cf590675aca"><td class="memItemLeft" align="right" valign="top">typedef unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html#ae545a88267bd2246de827cf590675aca">SVF::PointsToID</a></td></tr>
@@ -272,7 +270,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00182">182</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00183">183</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +286,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00172">172</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00173">173</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +318,7 @@ Enumerations</h2></td></tr>
 
 <p>LLVM debug macros, define type of your DEBUG model of each pass. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00154">154</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00155">155</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +334,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00168">168</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00169">169</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +350,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00175">175</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00176">176</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +366,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00164">164</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00165">165</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +382,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00165">165</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00166">166</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +398,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00166">166</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00167">167</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -418,7 +416,7 @@ Enumerations</h2></td></tr>
 
 <p>General debug flag is for each phase of a pass, it is often in a colorful output format. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00159">159</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00160">160</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -434,7 +432,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00171">171</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00172">172</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -450,7 +448,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00162">162</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00163">163</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +464,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00163">163</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00164">164</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -482,7 +480,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00170">170</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00171">171</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -498,7 +496,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00174">174</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00175">175</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -518,7 +516,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00155">155</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00156">156</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -538,7 +536,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00156">156</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00157">157</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -554,7 +552,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00161">161</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00162">162</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -570,7 +568,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00167">167</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00168">168</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -586,7 +584,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00173">173</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00174">174</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -602,7 +600,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00169">169</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00170">170</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -620,7 +618,7 @@ Enumerations</h2></td></tr>
 
 <p>Size of native integer that we'll use for bit vectors, in bits. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00185">185</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00186">186</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>
@@ -636,7 +634,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00181">181</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFBasicTypes_8h_source.html#l00182">182</a> of file <a class="el" href="SVFBasicTypes_8h_source.html">SVFBasicTypes.h</a>.</p>
 
 </div>
 </div>

@@ -17,6 +17,7 @@ var searchData=
   ['unionptsfromin',['unionPtsFromIn',['../classSVF_1_1FlowSensitive.html#a16d757abf69ad77951b808dc18ca2999',1,'SVF::FlowSensitive']]],
   ['unionptsfromtop',['unionPtsFromTop',['../classSVF_1_1FlowSensitive.html#a49104435f8d20015907a1c8f58a76577',1,'SVF::FlowSensitive']]],
   ['unionptsthroughids',['unionPtsThroughIds',['../classSVF_1_1PersistentDFPTData.html#a2cb37d0403e1b34316c9c24a0d6ab66c',1,'SVF::PersistentDFPTData']]],
+  ['unionwith',['unionWith',['../structSVF_1_1SparseBitVectorElement.html#a34e70705e4618e6d79a19ee7725e4960',1,'SVF::SparseBitVectorElement']]],
   ['uniquecomplements',['uniqueComplements',['../classSVF_1_1PersistentPointsToCache.html#a5c1afbaebce46eac6b1172aa5f2824ee',1,'SVF::PersistentPointsToCache']]],
   ['uniqueintersections',['uniqueIntersections',['../classSVF_1_1PersistentPointsToCache.html#a474023fe293b080fbda7da06ef380531',1,'SVF::PersistentPointsToCache']]],
   ['uniqueunions',['uniqueUnions',['../classSVF_1_1PersistentPointsToCache.html#aacebdd87b1dd45250391d035b032f9d4',1,'SVF::PersistentPointsToCache']]],

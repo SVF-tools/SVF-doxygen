@@ -9,6 +9,7 @@ var searchData=
   ['unionptsfromin',['unionPtsFromIn',['../classSVF_1_1FlowSensitive.html#a16d757abf69ad77951b808dc18ca2999',1,'SVF::FlowSensitive']]],
   ['unionptsfromtop',['unionPtsFromTop',['../classSVF_1_1FlowSensitive.html#a49104435f8d20015907a1c8f58a76577',1,'SVF::FlowSensitive']]],
   ['unionptsthroughids',['unionPtsThroughIds',['../classSVF_1_1PersistentDFPTData.html#a2cb37d0403e1b34316c9c24a0d6ab66c',1,'SVF::PersistentDFPTData']]],
+  ['unionwith',['unionWith',['../structSVF_1_1SparseBitVectorElement.html#a34e70705e4618e6d79a19ee7725e4960',1,'SVF::SparseBitVectorElement']]],
   ['unset',['unset',['../classSVF_1_1NodeIDAllocator.html#af7952ef5667039c9be86a589419b35a8',1,'SVF::NodeIDAllocator']]],
   ['update_5foffset',['update_offset',['../cJSON_8cpp.html#af5fb173126786c1e3f90b6df6e2500c5',1,'cJSON.cpp']]],
   ['updatealiasmrs',['updateAliasMRs',['../classSVF_1_1MRGenerator.html#a9c1da53188729eb743e1a33bbad87af7',1,'SVF::MRGenerator']]],

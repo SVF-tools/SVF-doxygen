@@ -4,7 +4,7 @@ var searchData=
   ['nametochnodesmap',['NameToCHNodesMap',['../classSVF_1_1CHGraph.html#aedb20aca2fa11a070cfe28e14fd3552b',1,'SVF::CHGraph']]],
   ['node',['Node',['../classSVF_1_1List.html#a4eba65b40d347ea80e2427320eb9c5a1',1,'SVF::List']]],
   ['node_5fiterator',['node_iterator',['../classSVF_1_1SrcSnkSolver.html#a14a76b28f06e167bf66e15b336570cd3',1,'SVF::SrcSnkSolver::node_iterator()'],['../classSVF_1_1GraphReachSolver.html#a4e5126b0e97e490ce65804e2017f0084',1,'SVF::GraphReachSolver::node_iterator()'],['../classSVF_1_1SCCDetection.html#abaf75ef45e8f5349b902dab063999ad8',1,'SVF::SCCDetection::node_iterator()']]],
-  ['nodebs',['NodeBS',['../namespaceSVF.html#a740396763e377643790c8b803ab3e4ea',1,'SVF']]],
+  ['nodebs',['NodeBS',['../namespaceSVF.html#aa7b6a13e52671de8524b130738aeb564',1,'SVF']]],
   ['nodedata',['NodeData',['../classSVF_1_1VersionedFlowSensitive_1_1SCC.html#a3b4321bdd7924d05fd3b8506ec1c7c3c',1,'SVF::VersionedFlowSensitive::SCC']]],
   ['nodedeque',['NodeDeque',['../namespaceSVF.html#a35068c3650567d5051416db4aeb48e74',1,'SVF']]],
   ['nodeid',['NodeID',['../classSVF_1_1SCCDetection.html#a4f954a92b432b96f63454b7db46b60e2',1,'SVF::SCCDetection::NodeID()'],['../namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301',1,'SVF::NodeID()']]],
