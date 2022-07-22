@@ -183,7 +183,7 @@ var searchData=
   ['funtointermap',['FunToInterMap',['../classSVF_1_1IntraDisjointMRG.html#ad59c11753db0b310246418df4c62f639',1,'SVF::IntraDisjointMRG']]],
   ['funtoloopinfomap',['FunToLoopInfoMap',['../classSVF_1_1MTA.html#a2473be56f2861ad101f65a65e02dff8d',1,'SVF::MTA::FunToLoopInfoMap()'],['../classSVF_1_1PTACFInfoBuilder.html#ad76c187197c73fad8dd0c8bdb57b10f7',1,'SVF::PTACFInfoBuilder::FunToLoopInfoMap()'],['../classSVF_1_1PTACFInfoBuilder.html#a155db92ff5057abcb929c0ca8e8bee89',1,'SVF::PTACFInfoBuilder::funToLoopInfoMap()']]],
   ['funtomodsmap',['funToModsMap',['../classSVF_1_1MRGenerator.html#a2c94bfa19ad8d1d6360b12693c8b891d',1,'SVF::MRGenerator']]],
-  ['funtomrsmap',['FunToMRsMap',['../classSVF_1_1MRGenerator.html#a090070379a09460aef0c07270d32d27b',1,'SVF::MRGenerator::FunToMRsMap()'],['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator::funToMRsMap()']]],
+  ['funtomrsmap',['funToMRsMap',['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator::funToMRsMap()'],['../classSVF_1_1MRGenerator.html#a090070379a09460aef0c07270d32d27b',1,'SVF::MRGenerator::FunToMRsMap()']]],
   ['funtonodebsmap',['FunToNodeBSMap',['../classSVF_1_1MRGenerator.html#ab01e492f002c73e2c89eb0b4c8f9647d',1,'SVF::MRGenerator']]],
   ['funtopagedgesetmap',['FunToPAGEdgeSetMap',['../classSVF_1_1SVFIR.html#ac918466df08a2ab30472f3e57935f005',1,'SVF::SVFIR']]],
   ['funtopdtmap',['funToPDTMap',['../classSVF_1_1PTACFInfoBuilder.html#a11a1bb877406f45ea4c8f7c4678bfa15',1,'SVF::PTACFInfoBuilder']]],

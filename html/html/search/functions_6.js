@@ -370,6 +370,7 @@ var searchData=
   ['getllvmcallsite',['getLLVMCallSite',['../classSVF_1_1ThreadAPI.html#ad4dfe9563de352bb40fb1028a2851512',1,'SVF::ThreadAPI::getLLVMCallSite()'],['../namespaceSVF_1_1SVFUtil.html#a202de7ad2bea0311e2f75894c030e7a9',1,'SVF::SVFUtil::getLLVMCallSite()']]],
   ['getllvmfun',['getLLVMFun',['../classSVF_1_1SVFFunction.html#ac4ae917ae35ac6fca652fe2dd90a8ac2',1,'SVF::SVFFunction']]],
   ['getllvmfunction',['getLLVMFunction',['../namespaceSVF_1_1SVFUtil.html#ad98299033577f1e7f4e9bc73dff3b253',1,'SVF::SVFUtil']]],
+  ['getllvmglobalfunctions',['getLLVMGlobalFunctions',['../classSVF_1_1LLVMModuleSet.html#a0b46a2a5ff2165d17993a071d9cc82c1',1,'SVF::LLVMModuleSet']]],
   ['getllvmmoduleset',['getLLVMModuleSet',['../classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160',1,'SVF::LLVMModuleSet']]],
   ['getloadcgedges',['getLoadCGEdges',['../classSVF_1_1ConstraintGraph.html#afb849d8f3425ff36497d062ecefd2cc1',1,'SVF::ConstraintGraph']]],
   ['getloadcvar',['getLoadCVar',['../classSVF_1_1DDAVFSolver.html#ad42efad8e857290459689833c224e467',1,'SVF::DDAVFSolver']]],

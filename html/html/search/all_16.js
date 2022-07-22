@@ -23,7 +23,7 @@ var searchData=
   ['valuedouble',['valuedouble',['../structcJSON.html#a4b21817d0fd2919901abadac73214e7f',1,'cJSON::valuedouble()'],['../cJSON_8cpp.html#a6ea693e884dae57fb36b03a8ba6cad27',1,'valuedouble():&#160;cJSON.cpp']]],
   ['valueint',['valueint',['../structcJSON.html#a369cea49494eb5d4409d532a731a0fbf',1,'cJSON::valueint()'],['../cJSON_8cpp.html#a467a5974a6eae3b3059a89ba909c2a9c',1,'valueint():&#160;cJSON.cpp']]],
   ['valuestring',['valuestring',['../structcJSON.html#ad43f8de2571e504c4c5ce0a36990e6e1',1,'cJSON::valuestring()'],['../cJSON_8h.html#a7dc61ad7586ca3231e691514bad7cbc4',1,'valuestring():&#160;cJSON.h'],['../cJSON_8cpp.html#a7dc61ad7586ca3231e691514bad7cbc4',1,'valuestring():&#160;cJSON.cpp']]],
-  ['valuetoedgemap',['ValueToEdgeMap',['../classSVF_1_1IRGraph.html#addfc2131699f5ecee3a45d65cda46c24',1,'SVF::IRGraph::ValueToEdgeMap()'],['../classSVF_1_1IRGraph.html#a1308b5d3001c6676e8a8be6a8b118704',1,'SVF::IRGraph::valueToEdgeMap()']]],
+  ['valuetoedgemap',['valueToEdgeMap',['../classSVF_1_1IRGraph.html#a1308b5d3001c6676e8a8be6a8b118704',1,'SVF::IRGraph::valueToEdgeMap()'],['../classSVF_1_1IRGraph.html#addfc2131699f5ecee3a45d65cda46c24',1,'SVF::IRGraph::ValueToEdgeMap()']]],
   ['valuetoidmapty',['ValueToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#a03a11c48d748990ddac1ac5866ecb48e',1,'SVF::SymbolTableInfo']]],
   ['valvar',['ValVar',['../classSVF_1_1ValVar.html',1,'SVF::ValVar'],['../classSVF_1_1ValVar.html#ae5dc21b3327a100ffe3e0e2c876ba1bb',1,'SVF::ValVar::ValVar()']]],
   ['var2labelmap',['Var2LabelMap',['../classSVF_1_1SVFStmt.html#ad178ccbc7800527c3dc406ad5fa069bb',1,'SVF::SVFStmt::Var2LabelMap()'],['../classSVF_1_1SVFStmt.html#a24c64109d27ef7549d1c7a07c391e007',1,'SVF::SVFStmt::var2LabelMap()']]],
