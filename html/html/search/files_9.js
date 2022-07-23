@@ -17,7 +17,5 @@ var searchData=
   ['mtaresultvalidator_2eh',['MTAResultValidator.h',['../MTAResultValidator_8h.html',1,'']]],
   ['mtastat_2ecpp',['MTAStat.cpp',['../MTAStat_8cpp.html',1,'']]],
   ['mtastat_2eh',['MTAStat.h',['../MTAStat_8h.html',1,'']]],
-  ['mtr_2ec',['mtr.c',['../mtr_8c.html',1,'']]],
-  ['mtr_2eh',['mtr.h',['../mtr_8h.html',1,'']]],
   ['mutablepointstods_2eh',['MutablePointsToDS.h',['../MutablePointsToDS_8h.html',1,'']]]
 ];

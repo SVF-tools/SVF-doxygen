@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['nan',['NAN',['../cJSON_8cpp.html#a8abfcc76130f3f991d124dd22d7e69bc',1,'cJSON.cpp']]],
-  ['native_5fint_5fsize',['NATIVE_INT_SIZE',['../SVFBasicTypes_8h.html#ab8ca0fd9d0caa6817d305cae0f1cf022',1,'SVFBasicTypes.h']]],
-  ['nil',['NIL',['../util_8h.html#a31bfee01545b78af63301bf9e857218b',1,'util.h']]]
+  ['static_5fstrlen',['static_strlen',['../cJSON_8cpp.html#a5714bac836668a1b9af55465b78531ef',1,'cJSON.cpp']]],
+  ['svf_5fglobal_5fctors',['SVF_GLOBAL_CTORS',['../LLVMModule_8cpp.html#aa18802f2f60ef8030c66a42f20f285af',1,'LLVMModule.cpp']]],
+  ['svf_5fglobal_5fdtors',['SVF_GLOBAL_DTORS',['../LLVMModule_8cpp.html#a9fd6e28e6ed93f65a20a348ab0646320',1,'LLVMModule.cpp']]],
+  ['svf_5fmain_5ffunc_5fname',['SVF_MAIN_FUNC_NAME',['../LLVMModule_8cpp.html#a10ab7c7da3a458495d8528b9e90d714b',1,'LLVMModule.cpp']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['bddexprmanager',['BDDExprManager',['../classSVF_1_1BDDExprManager.html',1,'SVF']]],
   ['binaryopstmt',['BinaryOPStmt',['../classSVF_1_1BinaryOPStmt.html',1,'SVF']]],
   ['binaryopvfgnode',['BinaryOPVFGNode',['../classSVF_1_1BinaryOPVFGNode.html',1,'SVF']]],
   ['bitvector',['BitVector',['../classSVF_1_1BitVector.html',1,'SVF']]],

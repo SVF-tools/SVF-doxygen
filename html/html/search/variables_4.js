@@ -1,17 +1,10 @@
 var searchData=
 [
-  ['data',['data',['../structDdCache.html#a9905702dc8e111587a301164f51fd0f0',1,'DdCache::data()'],['../classSVF_1_1List_1_1ListNode.html#a4a9cb4ae17156d6d80d2357e06231e12',1,'SVF::List::ListNode::data()']]],
+  ['data',['data',['../classSVF_1_1List_1_1ListNode.html#a4a9cb4ae17156d6d80d2357e06231e12',1,'SVF::List::ListNode']]],
   ['data_5flist',['data_list',['../classSVF_1_1CFLFIFOWorkList.html#a5a5caa556bf8023b4b0b525179efd1b0',1,'SVF::CFLFIFOWorkList::data_list()'],['../classSVF_1_1FIFOWorkList.html#a270dad3fd1d95418e4af102b64fcc883',1,'SVF::FIFOWorkList::data_list()'],['../classSVF_1_1FILOWorkList.html#aeda28a2200d763279027642c8cf6a4bf',1,'SVF::FILOWorkList::data_list()']]],
   ['data_5fset',['data_set',['../classSVF_1_1CFLFIFOWorkList.html#a62ef55a46552652e20f8e3bfc2b72bd0',1,'SVF::CFLFIFOWorkList::data_set()'],['../classSVF_1_1FIFOWorkList.html#a5e9648954a2f6902dc4106cc17a7d1e6',1,'SVF::FIFOWorkList::data_set()'],['../classSVF_1_1FILOWorkList.html#a46092b75425becfe97fdf047206c736b',1,'SVF::FILOWorkList::data_set()']]],
-  ['dd_5funused',['DD_UNUSED',['../cuddInt_8c.html#a15755406c65f1ac3ea34ce661b57b54e',1,'cuddInt.c']]],
   ['ddaselected',['DDASelected',['../classSVF_1_1Options.html#a2203f622ab539b3a38488575c9eec33b',1,'SVF::Options']]],
   ['ddastat',['ddaStat',['../classSVF_1_1DDAVFSolver.html#ae40c7bad663e0fa07dee4be3d1794ff2',1,'SVF::DDAVFSolver']]],
-  ['ddtotalnumberswapping',['ddTotalNumberSwapping',['../cuddInt_8c.html#a1860a312dbd8ab2ab829b1a3beed31d9',1,'cuddInt.c']]],
-  ['dead',['dead',['../structDdSubtable.html#a5f391dd3334a05f5e753d7df4da807bc',1,'DdSubtable::dead()'],['../structDdManager.html#a170c1cfcbbd9b83bb479fc85c177c52e',1,'DdManager::dead()']]],
-  ['deadmask',['deadMask',['../structDdManager.html#a1db4328721c383590ca555a0150a142c',1,'DdManager']]],
-  ['deadz',['deadZ',['../structDdManager.html#a023bca6151c211d2d547da82a8f05d8b',1,'DdManager']]],
-  ['deathrow',['deathRow',['../structDdManager.html#aed01f5d091c2450245b37e1fcfafd7d0',1,'DdManager']]],
-  ['deathrowdepth',['deathRowDepth',['../structDdManager.html#a61aa0ca7d1b7e22fe1450444b03aeab7',1,'DdManager']]],
   ['def',['def',['../classSVF_1_1MRVer.html#a3398bb8d3189413c275b62d5cb7a5fc4',1,'SVF::MRVer']]],
   ['defnodes',['defNodes',['../classSVF_1_1SVFGOPT.html#abd524dca72261bbcc7ebb1103b693a2b',1,'SVF::SVFGOPT']]],
   ['deltamap',['deltaMap',['../classSVF_1_1VersionedFlowSensitive.html#a11ddfa1faebf56e74e6dcc53e16142e1',1,'SVF::VersionedFlowSensitive']]],

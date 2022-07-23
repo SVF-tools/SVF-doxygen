@@ -27,7 +27,7 @@ var searchData=
   ['funtocallgraphnodemap',['FunToCallGraphNodeMap',['../classSVF_1_1PTACallGraph.html#a049bc978a93f0db1fe91efb6feb22b14',1,'SVF::PTACallGraph']]],
   ['funtodtmap',['FunToDTMap',['../classSVF_1_1PTACFInfoBuilder.html#a69109de5fddf4042037bc6d66563a9e5',1,'SVF::PTACFInfoBuilder']]],
   ['funtoentrychisetmap',['FunToEntryChiSetMap',['../classSVF_1_1MemSSA.html#ac34aa1ac96600bfc27b3c2eb0b1510ca',1,'SVF::MemSSA']]],
-  ['funtoexitbbsmap',['FunToExitBBsMap',['../classSVF_1_1PathCondAllocator.html#a0753fb35cb8fd37cfe8fd795d01e5275',1,'SVF::PathCondAllocator']]],
+  ['funtoexitbbsmap',['FunToExitBBsMap',['../classSVF_1_1SaberCondAllocator.html#a37b7a293dcd12bd13639c55482e856e1',1,'SVF::SaberCondAllocator']]],
   ['funtofunentrynodemapty',['FunToFunEntryNodeMapTy',['../classSVF_1_1ICFG.html#a44a95ca43a7b3148c1aee9ad5da6e9d1',1,'SVF::ICFG']]],
   ['funtofunexitnodemapty',['FunToFunExitNodeMapTy',['../classSVF_1_1ICFG.html#a25f4e5330af9d3fba19ad70520b2ec7f',1,'SVF::ICFG']]],
   ['funtoidmapty',['FunToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#ada2191cb0e3798ba29aa442dca762290',1,'SVF::SymbolTableInfo']]],

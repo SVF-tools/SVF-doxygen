@@ -7,6 +7,5 @@ var searchData=
   ['joinsitetoloopmap',['joinSiteToLoopMap',['../classSVF_1_1TCT.html#a5b1f44ffa732607a7800728befa5bc57',1,'SVF::TCT']]],
   ['json',['json',['../structerror.html#a9b123855d5dd48e86de846588462b39f',1,'error::json()'],['../cJSON_8cpp.html#ac3d010a5f321146bc39a696b90a35c37',1,'json():&#160;cJSON.cpp']]],
   ['json_5fopt_5ffunctiontype',['JSON_OPT_FUNCTIONTYPE',['../ExtAPI_8h.html#a8af07ec3fec2ac9636dfb81bb7a8961e',1,'ExtAPI.h']]],
-  ['json_5fopt_5foverwrite',['JSON_OPT_OVERWRITE',['../ExtAPI_8h.html#a6dec9d5ce6e777757e97065129d96874',1,'ExtAPI.h']]],
-  ['jump_5fup_5fprob',['JUMP_UP_PROB',['../cuddInt_8c.html#a91b8f7055919a427c26d2ca5e5732548',1,'cuddInt.c']]]
+  ['json_5fopt_5foverwrite',['JSON_OPT_OVERWRITE',['../ExtAPI_8h.html#a6dec9d5ce6e777757e97065129d96874',1,'ExtAPI.h']]]
 ];

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['h',['h',['../structDdCache.html#adcf343a00c090b91bb78b105ac51e4be',1,'DdCache']]],
-  ['hack',['hack',['../unionhack.html',1,'hack'],['../cuddInt_8c.html#a8130f92b5439f01dd3b73b41b0b5deae',1,'hack():&#160;cuddInt.c']]],
   ['handblackhole',['HandBlackHole',['../classSVF_1_1Options.html#ad2d3db3e407a53956a5a59cc24eb8d40',1,'SVF::Options']]],
   ['handleaddr',['handleAddr',['../classSVF_1_1ContextDDA.html#a26031c81d3eba5b3ff3ebd51d89510ae',1,'SVF::ContextDDA::handleAddr()'],['../classSVF_1_1DDAVFSolver.html#acfe7d961caac8f0f558881a9a006b1fa',1,'SVF::DDAVFSolver::handleAddr()'],['../classSVF_1_1FlowDDA.html#a1b8d66dbe8c6587e74d70f5d231eb69d',1,'SVF::FlowDDA::handleAddr()']]],
   ['handlebkcondition',['handleBKCondition',['../classSVF_1_1ContextDDA.html#aa8a7b6e99b92abfa5c2404515b703a2d',1,'SVF::ContextDDA::handleBKCondition()'],['../classSVF_1_1DDAVFSolver.html#a601282325e55badc15f3ba9141816af5',1,'SVF::DDAVFSolver::handleBKCondition()'],['../classSVF_1_1FlowDDA.html#addb412dc03c7684889693ce263585867',1,'SVF::FlowDDA::handleBKCondition()']]],
@@ -80,7 +78,7 @@ var searchData=
   ['hasglobalrep',['hasGlobalRep',['../classSVF_1_1LLVMModuleSet.html#a0e5ab0def54815f67ed7495d028dab1b',1,'SVF::LLVMModuleSet']]],
   ['hasgnode',['hasGNode',['../classSVF_1_1GenericGraph.html#a6885064afa211958af7b73f0233284e5',1,'SVF::GenericGraph']]],
   ['hasgraphedge',['hasGraphEdge',['../classSVF_1_1PTACallGraph.html#a6d29a39440d8f6290e2e8b7322b965fb',1,'SVF::PTACallGraph::hasGraphEdge()'],['../classSVF_1_1TCT.html#adb2025048dc69f0689f526c58df29802',1,'SVF::TCT::hasGraphEdge()']]],
-  ['hash',['Hash',['../structSVF_1_1Hash.html',1,'SVF::Hash&lt; T &gt;'],['../structst__table.html#a70df318ebef482661599de3bcc536cc3',1,'st_table::hash()'],['../classSVF_1_1PointsTo.html#afe275b31ea93a3ecea4e19660ceef0ae',1,'SVF::PointsTo::hash()'],['../classSVF_1_1CoreBitVector.html#af979ecb48d3d5296bce5bd0b4676e359',1,'SVF::CoreBitVector::hash()']]],
+  ['hash',['Hash',['../structSVF_1_1Hash.html',1,'SVF::Hash&lt; T &gt;'],['../classSVF_1_1PointsTo.html#afe275b31ea93a3ecea4e19660ceef0ae',1,'SVF::PointsTo::hash()'],['../classSVF_1_1CoreBitVector.html#af979ecb48d3d5296bce5bd0b4676e359',1,'SVF::CoreBitVector::hash()'],['../classSVF_1_1Z3Expr.html#a631cb7cee0e1f9b7204b9293f4e516a9',1,'SVF::Z3Expr::hash()']]],
   ['hash_3c_20const_20svf_3a_3acondvar_3c_20cond_20_3e_20_3e',['hash&lt; const SVF::CondVar&lt; Cond &gt; &gt;',['../structstd_1_1hash_3_01const_01SVF_1_1CondVar_3_01Cond_01_4_01_4.html',1,'std']]],
   ['hash_3c_20const_20svf_3a_3acontextcond_20_3e',['hash&lt; const SVF::ContextCond &gt;',['../structstd_1_1hash_3_01const_01SVF_1_1ContextCond_01_4.html',1,'std']]],
   ['hash_3c_20corebitvector_20_3e',['Hash&lt; CoreBitVector &gt;',['../structSVF_1_1Hash_3_01CoreBitVector_01_4.html',1,'SVF']]],
@@ -162,9 +160,6 @@ var searchData=
   ['hasvaluenode',['hasValueNode',['../classSVF_1_1IRGraph.html#aceb17dfbe137658625e16291127267d1',1,'SVF::IRGraph']]],
   ['hasvfgnode',['hasVFGNode',['../classSVF_1_1VFG.html#a30eb9d717ad5bc8a9109a7bdef38f4a1',1,'SVF::VFG']]],
   ['hasvfgnodes',['hasVFGNodes',['../classSVF_1_1VFG.html#a76af43e28630eb56a1aa5971f516d43d',1,'SVF::VFG']]],
-  ['have_5fgetrlimit',['HAVE_GETRLIMIT',['../util_8c.html#a30a57d379e02246aa63b4d32e683ec53',1,'util.c']]],
-  ['have_5fsys_5fresource_5fh',['HAVE_SYS_RESOURCE_H',['../util_8c.html#a6e7be09e66bc8d1260031bde86fef17b',1,'util.c']]],
-  ['have_5fsys_5ftime_5fh',['HAVE_SYS_TIME_H',['../util_8c.html#a2aae46056558e9d6fef6380f9678ffe3',1,'util.c']]],
   ['hbpair',['HBPair',['../classSVF_1_1ForkJoinAnalysis.html#aad3e722ecaa4a39aef0e1cabfa2b8019',1,'SVF::ForkJoinAnalysis']]],
   ['hcdandersen',['hcdAndersen',['../classSVF_1_1AndersenHCD.html#a2356a7f8215725d2ee035630b1487b05',1,'SVF::AndersenHCD']]],
   ['hclust_5ffast',['hclust_fast',['../fastcluster_8h.html#acccd226cbdf0944b5c9e24c84a4599c9',1,'hclust_fast(int n, double *distmat, int method, int *merge, double *height):&#160;fastcluster.cpp'],['../fastcluster_8cpp.html#acccd226cbdf0944b5c9e24c84a4599c9',1,'hclust_fast(int n, double *distmat, int method, int *merge, double *height):&#160;fastcluster.cpp']]],
@@ -179,8 +174,7 @@ var searchData=
   ['headmap',['headmap',['../classSVF_1_1MTASVFGBuilder.html#ac92452c257052706b1cf1737b266eec1',1,'SVF::MTASVFGBuilder']]],
   ['heap_5fobj',['HEAP_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830a692b4b0df23bad19ea04d18b01bf445c',1,'SVF::ObjTypeInfo']]],
   ['heapallocatorviaindcall',['heapAllocatorViaIndCall',['../classSVF_1_1CFLAlias.html#a40841c2b47cf690af5c13ba7662d0863',1,'SVF::CFLAlias::heapAllocatorViaIndCall()'],['../classSVF_1_1Andersen.html#a7b1b9e9b25b5643440aca77e23a8de07',1,'SVF::Andersen::heapAllocatorViaIndCall()']]],
-  ['hits',['hits',['../structDdLocalCache.html#aeb0c91dbe5e63a318436df1d716810b6',1,'DdLocalCache']]],
   ['hlcdandersen',['hlcdAndersen',['../classSVF_1_1AndersenHLCD.html#ad22c1990d8faad9c7cae6d779c7de94a',1,'SVF::AndersenHLCD']]],
-  ['hooks',['hooks',['../structDdManager.html#adb322122f7a8874e4c0704fb1a022e00',1,'DdManager::hooks()'],['../structparse__buffer.html#a2c3e99b15da2935fc5d58124ffb4a894',1,'parse_buffer::hooks()'],['../structprintbuffer.html#a43a8b3bcc644432f12f5aed5159d2520',1,'printbuffer::hooks()'],['../cJSON_8cpp.html#a182a7b0d4467e799ca4ea26235b1cf74',1,'hooks():&#160;cJSON.cpp']]],
+  ['hooks',['hooks',['../structparse__buffer.html#a2c3e99b15da2935fc5d58124ffb4a894',1,'parse_buffer::hooks()'],['../structprintbuffer.html#a43a8b3bcc644432f12f5aed5159d2520',1,'printbuffer::hooks()'],['../cJSON_8cpp.html#a182a7b0d4467e799ca4ea26235b1cf74',1,'hooks():&#160;cJSON.cpp']]],
   ['hppair',['HPPair',['../classSVF_1_1ForkJoinAnalysis.html#a4ad5c7a21ca994d908d648ca9d9e1833',1,'SVF::ForkJoinAnalysis']]]
 ];

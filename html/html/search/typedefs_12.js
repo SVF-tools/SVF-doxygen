@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['tctnodeiter',['TCTNodeIter',['../classSVF_1_1TCT.html#a6f4ab4fb901620c733d90b380c9db670',1,'SVF::TCT']]],
-  ['tdapimap',['TDAPIMap',['../classSVF_1_1SaberCheckerAPI.html#a7acbb76087b863393e0214c77bb934b2',1,'SVF::SaberCheckerAPI::TDAPIMap()'],['../classSVF_1_1ThreadAPI.html#abad7c113fd56c30537444ae4bdff2144',1,'SVF::ThreadAPI::TDAPIMap()']]],
-  ['threadcallgraphscc',['ThreadCallGraphSCC',['../classSVF_1_1TCT.html#a71942c7386d094426ae86633a9b1f755',1,'SVF::TCT']]],
-  ['threadcreateedgeset',['ThreadCreateEdgeSet',['../classSVF_1_1TCTEdge.html#aecd13905b54ae91d938b610be828deb5',1,'SVF::TCTEdge::ThreadCreateEdgeSet()'],['../classSVF_1_1TCT.html#a7c53c7ff773a253976374392d4930d6e',1,'SVF::TCT::ThreadCreateEdgeSet()']]],
-  ['threadid',['ThreadID',['../namespaceSVF.html#a10cddb090690c82a2aab31a480253d35',1,'SVF']]],
-  ['threadpairset',['ThreadPairSet',['../classSVF_1_1ForkJoinAnalysis.html#a7fb8df483e619337e77088e8543a9846',1,'SVF::ForkJoinAnalysis']]],
-  ['threadstmttothreadinterleav',['ThreadStmtToThreadInterleav',['../classSVF_1_1MHP.html#ac30f283cb2ad020a054ee6525ca94025',1,'SVF::MHP']]],
-  ['timestatmap',['TIMEStatMap',['../classSVF_1_1PTAStat.html#a28f304e7095f3843ca4cc017bc1f7b10',1,'SVF::PTAStat']]],
-  ['type',['Type',['../namespaceSVF.html#a1d008c0666c145622b81d427be64c52d',1,'SVF']]],
-  ['typetofieldinfomap',['TypeToFieldInfoMap',['../classSVF_1_1SymbolTableInfo.html#a9c9a9da876d41ab48e55f25efc266494',1,'SVF::SymbolTableInfo']]]
+  ['u32_5ft',['u32_t',['../namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af',1,'SVF']]],
+  ['u64_5ft',['u64_t',['../namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14',1,'SVF']]],
+  ['unaryoperator',['UnaryOperator',['../SVF-FE_2BasicTypes_8h.html#ab6cb332bc04ab932cba29fa9c9d5f3b2',1,'BasicTypes.h']]],
+  ['undefvalue',['UndefValue',['../SVF-FE_2BasicTypes_8h.html#a1ab5636908738dc0987bc642604cbb4a',1,'BasicTypes.h']]],
+  ['unifyfunctionexitnodes',['UnifyFunctionExitNodes',['../SVF-FE_2BasicTypes_8h.html#a66384f66e64322087e7bdab0b50840f2',1,'BasicTypes.h']]],
+  ['unreachableinst',['UnreachableInst',['../SVF-FE_2BasicTypes_8h.html#ac81608d3ff4a58a9a5d8fd522860b96f',1,'BasicTypes.h']]],
+  ['updatedvarconstiter',['UpdatedVarconstIter',['../classSVF_1_1MutableIncDFPTData.html#af815dd2108c16e1dfddbcd5bdbcceeb6',1,'SVF::MutableIncDFPTData']]],
+  ['updatedvarmap',['UpdatedVarMap',['../classSVF_1_1MutableIncDFPTData.html#a67c24cebffdcea9c8059f6769c7f9798',1,'SVF::MutableIncDFPTData::UpdatedVarMap()'],['../classSVF_1_1PersistentIncDFPTData.html#abad78c2ef84371b693dca206ebbb63ab',1,'SVF::PersistentIncDFPTData::UpdatedVarMap()']]],
+  ['updatedvarmapiter',['UpdatedVarMapIter',['../classSVF_1_1MutableIncDFPTData.html#a8b30326d3fa3f4054e67268f512aec9e',1,'SVF::MutableIncDFPTData']]],
+  ['use',['Use',['../SVF-FE_2BasicTypes_8h.html#a9c01c67684e99545d8e0403321594977',1,'BasicTypes.h']]],
+  ['user',['User',['../namespaceSVF.html#afc1b50355821e7299df03b026e36f1df',1,'SVF']]]
 ];

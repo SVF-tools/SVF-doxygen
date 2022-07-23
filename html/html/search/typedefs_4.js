@@ -9,8 +9,6 @@ var searchData=
   ['elementlistiter',['ElementListIter',['../classSVF_1_1SparseBitVector.html#a399721230d13a4153766e6e8ed1f9aed',1,'SVF::SparseBitVector']]],
   ['elementset',['ElementSet',['../classSVF_1_1CondStdSet.html#a3fcc7079d72b0b392731ae7bf1ef2939',1,'SVF::CondStdSet']]],
   ['entrychi',['ENTRYCHI',['../classSVF_1_1SVFG.html#a101c5a8b31baf5c5613144f6e277abe9',1,'SVF::SVFG::ENTRYCHI()'],['../classSVF_1_1MemSSA.html#a6a20da24d82ace1888be49a2ae0f6bd5',1,'SVF::MemSSA::ENTRYCHI()']]],
-  ['epdouble',['EpDouble',['../epd_8h.html#a6da609fee802d939cf57b73a8c2656b5',1,'epd.h']]],
-  ['eptype',['EpType',['../epd_8h.html#a618ccbef690a6439abf31cd8b30330e9',1,'epd.h']]],
   ['equalgedge',['equalGEdge',['../classSVF_1_1GenericEdge.html#a69accb303ee67733e065350e4452cbca',1,'SVF::GenericEdge']]],
   ['equalmemregion',['equalMemRegion',['../classSVF_1_1MemRegion.html#af0a0b4a5862a136ef4f203f19139da65',1,'SVF::MemRegion']]],
   ['equalnodebs',['equalNodeBS',['../namespaceSVF_1_1SVFUtil.html#a5c2b39ae857d78ed9dda83880e703b0f',1,'SVF::SVFUtil']]],
