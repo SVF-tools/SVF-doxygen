@@ -28,6 +28,7 @@ var searchData=
   ['releasefswpa',['releaseFSWPA',['../classSVF_1_1FlowSensitive.html#ae6aed22a79ac6567446dfcba82cb17b8',1,'SVF::FlowSensitive']]],
   ['releasellvmmoduleset',['releaseLLVMModuleSet',['../classSVF_1_1LLVMModuleSet.html#a2f8e91c075d90be66412a079fe73e936',1,'SVF::LLVMModuleSet']]],
   ['releasememory',['releaseMemory',['../classSVF_1_1SVFGBuilder.html#a6e08e6a99f7e743abf35e603e35e54f5',1,'SVF::SVFGBuilder']]],
+  ['releasesolver',['releaseSolver',['../classSVF_1_1Z3Expr.html#a9cf1997ee2d22542f7288506ed0f4733',1,'SVF::Z3Expr']]],
   ['releasesteensgaard',['releaseSteensgaard',['../classSVF_1_1Steensgaard.html#a375a16c7538866fcebfecf228f7ee63d',1,'SVF::Steensgaard']]],
   ['releasesvfg',['releaseSVFG',['../classSVF_1_1SVFGBuilder.html#a9767f95253f02901da757076e3010b37',1,'SVF::SVFGBuilder']]],
   ['releasesvfir',['releaseSVFIR',['../classSVF_1_1SVFIR.html#a007c86e5d2d541d08815547a5492731e',1,'SVF::SVFIR']]],

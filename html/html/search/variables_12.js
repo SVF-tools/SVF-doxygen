@@ -29,7 +29,7 @@ var searchData=
   ['singlevfg',['SingleVFG',['../classSVF_1_1Options.html#a78ce4bd2e80e7b87ff0ee52edd1db403',1,'SVF::Options']]],
   ['sinks',['sinks',['../classSVF_1_1SVFGStat.html#a332adbaad93a3077416c870f175a1202',1,'SVF::SVFGStat::sinks()'],['../classSVF_1_1ProgSlice.html#ab4da58e7c4cd2c80b4830efeaa896f80',1,'SVF::ProgSlice::sinks()'],['../classSVF_1_1SrcSnkDDA.html#aaffd4b48be1f99e0450b23f20f034b1e',1,'SVF::SrcSnkDDA::sinks()']]],
   ['solveall',['solveAll',['../classSVF_1_1DDAClient.html#aa8a67c60ec0395c9cfae178dcff638a8',1,'SVF::DDAClient']]],
-  ['solver',['solver',['../classSVF_1_1CFLAlias.html#aa61c3683c9b759b6eca65b1f88e00b35',1,'SVF::CFLAlias::solver()'],['../classSVF_1_1Z3Expr.html#a0c43c8779505361eaeb0c8bcba9686b0',1,'SVF::Z3Expr::solver()']]],
+  ['solver',['solver',['../classSVF_1_1CFLAlias.html#aa61c3683c9b759b6eca65b1f88e00b35',1,'SVF::CFLAlias::solver()'],['../classSVF_1_1Z3Expr.html#a2f0cf6549d9bc6fc1d4be46976ad0f0e',1,'SVF::Z3Expr::solver()']]],
   ['solvetime',['solveTime',['../classSVF_1_1FlowSensitive.html#a4202f837e863a48712765cc346d8b514',1,'SVF::FlowSensitive']]],
   ['sources',['sources',['../classSVF_1_1SVFGStat.html#a18a30f659c3a79d65b4ae7f3316c5f91',1,'SVF::SVFGStat::sources()'],['../classSVF_1_1SrcSnkDDA.html#a96c41d03d2615f952b58dca327a2866c',1,'SVF::SrcSnkDDA::sources()']]],
   ['spawncallsites',['spawnCallSites',['../classSVF_1_1PCG.html#a859545671beab2a85c721ce98b785452',1,'SVF::PCG']]],

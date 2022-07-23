@@ -93,7 +93,7 @@ var searchData=
   ['lookupunions',['lookupUnions',['../classSVF_1_1PersistentPointsToCache.html#ace976f138cf1b8ab6bbf7a5c5d0b60b8',1,'SVF::PersistentPointsToCache']]],
   ['loop',['Loop',['../namespaceSVF.html#abf85e29310b2e4df8925d00a5c081314',1,'SVF']]],
   ['loopanalysis',['LoopAnalysis',['../classSVF_1_1Options.html#a420e6656b02fd900430d51b8b4a5c6c1',1,'SVF::Options']]],
-  ['loopbound',['loopBound',['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()'],['../classSVF_1_1Options.html#ab7161ca7a809792af82e5aabdfcc3bfb',1,'SVF::Options::LoopBound()']]],
+  ['loopbound',['LoopBound',['../classSVF_1_1Options.html#ab7161ca7a809792af82e5aabdfcc3bfb',1,'SVF::Options::LoopBound()'],['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()']]],
   ['loopinfo',['LoopInfo',['../namespaceSVF.html#a77e088bfe47c0b0ddcbbe0693dec6fe5',1,'SVF']]],
   ['loopinfobuilder',['loopInfoBuilder',['../classSVF_1_1TCT.html#ae64d6203b41c92d4ca617b8e976b88b2',1,'SVF::TCT']]],
   ['lowlink',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
