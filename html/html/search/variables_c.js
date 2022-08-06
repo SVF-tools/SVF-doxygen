@@ -2,8 +2,6 @@ var searchData=
 [
   ['label2kindmap',['label2KindMap',['../classSVF_1_1CFLGraphBuilder.html#a7117dbeceeef7a9fcaeee0a84a171590',1,'SVF::CFLGraphBuilder']]],
   ['largestregion',['LargestRegion',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a172d72ae4ae45fa2baf2f20ff2b499dc',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['lcdandersen',['lcdAndersen',['../classSVF_1_1AndersenLCD.html#ae4e979d6e7fa83c8961d0caf0ca0f54e',1,'SVF::AndersenLCD']]],
-  ['lcdcandidates',['lcdCandidates',['../classSVF_1_1AndersenLCD.html#a63823aa384f1438917c3625befa30bad',1,'SVF::AndersenLCD']]],
   ['ldnodeset',['ldnodeSet',['../classSVF_1_1MTASVFGBuilder.html#a6dfa9807255258f324557d188adea9b2',1,'SVF::MTASVFGBuilder']]],
   ['length',['length',['../structparse__buffer.html#a036970e9335896d3cee8459eda9e2eb9',1,'parse_buffer::length()'],['../structprintbuffer.html#a1a679f8b6fe9b413fb3a87203b0f5bc8',1,'printbuffer::length()'],['../cJSON_8h.html#a9f237f17f4e79d5b89149e09152edabe',1,'length():&#160;cJSON.h'],['../cJSON_8cpp.html#a9f237f17f4e79d5b89149e09152edabe',1,'length():&#160;cJSON.cpp']]],
   ['llvmfunc2svffunc',['LLVMFunc2SVFFunc',['../classSVF_1_1SVFModule.html#ac96e0c68e0c951acaaa586dd56418335',1,'SVF::SVFModule']]],

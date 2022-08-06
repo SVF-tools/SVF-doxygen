@@ -49,8 +49,6 @@ var searchData=
   ['buildmemmodel',['buildMemModel',['../classSVF_1_1SymbolTableBuilder.html#aef0bb1e88d0b69313c673318f7b7cb5f',1,'SVF::SymbolTableBuilder']]],
   ['buildmemssa',['buildMemSSA',['../classSVF_1_1MemSSA.html#ae56d1878046c119d1857727ca3609d74',1,'SVF::MemSSA']]],
   ['buildmssa',['buildMSSA',['../classSVF_1_1SVFGBuilder.html#a49cee21be46d6a3f65eec638714038ed',1,'SVF::SVFGBuilder']]],
-  ['buildofflinecg',['buildOfflineCG',['../classSVF_1_1OfflineConsG.html#ac6197a5515ace76b2d51451f5149aef7',1,'SVF::OfflineConsG']]],
-  ['buildofflinemap',['buildOfflineMap',['../classSVF_1_1OfflineConsG.html#afc60c6d897517437597c54e8f83622eb',1,'SVF::OfflineConsG']]],
   ['buildptronlysvfg',['buildPTROnlySVFG',['../classSVF_1_1SVFGBuilder.html#ab7353191edd06568e2598177d253c1d9',1,'SVF::SVFGBuilder']]],
   ['buildsvfg',['buildSVFG',['../classSVF_1_1DDAVFSolver.html#af34ed8482d3737a8aaaff2d5c75960ec',1,'SVF::DDAVFSolver::buildSVFG()'],['../classSVF_1_1SVFG.html#a0920e9f9896531959d74ae61013d96d6',1,'SVF::SVFG::buildSVFG()'],['../classSVF_1_1SVFGOPT.html#af4d2c6d2e3b316b256f860801fe3b178',1,'SVF::SVFGOPT::buildSVFG()'],['../classSVF_1_1SVFGBuilder.html#ae2d84f7527de200a2f269dc1c056a305',1,'SVF::SVFGBuilder::buildSVFG()'],['../classSVF_1_1MTASVFGBuilder.html#a3b75cd10a314c920669cd0d4790e1a16',1,'SVF::MTASVFGBuilder::buildSVFG()'],['../classSVF_1_1SaberSVFGBuilder.html#a4d70d1413f42f30437d8eb45ff00b6f6',1,'SVF::SaberSVFGBuilder::buildSVFG()']]],
   ['buildsvfloops',['buildSVFLoops',['../classSVF_1_1LLVMLoopAnalysis.html#a82b29fc1e138e082d7da6e016a5b7eb8',1,'SVF::LLVMLoopAnalysis']]],

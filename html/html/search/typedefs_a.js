@@ -6,7 +6,6 @@ var searchData=
   ['llvmcontext',['LLVMContext',['../SVF-FE_2BasicTypes_8h.html#a9f19a521d06397d1b6dc52c0388513d9',1,'BasicTypes.h']]],
   ['llvmfun2svffunmap',['LLVMFun2SVFFunMap',['../classSVF_1_1SVFModule.html#a767c49e07c29cbea81c35b164a8c9cab',1,'SVF::SVFModule']]],
   ['llvmfunctionsettype',['LLVMFunctionSetType',['../classSVF_1_1SVFModule.html#a63040f378cf2874ad127f7609d28ada7',1,'SVF::SVFModule']]],
-  ['loadedges',['LoadEdges',['../classSVF_1_1OfflineConsG.html#a832953ac86452c45f55aa6ff3c545f36',1,'SVF::OfflineConsG']]],
   ['loadinst',['LoadInst',['../namespaceSVF.html#a5a6e8ab900d5cd17ef72661006a7fbe0',1,'SVF']]],
   ['loadmu',['LOADMU',['../classSVF_1_1SVFG.html#a86d4a41a881a3d2e5def103d7ba8bb2f',1,'SVF::SVFG::LOADMU()'],['../classSVF_1_1MemSSA.html#a4717016109fd3bc80f3095d11afff5b1',1,'SVF::MemSSA::LOADMU()']]],
   ['loadset',['LoadSet',['../classSVF_1_1MTA.html#a80356495b6c45bac59dc15fd7a99730b',1,'SVF::MTA']]],

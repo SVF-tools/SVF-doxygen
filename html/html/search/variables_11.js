@@ -15,7 +15,6 @@ var searchData=
   ['recordedges',['recordedges',['../classSVF_1_1MTASVFGBuilder.html#a13ac51421add3cb242ad823e18938c95',1,'SVF::MTASVFGBuilder']]],
   ['recurse',['recurse',['../cJSON_8h.html#afc8d1c385c6dc37e1c5b640869ce4ab6',1,'recurse():&#160;cJSON.h'],['../cJSON_8cpp.html#afc8d1c385c6dc37e1c5b640869ce4ab6',1,'recurse():&#160;cJSON.cpp']]],
   ['redundantgepnodes',['redundantGepNodes',['../classSVF_1_1AndersenBase.html#a6c3d6b4c004d9e43690c3807502eed74',1,'SVF::AndersenBase']]],
-  ['refnodes',['refNodes',['../classSVF_1_1OfflineConsG.html#a381e656d0034b91935f62aeb7924dd4e',1,'SVF::OfflineConsG']]],
   ['refval',['refVal',['../classSVF_1_1MemObj.html#a011f324448f2796acaff6d2e388582e9',1,'SVF::MemObj']]],
   ['reg2bbmap',['reg2BBMap',['../classSVF_1_1MemSSA.html#add1d4ff17d0860906d2f5f7172176121',1,'SVF::MemSSA']]],
   ['regionalign',['RegionAlign',['../classSVF_1_1Options.html#a88550ed8c4ec2ccc5d5e40869499787b',1,'SVF::Options']]],

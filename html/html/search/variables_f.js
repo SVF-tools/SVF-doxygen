@@ -4,7 +4,6 @@ var searchData=
   ['objmap',['objMap',['../classSVF_1_1SymbolTableInfo.html#aeab14702eabde827923a692cba8f7f8a',1,'SVF::SymbolTableInfo']]],
   ['objsymmap',['objSymMap',['../classSVF_1_1SymbolTableInfo.html#a5840b742ed8c73ece548b9b4aede07ec',1,'SVF::SymbolTableInfo']]],
   ['objtonsrevptsmap',['objToNSRevPtsMap',['../classSVF_1_1CondPTAImpl.html#a22c23f3ba1ee7e0aaccf0b8a1b58e33e',1,'SVF::CondPTAImpl']]],
-  ['ocg',['oCG',['../classSVF_1_1AndersenHCD.html#af5fe01816e65ece685a3c3537ebd0137',1,'SVF::AndersenHCD']]],
   ['ocgdotgraph',['OCGDotGraph',['../classSVF_1_1Options.html#a2780c16611375631cd48bf9487f9e0bf',1,'SVF::Options']]],
   ['offset',['offset',['../classSVF_1_1DCHEdge.html#a41bd0d95d588aa7fb77e83dc91654493',1,'SVF::DCHEdge::offset()'],['../classSVF_1_1CoreBitVector.html#a79dfa9f4c2efb6a0a2de18c6359c41bd',1,'SVF::CoreBitVector::offset()'],['../structparse__buffer.html#af727920073077579942a79de519bb31a',1,'parse_buffer::offset()'],['../structprintbuffer.html#a3ed6f9d24d6591047680492a962dc7c9',1,'printbuffer::offset()'],['../cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de',1,'offset():&#160;cJSON.cpp']]],
   ['offsetvalues',['offsetValues',['../classSVF_1_1LocationSet.html#a5a2792b8b914557a9ccf0e57d0ed8b30',1,'SVF::LocationSet']]],

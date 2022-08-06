@@ -3,7 +3,6 @@ var searchData=
   ['objsyms',['objSyms',['../classSVF_1_1SymbolTableInfo.html#a3f9612f32c651220386beb0514f8fcff',1,'SVF::SymbolTableInfo']]],
   ['objtypeinfo',['ObjTypeInfo',['../classSVF_1_1ObjTypeInfo.html#a351edf73b2b035ce61a99a10b3d9de87',1,'SVF::ObjTypeInfo']]],
   ['objvar',['ObjVar',['../classSVF_1_1ObjVar.html#a3ccbe6bbe3f565641e0cf46c5ecbb6bb',1,'SVF::ObjVar']]],
-  ['offlineconsg',['OfflineConsG',['../classSVF_1_1OfflineConsG.html#ae61c4f509b90dd43f63a07560ba3562f',1,'SVF::OfflineConsG']]],
   ['ontheflycallgraphsolve',['onTheFlyCallGraphSolve',['../classSVF_1_1CFLAlias.html#a25b38896aef06dad19532f7678291b37',1,'SVF::CFLAlias::onTheFlyCallGraphSolve()'],['../classSVF_1_1BVDataPTAImpl.html#a9830d4676fd424b633f8e4d918734296',1,'SVF::BVDataPTAImpl::onTheFlyCallGraphSolve()']]],
   ['oobresetvisited',['OOBResetVisited',['../classSVF_1_1DDAVFSolver.html#ab60c701f1881d88aa4440991fb972638',1,'SVF::DDAVFSolver']]],
   ['operator_20_26',['operator &amp;',['../namespaceSVF.html#aaa21ff095e66a18937f29246e213f69d',1,'SVF::operator &amp;(const PointsTo &amp;lhs, const PointsTo &amp;rhs)'],['../namespaceSVF.html#a47b11c4e305a8a1e2dc387c2f9d4617e',1,'SVF::operator &amp;(const SparseBitVector&lt; ElementSize &gt; &amp;LHS, const SparseBitVector&lt; ElementSize &gt; &amp;RHS)'],['../namespaceSVF.html#aaa21ff095e66a18937f29246e213f69d',1,'SVF::operator &amp;(const PointsTo &amp;lhs, const PointsTo &amp;rhs)']]],

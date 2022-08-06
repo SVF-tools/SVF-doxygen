@@ -19,7 +19,6 @@ var searchData=
   ['smdiagnostic',['SMDiagnostic',['../SVF-FE_2BasicTypes_8h.html#a312d4d865f87a9bff58ce66b087c13d0',1,'BasicTypes.h']]],
   ['stmtsvfgnode',['StmtSVFGNode',['../namespaceSVF.html#a26bd4f89dc154b9c6d34b6a517777934',1,'SVF']]],
   ['storechi',['STORECHI',['../classSVF_1_1SVFG.html#ad14cdbb3f1df1f716aa03b4d39f4e52b',1,'SVF::SVFG::STORECHI()'],['../classSVF_1_1MemSSA.html#a150e9d53ced1c143bba2d1026f739fa4',1,'SVF::MemSSA::STORECHI()']]],
-  ['storeedges',['StoreEdges',['../classSVF_1_1OfflineConsG.html#a9880cb387e24fa2c87297487411f95ea',1,'SVF::OfflineConsG']]],
   ['storeinst',['StoreInst',['../namespaceSVF.html#ab696aab940eb187dc81217efe8649af5',1,'SVF']]],
   ['storeset',['StoreSet',['../classSVF_1_1MTA.html#a891e56104b9c2daa8b052e3821e85b9b',1,'SVF::MTA']]],
   ['storestomrsmap',['StoresToMRsMap',['../classSVF_1_1MRGenerator.html#afacb458ca832ef459e873b7d90134a8c',1,'SVF::MRGenerator']]],
