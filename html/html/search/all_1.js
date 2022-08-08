@@ -23,6 +23,7 @@ var searchData=
   ['actualret',['actualRet',['../classSVF_1_1RetICFGNode.html#ab11aa45c33cdcf5836fa2ee88bda9a9c',1,'SVF::RetICFGNode']]],
   ['actualretsvfgnode',['ActualRetSVFGNode',['../namespaceSVF.html#a77b8b8ca831e1eba3e47f2ca29667f67',1,'SVF']]],
   ['actualretvfgnode',['ActualRetVFGNode',['../classSVF_1_1ActualRetVFGNode.html',1,'SVF::ActualRetVFGNode'],['../classSVF_1_1ActualRetVFGNode.html#adc425f00b03e7a59725161ce1a78b349',1,'SVF::ActualRetVFGNode::ActualRetVFGNode()'],['../classSVF_1_1ActualRetVFGNode.html#a2974c14c972559b366a3bbdfe08b4ea9',1,'SVF::ActualRetVFGNode::ActualRetVFGNode(const ActualRetVFGNode &amp;)'],['../classSVF_1_1ActualRetVFGNode.html#a35a0ac96ef0678286705a6c4981a4225',1,'SVF::ActualRetVFGNode::ActualRetVFGNode(NodeID id, const PAGNode *n, const CallICFGNode *c)']]],
+  ['add_5fentry',['add_entry',['../classSVF_1_1ExtAPI.html#a945fb815af09e4f7b22c637effd64d8b',1,'SVF::ExtAPI']]],
   ['add_5fitem_5fto_5farray',['add_item_to_array',['../cJSON_8cpp.html#a816d10c908af6be844a1f8277363e2f1',1,'cJSON.cpp']]],
   ['add_5fitem_5fto_5fobject',['add_item_to_object',['../cJSON_8cpp.html#acc48bef0e1b495898d9489e577b91d5c',1,'cJSON.cpp']]],
   ['addactualinsvfgnode',['addActualINSVFGNode',['../classSVF_1_1SVFG.html#a923924d3887c668b355f4029502a3754',1,'SVF::SVFG']]],

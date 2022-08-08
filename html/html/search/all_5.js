@@ -137,5 +137,6 @@ var searchData=
   ['extractkindstrfromsymbolstr',['extractKindStrFromSymbolStr',['../classSVF_1_1GrammarBase.html#a9cc406edc117b3abd07a85f66ca892a0',1,'SVF::GrammarBase']]],
   ['extractsubconds',['extractSubConds',['../classSVF_1_1SaberCondAllocator.html#a9f43fe1cacf419f03276d66c3a54fe77',1,'SVF::SaberCondAllocator']]],
   ['extractvalueinst',['ExtractValueInst',['../SVF-FE_2BasicTypes_8h.html#a41c335e8362a500085923e4742a53f57',1,'BasicTypes.h']]],
-  ['exttype',['extType',['../classSVF_1_1ExtAPI.html#a5df65081e82a05223ce781660ee199ca',1,'SVF::ExtAPI']]]
+  ['exttype',['extType',['../classSVF_1_1ExtAPI.html#a5df65081e82a05223ce781660ee199ca',1,'SVF::ExtAPI']]],
+  ['exttype_5ftostring',['extType_toString',['../classSVF_1_1ExtAPI.html#aa98b80dc86d0549183ec69b44b391bd7',1,'SVF::ExtAPI']]]
 ];

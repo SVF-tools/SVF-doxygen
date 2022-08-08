@@ -41,5 +41,6 @@ var searchData=
   ['extendto',['extendTo',['../classSVF_1_1CoreBitVector.html#a73e5b15854f4f56f50992ed0d0cc7349',1,'SVF::CoreBitVector']]],
   ['extractattributestrfromsymbolstr',['extractAttributeStrFromSymbolStr',['../classSVF_1_1GrammarBase.html#a9f56cebea336079e35f5f3a288eb356f',1,'SVF::GrammarBase']]],
   ['extractkindstrfromsymbolstr',['extractKindStrFromSymbolStr',['../classSVF_1_1GrammarBase.html#a9cc406edc117b3abd07a85f66ca892a0',1,'SVF::GrammarBase']]],
-  ['extractsubconds',['extractSubConds',['../classSVF_1_1SaberCondAllocator.html#a9f43fe1cacf419f03276d66c3a54fe77',1,'SVF::SaberCondAllocator']]]
+  ['extractsubconds',['extractSubConds',['../classSVF_1_1SaberCondAllocator.html#a9f43fe1cacf419f03276d66c3a54fe77',1,'SVF::SaberCondAllocator']]],
+  ['exttype_5ftostring',['extType_toString',['../classSVF_1_1ExtAPI.html#aa98b80dc86d0549183ec69b44b391bd7',1,'SVF::ExtAPI']]]
 ];

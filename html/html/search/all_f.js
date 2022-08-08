@@ -51,7 +51,7 @@ var searchData=
   ['operator_7c_7c',['operator||',['../classSVF_1_1Z3Expr.html#a31327900a231526ff8f62be87c5f309d',1,'SVF::Z3Expr']]],
   ['opicfgnodes',['opICFGNodes',['../classSVF_1_1PhiStmt.html#a4c75a8f8430621aaec62a5189db136b5',1,'SVF::PhiStmt']]],
   ['opicfgnodevec',['OpICFGNodeVec',['../classSVF_1_1PhiStmt.html#ac505a4fe33e82f555663872e81220ba4',1,'SVF::PhiStmt']]],
-  ['opincomingbbs',['OPIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a66928f6cc755bd2a048804d00f859a80',1,'SVF::IntraPHIVFGNode::OPIncomingBBs()'],['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode::opIncomingBBs()']]],
+  ['opincomingbbs',['opIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode::opIncomingBBs()'],['../classSVF_1_1IntraPHIVFGNode.html#a66928f6cc755bd2a048804d00f859a80',1,'SVF::IntraPHIVFGNode::OPIncomingBBs()']]],
   ['opit',['OpIt',['../classllvm_1_1generic__bridge__gep__type__iterator.html#aa3fd4dca27e09df9ee726879624ae47e',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['oppts',['opPts',['../classSVF_1_1PersistentPointsToCache.html#ac7865b3ea1d76d2c522b465cc8e86639',1,'SVF::PersistentPointsToCache']]],
   ['options',['Options',['../classSVF_1_1Options.html',1,'SVF::Options'],['../classSVF_1_1Options.html#a08c25694f8f9e31eb8b116ad58c1c078',1,'SVF::Options::Options()']]],
