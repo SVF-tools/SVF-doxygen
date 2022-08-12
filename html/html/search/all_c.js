@@ -1,7 +1,7 @@
 var searchData=
 [
   ['label2kindmap',['label2KindMap',['../classSVF_1_1CFLGraphBuilder.html#a7117dbeceeef7a9fcaeee0a84a171590',1,'SVF::CFLGraphBuilder']]],
-  ['landingpadinst',['LandingPadInst',['../SVF-FE_2BasicTypes_8h.html#a5b02d9efe63d84149e54736b81f922f1',1,'BasicTypes.h']]],
+  ['landingpadinst',['LandingPadInst',['../namespaceSVF.html#afa513a3c76371907221ee2b1ef289c71',1,'SVF']]],
   ['largestregion',['LargestRegion',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a172d72ae4ae45fa2baf2f20ff2b499dc',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['ldnodeset',['ldnodeSet',['../classSVF_1_1MTASVFGBuilder.html#a6dfa9807255258f324557d188adea9b2',1,'SVF::MTASVFGBuilder']]],
   ['leadingzeroscounter',['LeadingZerosCounter',['../structSVF_1_1LeadingZerosCounter.html',1,'SVF']]],
@@ -16,7 +16,7 @@ var searchData=
   ['llvm',['llvm',['../namespacellvm.html',1,'']]],
   ['llvm_5fconst_5fiterator',['llvm_const_iterator',['../classSVF_1_1SVFModule.html#ab86e221a93bec67a2ecb7cb53315f569',1,'SVF::SVFModule']]],
   ['llvm_5fiterator',['llvm_iterator',['../classSVF_1_1SVFModule.html#aa5a0780c5c69a1e9a0ba902b4ad49714',1,'SVF::SVFModule']]],
-  ['llvmcontext',['LLVMContext',['../SVF-FE_2BasicTypes_8h.html#a9f19a521d06397d1b6dc52c0388513d9',1,'BasicTypes.h']]],
+  ['llvmcontext',['LLVMContext',['../namespaceSVF.html#affba423b674a0aba723e33101826e297',1,'SVF']]],
   ['llvmfun2svffunmap',['LLVMFun2SVFFunMap',['../classSVF_1_1SVFModule.html#a767c49e07c29cbea81c35b164a8c9cab',1,'SVF::SVFModule']]],
   ['llvmfunbegin',['llvmFunBegin',['../classSVF_1_1SVFModule.html#a648542aa5c4b487ad5aa12a39d15e951',1,'SVF::SVFModule::llvmFunBegin()'],['../classSVF_1_1SVFModule.html#a83ed76263dbe297ee0ecaf672c3a1805',1,'SVF::SVFModule::llvmFunBegin() const']]],
   ['llvmfunc2svffunc',['LLVMFunc2SVFFunc',['../classSVF_1_1SVFModule.html#ac96e0c68e0c951acaaa586dd56418335',1,'SVF::SVFModule']]],

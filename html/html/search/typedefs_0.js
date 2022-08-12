@@ -11,11 +11,11 @@ var searchData=
   ['aliasanalysis',['AliasAnalysis',['../classSVF_1_1PointerAnalysis.html#ac87eb408daafd5d556ecd8633f7d4f1f',1,'SVF::PointerAnalysis']]],
   ['aliasset',['AliasSet',['../namespaceSVF.html#a2b2887cf75225bc9127338b4cf30aa85',1,'SVF']]],
   ['aliassettype',['AliasSetType',['../classSVF_1_1SVFModule.html#a654097a3df71f8eac489e8ddae8de30c',1,'SVF::SVFModule']]],
-  ['allocainst',['AllocaInst',['../SVF-FE_2BasicTypes_8h.html#a5e06fe1b4b25113ac322dbeda71055dc',1,'BasicTypes.h']]],
+  ['allocainst',['AllocaInst',['../namespaceSVF.html#a3bacb4f95c73e6d794901d01c6b65a83',1,'SVF']]],
   ['arg_5fiterator',['arg_iterator',['../classSVF_1_1CallSite.html#ac1cdfe5e54026960a23142e26b3150ff',1,'SVF::CallSite']]],
   ['argument',['Argument',['../namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801',1,'SVF']]],
   ['arraytype',['ArrayType',['../namespaceSVF.html#a146d286041987860388da3d8bc85cee3',1,'SVF']]],
-  ['atomiccmpxchginst',['AtomicCmpXchgInst',['../SVF-FE_2BasicTypes_8h.html#abafbd655050c8c70dc8947997c369294',1,'BasicTypes.h']]],
-  ['atomicrmwinst',['AtomicRMWInst',['../SVF-FE_2BasicTypes_8h.html#ab3bd63fdab8cc747227a32f88bd10370',1,'BasicTypes.h']]],
+  ['atomiccmpxchginst',['AtomicCmpXchgInst',['../namespaceSVF.html#a582e3736a2bbb0540364c1693d831b49',1,'SVF']]],
+  ['atomicrmwinst',['AtomicRMWInst',['../namespaceSVF.html#a468154e0ab9e7be82afef1aa0a2fb9e0',1,'SVF']]],
   ['attribute',['Attribute',['../classSVF_1_1GrammarBase.html#ab070e5449d26e347b957d8b994d0303f',1,'SVF::GrammarBase']]]
 ];

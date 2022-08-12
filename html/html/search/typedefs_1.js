@@ -17,10 +17,10 @@ var searchData=
   ['bbtomrsetmap',['BBToMRSetMap',['../classSVF_1_1MemSSA.html#a4d4f7039c2972e671dc15b8c75abad14',1,'SVF::MemSSA']]],
   ['bbtophisetmap',['BBToPhiSetMap',['../classSVF_1_1MemSSA.html#afeef58baed23fc731e33a07a0ef05f6a',1,'SVF::MemSSA']]],
   ['bbworklist',['BBWorkList',['../classSVF_1_1PCG.html#a05759205f1362b6d72041cf669cf028d',1,'SVF::PCG']]],
-  ['binaryoperator',['BinaryOperator',['../SVF-FE_2BasicTypes_8h.html#ab58e9b290ff1defcedad101c3da8d8fd',1,'BasicTypes.h']]],
-  ['bitcastinst',['BitCastInst',['../SVF-FE_2BasicTypes_8h.html#ab8cddf2ff868c0a9ae99483640c9ecef',1,'BasicTypes.h']]],
+  ['binaryoperator',['BinaryOperator',['../namespaceSVF.html#aad5d26ab07a5d1314bdb8f54e0fcdb22',1,'SVF']]],
+  ['bitcastinst',['BitCastInst',['../namespaceSVF.html#afc50da46a6ea7c2cf61683bbec4d7c8d',1,'SVF']]],
   ['bitword',['BitWord',['../structSVF_1_1SparseBitVectorElement.html#af9014ab5077a2d9c1aed1e9b1460390d',1,'SVF::SparseBitVectorElement']]],
-  ['blockaddress',['BlockAddress',['../SVF-FE_2BasicTypes_8h.html#ad29efa92ce4c6449b5ef7853994877bd',1,'BasicTypes.h']]],
-  ['branchinst',['BranchInst',['../SVF-FE_2BasicTypes_8h.html#adeac5db1db4ed03898d30f205fd02264',1,'BasicTypes.h']]],
-  ['bridge_5fgep_5fiterator',['bridge_gep_iterator',['../SVF-FE_2BasicTypes_8h.html#af43699df9f7bdcb9565574b588e3f5ae',1,'bridge_gep_iterator():&#160;BasicTypes.h'],['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator()']]]
+  ['blockaddress',['BlockAddress',['../namespaceSVF.html#a956458a8554bf734db1194f320fd4b4c',1,'SVF']]],
+  ['branchinst',['BranchInst',['../namespaceSVF.html#ac9a05dd7ab16e998625037aa242cd30f',1,'SVF']]],
+  ['bridge_5fgep_5fiterator',['bridge_gep_iterator',['../namespaceSVF.html#a3b6e84470681a9f731a81e8cf54680cc',1,'SVF::bridge_gep_iterator()'],['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator()']]]
 ];

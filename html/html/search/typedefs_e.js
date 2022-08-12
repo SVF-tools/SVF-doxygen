@@ -27,7 +27,7 @@ var searchData=
   ['persptdataty',['PersPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#ae3ba6392560e5c0978335151c3373fd1',1,'SVF::BVDataPTAImpl']]],
   ['persversionedptdataty',['PersVersionedPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#ae028ae29bdc799f35777b82a39faf5e8',1,'SVF::BVDataPTAImpl']]],
   ['phi',['PHI',['../classSVF_1_1MemSSA.html#a8e948ea7778158107657fdd8195530e1',1,'SVF::MemSSA']]],
-  ['phinode',['PHINode',['../SVF-FE_2BasicTypes_8h.html#a65732ea63bff4b444b225629ee7cf252',1,'BasicTypes.h']]],
+  ['phinode',['PHINode',['../namespaceSVF.html#ac8d4990439af7a2ecca7e15383119674',1,'SVF']]],
   ['phinodemap',['PHINodeMap',['../classSVF_1_1SVFIR.html#a08a05dfa6b9734936bb92b3969dbce3b',1,'SVF::SVFIR']]],
   ['phiset',['PHISet',['../classSVF_1_1SVFG.html#aef7ee9d802934d51b3761663bdaf0c05',1,'SVF::SVFG::PHISet()'],['../classSVF_1_1MemSSA.html#a8a5d3597f3dba9744e170cc8c32bf25f',1,'SVF::MemSSA::PHISet()']]],
   ['phisvfgnode',['PHISVFGNode',['../namespaceSVF.html#a71d4e214e049f02bf26537cba6328673',1,'SVF']]],
