@@ -261,7 +261,7 @@ var searchData=
   ['collapsefield',['collapseField',['../classSVF_1_1Andersen.html#af4a0d960ef198047517bb32ee1e24a61',1,'SVF::Andersen']]],
   ['collapsefields',['collapseFields',['../classSVF_1_1Andersen.html#ac22a6946de30bc5887b9e4ec9259764f',1,'SVF::Andersen::collapseFields()'],['../classSVF_1_1WPASolver.html#a79c2b3f10f3f813396d8caaa1f7bc62a',1,'SVF::WPASolver::collapseFields()']]],
   ['collapsenodepts',['collapseNodePts',['../classSVF_1_1Andersen.html#a3f0048155f0b3a6899dac6f30553aa9e',1,'SVF::Andersen']]],
-  ['collapsepwcnode',['collapsePWCNode',['../classSVF_1_1Andersen.html#ae79bff0e9c49f15e7db00ed605824d98',1,'SVF::Andersen::collapsePWCNode()'],['../classSVF_1_1WPASolver.html#a138b403af0370ad6fdf8cc6af0530392',1,'SVF::WPASolver::collapsePWCNode()']]],
+  ['collapsepwcnode',['collapsePWCNode',['../classSVF_1_1Andersen.html#ae79bff0e9c49f15e7db00ed605824d98',1,'SVF::Andersen']]],
   ['collapsetime',['CollapseTime',['../classSVF_1_1AndersenStat.html#a3f5739454b1f4e03b4388a4ba5730e15',1,'SVF::AndersenStat']]],
   ['collectarrayinfo',['collectArrayInfo',['../classSVF_1_1SymbolTableInfo.html#aea1c4ec32c307feb5da455a41cc51b5e',1,'SVF::SymbolTableInfo']]],
   ['collectbbcallingprogexit',['collectBBCallingProgExit',['../classSVF_1_1SaberCondAllocator.html#adcb9b49512179e016765b50277fc058f',1,'SVF::SaberCondAllocator']]],

@@ -30,7 +30,7 @@ var searchData=
   ['memssadf',['MemSSADF',['../classSVF_1_1MemSSADF.html#aabae3337a22fc441fd2fdc2cf30b009c',1,'SVF::MemSSADF']]],
   ['memssastat',['MemSSAStat',['../classSVF_1_1MemSSAStat.html#a53f3d85a8eb63676d3dc47ee648efb66',1,'SVF::MemSSAStat']]],
   ['mergefunctionrets',['MergeFunctionRets',['../classSVF_1_1MergeFunctionRets.html#a2b989707893cd81dd275be6a3b8c79fc',1,'SVF::MergeFunctionRets']]],
-  ['mergenodetorep',['mergeNodeToRep',['../classSVF_1_1Andersen.html#a36729160041bc3a3e2b0a92b29062848',1,'SVF::Andersen::mergeNodeToRep()'],['../classSVF_1_1AndersenWaveDiff.html#acdc82c72b14e012551a460fa91a634db',1,'SVF::AndersenWaveDiff::mergeNodeToRep()']]],
+  ['mergenodetorep',['mergeNodeToRep',['../classSVF_1_1Andersen.html#a36729160041bc3a3e2b0a92b29062848',1,'SVF::Andersen']]],
   ['mergeptsoccmaps',['mergePtsOccMaps',['../namespaceSVF_1_1SVFUtil.html#a36c91f952a69875c33d4bd0b05a27ff2',1,'SVF::SVFUtil']]],
   ['mergepwc',['mergePWC',['../classSVF_1_1Andersen.html#a44d62658bbd2efcef5ff479930b5dce9',1,'SVF::Andersen']]],
   ['mergescccycle',['mergeSccCycle',['../classSVF_1_1Andersen.html#ac86ffd334568e4df5c08b3c827018bef',1,'SVF::Andersen']]],
