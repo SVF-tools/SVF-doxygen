@@ -53,9 +53,11 @@ var searchData=
   ['isdecl',['isDecl',['../classSVF_1_1SVFFunction.html#a52581d00177fd5853d6f9de50b3e7fb9',1,'SVF::SVFFunction']]],
   ['isintri',['isIntri',['../classSVF_1_1SVFFunction.html#a29f016522d91f1b78ea05a9334b1c3e3',1,'SVF::SVFFunction']]],
   ['isloadmap',['isLoadMap',['../classSVF_1_1VersionedFlowSensitive.html#a6bb3db072db0b899f306b37f1146f83d',1,'SVF::VersionedFlowSensitive']]],
+  ['isnotret',['isNotRet',['../classSVF_1_1SVFFunction.html#ac85bdf04fd784e22a89426955d28e3d6',1,'SVF::SVFFunction']]],
   ['isptr',['isPtr',['../classSVF_1_1SVFVar.html#a7c8ffadedbf53d30694feeb7771990af',1,'SVF::SVFVar']]],
   ['isstoremap',['isStoreMap',['../classSVF_1_1VersionedFlowSensitive.html#a18e25c3871d7cc1a6bb0592ceca90f88',1,'SVF::VersionedFlowSensitive']]],
   ['isthunkfunc',['isThunkFunc',['../structSVF_1_1cppUtil_1_1DemangledName.html#af6117df8aec7f4c077058fa8f00b0243',1,'SVF::cppUtil::DemangledName']]],
+  ['isuncalled',['isUncalled',['../classSVF_1_1SVFFunction.html#a1e9dc1d660e3626540b7501194bb12ea',1,'SVF::SVFFunction']]],
   ['item',['item',['../cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14',1,'item():&#160;cJSON.h'],['../cJSON_8cpp.html#ac011de571ff16ba220d2e0d757e4e8b0',1,'item():&#160;cJSON.cpp']]],
   ['iter',['Iter',['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#a3627077086baa18bd0ae25efd981c18f',1,'SVF::SparseBitVector::SparseBitVectorIterator']]],
   ['iterationforprintstat',['iterationForPrintStat',['../classSVF_1_1WPASolver.html#aa7c0636780a86f376e9222bce771e859',1,'SVF::WPASolver']]]

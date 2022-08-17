@@ -108,6 +108,7 @@ var searchData=
   ['exestate_2ecpp',['ExeState.cpp',['../ExeState_8cpp.html',1,'']]],
   ['exestate_2eh',['ExeState.h',['../ExeState_8h.html',1,'']]],
   ['exit',['exit',['../classSVF_1_1RetPE.html#a6f6ccda153150b6acdd81550e45f640f',1,'SVF::RetPE']]],
+  ['exitbb',['exitBB',['../classSVF_1_1SVFFunction.html#a2215730d8469cc3f4bf0c0f16b47a7fc',1,'SVF::SVFFunction']]],
   ['expandfiobjs',['expandFIObjs',['../classSVF_1_1BVDataPTAImpl.html#a798c84d5e861de2b61bcb1a86385f721',1,'SVF::BVDataPTAImpl::expandFIObjs(const PointsTo &amp;pts, PointsTo &amp;expandedPts)'],['../classSVF_1_1BVDataPTAImpl.html#aa6a7186152037452599406a74b05d0e1',1,'SVF::BVDataPTAImpl::expandFIObjs(const NodeBS &amp;pts, NodeBS &amp;expandedPts)'],['../classSVF_1_1CondPTAImpl.html#a87b48287d7edb97fc120200fe0e5218d',1,'SVF::CondPTAImpl::expandFIObjs()']]],
   ['ext_5faddr',['EXT_ADDR',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094aedaa8f975941f17692f993d8a8b6dd30',1,'SVF::ExtAPI']]],
   ['ext_5fcomplex',['EXT_COMPLEX',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094aa9e95e42adbdc4db3dd5e76785916154',1,'SVF::ExtAPI']]],

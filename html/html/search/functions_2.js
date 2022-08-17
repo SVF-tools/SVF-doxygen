@@ -109,6 +109,7 @@ var searchData=
   ['collectsimpletypeinfo',['collectSimpleTypeInfo',['../classSVF_1_1SymbolTableInfo.html#abf7567c655499d6744de8df689c11fad',1,'SVF::SymbolTableInfo']]],
   ['collectspawnees',['collectSpawnees',['../classSVF_1_1PCG.html#a8cff88e2a6cee5f655e491f9f2967460',1,'SVF::PCG']]],
   ['collectspawners',['collectSpawners',['../classSVF_1_1PCG.html#aef06745128e4e99c8e3bab226a337041',1,'SVF::PCG']]],
+  ['collectspecialsym',['collectSpecialSym',['../classSVF_1_1SymbolTableBuilder.html#a31744fb339c159d63075e6e74cc8d252',1,'SVF::SymbolTableBuilder']]],
   ['collectstructinfo',['collectStructInfo',['../classSVF_1_1SymbolTableInfo.html#ab5297b79a02d8afce647a8b61bdab804',1,'SVF::SymbolTableInfo']]],
   ['collectsym',['collectSym',['../classSVF_1_1SymbolTableBuilder.html#ac2fa9a797e3e2a8885ccc488030659d5',1,'SVF::SymbolTableBuilder']]],
   ['collecttcttargets',['collectTCTTargets',['../classSVF_1_1MTAResultValidator.html#abdf31e8fca824b56a53788de525042a6',1,'SVF::MTAResultValidator']]],
