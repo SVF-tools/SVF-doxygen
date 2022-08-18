@@ -40,9 +40,8 @@ var searchData=
   ['ext_5fcopy_5fmn',['EXT_COPY_MN',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094acfb80bb18d5cc826c04a57517b9d723a',1,'SVF::ExtAPI']]],
   ['ext_5fcopy_5fn',['EXT_COPY_N',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a16fe812578afb8f018b6dd503c7bad49',1,'SVF::ExtAPI']]],
   ['ext_5ffunptr',['EXT_FUNPTR',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094ab6db72191d9b7d667fb6f7bd5b200d24',1,'SVF::ExtAPI']]],
-  ['ext_5fgepgep',['EXT_GEPGEP',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094af5e672eee0c7b2ceb7f0f87ca9962dd8',1,'SVF::ExtAPI']]],
+  ['ext_5fgep',['EXT_GEP',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094acc6ac00f0ce70874f3a624927b6257fa',1,'SVF::ExtAPI']]],
   ['ext_5fload',['EXT_LOAD',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094ab21117e18dd413220f4a331629d32bd8',1,'SVF::ExtAPI']]],
-  ['ext_5floadstore',['EXT_LOADSTORE',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a9b961a2cf28f4ae48e8a120a65721669',1,'SVF::ExtAPI']]],
   ['ext_5fother',['EXT_OTHER',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a894fdba1a423fe49fa357f87ea69cf69',1,'SVF::ExtAPI']]],
   ['ext_5fstore',['EXT_STORE',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a501a7dadb95aa1a97b8fe111c7838900',1,'SVF::ExtAPI']]]
 ];

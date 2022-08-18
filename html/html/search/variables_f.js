@@ -11,6 +11,7 @@ var searchData=
   ['ontheflyiterbudgetforstat',['OnTheFlyIterBudgetForStat',['../classSVF_1_1PointerAnalysis.html#afc320fbf269404fe128e69c98e6f9cac',1,'SVF::PointerAnalysis']]],
   ['op_5fpair',['op_pair',['../classSVF_1_1ExtAPI.html#a495b6db60a6266b83cf511965a57f6a3',1,'SVF::ExtAPI']]],
   ['opcode',['opcode',['../classSVF_1_1BinaryOPStmt.html#a0c4f900cf7321e8385b4f45e5cba3d1a',1,'SVF::BinaryOPStmt::opcode()'],['../classSVF_1_1UnaryOPStmt.html#a099df135a83d28a2e6f344e008fe1cc6',1,'SVF::UnaryOPStmt::opcode()']]],
+  ['operation',['operation',['../classSVF_1_1ExtAPI_1_1Operation.html#ad5b7fd4408d5d33e2963008d30dcbdc9',1,'SVF::ExtAPI::Operation']]],
   ['opicfgnodes',['opICFGNodes',['../classSVF_1_1PhiStmt.html#a4c75a8f8430621aaec62a5189db136b5',1,'SVF::PhiStmt']]],
   ['opincomingbbs',['opIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode']]],
   ['opit',['OpIt',['../classllvm_1_1generic__bridge__gep__type__iterator.html#aa3fd4dca27e09df9ee726879624ae47e',1,'llvm::generic_bridge_gep_type_iterator']]],

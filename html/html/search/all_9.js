@@ -118,7 +118,7 @@ var searchData=
   ['inserttocflgrammar',['insertToCFLGrammar',['../classSVF_1_1CFGNormalizer.html#ad08f183a1b8ca69201f965f224e92950',1,'SVF::CFGNormalizer']]],
   ['insertvalueinst',['InsertValueInst',['../namespaceSVF.html#a485b10fc29e76fdb6f31a56ebbde8f24',1,'SVF']]],
   ['inst',['inst',['../classSVF_1_1IntraICFGNode.html#ac160eae9228d5b6627a6ca74da0b03e4',1,'SVF::IntraICFGNode::inst()'],['../classSVF_1_1LoadMU.html#a7bbac3ff5455aa1340f348c7cb239c46',1,'SVF::LoadMU::inst()'],['../classSVF_1_1StoreCHI.html#a6e58e7cde1f417ec3feaef98f6f74be2',1,'SVF::StoreCHI::inst()'],['../classSVF_1_1CxtStmt.html#a237b8738885e57d5a9b984221f611567',1,'SVF::CxtStmt::inst()']]],
-  ['inst2labelmap',['inst2LabelMap',['../classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c',1,'SVF::SVFStmt::inst2LabelMap()'],['../classSVF_1_1SVFStmt.html#a5a3db6b1335b4adc55b961a6f480f228',1,'SVF::SVFStmt::Inst2LabelMap()']]],
+  ['inst2labelmap',['Inst2LabelMap',['../classSVF_1_1SVFStmt.html#a5a3db6b1335b4adc55b961a6f480f228',1,'SVF::SVFStmt::Inst2LabelMap()'],['../classSVF_1_1SVFStmt.html#abb83549118bcd7216a053d82f7180d1c',1,'SVF::SVFStmt::inst2LabelMap()']]],
   ['inst_5fiterator',['inst_iterator',['../namespaceSVF.html#a255af6ff30782cb9a548feadb0fe7d6b',1,'SVF']]],
   ['instance',['INSTANCE',['../classSVF_1_1DCHEdge.html#a48f01c4a02c4e278a1ab70b16efdef4ba3e807b4caeb170c5cd1e855ac1a92d77',1,'SVF::DCHEdge']]],
   ['instantce',['INSTANTCE',['../classSVF_1_1CHEdge.html#a26280c3b724551036f7e3ba2b5922676a8721eaefd547d6ba5229463d644815f4',1,'SVF::CHEdge']]],
