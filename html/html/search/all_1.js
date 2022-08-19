@@ -290,7 +290,6 @@ var searchData=
   ['addtostmt2typemap',['addToStmt2TypeMap',['../classSVF_1_1SVFIR.html#a292b5a477c1f87777730b591c271e523',1,'SVF::SVFIR']]],
   ['addtosvfstmtlist',['addToSVFStmtList',['../classSVF_1_1SVFIR.html#a6a84868ab4e2845e884fba08d82b40f6',1,'SVF::SVFIR']]],
   ['addtypedef',['addTypedef',['../classSVF_1_1DCHNode.html#a9d1016e3da3462664198b1125dfc8f6e',1,'SVF::DCHNode']]],
-  ['addtypeforgepobjnode',['addTypeForGepObjNode',['../classSVF_1_1Andersen.html#a85cc81a4f9399e9a23372fa2658325a6',1,'SVF::Andersen']]],
   ['addunaryopedge',['addUnaryOPEdge',['../classSVF_1_1SVFIRBuilder.html#a9e81039d17b70e6a3d7310d05fa73c45',1,'SVF::SVFIRBuilder']]],
   ['addunaryopstmt',['addUnaryOPStmt',['../classSVF_1_1SVFIR.html#a8abc436992aa3b6b636084ff5f9a8ef2',1,'SVF::SVFIR']]],
   ['addunaryopvfgnode',['addUnaryOPVFGNode',['../classSVF_1_1VFG.html#a65c88a6c20380b715ac8b6c31e68afed',1,'SVF::VFG']]],
