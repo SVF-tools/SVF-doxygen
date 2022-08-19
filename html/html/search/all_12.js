@@ -23,6 +23,7 @@ var searchData=
   ['samelooptripcount',['sameLoopTripCount',['../classSVF_1_1ForkJoinAnalysis.html#acbd457a3cbb3cb7ca54ac3c0610b5c9e',1,'SVF::ForkJoinAnalysis']]],
   ['sanitizepts',['sanitizePts',['../classSVF_1_1Andersen.html#a308ef1f3a1c9fd7ac1858d0c690aa37a',1,'SVF::Andersen']]],
   ['sanitycheck',['sanityCheck',['../classSVF_1_1SVFIRBuilder.html#a09baa8c7246853c3faaed85b38f0da60',1,'SVF::SVFIRBuilder']]],
+  ['saturatinginst',['SaturatingInst',['../namespaceSVF.html#ad1dff7fa24ef579c1392a3cd4712b1ee',1,'SVF']]],
   ['sb_5ffesible',['SB_FESIBLE',['../classSVF_1_1Annotator.html#ac58473072d90baa6dc377b45f18d0da5',1,'SVF::Annotator']]],
   ['sb_5finfesible',['SB_INFESIBLE',['../classSVF_1_1Annotator.html#a556138c152d52921d6f0a709a826a93a',1,'SVF::Annotator']]],
   ['sb_5fslicesink',['SB_SLICESINK',['../classSVF_1_1Annotator.html#a3edacb8703c74abf42c4a29761a3437f',1,'SVF::Annotator']]],
