@@ -35,6 +35,7 @@ var searchData=
   ['visitedset',['visitedSet',['../classSVF_1_1SrcSnkDDA.html#a2349db6c540e418600e2fdbe2e665628',1,'SVF::SrcSnkDDA']]],
   ['vptd',['vPtD',['../classSVF_1_1VersionedFlowSensitive.html#a03f5f16377daa0258166a73de3e21f07',1,'SVF::VersionedFlowSensitive']]],
   ['vtable',['vtable',['../classSVF_1_1CHNode.html#a08a717043e8b8c3d87742f0ecd3a3cc1',1,'SVF::CHNode::vtable()'],['../classSVF_1_1DCHNode.html#a620ac2c6a9095510be5999431ff54b6d',1,'SVF::DCHNode::vtable()']]],
+  ['vtableinsvfir',['VtableInSVFIR',['../classSVF_1_1Options.html#a2a9fe90fae25f3de780f91b7e296b49a',1,'SVF::Options']]],
   ['vtabletocallsitemap',['vtableToCallSiteMap',['../classSVF_1_1FunptrDDAClient.html#a357db092c3c39d7b1c6dd0fec3888048',1,'SVF::FunptrDDAClient::vtableToCallSiteMap()'],['../classSVF_1_1AliasDDAClient.html#a123e98572cf077ffdf7116ac5f5fc5e4',1,'SVF::AliasDDAClient::vtableToCallSiteMap()']]],
   ['vtblchamap',['vtblCHAMap',['../classSVF_1_1DCHGraph.html#a294e7a04aff9cef87c1008e91a620155',1,'SVF::DCHGraph']]],
   ['vtbllabelafterdemangle',['vtblLabelAfterDemangle',['../CPPUtil_8cpp.html#ac43d67cde6cc257e442b3ac2ae8fb3f9',1,'CPPUtil.cpp']]],
