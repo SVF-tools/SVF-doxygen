@@ -7,7 +7,6 @@ var searchData=
   ['destructor',['DESTRUCTOR',['../classSVF_1_1CHGraph.html#a2a1da7f262a2f11653fb583154a93a22adfb68ad45ad216277b580d9a45926dc7',1,'SVF::CHGraph']]],
   ['di',['DI',['../classSVF_1_1CommonCHGraph.html#a6a1feb9e268fb56b0de3efc39cfc8db8ae9e3edea0bae930aa9af04699fca9506',1,'SVF::CommonCHGraph']]],
   ['diff',['Diff',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a03a155517b9587d79c3f0b6dc3b72447',1,'SVF::PTData']]],
-  ['direct',['Direct',['../classSVF_1_1ConstraintNode.html#a6e59b815d784bc1a9437290ff0e1e28ca7f8c92a2f50277fee80899235ae477f9',1,'SVF::ConstraintNode']]],
   ['distinct',['Distinct',['../classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a9da5f4ad2a43befdbc4be319bffc80ea',1,'SVF::MemSSA']]],
   ['dummyobjnode',['DummyObjNode',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa1ab625ecaf51446246dcc2944d6559af',1,'SVF::SVFVar']]],
   ['dummyvalnode',['DummyValNode',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeffa8299ae0d09f1b19411cb07cd79a2bae8',1,'SVF::SVFVar']]],

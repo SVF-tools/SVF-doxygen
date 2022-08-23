@@ -65,7 +65,6 @@ var searchData=
   ['emptypointstoid',['emptyPointsToId',['../classSVF_1_1PersistentPointsToCache.html#a921a4ef4c72ccde5724860f98ad62a57',1,'SVF::PersistentPointsToCache']]],
   ['enablealiascheck',['EnableAliasCheck',['../classSVF_1_1Options.html#a4da18281b973b9ffb5068dd53060524c',1,'SVF::Options']]],
   ['enablecontext',['ENABLECONTEXT',['../dda_8cpp.html#a1fe1900e000a62ca91dc0651bfa3a24f',1,'dda.cpp']]],
-  ['enablediff',['enableDiff',['../classSVF_1_1Andersen.html#a6804284abb4b63f44eefdaf044a301f7',1,'SVF::Andersen']]],
   ['enablefield',['ENABLEFIELD',['../dda_8cpp.html#adad2a8a1b2f5bf9f333382725f174cb0',1,'dda.cpp']]],
   ['enableflow',['ENABLEFLOW',['../dda_8cpp.html#af95c31f8cf35812a4fe4a22342aacaa2',1,'dda.cpp']]],
   ['enablethreadcallgraph',['EnableThreadCallGraph',['../classSVF_1_1Options.html#a153d42a480ef1763ad59fd7258ac3ac5',1,'SVF::Options']]],

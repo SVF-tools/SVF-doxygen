@@ -85,13 +85,11 @@ var searchData=
   ['ptrtobvptsmap',['ptrToBVPtsMap',['../classSVF_1_1CondPTAImpl.html#a30b9ee7b1dcd04285f92cf7accd05b2e',1,'SVF::CondPTAImpl']]],
   ['ptrtocptsmap',['ptrToCPtsMap',['../classSVF_1_1CondPTAImpl.html#a61167fcdb2005090de1b38e53450431a',1,'SVF::CondPTAImpl']]],
   ['ptsallprint',['PTSAllPrint',['../classSVF_1_1Options.html#a113ee30422ef08b6790eed9a83277b9c',1,'SVF::Options']]],
-  ['ptsdiff',['PtsDiff',['../classSVF_1_1Options.html#acf7262c0b0bd91e6dab56a631be51206',1,'SVF::Options']]],
   ['ptsmap',['ptsMap',['../classSVF_1_1MutablePTData.html#a5ee6e307acd4edbf4f7c2b063032d942',1,'SVF::MutablePTData::ptsMap()'],['../classSVF_1_1PersistentPTData.html#a483c690c6cf19e258bdf7bb13e77976e',1,'SVF::PersistentPTData::ptsMap()']]],
   ['ptsprint',['PTSPrint',['../classSVF_1_1Options.html#ace0fa364337374ce75a58a9e2f229e24',1,'SVF::Options']]],
   ['ptsto',['ptsTo',['../classSVF_1_1IRAnnotator.html#afd8770eee0c14386c407cae026ce87b5',1,'SVF::IRAnnotator']]],
   ['ptstoid',['ptsToId',['../classSVF_1_1PersistentPointsToCache.html#a6a3b33721ae00efd2fdf2d71f3298e1c',1,'SVF::PersistentPointsToCache']]],
   ['pttype',['PtType',['../classSVF_1_1Options.html#abc02c7dc5e6cb3613856e0f774c6d304',1,'SVF::Options']]],
   ['purevirtualfunname',['pureVirtualFunName',['../CHGBuilder_8cpp.html#a5b49460faf973332d3cbfc561c994c6c',1,'CHGBuilder.cpp']]],
-  ['pwcopt',['pwcOpt',['../classSVF_1_1Andersen.html#ab90350dc4788d8e282404bd7944dd263',1,'SVF::Andersen']]],
   ['pwcreps',['pwcReps',['../classSVF_1_1AndersenSCD.html#ac4bf67d35b56f010aeedb59777a83f0e',1,'SVF::AndersenSCD']]]
 ];

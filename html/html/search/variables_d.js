@@ -35,7 +35,6 @@ var searchData=
   ['memregset',['memRegSet',['../classSVF_1_1MRGenerator.html#af94bd8155a23273aab2396334d905119',1,'SVF::MRGenerator']]],
   ['memssa',['memSSA',['../classSVF_1_1SrcSnkDDA.html#ab6803f0a2b3507213ad2979b9b12f700',1,'SVF::SrcSnkDDA::memSSA()'],['../classSVF_1_1FlowSensitive.html#a76f6f19ac2b58ab4a10a2d7e6e24e42a',1,'SVF::FlowSensitive::memSSA()']]],
   ['memtofieldsmap',['memToFieldsMap',['../classSVF_1_1SVFIR.html#a3c014227661d8976714772205611c252',1,'SVF::SVFIR']]],
-  ['mergepwc',['MergePWC',['../classSVF_1_1Options.html#a69579e2f37962afdbb292a36782511ed',1,'SVF::Options']]],
   ['mfspta',['mfspta',['../classSVF_1_1FSMPTA.html#af248a80855457ca9e5a7208c114681bb',1,'SVF::FSMPTA']]],
   ['mhp',['mhp',['../classSVF_1_1MTASVFGBuilder.html#a73024bf30aa3ec79e5953a7ea1f8feb7',1,'SVF::MTASVFGBuilder::mhp()'],['../classSVF_1_1FSMPTA.html#aa8dcd130d4b9283fc6b903de8e4ad830',1,'SVF::FSMPTA::mhp()'],['../classSVF_1_1MTAAnnotator.html#a94d7a3fd9166126c052fca28f9a4c825',1,'SVF::MTAAnnotator::mhp()'],['../classSVF_1_1MTAResultValidator.html#a6b3592525d5275d583c0726744d1f857',1,'SVF::MTAResultValidator::mhp()'],['../classSVF_1_1MHPValidator.html#ad6e417ad7f0b1b399822eaa62d83341d',1,'SVF::MHPValidator::mhp()']]],
   ['mhpfuns',['mhpfuns',['../classSVF_1_1PCG.html#a96f91b051a8035b614e015bf4d5081e0',1,'SVF::PCG']]],

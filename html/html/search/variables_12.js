@@ -11,7 +11,6 @@ var searchData=
   ['scc',['scc',['../classSVF_1_1WPASolver.html#a21709a0f33b6238afe735cc9fe49ff70',1,'SVF::WPASolver']]],
   ['scccandidates',['sccCandidates',['../classSVF_1_1AndersenSCD.html#aeb0b3644c3bfbfa5768b92c99aeeef40',1,'SVF::AndersenSCD']]],
   ['sccdetectiontime',['SCCDetectionTime',['../classSVF_1_1PTAStat.html#ad4c1cf3750341f73987c37745f3bd2aa',1,'SVF::PTAStat']]],
-  ['sccedgeflag',['sccEdgeFlag',['../classSVF_1_1ConstraintNode.html#a0fd9fca5ed82cf83dbd825d23c63783a',1,'SVF::ConstraintNode']]],
   ['sccmergetime',['SCCMergeTime',['../classSVF_1_1PTAStat.html#a8c4101e697057269def501d14a987287',1,'SVF::PTAStat']]],
   ['scctime',['sccTime',['../classSVF_1_1FlowSensitive.html#af496fa9aa2f4d59594950b2ad121deff',1,'SVF::FlowSensitive']]],
   ['scdandersen',['scdAndersen',['../classSVF_1_1AndersenSCD.html#a1d143f104c0bfb5258b7129d0eceb4cd',1,'SVF::AndersenSCD']]],
