@@ -33,15 +33,5 @@ var searchData=
   ['eft_5fstd_5frb_5ftree_5fincrement',['EFT_STD_RB_TREE_INCREMENT',['../classSVF_1_1ExtAPI.html#a5df65081e82a05223ce781660ee199caa31d0b620d3344c68ecfd71c9faf1d598',1,'SVF::ExtAPI']]],
   ['eft_5fstd_5frb_5ftree_5finsert_5fand_5frebalance',['EFT_STD_RB_TREE_INSERT_AND_REBALANCE',['../classSVF_1_1ExtAPI.html#a5df65081e82a05223ce781660ee199caafedd2f66497ed9404b8b3cb1d16a3f0b',1,'SVF::ExtAPI']]],
   ['empty',['Empty',['../classSVF_1_1LockAnalysis.html#ac2fbbabca4506e28f706cf54b1614791ae16d4995f32298086fd37b4759ec069c',1,'SVF::LockAnalysis::Empty()'],['../classSVF_1_1ForkJoinAnalysis.html#a8d40e687caf8999369621ed385dfc631a9d940442c782d5a1297102209540182f',1,'SVF::ForkJoinAnalysis::Empty()']]],
-  ['entrymssachi',['EntryMSSACHI',['../classSVF_1_1MSSADEF.html#a32682e20c9c08d2bdd5abc62ea17af18af0a554492277c9964a67ab9cd23071d3',1,'SVF::MSSADEF']]],
-  ['ext_5faddr',['EXT_ADDR',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094aedaa8f975941f17692f993d8a8b6dd30',1,'SVF::ExtAPI']]],
-  ['ext_5fcomplex',['EXT_COMPLEX',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094aa9e95e42adbdc4db3dd5e76785916154',1,'SVF::ExtAPI']]],
-  ['ext_5fcopy',['EXT_COPY',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094aaaaeb3443da98c5132ebcf33617962de',1,'SVF::ExtAPI']]],
-  ['ext_5fcopy_5fmn',['EXT_COPY_MN',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094acfb80bb18d5cc826c04a57517b9d723a',1,'SVF::ExtAPI']]],
-  ['ext_5fcopy_5fn',['EXT_COPY_N',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a16fe812578afb8f018b6dd503c7bad49',1,'SVF::ExtAPI']]],
-  ['ext_5ffunptr',['EXT_FUNPTR',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094ab6db72191d9b7d667fb6f7bd5b200d24',1,'SVF::ExtAPI']]],
-  ['ext_5fgep',['EXT_GEP',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094acc6ac00f0ce70874f3a624927b6257fa',1,'SVF::ExtAPI']]],
-  ['ext_5fload',['EXT_LOAD',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094ab21117e18dd413220f4a331629d32bd8',1,'SVF::ExtAPI']]],
-  ['ext_5fother',['EXT_OTHER',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a894fdba1a423fe49fa357f87ea69cf69',1,'SVF::ExtAPI']]],
-  ['ext_5fstore',['EXT_STORE',['../classSVF_1_1ExtAPI.html#aaf94c82d98f8ed1514ee49c9881a4094a501a7dadb95aa1a97b8fe111c7838900',1,'SVF::ExtAPI']]]
+  ['entrymssachi',['EntryMSSACHI',['../classSVF_1_1MSSADEF.html#a32682e20c9c08d2bdd5abc62ea17af18af0a554492277c9964a67ab9cd23071d3',1,'SVF::MSSADEF']]]
 ];

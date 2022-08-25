@@ -408,7 +408,6 @@ var searchData=
   ['arg_5fsize',['arg_size',['../classSVF_1_1SVFFunction.html#a3757cd3ae587eaca488fa4cd8ad3967d',1,'SVF::SVFFunction::arg_size()'],['../classSVF_1_1CallSite.html#a145676880fce313b4634d14118476c27',1,'SVF::CallSite::arg_size()']]],
   ['argindeadfunction',['ArgInDeadFunction',['../namespaceSVF_1_1LLVMUtil.html#a5cbde00eef789f682df972ae71b44449',1,'SVF::LLVMUtil']]],
   ['arginprogentryfunction',['ArgInProgEntryFunction',['../namespaceSVF_1_1LLVMUtil.html#adad59a953dd81e213db71babbbc9df2f',1,'SVF::LLVMUtil']]],
-  ['args',['args',['../classSVF_1_1ExtAPI_1_1Operation.html#a826ff720a0038118e8e27e2a36d05cd5',1,'SVF::ExtAPI::Operation']]],
   ['argsofuncalledfunction',['argsOfUncalledFunction',['../classSVF_1_1SVFModule.html#a90bd61848ffbbb0bc30b33bf65d1cb6e',1,'SVF::SVFModule']]],
   ['argument',['Argument',['../namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801',1,'SVF']]],
   ['argumentvfgnode',['ArgumentVFGNode',['../classSVF_1_1ArgumentVFGNode.html',1,'SVF::ArgumentVFGNode'],['../classSVF_1_1ArgumentVFGNode.html#a0b35234b96e98099a289b73028bae276',1,'SVF::ArgumentVFGNode::ArgumentVFGNode()']]],
