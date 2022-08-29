@@ -121,7 +121,7 @@ var searchData=
   ['buildsymboltableinfo',['buildSymbolTableInfo',['../classSVF_1_1SVFModule.html#aa03ab5272652290f30870c6e2d053d98',1,'SVF::SVFModule']]],
   ['buildthreadcallgraph',['buildThreadCallGraph',['../classSVF_1_1ThreadCallGraphBuilder.html#a0f5bf24257858919c10af0e076d87ef7',1,'SVF::ThreadCallGraphBuilder']]],
   ['buildvirtualfunctiontoidmap',['buildVirtualFunctionToIDMap',['../classSVF_1_1CHGBuilder.html#aa677ac2c640ee7fc0dab1d4fe508ead8',1,'SVF::CHGBuilder']]],
-  ['buildvtables',['buildVTables',['../classSVF_1_1DCHGraph.html#a0c873ab28d5967991e636696fae8c67f',1,'SVF::DCHGraph']]],
+  ['buildvtables',['buildVTables',['../classSVF_1_1DCHGraph.html#a1215db390515a30fbc416fb14d2e863f',1,'SVF::DCHGraph']]],
   ['bv',['bv',['../classSVF_1_1PointsTo.html#a668be9270539fdfc5dbf3efb9cc17587',1,'SVF::PointsTo::bv()'],['../classSVF_1_1PointsTo.html#a8f757f92ebf0a2ebdb5e6b001606923eafd6e0658d0eb4cdba368fa8e77d4d892',1,'SVF::PointsTo::BV()']]],
   ['bv2int',['bv2int',['../classSVF_1_1Z3Expr.html#a349068a6c6c45f42ee3fedb0a487c06a',1,'SVF::Z3Expr']]],
   ['bvdataimpl',['BVDataImpl',['../classSVF_1_1PointerAnalysis.html#ac0c0855918cb2cdc3d8ebc175acfbd4da84705167ea3a7162ecb9470a8a77b5d8',1,'SVF::PointerAnalysis']]],
