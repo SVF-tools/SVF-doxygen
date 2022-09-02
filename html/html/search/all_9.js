@@ -204,6 +204,7 @@ var searchData=
   ['is_5fnoop',['is_noop',['../classSVF_1_1ExtAPI.html#a82ebf71c5214f891f17e842e0b133b4f',1,'SVF::ExtAPI']]],
   ['is_5fnumeral',['is_numeral',['../classSVF_1_1Z3Expr.html#ad1802109545427278e3a8bde52e016b0',1,'SVF::Z3Expr']]],
   ['is_5frealloc',['is_realloc',['../classSVF_1_1ExtAPI.html#ac6d6bdc51a6b75d6d5741cb751559fe4',1,'SVF::ExtAPI']]],
+  ['is_5fsamesignature',['is_sameSignature',['../classSVF_1_1ExtAPI.html#a5e8b816a3eb894f6b09403852df0d01b',1,'SVF::ExtAPI']]],
   ['is_5fsimple_5ftype',['is_simple_type',['../structSVF_1_1SVFUtil_1_1is__simple__type.html',1,'SVF::SVFUtil']]],
   ['isa',['isa',['../namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737',1,'SVF::SVFUtil']]],
   ['isa_5fimpl',['isa_impl',['../structSVF_1_1SVFUtil_1_1isa__impl.html',1,'SVF::SVFUtil']]],
