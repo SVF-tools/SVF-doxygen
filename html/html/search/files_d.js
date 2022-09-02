@@ -36,6 +36,8 @@ var searchData=
   ['svfloop_2eh',['SVFLoop.h',['../SVFLoop_8h.html',1,'']]],
   ['svfmodule_2ecpp',['SVFModule.cpp',['../SVFModule_8cpp.html',1,'']]],
   ['svfmodule_2eh',['SVFModule.h',['../SVFModule_8h.html',1,'']]],
+  ['svfstat_2ecpp',['SVFStat.cpp',['../SVFStat_8cpp.html',1,'']]],
+  ['svfstat_2eh',['SVFStat.h',['../SVFStat_8h.html',1,'']]],
   ['svfstatements_2ecpp',['SVFStatements.cpp',['../SVFStatements_8cpp.html',1,'']]],
   ['svfstatements_2eh',['SVFStatements.h',['../SVFStatements_8h.html',1,'']]],
   ['svfutil_2ecpp',['SVFUtil.cpp',['../SVFUtil_8cpp.html',1,'']]],

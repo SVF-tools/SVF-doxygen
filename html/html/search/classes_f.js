@@ -34,6 +34,7 @@ var searchData=
   ['svfirbuilder',['SVFIRBuilder',['../classSVF_1_1SVFIRBuilder.html',1,'SVF']]],
   ['svfloop',['SVFLoop',['../classSVF_1_1SVFLoop.html',1,'SVF']]],
   ['svfmodule',['SVFModule',['../classSVF_1_1SVFModule.html',1,'SVF']]],
+  ['svfstat',['SVFStat',['../classSVF_1_1SVFStat.html',1,'SVF']]],
   ['svfstmt',['SVFStmt',['../classSVF_1_1SVFStmt.html',1,'SVF']]],
   ['svfvalue',['SVFValue',['../classSVF_1_1SVFValue.html',1,'SVF']]],
   ['svfvar',['SVFVar',['../classSVF_1_1SVFVar.html',1,'SVF']]],

@@ -7,7 +7,7 @@ var searchData=
   ['threadid',['ThreadID',['../namespaceSVF.html#a10cddb090690c82a2aab31a480253d35',1,'SVF']]],
   ['threadpairset',['ThreadPairSet',['../classSVF_1_1ForkJoinAnalysis.html#a7fb8df483e619337e77088e8543a9846',1,'SVF::ForkJoinAnalysis']]],
   ['threadstmttothreadinterleav',['ThreadStmtToThreadInterleav',['../classSVF_1_1MHP.html#ac30f283cb2ad020a054ee6525ca94025',1,'SVF::MHP']]],
-  ['timestatmap',['TIMEStatMap',['../classSVF_1_1PTAStat.html#a28f304e7095f3843ca4cc017bc1f7b10',1,'SVF::PTAStat']]],
+  ['timestatmap',['TIMEStatMap',['../classSVF_1_1SVFStat.html#aeded7780a3f826b3efab971807e2dd98',1,'SVF::SVFStat']]],
   ['type',['Type',['../namespaceSVF.html#a1d008c0666c145622b81d427be64c52d',1,'SVF']]],
   ['typetofieldinfomap',['TypeToFieldInfoMap',['../classSVF_1_1SymbolTableInfo.html#a9c9a9da876d41ab48e55f25efc266494',1,'SVF::SymbolTableInfo']]]
 ];

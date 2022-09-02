@@ -118,7 +118,7 @@ var searchData=
   ['module',['module',['../classSVF_1_1DDAClient.html#a4ac68012099540beb87ee4700e824d64',1,'SVF::DDAClient::module()'],['../namespaceSVF.html#aa7a770b5dd5cd0e37d06a1088f252906',1,'SVF::Module()']]],
   ['moduleflagvalue',['moduleFlagValue',['../namespaceSVF_1_1cppUtil_1_1ctir.html#a05c7c51164928786d70713094db7f3f3',1,'SVF::cppUtil::ctir']]],
   ['moduleidentifier',['moduleIdentifier',['../classSVF_1_1SVFModule.html#ac40e98040f949171279afec54bb03f71',1,'SVF::SVFModule']]],
-  ['modulename',['moduleName',['../classSVF_1_1PTAStat.html#a194734855aa1c9e0ba891f1085d50d5d',1,'SVF::PTAStat']]],
+  ['modulename',['moduleName',['../classSVF_1_1PTAStat.html#a194734855aa1c9e0ba891f1085d50d5d',1,'SVF::PTAStat::moduleName()'],['../classSVF_1_1SVFStat.html#a3333e45303dcc9c3da00858628cdbbff',1,'SVF::SVFStat::moduleName()']]],
   ['modulepass',['modulePass',['../classSVF_1_1MTA.html#a3dd09dcdcf58ae8ee1745634cefbb8aa',1,'SVF::MTA::modulePass()'],['../namespaceSVF.html#ac226d84f86637126d17f6814632c8a90',1,'SVF::ModulePass()']]],
   ['modules',['modules',['../classSVF_1_1LLVMModuleSet.html#acde6292e719c80f93d3d1c344ab442cd',1,'SVF::LLVMModuleSet']]],
   ['move',['move',['../namespaceSVF_1_1SVFUtil.html#a72502f7f536418621485e90ab98c2016',1,'SVF::SVFUtil']]],

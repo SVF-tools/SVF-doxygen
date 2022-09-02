@@ -139,7 +139,7 @@ var searchData=
   ['getclassnamefromtype',['getClassNameFromType',['../namespaceSVF_1_1cppUtil.html#a891719bac36ebb6c001f073dfa5a9e7b',1,'SVF::cppUtil']]],
   ['getclassnamefromvtblobj',['getClassNameFromVtblObj',['../namespaceSVF_1_1cppUtil.html#ad83c097f1c77cdf52fc219ef07ee0b1a',1,'SVF::cppUtil']]],
   ['getclassnameofthisptr',['getClassNameOfThisPtr',['../namespaceSVF_1_1cppUtil.html#a3bed7bc0a0ae580841ca049f91690ff7',1,'SVF::cppUtil']]],
-  ['getclk',['getClk',['../classSVF_1_1PTAStat.html#a3c4eaa1695ea13405911ae1621f98edc',1,'SVF::PTAStat']]],
+  ['getclk',['getClk',['../classSVF_1_1SVFStat.html#ac9d390c417df6f6af6b274618b87010d',1,'SVF::SVFStat']]],
   ['getcmpvfgnode',['getCmpVFGNode',['../classSVF_1_1VFG.html#a9215c1d7f1152967f0731057a085e793',1,'SVF::VFG']]],
   ['getcompletenodelabel',['getCompleteNodeLabel',['../structllvm_1_1DOTGraphTraits_3_01SVFG_01_5_01_4.html#a381db1cc959f8f2279fb501f8224a19a',1,'llvm::DOTGraphTraits&lt; SVFG * &gt;::getCompleteNodeLabel()'],['../structllvm_1_1DOTGraphTraits_3_01VFG_01_5_01_4.html#a6ced6b5b50d920fb47c4334693fea86c',1,'llvm::DOTGraphTraits&lt; VFG * &gt;::getCompleteNodeLabel()']]],
   ['getcond',['getCond',['../classSVF_1_1MSSAMU.html#ac51263250da06fd63b923a6771744f97',1,'SVF::MSSAMU::getCond()'],['../classSVF_1_1MSSACHI.html#a9673994f9db94e23984b132d4b533304',1,'SVF::MSSACHI::getCond()'],['../classSVF_1_1MSSAPHI.html#a06a5d63be38e6df36e1c28a6c0c789cc',1,'SVF::MSSAPHI::getCond()'],['../classSVF_1_1CxtStmtDPItem.html#ace41c90e66f6a85f12ff67540ad9d594',1,'SVF::CxtStmtDPItem::getCond() const'],['../classSVF_1_1CxtStmtDPItem.html#a987f57970d633acc10aa3f3e69b68cb0',1,'SVF::CxtStmtDPItem::getCond()']]],

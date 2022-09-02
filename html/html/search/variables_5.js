@@ -17,7 +17,7 @@ var searchData=
   ['else',['else',['../cJSON_8cpp.html#a0544c3fe466e421738dae463968b70ba',1,'cJSON.cpp']]],
   ['enablealiascheck',['EnableAliasCheck',['../classSVF_1_1Options.html#a4da18281b973b9ffb5068dd53060524c',1,'SVF::Options']]],
   ['enablethreadcallgraph',['EnableThreadCallGraph',['../classSVF_1_1Options.html#a153d42a480ef1763ad59fd7258ac3ac5',1,'SVF::Options']]],
-  ['endtime',['endTime',['../classSVF_1_1PTAStat.html#a267ba4aac2e7ceb65f008f9486d3d9f7',1,'SVF::PTAStat']]],
+  ['endtime',['endTime',['../classSVF_1_1PTAStat.html#a267ba4aac2e7ceb65f008f9486d3d9f7',1,'SVF::PTAStat::endTime()'],['../classSVF_1_1SVFStat.html#a8b01f1564408b51f28c107454bf9068d',1,'SVF::SVFStat::endTime()']]],
   ['entry',['entry',['../classSVF_1_1CallPE.html#a88e420e259b8d7d34c9850ddde53d372',1,'SVF::CallPE']]],
   ['entryfuncset',['entryFuncSet',['../classSVF_1_1TCT.html#a140eaf9440ae9d52dbfb659967aa449a',1,'SVF::TCT']]],
   ['entryicfgedges',['entryICFGEdges',['../classSVF_1_1SVFLoop.html#a681d712db88d105c8a2f758de3d7e72e',1,'SVF::SVFLoop']]],

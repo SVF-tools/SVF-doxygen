@@ -127,6 +127,7 @@ var searchData=
   ['_7esvfirbuilder',['~SVFIRBuilder',['../classSVF_1_1SVFIRBuilder.html#a5a04b9d97ad5f6e761bcc4779c96104e',1,'SVF::SVFIRBuilder']]],
   ['_7esvfloop',['~SVFLoop',['../classSVF_1_1SVFLoop.html#a36fb834fe1a5655ac13c44b49815f0af',1,'SVF::SVFLoop']]],
   ['_7esvfmodule',['~SVFModule',['../classSVF_1_1SVFModule.html#a1eb570539328976351d95ca93cb7aa02',1,'SVF::SVFModule']]],
+  ['_7esvfstat',['~SVFStat',['../classSVF_1_1SVFStat.html#a135ac9973ebfef4680d343320453ff52',1,'SVF::SVFStat']]],
   ['_7esvfstmt',['~SVFStmt',['../classSVF_1_1SVFStmt.html#aac79c7e8d390f297002782afb0ba3ff0',1,'SVF::SVFStmt']]],
   ['_7esvfvar',['~SVFVar',['../classSVF_1_1SVFVar.html#ab76f9dea1559bd9b10b870dbc7bb454a',1,'SVF::SVFVar']]],
   ['_7esymboltableinfo',['~SymbolTableInfo',['../classSVF_1_1SymbolTableInfo.html#a6efac0ae8ebf2865067136675be5a340',1,'SVF::SymbolTableInfo']]],

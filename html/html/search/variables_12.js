@@ -38,7 +38,7 @@ var searchData=
   ['srctocsidmap',['srcToCSIDMap',['../classSVF_1_1LeakChecker.html#a46b4447bf1bf34d3b8e56cce93e04852',1,'SVF::LeakChecker']]],
   ['start',['start',['../classSVF_1_1PTASCEV.html#a0de1531fc72f5aa0bafc59101faae68d',1,'SVF::PTASCEV']]],
   ['startkind',['startKind',['../classSVF_1_1GrammarBase.html#a604cb7d4850cfd12d3b8730e0cab84af',1,'SVF::GrammarBase::startKind()'],['../classSVF_1_1CFLGraph.html#a0723f25be2a163b21f478cddca5293d2',1,'SVF::CFLGraph::startKind()']]],
-  ['starttime',['startTime',['../classSVF_1_1PTAStat.html#a59e0fe6fa506f1cf319b5acaf9d28be9',1,'SVF::PTAStat']]],
+  ['starttime',['startTime',['../classSVF_1_1PTAStat.html#a59e0fe6fa506f1cf319b5acaf9d28be9',1,'SVF::PTAStat::startTime()'],['../classSVF_1_1SVFStat.html#abd7a79d1fe50110a0c1d448027492669',1,'SVF::SVFStat::startTime()']]],
   ['stat',['stat',['../classSVF_1_1SVFG.html#ad5c1415f488ec4412d5457262269eff3',1,'SVF::SVFG::stat()'],['../classSVF_1_1PointerAnalysis.html#a5ec3d9bf1fc81346c9df29638daedc0f',1,'SVF::PointerAnalysis::stat()'],['../classSVF_1_1MemSSA.html#a4fc930040ec54eb60629da18fb6a4d04',1,'SVF::MemSSA::stat()'],['../classSVF_1_1MTA.html#a8c0f7a777b7fd6b388678be63190ee59',1,'SVF::MTA::stat()']]],
   ['statbudget',['StatBudget',['../classSVF_1_1Options.html#abae23cb06d932f93900f627813b9f4a4',1,'SVF::Options']]],
   ['steens',['steens',['../classSVF_1_1Steensgaard.html#a04530669bc548ae13bd8908fe4dbd3d2',1,'SVF::Steensgaard']]],

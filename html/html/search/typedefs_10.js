@@ -11,7 +11,7 @@ var searchData=
   ['scevconstant',['SCEVConstant',['../namespaceSVF.html#abe745006fa40399d8a13613a3e0dfc63',1,'SVF']]],
   ['selectinst',['SelectInst',['../namespaceSVF.html#ab7fac9d4a4839be445c89777e21bc307',1,'SVF']]],
   ['set',['Set',['../namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb',1,'SVF']]],
-  ['sfrtrait',['SFRTrait',['../classSVF_1_1AndersenSFR.html#a654c391ad41b026eec2e0a1a54146600',1,'SVF::AndersenSFR']]],
+  ['sfrtrait',['SFRTrait',['../classSVF_1_1AndersenSFR.html#a2d41b49a1474c030ef2324c14467af30',1,'SVF::AndersenSFR']]],
   ['shufflevectorinst',['ShuffleVectorInst',['../namespaceSVF.html#a64e69f438b8c302c4cae27735319fa49',1,'SVF']]],
   ['simpletype',['SimpleType',['../structSVF_1_1SVFUtil_1_1simplify__type.html#a40c0d9a74681d3eaa7172ba137d489e4',1,'SVF::SVFUtil::simplify_type::SimpleType()'],['../structSVF_1_1SVFUtil_1_1simplify__type_3_01const_01From_01_4.html#afdc334dc0c584651f9ab538e38cf3aff',1,'SVF::SVFUtil::simplify_type&lt; const From &gt;::SimpleType()']]],
   ['singlecondvar',['SingleCondVar',['../classSVF_1_1CondPointsToSet.html#a0ef73bd2c1b42439ee6f265e07f17514',1,'SVF::CondPointsToSet']]],

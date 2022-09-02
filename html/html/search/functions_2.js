@@ -9,7 +9,7 @@ var searchData=
   ['callgraphbuilder',['CallGraphBuilder',['../classSVF_1_1CallGraphBuilder.html#ae5c2b2deb4a621cb38a31c8895052856',1,'SVF::CallGraphBuilder']]],
   ['callgraphsccdetection',['callGraphSCCDetection',['../classSVF_1_1PointerAnalysis.html#aafa5df4aa576a144476e547b1da35795',1,'SVF::PointerAnalysis']]],
   ['callgraphsolvebasedoncha',['callGraphSolveBasedOnCHA',['../classSVF_1_1TypeAnalysis.html#aec579b7854aa6a994632d3f7c5d621db',1,'SVF::TypeAnalysis']]],
-  ['callgraphstat',['callgraphStat',['../classSVF_1_1PTAStat.html#a1772bc87370b5625f71edd4476277064',1,'SVF::PTAStat']]],
+  ['callgraphstat',['callgraphStat',['../classSVF_1_1PTAStat.html#af2eb88d1563be9e6290a5fc69bec3bbe',1,'SVF::PTAStat::callgraphStat()'],['../classSVF_1_1SVFStat.html#a21e6767fbe2c3cdea4aac30199dfd2f0',1,'SVF::SVFStat::callgraphStat()']]],
   ['callicfgnode',['CallICFGNode',['../classSVF_1_1CallICFGNode.html#a7c514653ca97c9a97f5a26a57a2955e1',1,'SVF::CallICFGNode']]],
   ['callindsvfgedge',['CallIndSVFGEdge',['../classSVF_1_1CallIndSVFGEdge.html#a9651aa6a85a7ee9e626dd66a5410b191',1,'SVF::CallIndSVFGEdge']]],
   ['callmu',['CallMU',['../classSVF_1_1CallMU.html#abb981eb0739d7b3fdcc271b693e708ae',1,'SVF::CallMU']]],

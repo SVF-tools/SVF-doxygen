@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['generalnummap',['generalNumMap',['../classSVF_1_1PTAStat.html#afa718535839a939e51afc0f8c1fbdac6',1,'SVF::PTAStat']]],
+  ['generalnummap',['generalNumMap',['../classSVF_1_1SVFStat.html#a07b6f8cb424b84b468c4518140fa3a41',1,'SVF::SVFStat']]],
   ['gep_5f0',['Gep_0',['../CFLGrammar_8txt.html#ace8178aa913f2a15d4b3f12778dfc6f1',1,'Gep_0():&#160;CFLGrammar.txt'],['../PEGGrammar_8txt.html#ace8178aa913f2a15d4b3f12778dfc6f1',1,'Gep_0():&#160;PEGGrammar.txt']]],
   ['gep_5f1',['Gep_1',['../CFLGrammar_8txt.html#a92c75ced313339aea5e3e0c9f0726e5a',1,'CFLGrammar.txt']]],
   ['gep_5fi',['Gep_i',['../CFLGrammar_8txt.html#af184db68cfa45428afdc186dd62e32a3',1,'Gep_i():&#160;CFLGrammar.txt'],['../PEGGrammar_8txt.html#af184db68cfa45428afdc186dd62e32a3',1,'Gep_i():&#160;PEGGrammar.txt']]],
