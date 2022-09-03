@@ -16,7 +16,7 @@ var searchData=
   ['icfgnode',['ICFGNode',['../classSVF_1_1ICFGNode.html',1,'SVF::ICFGNode'],['../classSVF_1_1ICFGNode.html#ae6fe836e269ac36f14b2d2b1499a11e6',1,'SVF::ICFGNode::ICFGNode()'],['../classSVF_1_1VFGNode.html#a54c631f1e39be144c0cd25373f6b98b8',1,'SVF::VFGNode::icfgNode()'],['../classSVF_1_1SVFStmt.html#a50046a1500ec6e2819ef55162e70cc71',1,'SVF::SVFStmt::icfgNode()']]],
   ['icfgnode_2eh',['ICFGNode.h',['../ICFGNode_8h.html',1,'']]],
   ['icfgnode2ptasvfstmtsmap',['icfgNode2PTASVFStmtsMap',['../classSVF_1_1SVFIR.html#aaae756185bbd5b7175e96f8928a989c2',1,'SVF::SVFIR']]],
-  ['icfgnode2svfstmtsmap',['ICFGNode2SVFStmtsMap',['../classSVF_1_1SVFIR.html#a4666dabcbeb3f40f96a0694ce2f07eb0',1,'SVF::SVFIR::ICFGNode2SVFStmtsMap()'],['../classSVF_1_1SVFIR.html#a86c0c23d854b034d741d9d8891debab7',1,'SVF::SVFIR::icfgNode2SVFStmtsMap()']]],
+  ['icfgnode2svfstmtsmap',['icfgNode2SVFStmtsMap',['../classSVF_1_1SVFIR.html#a86c0c23d854b034d741d9d8891debab7',1,'SVF::SVFIR::icfgNode2SVFStmtsMap()'],['../classSVF_1_1SVFIR.html#a4666dabcbeb3f40f96a0694ce2f07eb0',1,'SVF::SVFIR::ICFGNode2SVFStmtsMap()']]],
   ['icfgnodeidtonodemapty',['ICFGNodeIDToNodeMapTy',['../classSVF_1_1ICFG.html#af1fe5708c6f67fd87fa1edaa6c73ff5d',1,'SVF::ICFG']]],
   ['icfgnodek',['ICFGNodeK',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376',1,'SVF::ICFGNode']]],
   ['icfgnodes',['icfgNodes',['../classSVF_1_1SVFLoop.html#a062e4b336b9b8315a9fc1107c9cab840',1,'SVF::SVFLoop']]],

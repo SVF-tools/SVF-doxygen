@@ -48,6 +48,8 @@ var searchData=
   ['addbbpredecessorpos',['addBBPredecessorPos',['../classSVF_1_1SVFModule.html#a4917f8a48e5a093e4a4314033b790fc2',1,'SVF::SVFModule']]],
   ['addbbsuccessornum',['addBBSuccessorNum',['../classSVF_1_1SVFModule.html#a228fd819dbae70d1074e15c804896841',1,'SVF::SVFModule']]],
   ['addbbsuccessorpos',['addBBSuccessorPos',['../classSVF_1_1SVFModule.html#a556482926cf0253ca290dc4a4a52bffa',1,'SVF::SVFModule']]],
+  ['addbicfledge',['addBiCFLEdge',['../classSVF_1_1AliasCFLGraphBuilder.html#ae7a9f2103c68829290c1bd5fd9cde321',1,'SVF::AliasCFLGraphBuilder']]],
+  ['addbigepcfledge',['addBiGepCFLEdge',['../classSVF_1_1AliasCFLGraphBuilder.html#a715213d0b521b676832ec73b38d2014e',1,'SVF::AliasCFLGraphBuilder']]],
   ['addbinaryopedge',['addBinaryOPEdge',['../classSVF_1_1SVFIRBuilder.html#a3f954c61381fe31088e791772c334105',1,'SVF::SVFIRBuilder']]],
   ['addbinaryopstmt',['addBinaryOPStmt',['../classSVF_1_1SVFIR.html#a955a2f93cf9eef857e40f19bc24edb2f',1,'SVF::SVFIR']]],
   ['addbinaryopvfgnode',['addBinaryOPVFGNode',['../classSVF_1_1VFG.html#ac79516fc4d9136241d708f9df5c73262',1,'SVF::VFG']]],
