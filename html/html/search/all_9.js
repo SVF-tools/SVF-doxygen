@@ -23,7 +23,7 @@ var searchData=
   ['icfgnodesbegin',['ICFGNodesBegin',['../classSVF_1_1SVFLoop.html#a39d7db54e8dd092fd5420c5332210ed1',1,'SVF::SVFLoop']]],
   ['icfgnodesend',['ICFGNodesEnd',['../classSVF_1_1SVFLoop.html#a4c96835d38a55423b70b2ce100d76dd2',1,'SVF::SVFLoop']]],
   ['icfgnodeset',['ICFGNodeSet',['../classSVF_1_1ICFGStat.html#a69670ae14f5ec47728e2ddc7dd4dec84',1,'SVF::ICFGStat::ICFGNodeSet()'],['../classSVF_1_1SVFLoop.html#a4519b374ff32534797ad2afe1c1f672f',1,'SVF::SVFLoop::ICFGNodeSet()']]],
-  ['icfgnodetosvfloopvec',['icfgNodeToSVFLoopVec',['../classSVF_1_1ICFG.html#a7d6aeecb00d77600a204a72d60023d54',1,'SVF::ICFG::icfgNodeToSVFLoopVec()'],['../classSVF_1_1ICFG.html#a4288dd1d729524b8e8a92954852a2317',1,'SVF::ICFG::ICFGNodeToSVFLoopVec()']]],
+  ['icfgnodetosvfloopvec',['ICFGNodeToSVFLoopVec',['../classSVF_1_1ICFG.html#a4288dd1d729524b8e8a92954852a2317',1,'SVF::ICFG::ICFGNodeToSVFLoopVec()'],['../classSVF_1_1ICFG.html#a7d6aeecb00d77600a204a72d60023d54',1,'SVF::ICFG::icfgNodeToSVFLoopVec()']]],
   ['icfgprinter',['ICFGPrinter',['../classSVF_1_1ICFGPrinter.html',1,'SVF::ICFGPrinter'],['../classSVF_1_1ICFGPrinter.html#ab51ba2c92e69d3688b0a185b4b1d69cb',1,'SVF::ICFGPrinter::ICFGPrinter()']]],
   ['icfgstat',['ICFGStat',['../classSVF_1_1ICFGStat.html',1,'SVF::ICFGStat'],['../classSVF_1_1ICFGStat.html#a3bbad3d1c0ab0cad3cc4b7aa069d1f9f',1,'SVF::ICFGStat::ICFGStat()']]],
   ['icfgstat_2eh',['ICFGStat.h',['../ICFGStat_8h.html',1,'']]],
