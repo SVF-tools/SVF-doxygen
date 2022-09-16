@@ -1,10 +1,6 @@
 var searchData=
 [
   ['gatheraggs',['gatherAggs',['../classSVF_1_1DCHGraph.html#a8fcbea9435a77beb27ad64d5a3175b0b',1,'SVF::DCHGraph']]],
-  ['gcprojectioninst',['GCProjectionInst',['../namespaceSVF.html#aa567358f0c0c3a6363b41ba6d37dc90c',1,'SVF']]],
-  ['gcrelocateinst',['GCRelocateInst',['../namespaceSVF.html#ac4d0b7e1b0332ac5335cc98669a3de0a',1,'SVF']]],
-  ['gcresultinst',['GCResultInst',['../namespaceSVF.html#ae0b0c09f22fa87d94d7671a941851726',1,'SVF']]],
-  ['gcstatepointinst',['GCStatepointInst',['../namespaceSVF.html#ac2f24d976e62d802aa1769924ff38bf2',1,'SVF']]],
   ['gedge',['GEDGE',['../classSVF_1_1SrcSnkSolver.html#a6007c2d795370bb48ad120af5474a31f',1,'SVF::SrcSnkSolver::GEDGE()'],['../classSVF_1_1GraphReachSolver.html#a8a42bdbb5987d0a340f9935f09e2acd2',1,'SVF::GraphReachSolver::GEDGE()'],['../classSVF_1_1WPASolver.html#ab7de73aabfa092b51b8dbe7b091e4c57',1,'SVF::WPASolver::GEDGE()']]],
   ['gedgeflag',['GEdgeFlag',['../classSVF_1_1GenericEdge.html#aab8892b73370c32b48621cd1d0cce614',1,'SVF::GenericEdge']]],
   ['gedgekind',['GEdgeKind',['../classSVF_1_1GenericEdge.html#a5aceeb48929f54264807b36569019a8a',1,'SVF::GenericEdge']]],

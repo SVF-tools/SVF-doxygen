@@ -18,7 +18,6 @@ var searchData=
   ['bbtophisetmap',['BBToPhiSetMap',['../classSVF_1_1MemSSA.html#afeef58baed23fc731e33a07a0ef05f6a',1,'SVF::MemSSA']]],
   ['bbworklist',['BBWorkList',['../classSVF_1_1PCG.html#a05759205f1362b6d72041cf669cf028d',1,'SVF::PCG']]],
   ['binaryoperator',['BinaryOperator',['../namespaceSVF.html#aad5d26ab07a5d1314bdb8f54e0fcdb22',1,'SVF']]],
-  ['binaryopintrinsic',['BinaryOpIntrinsic',['../namespaceSVF.html#aff2da2ed0d7c413dcb014141f0b750f1',1,'SVF']]],
   ['bitcastinst',['BitCastInst',['../namespaceSVF.html#afc50da46a6ea7c2cf61683bbec4d7c8d',1,'SVF']]],
   ['bitword',['BitWord',['../structSVF_1_1SparseBitVectorElement.html#af9014ab5077a2d9c1aed1e9b1460390d',1,'SVF::SparseBitVectorElement']]],
   ['blockaddress',['BlockAddress',['../namespaceSVF.html#a956458a8554bf734db1194f320fd4b4c',1,'SVF']]],

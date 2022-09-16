@@ -74,8 +74,6 @@ var searchData=
   ['constantint',['ConstantInt',['../namespaceSVF.html#adefcb50414ea999d70cea5ccdbcb98d7',1,'SVF']]],
   ['constantpointernull',['ConstantPointerNull',['../namespaceSVF.html#a90f6c91ba7a3c31c84b5c25277d83fca',1,'SVF']]],
   ['constantstruct',['ConstantStruct',['../namespaceSVF.html#a2b28f48dde0a9a91d251e654ce1f9477',1,'SVF']]],
-  ['constrainedfpcmpintrinsic',['ConstrainedFPCmpIntrinsic',['../namespaceSVF.html#a01c39e0b75e02ca0823291cc0aab751f',1,'SVF']]],
-  ['constrainedfpintrinsic',['ConstrainedFPIntrinsic',['../namespaceSVF.html#a373d9c3194e0b4d92ec12d792854eb87',1,'SVF']]],
   ['constraintedgesetty',['ConstraintEdgeSetTy',['../classSVF_1_1ConstraintEdge.html#ad155e1ed2473cc4f5f57128d282ac541',1,'SVF::ConstraintEdge']]],
   ['constraintnodeidtonodemapty',['ConstraintNodeIDToNodeMapTy',['../classSVF_1_1ConstraintGraph.html#af2dcf9fd0bc3d353c8582849cdabdf54',1,'SVF::ConstraintGraph']]],
   ['constraintnodeiter',['ConstraintNodeIter',['../classSVF_1_1ConstraintGraph.html#a15bc278f76cdfcf38e623cedbc80d025',1,'SVF::ConstraintGraph']]],
