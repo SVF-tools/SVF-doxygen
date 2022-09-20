@@ -26,7 +26,6 @@ var searchData=
   ['memobj',['MemObj',['../classSVF_1_1MemObj.html#afc62b5dbcaf790e561c852f567ca5bd1',1,'SVF::MemObj']]],
   ['memregion',['MemRegion',['../classSVF_1_1MemRegion.html#a1d8189977196da687f50cfa6df98394b',1,'SVF::MemRegion']]],
   ['memssa',['MemSSA',['../classSVF_1_1MemSSA.html#a6bd57451370f5f4c92ce212be4cddd15',1,'SVF::MemSSA']]],
-  ['memssadf',['MemSSADF',['../classSVF_1_1MemSSADF.html#aabae3337a22fc441fd2fdc2cf30b009c',1,'SVF::MemSSADF']]],
   ['memssastat',['MemSSAStat',['../classSVF_1_1MemSSAStat.html#a53f3d85a8eb63676d3dc47ee648efb66',1,'SVF::MemSSAStat']]],
   ['mergefunctionrets',['MergeFunctionRets',['../classSVF_1_1MergeFunctionRets.html#a2b989707893cd81dd275be6a3b8c79fc',1,'SVF::MergeFunctionRets']]],
   ['mergenodetorep',['mergeNodeToRep',['../classSVF_1_1Andersen.html#a36729160041bc3a3e2b0a92b29062848',1,'SVF::Andersen']]],

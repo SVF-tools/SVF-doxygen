@@ -3,7 +3,6 @@ var searchData=
   ['memobj',['MemObj',['../classSVF_1_1MemObj.html',1,'SVF']]],
   ['memregion',['MemRegion',['../classSVF_1_1MemRegion.html',1,'SVF']]],
   ['memssa',['MemSSA',['../classSVF_1_1MemSSA.html',1,'SVF']]],
-  ['memssadf',['MemSSADF',['../classSVF_1_1MemSSADF.html',1,'SVF']]],
   ['memssastat',['MemSSAStat',['../classSVF_1_1MemSSAStat.html',1,'SVF']]],
   ['mergefunctionrets',['MergeFunctionRets',['../classSVF_1_1MergeFunctionRets.html',1,'SVF']]],
   ['mhp',['MHP',['../classSVF_1_1MHP.html',1,'SVF']]],

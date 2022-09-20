@@ -28,7 +28,7 @@ var searchData=
   ['ditype',['DIType',['../namespaceSVF.html#ad127b0ad478640ede3d426e3a58d2632',1,'SVF']]],
   ['dityperefarray',['DITypeRefArray',['../namespaceSVF.html#a9d3ee421789884473bfacfaa9ec007cc',1,'SVF']]],
   ['dominancefrontier',['DominanceFrontier',['../namespaceSVF.html#ab44d20f806be99699895260b14a942d7',1,'SVF']]],
-  ['dominancefrontierbase',['DominanceFrontierBase',['../namespaceSVF.html#aefa7ddc97343be9e528108d0a52293de',1,'SVF']]],
+  ['dominancefrontierbase',['DominanceFrontierBase',['../namespaceSVF.html#a2f60343a6839b9cc893bbf77e8a19915',1,'SVF']]],
   ['dominatortree',['DominatorTree',['../namespaceSVF.html#aecbb42b8e9d17fa0189c50dda9fd5fdd',1,'SVF']]],
   ['domtreenode',['DomTreeNode',['../namespaceSVF.html#a827d09974dc7bf0849f96823cc2fee89',1,'SVF']]],
   ['dpim',['DPIm',['../classSVF_1_1SrcSnkDDA.html#a83d5ccf0836f8f751aff078f88328cca',1,'SVF::SrcSnkDDA']]],
