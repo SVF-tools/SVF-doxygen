@@ -30,6 +30,8 @@ var searchData=
   ['cflgraphbuilder',['CFLGraphBuilder',['../classSVF_1_1CFLGraphBuilder.html',1,'SVF']]],
   ['cflnode',['CFLNode',['../classSVF_1_1CFLNode.html',1,'SVF']]],
   ['cflsolver',['CFLSolver',['../classSVF_1_1CFLSolver.html',1,'SVF']]],
+  ['cflstat',['CFLStat',['../classSVF_1_1CFLStat.html',1,'SVF']]],
+  ['cflvf',['CFLVF',['../classSVF_1_1CFLVF.html',1,'SVF']]],
   ['chedge',['CHEdge',['../classSVF_1_1CHEdge.html',1,'SVF']]],
   ['chgbuilder',['CHGBuilder',['../classSVF_1_1CHGBuilder.html',1,'SVF']]],
   ['chgraph',['CHGraph',['../classSVF_1_1CHGraph.html',1,'SVF']]],

@@ -15,6 +15,8 @@ var searchData=
   ['_7ecflgraph',['~CFLGraph',['../classSVF_1_1CFLGraph.html#a887f27836a2fb5eca3c33fb95f3990d3',1,'SVF::CFLGraph']]],
   ['_7ecflnode',['~CFLNode',['../classSVF_1_1CFLNode.html#acdb5d04eae48b26bb21f8738c62cd3bf',1,'SVF::CFLNode']]],
   ['_7ecflsolver',['~CFLSolver',['../classSVF_1_1CFLSolver.html#a59bb656e9fc0f5c29feb2200bc198e41',1,'SVF::CFLSolver']]],
+  ['_7ecflstat',['~CFLStat',['../classSVF_1_1CFLStat.html#ac51498242513e203d0367b9d75f350f3',1,'SVF::CFLStat']]],
+  ['_7ecflvf',['~CFLVF',['../classSVF_1_1CFLVF.html#ac993bd9c186eef2447d6f50d6451f014',1,'SVF::CFLVF']]],
   ['_7echgraph',['~CHGraph',['../classSVF_1_1CHGraph.html#a63c4f42eea94e786090a546fc2195a00',1,'SVF::CHGraph']]],
   ['_7echnode',['~CHNode',['../classSVF_1_1CHNode.html#aff05589899b58112119af68df5d1997e',1,'SVF::CHNode']]],
   ['_7ecommonchgraph',['~CommonCHGraph',['../classSVF_1_1CommonCHGraph.html#aeb7e79b36c74bcded008fe227952c335',1,'SVF::CommonCHGraph']]],

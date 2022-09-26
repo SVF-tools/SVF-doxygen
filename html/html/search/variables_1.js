@@ -59,7 +59,7 @@ var searchData=
   ['attribute',['attribute',['../structSVF_1_1GrammarBase_1_1Symbol.html#a756bed7c50c6d3251cc4832247c8691d',1,'SVF::GrammarBase::Symbol']]],
   ['attributedkindmaskbits',['AttributedKindMaskBits',['../classSVF_1_1GrammarBase.html#a2dcb7647b5be7b3ab1dad2c494828854',1,'SVF::GrammarBase']]],
   ['attributekinds',['attributeKinds',['../classSVF_1_1GrammarBase.html#ac3324324d2146cf04680cc4a4e444a2d',1,'SVF::GrammarBase']]],
-  ['averagepointstosetsize',['AveragePointsToSetSize',['../classSVF_1_1AndersenBase.html#adaf738bee77a4b1fbb8d42911fabdb49',1,'SVF::AndersenBase']]],
+  ['averagepointstosetsize',['AveragePointsToSetSize',['../classSVF_1_1CFLAlias.html#ab30e7513dd0d743c59b38448a45a8ff8',1,'SVF::CFLAlias::AveragePointsToSetSize()'],['../classSVF_1_1AndersenBase.html#adaf738bee77a4b1fbb8d42911fabdb49',1,'SVF::AndersenBase::AveragePointsToSetSize()']]],
   ['avgindegree',['avgInDegree',['../classSVF_1_1SVFGStat.html#a4328f75f379e692901b95bacdf8dd413',1,'SVF::SVFGStat']]],
   ['avgindindegree',['avgIndInDegree',['../classSVF_1_1SVFGStat.html#a364d684cbefed1793d7c4506fb1fa0fd',1,'SVF::SVFGStat']]],
   ['avgindoutdegree',['avgIndOutDegree',['../classSVF_1_1SVFGStat.html#a7854ee895f1965ea02f5d04f81589826',1,'SVF::SVFGStat']]],
