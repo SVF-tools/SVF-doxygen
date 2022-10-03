@@ -42,6 +42,7 @@ var searchData=
   ['removecxtstmttospan',['removeCxtStmtToSpan',['../classSVF_1_1LockAnalysis.html#a0b21446e6d5dfc1b5d0ebd75895225dd',1,'SVF::LockAnalysis']]],
   ['removedirectedge',['removeDirectEdge',['../classSVF_1_1ConstraintGraph.html#a9fc73676ea133651604e2528fe1d8244',1,'SVF::ConstraintGraph']]],
   ['removedpmfromloc',['removeDpmFromLoc',['../classSVF_1_1DDAVFSolver.html#a00ae738a76564b7b334faae567674e34',1,'SVF::DDAVFSolver']]],
+  ['removefirstsymbol',['removeFirstSymbol',['../classSVF_1_1CFGNormalizer.html#afd29c476dad9728a10e19561e846f97e',1,'SVF::CFGNormalizer']]],
   ['removefront',['removeFront',['../classSVF_1_1FIFOWorkList.html#a621fe65af285665396fa10af9f96ef3a',1,'SVF::FIFOWorkList']]],
   ['removegnode',['removeGNode',['../classSVF_1_1GenericGraph.html#a1817b65e76052f11e36a67d6b9efd915',1,'SVF::GenericGraph']]],
   ['removeicfgedge',['removeICFGEdge',['../classSVF_1_1ICFG.html#a534625b10673efe5b0f344bfebf9b3cf',1,'SVF::ICFG']]],
