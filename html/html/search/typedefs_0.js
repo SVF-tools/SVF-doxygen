@@ -12,7 +12,6 @@ var searchData=
   ['aliasset',['AliasSet',['../namespaceSVF.html#a2b2887cf75225bc9127338b4cf30aa85',1,'SVF']]],
   ['aliassettype',['AliasSetType',['../classSVF_1_1SVFModule.html#a654097a3df71f8eac489e8ddae8de30c',1,'SVF::SVFModule']]],
   ['allocainst',['AllocaInst',['../namespaceSVF.html#a3bacb4f95c73e6d794901d01c6b65a83',1,'SVF']]],
-  ['arg_5fiterator',['arg_iterator',['../classSVF_1_1CallSite.html#ac1cdfe5e54026960a23142e26b3150ff',1,'SVF::CallSite']]],
   ['argument',['Argument',['../namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801',1,'SVF']]],
   ['arraytype',['ArrayType',['../namespaceSVF.html#a146d286041987860388da3d8bc85cee3',1,'SVF']]],
   ['atomiccmpxchginst',['AtomicCmpXchgInst',['../namespaceSVF.html#a582e3736a2bbb0540364c1693d831b49',1,'SVF']]],

@@ -116,6 +116,7 @@ var searchData=
   ['hasintraicfgedge',['hasIntraICFGEdge',['../classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709',1,'SVF::ICFG']]],
   ['hasintravfgedge',['hasIntraVFGEdge',['../classSVF_1_1VFG.html#ac34c4529229404617c346f81cc6c141f',1,'SVF::VFG']]],
   ['haslabelededge',['hasLabeledEdge',['../classSVF_1_1IRGraph.html#a192e584440eb141e0d35d8fed671bbe0',1,'SVF::IRGraph::hasLabeledEdge(SVFVar *src, SVFVar *dst, SVFStmt::PEDGEK kind, const ICFGNode *cs)'],['../classSVF_1_1IRGraph.html#a1c999e2fd771e4fda192af096e3ec92c',1,'SVF::IRGraph::hasLabeledEdge(SVFVar *src, SVFVar *op1, SVFStmt::PEDGEK kind, const SVFVar *op2)']]],
+  ['hasloopinfo',['hasLoopInfo',['../classSVF_1_1SVFFunction.html#a8d9140ca8da3d17135faa9dfcc6ecc43',1,'SVF::SVFFunction']]],
   ['hasmodmrset',['hasModMRSet',['../classSVF_1_1MRGenerator.html#a7d66a341805af7ec4e4893e5a7e0bc2d',1,'SVF::MRGenerator']]],
   ['hasmodsideeffectofcallsite',['hasModSideEffectOfCallSite',['../classSVF_1_1MRGenerator.html#a187d82895b2e1156c6dd5ae28795944f',1,'SVF::MRGenerator']]],
   ['hasmu',['hasMU',['../classSVF_1_1MemSSA.html#af5e356e82c3f93b65bd89908e0f465dc',1,'SVF::MemSSA::hasMU(const PAGEdge *inst) const'],['../classSVF_1_1MemSSA.html#a6bd9390c6cd2a3d7a3752fba76acfb46',1,'SVF::MemSSA::hasMU(const CallICFGNode *cs) const']]],

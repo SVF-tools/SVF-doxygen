@@ -30,6 +30,7 @@ var searchData=
   ['basicblockset',['BasicBlockSet',['../classSVF_1_1SaberCondAllocator.html#ae4dea0585e5fad34cbfc10fa535b1426',1,'SVF::SaberCondAllocator']]],
   ['basictypes_2eh',['BasicTypes.h',['../SVF-FE_2BasicTypes_8h.html',1,'(Global Namespace)'],['../Util_2BasicTypes_8h.html',1,'(Global Namespace)']]],
   ['bb',['bb',['../classSVF_1_1ICFGNode.html#ad3c5171fed4e28cfd35c1a6fb9697005',1,'SVF::ICFGNode::bb()'],['../classSVF_1_1LoadMU.html#ad5b6ecaf016a136c982291256687d4d2',1,'SVF::LoadMU::bb()'],['../classSVF_1_1StoreCHI.html#a3b1bcd4535e2199b57adc67fc283fb3f',1,'SVF::StoreCHI::bb()'],['../classSVF_1_1MSSAPHI.html#a39e68e1e74483dc07bd117bd2209da91',1,'SVF::MSSAPHI::bb()']]],
+  ['bb2loopmap',['bb2LoopMap',['../classSVF_1_1SVFFunction.html#a3ce143c5204cbed737fc18276ae90788',1,'SVF::SVFFunction']]],
   ['bb2phisetmap',['bb2PhiSetMap',['../classSVF_1_1MemSSA.html#a190061a6f7423461f4292fc326330f23',1,'SVF::MemSSA']]],
   ['bbcondmap',['BBCondMap',['../classSVF_1_1SaberCondAllocator.html#a80445dc28d9a01c2e0a656f1e2f2a51f',1,'SVF::SaberCondAllocator']]],
   ['bbconds',['bbConds',['../classSVF_1_1SaberCondAllocator.html#a5c129ebf5ae55eb3af8bd670c921a646',1,'SVF::SaberCondAllocator']]],
