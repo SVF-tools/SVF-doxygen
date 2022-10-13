@@ -20,7 +20,7 @@ var searchData=
   ['maxoffsetlimit',['maxOffsetLimit',['../classSVF_1_1ObjTypeInfo.html#a5ff63eb0654acd152f7d6c18618ee94a',1,'SVF::ObjTypeInfo']]],
   ['maxoutdegree',['maxOutDegree',['../classSVF_1_1SVFGStat.html#a6694ace7ee1b24b0c5ce42e06e4db2cf',1,'SVF::SVFGStat']]],
   ['maxpathlen',['MaxPathLen',['../classSVF_1_1Options.html#a32ef95b3bd06b50337b3129b74ffb45c',1,'SVF::Options']]],
-  ['maxpointstosetsize',['MaxPointsToSetSize',['../classSVF_1_1CFLAlias.html#a593d1b7b7380629ec8194d3a7b970ab5',1,'SVF::CFLAlias::MaxPointsToSetSize()'],['../classSVF_1_1AndersenBase.html#abd73e930450b7c605f478672bdf9bdae',1,'SVF::AndersenBase::MaxPointsToSetSize()']]],
+  ['maxpointstosetsize',['MaxPointsToSetSize',['../classSVF_1_1CFLBase.html#a87071a5ec6715fa8168b28e992b8555d',1,'SVF::CFLBase::MaxPointsToSetSize()'],['../classSVF_1_1AndersenBase.html#abd73e930450b7c605f478672bdf9bdae',1,'SVF::AndersenBase::MaxPointsToSetSize()']]],
   ['maxsccsize',['maxSCCSize',['../classSVF_1_1FlowSensitive.html#aa3d4703756a6297ab5c0756172024fe4',1,'SVF::FlowSensitive']]],
   ['maxstepinwrapper',['MaxStepInWrapper',['../classSVF_1_1Options.html#a0b82f16ee0c7e6566a6ae20662525e84',1,'SVF::Options']]],
   ['maxstruct',['maxStruct',['../classSVF_1_1SymbolTableInfo.html#a4e33a01e203f07a8154af6ee65f5ba46',1,'SVF::SymbolTableInfo']]],

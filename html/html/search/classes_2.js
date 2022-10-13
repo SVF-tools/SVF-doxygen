@@ -22,6 +22,7 @@ var searchData=
   ['cast_5fretty_5fwrap_3c_20to_2c_20fromty_2c_20fromty_20_3e',['cast_retty_wrap&lt; To, FromTy, FromTy &gt;',['../structSVF_1_1SVFUtil_1_1cast__retty__wrap_3_01To_00_01FromTy_00_01FromTy_01_4.html',1,'SVF::SVFUtil']]],
   ['cfgnormalizer',['CFGNormalizer',['../classSVF_1_1CFGNormalizer.html',1,'SVF']]],
   ['cflalias',['CFLAlias',['../classSVF_1_1CFLAlias.html',1,'SVF']]],
+  ['cflbase',['CFLBase',['../classSVF_1_1CFLBase.html',1,'SVF']]],
   ['cfledge',['CFLEdge',['../classSVF_1_1CFLEdge.html',1,'SVF']]],
   ['cflfifoworklist',['CFLFIFOWorkList',['../classSVF_1_1CFLFIFOWorkList.html',1,'SVF']]],
   ['cflgramgraphchecker',['CFLGramGraphChecker',['../classSVF_1_1CFLGramGraphChecker.html',1,'SVF']]],
