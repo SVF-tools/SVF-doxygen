@@ -61,7 +61,7 @@ var searchData=
   ['clusterander',['ClusterAnder',['../classSVF_1_1Options.html#a8459d43a21bcf8a50fc55d14fcf5a81e',1,'SVF::Options']]],
   ['clusterfs',['ClusterFs',['../classSVF_1_1Options.html#a9dc372635fc6f5ea2d902fc5c49fca8a',1,'SVF::Options']]],
   ['clustermethod',['ClusterMethod',['../classSVF_1_1Options.html#a8e0538a7f2e3c5bece69bc69f7074819',1,'SVF::Options']]],
-  ['collapsetime',['CollapseTime',['../classSVF_1_1CFLStat.html#a1038d77be761d3033237724330631d3e',1,'SVF::CFLStat::CollapseTime()'],['../classSVF_1_1AndersenStat.html#a3f5739454b1f4e03b4388a4ba5730e15',1,'SVF::AndersenStat::CollapseTime()']]],
+  ['collapsetime',['CollapseTime',['../classSVF_1_1AndersenStat.html#a3f5739454b1f4e03b4388a4ba5730e15',1,'SVF::AndersenStat']]],
   ['complementcache',['complementCache',['../classSVF_1_1PersistentPointsToCache.html#adef498f8a0d4c75023382e6312a85a58',1,'SVF::PersistentPointsToCache']]],
   ['concretecxt',['concreteCxt',['../classSVF_1_1ContextCond.html#a453722fc2b9b4ae4be0dfc1f020390eb',1,'SVF::ContextCond']]],
   ['cond',['cond',['../classSVF_1_1BranchStmt.html#adcf5cabe6e0a87cded5ef1fdf7273f3f',1,'SVF::BranchStmt::cond()'],['../classSVF_1_1MSSAMU.html#a8e828af79da08528166b1f53165bc5b2',1,'SVF::MSSAMU::cond()'],['../classSVF_1_1MSSACHI.html#addeee3fb0c5e6b1c68c30da111c26759',1,'SVF::MSSACHI::cond()'],['../classSVF_1_1MSSAPHI.html#a348e69bf48ee7a959cd0bb117ba1dc9f',1,'SVF::MSSAPHI::cond()']]],

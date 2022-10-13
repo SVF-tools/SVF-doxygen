@@ -34,6 +34,8 @@ var searchData=
   ['buildbipeggraph',['buildBiPEGgraph',['../classSVF_1_1AliasCFLGraphBuilder.html#ac74b55198d73acebb9843fd13c1fd880',1,'SVF::AliasCFLGraphBuilder::buildBiPEGgraph()'],['../classSVF_1_1VFCFLGraphBuilder.html#ac4a6620622ad6642ed8543e0f8c65c20',1,'SVF::VFCFLGraphBuilder::buildBiPEGgraph()']]],
   ['buildcallgraph',['buildCallGraph',['../classSVF_1_1CallGraphBuilder.html#aa64a27e99434908a203e566074c66ebc',1,'SVF::CallGraphBuilder']]],
   ['buildcandidatefuncsetforlock',['buildCandidateFuncSetforLock',['../classSVF_1_1LockAnalysis.html#a271506d5032033efae684b0d729f5b3e',1,'SVF::LockAnalysis']]],
+  ['buildcflgrammar',['buildCFLGrammar',['../classSVF_1_1CFLBase.html#a77bc3b0260fe02cdcf41fdb6b80caa09',1,'SVF::CFLBase']]],
+  ['buildcflgraph',['buildCFLGraph',['../classSVF_1_1CFLBase.html#a0daabb58bd7d5be40379ccc670c37a93',1,'SVF::CFLBase::buildCFLGraph()'],['../classSVF_1_1CFLVF.html#aa20f8d27da439c831f36b31312daf047',1,'SVF::CFLVF::buildCFLGraph()']]],
   ['buildcg',['buildCG',['../classSVF_1_1ConstraintGraph.html#a1973126243ff619033a78a3782944278',1,'SVF::ConstraintGraph']]],
   ['buildchg',['buildCHG',['../classSVF_1_1CHGBuilder.html#aa5c672ac426ad4085d64d97f8cb14ace',1,'SVF::CHGBuilder::buildCHG()'],['../classSVF_1_1DCHGraph.html#a710c6b87fd475552eddb425e38de8889',1,'SVF::DCHGraph::buildCHG()']]],
   ['buildchgedges',['buildCHGEdges',['../classSVF_1_1CHGBuilder.html#a7420a3a4858ebe861aaa47d76f49ab1f',1,'SVF::CHGBuilder']]],
