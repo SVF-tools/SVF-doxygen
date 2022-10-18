@@ -238,7 +238,7 @@ var searchData=
   ['islockcandidatefun',['isLockCandidateFun',['../classSVF_1_1LockAnalysis.html#a4c76b3fb18248081dc1affbc33940164',1,'SVF::LockAnalysis']]],
   ['islockreleasecall',['isLockReleaseCall',['../namespaceSVF_1_1SVFUtil.html#a1241ef1c19df14f7db0bd62dd68f14f9',1,'SVF::SVFUtil::isLockReleaseCall(const CallSite cs)'],['../namespaceSVF_1_1SVFUtil.html#a84ac49c70252036a957694f2cf05ae2c',1,'SVF::SVFUtil::isLockReleaseCall(const Instruction *inst)']]],
   ['isloopexitofjoinloop',['isLoopExitOfJoinLoop',['../classSVF_1_1TCT.html#a154f779578f6112e7c9e90d585c08eb6',1,'SVF::TCT']]],
-  ['isloopheader',['isLoopHeader',['../classSVF_1_1SVFFunction.html#a408763a3a95397c5dc1a47fc85d443e9',1,'SVF::SVFFunction']]],
+  ['isloopheader',['isLoopHeader',['../classSVF_1_1SVFFunction.html#abcba9b1b7d7ede561a154417c09ced6c',1,'SVF::SVFFunction']]],
   ['isloopheaderofjoinloop',['isLoopHeaderOfJoinLoop',['../classSVF_1_1TCT.html#a549a95aa04233c98732777ea210d8525',1,'SVF::TCT']]],
   ['ismemalloc',['isMemAlloc',['../classSVF_1_1SaberCheckerAPI.html#a71cbe5fbf582d0801f604595d3dfb416',1,'SVF::SaberCheckerAPI::isMemAlloc(const SVFFunction *fun) const'],['../classSVF_1_1SaberCheckerAPI.html#a8a96f6ee7bd9be1abfa89b05d773539f',1,'SVF::SaberCheckerAPI::isMemAlloc(const Instruction *inst) const'],['../classSVF_1_1SaberCheckerAPI.html#acd2486bcf4cf413e63afed7884a0719e',1,'SVF::SaberCheckerAPI::isMemAlloc(const CallICFGNode *cs) const']]],
   ['ismemcpy',['isMemcpy',['../classSVF_1_1MTAAnnotator.html#aee9e5ebac543d9a2aab511410b047898',1,'SVF::MTAAnnotator']]],

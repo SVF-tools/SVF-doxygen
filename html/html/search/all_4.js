@@ -133,7 +133,7 @@ var searchData=
   ['dolockanalysis',['DoLockAnalysis',['../classSVF_1_1Options.html#a036b9eb8b265a8abd54680d45758e7c6',1,'SVF::Options']]],
   ['dominancefrontier',['DominanceFrontier',['../namespaceSVF.html#ab44d20f806be99699895260b14a942d7',1,'SVF']]],
   ['dominancefrontierbase',['DominanceFrontierBase',['../namespaceSVF.html#a2f60343a6839b9cc893bbf77e8a19915',1,'SVF']]],
-  ['dominate',['dominate',['../classSVF_1_1SaberCondAllocator.html#a6bcbb4475102221e7d71954f63d98558',1,'SVF::SaberCondAllocator::dominate()'],['../classSVF_1_1SVFFunction.html#a3955e86456afe4cc550eb42c84d61c68',1,'SVF::SVFFunction::dominate()']]],
+  ['dominate',['dominate',['../classSVF_1_1SaberCondAllocator.html#a6bcbb4475102221e7d71954f63d98558',1,'SVF::SaberCondAllocator::dominate()'],['../classSVF_1_1SVFFunction.html#a8cd83e389a55630e08559392d6004b32',1,'SVF::SVFFunction::dominate()']]],
   ['dominatortree',['DominatorTree',['../namespaceSVF.html#aecbb42b8e9d17fa0189c50dda9fd5fdd',1,'SVF']]],
   ['domtreenode',['DomTreeNode',['../namespaceSVF.html#a827d09974dc7bf0849f96823cc2fee89',1,'SVF']]],
   ['dostat',['DOSTAT',['../SVFBasicTypes_8h.html#a6c9e2209a2c38607a9e3b7fab242886a',1,'SVFBasicTypes.h']]],
