@@ -66,6 +66,7 @@ var searchData=
   ['insertphi',['insertPHI',['../classSVF_1_1MemSSA.html#acc6f72d96cf29e36093ba08ea86b8983',1,'SVF::MemSSA']]],
   ['insertsymbol',['insertSymbol',['../classSVF_1_1GrammarBase.html#a3c16f37c05de31fbd2be1ae9c0961e84',1,'SVF::GrammarBase']]],
   ['insertterminalkind',['insertTerminalKind',['../classSVF_1_1GrammarBase.html#ad2f1a578ba72a2b600014b21b6f2d542',1,'SVF::GrammarBase']]],
+  ['insertterminalsymbol',['insertTerminalSymbol',['../classSVF_1_1GrammarBase.html#a7583350e892c62a454de8a8317e4c1b8',1,'SVF::GrammarBase']]],
   ['inserttocflgrammar',['insertToCFLGrammar',['../classSVF_1_1CFGNormalizer.html#ad08f183a1b8ca69201f965f224e92950',1,'SVF::CFGNormalizer']]],
   ['interdisjointmrg',['InterDisjointMRG',['../classSVF_1_1InterDisjointMRG.html#a91e89081103f451945baadaea370b428',1,'SVF::InterDisjointMRG']]],
   ['interferenceanalysis',['interferenceAnalysis',['../classSVF_1_1PCG.html#a057887f3d5fd3b9b414e573b3f9f4548',1,'SVF::PCG']]],
