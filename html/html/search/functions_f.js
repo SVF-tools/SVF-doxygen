@@ -85,6 +85,7 @@ var searchData=
   ['processarguments',['processArguments',['../namespaceSVF_1_1LLVMUtil.html#accdd44093d6d145dc92edeaaff3f5732',1,'SVF::LLVMUtil']]],
   ['processbasicblocknode',['processBasicBlockNode',['../classSVF_1_1IRAnnotator.html#a6da6bf2db9dd582739e621aefc72025f',1,'SVF::IRAnnotator']]],
   ['processce',['processCE',['../classSVF_1_1SVFIRBuilder.html#a5adf8baa546292434ba1fec48db2d0a7',1,'SVF::SVFIRBuilder']]],
+  ['processcfledge',['processCFLEdge',['../classSVF_1_1CFLSolver.html#a53c873a9243d2ef3e8d5eff1b8081102',1,'SVF::CFLSolver']]],
   ['processconstantnode',['processConstantNode',['../classSVF_1_1IRAnnotator.html#a0a26b250269a2e38a5507d68fdbe03f4',1,'SVF::IRAnnotator']]],
   ['processcopy',['processCopy',['../classSVF_1_1Andersen.html#ac4afe532655c3f311143ebbe15175ca2',1,'SVF::Andersen::processCopy()'],['../classSVF_1_1FlowSensitive.html#aa401cc90de4e1c6842f08a43a28c5aa1',1,'SVF::FlowSensitive::processCopy()']]],
   ['processfunbody',['processFunBody',['../classSVF_1_1ICFGBuilder.html#ab1cc5de5c2ee7acf83e9ae51c7b38cb5',1,'SVF::ICFGBuilder']]],

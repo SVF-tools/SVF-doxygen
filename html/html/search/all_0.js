@@ -43,7 +43,6 @@ var searchData=
   ['_5fnumofactualoutsvfgnodeshaveinout',['_NumOfActualOutSVFGNodesHaveInOut',['../classSVF_1_1FlowSensitiveStat.html#a3ac011649b3c0ced46283265ba88dd0e',1,'SVF::FlowSensitiveStat']]],
   ['_5fnumofaddrtakevar',['_NumOfAddrTakeVar',['../classSVF_1_1FlowSensitiveStat.html#ae2d4df7129385905775489f1389a9fa7',1,'SVF::FlowSensitiveStat']]],
   ['_5fnumofblackholeptr',['_NumOfBlackholePtr',['../classSVF_1_1DDAStat.html#af3f359ca7c620695b124573377bda407',1,'SVF::DDAStat::_NumOfBlackholePtr()'],['../classSVF_1_1AndersenStat.html#a27d4e2bf145226f3c2b4d46fee2311e7',1,'SVF::AndersenStat::_NumOfBlackholePtr()'],['../classSVF_1_1FlowSensitiveStat.html#a74ab9e235e08e4840223ddf0599a9da7',1,'SVF::FlowSensitiveStat::_NumOfBlackholePtr()']]],
-  ['_5fnumofcflgraphnode',['_NumofCFLGraphNode',['../classSVF_1_1CFLStat.html#a99aa7227148c3df700542aec0b8ae98d',1,'SVF::CFLStat']]],
   ['_5fnumofconstantptr',['_NumOfConstantPtr',['../classSVF_1_1DDAStat.html#a967b0def2602a596538973703ffaad5d',1,'SVF::DDAStat::_NumOfConstantPtr()'],['../classSVF_1_1AndersenStat.html#ab8f8152b5e6127f2d9bdcbd22083da67',1,'SVF::AndersenStat::_NumOfConstantPtr()'],['../classSVF_1_1FlowSensitiveStat.html#a767a935ec5bacd97f4fa79a05c165cc2',1,'SVF::FlowSensitiveStat::_NumOfConstantPtr()']]],
   ['_5fnumofcycles',['_NumOfCycles',['../classSVF_1_1AndersenStat.html#a6e58c88a4118d368955dee5bbb0ccd21',1,'SVF::AndersenStat']]],
   ['_5fnumofdpm',['_NumOfDPM',['../classSVF_1_1DDAStat.html#a5ad94d2109b293d306f67741effc73aa',1,'SVF::DDAStat']]],
