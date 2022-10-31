@@ -22,6 +22,7 @@ var searchData=
   ['opvers',['opVers',['../classSVF_1_1MSSAPHISVFGNode.html#a9c327923ab939e06877441ebde5c1139',1,'SVF::MSSAPHISVFGNode::opVers()'],['../classSVF_1_1CmpVFGNode.html#aae30d80fd848d62467476d21c691573c',1,'SVF::CmpVFGNode::opVers()'],['../classSVF_1_1BinaryOPVFGNode.html#ae803603f567cc28f5a7e1b66fb324cbc',1,'SVF::BinaryOPVFGNode::opVers()'],['../classSVF_1_1UnaryOPVFGNode.html#ae6fdb5759a0dfeb0635ffd758b752dc1',1,'SVF::UnaryOPVFGNode::opVers()'],['../classSVF_1_1PHIVFGNode.html#a08ccd55d0fb6ce33f69959349008daca',1,'SVF::PHIVFGNode::opVers()'],['../classSVF_1_1MSSAPHI.html#abdabd6dff67cd59622f18d48e8b34271',1,'SVF::MSSAPHI::opVers()']]],
   ['originalbvnumwords',['OriginalBvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#af2786eae11ee13845da336ad23bc97e9',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['originalsbvnumwords',['OriginalSbvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a639b887e30115c2a6cd108c65f18fcc1',1,'SVF::NodeIDAllocator::Clusterer']]],
+  ['outcfledges',['outCFLEdges',['../classSVF_1_1CFLNode.html#a47eba9df9dc664e56631ecc9b6146b33',1,'SVF::CFLNode']]],
   ['outedgekindtosetmap',['OutEdgeKindToSetMap',['../classSVF_1_1SVFVar.html#a3775dd07e89ea6b25950a8b900a4ceab',1,'SVF::SVFVar']]],
   ['outedges',['OutEdges',['../classSVF_1_1GenericNode.html#a04aa14df71ffa60a54c870842c552889',1,'SVF::GenericNode']]],
   ['outicfgedges',['outICFGEdges',['../classSVF_1_1SVFLoop.html#ad17edf0d1dcca5eebc9789a5015c769d',1,'SVF::SVFLoop']]],

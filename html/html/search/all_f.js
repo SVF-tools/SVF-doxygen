@@ -54,7 +54,7 @@ var searchData=
   ['operator_7c_7c',['operator||',['../classSVF_1_1Z3Expr.html#a31327900a231526ff8f62be87c5f309d',1,'SVF::Z3Expr']]],
   ['opicfgnodes',['opICFGNodes',['../classSVF_1_1PhiStmt.html#a4c75a8f8430621aaec62a5189db136b5',1,'SVF::PhiStmt']]],
   ['opicfgnodevec',['OpICFGNodeVec',['../classSVF_1_1PhiStmt.html#ac505a4fe33e82f555663872e81220ba4',1,'SVF::PhiStmt']]],
-  ['opincomingbbs',['OPIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a66928f6cc755bd2a048804d00f859a80',1,'SVF::IntraPHIVFGNode::OPIncomingBBs()'],['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode::opIncomingBBs()']]],
+  ['opincomingbbs',['opIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a73f39a488ad82300010abd18afe247a4',1,'SVF::IntraPHIVFGNode::opIncomingBBs()'],['../classSVF_1_1IntraPHIVFGNode.html#a66928f6cc755bd2a048804d00f859a80',1,'SVF::IntraPHIVFGNode::OPIncomingBBs()']]],
   ['opit',['OpIt',['../classllvm_1_1generic__bridge__gep__type__iterator.html#aa3fd4dca27e09df9ee726879624ae47e',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['oppts',['opPts',['../classSVF_1_1PersistentPointsToCache.html#ac7865b3ea1d76d2c522b465cc8e86639',1,'SVF::PersistentPointsToCache']]],
   ['options',['Options',['../classSVF_1_1Options.html',1,'SVF::Options'],['../classSVF_1_1Options.html#a08c25694f8f9e31eb8b116ad58c1c078',1,'SVF::Options::Options()']]],
@@ -74,6 +74,7 @@ var searchData=
   ['originalbvnumwords',['OriginalBvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#af2786eae11ee13845da336ad23bc97e9',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['originalsbvnumwords',['OriginalSbvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a639b887e30115c2a6cd108c65f18fcc1',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['out',['OUT',['../classSVF_1_1FlowSensitiveStat.html#ab11996ab5606f51c977b9b1385c13d71ac018f116c78ed5e314b52e5d743f3fa5',1,'SVF::FlowSensitiveStat']]],
+  ['outcfledges',['outCFLEdges',['../classSVF_1_1CFLNode.html#a47eba9df9dc664e56631ecc9b6146b33',1,'SVF::CFLNode']]],
   ['outedgebegin',['OutEdgeBegin',['../classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb',1,'SVF::GenericNode::OutEdgeBegin()'],['../classSVF_1_1GenericNode.html#a50219c203fb5a8a44fe22428699f26e7',1,'SVF::GenericNode::OutEdgeBegin() const']]],
   ['outedgeend',['OutEdgeEnd',['../classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d',1,'SVF::GenericNode::OutEdgeEnd()'],['../classSVF_1_1GenericNode.html#ace88b6c7561f61f747ff08f61e2c18bc',1,'SVF::GenericNode::OutEdgeEnd() const']]],
   ['outedgekindtosetmap',['OutEdgeKindToSetMap',['../classSVF_1_1SVFVar.html#a3775dd07e89ea6b25950a8b900a4ceab',1,'SVF::SVFVar']]],
@@ -93,6 +94,6 @@ var searchData=
   ['outs',['outs',['../namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61',1,'SVF::SVFUtil']]],
   ['outstream',['OutStream',['../namespaceSVF.html#a8bd74fdcb0e58d0249003df9c3fb8b31',1,'SVF']]],
   ['outupdatedvarmap',['outUpdatedVarMap',['../classSVF_1_1MutableIncDFPTData.html#af5f7db6c55037a0e117a36982736039e',1,'SVF::MutableIncDFPTData::outUpdatedVarMap()'],['../classSVF_1_1PersistentIncDFPTData.html#a054f8e2a0668387c092b2802e64a4df0',1,'SVF::PersistentIncDFPTData::outUpdatedVarMap()']]],
-  ['overlap',['overlap',['../classSVF_1_1CondPTAImpl.html#adf0acbb0c605278e43d88787d651bbd8',1,'SVF::CondPTAImpl::overlap()'],['../classSVF_1_1LocationSet.html#a002a0c8ec2528835d809bf7eb3ebc83fa8c76affbe3b39db53e8046cd5d79903c',1,'SVF::LocationSet::Overlap()']]],
+  ['overlap',['Overlap',['../classSVF_1_1LocationSet.html#a002a0c8ec2528835d809bf7eb3ebc83fa8c76affbe3b39db53e8046cd5d79903c',1,'SVF::LocationSet::Overlap()'],['../classSVF_1_1CondPTAImpl.html#adf0acbb0c605278e43d88787d651bbd8',1,'SVF::CondPTAImpl::overlap()']]],
   ['owned_5fmodules',['owned_modules',['../classSVF_1_1LLVMModuleSet.html#ae365189769640adb919a23c36978e5e2',1,'SVF::LLVMModuleSet']]]
 ];

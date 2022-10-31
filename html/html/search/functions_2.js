@@ -164,7 +164,7 @@ var searchData=
   ['constantsymid',['constantSymID',['../classSVF_1_1SymbolTableInfo.html#ab582424fdb6d9674c1bd4466cdfbe497',1,'SVF::SymbolTableInfo']]],
   ['constraintedge',['ConstraintEdge',['../classSVF_1_1ConstraintEdge.html#a2b2b7206af6463b82441ac7a5c78e637',1,'SVF::ConstraintEdge']]],
   ['constraintgraph',['ConstraintGraph',['../classSVF_1_1ConstraintGraph.html#a7e4c0c3e6e3c64d2729abd0f161cf550',1,'SVF::ConstraintGraph']]],
-  ['constraintgraphstat',['constraintGraphStat',['../classSVF_1_1CFLStat.html#a58ad0e3bdb93c985ffc7242dba074fea',1,'SVF::CFLStat::constraintGraphStat()'],['../classSVF_1_1AndersenStat.html#a5ad75166a80052f9e6fdd14ff7c8b948',1,'SVF::AndersenStat::constraintGraphStat()']]],
+  ['constraintgraphstat',['constraintGraphStat',['../classSVF_1_1AndersenStat.html#a5ad75166a80052f9e6fdd14ff7c8b948',1,'SVF::AndersenStat']]],
   ['constraintnode',['ConstraintNode',['../classSVF_1_1ConstraintNode.html#af8a23bea84c7a28a8ac4daa38586b88a',1,'SVF::ConstraintNode']]],
   ['containblackholenode',['containBlackHoleNode',['../classSVF_1_1PointerAnalysis.html#a56368369bc37e37b13f19e5eb1890063',1,'SVF::PointerAnalysis::containBlackHoleNode()'],['../classSVF_1_1CondPTAImpl.html#a8cd7b08bd978513cb0faacc47bbaf578',1,'SVF::CondPTAImpl::containBlackHoleNode()']]],
   ['containcallstr',['containCallStr',['../classSVF_1_1ContextCond.html#a6f5b0bbc0978220aaa990f5fd0ddce8d',1,'SVF::ContextCond']]],

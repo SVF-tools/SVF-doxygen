@@ -16,6 +16,7 @@ var searchData=
   ['idtoterminstmap',['idToTermInstMap',['../classSVF_1_1SaberCondAllocator.html#aee401aa2c7884888bbd26544bcd92881',1,'SVF::SaberCondAllocator']]],
   ['ignoredeadfun',['IgnoreDeadFun',['../classSVF_1_1Options.html#a50182faec95c6c4635df65a55148b040',1,'SVF::Options']]],
   ['incdfptdata',['INCDFPTData',['../classSVF_1_1Options.html#a5896e2aaf59305441a74ede0dfb85845',1,'SVF::Options']]],
+  ['incfledges',['inCFLEdges',['../classSVF_1_1CFLNode.html#a3a7d1ea890272e9905406638b12bdc30',1,'SVF::CFLNode']]],
   ['incycle',['incycle',['../classSVF_1_1CxtThread.html#a97d876697e682b23211a8f930fed7f32',1,'SVF::CxtThread']]],
   ['indcallsitetofunptrmap',['indCallSiteToFunPtrMap',['../classSVF_1_1SVFIR.html#a0a5f88766b7e11f1ea35befcbcea62dc',1,'SVF::SVFIR']]],
   ['index',['index',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a823afbcf2b99a38367b7bc8be17ff2ba',1,'SVF::VersionedFlowSensitive::SCC::NodeData::index()'],['../cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0',1,'index():&#160;cJSON.h'],['../cJSON_8cpp.html#a750b5d744c39a06bfb13e6eb010e35d0',1,'index():&#160;cJSON.cpp']]],

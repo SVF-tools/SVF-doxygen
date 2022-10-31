@@ -82,7 +82,7 @@ var searchData=
   ['context',['context',['../classSVF_1_1ContextCond.html#ac431eae00244cc7792b6e7e00634d535',1,'SVF::ContextCond::context()'],['../classSVF_1_1CxtStmtDPItem.html#a96f1d7c309e3b69af66200e2cfb5a466',1,'SVF::CxtStmtDPItem::context()'],['../classSVF_1_1CxtDPItem.html#ab89e9f588054ad8a99d9af8e756c951b',1,'SVF::CxtDPItem::context()']]],
   ['contextdda',['contextDDA',['../classSVF_1_1DDAStat.html#ac3fb8b15c5308c926209a941c7cf62e1',1,'SVF::DDAStat']]],
   ['contextinsensitive',['ContextInsensitive',['../classSVF_1_1Options.html#ac3ad7d0cf734e867b91a081aad1faff2',1,'SVF::Options']]],
-  ['copy',['copy',['../CFLGrammar_8txt.html#a7669ee67a0563250c1efaa24d130e1ac',1,'copy():&#160;CFLGrammar.txt'],['../cJSON_8cpp.html#a7669ee67a0563250c1efaa24d130e1ac',1,'copy():&#160;cJSON.cpp']]],
+  ['copy',['copy',['../cJSON_8cpp.html#a7669ee67a0563250c1efaa24d130e1ac',1,'cJSON.cpp']]],
   ['copyinedges',['copyInEdges',['../classSVF_1_1ConstraintNode.html#a4d413d64bf554ecdc72709afeeb85775',1,'SVF::ConstraintNode']]],
   ['copyoutedges',['copyOutEdges',['../classSVF_1_1ConstraintNode.html#a12df688fd9b5b7617daadc7bee0fff40',1,'SVF::ConstraintNode']]],
   ['copytime',['copyTime',['../classSVF_1_1FlowSensitive.html#a888d6334e5e226c634680e4c0674dcfb',1,'SVF::FlowSensitive']]],

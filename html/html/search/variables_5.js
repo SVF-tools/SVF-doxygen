@@ -1,6 +1,7 @@
 var searchData=
 [
   ['e',['e',['../classSVF_1_1Z3Expr.html#ae14d9fa0613b196420b90d20cc8df041',1,'SVF::Z3Expr']]],
+  ['ebnfsigns',['EBNFSigns',['../classSVF_1_1GrammarBase.html#a7909a5f90ed1678a178f18259f0b66a9',1,'SVF::GrammarBase']]],
   ['edge2pts',['edge2pts',['../classSVF_1_1MTASVFGBuilder.html#a1c0de33bba2f05f14140d872c345ab38',1,'SVF::MTASVFGBuilder']]],
   ['edgeflag',['edgeFlag',['../classSVF_1_1GenericEdge.html#aa1f446e93750580dce04a127231dd1a3',1,'SVF::GenericEdge']]],
   ['edgeid',['edgeId',['../classSVF_1_1ConstraintEdge.html#af51f8e9b3c1dd68855581d0d1739ba29',1,'SVF::ConstraintEdge::edgeId()'],['../classSVF_1_1SVFStmt.html#a593cc8136f2138a518476405e667e060',1,'SVF::SVFStmt::edgeId()']]],
@@ -21,7 +22,7 @@ var searchData=
   ['entry',['entry',['../classSVF_1_1CallPE.html#a88e420e259b8d7d34c9850ddde53d372',1,'SVF::CallPE']]],
   ['entryfuncset',['entryFuncSet',['../classSVF_1_1TCT.html#a140eaf9440ae9d52dbfb659967aa449a',1,'SVF::TCT']]],
   ['entryicfgedges',['entryICFGEdges',['../classSVF_1_1SVFLoop.html#a681d712db88d105c8a2f758de3d7e72e',1,'SVF::SVFLoop']]],
-  ['epsilon',['epsilon',['../CFLGrammar_8txt.html#a114c2e5cd44b3ea4720e9191ed819f3b',1,'epsilon():&#160;CFLGrammar.txt'],['../VFG_8txt.html#ac5f2eebeadca57b6dd4a532ba5f01757',1,'epsilon():&#160;VFG.txt']]],
+  ['epsilon',['epsilon',['../VFG_8txt.html#ac5f2eebeadca57b6dd4a532ba5f01757',1,'VFG.txt']]],
   ['epsilonprods',['epsilonProds',['../classSVF_1_1CFLGrammar.html#a4d9770a2b935bcad74ae551389925f74',1,'SVF::CFLGrammar']]],
   ['equivalentobject',['equivalentObject',['../classSVF_1_1VersionedFlowSensitive.html#a2d451d89f99a4bff828b682723df477f',1,'SVF::VersionedFlowSensitive']]],
   ['evaltime',['EvalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1d98862e19affdd08740f85490d0d856',1,'SVF::NodeIDAllocator::Clusterer']]],
