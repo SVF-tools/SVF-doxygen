@@ -71,7 +71,7 @@ var searchData=
   ['numofgep',['numOfGep',['../classSVF_1_1SVFGStat.html#a862cd075a7c9d5019acfabe608ab7905',1,'SVF::SVFGStat']]],
   ['numofintraedges',['numOfIntraEdges',['../classSVF_1_1ICFGStat.html#a3ddf933064f2a7f2efbd3a1af2ae7658',1,'SVF::ICFGStat']]],
   ['numofintranodes',['numOfIntraNodes',['../classSVF_1_1ICFGStat.html#ad88dbfaabae9b36f02a6e6e815d08e3e',1,'SVF::ICFGStat']]],
-  ['numofiteration',['numOfIteration',['../classSVF_1_1CFLBase.html#a6f1f4ae5ad06fb4f669c9bdb21f207a3',1,'SVF::CFLBase::numOfIteration()'],['../classSVF_1_1WPASolver.html#ab3369caa278da03e6e6697a839985cd6',1,'SVF::WPASolver::numOfIteration()']]],
+  ['numofiteration',['numOfIteration',['../classSVF_1_1CFLBase.html#aa807cf1b8605a463d6d68d5096f3e0e8',1,'SVF::CFLBase::numOfIteration()'],['../classSVF_1_1WPASolver.html#ab3369caa278da03e6e6697a839985cd6',1,'SVF::WPASolver::numOfIteration()']]],
   ['numofload',['numOfLoad',['../classSVF_1_1SVFGStat.html#a7c80f2332b97a3228e2ad7621162167a',1,'SVF::SVFGStat']]],
   ['numofloadhasmu',['NumOfLoadHasMu',['../classSVF_1_1MemSSAStat.html#ad3139d2643f5e79dcd4ca9569ebbe7df',1,'SVF::MemSSAStat']]],
   ['numofloadmu',['NumOfLoadMu',['../classSVF_1_1MemSSAStat.html#a284dbb01e051945a40179b315bdb112f',1,'SVF::MemSSAStat']]],
