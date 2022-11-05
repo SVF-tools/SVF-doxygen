@@ -73,8 +73,8 @@ var searchData=
   ['svfgwithindirectcall',['SVFGWithIndirectCall',['../classSVF_1_1Options.html#a982b4cd71ccafd07d94f10a0a2e953c2',1,'SVF::Options']]],
   ['svfir',['svfir',['../classSVF_1_1CFLBase.html#a9e6cbab31612da4a1f8f660d1fabc4c0',1,'SVF::CFLBase']]],
   ['svfmain',['SVFMain',['../classSVF_1_1Options.html#a868fa5069b01b7a7dfbc5fb99cb76385',1,'SVF::Options']]],
-  ['svfmod',['svfMod',['../classSVF_1_1CHGraph.html#a62a3ccdbc55381d5f8d96dc23141f2e5',1,'SVF::CHGraph::svfMod()'],['../classSVF_1_1PointerAnalysis.html#a7e8b3f6843e5ea75fd189162d2cd60a5',1,'SVF::PointerAnalysis::svfMod()'],['../classSVF_1_1SVFIRBuilder.html#aa67bbd366b93fb1ec7a540c83566c977',1,'SVF::SVFIRBuilder::svfMod()']]],
-  ['svfmodule',['svfModule',['../classSVF_1_1DCHGraph.html#a85a3c9a6a60a4379717773f8722ae42e',1,'SVF::DCHGraph::svfModule()'],['../classSVF_1_1LLVMModuleSet.html#a43832e93a42ae43d44b0cc160981678f',1,'SVF::LLVMModuleSet::svfModule()']]],
+  ['svfmod',['svfMod',['../classSVF_1_1CHGraph.html#a62a3ccdbc55381d5f8d96dc23141f2e5',1,'SVF::CHGraph::svfMod()'],['../classSVF_1_1PointerAnalysis.html#a7e8b3f6843e5ea75fd189162d2cd60a5',1,'SVF::PointerAnalysis::svfMod()']]],
+  ['svfmodule',['svfModule',['../classSVF_1_1SVFIR.html#a8bfa675eed3c60a21134faa8e0b9e6b9',1,'SVF::SVFIR::svfModule()'],['../classSVF_1_1DCHGraph.html#a85a3c9a6a60a4379717773f8722ae42e',1,'SVF::DCHGraph::svfModule()'],['../classSVF_1_1LLVMModuleSet.html#a43832e93a42ae43d44b0cc160981678f',1,'SVF::LLVMModuleSet::svfModule()'],['../classSVF_1_1SVFIRBuilder.html#a6ca1b9d5bb267806f8aaae5a94ed36cc',1,'SVF::SVFIRBuilder::svfModule()']]],
   ['symid',['symId',['../classSVF_1_1MemObj.html#a37f4e34b7f7dd6bfd4379cf3552e9046',1,'SVF::MemObj']]],
   ['syminfo',['symInfo',['../classSVF_1_1IRGraph.html#a679145e7bf818b0a19005dc8e2845fe1',1,'SVF::IRGraph::symInfo()'],['../classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c',1,'SVF::SymbolTableInfo::symInfo()'],['../classSVF_1_1SymbolTableBuilder.html#a3100246d9b0a58e53f2dbc8acf231afb',1,'SVF::SymbolTableBuilder::symInfo()']]],
   ['symtabprint',['SymTabPrint',['../classSVF_1_1Options.html#abbfd1d7e985483c486394d8db85b6a85',1,'SVF::Options']]]

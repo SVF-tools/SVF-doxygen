@@ -138,6 +138,7 @@ var searchData=
   ['addgepvalnode',['addGepValNode',['../classSVF_1_1SVFIR.html#a781ffc0194fd501dcb34f1892a393c33',1,'SVF::SVFIR']]],
   ['addgepvfgnode',['addGepVFGNode',['../classSVF_1_1VFG.html#a4fb321fb0ff2a06c1065506552b862aa',1,'SVF::VFG']]],
   ['addglobalblackholeaddredge',['addGlobalBlackHoleAddrEdge',['../classSVF_1_1SVFIRBuilder.html#a55d8504dbc766c4ede031299a37417ef',1,'SVF::SVFIRBuilder']]],
+  ['addglobalicfgnode',['addGlobalICFGNode',['../classSVF_1_1ICFG.html#adce53ce7392af67e1c6764ecba6fe774',1,'SVF::ICFG']]],
   ['addglobalpagedge',['addGlobalPAGEdge',['../classSVF_1_1SVFIR.html#ae3d9b4acb63a7dbe316e87bad4e3987a',1,'SVF::SVFIR']]],
   ['addglobalset',['addGlobalSet',['../classSVF_1_1SVFModule.html#a9aabe6d24bea26f3b5c7cab5a0fc3053',1,'SVF::SVFModule']]],
   ['addgnode',['addGNode',['../classSVF_1_1GenericGraph.html#a0a8831a5429005ff9d71adbd6bf3994f',1,'SVF::GenericGraph']]],

@@ -36,7 +36,7 @@ var searchData=
   ['lookupintersections',['lookupIntersections',['../classSVF_1_1PersistentPointsToCache.html#a15d3235017b35f4a5c668d0b6626faff',1,'SVF::PersistentPointsToCache']]],
   ['lookupunions',['lookupUnions',['../classSVF_1_1PersistentPointsToCache.html#ace976f138cf1b8ab6bbf7a5c5d0b60b8',1,'SVF::PersistentPointsToCache']]],
   ['loopanalysis',['LoopAnalysis',['../classSVF_1_1Options.html#a420e6656b02fd900430d51b8b4a5c6c1',1,'SVF::Options']]],
-  ['loopbound',['LoopBound',['../classSVF_1_1Options.html#ab7161ca7a809792af82e5aabdfcc3bfb',1,'SVF::Options::LoopBound()'],['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()']]],
+  ['loopbound',['loopBound',['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()'],['../classSVF_1_1Options.html#ab7161ca7a809792af82e5aabdfcc3bfb',1,'SVF::Options::LoopBound()']]],
   ['loopinfobuilder',['loopInfoBuilder',['../classSVF_1_1TCT.html#ae64d6203b41c92d4ca617b8e976b88b2',1,'SVF::TCT']]],
   ['lowlink',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
   ['ls',['ls',['../classSVF_1_1NormalGepCGEdge.html#a7cbcaa28acde49ef0b03a8554a41344b',1,'SVF::NormalGepCGEdge::ls()'],['../classSVF_1_1GepStmt.html#a543a3f4801b22719f7b9677246bf2ac7',1,'SVF::GepStmt::ls()'],['../classSVF_1_1GepValVar.html#a2ee5e9a2e5a92b32fd81fda09b560ad6',1,'SVF::GepValVar::ls()'],['../classSVF_1_1GepObjVar.html#a55b057663180420c6bb09bf849d83f6b',1,'SVF::GepObjVar::ls()']]],
