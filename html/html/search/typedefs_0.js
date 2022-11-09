@@ -8,7 +8,6 @@ var searchData=
   ['actualretsvfgnode',['ActualRetSVFGNode',['../namespaceSVF.html#a77b8b8ca831e1eba3e47f2ca29667f67',1,'SVF']]],
   ['addrsvfgnode',['AddrSVFGNode',['../namespaceSVF.html#a959453cbb8ff2d852b526fd1ff74ce49',1,'SVF']]],
   ['alias_5fiterator',['alias_iterator',['../classSVF_1_1SVFModule.html#abee99d29b7d4c4915a386895c755009c',1,'SVF::SVFModule']]],
-  ['aliasanalysis',['AliasAnalysis',['../classSVF_1_1PointerAnalysis.html#ac87eb408daafd5d556ecd8633f7d4f1f',1,'SVF::PointerAnalysis']]],
   ['aliasset',['AliasSet',['../namespaceSVF.html#a2b2887cf75225bc9127338b4cf30aa85',1,'SVF']]],
   ['aliassettype',['AliasSetType',['../classSVF_1_1SVFModule.html#a654097a3df71f8eac489e8ddae8de30c',1,'SVF::SVFModule']]],
   ['allocainst',['AllocaInst',['../namespaceSVF.html#a3bacb4f95c73e6d794901d01c6b65a83',1,'SVF']]],

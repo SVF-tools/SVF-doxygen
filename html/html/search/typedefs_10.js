@@ -15,7 +15,6 @@ var searchData=
   ['simpletype',['SimpleType',['../structSVF_1_1SVFUtil_1_1simplify__type.html#a40c0d9a74681d3eaa7172ba137d489e4',1,'SVF::SVFUtil::simplify_type::SimpleType()'],['../structSVF_1_1SVFUtil_1_1simplify__type_3_01const_01From_01_4.html#afdc334dc0c584651f9ab538e38cf3aff',1,'SVF::SVFUtil::simplify_type&lt; const From &gt;::SimpleType()']]],
   ['singlecondvar',['SingleCondVar',['../classSVF_1_1CondPointsToSet.html#a0ef73bd2c1b42439ee6f265e07f17514',1,'SVF::CondPointsToSet']]],
   ['size_5ftype',['size_type',['../structSVF_1_1SparseBitVectorElement.html#ad9e38352db094adcdfb2964f325d9e53',1,'SVF::SparseBitVectorElement']]],
-  ['smallbbvector',['SmallBBVector',['../namespaceSVF.html#a02be4933b76c2baa7fdbe8b290e12bb3',1,'SVF']]],
   ['smdiagnostic',['SMDiagnostic',['../namespaceSVF.html#a86863d104a3930b3a806935d92ddbf30',1,'SVF']]],
   ['stmtsvfgnode',['StmtSVFGNode',['../namespaceSVF.html#a26bd4f89dc154b9c6d34b6a517777934',1,'SVF']]],
   ['storechi',['STORECHI',['../classSVF_1_1SVFG.html#ad14cdbb3f1df1f716aa03b4d39f4e52b',1,'SVF::SVFG::STORECHI()'],['../classSVF_1_1MemSSA.html#a150e9d53ced1c143bba2d1026f739fa4',1,'SVF::MemSSA::STORECHI()']]],

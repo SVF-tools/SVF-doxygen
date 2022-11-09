@@ -181,7 +181,7 @@ var searchData=
   ['svfgnodelockspan',['SVFGNodeLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a43f4d595b31259576b141cb99883938e',1,'SVF::SVFGNodeLockSpan']]],
   ['svfgopt',['SVFGOPT',['../classSVF_1_1SVFGOPT.html#a239475c15b39d54c632427307b8e9350',1,'SVF::SVFGOPT']]],
   ['svfgsccdetection',['SVFGSCCDetection',['../classSVF_1_1DDAVFSolver.html#aba0ec611a5cfd096ac0b8b11e0bd5580',1,'SVF::DDAVFSolver']]],
-  ['svfgstat',['SVFGStat',['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()'],['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()']]],
+  ['svfgstat',['svfgStat',['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()'],['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()']]],
   ['svfir',['SVFIR',['../classSVF_1_1SVFIR.html#abf511f82cdbf7a6d9b6da167aee57636',1,'SVF::SVFIR']]],
   ['svfirbuilder',['SVFIRBuilder',['../classSVF_1_1SVFIRBuilder.html#a1ecae204a349b69031f0edd7df7ca708',1,'SVF::SVFIRBuilder']]],
   ['svfloop',['SVFLoop',['../classSVF_1_1SVFLoop.html#a25b9a079f48aa0374c91be6a1e9697f8',1,'SVF::SVFLoop']]],

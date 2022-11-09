@@ -318,7 +318,6 @@ var searchData=
   ['alias_5fend',['alias_end',['../classSVF_1_1SVFModule.html#a3cfd0983849950099d1e8f8e0fda42bc',1,'SVF::SVFModule::alias_end()'],['../classSVF_1_1SVFModule.html#a1bb5c818ec63d81a238f3d242a89079f',1,'SVF::SVFModule::alias_end() const']]],
   ['alias_5fiterator',['alias_iterator',['../classSVF_1_1SVFModule.html#abee99d29b7d4c4915a386895c755009c',1,'SVF::SVFModule']]],
   ['alias_5fvalidation',['alias_validation',['../classSVF_1_1PointerAnalysis.html#aac1a133d478bd14c74309d9c4eaf0c8e',1,'SVF::PointerAnalysis']]],
-  ['aliasanalysis',['AliasAnalysis',['../classSVF_1_1PointerAnalysis.html#ac87eb408daafd5d556ecd8633f7d4f1f',1,'SVF::PointerAnalysis']]],
   ['aliascflgraphbuilder',['AliasCFLGraphBuilder',['../classSVF_1_1AliasCFLGraphBuilder.html',1,'SVF']]],
   ['aliascheckrule',['AliasCheckRule',['../classSVF_1_1WPAPass.html#a4505a1882956feda3cf83c788149394d',1,'SVF::WPAPass']]],
   ['aliasddaclient',['AliasDDAClient',['../classSVF_1_1AliasDDAClient.html',1,'SVF::AliasDDAClient'],['../classSVF_1_1AliasDDAClient.html#af55b1ccfa6cfaa6ec079b19d62288cb6',1,'SVF::AliasDDAClient::AliasDDAClient()']]],
