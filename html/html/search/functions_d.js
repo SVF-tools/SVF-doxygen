@@ -1,7 +1,7 @@
 var searchData=
 [
   ['neg',['NEG',['../classSVF_1_1Z3Expr.html#a9a545e516e6dee37310ad02481a84356',1,'SVF::Z3Expr']]],
-  ['newcond',['newCond',['../classSVF_1_1SaberCondAllocator.html#a5a39b2efcec1c77e7f06dda7b64c9765',1,'SVF::SaberCondAllocator']]],
+  ['newcond',['newCond',['../classSVF_1_1SaberCondAllocator.html#ada4902d6ee3ad2d37e31c710a36dcc74',1,'SVF::SaberCondAllocator']]],
   ['newpointstoid',['newPointsToId',['../classSVF_1_1PersistentPointsToCache.html#a52ec4a787a199bb4d7553e8bafa9c127',1,'SVF::PersistentPointsToCache']]],
   ['newssaname',['newSSAName',['../classSVF_1_1MemSSA.html#a381a35d48ce2f8e348ddbbb9ce526ca8',1,'SVF::MemSSA']]],
   ['nextsetindex',['nextSetIndex',['../classSVF_1_1CoreBitVector.html#a087f69adea5e9e83bd908a1ab0ee1383',1,'SVF::CoreBitVector']]],

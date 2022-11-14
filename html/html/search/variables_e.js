@@ -1,7 +1,7 @@
 var searchData=
 [
   ['n',['n',['../cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a',1,'cJSON.cpp']]],
-  ['name',['name',['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name():&#160;cJSON.h'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name():&#160;cJSON.cpp']]],
+  ['name',['name',['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name()'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name():&#160;cJSON.h'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name():&#160;cJSON.cpp']]],
   ['negconds',['negConds',['../classSVF_1_1SaberCondAllocator.html#a4267ed81d5100d49581a4216f46e660c',1,'SVF::SaberCondAllocator']]],
   ['newbvnumwords',['NewBvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#af3fe4b4098898ee38928c9db30ea0fe9',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['newchild',['newchild',['../cJSON_8cpp.html#a81f8a22ccfd48d5d5f5b911c24892ca9',1,'cJSON.cpp']]],
@@ -28,7 +28,7 @@ var searchData=
   ['normalized',['normalized',['../classSVF_1_1CondPTAImpl.html#ab4115f25e2e477bfd73d01f069f47241',1,'SVF::CondPTAImpl']]],
   ['null',['NULL',['../cJSON_8cpp.html#a1a05ede2ad100bf5de5dfa7ccdfa4397',1,'cJSON.cpp']]],
   ['nullpointerid',['nullPointerId',['../classSVF_1_1NodeIDAllocator.html#a1e3a98be74d5dfd3b4c1b5f9c0941353',1,'SVF::NodeIDAllocator']]],
-  ['nullptrsyms',['nullPtrSyms',['../classSVF_1_1SVFModule.html#a54f4857ba920d4d7c36d5258616d5dae',1,'SVF::SVFModule']]],
+  ['nullptrsym',['nullptrSym',['../classSVF_1_1SVFValue.html#a1f4c639152bdcc049c71b9f449e69583',1,'SVF::SVFValue']]],
   ['number',['number',['../cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7',1,'number():&#160;cJSON.h'],['../cJSON_8cpp.html#a0b3e94800c28aaf801bbbf0b9b69fee4',1,'number():&#160;cJSON.cpp']]],
   ['numgtintregions',['NumGtIntRegions',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ad7cb36a1f0f67864fb8290e9dfd7b639',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['numnodes',['numNodes',['../classSVF_1_1NodeIDAllocator.html#a8e76e0da58f0a5bdbd8118ac419cfa62',1,'SVF::NodeIDAllocator']]],

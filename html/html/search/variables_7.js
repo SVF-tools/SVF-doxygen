@@ -27,5 +27,6 @@ var searchData=
   ['grammarbase',['grammarBase',['../classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f',1,'SVF::CFLBase']]],
   ['grammarfilename',['GrammarFilename',['../classSVF_1_1Options.html#aa929e2ae2c0a78181c3a1311bfe73596',1,'SVF::Options']]],
   ['graph',['graph',['../classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f',1,'SVF::CFLBase::graph()'],['../classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2',1,'SVF::CFLSolver::graph()'],['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat::graph()']]],
-  ['graphtxt',['Graphtxt',['../classSVF_1_1Options.html#aa5c4bc8e55a056adcd7a6f8946ad5f38',1,'SVF::Options']]]
+  ['graphtxt',['Graphtxt',['../classSVF_1_1Options.html#aa5c4bc8e55a056adcd7a6f8946ad5f38',1,'SVF::Options']]],
+  ['gv',['gv',['../classSVF_1_1SVFGlobalValue.html#a0c3df0cfc0ede9a438e4790674afea13',1,'SVF::SVFGlobalValue']]]
 ];
