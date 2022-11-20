@@ -38,6 +38,7 @@ var searchData=
   ['dr_5fnot_5fcheck',['DR_NOT_CHECK',['../classSVF_1_1Annotator.html#af220da6fe6fc879d15cc34ab397c5ba1',1,'SVF::Annotator']]],
   ['dst',['dst',['../classSVF_1_1GenericEdge.html#aa41cb7482bdab1ba328f4b94f30f3ee4',1,'SVF::GenericEdge']]],
   ['dtbbsmap',['dtBBsMap',['../classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3',1,'SVF::SVFLoopAndDomInfo']]],
+  ['dtraits',['DTraits',['../classllvm_1_1GraphWriter.html#aed76f440aab643d1af5dbfda1a3f9c78',1,'llvm::GraphWriter']]],
   ['dumpcha',['DumpCHA',['../classSVF_1_1Options.html#ab13a47f6dd4eedfaa607d36448a1d456',1,'SVF::Options']]],
   ['dumpfree',['DumpFree',['../classSVF_1_1Options.html#a2ef679d4177438655577e7fef7c0cc90',1,'SVF::Options']]],
   ['dumpicfg',['DumpICFG',['../classSVF_1_1Options.html#aea29a835c54fab800117e57de00e0b1e',1,'SVF::Options']]],

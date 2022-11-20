@@ -2,6 +2,7 @@ var searchData=
 [
   ['raceresultvalidator',['RaceResultValidator',['../classSVF_1_1RaceResultValidator.html',1,'SVF']]],
   ['racevalidator',['RaceValidator',['../classSVF_1_1RaceValidator.html',1,'SVF']]],
+  ['referenceproxy',['ReferenceProxy',['../classllvm_1_1iterator__facade__base_1_1ReferenceProxy.html',1,'llvm::iterator_facade_base']]],
   ['retcfgedge',['RetCFGEdge',['../classSVF_1_1RetCFGEdge.html',1,'SVF']]],
   ['retdirsvfgedge',['RetDirSVFGEdge',['../classSVF_1_1RetDirSVFGEdge.html',1,'SVF']]],
   ['reticfgnode',['RetICFGNode',['../classSVF_1_1RetICFGNode.html',1,'SVF']]],

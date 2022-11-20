@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['dot',['DOT',['../namespacellvm_1_1DOT.html',1,'llvm']]],
+  ['graphprogram',['GraphProgram',['../namespacellvm_1_1GraphProgram.html',1,'llvm']]],
   ['label2kindmap',['label2KindMap',['../classSVF_1_1CFLGraphBuilder.html#a7117dbeceeef7a9fcaeee0a84a171590',1,'SVF::CFLGraphBuilder']]],
   ['landingpadinst',['LandingPadInst',['../namespaceSVF.html#afa513a3c76371907221ee2b1ef289c71',1,'SVF']]],
   ['largestregion',['LargestRegion',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a172d72ae4ae45fa2baf2f20ff2b499dc',1,'SVF::NodeIDAllocator::Clusterer']]],
@@ -49,7 +51,7 @@ var searchData=
   ['loadset',['LoadSet',['../classSVF_1_1MTA.html#a61ad028aa33e2fc5c9d05b9f735bd62e',1,'SVF::MTA::LoadSet()'],['../classSVF_1_1MTAAnnotator.html#a469851829bf1105fe8faac44b4abbfdd',1,'SVF::MTAAnnotator::loadset()']]],
   ['loadsrcnodes',['loadSrcNodes',['../classSVF_1_1AliasDDAClient.html#a246448efd1ff5da683a6ffe9f759e282',1,'SVF::AliasDDAClient']]],
   ['loadstmt',['LoadStmt',['../classSVF_1_1LoadStmt.html',1,'SVF::LoadStmt'],['../classSVF_1_1LoadStmt.html#a4bd939005c7c6a5da4ed3b6be6ef1a22',1,'SVF::LoadStmt::LoadStmt()'],['../classSVF_1_1LoadStmt.html#a2efafa925a30de73735ca73b1632b5f8',1,'SVF::LoadStmt::LoadStmt(const LoadStmt &amp;)'],['../classSVF_1_1LoadStmt.html#a92c5817abfaa1f6fbc9ee911f458dfb2',1,'SVF::LoadStmt::LoadStmt(SVFVar *s, SVFVar *d)']]],
-  ['loadstomrsmap',['loadsToMRsMap',['../classSVF_1_1MRGenerator.html#a0d8229b1f0b8428708e923d19096e4ba',1,'SVF::MRGenerator::loadsToMRsMap()'],['../classSVF_1_1MRGenerator.html#a273b2634adcfa10a08924517e8d51175',1,'SVF::MRGenerator::LoadsToMRsMap()']]],
+  ['loadstomrsmap',['LoadsToMRsMap',['../classSVF_1_1MRGenerator.html#a273b2634adcfa10a08924517e8d51175',1,'SVF::MRGenerator::LoadsToMRsMap()'],['../classSVF_1_1MRGenerator.html#a0d8229b1f0b8428708e923d19096e4ba',1,'SVF::MRGenerator::loadsToMRsMap()']]],
   ['loadstopointstomap',['loadsToPointsToMap',['../classSVF_1_1MRGenerator.html#af47e15d6b8c15d547a718f3577513975',1,'SVF::MRGenerator::loadsToPointsToMap()'],['../classSVF_1_1MRGenerator.html#acfadd565b5c978c9417e059b3ea7588c',1,'SVF::MRGenerator::LoadsToPointsToMap()']]],
   ['loadsvfgnode',['LoadSVFGNode',['../namespaceSVF.html#a3ce49be3724e1e8423ccdfa726fbf6c8',1,'SVF']]],
   ['loadtime',['loadTime',['../classSVF_1_1FlowSensitive.html#aab4f70210eb1e6447a24697d3b459067',1,'SVF::FlowSensitive']]],
@@ -94,7 +96,7 @@ var searchData=
   ['loopanalysis',['LoopAnalysis',['../classSVF_1_1Options.html#a420e6656b02fd900430d51b8b4a5c6c1',1,'SVF::Options']]],
   ['loopanddom',['loopAndDom',['../classSVF_1_1SVFFunction.html#aefde3a0671e34541a4ad5d7a6dfaa5d1',1,'SVF::SVFFunction']]],
   ['loopbbs',['LoopBBs',['../classSVF_1_1MHP.html#a2c3dcb480ef332bd4aff991df39f3e34',1,'SVF::MHP::LoopBBs()'],['../classSVF_1_1ForkJoinAnalysis.html#a159bbd4352fcffa93c97281ab9d229b1',1,'SVF::ForkJoinAnalysis::LoopBBs()'],['../classSVF_1_1TCT.html#aeb61fffa4861cb1146676869d85d3773',1,'SVF::TCT::LoopBBs()'],['../classSVF_1_1SVFLoopAndDomInfo.html#ae5e2b154313b4330bb015050aec72a1f',1,'SVF::SVFLoopAndDomInfo::LoopBBs()'],['../classSVF_1_1SVFFunction.html#a837e67c823d5323c5462e78f5bbe6e64',1,'SVF::SVFFunction::LoopBBs()']]],
-  ['loopbound',['loopBound',['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()'],['../classSVF_1_1Options.html#ab7161ca7a809792af82e5aabdfcc3bfb',1,'SVF::Options::LoopBound()']]],
+  ['loopbound',['LoopBound',['../classSVF_1_1Options.html#ab7161ca7a809792af82e5aabdfcc3bfb',1,'SVF::Options::LoopBound()'],['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()']]],
   ['loopcontainsbb',['loopContainsBB',['../classSVF_1_1SVFLoopAndDomInfo.html#adc010d8c6b2a3fe1a99f39552be5b117',1,'SVF::SVFLoopAndDomInfo::loopContainsBB()'],['../classSVF_1_1SVFFunction.html#a1cf90f3c56ae200bef2a9e6a67ff97bf',1,'SVF::SVFFunction::loopContainsBB()']]],
   ['loopinfo',['LoopInfo',['../namespaceSVF.html#a77e088bfe47c0b0ddcbbe0693dec6fe5',1,'SVF']]],
   ['lowlink',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],

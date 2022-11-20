@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['f',['F',['../classllvm_1_1mapped__iter.html#a9bd10b1c45d544ecba54657f762f8258',1,'llvm::mapped_iter']]],
   ['false',['false',['../cJSON_8cpp.html#a65e9886d74aaee76545e83dd09011727',1,'cJSON.cpp']]],
   ['fastcluster_2ecpp',['fastcluster.cpp',['../fastcluster_8cpp.html',1,'']]],
   ['fastcluster_2eh',['fastcluster.h',['../fastcluster_8h.html',1,'']]],
@@ -8,6 +9,7 @@ var searchData=
   ['fastclustertime',['FastClusterTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ae78d2b60035350c634f6f58d7a043c22',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['fbar',['Fbar',['../PEGGrammar_8txt.html#a1e8b28eb87d57c33c5c45731db639c91',1,'Fbar():&#160;PEGGrammar.txt'],['../PEGGrammar_8txt.html#a381299bc74db18cd7c54b9e856fca447',1,'Fbar(M ? copybar) *:&#160;PEGGrammar.txt']]],
   ['fc_5fisnan',['fc_isnan',['../fastcluster_8cpp.html#a8abcd9d66492e761592578e82ce2cba0',1,'fastcluster.cpp']]],
+  ['fdp',['FDP',['../namespacellvm_1_1GraphProgram.html#a0ad4685976f8c4d4a697a53fbe05d10ba369c1aafe1a79637a098d1ac61c3c940',1,'llvm::GraphProgram']]],
   ['fenceinst',['FenceInst',['../namespaceSVF.html#a61f0d928e58d4f7e21616f770ae1080b',1,'SVF']]],
   ['fieldexpand',['fieldExpand',['../classSVF_1_1AndersenSFR.html#aa768e5cd0a762d17e2ec2baaad0486bf',1,'SVF::AndersenSFR']]],
   ['fieldreps',['FieldReps',['../classSVF_1_1AndersenSFR.html#a52aa0c2a02a0db6700c4a7a8819d0a5d',1,'SVF::AndersenSFR::FieldReps()'],['../classSVF_1_1AndersenSFR.html#a99337c429aebe9046c65068b44eff7cc',1,'SVF::AndersenSFR::fieldReps()']]],
@@ -168,7 +170,7 @@ var searchData=
   ['funtoidmapty',['FunToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#acd5c1096bb8e93a2a708cd7eef66e7d8',1,'SVF::SymbolTableInfo']]],
   ['funtointermap',['FunToInterMap',['../classSVF_1_1IntraDisjointMRG.html#ad59c11753db0b310246418df4c62f639',1,'SVF::IntraDisjointMRG']]],
   ['funtomodsmap',['funToModsMap',['../classSVF_1_1MRGenerator.html#a2c94bfa19ad8d1d6360b12693c8b891d',1,'SVF::MRGenerator']]],
-  ['funtomrsmap',['funToMRsMap',['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator::funToMRsMap()'],['../classSVF_1_1MRGenerator.html#a090070379a09460aef0c07270d32d27b',1,'SVF::MRGenerator::FunToMRsMap()']]],
+  ['funtomrsmap',['FunToMRsMap',['../classSVF_1_1MRGenerator.html#a090070379a09460aef0c07270d32d27b',1,'SVF::MRGenerator::FunToMRsMap()'],['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator::funToMRsMap()']]],
   ['funtonodebsmap',['FunToNodeBSMap',['../classSVF_1_1MRGenerator.html#ab01e492f002c73e2c89eb0b4c8f9647d',1,'SVF::MRGenerator']]],
   ['funtopagedgesetmap',['FunToPAGEdgeSetMap',['../classSVF_1_1SVFIR.html#ac918466df08a2ab30472f3e57935f005',1,'SVF::SVFIR']]],
   ['funtopointstomap',['funToPointsToMap',['../classSVF_1_1MRGenerator.html#a05c7a5ddbe3079f63be76c35298d1c2b',1,'SVF::MRGenerator::funToPointsToMap()'],['../classSVF_1_1MRGenerator.html#ad492e2940936fc7df06127f0cb94d47a',1,'SVF::MRGenerator::FunToPointsToMap()']]],

@@ -11,6 +11,7 @@ var searchData=
   ['cflfici_5fwpa',['CFLFICI_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a164c6de3baace1c63db75a228a5816bb',1,'SVF::PointerAnalysis']]],
   ['cflfsci_5fwpa',['CFLFSCI_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85afbe666887476ce8620aca97a159921bc',1,'SVF::PointerAnalysis']]],
   ['cflfscs_5fwpa',['CFLFSCS_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85ab87dcf990c05d31f91b9bfdfcfb54b7d',1,'SVF::PointerAnalysis']]],
+  ['circo',['CIRCO',['../namespacellvm_1_1GraphProgram.html#a0ad4685976f8c4d4a697a53fbe05d10bab89542c270041afd91cb19369af6dc31',1,'llvm::GraphProgram']]],
   ['ck_5falloc',['CK_ALLOC',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056acd7e3bca6e36e08205576482b1b0221e',1,'SVF::SaberCheckerAPI']]],
   ['ck_5fdummy',['CK_DUMMY',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056a7e06261f283161194d11f4d27c417c45',1,'SVF::SaberCheckerAPI']]],
   ['ck_5ffclose',['CK_FCLOSE',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056a731dcaf32786abf31c43be180dd366cb',1,'SVF::SaberCheckerAPI']]],

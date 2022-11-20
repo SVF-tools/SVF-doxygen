@@ -9,5 +9,7 @@ var searchData=
   ['icfgstat_2eh',['ICFGStat.h',['../ICFGStat_8h.html',1,'']]],
   ['irannotator_2eh',['IRAnnotator.h',['../IRAnnotator_8h.html',1,'']]],
   ['irgraph_2ecpp',['IRGraph.cpp',['../IRGraph_8cpp.html',1,'']]],
-  ['irgraph_2eh',['IRGraph.h',['../IRGraph_8h.html',1,'']]]
+  ['irgraph_2eh',['IRGraph.h',['../IRGraph_8h.html',1,'']]],
+  ['iterator_2eh',['iterator.h',['../iterator_8h.html',1,'']]],
+  ['iterator_5frange_2eh',['iterator_range.h',['../iterator__range_8h.html',1,'']]]
 ];
