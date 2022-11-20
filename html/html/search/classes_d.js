@@ -24,8 +24,6 @@ var searchData=
   ['ptacallgraph',['PTACallGraph',['../classSVF_1_1PTACallGraph.html',1,'SVF']]],
   ['ptacallgraphedge',['PTACallGraphEdge',['../classSVF_1_1PTACallGraphEdge.html',1,'SVF']]],
   ['ptacallgraphnode',['PTACallGraphNode',['../classSVF_1_1PTACallGraphNode.html',1,'SVF']]],
-  ['ptacfinfobuilder',['PTACFInfoBuilder',['../classSVF_1_1PTACFInfoBuilder.html',1,'SVF']]],
-  ['ptascev',['PTASCEV',['../classSVF_1_1PTASCEV.html',1,'SVF']]],
   ['ptastat',['PTAStat',['../classSVF_1_1PTAStat.html',1,'SVF']]],
   ['ptdata',['PTData',['../classSVF_1_1PTData.html',1,'SVF']]],
   ['ptdata_3c_20versionedkey_2c_20versionedkeyset_2c_20data_2c_20dataset_20_3e',['PTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;',['../classSVF_1_1PTData.html',1,'SVF']]]

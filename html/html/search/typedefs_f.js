@@ -1,8 +1,7 @@
 var searchData=
 [
   ['raw_5ffd_5fostream',['raw_fd_ostream',['../namespaceSVF.html#a1c7c7ac12791c0ae386283c0a4f127ba',1,'SVF']]],
-  ['raw_5fstring_5fostream',['raw_string_ostream',['../namespaceSVF.html#a726981481ac082dcda3e4921416b65a0',1,'SVF']]],
-  ['rc_5fflag',['RC_FLAG',['../classSVF_1_1RaceResultValidator.html#ac57ae430ee5b6868fe810172ec658853',1,'SVF::RaceResultValidator']]],
+  ['rc_5fflag',['RC_FLAG',['../classSVF_1_1RaceResultValidator.html#ac57ae430ee5b6868fe810172ec658853',1,'SVF::RaceResultValidator::RC_FLAG()'],['../classSVF_1_1RaceResultValidator.html#ac57ae430ee5b6868fe810172ec658853',1,'SVF::RaceResultValidator::RC_FLAG()']]],
   ['reference',['reference',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a28e12df86b7514e119e2b4f7bffd29c9',1,'SVF::PointsTo::PointsToIterator::reference()'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a65313b9702cf6767d2936852e09f04c5',1,'SVF::CoreBitVector::CoreBitVectorIterator::reference()']]],
   ['resulttype',['ResultType',['../structSVF_1_1SVFUtil_1_1cast__retty__impl_3_01To_00_01std_1_1unique__ptr_3_01From_01_4_01_4.html#a052f7cd3a81e368060f132bf0268fa68',1,'SVF::SVFUtil::cast_retty_impl&lt; To, std::unique_ptr&lt; From &gt; &gt;']]],
   ['resumeinst',['ResumeInst',['../namespaceSVF.html#a8c685f6bff3a67bf7fe3557dbfa84caa',1,'SVF']]],
@@ -12,6 +11,6 @@ var searchData=
   ['rettype',['RetType',['../structSVF_1_1SVFUtil_1_1simplify__type_3_01const_01From_01_4.html#ae6f5437cb8355759aadc78fca716bc6a',1,'SVF::SVFUtil::simplify_type&lt; const From &gt;']]],
   ['returninst',['ReturnInst',['../namespaceSVF.html#ac7dcc6103dee3a0bbc2fd2e02716a154',1,'SVF']]],
   ['revptsmap',['RevPtsMap',['../classSVF_1_1MutablePTData.html#a6d491581d17876625d0265cd26acd8e1',1,'SVF::MutablePTData::RevPtsMap()'],['../classSVF_1_1PersistentPTData.html#aad89172e6e99d5ee576faa7bc74b36d8',1,'SVF::PersistentPTData::RevPtsMap()'],['../classSVF_1_1PersistentDiffPTData.html#ac008ee5f7e4d286f9e76d85989358305',1,'SVF::PersistentDiffPTData::RevPtsMap()']]],
-  ['rthdtochildrenmap',['rthdToChildrenMap',['../classSVF_1_1MTAResultValidator.html#a7d2043cf3c354812fa5e4cdf7f60ff20',1,'SVF::MTAResultValidator']]],
-  ['rthdtovthdmap',['rthdTovthdMap',['../classSVF_1_1MTAResultValidator.html#ab386260dd6bbaeacde10e5c81f07502c',1,'SVF::MTAResultValidator']]]
+  ['rthdtochildrenmap',['rthdToChildrenMap',['../classSVF_1_1MTAResultValidator.html#a7d2043cf3c354812fa5e4cdf7f60ff20',1,'SVF::MTAResultValidator::rthdToChildrenMap()'],['../classSVF_1_1MTAResultValidator.html#a7d2043cf3c354812fa5e4cdf7f60ff20',1,'SVF::MTAResultValidator::rthdToChildrenMap()']]],
+  ['rthdtovthdmap',['rthdTovthdMap',['../classSVF_1_1MTAResultValidator.html#ab386260dd6bbaeacde10e5c81f07502c',1,'SVF::MTAResultValidator::rthdTovthdMap()'],['../classSVF_1_1MTAResultValidator.html#ab386260dd6bbaeacde10e5c81f07502c',1,'SVF::MTAResultValidator::rthdTovthdMap()']]]
 ];

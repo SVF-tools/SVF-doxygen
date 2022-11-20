@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['versionedflowsensitivestat',['VersionedFlowSensitiveStat',['../classSVF_1_1VersionedFlowSensitive.html#aaee58f266762146e9fdc08ecfc326b29',1,'SVF::VersionedFlowSensitive']]],
-  ['vfg',['VFG',['../classSVF_1_1SVFVar.html#a1499a631a2a15408ea35a09fccc0f0ad',1,'SVF::SVFVar']]]
+  ['taintsvfgbuilder',['TaintSVFGBuilder',['../classSVF_1_1SVFG.html#a665c93b68f49078c281270a028d04445',1,'SVF::SVFG']]],
+  ['typebasedheapcloning',['TypeBasedHeapCloning',['../classSVF_1_1SVFIR.html#ac7f1349df526a5a50741e9303f3bd446',1,'SVF::SVFIR']]]
 ];

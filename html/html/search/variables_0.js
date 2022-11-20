@@ -17,7 +17,7 @@ var searchData=
   ['_5fcondpts',['_condPts',['../classSVF_1_1CondPointsToSet.html#ad0e1a70889a7bf2cb1b201a129128c52',1,'SVF::CondPointsToSet']]],
   ['_5fconsg',['_consG',['../classSVF_1_1CSC.html#a549a0a410b1ca9eeb22c05dd93761560',1,'SVF::CSC']]],
   ['_5fcuriter',['_curIter',['../classSVF_1_1CondPointsToSet_1_1CondPtsSetIterator.html#a991ef07c78bd5a80cd62a398514f38ae',1,'SVF::CondPointsToSet::CondPtsSetIterator']]],
-  ['_5fcurslice',['_curSlice',['../classSVF_1_1SaberAnnotator.html#adceb8a459b44c289413401b57d8aeb4d',1,'SVF::SaberAnnotator::_curSlice()'],['../classSVF_1_1SrcSnkDDA.html#a60dcf333cb36230d5f3070e8d238ad6d',1,'SVF::SrcSnkDDA::_curSlice()']]],
+  ['_5fcurslice',['_curSlice',['../classSVF_1_1SrcSnkDDA.html#a60dcf333cb36230d5f3070e8d238ad6d',1,'SVF::SrcSnkDDA']]],
   ['_5fcursvfgnode',['_curSVFGNode',['../classSVF_1_1ProgSlice.html#af3095788fc3d7798abfae10e3216968b',1,'SVF::ProgSlice']]],
   ['_5fd',['_D',['../classSVF_1_1SCCDetection.html#a58b7ae8ed203311628dc5a84e1e79a5e',1,'SVF::SCCDetection::_D()'],['../classSVF_1_1CSC.html#a0eaf3a742fb8003b031528ee7c1c4799',1,'SVF::CSC::_D()']]],
   ['_5fenditer',['_endIter',['../classSVF_1_1CondPointsToSet_1_1CondPtsSetIterator.html#a9ffed93e0d4ae4b1431689b7fa5d6082',1,'SVF::CondPointsToSet::CondPtsSetIterator']]],

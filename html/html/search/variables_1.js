@@ -1,8 +1,7 @@
 var searchData=
 [
   ['a',['a',['../cJSON_8cpp.html#a8a1a0a26c50cc4becfc754bb68d1dc6b',1,'cJSON.cpp']]],
-  ['absstate',['absState',['../classSVF_1_1SymState.html#ad36f290382c773fd4b2ce801bf45d708',1,'SVF::SymState']]],
-  ['accesspairs',['accessPairs',['../classSVF_1_1RaceResultValidator.html#a8436ecde1e34bca7cef86a320ad42162',1,'SVF::RaceResultValidator']]],
+  ['accesspairs',['accessPairs',['../classSVF_1_1RaceResultValidator.html#a90f7d527816acf808e3e54c2a4ed0532',1,'SVF::RaceResultValidator']]],
   ['actualintodefmap',['actualInToDefMap',['../classSVF_1_1SVFGOPT.html#a9741514d915bf7f14787cc346b9d7c98',1,'SVF::SVFGOPT']]],
   ['actualret',['actualRet',['../classSVF_1_1RetICFGNode.html#ab11aa45c33cdcf5836fa2ee88bda9a9c',1,'SVF::RetICFGNode']]],
   ['addaddrtakennodetimeend',['addAddrTakenNodeTimeEnd',['../classSVF_1_1SVFGStat.html#a2f7a49d2b3aae6cdb1cbc0e8ae18d1c2',1,'SVF::SVFGStat']]],
@@ -20,6 +19,7 @@ var searchData=
   ['addressinedges',['addressInEdges',['../classSVF_1_1ConstraintNode.html#a214d8c0cb3913cb3403d686790c9eabb',1,'SVF::ConstraintNode']]],
   ['addressoutedges',['addressOutEdges',['../classSVF_1_1ConstraintNode.html#af05accba5a61957323bc2fd409b6f6e0',1,'SVF::ConstraintNode']]],
   ['addrspace',['AddrSpace',['../classllvm_1_1generic__bridge__gep__type__iterator.html#a58127812b9ab914238095883ab1fe24e',1,'llvm::generic_bridge_gep_type_iterator']]],
+  ['addrtaken',['addrTaken',['../classSVF_1_1SVFFunction.html#a3b93a04e82233f64b1c463f6cece8ea1',1,'SVF::SVFFunction']]],
   ['addrtime',['addrTime',['../classSVF_1_1FlowSensitive.html#a38f3ed35185addf701d4401bfdd5f29b',1,'SVF::FlowSensitive']]],
   ['addtoplevelnodetimeend',['addTopLevelNodeTimeEnd',['../classSVF_1_1SVFGStat.html#a89f40e0cb98fdb65a320686b1698d909',1,'SVF::SVFGStat']]],
   ['addtoplevelnodetimestart',['addTopLevelNodeTimeStart',['../classSVF_1_1SVFGStat.html#ad72d8706cdc97443556c0d878a393727',1,'SVF::SVFGStat']]],
@@ -55,10 +55,8 @@ var searchData=
   ['annoflag',['AnnoFlag',['../classSVF_1_1Options.html#ae1dadbd4c213f1bd5b8957b5c747bebd',1,'SVF::Options']]],
   ['annotationtime',['AnnotationTime',['../classSVF_1_1MTAStat.html#a51e1ba35f81d89e210a937942f516839',1,'SVF::MTAStat']]],
   ['apnodes',['APNodes',['../classSVF_1_1CallICFGNode.html#a07615cb6245a9dccbba2cc70bde9bf22',1,'SVF::CallICFGNode']]],
-  ['arg',['arg',['../classSVF_1_1SVFArgument.html#a10579ee5fd95ef116dd0a7ef644a2b1f',1,'SVF::SVFArgument']]],
   ['argno',['argNo',['../classSVF_1_1SVFArgument.html#ac4fa9a6b097a6745e016339851428c0d',1,'SVF::SVFArgument']]],
   ['args',['args',['../classSVF_1_1SVFCallInst.html#affe1e1d74a71c17a7fb8a9a145bd9524',1,'SVF::SVFCallInst']]],
-  ['argsofuncalledfunction',['argsOfUncalledFunction',['../classSVF_1_1SVFModule.html#a90bd61848ffbbb0bc30b33bf65d1cb6e',1,'SVF::SVFModule']]],
   ['atend',['AtEnd',['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#aa28c3c88d66d8bc3dbf96e2f4bd84fab',1,'SVF::SparseBitVector::SparseBitVectorIterator::AtEnd()'],['../classSVF_1_1CondPointsToSet_1_1CondPtsSetIterator.html#ad22614f30570619802e23715d1d5eaf0',1,'SVF::CondPointsToSet::CondPtsSetIterator::atEnd()']]],
   ['atptdata',['atPTData',['../classSVF_1_1MutableVersionedPTData.html#a3e5337d4189e98f11305491a9ef3c439',1,'SVF::MutableVersionedPTData::atPTData()'],['../classSVF_1_1PersistentVersionedPTData.html#a61b44f6d63cca013da2b278f47298473',1,'SVF::PersistentVersionedPTData::atPTData()']]],
   ['attribute',['attribute',['../structSVF_1_1GrammarBase_1_1Symbol.html#a756bed7c50c6d3251cc4832247c8691d',1,'SVF::GrammarBase::Symbol']]],

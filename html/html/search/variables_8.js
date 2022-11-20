@@ -1,6 +1,7 @@
 var searchData=
 [
   ['handblackhole',['HandBlackHole',['../classSVF_1_1Options.html#ad2d3db3e407a53956a5a59cc24eb8d40',1,'SVF::Options']]],
+  ['has_5fname',['has_name',['../classSVF_1_1SVFValue.html#a89e13c82c6f302704838b9496a288aea',1,'SVF::SVFValue']]],
   ['hbpair',['HBPair',['../classSVF_1_1ForkJoinAnalysis.html#aad3e722ecaa4a39aef0e1cabfa2b8019',1,'SVF::ForkJoinAnalysis']]],
   ['head',['head',['../classSVF_1_1List.html#a41d52072edb2b75ab15d67bf2663312a',1,'SVF::List']]],
   ['headmap',['headmap',['../classSVF_1_1MTASVFGBuilder.html#ac92452c257052706b1cf1737b266eec1',1,'SVF::MTASVFGBuilder']]],

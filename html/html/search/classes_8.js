@@ -4,7 +4,6 @@ var searchData=
   ['icfgbuilder',['ICFGBuilder',['../classSVF_1_1ICFGBuilder.html',1,'SVF']]],
   ['icfgedge',['ICFGEdge',['../classSVF_1_1ICFGEdge.html',1,'SVF']]],
   ['icfgnode',['ICFGNode',['../classSVF_1_1ICFGNode.html',1,'SVF']]],
-  ['icfgprinter',['ICFGPrinter',['../classSVF_1_1ICFGPrinter.html',1,'SVF']]],
   ['icfgstat',['ICFGStat',['../classSVF_1_1ICFGStat.html',1,'SVF']]],
   ['indirectsvfgedge',['IndirectSVFGEdge',['../classSVF_1_1IndirectSVFGEdge.html',1,'SVF']]],
   ['interdisjointmrg',['InterDisjointMRG',['../classSVF_1_1InterDisjointMRG.html',1,'SVF']]],
@@ -32,6 +31,5 @@ var searchData=
   ['isa_5fimpl_5fcl_3c_20to_2c_20from_20_2a_20_3e',['isa_impl_cl&lt; To, From * &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl__cl_3_01To_00_01From_01_5_01_4.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl_5fcl_3c_20to_2c_20from_20_2aconst_20_3e',['isa_impl_cl&lt; To, From *const &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl__cl_3_01To_00_01From_01_5const_01_4.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl_5fwrap',['isa_impl_wrap',['../structSVF_1_1SVFUtil_1_1isa__impl__wrap.html',1,'SVF::SVFUtil']]],
-  ['isa_5fimpl_5fwrap_3c_20to_2c_20fromty_2c_20fromty_20_3e',['isa_impl_wrap&lt; To, FromTy, FromTy &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl__wrap_3_01To_00_01FromTy_00_01FromTy_01_4.html',1,'SVF::SVFUtil']]],
-  ['iterateddominancefrontier',['IteratedDominanceFrontier',['../classSVF_1_1IteratedDominanceFrontier.html',1,'SVF']]]
+  ['isa_5fimpl_5fwrap_3c_20to_2c_20fromty_2c_20fromty_20_3e',['isa_impl_wrap&lt; To, FromTy, FromTy &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl__wrap_3_01To_00_01FromTy_00_01FromTy_01_4.html',1,'SVF::SVFUtil']]]
 ];

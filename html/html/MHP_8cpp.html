@@ -62,10 +62,6 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">MHP.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -74,71 +70,10 @@ $(function() {
 <code>#include &quot;<a class="el" href="MHP_8h_source.html">MTA/MHP.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="MTA_8h_source.html">MTA/MTA.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LockAnalysis_8h_source.html">MTA/LockAnalysis.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="MTAResultValidator_8h_source.html">MTA/MTAResultValidator.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SVFUtil_8h_source.html">Util/SVFUtil.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PTAStat_8h_source.html">Util/PTAStat.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="SVF-FE_2BasicTypes_8h_source.html">SVF-FE/BasicTypes.h</a>&quot;</code><br />
 </div>
 <p><a href="MHP_8cpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1MHPValidator.html">SVF::MHPValidator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceSVF"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF.html">SVF</a></td></tr>
-<tr class="memdesc:namespaceSVF"><td class="mdescLeft">&#160;</td><td class="mdescRight">for isBitcode <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a1a6f1ed70075da459ab275eb5c099144"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MHP_8cpp.html#a1a6f1ed70075da459ab275eb5c099144">accessSameArrayIndex</a> (const <a class="el" href="namespaceSVF.html#ac4e93e1fec646ff222940a663843921b">GetElementPtrInst</a> *ptr1, const <a class="el" href="namespaceSVF.html#ac4e93e1fec646ff222940a663843921b">GetElementPtrInst</a> *ptr2)</td></tr>
-<tr class="separator:a1a6f1ed70075da459ab275eb5c099144"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a1a6f1ed70075da459ab275eb5c099144"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a6f1ed70075da459ab275eb5c099144">&#9670;&nbsp;</a></span>accessSameArrayIndex()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool accessSameArrayIndex </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceSVF.html#ac4e93e1fec646ff222940a663843921b">GetElementPtrInst</a> *&#160;</td>
-          <td class="paramname"><em>ptr1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceSVF.html#ac4e93e1fec646ff222940a663843921b">GetElementPtrInst</a> *&#160;</td>
-          <td class="paramname"><em>ptr2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="MHP_8cpp_source.html#l01036">1036</a> of file <a class="el" href="MHP_8cpp_source.html">MHP.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;{</div><div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;</div><div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    std::vector&lt;u32_t&gt; ptr1vec;</div><div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#aa508c087703240dad69a9827e85ebd0b">gep_type_iterator</a> gi = gep_type_begin(*ptr1), ge = gep_type_end(*ptr1);</div><div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;            gi != ge; ++gi)</div><div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    {</div><div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF.html#adefcb50414ea999d70cea5ccdbcb98d7">ConstantInt</a>* ci = SVFUtil::dyn_cast&lt;ConstantInt&gt;(gi.getOperand()))</div><div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;        {</div><div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;            <a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> idx = ci-&gt;getSExtValue();</div><div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;            ptr1vec.push_back(idx);</div><div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;        }</div><div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;    }</div><div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;</div><div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;    std::vector&lt;u32_t&gt; ptr2vec;</div><div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#aa508c087703240dad69a9827e85ebd0b">gep_type_iterator</a> gi = gep_type_begin(*ptr2), ge = gep_type_end(*ptr2);</div><div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;            gi != ge; ++gi)</div><div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    {</div><div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF.html#adefcb50414ea999d70cea5ccdbcb98d7">ConstantInt</a>* ci = SVFUtil::dyn_cast&lt;ConstantInt&gt;(gi.getOperand()))</div><div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;        {</div><div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;            <a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> idx = ci-&gt;getSExtValue();</div><div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;            ptr2vec.push_back(idx);</div><div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;        }</div><div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    }</div><div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;</div><div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;    <span class="keywordflow">return</span> ptr1vec==ptr2vec;</div><div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;}</div><div class="ttc" id="namespaceSVF_html_a9b707002523ece2ac54ca893ee9a2d4e"><div class="ttname"><a href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">SVF::s32_t</a></div><div class="ttdeci">signed s32_t</div><div class="ttdef"><b>Definition:</b> <a href="SVFBasicTypes_8h_source.html#l00082">SVFBasicTypes.h:82</a></div></div>
-<div class="ttc" id="namespaceSVF_html_adefcb50414ea999d70cea5ccdbcb98d7"><div class="ttname"><a href="namespaceSVF.html#adefcb50414ea999d70cea5ccdbcb98d7">SVF::ConstantInt</a></div><div class="ttdeci">llvm::ConstantInt ConstantInt</div><div class="ttdef"><b>Definition:</b> <a href="Util_2BasicTypes_8h_source.html#l00069">BasicTypes.h:69</a></div></div>
-<div class="ttc" id="namespaceSVF_html_aa508c087703240dad69a9827e85ebd0b"><div class="ttname"><a href="namespaceSVF.html#aa508c087703240dad69a9827e85ebd0b">SVF::gep_type_iterator</a></div><div class="ttdeci">llvm::gep_type_iterator gep_type_iterator</div><div class="ttdef"><b>Definition:</b> <a href="SVF-FE_2BasicTypes_8h_source.html#l00190">BasicTypes.h:190</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

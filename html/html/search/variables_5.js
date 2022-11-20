@@ -26,9 +26,7 @@ var searchData=
   ['epsilonprods',['epsilonProds',['../classSVF_1_1CFLGrammar.html#a4d9770a2b935bcad74ae551389925f74',1,'SVF::CFLGrammar']]],
   ['equivalentobject',['equivalentObject',['../classSVF_1_1VersionedFlowSensitive.html#a2d451d89f99a4bff828b682723df477f',1,'SVF::VersionedFlowSensitive']]],
   ['evaltime',['EvalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1d98862e19affdd08740f85490d0d856',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['exestate',['exeState',['../classSVF_1_1SymState.html#ab9ee5f993809fc026ffd270b0e9a6db4',1,'SVF::SymState']]],
   ['exit',['exit',['../classSVF_1_1RetPE.html#a6f6ccda153150b6acdd81550e45f640f',1,'SVF::RetPE']]],
-  ['exitbb',['exitBB',['../classSVF_1_1SVFFunction.html#ab268cbf34fca0b915bd4c8bee2334ab5',1,'SVF::SVFFunction']]],
   ['extended',['extended',['../classSVF_1_1DCHGraph.html#aa6f49dfc9e3580d3f2d8c257395eb11e',1,'SVF::DCHGraph']]],
   ['externmap',['externMap',['../classSVF_1_1CFLGraphBuilder.html#a91f1f0e8abc8d781eaf8b1a4f025c18e',1,'SVF::CFLGraphBuilder']]],
   ['extop',['extOp',['../classSVF_1_1ExtAPI.html#a552feab663622681db231d5b48f00d75',1,'SVF::ExtAPI']]]

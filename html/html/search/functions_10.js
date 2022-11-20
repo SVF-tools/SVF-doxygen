@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['racedetecor',['RACEDETECOR',['../MTA_8cpp.html#a722a3314000546677382be2b285e04d8',1,'MTA.cpp']]],
   ['racevalidator',['RaceValidator',['../classSVF_1_1RaceValidator.html#a7ec5d97155d170033398757af56691ad',1,'SVF::RaceValidator']]],
   ['readfile',['readFile',['../classSVF_1_1SVFG.html#a9da50b8f467066b478143af64f7c9858',1,'SVF::SVFG']]],
   ['readfromfile',['readFromFile',['../classSVF_1_1BVDataPTAImpl.html#a290501006cb700db0e07dc577429c928',1,'SVF::BVDataPTAImpl']]],
@@ -16,7 +15,7 @@ var searchData=
   ['recordremovingedge',['recordRemovingEdge',['../classSVF_1_1MTASVFGBuilder.html#a97179139a6395a7062d3200c23d4b69d',1,'SVF::MTASVFGBuilder']]],
   ['regionobjects',['regionObjects',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a7d34542f34a8e8008119c3d61943daa2',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['regpt',['REGPT',['../dda_8cpp.html#a5ed1de5ad06cf459c1b4e63685316618',1,'dda.cpp']]],
-  ['release',['release',['../classSVF_1_1RaceResultValidator.html#a64f61b58f59eba5f3e7c69f90edc68df',1,'SVF::RaceResultValidator']]],
+  ['release',['release',['../classSVF_1_1RaceResultValidator.html#a64f61b58f59eba5f3e7c69f90edc68df',1,'SVF::RaceResultValidator::release()'],['../classSVF_1_1RaceResultValidator.html#a64f61b58f59eba5f3e7c69f90edc68df',1,'SVF::RaceResultValidator::release()']]],
   ['releaseandersenscd',['releaseAndersenSCD',['../classSVF_1_1AndersenSCD.html#ac2003ddf910f55d5c53c762b45964b50',1,'SVF::AndersenSCD']]],
   ['releaseandersensfr',['releaseAndersenSFR',['../classSVF_1_1AndersenSFR.html#a4aa1607b7d84a6de151c19ae84b913b9',1,'SVF::AndersenSFR']]],
   ['releaseandersenwavediff',['releaseAndersenWaveDiff',['../classSVF_1_1AndersenWaveDiff.html#a5da6abb1a7f0ef3e3871ea6e5a623625',1,'SVF::AndersenWaveDiff']]],
@@ -93,7 +92,7 @@ var searchData=
   ['resetquery',['resetQuery',['../classSVF_1_1DDAVFSolver.html#afe518d3d7f8051de5b9860f2460aa1b7',1,'SVF::DDAVFSolver']]],
   ['resetrep',['resetRep',['../classSVF_1_1ConstraintGraph.html#aa30231dab5b7c759e4e5d76422a5eb8e',1,'SVF::ConstraintGraph']]],
   ['resetsubs',['resetSubs',['../classSVF_1_1ConstraintGraph.html#a5fe3815a7990e16b99cf46e90529f8b3',1,'SVF::ConstraintGraph']]],
-  ['resettypeforheapstaticobj',['resetTypeForHeapStaticObj',['../classSVF_1_1ObjTypeInfo.html#a57d714a511273b8275374cd4c7f14373',1,'SVF::ObjTypeInfo']]],
+  ['resettypeforheapstaticobj',['resetTypeForHeapStaticObj',['../classSVF_1_1ObjTypeInfo.html#ae26937ca2107517e6ede8eb6d76b95d5',1,'SVF::ObjTypeInfo']]],
   ['resolvecppindcalls',['resolveCPPIndCalls',['../classSVF_1_1PointerAnalysis.html#ac04b64a5884710508b304f93da88c7ba',1,'SVF::PointerAnalysis']]],
   ['resolvefunptr',['resolveFunPtr',['../classSVF_1_1DDAVFSolver.html#afcc074be34dd0c45418ff16b3d9d4192',1,'SVF::DDAVFSolver']]],
   ['resolveindcalls',['resolveIndCalls',['../classSVF_1_1PointerAnalysis.html#a8d128246f86f28fdf4981d91169ab440',1,'SVF::PointerAnalysis']]],
@@ -117,6 +116,6 @@ var searchData=
   ['rmincomingedgeforsustore',['rmIncomingEdgeForSUStore',['../classSVF_1_1SaberSVFGBuilder.html#ae0a9c42c850bda29aeae2f47ad2b8f4a',1,'SVF::SaberSVFGBuilder']]],
   ['rminterleavingthread',['rmInterleavingThread',['../classSVF_1_1MHP.html#a02b4ab18067c9b911b4bd53f0426aec3',1,'SVF::MHP']]],
   ['rmsustat',['rmSUStat',['../classSVF_1_1DDAVFSolver.html#a7d0775354df32f293e98578ed071d33c',1,'SVF::DDAVFSolver']]],
-  ['runonmodule',['runOnModule',['../classSVF_1_1DDAPass.html#af196994d6ec7f5cead72212407842103',1,'SVF::DDAPass::runOnModule()'],['../classSVF_1_1MTA.html#a9c4b9eb2c04de305a30114019c3b1dae',1,'SVF::MTA::runOnModule(Module &amp;module)'],['../classSVF_1_1MTA.html#a32f6beffb47e5c2ac86f5c3b8a1bd9ba',1,'SVF::MTA::runOnModule(SVFModule *module)'],['../classSVF_1_1DoubleFreeChecker.html#ae8c09909e9f3e44489464f7190a6b671',1,'SVF::DoubleFreeChecker::runOnModule()'],['../classSVF_1_1FileChecker.html#a98a68536b8ffdb2250bbb01437598ac3',1,'SVF::FileChecker::runOnModule()'],['../classSVF_1_1LeakChecker.html#ab3bb79d88d73c8b881d714921e7b5e12',1,'SVF::LeakChecker::runOnModule()'],['../classSVF_1_1BreakConstantGEPs.html#ae99ceb7923161d54e7d0a687f4f68e1a',1,'SVF::BreakConstantGEPs::runOnModule()'],['../classSVF_1_1MergeFunctionRets.html#a8fe74477a43f80104fb3461d006ad392',1,'SVF::MergeFunctionRets::runOnModule()'],['../classSVF_1_1FlowSensitive.html#a611608ccc9659bd320670f1ec31ad18e',1,'SVF::FlowSensitive::runOnModule()'],['../classSVF_1_1WPAPass.html#a394dcd976c1ef08d9cadcba8f5d07c75',1,'SVF::WPAPass::runOnModule()']]],
-  ['runpointeranalysis',['runPointerAnalysis',['../classSVF_1_1DDAPass.html#a13ff3107a0e4f8749b166fa9b8165167',1,'SVF::DDAPass::runPointerAnalysis()'],['../classSVF_1_1WPAPass.html#a2d6a270c3a71b5963eaed37839355fd3',1,'SVF::WPAPass::runPointerAnalysis()']]]
+  ['runonmodule',['runOnModule',['../classSVF_1_1DDAPass.html#aca46f1d464f5766ae666661a164a51a9',1,'SVF::DDAPass::runOnModule()'],['../classSVF_1_1MTA.html#ad9172b17fa738bff616771df6f9e9c37',1,'SVF::MTA::runOnModule()'],['../classSVF_1_1DoubleFreeChecker.html#a6ae08976bd1a82f4370ff373b898f49e',1,'SVF::DoubleFreeChecker::runOnModule()'],['../classSVF_1_1FileChecker.html#a3fad64b69b652e9ab3fc3ab12b023223',1,'SVF::FileChecker::runOnModule()'],['../classSVF_1_1LeakChecker.html#a1a4e10da2b2265a5d1aca6d54e622fda',1,'SVF::LeakChecker::runOnModule()'],['../classSVF_1_1BreakConstantGEPs.html#ae99ceb7923161d54e7d0a687f4f68e1a',1,'SVF::BreakConstantGEPs::runOnModule()'],['../classSVF_1_1MergeFunctionRets.html#a8fe74477a43f80104fb3461d006ad392',1,'SVF::MergeFunctionRets::runOnModule()'],['../classSVF_1_1FlowSensitive.html#a611608ccc9659bd320670f1ec31ad18e',1,'SVF::FlowSensitive::runOnModule()'],['../classSVF_1_1WPAPass.html#af5ae999c6ca7c481e32b628dd3f6a7b0',1,'SVF::WPAPass::runOnModule()']]],
+  ['runpointeranalysis',['runPointerAnalysis',['../classSVF_1_1DDAPass.html#ac480fe602e5e2d36ec4815ce50aeaad3',1,'SVF::DDAPass::runPointerAnalysis()'],['../classSVF_1_1WPAPass.html#ace6627f09d237f01d7b698aaea9020eb',1,'SVF::WPAPass::runPointerAnalysis()']]]
 ];

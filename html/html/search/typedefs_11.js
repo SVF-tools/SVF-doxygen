@@ -9,5 +9,5 @@ var searchData=
   ['threadstmttothreadinterleav',['ThreadStmtToThreadInterleav',['../classSVF_1_1MHP.html#ac30f283cb2ad020a054ee6525ca94025',1,'SVF::MHP']]],
   ['timestatmap',['TIMEStatMap',['../classSVF_1_1SVFStat.html#aeded7780a3f826b3efab971807e2dd98',1,'SVF::SVFStat']]],
   ['type',['Type',['../namespaceSVF.html#a1d008c0666c145622b81d427be64c52d',1,'SVF']]],
-  ['typetofieldinfomap',['TypeToFieldInfoMap',['../classSVF_1_1SymbolTableInfo.html#a9c9a9da876d41ab48e55f25efc266494',1,'SVF::SymbolTableInfo']]]
+  ['type2typeinfomap',['Type2TypeInfoMap',['../classSVF_1_1LLVMModuleSet.html#a3c2eb10a20604bf794d2d10f2cffb116',1,'SVF::LLVMModuleSet']]]
 ];

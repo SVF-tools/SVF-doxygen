@@ -13,8 +13,7 @@ var searchData=
   ['depth',['depth',['../structparse__buffer.html#af613c4ed7d73f76c60c50d1bcf4c67a0',1,'parse_buffer::depth()'],['../structprintbuffer.html#aa7311b5da38ff8d1737824c611b48732',1,'printbuffer::depth()']]],
   ['derefmdname',['derefMDName',['../namespaceSVF_1_1cppUtil_1_1ctir.html#a0cd5347bc8043d4306e66a4a96005ace',1,'SVF::cppUtil::ctir']]],
   ['detectpwc',['DetectPWC',['../classSVF_1_1Options.html#a1d299e736ee653759d340508fd30c6ab',1,'SVF::Options']]],
-  ['df',['DF',['../classSVF_1_1IteratedDominanceFrontier.html#aa50321ef8e3c9ee5e0b04f95a5a72e24',1,'SVF::IteratedDominanceFrontier']]],
-  ['dfbbsmap',['dfBBsMap',['../classSVF_1_1SVFFunction.html#a48f57ec22bbc4888581dc930e522de04',1,'SVF::SVFFunction']]],
+  ['dfbbsmap',['dfBBsMap',['../classSVF_1_1SVFLoopAndDomInfo.html#ae191915ae746e30c8370ebf8fe733723',1,'SVF::SVFLoopAndDomInfo']]],
   ['dfinptsmap',['dfInPtsMap',['../classSVF_1_1MutableDFPTData.html#abb59ef7367e353e65b82b54dac509f36',1,'SVF::MutableDFPTData::dfInPtsMap()'],['../classSVF_1_1PersistentDFPTData.html#a6b892b707524127928e269f0f0bbe868',1,'SVF::PersistentDFPTData::dfInPtsMap()']]],
   ['dfoutptsmap',['dfOutPtsMap',['../classSVF_1_1MutableDFPTData.html#ad3c53ef1c8e221299f3afe078946fbe0',1,'SVF::MutableDFPTData::dfOutPtsMap()'],['../classSVF_1_1PersistentDFPTData.html#ad77d7ccad393c995813f8c433c249dfc',1,'SVF::PersistentDFPTData::dfOutPtsMap()']]],
   ['diffpts',['DiffPts',['../classSVF_1_1Options.html#a3e311bdcdaf0e39fd7d8566dc7866a44',1,'SVF::Options']]],
@@ -38,7 +37,7 @@ var searchData=
   ['dr_5fcheck',['DR_CHECK',['../classSVF_1_1Annotator.html#a64fa6f1cac79c47c66b16ac29d2ac3f4',1,'SVF::Annotator']]],
   ['dr_5fnot_5fcheck',['DR_NOT_CHECK',['../classSVF_1_1Annotator.html#af220da6fe6fc879d15cc34ab397c5ba1',1,'SVF::Annotator']]],
   ['dst',['dst',['../classSVF_1_1GenericEdge.html#aa41cb7482bdab1ba328f4b94f30f3ee4',1,'SVF::GenericEdge']]],
-  ['dtbbsmap',['dtBBsMap',['../classSVF_1_1SVFFunction.html#aaac567d6bb2338c737374c83a64f8bae',1,'SVF::SVFFunction']]],
+  ['dtbbsmap',['dtBBsMap',['../classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3',1,'SVF::SVFLoopAndDomInfo']]],
   ['dumpcha',['DumpCHA',['../classSVF_1_1Options.html#ab13a47f6dd4eedfaa607d36448a1d456',1,'SVF::Options']]],
   ['dumpfree',['DumpFree',['../classSVF_1_1Options.html#a2ef679d4177438655577e7fef7c0cc90',1,'SVF::Options']]],
   ['dumpicfg',['DumpICFG',['../classSVF_1_1Options.html#aea29a835c54fab800117e57de00e0b1e',1,'SVF::Options']]],
@@ -48,5 +47,6 @@ var searchData=
   ['dumpsustore',['DumpSUStore',['../classSVF_1_1Options.html#aa24f52782c835452daf82138d0d69412',1,'SVF::Options']]],
   ['dumpuninitptr',['DumpUninitPtr',['../classSVF_1_1Options.html#a2f671b5844b2c167a2c44b90061bfd73',1,'SVF::Options']]],
   ['dumpuninitvar',['DumpUninitVar',['../classSVF_1_1Options.html#aaf05b444fd7f087e5d7fda3883f29dc5',1,'SVF::Options']]],
-  ['dumpvfg',['DumpVFG',['../classSVF_1_1Options.html#a3061c75f7491dd737222b1b877721070',1,'SVF::Options']]]
+  ['dumpvfg',['DumpVFG',['../classSVF_1_1Options.html#a3061c75f7491dd737222b1b877721070',1,'SVF::Options']]],
+  ['dval',['dval',['../classSVF_1_1SVFConstantFP.html#aa1d551ad74dd5ce3eb4b7d639aec31a9',1,'SVF::SVFConstantFP']]]
 ];

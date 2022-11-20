@@ -5,12 +5,11 @@ var searchData=
   ['vaendinst',['VAEndInst',['../namespaceSVF.html#adb305e32f35af19b870b07711ba5b913',1,'SVF']]],
   ['value',['Value',['../namespaceSVF.html#a90b263fd2f541eca78135078114cabda',1,'SVF']]],
   ['value_5ftype',['value_type',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#ab81cda692bb6ad451276f571a25c0751',1,'SVF::PointsTo::PointsToIterator::value_type()'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a6a59f0e97fc9cf278ed22b0a4c109ae1',1,'SVF::CoreBitVector::CoreBitVectorIterator::value_type()']]],
-  ['valuetoedgemap',['ValueToEdgeMap',['../classSVF_1_1IRGraph.html#addfc2131699f5ecee3a45d65cda46c24',1,'SVF::IRGraph']]],
-  ['valuetoidmapty',['ValueToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#ab3eeddc4649355d234cd9eb59d2b583b',1,'SVF::SymbolTableInfo']]],
+  ['valuetoedgemap',['ValueToEdgeMap',['../classSVF_1_1IRGraph.html#a6247c1b1f6b92ce684c39af760878bbc',1,'SVF::IRGraph']]],
+  ['valuetoidmapty',['ValueToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#ad1741e65d47c39e03049c6d7265961af',1,'SVF::SymbolTableInfo']]],
   ['var2labelmap',['Var2LabelMap',['../classSVF_1_1SVFStmt.html#ad178ccbc7800527c3dc406ad5fa069bb',1,'SVF::SVFStmt']]],
   ['variableattribute',['VariableAttribute',['../classSVF_1_1GrammarBase.html#a716ce662e6a3f2febf3ab378c4217759',1,'SVF::GrammarBase']]],
   ['vartopropnodemap',['VarToPropNodeMap',['../classSVF_1_1VersionedFlowSensitive.html#a9ee5add09f2b446c6c6bcb84da0f75b3',1,'SVF::VersionedFlowSensitive']]],
-  ['vartovalmap',['VarToValMap',['../classSVF_1_1ExeState.html#afc4aad166cd39a6cfbd8e9b897104f3f',1,'SVF::ExeState']]],
   ['vastartinst',['VAStartInst',['../namespaceSVF.html#ad92e392a50e7c6c1f635fe2dcebd1adc',1,'SVF']]],
   ['vectortype',['VectorType',['../namespaceSVF.html#a1eaed46fa67cf1a51e438c5f8f523418',1,'SVF']]],
   ['version',['Version',['../namespaceSVF.html#a9ec7a8dc63411ee3724a25a59191be0c',1,'SVF']]],
@@ -28,7 +27,7 @@ var searchData=
   ['vfunset',['VFunSet',['../classSVF_1_1PointerAnalysis.html#aa7f15c74eb438be78fcc028534477478',1,'SVF::PointerAnalysis::VFunSet()'],['../namespaceSVF.html#ad2b487757f1e1a1d81073120fc1d49c7',1,'SVF::VFunSet()']]],
   ['vfworklist',['VFWorkList',['../classSVF_1_1ProgSlice.html#a684e44ade783439c6f77a8d84eed282c',1,'SVF::ProgSlice']]],
   ['vtableptrtocallsitemap',['VTablePtrToCallSiteMap',['../classSVF_1_1FunptrDDAClient.html#ad195fbe1a6b422e67f16c9fde9d8e671',1,'SVF::FunptrDDAClient::VTablePtrToCallSiteMap()'],['../classSVF_1_1AliasDDAClient.html#a1eb12d17470a8b1ae7131470ace2daa2',1,'SVF::AliasDDAClient::VTablePtrToCallSiteMap()']]],
-  ['vtableset',['VTableSet',['../classSVF_1_1PointerAnalysis.html#af46f4b99fc2d5061c9266a7f45aafaca',1,'SVF::PointerAnalysis::VTableSet()'],['../namespaceSVF.html#a53511f619c06836ee85acf12153810e2',1,'SVF::VTableSet()']]],
-  ['vthdtocxtmap',['vthdToCxtMap',['../classSVF_1_1MTAResultValidator.html#a1392757f98b54057d33adb125fd48efa',1,'SVF::MTAResultValidator']]],
-  ['vthdtorthdmap',['vthdTorthdMap',['../classSVF_1_1MTAResultValidator.html#a7fc576e83fa259d0ab06d54c3537c4ac',1,'SVF::MTAResultValidator']]]
+  ['vtableset',['VTableSet',['../classSVF_1_1PointerAnalysis.html#a57fabf1408ada10028282deef0b23ec6',1,'SVF::PointerAnalysis::VTableSet()'],['../namespaceSVF.html#a340a9e77adc2bbfdee79e22da9ead234',1,'SVF::VTableSet()']]],
+  ['vthdtocxtmap',['vthdToCxtMap',['../classSVF_1_1MTAResultValidator.html#a1392757f98b54057d33adb125fd48efa',1,'SVF::MTAResultValidator::vthdToCxtMap()'],['../classSVF_1_1MTAResultValidator.html#a1392757f98b54057d33adb125fd48efa',1,'SVF::MTAResultValidator::vthdToCxtMap()']]],
+  ['vthdtorthdmap',['vthdTorthdMap',['../classSVF_1_1MTAResultValidator.html#a7fc576e83fa259d0ab06d54c3537c4ac',1,'SVF::MTAResultValidator::vthdTorthdMap()'],['../classSVF_1_1MTAResultValidator.html#a7fc576e83fa259d0ab06d54c3537c4ac',1,'SVF::MTAResultValidator::vthdTorthdMap()']]]
 ];
