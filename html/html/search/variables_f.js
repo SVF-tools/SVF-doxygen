@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['o',['O',['../classllvm_1_1GraphWriter.html#a8d438ca3456d83ef5feff3934d709e4d',1,'llvm::GraphWriter']]],
+  ['o',['O',['../classSVF_1_1GraphWriter.html#a2e882c9af39ffd3c4a4bac9212e0e82d',1,'SVF::GraphWriter']]],
   ['object',['object',['../classSVF_1_1DummyVersionPropSVFGNode.html#ad9a6fd01bf1a101da68eaacc61f420ee',1,'SVF::DummyVersionPropSVFGNode']]],
   ['objmap',['objMap',['../classSVF_1_1SymbolTableInfo.html#aeab14702eabde827923a692cba8f7f8a',1,'SVF::SymbolTableInfo']]],
   ['objsymmap',['objSymMap',['../classSVF_1_1SymbolTableInfo.html#a5840b742ed8c73ece548b9b4aede07ec',1,'SVF::SymbolTableInfo']]],

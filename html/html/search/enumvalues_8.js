@@ -10,6 +10,6 @@ var searchData=
   ['intradirectvf',['IntraDirectVF',['../classSVF_1_1VFGEdge.html#a156ae6a8b3a033f505c18c6b162e7cf5a08201e6cbff4817e44568747a966b71d',1,'SVF::VFGEdge']]],
   ['intradisjoint',['IntraDisjoint',['../classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671ac9388cc44f91bd9a00666c0d69b32ef1',1,'SVF::MemSSA']]],
   ['intraindirectvf',['IntraIndirectVF',['../classSVF_1_1VFGEdge.html#a156ae6a8b3a033f505c18c6b162e7cf5aa80551154bcfbfa84f02df32ead6b1b0',1,'SVF::VFGEdge']]],
-  ['isbidirectional',['IsBidirectional',['../classllvm_1_1iterator__facade__base.html#ac111dbf74717bf5e6db6b9f8d5a81809a4e1f229fa73b6b5c2f25734ab347c51f',1,'llvm::iterator_facade_base']]],
-  ['israndomaccess',['IsRandomAccess',['../classllvm_1_1iterator__facade__base.html#ac111dbf74717bf5e6db6b9f8d5a81809a4f2910ff91c3e559958a66f09bfefe56',1,'llvm::iterator_facade_base']]]
+  ['isbidirectional',['IsBidirectional',['../classSVF_1_1iter__facade__base.html#a1935969a70a0312f809db166d65fec89a0552120a5aa8ae40a219b52934ad3409',1,'SVF::iter_facade_base']]],
+  ['israndomaccess',['IsRandomAccess',['../classSVF_1_1iter__facade__base.html#a1935969a70a0312f809db166d65fec89a3571f11b56b4970ffff3c021f6fb47e8',1,'SVF::iter_facade_base']]]
 ];

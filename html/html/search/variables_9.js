@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['i',['I',['../classllvm_1_1iterator__facade__base_1_1ReferenceProxy.html#ac4e5c0067c64cd5c7e0184218cae3dd2',1,'llvm::iterator_facade_base::ReferenceProxy::I()'],['../classllvm_1_1iterator__adaptor__base.html#a563ec95255977c34566292cbdce193b3',1,'llvm::iterator_adaptor_base::I()']]],
+  ['i',['I',['../classSVF_1_1iter__facade__base_1_1ReferenceProxy.html#aca4eadcdc568988ffddd09d359b1c1c3',1,'SVF::iter_facade_base::ReferenceProxy::I()'],['../classSVF_1_1iter__adaptor__base.html#a1c80cc24530dbc29b03bf58500e0d636',1,'SVF::iter_adaptor_base::I()']]],
   ['i1',['I1',['../classSVF_1_1RaceResultValidator_1_1AccessPair.html#a2f6817c4f04b090ff8ebff68cafa5892',1,'SVF::RaceResultValidator::AccessPair']]],
   ['i2',['I2',['../classSVF_1_1RaceResultValidator_1_1AccessPair.html#a4759b40288c232686465893d988697f3',1,'SVF::RaceResultValidator::AccessPair']]],
   ['icfg',['icfg',['../classSVF_1_1ICFGStat.html#a03185827f7913a480523de5b8f911acb',1,'SVF::ICFGStat::icfg()'],['../classSVF_1_1PointerAnalysis.html#a962cc91e4d68b25ce201072c384d8fc2',1,'SVF::PointerAnalysis::icfg()'],['../classSVF_1_1ICFGBuilder.html#adefeaad9c02000f263430dfee7149ea6',1,'SVF::ICFGBuilder::icfg()'],['../classSVF_1_1SVFIR.html#abe8aa0d325b35dd59ce4a7f302760e51',1,'SVF::SVFIR::icfg()'],['../classSVF_1_1CallGraphBuilder.html#ab3e0b47be010e25c093953e54602d211',1,'SVF::CallGraphBuilder::icfg()']]],
@@ -9,7 +9,7 @@ var searchData=
   ['icfgnode2svfstmtsmap',['icfgNode2SVFStmtsMap',['../classSVF_1_1SVFIR.html#a86c0c23d854b034d741d9d8891debab7',1,'SVF::SVFIR']]],
   ['icfgnodes',['icfgNodes',['../classSVF_1_1SVFLoop.html#a062e4b336b9b8315a9fc1107c9cab840',1,'SVF::SVFLoop']]],
   ['icfgnodetosvfloopvec',['icfgNodeToSVFLoopVec',['../classSVF_1_1ICFG.html#a7d6aeecb00d77600a204a72d60023d54',1,'SVF::ICFG']]],
-  ['id',['id',['../classSVF_1_1GenericNode.html#aaa53457604fe4cf4cb97ca85d33907b0',1,'SVF::GenericNode::id()'],['../classSVF_1_1DDAPass.html#adb39fc24e3d45e558ac36f37b5dc3565',1,'SVF::DDAPass::ID()'],['../classSVF_1_1BreakConstantGEPs.html#a8010c4f5824ed5ebcb7ae283473ada22',1,'SVF::BreakConstantGEPs::ID()'],['../classSVF_1_1MergeFunctionRets.html#a7a763ae6c9d3c72345495f01b0b4b458',1,'SVF::MergeFunctionRets::ID()'],['../classSVF_1_1WPAPass.html#a2674527c92cdef223e655d449f0811d4',1,'SVF::WPAPass::ID()']]],
+  ['id',['ID',['../classSVF_1_1DDAPass.html#adb39fc24e3d45e558ac36f37b5dc3565',1,'SVF::DDAPass::ID()'],['../classSVF_1_1BreakConstantGEPs.html#a8010c4f5824ed5ebcb7ae283473ada22',1,'SVF::BreakConstantGEPs::ID()'],['../classSVF_1_1MergeFunctionRets.html#a7a763ae6c9d3c72345495f01b0b4b458',1,'SVF::MergeFunctionRets::ID()'],['../classSVF_1_1WPAPass.html#a2674527c92cdef223e655d449f0811d4',1,'SVF::WPAPass::ID()'],['../classSVF_1_1GenericNode.html#aaa53457604fe4cf4cb97ca85d33907b0',1,'SVF::GenericNode::id()']]],
   ['idcounter',['idCounter',['../classSVF_1_1PersistentPointsToCache.html#ad8d24772f7503e0e735f546506d2bcc5',1,'SVF::PersistentPointsToCache']]],
   ['idtocsmap',['idToCSMap',['../classSVF_1_1PTACallGraph.html#a5d6f63baad19589a9fd1e069631e18fa',1,'SVF::PTACallGraph']]],
   ['idtonodemap',['IDToNodeMap',['../classSVF_1_1GenericGraph.html#a47a1ef8b67b0c92f78b4457dc3bbfe71',1,'SVF::GenericGraph']]],
@@ -57,13 +57,13 @@ var searchData=
   ['isloadmap',['isLoadMap',['../classSVF_1_1VersionedFlowSensitive.html#a6bb3db072db0b899f306b37f1146f83d',1,'SVF::VersionedFlowSensitive']]],
   ['isnotret',['isNotRet',['../classSVF_1_1SVFFunction.html#ac85bdf04fd784e22a89426955d28e3d6',1,'SVF::SVFFunction']]],
   ['isptr',['isPtr',['../classSVF_1_1SVFVar.html#a7c8ffadedbf53d30694feeb7771990af',1,'SVF::SVFVar']]],
-  ['issimple',['IsSimple',['../structllvm_1_1DefaultDOTGraphTraits.html#ae60a00eb9bdec41861fe6c4073e543b5',1,'llvm::DefaultDOTGraphTraits']]],
+  ['issimple',['IsSimple',['../structSVF_1_1DefaultDOTGraphTraits.html#abf5957e894bacd69c9ead5a80a330626',1,'SVF::DefaultDOTGraphTraits']]],
   ['issinglevalty',['isSingleValTy',['../classSVF_1_1SVFType.html#ac26ba9052149b5b792aa8e8c3ccfd350',1,'SVF::SVFType']]],
   ['isstoremap',['isStoreMap',['../classSVF_1_1VersionedFlowSensitive.html#a18e25c3871d7cc1a6bb0592ceca90f88',1,'SVF::VersionedFlowSensitive']]],
   ['isthunkfunc',['isThunkFunc',['../structSVF_1_1cppUtil_1_1DemangledName.html#af6117df8aec7f4c077058fa8f00b0243',1,'SVF::cppUtil::DemangledName']]],
   ['isuncalled',['isUncalled',['../classSVF_1_1SVFFunction.html#a1e9dc1d660e3626540b7501194bb12ea',1,'SVF::SVFFunction']]],
   ['item',['item',['../cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14',1,'item():&#160;cJSON.h'],['../cJSON_8cpp.html#ac011de571ff16ba220d2e0d757e4e8b0',1,'item():&#160;cJSON.cpp']]],
   ['iter',['Iter',['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#a3627077086baa18bd0ae25efd981c18f',1,'SVF::SparseBitVector::SparseBitVectorIterator']]],
-  ['iterationforprintstat',['iterationForPrintStat',['../classSVF_1_1WPASolver.html#aa7c0636780a86f376e9222bce771e859',1,'SVF::WPASolver']]],
-  ['iterator_5ffacade_5fbase',['iterator_facade_base',['../classllvm_1_1iterator__facade__base_1_1ReferenceProxy.html#ae839596dce7d66788c89951710111945',1,'llvm::iterator_facade_base::ReferenceProxy']]]
+  ['iter_5ffacade_5fbase',['iter_facade_base',['../classSVF_1_1iter__facade__base_1_1ReferenceProxy.html#ab4717ea89d08ac05464fa95bc7f50ac6',1,'SVF::iter_facade_base::ReferenceProxy']]],
+  ['iterationforprintstat',['iterationForPrintStat',['../classSVF_1_1WPASolver.html#aa7c0636780a86f376e9222bce771e859',1,'SVF::WPASolver']]]
 ];

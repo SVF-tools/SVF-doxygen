@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mapped_5fiter',['mapped_iter',['../classllvm_1_1mapped__iter.html',1,'llvm']]],
+  ['mapped_5fiter',['mapped_iter',['../classSVF_1_1mapped__iter.html',1,'SVF']]],
   ['memobj',['MemObj',['../classSVF_1_1MemObj.html',1,'SVF']]],
   ['memregion',['MemRegion',['../classSVF_1_1MemRegion.html',1,'SVF']]],
   ['memssa',['MemSSA',['../classSVF_1_1MemSSA.html',1,'SVF']]],

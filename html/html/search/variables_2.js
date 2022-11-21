@@ -12,7 +12,7 @@ var searchData=
   ['bb2phisetmap',['bb2PhiSetMap',['../classSVF_1_1MemSSA.html#a190061a6f7423461f4292fc326330f23',1,'SVF::MemSSA']]],
   ['bbconds',['bbConds',['../classSVF_1_1SaberCondAllocator.html#a5c129ebf5ae55eb3af8bd670c921a646',1,'SVF::SaberCondAllocator']]],
   ['bbtocondmap',['bbToCondMap',['../classSVF_1_1SaberCondAllocator.html#a6d29487d00d66dadae7b4b79f9bf50e9',1,'SVF::SaberCondAllocator']]],
-  ['begin_5fiterator',['begin_iterator',['../classllvm_1_1iterator__range.html#aeac0e00835772be18abf2daed29f5d1f',1,'llvm::iterator_range']]],
+  ['begin_5fiterator',['begin_iterator',['../classSVF_1_1iter__range.html#a56f458edec1d1181e1cfe0f9a23c8003',1,'SVF::iter_range']]],
   ['bestcandidate',['BestCandidate',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a3556bdda6725b72d0ca88364daeae32e',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['bit',['bit',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a853b685cf022839c183df46f1cafe638',1,'SVF::CoreBitVector::CoreBitVectorIterator']]],
   ['bitnumber',['BitNumber',['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#aae6ff6aada3863feb736619d4f8dba16',1,'SVF::SparseBitVector::SparseBitVectorIterator']]],

@@ -15,7 +15,7 @@ var searchData=
   ['genericchnodety',['GenericCHNodeTy',['../namespaceSVF.html#a838ed37e84836101711c25a760eec57d',1,'SVF']]],
   ['genericconsedgety',['GenericConsEdgeTy',['../namespaceSVF.html#a1d2b00b4b0ab475899488fc89b2bfe66',1,'SVF']]],
   ['genericconsnodety',['GenericConsNodeTy',['../namespaceSVF.html#a825a8805e4a16072031a18b8d553c5a2',1,'SVF']]],
-  ['genericgraphty',['GenericGraphTy',['../structllvm_1_1GraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#a1ab57d3e398711e732bf040aeabd5657',1,'llvm::GraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;']]],
+  ['genericgraphty',['GenericGraphTy',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#a587145a423fcdb3c08b2bdf9704e8d46',1,'SVF::GenericGraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;']]],
   ['genericicfgedgety',['GenericICFGEdgeTy',['../namespaceSVF.html#a91e714a719b1e62e9b63103e9e6af404',1,'SVF']]],
   ['genericicfgnodety',['GenericICFGNodeTy',['../namespaceSVF.html#afc2824871ad4eb9b871c35ae28494cd3',1,'SVF']]],
   ['genericicfgty',['GenericICFGTy',['../namespaceSVF.html#afe5e1b0e028b4cf0db9f2a9c758b03ed',1,'SVF']]],
@@ -43,6 +43,6 @@ var searchData=
   ['gnodek',['GNodeK',['../classSVF_1_1GenericNode.html#a3f20339b5295e11beb0f9adb95c7aa5b',1,'SVF::GenericNode::GNodeK()'],['../classSVF_1_1SVFType.html#a503a35534b72dbea065816f42ebfa9f0',1,'SVF::SVFType::GNodeK()'],['../classSVF_1_1SVFValue.html#a96b29b0f3f0048278b3ec9aa6b6540c4',1,'SVF::SVFValue::GNodeK()']]],
   ['gnodesccinfomap',['GNODESCCInfoMap',['../classSVF_1_1SCCDetection.html#a56c28264d14062354e3272a4a993a1ec',1,'SVF::SCCDetection']]],
   ['gnodestack',['GNodeStack',['../classSVF_1_1SCCDetection.html#a84fc3aef6f950471a539b7d9fa3c1289',1,'SVF::SCCDetection']]],
-  ['graphprinter',['GraphPrinter',['../namespaceSVF.html#a2eae2d6648dd6715421bd7af67d57637',1,'SVF']]],
-  ['gtraits',['GTraits',['../classllvm_1_1GraphWriter.html#ab818592ecc463aa32e20efe6d9633236',1,'llvm::GraphWriter::GTraits()'],['../classSVF_1_1SrcSnkSolver.html#a40c3ad6a16099d14654d6f59a1bae238',1,'SVF::SrcSnkSolver::GTraits()'],['../classSVF_1_1GraphReachSolver.html#a2ede2e8b4c0f44d7f1d5ab7684915556',1,'SVF::GraphReachSolver::GTraits()'],['../classSVF_1_1SCCDetection.html#aaee4b4afbfb6efa02c537529e3cebfef',1,'SVF::SCCDetection::GTraits()'],['../classSVF_1_1WPASCCSolver.html#a1ae985e2ff1a63320f6cbbb20053d808',1,'SVF::WPASCCSolver::GTraits()'],['../classSVF_1_1WPAMinimumSolver.html#a659448a7dbf9e39e7aef785540088324',1,'SVF::WPAMinimumSolver::GTraits()'],['../classSVF_1_1WPASolver.html#a64d9cb98ab38b441440b860ae4de0f9b',1,'SVF::WPASolver::GTraits()']]]
+  ['graphprinter',['GraphPrinter',['../namespaceSVF.html#ac8f90a58fd0d8e775e290b31f8ea9ce9',1,'SVF']]],
+  ['gtraits',['GTraits',['../classSVF_1_1GraphWriter.html#a65144f9ff432d21ad2751287a7237b3f',1,'SVF::GraphWriter::GTraits()'],['../classSVF_1_1SrcSnkSolver.html#a23cdacd5c5825844d3e28fc79cc924d3',1,'SVF::SrcSnkSolver::GTraits()'],['../classSVF_1_1GraphReachSolver.html#a70b93c20acbf28603b472d93dd602b7b',1,'SVF::GraphReachSolver::GTraits()'],['../classSVF_1_1SCCDetection.html#a862d30c661897fb8a5d60abcfa45da12',1,'SVF::SCCDetection::GTraits()'],['../classSVF_1_1WPASCCSolver.html#a1ae985e2ff1a63320f6cbbb20053d808',1,'SVF::WPASCCSolver::GTraits()'],['../classSVF_1_1WPAMinimumSolver.html#a659448a7dbf9e39e7aef785540088324',1,'SVF::WPAMinimumSolver::GTraits()'],['../classSVF_1_1WPASolver.html#a6be76c9bcdfc254a8973a444c369bd23',1,'SVF::WPASolver::GTraits()']]]
 ];

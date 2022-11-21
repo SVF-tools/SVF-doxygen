@@ -77,7 +77,7 @@ var searchData=
   ['ptdatabacking',['ptDataBacking',['../classSVF_1_1Options.html#a9ec1d22e20b655e364fea03ba7d923a2',1,'SVF::Options']]],
   ['ptdty',['ptdTy',['../classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28',1,'SVF::PTData']]],
   ['ptnumstatmap',['PTNumStatMap',['../classSVF_1_1SVFStat.html#a11c34e8ba16769d218432d9504ba26a0',1,'SVF::SVFStat']]],
-  ['ptr',['Ptr',['../classllvm_1_1pointer__iterator.html#ac6288459e1f350103a2cd26d20ce0df7',1,'llvm::pointer_iterator']]],
+  ['ptr',['Ptr',['../classSVF_1_1pointer__iterator.html#a0dd739c7a521b7efe951bb9712ddcd14',1,'SVF::pointer_iterator']]],
   ['ptrelementtype',['ptrElementType',['../classSVF_1_1SVFPointerType.html#a5b2e9e60925b6f45b10e1f54adb23d60',1,'SVF::SVFPointerType']]],
   ['ptrinuncalledfun',['ptrInUncalledFun',['../classSVF_1_1SVFValue.html#ab9dc800239cb906c1a044b05568f5fec',1,'SVF::SVFValue']]],
   ['ptronlymssa',['ptrOnlyMSSA',['../classSVF_1_1MRGenerator.html#a6a62d2dede5d2506c19b2d058d1cd9d3',1,'SVF::MRGenerator']]],

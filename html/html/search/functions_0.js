@@ -76,7 +76,7 @@ var searchData=
   ['addcptstocallsiterefs',['addCPtsToCallSiteRefs',['../classSVF_1_1MRGenerator.html#a94ce7ceff7cee90d672e9f3a4f3aa4e8',1,'SVF::MRGenerator']]],
   ['addcptstoload',['addCPtsToLoad',['../classSVF_1_1MRGenerator.html#a79a3032b50f7ef905213b770b12e0967',1,'SVF::MRGenerator']]],
   ['addcptstostore',['addCPtsToStore',['../classSVF_1_1MRGenerator.html#af50efed3af17806a3ba3f668e4466d3e',1,'SVF::MRGenerator']]],
-  ['addcustomgraphfeatures',['addCustomGraphFeatures',['../structllvm_1_1DefaultDOTGraphTraits.html#ae2bdfe5fa774a3dc5aad9a8465b50011',1,'llvm::DefaultDOTGraphTraits']]],
+  ['addcustomgraphfeatures',['addCustomGraphFeatures',['../structSVF_1_1DefaultDOTGraphTraits.html#a47ee60dc78e3f869ce4e808e73437ddf',1,'SVF::DefaultDOTGraphTraits']]],
   ['addcxtlock',['addCxtLock',['../classSVF_1_1LockAnalysis.html#a6b8d03d75751635e492dbda47e2d543e',1,'SVF::LockAnalysis']]],
   ['addcxtofcxtthread',['addCxtOfCxtThread',['../classSVF_1_1TCT.html#a2978381d69a9fd1fcee6a1258bc3bb5c',1,'SVF::TCT']]],
   ['addcxtstmttospan',['addCxtStmtToSpan',['../classSVF_1_1LockAnalysis.html#a718d6f2f55c1e2e7eb619c3e056ab458',1,'SVF::LockAnalysis']]],
