@@ -20,7 +20,7 @@ var searchData=
   ['canberemoved',['canBeRemoved',['../classSVF_1_1SVFGOPT.html#ab72ce28409a440bbf5b84a68e5f82b85',1,'SVF::SVFGOPT']]],
   ['canhold',['canHold',['../classSVF_1_1CoreBitVector.html#a3c85fd2084e52df869cb8fcf2dab6486',1,'SVF::CoreBitVector']]],
   ['case_5finsensitive_5fstrcmp',['case_insensitive_strcmp',['../cJSON_8cpp.html#a9b295e9edc859c11ad8c1e3d2cef0467',1,'cJSON.cpp']]],
-  ['cast',['cast',['../namespaceSVF_1_1SVFUtil.html#a0d100868bf63b968d387eb50e9603f7c',1,'SVF::SVFUtil::cast(const Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a406dd9baf2ce66235d482fd6c6121b2c',1,'SVF::SVFUtil::cast(Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#acc2419a55c0427571f11ad14db2fe481',1,'SVF::SVFUtil::cast(Y *Val)'],['../namespaceSVF_1_1SVFUtil.html#af3ca049b4ce83c874e231f5e13bf36a8',1,'SVF::SVFUtil::cast(std::unique_ptr&lt; Y &gt; &amp;&amp;Val)']]],
+  ['cast',['cast',['../namespaceSVF_1_1SVFUtil.html#a3ddf7041e685da8ede81cd773dd47761',1,'SVF::SVFUtil::cast(const Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a406dd9baf2ce66235d482fd6c6121b2c',1,'SVF::SVFUtil::cast(Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#acc2419a55c0427571f11ad14db2fe481',1,'SVF::SVFUtil::cast(Y *Val)'],['../namespaceSVF_1_1SVFUtil.html#af3ca049b4ce83c874e231f5e13bf36a8',1,'SVF::SVFUtil::cast(std::unique_ptr&lt; Y &gt; &amp;&amp;Val)']]],
   ['cast_5faway_5fconst',['cast_away_const',['../cJSON_8cpp.html#a48223c36735c39cfc4711b0659f966c8',1,'cJSON.cpp']]],
   ['cfgnormalizer',['CFGNormalizer',['../classSVF_1_1CFGNormalizer.html#ab1c19d6347ed694f52ded7defafeffe3',1,'SVF::CFGNormalizer']]],
   ['cflalias',['CFLAlias',['../classSVF_1_1CFLAlias.html#aae1dbf8d8c413eb7812ca428edfbae48',1,'SVF::CFLAlias']]],

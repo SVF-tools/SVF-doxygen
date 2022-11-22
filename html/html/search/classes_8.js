@@ -23,7 +23,7 @@ var searchData=
   ['irgraph',['IRGraph',['../classSVF_1_1IRGraph.html',1,'SVF']]],
   ['is_5fsimple_5ftype',['is_simple_type',['../structSVF_1_1SVFUtil_1_1is__simple__type.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl',['isa_impl',['../structSVF_1_1SVFUtil_1_1isa__impl.html',1,'SVF::SVFUtil']]],
-  ['isa_5fimpl_3c_20to_2c_20from_2c_20typename_20std_3a_3aenable_5fif_3c_20std_3a_3ais_5fbase_5fof_3c_20to_2c_20from_20_3e_3a_3avalue_20_3e_3a_3atype_20_3e',['isa_impl&lt; To, From, typename std::enable_if&lt; std::is_base_of&lt; To, From &gt;::value &gt;::type &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl_3_01To_00_01From_00_01typename_01std_1_1enable__if_3_01std_1_1101a002941fb8432b76e90258f1ec6b7.html',1,'SVF::SVFUtil']]],
+  ['isa_5fimpl_3c_20to_2c_20from_2c_20std_3a_3aenable_5fif_5ft_3c_20std_3a_3ais_5fbase_5fof_3c_20to_2c_20from_20_3e_3a_3avalue_20_3e_20_3e',['isa_impl&lt; To, From, std::enable_if_t&lt; std::is_base_of&lt; To, From &gt;::value &gt; &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl_3_01To_00_01From_00_01std_1_1enable__if__t_3_01std_1_1is__baseacbe8554d65d479d86c5b7d994311309.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl_5fcl',['isa_impl_cl',['../structSVF_1_1SVFUtil_1_1isa__impl__cl.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl_5fcl_3c_20to_2c_20const_20from_20_2a_20_3e',['isa_impl_cl&lt; To, const From * &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl__cl_3_01To_00_01const_01From_01_5_01_4.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl_5fcl_3c_20to_2c_20const_20from_20_2aconst_20_3e',['isa_impl_cl&lt; To, const From *const &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl__cl_3_01To_00_01const_01From_01_5const_01_4.html',1,'SVF::SVFUtil']]],

@@ -13,6 +13,8 @@ var searchData=
   ['list',['List',['../classSVF_1_1List.html',1,'SVF::List&lt; Data &gt;'],['../classSVF_1_1List.html#aeb697e85085a332e5d593b6f8ee95713',1,'SVF::List::List()']]],
   ['listnode',['ListNode',['../classSVF_1_1List_1_1ListNode.html',1,'SVF::List&lt; Data &gt;::ListNode'],['../classSVF_1_1List_1_1ListNode.html#a9a9f6cf03627a5a115c64776039f8dbc',1,'SVF::List::ListNode::ListNode()']]],
   ['llvm',['llvm',['../namespacellvm.html',1,'']]],
+  ['llvm_5fhas_5fcpp_5fattribute',['LLVM_HAS_CPP_ATTRIBUTE',['../Casting_8h.html#ac655bc80da3bd4c0e27a9ac4ac8163f9',1,'Casting.h']]],
+  ['llvm_5fnodiscard',['LLVM_NODISCARD',['../Casting_8h.html#a8ce3b3743bf423cf00a9eb18a3f0f139',1,'Casting.h']]],
   ['llvmargument2svfargument',['LLVMArgument2SVFArgument',['../classSVF_1_1LLVMModuleSet.html#a852524c71831d7b2da0e9b0b6b191480',1,'SVF::LLVMModuleSet']]],
   ['llvmargument2svfargumentmap',['LLVMArgument2SVFArgumentMap',['../classSVF_1_1LLVMModuleSet.html#abb3020435f266e5925a59da2935cd1a0',1,'SVF::LLVMModuleSet']]],
   ['llvmbb2svfbb',['LLVMBB2SVFBB',['../classSVF_1_1LLVMModuleSet.html#a0f9b36699b99dfcfe3c1588bfab6b97c',1,'SVF::LLVMModuleSet']]],
