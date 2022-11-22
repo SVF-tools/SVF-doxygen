@@ -32,7 +32,6 @@ var searchData=
   ['cjson_2eh',['cJSON.h',['../cJSON_8h.html',1,'']]],
   ['cmakelists_2etxt',['CMakeLists.txt',['../lib_2CMakeLists_8txt.html',1,'(Global Namespace)'],['../tools_2CFL_2CMakeLists_8txt.html',1,'(Global Namespace)'],['../tools_2CMakeLists_8txt.html',1,'(Global Namespace)'],['../tools_2DDA_2CMakeLists_8txt.html',1,'(Global Namespace)'],['../tools_2Example_2CMakeLists_8txt.html',1,'(Global Namespace)'],['../tools_2MTA_2CMakeLists_8txt.html',1,'(Global Namespace)'],['../tools_2SABER_2CMakeLists_8txt.html',1,'(Global Namespace)'],['../tools_2WPA_2CMakeLists_8txt.html',1,'(Global Namespace)']]],
   ['conditionalpt_2eh',['ConditionalPT.h',['../ConditionalPT_8h.html',1,'']]],
-  ['config_2eh',['config.h',['../config_8h.html',1,'']]],
   ['consg_2ecpp',['ConsG.cpp',['../ConsG_8cpp.html',1,'']]],
   ['consg_2eh',['ConsG.h',['../ConsG_8h.html',1,'']]],
   ['consgedge_2eh',['ConsGEdge.h',['../ConsGEdge_8h.html',1,'']]],

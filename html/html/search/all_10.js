@@ -231,7 +231,6 @@ var searchData=
   ['progslice',['ProgSlice',['../classSVF_1_1ProgSlice.html',1,'SVF::ProgSlice'],['../classSVF_1_1ProgSlice.html#afbf864cc47d6d06286529dbcc01c03c0',1,'SVF::ProgSlice::ProgSlice()']]],
   ['progslice_2ecpp',['ProgSlice.cpp',['../ProgSlice_8cpp.html',1,'']]],
   ['progslice_2eh',['ProgSlice.h',['../ProgSlice_8h.html',1,'']]],
-  ['project_5fpath',['PROJECT_PATH',['../config_8h.html#a799965f801bbe1f540c3100566f78d81',1,'config.h']]],
   ['propagate',['propagate',['../classSVF_1_1WPASCCSolver.html#aebc289ed32678fb7f93738927f0887d1',1,'SVF::WPASCCSolver::propagate()'],['../classSVF_1_1WPASolver.html#a541ef7fda44ce79086c30b07a5f6126c',1,'SVF::WPASolver::propagate()']]],
   ['propagatefromaptofp',['propagateFromAPToFP',['../classSVF_1_1FlowSensitive.html#a3574977acd161925cadcb05de6d3247d',1,'SVF::FlowSensitive']]],
   ['propagatefromfrtoar',['propagateFromFRToAR',['../classSVF_1_1FlowSensitive.html#a3abffe1434386b1ce349fbed0cfe0967',1,'SVF::FlowSensitive']]],
