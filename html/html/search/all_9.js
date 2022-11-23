@@ -209,7 +209,7 @@ var searchData=
   ['is_5frealloc',['is_realloc',['../classSVF_1_1ExtAPI.html#ac6d6bdc51a6b75d6d5741cb751559fe4',1,'SVF::ExtAPI']]],
   ['is_5fsamesignature',['is_sameSignature',['../classSVF_1_1ExtAPI.html#a5e8b816a3eb894f6b09403852df0d01b',1,'SVF::ExtAPI']]],
   ['is_5fsimple_5ftype',['is_simple_type',['../structSVF_1_1SVFUtil_1_1is__simple__type.html',1,'SVF::SVFUtil']]],
-  ['isa',['isa',['../namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737',1,'SVF::SVFUtil']]],
+  ['isa',['isa',['../namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737',1,'SVF::SVFUtil::isa(const Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a13729076054a2977670b05a338a6763d',1,'SVF::SVFUtil::isa(const Y &amp;Val)']]],
   ['isa_5fimpl',['isa_impl',['../structSVF_1_1SVFUtil_1_1isa__impl.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl_3c_20to_2c_20from_2c_20std_3a_3aenable_5fif_5ft_3c_20std_3a_3ais_5fbase_5fof_3c_20to_2c_20from_20_3e_3a_3avalue_20_3e_20_3e',['isa_impl&lt; To, From, std::enable_if_t&lt; std::is_base_of&lt; To, From &gt;::value &gt; &gt;',['../structSVF_1_1SVFUtil_1_1isa__impl_3_01To_00_01From_00_01std_1_1enable__if__t_3_01std_1_1is__baseacbe8554d65d479d86c5b7d994311309.html',1,'SVF::SVFUtil']]],
   ['isa_5fimpl_5fcl',['isa_impl_cl',['../structSVF_1_1SVFUtil_1_1isa__impl__cl.html',1,'SVF::SVFUtil']]],

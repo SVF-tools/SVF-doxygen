@@ -152,6 +152,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5c8cbc986cccb9d84f87aae162df3737"><td class="memTemplParams" colspan="2">template&lt;class X , class Y &gt; </td></tr>
 <tr class="memitem:a5c8cbc986cccb9d84f87aae162df3737"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="Casting_8h.html#a8ce3b3743bf423cf00a9eb18a3f0f139">LLVM_NODISCARD</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">isa</a> (const Y &amp;Val)</td></tr>
 <tr class="separator:a5c8cbc986cccb9d84f87aae162df3737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13729076054a2977670b05a338a6763d"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second , typename... Rest, typename Y &gt; </td></tr>
+<tr class="memitem:a13729076054a2977670b05a338a6763d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="Casting_8h.html#a8ce3b3743bf423cf00a9eb18a3f0f139">LLVM_NODISCARD</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1SVFUtil.html#a13729076054a2977670b05a338a6763d">isa</a> (const Y &amp;Val)</td></tr>
+<tr class="separator:a13729076054a2977670b05a338a6763d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ddf7041e685da8ede81cd773dd47761"><td class="memTemplParams" colspan="2">template&lt;class X , class Y &gt; </td></tr>
 <tr class="memitem:a3ddf7041e685da8ede81cd773dd47761"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!<a class="el" href="structSVF_1_1SVFUtil_1_1is__simple__type.html">is_simple_type</a>&lt; Y &gt;::value, typename <a class="el" href="structSVF_1_1SVFUtil_1_1cast__retty.html">cast_retty</a>&lt; X, const Y &gt;::ret_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1SVFUtil.html#a3ddf7041e685da8ede81cd773dd47761">cast</a> (const Y &amp;Val)</td></tr>
 <tr class="separator:a3ddf7041e685da8ede81cd773dd47761"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -570,8 +573,8 @@ template&lt;class X , class Y &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00353">353</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;{</div><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    assert(SVFUtil::isa&lt;X&gt;(Val) &amp;&amp; <span class="stringliteral">&quot;cast&lt;Ty&gt;() argument of incompatible type!&quot;</span>);</div><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">return</span> cast_convert_val&lt;</div><div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;           X, <span class="keyword">const</span> Y, <span class="keyword">typename</span> simplify_type&lt;const Y&gt;::SimpleType&gt;::doit(Val);</div><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00360">360</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;{</div><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    assert(SVFUtil::isa&lt;X&gt;(Val) &amp;&amp; <span class="stringliteral">&quot;cast&lt;Ty&gt;() argument of incompatible type!&quot;</span>);</div><div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">return</span> cast_convert_val&lt;</div><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;           X, <span class="keyword">const</span> Y, <span class="keyword">typename</span> simplify_type&lt;const Y&gt;::SimpleType&gt;::doit(Val);</div><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a406dd9baf2ce66235d482fd6c6121b2c"></a>
@@ -600,8 +603,8 @@ template&lt;class X , class Y &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00361">361</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;{</div><div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    assert(SVFUtil::isa&lt;X&gt;(Val) &amp;&amp; <span class="stringliteral">&quot;cast&lt;Ty&gt;() argument of incompatible type!&quot;</span>);</div><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span> cast_convert_val&lt;X, Y,</div><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;           <span class="keyword">typename</span> simplify_type&lt;Y&gt;::SimpleType&gt;::doit(Val);</div><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00368">368</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;{</div><div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    assert(SVFUtil::isa&lt;X&gt;(Val) &amp;&amp; <span class="stringliteral">&quot;cast&lt;Ty&gt;() argument of incompatible type!&quot;</span>);</div><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">return</span> cast_convert_val&lt;X, Y,</div><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;           <span class="keyword">typename</span> simplify_type&lt;Y&gt;::SimpleType&gt;::doit(Val);</div><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="acc2419a55c0427571f11ad14db2fe481"></a>
@@ -630,8 +633,8 @@ template&lt;class X , class Y &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00369">369</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;{</div><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    assert(SVFUtil::isa&lt;X&gt;(Val) &amp;&amp; <span class="stringliteral">&quot;cast&lt;Ty&gt;() argument of incompatible type!&quot;</span>);</div><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">return</span> cast_convert_val&lt;X, Y*,</div><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;           <span class="keyword">typename</span> simplify_type&lt;Y*&gt;::SimpleType&gt;::doit(Val);</div><div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00376">376</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;{</div><div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    assert(SVFUtil::isa&lt;X&gt;(Val) &amp;&amp; <span class="stringliteral">&quot;cast&lt;Ty&gt;() argument of incompatible type!&quot;</span>);</div><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">return</span> cast_convert_val&lt;X, Y*,</div><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;           <span class="keyword">typename</span> simplify_type&lt;Y*&gt;::SimpleType&gt;::doit(Val);</div><div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="af3ca049b4ce83c874e231f5e13bf36a8"></a>
@@ -660,8 +663,8 @@ template&lt;class X , class Y &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00378">378</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    assert(SVFUtil::isa&lt;X&gt;(Val.get()) &amp;&amp; <span class="stringliteral">&quot;cast&lt;Ty&gt;() argument of incompatible type!&quot;</span>);</div><div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">using</span> ret_type = <span class="keyword">typename</span> cast_retty&lt;X, std::unique_ptr&lt;Y&gt;&gt;::ret_type;</div><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">return</span> ret_type(</div><div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;               cast_convert_val&lt;X, Y *, <span class="keyword">typename</span> simplify_type&lt;Y *&gt;::SimpleType&gt;::doit(</div><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                   Val.release()));</div><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00385">385</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;{</div><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    assert(SVFUtil::isa&lt;X&gt;(Val.get()) &amp;&amp; <span class="stringliteral">&quot;cast&lt;Ty&gt;() argument of incompatible type!&quot;</span>);</div><div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keyword">using</span> ret_type = <span class="keyword">typename</span> cast_retty&lt;X, std::unique_ptr&lt;Y&gt;&gt;::ret_type;</div><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">return</span> ret_type(</div><div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;               cast_convert_val&lt;X, Y *, <span class="keyword">typename</span> simplify_type&lt;Y *&gt;::SimpleType&gt;::doit(</div><div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                   Val.release()));</div><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a8f749354b7e882ef3e5bf5081fa715b5"></a>
@@ -952,8 +955,8 @@ template&lt;class X , class Y &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00398">398</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;{</div><div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">return</span> SVFUtil::isa&lt;X&gt;(Val) ? SVFUtil::cast&lt;X&gt;(Val) : nullptr;</div><div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00405">405</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;{</div><div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">return</span> SVFUtil::isa&lt;X&gt;(Val) ? SVFUtil::cast&lt;X&gt;(Val) : nullptr;</div><div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a52d852ba8fa569e858565b3bba403656"></a>
@@ -982,8 +985,8 @@ template&lt;class X , class Y &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00404">404</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;{</div><div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">return</span> SVFUtil::isa&lt;X&gt;(Val) ? SVFUtil::cast&lt;X&gt;(Val) : nullptr;</div><div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00411">411</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;{</div><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">return</span> SVFUtil::isa&lt;X&gt;(Val) ? SVFUtil::cast&lt;X&gt;(Val) : nullptr;</div><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a105c5c5e97d56533fb2b3ba7a0bc59f3"></a>
@@ -1012,8 +1015,8 @@ template&lt;class X , class Y &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00410">410</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;{</div><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">return</span> SVFUtil::isa&lt;X&gt;(Val) ? SVFUtil::cast&lt;X&gt;(Val) : nullptr;</div><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00417">417</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;{</div><div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">return</span> SVFUtil::isa&lt;X&gt;(Val) ? SVFUtil::cast&lt;X&gt;(Val) : nullptr;</div><div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a5d4bb92f5df30417f414397f8e58cf01"></a>
@@ -1753,7 +1756,7 @@ template&lt;typename Key , typename KeySet &gt; </div>
 </div>
 </div>
 <a id="a5c8cbc986cccb9d84f87aae162df3737"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c8cbc986cccb9d84f87aae162df3737">&#9670;&nbsp;</a></span>isa()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8cbc986cccb9d84f87aae162df3737">&#9670;&nbsp;</a></span>isa() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1778,8 +1781,38 @@ template&lt;class X , class Y &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00240">240</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;{</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">return</span> isa_impl_wrap&lt;X, <span class="keyword">const</span> Y,</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;           <span class="keyword">typename</span> simplify_type&lt;const Y&gt;::SimpleType&gt;::doit(Val);</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00241">241</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">return</span> isa_impl_wrap&lt;X, <span class="keyword">const</span> Y,</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;           <span class="keyword">typename</span> simplify_type&lt;const Y&gt;::SimpleType&gt;::doit(Val);</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a13729076054a2977670b05a338a6763d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13729076054a2977670b05a338a6763d">&#9670;&nbsp;</a></span>isa() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename First , typename Second , typename... Rest, typename Y &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Casting_8h.html#a8ce3b3743bf423cf00a9eb18a3f0f139">LLVM_NODISCARD</a> bool SVF::SVFUtil::isa </td>
+          <td>(</td>
+          <td class="paramtype">const Y &amp;&#160;</td>
+          <td class="paramname"><em>Val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Casting_8h_source.html#l00248">248</a> of file <a class="el" href="Casting_8h_source.html">Casting.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> SVFUtil::isa&lt;First&gt;(Val) || SVFUtil::isa&lt;Second, Rest...&gt;(Val);</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a2c47299fdf0ca0d08578ded6348f77c2"></a>
