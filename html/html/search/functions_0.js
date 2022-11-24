@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['abstract_5fconsequence',['abstract_consequence',['../classSVF_1_1RelationSolver.html#a27cd159416a7a2f0a07532ccd86787db',1,'SVF::RelationSolver']]],
+  ['abstractvalue',['AbstractValue',['../classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60',1,'SVF::AbstractValue::AbstractValue(AbstractValueK kind)'],['../classSVF_1_1AbstractValue.html#a40a7792f8cf21c268990d546ccc0a378',1,'SVF::AbstractValue::AbstractValue(const AbstractValue &amp;) noexcept=default'],['../classSVF_1_1AbstractValue.html#a77574a2e9822d339124cf46eedcfb253',1,'SVF::AbstractValue::AbstractValue(AbstractValue &amp;&amp;) noexcept=default']]],
+  ['accept',['accept',['../classSVF_1_1WtoComponent.html#ab11e4e148e049575eac191db79a3ce3d',1,'SVF::WtoComponent::accept()'],['../classSVF_1_1WtoVertex.html#a8e65d48aa8ff5fc90fb5111b241ac35e',1,'SVF::WtoVertex::accept()'],['../classSVF_1_1WtoCycle.html#ac15dc9e260d77ade331ded9ca05e74ff',1,'SVF::WtoCycle::accept()'],['../classSVF_1_1Wto.html#a503a7df03292b0dae0f3e3b690b409f5',1,'SVF::Wto::accept()']]],
   ['accessglobal',['accessGlobal',['../classSVF_1_1SaberSVFGBuilder.html#a4bfa849a30d1982ae597d26b4a01dd0f',1,'SVF::SaberSVFGBuilder']]],
   ['accesspair',['AccessPair',['../classSVF_1_1RaceResultValidator_1_1AccessPair.html#a7dd2f8afab59ee4d107a6bfdb6c151ea',1,'SVF::RaceResultValidator::AccessPair::AccessPair(const Instruction *I1, const Instruction *I2, const RC_FLAG flags)'],['../classSVF_1_1RaceResultValidator_1_1AccessPair.html#a7dd2f8afab59ee4d107a6bfdb6c151ea',1,'SVF::RaceResultValidator::AccessPair::AccessPair(const Instruction *I1, const Instruction *I2, const RC_FLAG flags)']]],
   ['accumulateconstantfieldidx',['accumulateConstantFieldIdx',['../classSVF_1_1LocationSet.html#a63c5c8e03b35e0d0cea94137d309c853',1,'SVF::LocationSet']]],
@@ -10,6 +13,7 @@ var searchData=
   ['actualoutsvfgnode',['ActualOUTSVFGNode',['../classSVF_1_1ActualOUTSVFGNode.html#afe2c662d51f3c9d31a20b5c1bee45844',1,'SVF::ActualOUTSVFGNode']]],
   ['actualparmvfgnode',['ActualParmVFGNode',['../classSVF_1_1ActualParmVFGNode.html#a773b6912100fbd3a2a58cfe0da8ea6d5',1,'SVF::ActualParmVFGNode']]],
   ['actualretvfgnode',['ActualRetVFGNode',['../classSVF_1_1ActualRetVFGNode.html#adc425f00b03e7a59725161ce1a78b349',1,'SVF::ActualRetVFGNode::ActualRetVFGNode()'],['../classSVF_1_1ActualRetVFGNode.html#a2974c14c972559b366a3bbdfe08b4ea9',1,'SVF::ActualRetVFGNode::ActualRetVFGNode(const ActualRetVFGNode &amp;)'],['../classSVF_1_1ActualRetVFGNode.html#a35a0ac96ef0678286705a6c4981a4225',1,'SVF::ActualRetVFGNode::ActualRetVFGNode(NodeID id, const PAGNode *n, const CallICFGNode *c)']]],
+  ['add',['add',['../classSVF_1_1WtoNesting.html#a6fb7a331f0fdc454f260f77019b4029d',1,'SVF::WtoNesting']]],
   ['add_5fentry',['add_entry',['../classSVF_1_1ExtAPI.html#a945fb815af09e4f7b22c637effd64d8b',1,'SVF::ExtAPI']]],
   ['add_5fitem_5fto_5farray',['add_item_to_array',['../cJSON_8cpp.html#a816d10c908af6be844a1f8277363e2f1',1,'cJSON.cpp']]],
   ['add_5fitem_5fto_5fobject',['add_item_to_object',['../cJSON_8cpp.html#acc48bef0e1b495898d9489e577b91d5c',1,'cJSON.cpp']]],
@@ -212,6 +216,7 @@ var searchData=
   ['addrcgedge',['AddrCGEdge',['../classSVF_1_1AddrCGEdge.html#a9c8da69a469e51d83c5009ba2685bcf6',1,'SVF::AddrCGEdge::AddrCGEdge()'],['../classSVF_1_1AddrCGEdge.html#a3e07c316815631b1ddfd35ae3781daab',1,'SVF::AddrCGEdge::AddrCGEdge(const AddrCGEdge &amp;)'],['../classSVF_1_1AddrCGEdge.html#a131779667553499b85423e1932664252',1,'SVF::AddrCGEdge::AddrCGEdge(ConstraintNode *s, ConstraintNode *d, EdgeID id)']]],
   ['addrefsideeffectofcallsite',['addRefSideEffectOfCallSite',['../classSVF_1_1MRGenerator.html#a83f5087e84eb7a18976cbd3a446605ee',1,'SVF::MRGenerator']]],
   ['addrefsideeffectoffunction',['addRefSideEffectOfFunction',['../classSVF_1_1MRGenerator.html#a899c81db92c6bcf24f6f9b769e02e5bf',1,'SVF::MRGenerator']]],
+  ['addressvalue',['AddressValue',['../classSVF_1_1AddressValue.html#a4be7b51c3290d9cccdf7f8d3c734bcce',1,'SVF::AddressValue::AddressValue()'],['../classSVF_1_1AddressValue.html#a2a1d67c5e7224503932782b0ce47e6a5',1,'SVF::AddressValue::AddressValue(const Set&lt; u32_t &gt; &amp;addrs)'],['../classSVF_1_1AddressValue.html#ad66b4fda1ac1a177d3877cf1927aa291',1,'SVF::AddressValue::AddressValue(u32_t addr)'],['../classSVF_1_1AddressValue.html#ac7f6b332aedcf8a7d6cb0c9b661ce2bc',1,'SVF::AddressValue::AddressValue(const AddressValue &amp;other)'],['../classSVF_1_1AddressValue.html#a5edc442bfe6f4e50c78acb83a906ba0e',1,'SVF::AddressValue::AddressValue(AddressValue &amp;&amp;other) noexcept']]],
   ['addretblock',['addRetBlock',['../classSVF_1_1ICFG.html#ac58aa82eb74616a6608ff51d92f5baf6',1,'SVF::ICFG']]],
   ['addretedge',['addRetEdge',['../classSVF_1_1ICFG.html#a8a5e7571e804702a2d0af7d420f21b33',1,'SVF::ICFG::addRetEdge()'],['../classSVF_1_1VFG.html#a27ac8d60de7be75e831b4a28f8f8f1d2',1,'SVF::VFG::addRetEdge()'],['../classSVF_1_1SVFIRBuilder.html#a89e8cc23aad23d2c326b4a5ff12535ca',1,'SVF::SVFIRBuilder::addRetEdge()']]],
   ['addretindirectsvfgedge',['addRetIndirectSVFGEdge',['../classSVF_1_1SVFGOPT.html#afa99da68ef756d968d39a85f0fac3649',1,'SVF::SVFGOPT']]],
@@ -319,6 +324,7 @@ var searchData=
   ['annotateslice',['annotateSlice',['../classSVF_1_1SrcSnkDDA.html#a8817604b20724703121e9466e5cdb4cd',1,'SVF::SrcSnkDDA']]],
   ['annotator',['Annotator',['../classSVF_1_1Annotator.html#aa72e6952df50b5b36f0e0fed4024055f',1,'SVF::Annotator']]],
   ['answerqueries',['answerQueries',['../classSVF_1_1DDAClient.html#a3b202f9a70b6e23c06a15556d23d245e',1,'SVF::DDAClient']]],
+  ['applysummary',['applySummary',['../classSVF_1_1SVFIR2ItvExeState.html#a198e8d5f586a698462dee2c3fde8c83e',1,'SVF::SVFIR2ItvExeState']]],
   ['arg_5fempty',['arg_empty',['../classSVF_1_1SVFCallInst.html#af19bc370764b552b5ce55c9967bd5a1e',1,'SVF::SVFCallInst::arg_empty()'],['../classSVF_1_1CallSite.html#ad084f7734007db7b14444b20bb980dd3',1,'SVF::CallSite::arg_empty()']]],
   ['arg_5fsize',['arg_size',['../classSVF_1_1SVFFunction.html#ab8c7a9c79b0668aae604bbe54e34e46e',1,'SVF::SVFFunction::arg_size()'],['../classSVF_1_1SVFCallInst.html#a496d0e963f0f6a4f9c08183fa91792b0',1,'SVF::SVFCallInst::arg_size()'],['../classSVF_1_1CallSite.html#a2a1904e6f381a0f8ac30265f2dfc48c8',1,'SVF::CallSite::arg_size()']]],
   ['argindeadfunction',['ArgInDeadFunction',['../namespaceSVF_1_1LLVMUtil.html#a5cbde00eef789f682df972ae71b44449',1,'SVF::LLVMUtil']]],

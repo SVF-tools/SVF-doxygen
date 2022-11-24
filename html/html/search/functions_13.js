@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['ub',['ub',['../classSVF_1_1IntervalValue.html#adac2dc2c9f744a071ad3f0175ed40cd9',1,'SVF::IntervalValue']]],
   ['unaryopstmt',['UnaryOPStmt',['../classSVF_1_1UnaryOPStmt.html#a033d3ba05ce96e04b63f2cf455518582',1,'SVF::UnaryOPStmt::UnaryOPStmt()'],['../classSVF_1_1UnaryOPStmt.html#aaad7785c0e6ea468cf7df8eb39cfe327',1,'SVF::UnaryOPStmt::UnaryOPStmt(const UnaryOPStmt &amp;)'],['../classSVF_1_1UnaryOPStmt.html#a2b91333ac3d4b5e1099590aeb15d38ba',1,'SVF::UnaryOPStmt::UnaryOPStmt(SVFVar *s, SVFVar *d, u32_t oc)']]],
   ['unaryopvfgnode',['UnaryOPVFGNode',['../classSVF_1_1UnaryOPVFGNode.html#ae5298888e597b2a379f9c9ebb5bd9132',1,'SVF::UnaryOPVFGNode::UnaryOPVFGNode()'],['../classSVF_1_1UnaryOPVFGNode.html#a77b6cf315bdacb49e66bca15628a12b1',1,'SVF::UnaryOPVFGNode::UnaryOPVFGNode(const UnaryOPVFGNode &amp;)'],['../classSVF_1_1UnaryOPVFGNode.html#acefca73fdac419025ad5109c7b2c9b0c',1,'SVF::UnaryOPVFGNode::UnaryOPVFGNode(NodeID id, const PAGNode *r)']]],
   ['unifyfunctionexit',['UnifyFunctionExit',['../classSVF_1_1MergeFunctionRets.html#a8c04750179ee48d283c5db4d84b3eca1',1,'SVF::MergeFunctionRets']]],

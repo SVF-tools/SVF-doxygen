@@ -1,6 +1,7 @@
 var searchData=
 [
   ['addr',['Addr',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375aed68bc43e8aae49e8590e140eb0ffaf3',1,'SVF::ConstraintEdge::Addr()'],['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75af866301a661c59a7aa3182c0a7fc0c92',1,'SVF::VFGNode::Addr()'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a0a9a0f650e864e89b7cbb3dc8c8aa197',1,'SVF::SVFStmt::Addr()']]],
+  ['addressk',['AddressK',['../classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a7febb7f584172f4687c83b201a615187',1,'SVF::AbstractValue']]],
   ['andersen_5fbase',['Andersen_BASE',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a9a25374fb6d2218c6c59de0482548f49',1,'SVF::PointerAnalysis']]],
   ['andersen_5fwpa',['Andersen_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85ab68615784a520e39856be5237930e6a6',1,'SVF::PointerAnalysis']]],
   ['andersenscd_5fwpa',['AndersenSCD_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a6c06b12c95a4aa57edc6bef57514a7e1',1,'SVF::PointerAnalysis']]],

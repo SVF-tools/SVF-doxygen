@@ -2,6 +2,7 @@ var searchData=
 [
   ['vaarginst',['VAArgInst',['../namespaceSVF.html#abcafc32093ff5ee038b5fcf6e4076ed4',1,'SVF']]],
   ['vacopyinst',['VACopyInst',['../namespaceSVF.html#a0f3339f5241441c7e6023df9e0cfa295',1,'SVF']]],
+  ['vaddrs',['VAddrs',['../classSVF_1_1ExeState.html#aa1355e828af78b55b5d23f2dffa330f1',1,'SVF::ExeState::VAddrs()'],['../classSVF_1_1SVFIR2ItvExeState.html#a2b6de5a37851f83ed3fa8f69145148a8',1,'SVF::SVFIR2ItvExeState::VAddrs()']]],
   ['vaendinst',['VAEndInst',['../namespaceSVF.html#adb305e32f35af19b870b07711ba5b913',1,'SVF']]],
   ['value',['Value',['../namespaceSVF.html#a90b263fd2f541eca78135078114cabda',1,'SVF']]],
   ['value_5ftype',['value_type',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#ab81cda692bb6ad451276f571a25c0751',1,'SVF::PointsTo::PointsToIterator::value_type()'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a6a59f0e97fc9cf278ed22b0a4c109ae1',1,'SVF::CoreBitVector::CoreBitVectorIterator::value_type()'],['../classSVF_1_1iter__facade__base.html#a8d2e47a4de7b98466255b4846bdde26c',1,'SVF::iter_facade_base::value_type()']]],
@@ -10,6 +11,8 @@ var searchData=
   ['var2labelmap',['Var2LabelMap',['../classSVF_1_1SVFStmt.html#ad178ccbc7800527c3dc406ad5fa069bb',1,'SVF::SVFStmt']]],
   ['variableattribute',['VariableAttribute',['../classSVF_1_1GrammarBase.html#a716ce662e6a3f2febf3ab378c4217759',1,'SVF::GrammarBase']]],
   ['vartopropnodemap',['VarToPropNodeMap',['../classSVF_1_1VersionedFlowSensitive.html#a9ee5add09f2b446c6c6bcb84da0f75b3',1,'SVF::VersionedFlowSensitive']]],
+  ['vartovaddrs',['VarToVAddrs',['../classSVF_1_1ExeState.html#aab6dfbae3f5d743d5fff6bba3327f231',1,'SVF::ExeState']]],
+  ['vartovalmap',['VarToValMap',['../classSVF_1_1IntervalExeState.html#ae2b12e4add0714aa861f790864e098ff',1,'SVF::IntervalExeState::VarToValMap()'],['../classSVF_1_1RelExeState.html#afcdf0c842f48a35cf19b2f7887174e98',1,'SVF::RelExeState::VarToValMap()']]],
   ['vastartinst',['VAStartInst',['../namespaceSVF.html#ad92e392a50e7c6c1f635fe2dcebd1adc',1,'SVF']]],
   ['vectortype',['VectorType',['../namespaceSVF.html#a1eaed46fa67cf1a51e438c5f8f523418',1,'SVF']]],
   ['version',['Version',['../namespaceSVF.html#a9ec7a8dc63411ee3724a25a59191be0c',1,'SVF']]],

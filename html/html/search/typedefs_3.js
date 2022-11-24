@@ -10,6 +10,8 @@ var searchData=
   ['debuginfofinder',['DebugInfoFinder',['../namespaceSVF.html#a5ae98f122c64b0114df2e5861b341321',1,'SVF']]],
   ['dfinoutmap',['DFInOutMap',['../classSVF_1_1FlowSensitive.html#af9a2bd5b490f1cc5335ce696173c78dd',1,'SVF::FlowSensitive::DFInOutMap()'],['../classSVF_1_1FlowSensitiveStat.html#a55d45e82ea3d338114e50da877bcfb75',1,'SVF::FlowSensitiveStat::DFInOutMap()']]],
   ['dfkeytoidmap',['DFKeyToIDMap',['../classSVF_1_1PersistentDFPTData.html#a0d0318fa192eac88a4307112e30e9d90',1,'SVF::PersistentDFPTData']]],
+  ['dfn',['Dfn',['../classSVF_1_1Wto.html#affefcf48634cbf95d07b7c7953538382',1,'SVF::Wto']]],
+  ['dfntable',['DfnTable',['../classSVF_1_1Wto.html#a13c83f7745effec685a61027a5cb11e6',1,'SVF::Wto']]],
   ['dfptdataty',['DFPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#a5c2288519153467142e74c8dd4e77180',1,'SVF::BVDataPTAImpl']]],
   ['dfptsmap',['DFPtsMap',['../classSVF_1_1MutableDFPTData.html#a0c73427f957d310bc85955bec6654352',1,'SVF::MutableDFPTData']]],
   ['dfptsmapconstiter',['DFPtsMapconstIter',['../classSVF_1_1MutableDFPTData.html#adb30678f5bbdea0f196d3b0ab67d2bad',1,'SVF::MutableDFPTData']]],

@@ -18,6 +18,7 @@ var searchData=
   ['ck_5ffopen',['CK_FOPEN',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056a75cc4daa228ceb26f63cb1825da8a73e',1,'SVF::SaberCheckerAPI']]],
   ['ck_5ffree',['CK_FREE',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056a0fa2e38d001b233c6563822491adf507',1,'SVF::SaberCheckerAPI']]],
   ['cmp',['Cmp',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a98fd43afc6615f418d2d96209eb31828',1,'SVF::VFGNode::Cmp()'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a610d6662d1814cffbf23db29e7e620c0',1,'SVF::SVFStmt::Cmp()']]],
+  ['concretek',['ConcreteK',['../classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a9f76747494000cadf2e655a77f0e6ae5',1,'SVF::AbstractValue::ConcreteK()'],['../classSVF_1_1ExeState.html#a259b93247e06141077b2c1ae15efcbb8ae3680f12d77cb0b05d5d739ae5887802',1,'SVF::ExeState::ConcreteK()']]],
   ['condimpl',['CondImpl',['../classSVF_1_1PointerAnalysis.html#ac0c0855918cb2cdc3d8ebc175acfbd4da88380bb05f60a1349e192364ba6c5292',1,'SVF::PointerAnalysis']]],
   ['conservative',['Conservative',['../classSVF_1_1WPAPass.html#a4505a1882956feda3cf83c788149394da498ba80d25733b291f391a94500dd4c7',1,'SVF::WPAPass']]],
   ['const_5farray_5fobj',['CONST_ARRAY_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830aff4142c0c411dea07b484a19af514047',1,'SVF::ObjTypeInfo']]],
@@ -35,5 +36,6 @@ var searchData=
   ['cpu',['CPU',['../classSVF_1_1SVFStat.html#a4f47da512cfa8f94fddaddc65334b454ad58693e596aa4088fa4a05065f9c0ffa',1,'SVF::SVFStat']]],
   ['cscallstring_5fwpa',['CSCallString_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85ac9e931f254fa3471f5f5337cbca1de09',1,'SVF::PointerAnalysis']]],
   ['cssummary_5fwpa',['CSSummary_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85adf8fe4349f84779601a0b41659ca8e27',1,'SVF::PointerAnalysis']]],
-  ['cxt_5fdda',['Cxt_DDA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a0ab6564c48897595c9d23382a026e0a8',1,'SVF::PointerAnalysis']]]
+  ['cxt_5fdda',['Cxt_DDA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a0ab6564c48897595c9d23382a026e0a8',1,'SVF::PointerAnalysis']]],
+  ['cycle',['Cycle',['../classSVF_1_1WtoComponent.html#a61379d9c9aafab0f4729f2818d6d2ec5af43217c504cfe8ce5538aa2dccf3966d',1,'SVF::WtoComponent']]]
 ];

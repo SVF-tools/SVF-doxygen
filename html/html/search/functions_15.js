@@ -2,6 +2,8 @@ var searchData=
 [
   ['weakupdateoutfromin',['weakUpdateOutFromIn',['../classSVF_1_1FlowSensitive.html#ab492c283e2264b4cbd4c192e805b7750',1,'SVF::FlowSensitive']]],
   ['while',['while',['../cJSON_8cpp.html#a209b15238c5803bc547b2d77e02f29b4',1,'cJSON.cpp']]],
+  ['widen_5fwith',['widen_with',['../classSVF_1_1IntervalValue.html#ab7ddcc29a116944a91db24af90d4c144',1,'SVF::IntervalValue']]],
+  ['widenwith',['widenWith',['../classSVF_1_1IntervalExeState.html#acfbe4dbb85e802a0456b7223a26280d3',1,'SVF::IntervalExeState']]],
   ['word',['word',['../structSVF_1_1SparseBitVectorElement.html#a5d43d980591d14d3a3d0782be034ed4f',1,'SVF::SparseBitVectorElement']]],
   ['wpafssolver',['WPAFSSolver',['../classSVF_1_1WPAFSSolver.html#a3bab50f0e94f516204d6622420de7db7',1,'SVF::WPAFSSolver']]],
   ['wpaminimumsolver',['WPAMinimumSolver',['../classSVF_1_1WPAMinimumSolver.html#aaf8b6410ba9667f7a46fc4ca05900ed3',1,'SVF::WPAMinimumSolver']]],
@@ -20,5 +22,11 @@ var searchData=
   ['writetofile',['writeToFile',['../classSVF_1_1SVFG.html#a7ce9ec638995467c211958262be08ee1',1,'SVF::SVFG::writeToFile()'],['../classSVF_1_1BVDataPTAImpl.html#a25c68f9d2b88437778e854ff0d741d1b',1,'SVF::BVDataPTAImpl::writeToFile()']]],
   ['writetomodule',['writeToModule',['../classSVF_1_1BVDataPTAImpl.html#aa0ca07204a31004fb876c6e18d1ac1ca',1,'SVF::BVDataPTAImpl']]],
   ['writewrnmsg',['writeWrnMsg',['../namespaceSVF_1_1SVFUtil.html#a077caa1b10ab84d101d79fc7ea50db2d',1,'SVF::SVFUtil']]],
-  ['wrnmsg',['wrnMsg',['../namespaceSVF_1_1SVFUtil.html#a6c06020737f7dff22a666b75c28c5e7d',1,'SVF::SVFUtil']]]
+  ['wrnmsg',['wrnMsg',['../namespaceSVF_1_1SVFUtil.html#a6c06020737f7dff22a666b75c28c5e7d',1,'SVF::SVFUtil']]],
+  ['wto',['Wto',['../classSVF_1_1Wto.html#af9cecf6292bcd82a4e41af4857ebaf7c',1,'SVF::Wto::Wto()'],['../classSVF_1_1Wto.html#adbbef8f8f2a8381fde4dbc3f6fd285f6',1,'SVF::Wto::Wto(const SVFBasicBlock *entry)'],['../classSVF_1_1Wto.html#a1bda5244c662fe2d716be4fd7c0a1222',1,'SVF::Wto::Wto(const Wto &amp;other)=default'],['../classSVF_1_1Wto.html#a4f00e6f76a63042bfcd5763452a79e52',1,'SVF::Wto::Wto(Wto &amp;&amp;other)=default']]],
+  ['wtocomponent',['WtoComponent',['../classSVF_1_1WtoComponent.html#ad7bef59dce27335c9045711043c7f531',1,'SVF::WtoComponent::WtoComponent(WtoCT k)'],['../classSVF_1_1WtoComponent.html#a25ab859eb28264758e2c060eda805945',1,'SVF::WtoComponent::WtoComponent(const WtoComponent &amp;) noexcept=default'],['../classSVF_1_1WtoComponent.html#a86ccda5abf12c1a2fce180dd0478631b',1,'SVF::WtoComponent::WtoComponent(WtoComponent &amp;&amp;) noexcept=default']]],
+  ['wtocomponentvisitor',['WtoComponentVisitor',['../classSVF_1_1WtoComponentVisitor.html#a8b21e414fdf9125ffad277375b3172a9',1,'SVF::WtoComponentVisitor::WtoComponentVisitor()=default'],['../classSVF_1_1WtoComponentVisitor.html#a86874c5edb8084a1547289cc5c879bd8',1,'SVF::WtoComponentVisitor::WtoComponentVisitor(const WtoComponentVisitor &amp;) noexcept=default'],['../classSVF_1_1WtoComponentVisitor.html#a39d4cc064c02fe4145a950ca452372b9',1,'SVF::WtoComponentVisitor::WtoComponentVisitor(WtoComponentVisitor &amp;&amp;) noexcept=default']]],
+  ['wtocycle',['WtoCycle',['../classSVF_1_1WtoCycle.html#a989206ac5c05c91991beaaff17f2f2d2',1,'SVF::WtoCycle']]],
+  ['wtonesting',['WtoNesting',['../classSVF_1_1WtoNesting.html#ae47ab6f3a67e1179a1832bc3086234e6',1,'SVF::WtoNesting::WtoNesting()=default'],['../classSVF_1_1WtoNesting.html#aed5f8a944a1018c71c4fb78a22795c08',1,'SVF::WtoNesting::WtoNesting(const WtoNesting &amp;)=default'],['../classSVF_1_1WtoNesting.html#a781655082432cd789e282962c6ded5a3',1,'SVF::WtoNesting::WtoNesting(WtoNesting &amp;&amp;)=default']]],
+  ['wtovertex',['WtoVertex',['../classSVF_1_1WtoVertex.html#ac04dcdc823f29fbd0a3223d37f5fe973',1,'SVF::WtoVertex']]]
 ];

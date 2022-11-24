@@ -16,6 +16,7 @@ var searchData=
   ['singlecondvar',['SingleCondVar',['../classSVF_1_1CondPointsToSet.html#a0ef73bd2c1b42439ee6f265e07f17514',1,'SVF::CondPointsToSet']]],
   ['size_5ftype',['size_type',['../structSVF_1_1SparseBitVectorElement.html#ad9e38352db094adcdfb2964f325d9e53',1,'SVF::SparseBitVectorElement']]],
   ['smdiagnostic',['SMDiagnostic',['../namespaceSVF.html#a86863d104a3930b3a806935d92ddbf30',1,'SVF']]],
+  ['stack',['Stack',['../classSVF_1_1Wto.html#aa8dac9c4a8c2c5649df80486af5e06fc',1,'SVF::Wto']]],
   ['stmtsvfgnode',['StmtSVFGNode',['../namespaceSVF.html#a26bd4f89dc154b9c6d34b6a517777934',1,'SVF']]],
   ['storechi',['STORECHI',['../classSVF_1_1SVFG.html#ad14cdbb3f1df1f716aa03b4d39f4e52b',1,'SVF::SVFG::STORECHI()'],['../classSVF_1_1MemSSA.html#a150e9d53ced1c143bba2d1026f739fa4',1,'SVF::MemSSA::STORECHI()']]],
   ['storeinst',['StoreInst',['../namespaceSVF.html#ab696aab940eb187dc81217efe8649af5',1,'SVF']]],

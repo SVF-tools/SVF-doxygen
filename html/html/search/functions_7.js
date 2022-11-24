@@ -39,6 +39,7 @@ var searchData=
   ['handlethunkfunction',['handleThunkFunction',['../CPPUtil_8cpp.html#a264d15523be2c695d9cee8d49ae87ebe',1,'CPPUtil.cpp']]],
   ['handletypedef',['handleTypedef',['../classSVF_1_1DCHGraph.html#a6d97a772afe16c1483e65eea81f82603',1,'SVF::DCHGraph']]],
   ['hareparforedge',['HareParForEdge',['../classSVF_1_1HareParForEdge.html#a097ccd687d7ca511a4a453dd56b7c665',1,'SVF::HareParForEdge']]],
+  ['has_5fbottom',['has_bottom',['../classSVF_1_1IntervalExeState.html#a6a8c6bbff583ccd71453af5de884df89',1,'SVF::IntervalExeState']]],
   ['has_5fstatic',['has_static',['../classSVF_1_1ExtAPI.html#ae20ea24cce02de87d89a2d0b773a2357',1,'SVF::ExtAPI']]],
   ['has_5fstatic2',['has_static2',['../classSVF_1_1ExtAPI.html#ad3eefa086aa514e4d245a975ea3d45b5',1,'SVF::ExtAPI']]],
   ['hasactualinsvfgnodes',['hasActualINSVFGNodes',['../classSVF_1_1SVFG.html#a21577bc4b4e55b23aa55083f5321b399',1,'SVF::SVFG']]],
@@ -77,7 +78,7 @@ var searchData=
   ['hasglobalrep',['hasGlobalRep',['../classSVF_1_1LLVMModuleSet.html#a0e5ab0def54815f67ed7495d028dab1b',1,'SVF::LLVMModuleSet']]],
   ['hasgnode',['hasGNode',['../classSVF_1_1GenericGraph.html#a6885064afa211958af7b73f0233284e5',1,'SVF::GenericGraph']]],
   ['hasgraphedge',['hasGraphEdge',['../classSVF_1_1PTACallGraph.html#a6d29a39440d8f6290e2e8b7322b965fb',1,'SVF::PTACallGraph::hasGraphEdge()'],['../classSVF_1_1TCT.html#adb2025048dc69f0689f526c58df29802',1,'SVF::TCT::hasGraphEdge()']]],
-  ['hash',['hash',['../classSVF_1_1PointsTo.html#afe275b31ea93a3ecea4e19660ceef0ae',1,'SVF::PointsTo::hash()'],['../classSVF_1_1CoreBitVector.html#af979ecb48d3d5296bce5bd0b4676e359',1,'SVF::CoreBitVector::hash()'],['../classSVF_1_1Z3Expr.html#a631cb7cee0e1f9b7204b9293f4e516a9',1,'SVF::Z3Expr::hash()']]],
+  ['hash',['hash',['../classSVF_1_1ExeState.html#a2e63af0f29d04484c09cca217b799986',1,'SVF::ExeState::hash()'],['../classSVF_1_1IntervalExeState.html#a85b0e711160d67ea84f426025b980dce',1,'SVF::IntervalExeState::hash()'],['../classSVF_1_1RelExeState.html#a021da964784427cfb9f4353e2678ce73',1,'SVF::RelExeState::hash()'],['../classSVF_1_1PointsTo.html#afe275b31ea93a3ecea4e19660ceef0ae',1,'SVF::PointsTo::hash()'],['../classSVF_1_1CoreBitVector.html#af979ecb48d3d5296bce5bd0b4676e359',1,'SVF::CoreBitVector::hash()'],['../classSVF_1_1Z3Expr.html#a631cb7cee0e1f9b7204b9293f4e516a9',1,'SVF::Z3Expr::hash()']]],
   ['hasicfgnode',['hasICFGNode',['../classSVF_1_1ICFG.html#a16c2ed1f9e28c84669b14dc48fb3c01a',1,'SVF::ICFG']]],
   ['hasincomingedge',['hasIncomingEdge',['../classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe',1,'SVF::GenericNode::hasIncomingEdge() const'],['../classSVF_1_1GenericNode.html#add6b6b3bd45a9460335c5db9eda821b8',1,'SVF::GenericNode::hasIncomingEdge(EdgeType *edge) const']]],
   ['hasincomingedges',['hasIncomingEdges',['../classSVF_1_1SVFVar.html#a747b2c92c81d32fcd357e80d2d8fe7cc',1,'SVF::SVFVar']]],
@@ -85,6 +86,7 @@ var searchData=
   ['hasindcscallees',['hasIndCSCallees',['../classSVF_1_1PTACallGraph.html#a71a63c53a093ea8e450fb53fd60c9424',1,'SVF::PTACallGraph::hasIndCSCallees()'],['../classSVF_1_1PointerAnalysis.html#abdacd060691add054839aa183babe095',1,'SVF::PointerAnalysis::hasIndCSCallees()']]],
   ['hasintericfgedge',['hasInterICFGEdge',['../classSVF_1_1ICFG.html#a86535e50d1feba706b19491d905baef1',1,'SVF::ICFG']]],
   ['hasinterleavingthreads',['hasInterleavingThreads',['../classSVF_1_1MHP.html#a3ba43bb0be55ffade3d70f8cbb95f88f',1,'SVF::MHP']]],
+  ['hasintersect',['hasIntersect',['../classSVF_1_1AddressValue.html#a269a73753a7b495eb08bb0c9c0a58dc0',1,'SVF::AddressValue']]],
   ['hasintervfgedge',['hasInterVFGEdge',['../classSVF_1_1VFG.html#ad86631f70bd702b5635bdbeab7d884b9',1,'SVF::VFG']]],
   ['hasintraicfgedge',['hasIntraICFGEdge',['../classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709',1,'SVF::ICFG']]],
   ['hasintravfgedge',['hasIntraVFGEdge',['../classSVF_1_1VFG.html#ac34c4529229404617c346f81cc6c141f',1,'SVF::VFG']]],
@@ -134,5 +136,8 @@ var searchData=
   ['hasvfgnodes',['hasVFGNodes',['../classSVF_1_1VFG.html#a76af43e28630eb56a1aa5971f516d43d',1,'SVF::VFG']]],
   ['hclust_5ffast',['hclust_fast',['../fastcluster_8h.html#acccd226cbdf0944b5c9e24c84a4599c9',1,'hclust_fast(int n, double *distmat, int method, int *merge, double *height):&#160;fastcluster.cpp'],['../fastcluster_8cpp.html#acccd226cbdf0944b5c9e24c84a4599c9',1,'hclust_fast(int n, double *distmat, int method, int *merge, double *height):&#160;fastcluster.cpp']]],
   ['hclustmethodtostring',['hclustMethodToString',['../namespaceSVF_1_1SVFUtil.html#a14a4c5124f2fd03ca3d898e2acd54160',1,'SVF::SVFUtil']]],
+  ['head',['head',['../classSVF_1_1WtoCycle.html#af0dee4bcc82e3047a129add6822835b1',1,'SVF::WtoCycle']]],
+  ['headbegin',['headBegin',['../classSVF_1_1Wto.html#aced9d7579a6e93b46d621d25f61e799e',1,'SVF::Wto']]],
+  ['headend',['headEnd',['../classSVF_1_1Wto.html#a5be6913f841c774301095c6006167bf6',1,'SVF::Wto']]],
   ['heapallocatorviaindcall',['heapAllocatorViaIndCall',['../classSVF_1_1CFLAlias.html#a40841c2b47cf690af5c13ba7662d0863',1,'SVF::CFLAlias::heapAllocatorViaIndCall()'],['../classSVF_1_1Andersen.html#a7b1b9e9b25b5643440aca77e23a8de07',1,'SVF::Andersen::heapAllocatorViaIndCall()']]]
 ];

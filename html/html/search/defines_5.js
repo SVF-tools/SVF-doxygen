@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['has_5fclz',['HAS_CLZ',['../SparseBitVector_8h.html#aa4aed82d501b04499090de2c616e6b1f',1,'SparseBitVector.h']]],
-  ['has_5fclzll',['HAS_CLZLL',['../SparseBitVector_8h.html#ad66fb43b1e40d6e22629fcd889d4bfab',1,'SparseBitVector.h']]]
+  ['false',['false',['../cJSON_8cpp.html#a65e9886d74aaee76545e83dd09011727',1,'cJSON.cpp']]],
+  ['flippedaddressmask',['FlippedAddressMask',['../AddressValue_8h.html#aec682540f2c8aa9deb79f610e4399411',1,'AddressValue.h']]]
 ];
