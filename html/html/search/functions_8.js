@@ -382,7 +382,7 @@ var searchData=
   ['isvararray',['isVarArray',['../classSVF_1_1MemObj.html#a616e9f4d6f82a253f94391c47668b9a6',1,'SVF::MemObj::isVarArray()'],['../classSVF_1_1ObjTypeInfo.html#aca1e900f9b0a774684af77666cf033e3',1,'SVF::ObjTypeInfo::isVarArray()']]],
   ['isvariantfieldgep',['isVariantFieldGep',['../classSVF_1_1GepStmt.html#a0ddf180a0f7ba64fc8655687910e3788',1,'SVF::GepStmt']]],
   ['isvarstruct',['isVarStruct',['../classSVF_1_1MemObj.html#ad1966c52f95775ac7d65c0ba6632c3cf',1,'SVF::MemObj::isVarStruct()'],['../classSVF_1_1ObjTypeInfo.html#a40d6703875b370aed2c6dc41c0594af5',1,'SVF::ObjTypeInfo::isVarStruct()']]],
-  ['isvirtualcall',['isVirtualCall',['../classSVF_1_1CallSite.html#a100235069232bd9940783a31acfd1169',1,'SVF::CallSite']]],
+  ['isvirtualcall',['isVirtualCall',['../classSVF_1_1CallSite.html#a427a38e580db4bf04c9d716762243c89',1,'SVF::CallSite']]],
   ['isvirtualcallsite',['isVirtualCallSite',['../namespaceSVF_1_1cppUtil.html#aab1dce633f9a03796c208b6fba2bd2b4',1,'SVF::cppUtil']]],
   ['isvirtualmemaddress',['isVirtualMemAddress',['../classSVF_1_1AddressValue.html#ab76f47f97262d40dbbee12f466f746e8',1,'SVF::AddressValue::isVirtualMemAddress()'],['../classSVF_1_1ExeState.html#abfaad70395d9f4416f297887c84f7df4',1,'SVF::ExeState::isVirtualMemAddress()'],['../classSVF_1_1RelExeState.html#adc3ed92ba80bb95326cbbe675a278879',1,'SVF::RelExeState::isVirtualMemAddress()'],['../classSVF_1_1SVFIR2ItvExeState.html#ae48cc31474d2c1cbc581b8f7ed433a14',1,'SVF::SVFIR2ItvExeState::isVirtualMemAddress()']]],
   ['isvisited',['isVisited',['../classSVF_1_1CSC.html#a2913a7a83deae0b91f1f42dc45c4f3b2',1,'SVF::CSC']]],

@@ -140,7 +140,7 @@ var searchData=
   ['setpwcnode',['setPWCNode',['../classSVF_1_1ConstraintGraph.html#a03f9fe8ae7094c39937f47f422276724',1,'SVF::ConstraintGraph::setPWCNode()'],['../classSVF_1_1ConstraintNode.html#ad8701df90d93c5dfed26cff8f0b2fbb3',1,'SVF::ConstraintNode::setPWCNode()']]],
   ['setquery',['setQuery',['../classSVF_1_1DDAClient.html#a3d0f732e284f3237287b375582c0aa88',1,'SVF::DDAClient']]],
   ['setrawproductions',['setRawProductions',['../classSVF_1_1GrammarBase.html#a2eb6ab294093710ca1dc119836adff5a',1,'SVF::GrammarBase']]],
-  ['setreachablebbs',['setReachableBBs',['../classSVF_1_1SVFLoopAndDomInfo.html#afc83955233ed9c77ad6a8b36e4a6b168',1,'SVF::SVFLoopAndDomInfo']]],
+  ['setreachablebbs',['setReachableBBs',['../classSVF_1_1SVFLoopAndDomInfo.html#acc409e328f641a2c9512beeb727f58c7',1,'SVF::SVFLoopAndDomInfo']]],
   ['setreachglobal',['setReachGlobal',['../classSVF_1_1ProgSlice.html#a397632ce0c523c4a54c5dc578606d14d',1,'SVF::ProgSlice']]],
   ['setreles',['setRelEs',['../classSVF_1_1SVFIR2ItvExeState.html#af0b6abd2310a9bf0311760b290114341',1,'SVF::SVFIR2ItvExeState']]],
   ['setrep',['setRep',['../classSVF_1_1ConstraintGraph.html#abea65bf6dd43aa312082f8d4c7c3e3cb',1,'SVF::ConstraintGraph']]],
