@@ -12,7 +12,7 @@ var searchData=
   ['newvertex',['newVertex',['../classSVF_1_1Wto.html#a0c5a8b60b95203deafe52a87504a464a',1,'SVF::Wto']]],
   ['nextsetindex',['nextSetIndex',['../classSVF_1_1CoreBitVector.html#a087f69adea5e9e83bd908a1ab0ee1383',1,'SVF::CoreBitVector']]],
   ['no_5fstruct_5falloc',['no_struct_alloc',['../classSVF_1_1ExtAPI.html#a934e293bd4050cb1ab5c19e8ad391ebe',1,'SVF::ExtAPI']]],
-  ['node',['node',['../classSVF_1_1WtoVertex.html#adf36d4d72f1848e3fd6a6000fd0e89c0',1,'SVF::WtoVertex::node()'],['../classSVF_1_1SCCDetection.html#a6458c27c625add944fcb8a3ef7b536a6',1,'SVF::SCCDetection::Node()'],['../classSVF_1_1WPASolver.html#a5fd488d74e04aa9e66ca4eb42c6dbbf4',1,'SVF::WPASolver::Node()']]],
+  ['node',['Node',['../classSVF_1_1SCCDetection.html#a6458c27c625add944fcb8a3ef7b536a6',1,'SVF::SCCDetection::Node()'],['../classSVF_1_1WPASolver.html#a5fd488d74e04aa9e66ca4eb42c6dbbf4',1,'SVF::WPASolver::Node()'],['../classSVF_1_1WtoVertex.html#adf36d4d72f1848e3fd6a6000fd0e89c0',1,'SVF::WtoVertex::node()']]],
   ['node_5findex',['Node_Index',['../classSVF_1_1SCCDetection.html#a5fa111bb849052b8a753194cd0cd5e0c',1,'SVF::SCCDetection::Node_Index()'],['../classSVF_1_1WPASolver.html#a01450e1475679d093413e6496c198fc0',1,'SVF::WPASolver::Node_Index()']]],
   ['nodeidallocator',['NodeIDAllocator',['../classSVF_1_1NodeIDAllocator.html#ac8d6abc4ee27ae464f3978e4f4bdc3a6',1,'SVF::NodeIDAllocator']]],
   ['nodeincycle',['nodeInCycle',['../classSVF_1_1SVFGStat.html#a42b67371df87ba647166000912f53243',1,'SVF::SVFGStat']]],

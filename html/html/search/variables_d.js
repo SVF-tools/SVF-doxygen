@@ -3,7 +3,6 @@ var searchData=
   ['m',['M',['../classSVF_1_1RaceResultValidator.html#aedc9ec6c3db947fa7e1ef50fbb61e9a8',1,'SVF::RaceResultValidator']]],
   ['m_5fcond',['m_cond',['../classSVF_1_1CondVar.html#a90b13685d2126f8c10dde4a504bb28df',1,'SVF::CondVar']]],
   ['m_5fid',['m_id',['../classSVF_1_1CondVar.html#a26fd04b3f2d45f0c230e1823f3eea49a',1,'SVF::CondVar']]],
-  ['mainmodule',['mainModule',['../classSVF_1_1IRAnnotator.html#a01462e9ee84f490514598c68e8c9557b',1,'SVF::IRAnnotator']]],
   ['malloconly',['MallocOnly',['../classSVF_1_1Options.html#a30abe362add49b0b7083f34530aa446c',1,'SVF::Options']]],
   ['markedclocksonly',['MarkedClocksOnly',['../classSVF_1_1Options.html#a5cfcf1ddc44ff175c4766f88bf204c03',1,'SVF::Options']]],
   ['maxcontextlen',['MaxContextLen',['../classSVF_1_1Options.html#a2e53156bd075d7802d390672f129c6a8',1,'SVF::Options']]],

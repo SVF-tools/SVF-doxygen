@@ -46,8 +46,6 @@ var searchData=
   ['addaddrtakennodetimestart',['addAddrTakenNodeTimeStart',['../classSVF_1_1SVFGStat.html#aa35ff9ddfc4f00be698a903adf3285f5',1,'SVF::SVFGStat']]],
   ['addaddrvfgnode',['addAddrVFGNode',['../classSVF_1_1VFG.html#aca2b1493bd712bdc6618de995a81e5af',1,'SVF::VFG']]],
   ['addaliasset',['addAliasSet',['../classSVF_1_1SVFModule.html#aa6627399cf4d30d576f76f681d83449d',1,'SVF::SVFModule']]],
-  ['addandersenmetadata',['addAndersenMetadata',['../classSVF_1_1IRAnnotator.html#aa36cd38b0518a9c9a3b57cea9b07b227',1,'SVF::IRAnnotator']]],
-  ['addandersennamedmetdata',['addAndersenNamedMetdata',['../classSVF_1_1IRAnnotator.html#af48723d319bbe2ecfd0c4777c1c92dc1',1,'SVF::IRAnnotator']]],
   ['addargument',['addArgument',['../classSVF_1_1SVFFunction.html#ad865b8440a6e0d5d212798d2213e1e9c',1,'SVF::SVFFunction::addArgument()'],['../classSVF_1_1SVFCallInst.html#ac979b49b449b97b2a23f195cb107ec77',1,'SVF::SVFCallInst::addArgument()']]],
   ['addargumentmap',['addArgumentMap',['../classSVF_1_1LLVMModuleSet.html#a5595ec3f7582934dc499770825bf5373',1,'SVF::LLVMModuleSet']]],
   ['addattribute',['addAttribute',['../classSVF_1_1CFLGraphBuilder.html#adaa843018284f854ed0ad3bcb1460a01',1,'SVF::CFLGraphBuilder']]],

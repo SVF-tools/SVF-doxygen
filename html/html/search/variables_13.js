@@ -29,7 +29,7 @@ var searchData=
   ['timeofcollapse',['timeOfCollapse',['../classSVF_1_1AndersenBase.html#ad40b196c2c699bd115529b806d20de25',1,'SVF::AndersenBase']]],
   ['timeofcreatemuchi',['timeOfCreateMUCHI',['../classSVF_1_1MemSSA.html#a4d2418b7df74f23d8fd328f66e29f198',1,'SVF::MemSSA::timeOfCreateMUCHI()'],['../classSVF_1_1MemSSAStat.html#a48c70f0ed1c7d031a3cd528035162e52',1,'SVF::MemSSAStat::TimeOfCreateMUCHI()']]],
   ['timeofgeneratingmemregions',['TimeOfGeneratingMemRegions',['../classSVF_1_1MemSSAStat.html#a74c36654b7452aa94aa241881f0a83c5',1,'SVF::MemSSAStat::TimeOfGeneratingMemRegions()'],['../classSVF_1_1MemSSA.html#a37dca8a7d155de4870358146d219b5e5',1,'SVF::MemSSA::timeOfGeneratingMemRegions()']]],
-  ['timeofinsertingphi',['TimeOfInsertingPHI',['../classSVF_1_1MemSSAStat.html#a0c24822c8549af6a96e82312954fab9b',1,'SVF::MemSSAStat::TimeOfInsertingPHI()'],['../classSVF_1_1MemSSA.html#a3c7b5fa73fdc7c805ee3673fbe812b44',1,'SVF::MemSSA::timeOfInsertingPHI()']]],
+  ['timeofinsertingphi',['timeOfInsertingPHI',['../classSVF_1_1MemSSA.html#a3c7b5fa73fdc7c805ee3673fbe812b44',1,'SVF::MemSSA::timeOfInsertingPHI()'],['../classSVF_1_1MemSSAStat.html#a0c24822c8549af6a96e82312954fab9b',1,'SVF::MemSSAStat::TimeOfInsertingPHI()']]],
   ['timeofnormalizegrammar',['timeOfNormalizeGrammar',['../classSVF_1_1CFLBase.html#ad4d65dd4c3e173d014199ac6b08a5261',1,'SVF::CFLBase']]],
   ['timeofprocesscopygep',['timeOfProcessCopyGep',['../classSVF_1_1AndersenBase.html#aae14de6fbca9280d8d0290326aa493f0',1,'SVF::AndersenBase']]],
   ['timeofprocessloadstore',['timeOfProcessLoadStore',['../classSVF_1_1AndersenBase.html#a9fe738f1e11c80006d540f246a80bfdf',1,'SVF::AndersenBase']]],
@@ -69,7 +69,7 @@ var searchData=
   ['type2typeinfo',['Type2TypeInfo',['../classSVF_1_1LLVMModuleSet.html#af2c555af91679d9e6d3009547ee11486',1,'SVF::LLVMModuleSet']]],
   ['type_5fpair',['type_pair',['../classSVF_1_1ExtAPI.html#a95ac45d2367b3d3124d5d98958e74cc5',1,'SVF::ExtAPI']]],
   ['typedefs',['typedefs',['../classSVF_1_1DCHNode.html#abafa483be12690549fbcccaf4c3fa511',1,'SVF::DCHNode']]],
-  ['typeinfo',['typeInfo',['../classSVF_1_1MemObj.html#a750770ea992d39b22c8b2dda9aff2eaf',1,'SVF::MemObj::typeInfo()'],['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo()']]],
+  ['typeinfo',['typeinfo',['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo()'],['../classSVF_1_1MemObj.html#a750770ea992d39b22c8b2dda9aff2eaf',1,'SVF::MemObj::typeInfo()']]],
   ['typename',['typeName',['../classSVF_1_1DCHNode.html#a8a7b412262af7a90c9ef583b6a8c10fc',1,'SVF::DCHNode']]],
   ['typeprint',['TypePrint',['../classSVF_1_1Options.html#affd0cb6e0cb91e096537a3d3198bf4e5',1,'SVF::Options']]],
   ['typesystem',['typeSystem',['../classSVF_1_1PointerAnalysis.html#a219baed92b811d5519b056ad393fceed',1,'SVF::PointerAnalysis']]]

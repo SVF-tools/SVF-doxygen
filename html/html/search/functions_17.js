@@ -67,7 +67,6 @@ var searchData=
   ['_7eintervalexestate',['~IntervalExeState',['../classSVF_1_1IntervalExeState.html#a9e6006e0f0a4039cf65f9e79be6eea49',1,'SVF::IntervalExeState']]],
   ['_7eintervalvalue',['~IntervalValue',['../classSVF_1_1IntervalValue.html#afcd424e419fe66750c47df21774bb22c',1,'SVF::IntervalValue']]],
   ['_7eintradisjointmrg',['~IntraDisjointMRG',['../classSVF_1_1IntraDisjointMRG.html#ad92695f6ff2cb62f58b48d68b0b6fb0e',1,'SVF::IntraDisjointMRG']]],
-  ['_7eirannotator',['~IRAnnotator',['../classSVF_1_1IRAnnotator.html#a6e0454ebd200005fd161cf6a2a0e1c26',1,'SVF::IRAnnotator']]],
   ['_7eirgraph',['~IRGraph',['../classSVF_1_1IRGraph.html#a2085d6895363c2ff7b757eb58f3f4cea',1,'SVF::IRGraph']]],
   ['_7eleakchecker',['~LeakChecker',['../classSVF_1_1LeakChecker.html#a1c47ce036a7ffcd7cbe5d5e372a30208',1,'SVF::LeakChecker']]],
   ['_7elist',['~List',['../classSVF_1_1List.html#afd8edd0acf606e0c3470bab424083b45',1,'SVF::List']]],

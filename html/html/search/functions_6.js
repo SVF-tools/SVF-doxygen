@@ -431,7 +431,6 @@ var searchData=
   ['getmaxfieldoffsetlimit',['getMaxFieldOffsetLimit',['../classSVF_1_1MemObj.html#a51be7ad70bc2c6a4230bd2f6b86bdc88',1,'SVF::MemObj::getMaxFieldOffsetLimit()'],['../classSVF_1_1ObjTypeInfo.html#a81bc3d785062c7e527ecf8e564cd52a4',1,'SVF::ObjTypeInfo::getMaxFieldOffsetLimit()']]],
   ['getmaxpathlen',['getMaxPathLen',['../classSVF_1_1ContextCond.html#a935415951bfc6f5089663980bf8e324d',1,'SVF::ContextCond']]],
   ['getmaxstructsize',['getMaxStructSize',['../classSVF_1_1SymbolTableInfo.html#abc7e567209010286a68634c700d76cca',1,'SVF::SymbolTableInfo']]],
-  ['getmdnodepts',['getMdNodePts',['../classSVF_1_1IRAnnotator.html#a08a3ad9b6d872a70b1480f1beed49441',1,'SVF::IRAnnotator']]],
   ['getmemobj',['getMemObj',['../classSVF_1_1IRGraph.html#ad5a06a57d64c54ec6e7e92b7e0acfad8',1,'SVF::IRGraph::getMemObj()'],['../classSVF_1_1ObjVar.html#a6a4feb73b54e602407e35eeb09f55930',1,'SVF::ObjVar::getMemObj()']]],
   ['getmemoryusagekb',['getMemoryUsageKB',['../namespaceSVF_1_1SVFUtil.html#a630ff9c47f58f9b8df7c8a2b3711477c',1,'SVF::SVFUtil']]],
   ['getmemtofieldsmap',['getMemToFieldsMap',['../classSVF_1_1SVFIR.html#a6f46446d667258b32ddc1ccab48f651c',1,'SVF::SVFIR']]],
