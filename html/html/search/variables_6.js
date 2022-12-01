@@ -33,7 +33,7 @@ var searchData=
   ['fromfile',['fromFile',['../classSVF_1_1IRGraph.html#a7750a2b2a98bb39fc5f67af4e0c12379',1,'SVF::IRGraph']]],
   ['fsanno',['FSAnno',['../classSVF_1_1Options.html#ae444f90ff3b6a3cfec1c08e6ca6f263a',1,'SVF::Options']]],
   ['fsmptatime',['FSMPTATime',['../classSVF_1_1MTAStat.html#a030671ec358a93e3c2887f048dcfcce8',1,'SVF::MTAStat']]],
-  ['fspta',['fspta',['../classSVF_1_1FlowSensitive.html#a4ad2095dc708df07602de25e4a004776',1,'SVF::FlowSensitive::fspta()'],['../classSVF_1_1FlowSensitiveStat.html#af7e04f73ee17647c52e571cadef8729f',1,'SVF::FlowSensitiveStat::fspta()']]],
+  ['fspta',['fspta',['../classSVF_1_1FlowSensitive.html#a2fac4f6a9d2cc19b2d998f0197e6883b',1,'SVF::FlowSensitive::fspta()'],['../classSVF_1_1FlowSensitiveStat.html#af7e04f73ee17647c52e571cadef8729f',1,'SVF::FlowSensitiveStat::fspta()']]],
   ['fstimelimit',['FsTimeLimit',['../classSVF_1_1Options.html#ad03c4697dd4da2b6adde112e3ee1884b',1,'SVF::Options']]],
   ['fulljoin',['fullJoin',['../classSVF_1_1ForkJoinAnalysis.html#a4193a30050195cd9aaafd58511b66ccc',1,'SVF::ForkJoinAnalysis']]],
   ['fullreachable',['fullReachable',['../classSVF_1_1ProgSlice.html#a632db4b2e69848955925746ac721d94f',1,'SVF::ProgSlice']]],

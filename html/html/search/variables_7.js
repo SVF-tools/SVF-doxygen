@@ -21,7 +21,6 @@ var searchData=
   ['globaldeftorepmap',['GlobalDefToRepMap',['../classSVF_1_1LLVMModuleSet.html#ae2a1fa0b908cf372c50af90e62c4bf2b',1,'SVF::LLVMModuleSet']]],
   ['globales',['globalES',['../classSVF_1_1IntervalExeState.html#a92b1b163493a74a31d30a261128edd05',1,'SVF::IntervalExeState']]],
   ['globalset',['GlobalSet',['../classSVF_1_1SVFModule.html#a4ff4bbd1771615757fc6575282046e30',1,'SVF::SVFModule']]],
-  ['globalsvfg',['globalSvfg',['../classSVF_1_1SVFGBuilder.html#a31b754a303116f33d679dfcd886c4bed',1,'SVF::SVFGBuilder']]],
   ['globalvfgnodes',['globalVFGNodes',['../classSVF_1_1VFG.html#a6c3daf2777cc5f76ce07241f803720f3',1,'SVF::VFG']]],
   ['globs',['globs',['../classSVF_1_1SaberSVFGBuilder.html#a967dba864a6032e448222525aedb1f2a',1,'SVF::SaberSVFGBuilder']]],
   ['globsvfgnodes',['globSVFGNodes',['../classSVF_1_1SaberSVFGBuilder.html#a9431a9dcbcf88b78e721b0347046e997',1,'SVF::SaberSVFGBuilder']]],
