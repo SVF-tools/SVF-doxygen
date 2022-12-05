@@ -22,7 +22,7 @@ var searchData=
   ['blackholepointerid',['blackHolePointerId',['../classSVF_1_1NodeIDAllocator.html#a535be344f97496d8086e2861ea6dc2ea',1,'SVF::NodeIDAllocator']]],
   ['boolean',['boolean',['../cJSON_8h.html#a08f076c86f430b6f0e301fcf94223b38',1,'boolean():&#160;cJSON.h'],['../cJSON_8cpp.html#a08f076c86f430b6f0e301fcf94223b38',1,'boolean():&#160;cJSON.cpp']]],
   ['branchcondval',['branchCondVal',['../classSVF_1_1IntraCFGEdge.html#aa1c91aad3dec610100b1f2f4b9826d10',1,'SVF::IntraCFGEdge']]],
-  ['briefconscgdotgraph',['BriefConsCGDotGraph',['../classSVF_1_1Options.html#a82370c2b8c9cd62b5767ceeaeeaa7177',1,'SVF::Options']]],
+  ['briefconscgdotgraph',['BriefConsCGDotGraph',['../classSVF_1_1Options.html#a25a3db9daa81a127a8dad86888adea6c',1,'SVF::Options']]],
   ['brinst',['brInst',['../classSVF_1_1BranchStmt.html#a33887345c00ffda9ca7dca59d61e184a',1,'SVF::BranchStmt']]],
   ['brstmt',['brstmt',['../classSVF_1_1BranchVFGNode.html#ab2c5f49a3ac21d827b37b0e4b61f1a10',1,'SVF::BranchVFGNode']]],
   ['buffer',['buffer',['../structprintbuffer.html#a754f63618e91db99f7ab6cfc4e629013',1,'printbuffer::buffer()'],['../cJSON_8h.html#a503753140aa27b00f99a3501280b2746',1,'buffer():&#160;cJSON.h'],['../cJSON_8cpp.html#a503753140aa27b00f99a3501280b2746',1,'buffer():&#160;cJSON.cpp']]],

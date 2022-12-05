@@ -1,7 +1,7 @@
 var searchData=
 [
   ['lb',['lb',['../classSVF_1_1IntervalValue.html#a0df07a2659cbf3a918de5b0d7c407264',1,'SVF::IntervalValue']]],
-  ['leakchecker',['LeakChecker',['../classSVF_1_1LeakChecker.html#af1140475e97947d193784d2b90809036',1,'SVF::LeakChecker::LeakChecker()'],['../saber_8cpp.html#a3bebf1fb890054c49ae16f9706fa38d2',1,'LEAKCHECKER():&#160;saber.cpp']]],
+  ['leakchecker',['LeakChecker',['../classSVF_1_1LeakChecker.html#af1140475e97947d193784d2b90809036',1,'SVF::LeakChecker']]],
   ['leq',['leq',['../classSVF_1_1IntervalValue.html#a2dd004dda59ee5271081afd082374039',1,'SVF::IntervalValue::leq()'],['../classSVF_1_1NumericLiteral.html#aa01880cdfc3b9504bef63a3bf315c54b',1,'SVF::NumericLiteral::leq()']]],
   ['lessthanvartovalmap',['lessThanVarToValMap',['../classSVF_1_1IntervalExeState.html#a7129d3e1901c527f7c4876cb1c54a890',1,'SVF::IntervalExeState::lessThanVarToValMap()'],['../classSVF_1_1RelExeState.html#a1bc5dc440ad614fd7b4804bfa88c37c0',1,'SVF::RelExeState::lessThanVarToValMap()']]],
   ['list',['List',['../classSVF_1_1List.html#aeb697e85085a332e5d593b6f8ee95713',1,'SVF::List']]],

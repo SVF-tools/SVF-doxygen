@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['daa',['DAA',['../dda_8cpp.html#a55c1167d4e6efe7828f050d978291725',1,'dda.cpp']]],
   ['dchedge',['DCHEdge',['../classSVF_1_1DCHEdge.html#a17e3db6d11e0752064194ffc46cd9afe',1,'SVF::DCHEdge']]],
   ['dchgraph',['DCHGraph',['../classSVF_1_1DCHGraph.html#a7cbea4d5399333497faa3f8d213e365e',1,'SVF::DCHGraph']]],
   ['dchnode',['DCHNode',['../classSVF_1_1DCHNode.html#a3e81cc40aa1c37999cead00f1af85a6e',1,'SVF::DCHNode']]],
@@ -20,7 +19,6 @@ var searchData=
   ['determinebestmapping',['determineBestMapping',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a3f86e733cc075180e9682887c554b8fa',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['dfn',['dfn',['../classSVF_1_1Wto.html#a006b9a59b5927401455be0dedf3480b0',1,'SVF::Wto']]],
   ['dfptdata',['DFPTData',['../classSVF_1_1DFPTData.html#a40016a7e3dac46d9ba854d336c7aae83',1,'SVF::DFPTData']]],
-  ['dfreechecker',['DFREECHECKER',['../saber_8cpp.html#ae783b2330e99490ef5d366605d1098cf',1,'saber.cpp']]],
   ['diffptdata',['DiffPTData',['../classSVF_1_1DiffPTData.html#ac7e9661cfb4d5af3ef35d323ddc35558',1,'SVF::DiffPTData']]],
   ['direct_5fchild_5fbegin',['direct_child_begin',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a46c6957a8771d6e52dc71d5f7b3c4e81',1,'SVF::GenericGraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;']]],
   ['direct_5fchild_5fend',['direct_child_end',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a543da98c9818fbfd235152beab355e9c',1,'SVF::GenericGraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;']]],

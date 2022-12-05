@@ -1,7 +1,7 @@
 var searchData=
 [
   ['n',['n',['../cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a',1,'cJSON.cpp']]],
-  ['name',['name',['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name()'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name():&#160;cJSON.h'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name():&#160;cJSON.cpp']]],
+  ['name',['name',['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name()'],['../classOptionBase.html#a494ea256d6484e4f7e8751de499889fc',1,'OptionBase::name()'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name():&#160;cJSON.h'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name():&#160;cJSON.cpp']]],
   ['negconds',['negConds',['../classSVF_1_1SaberCondAllocator.html#a4267ed81d5100d49581a4216f46e660c',1,'SVF::SaberCondAllocator']]],
   ['newbvnumwords',['NewBvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#af3fe4b4098898ee38928c9db30ea0fe9',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['newchild',['newchild',['../cJSON_8cpp.html#a81f8a22ccfd48d5d5f5b911c24892ca9',1,'cJSON.cpp']]],
@@ -11,7 +11,7 @@ var searchData=
   ['next',['next',['../classSVF_1_1WtoComponent.html#ae817e4f6fda2c01c453a12d3e7a55b0a',1,'SVF::WtoComponent::next()'],['../structcJSON.html#ade862b880379b5e2a591f7326401fa8d',1,'cJSON::next()'],['../classSVF_1_1List_1_1ListNode.html#a6fb535e702af0e4f54274050ee0c06c5',1,'SVF::List::ListNode::next()'],['../cJSON_8cpp.html#a2599f74bdbbc1b3fd1ba8db3789a0be7',1,'next():&#160;cJSON.cpp']]],
   ['noalloc',['noalloc',['../structprintbuffer.html#aa2a7966b71dc3535e4e3789c33ec5368',1,'printbuffer::noalloc()'],['../cJSON_8cpp.html#a2212121102d55231315839f800aa1350',1,'noalloc():&#160;cJSON.cpp']]],
   ['node',['node',['../classSVF_1_1NullPtrVFGNode.html#adef43dcc86e61145a7fdc6711b28239d',1,'SVF::NullPtrVFGNode']]],
-  ['nodeallocstrat',['NodeAllocStrat',['../classSVF_1_1Options.html#a2537be131132830c63d408133619a065',1,'SVF::Options']]],
+  ['nodeallocstrat',['NodeAllocStrat',['../classSVF_1_1Options.html#a38107576f4f242191cdbfb1ca51f93cd',1,'SVF::Options']]],
   ['nodekind',['nodeKind',['../classSVF_1_1GenericNode.html#a586df5473d1e7cdcb9051683914d0220',1,'SVF::GenericNode']]],
   ['nodemapping',['nodeMapping',['../classSVF_1_1PointsTo.html#acd7eab32125de90020c55c757d6adfda',1,'SVF::PointsTo']]],
   ['nodenum',['nodeNum',['../classSVF_1_1GenericGraph.html#a38122734cbe71551a420dfb7fee2012e',1,'SVF::GenericGraph']]],
@@ -32,7 +32,7 @@ var searchData=
   ['numgtintregions',['NumGtIntRegions',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ad7cb36a1f0f67864fb8290e9dfd7b639',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['numnodes',['numNodes',['../classSVF_1_1NodeIDAllocator.html#a8e76e0da58f0a5bdbd8118ac419cfa62',1,'SVF::NodeIDAllocator']]],
   ['numnontrivialregionobjects',['NumNonTrivialRegionObjects',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1bf9461c717e8dabaee6a57f3d76d61f',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['numobjects',['numObjects',['../classSVF_1_1NodeIDAllocator.html#a190c729a3f3f622f82cee4917946b50f',1,'SVF::NodeIDAllocator::numObjects()'],['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#afa74c5ccd22bebe0b76db33066d8b498',1,'SVF::NodeIDAllocator::Clusterer::NumObjects()']]],
+  ['numobjects',['NumObjects',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#afa74c5ccd22bebe0b76db33066d8b498',1,'SVF::NodeIDAllocator::Clusterer::NumObjects()'],['../classSVF_1_1NodeIDAllocator.html#a190c729a3f3f622f82cee4917946b50f',1,'SVF::NodeIDAllocator::numObjects()']]],
   ['numofactualin',['numOfActualIn',['../classSVF_1_1SVFGStat.html#a5365744d2ec3594e2255d274f7256569',1,'SVF::SVFGStat']]],
   ['numofactualout',['numOfActualOut',['../classSVF_1_1SVFGStat.html#a122555f5c4b9746cc2b7f38c7cd6b505',1,'SVF::SVFGStat']]],
   ['numofactualparam',['numOfActualParam',['../classSVF_1_1SVFGStat.html#a0494c59483520b57acdca95952c93d76',1,'SVF::SVFGStat']]],

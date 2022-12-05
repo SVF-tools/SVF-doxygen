@@ -506,6 +506,8 @@ var searchData=
   ['getopicfgnode',['getOpICFGNode',['../classSVF_1_1PhiStmt.html#a0b97394bc1946c0185d2c11fbc2181f4',1,'SVF::PhiStmt']]],
   ['getopincomingbb',['getOpIncomingBB',['../classSVF_1_1IntraPHIVFGNode.html#a3a6ef9d2b10a6f2f1ac1b25590f56a70',1,'SVF::IntraPHIVFGNode']]],
   ['getopndvars',['getOpndVars',['../classSVF_1_1MultiOpndStmt.html#a0441f2646fed28830439c41a0704ed4b',1,'SVF::MultiOpndStmt']]],
+  ['getoption',['getOption',['../classOptionBase.html#abf205790830ba8c3bb7097701ca86a69',1,'OptionBase']]],
+  ['getoptionsmap',['getOptionsMap',['../classOptionBase.html#ac68017dd45d05c5fe26ae04bb58f903c',1,'OptionBase']]],
   ['getopvar',['getOpVar',['../classSVF_1_1UnaryOPVFGNode.html#adb0928a2547397d0ac2bbc2cf261d595',1,'SVF::UnaryOPVFGNode::getOpVar()'],['../classSVF_1_1MultiOpndStmt.html#a18f9d9ea87def35d4eaa707a339316b8',1,'SVF::MultiOpndStmt::getOpVar()'],['../classSVF_1_1UnaryOPStmt.html#abde2b32d5bbd37df0e194b1a4e78483b',1,'SVF::UnaryOPStmt::getOpVar()']]],
   ['getopvarid',['getOpVarID',['../classSVF_1_1MultiOpndStmt.html#a5c6efcc023e90ef2e618586091958c59',1,'SVF::MultiOpndStmt::getOpVarID()'],['../classSVF_1_1UnaryOPStmt.html#a8029b46bccda153ca2e677686c2655e2',1,'SVF::UnaryOPStmt::getOpVarID()']]],
   ['getopvarnum',['getOpVarNum',['../classSVF_1_1MultiOpndStmt.html#af300571886b7aa2d84b0a70851c99bc3',1,'SVF::MultiOpndStmt']]],

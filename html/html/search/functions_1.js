@@ -65,6 +65,7 @@ var searchData=
   ['buildsvfloops',['buildSVFLoops',['../classSVF_1_1LLVMLoopAnalysis.html#a82b29fc1e138e082d7da6e016a5b7eb8',1,'SVF::LLVMLoopAnalysis']]],
   ['buildsvfmodule',['buildSVFModule',['../classSVF_1_1LLVMModuleSet.html#ae919327019b5014f64b754dbdeb07f75',1,'SVF::LLVMModuleSet::buildSVFModule(Module &amp;mod)'],['../classSVF_1_1LLVMModuleSet.html#a1f8e769251c89433311eeb6f98d115e9',1,'SVF::LLVMModuleSet::buildSVFModule(const std::vector&lt; std::string &gt; &amp;moduleNameVec)']]],
   ['buildthreadcallgraph',['buildThreadCallGraph',['../classSVF_1_1ThreadCallGraphBuilder.html#a0f5bf24257858919c10af0e076d87ef7',1,'SVF::ThreadCallGraphBuilder']]],
+  ['buildusage',['buildUsage',['../classOptionBase.html#a7dbcdc9ff8df95a2c5ca4bd0723a3965',1,'OptionBase']]],
   ['buildvirtualfunctiontoidmap',['buildVirtualFunctionToIDMap',['../classSVF_1_1CHGBuilder.html#aa677ac2c640ee7fc0dab1d4fe508ead8',1,'SVF::CHGBuilder']]],
   ['buildvtables',['buildVTables',['../classSVF_1_1DCHGraph.html#a1215db390515a30fbc416fb14d2e863f',1,'SVF::DCHGraph']]],
   ['bvdataptaimpl',['BVDataPTAImpl',['../classSVF_1_1BVDataPTAImpl.html#ab0e1242aadfe1e16a2bd1445658a5476',1,'SVF::BVDataPTAImpl']]],

@@ -35,6 +35,8 @@ var searchData=
   ['pointertype',['PointerType',['../structSVF_1_1SVFUtil_1_1cast__retty__impl_3_01To_00_01std_1_1unique__ptr_3_01From_01_4_01_4.html#a9d08abc346f3b77c487eba144f3cbd8d',1,'SVF::SVFUtil::cast_retty_impl&lt; To, std::unique_ptr&lt; From &gt; &gt;::PointerType()'],['../namespaceSVF.html#aa962cc1d782cc46553251e96b64a754b',1,'SVF::PointerType()']]],
   ['pointstoid',['PointsToID',['../namespaceSVF.html#ae545a88267bd2246de827cf590675aca',1,'SVF']]],
   ['pointstolist',['PointsToList',['../classSVF_1_1MRGenerator.html#a8b254a0c5063e25f297d1b00fb0b515e',1,'SVF::MRGenerator::PointsToList()'],['../namespaceSVF_1_1SVFUtil.html#a4740b14abf7d308e7806a0d6d6c42ee2',1,'SVF::SVFUtil::PointsToList()']]],
+  ['possibilitydescription',['PossibilityDescription',['../classOptionBase.html#a0a048de2a9ea404cb6b6be6276e8f91e',1,'OptionBase']]],
+  ['possibilitydescriptions',['PossibilityDescriptions',['../classOptionBase.html#adbecc317e1c8a157456c069ca0b4679c',1,'OptionBase']]],
   ['postdominatortree',['PostDominatorTree',['../namespaceSVF.html#ab34383ee87cd45eb485fa29db482ffef',1,'SVF']]],
   ['production',['Production',['../classSVF_1_1GrammarBase.html#af384c960a5edc576cbfb60a869e346ec',1,'SVF::GrammarBase::Production()'],['../classSVF_1_1CFLSolver.html#a0ade6e3827c629c3cc3d22a101df7288',1,'SVF::CFLSolver::Production()']]],
   ['productions',['Productions',['../classSVF_1_1GrammarBase.html#a755024745a77509d2f07867be8245a4d',1,'SVF::GrammarBase']]],

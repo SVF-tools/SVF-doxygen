@@ -19,6 +19,7 @@ var searchData=
   ['callsitehasret',['callsiteHasRet',['../classSVF_1_1SVFIR.html#aa79dba26cb34b40eee682713db299d5f',1,'SVF::SVFIR']]],
   ['canberemoved',['canBeRemoved',['../classSVF_1_1SVFGOPT.html#ab72ce28409a440bbf5b84a68e5f82b85',1,'SVF::SVFGOPT']]],
   ['canhold',['canHold',['../classSVF_1_1CoreBitVector.html#a3c85fd2084e52df869cb8fcf2dab6486',1,'SVF::CoreBitVector']]],
+  ['canset',['canSet',['../classOptionBase.html#a41b5697dffc86139fa9341210f7233d9',1,'OptionBase::canSet()'],['../classOption.html#a25507245c3b4b8d2d52ab069d756bc31',1,'Option::canSet()'],['../classOptionMap.html#a9fe150111f4ef83a91c5a1a01878ffa3',1,'OptionMap::canSet()'],['../classOptionMultiple.html#aa582e95f6546ffd2fc8420699967bca9',1,'OptionMultiple::canSet()']]],
   ['case_5finsensitive_5fstrcmp',['case_insensitive_strcmp',['../cJSON_8cpp.html#a9b295e9edc859c11ad8c1e3d2cef0467',1,'cJSON.cpp']]],
   ['cast',['cast',['../namespaceSVF_1_1SVFUtil.html#a3ddf7041e685da8ede81cd773dd47761',1,'SVF::SVFUtil::cast(const Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a406dd9baf2ce66235d482fd6c6121b2c',1,'SVF::SVFUtil::cast(Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#acc2419a55c0427571f11ad14db2fe481',1,'SVF::SVFUtil::cast(Y *Val)'],['../namespaceSVF_1_1SVFUtil.html#af3ca049b4ce83c874e231f5e13bf36a8',1,'SVF::SVFUtil::cast(std::unique_ptr&lt; Y &gt; &amp;&amp;Val)']]],
   ['cast_5faway_5fconst',['cast_away_const',['../cJSON_8cpp.html#a48223c36735c39cfc4711b0659f966c8',1,'cJSON.cpp']]],

@@ -10,8 +10,8 @@ var searchData=
   ['updatetime',['updateTime',['../classSVF_1_1FlowSensitive.html#af5a94d14096ae2bbc47b3b3b9f723226',1,'SVF::FlowSensitive']]],
   ['usedmrvers',['usedMRVers',['../classSVF_1_1MemSSA.html#a6e5ac4f390528f8ee3cdc8e0e221ee71',1,'SVF::MemSSA']]],
   ['usedregs',['usedRegs',['../classSVF_1_1MemSSA.html#acf840b71b67cabe831f01f2d358f27fa',1,'SVF::MemSSA']]],
-  ['usepcg',['UsePCG',['../classSVF_1_1Options.html#af2f66307e1d51947676f622c98ef0762',1,'SVF::Options']]],
-  ['useprecompfieldsensitive',['UsePreCompFieldSensitive',['../classSVF_1_1Options.html#afb6fabc25c0d7f9e9d1708ce648797fc',1,'SVF::Options']]],
+  ['usepcg',['UsePCG',['../classSVF_1_1Options.html#aaa7ca76c841dd19d67796d09c94a9746',1,'SVF::Options']]],
+  ['useprecompfieldsensitive',['UsePreCompFieldSensitive',['../classSVF_1_1Options.html#a742a42d855c5b96fb7c70a2d0ab64021',1,'SVF::Options']]],
   ['userinput',['userInput',['../classSVF_1_1DDAClient.html#a25f8abbcaca653d0883d542bfbe729a3',1,'SVF::DDAClient']]],
-  ['userinputquery',['UserInputQuery',['../classSVF_1_1Options.html#a3c3d704c209c4e6eed1a771caf8214ce',1,'SVF::Options']]]
+  ['userinputquery',['UserInputQuery',['../classSVF_1_1Options.html#a5d14e81336dbfefa14146bf610989e6b',1,'SVF::Options']]]
 ];
