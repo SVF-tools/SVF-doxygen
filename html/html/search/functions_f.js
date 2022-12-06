@@ -41,6 +41,7 @@ var searchData=
   ['phivfgnode',['PHIVFGNode',['../classSVF_1_1PHIVFGNode.html#add1ed5dfc7fbb095e2bdb7ff1e2658ef',1,'SVF::PHIVFGNode']]],
   ['plainmap',['plainMap',['../classSVF_1_1FlowSensitive.html#a5a8688102f3675cf414b01dc2ae51c6b',1,'SVF::FlowSensitive']]],
   ['plus_5finfinity',['plus_infinity',['../classSVF_1_1IntervalValue.html#a739ab04e16ec1156be71b29d49998a4f',1,'SVF::IntervalValue::plus_infinity()'],['../classSVF_1_1NumericLiteral.html#a42f5bdc956614b4c431f7045f744ac7d',1,'SVF::NumericLiteral::plus_infinity()']]],
+  ['pocralias',['POCRAlias',['../classSVF_1_1POCRAlias.html#a5931bb7bb7c0be1138310f8da9548bb9',1,'SVF::POCRAlias']]],
   ['pointee_5fiter',['pointee_iter',['../structSVF_1_1pointee__iter.html#a99d911b02890643ba8680b140999b59e',1,'SVF::pointee_iter::pointee_iter()=default'],['../structSVF_1_1pointee__iter.html#a77dce78a5bd0330658dc75a38c3fc329',1,'SVF::pointee_iter::pointee_iter(U &amp;&amp;u)']]],
   ['pointer_5fiterator',['pointer_iterator',['../classSVF_1_1pointer__iterator.html#aad755d2a1529f02fa405434df1329236',1,'SVF::pointer_iterator::pointer_iterator()=default'],['../classSVF_1_1pointer__iterator.html#a90b49a39706f22db66f33c5e527235e9',1,'SVF::pointer_iterator::pointer_iterator(WrappedIteratorT u)']]],
   ['pointeranalysis',['PointerAnalysis',['../classSVF_1_1PointerAnalysis.html#a14e2a209cb594f91a24ef09b12f82f3f',1,'SVF::PointerAnalysis']]],

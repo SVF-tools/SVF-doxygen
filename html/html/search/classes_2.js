@@ -23,6 +23,8 @@ var searchData=
   ['cfgnormalizer',['CFGNormalizer',['../classSVF_1_1CFGNormalizer.html',1,'SVF']]],
   ['cflalias',['CFLAlias',['../classSVF_1_1CFLAlias.html',1,'SVF']]],
   ['cflbase',['CFLBase',['../classSVF_1_1CFLBase.html',1,'SVF']]],
+  ['cfldata',['CFLData',['../classSVF_1_1CFLData.html',1,'SVF']]],
+  ['cfldatabuilder',['CFLDataBuilder',['../classSVF_1_1CFLDataBuilder.html',1,'SVF']]],
   ['cfledge',['CFLEdge',['../classSVF_1_1CFLEdge.html',1,'SVF']]],
   ['cflfifoworklist',['CFLFIFOWorkList',['../classSVF_1_1CFLFIFOWorkList.html',1,'SVF']]],
   ['cflgramgraphchecker',['CFLGramGraphChecker',['../classSVF_1_1CFLGramGraphChecker.html',1,'SVF']]],

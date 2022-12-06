@@ -3,6 +3,7 @@ var searchData=
   ['datadeque',['DataDeque',['../classSVF_1_1CFLFIFOWorkList.html#aa2ac3edad97017817899d081dc6f1df7',1,'SVF::CFLFIFOWorkList::DataDeque()'],['../classSVF_1_1FIFOWorkList.html#a2907cd4515b2072aae0a88e972e93fc4',1,'SVF::FIFOWorkList::DataDeque()']]],
   ['dataiter',['DataIter',['../classSVF_1_1MutableIncDFPTData.html#a1fc4dff28f9044234fdfeede6f4b1cb0',1,'SVF::MutableIncDFPTData']]],
   ['datalayout',['DataLayout',['../namespaceSVF.html#a03db82b8a7914367024723dba4d6ca3c',1,'SVF']]],
+  ['datamap',['DataMap',['../classSVF_1_1CFLData.html#a3a33fbfd1fb0afa58926e748012a2bf7',1,'SVF::CFLData']]],
   ['dataop',['DataOp',['../classSVF_1_1PersistentPointsToCache.html#a5a0f1b93f29ce62ad13042ab8435c62c',1,'SVF::PersistentPointsToCache']]],
   ['dataset',['DataSet',['../classSVF_1_1CFLFIFOWorkList.html#a0db15ca0ec5a14aee493ccfe54d34d85',1,'SVF::CFLFIFOWorkList::DataSet()'],['../classSVF_1_1List.html#a8f8a9dff1d1213a747f0d7ce8b1802e9',1,'SVF::List::DataSet()'],['../classSVF_1_1FIFOWorkList.html#a4803dc3b7f3ab57261261acb20551579',1,'SVF::FIFOWorkList::DataSet()'],['../classSVF_1_1FILOWorkList.html#abe04c596453280fe15cadde868ded798',1,'SVF::FILOWorkList::DataSet()']]],
   ['datavector',['DataVector',['../classSVF_1_1FILOWorkList.html#a41d3d71633adc6a1282922b4e4929a7f',1,'SVF::FILOWorkList']]],

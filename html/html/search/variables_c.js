@@ -42,7 +42,7 @@ var searchData=
   ['lookupunions',['lookupUnions',['../classSVF_1_1PersistentPointsToCache.html#ace976f138cf1b8ab6bbf7a5c5d0b60b8',1,'SVF::PersistentPointsToCache']]],
   ['loopanalysis',['LoopAnalysis',['../classSVF_1_1Options.html#abfd13c7d998333290b39354178739f2c',1,'SVF::Options']]],
   ['loopanddom',['loopAndDom',['../classSVF_1_1SVFFunction.html#aefde3a0671e34541a4ad5d7a6dfaa5d1',1,'SVF::SVFFunction']]],
-  ['loopbound',['LoopBound',['../classSVF_1_1Options.html#a17f11eb3e9a3178395e8574a027b181e',1,'SVF::Options::LoopBound()'],['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()']]],
+  ['loopbound',['loopBound',['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound()'],['../classSVF_1_1Options.html#a17f11eb3e9a3178395e8574a027b181e',1,'SVF::Options::LoopBound()']]],
   ['lowlink',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
   ['ls',['ls',['../classSVF_1_1NormalGepCGEdge.html#a7cbcaa28acde49ef0b03a8554a41344b',1,'SVF::NormalGepCGEdge::ls()'],['../classSVF_1_1GepStmt.html#a543a3f4801b22719f7b9677246bf2ac7',1,'SVF::GepStmt::ls()'],['../classSVF_1_1GepValVar.html#a2ee5e9a2e5a92b32fd81fda09b560ad6',1,'SVF::GepValVar::ls()'],['../classSVF_1_1GepObjVar.html#a55b057663180420c6bb09bf849d83f6b',1,'SVF::GepObjVar::ls()']]],
   ['lsa',['lsa',['../classSVF_1_1MTA.html#a80a44f3aa41d4259523c94044983c509',1,'SVF::MTA::lsa()'],['../classSVF_1_1RaceValidator.html#a6982b72e3e2551deab80d9e3fefaab64',1,'SVF::RaceValidator::lsa()'],['../classSVF_1_1MTAAnnotator.html#a42a5c0eac879be5e300583aa7d07beb0',1,'SVF::MTAAnnotator::lsa()']]]

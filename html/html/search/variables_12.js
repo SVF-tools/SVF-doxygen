@@ -60,6 +60,7 @@ var searchData=
   ['succbbs',['succBBs',['../classSVF_1_1SVFBasicBlock.html#a7c3a69644f5e1351aad5d0ce0048abfd',1,'SVF::SVFBasicBlock']]],
   ['successors',['successors',['../classSVF_1_1BranchStmt.html#a40854cd95fbae16ef8e370255d0e3cf5',1,'SVF::BranchStmt']]],
   ['succinsts',['succInsts',['../classSVF_1_1SVFInstruction.html#ad0e8b1042094fda42346bae211d3e679',1,'SVF::SVFInstruction']]],
+  ['succmap',['succMap',['../classSVF_1_1CFLData.html#a58bc39506945e1c7eaaf542c9e93aefa',1,'SVF::CFLData']]],
   ['succset',['succset',['../classSVF_1_1MTASVFGBuilder.html#ac909a7aa7de6cda8d2a89a9c7d2f4262',1,'SVF::MTASVFGBuilder']]],
   ['sval',['sval',['../classSVF_1_1SVFConstantInt.html#a484bcb1494a2c0c946e85f39f7961671',1,'SVF::SVFConstantInt']]],
   ['svfg',['svfg',['../classSVF_1_1CFLVF.html#aed71ea423497a4f64c8b62ee4187210e',1,'SVF::CFLVF::svfg()'],['../classSVF_1_1SVFGBuilder.html#af9f454c48ebf26376fca06cdcec0f9cc',1,'SVF::SVFGBuilder::svfg()'],['../classSVF_1_1ProgSlice.html#a457a759c552a1418538769d79d7a7dde',1,'SVF::ProgSlice::svfg()'],['../classSVF_1_1SrcSnkDDA.html#ae657ebdeae8a083cfec210859a0023e4',1,'SVF::SrcSnkDDA::svfg()'],['../classSVF_1_1FlowSensitive.html#aae032e5f5d53b131d0112dc8faa464a9',1,'SVF::FlowSensitive::svfg()']]],

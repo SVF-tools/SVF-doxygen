@@ -47,6 +47,7 @@ var searchData=
   ['chg',['chg',['../classSVF_1_1CHGBuilder.html#ab3471cc9afba5976c7e5fbd07dfb22dc',1,'SVF::CHGBuilder']]],
   ['chgraph',['chgraph',['../classSVF_1_1PointerAnalysis.html#a0c0fce2539bb9ec6c824f6584a0f6b33',1,'SVF::PointerAnalysis::chgraph()'],['../classSVF_1_1SVFIR.html#a31c54c878be428cc92cf08970fef422b',1,'SVF::SVFIR::chgraph()']]],
   ['child',['child',['../structcJSON.html#a401b274c2da358dac5c23ab8b2c71f85',1,'cJSON::child()'],['../cJSON_8cpp.html#ad00efb41ca386db28bacc7aefe79535c',1,'child():&#160;cJSON.cpp']]],
+  ['children',['children',['../structSVF_1_1HybridData_1_1TreeNode.html#ab9fbeff34671b066d10611616909c683',1,'SVF::HybridData::TreeNode']]],
   ['cilocktospan',['ciLocktoSpan',['../classSVF_1_1LockAnalysis.html#afc4212873c3e05ac9506aac0a25f515a',1,'SVF::LockAnalysis']]],
   ['ckapi',['ckAPI',['../classSVF_1_1SaberCheckerAPI.html#a3e54cae9b4259da2332c7fc87d3df347',1,'SVF::SaberCheckerAPI']]],
   ['classname',['className',['../classSVF_1_1CHNode.html#ac7c18617b768a2988cf4eff7e849f397',1,'SVF::CHNode::className()'],['../structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297',1,'SVF::cppUtil::DemangledName::className()']]],

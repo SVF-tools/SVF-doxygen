@@ -14,6 +14,8 @@ var searchData=
   ['persistentversionedptdata',['PersistentVersionedPTData',['../classSVF_1_1PersistentVersionedPTData.html',1,'SVF']]],
   ['phistmt',['PhiStmt',['../classSVF_1_1PhiStmt.html',1,'SVF']]],
   ['phivfgnode',['PHIVFGNode',['../classSVF_1_1PHIVFGNode.html',1,'SVF']]],
+  ['pocralias',['POCRAlias',['../classSVF_1_1POCRAlias.html',1,'SVF']]],
+  ['pocrsolver',['POCRSolver',['../classSVF_1_1POCRSolver.html',1,'SVF']]],
   ['pointee_5fiter',['pointee_iter',['../structSVF_1_1pointee__iter.html',1,'SVF']]],
   ['pointer_5fiterator',['pointer_iterator',['../classSVF_1_1pointer__iterator.html',1,'SVF']]],
   ['pointeranalysis',['PointerAnalysis',['../classSVF_1_1PointerAnalysis.html',1,'SVF']]],

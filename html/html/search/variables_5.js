@@ -16,6 +16,7 @@ var searchData=
   ['elemidxvec',['elemIdxVec',['../classSVF_1_1StInfo.html#a807ae5cb4d277c79f8b2c9ecde5f12ea',1,'SVF::StInfo']]],
   ['elemnum',['elemNum',['../classSVF_1_1ObjTypeInfo.html#a5fdcd5f3b7550e7bdc30c8c030c6226d',1,'SVF::ObjTypeInfo']]],
   ['else',['else',['../cJSON_8cpp.html#a0544c3fe466e421738dae463968b70ba',1,'cJSON.cpp']]],
+  ['emptydata',['emptyData',['../classSVF_1_1CFLData.html#ad6d63106c4db16659cf29a7e0c31c6bc',1,'SVF::CFLData']]],
   ['enablealiascheck',['EnableAliasCheck',['../classSVF_1_1Options.html#a5f07ff361307017b35fb6b9a97919a73',1,'SVF::Options']]],
   ['enablecontext',['ENABLECONTEXT',['../dda_8cpp.html#a0a4ada5aa37179525df2c87a5c6e2685',1,'dda.cpp']]],
   ['enablefield',['ENABLEFIELD',['../dda_8cpp.html#a33384804c17c2e3f457d80b47b114e1d',1,'dda.cpp']]],

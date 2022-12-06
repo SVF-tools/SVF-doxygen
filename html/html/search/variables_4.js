@@ -19,6 +19,7 @@ var searchData=
   ['dfinptsmap',['dfInPtsMap',['../classSVF_1_1MutableDFPTData.html#abb59ef7367e353e65b82b54dac509f36',1,'SVF::MutableDFPTData::dfInPtsMap()'],['../classSVF_1_1PersistentDFPTData.html#a6b892b707524127928e269f0f0bbe868',1,'SVF::PersistentDFPTData::dfInPtsMap()']]],
   ['dfoutptsmap',['dfOutPtsMap',['../classSVF_1_1MutableDFPTData.html#ad3c53ef1c8e221299f3afe078946fbe0',1,'SVF::MutableDFPTData::dfOutPtsMap()'],['../classSVF_1_1PersistentDFPTData.html#ad77d7ccad393c995813f8c433c249dfc',1,'SVF::PersistentDFPTData::dfOutPtsMap()']]],
   ['dfreechecker',['DFREECHECKER',['../saber_8cpp.html#ab233df6b8c190aa2c26fa20bd1ac7c52',1,'saber.cpp']]],
+  ['diff',['diff',['../classSVF_1_1CFLData.html#ab7db3b1ae0698c64b02001dd9943c311',1,'SVF::CFLData']]],
   ['diffpts',['DiffPts',['../classSVF_1_1Options.html#ae782f25eaee9ac363c733b6ac609fbce',1,'SVF::Options']]],
   ['diffptsmap',['diffPtsMap',['../classSVF_1_1MutableDiffPTData.html#a9ee7874e987e93eb4cb9d75ed08effd5',1,'SVF::MutableDiffPTData::diffPtsMap()'],['../classSVF_1_1PersistentDiffPTData.html#ac54339952e2734a6affdaa543fb3ed22',1,'SVF::PersistentDiffPTData::diffPtsMap()']]],
   ['diffwave',['diffWave',['../classSVF_1_1AndersenWaveDiff.html#add4dcb6d74a8ce8747bcac5f740cd672',1,'SVF::AndersenWaveDiff']]],
