@@ -37,7 +37,7 @@ var searchData=
   ['timeofsccdetection',['timeOfSCCDetection',['../classSVF_1_1AndersenBase.html#a6b7d0e57f741c446d0bf178939960143',1,'SVF::AndersenBase']]],
   ['timeofsccmerges',['timeOfSCCMerges',['../classSVF_1_1AndersenBase.html#a02c5a50b214d36921e1404784e76704d',1,'SVF::AndersenBase']]],
   ['timeofsolving',['timeOfSolving',['../classSVF_1_1CFLBase.html#a88e40af43705550a78837b8589bbf3f8',1,'SVF::CFLBase']]],
-  ['timeofssarenaming',['timeOfSSARenaming',['../classSVF_1_1MemSSA.html#a97ccd5e0b9ab6144415e26bdf95cbabd',1,'SVF::MemSSA::timeOfSSARenaming()'],['../classSVF_1_1MemSSAStat.html#a887ff23a7ea1a18f08b1744ff30da773',1,'SVF::MemSSAStat::TimeOfSSARenaming()']]],
+  ['timeofssarenaming',['TimeOfSSARenaming',['../classSVF_1_1MemSSAStat.html#a887ff23a7ea1a18f08b1744ff30da773',1,'SVF::MemSSAStat::TimeOfSSARenaming()'],['../classSVF_1_1MemSSA.html#a97ccd5e0b9ab6144415e26bdf95cbabd',1,'SVF::MemSSA::timeOfSSARenaming()']]],
   ['timeofupdatecallgraph',['timeOfUpdateCallGraph',['../classSVF_1_1AndersenBase.html#a2afb49f513c9534fd051117b59dc056b',1,'SVF::AndersenBase']]],
   ['timestatmap',['timeStatMap',['../classSVF_1_1SVFStat.html#a5383691a34426a1a997b5eed387f1831',1,'SVF::SVFStat']]],
   ['tlptdata',['tlPTData',['../classSVF_1_1MutableVersionedPTData.html#a01974968b7cf60a4231cc83c93b26d7f',1,'SVF::MutableVersionedPTData::tlPTData()'],['../classSVF_1_1PersistentVersionedPTData.html#a29104a2d53d94805e142f778d3d21ad5',1,'SVF::PersistentVersionedPTData::tlPTData()']]],
@@ -70,7 +70,7 @@ var searchData=
   ['type2typeinfo',['Type2TypeInfo',['../classSVF_1_1LLVMModuleSet.html#af2c555af91679d9e6d3009547ee11486',1,'SVF::LLVMModuleSet']]],
   ['type_5fpair',['type_pair',['../classSVF_1_1ExtAPI.html#a95ac45d2367b3d3124d5d98958e74cc5',1,'SVF::ExtAPI']]],
   ['typedefs',['typedefs',['../classSVF_1_1DCHNode.html#abafa483be12690549fbcccaf4c3fa511',1,'SVF::DCHNode']]],
-  ['typeinfo',['typeinfo',['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo()'],['../classSVF_1_1MemObj.html#a750770ea992d39b22c8b2dda9aff2eaf',1,'SVF::MemObj::typeInfo()']]],
+  ['typeinfo',['typeInfo',['../classSVF_1_1MemObj.html#a750770ea992d39b22c8b2dda9aff2eaf',1,'SVF::MemObj::typeInfo()'],['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo()']]],
   ['typename',['typeName',['../classSVF_1_1DCHNode.html#a8a7b412262af7a90c9ef583b6a8c10fc',1,'SVF::DCHNode']]],
   ['typeprint',['TypePrint',['../classSVF_1_1Options.html#a83103f0d5f166e0bb062aa7d7b393ddd',1,'SVF::Options']]],
   ['typesystem',['typeSystem',['../classSVF_1_1PointerAnalysis.html#a219baed92b811d5519b056ad393fceed',1,'SVF::PointerAnalysis']]]

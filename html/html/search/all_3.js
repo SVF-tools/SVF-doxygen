@@ -562,7 +562,7 @@ var searchData=
   ['cxtlockset',['cxtLockset',['../classSVF_1_1LockAnalysis.html#a3081e7c7165908ed4aa282f398c5236d',1,'SVF::LockAnalysis::cxtLockset()'],['../classSVF_1_1LockAnalysis.html#a0716c155b42b3ae7a6c8d7593bb6ac83',1,'SVF::LockAnalysis::CxtLockSet()'],['../classSVF_1_1LockResultValidator.html#a51e6f48be9f2a65b390e4e0350eb12a9',1,'SVF::LockResultValidator::cxtLockSet()']]],
   ['cxtlocksetstr',['CxtLockSetStr',['../classSVF_1_1LockResultValidator.html#afec6058866fe334646db78227fb4d6a6',1,'SVF::LockResultValidator']]],
   ['cxtlocktolockset',['CxtLockToLockSet',['../classSVF_1_1LockAnalysis.html#ab782401c6521a2810e28ac602710ac22',1,'SVF::LockAnalysis']]],
-  ['cxtlocktospan',['CxtLockToSpan',['../classSVF_1_1LockAnalysis.html#a7335d5b13a6cb1dcde9706f30b8a4826',1,'SVF::LockAnalysis::CxtLockToSpan()'],['../classSVF_1_1LockAnalysis.html#a2fd796765f16cc7094f36d68c0ff70a0',1,'SVF::LockAnalysis::cxtLocktoSpan()']]],
+  ['cxtlocktospan',['cxtLocktoSpan',['../classSVF_1_1LockAnalysis.html#a2fd796765f16cc7094f36d68c0ff70a0',1,'SVF::LockAnalysis::cxtLocktoSpan()'],['../classSVF_1_1LockAnalysis.html#a7335d5b13a6cb1dcde9706f30b8a4826',1,'SVF::LockAnalysis::CxtLockToSpan()']]],
   ['cxtproc',['CxtProc',['../classSVF_1_1CxtProc.html',1,'SVF::CxtProc'],['../classSVF_1_1CxtProc.html#ac1ca3a049f6d0f8a0548a153cc903aa0',1,'SVF::CxtProc::CxtProc(const CallStrCxt &amp;c, const SVFFunction *f)'],['../classSVF_1_1CxtProc.html#a25a80c93a6aeb1112a846d6c588364cc',1,'SVF::CxtProc::CxtProc(const CxtProc &amp;ctm)']]],
   ['cxtptset',['CxtPtSet',['../namespaceSVF.html#ae23af66c8962f4a37da0a5a952bd137a',1,'SVF']]],
   ['cxts',['cxts',['../classSVF_1_1LLVMModuleSet.html#ad06a92bf8bc556de742e0ffdf79ffafe',1,'SVF::LLVMModuleSet']]],

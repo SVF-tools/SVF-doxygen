@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['bad_5ffcmp_5fpredicate',['BAD_FCMP_PREDICATE',['../classSVF_1_1CmpStmt.html#ad8e01744bfd98d584661025ce59338aca257536bcaeadf76c6172db4d225f3a26',1,'SVF::CmpStmt']]],
+  ['bad_5ficmp_5fpredicate',['BAD_ICMP_PREDICATE',['../classSVF_1_1CmpStmt.html#ad8e01744bfd98d584661025ce59338aca163b0f2adc52334e5a1083d59d6bc5d9',1,'SVF::CmpStmt']]],
   ['base',['Base',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a347b03b12df7d51774b617f4e7399568',1,'SVF::PTData']]],
   ['baseimpl',['BaseImpl',['../classSVF_1_1PointerAnalysis.html#ac0c0855918cb2cdc3d8ebc175acfbd4da66b132e5ab8c8746eb22e58d199b4c2a',1,'SVF::PointerAnalysis']]],
   ['binaryop',['BinaryOp',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a0e99fed4f3145668652aad5a3700e337',1,'SVF::VFGNode::BinaryOp()'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13',1,'SVF::SVFStmt::BinaryOp()']]],

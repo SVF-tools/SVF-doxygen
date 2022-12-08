@@ -162,6 +162,7 @@ var searchData=
   ['mtastat_2eh',['MTAStat.h',['../MTAStat_8h.html',1,'']]],
   ['mtasvfgbuilder',['MTASVFGBuilder',['../classSVF_1_1MTASVFGBuilder.html',1,'SVF::MTASVFGBuilder'],['../classSVF_1_1SVFG.html#ac0e43f4a2043538c9046f95826caa725',1,'SVF::SVFG::MTASVFGBuilder()'],['../classSVF_1_1MTASVFGBuilder.html#ae0cbe965ddbc511fb10e87fe8ae3912f',1,'SVF::MTASVFGBuilder::MTASVFGBuilder()']]],
   ['mu',['MU',['../classSVF_1_1SVFG.html#a7f4deffe7e13352b8c13eab110c834cc',1,'SVF::SVFG::MU()'],['../classSVF_1_1MemSSA.html#a2b4f3b19b32ac61dd1932faa82b93d8b',1,'SVF::MemSSA::MU()']]],
+  ['mul',['Mul',['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6a787e5771d6e70f3cbec3e2a33f5a4e8a',1,'SVF::BinaryOPStmt']]],
   ['multi_5finheritance',['MULTI_INHERITANCE',['../classSVF_1_1CHNode.html#a7111a3971f9f03e32bfd291a783d43b4afd6d851b22e741690f0736b4858d81a5',1,'SVF::CHNode::MULTI_INHERITANCE()'],['../classSVF_1_1DCHNode.html#a029988e54846db9aca2584e1c10283e3a1d2b2d38bfc09259f63933e9ab23aecc',1,'SVF::DCHNode::MULTI_INHERITANCE()']]],
   ['multiforked',['multiforked',['../classSVF_1_1TCTNode.html#a414f4b98fb8fd36d2cb381ff56eb98d8',1,'SVF::TCTNode']]],
   ['multiopndlabelcounter',['multiOpndLabelCounter',['../classSVF_1_1SVFStmt.html#a9ea22adbfc307dddee42ffec07cc88ed',1,'SVF::SVFStmt']]],
