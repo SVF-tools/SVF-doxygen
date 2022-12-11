@@ -112,7 +112,7 @@ var searchData=
   ['persptdataty',['PersPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#ae3ba6392560e5c0978335151c3373fd1',1,'SVF::BVDataPTAImpl']]],
   ['persversioned',['PersVersioned',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a15e53fc2443dac125c703ccd7eef1a03',1,'SVF::PTData']]],
   ['persversionedptdataty',['PersVersionedPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#ae028ae29bdc799f35777b82a39faf5e8',1,'SVF::BVDataPTAImpl']]],
-  ['phi',['Phi',['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3cd98eeb47c8475e7ee64480dcdee9',1,'SVF::SVFStmt::Phi()'],['../classSVF_1_1MemSSA.html#a8e948ea7778158107657fdd8195530e1',1,'SVF::MemSSA::PHI()']]],
+  ['phi',['PHI',['../classSVF_1_1MemSSA.html#a8e948ea7778158107657fdd8195530e1',1,'SVF::MemSSA::PHI()'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a6b3cd98eeb47c8475e7ee64480dcdee9',1,'SVF::SVFStmt::Phi()']]],
   ['phinode',['PHINode',['../namespaceSVF.html#ac8d4990439af7a2ecca7e15383119674',1,'SVF']]],
   ['phinodemap',['phiNodeMap',['../classSVF_1_1SVFIR.html#a41abf665421dbfaef508b1eba0c91fb9',1,'SVF::SVFIR::phiNodeMap()'],['../classSVF_1_1SVFIR.html#a08a05dfa6b9734936bb92b3969dbce3b',1,'SVF::SVFIR::PHINodeMap()']]],
   ['phiset',['PHISet',['../classSVF_1_1SVFG.html#aef7ee9d802934d51b3761663bdaf0c05',1,'SVF::SVFG::PHISet()'],['../classSVF_1_1MemSSA.html#a8a5d3597f3dba9744e170cc8c32bf25f',1,'SVF::MemSSA::PHISet()']]],

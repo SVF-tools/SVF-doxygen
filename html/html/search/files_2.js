@@ -43,8 +43,8 @@ var searchData=
   ['contextdda_2eh',['ContextDDA.h',['../ContextDDA_8h.html',1,'']]],
   ['corebitvector_2ecpp',['CoreBitVector.cpp',['../CoreBitVector_8cpp.html',1,'']]],
   ['corebitvector_2eh',['CoreBitVector.h',['../CoreBitVector_8h.html',1,'']]],
-  ['cpputil_2ecpp',['CPPUtil.cpp',['../CPPUtil_8cpp.html',1,'']]],
-  ['cpputil_2eh',['CPPUtil.h',['../CPPUtil_8h.html',1,'']]],
+  ['cpputil_2ecpp',['CppUtil.cpp',['../CppUtil_8cpp.html',1,'']]],
+  ['cpputil_2eh',['CppUtil.h',['../CppUtil_8h.html',1,'']]],
   ['csc_2ecpp',['CSC.cpp',['../CSC_8cpp.html',1,'']]],
   ['csc_2eh',['CSC.h',['../CSC_8h.html',1,'']]],
   ['cxtstmt_2eh',['CxtStmt.h',['../CxtStmt_8h.html',1,'']]]
