@@ -212,7 +212,7 @@ var searchData=
   ['svfgnodelockspan',['SVFGNodeLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a43f4d595b31259576b141cb99883938e',1,'SVF::SVFGNodeLockSpan']]],
   ['svfgopt',['SVFGOPT',['../classSVF_1_1SVFGOPT.html#a64c300c8a9f8cc2ac13eef65c1108d01',1,'SVF::SVFGOPT']]],
   ['svfgsccdetection',['SVFGSCCDetection',['../classSVF_1_1DDAVFSolver.html#aba0ec611a5cfd096ac0b8b11e0bd5580',1,'SVF::DDAVFSolver']]],
-  ['svfgstat',['SVFGStat',['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()'],['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()']]],
+  ['svfgstat',['svfgStat',['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()'],['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()']]],
   ['svfinstruction',['SVFInstruction',['../classSVF_1_1SVFInstruction.html#af12f1d63483901bd33a42f04bccddeb8',1,'SVF::SVFInstruction::SVFInstruction(const std::string &amp;i, const SVFType *ty, const SVFBasicBlock *b, bool tm, bool isRet, SVFValKind k=SVFInst)'],['../classSVF_1_1SVFInstruction.html#a245c052c318899d236654d629b855851',1,'SVF::SVFInstruction::SVFInstruction(const std::string &amp;i)=delete'],['../classSVF_1_1SVFInstruction.html#a7d81c86ea5e1f8e313457862e19c2a3c',1,'SVF::SVFInstruction::SVFInstruction(void)=delete']]],
   ['svfintergertype',['SVFIntergerType',['../classSVF_1_1SVFIntergerType.html#a4d0548bce2f5cf88d734800d61a6a613',1,'SVF::SVFIntergerType']]],
   ['svfir',['SVFIR',['../classSVF_1_1SVFIR.html#abf511f82cdbf7a6d9b6da167aee57636',1,'SVF::SVFIR']]],

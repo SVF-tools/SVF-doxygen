@@ -38,6 +38,7 @@ var searchData=
   ['stat',['stat',['../classSVF_1_1SVFG.html#ad5c1415f488ec4412d5457262269eff3',1,'SVF::SVFG::stat()'],['../classSVF_1_1PointerAnalysis.html#a5ec3d9bf1fc81346c9df29638daedc0f',1,'SVF::PointerAnalysis::stat()'],['../classSVF_1_1MemSSA.html#a4fc930040ec54eb60629da18fb6a4d04',1,'SVF::MemSSA::stat()'],['../classSVF_1_1MTA.html#abd4addbfd11a9479edd8625ed1947b9f',1,'SVF::MTA::stat()']]],
   ['statbudget',['StatBudget',['../classSVF_1_1Options.html#ad2f3ffd1b8d579ebe4c19a015cd599e2',1,'SVF::Options']]],
   ['steens',['steens',['../classSVF_1_1Steensgaard.html#a04530669bc548ae13bd8908fe4dbd3d2',1,'SVF::Steensgaard']]],
+  ['stinfos',['StInfos',['../classSVF_1_1LLVMModuleSet.html#ad13302dd3e5585e8feba4b0cb31991a2',1,'SVF::LLVMModuleSet']]],
   ['stmtreliance',['stmtReliance',['../classSVF_1_1VersionedFlowSensitive.html#af0859eb2a5b46c45aa4314e6e54f4438',1,'SVF::VersionedFlowSensitive']]],
   ['stnodeset',['stnodeSet',['../classSVF_1_1MTASVFGBuilder.html#a772436f5edc7b4bed3a3e8f0e55ac5ce',1,'SVF::MTASVFGBuilder']]],
   ['store2chisetmap',['store2ChiSetMap',['../classSVF_1_1MemSSA.html#a73d7465cf166d9ffa9d234d15edb375a',1,'SVF::MemSSA']]],

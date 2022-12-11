@@ -21,7 +21,7 @@ var searchData=
   ['oobresetvisited',['OOBResetVisited',['../classSVF_1_1DDAVFSolver.html#ab60c701f1881d88aa4440991fb972638',1,'SVF::DDAVFSolver']]],
   ['op',['op',['../classSVF_1_1ExtAPI_1_1Operation.html#a1e8979a53cf1edb5df00a5f28b6c19e9',1,'SVF::ExtAPI::Operation']]],
   ['opcache',['OpCache',['../classSVF_1_1PersistentPointsToCache.html#a896bab5039f4bf2d0da71045e2c63ad7',1,'SVF::PersistentPointsToCache']]],
-  ['opcode',['opcode',['../classSVF_1_1BinaryOPStmt.html#a0c4f900cf7321e8385b4f45e5cba3d1a',1,'SVF::BinaryOPStmt::opcode()'],['../classSVF_1_1UnaryOPStmt.html#a099df135a83d28a2e6f344e008fe1cc6',1,'SVF::UnaryOPStmt::opcode()'],['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6',1,'SVF::BinaryOPStmt::OpCode()']]],
+  ['opcode',['OpCode',['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6',1,'SVF::BinaryOPStmt::OpCode()'],['../classSVF_1_1BinaryOPStmt.html#a0c4f900cf7321e8385b4f45e5cba3d1a',1,'SVF::BinaryOPStmt::opcode()'],['../classSVF_1_1UnaryOPStmt.html#a099df135a83d28a2e6f344e008fe1cc6',1,'SVF::UnaryOPStmt::opcode()']]],
   ['operands',['operands',['../classSVF_1_1ExtAPI_1_1Operation.html#ae3539c507b6284b849c136418507e72b',1,'SVF::ExtAPI::Operation']]],
   ['operandstr',['operandStr',['../classSVF_1_1ExtAPI_1_1Operation.html#a56d03123021f1f628361a4080fa573ce',1,'SVF::ExtAPI::Operation']]],
   ['operation',['Operation',['../classSVF_1_1ExtAPI_1_1Operation.html',1,'SVF::ExtAPI::Operation'],['../classSVF_1_1ExtAPI_1_1Operation.html#a453f37464f5c6261e22e845948f36c94',1,'SVF::ExtAPI::Operation::Operation()'],['../classSVF_1_1ExtAPI_1_1Operation.html#a6fe4cc69b9181548940cbc67f7b6b315',1,'SVF::ExtAPI::Operation::Operation(std::string opn, std::vector&lt; std::string &gt; varstr)']]],
@@ -120,6 +120,6 @@ var searchData=
   ['outstream',['OutStream',['../namespaceSVF.html#a8bd74fdcb0e58d0249003df9c3fb8b31',1,'SVF']]],
   ['outupdatedvarmap',['outUpdatedVarMap',['../classSVF_1_1MutableIncDFPTData.html#af5f7db6c55037a0e117a36982736039e',1,'SVF::MutableIncDFPTData::outUpdatedVarMap()'],['../classSVF_1_1PersistentIncDFPTData.html#a054f8e2a0668387c092b2802e64a4df0',1,'SVF::PersistentIncDFPTData::outUpdatedVarMap()']]],
   ['ovalue_5fiterator',['ovalue_iterator',['../classSVF_1_1SVFModule.html#a7d11fccf78e9e69cef94c26aab6689d7',1,'SVF::SVFModule']]],
-  ['overlap',['Overlap',['../classSVF_1_1LocationSet.html#a002a0c8ec2528835d809bf7eb3ebc83fa8c76affbe3b39db53e8046cd5d79903c',1,'SVF::LocationSet::Overlap()'],['../classSVF_1_1CondPTAImpl.html#adf0acbb0c605278e43d88787d651bbd8',1,'SVF::CondPTAImpl::overlap()']]],
+  ['overlap',['overlap',['../classSVF_1_1CondPTAImpl.html#adf0acbb0c605278e43d88787d651bbd8',1,'SVF::CondPTAImpl::overlap()'],['../classSVF_1_1LocationSet.html#a002a0c8ec2528835d809bf7eb3ebc83fa8c76affbe3b39db53e8046cd5d79903c',1,'SVF::LocationSet::Overlap()']]],
   ['owned_5fmodules',['owned_modules',['../classSVF_1_1LLVMModuleSet.html#ae365189769640adb919a23c36978e5e2',1,'SVF::LLVMModuleSet']]]
 ];

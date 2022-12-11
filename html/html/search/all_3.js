@@ -314,7 +314,7 @@ var searchData=
   ['collectreguses',['collectRegUses',['../classSVF_1_1MemSSA.html#a8032c530b44e264544881d53d2fac390',1,'SVF::MemSSA']]],
   ['collectret',['collectRet',['../classSVF_1_1SymbolTableBuilder.html#a2f5321b9a76ea833650f1391ecd8de5f',1,'SVF::SymbolTableBuilder']]],
   ['collectscevinfo',['collectSCEVInfo',['../classSVF_1_1ForkJoinAnalysis.html#a731ece7e21bfa2b08ae16780b55f9f5f',1,'SVF::ForkJoinAnalysis']]],
-  ['collectsimpletypeinfo',['collectSimpleTypeInfo',['../classSVF_1_1LLVMModuleSet.html#abcd6d9513511e6a306189a87fe3dfa06',1,'SVF::LLVMModuleSet']]],
+  ['collectsimpletypeinfo',['collectSimpleTypeInfo',['../classSVF_1_1LLVMModuleSet.html#a52853bd34a394882c6fd0fc73739c9f2',1,'SVF::LLVMModuleSet']]],
   ['collectspawnees',['collectSpawnees',['../classSVF_1_1PCG.html#a8cff88e2a6cee5f655e491f9f2967460',1,'SVF::PCG']]],
   ['collectspawners',['collectSpawners',['../classSVF_1_1PCG.html#aef06745128e4e99c8e3bab226a337041',1,'SVF::PCG']]],
   ['collectstructinfo',['collectStructInfo',['../classSVF_1_1LLVMModuleSet.html#a93315673be515ce5c2fabd36fa927128',1,'SVF::LLVMModuleSet']]],

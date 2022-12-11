@@ -6,7 +6,7 @@ var searchData=
   ['while',['while',['../cJSON_8cpp.html#a209b15238c5803bc547b2d77e02f29b4',1,'cJSON.cpp']]],
   ['widen_5fwith',['widen_with',['../classSVF_1_1IntervalValue.html#ab7ddcc29a116944a91db24af90d4c144',1,'SVF::IntervalValue']]],
   ['widenwith',['widenWith',['../classSVF_1_1IntervalExeState.html#acfbe4dbb85e802a0456b7223a26280d3',1,'SVF::IntervalExeState']]],
-  ['word',['word',['../structSVF_1_1SparseBitVectorElement.html#a5d43d980591d14d3a3d0782be034ed4f',1,'SVF::SparseBitVectorElement::word()'],['../classSVF_1_1CoreBitVector.html#aaee26ffc13d05cd57f0fd7e4c2ea875c',1,'SVF::CoreBitVector::Word()']]],
+  ['word',['Word',['../classSVF_1_1CoreBitVector.html#aaee26ffc13d05cd57f0fd7e4c2ea875c',1,'SVF::CoreBitVector::Word()'],['../structSVF_1_1SparseBitVectorElement.html#a5d43d980591d14d3a3d0782be034ed4f',1,'SVF::SparseBitVectorElement::word()']]],
   ['wordit',['wordIt',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a1afa1cb9e8377d3dab767aa4bfc713dc',1,'SVF::CoreBitVector::CoreBitVectorIterator']]],
   ['wordnumber',['WordNumber',['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#a6b139db78c9cba017df0fa468bee713a',1,'SVF::SparseBitVector::SparseBitVectorIterator']]],
   ['words',['words',['../classSVF_1_1CoreBitVector.html#a807283a917e845ef19c4962b1744e98b',1,'SVF::CoreBitVector']]],
