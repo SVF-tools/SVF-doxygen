@@ -26,6 +26,7 @@ var searchData=
   ['first_5ficmp_5fpredicate',['FIRST_ICMP_PREDICATE',['../classSVF_1_1CmpStmt.html#ad8e01744bfd98d584661025ce59338aca41466bf1e1bb63a6d83ee6a3817b6e1b',1,'SVF::CmpStmt']]],
   ['flows_5fdda',['FlowS_DDA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85aa43c83e2f0df003c158d4b1325b50b18',1,'SVF::PointerAnalysis']]],
   ['fmul',['FMul',['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6a22a047e74227056ef3340628fae80198',1,'SVF::BinaryOPStmt']]],
+  ['fneg',['FNeg',['../classSVF_1_1UnaryOPStmt.html#ad06357c3d2abbd0eae12ba71d5206742ad6ff65c6ca19f968051e811b09745ad8',1,'SVF::UnaryOPStmt']]],
   ['fparm',['FParm',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75aeb82378d1c11bd6bf1776eb884cc4db7',1,'SVF::VFGNode']]],
   ['fpin',['FPIN',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a3c58aedc46cdafac26b47ec9674c2ac5',1,'SVF::VFGNode']]],
   ['fpout',['FPOUT',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75ac2c5b04acc4f754e70a782adee522e09',1,'SVF::VFGNode']]],

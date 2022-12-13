@@ -91,6 +91,7 @@ var searchData=
   ['flowsensitivestat_2ecpp',['FlowSensitiveStat.cpp',['../FlowSensitiveStat_8cpp.html',1,'']]],
   ['fmt',['fmt',['../cJSON_8h.html#aa813b2b7bde1a5a1f528cd9d9aa9ee7d',1,'fmt():&#160;cJSON.h'],['../cJSON_8cpp.html#aa813b2b7bde1a5a1f528cd9d9aa9ee7d',1,'fmt():&#160;cJSON.cpp']]],
   ['fmul',['FMul',['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6a22a047e74227056ef3340628fae80198',1,'SVF::BinaryOPStmt']]],
+  ['fneg',['FNeg',['../classSVF_1_1UnaryOPStmt.html#ad06357c3d2abbd0eae12ba71d5206742ad6ff65c6ca19f968051e811b09745ad8',1,'SVF::UnaryOPStmt']]],
   ['followers',['followers',['../classSVF_1_1PCG.html#ab3a3d18bac6e1f833583d41fa562caea',1,'SVF::PCG']]],
   ['followersbegin',['followersBegin',['../classSVF_1_1PCG.html#a78e0fcf6657bddc055f02e126fbf5626',1,'SVF::PCG']]],
   ['followersend',['followersEnd',['../classSVF_1_1PCG.html#ad4fe2747c89e6406c33eea95826de0d7',1,'SVF::PCG']]],
