@@ -1,18 +1,6 @@
 var searchData=
 [
-  ['edgeid',['EdgeID',['../namespaceSVF.html#ae71551d6a1fc300e0403297aa25ddf94',1,'SVF']]],
-  ['edgeset',['EdgeSet',['../namespaceSVF.html#a0d2e17d5b07a50ed95e8f407cd6dd0be',1,'SVF']]],
-  ['edgetype',['EdgeType',['../classSVF_1_1GenericNode.html#a458c626543431b4314f5f4f532eb51de',1,'SVF::GenericNode::EdgeType()'],['../classSVF_1_1GenericGraph.html#a12d493d6ad2b6c89f240c9ccfa3bdf30',1,'SVF::GenericGraph::EdgeType()'],['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#aeba2a9cf0cf40f5fdfe5c1d73cec675d',1,'SVF::GenericGraphTraits&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; * &gt;::EdgeType()'],['../structSVF_1_1GenericGraphTraits_3_01Inverse_3_01SVF_1_1GenericNode_3_01NodeTy_00_01EdgeTy_01_4_01_5_4_01_4.html#aced5ac52d86c89f0befb9f94d32c837a',1,'SVF::GenericGraphTraits&lt; Inverse&lt; SVF::GenericNode&lt; NodeTy, EdgeTy &gt; *&gt; &gt;::EdgeType()'],['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_4.html#a0fadf3d9a1e5043ff6fdb0f12ec796e9',1,'SVF::GenericGraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; *&gt;::EdgeType()']]],
-  ['edgevector',['EdgeVector',['../namespaceSVF.html#a4831992588252dc51c102e9e3f7d5e2e',1,'SVF']]],
-  ['elementlist',['ElementList',['../classSVF_1_1SparseBitVector.html#a74ab73c1674200bb4560070c8b10346d',1,'SVF::SparseBitVector']]],
-  ['elementlistconstiter',['ElementListConstIter',['../classSVF_1_1SparseBitVector.html#acdc2e97bfeeba3a91d8793992df9451f',1,'SVF::SparseBitVector']]],
-  ['elementlistiter',['ElementListIter',['../classSVF_1_1SparseBitVector.html#a399721230d13a4153766e6e8ed1f9aed',1,'SVF::SparseBitVector']]],
-  ['elementset',['ElementSet',['../classSVF_1_1CondStdSet.html#a3fcc7079d72b0b392731ae7bf1ef2939',1,'SVF::CondStdSet']]],
-  ['entrychi',['ENTRYCHI',['../classSVF_1_1SVFG.html#a101c5a8b31baf5c5613144f6e277abe9',1,'SVF::SVFG::ENTRYCHI()'],['../classSVF_1_1MemSSA.html#a6a20da24d82ace1888be49a2ae0f6bd5',1,'SVF::MemSSA::ENTRYCHI()']]],
-  ['equalgedge',['equalGEdge',['../classSVF_1_1GenericEdge.html#a69accb303ee67733e065350e4452cbca',1,'SVF::GenericEdge']]],
-  ['equalmemregion',['equalMemRegion',['../classSVF_1_1MemRegion.html#af0a0b4a5862a136ef4f203f19139da65',1,'SVF::MemRegion']]],
-  ['equalnodebs',['equalNodeBS',['../namespaceSVF_1_1SVFUtil.html#a5c2b39ae857d78ed9dda83880e703b0f',1,'SVF::SVFUtil']]],
-  ['equalpointsto',['equalPointsTo',['../namespaceSVF_1_1SVFUtil.html#a68302f07b13f6e1f39aace5699762c41',1,'SVF::SVFUtil']]],
-  ['extractelementinst',['ExtractElementInst',['../namespaceSVF.html#afb88c4d723dd7c51bdfc7ba5893cb356',1,'SVF']]],
-  ['extractvalueinst',['ExtractValueInst',['../namespaceSVF.html#ace1fd4c32134018e2f6d5da193524986',1,'SVF']]]
+  ['rc_5fflag',['RC_FLAG',['../classSVF_1_1RaceResultValidator.html#ac57ae430ee5b6868fe810172ec658853',1,'SVF::RaceResultValidator']]],
+  ['rthdtochildrenmap',['rthdToChildrenMap',['../classSVF_1_1MTAResultValidator.html#a7d2043cf3c354812fa5e4cdf7f60ff20',1,'SVF::MTAResultValidator']]],
+  ['rthdtovthdmap',['rthdTovthdMap',['../classSVF_1_1MTAResultValidator.html#ab386260dd6bbaeacde10e5c81f07502c',1,'SVF::MTAResultValidator']]]
 ];
