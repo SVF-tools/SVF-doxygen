@@ -1,22 +1,9 @@
 var searchData=
 [
-  ['objtypeinfo',['ObjTypeInfo',['../classSVF_1_1ObjTypeInfo.html',1,'SVF']]],
-  ['objvar',['ObjVar',['../classSVF_1_1ObjVar.html',1,'SVF']]],
-  ['operation',['Operation',['../classSVF_1_1ExtAPI_1_1Operation.html',1,'SVF::ExtAPI']]],
-  ['option',['Option',['../classOption.html',1,'']]],
-  ['option_3c_20bool_20_3e',['Option&lt; bool &gt;',['../classOption.html',1,'']]],
-  ['option_3c_20std_3a_3astring_20_3e',['Option&lt; std::string &gt;',['../classOption.html',1,'']]],
-  ['option_3c_20u32_5ft_20_3e',['Option&lt; u32_t &gt;',['../classOption.html',1,'']]],
-  ['optionbase',['OptionBase',['../classOptionBase.html',1,'']]],
-  ['optionmap',['OptionMap',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20bvdataptaimpl_3a_3aptbackingtype_20_3e',['OptionMap&lt; BVDataPTAImpl::PTBackingType &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20enum_20hclust_5ffast_5fmethods_20_3e',['OptionMap&lt; enum hclust_fast_methods &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20enum_20ptastat_3a_3aclocktype_20_3e',['OptionMap&lt; enum PTAStat::ClockType &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20memssa_3a_3amempartition_20_3e',['OptionMap&lt; MemSSA::MemPartition &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20pointsto_3a_3atype_20_3e',['OptionMap&lt; PointsTo::Type &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20svf_3a_3anodeidallocator_3a_3astrategy_20_3e',['OptionMap&lt; SVF::NodeIDAllocator::Strategy &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmultiple',['OptionMultiple',['../classOptionMultiple.html',1,'']]],
-  ['optionmultiple_3c_20pointeranalysis_3a_3aptaty_20_3e',['OptionMultiple&lt; PointerAnalysis::PTATY &gt;',['../classOptionMultiple.html',1,'']]],
-  ['optionmultiple_3c_20wpapass_3a_3aaliascheckrule_20_3e',['OptionMultiple&lt; WPAPass::AliasCheckRule &gt;',['../classOptionMultiple.html',1,'']]],
-  ['options',['Options',['../classSVF_1_1Options.html',1,'SVF']]]
+  ['neverfreebug_6686',['NeverFreeBug',['../classSVF_1_1NeverFreeBug.html',1,'SVF']]],
+  ['nodedata_6687',['NodeData',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html',1,'SVF::VersionedFlowSensitive::SCC']]],
+  ['nodeidallocator_6688',['NodeIDAllocator',['../classSVF_1_1NodeIDAllocator.html',1,'SVF']]],
+  ['normalgepcgedge_6689',['NormalGepCGEdge',['../classSVF_1_1NormalGepCGEdge.html',1,'SVF']]],
+  ['nullptrvfgnode_6690',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html',1,'SVF']]],
+  ['numericliteral_6691',['NumericLiteral',['../classSVF_1_1NumericLiteral.html',1,'SVF']]]
 ];

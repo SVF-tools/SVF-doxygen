@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['leak_5ftype',['LEAK_TYPE',['../classSVF_1_1LeakChecker.html#a42f54433e5ca60928f3c329ab545842d',1,'SVF::LeakChecker']]],
-  ['lsrelation',['LSRelation',['../classSVF_1_1LocationSet.html#a002a0c8ec2528835d809bf7eb3ebc83f',1,'SVF::LocationSet']]]
+  ['icfgedgek_12576',['ICFGEdgeK',['../classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429',1,'SVF::ICFGEdge']]],
+  ['icfgnodek_12577',['ICFGNodeK',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376',1,'SVF::ICFGNode']]]
 ];

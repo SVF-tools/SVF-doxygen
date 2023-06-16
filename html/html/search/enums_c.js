@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['strategy',['Strategy',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228',1,'SVF::NodeIDAllocator']]],
-  ['svftykind',['SVFTyKind',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40c',1,'SVF::SVFType']]],
-  ['svfvalkind',['SVFValKind',['../classSVF_1_1SVFValue.html#afb50ea5aeea7a0608a3c9335aea6860e',1,'SVF::SVFValue']]],
-  ['symtype',['SYMTYPE',['../classSVF_1_1SymbolTableInfo.html#afd2cf6ef6d7f2a583c709a72067be89b',1,'SVF::SymbolTableInfo']]]
+  ['relationtype_12594',['RELATIONTYPE',['../classSVF_1_1CHGraph.html#a2a1da7f262a2f11653fb583154a93a22',1,'SVF::CHGraph']]]
 ];
