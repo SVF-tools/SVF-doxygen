@@ -5540,11 +5540,11 @@ template&lt;unsigned ElementSize&gt; </div>
 </div><div class="memdoc">
 <p>[FOR DEBUG ONLY, DON'T USE IT UNSIDE <code>svf</code>!] Converts an <a class="el" href="classSVF_1_1SVFType.html">SVFType</a> to corresponding LLVM::Type, then get the string representation of it. Use it only when you are debugging. Don't use it in any <a class="el" href="namespaceSVF.html" title="for isBitcode">SVF</a> algorithm because it relies on information stored in LLVM bc. </p>
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l01075">1075</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;{</div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a>* ty = LLVMModuleSet::getLLVMModuleSet()-&gt;getLLVMType(svfType);</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a7b8b93fec1dc8c63c0a5837a85b99129">LLVMUtil::llvmToString</a>(*ty);</div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l01071">1071</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;{</div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a>* ty = LLVMModuleSet::getLLVMModuleSet()-&gt;getLLVMType(svfType);</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a7b8b93fec1dc8c63c0a5837a85b99129">LLVMUtil::llvmToString</a>(*ty);</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5565,38 +5565,38 @@ template&lt;unsigned ElementSize&gt; </div>
 </div><div class="memdoc">
 <p>[FOR DEBUG ONLY, DON'T USE IT UNSIDE <code>svf</code>!] Converts an <a class="el" href="classSVF_1_1SVFValue.html">SVFValue</a> to corresponding LLVM::Value, then get the string representation of it. Use it only when you are debugging. Don't use it in any <a class="el" href="namespaceSVF.html" title="for isBitcode">SVF</a> algorithm because it relies on information stored in LLVM bc. </p>
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l01042">1042</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;{</div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;    llvm::raw_string_ostream rawstr(str);</div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    <span class="keywordflow">if</span> (LLVMModuleSet::getLLVMModuleSet()-&gt;getLLVMValue(svfValue) == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;    {</div>
-<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        assert((SVFUtil::isa&lt;SVFInstruction, SVFBasicBlock&gt;(svfValue)) &amp;&amp;</div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;               <span class="stringliteral">&quot;Manually created SVF call inst, actual parameter and &quot;</span></div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;               <span class="stringliteral">&quot;BasicBlock by ExtAPI do not have LLVM value!&quot;</span>);</div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;        rawstr &lt;&lt; svfValue-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">getName</a>();</div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;        <span class="keywordflow">return</span> rawstr.str();</div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;    }</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    {</div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVF::SVFFunction</a>* fun = SVFUtil::dyn_cast&lt;SVFFunction&gt;(svfValue))</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l01038">1038</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;{</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    llvm::raw_string_ostream rawstr(str);</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    <span class="keywordflow">if</span> (LLVMModuleSet::getLLVMModuleSet()-&gt;getLLVMValue(svfValue) == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    {</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;        assert((SVFUtil::isa&lt;SVFInstruction, SVFBasicBlock&gt;(svfValue)) &amp;&amp;</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;               <span class="stringliteral">&quot;Manually created SVF call inst, actual parameter and &quot;</span></div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;               <span class="stringliteral">&quot;BasicBlock by ExtAPI do not have LLVM value!&quot;</span>);</div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;        rawstr &lt;&lt; svfValue-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">getName</a>();</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        <span class="keywordflow">return</span> rawstr.str();</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;    }</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;    {</div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVF::SVFFunction</a>* fun = SVFUtil::dyn_cast&lt;SVFFunction&gt;(svfValue))</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;        {</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot;Function: &quot;</span> &lt;&lt; fun-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;        }</div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFBasicBlock.html">SVFBasicBlock</a>* bb = SVFUtil::dyn_cast&lt;SVFBasicBlock&gt;(svfValue))</div>
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;        {</div>
-<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot;Function: &quot;</span> &lt;&lt; fun-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot;BasicBlock: &quot;</span> &lt;&lt; bb-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;        }</div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFBasicBlock.html">SVFBasicBlock</a>* bb = SVFUtil::dyn_cast&lt;SVFBasicBlock&gt;(svfValue))</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;        {</div>
-<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot;BasicBlock: &quot;</span> &lt;&lt; bb-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;        }</div>
-<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;        {</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* val =</div>
-<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;                LLVMModuleSet::getLLVMModuleSet()-&gt;getLLVMValue(svfValue);</div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; *val &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;        }</div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;        rawstr &lt;&lt; svfValue-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a7effb0f37f486745e0cdc3ae5e9c732b">getSourceLoc</a>();</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;        <span class="keywordflow">return</span> rawstr.str();</div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;    }</div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;}</div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* val =</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;                LLVMModuleSet::getLLVMModuleSet()-&gt;getLLVMValue(svfValue);</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; *val &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;        }</div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;        rawstr &lt;&lt; svfValue-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a7effb0f37f486745e0cdc3ae5e9c732b">getSourceLoc</a>();</div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;        <span class="keywordflow">return</span> rawstr.str();</div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;    }</div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
