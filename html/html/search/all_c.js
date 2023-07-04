@@ -50,7 +50,7 @@ var searchData=
   ['load2musetmap_3944',['load2MuSetMap',['../classSVF_1_1MemSSA.html#a5cf94edea3a5c35b3c1d9c6ae4b5f9d6',1,'SVF::MemSSA']]],
   ['loadcgedge_3945',['LoadCGEdge',['../classSVF_1_1LoadCGEdge.html',1,'SVF::LoadCGEdge'],['../classSVF_1_1LoadCGEdge.html#a74ccf27a1e90fb8f47e9cecf7bd38cf7',1,'SVF::LoadCGEdge::LoadCGEdge()'],['../classSVF_1_1LoadCGEdge.html#a7dd1e2dd057e0985fd837222f8042019',1,'SVF::LoadCGEdge::LoadCGEdge(const LoadCGEdge &amp;)'],['../classSVF_1_1LoadCGEdge.html#a36a21551732bbe3f7ff4babc0804bff2',1,'SVF::LoadCGEdge::LoadCGEdge(ConstraintNode *s, ConstraintNode *d, EdgeID id)']]],
   ['loadcgedgeset_3946',['LoadCGEdgeSet',['../classSVF_1_1ConstraintGraph.html#a1cb9124b29720e7a5b39d83419f9cc17',1,'SVF::ConstraintGraph']]],
-  ['loadextmodules_3947',['loadExtModules',['../classSVF_1_1LLVMModuleSet.html#a9247b3240ea36913baf7e7aa6d4a37e8',1,'SVF::LLVMModuleSet']]],
+  ['loadextapimodules_3947',['loadExtAPIModules',['../classSVF_1_1LLVMModuleSet.html#a8820d1df9098db6eadf3a9c67e380e55',1,'SVF::LLVMModuleSet']]],
   ['loadinedges_3948',['loadInEdges',['../classSVF_1_1ConstraintNode.html#af7343134750575d3f335ed431f13a418',1,'SVF::ConstraintNode']]],
   ['loadinst_3949',['LoadInst',['../namespaceSVF.html#a5a6e8ab900d5cd17ef72661006a7fbe0',1,'SVF']]],
   ['loadmodules_3950',['loadModules',['../classSVF_1_1LLVMModuleSet.html#a298966366b02d0a34f409c2c77da3789',1,'SVF::LLVMModuleSet']]],
