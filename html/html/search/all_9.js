@@ -232,7 +232,7 @@ var searchData=
   ['inverse_3456',['Inverse',['../structSVF_1_1Inverse.html',1,'SVF::Inverse&lt; GraphType &gt;'],['../structSVF_1_1Inverse.html#a9bff8acbcb891eeaeb6a9324312358a0',1,'SVF::Inverse::Inverse()']]],
   ['inverse_5fchildren_3457',['inverse_children',['../namespaceSVF.html#a155eb379cf271ac550333afb13cb36fa',1,'SVF']]],
   ['inverse_5fnodes_3458',['inverse_nodes',['../namespaceSVF.html#a6506af0b08e86390c0e4786b6ee294ae',1,'SVF']]],
-  ['invgtraits_3459',['InvGTraits',['../classSVF_1_1SrcSnkSolver.html#a19a5395fbfdb95d9328337925496d5eb',1,'SVF::SrcSnkSolver::InvGTraits()'],['../classSVF_1_1GraphReachSolver.html#af790a24d4448911584a6a49b9342a8d5',1,'SVF::GraphReachSolver::InvGTraits()']]],
+  ['invgtraits_3459',['InvGTraits',['../classSVF_1_1SrcSnkSolver.html#a7920becf918d7b7a0e67063b19c147a6',1,'SVF::SrcSnkSolver::InvGTraits()'],['../classSVF_1_1GraphReachSolver.html#af790a24d4448911584a6a49b9342a8d5',1,'SVF::GraphReachSolver::InvGTraits()']]],
   ['invokeinst_3460',['InvokeInst',['../namespaceSVF.html#a56cb9d6d1e05f6c31bfe1a4045bc8b5f',1,'SVF']]],
   ['irbuilder_3461',['IRBuilder',['../namespaceSVF.html#a94824519e439aeef1568d415b6f7331c',1,'SVF']]],
   ['irgraph_3462',['IRGraph',['../classSVF_1_1IRGraph.html',1,'SVF::IRGraph'],['../classSVF_1_1SVFVar.html#a6755ed387e15f44ffb637f64a0af60bc',1,'SVF::SVFVar::IRGraph()'],['../classSVF_1_1IRGraph.html#a34f7644ccf88fc0911c0b4f625dc1f28',1,'SVF::IRGraph::IRGraph()']]],
