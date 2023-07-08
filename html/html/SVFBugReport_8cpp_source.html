@@ -321,150 +321,174 @@ $(function() {
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugEvent.html#ad3bcb02563f952edd43ab5a7276bd57d">  253</a></span>&#160;<span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> SVFBugEvent::getFuncName()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classSVF_1_1FullNullPtrDereferenceBug.html#a8f057178ee7182d691dbb3103d0d0d43">  253</a></span>&#160;<a class="code" href="structcJSON.html">cJSON</a> *FullNullPtrDereferenceBug::getBugDescription()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> eventInst-&gt;getFunction()-&gt;getName();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugEvent.html#a5b3fcd366e5275927eb66a02dc6040f8">  258</a></span>&#160;<span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> SVFBugEvent::getEventLoc()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> eventInst-&gt;getSourceLoc();</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugEvent.html#a7c5d28996f9715d0f90d664b93477a23">  263</a></span>&#160;<span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> SVFBugEvent::getEventDescription()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">switch</span>(getEventType())</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">case</span> SVFBugEvent::Branch:</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">if</span> (typeAndInfoFlag &amp; <a class="code" href="SVFBugReport_8h.html#a6c7cd1f1c2372251f51de3a8392faeec">BRANCHFLAGMASK</a>)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;True&quot;</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;False&quot;</span>;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">case</span> SVFBugEvent::CallSite:</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> description(<span class="stringliteral">&quot;calls &quot;</span>);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *callee = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ad56c48be3ba6ebb95416623256524097">SVFUtil::getCallee</a>(eventInst);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">if</span>(callee == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            description += <span class="stringliteral">&quot;&lt;unknown&gt;&quot;</span>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            description += callee-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">getName</a>();</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> description;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    }</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">case</span> SVFBugEvent::SourceInst:</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;None&quot;</span>;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;No such type of event!&quot;</span>);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        abort();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="structcJSON.html">cJSON</a> *bugDescription = cJSON_CreateObject();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">return</span> bugDescription;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classSVF_1_1FullNullPtrDereferenceBug.html#ae269f1b62e89f8fcca783865d6ce8723">  259</a></span>&#160;<span class="keywordtype">void</span> FullNullPtrDereferenceBug::printBugToTerminal()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#ac25f6dfcc9118ffd80244a771bdee535">SVFUtil::bugMsg2</a>(<span class="stringliteral">&quot;\t FullNullPtrDereference :&quot;</span>) &lt;&lt;  <span class="stringliteral">&quot; dereference at : (&quot;</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    &lt;&lt; GenericBug::getLoc() &lt;&lt; <span class="stringliteral">&quot;)\n&quot;</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="classSVF_1_1PartialNullPtrDereferenceBug.html#a910f2e839e1e722655fbb2266c15f136">  265</a></span>&#160;<a class="code" href="structcJSON.html">cJSON</a> *PartialNullPtrDereferenceBug::getBugDescription()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="structcJSON.html">cJSON</a> *bugDescription = cJSON_CreateObject();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> bugDescription;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="classSVF_1_1PartialNullPtrDereferenceBug.html#acc860880d548ea2cf5b63f0f7ad11456">  271</a></span>&#160;<span class="keywordtype">void</span> PartialNullPtrDereferenceBug::printBugToTerminal()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#ac25f6dfcc9118ffd80244a771bdee535">SVFUtil::bugMsg2</a>(<span class="stringliteral">&quot;\t PartialNullPtrDereference :&quot;</span>) &lt;&lt;  <span class="stringliteral">&quot; dereference at : (&quot;</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    &lt;&lt; GenericBug::getLoc() &lt;&lt; <span class="stringliteral">&quot;)\n&quot;</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugEvent.html#ad3bcb02563f952edd43ab5a7276bd57d">  277</a></span>&#160;<span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> SVFBugEvent::getFuncName()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">return</span> eventInst-&gt;getFunction()-&gt;getName();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugEvent.html#a5b3fcd366e5275927eb66a02dc6040f8">  282</a></span>&#160;<span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> SVFBugEvent::getEventLoc()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">return</span> eventInst-&gt;getSourceLoc();</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugEvent.html#a7c5d28996f9715d0f90d664b93477a23">  287</a></span>&#160;<span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> SVFBugEvent::getEventDescription()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">switch</span>(getEventType())</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">case</span> SVFBugEvent::Branch:</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">if</span> (typeAndInfoFlag &amp; <a class="code" href="SVFBugReport_8h.html#a6c7cd1f1c2372251f51de3a8392faeec">BRANCHFLAGMASK</a>)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;True&quot;</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;False&quot;</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugReport.html#a4e243c7297791b306d970c19abc87ca9">  306</a></span>&#160;SVFBugReport::~SVFBugReport()</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;{</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> bugIt: bugSet)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keyword">delete</span> bugIt;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugReport.html#aa119593331403f73867fddcb6ec26989">  314</a></span>&#160;<span class="keywordtype">void</span> SVFBugReport::dumpToJsonFile(<span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a>&amp; filePath)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    std::map&lt;u32_t, std::string&gt; eventType2Str =</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        {SVFBugEvent::CallSite, <span class="stringliteral">&quot;call site&quot;</span>},</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        {SVFBugEvent::Caller, <span class="stringliteral">&quot;caller&quot;</span>},</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        {<a class="code" href="namespaceSVF.html#abf85e29310b2e4df8925d00a5c081314">SVFBugEvent::Loop</a>, <span class="stringliteral">&quot;loop&quot;</span>},</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        {SVFBugEvent::Branch, <span class="stringliteral">&quot;branch&quot;</span>}</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    };</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    ofstream jsonFile(filePath, ios::out);</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    jsonFile &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">size_t</span> commaCounter = bugSet.size() - 1;  <span class="comment">// comma num needed</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> bugPtr : bugSet)</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *singleBug = cJSON_CreateObject();</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *bugType = cJSON_CreateString(GenericBug::BugType2Str.at(bugPtr-&gt;getBugType()).c_str());</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;DefectType&quot;</span>, bugType);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *bugLoc = cJSON_Parse(bugPtr-&gt;getLoc().c_str());</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">if</span>(bugLoc == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            bugLoc = cJSON_CreateObject();</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;Location&quot;</span>, bugLoc);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *bugFunction = cJSON_CreateString(bugPtr-&gt;getFuncName().c_str());</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;Function&quot;</span>, bugFunction);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;Description&quot;</span>, bugPtr-&gt;getBugDescription());</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *eventList = cJSON_CreateArray();</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1GenericBug.html#acc65b033bfd61257d5b6fdbf932dfafe">GenericBug::EventStack</a> &amp;bugEventStack = bugPtr-&gt;getEventStack();</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="keywordflow">if</span>(BufferOverflowBug::classof(bugPtr))</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="comment">// add only when bug is context sensitive</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFBugEvent.html">SVFBugEvent</a>&amp;event : bugEventStack)</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                <span class="keywordflow">if</span> (event.getEventType() == SVFBugEvent::SourceInst)</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                {</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *singleEvent = cJSON_CreateObject();</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                <span class="comment">//event type</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *eventType = cJSON_CreateString(eventType2Str[event.getEventType()].c_str());</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                cJSON_AddItemToObject(singleEvent, <span class="stringliteral">&quot;EventType&quot;</span>, eventType);</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                <span class="comment">//function name</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *eventFunc = cJSON_CreateString(event.getFuncName().c_str());</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                cJSON_AddItemToObject(singleEvent, <span class="stringliteral">&quot;Function&quot;</span>, eventFunc);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                <span class="comment">//event loc</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *eventLoc = cJSON_Parse(event.getEventLoc().c_str());</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <span class="keywordflow">if</span>(eventLoc == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                {</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    eventLoc = cJSON_CreateObject();</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                cJSON_AddItemToObject(singleEvent, <span class="stringliteral">&quot;Location&quot;</span>, eventLoc);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                <span class="comment">//event description</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *eventDescription = cJSON_CreateString(event.getEventDescription().c_str());</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                cJSON_AddItemToObject(singleEvent, <span class="stringliteral">&quot;Description&quot;</span>, eventDescription);</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                cJSON_AddItemToArray(eventList, singleEvent);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        }</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;Events&quot;</span>, eventList);</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordtype">char</span> *singleBugStr = cJSON_Print(singleBug);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        jsonFile &lt;&lt; singleBugStr;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keywordflow">if</span> (commaCounter != 0)</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            jsonFile &lt;&lt; <span class="stringliteral">&quot;,\n&quot;</span>;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        commaCounter --;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <a class="code" href="cJSON_8cpp.html#afde5c619f31577b3d821b56b23953c85">cJSON_Delete</a>(singleBug);</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    }</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    jsonFile &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    jsonFile.close();</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;}</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">case</span> SVFBugEvent::CallSite:</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> description(<span class="stringliteral">&quot;calls &quot;</span>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *callee = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ad56c48be3ba6ebb95416623256524097">SVFUtil::getCallee</a>(eventInst);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">if</span>(callee == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            description += <span class="stringliteral">&quot;&lt;unknown&gt;&quot;</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            description += callee-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">getName</a>();</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">return</span> description;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">case</span> SVFBugEvent::SourceInst:</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;None&quot;</span>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;No such type of event!&quot;</span>);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        abort();</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugReport.html#a4e243c7297791b306d970c19abc87ca9">  330</a></span>&#160;SVFBugReport::~SVFBugReport()</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;{</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> bugIt: bugSet)</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keyword">delete</span> bugIt;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFBugReport.html#aa119593331403f73867fddcb6ec26989">  338</a></span>&#160;<span class="keywordtype">void</span> SVFBugReport::dumpToJsonFile(<span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a>&amp; filePath)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    std::map&lt;u32_t, std::string&gt; eventType2Str =</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        {SVFBugEvent::CallSite, <span class="stringliteral">&quot;call site&quot;</span>},</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        {SVFBugEvent::Caller, <span class="stringliteral">&quot;caller&quot;</span>},</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        {<a class="code" href="namespaceSVF.html#abf85e29310b2e4df8925d00a5c081314">SVFBugEvent::Loop</a>, <span class="stringliteral">&quot;loop&quot;</span>},</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        {SVFBugEvent::Branch, <span class="stringliteral">&quot;branch&quot;</span>}</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    };</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    ofstream jsonFile(filePath, ios::out);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    jsonFile &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">size_t</span> commaCounter = bugSet.size() - 1;  <span class="comment">// comma num needed</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> bugPtr : bugSet)</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *singleBug = cJSON_CreateObject();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *bugType = cJSON_CreateString(GenericBug::BugType2Str.at(bugPtr-&gt;getBugType()).c_str());</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;DefectType&quot;</span>, bugType);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *bugLoc = cJSON_Parse(bugPtr-&gt;getLoc().c_str());</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">if</span>(bugLoc == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            bugLoc = cJSON_CreateObject();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;Location&quot;</span>, bugLoc);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *bugFunction = cJSON_CreateString(bugPtr-&gt;getFuncName().c_str());</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;Function&quot;</span>, bugFunction);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;Description&quot;</span>, bugPtr-&gt;getBugDescription());</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *eventList = cJSON_CreateArray();</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1GenericBug.html#acc65b033bfd61257d5b6fdbf932dfafe">GenericBug::EventStack</a> &amp;bugEventStack = bugPtr-&gt;getEventStack();</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordflow">if</span>(BufferOverflowBug::classof(bugPtr))</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            <span class="comment">// add only when bug is context sensitive</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFBugEvent.html">SVFBugEvent</a>&amp;event : bugEventStack)</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                <span class="keywordflow">if</span> (event.getEventType() == SVFBugEvent::SourceInst)</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *singleEvent = cJSON_CreateObject();</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                <span class="comment">//event type</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *eventType = cJSON_CreateString(eventType2Str[event.getEventType()].c_str());</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                cJSON_AddItemToObject(singleEvent, <span class="stringliteral">&quot;EventType&quot;</span>, eventType);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                <span class="comment">//function name</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *eventFunc = cJSON_CreateString(event.getFuncName().c_str());</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                cJSON_AddItemToObject(singleEvent, <span class="stringliteral">&quot;Function&quot;</span>, eventFunc);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                <span class="comment">//event loc</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *eventLoc = cJSON_Parse(event.getEventLoc().c_str());</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                <span class="keywordflow">if</span>(eventLoc == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                {</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                    eventLoc = cJSON_CreateObject();</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                cJSON_AddItemToObject(singleEvent, <span class="stringliteral">&quot;Location&quot;</span>, eventLoc);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                <span class="comment">//event description</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                <a class="code" href="structcJSON.html">cJSON</a> *eventDescription = cJSON_CreateString(event.getEventDescription().c_str());</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                cJSON_AddItemToObject(singleEvent, <span class="stringliteral">&quot;Description&quot;</span>, eventDescription);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                cJSON_AddItemToArray(eventList, singleEvent);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        }</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        cJSON_AddItemToObject(singleBug, <span class="stringliteral">&quot;Events&quot;</span>, eventList);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordtype">char</span> *singleBugStr = cJSON_Print(singleBug);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        jsonFile &lt;&lt; singleBugStr;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">if</span> (commaCounter != 0)</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            jsonFile &lt;&lt; <span class="stringliteral">&quot;,\n&quot;</span>;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        }</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        commaCounter --;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <a class="code" href="cJSON_8cpp.html#afde5c619f31577b3d821b56b23953c85">cJSON_Delete</a>(singleBug);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    jsonFile &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    jsonFile.close();</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a2401b022638769f59f86ab424a189b6e"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">SVF::SVFValue::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00216">SVFValue.h:216</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_ad56c48be3ba6ebb95416623256524097"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#ad56c48be3ba6ebb95416623256524097">SVF::LLVMUtil::getCallee</a></div><div class="ttdeci">const Function * getCallee(const CallBase *cs)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00075">LLVMUtil.h:75</a></div></div>
@@ -475,7 +499,7 @@ $(function() {
 <div class="ttc" id="acJSON_8h_html"><div class="ttname"><a href="cJSON_8h.html">cJSON.h</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ac25f6dfcc9118ffd80244a771bdee535"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ac25f6dfcc9118ffd80244a771bdee535">SVF::SVFUtil::bugMsg2</a></div><div class="ttdeci">std::string bugMsg2(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8cpp_source.html#l00086">SVFUtil.cpp:86</a></div></div>
 <div class="ttc" id="aSVFUtil_8h_html"><div class="ttname"><a href="SVFUtil_8h.html">SVFUtil.h</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFBugEvent_html_ad3bcb02563f952edd43ab5a7276bd57d"><div class="ttname"><a href="classSVF_1_1SVFBugEvent.html#ad3bcb02563f952edd43ab5a7276bd57d">SVF::SVFBugEvent::getFuncName</a></div><div class="ttdeci">virtual const std::string getFuncName() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8cpp_source.html#l00253">SVFBugReport.cpp:253</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFBugEvent_html_ad3bcb02563f952edd43ab5a7276bd57d"><div class="ttname"><a href="classSVF_1_1SVFBugEvent.html#ad3bcb02563f952edd43ab5a7276bd57d">SVF::SVFBugEvent::getFuncName</a></div><div class="ttdeci">virtual const std::string getFuncName() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8cpp_source.html#l00277">SVFBugReport.cpp:277</a></div></div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html"><div class="ttname"><a href="classSVF_1_1SVFFunction.html">SVF::SVFFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00274">SVFValue.h:274</a></div></div>
 <div class="ttc" id="aSVFBugReport_8h_html_a6c7cd1f1c2372251f51de3a8392faeec"><div class="ttname"><a href="SVFBugReport_8h.html#a6c7cd1f1c2372251f51de3a8392faeec">BRANCHFLAGMASK</a></div><div class="ttdeci">#define BRANCHFLAGMASK</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8h_source.html#l00040">SVFBugReport.h:40</a></div></div>
@@ -483,7 +507,7 @@ $(function() {
 <div class="ttc" id="aSVFBugReport_8h_html"><div class="ttname"><a href="SVFBugReport_8h.html">SVFBugReport.h</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_abf85e29310b2e4df8925d00a5c081314"><div class="ttname"><a href="namespaceSVF.html#abf85e29310b2e4df8925d00a5c081314">SVF::Loop</a></div><div class="ttdeci">llvm::Loop Loop</div><div class="ttdoc">LLVM Loop.</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00138">BasicTypes.h:138</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFBugEvent_html_a7ded0022f3852a08a05c67aeae77162f"><div class="ttname"><a href="classSVF_1_1SVFBugEvent.html#a7ded0022f3852a08a05c67aeae77162f">SVF::SVFBugEvent::getEventType</a></div><div class="ttdeci">u32_t getEventType() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8h_source.html#l00071">SVFBugReport.h:71</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFBugEvent_html_a5b3fcd366e5275927eb66a02dc6040f8"><div class="ttname"><a href="classSVF_1_1SVFBugEvent.html#a5b3fcd366e5275927eb66a02dc6040f8">SVF::SVFBugEvent::getEventLoc</a></div><div class="ttdeci">virtual const std::string getEventLoc() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8cpp_source.html#l00258">SVFBugReport.cpp:258</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFBugEvent_html_a5b3fcd366e5275927eb66a02dc6040f8"><div class="ttname"><a href="classSVF_1_1SVFBugEvent.html#a5b3fcd366e5275927eb66a02dc6040f8">SVF::SVFBugEvent::getEventLoc</a></div><div class="ttdeci">virtual const std::string getEventLoc() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8cpp_source.html#l00282">SVFBugReport.cpp:282</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFBugEvent_html"><div class="ttname"><a href="classSVF_1_1SVFBugEvent.html">SVF::SVFBugEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8h_source.html#l00051">SVFBugReport.h:51</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ab65033f068bfbeb0a1c52dcec3beb6bc"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVF::SVFUtil::errs</a></div><div class="ttdeci">std::ostream &amp; errs()</div><div class="ttdoc">Overwrite llvm::errs()</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00056">SVFUtil.h:56</a></div></div>
 <!-- start footer part -->
