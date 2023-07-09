@@ -239,29 +239,29 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1GenericBug.html#aed9feb57ffb0860cbdd13698fd4dbf6c">SVF::GenericBug</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFBugReport_8cpp_source.html#l00215">215</a> of file <a class="el" href="SVFBugReport_8cpp_source.html">SVFBugReport.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="structcJSON.html">cJSON</a> *bugDescription = cJSON_CreateObject();</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="structcJSON.html">cJSON</a> *pathInfo = cJSON_CreateArray();</div>
+<p class="definition">Definition at line <a class="el" href="SVFBugReport_8cpp_source.html#l00217">217</a> of file <a class="el" href="SVFBugReport_8cpp_source.html">SVFBugReport.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;{</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="structcJSON.html">cJSON</a> *bugDescription = cJSON_CreateObject();</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">auto</span> lastBranchEventIt = <a class="code" href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">bugEventStack</a>.end() - 1;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> eventIt = <a class="code" href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">bugEventStack</a>.begin(); eventIt != lastBranchEventIt; eventIt++)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *newBranch = cJSON_CreateObject();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *branchLoc = cJSON_Parse((*eventIt).getEventLoc().c_str());</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">if</span>(branchLoc == <span class="keyword">nullptr</span>) branchLoc = cJSON_CreateObject();</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *branchCondition = cJSON_CreateString((*eventIt).getEventDescription().c_str());</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        cJSON_AddItemToObject(newBranch, <span class="stringliteral">&quot;BranchLoc&quot;</span>, branchLoc);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        cJSON_AddItemToObject(newBranch, <span class="stringliteral">&quot;BranchCond&quot;</span>, branchCondition);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        cJSON_AddItemToArray(pathInfo, newBranch);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    cJSON_AddItemToObject(bugDescription, <span class="stringliteral">&quot;ConditionalFileClosePath&quot;</span>, pathInfo);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> bugDescription;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="structcJSON.html">cJSON</a> *pathInfo = cJSON_CreateArray();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">auto</span> lastBranchEventIt = <a class="code" href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">bugEventStack</a>.end() - 1;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> eventIt = <a class="code" href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">bugEventStack</a>.begin(); eventIt != lastBranchEventIt; eventIt++)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *newBranch = cJSON_CreateObject();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *branchLoc = cJSON_Parse((*eventIt).getEventLoc().c_str());</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">if</span>(branchLoc == <span class="keyword">nullptr</span>) branchLoc = cJSON_CreateObject();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="structcJSON.html">cJSON</a> *branchCondition = cJSON_CreateString((*eventIt).getEventDescription().c_str());</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        cJSON_AddItemToObject(newBranch, <span class="stringliteral">&quot;BranchLoc&quot;</span>, branchLoc);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        cJSON_AddItemToObject(newBranch, <span class="stringliteral">&quot;BranchCond&quot;</span>, branchCondition);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        cJSON_AddItemToArray(pathInfo, newBranch);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    cJSON_AddItemToObject(bugDescription, <span class="stringliteral">&quot;ConditionalFileClosePath&quot;</span>, pathInfo);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> bugDescription;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -290,19 +290,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1GenericBug.html#aabf06cd1094ddbf7ee419c635f29a948">SVF::GenericBug</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFBugReport_8cpp_source.html#l00239">239</a> of file <a class="el" href="SVFBugReport_8cpp_source.html">SVFBugReport.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;{</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#ac25f6dfcc9118ffd80244a771bdee535">SVFUtil::bugMsg2</a>(<span class="stringliteral">&quot;\t PartialFileClose :&quot;</span>) &lt;&lt;  <span class="stringliteral">&quot; file open location at : (&quot;</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                    &lt;&lt; <a class="code" href="classSVF_1_1GenericBug.html#abbc86875488c27e53e5c36e95c472b20">GenericBug::getLoc</a>() &lt;&lt; <span class="stringliteral">&quot;)\n&quot;</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;\t\t conditional file close path: \n&quot;</span>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">auto</span> lastBranchEventIt = <a class="code" href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">bugEventStack</a>.end() - 1;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> eventIt = <a class="code" href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">bugEventStack</a>.begin(); eventIt != lastBranchEventIt; eventIt++)</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;\t\t  --&gt; (&quot;</span> &lt;&lt; (*eventIt).getEventLoc() &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; (*eventIt).getEventDescription() &lt;&lt; <span class="stringliteral">&quot;) \n&quot;</span>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SVFBugReport_8cpp_source.html#l00241">241</a> of file <a class="el" href="SVFBugReport_8cpp_source.html">SVFBugReport.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#ac25f6dfcc9118ffd80244a771bdee535">SVFUtil::bugMsg2</a>(<span class="stringliteral">&quot;\t PartialFileClose :&quot;</span>) &lt;&lt;  <span class="stringliteral">&quot; file open location at : (&quot;</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    &lt;&lt; <a class="code" href="classSVF_1_1GenericBug.html#abbc86875488c27e53e5c36e95c472b20">GenericBug::getLoc</a>() &lt;&lt; <span class="stringliteral">&quot;)\n&quot;</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;\t\t conditional file close path: \n&quot;</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">auto</span> lastBranchEventIt = <a class="code" href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">bugEventStack</a>.end() - 1;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> eventIt = <a class="code" href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">bugEventStack</a>.begin(); eventIt != lastBranchEventIt; eventIt++)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;\t\t  --&gt; (&quot;</span> &lt;&lt; (*eventIt).getEventLoc() &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; (*eventIt).getEventDescription() &lt;&lt; <span class="stringliteral">&quot;) \n&quot;</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -317,7 +317,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="astructcJSON_html"><div class="ttname"><a href="structcJSON.html">cJSON</a></div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00103">cJSON.h:103</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericBug_html_a3f62d1f1307b9e6771d7449d0855d7e4"><div class="ttname"><a href="classSVF_1_1GenericBug.html#a3f62d1f1307b9e6771d7449d0855d7e4">SVF::GenericBug::GenericBug</a></div><div class="ttdeci">GenericBug(BugType bugType, const EventStack &amp;bugEventStack)</div><div class="ttdoc">note: should be initialized with a bugEventStack</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8h_source.html#l00095">SVFBugReport.h:95</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericBug_html_ac0b91adaf9df0d57dc2e179d962ca490"><div class="ttname"><a href="classSVF_1_1GenericBug.html#ac0b91adaf9df0d57dc2e179d962ca490">SVF::GenericBug::bugEventStack</a></div><div class="ttdeci">const EventStack bugEventStack</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8h_source.html#l00091">SVFBugReport.h:91</a></div></div>
-<div class="ttc" id="aclassSVF_1_1GenericBug_html_abbc86875488c27e53e5c36e95c472b20"><div class="ttname"><a href="classSVF_1_1GenericBug.html#abbc86875488c27e53e5c36e95c472b20">SVF::GenericBug::getLoc</a></div><div class="ttdeci">const std::string getLoc() const</div><div class="ttdoc">returns bug location as json format string</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8cpp_source.html#l00049">SVFBugReport.cpp:49</a></div></div>
+<div class="ttc" id="aclassSVF_1_1GenericBug_html_abbc86875488c27e53e5c36e95c472b20"><div class="ttname"><a href="classSVF_1_1GenericBug.html#abbc86875488c27e53e5c36e95c472b20">SVF::GenericBug::getLoc</a></div><div class="ttdeci">const std::string getLoc() const</div><div class="ttdoc">returns bug location as json format string</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8cpp_source.html#l00051">SVFBugReport.cpp:51</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ab65033f068bfbeb0a1c52dcec3beb6bc"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVF::SVFUtil::errs</a></div><div class="ttdeci">std::ostream &amp; errs()</div><div class="ttdoc">Overwrite llvm::errs()</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00056">SVFUtil.h:56</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
