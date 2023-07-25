@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nan_13137',['NAN',['../cJSON_8cpp.html#a8abfcc76130f3f991d124dd22d7e69bc',1,'cJSON.cpp']]],
-  ['native_5fint_5fsize_13138',['NATIVE_INT_SIZE',['../SVFType_8h.html#ab8ca0fd9d0caa6817d305cae0f1cf022',1,'SVFType.h']]]
+  ['maxbvlen_13137',['MaxBvLen',['../BoundedZ3Expr_8h.html#adf05e95ec112057aa9e9abf8616e40c7',1,'BoundedZ3Expr.h']]]
 ];
