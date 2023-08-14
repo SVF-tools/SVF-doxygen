@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="fastcluster_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// C++ standalone verion of fastcluster by Daniel Muellner</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// C++ standalone version of fastcluster by Daniel Muellner</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Copyright: Daniel Muellner, 2011</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//            Christoph Dalitz, 2020</span></div>
@@ -96,7 +96,7 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Assigns cluster labels (0, ..., nclust-1) to the n points such</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// that the hierarchical clsutering is stopped at cluster distance cdist</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// that the hierarchical clustering is stopped at cluster distance cdist</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// Input arguments:</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//   n      = number of observables</span></div>
@@ -124,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// Output arguments:</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//   merge   = allocated (n-1)x2 matrix (2*(n-1) array) for storing result.</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//             Result follows R hclust convention:</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//              - observabe indices start with one</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//              - observable indices start with one</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//              - merge[i][] contains the merged nodes in step i</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//              - merge[i][j] is negative when the node is an atom</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//   height  = allocated (n-1) array with distances at each merge step</span></div>
@@ -139,7 +139,7 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913ddad16cc6362447cc32292c4af4c6fe8024">   68</a></span>&#160;    <a class="code" href="fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913ddad16cc6362447cc32292c4af4c6fe8024">HCLUST_METHOD_SINGLE</a> = 0,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// complete link with the nearest-neighbor-chain algorithm (Murtagh, 1984)</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dda44ce22fdfc560f27242e9b8f8e7009f4">   70</a></span>&#160;    <a class="code" href="fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dda44ce22fdfc560f27242e9b8f8e7009f4">HCLUST_METHOD_COMPLETE</a> = 1,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// omplete link with the nearest-neighbor-chain algorithm (Murtagh, 1984)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// complete link with the nearest-neighbor-chain algorithm (Murtagh, 1984)</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dda3ab72664fc61704a1ba46bddbc347115">   72</a></span>&#160;    <a class="code" href="fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dda3ab72664fc61704a1ba46bddbc347115">HCLUST_METHOD_AVERAGE</a> = 2,</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// median link with the generic algorithm (Müllner, 2011)</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913ddaa453b79910d9c6f7f57a179bcdf63474">   74</a></span>&#160;    <a class="code" href="fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913ddaa453b79910d9c6f7f57a179bcdf63474">HCLUST_METHOD_MEDIAN</a> = 3,</div>

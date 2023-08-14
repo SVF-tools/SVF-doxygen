@@ -297,7 +297,7 @@ $(function() {
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    assert(pag-&gt;getTotalNodeNum() &gt;= symTable-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a26eb45eab3da4695a6e5bad51b01ddc5">getTotalSymNum</a>()</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;           &amp;&amp; <span class="stringliteral">&quot;not all node been inititalize!!!&quot;</span>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;           &amp;&amp; <span class="stringliteral">&quot;not all node have been initialized!!!&quot;</span>);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
@@ -343,7 +343,7 @@ $(function() {
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#adefcb50414ea999d70cea5ccdbcb98d7">ConstantInt</a>* op = SVFUtil::dyn_cast&lt;ConstantInt&gt;(offsetVal);</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="comment">// if Options::ModelConsts() is disabled. We will treat whole array as one,</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">// but we can distinguish different field of an array of struct, e.g. s[1].f1 is differet from s[0].f2</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">// but we can distinguish different field of an array of struct, e.g. s[1].f1 is different from s[0].f2</span></div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a146d286041987860388da3d8bc85cee3">ArrayType</a>* arrTy = SVFUtil::dyn_cast&lt;ArrayType&gt;(gepTy))</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        {</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">if</span>(!op || (arrTy-&gt;getArrayNumElements() &lt;= (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>)op-&gt;getSExtValue()))</div>
@@ -477,7 +477,7 @@ $(function() {
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        }</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;ConstantAggregate&gt;(ref))</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        {</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="comment">// we don&#39;t handle constant agrgregate like constant vectors</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="comment">// we don&#39;t handle constant aggregate like constant vectors</span></div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        }</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;BlockAddress&gt;(ref))</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        {</div>
@@ -529,7 +529,7 @@ $(function() {
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keywordflow">if</span> (C-&gt;getType()-&gt;isSingleValueType())</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    {</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> src = getValueNode(C);</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <span class="comment">// get the field value if it is avaiable, otherwise we create a dummy field node.</span></div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <span class="comment">// get the field value if it is available, otherwise we create a dummy field node.</span></div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        setCurrentLocation(gvar, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> field = getGlobalVarField(gvar, <a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>, LLVMModuleSet::getLLVMModuleSet()-&gt;getSVFType(C-&gt;getType()));</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>

@@ -3606,7 +3606,7 @@ template&lt;typename T , typename U &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The following 2 functions are intended to convert SparseBitVectors to JSON. But they're buggy. Commentting them out would enable the toJson(T) where is_iterable_v&lt;T&gt; is true. But that implementation is less space-efficient if the bitvector contains many elements. It is observed that upon construction, <a class="el" href="namespaceSVF.html" title="for isBitcode">SVF</a> IR bitvectors contain at most 1 element. In that case, we can just use the toJson(T) for iterable T without much space overhead.</p>
+<p>The following 2 functions are intended to convert SparseBitVectors to JSON. But they're buggy. Commenting them out would enable the toJson(T) where is_iterable_v&lt;T&gt; is true. But that implementation is less space-efficient if the bitvector contains many elements. It is observed that upon construction, <a class="el" href="namespaceSVF.html" title="for isBitcode">SVF</a> IR bitvectors contain at most 1 element. In that case, we can just use the toJson(T) for iterable T without much space overhead.</p>
 <p>template &lt;unsigned ElementSize&gt; cJSON* toJson(const SparseBitVectorElement&lt;ElementSize&gt;&amp; element) { cJSON* array = <a class="el" href="namespaceSVF.html#afbeab0bb58006021ef620f3fbdc44d14">jsonCreateArray()</a>; for (const auto v : element.Bits) { jsonAddItemToArray(array, toJson(v)); } return array; }</p>
 <p>template &lt;unsigned ElementSize&gt; cJSON* toJson(const SparseBitVector&lt;ElementSize&gt;&amp; bv) { return toJson(bv.Elements); } </p>
 
