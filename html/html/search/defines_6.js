@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['has_5fclz_13122',['HAS_CLZ',['../SparseBitVector_8h.html#aa4aed82d501b04499090de2c616e6b1f',1,'SparseBitVector.h']]],
-  ['has_5fclzll_13123',['HAS_CLZLL',['../SparseBitVector_8h.html#ad66fb43b1e40d6e22629fcd889d4bfab',1,'SparseBitVector.h']]]
+  ['has_5fclz_12972',['HAS_CLZ',['../SparseBitVector_8h.html#aa4aed82d501b04499090de2c616e6b1f',1,'SparseBitVector.h']]],
+  ['has_5fclzll_12973',['HAS_CLZLL',['../SparseBitVector_8h.html#ad66fb43b1e40d6e22629fcd889d4bfab',1,'SparseBitVector.h']]]
 ];
