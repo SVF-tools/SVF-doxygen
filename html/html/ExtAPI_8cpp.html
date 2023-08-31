@@ -65,14 +65,134 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ExtAPI.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="ExtAPI_8h_source.html">Util/ExtAPI.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SVFUtil_8h_source.html">Util/SVFUtil.h</a>&quot;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
 </div>
 <p><a href="ExtAPI_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a424940f91f234b23bcc633f12269f935"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ExtAPI_8cpp.html#a424940f91f234b23bcc633f12269f935">GetStdoutFromCommand</a> (const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;command)</td></tr>
+<tr class="separator:a424940f91f234b23bcc633f12269f935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2ff3727892c4ee0eff596174eb5b84"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ExtAPI_8cpp.html#a7d2ff3727892c4ee0eff596174eb5b84">getFilePath</a> (const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;path)</td></tr>
+<tr class="separator:a7d2ff3727892c4ee0eff596174eb5b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a7d2ff3727892c4ee0eff596174eb5b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d2ff3727892c4ee0eff596174eb5b84">&#9670;&nbsp;</a></span>getFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> getFilePath </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00081">81</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> bcFilePath = <a class="code" href="ExtAPI_8cpp.html#a424940f91f234b23bcc633f12269f935">GetStdoutFromCommand</a>(path);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> (path.compare(<span class="stringliteral">&quot;npm root&quot;</span>) == 0)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">int</span> os_flag = 1;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// SVF installed via npm needs to determine the type of operating</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">// system, otherwise the extapi.bc path may not be found.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#ifdef linux</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">// Linux os</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        os_flag = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        bcFilePath.append(<span class="stringliteral">&quot;/svf-lib/SVF-linux&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">// Mac os</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> (os_flag == 1)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            bcFilePath.append(<span class="stringliteral">&quot;/svf-lib/SVF-osx&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (bcFilePath.back() != <span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        bcFilePath.push_back(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    bcFilePath.append(<a class="code" href="ExtAPI_8h.html#a02f944ad8948fa28a15d67ab1252573b">EXTAPI_BC_PATH</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> bcFilePath;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a424940f91f234b23bcc633f12269f935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424940f91f234b23bcc633f12269f935">&#9670;&nbsp;</a></span>GetStdoutFromCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> GetStdoutFromCommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00057">57</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="cJSON_8h.html#a503753140aa27b00f99a3501280b2746">buffer</a>[128];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> result = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// Open pipe to file</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    FILE* pipe = popen(command.c_str(), <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (!pipe)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;popen failed!&quot;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// read till end of process:</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">while</span> (!feof(pipe))</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// use buffer to read and add to result</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="extapi_8c.html#a55c10fd7c7152a709388daa21827771c">fgets</a>(<a class="code" href="cJSON_8h.html#a503753140aa27b00f99a3501280b2746">buffer</a>, 128, pipe) != <a class="code" href="cJSON_8cpp.html#a1a05ede2ad100bf5de5dfa7ccdfa4397">NULL</a>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            result += <a class="code" href="cJSON_8h.html#a503753140aa27b00f99a3501280b2746">buffer</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    pclose(pipe);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// remove &quot;\n&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    result.erase(remove(result.begin(), result.end(), <span class="charliteral">&#39;\n&#39;</span>), result.end());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
+<div class="ttc" id="aextapi_8c_html_a55c10fd7c7152a709388daa21827771c"><div class="ttname"><a href="extapi_8c.html#a55c10fd7c7152a709388daa21827771c">fgets</a></div><div class="ttdeci">char * fgets(char *str, int n, void *stream)</div><div class="ttdef"><b>Definition:</b> <a href="extapi_8c_source.html#l00968">extapi.c:968</a></div></div>
+<div class="ttc" id="aExtAPI_8cpp_html_a424940f91f234b23bcc633f12269f935"><div class="ttname"><a href="ExtAPI_8cpp.html#a424940f91f234b23bcc633f12269f935">GetStdoutFromCommand</a></div><div class="ttdeci">static std::string GetStdoutFromCommand(const std::string &amp;command)</div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8cpp_source.html#l00057">ExtAPI.cpp:57</a></div></div>
+<div class="ttc" id="aExtAPI_8h_html_a02f944ad8948fa28a15d67ab1252573b"><div class="ttname"><a href="ExtAPI_8h.html#a02f944ad8948fa28a15d67ab1252573b">EXTAPI_BC_PATH</a></div><div class="ttdeci">#define EXTAPI_BC_PATH</div><div class="ttdoc">For a more detailed explanation of how External APIs are handled in SVF, please refer to the SVF Wiki...</div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8h_source.html#l00041">ExtAPI.h:41</a></div></div>
+<div class="ttc" id="acJSON_8h_html_a503753140aa27b00f99a3501280b2746"><div class="ttname"><a href="cJSON_8h.html#a503753140aa27b00f99a3501280b2746">buffer</a></div><div class="ttdeci">char * buffer</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00163">cJSON.h:163</a></div></div>
+<div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
+<div class="ttc" id="acJSON_8cpp_html_a1a05ede2ad100bf5de5dfa7ccdfa4397"><div class="ttname"><a href="cJSON_8cpp.html#a1a05ede2ad100bf5de5dfa7ccdfa4397">NULL</a></div><div class="ttdeci">return NULL</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8cpp_source.html#l01173">cJSON.cpp:1173</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
