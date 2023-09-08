@@ -270,6 +270,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a7b8b93fec1dc8c63c0a5837a85b99129"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7b8b93fec1dc8c63c0a5837a85b99129"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#a7b8b93fec1dc8c63c0a5837a85b99129">llvmToString</a> (const T &amp;val)</td></tr>
 <tr class="separator:a7b8b93fec1dc8c63c0a5837a85b99129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9001722dd27bf487351725c3d7b65f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#a9001722dd27bf487351725c3d7b65f2f">getSuccBBandCondValPairVec</a> (const <a class="el" href="namespaceSVF.html#a412280b134578905248ce0122c5db7c9">SwitchInst</a> &amp;switchInst, <a class="el" href="namespaceSVF.html#a8de26e1810ea0c3b1e8ad62f1c8a864d">SuccBBAndCondValPairVec</a> &amp;vec)</td></tr>
+<tr class="separator:a9001722dd27bf487351725c3d7b65f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e8378ae1a911169394e545a4ba2220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#a33e8378ae1a911169394e545a4ba2220">getCaseValue</a> (const <a class="el" href="namespaceSVF.html#a412280b134578905248ce0122c5db7c9">SwitchInst</a> &amp;switchInst, <a class="el" href="namespaceSVF.html#a255efa5be786996cbdd0c1f3d98b8400">SuccBBAndCondValPair</a> &amp;succBB2CondVal)</td></tr>
+<tr class="separator:a33e8378ae1a911169394e545a4ba2220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a5cbde00eef789f682df972ae71b44449"></a>
@@ -493,6 +497,61 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a>* callee = SVFUtil::dyn_cast&lt;Function&gt;(cs-&gt;getCalledOperand()-&gt;stripPointerCasts());</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> callee ? <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a3d34fcdfc98add848a34fd5259c11eb2">getDefFunForMultipleModule</a>(callee) : nullptr;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a33e8378ae1a911169394e545a4ba2220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33e8378ae1a911169394e545a4ba2220">&#9670;&nbsp;</a></span>getCaseValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> SVF::LLVMUtil::getCaseValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a412280b134578905248ce0122c5db7c9">SwitchInst</a> &amp;&#160;</td>
+          <td class="paramname"><em>switchInst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a255efa5be786996cbdd0c1f3d98b8400">SuccBBAndCondValPair</a> &amp;&#160;</td>
+          <td class="paramname"><em>succBB2CondVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Note: default case value is nullptr </p>
+<p>default case value is set to -1</p>
+<p>get normal case value</p>
+<p>For larger number, we preserve case value just -1 now see more: <a href="https://github.com/SVF-tools/SVF/pull/992">https://github.com/SVF-tools/SVF/pull/992</a></p>
+
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l01165">1165</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;{</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a>* succBB = succBB2CondVal.first;</div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#adefcb50414ea999d70cea5ccdbcb98d7">ConstantInt</a>* caseValue = succBB2CondVal.second;</div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;    <a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> val;</div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;    <span class="keywordflow">if</span> (caseValue == <span class="keyword">nullptr</span> || succBB == switchInst.getDefaultDest())</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;    {</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;        val = -1;</div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;    }</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;    {</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;        <span class="keywordflow">if</span> (caseValue-&gt;getBitWidth() &lt;= 64)</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;        {</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;            val = caseValue-&gt;getSExtValue();</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;        }</div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;        {</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;            val = -1;</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;        }</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;    }</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;    <span class="keywordflow">return</span> val;</div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1508,6 +1567,50 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    }</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9001722dd27bf487351725c3d7b65f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9001722dd27bf487351725c3d7b65f2f">&#9670;&nbsp;</a></span>getSuccBBandCondValPairVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SVF::LLVMUtil::getSuccBBandCondValPairVec </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a412280b134578905248ce0122c5db7c9">SwitchInst</a> &amp;&#160;</td>
+          <td class="paramname"><em>switchInst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a8de26e1810ea0c3b1e8ad62f1c8a864d">SuccBBAndCondValPairVec</a> &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>See more: <a href="https://github.com/SVF-tools/SVF/pull/1191">https://github.com/SVF-tools/SVF/pull/1191</a></p>
+<p>Given the code:</p>
+<p>switch (a) { case 0: printf("0\n"); break; case 1: case 2: case 3: printf("a &gt;=1 &amp;&amp; a &lt;= 3\n"); break; case 4: case 6: case 7: printf("a &gt;= 4 &amp;&amp; a &lt;=7\n"); break; default: printf("a &lt; 0 || a &gt; 7"); break; }</p>
+<p>Generate the IR:</p>
+<p>switch i32 %0, label sw.default [ i32 0, label sw.bb i32 1, label sw.bb1 i32 2, label sw.bb1 i32 3, label sw.bb1 i32 4, label sw.bb3 i32 6, label sw.bb3 i32 7, label sw.bb3 ]</p>
+<p>We can get every case basic block and related case value: [ {sw.default, -1}, {sw.bb, 0}, {sw.bb1, 1}, {sw.bb1, 2}, {sw.bb1, 3}, {sw.bb3, 4}, {sw.bb3, 6}, {sw.bb3, 7}, ] Note: default case value is nullptr </p>
+
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l01155">1155</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;{</div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;    <span class="comment">// get default successor basic block and default case value (nullptr)</span></div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;    vec.push_back({switchInst.getDefaultDest(), <span class="keyword">nullptr</span>});</div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160; </div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;    <span class="comment">// get normal case value and it&#39;s successor basic block</span></div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cs : switchInst.cases())</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;        vec.push_back({cs.getCaseSuccessor(), cs.getCaseValue()});</div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3472,7 +3575,7 @@ template&lt;typename T &gt; </div>
 <div class="ttc" id="anamespaceSVF_html_a7cbe1c6567039e72958fd70e423d3597"><div class="ttname"><a href="namespaceSVF.html#a7cbe1c6567039e72958fd70e423d3597">SVF::ConstantAggregate</a></div><div class="ttdeci">llvm::ConstantAggregate ConstantAggregate</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00115">BasicTypes.h:115</a></div></div>
 <div class="ttc" id="acJSON_8h_html_a25d22ecc7e656d2c59332072684e8766"><div class="ttname"><a href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a></div><div class="ttdeci">const char *const name</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00264">cJSON.h:264</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a47d2af43ff12d9e1014fa19256619466"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a47d2af43ff12d9e1014fa19256619466">SVF::LLVMUtil::getCalledFunctions</a></div><div class="ttdeci">std::vector&lt; const Function * &gt; getCalledFunctions(const Function *F)</div><div class="ttdoc">Get all called funcions in a parent function.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00547">LLVMUtil.cpp:547</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_a5c943191dc4e242704943e5f594ae99e"><div class="ttname"><a href="namespaceSVF.html#a5c943191dc4e242704943e5f594ae99e">SVF::const_pred_iterator</a></div><div class="ttdeci">llvm::const_pred_iterator const_pred_iterator</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00247">BasicTypes.h:247</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a5c943191dc4e242704943e5f594ae99e"><div class="ttname"><a href="namespaceSVF.html#a5c943191dc4e242704943e5f594ae99e">SVF::const_pred_iterator</a></div><div class="ttdeci">llvm::const_pred_iterator const_pred_iterator</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00251">BasicTypes.h:251</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a5faee14fa1dd41447bc73ac365fe33c1"><div class="ttname"><a href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">SVF::Function</a></div><div class="ttdeci">llvm::Function Function</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00083">BasicTypes.h:83</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a1f4624771922dc8c2447ad7433588c73"><div class="ttname"><a href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">SVF::CallBase</a></div><div class="ttdeci">llvm::CallBase CallBase</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00144">BasicTypes.h:144</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a5ae718cba37d8e34d2946530dc098c8e"><div class="ttname"><a href="namespaceSVF.html#a5ae718cba37d8e34d2946530dc098c8e">SVF::ConstantArray</a></div><div class="ttdeci">llvm::ConstantArray ConstantArray</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00121">BasicTypes.h:121</a></div></div>
@@ -3526,7 +3629,7 @@ template&lt;typename T &gt; </div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_aa841a295ec803b6a1f2bd248f63f863f"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#aa841a295ec803b6a1f2bd248f63f863f">SVF::LLVMUtil::getClassNameOfThisPtr</a></div><div class="ttdeci">std::string getClassNameOfThisPtr(const CallBase *cs)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l01094">LLVMUtil.cpp:1094</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_aa81614cdb6a2a912638d5dc980480af7"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#aa81614cdb6a2a912638d5dc980480af7">SVF::LLVMUtil::getRefTypeOfHeapAllocOrStatic</a></div><div class="ttdeci">const PointerType * getRefTypeOfHeapAllocOrStatic(const Instruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00155">LLVMUtil.h:155</a></div></div>
 <div class="ttc" id="astructSVF_1_1cppUtil_1_1DemangledName_html_a5cd207bce618521166e6fa235014b297"><div class="ttname"><a href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">SVF::cppUtil::DemangledName::className</a></div><div class="ttdeci">std::string className</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8h_source.html#l00048">CppUtil.h:48</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_a3436a988bf80c021cd8022fb445b66d5"><div class="ttname"><a href="namespaceSVF.html#a3436a988bf80c021cd8022fb445b66d5">SVF::succ_const_iterator</a></div><div class="ttdeci">llvm::succ_const_iterator succ_const_iterator</div><div class="ttdoc">LLVM Iterators.</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00269">BasicTypes.h:269</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a3436a988bf80c021cd8022fb445b66d5"><div class="ttname"><a href="namespaceSVF.html#a3436a988bf80c021cd8022fb445b66d5">SVF::succ_const_iterator</a></div><div class="ttdeci">llvm::succ_const_iterator succ_const_iterator</div><div class="ttdoc">LLVM Iterators.</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00273">BasicTypes.h:273</a></div></div>
 <div class="ttc" id="astructSVF_1_1cppUtil_1_1DemangledName_html_a1dd17b240663bc9412adefde82385e02"><div class="ttname"><a href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">SVF::cppUtil::DemangledName::funcName</a></div><div class="ttdeci">std::string funcName</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8h_source.html#l00049">CppUtil.h:49</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a3d34fcdfc98add848a34fd5259c11eb2"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a3d34fcdfc98add848a34fd5259c11eb2">SVF::LLVMUtil::getDefFunForMultipleModule</a></div><div class="ttdeci">const Function * getDefFunForMultipleModule(const Function *fun)</div><div class="ttdoc">Get the definition of a function across multiple modules.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00057">LLVMUtil.h:57</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a2b32283ee2dbb9cef1d17ab6f2719e0c"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a2b32283ee2dbb9cef1d17ab6f2719e0c">SVF::LLVMUtil::getSourceLocOfFunction</a></div><div class="ttdeci">const std::string getSourceLocOfFunction(const Function *F)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00694">LLVMUtil.cpp:694</a></div></div>
@@ -3540,6 +3643,7 @@ template&lt;typename T &gt; </div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a17cce1a11e1bfc342a9e3e79fe35deef"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a17cce1a11e1bfc342a9e3e79fe35deef">SVF::LLVMUtil::isNoCallerFunction</a></div><div class="ttdeci">bool isNoCallerFunction(const Function *fun)</div><div class="ttdoc">Function does not have any possible caller in the call graph.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00195">LLVMUtil.h:195</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_afbd60d5443c7fa1448813d00bb5d0fa7"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#afbd60d5443c7fa1448813d00bb5d0fa7">SVF::LLVMUtil::getNextInsts</a></div><div class="ttdeci">void getNextInsts(const Instruction *curInst, std::vector&lt; const SVFInstruction * &gt; &amp;instList)</div><div class="ttdoc">Get the next instructions following control flow.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00275">LLVMUtil.cpp:275</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFInstruction_html"><div class="ttname"><a href="classSVF_1_1SVFInstruction.html">SVF::SVFInstruction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00593">SVFValue.h:593</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_ad781b0b14e89773e774072b280658ef3"><div class="ttname"><a href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">SVF::s64_t</a></div><div class="ttdeci">signed long long s64_t</div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00054">SVFType.h:54</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a003b769751b93b94bdb011bd704cfde1"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a003b769751b93b94bdb011bd704cfde1">SVF::LLVMUtil::isIntrinsicInst</a></div><div class="ttdeci">bool isIntrinsicInst(const Instruction *inst)</div><div class="ttdoc">Return true if it is an intrinsic instruction.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00204">LLVMUtil.cpp:204</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_abba4111230f6009bbf50518ee36a9870"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#abba4111230f6009bbf50518ee36a9870">SVF::LLVMUtil::getPtrElementType</a></div><div class="ttdeci">static Type * getPtrElementType(const PointerType *pty)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00119">LLVMUtil.h:119</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a7332f8059ea95472dcc231de884a5768"><div class="ttname"><a href="namespaceSVF.html#a7332f8059ea95472dcc231de884a5768">SVF::ConstantData</a></div><div class="ttdeci">llvm::ConstantData ConstantData</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00114">BasicTypes.h:114</a></div></div>
