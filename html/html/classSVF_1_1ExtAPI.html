@@ -86,8 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a641c82ed1f1a86f0f8a6015ef1fdbfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d7778db3b31f732f06129b49ec6dacd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a> (const <a class="el" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *fun, const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;funcAnnotation)</td></tr>
 <tr class="separator:a1d7778db3b31f732f06129b49ec6dacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae20ea24cce02de87d89a2d0b773a2357"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ExtAPI.html#ae20ea24cce02de87d89a2d0b773a2357">has_static</a> (const <a class="el" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *<a class="el" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>)</td></tr>
-<tr class="separator:ae20ea24cce02de87d89a2d0b773a2357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba485eb5c452f8fb273c625126bad96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ExtAPI.html#a9ba485eb5c452f8fb273c625126bad96">has_static</a> (const <a class="el" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *<a class="el" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>)</td></tr>
+<tr class="separator:a9ba485eb5c452f8fb273c625126bad96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc8f2e0ff777e3f611a7d741def0742"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ExtAPI.html#aadc8f2e0ff777e3f611a7d741def0742">is_memcpy</a> (const <a class="el" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *<a class="el" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>)</td></tr>
 <tr class="separator:aadc8f2e0ff777e3f611a7d741def0742"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f6e5cd617ab57ef9da0bab6c3c9cdc8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ExtAPI.html#a9f6e5cd617ab57ef9da0bab6c3c9cdc8">is_memset</a> (const <a class="el" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *<a class="el" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>)</td></tr>
@@ -200,21 +200,21 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00175">175</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> s = <span class="stringliteral">&quot;ALLOC_ARG&quot;</span>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> allocArg = <a class="code" href="classSVF_1_1ExtAPI.html#a641c82ed1f1a86f0f8a6015ef1fdbfef">getExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, s);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    assert(!allocArg.empty() &amp;&amp; <span class="stringliteral">&quot;Not an alloc call via argument or incorrect extern function annotation!&quot;</span>);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> <a class="code" href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c : allocArg)</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="extapi_8c.html#a3fa45b35c8abf67a950b6d3d4063dede">isdigit</a>(c))</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a>.push_back(c);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    assert(!<a class="code" href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a>.empty() &amp;&amp; <span class="stringliteral">&quot;Incorrect naming convention for svf external functions(ALLOC_ARG + number)?&quot;</span>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> std::stoi(<a class="code" href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a>);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00169">169</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> s = <span class="stringliteral">&quot;ALLOC_ARG&quot;</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> allocArg = <a class="code" href="classSVF_1_1ExtAPI.html#a641c82ed1f1a86f0f8a6015ef1fdbfef">getExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, s);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    assert(!allocArg.empty() &amp;&amp; <span class="stringliteral">&quot;Not an alloc call via argument or incorrect extern function annotation!&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> <a class="code" href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c : allocArg)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="extapi_8c.html#a3fa45b35c8abf67a950b6d3d4063dede">isdigit</a>(c))</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <a class="code" href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a>.push_back(c);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    assert(!<a class="code" href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a>.empty() &amp;&amp; <span class="stringliteral">&quot;Incorrect naming convention for svf external functions(ALLOC_ARG + number)?&quot;</span>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">return</span> std::stoi(<a class="code" href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -327,14 +327,14 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ae20ea24cce02de87d89a2d0b773a2357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae20ea24cce02de87d89a2d0b773a2357">&#9670;&nbsp;</a></span>has_static()</h2>
+<a id="a9ba485eb5c452f8fb273c625126bad96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba485eb5c452f8fb273c625126bad96">&#9670;&nbsp;</a></span>has_static()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ExtAPI::has_static </td>
+          <td class="memname">bool SVF::ExtAPI::has_static </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *&#160;</td>
           <td class="paramname"><em>F</em></td><td>)</td>
@@ -343,11 +343,6 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00148">148</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;STATIC&quot;</span>);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="a1d7778db3b31f732f06129b49ec6dacd"></a>
@@ -404,10 +399,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00163">163</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;ALLOC_RET&quot;</span>);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00157">157</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;ALLOC_RET&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -427,10 +422,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00169">169</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;ALLOC_ARG&quot;</span>);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00163">163</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;ALLOC_ARG&quot;</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -450,16 +445,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00200">200</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    assert(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <span class="stringliteral">&quot;Null SVFFunction* pointer&quot;</span>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>-&gt;isDeclaration() || <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>-&gt;isIntrinsic())</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;OVERWRITE&quot;</span>) &amp;&amp; <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>-&gt;getAnnotations().size() == 1)</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> !<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>-&gt;getAnnotations().empty();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00194">194</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;{</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    assert(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <span class="stringliteral">&quot;Null SVFFunction* pointer&quot;</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>-&gt;isDeclaration() || <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>-&gt;isIntrinsic())</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;OVERWRITE&quot;</span>) &amp;&amp; <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>-&gt;getAnnotations().size() == 1)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">return</span> !<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>-&gt;getAnnotations().empty();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -479,10 +474,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00153">153</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;MEMCPY&quot;</span>);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00147">147</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;MEMCPY&quot;</span>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -502,10 +497,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00158">158</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;MEMSET&quot;</span>);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00152">152</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;MEMSET&quot;</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -525,10 +520,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00192">192</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;REALLOC_RET&quot;</span>);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ExtAPI_8cpp_source.html#l00186">186</a> of file <a class="el" href="ExtAPI_8cpp_source.html">ExtAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a> &amp;&amp; <a class="code" href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">hasExtFuncAnnotation</a>(<a class="code" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <span class="stringliteral">&quot;REALLOC_RET&quot;</span>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -566,7 +561,7 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aExtAPI_8cpp_html_a7d2ff3727892c4ee0eff596174eb5b84"><div class="ttname"><a href="ExtAPI_8cpp.html#a7d2ff3727892c4ee0eff596174eb5b84">getFilePath</a></div><div class="ttdeci">static std::string getFilePath(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8cpp_source.html#l00081">ExtAPI.cpp:81</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ExtAPI_html_ab793be4b6f8f0a025599e76f5df2a4eb"><div class="ttname"><a href="classSVF_1_1ExtAPI.html#ab793be4b6f8f0a025599e76f5df2a4eb">SVF::ExtAPI::ExtAPI</a></div><div class="ttdeci">ExtAPI()=default</div></div>
 <div class="ttc" id="acJSON_8h_html_a6288dae99eabb0a393b1d4974e01cde7"><div class="ttname"><a href="cJSON_8h.html#a6288dae99eabb0a393b1d4974e01cde7">number</a></div><div class="ttdeci">const char *const const double number</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00268">cJSON.h:268</a></div></div>
-<div class="ttc" id="aextapi_8c_html_a3fa45b35c8abf67a950b6d3d4063dede"><div class="ttname"><a href="extapi_8c.html#a3fa45b35c8abf67a950b6d3d4063dede">isdigit</a></div><div class="ttdeci">int isdigit(int c)</div><div class="ttdef"><b>Definition:</b> <a href="extapi_8c_source.html#l01038">extapi.c:1038</a></div></div>
+<div class="ttc" id="aextapi_8c_html_a3fa45b35c8abf67a950b6d3d4063dede"><div class="ttname"><a href="extapi_8c.html#a3fa45b35c8abf67a950b6d3d4063dede">isdigit</a></div><div class="ttdeci">int isdigit(int c)</div><div class="ttdef"><b>Definition:</b> <a href="extapi_8c_source.html#l00754">extapi.c:754</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html_a067bd6dbaf74a028d546fa56b095791b"><div class="ttname"><a href="classSVF_1_1SVFFunction.html#a067bd6dbaf74a028d546fa56b095791b">SVF::SVFFunction::getAnnotations</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; getAnnotations() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00434">SVFValue.h:434</a></div></div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ExtAPI_html_a1d7778db3b31f732f06129b49ec6dacd"><div class="ttname"><a href="classSVF_1_1ExtAPI.html#a1d7778db3b31f732f06129b49ec6dacd">SVF::ExtAPI::hasExtFuncAnnotation</a></div><div class="ttdeci">bool hasExtFuncAnnotation(const SVFFunction *fun, const std::string &amp;funcAnnotation)</div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8cpp_source.html#l00137">ExtAPI.cpp:137</a></div></div>
