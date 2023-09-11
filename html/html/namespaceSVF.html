@@ -6919,15 +6919,15 @@ template&lt;class GraphType &gt; </div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    }</div>
 <div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; rhs.lb().getNumeral() &gt;= 0)</div>
 <div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;    {</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        <span class="keywordflow">return</span> IntervalValue((int64_t) 0, min(lhs.ub(), rhs.ub()));</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        <span class="keywordflow">return</span> IntervalValue((<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, min(lhs.ub(), rhs.ub()));</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    }</div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0)</div>
 <div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    {</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        <span class="keywordflow">return</span> IntervalValue((int64_t) 0, lhs.ub());</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        <span class="keywordflow">return</span> IntervalValue((<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, lhs.ub());</div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    }</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhs.lb().getNumeral() &gt;= 0)</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    {</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        <span class="keywordflow">return</span> IntervalValue((int64_t) 0, rhs.ub());</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        <span class="keywordflow">return</span> IntervalValue((<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, rhs.ub());</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    }</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    {</div>
@@ -8051,9 +8051,9 @@ template&lt;typename F , typename S &gt; </div>
 <div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; !lhs.ub().is_infinity() &amp;&amp;</div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;             rhs.lb().getNumeral() &gt;= 0 &amp;&amp; !rhs.ub().is_infinity())</div>
 <div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    {</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        int64_t m = std::max(lhs.ub().getNumeral(), rhs.ub().getNumeral());</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        int64_t ub = next_power_of_2(<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(m+1));</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="keywordflow">return</span> IntervalValue((int64_t) 0, (int64_t) ub);</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        <a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> m = std::max(lhs.ub().getNumeral(), rhs.ub().getNumeral());</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> ub = next_power_of_2(<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(m+1));</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="keywordflow">return</span> IntervalValue((<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, (<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) ub);</div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    }</div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    {</div>
@@ -8117,9 +8117,9 @@ template&lt;typename F , typename S &gt; </div>
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; !lhs.ub().is_infinity() &amp;&amp;</div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;             rhs.lb().getNumeral() &gt;= 0 &amp;&amp; !rhs.ub().is_infinity())</div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    {</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        int64_t m = std::max(lhs.ub().getNumeral(), rhs.ub().getNumeral());</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        int64_t ub = next_power_of_2(<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(m+1));</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="keywordflow">return</span> IntervalValue((int64_t) 0, (int64_t) ub);</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        <a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> m = std::max(lhs.ub().getNumeral(), rhs.ub().getNumeral());</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> ub = next_power_of_2(<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(m+1));</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="keywordflow">return</span> IntervalValue((<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, (<a class="code" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) ub);</div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    }</div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    {</div>

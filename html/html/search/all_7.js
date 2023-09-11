@@ -658,7 +658,7 @@ var searchData=
   ['getnullptr_2651',['getNullPtr',['../classSVF_1_1IRGraph.html#a3de9a2a565c303f68a90c32dc59febd5',1,'SVF::IRGraph']]],
   ['getnumargoperands_2652',['getNumArgOperands',['../classSVF_1_1SVFCallInst.html#ab8ea07e329ce09b1874d482465724121',1,'SVF::SVFCallInst::getNumArgOperands()'],['../classSVF_1_1CallSite.html#a6b7a7e6da24425a3b15aa1803c673288',1,'SVF::CallSite::getNumArgOperands()']]],
   ['getnumber_2653',['getNumber',['../classSVF_1_1ConsExeState.html#a3efeeb8311b868c4a7fc2df69f061317',1,'SVF::ConsExeState']]],
-  ['getnumeral_2654',['getNumeral',['../classSVF_1_1BoundedZ3Expr.html#a950c44fafa34b36a16e5913b6a9ea51d',1,'SVF::BoundedZ3Expr::getNumeral()'],['../classSVF_1_1IntervalValue.html#a2fa999764e68c2bbdc1f000f0c63b597',1,'SVF::IntervalValue::getNumeral()'],['../classSVF_1_1NumericLiteral.html#a221061ec858e5c51b222164a6c4f8152',1,'SVF::NumericLiteral::getNumeral()']]],
+  ['getnumeral_2654',['getNumeral',['../classSVF_1_1BoundedZ3Expr.html#af62c2d6bc40080b9728c107cf317184b',1,'SVF::BoundedZ3Expr::getNumeral()'],['../classSVF_1_1IntervalValue.html#ae081b5c462f8ed5b306719822e35cea9',1,'SVF::IntervalValue::getNumeral()'],['../classSVF_1_1NumericLiteral.html#a4181e5e15e10304ea524e5f8b2a3f576',1,'SVF::NumericLiteral::getNumeral()']]],
   ['getnumfields_2655',['getNumFields',['../classSVF_1_1DCHGraph.html#a0788694fbff155949fc4f4d6487c223e',1,'SVF::DCHGraph']]],
   ['getnumobjects_2656',['getNumObjects',['../classSVF_1_1NodeIDAllocator.html#ad63e43c65cb7d7cac7824f5cede5ec89',1,'SVF::NodeIDAllocator']]],
   ['getnumofcxtlocks_2657',['getNumOfCxtLocks',['../classSVF_1_1LockAnalysis.html#a3df63f936d488166109d73bdcf0437d5',1,'SVF::LockAnalysis']]],
