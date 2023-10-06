@@ -8,7 +8,7 @@ var searchData=
   ['ddda_13319',['DDDA',['../SVFType_8h.html#a40845b3027a1237076aa8297ca39e730',1,'SVFType.h']]],
   ['ddumppt_13320',['DDumpPT',['../SVFType_8h.html#a395c9d15b59b8c057f859855f0405d7b',1,'SVFType.h']]],
   ['debug_5ftype_13321',['DEBUG_TYPE',['../BreakConstantExpr_8cpp.html#ad78e062f62e0d6e453941fb4ca843e4d',1,'BreakConstantExpr.cpp']]],
-  ['defualt_5fextapi_5fbc_5fpath_13322',['DEFUALT_EXTAPI_BC_PATH',['../ExtAPI_8h.html#a8983f9a86a5284dc50950222a06f1a11',1,'ExtAPI.h']]],
+  ['default_5fextapi_5fbc_5fpath_13322',['DEFAULT_EXTAPI_BC_PATH',['../ExtAPI_8h.html#a3be52a096fe407bb55141117f1cf4c75',1,'ExtAPI.h']]],
   ['dgeneral_13323',['DGENERAL',['../SVFType_8h.html#a2c64190a065f342897573a3ef4973adb',1,'SVFType.h']]],
   ['dinstrument_13324',['DInstrument',['../SVFType_8h.html#abf3a5def3f319733214fa5f595b39827',1,'SVFType.h']]],
   ['dmemmodel_13325',['DMemModel',['../SVFType_8h.html#ad46a0423f8709692e1bb0f0fa5b1ca2f',1,'SVFType.h']]],
