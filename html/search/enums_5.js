@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['leak_5ftype',['LEAK_TYPE',['../classSVF_1_1LeakChecker.html#a42f54433e5ca60928f3c329ab545842d',1,'SVF::LeakChecker']]],
-  ['lsrelation',['LSRelation',['../classSVF_1_1LocationSet.html#a002a0c8ec2528835d809bf7eb3ebc83f',1,'SVF::LocationSet']]]
+  ['hclust_5ffast_5fmethods_12757',['hclust_fast_methods',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dd',1,'fastcluster.h']]]
 ];

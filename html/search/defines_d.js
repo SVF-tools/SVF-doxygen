@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['realloc',['REALLOC',['../util_8h.html#ac3d02b1026db1997f09067d47aed16a8',1,'util.h']]],
-  ['rlimit_5fdata_5fdefault',['RLIMIT_DATA_DEFAULT',['../datalimit_8c.html#a078d50c5bc23076e0d2af8d96156aeae',1,'datalimit.c']]]
+  ['read_5fcreate_5fedge_5ffwd_13271',['READ_CREATE_EDGE_FWD',['../SVFFileSystem_8cpp.html#a30d1c3675b87f06ba8a58a010ae55fec',1,'SVFFileSystem.cpp']]],
+  ['read_5fcreate_5fnode_5ffwd_13272',['READ_CREATE_NODE_FWD',['../SVFFileSystem_8cpp.html#ad9bbbc9c38a358d29b606dcf38c851ad',1,'SVFFileSystem.cpp']]]
 ];

@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['valdomain',['ValDomain',['../classSVF_1_1LockAnalysis.html#ac2fbbabca4506e28f706cf54b1614791',1,'SVF::LockAnalysis::ValDomain()'],['../classSVF_1_1ForkJoinAnalysis.html#a8d40e687caf8999369621ed385dfc631',1,'SVF::ForkJoinAnalysis::ValDomain()']]],
-  ['versiontype',['VersionType',['../classSVF_1_1VersionedFlowSensitive.html#a9d5fd2c683484053f5e7c0ab94cb766b',1,'SVF::VersionedFlowSensitive']]],
-  ['vfgedgek',['VFGEdgeK',['../classSVF_1_1VFGEdge.html#a156ae6a8b3a033f505c18c6b162e7cf5',1,'SVF::VFGEdge']]],
-  ['vfgk',['VFGK',['../classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6',1,'SVF::VFG']]],
-  ['vfgnodek',['VFGNodeK',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75',1,'SVF::VFGNode']]]
+  ['pedgek_12768',['PEDGEK',['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9',1,'SVF::SVFStmt']]],
+  ['pnodek_12769',['PNODEK',['../classSVF_1_1SVFVar.html#a283f7c0c2eaae07c6865f73a0daafeff',1,'SVF::SVFVar']]],
+  ['predicate_12770',['Predicate',['../classSVF_1_1CmpStmt.html#ad8e01744bfd98d584661025ce59338ac',1,'SVF::CmpStmt']]],
+  ['ptaimplty_12771',['PTAImplTy',['../classSVF_1_1PointerAnalysis.html#ac0c0855918cb2cdc3d8ebc175acfbd4d',1,'SVF::PointerAnalysis']]],
+  ['ptaty_12772',['PTATY',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85',1,'SVF::PointerAnalysis']]],
+  ['ptbackingtype_12773',['PTBackingType',['../classSVF_1_1BVDataPTAImpl.html#ad76328a8543b02784992afc2d5501d8a',1,'SVF::BVDataPTAImpl']]],
+  ['ptdataty_12774',['PTDataTy',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848',1,'SVF::PTData']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rcsvfgbuilder',['RcSvfgBuilder',['../classSVF_1_1SVFG.html#a67654d252e9e93b74e35ba247048b41a',1,'SVF::SVFG']]]
+  ['flowsensitivestat_13124',['FlowSensitiveStat',['../classSVF_1_1FlowSensitive.html#a88f9752372eabb71f47f13a89e4d6d9c',1,'SVF::FlowSensitive']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['memtype',['MEMTYPE',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830',1,'SVF::ObjTypeInfo']]],
-  ['mutype',['MUTYPE',['../classSVF_1_1MSSAMU.html#a82c66f3e2b7d2d9dd391a947719bda9b',1,'SVF::MSSAMU']]]
+  ['icfgedgek_12758',['ICFGEdgeK',['../classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429',1,'SVF::ICFGEdge']]],
+  ['icfgnodek_12759',['ICFGNodeK',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376',1,'SVF::ICFGNode']]]
 ];

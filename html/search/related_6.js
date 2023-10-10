@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sabersvfgbuilder',['SaberSVFGBuilder',['../classSVF_1_1SVFG.html#a93a4287b55425abc188e5f5f2de54297',1,'SVF::SVFG']]],
-  ['svfgbuilder',['SVFGBuilder',['../classSVF_1_1SVFG.html#ab2f81db3935389480baa5cb14e15e9d7',1,'SVF::SVFG']]],
-  ['symboltableinfo',['SymbolTableInfo',['../classSVF_1_1LocationSet.html#a32ddec529ccbf4ea6336e5fd765164d8',1,'SVF::LocationSet']]]
+  ['genericgraphreader_3c_20nodety_2c_20edgety_20_3e_13125',['GenericGraphReader&lt; NodeTy, EdgeTy &gt;',['../classSVF_1_1GenericGraph.html#a219761d5d96b0bc27cce9210f2cf5572',1,'SVF::GenericGraph']]],
+  ['genericgraphwriter_3c_20nodety_2c_20edgety_20_3e_13126',['GenericGraphWriter&lt; NodeTy, EdgeTy &gt;',['../classSVF_1_1GenericGraph.html#a9772e25a4f4ff7baa0937e48c4ac7c52',1,'SVF::GenericGraph']]]
 ];
