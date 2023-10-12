@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ddastat_13132',['DDAStat',['../classSVF_1_1DDAVFSolver.html#af83f88f2ae2456f2691e8822d56b1598',1,'SVF::DDAVFSolver']]],
-  ['ddasvfgbuilder_13133',['DDASVFGBuilder',['../classSVF_1_1SVFG.html#a9ccd530dc4c49b0df372a2ce95b66921',1,'SVF::SVFG']]]
+  ['ddastat_13126',['DDAStat',['../classSVF_1_1DDAVFSolver.html#af83f88f2ae2456f2691e8822d56b1598',1,'SVF::DDAVFSolver']]],
+  ['ddasvfgbuilder_13127',['DDASVFGBuilder',['../classSVF_1_1SVFG.html#a9ccd530dc4c49b0df372a2ce95b66921',1,'SVF::SVFG']]]
 ];
