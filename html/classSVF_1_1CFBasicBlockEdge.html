@@ -349,10 +349,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CFBasicBlockG_8h_source.html#l00090">90</a> of file <a class="el" href="CFBasicBlockG_8h_source.html">CFBasicBlockG.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFBasicBlockEdge.html#a90d4a0b67bea812b4258719906ba03ab">_icfgEdge</a>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="CFBasicBlockG_8h_source.html#l00093">93</a> of file <a class="el" href="CFBasicBlockG_8h_source.html">CFBasicBlockG.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFBasicBlockEdge.html#a90d4a0b67bea812b4258719906ba03ab">_icfgEdge</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -382,11 +382,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Add the hash function for std::set (we also can overload operator&lt; to implement this) </p>
 
-<p class="definition">Definition at line <a class="el" href="CFBasicBlockG_8h_source.html#l00100">100</a> of file <a class="el" href="CFBasicBlockG_8h_source.html">CFBasicBlockG.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> (rhs-&gt;getSrcID() == this-&gt;getSrcID() &amp;&amp; rhs-&gt;getDstID() == this-&gt;getDstID() &amp;&amp;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                rhs-&gt;getICFGEdge() == this-&gt;getICFGEdge());</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="CFBasicBlockG_8h_source.html#l00103">103</a> of file <a class="el" href="CFBasicBlockG_8h_source.html">CFBasicBlockG.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> (rhs-&gt;getSrcID() == this-&gt;getSrcID() &amp;&amp; rhs-&gt;getDstID() == this-&gt;getDstID() &amp;&amp;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                rhs-&gt;getICFGEdge() == this-&gt;getICFGEdge());</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -415,8 +415,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CFBasicBlockG_8h_source.html#l00085">85</a> of file <a class="el" href="CFBasicBlockG_8h_source.html">CFBasicBlockG.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1CFBasicBlockEdge.html#a90d4a0b67bea812b4258719906ba03ab">_icfgEdge</a>-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#a7233609f62f278b738036e8de9bbbfc8">toString</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        std::stringstream rawstr(str);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;CFBBGEdge: [CFBBGNode&quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">getDstID</a>() &lt;&lt; <span class="stringliteral">&quot; &lt;-- CFBBGNode&quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#ae6792506a0150a9400d635eceab7f9e7">getSrcID</a>() &lt;&lt; <span class="stringliteral">&quot;]\t&quot;</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> rawstr.str();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -493,8 +496,10 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassSVF_1_1GenericEdge_html_aa41cb7482bdab1ba328f4b94f30f3ee4"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#aa41cb7482bdab1ba328f4b94f30f3ee4">SVF::GenericEdge::dst</a></div><div class="ttdeci">NodeTy * dst</div><div class="ttdoc">destination node</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00065">GenericGraph.h:65</a></div></div>
+<div class="ttc" id="aclassSVF_1_1GenericEdge_html_ad9edb45e74ae675d9da82f5acf02d56e"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">SVF::GenericEdge::getDstID</a></div><div class="ttdeci">NodeID getDstID() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00085">GenericGraph.h:85</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_add130ff635b1364201548469c28c0572"><div class="ttname"><a href="namespaceSVF.html#add130ff635b1364201548469c28c0572">SVF::GenericCFBasicBlockEdgeTy</a></div><div class="ttdeci">GenericEdge&lt; CFBasicBlockNode &gt; GenericCFBasicBlockEdgeTy</div><div class="ttdef"><b>Definition:</b> <a href="CFBasicBlockG_8h_source.html#l00039">CFBasicBlockG.h:39</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFGEdge_html_a7233609f62f278b738036e8de9bbbfc8"><div class="ttname"><a href="classSVF_1_1ICFGEdge.html#a7233609f62f278b738036e8de9bbbfc8">SVF::ICFGEdge::toString</a></div><div class="ttdeci">virtual const std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00150">ICFG.cpp:150</a></div></div>
+<div class="ttc" id="aclassSVF_1_1GenericEdge_html_ae6792506a0150a9400d635eceab7f9e7"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#ae6792506a0150a9400d635eceab7f9e7">SVF::GenericEdge::getSrcID</a></div><div class="ttdeci">NodeID getSrcID() const</div><div class="ttdoc">get methods of the components</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00081">GenericGraph.h:81</a></div></div>
+<div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CFBasicBlockEdge_html_a90d4a0b67bea812b4258719906ba03ab"><div class="ttname"><a href="classSVF_1_1CFBasicBlockEdge.html#a90d4a0b67bea812b4258719906ba03ab">SVF::CFBasicBlockEdge::_icfgEdge</a></div><div class="ttdeci">const ICFGEdge * _icfgEdge</div><div class="ttdef"><b>Definition:</b> <a href="CFBasicBlockG_8h_source.html#l00065">CFBasicBlockG.h:65</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericEdge_html_a0e8736f88ee75da025d874f92328ca71"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#a0e8736f88ee75da025d874f92328ca71">SVF::GenericEdge::src</a></div><div class="ttdeci">NodeTy * src</div><div class="ttdoc">source node</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00064">GenericGraph.h:64</a></div></div>
 <!-- start footer part -->
