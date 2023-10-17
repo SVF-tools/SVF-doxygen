@@ -128,7 +128,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Visitor to build the WTO cycle getCDN of each node. </p>
 
-<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00613">613</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00614">614</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adc313cc9a42ae663f0c018da128b77f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc313cc9a42ae663f0c018da128b77f6">&#9670;&nbsp;</a></span>WTOCycleDepthBuilder()</h2>
@@ -154,9 +154,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00621">621</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            : <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>(std::make_shared&lt;CFBasicBlockGWTOCycleDepth&gt;()),</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;              <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#acf93107c39ff71f30c678edd38ec21ad">_nodeToWTOCycleDepth</a>(nodeToWTOCycleDepth) {}</div>
+<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00622">622</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;            : <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>(std::make_shared&lt;CFBasicBlockGWTOCycleDepth&gt;()),</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;              <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#acf93107c39ff71f30c678edd38ec21ad">_nodeToWTOCycleDepth</a>(nodeToWTOCycleDepth) {}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -189,19 +189,19 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1WTOVisitor.html#a091a17f6b7eeee138fcde4499eb17311">SVF::WTOVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00625">625</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;        {</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            <span class="keyword">const</span> CFBasicBlockNode *head = cycle.head();</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO.html#a1cb3ad13956ab175c4c16bd9c856de47">CFBasicBlockGWTOCycleDepthPtr</a> previous_nesting = <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>;</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#acf93107c39ff71f30c678edd38ec21ad">_nodeToWTOCycleDepth</a>.insert(std::make_pair(head, <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>));</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a> = std::make_shared&lt;CFBasicBlockGWTOCycleDepth&gt;(*<a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>);</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>-&gt;push_back(head);</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = cycle.begin(), et = cycle.end(); it != et; ++it)</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;            {</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;                (*it)-&gt;accept(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;            }</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a> = previous_nesting;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00626">626</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        {</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            <span class="keyword">const</span> CFBasicBlockNode *head = cycle.head();</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO.html#a1cb3ad13956ab175c4c16bd9c856de47">CFBasicBlockGWTOCycleDepthPtr</a> previous_nesting = <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#acf93107c39ff71f30c678edd38ec21ad">_nodeToWTOCycleDepth</a>.insert(std::make_pair(head, <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>));</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a> = std::make_shared&lt;CFBasicBlockGWTOCycleDepth&gt;(*<a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>);</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>-&gt;push_back(head);</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = cycle.begin(), et = cycle.end(); it != et; ++it)</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;            {</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;                (*it)-&gt;accept(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;            }</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a> = previous_nesting;</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -233,11 +233,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1WTOVisitor.html#aa338935535bb5c855224aa01d624f9d8">SVF::WTOVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00639">639</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;        {</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#acf93107c39ff71f30c678edd38ec21ad">_nodeToWTOCycleDepth</a>.insert(</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                std::make_pair(node.node(), <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>));</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00640">640</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        {</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;            <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#acf93107c39ff71f30c678edd38ec21ad">_nodeToWTOCycleDepth</a>.insert(</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                std::make_pair(node.node(), <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">_wtoCycleDepth</a>));</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -262,7 +262,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00618">618</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00619">619</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00617">617</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00618">618</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
 
 </div>
 </div>
@@ -294,8 +294,8 @@ Private Attributes</h2></td></tr>
 <li>/home/runner/work/SVF/SVF/svf/include/AbstractExecution/<a class="el" href="WTO_8h_source.html">WTO.h</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder_html_acf93107c39ff71f30c678edd38ec21ad"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#acf93107c39ff71f30c678edd38ec21ad">SVF::CFBasicBlockGWTO::WTOCycleDepthBuilder::_nodeToWTOCycleDepth</a></div><div class="ttdeci">NodeRefToWTOCycleDepthPtr &amp; _nodeToWTOCycleDepth</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00618">WTO.h:618</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder_html_ad2be261b3cccfd58d83ad1d6659ef639"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">SVF::CFBasicBlockGWTO::WTOCycleDepthBuilder::_wtoCycleDepth</a></div><div class="ttdeci">CFBasicBlockGWTOCycleDepthPtr _wtoCycleDepth</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00617">WTO.h:617</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder_html_acf93107c39ff71f30c678edd38ec21ad"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#acf93107c39ff71f30c678edd38ec21ad">SVF::CFBasicBlockGWTO::WTOCycleDepthBuilder::_nodeToWTOCycleDepth</a></div><div class="ttdeci">NodeRefToWTOCycleDepthPtr &amp; _nodeToWTOCycleDepth</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00619">WTO.h:619</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder_html_ad2be261b3cccfd58d83ad1d6659ef639"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1WTOCycleDepthBuilder.html#ad2be261b3cccfd58d83ad1d6659ef639">SVF::CFBasicBlockGWTO::WTOCycleDepthBuilder::_wtoCycleDepth</a></div><div class="ttdeci">CFBasicBlockGWTOCycleDepthPtr _wtoCycleDepth</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00618">WTO.h:618</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_html_a1cb3ad13956ab175c4c16bd9c856de47"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO.html#a1cb3ad13956ab175c4c16bd9c856de47">SVF::CFBasicBlockGWTO::CFBasicBlockGWTOCycleDepthPtr</a></div><div class="ttdeci">std::shared_ptr&lt; CFBasicBlockGWTOCycleDepth &gt; CFBasicBlockGWTOCycleDepthPtr</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00480">WTO.h:480</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
