@@ -230,12 +230,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the wto-cycle-depth of the given node. </p>
 
-<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00701">701</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        {</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            <span class="keyword">auto</span> it = <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0a06c8bb53552030d11398955eae665c">_nodeToWTOCycleDepth</a>.find(<a class="code" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>);</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;            assert(it != <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0a06c8bb53552030d11398955eae665c">_nodeToWTOCycleDepth</a>.end() &amp;&amp; <span class="stringliteral">&quot;node not found&quot;</span>);</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            <span class="keywordflow">return</span> *(it-&gt;second);</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="WTO_8h_source.html#l00702">702</a> of file <a class="el" href="WTO_8h_source.html">WTO.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        {</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;            <span class="keyword">auto</span> it = <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0a06c8bb53552030d11398955eae665c">_nodeToWTOCycleDepth</a>.find(<a class="code" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>);</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            assert(it != <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0a06c8bb53552030d11398955eae665c">_nodeToWTOCycleDepth</a>.end() &amp;&amp; <span class="stringliteral">&quot;node not found&quot;</span>);</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            <span class="keywordflow">return</span> *(it-&gt;second);</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -320,15 +320,16 @@ Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;            {</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;edge: node.node()-&gt;getOutEdges())</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                {</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;                    <span class="keyword">const</span> CFBasicBlockNode *succ = edge-&gt;getDstNode();</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;                    <span class="keyword">const</span> <a class="code" href="classSVF_1_1CFBasicBlockGWTO.html#acc7a69f2e4d44bda34a84ed68667b803">CFBasicBlockGWTOCycleDepth</a> &amp;succNesting = <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0efb4902bc6933e28b042edf6fc3f94c">getWTOCycleDepth</a>(succ);</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;                    <span class="keywordflow">if</span> (succ != <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#ae846777ace039ab74fad15ee52884f44">_head</a> &amp;&amp; succNesting &lt;= <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a27e3f03587ce871f41853e3be2537209">_headWTOCycleDepth</a>)</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;                    {</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;                        <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a6328b869dd664d4eca8e13c4dae3703b">_tails</a>.insert(node.node());</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;                    }</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;                }</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            }</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        }</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;                    <span class="keywordflow">if</span>(edge-&gt;getICFGEdge() &amp;&amp; !edge-&gt;getICFGEdge()-&gt;isIntraCFGEdge()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;                    <span class="keyword">const</span> CFBasicBlockNode *succ = edge-&gt;getDstNode();</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;                    <span class="keyword">const</span> <a class="code" href="classSVF_1_1CFBasicBlockGWTO.html#acc7a69f2e4d44bda34a84ed68667b803">CFBasicBlockGWTOCycleDepth</a> &amp;succNesting = <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0efb4902bc6933e28b042edf6fc3f94c">getWTOCycleDepth</a>(succ);</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;                    <span class="keywordflow">if</span> (succ != <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#ae846777ace039ab74fad15ee52884f44">_head</a> &amp;&amp; succNesting &lt;= <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a27e3f03587ce871f41853e3be2537209">_headWTOCycleDepth</a>)</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;                    {</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;                        <a class="code" href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a6328b869dd664d4eca8e13c4dae3703b">_tails</a>.insert(node.node());</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;                    }</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;                }</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            }</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -458,7 +459,7 @@ Protected Attributes</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1TailBuilder_html_a0a06c8bb53552030d11398955eae665c"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0a06c8bb53552030d11398955eae665c">SVF::CFBasicBlockGWTO::TailBuilder::_nodeToWTOCycleDepth</a></div><div class="ttdeci">NodeRefToWTOCycleDepthPtr &amp; _nodeToWTOCycleDepth</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00655">WTO.h:655</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1TailBuilder_html_a0efb4902bc6933e28b042edf6fc3f94c"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0efb4902bc6933e28b042edf6fc3f94c">SVF::CFBasicBlockGWTO::TailBuilder::getWTOCycleDepth</a></div><div class="ttdeci">const CFBasicBlockGWTOCycleDepth &amp; getWTOCycleDepth(const CFBasicBlockNode *n) const</div><div class="ttdoc">Get the wto-cycle-depth of the given node.</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00701">WTO.h:701</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1TailBuilder_html_a0efb4902bc6933e28b042edf6fc3f94c"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a0efb4902bc6933e28b042edf6fc3f94c">SVF::CFBasicBlockGWTO::TailBuilder::getWTOCycleDepth</a></div><div class="ttdeci">const CFBasicBlockGWTOCycleDepth &amp; getWTOCycleDepth(const CFBasicBlockNode *n) const</div><div class="ttdoc">Get the wto-cycle-depth of the given node.</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00702">WTO.h:702</a></div></div>
 <div class="ttc" id="acJSON_8cpp_html_ab6e2ea6dc7bd57d1483413449998230a"><div class="ttname"><a href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a></div><div class="ttdeci">cJSON * n</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8cpp_source.html#l02558">cJSON.cpp:2558</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1TailBuilder_html_a27e3f03587ce871f41853e3be2537209"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a27e3f03587ce871f41853e3be2537209">SVF::CFBasicBlockGWTO::TailBuilder::_headWTOCycleDepth</a></div><div class="ttdeci">const CFBasicBlockGWTOCycleDepth &amp; _headWTOCycleDepth</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00653">WTO.h:653</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_1_1TailBuilder_html_a6328b869dd664d4eca8e13c4dae3703b"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO_1_1TailBuilder.html#a6328b869dd664d4eca8e13c4dae3703b">SVF::CFBasicBlockGWTO::TailBuilder::_tails</a></div><div class="ttdeci">NodeRefSet &amp; _tails</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00652">WTO.h:652</a></div></div>
