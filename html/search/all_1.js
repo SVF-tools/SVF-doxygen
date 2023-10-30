@@ -140,7 +140,7 @@ var searchData=
   ['addentryicfgedge_300',['addEntryICFGEdge',['../classSVF_1_1SVFLoop.html#a774d05838ad9b3cac8d2fb6d7b7edd00',1,'SVF::SVFLoop']]],
   ['addextactualparmsvfgnodes_301',['AddExtActualParmSVFGNodes',['../classSVF_1_1SaberSVFGBuilder.html#ab6870d6f6f5abc5417dcea771eaa31f7',1,'SVF::SaberSVFGBuilder']]],
   ['addfiobjnode_302',['addFIObjNode',['../classSVF_1_1SVFIR.html#a06465449e58e14bfb1c3eee2c97d3242',1,'SVF::SVFIR']]],
-  ['addfldwithtype_303',['addFldWithType',['../classSVF_1_1StInfo.html#aae0736a5e99b11571af52e28500a6f9c',1,'SVF::StInfo']]],
+  ['addfldwithtype_303',['addFldWithType',['../classSVF_1_1StInfo.html#a00339d1d7074e9222776801ce8689f6b',1,'SVF::StInfo']]],
   ['addfollowerfun_304',['addFollowerFun',['../classSVF_1_1PCG.html#a4901c6b064d92694f78ca0484c454fc8',1,'SVF::PCG']]],
   ['addforksite_305',['addForksite',['../classSVF_1_1ThreadCallGraph.html#a563ebb1ece0adb4bafe5e14b2a024a91',1,'SVF::ThreadCallGraph']]],
   ['addformalinsvfgnode_306',['addFormalINSVFGNode',['../classSVF_1_1SVFG.html#ab4690114393820f580e805d2e0d6a41d',1,'SVF::SVFG']]],
