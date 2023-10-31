@@ -318,7 +318,7 @@ $(function() {
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordtype">bool</span> added1 = edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">getDstNode</a>()-&gt;addIncomingEdge(edge);</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordtype">bool</span> added2 = edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#ab47ca533c415841ef75456cbad439589">getSrcNode</a>()-&gt;addOutgoingEdge(edge);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        assert(added1 &amp;&amp; added2 &amp;&amp; <span class="stringliteral">&quot;edge not added??&quot;</span>);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">return</span> added1 &amp;&amp; added2;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
 <div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="classSVF_1_1CDG.html#a98e499b5316074a8722b88f77117c92c">  273</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classSVF_1_1CDG.html#a98e499b5316074a8722b88f77117c92c">addCDGNode</a>(<a class="code" href="classSVF_1_1CDGNode.html">CDGNode</a> *node)</div>
@@ -484,32 +484,31 @@ $(function() {
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> EdgeIter&gt;</div>
 <div class="line"><a name="l00439"></a><span class="lineno"><a class="line" href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#af1b3645c9eb434b163c60e374d5428ab">  439</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> <a class="code" href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#af1b3645c9eb434b163c60e374d5428ab">getEdgeAttributes</a>(<a class="code" href="classSVF_1_1CDGNode.html">NodeType</a> *, EdgeIter EI, <a class="code" href="classSVF_1_1CDG.html">SVF::CDG</a> *)</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    {</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        <a class="code" href="classSVF_1_1CDGEdge.html">SVF::CDGEdge</a> *edge = *(EI.getCurrent());</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        assert(edge &amp;&amp; <span class="stringliteral">&quot;No edge found!!&quot;</span>);</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=solid&quot;</span>;</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    }</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> EdgeIter&gt;</div>
-<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#a66e40fd1741f5a5dd418bb73e7299be5">  447</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> <a class="code" href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#a66e40fd1741f5a5dd418bb73e7299be5">getEdgeSourceLabel</a>(<a class="code" href="classSVF_1_1CDGNode.html">NodeType</a> *, EdgeIter EI)</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    {</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <a class="code" href="classSVF_1_1CDGEdge.html">SVF::CDGEdge</a> *edge = *(EI.getCurrent());</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        assert(edge &amp;&amp; <span class="stringliteral">&quot;No edge found!!&quot;</span>);</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        std::stringstream rawstr(str);</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;cond: edge-&gt;<a class="code" href="classSVF_1_1CDGEdge.html#aedf54ed1ce3b77c3565390ddc52bd438">getBranchConditions</a>())</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        {</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            rawstr &lt;&lt; std::to_string(cond.second) &lt;&lt; <span class="stringliteral">&quot;|&quot;</span>;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        }</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> lb = rawstr.str();</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        lb.pop_back();</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keywordflow">return</span> lb;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    }</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;};</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;} <span class="comment">// End namespace SVF</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">#endif //SVF_CONTROLDG_H</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        assert(*(EI.getCurrent()) &amp;&amp; <span class="stringliteral">&quot;No edge found!!&quot;</span>);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=solid&quot;</span>;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> EdgeIter&gt;</div>
+<div class="line"><a name="l00446"></a><span class="lineno"><a class="line" href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#a66e40fd1741f5a5dd418bb73e7299be5">  446</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> <a class="code" href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#a66e40fd1741f5a5dd418bb73e7299be5">getEdgeSourceLabel</a>(<a class="code" href="classSVF_1_1CDGNode.html">NodeType</a> *, EdgeIter EI)</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    {</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <a class="code" href="classSVF_1_1CDGEdge.html">SVF::CDGEdge</a> *edge = *(EI.getCurrent());</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        assert(edge &amp;&amp; <span class="stringliteral">&quot;No edge found!!&quot;</span>);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        std::stringstream rawstr(str);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;cond: edge-&gt;<a class="code" href="classSVF_1_1CDGEdge.html#aedf54ed1ce3b77c3565390ddc52bd438">getBranchConditions</a>())</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        {</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            rawstr &lt;&lt; std::to_string(cond.second) &lt;&lt; <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        }</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> lb = rawstr.str();</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        lb.pop_back();</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160; </div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">return</span> lb;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    }</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;};</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;} <span class="comment">// End namespace SVF</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="preprocessor">#endif //SVF_CONTROLDG_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassSVF_1_1CDG_html_a79d7b96a3141348edb0a739eb6aea35c"><div class="ttname"><a href="classSVF_1_1CDG.html#a79d7b96a3141348edb0a739eb6aea35c">SVF::CDG::~CDG</a></div><div class="ttdeci">virtual ~CDG()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00167">CDG.h:167</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_a0931220d7a38e03f206cbdc6465d32ad"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">SVF::GenericNode::hasOutgoingEdge</a></div><div class="ttdeci">bool hasOutgoingEdge() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00209">GenericGraph.h:209</a></div></div>
@@ -526,7 +525,7 @@ $(function() {
 <div class="ttc" id="aclassSVF_1_1CDGNode_html_aca4257495b32baba3eab1ee841e66d78"><div class="ttname"><a href="classSVF_1_1CDGNode.html#aca4257495b32baba3eab1ee841e66d78">SVF::CDGNode::const_iterator</a></div><div class="ttdeci">CDGEdge::CDGEdgeSetTy::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00095">CDG.h:95</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CDG_html_a646aa0a899d8cc45df96c0a60c85011e"><div class="ttname"><a href="classSVF_1_1CDG.html#a646aa0a899d8cc45df96c0a60c85011e">SVF::CDG::CDG</a></div><div class="ttdeci">CDG()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00140">CDG.h:140</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CDGNode_html"><div class="ttname"><a href="classSVF_1_1CDGNode.html">SVF::CDGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00089">CDG.h:89</a></div></div>
-<div class="ttc" id="astructSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4_html_a66e40fd1741f5a5dd418bb73e7299be5"><div class="ttname"><a href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#a66e40fd1741f5a5dd418bb73e7299be5">SVF::DOTGraphTraits&lt; SVF::CDG * &gt;::getEdgeSourceLabel</a></div><div class="ttdeci">static std::string getEdgeSourceLabel(NodeType *, EdgeIter EI)</div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00447">CDG.h:447</a></div></div>
+<div class="ttc" id="astructSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4_html_a66e40fd1741f5a5dd418bb73e7299be5"><div class="ttname"><a href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#a66e40fd1741f5a5dd418bb73e7299be5">SVF::DOTGraphTraits&lt; SVF::CDG * &gt;::getEdgeSourceLabel</a></div><div class="ttdeci">static std::string getEdgeSourceLabel(NodeType *, EdgeIter EI)</div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00446">CDG.h:446</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CDG_html_aadc90afbdeff9aae0365cde7b96ae9bc"><div class="ttname"><a href="classSVF_1_1CDG.html#aadc90afbdeff9aae0365cde7b96ae9bc">SVF::CDG::getCDG</a></div><div class="ttdeci">static CDG * getCDG()</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis.</div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00149">CDG.h:149</a></div></div>
 <div class="ttc" id="astructSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4_html_a6a127e760a76f581b57edcdbe607eab6"><div class="ttname"><a href="structSVF_1_1DOTGraphTraits_3_01SVF_1_1CDG_01_5_01_4.html#a6a127e760a76f581b57edcdbe607eab6">SVF::DOTGraphTraits&lt; SVF::CDG * &gt;::getNodeAttributes</a></div><div class="ttdeci">static std::string getNodeAttributes(NodeType *node, SVF::CDG *)</div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00400">CDG.h:400</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CDG_html"><div class="ttname"><a href="classSVF_1_1CDG.html">SVF::CDG</a></div><div class="ttdef"><b>Definition:</b> <a href="CDG_8h_source.html#l00125">CDG.h:125</a></div></div>
