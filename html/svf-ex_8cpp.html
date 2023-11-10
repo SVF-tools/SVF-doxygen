@@ -89,8 +89,8 @@ Functions</h2></td></tr>
 <tr class="separator:a985b6c880c7922538046c6a1fa987829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fa9e6583c354b1883a32b8abf98779f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svf-ex_8cpp.html#a8fa9e6583c354b1883a32b8abf98779f">traverseOnSVFStmt</a> (const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *node)</td></tr>
 <tr class="separator:a8fa9e6583c354b1883a32b8abf98779f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addc5529c5b161d0c61eba4944428455e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svf-ex_8cpp.html#addc5529c5b161d0c61eba4944428455e">traverseOnICFG</a> (<a class="el" href="classSVF_1_1ICFG.html">ICFG</a> *icfg, const <a class="el" href="classSVF_1_1SVFInstruction.html">SVFInstruction</a> *svfInst)</td></tr>
-<tr class="separator:addc5529c5b161d0c61eba4944428455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f3fe331a1e7050a513672a91743b96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svf-ex_8cpp.html#a19f3fe331a1e7050a513672a91743b96">traverseOnICFG</a> (<a class="el" href="classSVF_1_1ICFG.html">ICFG</a> *icfg, const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *iNode)</td></tr>
+<tr class="separator:a19f3fe331a1e7050a513672a91743b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58149e5445ad22ce478339e103ab42b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svf-ex_8cpp.html#ad58149e5445ad22ce478339e103ab42b">traverseOnVFG</a> (const <a class="el" href="classSVF_1_1SVFG.html">SVFG</a> *vfg, <a class="el" href="classSVF_1_1SVFValue.html">SVFValue</a> *val)</td></tr>
 <tr class="separator:ad58149e5445ad22ce478339e103ab42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svf-ex_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
@@ -171,54 +171,60 @@ Functions</h2></td></tr>
 <p>Value-Flow Graph (VFG)</p>
 <p>Sparse value-flow graph (SVFG)</p>
 <p>Collect uses of an LLVM Value traverseOnVFG(svfg, value);</p>
-<p>Collect all successor nodes on ICFG traverseOnICFG(icfg, value);</p>
+<p>Collect all successor nodes on ICFG</p>
 
-<p class="definition">Definition at line <a class="el" href="svf-ex_8cpp_source.html#l00207">207</a> of file <a class="el" href="svf-ex_8cpp_source.html">svf-ex.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    std::vector&lt;std::string&gt; moduleNameVec;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    moduleNameVec = <a class="code" href="classOptionBase.html#a4fb6c6e4a1754d702c6c1730f54457e5">OptionBase::parseOptions</a>(</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                        argc, argv, <span class="stringliteral">&quot;Whole Program Points-to Analysis&quot;</span>, <span class="stringliteral">&quot;[options] &lt;input-bitcode...&gt;&quot;</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    );</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">if</span> (Options::WriteAnder() == <span class="stringliteral">&quot;ir_annotator&quot;</span>)</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        LLVMModuleSet::preProcessBCs(moduleNameVec);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="svf-ex_8cpp_source.html#l00205">205</a> of file <a class="el" href="svf-ex_8cpp_source.html">svf-ex.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    std::vector&lt;std::string&gt; moduleNameVec;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    moduleNameVec = <a class="code" href="classOptionBase.html#a4fb6c6e4a1754d702c6c1730f54457e5">OptionBase::parseOptions</a>(</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                        argc, argv, <span class="stringliteral">&quot;Whole Program Points-to Analysis&quot;</span>, <span class="stringliteral">&quot;[options] &lt;input-bitcode...&gt;&quot;</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                    );</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">if</span> (Options::WriteAnder() == <span class="stringliteral">&quot;ir_annotator&quot;</span>)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        LLVMModuleSet::preProcessBCs(moduleNameVec);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="classSVF_1_1SVFModule.html">SVFModule</a>* svfModule = LLVMModuleSet::buildSVFModule(moduleNameVec);</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="classSVF_1_1SVFModule.html">SVFModule</a>* svfModule = LLVMModuleSet::buildSVFModule(moduleNameVec);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="classSVF_1_1SVFIRBuilder.html">SVFIRBuilder</a> builder(svfModule);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = builder.build();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="classSVF_1_1Andersen.html">Andersen</a>* ander = AndersenWaveDiff::createAndersenWaveDiff(pag);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="classSVF_1_1PTACallGraph.html">PTACallGraph</a>* callgraph = ander-&gt;<a class="code" href="classSVF_1_1PointerAnalysis.html#a7c9b7e5fe37ae31ba84d167945ca57df">getPTACallGraph</a>();</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="classSVF_1_1ICFG.html">ICFG</a>* icfg = pag-&gt;<a class="code" href="classSVF_1_1SVFIR.html#abda052b73e869ed6d7c139ad1528da11">getICFG</a>();</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    icfg-&gt;<a class="code" href="classSVF_1_1ICFG.html#a999956500bbd605326531480546db9ba">dump</a>(<span class="stringliteral">&quot;icfg&quot;</span>);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="classSVF_1_1VFG.html">VFG</a>* vfg = <span class="keyword">new</span> <a class="code" href="classSVF_1_1VFG.html">VFG</a>(callgraph);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="classSVF_1_1SVFGBuilder.html">SVFGBuilder</a> svfBuilder(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">//SVFG* svfg =</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    svfBuilder.buildFullSVFG(ander);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">// clean up memory</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">delete</span> vfg;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    AndersenWaveDiff::releaseAndersenWaveDiff();</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    SVFIR::releaseSVFIR();</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    LLVMModuleSet::getLLVMModuleSet()-&gt;dumpModulesToFile(<span class="stringliteral">&quot;.svf.bc&quot;</span>);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="classSVF_1_1LLVMModuleSet.html#a2f8e91c075d90be66412a079fe73e936">SVF::LLVMModuleSet::releaseLLVMModuleSet</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="classSVF_1_1SVFIRBuilder.html">SVFIRBuilder</a> builder(svfModule);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = builder.build();</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="classSVF_1_1Andersen.html">Andersen</a>* ander = AndersenWaveDiff::createAndersenWaveDiff(pag);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="classSVF_1_1PTACallGraph.html">PTACallGraph</a>* callgraph = ander-&gt;<a class="code" href="classSVF_1_1PointerAnalysis.html#a7c9b7e5fe37ae31ba84d167945ca57df">getPTACallGraph</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="classSVF_1_1ICFG.html">ICFG</a>* icfg = pag-&gt;<a class="code" href="classSVF_1_1SVFIR.html#abda052b73e869ed6d7c139ad1528da11">getICFG</a>();</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    icfg-&gt;<a class="code" href="classSVF_1_1ICFG.html#a999956500bbd605326531480546db9ba">dump</a>(<span class="stringliteral">&quot;icfg&quot;</span>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="classSVF_1_1VFG.html">VFG</a>* vfg = <span class="keyword">new</span> <a class="code" href="classSVF_1_1VFG.html">VFG</a>(callgraph);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="classSVF_1_1SVFGBuilder.html">SVFGBuilder</a> svfBuilder(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">//SVFG* svfg =</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    svfBuilder.buildFullSVFG(ander);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;it : *icfg)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* node = it.second;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <a class="code" href="svf-ex_8cpp.html#a19f3fe331a1e7050a513672a91743b96">traverseOnICFG</a>(icfg, node);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// clean up memory</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">delete</span> vfg;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    AndersenWaveDiff::releaseAndersenWaveDiff();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    SVFIR::releaseSVFIR();</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    llvm::llvm_shutdown();</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    LLVMModuleSet::getLLVMModuleSet()-&gt;dumpModulesToFile(<span class="stringliteral">&quot;.svf.bc&quot;</span>);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="classSVF_1_1LLVMModuleSet.html#a2f8e91c075d90be66412a079fe73e936">SVF::LLVMModuleSet::releaseLLVMModuleSet</a>();</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    llvm::llvm_shutdown();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -274,8 +280,8 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="addc5529c5b161d0c61eba4944428455e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addc5529c5b161d0c61eba4944428455e">&#9670;&nbsp;</a></span>traverseOnICFG()</h2>
+<a id="a19f3fe331a1e7050a513672a91743b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f3fe331a1e7050a513672a91743b96">&#9670;&nbsp;</a></span>traverseOnICFG()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,8 +295,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classSVF_1_1SVFInstruction.html">SVFInstruction</a> *&#160;</td>
-          <td class="paramname"><em>svfInst</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *&#160;</td>
+          <td class="paramname"><em>iNode</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -304,28 +310,26 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="svf-ex_8cpp_source.html#l00141">141</a> of file <a class="el" href="svf-ex_8cpp_source.html">svf-ex.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* iNode = icfg-&gt;<a class="code" href="classSVF_1_1ICFG.html#a5f2c0aaba07d6fdd63058da0fb60ca8b">getICFGNode</a>(svfInst);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="classSVF_1_1FIFOWorkList.html">FIFOWorkList&lt;const ICFGNode*&gt;</a> worklist;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const ICFGNode*&gt;</a> visited;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(iNode);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">while</span> (!worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">empty</a>())</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* vNode = worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">pop</a>();</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="classSVF_1_1ICFGNode.html#ac16c5a3227a44d3b9f7c3209156d9df2">ICFGNode::const_iterator</a> it = vNode-&gt;<a class="code" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>(), eit =</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    vNode-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); it != eit; ++it)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = *it;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* succNode = edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">getDstNode</a>();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <a class="code" href="svf-ex_8cpp.html#a8fa9e6583c354b1883a32b8abf98779f">traverseOnSVFStmt</a>(succNode);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (visited.find(succNode) == visited.end())</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                visited.insert(succNode);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(succNode);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="classSVF_1_1FIFOWorkList.html">FIFOWorkList&lt;const ICFGNode*&gt;</a> worklist;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const ICFGNode*&gt;</a> visited;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(iNode);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">while</span> (!worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">empty</a>())</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* vNode = worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">pop</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="classSVF_1_1ICFGNode.html#ac16c5a3227a44d3b9f7c3209156d9df2">ICFGNode::const_iterator</a> it = vNode-&gt;<a class="code" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>(), eit =</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    vNode-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); it != eit; ++it)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = *it;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* succNode = edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">getDstNode</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">if</span> (visited.find(succNode) == visited.end())</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                visited.insert(succNode);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(succNode);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -438,37 +442,37 @@ Functions</h2></td></tr>
 <p>Collect all LLVM Values</p>
 <p>can only query VFGNode involving top-level pointers (starting with % or @ in LLVM IR) PAGNode* pNode = vfg-&gt;getLHSTopLevPtr(node); SVFValue* val = pNode-&gt;getValue();</p>
 
-<p class="definition">Definition at line <a class="el" href="svf-ex_8cpp_source.html#l00170">170</a> of file <a class="el" href="svf-ex_8cpp_source.html">svf-ex.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = SVFIR::getPAG();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classSVF_1_1SVFVar.html">PAGNode</a>* pNode = pag-&gt;<a class="code" href="classSVF_1_1GenericGraph.html#a43c9c773bfa17abf481c33073e30d01b">getGNode</a>(pag-&gt;<a class="code" href="classSVF_1_1IRGraph.html#a43514023a4f4d0c32f536f51443b0efc">getValueNode</a>(val));</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1VFGNode.html">VFGNode</a>* vNode = vfg-&gt;<a class="code" href="classSVF_1_1SVFG.html#a8e7a945f4266e8dc7dcfff2ad6494bfb">getDefSVFGNode</a>(pNode);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="classSVF_1_1FIFOWorkList.html">FIFOWorkList&lt;const VFGNode*&gt;</a> worklist;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const VFGNode*&gt;</a> visited;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(vNode);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">while</span> (!worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">empty</a>())</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1VFGNode.html">VFGNode</a>* vNode = worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">pop</a>();</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="classSVF_1_1VFGNode.html#a3c558955f60c237c558d8faafed781e8">VFGNode::const_iterator</a> it = vNode-&gt;<a class="code" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>(), eit =</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    vNode-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); it != eit; ++it)</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <a class="code" href="classSVF_1_1VFGEdge.html">VFGEdge</a>* edge = *it;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <a class="code" href="classSVF_1_1VFGNode.html">VFGNode</a>* succNode = edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">getDstNode</a>();</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordflow">if</span> (visited.find(succNode) == visited.end())</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                visited.insert(succNode);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(succNode);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const VFGNode*&gt;::const_iterator</a> it = visited.begin(), eit = visited.end(); it!=eit; ++it)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="comment">// const VFGNode* node = *it;</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment"></span>    }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="svf-ex_8cpp_source.html#l00168">168</a> of file <a class="el" href="svf-ex_8cpp_source.html">svf-ex.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;{</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = SVFIR::getPAG();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classSVF_1_1SVFVar.html">PAGNode</a>* pNode = pag-&gt;<a class="code" href="classSVF_1_1GenericGraph.html#a43c9c773bfa17abf481c33073e30d01b">getGNode</a>(pag-&gt;<a class="code" href="classSVF_1_1IRGraph.html#a43514023a4f4d0c32f536f51443b0efc">getValueNode</a>(val));</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1VFGNode.html">VFGNode</a>* vNode = vfg-&gt;<a class="code" href="classSVF_1_1SVFG.html#a8e7a945f4266e8dc7dcfff2ad6494bfb">getDefSVFGNode</a>(pNode);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classSVF_1_1FIFOWorkList.html">FIFOWorkList&lt;const VFGNode*&gt;</a> worklist;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const VFGNode*&gt;</a> visited;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(vNode);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">while</span> (!worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">empty</a>())</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1VFGNode.html">VFGNode</a>* vNode = worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">pop</a>();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="classSVF_1_1VFGNode.html#a3c558955f60c237c558d8faafed781e8">VFGNode::const_iterator</a> it = vNode-&gt;<a class="code" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>(), eit =</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    vNode-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); it != eit; ++it)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="classSVF_1_1VFGEdge.html">VFGEdge</a>* edge = *it;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <a class="code" href="classSVF_1_1VFGNode.html">VFGNode</a>* succNode = edge-&gt;<a class="code" href="classSVF_1_1GenericEdge.html#aeaa31a2c8479e831b36ce2e2582ceb86">getDstNode</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">if</span> (visited.find(succNode) == visited.end())</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                visited.insert(succNode);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                worklist.<a class="code" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(succNode);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const VFGNode*&gt;::const_iterator</a> it = visited.begin(), eit = visited.end(); it!=eit; ++it)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="comment">// const VFGNode* node = *it;</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"></span>    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -492,13 +496,13 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1LLVMModuleSet_html_a2f8e91c075d90be66412a079fe73e936"><div class="ttname"><a href="classSVF_1_1LLVMModuleSet.html#a2f8e91c075d90be66412a079fe73e936">SVF::LLVMModuleSet::releaseLLVMModuleSet</a></div><div class="ttdeci">static void releaseLLVMModuleSet()</div><div class="ttdef"><b>Definition:</b> <a href="LLVMModule_8h_source.html#l00108">LLVMModule.h:108</a></div></div>
 <div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a7c9b7e5fe37ae31ba84d167945ca57df"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a7c9b7e5fe37ae31ba84d167945ca57df">SVF::PointerAnalysis::getPTACallGraph</a></div><div class="ttdeci">PTACallGraph * getPTACallGraph() const</div><div class="ttdoc">Return call graph.</div><div class="ttdef"><b>Definition:</b> <a href="PointerAnalysis_8h_source.html#l00174">PointerAnalysis.h:174</a></div></div>
 <div class="ttc" id="aclassSVF_1_1RetPE_html"><div class="ttname"><a href="classSVF_1_1RetPE.html">SVF::RetPE</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00604">SVFStatements.h:604</a></div></div>
+<div class="ttc" id="asvf-ex_8cpp_html_a19f3fe331a1e7050a513672a91743b96"><div class="ttname"><a href="svf-ex_8cpp.html#a19f3fe331a1e7050a513672a91743b96">traverseOnICFG</a></div><div class="ttdeci">void traverseOnICFG(ICFG *icfg, const ICFGNode *iNode)</div><div class="ttdef"><b>Definition:</b> <a href="svf-ex_8cpp_source.html#l00141">svf-ex.cpp:141</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CmpStmt_html"><div class="ttname"><a href="classSVF_1_1CmpStmt.html">SVF::CmpStmt</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00870">SVFStatements.h:870</a></div></div>
 <div class="ttc" id="aclassSVF_1_1VFG_html"><div class="ttname"><a href="classSVF_1_1VFG.html">SVF::VFG</a></div><div class="ttdef"><b>Definition:</b> <a href="VFG_8h_source.html#l00050">VFG.h:50</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_aac5cc8767eb750bf121f1897788dee24"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#aac5cc8767eb750bf121f1897788dee24">SVF::SVFIR2ItvExeState::translateCmp</a></div><div class="ttdeci">void translateCmp(const CmpStmt *cmp)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00570">SVFIR2ItvExeState.cpp:570</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_aa274b5b4e18c28ec8035ca1b073aacfc"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#aa274b5b4e18c28ec8035ca1b073aacfc">SVF::SVFIR2ItvExeState::translateGep</a></div><div class="ttdeci">void translateGep(const GepStmt *gep)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00851">SVFIR2ItvExeState.cpp:851</a></div></div>
 <div class="ttc" id="aclassSVF_1_1FIFOWorkList_html_a7056704c224dfb4b57287fe90c004aa8"><div class="ttname"><a href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">SVF::FIFOWorkList::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00146">WorkList.h:146</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFVar_html_ac2db6304ea5526fb446ae882983beeb0"><div class="ttname"><a href="classSVF_1_1SVFVar.html#ac2db6304ea5526fb446ae882983beeb0">SVF::SVFVar::getValue</a></div><div class="ttdeci">const SVFValue * getValue() const</div><div class="ttdoc">Get/has methods of the components.</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00094">SVFVariables.h:94</a></div></div>
-<div class="ttc" id="asvf-ex_8cpp_html_a8fa9e6583c354b1883a32b8abf98779f"><div class="ttname"><a href="svf-ex_8cpp.html#a8fa9e6583c354b1883a32b8abf98779f">traverseOnSVFStmt</a></div><div class="ttdeci">void traverseOnSVFStmt(const ICFGNode *node)</div><div class="ttdef"><b>Definition:</b> <a href="svf-ex_8cpp_source.html#l00077">svf-ex.cpp:77</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGNode_html"><div class="ttname"><a href="classSVF_1_1ICFGNode.html">SVF::ICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00054">ICFGNode.h:54</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_ae00e5398cbeb9aa1cfc464da4250a91e"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#ae00e5398cbeb9aa1cfc464da4250a91e">SVF::SVFIR2ItvExeState::translatePhi</a></div><div class="ttdeci">void translatePhi(const PhiStmt *phi)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00911">SVFIR2ItvExeState.cpp:911</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallPE_html"><div class="ttname"><a href="classSVF_1_1CallPE.html">SVF::CallPE</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00544">SVFStatements.h:544</a></div></div>
@@ -512,7 +516,6 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_a449ee8f244120866037c7f6d2ee5fc13"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#a449ee8f244120866037c7f6d2ee5fc13">SVF::SVFIR2ItvExeState::translateBinary</a></div><div class="ttdeci">void translateBinary(const BinaryOPStmt *binary)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00508">SVFIR2ItvExeState.cpp:508</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_a19a3366fd8a58290d0c740c46c3dcb3d"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">SVF::GenericNode::OutEdgeEnd</a></div><div class="ttdeci">iterator OutEdgeEnd()</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00221">GenericGraph.h:221</a></div></div>
 <div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a4dfb43679e9fa794ebad99b6584c32ec"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a4dfb43679e9fa794ebad99b6584c32ec">SVF::PointerAnalysis::getPts</a></div><div class="ttdeci">virtual const PointsTo &amp; getPts(NodeID ptr)=0</div><div class="ttdoc">Get points-to targets of a pointer. It needs to be implemented in child class.</div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_a5f2c0aaba07d6fdd63058da0fb60ca8b"><div class="ttname"><a href="classSVF_1_1ICFG.html#a5f2c0aaba07d6fdd63058da0fb60ca8b">SVF::ICFG::getICFGNode</a></div><div class="ttdeci">ICFGNode * getICFGNode(NodeID id) const</div><div class="ttdoc">Get a ICFG node.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00088">ICFG.h:88</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIRBuilder_html"><div class="ttname"><a href="classSVF_1_1SVFIRBuilder.html">SVF::SVFIRBuilder</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFIRBuilder_8h_source.html#l00046">SVFIRBuilder.h:46</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_aed2e41879bae8389c49e69356b7aaac5"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#aed2e41879bae8389c49e69356b7aaac5">SVF::SVFIR2ItvExeState::translateStore</a></div><div class="ttdeci">void translateStore(const StoreStmt *store)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00800">SVFIR2ItvExeState.cpp:800</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFStmt_html"><div class="ttname"><a href="classSVF_1_1SVFStmt.html">SVF::SVFStmt</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00051">SVFStatements.h:51</a></div></div>
