@@ -831,10 +831,10 @@ Functions</h2></td></tr>
 
 <p>Get the corresponding Function based on its name. </p>
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00402">402</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;{</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">return</span> LLVMModuleSet::getLLVMModuleSet()-&gt;getSVFFunction(<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00405">405</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;{</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">return</span> LLVMModuleSet::getLLVMModuleSet()-&gt;getSVFFunction(<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -956,15 +956,15 @@ Functions</h2></td></tr>
 
 <p>find the unique defined global across multiple modules </p>
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00415">415</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;{</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a09f5fa3bc44bf53612a085e3a611cc4e">GlobalVariable</a>* gvar = SVFUtil::dyn_cast&lt;GlobalVariable&gt;(val))</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">if</span> (LLVMModuleSet::getLLVMModuleSet()-&gt;hasGlobalRep(gvar))</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            val = LLVMModuleSet::getLLVMModuleSet()-&gt;getGlobalRep(gvar);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">return</span> val;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00418">418</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;{</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a09f5fa3bc44bf53612a085e3a611cc4e">GlobalVariable</a>* gvar = SVFUtil::dyn_cast&lt;GlobalVariable&gt;(val))</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <span class="keywordflow">if</span> (LLVMModuleSet::getLLVMModuleSet()-&gt;hasGlobalRep(gvar))</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            val = LLVMModuleSet::getLLVMModuleSet()-&gt;getGlobalRep(gvar);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">return</span> val;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1328,7 +1328,7 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00119">119</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#if (LLVM_VERSION_MAJOR &lt; 14)</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> pty-&gt;getElementType();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> pty-&gt;getPointerElementType();</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    assert(!pty-&gt;isOpaque() &amp;&amp; <span class="stringliteral">&quot;Opaque Pointer is used, please recompile the source adding &#39;-Xclang -no-opaque-pointers&#39;&quot;</span>);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> pty-&gt;getNonOpaquePointerElementType();</div>
@@ -2287,11 +2287,11 @@ Functions</h2></td></tr>
 
 <p>Return true if the value refers to constant data, e.g., i32 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00408">408</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;{</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa</a>&lt;<a class="code" href="namespaceSVF.html#a7332f8059ea95472dcc231de884a5768">ConstantData</a>, <a class="code" href="namespaceSVF.html#a7cbe1c6567039e72958fd70e423d3597">ConstantAggregate</a>,</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;           <a class="code" href="namespaceSVF.html#a773900ea3c75022657aac1abf59fa51b">MetadataAsValue</a>, <a class="code" href="namespaceSVF.html#a956458a8554bf734db1194f320fd4b4c">BlockAddress</a>&gt;(val);</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00411">411</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;{</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa</a>&lt;<a class="code" href="namespaceSVF.html#a7332f8059ea95472dcc231de884a5768">ConstantData</a>, <a class="code" href="namespaceSVF.html#a7cbe1c6567039e72958fd70e423d3597">ConstantAggregate</a>,</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;           <a class="code" href="namespaceSVF.html#a773900ea3c75022657aac1abf59fa51b">MetadataAsValue</a>, <a class="code" href="namespaceSVF.html#a956458a8554bf734db1194f320fd4b4c">BlockAddress</a>&gt;(val);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3182,12 +3182,12 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00511">511</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;{</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    llvm::raw_string_ostream(str) &lt;&lt; val;</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">return</span> str;</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00514">514</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;{</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    llvm::raw_string_ostream(str) &lt;&lt; val;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <span class="keywordflow">return</span> str;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3544,19 +3544,22 @@ template&lt;typename T &gt; </div>
 <p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00384">384</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;{</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">llvm::Type</a>* llvm_rhs = LLVMModuleSet::getLLVMModuleSet()-&gt;getLLVMType(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> llvm_rhs_size = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a2b5fdf455c5dd40c0baa60185e5e41c6">LLVMUtil::getTypeSizeInBytes</a>(llvm_rhs-&gt;getPointerElementType());</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> llvm_elem_size = -1;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">if</span> (llvm_rhs-&gt;getPointerElementType()-&gt;isArrayTy() &amp;&amp; llvm_rhs_size &gt; 0)</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    {</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordtype">size_t</span> array_len = llvm_rhs-&gt;getPointerElementType()-&gt;getArrayNumElements();</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        llvm_elem_size = llvm_rhs_size / array_len;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    }</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    {</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        llvm_elem_size =llvm_rhs_size;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    }</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">return</span> llvm_elem_size;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;}</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#aa962cc1d782cc46553251e96b64a754b">llvm::PointerType</a>* llvm_rhs_ptr = SVFUtil::dyn_cast&lt;PointerType&gt;(llvm_rhs);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    assert(llvm_rhs_ptr &amp;&amp; <span class="stringliteral">&quot;not a pointer type?&quot;</span>);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *ptrElementType = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#abba4111230f6009bbf50518ee36a9870">getPtrElementType</a>(llvm_rhs_ptr);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> llvm_rhs_size = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a2b5fdf455c5dd40c0baa60185e5e41c6">LLVMUtil::getTypeSizeInBytes</a>(ptrElementType);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> llvm_elem_size = -1;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">if</span> (ptrElementType-&gt;isArrayTy() &amp;&amp; llvm_rhs_size &gt; 0)</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordtype">size_t</span> array_len = ptrElementType-&gt;getArrayNumElements();</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        llvm_elem_size = llvm_rhs_size / array_len;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        llvm_elem_size =llvm_rhs_size;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">return</span> llvm_elem_size;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3695,7 +3698,7 @@ template&lt;typename T &gt; </div>
 <div class="ttc" id="anamespaceSVF_html_a7875172ff434b2210eea7cecfbbd959e"><div class="ttname"><a href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">SVF::Instruction</a></div><div class="ttdeci">llvm::Instruction Instruction</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00085">BasicTypes.h:85</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_a745a2addadc136075d45c7fb8437af3e"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#a745a2addadc136075d45c7fb8437af3e">SVF::cppUtil::demangle</a></div><div class="ttdeci">struct DemangledName demangle(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00153">CppUtil.cpp:153</a></div></div>
 <div class="ttc" id="acJSON_8cpp_html_a930920b2bc42824a5c03be681830f4b2"><div class="ttname"><a href="cJSON_8cpp.html#a930920b2bc42824a5c03be681830f4b2">true</a></div><div class="ttdeci">return true</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8cpp_source.html#l02295">cJSON.cpp:2295</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a8a77403306e97ab4cb31a56d38bba5be"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a8a77403306e97ab4cb31a56d38bba5be">SVF::LLVMUtil::isConstDataOrAggData</a></div><div class="ttdeci">bool isConstDataOrAggData(const Value *val)</div><div class="ttdoc">Return true if the value refers to constant data, e.g., i32 0.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00408">LLVMUtil.h:408</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a8a77403306e97ab4cb31a56d38bba5be"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a8a77403306e97ab4cb31a56d38bba5be">SVF::LLVMUtil::isConstDataOrAggData</a></div><div class="ttdeci">bool isConstDataOrAggData(const Value *val)</div><div class="ttdoc">Return true if the value refers to constant data, e.g., i32 0.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00411">LLVMUtil.h:411</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a2bf58575ac7d068e0f1a4cf953b9e6cb"><div class="ttname"><a href="namespaceSVF.html#a2bf58575ac7d068e0f1a4cf953b9e6cb">SVF::StructType</a></div><div class="ttdeci">llvm::StructType StructType</div><div class="ttdoc">LLVM types.</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00092">BasicTypes.h:92</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a2b28f48dde0a9a91d251e654ce1f9477"><div class="ttname"><a href="namespaceSVF.html#a2b28f48dde0a9a91d251e654ce1f9477">SVF::ConstantStruct</a></div><div class="ttdeci">llvm::ConstantStruct ConstantStruct</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00104">BasicTypes.h:104</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html"><div class="ttname"><a href="classSVF_1_1SVFFunction.html">SVF::SVFFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00297">SVFValue.h:297</a></div></div>
