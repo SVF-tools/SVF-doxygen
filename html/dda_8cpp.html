@@ -88,16 +88,6 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:aa87e1cd4be4709a21393ed9e1a0da6bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classOption.html">Option</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dda_8cpp.html#aa87e1cd4be4709a21393ed9e1a0da6bb">DAA</a> (&quot;daa&quot;, &quot;Demand-Driven Alias Analysis Pass&quot;, false)</td></tr>
 <tr class="separator:aa87e1cd4be4709a21393ed9e1a0da6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4d54caa95b7971baaaa499dc52a83f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classOption.html">Option</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dda_8cpp.html#aa4d54caa95b7971baaaa499dc52a83f0">REGPT</a> (&quot;dreg&quot;, &quot;Demand-driven regular points-to analysis&quot;, false)</td></tr>
-<tr class="separator:aa4d54caa95b7971baaaa499dc52a83f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67ee98e0a1d06555ea82c26cf1fa2b35"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classOption.html">Option</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dda_8cpp.html#a67ee98e0a1d06555ea82c26cf1fa2b35">RFINEPT</a> (&quot;dref&quot;, &quot;Demand-driven refinement points-to analysis&quot;, false)</td></tr>
-<tr class="separator:a67ee98e0a1d06555ea82c26cf1fa2b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33384804c17c2e3f457d80b47b114e1d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classOption.html">Option</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dda_8cpp.html#a33384804c17c2e3f457d80b47b114e1d">ENABLEFIELD</a> (&quot;fdaa&quot;, &quot;enable field-sensitivity <a class="el" href="cJSON_8cpp.html#a8a10bf77b3753124dd7ae92c5c4184cc">for</a> demand-driven analysis&quot;, false)</td></tr>
-<tr class="separator:a33384804c17c2e3f457d80b47b114e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a4ada5aa37179525df2c87a5c6e2685"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classOption.html">Option</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dda_8cpp.html#a0a4ada5aa37179525df2c87a5c6e2685">ENABLECONTEXT</a> (&quot;cdaa&quot;, &quot;enable context-sensitivity <a class="el" href="cJSON_8cpp.html#a8a10bf77b3753124dd7ae92c5c4184cc">for</a> demand-driven analysis&quot;, false)</td></tr>
-<tr class="separator:a0a4ada5aa37179525df2c87a5c6e2685"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41cf6b3bb80c86976fab3561440031fe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classOption.html">Option</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dda_8cpp.html#a41cf6b3bb80c86976fab3561440031fe">ENABLEFLOW</a> (&quot;ldaa&quot;, &quot;enable flow-sensitivity <a class="el" href="cJSON_8cpp.html#a8a10bf77b3753124dd7ae92c5c4184cc">for</a> demand-driven analysis&quot;, false)</td></tr>
-<tr class="separator:a41cf6b3bb80c86976fab3561440031fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
@@ -126,29 +116,29 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dda_8cpp_source.html#l00078">78</a> of file <a class="el" href="dda_8cpp_source.html">dda.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::vector&lt;std::string&gt; moduleNameVec;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    moduleNameVec = <a class="code" href="classOptionBase.html#a4fb6c6e4a1754d702c6c1730f54457e5">OptionBase::parseOptions</a>(</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                        argc, argv, <span class="stringliteral">&quot;Demand-Driven Points-to Analysis&quot;</span>, <span class="stringliteral">&quot;[options] &lt;input-bitcode...&gt;&quot;</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (Options::WriteAnder() == <span class="stringliteral">&quot;ir_annotator&quot;</span>)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        LLVMModuleSet::preProcessBCs(moduleNameVec);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classSVF_1_1SVFModule.html">SVFModule</a>* svfModule = LLVMModuleSet::buildSVFModule(moduleNameVec);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="classSVF_1_1SVFIRBuilder.html">SVFIRBuilder</a> builder(svfModule);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = builder.build();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classSVF_1_1DDAPass.html">DDAPass</a> dda;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    dda.<a class="code" href="classSVF_1_1DDAPass.html#aca46f1d464f5766ae666661a164a51a9">runOnModule</a>(pag);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    LLVMModuleSet::releaseLLVMModuleSet();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="dda_8cpp_source.html#l00048">48</a> of file <a class="el" href="dda_8cpp_source.html">dda.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::vector&lt;std::string&gt; moduleNameVec;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    moduleNameVec = <a class="code" href="classOptionBase.html#a4fb6c6e4a1754d702c6c1730f54457e5">OptionBase::parseOptions</a>(</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        argc, argv, <span class="stringliteral">&quot;Demand-Driven Points-to Analysis&quot;</span>, <span class="stringliteral">&quot;[options] &lt;input-bitcode...&gt;&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (Options::WriteAnder() == <span class="stringliteral">&quot;ir_annotator&quot;</span>)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        LLVMModuleSet::preProcessBCs(moduleNameVec);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classSVF_1_1SVFModule.html">SVFModule</a>* svfModule = LLVMModuleSet::buildSVFModule(moduleNameVec);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classSVF_1_1SVFIRBuilder.html">SVFIRBuilder</a> builder(svfModule);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = builder.build();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classSVF_1_1DDAPass.html">DDAPass</a> dda;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    dda.<a class="code" href="classSVF_1_1DDAPass.html#aca46f1d464f5766ae666661a164a51a9">runOnModule</a>(pag);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    LLVMModuleSet::releaseLLVMModuleSet();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -164,116 +154,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classOption.html">Option</a>&lt;bool&gt; DAA(&quot;daa&quot;, &quot;Demand-Driven Alias Analysis Pass&quot;, false)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0a4ada5aa37179525df2c87a5c6e2685"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a4ada5aa37179525df2c87a5c6e2685">&#9670;&nbsp;</a></span>ENABLECONTEXT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classOption.html">Option</a>&lt;bool&gt; ENABLECONTEXT(&quot;cdaa&quot;, &quot;enable context-sensitivity <a class="el" href="cJSON_8cpp.html#a8a10bf77b3753124dd7ae92c5c4184cc">for</a> demand-driven analysis&quot;, false)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a33384804c17c2e3f457d80b47b114e1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33384804c17c2e3f457d80b47b114e1d">&#9670;&nbsp;</a></span>ENABLEFIELD</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classOption.html">Option</a>&lt;bool&gt; ENABLEFIELD(&quot;fdaa&quot;, &quot;enable field-sensitivity <a class="el" href="cJSON_8cpp.html#a8a10bf77b3753124dd7ae92c5c4184cc">for</a> demand-driven analysis&quot;, false)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a41cf6b3bb80c86976fab3561440031fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41cf6b3bb80c86976fab3561440031fe">&#9670;&nbsp;</a></span>ENABLEFLOW</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classOption.html">Option</a>&lt;bool&gt; ENABLEFLOW(&quot;ldaa&quot;, &quot;enable flow-sensitivity <a class="el" href="cJSON_8cpp.html#a8a10bf77b3753124dd7ae92c5c4184cc">for</a> demand-driven analysis&quot;, false)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa4d54caa95b7971baaaa499dc52a83f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4d54caa95b7971baaaa499dc52a83f0">&#9670;&nbsp;</a></span>REGPT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classOption.html">Option</a>&lt;bool&gt; REGPT(&quot;dreg&quot;, &quot;Demand-driven regular points-to analysis&quot;, false)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a67ee98e0a1d06555ea82c26cf1fa2b35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67ee98e0a1d06555ea82c26cf1fa2b35">&#9670;&nbsp;</a></span>RFINEPT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classOption.html">Option</a>&lt;bool&gt; RFINEPT(&quot;dref&quot;, &quot;Demand-driven refinement points-to analysis&quot;, false)</td>
         </tr>
       </table>
   </td>
