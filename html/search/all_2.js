@@ -167,5 +167,5 @@ var searchData=
   ['bwprocesscurnode_815',['BWProcessCurNode',['../classSVF_1_1SrcSnkDDA.html#ad9eb5a4e0b3783c300c36b66f053e302',1,'SVF::SrcSnkDDA::BWProcessCurNode()'],['../classSVF_1_1SrcSnkSolver.html#a447db2796a7024dfa0fbe9ac95c671c0',1,'SVF::SrcSnkSolver::BWProcessCurNode()'],['../classSVF_1_1GraphReachSolver.html#a5b2ec04cbee0e457ed9d8a8a4c2e134f',1,'SVF::GraphReachSolver::BWProcessCurNode()']]],
   ['bwprocessincomingedge_816',['BWProcessIncomingEdge',['../classSVF_1_1SrcSnkDDA.html#a3a097517e85b9ea4c92d5e213b04e1f0',1,'SVF::SrcSnkDDA::BWProcessIncomingEdge()'],['../classSVF_1_1SrcSnkSolver.html#a9e8b3a956eb5d1ac2aad095eb132c848',1,'SVF::SrcSnkSolver::BWProcessIncomingEdge()'],['../classSVF_1_1GraphReachSolver.html#aac7caf50b94caa7bd6960461c0c16014',1,'SVF::GraphReachSolver::BWProcessIncomingEdge()']]],
   ['bypassmssaphinode_817',['bypassMSSAPHINode',['../classSVF_1_1SVFGOPT.html#a4f3890f637ffe03c2a1981e75e3d2e16',1,'SVF::SVFGOPT']]],
-  ['bytesize_818',['byteSize',['../classSVF_1_1ObjTypeInfo.html#abe4d855db71b38e7fdd2fd73cca67814',1,'SVF::ObjTypeInfo']]]
+  ['bytesize_818',['byteSize',['../classSVF_1_1SVFType.html#a517f8bb64d3a2eb9d697e77191f718b6',1,'SVF::SVFType::byteSize()'],['../classSVF_1_1ObjTypeInfo.html#abe4d855db71b38e7fdd2fd73cca67814',1,'SVF::ObjTypeInfo::byteSize()']]]
 ];
