@@ -782,40 +782,40 @@ $(function() {
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    {</div>
 <div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        <a class="code" href="classSVF_1_1AddressValue.html">VAddrs</a> &amp;addrs = getVAddrs(rhs);</div>
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        assert(!addrs.<a class="code" href="classSVF_1_1AddressValue.html#aa7291f4b74bb824fb38b8c383fa0b6a0">empty</a>());</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;addr: addrs)</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        {</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;            <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> objId = getInternalID(addr);</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;            <span class="keywordflow">if</span> (inLocToIValTable(objId))</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;                _es[lhs] = <a class="code" href="classSVF_1_1IntervalValue.html#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inLocToAddrsTable(objId))</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;                _es.getVAddrs(lhs).setBottom();</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        }</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;addr: addrs)</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        {</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;            <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> objId = getInternalID(addr);</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            <span class="keywordflow">if</span> (inLocToIValTable(objId))</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;            {</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                <span class="keywordflow">if</span> (!inVarToIValTable(lhs))</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                {</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                    _es[lhs] = _es.load(addr);</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                }</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;                {</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                    _es[lhs].join_with(_es.load(addr));</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;                }</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            }</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inLocToAddrsTable(objId))</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;            {</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                <span class="keywordflow">if</span> (!inVarToAddrsTable(lhs))</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                {</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                    _es.getVAddrs(lhs) = _es.loadVAddrs(addr);</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                }</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                {</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;                    _es.getVAddrs(lhs).join_with(_es.loadVAddrs(addr));</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                }</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            }</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a> rhsItv = <a class="code" href="classSVF_1_1IntervalValue.html#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        <a class="code" href="classSVF_1_1AddressValue.html">AddressValue</a> rhsAddr;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordtype">bool</span> isItv = <span class="keyword">false</span>, isAddr = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;addr: addrs)</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        {</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;            <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> objId = getInternalID(addr);</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;            <span class="keywordflow">if</span> (inLocToIValTable(objId))</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            {</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                rhsItv.<a class="code" href="classSVF_1_1IntervalValue.html#a3771eb932069dcad8212009efc411b99">join_with</a>(_es.load(addr));</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                isItv = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;            }</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inLocToAddrsTable(objId))</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            {</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                rhsAddr.<a class="code" href="classSVF_1_1AddressValue.html#acad5216bdc02a234d57abfe9ae72a12a">join_with</a>(_es.loadVAddrs(addr));</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                isAddr = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;            }</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;            {</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                <span class="comment">// rhs not in table</span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;            }</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        }</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        <span class="keywordflow">if</span> (isItv)</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        {</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            <span class="comment">// lhs var is an integer</span></div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;            _es[lhs] = rhsItv;</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        }</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isAddr)</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        {</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            <span class="comment">// lhs var is an address</span></div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;            _es.getVAddrs(lhs) = rhsAddr;</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        }</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        {</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            <span class="comment">// rhs not in table</span></div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;        }</div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;    }</div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;}</div>
@@ -928,71 +928,78 @@ $(function() {
 <div class="line"><a name="l00931"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFIR2ItvExeState.html#ae00e5398cbeb9aa1cfc464da4250a91e">  931</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSVF_1_1SVFIR2ItvExeState.html#ae00e5398cbeb9aa1cfc464da4250a91e">SVFIR2ItvExeState::translatePhi</a>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1PhiStmt.html">PhiStmt</a> *phi)</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;{</div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> res = phi-&gt;<a class="code" href="classSVF_1_1MultiOpndStmt.html#a71a530eb9fa9f7e273e471b4a75a039e">getResID</a>();</div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> i = 0; i &lt; phi-&gt;<a class="code" href="classSVF_1_1MultiOpndStmt.html#af300571886b7aa2d84b0a70851c99bc3">getOpVarNum</a>(); i++)</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    {</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;        <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> curId = phi-&gt;<a class="code" href="classSVF_1_1MultiOpndStmt.html#a5c6efcc023e90ef2e618586091958c59">getOpVarID</a>(i);</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <span class="keywordflow">if</span> (inVarToIValTable(curId))</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;        {</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;            <span class="keyword">const</span> <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a> &amp;cur = _es[curId];</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;            <span class="keywordflow">if</span> (!inVarToIValTable(res))</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;            {</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                _es[res] = cur;</div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;            }</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;            {</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                _es[res].<a class="code" href="classSVF_1_1IntervalValue.html#a3771eb932069dcad8212009efc411b99">join_with</a>(cur);</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;            }</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;        }</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inVarToAddrsTable(curId))</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        {</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;            assert(!getVAddrs(curId).empty());</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;            <span class="keyword">const</span> <a class="code" href="classSVF_1_1AddressValue.html">VAddrs</a> &amp;cur = getVAddrs(curId);</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;            <span class="keywordflow">if</span> (!inVarToAddrsTable(res))</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;            {</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;                _es.getVAddrs(res) = cur;</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;            }</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;            {</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;                _es.getVAddrs(res).<a class="code" href="classSVF_1_1AddressValue.html#acad5216bdc02a234d57abfe9ae72a12a">join_with</a>(cur);</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;            }</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;        }</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    }</div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;}</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160; </div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160; </div>
-<div class="line"><a name="l00966"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFIR2ItvExeState.html#adb82778157e0f5e7a2ea4d803bcd07ad">  966</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSVF_1_1SVFIR2ItvExeState.html#adb82778157e0f5e7a2ea4d803bcd07ad">SVFIR2ItvExeState::translateCall</a>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CallPE.html">CallPE</a> *callPE)</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;{</div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> lhs = callPE-&gt;<a class="code" href="classSVF_1_1AssignStmt.html#a98f731be7be9bc8e7fd09f5c2204c840">getLHSVarID</a>();</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> rhs = callPE-&gt;<a class="code" href="classSVF_1_1AssignStmt.html#a4cec89489e82c60c287cae3327f3f01d">getRHSVarID</a>();</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    <span class="keywordflow">if</span> (inVarToIValTable(rhs))</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    {</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;        _es[lhs] = _es[rhs];</div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;    }</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inVarToAddrsTable(rhs))</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;    {</div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;        assert(!getVAddrs(rhs).empty());</div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;        _es.getVAddrs(lhs) = getVAddrs(rhs);</div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    }</div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;}</div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160; </div>
-<div class="line"><a name="l00981"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFIR2ItvExeState.html#a31e299f91eed29d1a8db3b884d57d1dc">  981</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSVF_1_1SVFIR2ItvExeState.html#a31e299f91eed29d1a8db3b884d57d1dc">SVFIR2ItvExeState::translateRet</a>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1RetPE.html">RetPE</a> *retPE)</div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;{</div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;    <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> lhs = retPE-&gt;<a class="code" href="classSVF_1_1AssignStmt.html#a98f731be7be9bc8e7fd09f5c2204c840">getLHSVarID</a>();</div>
-<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;    <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> rhs = retPE-&gt;<a class="code" href="classSVF_1_1AssignStmt.html#a4cec89489e82c60c287cae3327f3f01d">getRHSVarID</a>();</div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;    <span class="keywordflow">if</span> (inVarToIValTable(rhs))</div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;    {</div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;        _es[lhs] = _es[rhs];</div>
-<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;    }</div>
-<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inVarToAddrsTable(rhs))</div>
-<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;    {</div>
-<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;        assert(!getVAddrs(rhs).empty());</div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;        _es.getVAddrs(lhs) = getVAddrs(rhs);</div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;    }</div>
-<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;}</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a> rhsItv = <a class="code" href="classSVF_1_1IntervalValue.html#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    <a class="code" href="classSVF_1_1AddressValue.html">AddressValue</a> rhsAddr;</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    <span class="keywordtype">bool</span> isItv = <span class="keyword">false</span>, isAddr = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> i = 0; i &lt; phi-&gt;<a class="code" href="classSVF_1_1MultiOpndStmt.html#af300571886b7aa2d84b0a70851c99bc3">getOpVarNum</a>(); i++)</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    {</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;        <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> curId = phi-&gt;<a class="code" href="classSVF_1_1MultiOpndStmt.html#a5c6efcc023e90ef2e618586091958c59">getOpVarID</a>(i);</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;        <span class="keywordflow">if</span> (inVarToIValTable(curId))</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;        {</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;            rhsItv.<a class="code" href="classSVF_1_1IntervalValue.html#a3771eb932069dcad8212009efc411b99">join_with</a>(_es[curId]);</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;            isItv = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        }</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inVarToAddrsTable(curId))</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;        {</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;            assert(!getVAddrs(curId).empty());</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;            rhsAddr.<a class="code" href="classSVF_1_1AddressValue.html#acad5216bdc02a234d57abfe9ae72a12a">join_with</a>(getVAddrs(curId));</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;            isAddr = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        }</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        {</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;            <span class="comment">// rhs not in the table</span></div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;        }</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    }</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    <span class="keywordflow">if</span> (isItv)</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;    {</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;        <span class="comment">// res var is an integer</span></div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;        _es[res] = rhsItv;</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;    }</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isAddr)</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    {</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;        <span class="comment">// res var is an address</span></div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;        _es.getVAddrs(res) = rhsAddr;</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    }</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    {</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;        <span class="comment">// rhs not in table</span></div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    }</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;}</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160; </div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160; </div>
+<div class="line"><a name="l00973"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFIR2ItvExeState.html#adb82778157e0f5e7a2ea4d803bcd07ad">  973</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSVF_1_1SVFIR2ItvExeState.html#adb82778157e0f5e7a2ea4d803bcd07ad">SVFIR2ItvExeState::translateCall</a>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CallPE.html">CallPE</a> *callPE)</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;{</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;    <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> lhs = callPE-&gt;<a class="code" href="classSVF_1_1AssignStmt.html#a98f731be7be9bc8e7fd09f5c2204c840">getLHSVarID</a>();</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> rhs = callPE-&gt;<a class="code" href="classSVF_1_1AssignStmt.html#a4cec89489e82c60c287cae3327f3f01d">getRHSVarID</a>();</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    <span class="keywordflow">if</span> (inVarToIValTable(rhs))</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    {</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;        _es[lhs] = _es[rhs];</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;    }</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inVarToAddrsTable(rhs))</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    {</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;        assert(!getVAddrs(rhs).empty());</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;        _es.getVAddrs(lhs) = getVAddrs(rhs);</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;    }</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;}</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160; </div>
+<div class="line"><a name="l00988"></a><span class="lineno"><a class="line" href="classSVF_1_1SVFIR2ItvExeState.html#a31e299f91eed29d1a8db3b884d57d1dc">  988</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSVF_1_1SVFIR2ItvExeState.html#a31e299f91eed29d1a8db3b884d57d1dc">SVFIR2ItvExeState::translateRet</a>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1RetPE.html">RetPE</a> *retPE)</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;{</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;    <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> lhs = retPE-&gt;<a class="code" href="classSVF_1_1AssignStmt.html#a98f731be7be9bc8e7fd09f5c2204c840">getLHSVarID</a>();</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;    <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> rhs = retPE-&gt;<a class="code" href="classSVF_1_1AssignStmt.html#a4cec89489e82c60c287cae3327f3f01d">getRHSVarID</a>();</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;    <span class="keywordflow">if</span> (inVarToIValTable(rhs))</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;    {</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;        _es[lhs] = _es[rhs];</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    }</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (inVarToAddrsTable(rhs))</div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;    {</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;        assert(!getVAddrs(rhs).empty());</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;        _es.getVAddrs(lhs) = getVAddrs(rhs);</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;    }</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceSVF_html_a5c4820681ef340339ddded756eb82ae1"><div class="ttname"><a href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">SVF::APOffset</a></div><div class="ttdeci">s64_t APOffset</div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00061">SVFType.h:61</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CmpStmt_html_ad8e01744bfd98d584661025ce59338acad23a87cb6f2b3b2486a9a1277b491c09"><div class="ttname"><a href="classSVF_1_1CmpStmt.html#ad8e01744bfd98d584661025ce59338acad23a87cb6f2b3b2486a9a1277b491c09">SVF::CmpStmt::FCMP_UNE</a></div><div class="ttdeci">@ FCMP_UNE</div><div class="ttdoc">1 1 1 0 True if unordered or not equal</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00904">SVFStatements.h:904</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_adb82778157e0f5e7a2ea4d803bcd07ad"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#adb82778157e0f5e7a2ea4d803bcd07ad">SVF::SVFIR2ItvExeState::translateCall</a></div><div class="ttdeci">void translateCall(const CallPE *callPE)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00966">SVFIR2ItvExeState.cpp:966</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_adb82778157e0f5e7a2ea4d803bcd07ad"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#adb82778157e0f5e7a2ea4d803bcd07ad">SVF::SVFIR2ItvExeState::translateCall</a></div><div class="ttdeci">void translateCall(const CallPE *callPE)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00973">SVFIR2ItvExeState.cpp:973</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFType_html_a333e01a9c431c8f53bd2fc597bd5c40cac8c846ff3208d07a4a39c7a21433c6a5"><div class="ttname"><a href="classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40cac8c846ff3208d07a4a39c7a21433c6a5">SVF::SVFType::SVFArrayTy</a></div><div class="ttdeci">@ SVFArrayTy</div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00257">SVFType.h:257</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CopyStmt_html"><div class="ttname"><a href="classSVF_1_1CopyStmt.html">SVF::CopyStmt</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00351">SVFStatements.h:351</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BinaryOPStmt_html_a2f647224242dd87099104e0fdc994de6aafa66e75600b0098c4fa3304720cb7a6"><div class="ttname"><a href="classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6aafa66e75600b0098c4fa3304720cb7a6">SVF::BinaryOPStmt::FRem</a></div><div class="ttdeci">@ FRem</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00985">SVFStatements.h:985</a></div></div>
@@ -1061,7 +1068,7 @@ $(function() {
 <div class="ttc" id="aclassSVF_1_1StoreStmt_html"><div class="ttname"><a href="classSVF_1_1StoreStmt.html">SVF::StoreStmt</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00387">SVFStatements.h:387</a></div></div>
 <div class="ttc" id="aclassSVF_1_1IntervalExeState_html_a39dead4fe213e3d02b1613debbc86e71"><div class="ttname"><a href="classSVF_1_1IntervalExeState.html#a39dead4fe213e3d02b1613debbc86e71">SVF::IntervalExeState::_locToItvVal</a></div><div class="ttdeci">LocToValMap _locToItvVal</div><div class="ttdoc">key: nodeID value: Domain Value</div><div class="ttdef"><b>Definition:</b> <a href="IntervalExeState_8h_source.html#l00070">IntervalExeState.h:70</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html"><div class="ttname"><a href="classSVF_1_1SVFValue.html">SVF::SVFValue</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00177">SVFValue.h:177</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_a31e299f91eed29d1a8db3b884d57d1dc"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#a31e299f91eed29d1a8db3b884d57d1dc">SVF::SVFIR2ItvExeState::translateRet</a></div><div class="ttdeci">void translateRet(const RetPE *retPE)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00981">SVFIR2ItvExeState.cpp:981</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFIR2ItvExeState_html_a31e299f91eed29d1a8db3b884d57d1dc"><div class="ttname"><a href="classSVF_1_1SVFIR2ItvExeState.html#a31e299f91eed29d1a8db3b884d57d1dc">SVF::SVFIR2ItvExeState::translateRet</a></div><div class="ttdeci">void translateRet(const RetPE *retPE)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR2ItvExeState_8cpp_source.html#l00988">SVFIR2ItvExeState.cpp:988</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CmpStmt_html_ad8e01744bfd98d584661025ce59338aca88d74bf66465f4fdd221db0c11d62927"><div class="ttname"><a href="classSVF_1_1CmpStmt.html#ad8e01744bfd98d584661025ce59338aca88d74bf66465f4fdd221db0c11d62927">SVF::CmpStmt::ICMP_SLT</a></div><div class="ttdeci">@ ICMP_SLT</div><div class="ttdoc">signed less than</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00917">SVFStatements.h:917</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFArrayType_html"><div class="ttname"><a href="classSVF_1_1SVFArrayType.html">SVF::SVFArrayType</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00469">SVFType.h:469</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIR_html_a37cfa2aa4e7b98ef9dc8179f581a2362"><div class="ttname"><a href="classSVF_1_1SVFIR.html#a37cfa2aa4e7b98ef9dc8179f581a2362">SVF::SVFIR::getPAG</a></div><div class="ttdeci">static SVFIR * getPAG(bool buildFromFile=false)</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis.</div><div class="ttdef"><b>Definition:</b> <a href="SVFIR_8h_source.html#l00114">SVFIR.h:114</a></div></div>
