@@ -177,8 +177,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a90e39f78f4908f8a8ef3948d9158791c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a818f626cb8b8063b5f3c8928428095b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFFunction.html#a818f626cb8b8063b5f3c8928428095b8">isUncalledFunction</a> () const</td></tr>
 <tr class="separator:a818f626cb8b8063b5f3c8928428095b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97b0ad9fd31d7982f44a839605566347"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFFunction.html#a97b0ad9fd31d7982f44a839605566347">isNotRetFunction</a> () const</td></tr>
-<tr class="separator:a97b0ad9fd31d7982f44a839605566347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c8d773bde7e7af9f46d56b5db71065"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFFunction.html#a66c8d773bde7e7af9f46d56b5db71065">hasReturn</a> () const</td></tr>
+<tr class="separator:a66c8d773bde7e7af9f46d56b5db71065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067bd6dbaf74a028d546fa56b095791b"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFFunction.html#a067bd6dbaf74a028d546fa56b095791b">getAnnotations</a> () const</td></tr>
 <tr class="separator:a067bd6dbaf74a028d546fa56b095791b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61505b528343c7d728eba3a705930a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFFunction.html#a61505b528343c7d728eba3a705930a16">getExitBlocksOfLoop</a> (const <a class="el" href="classSVF_1_1SVFBasicBlock.html">SVFBasicBlock</a> *bb, <a class="el" href="classSVF_1_1SVFFunction.html#ad09ea0c680c88732c08d655e0afbead3">BBList</a> &amp;exitbbs) const</td></tr>
@@ -1042,7 +1042,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SVFValue_8h_source.html#l00418">418</a> of file <a class="el" href="SVFValue_8h_source.html">SVFValue.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    {</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        assert(<a class="code" href="classSVF_1_1SVFFunction.html#a9a7f1f56b6cfc33e7fa241286a07fd63">hasBasicBlock</a>() &amp;&amp; <span class="stringliteral">&quot;function does not have any Basicblock, external function?&quot;</span>);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        assert((!<a class="code" href="classSVF_1_1SVFFunction.html#ac85bdf04fd784e22a89426955d28e3d6">isNotRet</a> &amp;&amp; <a class="code" href="classSVF_1_1SVFFunction.html#a374cbaa780f540cb4b4ccac562a82632">exitBlock</a>) &amp;&amp; <span class="stringliteral">&quot;ensure the function has a single basic block containing a return instruction!&quot;</span>);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        assert((<a class="code" href="classSVF_1_1SVFFunction.html#a66c8d773bde7e7af9f46d56b5db71065">hasReturn</a>() &amp;&amp; <a class="code" href="classSVF_1_1SVFFunction.html#a374cbaa780f540cb4b4ccac562a82632">exitBlock</a>) &amp;&amp; <span class="stringliteral">&quot;ensure the function has a single basic block containing a return instruction!&quot;</span>);</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFFunction.html#a374cbaa780f540cb4b4ccac562a82632">exitBlock</a>;</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    }</div>
 </div><!-- fragment -->
@@ -1366,6 +1366,36 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a66c8d773bde7e7af9f46d56b5db71065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c8d773bde7e7af9f46d56b5db71065">&#9670;&nbsp;</a></span>hasReturn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::SVFFunction::hasReturn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SVFValue_8h_source.html#l00466">466</a> of file <a class="el" href="SVFValue_8h_source.html">SVFValue.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordflow">return</span>  !<a class="code" href="classSVF_1_1SVFFunction.html#ac85bdf04fd784e22a89426955d28e3d6">isNotRet</a>;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ab672f0255ec8e42d5e414bc8c72b7c76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab672f0255ec8e42d5e414bc8c72b7c76">&#9670;&nbsp;</a></span>isDeclaration()</h2>
 
@@ -1454,36 +1484,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    {</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFFunction.html#aefde3a0671e34541a4ad5d7a6dfaa5d1">loopAndDom</a>-&gt;<a class="code" href="classSVF_1_1SVFLoopAndDomInfo.html#a39257282d3875b5d28c21f6c8b1caf43">isLoopHeader</a>(bb);</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a97b0ad9fd31d7982f44a839605566347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97b0ad9fd31d7982f44a839605566347">&#9670;&nbsp;</a></span>isNotRetFunction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SVF::SVFFunction::isNotRetFunction </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="SVFValue_8h_source.html#l00466">466</a> of file <a class="el" href="SVFValue_8h_source.html">SVFValue.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    {</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFFunction.html#ac85bdf04fd784e22a89426955d28e3d6">isNotRet</a>;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2200,6 +2200,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_ae37546be7304c66b4eca2654d995eaa7"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#ae37546be7304c66b4eca2654d995eaa7">SVF::SVFLoopAndDomInfo::getDomFrontierMap</a></div><div class="ttdeci">const Map&lt; const SVFBasicBlock *, BBSet &gt; &amp; getDomFrontierMap() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00075">SVFValue.h:75</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a0fb893485fc3df088d921762514faf66"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a0fb893485fc3df088d921762514faf66">SVF::SVFLoopAndDomInfo::getLoopInfo</a></div><div class="ttdeci">const LoopBBs &amp; getLoopInfo(const SVFBasicBlock *bb) const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8cpp_source.html#l00034">SVFValue.cpp:34</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a48654f61a84ac5f93b02fb618cd0d045"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a48654f61a84ac5f93b02fb618cd0d045">SVF::SVFLoopAndDomInfo::getExitBlocksOfLoop</a></div><div class="ttdeci">void getExitBlocksOfLoop(const SVFBasicBlock *bb, BBList &amp;exitbbs) const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8cpp_source.html#l00041">SVFValue.cpp:41</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFFunction_html_a66c8d773bde7e7af9f46d56b5db71065"><div class="ttname"><a href="classSVF_1_1SVFFunction.html#a66c8d773bde7e7af9f46d56b5db71065">SVF::SVFFunction::hasReturn</a></div><div class="ttdeci">bool hasReturn() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00466">SVFValue.h:466</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html_a374cbaa780f540cb4b4ccac562a82632"><div class="ttname"><a href="classSVF_1_1SVFFunction.html#a374cbaa780f540cb4b4ccac562a82632">SVF::SVFFunction::exitBlock</a></div><div class="ttdeci">SVFBasicBlock * exitBlock</div><div class="ttdoc">annotations of this function</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00323">SVFValue.h:323</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html_a52581d00177fd5853d6f9de50b3e7fb9"><div class="ttname"><a href="classSVF_1_1SVFFunction.html#a52581d00177fd5853d6f9de50b3e7fb9">SVF::SVFFunction::isDecl</a></div><div class="ttdeci">bool isDecl</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00311">SVFValue.h:311</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFArgument_html"><div class="ttname"><a href="classSVF_1_1SVFArgument.html">SVF::SVFArgument</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00897">SVFValue.h:897</a></div></div>
