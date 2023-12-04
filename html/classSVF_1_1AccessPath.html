@@ -115,9 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abfc3dfecd5be261ee39f2443d72c1d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a21ba7604bc851f743250c9bd6afe35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#a9a21ba7604bc851f743250c9bd6afe35">operator==</a> (const <a class="el" href="classSVF_1_1AccessPath.html">AccessPath</a> &amp;rhs) const</td></tr>
 <tr class="separator:a9a21ba7604bc851f743250c9bd6afe35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68e49bb797a84ea035ea338549f2e054"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#a68e49bb797a84ea035ea338549f2e054">getConstantFieldIdx</a> () const</td></tr>
-<tr class="memdesc:a68e49bb797a84ea035ea338549f2e054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get methods.  <a href="classSVF_1_1AccessPath.html#a68e49bb797a84ea035ea338549f2e054">More...</a><br /></td></tr>
-<tr class="separator:a68e49bb797a84ea035ea338549f2e054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5427d08c9eb9d86e66c2bff6aeba6bac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a> () const</td></tr>
+<tr class="memdesc:a5427d08c9eb9d86e66c2bff6aeba6bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get methods.  <a href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">More...</a><br /></td></tr>
+<tr class="separator:a5427d08c9eb9d86e66c2bff6aeba6bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab95df74c97fba13206df48e00131e15f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#ab95df74c97fba13206df48e00131e15f">setFldIdx</a> (<a class="el" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> idx)</td></tr>
 <tr class="separator:ab95df74c97fba13206df48e00131e15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a586c71842e3e4487921aa3384ce9d025"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a> () const</td></tr>
@@ -453,7 +453,7 @@ Friends</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00249">249</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="classSVF_1_1SparseBitVector.html">NodeBS</a> result;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    result.<a class="code" href="classSVF_1_1SparseBitVector.html#a61bd86909a141f9de873d92c0f904832">set</a>(<a class="code" href="classSVF_1_1AccessPath.html#a68e49bb797a84ea035ea338549f2e054">getConstantFieldIdx</a>());</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    result.<a class="code" href="classSVF_1_1SparseBitVector.html#a61bd86909a141f9de873d92c0f904832">set</a>(<a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>());</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
 </div><!-- fragment -->
@@ -553,7 +553,7 @@ Friends</h2></td></tr>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    assert(<a class="code" href="classSVF_1_1AccessPath.html#a403312192a96a9fd5e7d071481592a7f">isConstantOffset</a>() &amp;&amp; <span class="stringliteral">&quot;not a constant offset&quot;</span>);</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>.empty())</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#a68e49bb797a84ea035ea338549f2e054">getConstantFieldIdx</a>();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> totalConstOffset = 0;</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>.size() - 1; i &gt;= 0; i--)</div>
@@ -611,7 +611,7 @@ Friends</h2></td></tr>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    std::stringstream rawstr(str);</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;AccessPath\tField_Index: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1AccessPath.html#a68e49bb797a84ea035ea338549f2e054">getConstantFieldIdx</a>();</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;AccessPath\tField_Index: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;,\tNum-Stride: {&quot;</span>;</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a>&amp; vec = <a class="code" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a>();</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    IdxOperandPairs::const_iterator it = vec.begin();</div>
@@ -627,8 +627,8 @@ Friends</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a68e49bb797a84ea035ea338549f2e054"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68e49bb797a84ea035ea338549f2e054">&#9670;&nbsp;</a></span>getConstantFieldIdx()</h2>
+<a id="a5427d08c9eb9d86e66c2bff6aeba6bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5427d08c9eb9d86e66c2bff6aeba6bac">&#9670;&nbsp;</a></span>getConstantStructFldIdx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,7 +637,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> SVF::AccessPath::getConstantFieldIdx </td>
+          <td class="memname"><a class="el" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> SVF::AccessPath::getConstantStructFldIdx </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -869,7 +869,7 @@ Friends</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00256">256</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <a class="code" href="classSVF_1_1AccessPath.html">AccessPath</a> ap(rhs);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    ap.fldIdx += <a class="code" href="classSVF_1_1AccessPath.html#a68e49bb797a84ea035ea338549f2e054">getConstantFieldIdx</a>();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    ap.fldIdx += <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a> : ap.getIdxOperandPairVec())</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        ap.addOffsetVarAndGepTypePair(<a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>.first, <a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>.second);</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
@@ -1157,11 +1157,11 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a61bd86909a141f9de873d92c0f904832"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a61bd86909a141f9de873d92c0f904832">SVF::SparseBitVector::set</a></div><div class="ttdeci">void set(unsigned Idx)</div><div class="ttdef"><b>Definition:</b> <a href="SparseBitVector_8h_source.html#l00747">SparseBitVector.h:747</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFVar_html_ac2db6304ea5526fb446ae882983beeb0"><div class="ttname"><a href="classSVF_1_1SVFVar.html#ac2db6304ea5526fb446ae882983beeb0">SVF::SVFVar::getValue</a></div><div class="ttdeci">const SVFValue * getValue() const</div><div class="ttdoc">Get/has methods of the components.</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00094">SVFVariables.h:94</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html">SVF::SparseBitVector</a></div><div class="ttdef"><b>Definition:</b> <a href="SparseBitVector_8h_source.html#l00459">SparseBitVector.h:459</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AccessPath_html_a5427d08c9eb9d86e66c2bff6aeba6bac"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">SVF::AccessPath::getConstantStructFldIdx</a></div><div class="ttdeci">APOffset getConstantStructFldIdx() const</div><div class="ttdoc">Get methods.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00098">AccessPath.h:98</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a76222b6571e46e8a8bd5c8c597c8ffaf"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a76222b6571e46e8a8bd5c8c597c8ffaf">SVF::AccessPath::computeAllLocations</a></div><div class="ttdeci">NodeBS computeAllLocations() const</div><div class="ttdoc">Compute all possible locations according to offset and number-stride pairs.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00249">AccessPath.cpp:249</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a3c98f0c5f07109f9da0a8a897aa51d18"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a3c98f0c5f07109f9da0a8a897aa51d18">SVF::AccessPath::getElementNum</a></div><div class="ttdeci">u32_t getElementNum(const SVFType *type) const</div><div class="ttdoc">Return element number of a type.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00063">AccessPath.cpp:63</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_aabb6c9600fac408f36b9fde013597245ab1ba3a42758473e5ff427ba36147a56a"><div class="ttname"><a href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245ab1ba3a42758473e5ff427ba36147a56a">SVF::AccessPath::Same</a></div><div class="ttdeci">@ Same</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00061">AccessPath.h:61</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SymbolTableInfo_html_a24df52313f8093bb651ae9da972cd663"><div class="ttname"><a href="classSVF_1_1SymbolTableInfo.html#a24df52313f8093bb651ae9da972cd663">SVF::SymbolTableInfo::getFlattenedElemIdx</a></div><div class="ttdeci">u32_t getFlattenedElemIdx(const SVFType *T, u32_t origId)</div><div class="ttdoc">Flattened element idx of an array or struct by considering stride.</div><div class="ttdef"><b>Definition:</b> <a href="SymbolTableInfo_8cpp_source.html#l00181">SymbolTableInfo.cpp:181</a></div></div>
-<div class="ttc" id="aclassSVF_1_1AccessPath_html_a68e49bb797a84ea035ea338549f2e054"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a68e49bb797a84ea035ea338549f2e054">SVF::AccessPath::getConstantFieldIdx</a></div><div class="ttdeci">APOffset getConstantFieldIdx() const</div><div class="ttdoc">Get methods.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00098">AccessPath.h:98</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html"><div class="ttname"><a href="classSVF_1_1SVFValue.html">SVF::SVFValue</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00177">SVFValue.h:177</a></div></div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFArrayType_html"><div class="ttname"><a href="classSVF_1_1SVFArrayType.html">SVF::SVFArrayType</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00469">SVFType.h:469</a></div></div>
