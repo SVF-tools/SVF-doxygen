@@ -282,20 +282,22 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                {</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    <span class="keywordflow">if</span> (<span class="keyword">const</span> RetCFGEdge *retEdge = SVFUtil::dyn_cast&lt;RetCFGEdge&gt;(icfgEdge))</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                        CFBasicBlockEdge *pEdge = <span class="keyword">new</span> CFBasicBlockEdge(bbToNodes[retEdge-&gt;getSrcNode()-&gt;getBB()].back(),</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                                bbNodes.second[i],</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                retEdge);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                        <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a4a298a45e54cbaf41cdf44aeea1a63f3">_CFBasicBlockG</a>-&gt;<a class="code" href="classSVF_1_1CFBasicBlockGraph.html#acd6a4b291c9aab8abdc466f985975d0d">addCFBBEdge</a>(pEdge);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="comment">// Other nodes are intra-procedural</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                        <span class="comment">// no return function</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                        <span class="keywordflow">if</span>(!retEdge-&gt;getSrcNode()-&gt;getFun()-&gt;hasReturn()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                        CFBasicBlockEdge *pEdge = <span class="keyword">new</span> CFBasicBlockEdge(bbToNodes[retEdge-&gt;getSrcNode()-&gt;getBB()].back(),</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                bbNodes.second[i],</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                                retEdge);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                        <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a4a298a45e54cbaf41cdf44aeea1a63f3">_CFBasicBlockG</a>-&gt;<a class="code" href="classSVF_1_1CFBasicBlockGraph.html#acd6a4b291c9aab8abdc466f985975d0d">addCFBBEdge</a>(pEdge);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                <span class="comment">// Other nodes are intra-procedural</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -398,16 +400,16 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="CFBasicBlockGBuilder_8cpp_source.html#l00217">217</a> of file <a class="el" href="CFBasicBlockGBuilder_8cpp_source.html">CFBasicBlockGBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;{</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a4a298a45e54cbaf41cdf44aeea1a63f3">_CFBasicBlockG</a> = <span class="keyword">new</span> CFBasicBlockGraph();</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    Map&lt;const SVFBasicBlock *, std::vector&lt;CFBasicBlockNode *&gt;&gt; bbToNodes;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a43c0cba051306acc6440f60165b835e6">initCFBasicBlockGNodes</a>(icfg, bbToNodes);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a2c9f8c120522e31124364f485e873608">addInterBBEdge</a>(icfg, bbToNodes);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#ae6c8497f1cd2e3ca63b899ea11757b31">addIntraBBEdge</a>(icfg, bbToNodes);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a2a72cd05458304eaae145532448cf913">addInterProceduralEdge</a>(icfg, bbToNodes);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CFBasicBlockGBuilder_8cpp_source.html#l00219">219</a> of file <a class="el" href="CFBasicBlockGBuilder_8cpp_source.html">CFBasicBlockGBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a4a298a45e54cbaf41cdf44aeea1a63f3">_CFBasicBlockG</a> = <span class="keyword">new</span> CFBasicBlockGraph();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    Map&lt;const SVFBasicBlock *, std::vector&lt;CFBasicBlockNode *&gt;&gt; bbToNodes;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a43c0cba051306acc6440f60165b835e6">initCFBasicBlockGNodes</a>(icfg, bbToNodes);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a2c9f8c120522e31124364f485e873608">addInterBBEdge</a>(icfg, bbToNodes);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#ae6c8497f1cd2e3ca63b899ea11757b31">addIntraBBEdge</a>(icfg, bbToNodes);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="classSVF_1_1CFBasicBlockGBuilder.html#a2a72cd05458304eaae145532448cf913">addInterProceduralEdge</a>(icfg, bbToNodes);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

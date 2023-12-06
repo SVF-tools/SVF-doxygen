@@ -430,7 +430,7 @@ var searchData=
   ['geteventtype_2467',['getEventType',['../classSVF_1_1SVFBugEvent.html#a7ded0022f3852a08a05c67aeae77162f',1,'SVF::SVFBugEvent']]],
   ['getexecutionstate_2468',['getExecutionState',['../classSVF_1_1SymState.html#aaaaa4e2a25d1cce483272a5da91886bd',1,'SVF::SymState::getExecutionState() const'],['../classSVF_1_1SymState.html#a188a2f94614d913913127d839b9884ee',1,'SVF::SymState::getExecutionState()']]],
   ['getexestatekind_2469',['getExeStateKind',['../classSVF_1_1ExeState.html#ab7f7de02202838bb9e3da5410983cfb1',1,'SVF::ExeState']]],
-  ['getexitbb_2470',['getExitBB',['../classSVF_1_1SVFFunction.html#a8ca4fa87f4c26b71c6e03c8f32db1071',1,'SVF::SVFFunction']]],
+  ['getexitbb_2470',['getExitBB',['../classSVF_1_1SVFFunction.html#ac4c28c8d205d354f3a982119f29f2aac',1,'SVF::SVFFunction']]],
   ['getexitblocksofloop_2471',['getExitBlocksOfLoop',['../classSVF_1_1SVFLoopAndDomInfo.html#a48654f61a84ac5f93b02fb618cd0d045',1,'SVF::SVFLoopAndDomInfo::getExitBlocksOfLoop()'],['../classSVF_1_1SVFFunction.html#a61505b528343c7d728eba3a705930a16',1,'SVF::SVFFunction::getExitBlocksOfLoop()']]],
   ['getexitinstofparentroutinefun_2472',['getExitInstOfParentRoutineFun',['../classSVF_1_1ForkJoinAnalysis.html#ae9fe4c9382f13d339db3baa39d956b05',1,'SVF::ForkJoinAnalysis']]],
   ['getexpr_2473',['getExpr',['../classSVF_1_1Z3Expr.html#a57c199ba2c3c6a6d44a86e0b1429be55',1,'SVF::Z3Expr']]],
