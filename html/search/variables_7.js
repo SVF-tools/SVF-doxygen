@@ -10,7 +10,7 @@ var searchData=
   ['gepnodenumindex_11326',['gepNodeNumIndex',['../PAGBuilderFromFile_8cpp.html#a1af3947dbaf1ad4364bc4818f70ead40',1,'PAGBuilderFromFile.cpp']]],
   ['gepobjvarmap_11327',['GepObjVarMap',['../classSVF_1_1SVFIR.html#a09a604cf6a7708f4391fcf807fec1453',1,'SVF::SVFIR']]],
   ['gepoutedges_11328',['gepOutEdges',['../classSVF_1_1ConstraintNode.html#a583880cd83a9f353003e199401d1b024',1,'SVF::ConstraintNode']]],
-  ['gepsourceelementtype_11329',['gepSourceElementType',['../classSVF_1_1AccessPath.html#ad059cd0b190e8cb852984a670dc51d75',1,'SVF::AccessPath']]],
+  ['geppointeetype_11329',['gepPointeeType',['../classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985',1,'SVF::AccessPath']]],
   ['gepsrcnodes_11330',['gepSrcNodes',['../classSVF_1_1AliasDDAClient.html#ab165537f4c9a318f31de8a272a529c9c',1,'SVF::AliasDDAClient']]],
   ['geptime_11331',['gepTime',['../classSVF_1_1FlowSensitive.html#a282126e5b67ed4e19aa40c81180b8290',1,'SVF::FlowSensitive']]],
   ['gepvalobjmap_11332',['GepValObjMap',['../classSVF_1_1SVFIR.html#ad7bbe1abea55ed03c9b6c81891c0bd67',1,'SVF::SVFIR']]],

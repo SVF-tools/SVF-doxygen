@@ -361,7 +361,7 @@ var searchData=
   ['getgepobjvar_8528',['getGepObjVar',['../classSVF_1_1ConstraintGraph.html#a64c3531053c084bf7195c0900d8902c9',1,'SVF::ConstraintGraph::getGepObjVar()'],['../classSVF_1_1PointerAnalysis.html#aac6ccf3dc313e3c6761bb57316829da8',1,'SVF::PointerAnalysis::getGepObjVar()'],['../classSVF_1_1SVFIR.html#ae18425df0631aefca7dd4b799f6f524a',1,'SVF::SVFIR::getGepObjVar(const MemObj *obj, const APOffset &amp;ap)'],['../classSVF_1_1SVFIR.html#a7abc062d05db516ece2805949aa45c46',1,'SVF::SVFIR::getGepObjVar(NodeID id, const APOffset &amp;ap)']]],
   ['getgepoffset_8529',['getGepOffset',['../classSVF_1_1SVFIR2ConsExeState.html#ae7720cdcb509ecfccbda141986643684',1,'SVF::SVFIR2ConsExeState']]],
   ['getgepoutedges_8530',['getGepOutEdges',['../classSVF_1_1ConstraintNode.html#a19d3d2c996ba821227a836717e5443c8',1,'SVF::ConstraintNode']]],
-  ['getgepsourceelementtype_8531',['getGepSourceElementType',['../classSVF_1_1AccessPath.html#a4e7d73c473a54c69fd01692ee0a9cf35',1,'SVF::AccessPath']]],
+  ['getgeppointeetype_8531',['getGepPointeeType',['../classSVF_1_1AccessPath.html#a8e0c5f7549c3b6a7808caacd57bf2035',1,'SVF::AccessPath']]],
   ['getgepvalvar_8532',['getGepValVar',['../classSVF_1_1SVFIRBuilder.html#ae4516ec05eabece1bc8e0cad1ec8cf1c',1,'SVF::SVFIRBuilder::getGepValVar()'],['../classSVF_1_1SVFIR.html#ad0977d55d947bdccd98d61c66d3f0cc7',1,'SVF::SVFIR::getGepValVar()']]],
   ['getglobalicfgnode_8533',['getGlobalICFGNode',['../classSVF_1_1ICFG.html#ae0b05ce161d62362642803158228e5d0',1,'SVF::ICFG']]],
   ['getglobalrep_8534',['getGlobalRep',['../classSVF_1_1LLVMModuleSet.html#a757bf149437cce22163c764ea9993e12',1,'SVF::LLVMModuleSet::getGlobalRep()'],['../namespaceSVF_1_1LLVMUtil.html#a9e0c786488dfdc4605d4cbcf9943c85a',1,'SVF::LLVMUtil::getGlobalRep()']]],
