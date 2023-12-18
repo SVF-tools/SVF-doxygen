@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['cfbasicblockgbuilder_13161',['CFBasicBlockGBuilder',['../classSVF_1_1CFBasicBlockGraph.html#a7ce096ffa0d05b095e3dbb649917265f',1,'SVF::CFBasicBlockGraph']]],
-  ['chgbuilder_13162',['CHGBuilder',['../classSVF_1_1CHGraph.html#af776f260ae050aa392e32f2a03f23733',1,'SVF::CHGraph']]]
+  ['cfbasicblockgbuilder_13193',['CFBasicBlockGBuilder',['../classSVF_1_1CFBasicBlockGraph.html#a7ce096ffa0d05b095e3dbb649917265f',1,'SVF::CFBasicBlockGraph']]],
+  ['chgbuilder_13194',['CHGBuilder',['../classSVF_1_1CHGraph.html#af776f260ae050aa392e32f2a03f23733',1,'SVF::CHGraph']]]
 ];
