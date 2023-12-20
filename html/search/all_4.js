@@ -228,10 +228,12 @@ var searchData=
   ['dumpsustore_1692',['DumpSUStore',['../classSVF_1_1Options.html#ab64401bdde8b0c846a78f21423e5cfb6',1,'SVF::Options']]],
   ['dumptojsonfile_1693',['dumpToJsonFile',['../classSVF_1_1SVFBugReport.html#aa119593331403f73867fddcb6ec26989',1,'SVF::SVFBugReport']]],
   ['dumptoplevelptsto_1694',['dumpTopLevelPtsTo',['../classSVF_1_1PointerAnalysis.html#a627bdc95485fd65e8846fcaa5e89559f',1,'SVF::PointerAnalysis::dumpTopLevelPtsTo()'],['../classSVF_1_1BVDataPTAImpl.html#ad34eea2a5ec26e0b2b6a78914879f989',1,'SVF::BVDataPTAImpl::dumpTopLevelPtsTo()'],['../classSVF_1_1CondPTAImpl.html#a80daa422e0dacf75aceb4fe5b4687c04',1,'SVF::CondPTAImpl::dumpTopLevelPtsTo()'],['../classSVF_1_1Andersen.html#a43858bd242c7f2c5f33c3c0f6445376a',1,'SVF::Andersen::dumpTopLevelPtsTo()']]],
-  ['dumpuninitptr_1695',['DumpUninitPtr',['../classSVF_1_1Options.html#a296e4a2187d14828cb0baf859f48d716',1,'SVF::Options']]],
-  ['dumpuninitvar_1696',['DumpUninitVar',['../classSVF_1_1Options.html#ab8075fe929f99b640d5c0a0530297025',1,'SVF::Options']]],
-  ['dumpvfg_1697',['DumpVFG',['../classSVF_1_1Options.html#ae3ad3003a8d3df2f1e3463248bb5ad51',1,'SVF::Options']]],
-  ['dval_1698',['dval',['../classSVF_1_1SVFConstantFP.html#aa1d551ad74dd5ce3eb4b7d639aec31a9',1,'SVF::SVFConstantFP']]],
-  ['dwpa_1699',['DWPA',['../SVFType_8h.html#a45d9233db3cad59f4f72b7c573bae180',1,'SVFType.h']]],
-  ['dyn_5fcast_1700',['dyn_cast',['../namespaceSVF_1_1SVFUtil.html#af6e96694d983643a66c238cce01bff0e',1,'SVF::SVFUtil::dyn_cast(const Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a52d852ba8fa569e858565b3bba403656',1,'SVF::SVFUtil::dyn_cast(Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a105c5c5e97d56533fb2b3ba7a0bc59f3',1,'SVF::SVFUtil::dyn_cast(Y *Val)']]]
+  ['dumptype_1695',['dumpType',['../namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9',1,'SVF::LLVMUtil']]],
+  ['dumpuninitptr_1696',['DumpUninitPtr',['../classSVF_1_1Options.html#a296e4a2187d14828cb0baf859f48d716',1,'SVF::Options']]],
+  ['dumpuninitvar_1697',['DumpUninitVar',['../classSVF_1_1Options.html#ab8075fe929f99b640d5c0a0530297025',1,'SVF::Options']]],
+  ['dumpvalue_1698',['dumpValue',['../namespaceSVF_1_1LLVMUtil.html#afa2f8c8ab19c75547c26ede53b9f6159',1,'SVF::LLVMUtil']]],
+  ['dumpvfg_1699',['DumpVFG',['../classSVF_1_1Options.html#ae3ad3003a8d3df2f1e3463248bb5ad51',1,'SVF::Options']]],
+  ['dval_1700',['dval',['../classSVF_1_1SVFConstantFP.html#aa1d551ad74dd5ce3eb4b7d639aec31a9',1,'SVF::SVFConstantFP']]],
+  ['dwpa_1701',['DWPA',['../SVFType_8h.html#a45d9233db3cad59f4f72b7c573bae180',1,'SVFType.h']]],
+  ['dyn_5fcast_1702',['dyn_cast',['../namespaceSVF_1_1SVFUtil.html#af6e96694d983643a66c238cce01bff0e',1,'SVF::SVFUtil::dyn_cast(const Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a52d852ba8fa569e858565b3bba403656',1,'SVF::SVFUtil::dyn_cast(Y &amp;Val)'],['../namespaceSVF_1_1SVFUtil.html#a105c5c5e97d56533fb2b3ba7a0bc59f3',1,'SVF::SVFUtil::dyn_cast(Y *Val)']]]
 ];
