@@ -793,44 +793,44 @@ Friends</h2></td></tr>
 
 <p>Another debug method. </p>
 
-<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00329">329</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;{</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <a class="code" href="namespaceSVF.html#aedf0d6718ca176e0b9e17ab4b30729c6">OrderedMap&lt;SymID, SVFValue*&gt;</a> idmap;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">for</span> (ValueToIDMapTy::iterator iter = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.begin(); iter != <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.end();</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            ++iter)</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    {</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> i = iter-&gt;second;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* val = (<a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>*) iter-&gt;first;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        idmap[i] = val;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">for</span> (ValueToIDMapTy::iterator iter = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5840b742ed8c73ece548b9b4aede07ec">objSymMap</a>.begin(); iter != <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5840b742ed8c73ece548b9b4aede07ec">objSymMap</a>.end();</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            ++iter)</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> i = iter-&gt;second;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* val = (<a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>*) iter-&gt;first;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        idmap[i] = val;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    }</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordflow">for</span> (FunToIDMapTy::iterator iter = <a class="code" href="classSVF_1_1SymbolTableInfo.html#ae6f8a4dbe09ff4756983ffdbed6d0681">returnSymMap</a>.begin(); iter != <a class="code" href="classSVF_1_1SymbolTableInfo.html#ae6f8a4dbe09ff4756983ffdbed6d0681">returnSymMap</a>.end();</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            ++iter)</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> i = iter-&gt;second;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* val = (<a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>*) iter-&gt;first;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        idmap[i] = val;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">for</span> (FunToIDMapTy::iterator iter = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a94c06e5ac0b50989743a9e63c9a6d5b9">varargSymMap</a>.begin(); iter != <a class="code" href="classSVF_1_1SymbolTableInfo.html#a94c06e5ac0b50989743a9e63c9a6d5b9">varargSymMap</a>.end();</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            ++iter)</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> i = iter-&gt;second;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* val = (<a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>*) iter-&gt;first;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        idmap[i] = val;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;{SymbolTableInfo \n&quot;</span>;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iter : idmap)</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; iter.first &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; iter.second-&gt;toString() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span>;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00330">330</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;{</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <a class="code" href="namespaceSVF.html#aedf0d6718ca176e0b9e17ab4b30729c6">OrderedMap&lt;SymID, SVFValue*&gt;</a> idmap;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">for</span> (ValueToIDMapTy::iterator iter = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.begin(); iter != <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.end();</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            ++iter)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> i = iter-&gt;second;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* val = (<a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>*) iter-&gt;first;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        idmap[i] = val;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">for</span> (ValueToIDMapTy::iterator iter = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5840b742ed8c73ece548b9b4aede07ec">objSymMap</a>.begin(); iter != <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5840b742ed8c73ece548b9b4aede07ec">objSymMap</a>.end();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            ++iter)</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> i = iter-&gt;second;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* val = (<a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>*) iter-&gt;first;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        idmap[i] = val;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">for</span> (FunToIDMapTy::iterator iter = <a class="code" href="classSVF_1_1SymbolTableInfo.html#ae6f8a4dbe09ff4756983ffdbed6d0681">returnSymMap</a>.begin(); iter != <a class="code" href="classSVF_1_1SymbolTableInfo.html#ae6f8a4dbe09ff4756983ffdbed6d0681">returnSymMap</a>.end();</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            ++iter)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> i = iter-&gt;second;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* val = (<a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>*) iter-&gt;first;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        idmap[i] = val;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">for</span> (FunToIDMapTy::iterator iter = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a94c06e5ac0b50989743a9e63c9a6d5b9">varargSymMap</a>.begin(); iter != <a class="code" href="classSVF_1_1SymbolTableInfo.html#a94c06e5ac0b50989743a9e63c9a6d5b9">varargSymMap</a>.end();</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            ++iter)</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48">SymID</a> i = iter-&gt;second;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* val = (<a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>*) iter-&gt;first;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        idmap[i] = val;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;{SymbolTableInfo \n&quot;</span>;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iter : idmap)</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; iter.first &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; iter.second-&gt;toString() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1498,20 +1498,20 @@ Friends</h2></td></tr>
 
 <p>Get different kinds of syms. </p>
 
-<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00568">568</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;{</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    <span class="keywordflow">if</span>(val-&gt;<a class="code" href="classSVF_1_1SVFValue.html#ac29e2f5e75cc6916be6a663ca6d51177">isNullPtr</a>())</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SymbolTableInfo.html#adaed6e68c2f53260ed4c4fc38b5c4721">nullPtrSymID</a>();</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (val-&gt;<a class="code" href="classSVF_1_1SVFValue.html#acb5d0311477899abb4c222cd44376c73">isblackHole</a>())</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SymbolTableInfo.html#a1689fa03795200b501ae3887906e7e72">blkPtrSymID</a>();</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    {</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        ValueToIDMapTy::const_iterator iter =  <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.find(val);</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        assert(iter!=<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.end() &amp;&amp;<span class="stringliteral">&quot;value sym not found&quot;</span>);</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <span class="keywordflow">return</span> iter-&gt;second;</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    }</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00569">569</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;{</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160; </div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keywordflow">if</span>(val-&gt;<a class="code" href="classSVF_1_1SVFValue.html#ac29e2f5e75cc6916be6a663ca6d51177">isNullPtr</a>())</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SymbolTableInfo.html#adaed6e68c2f53260ed4c4fc38b5c4721">nullPtrSymID</a>();</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (val-&gt;<a class="code" href="classSVF_1_1SVFValue.html#acb5d0311477899abb4c222cd44376c73">isblackHole</a>())</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SymbolTableInfo.html#a1689fa03795200b501ae3887906e7e72">blkPtrSymID</a>();</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    {</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        ValueToIDMapTy::const_iterator iter =  <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.find(val);</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        assert(iter!=<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.end() &amp;&amp;<span class="stringliteral">&quot;value sym not found&quot;</span>);</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        <span class="keywordflow">return</span> iter-&gt;second;</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    }</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1595,13 +1595,13 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00583">583</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;{</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    <span class="keywordflow">if</span> (val-&gt;<a class="code" href="classSVF_1_1SVFValue.html#ac29e2f5e75cc6916be6a663ca6d51177">isNullPtr</a>() || val-&gt;<a class="code" href="classSVF_1_1SVFValue.html#acb5d0311477899abb4c222cd44376c73">isblackHole</a>())</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.find(val) != <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.end());</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00584">584</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;{</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <span class="keywordflow">if</span> (val-&gt;<a class="code" href="classSVF_1_1SVFValue.html#ac29e2f5e75cc6916be6a663ca6d51177">isNullPtr</a>() || val-&gt;<a class="code" href="classSVF_1_1SVFValue.html#acb5d0311477899abb4c222cd44376c73">isblackHole</a>())</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.find(val) != <a class="code" href="classSVF_1_1SymbolTableInfo.html#a5054f95a7b77257ffb283044aab17b08">valSymMap</a>.end());</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1925,29 +1925,30 @@ Friends</h2></td></tr>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFPointerType.html">SVFPointerType</a>* pt= SVFUtil::dyn_cast&lt;SVFPointerType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    {</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> eSize = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a811a3489df0f793c7a5482d31d470a4c">getNumOfFlattenElements</a>(pt-&gt;getPtrElementType());</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  {Type: &quot;</span> &lt;&lt; *pt &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;\t [target size = &quot;</span> &lt;&lt; eSize &lt;&lt; <span class="stringliteral">&quot;]\n&quot;</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunctionType.html">SVFFunctionType</a>* fu =</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                 SVFUtil::dyn_cast&lt;SVFFunctionType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  {Type: &quot;</span> &lt;&lt; *fu &lt;&lt; <span class="stringliteral">&quot;}\n\n&quot;</span>;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFOtherType.html">SVFOtherType</a>* ot = SVFUtil::dyn_cast&lt;SVFOtherType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  {Type: &quot;</span>&lt;&lt; *ot &lt;&lt; <span class="stringliteral">&quot;(SVFOtherType)}\n\n&quot;</span>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        assert(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>-&gt;isSingleValueType() &amp;&amp; <span class="stringliteral">&quot;not a single value type, then what else!!&quot;</span>);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> eSize = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a811a3489df0f793c7a5482d31d470a4c">getNumOfFlattenElements</a>(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  {Type: &quot;</span> &lt;&lt; *<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;\t [object size = &quot;</span> &lt;&lt; eSize &lt;&lt; <span class="stringliteral">&quot;]\n&quot;</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="comment">// TODO: getPtrElementType to be removed</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> eSize = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a811a3489df0f793c7a5482d31d470a4c">getNumOfFlattenElements</a>(pt-&gt;getPtrElementType());</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  {Type: &quot;</span> &lt;&lt; *pt &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;\t [target size = &quot;</span> &lt;&lt; eSize &lt;&lt; <span class="stringliteral">&quot;]\n&quot;</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunctionType.html">SVFFunctionType</a>* fu =</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                 SVFUtil::dyn_cast&lt;SVFFunctionType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  {Type: &quot;</span> &lt;&lt; *fu &lt;&lt; <span class="stringliteral">&quot;}\n\n&quot;</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFOtherType.html">SVFOtherType</a>* ot = SVFUtil::dyn_cast&lt;SVFOtherType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  {Type: &quot;</span>&lt;&lt; *ot &lt;&lt; <span class="stringliteral">&quot;(SVFOtherType)}\n\n&quot;</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        assert(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>-&gt;isSingleValueType() &amp;&amp; <span class="stringliteral">&quot;not a single value type, then what else!!&quot;</span>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> eSize = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a811a3489df0f793c7a5482d31d470a4c">getNumOfFlattenElements</a>(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  {Type: &quot;</span> &lt;&lt; *<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;\t [object size = &quot;</span> &lt;&lt; eSize &lt;&lt; <span class="stringliteral">&quot;]\n&quot;</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2140,48 +2141,48 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00286">286</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">switch</span> (symtype)</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::BlackHole:</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;BlackHole&quot;</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    }</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::ConstantObj:</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ConstantObj&quot;</span>;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::BlkPtr:</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;BlkPtr&quot;</span>;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::NullPtr:</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;NullPtr&quot;</span>;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::ValSymbol:</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ValSym&quot;</span>;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::ObjSymbol:</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ObjSym&quot;</span>;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::RetSymbol:</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;RetSym&quot;</span>;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::VarargSymbol:</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;VarargSym&quot;</span>;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Invalid SYMTYPE&quot;</span>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00287">287</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;{</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">switch</span> (symtype)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::BlackHole:</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;BlackHole&quot;</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::ConstantObj:</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ConstantObj&quot;</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::BlkPtr:</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;BlkPtr&quot;</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::NullPtr:</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;NullPtr&quot;</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::ValSymbol:</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ValSym&quot;</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::ObjSymbol:</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ObjSym&quot;</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::RetSymbol:</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;RetSym&quot;</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">case</span> SYMTYPE::VarargSymbol:</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;VarargSym&quot;</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Invalid SYMTYPE&quot;</span>;</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2701,7 +2702,7 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_acb5d0311477899abb4c222cd44376c73"><div class="ttname"><a href="classSVF_1_1SVFValue.html#acb5d0311477899abb4c222cd44376c73">SVF::SVFValue::isblackHole</a></div><div class="ttdeci">bool isblackHole() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00268">SVFValue.h:268</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_aaab923c093730b1670a54f09340b1bd5"><div class="ttname"><a href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">SVF::Options::MaxFieldLimit</a></div><div class="ttdeci">static const Option&lt; u32_t &gt; MaxFieldLimit</div><div class="ttdoc">Maximum number of field derivations for an object.</div><div class="ttdef"><b>Definition:</b> <a href="Options_8h_source.html#l00038">Options.h:38</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_a18dd95e01a50aa82165c46a3801053c5"><div class="ttname"><a href="classSVF_1_1Options.html#a18dd95e01a50aa82165c46a3801053c5">SVF::Options::ModelConsts</a></div><div class="ttdeci">static const Option&lt; bool &gt; ModelConsts</div><div class="ttdef"><b>Definition:</b> <a href="Options_8h_source.html#l00218">Options.h:218</a></div></div>
-<div class="ttc" id="aclassSVF_1_1MemObj_html_a51be7ad70bc2c6a4230bd2f6b86bdc88"><div class="ttname"><a href="classSVF_1_1MemObj.html#a51be7ad70bc2c6a4230bd2f6b86bdc88">SVF::MemObj::getMaxFieldOffsetLimit</a></div><div class="ttdeci">u32_t getMaxFieldOffsetLimit() const</div><div class="ttdoc">Get max field offset limit.</div><div class="ttdef"><b>Definition:</b> <a href="SymbolTableInfo_8cpp_source.html#l00466">SymbolTableInfo.cpp:466</a></div></div>
+<div class="ttc" id="aclassSVF_1_1MemObj_html_a51be7ad70bc2c6a4230bd2f6b86bdc88"><div class="ttname"><a href="classSVF_1_1MemObj.html#a51be7ad70bc2c6a4230bd2f6b86bdc88">SVF::MemObj::getMaxFieldOffsetLimit</a></div><div class="ttdeci">u32_t getMaxFieldOffsetLimit() const</div><div class="ttdoc">Get max field offset limit.</div><div class="ttdef"><b>Definition:</b> <a href="SymbolTableInfo_8cpp_source.html#l00467">SymbolTableInfo.cpp:467</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SymbolTableInfo_html_a4fbb8ea4b4796d10d13c027b7455505c"><div class="ttname"><a href="classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c">SVF::SymbolTableInfo::symInfo</a></div><div class="ttdeci">static SymbolTableInfo * symInfo</div><div class="ttdef"><b>Definition:</b> <a href="SymbolTableInfo_8h_source.html#l00089">SymbolTableInfo.h:89</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFOtherType_html"><div class="ttname"><a href="classSVF_1_1SVFOtherType.html">SVF::SVFOtherType</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00509">SVFType.h:509</a></div></div>
 <div class="ttc" id="aclassSVF_1_1StInfo_html_a055697f565cb9d73b41110090fe50159"><div class="ttname"><a href="classSVF_1_1StInfo.html#a055697f565cb9d73b41110090fe50159">SVF::StInfo::getOriginalElemType</a></div><div class="ttdeci">const SVFType * getOriginalElemType(u32_t fldIdx) const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8cpp_source.html#l00026">SVFValue.cpp:26</a></div></div>

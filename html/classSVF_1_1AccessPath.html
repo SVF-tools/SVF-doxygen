@@ -122,8 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab95df74c97fba13206df48e00131e15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a586c71842e3e4487921aa3384ce9d025"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a> () const</td></tr>
 <tr class="separator:a586c71842e3e4487921aa3384ce9d025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e0c5f7549c3b6a7808caacd57bf2035"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1SVFType.html">SVFType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#a8e0c5f7549c3b6a7808caacd57bf2035">getGepPointeeType</a> () const</td></tr>
-<tr class="separator:a8e0c5f7549c3b6a7808caacd57bf2035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4921dea37246f0f08dffa7db384a61"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1SVFType.html">SVFType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#a7b4921dea37246f0f08dffa7db384a61">gepSrcPointeeType</a> () const</td></tr>
+<tr class="separator:a7b4921dea37246f0f08dffa7db384a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43dc770c4458c6ac58c591974b93fc57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#a43dc770c4458c6ac58c591974b93fc57">computeConstantByteOffset</a> () const</td></tr>
 <tr class="separator:a43dc770c4458c6ac58c591974b93fc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae746362c42da05a641ae062658e40651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AccessPath.html#ae746362c42da05a641ae062658e40651">computeConstantOffset</a> () const</td></tr>
@@ -310,7 +310,7 @@ Friends</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="AccessPath_8h_source.html#l00071">71</a> of file <a class="el" href="AccessPath_8h_source.html">AccessPath.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        : <a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a>(ap.fldIdx),</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>(ap.getIdxOperandPairVec()),</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          <a class="code" href="classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985">gepPointeeType</a>(ap.getGepPointeeType())</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          <a class="code" href="classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985">gepPointeeType</a>(ap.gepSrcPointeeType())</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 </div><!-- fragment -->
@@ -416,26 +416,26 @@ Friends</h2></td></tr>
 
 <p>Check relations of two location sets. </p>
 
-<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00304">304</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;{</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <a class="code" href="classSVF_1_1SparseBitVector.html">NodeBS</a> lhsLocations = LHS.<a class="code" href="classSVF_1_1AccessPath.html#a76222b6571e46e8a8bd5c8c597c8ffaf">computeAllLocations</a>();</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classSVF_1_1SparseBitVector.html">NodeBS</a> rhsLocations = RHS.<a class="code" href="classSVF_1_1AccessPath.html#a76222b6571e46e8a8bd5c8c597c8ffaf">computeAllLocations</a>();</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">if</span> (lhsLocations.<a class="code" href="classSVF_1_1SparseBitVector.html#a16756e0545fd3d50ab89f45a2e83bb79">intersects</a>(rhsLocations))</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">if</span> (lhsLocations == rhsLocations)</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245ab1ba3a42758473e5ff427ba36147a56a">Same</a>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhsLocations.<a class="code" href="classSVF_1_1SparseBitVector.html#abbd0e0cf759fad7858224ed8a63aade8">contains</a>(rhsLocations))</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245a52a64f855e6233e88b319cf2f3442f14">Superset</a>;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhsLocations.<a class="code" href="classSVF_1_1SparseBitVector.html#abbd0e0cf759fad7858224ed8a63aade8">contains</a>(lhsLocations))</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245a45bfb1e14fd39a700dba1243afe022e4">Subset</a>;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245afbdf7000b827f7d8590e5f0997e0d59a">Overlap</a>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245acb3c4a3f685068e391025eb01ebf061d">NonOverlap</a>;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    }</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00305">305</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classSVF_1_1SparseBitVector.html">NodeBS</a> lhsLocations = LHS.<a class="code" href="classSVF_1_1AccessPath.html#a76222b6571e46e8a8bd5c8c597c8ffaf">computeAllLocations</a>();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <a class="code" href="classSVF_1_1SparseBitVector.html">NodeBS</a> rhsLocations = RHS.<a class="code" href="classSVF_1_1AccessPath.html#a76222b6571e46e8a8bd5c8c597c8ffaf">computeAllLocations</a>();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">if</span> (lhsLocations.<a class="code" href="classSVF_1_1SparseBitVector.html#a16756e0545fd3d50ab89f45a2e83bb79">intersects</a>(rhsLocations))</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">if</span> (lhsLocations == rhsLocations)</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245ab1ba3a42758473e5ff427ba36147a56a">Same</a>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhsLocations.<a class="code" href="classSVF_1_1SparseBitVector.html#abbd0e0cf759fad7858224ed8a63aade8">contains</a>(rhsLocations))</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245a52a64f855e6233e88b319cf2f3442f14">Superset</a>;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhsLocations.<a class="code" href="classSVF_1_1SparseBitVector.html#abbd0e0cf759fad7858224ed8a63aade8">contains</a>(lhsLocations))</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245a45bfb1e14fd39a700dba1243afe022e4">Subset</a>;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245afbdf7000b827f7d8590e5f0997e0d59a">Overlap</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245acb3c4a3f685068e391025eb01ebf061d">NonOverlap</a>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -465,12 +465,12 @@ Friends</h2></td></tr>
 <p>Compute all possible locations according to offset and number-stride pairs. </p>
 <p>Compute all possible locations according to offset and number-stride pairs. </p>
 
-<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00262">262</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <a class="code" href="classSVF_1_1SparseBitVector.html">NodeBS</a> result;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    result.<a class="code" href="classSVF_1_1SparseBitVector.html#a61bd86909a141f9de873d92c0f904832">set</a>(<a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>());</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00263">263</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="classSVF_1_1SparseBitVector.html">NodeBS</a> result;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    result.<a class="code" href="classSVF_1_1SparseBitVector.html#a61bd86909a141f9de873d92c0f904832">set</a>(<a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>());</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -500,45 +500,45 @@ Friends</h2></td></tr>
 <p>for (1) structType: struct.DEST structField = 0, flattenIdx = 0, type2: int structField = 1, flattenIdx = 1, type2: char[10] structField = 2, flattenIdx = 11, type2: int[5]</p>
 <p>for (2) i = 0, op: 0, type: [10 x i8]*(Ptr), type2: [10 x i8](Arr) i = 1, op: 8, type: [10 x i8](Arr), type2: i8</p>
 
-<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00097">97</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    assert(<a class="code" href="classSVF_1_1AccessPath.html#a403312192a96a9fd5e7d071481592a7f">isConstantOffset</a>() &amp;&amp; <span class="stringliteral">&quot;not a constant offset&quot;</span>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> totalConstOffset = 0;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>.size() - 1; i &gt;= 0; i--)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">//  (2) %arrayidx = getelementptr inbounds [10 x i8], [10 x i8]* %b, i64 0, i64 8</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* value = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>[i].first-&gt;getValue();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* <a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>[i].second;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        assert(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> &amp;&amp; <span class="stringliteral">&quot;this GepStmt comes from ExternalAPI cannot call this api&quot;</span>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* type2 = <a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFArrayType.html">SVFArrayType</a>* arrType = SVFUtil::dyn_cast&lt;SVFArrayType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            type2 = arrType-&gt;getTypeOfElement();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFPointerType.html">SVFPointerType</a>* ptrType = SVFUtil::dyn_cast&lt;SVFPointerType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            type2 = ptrType-&gt;getPtrElementType();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFConstantInt.html">SVFConstantInt</a>* op = SVFUtil::dyn_cast&lt;SVFConstantInt&gt;(value);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFStructType.html">SVFStructType</a>* structType = SVFUtil::dyn_cast&lt;SVFStructType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> structField = 0; structField &lt; (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>)op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>(); ++structField)</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> flattenIdx = structType-&gt;getTypeInfo()-&gt;getFlattenedFieldIdxVec()[structField];</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                type2 = structType-&gt;<a class="code" href="classSVF_1_1SVFType.html#a05850c17c2dbe42e5602dc8c9a70f3bd">getTypeInfo</a>()-&gt;<a class="code" href="classSVF_1_1StInfo.html#a055697f565cb9d73b41110090fe50159">getOriginalElemType</a>(flattenIdx);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                totalConstOffset += type2-&gt;<a class="code" href="classSVF_1_1SVFType.html#a95b8031f1e15d49c7d68628be1d05aae">getByteSize</a>();</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            totalConstOffset += op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>() * type2-&gt;<a class="code" href="classSVF_1_1SVFType.html#a95b8031f1e15d49c7d68628be1d05aae">getByteSize</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    totalConstOffset = <a class="code" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() &gt; totalConstOffset? totalConstOffset: <a class="code" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> totalConstOffset;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00098">98</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    assert(<a class="code" href="classSVF_1_1AccessPath.html#a403312192a96a9fd5e7d071481592a7f">isConstantOffset</a>() &amp;&amp; <span class="stringliteral">&quot;not a constant offset&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> totalConstOffset = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>.size() - 1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">//  (2) %arrayidx = getelementptr inbounds [10 x i8], [10 x i8]* %b, i64 0, i64 8</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* value = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>[i].first-&gt;getValue();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* <a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>[i].second;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        assert(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> &amp;&amp; <span class="stringliteral">&quot;this GepStmt comes from ExternalAPI cannot call this api&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* type2 = <a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFArrayType.html">SVFArrayType</a>* arrType = SVFUtil::dyn_cast&lt;SVFArrayType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            type2 = arrType-&gt;getTypeOfElement();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;SVFPointerType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            type2 = <a class="code" href="classSVF_1_1AccessPath.html#a7b4921dea37246f0f08dffa7db384a61">gepSrcPointeeType</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFConstantInt.html">SVFConstantInt</a>* op = SVFUtil::dyn_cast&lt;SVFConstantInt&gt;(value);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFStructType.html">SVFStructType</a>* structType = SVFUtil::dyn_cast&lt;SVFStructType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> structField = 0; structField &lt; (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>)op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>(); ++structField)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> flattenIdx = structType-&gt;getTypeInfo()-&gt;getFlattenedFieldIdxVec()[structField];</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                type2 = structType-&gt;<a class="code" href="classSVF_1_1SVFType.html#a05850c17c2dbe42e5602dc8c9a70f3bd">getTypeInfo</a>()-&gt;<a class="code" href="classSVF_1_1StInfo.html#a055697f565cb9d73b41110090fe50159">getOriginalElemType</a>(flattenIdx);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                totalConstOffset += type2-&gt;<a class="code" href="classSVF_1_1SVFType.html#a95b8031f1e15d49c7d68628be1d05aae">getByteSize</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            totalConstOffset += op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>() * type2-&gt;<a class="code" href="classSVF_1_1SVFType.html#a95b8031f1e15d49c7d68628be1d05aae">getByteSize</a>();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    totalConstOffset = <a class="code" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() &gt; totalConstOffset? totalConstOffset: <a class="code" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> totalConstOffset;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -562,58 +562,58 @@ Friends</h2></td></tr>
 <p>Return accumulated constant offset</p>
 <p>"value" is the offset variable (must be a constant) "type" is the location where we want to compute offset Given a vector: [(value1,type1), (value2,type2), (value3,type3)] totalConstOffset = flattenOffset(value1,type1) * flattenOffset(value2,type2) + flattenOffset(value3,type3) For a pointer type (e.g., t1 is PointerType), we will retrieve the pointee type and times the offset, i.e., getElementNum(t1) X off1 %5 = getelementptr inbounds struct.Student, struct.Student* %4, i64 1 value1: i64 1 type1: struct.Student* computeConstantOffset = 32 %6 = getelementptr inbounds struct.Student, struct.Student* %5, i32 0, i32 1 value1: i32 0 type1: struct.Student* value2: i32 1 type2: struct.Student = type { struct.inner, [10 x [3 x i8]] } computeConstantOffset = 2 %7 = getelementptr inbounds [10 x [3 x i8]], [10 x [3 x i8]]* %6, i64 0, i64 3 value1: i64 0 type1: [10 x [3 x i8]]* value2: i64 3 type2: [10 x [3 x i8]] computeConstantOffset = 9 %8 = getelementptr inbounds [3 x i8], [3 x i8]* %7, i64 0, i64 2 value1: i64 0 type1: [3 x i8]* value2: i64 2 type2: [3 x i8] computeConstantOffset = 2 </p>
 
-<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00207">207</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    assert(<a class="code" href="classSVF_1_1AccessPath.html#a403312192a96a9fd5e7d071481592a7f">isConstantOffset</a>() &amp;&amp; <span class="stringliteral">&quot;not a constant offset&quot;</span>);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> totalConstOffset = 0;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">//After the model-const and model-array options are turned on,</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">// the gepstmt offset generated by the array on the global</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">// node will be saved in getConstantStructFldIdx</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>.size() == 0)</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>.size() - 1; i &gt;= 0; i--)</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* value = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>[i].first-&gt;getValue();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* <a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>[i].second;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFConstantInt.html">SVFConstantInt</a>* op = SVFUtil::dyn_cast&lt;SVFConstantInt&gt;(value);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        assert(op &amp;&amp; <span class="stringliteral">&quot;not a constant offset?&quot;</span>);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>==<span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            totalConstOffset += op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>();</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFPointerType.html">SVFPointerType</a>* pty = SVFUtil::dyn_cast&lt;SVFPointerType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            totalConstOffset += op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>() * <a class="code" href="classSVF_1_1AccessPath.html#a3c98f0c5f07109f9da0a8a897aa51d18">getElementNum</a>(pty-&gt;getPtrElementType());</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> <a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> = op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>();</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> &gt;= 0)</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keyword">const</span> std::vector&lt;u32_t&gt;&amp; so = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5dc699aa85fe879eb4b2c9109cf3030d">getTypeInfo</a>(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>)-&gt;<a class="code" href="classSVF_1_1StInfo.html#a55e5fd85f232c1867c5c6a73646d53eb">getFlattenedElemIdxVec</a>();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                <span class="comment">// if offset is larger than the size of getFlattenedElemIdxVec (overflow)</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <span class="comment">// set offset the last index of getFlattenedElemIdxVec to avoid assertion</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> &gt;= (<a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a>)so.size())</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;It is overflow access, we access the last idx\n&quot;</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    <a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> = so.size() - 1;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> flattenOffset =</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                    <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a24df52313f8093bb651ae9da972cd663">getFlattenedElemIdx</a>(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>,</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                            <a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                totalConstOffset += flattenOffset;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">return</span> totalConstOffset;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00208">208</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    assert(<a class="code" href="classSVF_1_1AccessPath.html#a403312192a96a9fd5e7d071481592a7f">isConstantOffset</a>() &amp;&amp; <span class="stringliteral">&quot;not a constant offset&quot;</span>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> totalConstOffset = 0;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">//After the model-const and model-array options are turned on,</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">// the gepstmt offset generated by the array on the global</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="comment">// node will be saved in getConstantStructFldIdx</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>.size() == 0)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>.size() - 1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* value = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>[i].first-&gt;getValue();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* <a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = <a class="code" href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">idxOperandPairs</a>[i].second;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFConstantInt.html">SVFConstantInt</a>* op = SVFUtil::dyn_cast&lt;SVFConstantInt&gt;(value);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        assert(op &amp;&amp; <span class="stringliteral">&quot;not a constant offset?&quot;</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>==<span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            totalConstOffset += op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span>(SVFUtil::isa&lt;SVFPointerType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            totalConstOffset += op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>() * <a class="code" href="classSVF_1_1AccessPath.html#a3c98f0c5f07109f9da0a8a897aa51d18">getElementNum</a>(<a class="code" href="classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985">gepPointeeType</a>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> <a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> = op-&gt;<a class="code" href="classSVF_1_1SVFConstantInt.html#a73f04bdfc19261b65164b98787bc2ed4">getSExtValue</a>();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> &gt;= 0)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                <span class="keyword">const</span> std::vector&lt;u32_t&gt;&amp; so = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5dc699aa85fe879eb4b2c9109cf3030d">getTypeInfo</a>(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>)-&gt;<a class="code" href="classSVF_1_1StInfo.html#a55e5fd85f232c1867c5c6a73646d53eb">getFlattenedElemIdxVec</a>();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <span class="comment">// if offset is larger than the size of getFlattenedElemIdxVec (overflow)</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="comment">// set offset the last index of getFlattenedElemIdxVec to avoid assertion</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> &gt;= (<a class="code" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a>)so.size())</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;It is overflow access, we access the last idx\n&quot;</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    <a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> = so.size() - 1;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> flattenOffset =</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a24df52313f8093bb651ae9da972cd663">getFlattenedElemIdx</a>(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>,</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                            <a class="code" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                totalConstOffset += flattenOffset;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">return</span> totalConstOffset;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -634,24 +634,54 @@ Friends</h2></td></tr>
 
 <p>Dump location set. </p>
 
-<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00326">326</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;{</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    std::stringstream rawstr(str);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;AccessPath\tField_Index: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;,\tNum-Stride: {&quot;</span>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a>&amp; vec = <a class="code" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a>();</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    IdxOperandPairs::const_iterator it = vec.begin();</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    IdxOperandPairs::const_iterator eit = vec.end();</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">for</span> (; it != eit; ++it)</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* ty = it-&gt;second;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot; (Svf var: &quot;</span> &lt;&lt; it-&gt;first-&gt;<a class="code" href="classSVF_1_1SVFType.html#a9035ac13134de4647d63507cd80ca3d6">toString</a>() &lt;&lt; <span class="stringliteral">&quot;, Iter type: &quot;</span> &lt;&lt; *ty &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot; }\n&quot;</span>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00327">327</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;{</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    std::stringstream rawstr(str);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;AccessPath\tField_Index: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;,\tNum-Stride: {&quot;</span>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a>&amp; vec = <a class="code" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a>();</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    IdxOperandPairs::const_iterator it = vec.begin();</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    IdxOperandPairs::const_iterator eit = vec.end();</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">for</span> (; it != eit; ++it)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* ty = it-&gt;second;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot; (Svf var: &quot;</span> &lt;&lt; it-&gt;first-&gt;<a class="code" href="classSVF_1_1SVFType.html#a9035ac13134de4647d63507cd80ca3d6">toString</a>() &lt;&lt; <span class="stringliteral">&quot;, Iter type: &quot;</span> &lt;&lt; *ty &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot; }\n&quot;</span>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7b4921dea37246f0f08dffa7db384a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4921dea37246f0f08dffa7db384a61">&#9670;&nbsp;</a></span>gepSrcPointeeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classSVF_1_1SVFType.html">SVFType</a>* SVF::AccessPath::gepSrcPointeeType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AccessPath_8h_source.html#l00112">112</a> of file <a class="el" href="AccessPath_8h_source.html">AccessPath.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985">gepPointeeType</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -716,52 +746,23 @@ Friends</h2></td></tr>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>-&gt;isSingleValueType())</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFPointerType.html">SVFPointerType</a>* pty = SVFUtil::dyn_cast&lt;SVFPointerType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#a3c98f0c5f07109f9da0a8a897aa51d18">getElementNum</a>(pty-&gt;getPtrElementType());</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;SVFFunctionType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; <span class="stringliteral">&quot;GepIter Type&quot;</span> &lt;&lt; *<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;What other types for this gep?&quot;</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        abort();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a8e0c5f7549c3b6a7808caacd57bf2035"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e0c5f7549c3b6a7808caacd57bf2035">&#9670;&nbsp;</a></span>getGepPointeeType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classSVF_1_1SVFType.html">SVFType</a>* SVF::AccessPath::getGepPointeeType </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AccessPath_8h_source.html#l00112">112</a> of file <a class="el" href="AccessPath_8h_source.html">AccessPath.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985">gepPointeeType</a>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// TODO: getPtrElementType to be removed</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFPointerType.html">SVFPointerType</a>* pty = SVFUtil::dyn_cast&lt;SVFPointerType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AccessPath.html#a3c98f0c5f07109f9da0a8a897aa51d18">getElementNum</a>(pty-&gt;getPtrElementType());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;SVFFunctionType&gt;(<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; <span class="stringliteral">&quot;GepIter Type&quot;</span> &lt;&lt; *<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;What other types for this gep?&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        abort();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -824,22 +825,22 @@ Friends</h2></td></tr>
 <p>Return byte offset from the beginning of the structure to the field where it is located for struct type. </p>
 <p>Return byte offset from the beginning of the structure to the field where it is located for struct type </p>
 
-<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00162">162</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* idxValue = idxOperandVar-&gt;<a class="code" href="classSVF_1_1SVFVar.html#ac2db6304ea5526fb446ae882983beeb0">getValue</a>();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> structByteOffset = 0;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFConstantInt.html">SVFConstantInt</a> *op = SVFUtil::dyn_cast&lt;SVFConstantInt&gt;(idxValue))</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> structField = 0; structField &lt; (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>)op-&gt;getSExtValue(); ++structField)</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> flattenIdx = idxOperandType-&gt;<a class="code" href="classSVF_1_1SVFType.html#a05850c17c2dbe42e5602dc8c9a70f3bd">getTypeInfo</a>()-&gt;<a class="code" href="classSVF_1_1StInfo.html#aaf05447c20c9f90eea64ab6e88d6ab05">getFlattenedFieldIdxVec</a>()[structField];</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            structByteOffset += idxOperandType-&gt;<a class="code" href="classSVF_1_1SVFType.html#a05850c17c2dbe42e5602dc8c9a70f3bd">getTypeInfo</a>()-&gt;<a class="code" href="classSVF_1_1StInfo.html#a055697f565cb9d73b41110090fe50159">getOriginalElemType</a>(flattenIdx)-&gt;<a class="code" href="classSVF_1_1SVFType.html#a95b8031f1e15d49c7d68628be1d05aae">getByteSize</a>();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> structByteOffset;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;struct type can only pair with constant idx&quot;</span>);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00163">163</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFValue.html">SVFValue</a>* idxValue = idxOperandVar-&gt;<a class="code" href="classSVF_1_1SVFVar.html#ac2db6304ea5526fb446ae882983beeb0">getValue</a>();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> structByteOffset = 0;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFConstantInt.html">SVFConstantInt</a> *op = SVFUtil::dyn_cast&lt;SVFConstantInt&gt;(idxValue))</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> structField = 0; structField &lt; (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>)op-&gt;getSExtValue(); ++structField)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> flattenIdx = idxOperandType-&gt;<a class="code" href="classSVF_1_1SVFType.html#a05850c17c2dbe42e5602dc8c9a70f3bd">getTypeInfo</a>()-&gt;<a class="code" href="classSVF_1_1StInfo.html#aaf05447c20c9f90eea64ab6e88d6ab05">getFlattenedFieldIdxVec</a>()[structField];</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            structByteOffset += idxOperandType-&gt;<a class="code" href="classSVF_1_1SVFType.html#a05850c17c2dbe42e5602dc8c9a70f3bd">getTypeInfo</a>()-&gt;<a class="code" href="classSVF_1_1StInfo.html#a055697f565cb9d73b41110090fe50159">getOriginalElemType</a>(flattenIdx)-&gt;<a class="code" href="classSVF_1_1SVFType.html#a95b8031f1e15d49c7d68628be1d05aae">getByteSize</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">return</span> structByteOffset;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;struct type can only pair with constant idx&quot;</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -924,16 +925,16 @@ Friends</h2></td></tr>
 
 <p>Overload operators. </p>
 
-<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00269">269</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    assert(<a class="code" href="classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985">gepPointeeType</a> == rhs.<a class="code" href="classSVF_1_1AccessPath.html#a8e0c5f7549c3b6a7808caacd57bf2035">getGepPointeeType</a>() &amp;&amp; <span class="stringliteral">&quot;source element type not match&quot;</span>);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="classSVF_1_1AccessPath.html">AccessPath</a> ap(rhs);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    ap.fldIdx += <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a> : ap.getIdxOperandPairVec())</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        ap.addOffsetVarAndGepTypePair(<a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>.first, <a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>.second);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">return</span> ap;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00270">270</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    assert(<a class="code" href="classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985">gepPointeeType</a> == rhs.<a class="code" href="classSVF_1_1AccessPath.html#a7b4921dea37246f0f08dffa7db384a61">gepSrcPointeeType</a>() &amp;&amp; <span class="stringliteral">&quot;source element type not match&quot;</span>);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <a class="code" href="classSVF_1_1AccessPath.html">AccessPath</a> ap(rhs);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    ap.fldIdx += <a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a> : ap.getIdxOperandPairVec())</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        ap.addOffsetVarAndGepTypePair(<a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>.first, <a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>.second);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span> ap;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -953,29 +954,29 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00280">280</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;{</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a> != rhs.<a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a>)</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a> &lt; rhs.<a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a>);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a>&amp; pairVec = <a class="code" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a>();</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a>&amp; rhsPairVec = rhs.<a class="code" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a>();</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">if</span> (pairVec.size() != rhsPairVec.size())</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">return</span> (pairVec.size() &lt; rhsPairVec.size());</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            IdxOperandPairs::const_iterator it = pairVec.begin();</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            IdxOperandPairs::const_iterator rhsIt = rhsPairVec.begin();</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">for</span> (; it != pairVec.end() &amp;&amp; rhsIt != rhsPairVec.end(); ++it, ++rhsIt)</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keywordflow">return</span> (*it) &lt; (*rhsIt);</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="AccessPath_8cpp_source.html#l00281">281</a> of file <a class="el" href="AccessPath_8cpp_source.html">AccessPath.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;{</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a> != rhs.<a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a>)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a> &lt; rhs.<a class="code" href="classSVF_1_1AccessPath.html#aa1747064a0833855a5848ebf4a4d65fa">fldIdx</a>);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a>&amp; pairVec = <a class="code" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a>();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">IdxOperandPairs</a>&amp; rhsPairVec = rhs.<a class="code" href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">getIdxOperandPairVec</a>();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">if</span> (pairVec.size() != rhsPairVec.size())</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">return</span> (pairVec.size() &lt; rhsPairVec.size());</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            IdxOperandPairs::const_iterator it = pairVec.begin();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            IdxOperandPairs::const_iterator rhsIt = rhsPairVec.begin();</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="keywordflow">for</span> (; it != pairVec.end() &amp;&amp; rhsIt != rhsPairVec.end(); ++it, ++rhsIt)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="keywordflow">return</span> (*it) &lt; (*rhsIt);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1237,12 +1238,13 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_abbd0e0cf759fad7858224ed8a63aade8"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#abbd0e0cf759fad7858224ed8a63aade8">SVF::SparseBitVector::contains</a></div><div class="ttdeci">bool contains(const SparseBitVector&lt; ElementSize &gt; &amp;RHS) const</div><div class="ttdef"><b>Definition:</b> <a href="SparseBitVector_8h_source.html#l01073">SparseBitVector.h:1073</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_aabb6c9600fac408f36b9fde013597245afbdf7000b827f7d8590e5f0997e0d59a"><div class="ttname"><a href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245afbdf7000b827f7d8590e5f0997e0d59a">SVF::AccessPath::Overlap</a></div><div class="ttdeci">@ Overlap</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00061">AccessPath.h:61</a></div></div>
 <div class="ttc" id="acJSON_8cpp_html_a009ef1d888ab6dbe77e6b42b0b39f1ae"><div class="ttname"><a href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a></div><div class="ttdeci">cJSON * p</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8cpp_source.html#l02559">cJSON.cpp:2559</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AccessPath_html_a7b4921dea37246f0f08dffa7db384a61"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a7b4921dea37246f0f08dffa7db384a61">SVF::AccessPath::gepSrcPointeeType</a></div><div class="ttdeci">const SVFType * gepSrcPointeeType() const</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00112">AccessPath.h:112</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFPointerType_html"><div class="ttname"><a href="classSVF_1_1SVFPointerType.html">SVF::SVFPointerType</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00351">SVFType.h:351</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a61bd86909a141f9de873d92c0f904832"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a61bd86909a141f9de873d92c0f904832">SVF::SparseBitVector::set</a></div><div class="ttdeci">void set(unsigned Idx)</div><div class="ttdef"><b>Definition:</b> <a href="SparseBitVector_8h_source.html#l00747">SparseBitVector.h:747</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFVar_html_ac2db6304ea5526fb446ae882983beeb0"><div class="ttname"><a href="classSVF_1_1SVFVar.html#ac2db6304ea5526fb446ae882983beeb0">SVF::SVFVar::getValue</a></div><div class="ttdeci">const SVFValue * getValue() const</div><div class="ttdoc">Get/has methods of the components.</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00094">SVFVariables.h:94</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html">SVF::SparseBitVector</a></div><div class="ttdef"><b>Definition:</b> <a href="SparseBitVector_8h_source.html#l00459">SparseBitVector.h:459</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a5427d08c9eb9d86e66c2bff6aeba6bac"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">SVF::AccessPath::getConstantStructFldIdx</a></div><div class="ttdeci">APOffset getConstantStructFldIdx() const</div><div class="ttdoc">Get methods.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00100">AccessPath.h:100</a></div></div>
-<div class="ttc" id="aclassSVF_1_1AccessPath_html_a76222b6571e46e8a8bd5c8c597c8ffaf"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a76222b6571e46e8a8bd5c8c597c8ffaf">SVF::AccessPath::computeAllLocations</a></div><div class="ttdeci">NodeBS computeAllLocations() const</div><div class="ttdoc">Compute all possible locations according to offset and number-stride pairs.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00262">AccessPath.cpp:262</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AccessPath_html_a76222b6571e46e8a8bd5c8c597c8ffaf"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a76222b6571e46e8a8bd5c8c597c8ffaf">SVF::AccessPath::computeAllLocations</a></div><div class="ttdeci">NodeBS computeAllLocations() const</div><div class="ttdoc">Compute all possible locations according to offset and number-stride pairs.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00263">AccessPath.cpp:263</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a3c98f0c5f07109f9da0a8a897aa51d18"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a3c98f0c5f07109f9da0a8a897aa51d18">SVF::AccessPath::getElementNum</a></div><div class="ttdeci">u32_t getElementNum(const SVFType *type) const</div><div class="ttdoc">Return element number of a type.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00063">AccessPath.cpp:63</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_aabb6c9600fac408f36b9fde013597245ab1ba3a42758473e5ff427ba36147a56a"><div class="ttname"><a href="classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245ab1ba3a42758473e5ff427ba36147a56a">SVF::AccessPath::Same</a></div><div class="ttdeci">@ Same</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00061">AccessPath.h:61</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SymbolTableInfo_html_a24df52313f8093bb651ae9da972cd663"><div class="ttname"><a href="classSVF_1_1SymbolTableInfo.html#a24df52313f8093bb651ae9da972cd663">SVF::SymbolTableInfo::getFlattenedElemIdx</a></div><div class="ttdeci">u32_t getFlattenedElemIdx(const SVFType *T, u32_t origId)</div><div class="ttdoc">Flattened element idx of an array or struct by considering stride.</div><div class="ttdef"><b>Definition:</b> <a href="SymbolTableInfo_8cpp_source.html#l00181">SymbolTableInfo.cpp:181</a></div></div>
@@ -1259,7 +1261,6 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a1d75baf851ba9982ac0861c850929985"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985">SVF::AccessPath::gepPointeeType</a></div><div class="ttdeci">const SVFType * gepPointeeType</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00176">AccessPath.h:176</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFType_html_a9035ac13134de4647d63507cd80ca3d6"><div class="ttname"><a href="classSVF_1_1SVFType.html#a9035ac13134de4647d63507cd80ca3d6">SVF::SVFType::toString</a></div><div class="ttdeci">std::string toString() const</div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a04ca154a70f40999a6a28c505bfd942d"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a04ca154a70f40999a6a28c505bfd942d">SVF::AccessPath::IdxOperandPairs</a></div><div class="ttdeci">std::vector&lt; IdxOperandPair &gt; IdxOperandPairs</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00065">AccessPath.h:65</a></div></div>
-<div class="ttc" id="aclassSVF_1_1AccessPath_html_a8e0c5f7549c3b6a7808caacd57bf2035"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a8e0c5f7549c3b6a7808caacd57bf2035">SVF::AccessPath::getGepPointeeType</a></div><div class="ttdeci">const SVFType * getGepPointeeType() const</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00112">AccessPath.h:112</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a47855e8ab3bba692f443903b58618229"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229">SVF::AccessPath::idxOperandPairs</a></div><div class="ttdeci">IdxOperandPairs idxOperandPairs</div><div class="ttdoc">a vector of actual offset in the form of &lt;SVF Var, iterator type&gt;</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00175">AccessPath.h:175</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SymbolTableInfo_html_a267169023fc4f8dd66b145f7231fec11"><div class="ttname"><a href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SVF::SymbolTableInfo::SymbolInfo</a></div><div class="ttdeci">static SymbolTableInfo * SymbolInfo()</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis.</div><div class="ttdef"><b>Definition:</b> <a href="SymbolTableInfo_8cpp_source.html#l00081">SymbolTableInfo.cpp:81</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a586c71842e3e4487921aa3384ce9d025"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a586c71842e3e4487921aa3384ce9d025">SVF::AccessPath::getIdxOperandPairVec</a></div><div class="ttdeci">const IdxOperandPairs &amp; getIdxOperandPairVec() const</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00108">AccessPath.h:108</a></div></div>

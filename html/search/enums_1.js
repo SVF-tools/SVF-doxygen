@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bugtype_12820',['BugType',['../classSVF_1_1GenericBug.html#a7aeeb33097bca5f7fe6747f90f5cecac',1,'SVF::GenericBug']]],
-  ['builddirection_12821',['BuildDirection',['../namespaceSVF.html#a165cd8904ba9f1ae6e0fa1752ba78caa',1,'SVF']]]
+  ['bugtype_12824',['BugType',['../classSVF_1_1GenericBug.html#a7aeeb33097bca5f7fe6747f90f5cecac',1,'SVF::GenericBug']]],
+  ['builddirection_12825',['BuildDirection',['../namespaceSVF.html#a165cd8904ba9f1ae6e0fa1752ba78caa',1,'SVF']]]
 ];
