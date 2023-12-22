@@ -807,35 +807,35 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Whether a location set is a pointer type or not </p>
 
-<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00372">372</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;{</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1ObjTypeInfo.html#ac5bae1e7917f415193a805e8d2e29320">hasPtrObj</a>() == <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* ety = <a class="code" href="classSVF_1_1ObjTypeInfo.html#a3620a491a32ff0af93f0d92f55911498">type</a>;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">if</span> (SVFUtil::isa&lt;SVFStructType, SVFArrayType&gt;(ety))</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    {</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> sz = 0;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1Options.html#a429c3000ee2ac45119b8c241aa06762c">Options::ModelArrays</a>())</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            sz = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5dc699aa85fe879eb4b2c9109cf3030d">getTypeInfo</a>(ety)-&gt;<a class="code" href="classSVF_1_1StInfo.html#a03bfeee0406c7e54557e74f3a8e848b7">getFlattenElementTypes</a>().size();</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            sz = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5dc699aa85fe879eb4b2c9109cf3030d">getTypeInfo</a>(ety)-&gt;<a class="code" href="classSVF_1_1StInfo.html#ac0a9f85f90524abfd519d3cd2ac95a56">getFlattenFieldTypes</a>().size();</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordflow">if</span>(sz &lt;= (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>) apOffset)</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab2e0196e0ce547ab4a483cc6d2646b24">writeWrnMsg</a>(<span class="stringliteral">&quot;out of bound error when accessing the struct/array&quot;</span>);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* elemTy = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a806ae865d29c4b05b69c499284758c6f">getFlatternedElemType</a>(ety, apOffset);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">return</span> (elemTy-&gt;<a class="code" href="classSVF_1_1SVFType.html#a870b63af2bf9fe43cdf1df3d56b20f6c">isPointerTy</a>() == <span class="keyword">false</span>);</div>
+<p class="definition">Definition at line <a class="el" href="SymbolTableInfo_8cpp_source.html#l00368">368</a> of file <a class="el" href="SymbolTableInfo_8cpp_source.html">SymbolTableInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;{</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1ObjTypeInfo.html#ac5bae1e7917f415193a805e8d2e29320">hasPtrObj</a>() == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* ety = <a class="code" href="classSVF_1_1ObjTypeInfo.html#a3620a491a32ff0af93f0d92f55911498">type</a>;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">if</span> (SVFUtil::isa&lt;SVFStructType, SVFArrayType&gt;(ety))</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> sz = 0;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1Options.html#a429c3000ee2ac45119b8c241aa06762c">Options::ModelArrays</a>())</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            sz = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5dc699aa85fe879eb4b2c9109cf3030d">getTypeInfo</a>(ety)-&gt;<a class="code" href="classSVF_1_1StInfo.html#a03bfeee0406c7e54557e74f3a8e848b7">getFlattenElementTypes</a>().size();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            sz = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a5dc699aa85fe879eb4b2c9109cf3030d">getTypeInfo</a>(ety)-&gt;<a class="code" href="classSVF_1_1StInfo.html#ac0a9f85f90524abfd519d3cd2ac95a56">getFlattenFieldTypes</a>().size();</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">if</span>(sz &lt;= (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>) apOffset)</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab2e0196e0ce547ab4a483cc6d2646b24">writeWrnMsg</a>(<span class="stringliteral">&quot;out of bound error when accessing the struct/array&quot;</span>);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        }</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* elemTy = <a class="code" href="classSVF_1_1SymbolTableInfo.html#a267169023fc4f8dd66b145f7231fec11">SymbolTableInfo::SymbolInfo</a>()-&gt;<a class="code" href="classSVF_1_1SymbolTableInfo.html#a806ae865d29c4b05b69c499284758c6f">getFlatternedElemType</a>(ety, apOffset);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span> (elemTy-&gt;<a class="code" href="classSVF_1_1SVFType.html#a870b63af2bf9fe43cdf1df3d56b20f6c">isPointerTy</a>() == <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ObjTypeInfo.html#ac5bae1e7917f415193a805e8d2e29320">hasPtrObj</a>() == <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    }</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    {</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ObjTypeInfo.html#ac5bae1e7917f415193a805e8d2e29320">hasPtrObj</a>() == <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;}</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
