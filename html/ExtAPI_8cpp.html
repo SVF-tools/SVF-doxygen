@@ -115,27 +115,29 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> bcFilePath = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (path.compare(<span class="stringliteral">&quot;SVF_DIR&quot;</span>) == 0)</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        bcFilePath = getenv(<span class="stringliteral">&quot;SVF_DIR&quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (path.compare(<span class="stringliteral">&quot;npm root&quot;</span>) == 0)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        bcFilePath = <a class="code" href="ExtAPI_8cpp.html#a424940f91f234b23bcc633f12269f935">GetStdoutFromCommand</a>(path);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// SVF installed via npm needs to determine the type of operating</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">// system, otherwise the extapi.bc path may not be found.</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#ifdef linux</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">// Linux os</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        bcFilePath.append(<span class="stringliteral">&quot;/svf-lib/SVF-linux&quot;</span>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="comment">// Mac os</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        bcFilePath.append(<span class="stringliteral">&quot;/svf-lib/SVF-osx&quot;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span> (!bcFilePath.empty() &amp;&amp; bcFilePath.back() != <span class="charliteral">&#39;/&#39;</span>)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        bcFilePath.push_back(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    bcFilePath.append(BUILD_TYPE).append(<a class="code" href="ExtAPI_8h.html#a3be52a096fe407bb55141117f1cf4c75">DEFAULT_EXTAPI_BC_PATH</a>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> bcFilePath;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">char</span> <span class="keyword">const</span>* svfdir = getenv(<span class="stringliteral">&quot;SVF_DIR&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (svfdir)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            bcFilePath = svfdir;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (path.compare(<span class="stringliteral">&quot;npm root&quot;</span>) == 0)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        bcFilePath = <a class="code" href="ExtAPI_8cpp.html#a424940f91f234b23bcc633f12269f935">GetStdoutFromCommand</a>(path);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">// SVF installed via npm needs to determine the type of operating</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">// system, otherwise the extapi.bc path may not be found.</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#ifdef linux</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">// Linux os</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        bcFilePath.append(<span class="stringliteral">&quot;/svf-lib/SVF-linux&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">// Mac os</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        bcFilePath.append(<span class="stringliteral">&quot;/svf-lib/SVF-osx&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (!bcFilePath.empty() &amp;&amp; bcFilePath.back() != <span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        bcFilePath.push_back(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    bcFilePath.append(BUILD_TYPE).append(<a class="code" href="ExtAPI_8h.html#a3be52a096fe407bb55141117f1cf4c75">DEFAULT_EXTAPI_BC_PATH</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> bcFilePath;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
