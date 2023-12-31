@@ -102,7 +102,7 @@ var searchData=
   ['timeofsolving_5809',['timeOfSolving',['../classSVF_1_1CFLBase.html#a88e40af43705550a78837b8589bbf3f8',1,'SVF::CFLBase']]],
   ['timeofssarenaming_5810',['timeOfSSARenaming',['../classSVF_1_1MemSSA.html#a97ccd5e0b9ab6144415e26bdf95cbabd',1,'SVF::MemSSA::timeOfSSARenaming()'],['../classSVF_1_1MemSSAStat.html#a887ff23a7ea1a18f08b1744ff30da773',1,'SVF::MemSSAStat::TimeOfSSARenaming()']]],
   ['timeofupdatecallgraph_5811',['timeOfUpdateCallGraph',['../classSVF_1_1AndersenBase.html#a2afb49f513c9534fd051117b59dc056b',1,'SVF::AndersenBase']]],
-  ['timestatmap_5812',['timeStatMap',['../classSVF_1_1SVFStat.html#a5383691a34426a1a997b5eed387f1831',1,'SVF::SVFStat::timeStatMap()'],['../classSVF_1_1SVFStat.html#aeded7780a3f826b3efab971807e2dd98',1,'SVF::SVFStat::TIMEStatMap()']]],
+  ['timestatmap_5812',['timeStatMap',['../classSVF_1_1SVFStat.html#a5383691a34426a1a997b5eed387f1831',1,'SVF::SVFStat::timeStatMap()'],['../classSVF_1_1SVFStat.html#a8bb01becef1eb8d6113d946d29d904bd',1,'SVF::SVFStat::TIMEStatMap()']]],
   ['tinterphi_5813',['TInterPhi',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75aa501e9891cbacea3950d80aa6071ec69',1,'SVF::VFGNode']]],
   ['tintraphi_5814',['TIntraPhi',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a3d97c6d57d8d2e7387715f4eb719f727',1,'SVF::VFGNode']]],
   ['tlptdata_5815',['tlPTData',['../classSVF_1_1MutableVersionedPTData.html#a01974968b7cf60a4231cc83c93b26d7f',1,'SVF::MutableVersionedPTData::tlPTData()'],['../classSVF_1_1PersistentVersionedPTData.html#a29104a2d53d94805e142f778d3d21ad5',1,'SVF::PersistentVersionedPTData::tlPTData()']]],

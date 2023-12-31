@@ -40,5 +40,5 @@ var searchData=
   ['nodevector_12612',['NodeVector',['../namespaceSVF.html#a39d27055a14d9d6363c668ee215a4676',1,'SVF']]],
   ['nonconstsimpletype_12613',['NonConstSimpleType',['../structSVF_1_1SVFUtil_1_1simplify__type_3_01const_01From_01_4.html#aadddb18b44c9744dcc639a3de603151d',1,'SVF::SVFUtil::simplify_type&lt; const From &gt;']]],
   ['nullptrsvfgnode_12614',['NullPtrSVFGNode',['../namespaceSVF.html#aeccd0bd024319173c1cda5ff1a79c5ae',1,'SVF']]],
-  ['numstatmap_12615',['NUMStatMap',['../classSVF_1_1SVFStat.html#ab810863d70cb2f5b4e312d07eae51227',1,'SVF::SVFStat']]]
+  ['numstatmap_12615',['NUMStatMap',['../classSVF_1_1SVFStat.html#ade5a685e0f6147e05a4f1e7384b1f4dd',1,'SVF::SVFStat']]]
 ];

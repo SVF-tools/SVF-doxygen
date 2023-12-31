@@ -200,7 +200,7 @@ var searchData=
   ['numprelabelednodes_4482',['numPrelabeledNodes',['../classSVF_1_1VersionedFlowSensitive.html#aff5029fca933376be1fa374bec790da6',1,'SVF::VersionedFlowSensitive']]],
   ['numprelabelversions_4483',['numPrelabelVersions',['../classSVF_1_1VersionedFlowSensitive.html#a207ae4d1f2e0ccab8e36add0a45578af',1,'SVF::VersionedFlowSensitive']]],
   ['numregions_4484',['NumRegions',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ac5fe44f10cdbca9754444943a0f5c3c1',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['numstatmap_4485',['NUMStatMap',['../classSVF_1_1SVFStat.html#ab810863d70cb2f5b4e312d07eae51227',1,'SVF::SVFStat']]],
+  ['numstatmap_4485',['NUMStatMap',['../classSVF_1_1SVFStat.html#ade5a685e0f6147e05a4f1e7384b1f4dd',1,'SVF::SVFStat']]],
   ['numsymbols_4486',['numSymbols',['../classSVF_1_1NodeIDAllocator.html#a3a160f4c6e761a130b863a3df0af7f96',1,'SVF::NodeIDAllocator']]],
   ['numtostr_4487',['numToStr',['../classSVF_1_1SVFIRWriter.html#a10ce46b10bad5f0f3dbcff5bf5818626',1,'SVF::SVFIRWriter']]],
   ['numtostrmap_4488',['numToStrMap',['../classSVF_1_1SVFIRWriter.html#a7f9d7bb88e4f98f71f542d01107878e4',1,'SVF::SVFIRWriter']]],
