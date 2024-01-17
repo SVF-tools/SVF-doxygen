@@ -211,7 +211,7 @@ var searchData=
   ['funtoidmapty_2031',['FunToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#acd5c1096bb8e93a2a708cd7eef66e7d8',1,'SVF::SymbolTableInfo']]],
   ['funtointermap_2032',['FunToInterMap',['../classSVF_1_1IntraDisjointMRG.html#ad59c11753db0b310246418df4c62f639',1,'SVF::IntraDisjointMRG']]],
   ['funtomodsmap_2033',['funToModsMap',['../classSVF_1_1MRGenerator.html#a2c94bfa19ad8d1d6360b12693c8b891d',1,'SVF::MRGenerator']]],
-  ['funtomrsmap_2034',['FunToMRsMap',['../classSVF_1_1MRGenerator.html#a090070379a09460aef0c07270d32d27b',1,'SVF::MRGenerator::FunToMRsMap()'],['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator::funToMRsMap()']]],
+  ['funtomrsmap_2034',['funToMRsMap',['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator::funToMRsMap()'],['../classSVF_1_1MRGenerator.html#a090070379a09460aef0c07270d32d27b',1,'SVF::MRGenerator::FunToMRsMap()']]],
   ['funtonodebsmap_2035',['FunToNodeBSMap',['../classSVF_1_1MRGenerator.html#ab01e492f002c73e2c89eb0b4c8f9647d',1,'SVF::MRGenerator']]],
   ['funtopagedgesetmap_2036',['FunToPAGEdgeSetMap',['../classSVF_1_1SVFIR.html#ac918466df08a2ab30472f3e57935f005',1,'SVF::SVFIR']]],
   ['funtopointstomap_2037',['funToPointsToMap',['../classSVF_1_1MRGenerator.html#a05c7a5ddbe3079f63be76c35298d1c2b',1,'SVF::MRGenerator::funToPointsToMap()'],['../classSVF_1_1MRGenerator.html#ad492e2940936fc7df06127f0cb94d47a',1,'SVF::MRGenerator::FunToPointsToMap()']]],
