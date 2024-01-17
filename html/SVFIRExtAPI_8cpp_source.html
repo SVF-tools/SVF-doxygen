@@ -195,7 +195,7 @@ $(function() {
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> val = pag-&gt;getValueNode(svfInst);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> obj = pag-&gt;getObjectNode(svfInst);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        addAddrEdge(obj, val);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        addAddrWithHeapSz(obj, val, cs);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1SVFUtil.html#aedfa6e9216c6c788c26aef1967689b76">isHeapAllocExtCallViaArg</a>(svfCall))</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
@@ -208,7 +208,7 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <a class="code" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> obj = pag-&gt;addDummyObjNode(arg-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a11f2d9b6e969ede6fca2c204cc15b821">getType</a>());</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">if</span> (vnArg &amp;&amp; dummy &amp;&amp; obj)</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                addAddrEdge(obj, dummy);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                addAddrWithHeapSz(obj, dummy, cs);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                addStoreEdge(dummy, vnArg);</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
