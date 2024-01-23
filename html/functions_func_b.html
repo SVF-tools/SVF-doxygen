@@ -106,8 +106,6 @@ $(function() {
 <li>begin()
 : <a class="el" href="classllvm_1_1generic__bridge__gep__type__iterator.html#aabd833b8eca182f681462209c9f24f1a">llvm::generic_bridge_gep_type_iterator&lt; ItTy &gt;</a>
 , <a class="el" href="classSVF_1_1AddressValue.html#aed0b4789beda4980e4e215a65350f323">SVF::AddressValue</a>
-, <a class="el" href="classSVF_1_1CFBasicBlockGWTO.html#a62021e77023442dc809f6441cd3692c5">SVF::CFBasicBlockGWTO</a>
-, <a class="el" href="classSVF_1_1CFBasicBlockGWTOCycle.html#aa4902464dbcfdf6d961050ebfe7b3c88">SVF::CFBasicBlockGWTOCycle</a>
 , <a class="el" href="classSVF_1_1CFBasicBlockNode.html#a439a84d7181616f62d8ebac945dbbd59">SVF::CFBasicBlockNode</a>
 , <a class="el" href="classSVF_1_1CondPointsToSet.html#a3521ec3be48cc03d9d3f562cb088a9ad">SVF::CondPointsToSet&lt; Cond &gt;</a>
 , <a class="el" href="classSVF_1_1CondStdSet.html#adf095111734d81b6ad1908a7f795b038">SVF::CondStdSet&lt; Element &gt;</a>
@@ -122,7 +120,9 @@ $(function() {
 , <a class="el" href="classSVF_1_1SVFFunction.html#a49a6e9c0661135ceda2dd4d84c4b24ae">SVF::SVFFunction</a>
 , <a class="el" href="classSVF_1_1SVFModule.html#a5486697889c6cca4f9f426650defc255">SVF::SVFModule</a>
 , <a class="el" href="classSVF_1_1WriterPtrPool.html#afe8686cdcce746eb49673d64b24c8945">SVF::WriterPtrPool&lt; T &gt;</a>
-, <a class="el" href="classSVF_1_1WTOCycleDepth.html#a2bfdd81b8742322d03c52c811ff742ce">SVF::WTOCycleDepth&lt; NodeRef &gt;</a>
+, <a class="el" href="classSVF_1_1WTO.html#a13e9082913aa4a14065687ccdd47642d">SVF::WTO&lt; GraphT &gt;</a>
+, <a class="el" href="classSVF_1_1WTOCycle.html#a807c883d1cfe98c791c903125742f95b">SVF::WTOCycle&lt; GraphT &gt;</a>
+, <a class="el" href="classSVF_1_1WTOCycleDepth.html#a05e5c2f26d21fea5197205e23fea7d3a">SVF::WTOCycleDepth&lt; GraphT &gt;</a>
 </li>
 <li>beta()
 : <a class="el" href="classSVF_1_1RelationSolver.html#af0c2db68bffbb223b845ca307b86c10a">SVF::RelationSolver</a>
@@ -188,9 +188,8 @@ $(function() {
 <li>build()
 : <a class="el" href="classSVF_1_1CDGBuilder.html#aeeb38d897babfeff1844c643dda8ae97">SVF::CDGBuilder</a>
 , <a class="el" href="classSVF_1_1CFBasicBlockGBuilder.html#a25f0496187622b156bafc49f34fffeaf">SVF::CFBasicBlockGBuilder</a>
-, <a class="el" href="classSVF_1_1CFBasicBlockGWTO.html#a6cc2cb7b203e16b9cc8f5e121f39bd9f">SVF::CFBasicBlockGWTO</a>
 , <a class="el" href="classSVF_1_1CFLGraphBuilder.html#a27b247b46ce0b467459fcc2d53f50383">SVF::CFLGraphBuilder</a>
-, <a class="el" href="classSVF_1_1GrammarBuilder.html#a11bd8225be12650c811ba968cc3935b3">SVF::GrammarBuilder</a>
+, <a class="el" href="classSVF_1_1GrammarBuilder.html#a23d03b2cd348d85bda1ee582dded6505">SVF::GrammarBuilder</a>
 , <a class="el" href="classSVF_1_1ICFGBuilder.html#ae66565ee32fff4ef5f0157e867333250">SVF::ICFGBuilder</a>
 , <a class="el" href="classSVF_1_1LLVMLoopAnalysis.html#a17e4805c2db146430c58af35625a388d">SVF::LLVMLoopAnalysis</a>
 , <a class="el" href="classSVF_1_1LLVMModuleSet.html#af8edfe08027020f14b81b44362c6018e">SVF::LLVMModuleSet</a>
@@ -198,9 +197,6 @@ $(function() {
 , <a class="el" href="classSVF_1_1SVFGBuilder.html#a47591192260ddc3ff0717430f127cc95">SVF::SVFGBuilder</a>
 , <a class="el" href="classSVF_1_1SVFIRBuilder.html#a5ecf1deb5646ccb46b0b3101417f4689">SVF::SVFIRBuilder</a>
 , <a class="el" href="classSVF_1_1TCT.html#ab86389b3bf292c5b3d2b29fc49a5d94d">SVF::TCT</a>
-</li>
-<li>build_tails()
-: <a class="el" href="classSVF_1_1CFBasicBlockGWTO.html#a371c7416c88df3c0b70addf9b88b305a">SVF::CFBasicBlockGWTO</a>
 </li>
 <li>buildBigraph()
 : <a class="el" href="classSVF_1_1AliasCFLGraphBuilder.html#ab19243c4aceffce7b257f3d8cb3050fd">SVF::AliasCFLGraphBuilder</a>
@@ -296,8 +292,8 @@ $(function() {
 <li>buildMSSA()
 : <a class="el" href="classSVF_1_1SVFGBuilder.html#a057d1d631326e844ce3287eb17b98c1a">SVF::SVFGBuilder</a>
 </li>
-<li>buildNodeToWTOCycleDepth()
-: <a class="el" href="classSVF_1_1CFBasicBlockGWTO.html#a50fa3b82172788c5e963d723b27900ba">SVF::CFBasicBlockGWTO</a>
+<li>buildNodeToDepth()
+: <a class="el" href="classSVF_1_1WTO.html#abf8ab42831098184ce972aa6664fcb8a">SVF::WTO&lt; GraphT &gt;</a>
 </li>
 <li>buildPTROnlySVFG()
 : <a class="el" href="classSVF_1_1SVFGBuilder.html#ab7353191edd06568e2598177d253c1d9">SVF::SVFGBuilder</a>
