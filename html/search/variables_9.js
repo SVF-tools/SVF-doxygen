@@ -16,7 +16,7 @@ var searchData=
   ['idcounter_11497',['idCounter',['../classSVF_1_1PersistentPointsToCache.html#ad8d24772f7503e0e735f546506d2bcc5',1,'SVF::PersistentPointsToCache']]],
   ['idmap_11498',['idMap',['../classSVF_1_1ReaderIDToObjMap.html#a3ed6e858fd91ec6cf14361b55dec55b4',1,'SVF::ReaderIDToObjMap']]],
   ['idtocsmap_11499',['idToCSMap',['../classSVF_1_1PTACallGraph.html#a5d6f63baad19589a9fd1e069631e18fa',1,'SVF::PTACallGraph']]],
-  ['idtonodemap_11500',['idToNodeMap',['../classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa',1,'SVF::GenericGraphReader::idToNodeMap()'],['../classSVF_1_1GenericGraph.html#a47a1ef8b67b0c92f78b4457dc3bbfe71',1,'SVF::GenericGraph::IDToNodeMap()']]],
+  ['idtonodemap_11500',['IDToNodeMap',['../classSVF_1_1GenericGraph.html#a47a1ef8b67b0c92f78b4457dc3bbfe71',1,'SVF::GenericGraph::IDToNodeMap()'],['../classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa',1,'SVF::GenericGraphReader::idToNodeMap()']]],
   ['idtopts_11501',['idToPts',['../classSVF_1_1PersistentPointsToCache.html#a32009561c9d3a340ec4e6230ef17f998',1,'SVF::PersistentPointsToCache']]],
   ['idtoterminstmap_11502',['idToTermInstMap',['../classSVF_1_1SaberCondAllocator.html#aee401aa2c7884888bbd26544bcd92881',1,'SVF::SaberCondAllocator']]],
   ['idxoperandpairs_11503',['idxOperandPairs',['../classSVF_1_1AccessPath.html#a47855e8ab3bba692f443903b58618229',1,'SVF::AccessPath']]],

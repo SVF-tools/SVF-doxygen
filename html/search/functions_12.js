@@ -258,7 +258,7 @@ var searchData=
   ['svfgnodelockspan_10456',['SVFGNodeLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a43f4d595b31259576b141cb99883938e',1,'SVF::SVFGNodeLockSpan']]],
   ['svfgopt_10457',['SVFGOPT',['../classSVF_1_1SVFGOPT.html#a64c300c8a9f8cc2ac13eef65c1108d01',1,'SVF::SVFGOPT']]],
   ['svfgsccdetection_10458',['SVFGSCCDetection',['../classSVF_1_1DDAVFSolver.html#aba0ec611a5cfd096ac0b8b11e0bd5580',1,'SVF::DDAVFSolver']]],
-  ['svfgstat_10459',['svfgStat',['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()'],['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()']]],
+  ['svfgstat_10459',['SVFGStat',['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()'],['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()']]],
   ['svfinstruction_10460',['SVFInstruction',['../classSVF_1_1SVFInstruction.html#a976cc9df05994e7e1b11fcdd22febcc5',1,'SVF::SVFInstruction::SVFInstruction(const SVFType *ty, const SVFBasicBlock *b, bool tm, bool isRet, SVFValKind k=SVFInst)'],['../classSVF_1_1SVFInstruction.html#a7d81c86ea5e1f8e313457862e19c2a3c',1,'SVF::SVFInstruction::SVFInstruction(void)=delete']]],
   ['svfintegertype_10461',['SVFIntegerType',['../classSVF_1_1SVFIntegerType.html#a4caf4cef19b93e06dfa7108a1409c32a',1,'SVF::SVFIntegerType']]],
   ['svfir_10462',['SVFIR',['../classSVF_1_1SVFIR.html#abf511f82cdbf7a6d9b6da167aee57636',1,'SVF::SVFIR']]],

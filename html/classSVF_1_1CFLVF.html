@@ -619,24 +619,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSVF_1_1CFLBase.html#a0daabb58bd7d5be40379ccc670c37a93">SVF::CFLBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CFLVF_8cpp_source.html#l00037">37</a> of file <a class="el" href="CFLVF_8cpp_source.html">CFLVF.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Build CFL Graph</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classSVF_1_1VFCFLGraphBuilder.html">VFCFLGraphBuilder</a> cflGraphBuilder = <a class="code" href="classSVF_1_1VFCFLGraphBuilder.html">VFCFLGraphBuilder</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac">Options::CFLGraph</a>().empty()) <span class="comment">// built from svfir</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classSVF_1_1PointerAnalysis.html#a431ec4f85eb0f029e5740b92fd9ceb32">PointerAnalysis::initialize</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classSVF_1_1AndersenWaveDiff.html">AndersenWaveDiff</a>* ander = <a class="code" href="classSVF_1_1AndersenWaveDiff.html#a48ff6fc4badc79ad3204ae9bd95cc540">AndersenWaveDiff::createAndersenWaveDiff</a>(<a class="code" href="classSVF_1_1PointerAnalysis.html#adc7f5c71efb9cd1bec4f5ca9127654c3">pag</a>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classSVF_1_1CFLVF.html#aed71ea423497a4f64c8b62ee4187210e">svfg</a> =  <a class="code" href="classSVF_1_1CFLVF.html#a88ee14429afb2d1efbc83e551e7869a8">memSSA</a>.<a class="code" href="classSVF_1_1SVFGBuilder.html#a54a713e3989597b11cee70864d0197bd">buildFullSVFG</a>(ander);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a> = cflGraphBuilder.<a class="code" href="classSVF_1_1VFCFLGraphBuilder.html#acd5ade19c0e058bfb41a1a8dd84748e1">buildBigraph</a>(<a class="code" href="classSVF_1_1CFLVF.html#aed71ea423497a4f64c8b62ee4187210e">svfg</a>, <a class="code" href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">grammarBase</a>-&gt;<a class="code" href="classSVF_1_1GrammarBase.html#a8921a7d7a006e31f13d88b8c808c931b">getStartKind</a>(), <a class="code" href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">grammarBase</a>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a> = cflGraphBuilder.<a class="code" href="classSVF_1_1CFLGraphBuilder.html#a27b247b46ce0b467459fcc2d53f50383">build</a>(<a class="code" href="classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac">Options::CFLGraph</a>(), <a class="code" href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">grammarBase</a>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// Check CFL Graph and Grammar are accordance with grammar</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classSVF_1_1CFLGramGraphChecker.html">CFLGramGraphChecker</a> cflChecker = <a class="code" href="classSVF_1_1CFLGramGraphChecker.html">CFLGramGraphChecker</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    cflChecker.<a class="code" href="classSVF_1_1CFLGramGraphChecker.html#ada643d980c2590711660eb5f2a4e5f93">check</a>(<a class="code" href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">grammarBase</a>, &amp;cflGraphBuilder, <a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CFLVF_8cpp_source.html#l00035">35</a> of file <a class="el" href="CFLVF_8cpp_source.html">CFLVF.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Build CFL Graph</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classSVF_1_1VFCFLGraphBuilder.html">VFCFLGraphBuilder</a> cflGraphBuilder = <a class="code" href="classSVF_1_1VFCFLGraphBuilder.html">VFCFLGraphBuilder</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac">Options::CFLGraph</a>().empty()) <span class="comment">// built from svfir</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classSVF_1_1PointerAnalysis.html#a431ec4f85eb0f029e5740b92fd9ceb32">PointerAnalysis::initialize</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classSVF_1_1AndersenWaveDiff.html">AndersenWaveDiff</a>* ander = <a class="code" href="classSVF_1_1AndersenWaveDiff.html#a48ff6fc4badc79ad3204ae9bd95cc540">AndersenWaveDiff::createAndersenWaveDiff</a>(<a class="code" href="classSVF_1_1PointerAnalysis.html#adc7f5c71efb9cd1bec4f5ca9127654c3">pag</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classSVF_1_1CFLVF.html#aed71ea423497a4f64c8b62ee4187210e">svfg</a> =  <a class="code" href="classSVF_1_1CFLVF.html#a88ee14429afb2d1efbc83e551e7869a8">memSSA</a>.<a class="code" href="classSVF_1_1SVFGBuilder.html#a54a713e3989597b11cee70864d0197bd">buildFullSVFG</a>(ander);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a> = cflGraphBuilder.<a class="code" href="classSVF_1_1VFCFLGraphBuilder.html#acd5ade19c0e058bfb41a1a8dd84748e1">buildBigraph</a>(<a class="code" href="classSVF_1_1CFLVF.html#aed71ea423497a4f64c8b62ee4187210e">svfg</a>, <a class="code" href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">grammarBase</a>-&gt;<a class="code" href="classSVF_1_1GrammarBase.html#a8921a7d7a006e31f13d88b8c808c931b">getStartKind</a>(), <a class="code" href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">grammarBase</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a> = cflGraphBuilder.<a class="code" href="classSVF_1_1CFLGraphBuilder.html#a27b247b46ce0b467459fcc2d53f50383">build</a>(<a class="code" href="classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac">Options::CFLGraph</a>(), <a class="code" href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">grammarBase</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Check CFL Graph and Grammar are accordance with grammar</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classSVF_1_1CFLGramGraphChecker.html">CFLGramGraphChecker</a> cflChecker = <a class="code" href="classSVF_1_1CFLGramGraphChecker.html">CFLGramGraphChecker</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    cflChecker.<a class="code" href="classSVF_1_1CFLGramGraphChecker.html#ada643d980c2590711660eb5f2a4e5f93">check</a>(<a class="code" href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">grammarBase</a>, &amp;cflGraphBuilder, <a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -667,19 +667,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSVF_1_1CFLBase.html#a5a29d4b85cb24fd33ab65d60a79e4201">SVF::CFLBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CFLVF_8cpp_source.html#l00074">74</a> of file <a class="el" href="CFLVF_8cpp_source.html">CFLVF.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// Check for valid grammar file before parsing other options</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> filename = <a class="code" href="classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f">Options::GrammarFilename</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> vfgfile = (filename.rfind(<span class="stringliteral">&quot;VFGGrammar.txt&quot;</span>) == filename.length() - <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a>(<span class="stringliteral">&quot;VFGGrammar.txt&quot;</span>).length());</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classSVF_1_1Options.html#a15a9c1086e1bbd6a76d56ad1bdd6b994">Options::Customized</a>()  &amp;&amp; !vfgfile)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;Invalid VFG grammar file: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f">Options::GrammarFilename</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;Please use a file that ends with &#39;VFG.txt&#39;, &quot;</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;or use the -customized flag to allow custom grammar files.\n&quot;</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;grammar loading failed!&quot;</span>);  <span class="comment">// exit with error</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CFLVF_8cpp_source.html#l00072">72</a> of file <a class="el" href="CFLVF_8cpp_source.html">CFLVF.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// Check for valid grammar file before parsing other options</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> filename = <a class="code" href="classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f">Options::GrammarFilename</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">bool</span> vfgfile = (filename.rfind(<span class="stringliteral">&quot;VFGGrammar.txt&quot;</span>) == filename.length() - <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a>(<span class="stringliteral">&quot;VFGGrammar.txt&quot;</span>).length());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classSVF_1_1Options.html#a15a9c1086e1bbd6a76d56ad1bdd6b994">Options::Customized</a>()  &amp;&amp; !vfgfile)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <span class="stringliteral">&quot;Invalid VFG grammar file: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f">Options::GrammarFilename</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;Please use a file that ends with &#39;VFG.txt&#39;, &quot;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;or use the -customized flag to allow custom grammar files.\n&quot;</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;grammar loading failed!&quot;</span>);  <span class="comment">// exit with error</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -710,16 +710,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSVF_1_1CFLBase.html#a7ee2fdf1c0cdf019c863870dc51c0b5d">SVF::CFLBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CFLVF_8cpp_source.html#l00089">89</a> of file <a class="el" href="CFLVF_8cpp_source.html">CFLVF.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1Options.html#a9ff12bf51a475c90c35e3351c5501f0f">Options::PrintCFL</a>())</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac">Options::CFLGraph</a>().empty())</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="classSVF_1_1CFLBase.html#a9e6cbab31612da4a1f8f660d1fabc4c0">svfir</a>-&gt;<a class="code" href="classSVF_1_1IRGraph.html#a1cb32461439c4dc8d044c2bfadb11307">dump</a>(<span class="stringliteral">&quot;IR&quot;</span>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="classSVF_1_1CFLBase.html#a8dd040c7078b7f1a61da76849c89a640">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFGrammar.html#a032e6a1ccff5444f0c849309ac2ad23f">dump</a>(<span class="stringliteral">&quot;Grammar&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a>-&gt;<a class="code" href="classSVF_1_1CFLGraph.html#ab32869931e46babcfaa6791efe2ba91e">dump</a>(<span class="stringliteral">&quot;CFLGraph&quot;</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CFLVF_8cpp_source.html#l00087">87</a> of file <a class="el" href="CFLVF_8cpp_source.html">CFLVF.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1Options.html#a9ff12bf51a475c90c35e3351c5501f0f">Options::PrintCFL</a>())</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac">Options::CFLGraph</a>().empty())</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="classSVF_1_1CFLBase.html#a9e6cbab31612da4a1f8f660d1fabc4c0">svfir</a>-&gt;<a class="code" href="classSVF_1_1IRGraph.html#a1cb32461439c4dc8d044c2bfadb11307">dump</a>(<span class="stringliteral">&quot;IR&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classSVF_1_1CFLBase.html#a8dd040c7078b7f1a61da76849c89a640">grammar</a>-&gt;<a class="code" href="classSVF_1_1CFGrammar.html#a032e6a1ccff5444f0c849309ac2ad23f">dump</a>(<span class="stringliteral">&quot;Grammar&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a>-&gt;<a class="code" href="classSVF_1_1CFLGraph.html#ab32869931e46babcfaa6791efe2ba91e">dump</a>(<span class="stringliteral">&quot;CFLGraph&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -750,23 +750,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSVF_1_1PointerAnalysis.html#a431ec4f85eb0f029e5740b92fd9ceb32">SVF::PointerAnalysis</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CFLVF_8cpp_source.html#l00056">56</a> of file <a class="el" href="CFLVF_8cpp_source.html">CFLVF.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Parameter Checking</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classSVF_1_1CFLVF.html#a20c6a97e620239c72f402ddf470852bf">checkParameter</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// Build CFL Grammar</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classSVF_1_1CFLBase.html#a77bc3b0260fe02cdcf41fdb6b80caa09">buildCFLGrammar</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Build CFL Graph</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classSVF_1_1CFLVF.html#aa20f8d27da439c831f36b31312daf047">buildCFLGraph</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Normalize grammar</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classSVF_1_1CFLBase.html#a462de3facd2a9365d32397d250414ee9">normalizeCFLGrammar</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// Initialize solver</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classSVF_1_1CFLBase.html#a34c3a3eec2d7d34ef78b5031d8844b17">solver</a> = <span class="keyword">new</span> <a class="code" href="classSVF_1_1CFLSolver.html">CFLSolver</a>(<a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a>, <a class="code" href="classSVF_1_1CFLBase.html#a8dd040c7078b7f1a61da76849c89a640">grammar</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CFLVF_8cpp_source.html#l00054">54</a> of file <a class="el" href="CFLVF_8cpp_source.html">CFLVF.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// Parameter Checking</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classSVF_1_1CFLVF.html#a20c6a97e620239c72f402ddf470852bf">checkParameter</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Build CFL Grammar</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classSVF_1_1CFLBase.html#a77bc3b0260fe02cdcf41fdb6b80caa09">buildCFLGrammar</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// Build CFL Graph</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classSVF_1_1CFLVF.html#aa20f8d27da439c831f36b31312daf047">buildCFLGraph</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// Normalize grammar</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classSVF_1_1CFLBase.html#a462de3facd2a9365d32397d250414ee9">normalizeCFLGrammar</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// Initialize solver</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classSVF_1_1CFLBase.html#a34c3a3eec2d7d34ef78b5031d8844b17">solver</a> = <span class="keyword">new</span> <a class="code" href="classSVF_1_1CFLSolver.html">CFLSolver</a>(<a class="code" href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">graph</a>, <a class="code" href="classSVF_1_1CFLBase.html#a8dd040c7078b7f1a61da76849c89a640">grammar</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -825,8 +825,8 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassSVF_1_1CFLGramGraphChecker_html_ada643d980c2590711660eb5f2a4e5f93"><div class="ttname"><a href="classSVF_1_1CFLGramGraphChecker.html#ada643d980c2590711660eb5f2a4e5f93">SVF::CFLGramGraphChecker::check</a></div><div class="ttdeci">void check(GrammarBase *grammar, CFLGraphBuilder *graphBuilder, CFLGraph *graph)</div><div class="ttdef"><b>Definition:</b> <a href="CFLGramGraphChecker_8h_source.html#l00040">CFLGramGraphChecker.h:40</a></div></div>
-<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a431ec4f85eb0f029e5740b92fd9ceb32"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a431ec4f85eb0f029e5740b92fd9ceb32">SVF::PointerAnalysis::initialize</a></div><div class="ttdeci">virtual void initialize()</div><div class="ttdoc">Initialization of a pointer analysis, including building symbol table and SVFIR etc.</div><div class="ttdef"><b>Definition:</b> <a href="PointerAnalysis_8cpp_source.html#l00106">PointerAnalysis.cpp:106</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CFLVF_html_aa20f8d27da439c831f36b31312daf047"><div class="ttname"><a href="classSVF_1_1CFLVF.html#aa20f8d27da439c831f36b31312daf047">SVF::CFLVF::buildCFLGraph</a></div><div class="ttdeci">void buildCFLGraph()</div><div class="ttdoc">Build CFLGraph via VFG.</div><div class="ttdef"><b>Definition:</b> <a href="CFLVF_8cpp_source.html#l00037">CFLVF.cpp:37</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a431ec4f85eb0f029e5740b92fd9ceb32"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a431ec4f85eb0f029e5740b92fd9ceb32">SVF::PointerAnalysis::initialize</a></div><div class="ttdeci">virtual void initialize()</div><div class="ttdoc">Initialization of a pointer analysis, including building symbol table and SVFIR etc.</div><div class="ttdef"><b>Definition:</b> <a href="PointerAnalysis_8cpp_source.html#l00104">PointerAnalysis.cpp:104</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CFLVF_html_aa20f8d27da439c831f36b31312daf047"><div class="ttname"><a href="classSVF_1_1CFLVF.html#aa20f8d27da439c831f36b31312daf047">SVF::CFLVF::buildCFLGraph</a></div><div class="ttdeci">void buildCFLGraph()</div><div class="ttdoc">Build CFLGraph via VFG.</div><div class="ttdef"><b>Definition:</b> <a href="CFLVF_8cpp_source.html#l00035">CFLVF.cpp:35</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GrammarBase_html_a8921a7d7a006e31f13d88b8c808c931b"><div class="ttname"><a href="classSVF_1_1GrammarBase.html#a8921a7d7a006e31f13d88b8c808c931b">SVF::GrammarBase::getStartKind</a></div><div class="ttdeci">Kind getStartKind()</div><div class="ttdef"><b>Definition:</b> <a href="CFGrammar_8h_source.html#l00205">CFGrammar.h:205</a></div></div>
 <div class="ttc" id="aclassSVF_1_1VFCFLGraphBuilder_html"><div class="ttname"><a href="classSVF_1_1VFCFLGraphBuilder.html">SVF::VFCFLGraphBuilder</a></div><div class="ttdoc">VFCFLGraphBuilder: a CFLGraphBuilder specialized for handling value-flow.</div><div class="ttdef"><b>Definition:</b> <a href="CFLGraphBuilder_8h_source.html#l00142">CFLGraphBuilder.h:142</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CFLVF_html_a88ee14429afb2d1efbc83e551e7869a8"><div class="ttname"><a href="classSVF_1_1CFLVF.html#a88ee14429afb2d1efbc83e551e7869a8">SVF::CFLVF::memSSA</a></div><div class="ttdeci">CFLSVFGBuilder memSSA</div><div class="ttdef"><b>Definition:</b> <a href="CFLVF_8h_source.html#l00062">CFLVF.h:62</a></div></div>
@@ -849,7 +849,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1AndersenWaveDiff_html"><div class="ttname"><a href="classSVF_1_1AndersenWaveDiff.html">SVF::AndersenWaveDiff</a></div><div class="ttdef"><b>Definition:</b> <a href="Andersen_8h_source.html#l00384">Andersen.h:384</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CFGrammar_html_a032e6a1ccff5444f0c849309ac2ad23f"><div class="ttname"><a href="classSVF_1_1CFGrammar.html#a032e6a1ccff5444f0c849309ac2ad23f">SVF::CFGrammar::dump</a></div><div class="ttdeci">void dump() const</div><div class="ttdef"><b>Definition:</b> <a href="CFGrammar_8cpp_source.html#l00346">CFGrammar.cpp:346</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CFLBase_html_aef3da4ce970597586757cafd2a435c1f"><div class="ttname"><a href="classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f">SVF::CFLBase::grammarBase</a></div><div class="ttdeci">GrammarBase * grammarBase</div><div class="ttdef"><b>Definition:</b> <a href="CFLBase_8h_source.html#l00111">CFLBase.h:111</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CFLVF_html_a20c6a97e620239c72f402ddf470852bf"><div class="ttname"><a href="classSVF_1_1CFLVF.html#a20c6a97e620239c72f402ddf470852bf">SVF::CFLVF::checkParameter</a></div><div class="ttdeci">virtual void checkParameter()</div><div class="ttdoc">Parameter Checking.</div><div class="ttdef"><b>Definition:</b> <a href="CFLVF_8cpp_source.html#l00074">CFLVF.cpp:74</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CFLVF_html_a20c6a97e620239c72f402ddf470852bf"><div class="ttname"><a href="classSVF_1_1CFLVF.html#a20c6a97e620239c72f402ddf470852bf">SVF::CFLVF::checkParameter</a></div><div class="ttdeci">virtual void checkParameter()</div><div class="ttdoc">Parameter Checking.</div><div class="ttdef"><b>Definition:</b> <a href="CFLVF_8cpp_source.html#l00072">CFLVF.cpp:72</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AndersenWaveDiff_html_a48ff6fc4badc79ad3204ae9bd95cc540"><div class="ttname"><a href="classSVF_1_1AndersenWaveDiff.html#a48ff6fc4badc79ad3204ae9bd95cc540">SVF::AndersenWaveDiff::createAndersenWaveDiff</a></div><div class="ttdeci">static AndersenWaveDiff * createAndersenWaveDiff(SVFIR *_pag)</div><div class="ttdoc">Create an singleton instance directly instead of invoking llvm pass manager.</div><div class="ttdef"><b>Definition:</b> <a href="Andersen_8h_source.html#l00395">Andersen.h:395</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CFLBase_html_a8101683062b9a71c0b2309cbdfb7b26f"><div class="ttname"><a href="classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f">SVF::CFLBase::graph</a></div><div class="ttdeci">CFLGraph * graph</div><div class="ttdef"><b>Definition:</b> <a href="CFLBase_8h_source.html#l00110">CFLBase.h:110</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_ad09017ae2e1010fbba5c086a4772750f"><div class="ttname"><a href="classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f">SVF::Options::GrammarFilename</a></div><div class="ttdeci">static const Option&lt; std::string &gt; GrammarFilename</div><div class="ttdef"><b>Definition:</b> <a href="Options_8h_source.html#l00249">Options.h:249</a></div></div>
