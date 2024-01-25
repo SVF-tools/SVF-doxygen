@@ -333,6 +333,9 @@ $(function() {
 : <a class="el" href="classSVF_1_1CallSite.html#a93c083aa8f3f3ef28fe80e9aaf70dfb5">SVF::CallSite</a>
 , <a class="el" href="classSVF_1_1SVFCallInst.html#a3cbb4b4089c8b27d01da15f2d2f22e14">SVF::SVFCallInst</a>
 </li>
+<li>getArgPosInCall()
+: <a class="el" href="classSVF_1_1ObjTypeInference.html#a72da2d7f06e8fee67dc5b3c451fa5dee">SVF::ObjTypeInference</a>
+</li>
 <li>getArgument()
 : <a class="el" href="classSVF_1_1CallSite.html#a9e7c94ee7f689466111487e03b2cebcc">SVF::CallSite</a>
 </li>
@@ -1436,9 +1439,6 @@ $(function() {
 <li>getGraphProperties()
 : <a class="el" href="structSVF_1_1DefaultDOTGraphTraits.html#afe384157441d5ef0b3aafdfb6cd3028a">SVF::DefaultDOTGraphTraits</a>
 </li>
-<li>getI8Ty()
-: <a class="el" href="classSVF_1_1SVFType.html#a58f16f12050b2e07d2c41d635a646b52">SVF::SVFType</a>
-</li>
 <li>getICFG()
 : <a class="el" href="classSVF_1_1PointerAnalysis.html#ade879ee99cae01632d567d3736dcad9e">SVF::PointerAnalysis</a>
 , <a class="el" href="classSVF_1_1SaberCondAllocator.html#a6bd67514e0ea9a2704ae83a38c9f2592">SVF::SaberCondAllocator</a>
@@ -1659,6 +1659,9 @@ $(function() {
 <li>getLHSVarID()
 : <a class="el" href="classSVF_1_1AssignStmt.html#a98f731be7be9bc8e7fd09f5c2204c840">SVF::AssignStmt</a>
 </li>
+<li>getLLVMCtx()
+: <a class="el" href="classSVF_1_1ObjTypeInference.html#a172f97ff9c9a7c90dbec6329c89775ad">SVF::ObjTypeInference</a>
+</li>
 <li>getLLVMGlobalFunctions()
 : <a class="el" href="classSVF_1_1LLVMModuleSet.html#a0b46a2a5ff2165d17993a071d9cc82c1">SVF::LLVMModuleSet</a>
 </li>
@@ -1720,7 +1723,7 @@ $(function() {
 </li>
 <li>getLockVal()
 : <a class="el" href="classSVF_1_1LockAnalysis.html#aa3c4548e8f8e47cd716081bda2574ff3">SVF::LockAnalysis</a>
-, <a class="el" href="classSVF_1_1ThreadAPI.html#a3b81d6d51c286adf406d7597f9d51edc">SVF::ThreadAPI</a>
+, <a class="el" href="classSVF_1_1ThreadAPI.html#a758955bf256ab9c16fb9f17e23cc25e0">SVF::ThreadAPI</a>
 </li>
 <li>getLocToAddrs()
 : <a class="el" href="classSVF_1_1ExeState.html#aa7b897b107d722909f9de9dcbabad7cf">SVF::ExeState</a>
@@ -1807,7 +1810,7 @@ $(function() {
 </li>
 <li>getModRefInfo()
 : <a class="el" href="classSVF_1_1MRGenerator.html#ac14c99ee6064fc9cf30120a83c78e702">SVF::MRGenerator</a>
-, <a class="el" href="classSVF_1_1WPAPass.html#a081be672a9fc1b1fd93f00d390b8fc95">SVF::WPAPass</a>
+, <a class="el" href="classSVF_1_1WPAPass.html#af402037fa1a5cffee0db9b97f49d3473">SVF::WPAPass</a>
 </li>
 <li>getModSideEffectOfCallSite()
 : <a class="el" href="classSVF_1_1MRGenerator.html#a1535832f5b1ae3178fea950bf71fdd99">SVF::MRGenerator</a>
@@ -1883,7 +1886,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1SVFG.html#a49a910bc4ea6e98d1584e74a018badc9">SVF::SVFG</a>
 </li>
 <li>getMUSet()
-: <a class="el" href="classSVF_1_1MemSSA.html#af1a7b3ca0144ebff3747715e89646fbb">SVF::MemSSA</a>
+: <a class="el" href="classSVF_1_1MemSSA.html#af4d11a0c7da0ddd7dff8d75a00279847">SVF::MemSSA</a>
 </li>
 <li>getMutDFPTDataTy()
 : <a class="el" href="classSVF_1_1BVDataPTAImpl.html#acbb979edee9427efa2a7c0dbd881c483">SVF::BVDataPTAImpl</a>
@@ -2031,7 +2034,7 @@ $(function() {
 </li>
 <li>getObject()
 : <a class="el" href="classSVF_1_1DummyVersionPropSVFGNode.html#ac10a4b9c2ee536cfcb74120d86c0619f">SVF::DummyVersionPropSVFGNode</a>
-, <a class="el" href="classSVF_1_1SVFIR.html#a2dd4d5f704906270af13e7a07f900eb1">SVF::SVFIR</a>
+, <a class="el" href="classSVF_1_1SVFIR.html#a25b86c16d11b4d50ccc28ead525687ae">SVF::SVFIR</a>
 </li>
 <li>getObjectNode()
 : <a class="el" href="classSVF_1_1IRGraph.html#ab1e2f58c350ec14763b4d8a424984d47">SVF::IRGraph</a>
@@ -2146,11 +2149,11 @@ $(function() {
 </li>
 <li>getOutput()
 : <a class="el" href="classSVF_1_1LockResultValidator.html#ab71d89c954395df7d108263b3fa87330">SVF::LockResultValidator</a>
-, <a class="el" href="classSVF_1_1MTAResultValidator.html#a829e59b4f8cf01c125cf8a9b45f7b7d0">SVF::MTAResultValidator</a>
+, <a class="el" href="classSVF_1_1MTAResultValidator.html#a9c9baeb57a645b57cc9053b3071f0602">SVF::MTAResultValidator</a>
 , <a class="el" href="classSVF_1_1RaceResultValidator.html#afdd89e26a7c168762bfe85746252827f">SVF::RaceResultValidator</a>
 </li>
 <li>getOutputforInterlevAnalysis()
-: <a class="el" href="classSVF_1_1MTAResultValidator.html#ac24a8a6922d9dc9edecab3bc45bc9204">SVF::MTAResultValidator</a>
+: <a class="el" href="classSVF_1_1MTAResultValidator.html#a9f7c30f6bb29630101b034009f7d944c">SVF::MTAResultValidator</a>
 </li>
 <li>getPAG()
 : <a class="el" href="classSVF_1_1FSMPTA.html#ad93ee6450a9eb498369bf63acc9f6578">SVF::FSMPTA</a>
@@ -2224,12 +2227,6 @@ $(function() {
 <li>getPHISet()
 : <a class="el" href="classSVF_1_1MemSSA.html#a82ab0d35c95aeefbc4dfc8eb59033dca">SVF::MemSSA</a>
 </li>
-<li>getPointerTo()
-: <a class="el" href="classSVF_1_1SVFType.html#a3672b4797c400aac90c6d36ce29e0e57">SVF::SVFType</a>
-</li>
-<li>getPointerToTy
-: <a class="el" href="classSVF_1_1SVFType.html#a25faa037b356801c8c678f8c00dada33">SVF::SVFType</a>
-</li>
 <li>getPointsTo()
 : <a class="el" href="classSVF_1_1IndirectSVFGEdge.html#a30aca718d25924f1babdf348bb0ace71">SVF::IndirectSVFGEdge</a>
 , <a class="el" href="classSVF_1_1MemRegion.html#a1e5befaa1a46943e101b33adaf141ca1">SVF::MemRegion</a>
@@ -2242,7 +2239,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1WriterPtrPool.html#a5df00a28f394187fee526a96a4065a78">SVF::WriterPtrPool&lt; T &gt;</a>
 </li>
 <li>getPostDomTreeMap()
-: <a class="el" href="classSVF_1_1SVFLoopAndDomInfo.html#ad07f95e790b5c3a50c864155aa20a083">SVF::SVFLoopAndDomInfo</a>
+: <a class="el" href="classSVF_1_1SVFLoopAndDomInfo.html#a6b87fa0530b6d94f201a0989b35c2277">SVF::SVFLoopAndDomInfo</a>
 </li>
 <li>getPredecessors()
 : <a class="el" href="classSVF_1_1SVFBasicBlock.html#ac6fabc508f6b64127bb597f7b2110231">SVF::SVFBasicBlock</a>
@@ -2251,17 +2248,17 @@ $(function() {
 : <a class="el" href="classSVF_1_1CmpStmt.html#aa6a21fb1cfbc263bb38651176c495632">SVF::CmpStmt</a>
 </li>
 <li>getPredInstructions()
-: <a class="el" href="classSVF_1_1SVFInstruction.html#acc18d048b6f6b07bf1786980bb2d74f8">SVF::SVFInstruction</a>
+: <a class="el" href="classSVF_1_1SVFInstruction.html#a51c967b9e808b077562fbf25a04bafdc">SVF::SVFInstruction</a>
 </li>
 <li>getPredMap()
-: <a class="el" href="classSVF_1_1POCRSolver.html#a9cb6c06d4e9ede63c22637d9a230a584">SVF::POCRSolver</a>
+: <a class="el" href="classSVF_1_1POCRSolver.html#a585aa205c1da08d33aac52552a8a1a75">SVF::POCRSolver</a>
 </li>
 <li>getPreds()
 : <a class="el" href="classSVF_1_1POCRSolver.html#a7445cae0169e04f898798a75aa737177">SVF::POCRSolver</a>
 </li>
 <li>getPreviousMemoryAccessInst()
 : <a class="el" href="classSVF_1_1LockResultValidator.html#aaca2654ba49d2f79c9404a476b5b3079">SVF::LockResultValidator</a>
-, <a class="el" href="classSVF_1_1MTAResultValidator.html#a2ddf3189b3f90986752282b1c6bd003d">SVF::MTAResultValidator</a>
+, <a class="el" href="classSVF_1_1MTAResultValidator.html#ab3ba3c6d9c40e97febdab0e7d4ad9a3e">SVF::MTAResultValidator</a>
 , <a class="el" href="classSVF_1_1RaceResultValidator.html#ad029f7a9a5161191a44d1e841f9d6114">SVF::RaceResultValidator</a>
 </li>
 <li>getPrevNodes()
@@ -2315,34 +2312,28 @@ $(function() {
 , <a class="el" href="classSVF_1_1ReaderPtrPool.html#ab8243a35957fbae27825ec666c8f7560">SVF::ReaderPtrPool&lt; T &gt;</a>
 , <a class="el" href="classSVF_1_1WriterPtrPool.html#a79e9999b60a988f221e3483114f69e58">SVF::WriterPtrPool&lt; T &gt;</a>
 </li>
-<li>getPtrElementType()
-: <a class="el" href="classSVF_1_1SVFPointerType.html#a067e8f095942e095aa1721dee3a241ea">SVF::SVFPointerType</a>
-</li>
 <li>getPtrNodeID()
 : <a class="el" href="classSVF_1_1ContextDDA.html#a6ae16be6774994932aaa594c9b9cb397">SVF::ContextDDA</a>
 , <a class="el" href="classSVF_1_1DDAVFSolver.html#a3fa002d4ba4194ffde62ecbdd361a24d">SVF::DDAVFSolver&lt; CVar, CPtSet, DPIm &gt;</a>
 , <a class="el" href="classSVF_1_1FlowDDA.html#a9749c82c1164adb17e2ae53e725ded9a">SVF::FlowDDA</a>
 </li>
-<li>getPtrTy()
-: <a class="el" href="classSVF_1_1SVFType.html#aa1dc55cbc99c89b1beeebbf5e4b54a88">SVF::SVFType</a>
-</li>
 <li>getPts()
 : <a class="el" href="classSVF_1_1Andersen.html#a187285a5bdf9422d9188b2b11b667639">SVF::Andersen</a>
 , <a class="el" href="classSVF_1_1BVDataPTAImpl.html#ac9897a09cad8a99169f2da2116807b1b">SVF::BVDataPTAImpl</a>
-, <a class="el" href="classSVF_1_1CondPTAImpl.html#a63fa2b3a96696ffc67a119c1ba5ce748">SVF::CondPTAImpl&lt; Cond &gt;</a>
+, <a class="el" href="classSVF_1_1CondPTAImpl.html#a0b96ba98239186d6d676f9540da9e590">SVF::CondPTAImpl&lt; Cond &gt;</a>
 , <a class="el" href="classSVF_1_1MutableDFPTData.html#a4cbb9131a89c5c48367fb927693b5c6b">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>
 , <a class="el" href="classSVF_1_1MutableDiffPTData.html#ac2f494da9379c336bb81a0dc438b5af9">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>
 , <a class="el" href="classSVF_1_1MutablePTData.html#abe4230f3ba78fc660ea291fda36ffa62">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>
-, <a class="el" href="classSVF_1_1MutableVersionedPTData.html#afcc34f6cedca6a8f151b1a7251832818">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>
+, <a class="el" href="classSVF_1_1MutableVersionedPTData.html#aaf519166d2e0ca3c81088b52a1cf3066">SVF::MutableVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>
 , <a class="el" href="classSVF_1_1PersistentDFPTData.html#a2adbaa59c46d611a448594b74745e986">SVF::PersistentDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>
 , <a class="el" href="classSVF_1_1PersistentDiffPTData.html#ab1246073bd0e0395528f8ec53281e315">SVF::PersistentDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>
 , <a class="el" href="classSVF_1_1PersistentPTData.html#a82621bb9b53ccb479cb7278df9a4e366">SVF::PersistentPTData&lt; Key, KeySet, Data, DataSet &gt;</a>
-, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#ae705d46ac78d39f0779c0bf05e39f8b3">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>
+, <a class="el" href="classSVF_1_1PersistentVersionedPTData.html#abcfcbbb3fab89b89168409c1f714e1ed">SVF::PersistentVersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>
 , <a class="el" href="classSVF_1_1PointerAnalysis.html#a4dfb43679e9fa794ebad99b6584c32ec">SVF::PointerAnalysis</a>
 , <a class="el" href="classSVF_1_1PTData.html#a9ae6037637d8b9acb323333f491f4a7d">SVF::PTData&lt; Key, KeySet, Data, DataSet &gt;</a>
 , <a class="el" href="classSVF_1_1Steensgaard.html#adbcb9af660ab9bb0202bd32342280486">SVF::Steensgaard</a>
 , <a class="el" href="classSVF_1_1VersionedPTData.html#adcba3355f96357493d8a7520ff00cc97">SVF::VersionedPTData&lt; Key, KeySet, Data, DataSet, VersionedKey, VersionedKeySet &gt;</a>
-, <a class="el" href="classSVF_1_1WPAPass.html#a4d27be04d38089e86b8b6a1d22e9d8f8">SVF::WPAPass</a>
+, <a class="el" href="classSVF_1_1WPAPass.html#ab4680948b690b4e04d19a133d825b849">SVF::WPAPass</a>
 </li>
 <li>getPtsMap()
 : <a class="el" href="classSVF_1_1CondPTAImpl.html#a979486e35b529fbc62b2974899627113">SVF::CondPTAImpl&lt; Cond &gt;</a>
@@ -2351,7 +2342,7 @@ $(function() {
 , <a class="el" href="classSVF_1_1MutablePTData.html#a8838058efe94b62553bb5416fdc2ec5b">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>
 </li>
 <li>getPtsSubSetMap()
-: <a class="el" href="classSVF_1_1IntraDisjointMRG.html#ae3c857c056f4e6e863843bafba7fdea1">SVF::IntraDisjointMRG</a>
+: <a class="el" href="classSVF_1_1IntraDisjointMRG.html#ad0640ef6e02d9a90964ca495c0fd8f53">SVF::IntraDisjointMRG</a>
 </li>
 <li>getRangeLimitFromType()
 : <a class="el" href="classSVF_1_1SVFIR2ItvExeState.html#afbb9ff1f2c47d2afda117bf63a80a1a7">SVF::SVFIR2ItvExeState</a>
@@ -2457,7 +2448,7 @@ $(function() {
 <li>getRevPts()
 : <a class="el" href="classSVF_1_1BVDataPTAImpl.html#aa30608bc36dcfde45c896d4a15a08ca1">SVF::BVDataPTAImpl</a>
 , <a class="el" href="classSVF_1_1CFLAlias.html#abcb07a089b7b1036d070c451a81cef5d">SVF::CFLAlias</a>
-, <a class="el" href="classSVF_1_1CondPTAImpl.html#a0da0602c5b260afaba4bef1abcbcf7b3">SVF::CondPTAImpl&lt; Cond &gt;</a>
+, <a class="el" href="classSVF_1_1CondPTAImpl.html#aa266eef30817c557882de19aefe135a9">SVF::CondPTAImpl&lt; Cond &gt;</a>
 , <a class="el" href="classSVF_1_1MutableDFPTData.html#a2f98940bd8266ad37a975c6d30d948b4">SVF::MutableDFPTData&lt; Key, KeySet, Data, DataSet &gt;</a>
 , <a class="el" href="classSVF_1_1MutableDiffPTData.html#ad9bd6762fc6525afaed4a6c6da63688d">SVF::MutableDiffPTData&lt; Key, KeySet, Data, DataSet &gt;</a>
 , <a class="el" href="classSVF_1_1MutablePTData.html#a36aa05b8f5c308035315d6df7036c096">SVF::MutablePTData&lt; Key, KeySet, Data, DataSet &gt;</a>
@@ -2613,7 +2604,7 @@ $(function() {
 </li>
 <li>getStringArg()
 : <a class="el" href="classSVF_1_1LockResultValidator.html#a1b1b841451fe51cb58417e864a28cbfc">SVF::LockResultValidator</a>
-, <a class="el" href="classSVF_1_1MTAResultValidator.html#a75057911bf08c167ead4232c4a2b25f4">SVF::MTAResultValidator</a>
+, <a class="el" href="classSVF_1_1MTAResultValidator.html#a1ac51d2847f9bdee27092ab22211bb61">SVF::MTAResultValidator</a>
 </li>
 <li>getStrongUpdateStores()
 : <a class="el" href="classSVF_1_1DDAStat.html#a26b018fc5677e33876bee1200c270e60">SVF::DDAStat</a>
@@ -2641,13 +2632,13 @@ $(function() {
 , <a class="el" href="classSVF_1_1SVFBasicBlock.html#a66f51cd41e93ad055c4a0c2874e73fae">SVF::SVFBasicBlock</a>
 </li>
 <li>getSuccInstructions()
-: <a class="el" href="classSVF_1_1SVFInstruction.html#a281d6b024afeeb96bac281eb23ce3f1f">SVF::SVFInstruction</a>
+: <a class="el" href="classSVF_1_1SVFInstruction.html#a6364671e823166d1192bf791a8dd412b">SVF::SVFInstruction</a>
 </li>
 <li>getSuccMap()
-: <a class="el" href="classSVF_1_1POCRSolver.html#aac57a7a39ba314e5f16977848417e652">SVF::POCRSolver</a>
+: <a class="el" href="classSVF_1_1POCRSolver.html#ab0c8049934aab960ee734db76086016a">SVF::POCRSolver</a>
 </li>
 <li>getSuccNodes()
-: <a class="el" href="classSVF_1_1MTASVFGBuilder.html#a7033805052c8fae5cd0104fdd9e345c0">SVF::MTASVFGBuilder</a>
+: <a class="el" href="classSVF_1_1MTASVFGBuilder.html#a8164ae39b494115142767abc29cebd53">SVF::MTASVFGBuilder</a>
 </li>
 <li>getSuccs()
 : <a class="el" href="classSVF_1_1POCRSolver.html#ac3ee0745b684b851c3bac9b55bcbb7b9">SVF::POCRSolver</a>
@@ -2665,7 +2656,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1LLVMModuleSet.html#a25821b0feeb3b08e00ec9d444520b727">SVF::LLVMModuleSet</a>
 </li>
 <li>getSVFFunction()
-: <a class="el" href="classSVF_1_1LLVMModuleSet.html#a6ff4127e778810f613e594782643ad22">SVF::LLVMModuleSet</a>
+: <a class="el" href="classSVF_1_1LLVMModuleSet.html#a50fc24901350df9db890ba16a9b87e33">SVF::LLVMModuleSet</a>
 , <a class="el" href="classSVF_1_1SVFModule.html#afdb11f5fcbb6e7ed2689e3387bb78850">SVF::SVFModule</a>
 </li>
 <li>getSVFG()
@@ -2698,6 +2689,9 @@ $(function() {
 <li>getSVFInstruction()
 : <a class="el" href="classSVF_1_1LLVMModuleSet.html#ae74f307b6f96950ceedb2c375ef1c3a3">SVF::LLVMModuleSet</a>
 </li>
+<li>getSVFInt8Type()
+: <a class="el" href="classSVF_1_1SVFType.html#a2f60184512cbb5bc4c7a42dcede7a825">SVF::SVFType</a>
+</li>
 <li>getSvfLoopID()
 : <a class="el" href="classSVF_1_1ICFGWriter.html#a7c041629b3863525ded06ffe7d971940">SVF::ICFGWriter</a>
 </li>
@@ -2714,6 +2708,9 @@ $(function() {
 </li>
 <li>getSVFOtherValue()
 : <a class="el" href="classSVF_1_1LLVMModuleSet.html#a0ef17c1d5e6a95c597d2334ea577a965">SVF::LLVMModuleSet</a>
+</li>
+<li>getSVFPtrType()
+: <a class="el" href="classSVF_1_1SVFType.html#a381bc54b93206e22e9b76e09fcc6e460">SVF::SVFType</a>
 </li>
 <li>getSVFStmtList()
 : <a class="el" href="classSVF_1_1SVFIR.html#a570ad42ad516e3fabb91a3563b618c0b">SVF::SVFIR</a>
@@ -2756,7 +2753,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1ThreadAPI.html#a8c6617f2df59ff166b13242060707013">SVF::ThreadAPI</a>
 </li>
 <li>getTaskFuncAtHareParForSite()
-: <a class="el" href="classSVF_1_1ThreadAPI.html#ae72d7dcd1e0836e5d1c5a2c682abe31c">SVF::ThreadAPI</a>
+: <a class="el" href="classSVF_1_1ThreadAPI.html#ab15b12637a557b53b92e9087eaf66cd6">SVF::ThreadAPI</a>
 </li>
 <li>getTCG()
 : <a class="el" href="classSVF_1_1ForkJoinAnalysis.html#a8ad9b8cb0e6300b2ffc55244e53cece6">SVF::ForkJoinAnalysis</a>
@@ -2770,7 +2767,7 @@ $(function() {
 : <a class="el" href="classSVF_1_1TCT.html#a6ac3c91742a6e9088c4e9cf1b7d2f42e">SVF::TCT</a>
 </li>
 <li>getTCTNode()
-: <a class="el" href="classSVF_1_1TCT.html#aac9d98a33fbaa6defa3f847d0bbe76d6">SVF::TCT</a>
+: <a class="el" href="classSVF_1_1TCT.html#a7b4ad0b052e1f8b6869733eef15f4e4d">SVF::TCT</a>
 </li>
 <li>getTCTNodeNum()
 : <a class="el" href="classSVF_1_1TCT.html#af03bfeae7e09a9f62d96ba59632e588f">SVF::TCT</a>
@@ -2845,6 +2842,10 @@ $(function() {
 </li>
 <li>getTypedefs()
 : <a class="el" href="classSVF_1_1DCHNode.html#ac77edc44c3c5acc185c27c018837d066">SVF::DCHNode</a>
+</li>
+<li>getTypeInference()
+: <a class="el" href="classSVF_1_1LLVMModuleSet.html#afcde3a8e7d5eff76d017bd5c4b84cd1c">SVF::LLVMModuleSet</a>
+, <a class="el" href="classSVF_1_1SymbolTableBuilder.html#a4eebcc8dc7f23ead07c64bf523d0e68e">SVF::SymbolTableBuilder</a>
 </li>
 <li>getTypeInfo()
 : <a class="el" href="classSVF_1_1SVFType.html#af25ae6ae537f65f96917a66ce1bb3cf1">SVF::SVFType</a>
@@ -3003,10 +3004,10 @@ $(function() {
 : <a class="el" href="classSVF_1_1SVFConstantInt.html#aabc3c47a6e4036bf993fe29fa195bf1e">SVF::SVFConstantInt</a>
 </li>
 <li>global_begin()
-: <a class="el" href="classSVF_1_1SVFModule.html#af81c6deed3978562f83f120119c6aad2">SVF::SVFModule</a>
+: <a class="el" href="classSVF_1_1SVFModule.html#a4dc32c583d29d74d052eaa5665b0b70e">SVF::SVFModule</a>
 </li>
 <li>global_end()
-: <a class="el" href="classSVF_1_1SVFModule.html#afa9068e662918f6649d5ca25340a3ae2">SVF::SVFModule</a>
+: <a class="el" href="classSVF_1_1SVFModule.html#a8a34164634d6ad9a7b76175907c8c44b">SVF::SVFModule</a>
 </li>
 <li>global_iterator
 : <a class="el" href="classSVF_1_1SVFModule.html#a4cf1ca2e9f045a0520b0a8a6cd5993f2">SVF::SVFModule</a>

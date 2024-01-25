@@ -141,24 +141,25 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classSVF_1_1SVFIRBuilder.html">SVFIRBuilder</a> builder(svfModule);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = builder.build();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::unique_ptr&lt;LeakChecker&gt; saber;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="saber_8cpp.html#a789415bb7081a399af0d4218ead5e6a5">LEAKCHECKER</a>())</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        saber = std::make_unique&lt;LeakChecker&gt;();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="saber_8cpp.html#a040433670c569ad3978a19fb1bf44d5b">FILECHECKER</a>())</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        saber = std::make_unique&lt;FileChecker&gt;();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="saber_8cpp.html#ab233df6b8c190aa2c26fa20bd1ac7c52">DFREECHECKER</a>())</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        saber = std::make_unique&lt;DoubleFreeChecker&gt;();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        saber = std::make_unique&lt;LeakChecker&gt;();  <span class="comment">// if no checker is specified, we use leak checker as the default one.</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    saber-&gt;runOnModule(pag);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::unique_ptr&lt;LeakChecker&gt; saber;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="saber_8cpp.html#a789415bb7081a399af0d4218ead5e6a5">LEAKCHECKER</a>())</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        saber = std::make_unique&lt;LeakChecker&gt;();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="saber_8cpp.html#a040433670c569ad3978a19fb1bf44d5b">FILECHECKER</a>())</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        saber = std::make_unique&lt;FileChecker&gt;();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="saber_8cpp.html#ab233df6b8c190aa2c26fa20bd1ac7c52">DFREECHECKER</a>())</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        saber = std::make_unique&lt;DoubleFreeChecker&gt;();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        saber = std::make_unique&lt;LeakChecker&gt;();  <span class="comment">// if no checker is specified, we use leak checker as the default one.</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    saber-&gt;runOnModule(pag);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    LLVMModuleSet::releaseLLVMModuleSet();</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

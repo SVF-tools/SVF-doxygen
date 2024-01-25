@@ -113,36 +113,38 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mta_8cpp_source.html#l00034">34</a> of file <a class="el" href="mta_8cpp_source.html">mta.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::vector&lt;std::string&gt; moduleNameVec;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    moduleNameVec = <a class="code" href="classOptionBase.html#a4fb6c6e4a1754d702c6c1730f54457e5">OptionBase::parseOptions</a>(</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        argc, argv, <span class="stringliteral">&quot;MTA Analysis&quot;</span>, <span class="stringliteral">&quot;[options] &lt;input-bitcode...&gt;&quot;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    );</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (Options::WriteAnder() == <span class="stringliteral">&quot;ir_annotator&quot;</span>)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        LLVMModuleSet::preProcessBCs(moduleNameVec);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classSVF_1_1SVFModule.html">SVFModule</a>* svfModule = LLVMModuleSet::buildSVFModule(moduleNameVec);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classSVF_1_1SVFIRBuilder.html">SVFIRBuilder</a> builder(svfModule);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = builder.build();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classSVF_1_1MTA.html">MTA</a> mta;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    mta.<a class="code" href="classSVF_1_1MTA.html#ad9172b17fa738bff616771df6f9e9c37">runOnModule</a>(pag);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classSVF_1_1MTAResultValidator.html">MTAResultValidator</a> MTAValidator(mta.<a class="code" href="classSVF_1_1MTA.html#a8cfcfb26e22cc40260f6df6d50701bdb">getMHP</a>());</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    MTAValidator.analyze();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// Initialize the validator and perform validation.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classSVF_1_1LockResultValidator.html">LockResultValidator</a> lockvalidator(mta.<a class="code" href="classSVF_1_1MTA.html#a76ea96c430365132011f1a4edf0d5570">getLockAnalysis</a>());</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    lockvalidator.analyze();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    LLVMModuleSet::releaseLLVMModuleSet();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="mta_8cpp_source.html#l00035">35</a> of file <a class="el" href="mta_8cpp_source.html">mta.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::vector&lt;std::string&gt; moduleNameVec;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    moduleNameVec = <a class="code" href="classOptionBase.html#a4fb6c6e4a1754d702c6c1730f54457e5">OptionBase::parseOptions</a>(</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        argc, argv, <span class="stringliteral">&quot;MTA Analysis&quot;</span>, <span class="stringliteral">&quot;[options] &lt;input-bitcode...&gt;&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (Options::WriteAnder() == <span class="stringliteral">&quot;ir_annotator&quot;</span>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        LLVMModuleSet::preProcessBCs(moduleNameVec);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classSVF_1_1SVFModule.html">SVFModule</a>* svfModule = LLVMModuleSet::buildSVFModule(moduleNameVec);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classSVF_1_1SVFIRBuilder.html">SVFIRBuilder</a> builder(svfModule);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classSVF_1_1SVFIR.html">SVFIR</a>* pag = builder.build();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classSVF_1_1MTA.html">MTA</a> mta;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    mta.<a class="code" href="classSVF_1_1MTA.html#ad9172b17fa738bff616771df6f9e9c37">runOnModule</a>(pag);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classSVF_1_1MTAResultValidator.html">MTAResultValidator</a> MTAValidator(mta.<a class="code" href="classSVF_1_1MTA.html#a8cfcfb26e22cc40260f6df6d50701bdb">getMHP</a>());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    MTAValidator.analyze();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Initialize the validator and perform validation.</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classSVF_1_1LockResultValidator.html">LockResultValidator</a> lockvalidator(mta.<a class="code" href="classSVF_1_1MTA.html#a76ea96c430365132011f1a4edf0d5570">getLockAnalysis</a>());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    lockvalidator.analyze();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    LLVMModuleSet::releaseLLVMModuleSet();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
