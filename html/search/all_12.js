@@ -53,7 +53,7 @@ var searchData=
   ['selectclient_5237',['selectClient',['../classSVF_1_1DDAPass.html#aa33694e0b5f30c451c229e92877e4842',1,'SVF::DDAPass']]],
   ['selectedvalidationscenarios_5238',['selectedValidationScenarios',['../classSVF_1_1RaceResultValidator.html#a1294cb90b073ba25a8ffc06180c09419',1,'SVF::RaceResultValidator']]],
   ['selectinst_5239',['SelectInst',['../namespaceSVF.html#ab7fac9d4a4839be445c89777e21bc307',1,'SVF']]],
-  ['selectlargesttype_5240',['selectLargestType',['../classSVF_1_1ObjTypeInference.html#aff3be73b7348c0e4dece6a9b5b1bd1f1',1,'SVF::ObjTypeInference']]],
+  ['selectlargestsizedtype_5240',['selectLargestSizedType',['../classSVF_1_1ObjTypeInference.html#a205fa59a7250270b216f47df78ef2319',1,'SVF::ObjTypeInference']]],
   ['selectstmt_5241',['SelectStmt',['../classSVF_1_1SelectStmt.html',1,'SVF::SelectStmt'],['../classSVF_1_1SelectStmt.html#a995baa18cc36d0671be3e98761f9879a',1,'SVF::SelectStmt::SelectStmt()'],['../classSVF_1_1SelectStmt.html#ad51a542e72f165abbba9d3242db1bea6',1,'SVF::SelectStmt::SelectStmt(const SelectStmt &amp;)'],['../classSVF_1_1SelectStmt.html#af3ffdfb0b260754b64250f980c065198',1,'SVF::SelectStmt::SelectStmt(SVFVar *s, const OPVars &amp;opnds, const SVFVar *cond)']]],
   ['selfcycle_5242',['SelfCycle',['../classSVF_1_1Options.html#a9ef14f68939b7678ddff83d544e024cc',1,'SVF::Options']]],
   ['seq_5243',['SEQ',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228a85142db6ed24203f054117f3a5110e2f',1,'SVF::NodeIDAllocator']]],
