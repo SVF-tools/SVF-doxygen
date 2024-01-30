@@ -76,6 +76,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="LLVMUtil_8h_source.html">SVF-LLVM/LLVMUtil.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SVFUtil_8h_source.html">Util/SVFUtil.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LLVMModule_8h_source.html">SVF-LLVM/LLVMModule.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ObjTypeInference_8h_source.html">SVF-LLVM/ObjTypeInference.h</a>&quot;</code><br />
 <code>#include &lt;cxxabi.h&gt;</code><br />
 </div>
 <p><a href="CppUtil_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -88,6 +89,14 @@ Functions</h2></td></tr>
 <tr class="separator:a2bff9158f699b6fd11c8e116b91e4809"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a264d15523be2c695d9cee8d49ae87ebe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a264d15523be2c695d9cee8d49ae87ebe">handleThunkFunction</a> (<a class="el" href="structSVF_1_1cppUtil_1_1DemangledName.html">cppUtil::DemangledName</a> &amp;dname)</td></tr>
 <tr class="separator:a264d15523be2c695d9cee8d49ae87ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbc221b8368ff25777c6d86e3394789"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#afbbc221b8368ff25777c6d86e3394789">updateClassNameBeforeBrackets</a> (<a class="el" href="structSVF_1_1cppUtil_1_1DemangledName.html">cppUtil::DemangledName</a> &amp;dname)</td></tr>
+<tr class="separator:afbbc221b8368ff25777c6d86e3394789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf388a505ce7b2f2357f521c291d9655"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#aaf388a505ce7b2f2357f521c291d9655">findInnermostBrackets</a> (const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;input)</td></tr>
+<tr class="separator:aaf388a505ce7b2f2357f521c291d9655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a41352b62d0c45dcb828d3740083e71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a> (const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;str)</td></tr>
+<tr class="separator:a6a41352b62d0c45dcb828d3740083e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63632e75877f12057e5b0dad97ec7a48"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a63632e75877f12057e5b0dad97ec7a48">splitAndStrip</a> (const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;input, char delimiter)</td></tr>
+<tr class="separator:a63632e75877f12057e5b0dad97ec7a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -107,8 +116,113 @@ Variables</h2></td></tr>
 <tr class="separator:a61c158146c07e77234eb4a2f9b940821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4e4df5c6f24ccd2c0d6e752d7253bfc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#ac4e4df5c6f24ccd2c0d6e752d7253bfc">vtableType</a> = &quot;(...)**&quot;</td></tr>
 <tr class="separator:ac4e4df5c6f24ccd2c0d6e752d7253bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809a0913c3e4226ef8fd2df7aaa63d8d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a809a0913c3e4226ef8fd2df7aaa63d8d">znwm</a> = &quot;_Znwm&quot;</td></tr>
+<tr class="separator:a809a0913c3e4226ef8fd2df7aaa63d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f19eb9e9f233bab6ca592083dcfc0c3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a6f19eb9e9f233bab6ca592083dcfc0c3">zn1Label</a> = &quot;_ZN1&quot;</td></tr>
+<tr class="separator:a6f19eb9e9f233bab6ca592083dcfc0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bb8e85e7f5a08516c02c83ea329e63"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a64bb8e85e7f5a08516c02c83ea329e63">znstLabel</a> = &quot;_ZNSt&quot;</td></tr>
+<tr class="separator:a64bb8e85e7f5a08516c02c83ea329e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390380a90a788959ef45b5fd30349266"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a390380a90a788959ef45b5fd30349266">znst5Label</a> = &quot;_ZNSt5&quot;</td></tr>
+<tr class="separator:a390380a90a788959ef45b5fd30349266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da65e2a641fd4ccddaa68b83a6f2f72"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a7da65e2a641fd4ccddaa68b83a6f2f72">znst12Label</a> = &quot;_ZNSt12&quot;</td></tr>
+<tr class="separator:a7da65e2a641fd4ccddaa68b83a6f2f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec36087cc7f4ff6d6fe85626a09c885"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a0ec36087cc7f4ff6d6fe85626a09c885">znst6Label</a> = &quot;_ZNSt6&quot;</td></tr>
+<tr class="separator:a0ec36087cc7f4ff6d6fe85626a09c885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a784e559ae4da3ab3595e1fba4a171120"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a784e559ae4da3ab3595e1fba4a171120">znst7Label</a> = &quot;_ZNSt7&quot;</td></tr>
+<tr class="separator:a784e559ae4da3ab3595e1fba4a171120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adced009085794f93e816603380118609"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#adced009085794f93e816603380118609">znst14Label</a> = &quot;_ZNSt14&quot;</td></tr>
+<tr class="separator:adced009085794f93e816603380118609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f68716197e7fbd42cb334af32b9ee2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a73f68716197e7fbd42cb334af32b9ee2">znkstLabel</a> = &quot;_ZNKSt&quot;</td></tr>
+<tr class="separator:a73f68716197e7fbd42cb334af32b9ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64b669f778ac066473456de94f72d48"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#ae64b669f778ac066473456de94f72d48">znkst5Label</a> = &quot;_ZNKSt15_&quot;</td></tr>
+<tr class="separator:ae64b669f778ac066473456de94f72d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3750c7fb6ce4186591a9d7a74f66dd2d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a3750c7fb6ce4186591a9d7a74f66dd2d">znkst20Label</a> = &quot;_ZNKSt20_&quot;</td></tr>
+<tr class="separator:a3750c7fb6ce4186591a9d7a74f66dd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1236129f13ba32542603b56b7ad60fd2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a1236129f13ba32542603b56b7ad60fd2">znkst23Label</a> = &quot;_ZNKSt23_&quot;</td></tr>
+<tr class="separator:a1236129f13ba32542603b56b7ad60fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0fa1ab7e36b676084a4f680c1e5f2e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a9d0fa1ab7e36b676084a4f680c1e5f2e">znkLabel</a> = &quot;_ZNK&quot;</td></tr>
+<tr class="separator:a9d0fa1ab7e36b676084a4f680c1e5f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ed4e737ea205d0ba4b13bf59edee6d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#ae0ed4e737ea205d0ba4b13bf59edee6d">znk9Label</a> = &quot;_ZNK9&quot;</td></tr>
+<tr class="separator:ae0ed4e737ea205d0ba4b13bf59edee6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c8cb5e26437d51d4d2e0112ebfdbc6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#ac6c8cb5e26437d51d4d2e0112ebfdbc6">ztilabel</a> = &quot;_ZTI&quot;</td></tr>
+<tr class="separator:ac6c8cb5e26437d51d4d2e0112ebfdbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6dcab87a299097747c63a654197ae66"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#af6dcab87a299097747c63a654197ae66">ztiprefix</a> = &quot;typeinfo <a class="el" href="cJSON_8cpp.html#a8a10bf77b3753124dd7ae92c5c4184cc">for</a> &quot;</td></tr>
+<tr class="separator:af6dcab87a299097747c63a654197ae66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7972d88aaaa4644ee22e5b95ac465a80"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a7972d88aaaa4644ee22e5b95ac465a80">dyncast</a> = &quot;__dynamic_cast&quot;</td></tr>
+<tr class="separator:a7972d88aaaa4644ee22e5b95ac465a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aaf388a505ce7b2f2357f521c291d9655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf388a505ce7b2f2357f521c291d9655">&#9670;&nbsp;</a></span>findInnermostBrackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&gt; findInnermostBrackets </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>find the innermost brackets, e.g., return "int const, A" for "__gnu_cxx::__aligned_membuf&lt;std::pair&lt;int const, A&gt; &gt;::_M_ptr() const" </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00661">661</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;{</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;u32_t, u32_t&gt; StEdIdxPair;</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    std::stack&lt;int&gt; stack;</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    std::vector&lt;StEdIdxPair&gt; innerMostPairs;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    std::vector&lt;bool&gt; used(input.length(), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> i = 0; i &lt; input.length(); ++i)</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    {</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        <span class="keywordflow">if</span> (input[i] == <span class="charliteral">&#39;&lt;&#39;</span>)</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        {</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            stack.push(i);</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;        }</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (input[i] == <span class="charliteral">&#39;&gt;&#39;</span> &amp;&amp; i &gt; 0 &amp;&amp; input[i - 1] != <span class="charliteral">&#39;-&#39;</span>)</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        {</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            <span class="keywordflow">if</span> (!stack.empty())</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;            {</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                <span class="keywordtype">int</span> openIndex = stack.top();</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                stack.pop();</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160; </div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;                <span class="comment">// Check if this pair is innermost</span></div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                <span class="keywordtype">bool</span> isInnermost = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> j = openIndex + 1; j &lt; i &amp;&amp; isInnermost; ++j)</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;                {</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;                    <span class="keywordflow">if</span> (used[j])</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                    {</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                        isInnermost = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                    }</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;                }</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160; </div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;                <span class="keywordflow">if</span> (isInnermost)</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;                {</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;                    innerMostPairs.emplace_back(openIndex, i);</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;                    used[openIndex] = used[i] = <span class="keyword">true</span>; <span class="comment">// Mark these indices as used</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;                }</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            }</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        }</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    }</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    std::vector&lt;std::string&gt; ans(innerMostPairs.size());</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    std::transform(innerMostPairs.begin(), innerMostPairs.end(), ans.begin(), [&amp;input](StEdIdxPair &amp;<a class="code" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>) -&gt; <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a></div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    {</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        return input.substr(p.first + 1, p.second - p.first - 1);</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    });</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a2bff9158f699b6fd11c8e116b91e4809"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2bff9158f699b6fd11c8e116b91e4809">&#9670;&nbsp;</a></span>getBeforeParenthesis()</h2>
 
@@ -133,23 +247,23 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00080">80</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">size_t</span> lastRightParen = <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.rfind(<span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    assert(lastRightParen &gt; 0);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> paren_num = 1, pos;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">for</span> (pos = lastRightParen - 1; pos &gt;= 0; pos--)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>[pos] == <span class="charliteral">&#39;)&#39;</span>)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            paren_num++;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>[pos] == <span class="charliteral">&#39;(&#39;</span>)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            paren_num--;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> (paren_num == 0)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.substr(0, pos);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00105">105</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">size_t</span> lastRightParen = <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.rfind(<span class="charliteral">&#39;)&#39;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    assert(lastRightParen &gt; 0);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> paren_num = 1, pos;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">for</span> (pos = lastRightParen - 1; pos &gt;= 0; pos--)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>[pos] == <span class="charliteral">&#39;)&#39;</span>)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            paren_num++;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>[pos] == <span class="charliteral">&#39;(&#39;</span>)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            paren_num--;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span> (paren_num == 0)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.substr(0, pos);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -177,33 +291,33 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00117">117</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// when handling multi-inheritance,</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">// the compiler may generate thunk functions</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// to perform `this` pointer adjustment</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">// they are indicated with `virtual thunk to `</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// and `nun-virtual thunk to`.</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment">// if the classname starts with part of a</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">// demangled name starts with</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// these prefixes, we need to remove the prefix</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">// to get the real class name</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">static</span> std::vector&lt;std::string&gt; thunkPrefixes = {<a class="code" href="CppUtil_8cpp.html#a2aa14572bb011847c1e5920aae880bfa">VThunkFuncLabel</a>,</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                                     <a class="code" href="CppUtil_8cpp.html#a86fe6d521904f944bcf1b3164cfb5d4b">NVThunkFunLabel</a></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                                    };</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; thunkPrefixes.size(); i++)</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">auto</span> prefix = thunkPrefixes[i];</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">if</span> (dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() &gt; prefix.size() &amp;&amp;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.compare(0, prefix.size(), prefix) == 0)</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a> = dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.substr(prefix.size());</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#af6117df8aec7f4c077058fa8f00b0243">isThunkFunc</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00142">142</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">// when handling multi-inheritance,</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="comment">// the compiler may generate thunk functions</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">// to perform `this` pointer adjustment</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// they are indicated with `virtual thunk to `</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// and `nun-virtual thunk to`.</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">// if the classname starts with part of a</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">// demangled name starts with</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">// these prefixes, we need to remove the prefix</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">// to get the real class name</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">static</span> std::vector&lt;std::string&gt; thunkPrefixes = {<a class="code" href="CppUtil_8cpp.html#a2aa14572bb011847c1e5920aae880bfa">VThunkFuncLabel</a>,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                                     <a class="code" href="CppUtil_8cpp.html#a86fe6d521904f944bcf1b3164cfb5d4b">NVThunkFunLabel</a></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                                    };</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; thunkPrefixes.size(); i++)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keyword">auto</span> prefix = thunkPrefixes[i];</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() &gt; prefix.size() &amp;&amp;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.compare(0, prefix.size(), prefix) == 0)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a> = dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.substr(prefix.size());</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#af6117df8aec7f4c077058fa8f00b0243">isThunkFunc</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -231,28 +345,145 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00057">57</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> leftnum = 0, rightnum = 0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> subname = <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">size_t</span> leftpos, rightpos;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    leftpos = subname.find(<span class="stringliteral">&quot;&lt;&quot;</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">while</span> (leftpos != std::string::npos)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        subname = subname.substr(leftpos + 1);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        leftpos = subname.find(<span class="stringliteral">&quot;&lt;&quot;</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        leftnum++;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    subname = <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    rightpos = subname.find(<span class="stringliteral">&quot;&gt;&quot;</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">while</span> (rightpos != std::string::npos)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        subname = subname.substr(rightpos + 1);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        rightpos = subname.find(<span class="stringliteral">&quot;&gt;&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        rightnum++;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> leftnum != rightnum;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00082">82</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> leftnum = 0, rightnum = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> subname = <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">size_t</span> leftpos, rightpos;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    leftpos = subname.find(<span class="charliteral">&#39;&lt;&#39;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">while</span> (leftpos != std::string::npos)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        subname = subname.substr(leftpos + 1);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        leftpos = subname.find(<span class="charliteral">&#39;&lt;&#39;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        leftnum++;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    subname = <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    rightpos = subname.find(<span class="charliteral">&#39;&gt;&#39;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">while</span> (rightpos != std::string::npos)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        subname = subname.substr(rightpos + 1);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        rightpos = subname.find(<span class="charliteral">&#39;&gt;&#39;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        rightnum++;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> leftnum != rightnum;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a63632e75877f12057e5b0dad97ec7a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63632e75877f12057e5b0dad97ec7a48">&#9670;&nbsp;</a></span>splitAndStrip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&gt; splitAndStrip </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00726">726</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;{</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    std::vector&lt;std::string&gt; tokens;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keywordtype">size_t</span> start = 0, end = 0;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160; </div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="keywordflow">while</span> ((end = input.find(delimiter, start)) != std::string::npos)</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    {</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        tokens.push_back(<a class="code" href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a>(input.substr(start, end - start)));</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        start = end + 1;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    }</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160; </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    tokens.push_back(<a class="code" href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a>(input.substr(start)));</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    <span class="keywordflow">return</span> tokens;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6a41352b62d0c45dcb828d3740083e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a41352b62d0c45dcb828d3740083e71">&#9670;&nbsp;</a></span>stripWhitespaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> stripWhitespaces </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>strip the whitespaces in the beginning and ending of str </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00712">712</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;{</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keyword">auto</span> start = std::find_if(str.begin(), str.end(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ch)</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    {</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        return !std::isspace(ch);</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    });</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keyword">auto</span> end = std::find_if(str.rbegin(), str.rend(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ch)</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    {</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        return !std::isspace(ch);</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    }).base();</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    <span class="keywordflow">return</span> (start &lt; end) ? <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a>(start, end) : std::<a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a>();</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afbbc221b8368ff25777c6d86e3394789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbc221b8368ff25777c6d86e3394789">&#9670;&nbsp;</a></span>updateClassNameBeforeBrackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateClassNameBeforeBrackets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSVF_1_1cppUtil_1_1DemangledName.html">cppUtil::DemangledName</a> &amp;&#160;</td>
+          <td class="paramname"><em>dname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00401">401</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;{</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a> = <a class="code" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a> = <a class="code" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordtype">size_t</span> colon = dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.rfind(<span class="stringliteral">&quot;::&quot;</span>);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">if</span> (colon == std::string::npos)</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a> = <a class="code" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a> =</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            <a class="code" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(dname.<a class="code" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.substr(colon + 2));</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    }</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -269,7 +500,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00052">52</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00053">53</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7972d88aaaa4644ee22e5b95ac465a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7972d88aaaa4644ee22e5b95ac465a80">&#9670;&nbsp;</a></span>dyncast</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> dyncast = &quot;__dynamic_cast&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00079">79</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -285,7 +532,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00043">43</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00044">44</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -301,7 +548,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00053">53</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00054">54</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -317,7 +564,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00050">50</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00051">51</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -333,7 +580,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00054">54</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00055">55</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -349,7 +596,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00040">40</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00041">41</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +612,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00047">47</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00048">48</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -381,18 +628,278 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00044">44</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00045">45</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6f19eb9e9f233bab6ca592083dcfc0c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f19eb9e9f233bab6ca592083dcfc0c3">&#9670;&nbsp;</a></span>zn1Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> zn1Label = &quot;_ZN1&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00058">58</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae0ed4e737ea205d0ba4b13bf59edee6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ed4e737ea205d0ba4b13bf59edee6d">&#9670;&nbsp;</a></span>znk9Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znk9Label = &quot;_ZNK9&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00075">75</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9d0fa1ab7e36b676084a4f680c1e5f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0fa1ab7e36b676084a4f680c1e5f2e">&#9670;&nbsp;</a></span>znkLabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znkLabel = &quot;_ZNK&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00074">74</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3750c7fb6ce4186591a9d7a74f66dd2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3750c7fb6ce4186591a9d7a74f66dd2d">&#9670;&nbsp;</a></span>znkst20Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znkst20Label = &quot;_ZNKSt20_&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00069">69</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1236129f13ba32542603b56b7ad60fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1236129f13ba32542603b56b7ad60fd2">&#9670;&nbsp;</a></span>znkst23Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znkst23Label = &quot;_ZNKSt23_&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00071">71</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae64b669f778ac066473456de94f72d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64b669f778ac066473456de94f72d48">&#9670;&nbsp;</a></span>znkst5Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znkst5Label = &quot;_ZNKSt15_&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00068">68</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a73f68716197e7fbd42cb334af32b9ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f68716197e7fbd42cb334af32b9ee2">&#9670;&nbsp;</a></span>znkstLabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znkstLabel = &quot;_ZNKSt&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00067">67</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7da65e2a641fd4ccddaa68b83a6f2f72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da65e2a641fd4ccddaa68b83a6f2f72">&#9670;&nbsp;</a></span>znst12Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znst12Label = &quot;_ZNSt12&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00061">61</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adced009085794f93e816603380118609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adced009085794f93e816603380118609">&#9670;&nbsp;</a></span>znst14Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znst14Label = &quot;_ZNSt14&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00064">64</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a390380a90a788959ef45b5fd30349266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a390380a90a788959ef45b5fd30349266">&#9670;&nbsp;</a></span>znst5Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znst5Label = &quot;_ZNSt5&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00060">60</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0ec36087cc7f4ff6d6fe85626a09c885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec36087cc7f4ff6d6fe85626a09c885">&#9670;&nbsp;</a></span>znst6Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znst6Label = &quot;_ZNSt6&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00062">62</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a784e559ae4da3ab3595e1fba4a171120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a784e559ae4da3ab3595e1fba4a171120">&#9670;&nbsp;</a></span>znst7Label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znst7Label = &quot;_ZNSt7&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00063">63</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a64bb8e85e7f5a08516c02c83ea329e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bb8e85e7f5a08516c02c83ea329e63">&#9670;&nbsp;</a></span>znstLabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znstLabel = &quot;_ZNSt&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00059">59</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a809a0913c3e4226ef8fd2df7aaa63d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809a0913c3e4226ef8fd2df7aaa63d8d">&#9670;&nbsp;</a></span>znwm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> znwm = &quot;_Znwm&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00057">57</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac6c8cb5e26437d51d4d2e0112ebfdbc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c8cb5e26437d51d4d2e0112ebfdbc6">&#9670;&nbsp;</a></span>ztilabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> ztilabel = &quot;_ZTI&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00077">77</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af6dcab87a299097747c63a654197ae66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6dcab87a299097747c63a654197ae66">&#9670;&nbsp;</a></span>ztiprefix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> ztiprefix = &quot;typeinfo <a class="el" href="cJSON_8cpp.html#a8a10bf77b3753124dd7ae92c5c4184cc">for</a> &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00078">78</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aCppUtil_8cpp_html_a86fe6d521904f944bcf1b3164cfb5d4b"><div class="ttname"><a href="CppUtil_8cpp.html#a86fe6d521904f944bcf1b3164cfb5d4b">NVThunkFunLabel</a></div><div class="ttdeci">const std::string NVThunkFunLabel</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00043">CppUtil.cpp:43</a></div></div>
+<div class="ttc" id="aCppUtil_8cpp_html_a6a41352b62d0c45dcb828d3740083e71"><div class="ttname"><a href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a></div><div class="ttdeci">std::string stripWhitespaces(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00712">CppUtil.cpp:712</a></div></div>
+<div class="ttc" id="acJSON_8cpp_html_a009ef1d888ab6dbe77e6b42b0b39f1ae"><div class="ttname"><a href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a></div><div class="ttdeci">cJSON * p</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8cpp_source.html#l02559">cJSON.cpp:2559</a></div></div>
+<div class="ttc" id="aCppUtil_8cpp_html_a86fe6d521904f944bcf1b3164cfb5d4b"><div class="ttname"><a href="CppUtil_8cpp.html#a86fe6d521904f944bcf1b3164cfb5d4b">NVThunkFunLabel</a></div><div class="ttdeci">const std::string NVThunkFunLabel</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00044">CppUtil.cpp:44</a></div></div>
 <div class="ttc" id="acJSON_8h_html_a25d22ecc7e656d2c59332072684e8766"><div class="ttname"><a href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a></div><div class="ttdeci">const char *const name</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00264">cJSON.h:264</a></div></div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
-<div class="ttc" id="aCppUtil_8cpp_html_a2aa14572bb011847c1e5920aae880bfa"><div class="ttname"><a href="CppUtil_8cpp.html#a2aa14572bb011847c1e5920aae880bfa">VThunkFuncLabel</a></div><div class="ttdeci">const std::string VThunkFuncLabel</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00044">CppUtil.cpp:44</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1cppUtil_html_a1cf2e4671b16b477cc779c72f2419234"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">SVF::cppUtil::getBeforeBrackets</a></div><div class="ttdeci">std::string getBeforeBrackets(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00123">CppUtil.cpp:123</a></div></div>
+<div class="ttc" id="aCppUtil_8cpp_html_a2aa14572bb011847c1e5920aae880bfa"><div class="ttname"><a href="CppUtil_8cpp.html#a2aa14572bb011847c1e5920aae880bfa">VThunkFuncLabel</a></div><div class="ttdeci">const std::string VThunkFuncLabel</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00045">CppUtil.cpp:45</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a9b707002523ece2ac54ca893ee9a2d4e"><div class="ttname"><a href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">SVF::s32_t</a></div><div class="ttdeci">signed s32_t</div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00052">SVFType.h:52</a></div></div>
 <div class="ttc" id="astructSVF_1_1cppUtil_1_1DemangledName_html_af6117df8aec7f4c077058fa8f00b0243"><div class="ttname"><a href="structSVF_1_1cppUtil_1_1DemangledName.html#af6117df8aec7f4c077058fa8f00b0243">SVF::cppUtil::DemangledName::isThunkFunc</a></div><div class="ttdeci">bool isThunkFunc</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8h_source.html#l00051">CppUtil.h:51</a></div></div>
 <div class="ttc" id="astructSVF_1_1cppUtil_1_1DemangledName_html_a5cd207bce618521166e6fa235014b297"><div class="ttname"><a href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">SVF::cppUtil::DemangledName::className</a></div><div class="ttdeci">std::string className</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8h_source.html#l00049">CppUtil.h:49</a></div></div>
+<div class="ttc" id="astructSVF_1_1cppUtil_1_1DemangledName_html_a1dd17b240663bc9412adefde82385e02"><div class="ttname"><a href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">SVF::cppUtil::DemangledName::funcName</a></div><div class="ttdeci">std::string funcName</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8h_source.html#l00050">CppUtil.h:50</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_ad42bff8d0a7d60a085aa32d10f4955af"><div class="ttname"><a href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">SVF::u32_t</a></div><div class="ttdeci">unsigned u32_t</div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00051">SVFType.h:51</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
