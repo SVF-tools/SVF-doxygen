@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Static Value-Flow Analysis: /home/runner/work/SVF/SVF/svf/include/AbstractExecution/AbstractValue.h Source File</title>
+<title>Static Value-Flow Analysis: /home/runner/work/SVF/SVF/svf/include/AE/Core/AbstractValue.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_f984cfbe93434e3daf67f2a9bd6d521f.html">svf</a></li><li class="navelem"><a class="el" href="dir_390f2a6be5eff59a6919ecbd9cc9f31d.html">include</a></li><li class="navelem"><a class="el" href="dir_f63327fc9cf9e35b7653a5e341daceab.html">AbstractExecution</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_f984cfbe93434e3daf67f2a9bd6d521f.html">svf</a></li><li class="navelem"><a class="el" href="dir_390f2a6be5eff59a6919ecbd9cc9f31d.html">include</a></li><li class="navelem"><a class="el" href="dir_53d761ae38d6f143a0d195c719804439.html">AE</a></li><li class="navelem"><a class="el" href="dir_2c6fb801affc4b3efe6e1ed5974683f6.html">Core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,61 +103,59 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SVFValue_8h.html">SVFIR/SVFValue.h</a>&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSVF.html">SVF</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span>IntervalValue;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">   49</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">AbstractValueK</a></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16ae3efe972f0ed2983803d380f57e2546a">   51</a></span>&#160;        <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16ae3efe972f0ed2983803d380f57e2546a">IntervalK</a>, <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a9f76747494000cadf2e655a77f0e6ae5">ConcreteK</a>, <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a7febb7f584172f4687c83b201a615187">AddressK</a></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    };</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">   54</a></span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">AbstractValueK</a> <a class="code" href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">_kind</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">   57</a></span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">AbstractValue</a>(<a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">AbstractValueK</a> kind) : <a class="code" href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">_kind</a>(kind) {}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classSVF_1_1AbstractValue.html#ab6901c81e0a0153120de25876b44e3c4">~AbstractValue</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">AbstractValue</a>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;) noexcept = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">AbstractValue</a>(<a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;&amp;) noexcept = default;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;operator=(const <a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;) noexcept = default;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;operator=(<a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;&amp;) noexcept = default;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#a74bc740e894dfbdb2253bedc2851dd2e">   69</a></span>&#160;    inline <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">AbstractValueK</a> <a class="code" href="classSVF_1_1AbstractValue.html#a74bc740e894dfbdb2253bedc2851dd2e">getAbstractValueKind</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">_kind</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSVF_1_1AbstractValue.html#a8f470d727f665e3244b222df1eb724b6">isTop</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSVF_1_1AbstractValue.html#aafe29c4c572b851ce8031f5cd81600c5">isBottom</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}; <span class="comment">// end class AbstractValue</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">// end namespace SVF</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif //Z3_EXAMPLE_ABSTRACTVALUE_H</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSVF.html">SVF</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">class </span>IntervalValue;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">   48</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">AbstractValueK</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16ae3efe972f0ed2983803d380f57e2546a">   50</a></span>&#160;        <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16ae3efe972f0ed2983803d380f57e2546a">IntervalK</a>, <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a9f76747494000cadf2e655a77f0e6ae5">ConcreteK</a>, <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a7febb7f584172f4687c83b201a615187">AddressK</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">   53</a></span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">AbstractValueK</a> <a class="code" href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">_kind</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">   56</a></span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">AbstractValue</a>(<a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">AbstractValueK</a> kind) : <a class="code" href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">_kind</a>(kind) {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classSVF_1_1AbstractValue.html#ab6901c81e0a0153120de25876b44e3c4">~AbstractValue</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">AbstractValue</a>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;) noexcept = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">AbstractValue</a>(<a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;&amp;) noexcept = default;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;operator=(const <a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;) noexcept = default;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;operator=(<a class="code" href="classSVF_1_1AbstractValue.html">AbstractValue</a> &amp;&amp;) noexcept = default;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classSVF_1_1AbstractValue.html#a74bc740e894dfbdb2253bedc2851dd2e">   68</a></span>&#160;    inline <a class="code" href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">AbstractValueK</a> <a class="code" href="classSVF_1_1AbstractValue.html#a74bc740e894dfbdb2253bedc2851dd2e">getAbstractValueKind</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">_kind</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSVF_1_1AbstractValue.html#a8f470d727f665e3244b222df1eb724b6">isTop</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSVF_1_1AbstractValue.html#aafe29c4c572b851ce8031f5cd81600c5">isBottom</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}; <span class="comment">// end class AbstractValue</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;} <span class="comment">// end namespace SVF</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif //Z3_EXAMPLE_ABSTRACTVALUE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassSVF_1_1AbstractValue_html_a56c3cfc51a812f4a9b3171371d3efa60"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">SVF::AbstractValue::AbstractValue</a></div><div class="ttdeci">AbstractValue(AbstractValueK kind)</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00057">AbstractValue.h:57</a></div></div>
-<div class="ttc" id="aclassSVF_1_1AbstractValue_html_afc79860ce75455825ff75d1fef804c16"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">SVF::AbstractValue::AbstractValueK</a></div><div class="ttdeci">AbstractValueK</div><div class="ttdoc">Abstract value kind.</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00049">AbstractValue.h:49</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html_a56c3cfc51a812f4a9b3171371d3efa60"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a56c3cfc51a812f4a9b3171371d3efa60">SVF::AbstractValue::AbstractValue</a></div><div class="ttdeci">AbstractValue(AbstractValueK kind)</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00056">AbstractValue.h:56</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html_afc79860ce75455825ff75d1fef804c16"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16">SVF::AbstractValue::AbstractValueK</a></div><div class="ttdeci">AbstractValueK</div><div class="ttdoc">Abstract value kind.</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00048">AbstractValue.h:48</a></div></div>
 <div class="ttc" id="anamespaceSVF_html"><div class="ttname"><a href="namespaceSVF.html">SVF</a></div><div class="ttdoc">for isBitcode</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00066">BasicTypes.h:66</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractValue_html_aafe29c4c572b851ce8031f5cd81600c5"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#aafe29c4c572b851ce8031f5cd81600c5">SVF::AbstractValue::isBottom</a></div><div class="ttdeci">virtual bool isBottom() const =0</div></div>
-<div class="ttc" id="aclassSVF_1_1AbstractValue_html"><div class="ttname"><a href="classSVF_1_1AbstractValue.html">SVF::AbstractValue</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00045">AbstractValue.h:45</a></div></div>
-<div class="ttc" id="aclassSVF_1_1AbstractValue_html_a74bc740e894dfbdb2253bedc2851dd2e"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a74bc740e894dfbdb2253bedc2851dd2e">SVF::AbstractValue::getAbstractValueKind</a></div><div class="ttdeci">AbstractValueK getAbstractValueKind() const</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00069">AbstractValue.h:69</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html"><div class="ttname"><a href="classSVF_1_1AbstractValue.html">SVF::AbstractValue</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00044">AbstractValue.h:44</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html_a74bc740e894dfbdb2253bedc2851dd2e"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a74bc740e894dfbdb2253bedc2851dd2e">SVF::AbstractValue::getAbstractValueKind</a></div><div class="ttdeci">AbstractValueK getAbstractValueKind() const</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00068">AbstractValue.h:68</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractValue_html_ab6901c81e0a0153120de25876b44e3c4"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#ab6901c81e0a0153120de25876b44e3c4">SVF::AbstractValue::~AbstractValue</a></div><div class="ttdeci">virtual ~AbstractValue()=default</div></div>
-<div class="ttc" id="aclassSVF_1_1AbstractValue_html_afc79860ce75455825ff75d1fef804c16a7febb7f584172f4687c83b201a615187"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a7febb7f584172f4687c83b201a615187">SVF::AbstractValue::AddressK</a></div><div class="ttdeci">@ AddressK</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00051">AbstractValue.h:51</a></div></div>
-<div class="ttc" id="aclassSVF_1_1AbstractValue_html_afc79860ce75455825ff75d1fef804c16ae3efe972f0ed2983803d380f57e2546a"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16ae3efe972f0ed2983803d380f57e2546a">SVF::AbstractValue::IntervalK</a></div><div class="ttdeci">@ IntervalK</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00051">AbstractValue.h:51</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html_afc79860ce75455825ff75d1fef804c16a7febb7f584172f4687c83b201a615187"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a7febb7f584172f4687c83b201a615187">SVF::AbstractValue::AddressK</a></div><div class="ttdeci">@ AddressK</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00050">AbstractValue.h:50</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html_afc79860ce75455825ff75d1fef804c16ae3efe972f0ed2983803d380f57e2546a"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16ae3efe972f0ed2983803d380f57e2546a">SVF::AbstractValue::IntervalK</a></div><div class="ttdeci">@ IntervalK</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00050">AbstractValue.h:50</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractValue_html_a8f470d727f665e3244b222df1eb724b6"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a8f470d727f665e3244b222df1eb724b6">SVF::AbstractValue::isTop</a></div><div class="ttdeci">virtual bool isTop() const =0</div></div>
-<div class="ttc" id="aclassSVF_1_1AbstractValue_html_a9405e2725442f2f641f729038efbe172"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">SVF::AbstractValue::_kind</a></div><div class="ttdeci">AbstractValueK _kind</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00054">AbstractValue.h:54</a></div></div>
-<div class="ttc" id="aSVFValue_8h_html"><div class="ttname"><a href="SVFValue_8h.html">SVFValue.h</a></div></div>
-<div class="ttc" id="aclassSVF_1_1AbstractValue_html_afc79860ce75455825ff75d1fef804c16a9f76747494000cadf2e655a77f0e6ae5"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a9f76747494000cadf2e655a77f0e6ae5">SVF::AbstractValue::ConcreteK</a></div><div class="ttdeci">@ ConcreteK</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00051">AbstractValue.h:51</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html_a9405e2725442f2f641f729038efbe172"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a9405e2725442f2f641f729038efbe172">SVF::AbstractValue::_kind</a></div><div class="ttdeci">AbstractValueK _kind</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00053">AbstractValue.h:53</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html_afc79860ce75455825ff75d1fef804c16a9f76747494000cadf2e655a77f0e6ae5"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#afc79860ce75455825ff75d1fef804c16a9f76747494000cadf2e655a77f0e6ae5">SVF::AbstractValue::ConcreteK</a></div><div class="ttdeci">@ ConcreteK</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00050">AbstractValue.h:50</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

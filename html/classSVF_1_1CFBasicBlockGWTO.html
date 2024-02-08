@@ -114,6 +114,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf6d07ea25bb4e84fe63e2053331782b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFBasicBlockGWTO.html#aaf6d07ea25bb4e84fe63e2053331782b">CFBasicBlockGWTO</a> (<a class="el" href="classSVF_1_1CFBasicBlockGraph.html">CFBasicBlockGraph</a> *graph, const <a class="el" href="classSVF_1_1CFBasicBlockNode.html">CFBasicBlockNode</a> *node)</td></tr>
 <tr class="separator:aaf6d07ea25bb4e84fe63e2053331782b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f900167391802cfcb841ef9abd9140"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFBasicBlockGWTO.html#a45f900167391802cfcb841ef9abd9140">~CFBasicBlockGWTO</a> ()=default</td></tr>
+<tr class="separator:a45f900167391802cfcb841ef9abd9140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adebaf71337c65c3072a7364cbd660761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1CFBasicBlockGWTO.html#adebaf71337c65c3072a7364cbd660761">forEachSuccessor</a> (const <a class="el" href="classSVF_1_1CFBasicBlockNode.html">CFBasicBlockNode</a> *node, std::function&lt; void(const <a class="el" href="classSVF_1_1CFBasicBlockNode.html">CFBasicBlockNode</a> *)&gt; func) const override</td></tr>
 <tr class="separator:adebaf71337c65c3072a7364cbd660761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSVF_1_1WTO"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSVF_1_1WTO')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSVF_1_1WTO.html">SVF::WTO&lt; CFBasicBlockGraph &gt;</a></td></tr>
@@ -310,6 +312,31 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a45f900167391802cfcb841ef9abd9140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f900167391802cfcb841ef9abd9140">&#9670;&nbsp;</a></span>~CFBasicBlockGWTO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SVF::CFBasicBlockGWTO::~CFBasicBlockGWTO </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="adebaf71337c65c3072a7364cbd660761"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adebaf71337c65c3072a7364cbd660761">&#9670;&nbsp;</a></span>forEachSuccessor()</h2>
@@ -345,36 +372,36 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CFBasicBlockGWTO_8h_source.html#l00058">58</a> of file <a class="el" href="CFBasicBlockGWTO_8h_source.html">CFBasicBlockGWTO.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* callNode =</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    SVFUtil::dyn_cast&lt;CallICFGNode&gt;(node-&gt;getICFGNodes().front()))</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">const</span> CFBasicBlockNode* succ = <a class="code" href="classSVF_1_1WTO.html#ae8e57cc333199bc8b5aaff0a825eed47">_graph</a>-&gt;<a class="code" href="classSVF_1_1CFBasicBlockGraph.html#a54200b5a7c41c2ba19660da34c295e81">getCFBasicBlockNode</a>(</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                               callNode-&gt;getRetICFGNode()-&gt;getId());</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            func(succ);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : node-&gt;getOutEdges())</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">if</span> (e-&gt;getICFGEdge() &amp;&amp;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        (!e-&gt;getICFGEdge()-&gt;isIntraCFGEdge() ||</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                         node-&gt;getFunction() != e-&gt;getDstNode()-&gt;getFunction()))</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                func(e-&gt;getDstNode());</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="CFBasicBlockGWTO_8h_source.html#l00060">60</a> of file <a class="el" href="CFBasicBlockGWTO_8h_source.html">CFBasicBlockGWTO.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* callNode =</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    SVFUtil::dyn_cast&lt;CallICFGNode&gt;(node-&gt;getICFGNodes().front()))</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keyword">const</span> CFBasicBlockNode* succ = <a class="code" href="classSVF_1_1WTO.html#ae8e57cc333199bc8b5aaff0a825eed47">_graph</a>-&gt;<a class="code" href="classSVF_1_1CFBasicBlockGraph.html#a54200b5a7c41c2ba19660da34c295e81">getCFBasicBlockNode</a>(</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                               callNode-&gt;getRetICFGNode()-&gt;getId());</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            func(succ);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : node-&gt;getOutEdges())</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">if</span> (e-&gt;getICFGEdge() &amp;&amp;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        (!e-&gt;getICFGEdge()-&gt;isIntraCFGEdge() ||</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                         node-&gt;getFunction() != e-&gt;getDstNode()-&gt;getFunction()))</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                func(e-&gt;getDstNode());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/SVF/SVF/svf/include/AbstractExecution/<a class="el" href="CFBasicBlockGWTO_8h_source.html">CFBasicBlockGWTO.h</a></li>
+<li>/home/runner/work/SVF/SVF/svf/include/AE/Core/<a class="el" href="CFBasicBlockGWTO_8h_source.html">CFBasicBlockGWTO.h</a></li>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassSVF_1_1CFBasicBlockGWTO_html_a78a298146b9c8c3af09ac9744b9043ca"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGWTO.html#a78a298146b9c8c3af09ac9744b9043ca">SVF::CFBasicBlockGWTO::Base</a></div><div class="ttdeci">WTO&lt; CFBasicBlockGraph &gt; Base</div><div class="ttdef"><b>Definition:</b> <a href="CFBasicBlockGWTO_8h_source.html#l00048">CFBasicBlockGWTO.h:48</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CFBasicBlockGraph_html_a54200b5a7c41c2ba19660da34c295e81"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGraph.html#a54200b5a7c41c2ba19660da34c295e81">SVF::CFBasicBlockGraph::getCFBasicBlockNode</a></div><div class="ttdeci">CFBasicBlockNode * getCFBasicBlockNode(u32_t id) const</div><div class="ttdef"><b>Definition:</b> <a href="CFBasicBlockG_8h_source.html#l00368">CFBasicBlockG.h:368</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CFBasicBlockGraph_html_a54200b5a7c41c2ba19660da34c295e81"><div class="ttname"><a href="classSVF_1_1CFBasicBlockGraph.html#a54200b5a7c41c2ba19660da34c295e81">SVF::CFBasicBlockGraph::getCFBasicBlockNode</a></div><div class="ttdeci">CFBasicBlockNode * getCFBasicBlockNode(u32_t id) const</div><div class="ttdef"><b>Definition:</b> <a href="CFBasicBlockG_8h_source.html#l00374">CFBasicBlockG.h:374</a></div></div>
 <div class="ttc" id="aclassSVF_1_1WTO_html_ae8e57cc333199bc8b5aaff0a825eed47"><div class="ttname"><a href="classSVF_1_1WTO.html#ae8e57cc333199bc8b5aaff0a825eed47">SVF::WTO&lt; CFBasicBlockGraph &gt;::_graph</a></div><div class="ttdeci">CFBasicBlockGraph * _graph</div><div class="ttdef"><b>Definition:</b> <a href="WTO_8h_source.html#l00550">WTO.h:550</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
