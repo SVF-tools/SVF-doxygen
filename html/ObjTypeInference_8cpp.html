@@ -74,9 +74,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="ObjTypeInference_8h_source.html">SVF-LLVM/ObjTypeInference.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="BasicTypes_8h_source.html">SVF-LLVM/BasicTypes.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LLVMModule_8h_source.html">SVF-LLVM/LLVMModule.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LLVMUtil_8h_source.html">SVF-LLVM/LLVMUtil.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CppUtil_8h_source.html">SVF-LLVM/CppUtil.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Casting_8h_source.html">Util/Casting.h</a>&quot;</code><br />
 </div>
 <p><a href="ObjTypeInference_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -137,7 +139,7 @@ Variables</h2></td></tr>
 <div class="line">            ABORT_MSG(msg);                                                    \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00048">48</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00050">50</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 
 </div>
 </div>
@@ -162,7 +164,7 @@ Variables</h2></td></tr>
 <div class="line">        abort();                                                               \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00042">42</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00044">44</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 
 </div>
 </div>
@@ -187,7 +189,7 @@ Variables</h2></td></tr>
 <div class="line">            &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; (msg) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;                              \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00036">36</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00038">38</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 
 </div>
 </div>
@@ -203,7 +205,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00035">35</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00037">37</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 
 </div>
 </div>
@@ -233,7 +235,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00070">70</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00072">72</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +255,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00069">69</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00071">71</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,34 +277,34 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Determine type based on infer site <a href="https://llvm.org/docs/OpaquePointers.html#migration-instructions">https://llvm.org/docs/OpaquePointers.html#migration-instructions</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00083">83</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    assert(val &amp;&amp; <span class="stringliteral">&quot;value cannot be empty&quot;</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (SVFUtil::isa&lt;LoadInst, StoreInst&gt;(val))</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> llvm::getLoadStoreType(<span class="keyword">const_cast&lt;</span><a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *<span class="keyword">&gt;</span>(val));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *gepInst = SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;(val))</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> gepInst-&gt;getSourceElementType();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *call = SVFUtil::dyn_cast&lt;CallBase&gt;(val))</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> call-&gt;getFunctionType();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *allocaInst = SVFUtil::dyn_cast&lt;AllocaInst&gt;(val))</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> allocaInst-&gt;getAllocatedType();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *globalValue = SVFUtil::dyn_cast&lt;GlobalValue&gt;(val))</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> globalValue-&gt;getValueType();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a>(<span class="stringliteral">&quot;unknown value:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00085">85</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    assert(val &amp;&amp; <span class="stringliteral">&quot;value cannot be empty&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (SVFUtil::isa&lt;LoadInst, StoreInst&gt;(val))</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> llvm::getLoadStoreType(<span class="keyword">const_cast&lt;</span><a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *<span class="keyword">&gt;</span>(val));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *gepInst = SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;(val))</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> gepInst-&gt;getSourceElementType();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *call = SVFUtil::dyn_cast&lt;CallBase&gt;(val))</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> call-&gt;getFunctionType();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *allocaInst = SVFUtil::dyn_cast&lt;AllocaInst&gt;(val))</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> allocaInst-&gt;getAllocatedType();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *globalValue = SVFUtil::dyn_cast&lt;GlobalValue&gt;(val))</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> globalValue-&gt;getValueType();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a>(<span class="stringliteral">&quot;unknown value:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -319,7 +321,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00079">79</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00081">81</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 
 </div>
 </div>
@@ -327,7 +329,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a7655b13bbfe720ca2b8a25e0a72528e6"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6">SVF::SVFUtil::errMsg</a></div><div class="ttdeci">std::string errMsg(const std::string &amp;msg)</div><div class="ttdoc">Print error message by converting a string into red string output.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8cpp_source.html#l00076">SVFUtil.cpp:76</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a86c0a0cb4ada72bd4f42c77558e6a350"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">SVF::LLVMUtil::dumpValueAndDbgInfo</a></div><div class="ttdeci">std::string dumpValueAndDbgInfo(const Value *val)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00890">LLVMUtil.cpp:890</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a90b263fd2f541eca78135078114cabda"><div class="ttname"><a href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">SVF::Value</a></div><div class="ttdeci">llvm::Value Value</div><div class="ttdoc">LLVM Basic classes.</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00081">BasicTypes.h:81</a></div></div>
-<div class="ttc" id="aObjTypeInference_8cpp_html_a54176d0866e198769367b0dc65e049b5"><div class="ttname"><a href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a></div><div class="ttdeci">#define ABORT_MSG(msg)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00042">ObjTypeInference.cpp:42</a></div></div>
+<div class="ttc" id="aObjTypeInference_8cpp_html_a54176d0866e198769367b0dc65e049b5"><div class="ttname"><a href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a></div><div class="ttdeci">#define ABORT_MSG(msg)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00044">ObjTypeInference.cpp:44</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ab65033f068bfbeb0a1c52dcec3beb6bc"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVF::SVFUtil::errs</a></div><div class="ttdeci">std::ostream &amp; errs()</div><div class="ttdoc">Overwrite llvm::errs()</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00056">SVFUtil.h:56</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

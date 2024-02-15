@@ -74,7 +74,7 @@ var searchData=
   ['svfgwithindcall_12412',['SVFGWithIndCall',['../classSVF_1_1SVFGBuilder.html#a70de38086437635d2e44d2a0c9fdded9',1,'SVF::SVFGBuilder']]],
   ['svfgwithindirectcall_12413',['SVFGWithIndirectCall',['../classSVF_1_1Options.html#a06eea18ba4cdf509255126a9b58e8eb0',1,'SVF::Options']]],
   ['svfi8ty_12414',['svfI8Ty',['../classSVF_1_1SVFType.html#aab96e07d337363b3517b0dea1b527d1c',1,'SVF::SVFType']]],
-  ['svfir_12415',['svfIR',['../classSVF_1_1SVFIRWriter.html#a599d699f1a1dcb576d33cb40142c6db8',1,'SVF::SVFIRWriter::svfIR()'],['../classSVF_1_1CFLBase.html#a9e6cbab31612da4a1f8f660d1fabc4c0',1,'SVF::CFLBase::svfir()']]],
+  ['svfir_12415',['svfir',['../classSVF_1_1CFLBase.html#a9e6cbab31612da4a1f8f660d1fabc4c0',1,'SVF::CFLBase::svfir()'],['../classSVF_1_1SVFIRWriter.html#a599d699f1a1dcb576d33cb40142c6db8',1,'SVF::SVFIRWriter::svfIR()']]],
   ['svflooppool_12416',['svfLoopPool',['../classSVF_1_1ICFGWriter.html#a79f4edaff02404f518ffeaeab136c0a9',1,'SVF::ICFGWriter::svfLoopPool()'],['../classSVF_1_1ICFGReader.html#a366fa1cfec101c723e36582d80125194',1,'SVF::ICFGReader::svfLoopPool()']]],
   ['svfmain_12417',['SVFMain',['../classSVF_1_1Options.html#a3a718b0a27c2d13878c0718af97ad73d',1,'SVF::Options']]],
   ['svfmod_12418',['svfMod',['../classSVF_1_1CHGraph.html#a62a3ccdbc55381d5f8d96dc23141f2e5',1,'SVF::CHGraph::svfMod()'],['../classSVF_1_1PointerAnalysis.html#a7e8b3f6843e5ea75fd189162d2cd60a5',1,'SVF::PointerAnalysis::svfMod()']]],

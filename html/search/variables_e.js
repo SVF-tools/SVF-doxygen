@@ -81,7 +81,7 @@ var searchData=
   ['numofmhpld_12121',['numOfMHPLd',['../classSVF_1_1MTAAnnotator.html#a29e0123620ab072fddc45331c6aa46e8',1,'SVF::MTAAnnotator']]],
   ['numofmhpqueries_12122',['numOfMHPQueries',['../classSVF_1_1MHP.html#ab8bd382e0c70b0feb2a291ecc4043106',1,'SVF::MHP']]],
   ['numofmhpst_12123',['numOfMHPSt',['../classSVF_1_1MTAAnnotator.html#a3a53e90b4f361d1298983bc89795b3d2',1,'SVF::MTAAnnotator']]],
-  ['numofmssaphi_12124',['NumOfMSSAPhi',['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi()'],['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi()']]],
+  ['numofmssaphi_12124',['numOfMSSAPhi',['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi()'],['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi()']]],
   ['numofnewsvfgedges_12125',['numOfNewSVFGEdges',['../classSVF_1_1MTASVFGBuilder.html#a019a4597074fdad6e51d936ed4ead0d9',1,'SVF::MTASVFGBuilder']]],
   ['numofnodes_12126',['numOfNodes',['../classSVF_1_1ICFGStat.html#a8e71a19c266aacd7acb1fee6bb339788',1,'SVF::ICFGStat::numOfNodes()'],['../classSVF_1_1SVFGStat.html#ab499c24856a990dd4adb366107eb3302',1,'SVF::SVFGStat::numOfNodes()']]],
   ['numofnodesinscc_12127',['numOfNodesInSCC',['../classSVF_1_1FlowSensitive.html#a9f3fe97202db8170fa9f47c5684bce75',1,'SVF::FlowSensitive']]],

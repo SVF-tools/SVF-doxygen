@@ -15,7 +15,7 @@ var searchData=
   ['newssaname_10139',['newSSAName',['../classSVF_1_1MemSSA.html#a381a35d48ce2f8e348ddbbb9ce526ca8',1,'SVF::MemSSA']]],
   ['nextsetindex_10140',['nextSetIndex',['../classSVF_1_1CoreBitVector.html#a087f69adea5e9e83bd908a1ab0ee1383',1,'SVF::CoreBitVector']]],
   ['ngettext_10141',['ngettext',['../extapi_8c.html#ac4ffbac192a285f13ba01eeeffd72030',1,'extapi.c']]],
-  ['node_10142',['Node',['../classSVF_1_1SCCDetection.html#a6458c27c625add944fcb8a3ef7b536a6',1,'SVF::SCCDetection::Node()'],['../classSVF_1_1WPASolver.html#a5fd488d74e04aa9e66ca4eb42c6dbbf4',1,'SVF::WPASolver::Node()'],['../classSVF_1_1WTONode.html#aae0fe6c5464535f41f4723c23615e5cd',1,'SVF::WTONode::node()']]],
+  ['node_10142',['node',['../classSVF_1_1WTONode.html#aae0fe6c5464535f41f4723c23615e5cd',1,'SVF::WTONode::node()'],['../classSVF_1_1SCCDetection.html#a6458c27c625add944fcb8a3ef7b536a6',1,'SVF::SCCDetection::Node()'],['../classSVF_1_1WPASolver.html#a5fd488d74e04aa9e66ca4eb42c6dbbf4',1,'SVF::WPASolver::Node()']]],
   ['node_5findex_10143',['Node_Index',['../classSVF_1_1SCCDetection.html#a5fa111bb849052b8a753194cd0cd5e0c',1,'SVF::SCCDetection::Node_Index()'],['../classSVF_1_1WPASolver.html#a01450e1475679d093413e6496c198fc0',1,'SVF::WPASolver::Node_Index()']]],
   ['nodeidallocator_10144',['NodeIDAllocator',['../classSVF_1_1NodeIDAllocator.html#ac8d6abc4ee27ae464f3978e4f4bdc3a6',1,'SVF::NodeIDAllocator']]],
   ['nodeincycle_10145',['nodeInCycle',['../classSVF_1_1SVFGStat.html#a42b67371df87ba647166000912f53243',1,'SVF::SVFGStat']]],
