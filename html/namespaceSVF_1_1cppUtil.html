@@ -143,16 +143,11 @@ Functions</h2></td></tr>
 <tr class="memitem:afd5fcc8fe98df5f057ff2e04c68b49b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1cppUtil.html#afd5fcc8fe98df5f057ff2e04c68b49b5">isDynCast</a> (const <a class="el" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *foo)</td></tr>
 <tr class="memdesc:afd5fcc8fe98df5f057ff2e04c68b49b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether foo is a cpp dyncast function  <a href="namespaceSVF_1_1cppUtil.html#afd5fcc8fe98df5f057ff2e04c68b49b5">More...</a><br /></td></tr>
 <tr class="separator:afd5fcc8fe98df5f057ff2e04c68b49b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f7be63c320fca5a7d981a03999107b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1cppUtil.html#a4f7be63c320fca5a7d981a03999107b5">isNewAlloc</a> (const <a class="el" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *foo)</td></tr>
-<tr class="memdesc:a4f7be63c320fca5a7d981a03999107b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether foo is a cpp heap allocation (new)  <a href="namespaceSVF_1_1cppUtil.html#a4f7be63c320fca5a7d981a03999107b5">More...</a><br /></td></tr>
-<tr class="separator:a4f7be63c320fca5a7d981a03999107b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26ccd6abf127a7ccc34a973f7b13161b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1cppUtil.html#a26ccd6abf127a7ccc34a973f7b13161b">extractClsNameFromDynCast</a> (const <a class="el" href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">CallBase</a> *callBase)</td></tr>
 <tr class="memdesc:a26ccd6abf127a7ccc34a973f7b13161b"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract class name from cpp dyncast function  <a href="namespaceSVF_1_1cppUtil.html#a26ccd6abf127a7ccc34a973f7b13161b">More...</a><br /></td></tr>
 <tr class="separator:a26ccd6abf127a7ccc34a973f7b13161b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abccc29dae7b845f19bf588b013191173"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1cppUtil.html#abccc29dae7b845f19bf588b013191173">cppClsNameToType</a> (const <a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> &amp;className)</td></tr>
 <tr class="separator:abccc29dae7b845f19bf588b013191173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeb267a39339b04eec09c6a2a6ceb572"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1cppUtil.html#abeb267a39339b04eec09c6a2a6ceb572">typeToClsName</a> (const <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *ty)</td></tr>
-<tr class="separator:abeb267a39339b04eec09c6a2a6ceb572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a4e1785295e2695fae72758d8bbe4f7ac"></a>
@@ -203,12 +198,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00880">880</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;{</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <a class="code" href="namespaceSVF.html#a2bf58575ac7d068e0f1a4cf953b9e6cb">StructType</a> *classTy = StructType::getTypeByName(LLVMModuleSet::getLLVMModuleSet()-&gt;getContext(),</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                          <a class="code" href="CppUtil_8cpp.html#a5f8da60b0fcc28445f508f4e42513a82">clsName</a> + className);</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordflow">return</span> classTy ? classTy : LLVMModuleSet::getLLVMModuleSet()-&gt;getTypeInference()-&gt;ptrType();</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00869">869</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;{</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    <a class="code" href="namespaceSVF.html#a2bf58575ac7d068e0f1a4cf953b9e6cb">StructType</a> *classTy = StructType::getTypeByName(LLVMModuleSet::getLLVMModuleSet()-&gt;getContext(),</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;                          <a class="code" href="CppUtil_8cpp.html#a5f8da60b0fcc28445f508f4e42513a82">clsName</a> + className);</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <span class="keywordflow">return</span> classTy ? classTy : LLVMModuleSet::getLLVMModuleSet()-&gt;getTypeInference()-&gt;ptrType();</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -300,21 +295,21 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00864">864</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;{</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *tgtCast = callBase-&gt;getArgOperand(2);</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    <span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;valueStr = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#afa2f8c8ab19c75547c26ede53b9f6159">LLVMUtil::dumpValue</a>(tgtCast);</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> leftPos = valueStr.find(<a class="code" href="CppUtil_8cpp.html#ac6c8cb5e26437d51d4d2e0112ebfdbc6">ztilabel</a>);</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    assert(leftPos != (<a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a>) std::string::npos &amp;&amp; <span class="stringliteral">&quot;does not find ZTI for dyncast?&quot;</span>);</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> rightPos = leftPos;</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    <span class="keywordflow">while</span> (rightPos &lt; valueStr.size() &amp;&amp; valueStr[rightPos] != <span class="charliteral">&#39; &#39;</span>) rightPos++;</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    <span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;substr = valueStr.substr(leftPos, rightPos - leftPos);</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> demangleName = <a class="code" href="namespaceSVF_1_1cppUtil.html#a745a2addadc136075d45c7fb8437af3e">llvm::demangle</a>(substr);</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    <span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;realName = demangleName.substr(<a class="code" href="CppUtil_8cpp.html#af6dcab87a299097747c63a654197ae66">ztiprefix</a>.size(),</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;                                  demangleName.size() - <a class="code" href="CppUtil_8cpp.html#af6dcab87a299097747c63a654197ae66">ztiprefix</a>.size());</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    assert(realName != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; <span class="stringliteral">&quot;real name for dyncast empty?&quot;</span>);</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordflow">return</span> realName;</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00853">853</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;{</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *tgtCast = callBase-&gt;getArgOperand(2);</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;valueStr = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#afa2f8c8ab19c75547c26ede53b9f6159">LLVMUtil::dumpValue</a>(tgtCast);</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> leftPos = valueStr.find(<a class="code" href="CppUtil_8cpp.html#ac6c8cb5e26437d51d4d2e0112ebfdbc6">ztilabel</a>);</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    assert(leftPos != (<a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a>) std::string::npos &amp;&amp; <span class="stringliteral">&quot;does not find ZTI for dyncast?&quot;</span>);</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> rightPos = leftPos;</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    <span class="keywordflow">while</span> (rightPos &lt; valueStr.size() &amp;&amp; valueStr[rightPos] != <span class="charliteral">&#39; &#39;</span>) rightPos++;</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    <span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;substr = valueStr.substr(leftPos, rightPos - leftPos);</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> demangleName = <a class="code" href="namespaceSVF_1_1cppUtil.html#a745a2addadc136075d45c7fb8437af3e">llvm::demangle</a>(substr);</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    <span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;realName = demangleName.substr(<a class="code" href="CppUtil_8cpp.html#af6dcab87a299097747c63a654197ae66">ztiprefix</a>.size(),</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;                                  demangleName.size() - <a class="code" href="CppUtil_8cpp.html#af6dcab87a299097747c63a654197ae66">ztiprefix</a>.size());</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    assert(realName != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; <span class="stringliteral">&quot;real name for dyncast empty?&quot;</span>);</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    <span class="keywordflow">return</span> realName;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -994,39 +989,6 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a4f7be63c320fca5a7d981a03999107b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f7be63c320fca5a7d981a03999107b5">&#9670;&nbsp;</a></span>isNewAlloc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SVF::cppUtil::isNewAlloc </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *&#160;</td>
-          <td class="paramname"><em>foo</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>whether foo is a cpp heap allocation (new) </p>
-<p>whether foo is a cpp heap allocation (new) </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">foo</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00853">853</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;{</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    assert(foo-&gt;hasName() &amp;&amp; <span class="stringliteral">&quot;foo does not have a name? possible indirect call&quot;</span>);</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keywordflow">return</span> foo-&gt;getName().str() == <a class="code" href="CppUtil_8cpp.html#a809a0913c3e4226ef8fd2df7aaa63d8d">znwm</a>;</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a5dd3230226002e126f6b0a877f9550ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5dd3230226002e126f6b0a877f9550ce">&#9670;&nbsp;</a></span>isSameThisPtrInConstructor()</h2>
 
@@ -1237,36 +1199,6 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="abeb267a39339b04eec09c6a2a6ceb572"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeb267a39339b04eec09c6a2a6ceb572">&#9670;&nbsp;</a></span>typeToClsName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="cJSON_8cpp.html#ae1adbce218e7a9d09164012443191d24">std::string</a> SVF::cppUtil::typeToClsName </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *&#160;</td>
-          <td class="paramname"><em>ty</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00887">887</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;{</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *stTy = SVFUtil::dyn_cast&lt;StructType&gt;(ty))</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    {</div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        <span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;typeName = stTy-&gt;getName().str();</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        <span class="keyword">const</span> <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;className = typeName.substr(</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;                                           <a class="code" href="CppUtil_8cpp.html#a5f8da60b0fcc28445f508f4e42513a82">clsName</a>.size(), typeName.size() - <a class="code" href="CppUtil_8cpp.html#a5f8da60b0fcc28445f508f4e42513a82">clsName</a>.size());</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        <span class="keywordflow">return</span> className;</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;    }</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a96037fcbe6261f46e22505a10f50753f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a96037fcbe6261f46e22505a10f50753f">&#9670;&nbsp;</a></span>VCallInCtorOrDtor()</h2>
 
@@ -1352,7 +1284,6 @@ Functions</h2></td></tr>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_afd5fcc8fe98df5f057ff2e04c68b49b5"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#afd5fcc8fe98df5f057ff2e04c68b49b5">SVF::cppUtil::isDynCast</a></div><div class="ttdeci">bool isDynCast(const Function *foo)</div><div class="ttdoc">whether foo is a cpp dyncast function</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00842">CppUtil.cpp:842</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a28eec26ec8edaa5e96aecfeb01f6c0d4"><div class="ttname"><a href="namespaceSVF.html#a28eec26ec8edaa5e96aecfeb01f6c0d4">SVF::MDString</a></div><div class="ttdeci">llvm::MDString MDString</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00100">BasicTypes.h:100</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_af19bec54621f4605bac4feaf9f73803c"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#af19bec54621f4605bac4feaf9f73803c">SVF::cppUtil::isDestructor</a></div><div class="ttdeci">bool isDestructor(const Function *F)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00444">CppUtil.cpp:444</a></div></div>
-<div class="ttc" id="aCppUtil_8cpp_html_a809a0913c3e4226ef8fd2df7aaa63d8d"><div class="ttname"><a href="CppUtil_8cpp.html#a809a0913c3e4226ef8fd2df7aaa63d8d">znwm</a></div><div class="ttdeci">const std::string znwm</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00059">CppUtil.cpp:59</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ab65033f068bfbeb0a1c52dcec3beb6bc"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVF::SVFUtil::errs</a></div><div class="ttdeci">std::ostream &amp; errs()</div><div class="ttdoc">Overwrite llvm::errs()</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00056">SVFUtil.h:56</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a58cdfbc4160cae08745b67844ac29801"><div class="ttname"><a href="namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801">SVF::Argument</a></div><div class="ttdeci">llvm::Argument Argument</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00144">BasicTypes.h:144</a></div></div>
 <div class="ttc" id="aCppUtil_8cpp_html_a2bff9158f699b6fd11c8e116b91e4809"><div class="ttname"><a href="CppUtil_8cpp.html#a2bff9158f699b6fd11c8e116b91e4809">getBeforeParenthesis</a></div><div class="ttdeci">static std::string getBeforeParenthesis(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00107">CppUtil.cpp:107</a></div></div>
