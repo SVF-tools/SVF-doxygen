@@ -114,6 +114,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8a472a41196fd7537908665c631dcbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ICFGWTO.html#aa8a472a41196fd7537908665c631dcbb">ICFGWTO</a> (<a class="el" href="classSVF_1_1ICFG.html">ICFG</a> *graph, const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *node)</td></tr>
 <tr class="separator:aa8a472a41196fd7537908665c631dcbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52bfc8ef5e87bdbda4a3ba3e2ee23f2e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ICFGWTO.html#a52bfc8ef5e87bdbda4a3ba3e2ee23f2e">~ICFGWTO</a> ()</td></tr>
+<tr class="separator:a52bfc8ef5e87bdbda4a3ba3e2ee23f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0178699f891c6814c04c10da72c0acf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ICFGWTO.html#a0178699f891c6814c04c10da72c0acf2">forEachSuccessor</a> (const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *node, std::function&lt; void(const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *)&gt; func) const override</td></tr>
 <tr class="separator:a0178699f891c6814c04c10da72c0acf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSVF_1_1WTO"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSVF_1_1WTO')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSVF_1_1WTO.html">SVF::WTO&lt; ICFG &gt;</a></td></tr>
@@ -308,6 +310,35 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a52bfc8ef5e87bdbda4a3ba3e2ee23f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52bfc8ef5e87bdbda4a3ba3e2ee23f2e">&#9670;&nbsp;</a></span>~ICFGWTO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SVF::ICFGWTO::~ICFGWTO </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ICFGWTO_8h_source.html#l00055">55</a> of file <a class="el" href="ICFGWTO_8h_source.html">ICFGWTO.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0178699f891c6814c04c10da72c0acf2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0178699f891c6814c04c10da72c0acf2">&#9670;&nbsp;</a></span>forEachSuccessor()</h2>
@@ -343,24 +374,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ICFGWTO_8h_source.html#l00055">55</a> of file <a class="el" href="ICFGWTO_8h_source.html">ICFGWTO.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* callNode = SVFUtil::dyn_cast&lt;CallICFGNode&gt;(node))</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keyword">const</span> ICFGNode* succ = callNode-&gt;getRetICFGNode();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            func(succ);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : node-&gt;getOutEdges())</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">if</span> (!e-&gt;isIntraCFGEdge() ||</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        node-&gt;getFun() != e-&gt;getDstNode()-&gt;getFun())</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                func(e-&gt;getDstNode());</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="ICFGWTO_8h_source.html#l00059">59</a> of file <a class="el" href="ICFGWTO_8h_source.html">ICFGWTO.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* callNode = SVFUtil::dyn_cast&lt;CallICFGNode&gt;(node))</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">const</span> ICFGNode* succ = callNode-&gt;getRetICFGNode();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            func(succ);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : node-&gt;getOutEdges())</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">if</span> (!e-&gt;isIntraCFGEdge() ||</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        node-&gt;getFun() != e-&gt;getDstNode()-&gt;getFun())</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                func(e-&gt;getDstNode());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
