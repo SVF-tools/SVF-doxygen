@@ -527,6 +527,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ICFGReader.html">ICFGReader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ICFGSimplification.html">ICFGSimplification</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ICFGStat.html">ICFGStat</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1ICFGWriter.html">ICFGWriter</a></td></tr>
@@ -5252,11 +5254,11 @@ template&lt;typename Key , typename Hash  = Hash&lt;Key&gt;, typename KeyEqual  
 <tr><td class="fieldname"><a id="a41375daa7cc99317d0aa2a21dc643b88aa5aa2ddadb5f0392b52dcbe487fe0ecd"></a>BufOverflowChecker&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="AbstractExecution_8h_source.html#l00046">46</a> of file <a class="el" href="AbstractExecution_8h_source.html">AbstractExecution.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespaceSVF.html#a41375daa7cc99317d0aa2a21dc643b88a53d18d0ea8b11173db3d2f60f838ffe1">AbstractExecution</a>,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="namespaceSVF.html#a41375daa7cc99317d0aa2a21dc643b88aa5aa2ddadb5f0392b52dcbe487fe0ecd">BufOverflowChecker</a>,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<p class="definition">Definition at line <a class="el" href="AbstractExecution_8h_source.html#l00050">50</a> of file <a class="el" href="AbstractExecution_8h_source.html">AbstractExecution.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="namespaceSVF.html#a41375daa7cc99317d0aa2a21dc643b88a53d18d0ea8b11173db3d2f60f838ffe1">AbstractExecution</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="namespaceSVF.html#a41375daa7cc99317d0aa2a21dc643b88aa5aa2ddadb5f0392b52dcbe487fe0ecd">BufOverflowChecker</a>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5819,30 +5821,30 @@ template&lt;unsigned ElementSize&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BufOverflowChecker_8cpp_source.html#l00036">36</a> of file <a class="el" href="BufOverflowChecker_8cpp_source.html">BufOverflowChecker.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (inv.is_infinite())</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> inv.toString();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        int64_t lb_val = inv.lb().getNumeral();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        int64_t ub_val = inv.ub().getNumeral();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// check lb</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> lb_s32 = (lb_val &lt; static_cast&lt;int64_t&gt;(INT_MIN)) ? INT_MIN :</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                       (lb_val &gt; <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(INT_MAX)) ? INT_MAX :</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                       <span class="keyword">static_cast&lt;</span><a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a><span class="keyword">&gt;</span>(lb_val);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// check ub</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> ub_s32 = (ub_val &lt; static_cast&lt;int64_t&gt;(INT_MIN)) ? INT_MIN :</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                       (ub_val &gt; <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(INT_MAX)) ? INT_MAX :</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                       <span class="keyword">static_cast&lt;</span><a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a><span class="keyword">&gt;</span>(ub_val);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span> + std::to_string(lb_s32) + <span class="stringliteral">&quot;, &quot;</span> + std::to_string(ub_s32) + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="BufOverflowChecker_8cpp_source.html#l00037">37</a> of file <a class="el" href="BufOverflowChecker_8cpp_source.html">BufOverflowChecker.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (inv.is_infinite())</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> inv.toString();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        int64_t lb_val = inv.lb().getNumeral();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        int64_t ub_val = inv.ub().getNumeral();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// check lb</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> lb_s32 = (lb_val &lt; static_cast&lt;int64_t&gt;(INT_MIN)) ? INT_MIN :</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                       (lb_val &gt; <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(INT_MAX)) ? INT_MAX :</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                       <span class="keyword">static_cast&lt;</span><a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a><span class="keyword">&gt;</span>(lb_val);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// check ub</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> ub_s32 = (ub_val &lt; static_cast&lt;int64_t&gt;(INT_MIN)) ? INT_MIN :</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                       (ub_val &gt; <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(INT_MAX)) ? INT_MAX :</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                       <span class="keyword">static_cast&lt;</span><a class="code" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a><span class="keyword">&gt;</span>(ub_val);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span> + std::to_string(lb_s32) + <span class="stringliteral">&quot;, &quot;</span> + std::to_string(ub_s32) + <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
