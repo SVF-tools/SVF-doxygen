@@ -84,7 +84,7 @@ var searchData=
   ['dfptsmap_1598',['DFPtsMap',['../classSVF_1_1MutableDFPTData.html#a0c73427f957d310bc85955bec6654352',1,'SVF::MutableDFPTData']]],
   ['dfptsmapconstiter_1599',['DFPtsMapconstIter',['../classSVF_1_1MutableDFPTData.html#adb30678f5bbdea0f196d3b0ab67d2bad',1,'SVF::MutableDFPTData']]],
   ['dfptsmapiter_1600',['DFPtsMapIter',['../classSVF_1_1MutableDFPTData.html#a31ad5da37a88d2b97633d590393b0e64',1,'SVF::MutableDFPTData']]],
-  ['dfreechecker_1601',['DFREECHECKER',['../saber_8cpp.html#ab233df6b8c190aa2c26fa20bd1ac7c52',1,'saber.cpp']]],
+  ['dfreecheck_1601',['DFreeCheck',['../classSVF_1_1Options.html#a3a38989c49d0544f7cd7de85e5ea63f6',1,'SVF::Options']]],
   ['dfsnodesbetweenpdomnodes_1602',['dfsNodesBetweenPdomNodes',['../classSVF_1_1CDGBuilder.html#a6efa510f946ea8befebbc94bed241395',1,'SVF::CDGBuilder']]],
   ['dgeneral_1603',['DGENERAL',['../SVFType_8h.html#a2c64190a065f342897573a3ef4973adb',1,'SVFType.h']]],
   ['dgettext_1604',['dgettext',['../extapi_8c.html#ae9c3a42a44267df221d0c4fe5b2ea439',1,'extapi.c']]],
