@@ -468,7 +468,7 @@ var searchData=
   ['apoffset_649',['apOffset',['../classSVF_1_1GepObjVar.html#afb30992a958c591b6afcacdf35c552b5',1,'SVF::GepObjVar::apOffset()'],['../namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1',1,'SVF::APOffset()']]],
   ['apout_650',['APOUT',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a562b0ba840860c8eeaaca1a66e61b54f',1,'SVF::VFGNode']]],
   ['applyedgemask_651',['applyEdgeMask',['../classSVF_1_1SVFIRReader.html#aa554326050f1e921449b560d94b7bb07',1,'SVF::SVFIRReader']]],
-  ['applysummary_652',['applySummary',['../classSVF_1_1SVFIR2AbsState.html#ad247b7d3ff5fd99c0d92cac8f1c876eb',1,'SVF::SVFIR2AbsState']]],
+  ['applysummary_652',['applySummary',['../classSVF_1_1SVFIR2AbsState.html#aedb9ed0802f5aabb3dff760615600678',1,'SVF::SVFIR2AbsState']]],
   ['aret_653',['ARet',['../classSVF_1_1VFGNode.html#a99a54cf322b0eec3a1ef109ce5f2db75a283c290539f7f46d3cd474137ff37dfb',1,'SVF::VFGNode']]],
   ['arg_5fempty_654',['arg_empty',['../classSVF_1_1SVFCallInst.html#af19bc370764b552b5ce55c9967bd5a1e',1,'SVF::SVFCallInst::arg_empty()'],['../classSVF_1_1CallSite.html#ad084f7734007db7b14444b20bb980dd3',1,'SVF::CallSite::arg_empty()']]],
   ['arg_5fsize_655',['arg_size',['../classSVF_1_1SVFFunction.html#ab8c7a9c79b0668aae604bbe54e34e46e',1,'SVF::SVFFunction::arg_size()'],['../classSVF_1_1SVFCallInst.html#a496d0e963f0f6a4f9c08183fa91792b0',1,'SVF::SVFCallInst::arg_size()'],['../classSVF_1_1CallSite.html#a2a1904e6f381a0f8ac30265f2dfc48c8',1,'SVF::CallSite::arg_size()']]],
