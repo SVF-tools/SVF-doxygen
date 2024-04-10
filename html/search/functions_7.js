@@ -469,7 +469,7 @@ var searchData=
   ['getlockspan_8828',['getLockSpan',['../classSVF_1_1SVFGNodeLockSpan.html#a4e6207b3b64a60993e1e02f6ef125452',1,'SVF::SVFGNodeLockSpan']]],
   ['getlockval_8829',['getLockVal',['../classSVF_1_1LockAnalysis.html#aa3c4548e8f8e47cd716081bda2574ff3',1,'SVF::LockAnalysis::getLockVal()'],['../classSVF_1_1ThreadAPI.html#a758955bf256ab9c16fb9f17e23cc25e0',1,'SVF::ThreadAPI::getLockVal(const SVFInstruction *inst) const'],['../classSVF_1_1ThreadAPI.html#a3b81d6d51c286adf406d7597f9d51edc',1,'SVF::ThreadAPI::getLockVal(CallSite cs) const']]],
   ['getloctodpmvecmap_8830',['getLocToDPMVecMap',['../classSVF_1_1DDAVFSolver.html#ad849ae4509e88832f784c748468ab959',1,'SVF::DDAVFSolver']]],
-  ['getloctoval_8831',['getLocToVal',['../classSVF_1_1AbstractState.html#ab409b0084c202ddf437b45873d6992c6',1,'SVF::AbstractState::getLocToVal()'],['../classSVF_1_1RelExeState.html#a3eb51c26ae9c87e1457d6515e6d537f9',1,'SVF::RelExeState::getLocToVal()']]],
+  ['getloctoval_8831',['getLocToVal',['../classSVF_1_1AbstractState.html#ab8d9bf4a917a4691037ae08e2b634624',1,'SVF::AbstractState::getLocToVal()'],['../classSVF_1_1RelExeState.html#a86eb61721db5e50d421f3dc8606ea0ea',1,'SVF::RelExeState::getLocToVal()']]],
   ['getloop_8832',['getLoop',['../classSVF_1_1TCT.html#a35f0fd73e0d752a426284eb4406ecca2',1,'SVF::TCT::getLoop(const SVFInstruction *inst)'],['../classSVF_1_1TCT.html#af227b820ee93765e6b5c9eb9aad30c91',1,'SVF::TCT::getLoop(const SVFBasicBlock *bb)']]],
   ['getloopanddominfo_8833',['getLoopAndDomInfo',['../classSVF_1_1SVFFunction.html#a5798ecc742ee74e357d13eea751258c4',1,'SVF::SVFFunction']]],
   ['getloopbound_8834',['getLoopBound',['../classSVF_1_1SVFLoop.html#ae772c9aab10b88d3c53cdf2cdb23d713',1,'SVF::SVFLoop']]],
