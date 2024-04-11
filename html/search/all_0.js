@@ -150,7 +150,7 @@ var searchData=
   ['_5fsvfg_147',['_svfg',['../classSVF_1_1DDAVFSolver.html#a74d83f06e8fc0ecedc1e1846030c99c6',1,'SVF::DDAVFSolver::_svfg()'],['../classSVF_1_1WPAPass.html#ac0f6d1221ee66ac17d0b201d73d7e28a',1,'SVF::WPAPass::_svfg()']]],
   ['_5fsvfgscc_148',['_svfgSCC',['../classSVF_1_1DDAVFSolver.html#a54f5d4972238ae69f19c9da3b9f51644',1,'SVF::DDAVFSolver']]],
   ['_5fsvfir_149',['_svfir',['../classSVF_1_1AbstractInterpretation.html#a618fc324a6c205d7e1b471bd850377a9',1,'SVF::AbstractInterpretation::_svfir()'],['../classSVF_1_1SVFIR2AbsState.html#a80a0f0a20e993c6fcffc89f9de409f44',1,'SVF::SVFIR2AbsState::_svfir()']]],
-  ['_5fsvfir2exestate_150',['_svfir2ExeState',['../classSVF_1_1AbstractInterpretation.html#af78f068a373ebb6a2f14dcde980a9dae',1,'SVF::AbstractInterpretation']]],
+  ['_5fsvfir2absstate_150',['_svfir2AbsState',['../classSVF_1_1AbstractInterpretation.html#a9c592b91a1e3d72ada730387232a2fcf',1,'SVF::AbstractInterpretation']]],
   ['_5fswitch_5flhsrhs_5fpredicate_151',['_switch_lhsrhs_predicate',['../AbstractInterpretation_8cpp.html#a3b70282b79998dcb9f6df78370bc1fe9',1,'AbstractInterpretation.cpp']]],
   ['_5ft_152',['_T',['../classSVF_1_1SCCDetection.html#a0373c80345ffb147ba9a5f57e96d7745',1,'SVF::SCCDetection']]],
   ['_5fthisptrclassnames_153',['_thisPtrClassNames',['../classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b',1,'SVF::ObjTypeInference']]],
