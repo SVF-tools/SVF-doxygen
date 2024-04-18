@@ -44,7 +44,7 @@ var searchData=
   ['touchcxtstmt_10647',['touchCxtStmt',['../classSVF_1_1LockAnalysis.html#aaa0f33f19d9f80eee98289119ba907d2',1,'SVF::LockAnalysis']]],
   ['toz3expr_10648',['toZ3Expr',['../classSVF_1_1RelationSolver.html#af621897ab66f6475d5ee043ef2e33623',1,'SVF::RelationSolver::toZ3Expr()'],['../classSVF_1_1RelExeState.html#a8045abc5e96d0c7b373587c796180d3e',1,'SVF::RelExeState::toZ3Expr()']]],
   ['tparm_10649',['tparm',['../extapi_8c.html#ac94fb461ca9c5d62db380781a58a7f82',1,'extapi.c']]],
-  ['tracememoryallocationsize_10650',['traceMemoryAllocationSize',['../classSVF_1_1AbstractInterpretation.html#aef497844d2988de7b223a5bc4d669c1c',1,'SVF::AbstractInterpretation']]],
+  ['tracememoryallocationsize_10650',['traceMemoryAllocationSize',['../classSVF_1_1AbstractInterpretation.html#a90b54f715dfa24657bd3e058617bffac',1,'SVF::AbstractInterpretation']]],
   ['traversedendrogram_10651',['traverseDendrogram',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#abd44e3b07b0482bacf6b1a080fe650c6',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['traverseonicfg_10652',['traverseOnICFG',['../svf-ex_8cpp.html#a19f3fe331a1e7050a513672a91743b96',1,'svf-ex.cpp']]],
   ['traverseonsvfstmt_10653',['traverseOnSVFStmt',['../svf-ex_8cpp.html#a8fa9e6583c354b1883a32b8abf98779f',1,'svf-ex.cpp']]],

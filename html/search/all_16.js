@@ -13,7 +13,7 @@ var searchData=
   ['widenfixpointpass_6246',['widenFixpointPass',['../classSVF_1_1AbstractInterpretation.html#a1b8e1e0cc9803687a0eb951015ac59af',1,'SVF::AbstractInterpretation']]],
   ['widening_6247',['widening',['../classSVF_1_1AbstractState.html#afd37c4419cfc79b6765fa243fcbea573',1,'SVF::AbstractState']]],
   ['widenwith_6248',['widenWith',['../classSVF_1_1AbstractState.html#a8d2a6e895d17181324cdeb9e2cf8f1de',1,'SVF::AbstractState']]],
-  ['word_6249',['Word',['../classSVF_1_1CoreBitVector.html#aaee26ffc13d05cd57f0fd7e4c2ea875c',1,'SVF::CoreBitVector::Word()'],['../structSVF_1_1SparseBitVectorElement.html#a5d43d980591d14d3a3d0782be034ed4f',1,'SVF::SparseBitVectorElement::word()']]],
+  ['word_6249',['word',['../structSVF_1_1SparseBitVectorElement.html#a5d43d980591d14d3a3d0782be034ed4f',1,'SVF::SparseBitVectorElement::word()'],['../classSVF_1_1CoreBitVector.html#aaee26ffc13d05cd57f0fd7e4c2ea875c',1,'SVF::CoreBitVector::Word()']]],
   ['wordit_6250',['wordIt',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a1afa1cb9e8377d3dab767aa4bfc713dc',1,'SVF::CoreBitVector::CoreBitVectorIterator']]],
   ['wordnumber_6251',['WordNumber',['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#a6b139db78c9cba017df0fa468bee713a',1,'SVF::SparseBitVector::SparseBitVectorIterator']]],
   ['words_6252',['words',['../classSVF_1_1CoreBitVector.html#a807283a917e845ef19c4962b1744e98b',1,'SVF::CoreBitVector']]],
