@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['narrow_5fwith_10167',['narrow_with',['../classSVF_1_1IntervalValue.html#a6c175067e5573ae7180ae4d872c49c8f',1,'SVF::IntervalValue::narrow_with()'],['../structSVF_1_1AbstractValue.html#a84d4827120d8fa5858edfce1406ed386',1,'SVF::AbstractValue::narrow_with()']]],
+  ['narrow_5fwith_10167',['narrow_with',['../classSVF_1_1IntervalValue.html#a6c175067e5573ae7180ae4d872c49c8f',1,'SVF::IntervalValue::narrow_with()'],['../classSVF_1_1AbstractValue.html#a84d4827120d8fa5858edfce1406ed386',1,'SVF::AbstractValue::narrow_with()']]],
   ['narrowaddrs_10168',['narrowAddrs',['../classSVF_1_1SVFIR2AbsState.html#a4abde8e78108675a6980c362857cc7f0',1,'SVF::SVFIR2AbsState']]],
   ['narrowfixpointpass_10169',['narrowFixpointPass',['../classSVF_1_1AbstractInterpretation.html#a8a4b07e6c999bea0b0e69dcab0346933',1,'SVF::AbstractInterpretation']]],
   ['narrowing_10170',['narrowing',['../classSVF_1_1AbstractState.html#aa9f048614c0bdbe5e8562bfcc6288a97',1,'SVF::AbstractState']]],

@@ -57,7 +57,7 @@ var searchData=
   ['interlev_5funsound_11901',['INTERLEV_UNSOUND',['../classSVF_1_1MTAResultValidator.html#a0e2fb93a69df487606c0eeaeadab805d',1,'SVF::MTAResultValidator']]],
   ['inters_11902',['inters',['../classSVF_1_1InterDisjointMRG.html#a104134d0f7c8b16abe8f5f3899c3bbf0',1,'SVF::InterDisjointMRG']]],
   ['intersectioncache_11903',['intersectionCache',['../classSVF_1_1PersistentPointsToCache.html#a525fbb49c91040c078fbcaaae2339ef2',1,'SVF::PersistentPointsToCache']]],
-  ['interval_11904',['interval',['../structSVF_1_1AbstractValue.html#a6cbe0b567ba824136654627002e32930',1,'SVF::AbstractValue']]],
+  ['interval_11904',['interval',['../classSVF_1_1AbstractValue.html#a6cbe0b567ba824136654627002e32930',1,'SVF::AbstractValue']]],
   ['intralock_11905',['IntraLock',['../classSVF_1_1Options.html#af6d92cd4372cd952e6d955cfc9be0ccb',1,'SVF::Options']]],
   ['intrinsic_11906',['intrinsic',['../classSVF_1_1SVFFunction.html#a037b2583aa8d15ceeb630eaad41a36a3',1,'SVF::SVFFunction']]],
   ['inupdatedvarmap_11907',['inUpdatedVarMap',['../classSVF_1_1MutableIncDFPTData.html#ab5e9ebf9e71652b5fa63d59c97d016e4',1,'SVF::MutableIncDFPTData::inUpdatedVarMap()'],['../classSVF_1_1PersistentIncDFPTData.html#a106391cd8eefab1740b54cd9bbacccad',1,'SVF::PersistentIncDFPTData::inUpdatedVarMap()']]],

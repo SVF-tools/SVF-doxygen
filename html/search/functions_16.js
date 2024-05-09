@@ -3,7 +3,7 @@ var searchData=
   ['weakupdateoutfromin_10997',['weakUpdateOutFromIn',['../classSVF_1_1FlowSensitive.html#ab492c283e2264b4cbd4c192e805b7750',1,'SVF::FlowSensitive']]],
   ['what_10998',['what',['../structSVF_1_1BufOverflowException.html#a4eb54eb3943f96e60f89d2fdd99f08c0',1,'SVF::BufOverflowException']]],
   ['while_10999',['while',['../cJSON_8cpp.html#a209b15238c5803bc547b2d77e02f29b4',1,'cJSON.cpp']]],
-  ['widen_5fwith_11000',['widen_with',['../classSVF_1_1IntervalValue.html#ab7ddcc29a116944a91db24af90d4c144',1,'SVF::IntervalValue::widen_with()'],['../structSVF_1_1AbstractValue.html#a707f6afd5eaa421981bba96318f1b644',1,'SVF::AbstractValue::widen_with()']]],
+  ['widen_5fwith_11000',['widen_with',['../classSVF_1_1IntervalValue.html#ab7ddcc29a116944a91db24af90d4c144',1,'SVF::IntervalValue::widen_with()'],['../classSVF_1_1AbstractValue.html#a707f6afd5eaa421981bba96318f1b644',1,'SVF::AbstractValue::widen_with()']]],
   ['widenaddrs_11001',['widenAddrs',['../classSVF_1_1SVFIR2AbsState.html#ad4ae901d5e3fe20c155e508884a5bf7f',1,'SVF::SVFIR2AbsState']]],
   ['widenfixpointpass_11002',['widenFixpointPass',['../classSVF_1_1AbstractInterpretation.html#a1b8e1e0cc9803687a0eb951015ac59af',1,'SVF::AbstractInterpretation']]],
   ['widening_11003',['widening',['../classSVF_1_1AbstractState.html#afd37c4419cfc79b6765fa243fcbea573',1,'SVF::AbstractState']]],

@@ -12,7 +12,7 @@ var searchData=
   ['datamap_1562',['DataMap',['../classSVF_1_1POCRSolver.html#ad60f45d469f1b576e1c49ec0cdf29e1e',1,'SVF::POCRSolver']]],
   ['dataop_1563',['DataOp',['../classSVF_1_1PersistentPointsToCache.html#a5a0f1b93f29ce62ad13042ab8435c62c',1,'SVF::PersistentPointsToCache']]],
   ['dataset_1564',['DataSet',['../classSVF_1_1CFLFIFOWorkList.html#a0db15ca0ec5a14aee493ccfe54d34d85',1,'SVF::CFLFIFOWorkList::DataSet()'],['../classSVF_1_1List.html#a8f8a9dff1d1213a747f0d7ce8b1802e9',1,'SVF::List::DataSet()'],['../classSVF_1_1FIFOWorkList.html#a4803dc3b7f3ab57261261acb20551579',1,'SVF::FIFOWorkList::DataSet()'],['../classSVF_1_1FILOWorkList.html#abe04c596453280fe15cadde868ded798',1,'SVF::FILOWorkList::DataSet()']]],
-  ['datatype_1565',['DataType',['../structSVF_1_1AbstractValue.html#af93f4b54b34e74579ad177ead629b53a',1,'SVF::AbstractValue']]],
+  ['datatype_1565',['DataType',['../classSVF_1_1AbstractValue.html#af93f4b54b34e74579ad177ead629b53a',1,'SVF::AbstractValue']]],
   ['datavector_1566',['DataVector',['../classSVF_1_1FILOWorkList.html#a41d3d71633adc6a1282922b4e4929a7f',1,'SVF::FILOWorkList']]],
   ['dbout_1567',['DBOUT',['../SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0',1,'SVFType.h']]],
   ['dbug_1568',['DBUG',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228a36e359346b349ead71f7ab095b0865af',1,'SVF::NodeIDAllocator']]],

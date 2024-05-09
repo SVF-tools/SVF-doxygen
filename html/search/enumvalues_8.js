@@ -15,7 +15,7 @@ var searchData=
   ['instance_13524',['INSTANCE',['../classSVF_1_1DCHEdge.html#a02dc7660f9603cd065e7098ae3f220ada3e807b4caeb170c5cd1e855ac1a92d77',1,'SVF::DCHEdge']]],
   ['instantce_13525',['INSTANTCE',['../classSVF_1_1CHEdge.html#a26280c3b724551036f7e3ba2b5922676a8721eaefd547d6ba5229463d644815f4',1,'SVF::CHEdge']]],
   ['interdisjoint_13526',['InterDisjoint',['../classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a549b5589ecfbe073623091605785fc03',1,'SVF::MemSSA']]],
-  ['intervaltype_13527',['IntervalType',['../structSVF_1_1AbstractValue.html#af93f4b54b34e74579ad177ead629b53aa97bb2c581577ed42ccfdf07dde0305f4',1,'SVF::AbstractValue']]],
+  ['intervaltype_13527',['IntervalType',['../classSVF_1_1AbstractValue.html#af93f4b54b34e74579ad177ead629b53aa97bb2c581577ed42ccfdf07dde0305f4',1,'SVF::AbstractValue']]],
   ['intrablock_13528',['IntraBlock',['../classSVF_1_1ICFGNode.html#a74f598c1c86b023680bb2685aa8ab376a0df20ce0cced8193d3f194ee5985c8c4',1,'SVF::ICFGNode']]],
   ['intracf_13529',['IntraCF',['../classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b',1,'SVF::ICFGEdge']]],
   ['intradirectvf_13530',['IntraDirectVF',['../classSVF_1_1VFGEdge.html#a156ae6a8b3a033f505c18c6b162e7cf5a08201e6cbff4817e44568747a966b71d',1,'SVF::VFGEdge']]],

@@ -16,7 +16,7 @@ var searchData=
   ['addedge_5fnonsparse_11395',['ADDEDGE_NONSPARSE',['../classSVF_1_1MTASVFGBuilder.html#a2be0c1f7cc8872a6f27431b33811cbea',1,'SVF::MTASVFGBuilder']]],
   ['addedge_5fnorp_11396',['ADDEDGE_NORP',['../classSVF_1_1MTASVFGBuilder.html#adac31c16b9e84d3bee24ce09a82c467b',1,'SVF::MTASVFGBuilder']]],
   ['addmodelflag_11397',['AddModelFlag',['../classSVF_1_1Options.html#aac637c9746749320a4ebd6af36212c56',1,'SVF::Options']]],
-  ['addr_11398',['addr',['../structSVF_1_1AbstractValue.html#a14167db89d63bdd80778c5c46f8a3568',1,'SVF::AbstractValue']]],
+  ['addr_11398',['addr',['../classSVF_1_1AbstractValue.html#a14167db89d63bdd80778c5c46f8a3568',1,'SVF::AbstractValue']]],
   ['addrbar_11399',['addrbar',['../PEGGrammar_8txt.html#ac0ba65b20304c39926bf018842207e87',1,'PEGGrammar.txt']]],
   ['addrcgedgeset_11400',['AddrCGEdgeSet',['../classSVF_1_1ConstraintGraph.html#a5bbd6df25027d26911f5d8d6a10881dc',1,'SVF::ConstraintGraph']]],
   ['addressinedges_11401',['addressInEdges',['../classSVF_1_1ConstraintNode.html#a214d8c0cb3913cb3403d686790c9eabb',1,'SVF::ConstraintNode']]],

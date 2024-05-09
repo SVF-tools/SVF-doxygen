@@ -7,7 +7,7 @@ var searchData=
   ['what_6455',['what',['../structSVF_1_1BufOverflowException.html#a4eb54eb3943f96e60f89d2fdd99f08c0',1,'SVF::BufOverflowException']]],
   ['which_6456',['which',['../cJSON_8cpp.html#aa2a4dae2a14de4093826005f9bdfd3bb',1,'which():&#160;cJSON.cpp'],['../cJSON_8h.html#aa2a4dae2a14de4093826005f9bdfd3bb',1,'which():&#160;cJSON.h']]],
   ['while_6457',['while',['../cJSON_8cpp.html#a209b15238c5803bc547b2d77e02f29b4',1,'cJSON.cpp']]],
-  ['widen_5fwith_6458',['widen_with',['../structSVF_1_1AbstractValue.html#a707f6afd5eaa421981bba96318f1b644',1,'SVF::AbstractValue::widen_with()'],['../classSVF_1_1IntervalValue.html#ab7ddcc29a116944a91db24af90d4c144',1,'SVF::IntervalValue::widen_with()']]],
+  ['widen_5fwith_6458',['widen_with',['../classSVF_1_1AbstractValue.html#a707f6afd5eaa421981bba96318f1b644',1,'SVF::AbstractValue::widen_with()'],['../classSVF_1_1IntervalValue.html#ab7ddcc29a116944a91db24af90d4c144',1,'SVF::IntervalValue::widen_with()']]],
   ['widenaddrs_6459',['widenAddrs',['../classSVF_1_1SVFIR2AbsState.html#ad4ae901d5e3fe20c155e508884a5bf7f',1,'SVF::SVFIR2AbsState']]],
   ['widendelay_6460',['WidenDelay',['../classSVF_1_1Options.html#ab25f7ec430ba1d41597fc409b758b193',1,'SVF::Options']]],
   ['widenfixpointpass_6461',['widenFixpointPass',['../classSVF_1_1AbstractInterpretation.html#a1b8e1e0cc9803687a0eb951015ac59af',1,'SVF::AbstractInterpretation']]],

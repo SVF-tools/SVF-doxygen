@@ -7,7 +7,7 @@ var searchData=
   ['namedmdnode_4490',['NamedMDNode',['../namespaceSVF.html#a3011dbac9102f044ad5f36a4ad3d4a71',1,'SVF']]],
   ['nametochnodesmap_4491',['NameToCHNodesMap',['../classSVF_1_1CHGraph.html#aedb20aca2fa11a070cfe28e14fd3552b',1,'SVF::CHGraph']]],
   ['nan_4492',['NAN',['../cJSON_8cpp.html#a8abfcc76130f3f991d124dd22d7e69bc',1,'cJSON.cpp']]],
-  ['narrow_5fwith_4493',['narrow_with',['../structSVF_1_1AbstractValue.html#a84d4827120d8fa5858edfce1406ed386',1,'SVF::AbstractValue::narrow_with()'],['../classSVF_1_1IntervalValue.html#a6c175067e5573ae7180ae4d872c49c8f',1,'SVF::IntervalValue::narrow_with()']]],
+  ['narrow_5fwith_4493',['narrow_with',['../classSVF_1_1AbstractValue.html#a84d4827120d8fa5858edfce1406ed386',1,'SVF::AbstractValue::narrow_with()'],['../classSVF_1_1IntervalValue.html#a6c175067e5573ae7180ae4d872c49c8f',1,'SVF::IntervalValue::narrow_with()']]],
   ['narrowaddrs_4494',['narrowAddrs',['../classSVF_1_1SVFIR2AbsState.html#a4abde8e78108675a6980c362857cc7f0',1,'SVF::SVFIR2AbsState']]],
   ['narrowfixpointpass_4495',['narrowFixpointPass',['../classSVF_1_1AbstractInterpretation.html#a8a4b07e6c999bea0b0e69dcab0346933',1,'SVF::AbstractInterpretation']]],
   ['narrowing_4496',['narrowing',['../classSVF_1_1AbstractState.html#aa9f048614c0bdbe5e8562bfcc6288a97',1,'SVF::AbstractState']]],

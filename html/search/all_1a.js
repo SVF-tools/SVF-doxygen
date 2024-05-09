@@ -2,7 +2,7 @@ var searchData=
 [
   ['_7eabstractinterpretation_6562',['~AbstractInterpretation',['../classSVF_1_1AbstractInterpretation.html#aae29a8da31fddd069cb0e19cc2f78d46',1,'SVF::AbstractInterpretation']]],
   ['_7eabstractstate_6563',['~AbstractState',['../classSVF_1_1AbstractState.html#ab956eb2731209fa52a8e4812d3ab8b37',1,'SVF::AbstractState']]],
-  ['_7eabstractvalue_6564',['~AbstractValue',['../structSVF_1_1AbstractValue.html#a823a022bef32def0c326708da7801671',1,'SVF::AbstractValue']]],
+  ['_7eabstractvalue_6564',['~AbstractValue',['../classSVF_1_1AbstractValue.html#a823a022bef32def0c326708da7801671',1,'SVF::AbstractValue']]],
   ['_7eaccesspath_6565',['~AccessPath',['../classSVF_1_1AccessPath.html#adb4dab1b3184c78fb7808dff867c7a0a',1,'SVF::AccessPath']]],
   ['_7eaddressvalue_6566',['~AddressValue',['../classSVF_1_1AddressValue.html#a02c3b3a09780abe8fdaadf190c2b569e',1,'SVF::AddressValue']]],
   ['_7eaestat_6567',['~AEStat',['../classSVF_1_1AEStat.html#a974988b7df3982938e081883d7349a91',1,'SVF::AEStat']]],

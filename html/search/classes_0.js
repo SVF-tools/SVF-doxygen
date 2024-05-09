@@ -2,7 +2,7 @@ var searchData=
 [
   ['abstractinterpretation_6736',['AbstractInterpretation',['../classSVF_1_1AbstractInterpretation.html',1,'SVF']]],
   ['abstractstate_6737',['AbstractState',['../classSVF_1_1AbstractState.html',1,'SVF']]],
-  ['abstractvalue_6738',['AbstractValue',['../structSVF_1_1AbstractValue.html',1,'SVF']]],
+  ['abstractvalue_6738',['AbstractValue',['../classSVF_1_1AbstractValue.html',1,'SVF']]],
   ['accesspair_6739',['AccessPair',['../classSVF_1_1RaceResultValidator_1_1AccessPair.html',1,'SVF::RaceResultValidator']]],
   ['accesspath_6740',['AccessPath',['../classSVF_1_1AccessPath.html',1,'SVF']]],
   ['actualinsvfgnode_6741',['ActualINSVFGNode',['../classSVF_1_1ActualINSVFGNode.html',1,'SVF']]],
