@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['sse_5ffunc_5fprocess_13878',['SSE_FUNC_PROCESS',['../AbstractInterpretation_8cpp.html#a6ded577f411d8dd34071fba96989f93a',1,'AbstractInterpretation.cpp']]],
-  ['static_5fobject_13879',['STATIC_OBJECT',['../extapi_8c.html#a3fca2c30a16a7d2fd2efc60687f74995',1,'extapi.c']]],
-  ['static_5fstrlen_13880',['static_strlen',['../cJSON_8cpp.html#a5714bac836668a1b9af55465b78531ef',1,'cJSON.cpp']]],
-  ['svf_5fdebug_5fwith_5ftype_13881',['SVF_DEBUG_WITH_TYPE',['../SVFType_8h.html#af4959f3b61c766337464db7a1d3da399',1,'SVFType.h']]],
-  ['svf_5fglobal_5fctors_13882',['SVF_GLOBAL_CTORS',['../LLVMModule_8cpp.html#aa18802f2f60ef8030c66a42f20f285af',1,'LLVMModule.cpp']]],
-  ['svf_5fglobal_5fdtors_13883',['SVF_GLOBAL_DTORS',['../LLVMModule_8cpp.html#a9fd6e28e6ed93f65a20a348ab0646320',1,'LLVMModule.cpp']]],
-  ['svf_5fmain_5ffunc_5fname_13884',['SVF_MAIN_FUNC_NAME',['../LLVMModule_8cpp.html#a10ab7c7da3a458495d8528b9e90d714b',1,'LLVMModule.cpp']]],
-  ['svfir_5fdebug_13885',['SVFIR_DEBUG',['../SVFFileSystem_8h.html#a9b0b85a19311bdaea6d6174812eef0d9',1,'SVFFileSystem.h']]]
+  ['threadapi_5fcpp_5f_13879',['THREADAPI_CPP_',['../ThreadAPI_8cpp.html#a2edb48ac961ebb1eb8937424c6b273f1',1,'ThreadAPI.cpp']]],
+  ['timeinterval_13880',['TIMEINTERVAL',['../SVFType_8h.html#a1aeda3370621dc00e9a0fe8e7aabc736',1,'SVFType.h']]],
+  ['true_13881',['true',['../cJSON_8cpp.html#a930920b2bc42824a5c03be681830f4b2',1,'cJSON.cpp']]],
+  ['type_5fdebug_13882',['TYPE_DEBUG',['../ObjTypeInference_8cpp.html#a8e62b6cad2019cc242c6fa579bae4988',1,'ObjTypeInference.cpp']]]
 ];
