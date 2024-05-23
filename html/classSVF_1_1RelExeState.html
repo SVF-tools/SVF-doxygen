@@ -712,11 +712,11 @@ Friends</h2></td></tr>
 
 <p>Return the internal index if idx is an address otherwise return the value of idx. </p>
 
-<p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00182">182</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AddressValue.html#a3be7a2e3ec3215b67cd60f122d2cd10e">AddressValue::getInternalID</a>(idx);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
-<div class="ttc" id="aclassSVF_1_1AddressValue_html_a3be7a2e3ec3215b67cd60f122d2cd10e"><div class="ttname"><a href="classSVF_1_1AddressValue.html#a3be7a2e3ec3215b67cd60f122d2cd10e">SVF::AddressValue::getInternalID</a></div><div class="ttdeci">static u32_t getInternalID(u32_t idx)</div><div class="ttdoc">Return the internal index if idx is an address otherwise return the value of idx.</div><div class="ttdef"><b>Definition:</b> <a href="AddressValue_8h_source.html#l00224">AddressValue.h:224</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00184">184</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AddressValue.html#a3be7a2e3ec3215b67cd60f122d2cd10e">AddressValue::getInternalID</a>(idx);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
+<div class="ttc" id="aclassSVF_1_1AddressValue_html_a3be7a2e3ec3215b67cd60f122d2cd10e"><div class="ttname"><a href="classSVF_1_1AddressValue.html#a3be7a2e3ec3215b67cd60f122d2cd10e">SVF::AddressValue::getInternalID</a></div><div class="ttdeci">static u32_t getInternalID(u32_t idx)</div><div class="ttdoc">Return the internal index if idx is an address otherwise return the value of idx.</div><div class="ttdef"><b>Definition:</b> <a href="AddressValue_8h_source.html#l00226">AddressValue.h:226</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -925,9 +925,11 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00176">176</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AddressValue.html#ab76f47f97262d40dbbee12f466f746e8">AddressValue::isVirtualMemAddress</a>(val);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
-<div class="ttc" id="aclassSVF_1_1AddressValue_html_ab76f47f97262d40dbbee12f466f746e8"><div class="ttname"><a href="classSVF_1_1AddressValue.html#ab76f47f97262d40dbbee12f466f746e8">SVF::AddressValue::isVirtualMemAddress</a></div><div class="ttdeci">static bool isVirtualMemAddress(u32_t val)</div><div class="ttdoc">Check bit value of val start with 0x7F000000, filter by 0xFF000000.</div><div class="ttdef"><b>Definition:</b> <a href="AddressValue_8h_source.html#l00218">AddressValue.h:218</a></div></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (val == 0)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;val cannot be 0&quot;</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AddressValue.html#ab76f47f97262d40dbbee12f466f746e8">AddressValue::isVirtualMemAddress</a>(val);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="ttc" id="aclassSVF_1_1AddressValue_html_ab76f47f97262d40dbbee12f466f746e8"><div class="ttname"><a href="classSVF_1_1AddressValue.html#ab76f47f97262d40dbbee12f466f746e8">SVF::AddressValue::isVirtualMemAddress</a></div><div class="ttdeci">static bool isVirtualMemAddress(u32_t val)</div><div class="ttdoc">Check bit value of val start with 0x7F000000, filter by 0xFF000000.</div><div class="ttdef"><b>Definition:</b> <a href="AddressValue_8h_source.html#l00220">AddressValue.h:220</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1018,8 +1020,8 @@ Friends</h2></td></tr>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1RelExeState.html#aa550a580be3278d19f759b3a644baea5">load</a>(objId);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1RelExeState_html_aa550a580be3278d19f759b3a644baea5"><div class="ttname"><a href="classSVF_1_1RelExeState.html#aa550a580be3278d19f759b3a644baea5">SVF::RelExeState::load</a></div><div class="ttdeci">Z3Expr &amp; load(const Z3Expr &amp;loc)</div><div class="ttdoc">Load value at location.</div><div class="ttdef"><b>Definition:</b> <a href="RelExeState_8cpp_source.html#l00183">RelExeState.cpp:183</a></div></div>
-<div class="ttc" id="aclassSVF_1_1RelExeState_html_ab03410a5a0014d77d4f95f3a0bf45bfd"><div class="ttname"><a href="classSVF_1_1RelExeState.html#ab03410a5a0014d77d4f95f3a0bf45bfd">SVF::RelExeState::getInternalID</a></div><div class="ttdeci">static u32_t getInternalID(u32_t idx)</div><div class="ttdoc">Return the internal index if idx is an address otherwise return the value of idx.</div><div class="ttdef"><b>Definition:</b> <a href="RelExeState_8h_source.html#l00182">RelExeState.h:182</a></div></div>
-<div class="ttc" id="aclassSVF_1_1RelExeState_html_accb15cf8109eec2a7cc497badcdbaa57"><div class="ttname"><a href="classSVF_1_1RelExeState.html#accb15cf8109eec2a7cc497badcdbaa57">SVF::RelExeState::z3Expr2NumValue</a></div><div class="ttdeci">static s32_t z3Expr2NumValue(const Z3Expr &amp;e)</div><div class="ttdoc">Return int value from an expression if it is a numeral, otherwise return an approximate value.</div><div class="ttdef"><b>Definition:</b> <a href="RelExeState_8h_source.html#l00188">RelExeState.h:188</a></div></div>
+<div class="ttc" id="aclassSVF_1_1RelExeState_html_ab03410a5a0014d77d4f95f3a0bf45bfd"><div class="ttname"><a href="classSVF_1_1RelExeState.html#ab03410a5a0014d77d4f95f3a0bf45bfd">SVF::RelExeState::getInternalID</a></div><div class="ttdeci">static u32_t getInternalID(u32_t idx)</div><div class="ttdoc">Return the internal index if idx is an address otherwise return the value of idx.</div><div class="ttdef"><b>Definition:</b> <a href="RelExeState_8h_source.html#l00184">RelExeState.h:184</a></div></div>
+<div class="ttc" id="aclassSVF_1_1RelExeState_html_accb15cf8109eec2a7cc497badcdbaa57"><div class="ttname"><a href="classSVF_1_1RelExeState.html#accb15cf8109eec2a7cc497badcdbaa57">SVF::RelExeState::z3Expr2NumValue</a></div><div class="ttdeci">static s32_t z3Expr2NumValue(const Z3Expr &amp;e)</div><div class="ttdoc">Return int value from an expression if it is a numeral, otherwise return an approximate value.</div><div class="ttdef"><b>Definition:</b> <a href="RelExeState_8h_source.html#l00190">RelExeState.h:190</a></div></div>
 <div class="ttc" id="aclassSVF_1_1RelExeState_html_adc3ed92ba80bb95326cbbe675a278879"><div class="ttname"><a href="classSVF_1_1RelExeState.html#adc3ed92ba80bb95326cbbe675a278879">SVF::RelExeState::isVirtualMemAddress</a></div><div class="ttdeci">static bool isVirtualMemAddress(u32_t val)</div><div class="ttdoc">Check bit value of val start with 0x7F000000, filter by 0xFF000000.</div><div class="ttdef"><b>Definition:</b> <a href="RelExeState_8h_source.html#l00176">RelExeState.h:176</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a9b707002523ece2ac54ca893ee9a2d4e"><div class="ttname"><a href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">SVF::s32_t</a></div><div class="ttdeci">signed s32_t</div><div class="ttdef"><b>Definition:</b> <a href="GeneralType_8h_source.html#l00047">GeneralType.h:47</a></div></div>
 </div><!-- fragment -->
@@ -1049,10 +1051,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00208">208</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1RelExeState.html#ad92f53c7a29641d50cda609f779a46e2">_addrToVal</a>[objId];</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00210">210</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1RelExeState.html#ad92f53c7a29641d50cda609f779a46e2">_addrToVal</a>[objId];</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1374,10 +1376,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00203">203</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="classSVF_1_1RelExeState.html#ad92f53c7a29641d50cda609f779a46e2">_addrToVal</a>[objId] = z3Expr.simplify();</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00205">205</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="classSVF_1_1RelExeState.html#ad92f53c7a29641d50cda609f779a46e2">_addrToVal</a>[objId] = z3Expr.simplify();</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1441,11 +1443,11 @@ Friends</h2></td></tr>
 
 <p>Return int value from an expression if it is a numeral, otherwise return an approximate value. </p>
 
-<p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00188">188</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        assert(e.is_numeral() &amp;&amp; <span class="stringliteral">&quot;not numeral?&quot;</span>);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> e.get_numeral_int64();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="RelExeState_8h_source.html#l00190">190</a> of file <a class="el" href="RelExeState_8h_source.html">RelExeState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        assert(e.is_numeral() &amp;&amp; <span class="stringliteral">&quot;not numeral?&quot;</span>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> e.get_numeral_int64();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
