@@ -266,7 +266,7 @@ $(function() {
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *gepInst = SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;(curValue))</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            insertInferSite(gepInst);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;it: curValue-&gt;users())</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> it: curValue-&gt;users())</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        {</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *loadInst = SVFUtil::dyn_cast&lt;LoadInst&gt;(it))</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            {</div>
@@ -292,7 +292,7 @@ $(function() {
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;nit: storeInst-&gt;getPointerOperand()-&gt;users())</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> nit: storeInst-&gt;getPointerOperand()-&gt;users())</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    {</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                        <span class="comment">/*</span></div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">                         * propagate across store (value operand) and load</span></div>
@@ -324,14 +324,14 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *gepBase = gepInst-&gt;getPointerOperand();</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span> *load = SVFUtil::dyn_cast&lt;LoadInst&gt;(gepBase))</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;loadUse: load-&gt;getPointerOperand()-&gt;users())</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> loadUse: load-&gt;getPointerOperand()-&gt;users())</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                            {</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                                <span class="keywordflow">if</span> (loadUse == load || !SVFUtil::isa&lt;LoadInst&gt;(loadUse))</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;gepUse: loadUse-&gt;users())</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> gepUse: loadUse-&gt;users())</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                {</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                                    <span class="keywordflow">if</span> (!SVFUtil::isa&lt;GetElementPtrInst&gt;(gepUse)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;loadUse2: gepUse-&gt;users())</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> loadUse2: gepUse-&gt;users())</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                                    {</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                                        <span class="keywordflow">if</span> (SVFUtil::isa&lt;LoadInst&gt;(loadUse2))</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                                        {</div>
@@ -353,10 +353,10 @@ $(function() {
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">                              %6 = load ptr, ptr %5, align 8</span></div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">                              %7 = getelementptr inbounds %struct.ll, ptr %6, i32 0, i32 0</span></div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">                             */</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;gepUse: alloc-&gt;users())</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> gepUse: alloc-&gt;users())</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                            {</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                <span class="keywordflow">if</span> (!SVFUtil::isa&lt;GetElementPtrInst&gt;(gepUse)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;loadUse2: gepUse-&gt;users())</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> loadUse2: gepUse-&gt;users())</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                                {</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                                    <span class="keywordflow">if</span> (SVFUtil::isa&lt;LoadInst&gt;(loadUse2))</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                                    {</div>
@@ -403,7 +403,7 @@ $(function() {
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">                 %call = call i8* @malloc_wrapper()</span></div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">                 ..infer based on %call..</span></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">                */</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;callsite: retInst-&gt;getFunction()-&gt;users())</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> callsite: retInst-&gt;getFunction()-&gt;users())</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                {</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *callBase = SVFUtil::dyn_cast&lt;CallBase&gt;(callsite))</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                    {</div>
@@ -553,7 +553,7 @@ $(function() {
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        }</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *loadInst = SVFUtil::dyn_cast&lt;LoadInst&gt;(curValue))</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        {</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;use: loadInst-&gt;getPointerOperand()-&gt;users())</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> use: loadInst-&gt;getPointerOperand()-&gt;users())</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;            {</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#ab696aab940eb187dc81217efe8649af5">StoreInst</a> *storeInst = SVFUtil::dyn_cast&lt;StoreInst&gt;(use))</div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                {</div>
@@ -566,7 +566,7 @@ $(function() {
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        }</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *argument = SVFUtil::dyn_cast&lt;Argument&gt;(curValue))</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        {</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;use: argument-&gt;getParent()-&gt;users())</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> use: argument-&gt;getParent()-&gt;users())</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            {</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">CallBase</a> *callBase = SVFUtil::dyn_cast&lt;CallBase&gt;(use))</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                {</div>
