@@ -920,7 +920,7 @@ $(function() {
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    <a class="code" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> branchID = 0;</div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a>* succInst : nextInsts)</div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;    {</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;        assert(branchID &lt;= 2 &amp;&amp; <span class="stringliteral">&quot;if/else has more than two branches?&quot;</span>);</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;        assert(branchID &lt;= 1 &amp;&amp; <span class="stringliteral">&quot;if/else has more than two branches?&quot;</span>);</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFInstruction.html">SVFInstruction</a>* svfSuccInst = LLVMModuleSet::getLLVMModuleSet()-&gt;getSVFInstruction(succInst);</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* icfgNode = pag-&gt;getICFG()-&gt;getICFGNode(svfSuccInst);</div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        successors.push_back(std::make_pair(icfgNode, 1-branchID));</div>
