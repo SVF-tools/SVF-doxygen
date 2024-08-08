@@ -412,10 +412,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00597">597</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        : <a class="code" href="classSVF_1_1AssignStmt.html#abc65520cc2b9608c97374829eb475c57">AssignStmt</a>(s, d, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a20d960c19118d1ed319e0dbea94405e8">SVFStmt::Gep</a>), <a class="code" href="classSVF_1_1GepStmt.html#ad7cfa816936d38d1d022e2cfdb1c7c44">ap</a>(<a class="code" href="classSVF_1_1GepStmt.html#ad7cfa816936d38d1d022e2cfdb1c7c44">ap</a>), <a class="code" href="classSVF_1_1GepStmt.html#af8eefbd002ec36f36612b8e9ccdbc757">variantField</a>(varfld)</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    {</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00598">598</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        : <a class="code" href="classSVF_1_1AssignStmt.html#abc65520cc2b9608c97374829eb475c57">AssignStmt</a>(s, d, <a class="code" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9a20d960c19118d1ed319e0dbea94405e8">SVFStmt::Gep</a>), <a class="code" href="classSVF_1_1GepStmt.html#ad7cfa816936d38d1d022e2cfdb1c7c44">ap</a>(<a class="code" href="classSVF_1_1GepStmt.html#ad7cfa816936d38d1d022e2cfdb1c7c44">ap</a>), <a class="code" href="classSVF_1_1GepStmt.html#af8eefbd002ec36f36612b8e9ccdbc757">variantField</a>(varfld)</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    {</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    }</div>
 <div class="ttc" id="aclassSVF_1_1GepStmt_html_ad7cfa816936d38d1d022e2cfdb1c7c44"><div class="ttname"><a href="classSVF_1_1GepStmt.html#ad7cfa816936d38d1d022e2cfdb1c7c44">SVF::GepStmt::ap</a></div><div class="ttdeci">AccessPath ap</div><div class="ttdoc">Access path of the GEP edge.</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00537">SVFStatements.h:537</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepStmt_html_af8eefbd002ec36f36612b8e9ccdbc757"><div class="ttname"><a href="classSVF_1_1GepStmt.html#af8eefbd002ec36f36612b8e9ccdbc757">SVF::GepStmt::variantField</a></div><div class="ttdeci">bool variantField</div><div class="ttdoc">Gep statement with a variant field index (pointer arithmetic) for struct field access (e....</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00538">SVFStatements.h:538</a></div></div>
 </div><!-- fragment -->
@@ -446,11 +446,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Return accumulated constant offset (when accessing array or struct) if this offset is a constant. elemBytesize is the element byte size of an static alloc or heap alloc array e.g. GepStmt* gep = **, s32_t elemBytesize = LLVMUtil::SVFType2ByteSize(gep-&gt;<a class="el" href="classSVF_1_1AssignStmt.html#ad03d28d16754c9049dd4d0ad3b6c1e28">getRHSVar()</a>-&gt;<a class="el" href="classSVF_1_1SVFStmt.html#abb784290c90d26f35897fa15bae277d2">getValue()</a>-&gt;getType()); APOffset byteOffset = gep-&gt;accumulateConstantByteOffset(elemBytesize); </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00574">574</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    {</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GepStmt.html#a6c74f234a6b40bc5292bb14874c2e600">getAccessPath</a>().<a class="code" href="classSVF_1_1AccessPath.html#a43dc770c4458c6ac58c591974b93fc57">computeConstantByteOffset</a>();</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    }</div>
-<div class="ttc" id="aclassSVF_1_1AccessPath_html_a43dc770c4458c6ac58c591974b93fc57"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a43dc770c4458c6ac58c591974b93fc57">SVF::AccessPath::computeConstantByteOffset</a></div><div class="ttdeci">APOffset computeConstantByteOffset() const</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00099">AccessPath.cpp:99</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00575">575</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    {</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GepStmt.html#a6c74f234a6b40bc5292bb14874c2e600">getAccessPath</a>().<a class="code" href="classSVF_1_1AccessPath.html#a43dc770c4458c6ac58c591974b93fc57">computeConstantByteOffset</a>();</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    }</div>
+<div class="ttc" id="aclassSVF_1_1AccessPath_html_a43dc770c4458c6ac58c591974b93fc57"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a43dc770c4458c6ac58c591974b93fc57">SVF::AccessPath::computeConstantByteOffset</a></div><div class="ttdeci">APOffset computeConstantByteOffset() const</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00125">AccessPath.cpp:125</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepStmt_html_a6c74f234a6b40bc5292bb14874c2e600"><div class="ttname"><a href="classSVF_1_1GepStmt.html#a6c74f234a6b40bc5292bb14874c2e600">SVF::GepStmt::getAccessPath</a></div><div class="ttdeci">const AccessPath &amp; getAccessPath() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00556">SVFStatements.h:556</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -480,11 +480,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return accumulated constant offset (when accessing array or struct) if this offset is a constant. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00580">580</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    {</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GepStmt.html#a6c74f234a6b40bc5292bb14874c2e600">getAccessPath</a>().<a class="code" href="classSVF_1_1AccessPath.html#ae746362c42da05a641ae062658e40651">computeConstantOffset</a>();</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    }</div>
-<div class="ttc" id="aclassSVF_1_1AccessPath_html_ae746362c42da05a641ae062658e40651"><div class="ttname"><a href="classSVF_1_1AccessPath.html#ae746362c42da05a641ae062658e40651">SVF::AccessPath::computeConstantOffset</a></div><div class="ttdeci">APOffset computeConstantOffset() const</div><div class="ttdoc">For example,.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00212">AccessPath.cpp:212</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00581">581</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    {</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GepStmt.html#a6c74f234a6b40bc5292bb14874c2e600">getAccessPath</a>().<a class="code" href="classSVF_1_1AccessPath.html#ae746362c42da05a641ae062658e40651">computeConstantOffset</a>();</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    }</div>
+<div class="ttc" id="aclassSVF_1_1AccessPath_html_ae746362c42da05a641ae062658e40651"><div class="ttname"><a href="classSVF_1_1AccessPath.html#ae746362c42da05a641ae062658e40651">SVF::AccessPath::computeConstantOffset</a></div><div class="ttdeci">APOffset computeConstantOffset() const</div><div class="ttdoc">For example,.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8cpp_source.html#l00213">AccessPath.cpp:213</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -638,13 +638,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Field index of the gep statement if it access the field of a struct. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00585">585</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    {</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        assert(<a class="code" href="classSVF_1_1GepStmt.html#a0ddf180a0f7ba64fc8655687910e3788">isVariantFieldGep</a>()==<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Can&#39;t retrieve the AccessPath if using a variable field index (pointer arithmetic) for struct field access &quot;</span>);</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GepStmt.html#a6c74f234a6b40bc5292bb14874c2e600">getAccessPath</a>().<a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00586">586</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    {</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        assert(<a class="code" href="classSVF_1_1GepStmt.html#a0ddf180a0f7ba64fc8655687910e3788">isVariantFieldGep</a>()==<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Can&#39;t retrieve the AccessPath if using a variable field index (pointer arithmetic) for struct field access &quot;</span>);</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GepStmt.html#a6c74f234a6b40bc5292bb14874c2e600">getAccessPath</a>().<a class="code" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    }</div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a5427d08c9eb9d86e66c2bff6aeba6bac"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">SVF::AccessPath::getConstantStructFldIdx</a></div><div class="ttdeci">APOffset getConstantStructFldIdx() const</div><div class="ttdoc">Get methods.</div><div class="ttdef"><b>Definition:</b> <a href="AccessPath_8h_source.html#l00100">AccessPath.h:100</a></div></div>
-<div class="ttc" id="aclassSVF_1_1GepStmt_html_a0ddf180a0f7ba64fc8655687910e3788"><div class="ttname"><a href="classSVF_1_1GepStmt.html#a0ddf180a0f7ba64fc8655687910e3788">SVF::GepStmt::isVariantFieldGep</a></div><div class="ttdeci">bool isVariantFieldGep() const</div><div class="ttdoc">Gep statement with a variant field index (pointer arithmetic) for struct field access.</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00591">SVFStatements.h:591</a></div></div>
+<div class="ttc" id="aclassSVF_1_1GepStmt_html_a0ddf180a0f7ba64fc8655687910e3788"><div class="ttname"><a href="classSVF_1_1GepStmt.html#a0ddf180a0f7ba64fc8655687910e3788">SVF::GepStmt::isVariantFieldGep</a></div><div class="ttdeci">bool isVariantFieldGep() const</div><div class="ttdoc">Gep statement with a variant field index (pointer arithmetic) for struct field access.</div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00592">SVFStatements.h:592</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -737,10 +737,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Gep statement with a variant field index (pointer arithmetic) for struct field access. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00591">591</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    {</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GepStmt.html#af8eefbd002ec36f36612b8e9ccdbc757">variantField</a>;</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFStatements_8h_source.html#l00592">592</a> of file <a class="el" href="SVFStatements_8h_source.html">SVFStatements.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    {</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1GepStmt.html#af8eefbd002ec36f36612b8e9ccdbc757">variantField</a>;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
