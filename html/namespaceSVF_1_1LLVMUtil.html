@@ -1755,37 +1755,37 @@ Functions</h2></td></tr>
 <p>Check whether this value points-to a constant object. </p>
 <p>Check whether this value points-to a constant object </p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00607">607</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;{</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a09f5fa3bc44bf53612a085e3a611cc4e">GlobalVariable</a>* v = SVFUtil::dyn_cast&lt;GlobalVariable&gt;(val))</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    {</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#aeef0f5c6486379043a7d47b0635f2667">cppUtil::isValVtbl</a>(v))</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!v-&gt;hasInitializer())</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        {</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;            <span class="keywordflow">return</span> !v-&gt;isExternalLinkage(v-&gt;getLinkage());</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        }</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        {</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;            <a class="code" href="classSVF_1_1StInfo.html">StInfo</a> *stInfo = LLVMModuleSet::getLLVMModuleSet()-&gt;getSVFType(v-&gt;getInitializer()-&gt;getType())-&gt;getTypeInfo();</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            <span class="keyword">const</span> std::vector&lt;const SVFType*&gt; &amp;fields = stInfo-&gt;<a class="code" href="classSVF_1_1StInfo.html#ac0a9f85f90524abfd519d3cd2ac95a56">getFlattenFieldTypes</a>();</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            <span class="keywordflow">for</span> (std::vector&lt;const SVFType*&gt;::const_iterator it = fields.begin(), eit = fields.end(); it != eit; ++it)</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            {</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* elemTy = *it;</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                assert(!SVFUtil::isa&lt;SVFFunctionType&gt;(elemTy) &amp;&amp; <span class="stringliteral">&quot;Initializer of a global is a function?&quot;</span>);</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                <span class="keywordflow">if</span> (SVFUtil::isa&lt;SVFPointerType&gt;(elemTy))</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            }</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160; </div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;            <span class="keywordflow">return</span> v-&gt;isConstant();</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        }</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    }</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a8a77403306e97ab4cb31a56d38bba5be">LLVMUtil::isConstDataOrAggData</a>(val);</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00672">672</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;{</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a09f5fa3bc44bf53612a085e3a611cc4e">GlobalVariable</a>* v = SVFUtil::dyn_cast&lt;GlobalVariable&gt;(val))</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    {</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#aeef0f5c6486379043a7d47b0635f2667">cppUtil::isValVtbl</a>(v))</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!v-&gt;hasInitializer())</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        {</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            <span class="keywordflow">return</span> !v-&gt;isExternalLinkage(v-&gt;getLinkage());</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;        }</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        {</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;            <a class="code" href="classSVF_1_1StInfo.html">StInfo</a> *stInfo = LLVMModuleSet::getLLVMModuleSet()-&gt;getSVFType(v-&gt;getInitializer()-&gt;getType())-&gt;getTypeInfo();</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;            <span class="keyword">const</span> std::vector&lt;const SVFType*&gt; &amp;fields = stInfo-&gt;<a class="code" href="classSVF_1_1StInfo.html#ac0a9f85f90524abfd519d3cd2ac95a56">getFlattenFieldTypes</a>();</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;            <span class="keywordflow">for</span> (std::vector&lt;const SVFType*&gt;::const_iterator it = fields.begin(), eit = fields.end(); it != eit; ++it)</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;            {</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFType.html">SVFType</a>* elemTy = *it;</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;                assert(!SVFUtil::isa&lt;SVFFunctionType&gt;(elemTy) &amp;&amp; <span class="stringliteral">&quot;Initializer of a global is a function?&quot;</span>);</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;                <span class="keywordflow">if</span> (SVFUtil::isa&lt;SVFPointerType&gt;(elemTy))</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;            }</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160; </div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;            <span class="keywordflow">return</span> v-&gt;isConstant();</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        }</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    }</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a8a77403306e97ab4cb31a56d38bba5be">LLVMUtil::isConstDataOrAggData</a>(val);</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1SVFType_html"><div class="ttname"><a href="classSVF_1_1SVFType.html">SVF::SVFType</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00156">SVFType.h:157</a></div></div>
 <div class="ttc" id="aclassSVF_1_1StInfo_html"><div class="ttname"><a href="classSVF_1_1StInfo.html">SVF::StInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00046">SVFType.h:47</a></div></div>
 <div class="ttc" id="aclassSVF_1_1StInfo_html_ac0a9f85f90524abfd519d3cd2ac95a56"><div class="ttname"><a href="classSVF_1_1StInfo.html#ac0a9f85f90524abfd519d3cd2ac95a56">SVF::StInfo::getFlattenFieldTypes</a></div><div class="ttdeci">std::vector&lt; const SVFType * &gt; &amp; getFlattenFieldTypes()</div><div class="ttdef"><b>Definition:</b> <a href="SVFType_8h_source.html#l00106">SVFType.h:106</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1cppUtil_html_aeef0f5c6486379043a7d47b0635f2667"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#aeef0f5c6486379043a7d47b0635f2667">SVF::cppUtil::isValVtbl</a></div><div class="ttdeci">bool isValVtbl(const Value *val)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00271">CppUtil.cpp:271</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1cppUtil_html_aeef0f5c6486379043a7d47b0635f2667"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#aeef0f5c6486379043a7d47b0635f2667">SVF::cppUtil::isValVtbl</a></div><div class="ttdeci">bool isValVtbl(const Value *val)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00336">CppUtil.cpp:336</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
