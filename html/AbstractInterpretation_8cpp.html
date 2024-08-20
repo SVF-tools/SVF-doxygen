@@ -121,7 +121,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">        <span class="keyword">auto</span> sse_##FUNC_NAME = [<span class="keyword">this</span>](<span class="keyword">const</span> <a class="code" href="classSVF_1_1CallSite.html">CallSite</a> &amp;cs) { \</div>
 <div class="line">        <span class="comment">/* run real ext function */</span>            \</div>
 <div class="line">        const <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a>* callNode = SVFUtil::dyn_cast&lt;CallICFGNode&gt;(_svfir-&gt;getICFG()-&gt;getICFGNode(cs.getInstruction())); \</div>
-<div class="line">        AbstractState&amp; as = getAbsState(callNode); \</div>
+<div class="line">        AbstractState&amp; as = getAbsStateFromTrace(callNode); \</div>
 <div class="line">        u32_t rhs_id = _svfir-&gt;getValueNode(cs.getArgument(0)); \</div>
 <div class="line">        if (!as.inVarToValTable(rhs_id)) <span class="keywordflow">return</span>; \</div>
 <div class="line">        u32_t rhs = as[rhs_id].getInterval().lb().getIntNumeral(); \</div>

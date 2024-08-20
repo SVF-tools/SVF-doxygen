@@ -77,6 +77,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0df08dd4ec99bcb61270d74a99845bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a431259b0eee376a1f6542b6b68af3aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAETest.html#a431259b0eee376a1f6542b6b68af3aa9">testBinaryOpStmt</a> ()</td></tr>
 <tr class="separator:a431259b0eee376a1f6542b6b68af3aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0426e154ca46ddf7ca6a442026b7188"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAETest.html#ab0426e154ca46ddf7ca6a442026b7188">testAbsState</a> ()</td></tr>
+<tr class="separator:ab0426e154ca46ddf7ca6a442026b7188"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -133,6 +135,51 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab0426e154ca46ddf7ca6a442026b7188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0426e154ca46ddf7ca6a442026b7188">&#9670;&nbsp;</a></span>testAbsState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AETest::testAbsState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ae_8cpp_source.html#l00829">829</a> of file <a class="el" href="ae_8cpp_source.html">ae.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    {</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        <a class="code" href="classSVF_1_1AbstractState.html">AbstractState</a> as;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        as[1] = <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(1, 3);</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        as[2] = <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(2, 7);</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;        as[3] = <a class="code" href="classSVF_1_1AddressValue.html">AddressValue</a>(0x7f000007);</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        as[4] = <a class="code" href="classSVF_1_1AddressValue.html">AddressValue</a>(0x7f000008);</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        as.<a class="code" href="classSVF_1_1AbstractState.html#ad416ef722148d7af753ca567e63aad5f">storeValue</a>(3, as[1]);</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        as.<a class="code" href="classSVF_1_1AbstractState.html#ad416ef722148d7af753ca567e63aad5f">storeValue</a>(4, as[2]);</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        as.<a class="code" href="classSVF_1_1AbstractState.html#a3591f16ea93abeba00c74ad9582e48d2">printAbstractState</a>();</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        assert(as.<a class="code" href="classSVF_1_1AbstractState.html#aa060a84d70d10fd832fd724cef3fffc1">loadValue</a>(3).<a class="code" href="classSVF_1_1AbstractValue.html#ae8a8fb4dc6ff1d7faddea6a9b1e65f1e">equals</a>(as[1]) &amp;&amp; as.<a class="code" href="classSVF_1_1AbstractState.html#aa060a84d70d10fd832fd724cef3fffc1">loadValue</a>(4).<a class="code" href="classSVF_1_1AbstractValue.html#ae8a8fb4dc6ff1d7faddea6a9b1e65f1e">equals</a>(as[2]));</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    }</div>
+<div class="ttc" id="aclassSVF_1_1AbstractState_html"><div class="ttname"><a href="classSVF_1_1AbstractState.html">SVF::AbstractState</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractState_8h_source.html#l00058">AbstractState.h:59</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractState_html_a3591f16ea93abeba00c74ad9582e48d2"><div class="ttname"><a href="classSVF_1_1AbstractState.html#a3591f16ea93abeba00c74ad9582e48d2">SVF::AbstractState::printAbstractState</a></div><div class="ttdeci">void printAbstractState() const</div><div class="ttdef"><b>Definition:</b> <a href="AbstractState_8cpp_source.html#l00391">AbstractState.cpp:391</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractState_html_aa060a84d70d10fd832fd724cef3fffc1"><div class="ttname"><a href="classSVF_1_1AbstractState.html#aa060a84d70d10fd832fd724cef3fffc1">SVF::AbstractState::loadValue</a></div><div class="ttdeci">AbstractValue loadValue(NodeID varId)</div><div class="ttdef"><b>Definition:</b> <a href="AbstractState_8cpp_source.html#l00373">AbstractState.cpp:373</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractState_html_ad416ef722148d7af753ca567e63aad5f"><div class="ttname"><a href="classSVF_1_1AbstractState.html#ad416ef722148d7af753ca567e63aad5f">SVF::AbstractState::storeValue</a></div><div class="ttdeci">void storeValue(NodeID varId, AbstractValue val)</div><div class="ttdef"><b>Definition:</b> <a href="AbstractState_8cpp_source.html#l00383">AbstractState.cpp:383</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractValue_html_ae8a8fb4dc6ff1d7faddea6a9b1e65f1e"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#ae8a8fb4dc6ff1d7faddea6a9b1e65f1e">SVF::AbstractValue::equals</a></div><div class="ttdeci">bool equals(const AbstractValue &amp;rhs) const</div><div class="ttdef"><b>Definition:</b> <a href="AbstractValue_8h_source.html#l00123">AbstractValue.h:123</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AddressValue_html"><div class="ttname"><a href="classSVF_1_1AddressValue.html">SVF::AddressValue</a></div><div class="ttdef"><b>Definition:</b> <a href="AddressValue_8h_source.html#l00043">AddressValue.h:44</a></div></div>
+<div class="ttc" id="aclassSVF_1_1IntervalValue_html"><div class="ttname"><a href="classSVF_1_1IntervalValue.html">SVF::IntervalValue</a></div><div class="ttdef"><b>Definition:</b> <a href="IntervalValue_8h_source.html#l00045">IntervalValue.h:46</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a431259b0eee376a1f6542b6b68af3aa9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a431259b0eee376a1f6542b6b68af3aa9">&#9670;&nbsp;</a></span>testBinaryOpStmt()</h2>
 
@@ -158,7 +205,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ae_8cpp_source.html#l00633">633</a> of file <a class="el" href="ae_8cpp_source.html">ae.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    {</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;<span class="comment">//        // test division /</span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        <span class="comment">// test division /</span></div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;        assert((<a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(4) / IntervalValue::bottom()).equals(IntervalValue::bottom()));</div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        assert((IntervalValue::bottom() / <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(2)).equals(IntervalValue::bottom()));</div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        assert((IntervalValue::top() / <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(0)).equals(IntervalValue::bottom()));</div>
@@ -351,7 +398,6 @@ Public Member Functions</h2></td></tr>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        assert((<a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(-6, -3) ^ <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(3, 9)).equals(IntervalValue::top()));</div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        assert((<a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(-6, 6) ^ <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(3, 9)).equals(IntervalValue::top()));</div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;    }</div>
-<div class="ttc" id="aclassSVF_1_1IntervalValue_html"><div class="ttname"><a href="classSVF_1_1IntervalValue.html">SVF::IntervalValue</a></div><div class="ttdef"><b>Definition:</b> <a href="IntervalValue_8h_source.html#l00045">IntervalValue.h:46</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
