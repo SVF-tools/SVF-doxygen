@@ -189,9 +189,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91c8f9dc6e7cb225c2ed4b8f0322a2b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFIRBuilder.html#a91c8f9dc6e7cb225c2ed4b8f0322a2b3">visitInstruction</a> (<a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a> &amp;)</td></tr>
 <tr class="memdesc:a91c8f9dc6e7cb225c2ed4b8f0322a2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide base case for our instruction visit.  <a href="classSVF_1_1SVFIRBuilder.html#a91c8f9dc6e7cb225c2ed4b8f0322a2b3">More...</a><br /></td></tr>
 <tr class="separator:a91c8f9dc6e7cb225c2ed4b8f0322a2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4b22b8a09313801f865b8bc6723c0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFIRBuilder.html#a2d4b22b8a09313801f865b8bc6723c0f">updateCallGraph</a> (<a class="el" href="classSVF_1_1CallGraph.html">CallGraph</a> *callgraph)</td></tr>
-<tr class="memdesc:a2d4b22b8a09313801f865b8bc6723c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect PAG edges based on callgraph  <a href="classSVF_1_1SVFIRBuilder.html#a2d4b22b8a09313801f865b8bc6723c0f">More...</a><br /></td></tr>
-<tr class="separator:a2d4b22b8a09313801f865b8bc6723c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22bd51c6fe770d179867342164ec2767"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFIRBuilder.html#a22bd51c6fe770d179867342164ec2767">updateCallGraph</a> (<a class="el" href="classSVF_1_1PTACallGraph.html">PTACallGraph</a> *callgraph)</td></tr>
+<tr class="memdesc:a22bd51c6fe770d179867342164ec2767"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect PAG edges based on callgraph  <a href="classSVF_1_1SVFIRBuilder.html#a22bd51c6fe770d179867342164ec2767">More...</a><br /></td></tr>
+<tr class="separator:a22bd51c6fe770d179867342164ec2767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -3810,8 +3810,8 @@ Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a2d4b22b8a09313801f865b8bc6723c0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d4b22b8a09313801f865b8bc6723c0f">&#9670;&nbsp;</a></span>updateCallGraph()</h2>
+<a id="a22bd51c6fe770d179867342164ec2767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22bd51c6fe770d179867342164ec2767">&#9670;&nbsp;</a></span>updateCallGraph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3819,7 +3819,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void SVFIRBuilder::updateCallGraph </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSVF_1_1CallGraph.html">CallGraph</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1PTACallGraph.html">PTACallGraph</a> *&#160;</td>
           <td class="paramname"><em>callgraph</em></td><td>)</td>
           <td></td>
         </tr>
@@ -3830,15 +3830,15 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01149">1149</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;{</div>
-<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;    CallGraph::CallEdgeMap::const_iterator iter = callgraph-&gt;<a class="code" href="classSVF_1_1CallGraph.html#a1e3e12c110931365be3f412a725806dd">getIndCallMap</a>().begin();</div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;    CallGraph::CallEdgeMap::const_iterator eiter = callgraph-&gt;<a class="code" href="classSVF_1_1CallGraph.html#a1e3e12c110931365be3f412a725806dd">getIndCallMap</a>().end();</div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;    PTACallGraph::CallEdgeMap::const_iterator iter = callgraph-&gt;<a class="code" href="classSVF_1_1PTACallGraph.html#ad49fa2a288945f6910deb11acdf6a42d">getIndCallMap</a>().begin();</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;    PTACallGraph::CallEdgeMap::const_iterator eiter = callgraph-&gt;<a class="code" href="classSVF_1_1PTACallGraph.html#ad49fa2a288945f6910deb11acdf6a42d">getIndCallMap</a>().end();</div>
 <div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;    <span class="keywordflow">for</span> (; iter != eiter; iter++)</div>
 <div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;    {</div>
 <div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a>* callBlock = iter-&gt;first;</div>
 <div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">CallBase</a>* callbase = SVFUtil::cast&lt;CallBase&gt;(<a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;getLLVMValue(callBlock-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#a90fd0b8e44fba1a7eb76d15bce085d66">getCallSite</a>()));</div>
 <div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;        assert(callBlock-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#aa11226a2e4fa6a7b1d78006cc8ca0518">isIndirectCall</a>() &amp;&amp; <span class="stringliteral">&quot;this is not an indirect call?&quot;</span>);</div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1CallGraph.html#a1c6cc5a0f02fef1a804111387877e335">CallGraph::FunctionSet</a>&amp; functions = iter-&gt;second;</div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;        <span class="keywordflow">for</span> (CallGraph::FunctionSet::const_iterator func_iter = functions.begin(); func_iter != functions.end(); func_iter++)</div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1PTACallGraph.html#a5f5a5ec7e707a21994d301cc07d32a5a">PTACallGraph::FunctionSet</a>&amp; functions = iter-&gt;second;</div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;        <span class="keywordflow">for</span> (PTACallGraph::FunctionSet::const_iterator func_iter = functions.begin(); func_iter != functions.end(); func_iter++)</div>
 <div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;        {</div>
 <div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a>* callee = SVFUtil::cast&lt;Function&gt;(<a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;getLLVMValue(*func_iter));</div>
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160; </div>
@@ -3860,10 +3860,10 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#a1dd9ad3f11454be49b4c5099503db8e8">Options::PAGDotGraph</a>())</div>
 <div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;        <a class="code" href="classSVF_1_1SVFIRBuilder.html#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;<a class="code" href="classSVF_1_1IRGraph.html#a1cb32461439c4dc8d044c2bfadb11307">dump</a>(<span class="stringliteral">&quot;svfir_final&quot;</span>);</div>
 <div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;}</div>
-<div class="ttc" id="aclassSVF_1_1CallGraph_html_a1c6cc5a0f02fef1a804111387877e335"><div class="ttname"><a href="classSVF_1_1CallGraph.html#a1c6cc5a0f02fef1a804111387877e335">SVF::CallGraph::FunctionSet</a></div><div class="ttdeci">Set&lt; const SVFFunction * &gt; FunctionSet</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00228">CallGraph.h:228</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CallGraph_html_a1e3e12c110931365be3f412a725806dd"><div class="ttname"><a href="classSVF_1_1CallGraph.html#a1e3e12c110931365be3f412a725806dd">SVF::CallGraph::getIndCallMap</a></div><div class="ttdeci">CallEdgeMap &amp; getIndCallMap()</div><div class="ttdoc">Get callees from an indirect callsite.</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00280">CallGraph.h:280</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a90fd0b8e44fba1a7eb76d15bce085d66"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a90fd0b8e44fba1a7eb76d15bce085d66">SVF::CallICFGNode::getCallSite</a></div><div class="ttdeci">const SVFInstruction * getCallSite() const</div><div class="ttdoc">Return callsite.</div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00409">ICFGNode.h:409</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_aa11226a2e4fa6a7b1d78006cc8ca0518"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#aa11226a2e4fa6a7b1d78006cc8ca0518">SVF::CallICFGNode::isIndirectCall</a></div><div class="ttdeci">bool isIndirectCall() const</div><div class="ttdoc">Return true if this is an indirect call.</div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00440">ICFGNode.h:440</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PTACallGraph_html_a5f5a5ec7e707a21994d301cc07d32a5a"><div class="ttname"><a href="classSVF_1_1PTACallGraph.html#a5f5a5ec7e707a21994d301cc07d32a5a">SVF::PTACallGraph::FunctionSet</a></div><div class="ttdeci">Set&lt; const SVFFunction * &gt; FunctionSet</div><div class="ttdef"><b>Definition:</b> <a href="PTACallGraph_8h_source.html#l00228">PTACallGraph.h:228</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PTACallGraph_html_ad49fa2a288945f6910deb11acdf6a42d"><div class="ttname"><a href="classSVF_1_1PTACallGraph.html#ad49fa2a288945f6910deb11acdf6a42d">SVF::PTACallGraph::getIndCallMap</a></div><div class="ttdeci">CallEdgeMap &amp; getIndCallMap()</div><div class="ttdoc">Get callees from an indirect callsite.</div><div class="ttdef"><b>Definition:</b> <a href="PTACallGraph_8h_source.html#l00280">PTACallGraph.h:280</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIRBuilder_html_a3ccc53ca9a6862674ee2ec3bd67aa515"><div class="ttname"><a href="classSVF_1_1SVFIRBuilder.html#a3ccc53ca9a6862674ee2ec3bd67aa515">SVF::SVFIRBuilder::handleDirectCall</a></div><div class="ttdeci">void handleDirectCall(CallBase *cs, const Function *F)</div><div class="ttdoc">Handle direct call.</div><div class="ttdef"><b>Definition:</b> <a href="SVFIRBuilder_8cpp_source.html#l01053">SVFIRBuilder.cpp:1053</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIRBuilder_html_a8b664a9d689562bd857f056e6e08c59b"><div class="ttname"><a href="classSVF_1_1SVFIRBuilder.html#a8b664a9d689562bd857f056e6e08c59b">SVF::SVFIRBuilder::handleExtCall</a></div><div class="ttdeci">virtual void handleExtCall(const CallBase *cs, const SVFFunction *svfCallee)</div><div class="ttdef"><b>Definition:</b> <a href="SVFIRExtAPI_8cpp_source.html#l00124">SVFIRExtAPI.cpp:124</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFInstruction_html_ae009f41cbf48d949d4325e08fe8d7198"><div class="ttname"><a href="classSVF_1_1SVFInstruction.html#ae009f41cbf48d949d4325e08fe8d7198">SVF::SVFInstruction::getParent</a></div><div class="ttdeci">const SVFBasicBlock * getParent() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00658">SVFValue.h:658</a></div></div>
