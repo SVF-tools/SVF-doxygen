@@ -301,140 +301,139 @@ $(function() {
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="classSVF_1_1SVFFunction.html#aaec097379a345ab0e80b6a9c50508f48">SVFFunction::const_iterator</a> bit = (*it)-&gt;begin(), ebit = (*it)-&gt;end(); bit != ebit; ++bit)</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        {</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFBasicBlock.html">SVFBasicBlock</a>* bb = *bit;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="classSVF_1_1SVFBasicBlock.html#a73b7029f85e3762033f49c953d4b95ca">SVFBasicBlock::const_iterator</a> ii = bb-&gt;<a class="code" href="classSVF_1_1SVFBasicBlock.html#ac9cb2f17e42c40ca81b49c8b63a855fc">begin</a>(), eii = bb-&gt;<a class="code" href="classSVF_1_1SVFBasicBlock.html#ab65173c2668b80643cb96e8133e5ea0a">end</a>(); ii != eii; ++ii)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; svfInst: bb-&gt;<a class="code" href="classSVF_1_1SVFBasicBlock.html#a4e211beb69a4f9cc49cb51983d7946e7">getICFGNodeList</a>())</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFInstruction.html">SVFInstruction</a>* svfInst = *ii;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="namespaceSVF_1_1LLVMUtil.html#a5a7dc8680a9714e08b01dd339b85bb20">SVFUtil::isCallSite</a>(svfInst))</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a>* fun = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ad56c48be3ba6ebb95416623256524097">SVFUtil::getCallee</a>(svfInst);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <a class="code" href="classSVF_1_1ThreadAPI.html#a38a7516702c55ab418167b7c850516b3">TD_TYPE</a> <a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = getType(fun);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                <span class="keywordflow">switch</span> (<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>)</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordflow">case</span> TD_FORK:</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                {</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_create&quot;</span>]++;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <span class="keywordflow">case</span> TD_JOIN:</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_join&quot;</span>]++;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                <span class="keywordflow">case</span> TD_ACQUIRE:</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_lock&quot;</span>]++;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordflow">case</span> TD_TRY_ACQUIRE:</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_trylock&quot;</span>]++;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <span class="keywordflow">case</span> TD_RELEASE:</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_unlock&quot;</span>]++;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="keywordflow">case</span> TD_CANCEL:</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cancel&quot;</span>]++;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                <span class="keywordflow">case</span> TD_EXIT:</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                {</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_exit&quot;</span>]++;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                }</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                <span class="keywordflow">case</span> TD_DETACH:</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_detach&quot;</span>]++;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordflow">case</span> TD_COND_WAIT:</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_wait&quot;</span>]++;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <span class="keywordflow">case</span> TD_COND_SIGNAL:</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_signal&quot;</span>]++;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                <span class="keywordflow">case</span> TD_COND_BROADCAST:</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_broadcast&quot;</span>]++;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                <span class="keywordflow">case</span> TD_CONDVAR_INI:</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_init&quot;</span>]++;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="keywordflow">case</span> TD_CONDVAR_DESTROY:</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_destroy&quot;</span>]++;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keywordflow">case</span> TD_MUTEX_INI:</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_init&quot;</span>]++;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                <span class="keywordflow">case</span> TD_MUTEX_DESTROY:</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_destroy&quot;</span>]++;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                }</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <span class="keywordflow">case</span> TD_BAR_INIT:</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_barrier_init&quot;</span>]++;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                <span class="keywordflow">case</span> TD_BAR_WAIT:</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_barrier_wait&quot;</span>]++;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                }</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <span class="keywordflow">case</span> HARE_PAR_FOR:</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;hare_parallel_for&quot;</span>]++;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                }</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                <span class="keywordflow">case</span> TD_DUMMY:</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="namespaceSVF_1_1LLVMUtil.html#a5a7dc8680a9714e08b01dd339b85bb20">SVFUtil::isCallSite</a>(svfInst))</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a>* fun = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ad56c48be3ba6ebb95416623256524097">SVFUtil::getCallee</a>(svfInst);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <a class="code" href="classSVF_1_1ThreadAPI.html#a38a7516702c55ab418167b7c850516b3">TD_TYPE</a> <a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = getType(fun);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">switch</span> (<a class="code" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="keywordflow">case</span> TD_FORK:</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_create&quot;</span>]++;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="keywordflow">case</span> TD_JOIN:</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_join&quot;</span>]++;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                <span class="keywordflow">case</span> TD_ACQUIRE:</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_lock&quot;</span>]++;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                <span class="keywordflow">case</span> TD_TRY_ACQUIRE:</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_trylock&quot;</span>]++;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                <span class="keywordflow">case</span> TD_RELEASE:</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_unlock&quot;</span>]++;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                <span class="keywordflow">case</span> TD_CANCEL:</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cancel&quot;</span>]++;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="keywordflow">case</span> TD_EXIT:</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_exit&quot;</span>]++;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">case</span> TD_DETACH:</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_detach&quot;</span>]++;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <span class="keywordflow">case</span> TD_COND_WAIT:</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_wait&quot;</span>]++;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                <span class="keywordflow">case</span> TD_COND_SIGNAL:</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_signal&quot;</span>]++;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                <span class="keywordflow">case</span> TD_COND_BROADCAST:</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_broadcast&quot;</span>]++;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                <span class="keywordflow">case</span> TD_CONDVAR_INI:</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_init&quot;</span>]++;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="keywordflow">case</span> TD_CONDVAR_DESTROY:</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_cond_destroy&quot;</span>]++;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="keywordflow">case</span> TD_MUTEX_INI:</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_init&quot;</span>]++;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                <span class="keywordflow">case</span> TD_MUTEX_DESTROY:</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_mutex_destroy&quot;</span>]++;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <span class="keywordflow">case</span> TD_BAR_INIT:</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_barrier_init&quot;</span>]++;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                <span class="keywordflow">case</span> TD_BAR_WAIT:</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;pthread_barrier_wait&quot;</span>]++;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                <span class="keywordflow">case</span> HARE_PAR_FOR:</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    tdAPIStatMap[<span class="stringliteral">&quot;hare_parallel_for&quot;</span>]++;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                <span class="keywordflow">case</span> TD_DUMMY:</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                }</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                }</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            }</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    }</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>(module-&gt;<a class="code" href="classSVF_1_1SVFModule.html#aa8bab1ad6cab332fe24066b9cf487344">getModuleIdentifier</a>());</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    std::vector&lt;std::string&gt; fullNames = <a class="code" href="namespaceSVF_1_1SVFUtil.html#ae18227f257c9881541b84ca186680dfd">SVFUtil::split</a>(<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>,<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">if</span> (fullNames.size() &gt; 1)</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a> = fullNames[fullNames.size() - 1];</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; <span class="stringliteral">&quot;################ (program : &quot;</span> &lt;&lt; <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                    &lt;&lt; <span class="stringliteral">&quot;)###############\n&quot;</span>;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>().flags(std::ios::left);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">unsigned</span> field_width = 20;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map&lt;std::string, u32_t&gt;::iterator</a> it = tdAPIStatMap.begin(), eit =</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                tdAPIStatMap.end(); it != eit; ++it)</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    {</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> apiName = it-&gt;first;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="comment">// format out put with width 20 space</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; std::setw(field_width) &lt;&lt; apiName &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; it-&gt;second</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; <span class="stringliteral">&quot;#######################################################&quot;</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                    &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* THREADAPI_CPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>(module-&gt;<a class="code" href="classSVF_1_1SVFModule.html#aa8bab1ad6cab332fe24066b9cf487344">getModuleIdentifier</a>());</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    std::vector&lt;std::string&gt; fullNames = <a class="code" href="namespaceSVF_1_1SVFUtil.html#ae18227f257c9881541b84ca186680dfd">SVFUtil::split</a>(<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>,<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">if</span> (fullNames.size() &gt; 1)</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a> = fullNames[fullNames.size() - 1];</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; <span class="stringliteral">&quot;################ (program : &quot;</span> &lt;&lt; <a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                    &lt;&lt; <span class="stringliteral">&quot;)###############\n&quot;</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>().flags(std::ios::left);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">unsigned</span> field_width = 20;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map&lt;std::string, u32_t&gt;::iterator</a> it = tdAPIStatMap.begin(), eit =</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                tdAPIStatMap.end(); it != eit; ++it)</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> apiName = it-&gt;first;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="comment">// format out put with width 20 space</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; std::setw(field_width) &lt;&lt; apiName &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; it-&gt;second</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; <span class="stringliteral">&quot;#######################################################&quot;</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                    &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;}</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* THREADAPI_CPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aSVFIR_8h_html"><div class="ttname"><a href="SVFIR_8h.html">SVFIR.h</a></div></div>
 <div class="ttc" id="aSVFUtil_8h_html"><div class="ttname"><a href="SVFUtil_8h.html">SVFUtil.h</a></div></div>
 <div class="ttc" id="aThreadAPI_8cpp_html_aa5c38361a7f02befa83ea45388056ea1"><div class="ttname"><a href="ThreadAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1">ei_pairs</a></div><div class="ttdeci">static const ei_pair ei_pairs[]</div><div class="ttdef"><b>Definition:</b> <a href="ThreadAPI_8cpp_source.html#l00060">ThreadAPI.cpp:60</a></div></div>
@@ -446,17 +445,15 @@ $(function() {
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html">SVF::CallICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00385">ICFGNode.h:386</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a90fd0b8e44fba1a7eb76d15bce085d66"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a90fd0b8e44fba1a7eb76d15bce085d66">SVF::CallICFGNode::getCallSite</a></div><div class="ttdeci">const SVFInstruction * getCallSite() const</div><div class="ttdoc">Return callsite.</div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00409">ICFGNode.h:409</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CallSite_html"><div class="ttname"><a href="classSVF_1_1CallSite.html">SVF::CallSite</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l01113">SVFValue.h:1114</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CallSite_html_a9e7c94ee7f689466111487e03b2cebcc"><div class="ttname"><a href="classSVF_1_1CallSite.html#a9e7c94ee7f689466111487e03b2cebcc">SVF::CallSite::getArgument</a></div><div class="ttdeci">const SVFValue * getArgument(u32_t ArgNo) const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l01132">SVFValue.h:1132</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CallSite_html"><div class="ttname"><a href="classSVF_1_1CallSite.html">SVF::CallSite</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l01118">SVFValue.h:1119</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CallSite_html_a9e7c94ee7f689466111487e03b2cebcc"><div class="ttname"><a href="classSVF_1_1CallSite.html#a9e7c94ee7f689466111487e03b2cebcc">SVF::CallSite::getArgument</a></div><div class="ttdeci">const SVFValue * getArgument(u32_t ArgNo) const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l01137">SVFValue.h:1137</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_afc8b5f86d7795b6a0dfc0687d942d79b"><div class="ttname"><a href="classSVF_1_1GenericNode.html#afc8b5f86d7795b6a0dfc0687d942d79b">SVF::GenericNode::getInEdges</a></div><div class="ttdeci">const GEdgeSetTy &amp; getInEdges() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00197">GenericGraph.h:197</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGNode_html"><div class="ttname"><a href="classSVF_1_1ICFGNode.html">SVF::ICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00054">ICFGNode.h:55</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html">SVF::SVFBasicBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00527">SVFValue.h:528</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html_a73b7029f85e3762033f49c953d4b95ca"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html#a73b7029f85e3762033f49c953d4b95ca">SVF::SVFBasicBlock::const_iterator</a></div><div class="ttdeci">std::vector&lt; const SVFInstruction * &gt;::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00536">SVFValue.h:536</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html_ab65173c2668b80643cb96e8133e5ea0a"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html#ab65173c2668b80643cb96e8133e5ea0a">SVF::SVFBasicBlock::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00583">SVFValue.h:583</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html_ac9cb2f17e42c40ca81b49c8b63a855fc"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html#ac9cb2f17e42c40ca81b49c8b63a855fc">SVF::SVFBasicBlock::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00578">SVFValue.h:578</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html">SVF::SVFBasicBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00529">SVFValue.h:530</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html_a4e211beb69a4f9cc49cb51983d7946e7"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html#a4e211beb69a4f9cc49cb51983d7946e7">SVF::SVFBasicBlock::getICFGNodeList</a></div><div class="ttdeci">const std::vector&lt; const ICFGNode * &gt; &amp; getICFGNodeList() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00580">SVFValue.h:580</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html"><div class="ttname"><a href="classSVF_1_1SVFFunction.html">SVF::SVFFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00297">SVFValue.h:298</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html_aaec097379a345ab0e80b6a9c50508f48"><div class="ttname"><a href="classSVF_1_1SVFFunction.html#aaec097379a345ab0e80b6a9c50508f48">SVF::SVFFunction::const_iterator</a></div><div class="ttdeci">std::vector&lt; const SVFBasicBlock * &gt;::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00305">SVFValue.h:305</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFInstruction_html"><div class="ttname"><a href="classSVF_1_1SVFInstruction.html">SVF::SVFInstruction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00631">SVFValue.h:632</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFInstruction_html"><div class="ttname"><a href="classSVF_1_1SVFInstruction.html">SVF::SVFInstruction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00636">SVFValue.h:637</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFModule_html"><div class="ttname"><a href="classSVF_1_1SVFModule.html">SVF::SVFModule</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFModule_8h_source.html#l00040">SVFModule.h:41</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFModule_html_a5486697889c6cca4f9f426650defc255"><div class="ttname"><a href="classSVF_1_1SVFModule.html#a5486697889c6cca4f9f426650defc255">SVF::SVFModule::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdef"><b>Definition:</b> <a href="SVFModule_8h_source.html#l00133">SVFModule.h:133</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFModule_html_a58d03edb6ff85f4943135478f113df31"><div class="ttname"><a href="classSVF_1_1SVFModule.html#a58d03edb6ff85f4943135478f113df31">SVF::SVFModule::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdef"><b>Definition:</b> <a href="SVFModule_8h_source.html#l00141">SVFModule.h:141</a></div></div>
@@ -470,8 +467,8 @@ $(function() {
 <div class="ttc" id="aclassSVF_1_1ThreadAPI_html_a38a7516702c55ab418167b7c850516b3"><div class="ttname"><a href="classSVF_1_1ThreadAPI.html#a38a7516702c55ab418167b7c850516b3">SVF::ThreadAPI::TD_TYPE</a></div><div class="ttdeci">TD_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="ThreadAPI_8h_source.html#l00048">ThreadAPI.h:49</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a5a7dc8680a9714e08b01dd339b85bb20"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a5a7dc8680a9714e08b01dd339b85bb20">SVF::LLVMUtil::isCallSite</a></div><div class="ttdeci">bool isCallSite(const Instruction *inst)</div><div class="ttdoc">Whether an instruction is a call or invoke instruction.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00045">LLVMUtil.h:45</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_ad56c48be3ba6ebb95416623256524097"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#ad56c48be3ba6ebb95416623256524097">SVF::LLVMUtil::getCallee</a></div><div class="ttdeci">const Function * getCallee(const CallBase *cs)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00065">LLVMUtil.h:65</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a9815a5b31ac7dc21239d08e5b9f61106"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a9815a5b31ac7dc21239d08e5b9f61106">SVF::SVFUtil::getSVFCallSite</a></div><div class="ttdeci">CallSite getSVFCallSite(const SVFInstruction *inst)</div><div class="ttdoc">Return LLVM callsite given an instruction.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00196">SVFUtil.h:196</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ae18227f257c9881541b84ca186680dfd"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ae18227f257c9881541b84ca186680dfd">SVF::SVFUtil::split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split(const std::string &amp;s, char separator)</div><div class="ttdoc">Split into two substrings around the first occurrence of a separator string.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00218">SVFUtil.h:218</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a9815a5b31ac7dc21239d08e5b9f61106"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a9815a5b31ac7dc21239d08e5b9f61106">SVF::SVFUtil::getSVFCallSite</a></div><div class="ttdeci">CallSite getSVFCallSite(const SVFInstruction *inst)</div><div class="ttdoc">Return LLVM callsite given an instruction.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00210">SVFUtil.h:210</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ae18227f257c9881541b84ca186680dfd"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ae18227f257c9881541b84ca186680dfd">SVF::SVFUtil::split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split(const std::string &amp;s, char separator)</div><div class="ttdoc">Split into two substrings around the first occurrence of a separator string.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00232">SVFUtil.h:232</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aed0b0b9f035057552a6a82154fd88e61"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVF::SVFUtil::outs</a></div><div class="ttdeci">std::ostream &amp; outs()</div><div class="ttdoc">Overwrite llvm::outs()</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00050">SVFUtil.h:50</a></div></div>
 <div class="ttc" id="anamespaceSVF_html"><div class="ttname"><a href="namespaceSVF.html">SVF</a></div><div class="ttdoc">for isBitcode</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00067">BasicTypes.h:68</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a8234d4b959abc9123993bcff4eee34c1"><div class="ttname"><a href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">SVF::Map</a></div><div class="ttdeci">std::unordered_map&lt; Key, Value, Hash, KeyEqual, Allocator &gt; Map</div><div class="ttdef"><b>Definition:</b> <a href="GeneralType_8h_source.html#l00101">GeneralType.h:101</a></div></div>

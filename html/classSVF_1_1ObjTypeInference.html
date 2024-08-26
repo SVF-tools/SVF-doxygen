@@ -485,25 +485,27 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                <span class="keywordflow">if</span> (!callee-&gt;isDeclaration())</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                {</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                    <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *svfFunc = <a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code" href="classSVF_1_1LLVMModuleSet.html#a50fc24901350df9db890ba16a9b87e33">getSVFFunction</a>(callee);</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *pValue = <a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code" href="classSVF_1_1LLVMModuleSet.html#aaf9b679407f12b93afc53c157d37b444">getLLVMValue</a>(svfFunc-&gt;<a class="code" href="classSVF_1_1SVFFunction.html#ac4c28c8d205d354f3a982119f29f2aac">getExitBB</a>()-&gt;<a class="code" href="classSVF_1_1SVFBasicBlock.html#ad05f85ce931d4479f71d1947a25599dc">back</a>());</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> *retInst = SVFUtil::dyn_cast&lt;ReturnInst&gt;(pValue);</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                    <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(retInst &amp;&amp; retInst-&gt;getReturnValue(), <span class="stringliteral">&quot;not return inst?&quot;</span>);</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                    insertAllocsOrPushWorklist(retInst-&gt;getReturnValue());</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                }</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            }</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        }</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        <span class="keywordflow">if</span> (canUpdate)</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        {</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;            <a class="code" href="classSVF_1_1ObjTypeInference.html#a18edeb47fb7734eb17ba3a84181cbc16">_valueToAllocs</a>[curValue] = <a class="code" href="namespaceSVF_1_1SVFUtil.html#a72502f7f536418621485e90ab98c2016">SVFUtil::move</a>(sources);</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        }</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    }</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const Value *&gt;</a> &amp;srcs = <a class="code" href="classSVF_1_1ObjTypeInference.html#a18edeb47fb7734eb17ba3a84181cbc16">_valueToAllocs</a>[var];</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="keywordflow">if</span> (srcs.empty())</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    {</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#ac48ef12f2a6f605d6fa5d31e7623a826">WARN_MSG</a>(<span class="stringliteral">&quot;Cannot find allocation: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(var));</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    }</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keywordflow">return</span> srcs;</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;}</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a>* exitBB = SVFUtil::cast&lt;BasicBlock&gt;(<a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;getLLVMValue(</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                                                   svfFunc-&gt;<a class="code" href="classSVF_1_1SVFFunction.html#ac4c28c8d205d354f3a982119f29f2aac">getExitBB</a>()));</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *pValue = &amp;exitBB-&gt;back();</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> *retInst = SVFUtil::dyn_cast&lt;ReturnInst&gt;(pValue);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                    <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(retInst &amp;&amp; retInst-&gt;getReturnValue(), <span class="stringliteral">&quot;not return inst?&quot;</span>);</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                    insertAllocsOrPushWorklist(retInst-&gt;getReturnValue());</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                }</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            }</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        }</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <span class="keywordflow">if</span> (canUpdate)</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        {</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;            <a class="code" href="classSVF_1_1ObjTypeInference.html#a18edeb47fb7734eb17ba3a84181cbc16">_valueToAllocs</a>[curValue] = <a class="code" href="namespaceSVF_1_1SVFUtil.html#a72502f7f536418621485e90ab98c2016">SVFUtil::move</a>(sources);</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;        }</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    }</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const Value *&gt;</a> &amp;srcs = <a class="code" href="classSVF_1_1ObjTypeInference.html#a18edeb47fb7734eb17ba3a84181cbc16">_valueToAllocs</a>[var];</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordflow">if</span> (srcs.empty())</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    {</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#ac48ef12f2a6f605d6fa5d31e7623a826">WARN_MSG</a>(<span class="stringliteral">&quot;Cannot find allocation: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(var));</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    }</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="keywordflow">return</span> srcs;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;}</div>
 <div class="ttc" id="aCommandLine_8h_html_a2429346d37bd4c40889bd7c6d319d9da"><div class="ttname"><a href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a></div><div class="ttdeci">unsigned u32_t</div><div class="ttdef"><b>Definition:</b> <a href="CommandLine_8h_source.html#l00018">CommandLine.h:18</a></div></div>
 <div class="ttc" id="aObjTypeInference_8cpp_html_a7165377d2fbd76a86ed0ec5218712c78"><div class="ttname"><a href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a></div><div class="ttdeci">#define ABORT_IFNOT(condition, msg)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00050">ObjTypeInference.cpp:50</a></div></div>
 <div class="ttc" id="aObjTypeInference_8cpp_html_ac48ef12f2a6f605d6fa5d31e7623a826"><div class="ttname"><a href="ObjTypeInference_8cpp.html#ac48ef12f2a6f605d6fa5d31e7623a826">WARN_MSG</a></div><div class="ttdeci">#define WARN_MSG(msg)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00071">ObjTypeInference.cpp:71</a></div></div>
@@ -512,16 +514,15 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1FILOWorkList_html_a3fd9acb6d09fd142bfd402fdf8cac93b"><div class="ttname"><a href="classSVF_1_1FILOWorkList.html#a3fd9acb6d09fd142bfd402fdf8cac93b">SVF::FILOWorkList::pop</a></div><div class="ttdeci">Data pop()</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00272">WorkList.h:272</a></div></div>
 <div class="ttc" id="aclassSVF_1_1FILOWorkList_html_afcf3fcda18e8d3e2bad70a51376c0ce1"><div class="ttname"><a href="classSVF_1_1FILOWorkList.html#afcf3fcda18e8d3e2bad70a51376c0ce1">SVF::FILOWorkList::push</a></div><div class="ttdeci">bool push(const Data &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="WorkList_8h_source.html#l00257">WorkList.h:257</a></div></div>
 <div class="ttc" id="aclassSVF_1_1LLVMModuleSet_html_a50fc24901350df9db890ba16a9b87e33"><div class="ttname"><a href="classSVF_1_1LLVMModuleSet.html#a50fc24901350df9db890ba16a9b87e33">SVF::LLVMModuleSet::getSVFFunction</a></div><div class="ttdeci">SVFFunction * getSVFFunction(const Function *fun) const</div><div class="ttdef"><b>Definition:</b> <a href="LLVMModule_8h_source.html#l00210">LLVMModule.h:210</a></div></div>
-<div class="ttc" id="aclassSVF_1_1LLVMModuleSet_html_aaf9b679407f12b93afc53c157d37b444"><div class="ttname"><a href="classSVF_1_1LLVMModuleSet.html#aaf9b679407f12b93afc53c157d37b444">SVF::LLVMModuleSet::getLLVMValue</a></div><div class="ttdeci">const Value * getLLVMValue(const SVFValue *value) const</div><div class="ttdef"><b>Definition:</b> <a href="LLVMModule_8h_source.html#l00203">LLVMModule.h:203</a></div></div>
 <div class="ttc" id="aclassSVF_1_1LLVMModuleSet_html_acf40310917909e4234282c0695a43160"><div class="ttname"><a href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">SVF::LLVMModuleSet::getLLVMModuleSet</a></div><div class="ttdeci">static LLVMModuleSet * getLLVMModuleSet()</div><div class="ttdef"><b>Definition:</b> <a href="LLVMModule_8h_source.html#l00105">LLVMModule.h:105</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a18edeb47fb7734eb17ba3a84181cbc16"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a18edeb47fb7734eb17ba3a84181cbc16">SVF::ObjTypeInference::_valueToAllocs</a></div><div class="ttdeci">ValueToSources _valueToAllocs</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8h_source.html#l00057">ObjTypeInference.h:57</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a62020ece25ac660f1adb41bd0cf40be7"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a62020ece25ac660f1adb41bd0cf40be7">SVF::ObjTypeInference::isAlloc</a></div><div class="ttdeci">bool isAlloc(const SVF::Value *val)</div><div class="ttdoc">is allocation (stack, static, heap)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00609">ObjTypeInference.cpp:609</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html_ad05f85ce931d4479f71d1947a25599dc"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html#ad05f85ce931d4479f71d1947a25599dc">SVF::SVFBasicBlock::back</a></div><div class="ttdeci">const SVFInstruction * back() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00603">SVFValue.h:603</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a62020ece25ac660f1adb41bd0cf40be7"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a62020ece25ac660f1adb41bd0cf40be7">SVF::ObjTypeInference::isAlloc</a></div><div class="ttdeci">bool isAlloc(const SVF::Value *val)</div><div class="ttdoc">is allocation (stack, static, heap)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00611">ObjTypeInference.cpp:611</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html"><div class="ttname"><a href="classSVF_1_1SVFFunction.html">SVF::SVFFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00297">SVFValue.h:298</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html_ac4c28c8d205d354f3a982119f29f2aac"><div class="ttname"><a href="classSVF_1_1SVFFunction.html#ac4c28c8d205d354f3a982119f29f2aac">SVF::SVFFunction::getExitBB</a></div><div class="ttdeci">const SVFBasicBlock * getExitBB() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8cpp_source.html#l00192">SVFValue.cpp:192</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a86c0a0cb4ada72bd4f42c77558e6a350"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">SVF::LLVMUtil::dumpValueAndDbgInfo</a></div><div class="ttdeci">std::string dumpValueAndDbgInfo(const Value *val)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00892">LLVMUtil.cpp:892</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a72502f7f536418621485e90ab98c2016"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a72502f7f536418621485e90ab98c2016">SVF::SVFUtil::move</a></div><div class="ttdeci">constexpr std::remove_reference&lt; T &gt;::type &amp;&amp; move(T &amp;&amp;t) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00547">SVFUtil.h:547</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a72502f7f536418621485e90ab98c2016"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a72502f7f536418621485e90ab98c2016">SVF::SVFUtil::move</a></div><div class="ttdeci">constexpr std::remove_reference&lt; T &gt;::type &amp;&amp; move(T &amp;&amp;t) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00549">SVFUtil.h:549</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a1f4624771922dc8c2447ad7433588c73"><div class="ttname"><a href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">SVF::CallBase</a></div><div class="ttdeci">llvm::CallBase CallBase</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00146">BasicTypes.h:146</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a23bf614858f168b6ad76e0233cec9965"><div class="ttname"><a href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">SVF::BasicBlock</a></div><div class="ttdeci">llvm::BasicBlock BasicBlock</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00086">BasicTypes.h:86</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a5faee14fa1dd41447bc73ac365fe33c1"><div class="ttname"><a href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">SVF::Function</a></div><div class="ttdeci">llvm::Function Function</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00085">BasicTypes.h:85</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a90b263fd2f541eca78135078114cabda"><div class="ttname"><a href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">SVF::Value</a></div><div class="ttdeci">llvm::Value Value</div><div class="ttdoc">LLVM Basic classes.</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00082">BasicTypes.h:82</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_ab696aab940eb187dc81217efe8649af5"><div class="ttname"><a href="namespaceSVF.html#ab696aab940eb187dc81217efe8649af5">SVF::StoreInst</a></div><div class="ttdeci">llvm::StoreInst StoreInst</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00148">BasicTypes.h:148</a></div></div>
@@ -561,138 +562,140 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00780">780</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;{</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160; </div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    <span class="comment">// consult cache</span></div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    <span class="keyword">auto</span> tIt = <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.find(startValue);</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    <span class="keywordflow">if</span> (tIt != <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.end())</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    {</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        <span class="keywordflow">return</span> tIt-&gt;second;</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    }</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160; </div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    <span class="comment">// simulate the call stack, the second element indicates whether we should update sources for current value</span></div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    <a class="code" href="classSVF_1_1FILOWorkList.html">FILOWorkList&lt;ValueBoolPair&gt;</a> workList;</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;ValueBoolPair&gt;</a> visited;</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    workList.<a class="code" href="classSVF_1_1FILOWorkList.html#afcf3fcda18e8d3e2bad70a51376c0ce1">push</a>({startValue, <span class="keyword">false</span>});</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    <span class="keywordflow">while</span> (!workList.<a class="code" href="classSVF_1_1FILOWorkList.html#a071a624c91def82a4bbbf3806c7b7eea">empty</a>())</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    {</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        <span class="keyword">auto</span> curPair = workList.<a class="code" href="classSVF_1_1FILOWorkList.html#a3fd9acb6d09fd142bfd402fdf8cac93b">pop</a>();</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        <span class="keywordflow">if</span> (visited.count(curPair)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        visited.insert(curPair);</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *curValue = curPair.first;</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        <span class="keywordtype">bool</span> canUpdate = curPair.second;</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160; </div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const Value *&gt;</a> sources;</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        <span class="keyword">auto</span> insertSource = [&amp;sources, &amp;canUpdate](<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *source)</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        {</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;            <span class="keywordflow">if</span> (canUpdate) sources.insert(source);</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        };</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        <span class="keyword">auto</span> insertSourcesOrPushWorklist = [<span class="keyword">this</span>, &amp;sources, &amp;workList, &amp;canUpdate](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;pUser)</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        {</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            <span class="keyword">auto</span> vIt = <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.find(pUser);</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            <span class="keywordflow">if</span> (canUpdate)</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            {</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                <span class="keywordflow">if</span> (vIt != <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.end() &amp;&amp; !vIt-&gt;second.empty())</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                {</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                    sources.insert(vIt-&gt;second.begin(), vIt-&gt;second.end());</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                }</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            }</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;            {</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;                <span class="keywordflow">if</span> (vIt == <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.end()) workList.push({pUser, <span class="keyword">false</span>});</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;            }</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;        };</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160; </div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        <span class="keywordflow">if</span> (!canUpdate &amp;&amp; !<a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.count(curValue))</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        {</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;            workList.push({curValue, <span class="keyword">true</span>});</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        }</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;        <span class="comment">// If current value is an instruction inside a constructor/destructor/template, use it as a source</span></div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *inst = SVFUtil::dyn_cast&lt;Instruction&gt;(curValue))</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;        {</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *parent = inst-&gt;getFunction())</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;            {</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(parent)) insertSource(parent);</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;            }</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        }</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160; </div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        <span class="comment">// If the current value is an object (global, heap, stack, etc) or name source (constructor/destructor,</span></div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        <span class="comment">// a C++ dynamic cast, or a template function), use it as a source</span></div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1ObjTypeInference.html#a62020ece25ac660f1adb41bd0cf40be7">isAlloc</a>(curValue) || <a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(curValue))</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        {</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;            insertSource(curValue);</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;        }</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160; </div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        <span class="comment">// Explore the current value further depending on the type of the value; use cached values if possible</span></div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *getElementPtrInst = SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;(curValue))</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;        {</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            insertSourcesOrPushWorklist(getElementPtrInst-&gt;getPointerOperand());</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        }</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *bitCastInst = SVFUtil::dyn_cast&lt;BitCastInst&gt;(curValue))</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        {</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            insertSourcesOrPushWorklist(bitCastInst-&gt;getOperand(0));</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        }</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *phiNode = SVFUtil::dyn_cast&lt;PHINode&gt;(curValue))</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        {</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *op : phiNode-&gt;operand_values())</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;            {</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;                insertSourcesOrPushWorklist(op);</div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            }</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        }</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *loadInst = SVFUtil::dyn_cast&lt;LoadInst&gt;(curValue))</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        {</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *user : loadInst-&gt;getPointerOperand()-&gt;users())</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;            {</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *storeInst = SVFUtil::dyn_cast&lt;StoreInst&gt;(user))</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;                {</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;                    <span class="keywordflow">if</span> (storeInst-&gt;getPointerOperand() == loadInst-&gt;getPointerOperand())</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;                    {</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                        insertSourcesOrPushWorklist(storeInst-&gt;getValueOperand());</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;                    }</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;                }</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;            }</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        }</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *argument = SVFUtil::dyn_cast&lt;Argument&gt;(curValue))</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        {</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *user: argument-&gt;getParent()-&gt;users())</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;            {</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *callBase = SVFUtil::dyn_cast&lt;CallBase&gt;(user))</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;                {</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                    <span class="comment">// skip function as parameter</span></div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;                    <span class="comment">// e.g., call void @foo(%struct.ssl_ctx_st* %9, i32 (i8*, i32, i32, i8*)* @passwd_callback)</span></div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;                    <span class="keywordflow">if</span> (callBase-&gt;getCalledFunction() != argument-&gt;getParent()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> pos = argument-&gt;getParent()-&gt;isVarArg() ? 0 : argument-&gt;getArgNo();</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                    insertSourcesOrPushWorklist(callBase-&gt;getArgOperand(pos));</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;                }</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;            }</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;        }</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *callBase = SVFUtil::dyn_cast&lt;CallBase&gt;(curValue))</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        {</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;            <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(!callBase-&gt;doesNotReturn(), <span class="stringliteral">&quot;callbase does not return:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(callBase));</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *callee = callBase-&gt;getCalledFunction())</div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;            {</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;                <span class="keywordflow">if</span> (!callee-&gt;isDeclaration())</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;                {</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;                    <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *svfFunc = <a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code" href="classSVF_1_1LLVMModuleSet.html#a50fc24901350df9db890ba16a9b87e33">getSVFFunction</a>(callee);</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;                    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *pValue = <a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code" href="classSVF_1_1LLVMModuleSet.html#aaf9b679407f12b93afc53c157d37b444">getLLVMValue</a>(svfFunc-&gt;<a class="code" href="classSVF_1_1SVFFunction.html#ac4c28c8d205d354f3a982119f29f2aac">getExitBB</a>()-&gt;<a class="code" href="classSVF_1_1SVFBasicBlock.html#ad05f85ce931d4479f71d1947a25599dc">back</a>());</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> *retInst = SVFUtil::dyn_cast&lt;ReturnInst&gt;(pValue);</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;                    <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(retInst &amp;&amp; retInst-&gt;getReturnValue(), <span class="stringliteral">&quot;not return inst?&quot;</span>);</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;                    insertSourcesOrPushWorklist(retInst-&gt;getReturnValue());</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;                }</div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;            }</div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;        }</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160; </div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        <span class="comment">// If updating is allowed; store the gathered sources as sources for the current value in the cache</span></div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        <span class="keywordflow">if</span> (canUpdate)</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        {</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;            <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>[curValue] = sources;</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        }</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;    }</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160; </div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>[startValue];</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00782">782</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;{</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160; </div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    <span class="comment">// consult cache</span></div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    <span class="keyword">auto</span> tIt = <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.find(startValue);</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    <span class="keywordflow">if</span> (tIt != <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.end())</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    {</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        <span class="keywordflow">return</span> tIt-&gt;second;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    }</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160; </div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <span class="comment">// simulate the call stack, the second element indicates whether we should update sources for current value</span></div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <a class="code" href="classSVF_1_1FILOWorkList.html">FILOWorkList&lt;ValueBoolPair&gt;</a> workList;</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;ValueBoolPair&gt;</a> visited;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    workList.<a class="code" href="classSVF_1_1FILOWorkList.html#afcf3fcda18e8d3e2bad70a51376c0ce1">push</a>({startValue, <span class="keyword">false</span>});</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    <span class="keywordflow">while</span> (!workList.<a class="code" href="classSVF_1_1FILOWorkList.html#a071a624c91def82a4bbbf3806c7b7eea">empty</a>())</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    {</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="keyword">auto</span> curPair = workList.<a class="code" href="classSVF_1_1FILOWorkList.html#a3fd9acb6d09fd142bfd402fdf8cac93b">pop</a>();</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        <span class="keywordflow">if</span> (visited.count(curPair)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        visited.insert(curPair);</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *curValue = curPair.first;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        <span class="keywordtype">bool</span> canUpdate = curPair.second;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160; </div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const Value *&gt;</a> sources;</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        <span class="keyword">auto</span> insertSource = [&amp;sources, &amp;canUpdate](<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *source)</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        {</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;            <span class="keywordflow">if</span> (canUpdate) sources.insert(source);</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        };</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        <span class="keyword">auto</span> insertSourcesOrPushWorklist = [<span class="keyword">this</span>, &amp;sources, &amp;workList, &amp;canUpdate](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;pUser)</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        {</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            <span class="keyword">auto</span> vIt = <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.find(pUser);</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;            <span class="keywordflow">if</span> (canUpdate)</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            {</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                <span class="keywordflow">if</span> (vIt != <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.end() &amp;&amp; !vIt-&gt;second.empty())</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                {</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                    sources.insert(vIt-&gt;second.begin(), vIt-&gt;second.end());</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                }</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;            }</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;            {</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;                <span class="keywordflow">if</span> (vIt == <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.end()) workList.push({pUser, <span class="keyword">false</span>});</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;            }</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        };</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160; </div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        <span class="keywordflow">if</span> (!canUpdate &amp;&amp; !<a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>.count(curValue))</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        {</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            workList.push({curValue, <span class="keyword">true</span>});</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;        }</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160; </div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;        <span class="comment">// If current value is an instruction inside a constructor/destructor/template, use it as a source</span></div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *inst = SVFUtil::dyn_cast&lt;Instruction&gt;(curValue))</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        {</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *parent = inst-&gt;getFunction())</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;            {</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(parent)) insertSource(parent);</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;            }</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        }</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160; </div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <span class="comment">// If the current value is an object (global, heap, stack, etc) or name source (constructor/destructor,</span></div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="comment">// a C++ dynamic cast, or a template function), use it as a source</span></div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1ObjTypeInference.html#a62020ece25ac660f1adb41bd0cf40be7">isAlloc</a>(curValue) || <a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(curValue))</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;        {</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            insertSource(curValue);</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        }</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160; </div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;        <span class="comment">// Explore the current value further depending on the type of the value; use cached values if possible</span></div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *getElementPtrInst = SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;(curValue))</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        {</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;            insertSourcesOrPushWorklist(getElementPtrInst-&gt;getPointerOperand());</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        }</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *bitCastInst = SVFUtil::dyn_cast&lt;BitCastInst&gt;(curValue))</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        {</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;            insertSourcesOrPushWorklist(bitCastInst-&gt;getOperand(0));</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        }</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *phiNode = SVFUtil::dyn_cast&lt;PHINode&gt;(curValue))</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;        {</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *op : phiNode-&gt;operand_values())</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            {</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;                insertSourcesOrPushWorklist(op);</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;            }</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        }</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *loadInst = SVFUtil::dyn_cast&lt;LoadInst&gt;(curValue))</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        {</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *user : loadInst-&gt;getPointerOperand()-&gt;users())</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;            {</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *storeInst = SVFUtil::dyn_cast&lt;StoreInst&gt;(user))</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;                {</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                    <span class="keywordflow">if</span> (storeInst-&gt;getPointerOperand() == loadInst-&gt;getPointerOperand())</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;                    {</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;                        insertSourcesOrPushWorklist(storeInst-&gt;getValueOperand());</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;                    }</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;                }</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;            }</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        }</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *argument = SVFUtil::dyn_cast&lt;Argument&gt;(curValue))</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;        {</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *user: argument-&gt;getParent()-&gt;users())</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;            {</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *callBase = SVFUtil::dyn_cast&lt;CallBase&gt;(user))</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;                {</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;                    <span class="comment">// skip function as parameter</span></div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                    <span class="comment">// e.g., call void @foo(%struct.ssl_ctx_st* %9, i32 (i8*, i32, i32, i8*)* @passwd_callback)</span></div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                    <span class="keywordflow">if</span> (callBase-&gt;getCalledFunction() != argument-&gt;getParent()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;                    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> pos = argument-&gt;getParent()-&gt;isVarArg() ? 0 : argument-&gt;getArgNo();</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;                    insertSourcesOrPushWorklist(callBase-&gt;getArgOperand(pos));</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;                }</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;            }</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        }</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *callBase = SVFUtil::dyn_cast&lt;CallBase&gt;(curValue))</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        {</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;            <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(!callBase-&gt;doesNotReturn(), <span class="stringliteral">&quot;callbase does not return:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(callBase));</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *callee = callBase-&gt;getCalledFunction())</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;            {</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;                <span class="keywordflow">if</span> (!callee-&gt;isDeclaration())</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;                {</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;                    <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *svfFunc = <a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code" href="classSVF_1_1LLVMModuleSet.html#a50fc24901350df9db890ba16a9b87e33">getSVFFunction</a>(callee);</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;                    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a23bf614858f168b6ad76e0233cec9965">BasicBlock</a>* exitBB = SVFUtil::cast&lt;BasicBlock&gt;(<a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;getLLVMValue(</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;                                                   svfFunc-&gt;<a class="code" href="classSVF_1_1SVFFunction.html#ac4c28c8d205d354f3a982119f29f2aac">getExitBB</a>()));</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;                    <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *pValue = &amp;exitBB-&gt;back();</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> *retInst = SVFUtil::dyn_cast&lt;ReturnInst&gt;(pValue);</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;                    <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(retInst &amp;&amp; retInst-&gt;getReturnValue(), <span class="stringliteral">&quot;not return inst?&quot;</span>);</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;                    insertSourcesOrPushWorklist(retInst-&gt;getReturnValue());</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;                }</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;            }</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        }</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160; </div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="comment">// If updating is allowed; store the gathered sources as sources for the current value in the cache</span></div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="keywordflow">if</span> (canUpdate)</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        {</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;            <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>[curValue] = sources;</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        }</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    }</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160; </div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">_valueToAllocOrClsNameSources</a>[startValue];</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_afefdc78a399a653f1b408a62eafeaab9"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#afefdc78a399a653f1b408a62eafeaab9">SVF::ObjTypeInference::_valueToAllocOrClsNameSources</a></div><div class="ttdeci">ValueToSources _valueToAllocOrClsNameSources</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8h_source.html#l00059">ObjTypeInference.h:59</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_a985a32c8324d559a87e4ee6e5a1e1efd"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">SVF::cppUtil::isClsNameSource</a></div><div class="ttdeci">bool isClsNameSource(const Value *val)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00861">CppUtil.cpp:861</a></div></div>
 </div><!-- fragment -->
@@ -728,7 +731,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a172d2e9ab858fc7cd145721e175c4deb"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a172d2e9ab858fc7cd145721e175c4deb">SVF::ObjTypeInference::int8Type</a></div><div class="ttdeci">const IntegerType * int8Type()</div><div class="ttdoc">int8 type</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8h_source.html#l00088">ObjTypeInference.h:88</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a873679d5197310cb7d1bf708ef1ade6e"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a873679d5197310cb7d1bf708ef1ade6e">SVF::ObjTypeInference::ptrType</a></div><div class="ttdeci">const Type * ptrType()</div><div class="ttdoc">pointer type</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8h_source.html#l00082">ObjTypeInference.h:82</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ab2064cb70c76f399ce115f2621adea35"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ab2064cb70c76f399ce115f2621adea35">SVF::SVFUtil::isHeapAllocExtCallViaRet</a></div><div class="ttdeci">bool isHeapAllocExtCallViaRet(const CallSite cs)</div><div class="ttdoc">interfaces to be used externally</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00442">SVFUtil.h:442</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ab2064cb70c76f399ce115f2621adea35"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ab2064cb70c76f399ce115f2621adea35">SVF::SVFUtil::isHeapAllocExtCallViaRet</a></div><div class="ttdeci">bool isHeapAllocExtCallViaRet(const CallSite cs)</div><div class="ttdoc">interfaces to be used externally</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00451">SVFUtil.h:451</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -758,48 +761,48 @@ Private Attributes</h2></td></tr>
 
 <p>forward find class name sources starting from an allocation </p>
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00913">913</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;{</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;    assert(startValue &amp;&amp; <span class="stringliteral">&quot;startValue was null?&quot;</span>);</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160; </div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;    <span class="comment">// consult cache</span></div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    <span class="keyword">auto</span> tIt = <a class="code" href="classSVF_1_1ObjTypeInference.html#af1bd0b800558eb5e3bcc6fae9c86a874">_objToClsNameSources</a>.find(startValue);</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    <span class="keywordflow">if</span> (tIt != <a class="code" href="classSVF_1_1ObjTypeInference.html#af1bd0b800558eb5e3bcc6fae9c86a874">_objToClsNameSources</a>.end())</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    {</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;        <span class="keywordflow">return</span> tIt-&gt;second;</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    }</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160; </div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const CallBase *&gt;</a> sources;</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160; </div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <span class="comment">// Lambda for adding a callee to the sources iff it is a constructor/destructor/template/dyncast</span></div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    <span class="keyword">auto</span> inferViaCppCall = [&amp;sources](<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">CallBase</a> *caller)</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    {</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;        <span class="keywordflow">if</span> (!caller) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(caller)) sources.insert(caller);</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    };</div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160; </div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="comment">// Find all calls of starting val (or through cast); add as potential source iff applicable</span></div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *user : startValue-&gt;users())</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    {</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *caller = SVFUtil::dyn_cast&lt;CallBase&gt;(user))</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        {</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;            inferViaCppCall(caller);</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;        }</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *bitcast = SVFUtil::dyn_cast&lt;BitCastInst&gt;(user))</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00917">917</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;{</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    assert(startValue &amp;&amp; <span class="stringliteral">&quot;startValue was null?&quot;</span>);</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160; </div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <span class="comment">// consult cache</span></div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    <span class="keyword">auto</span> tIt = <a class="code" href="classSVF_1_1ObjTypeInference.html#af1bd0b800558eb5e3bcc6fae9c86a874">_objToClsNameSources</a>.find(startValue);</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;    <span class="keywordflow">if</span> (tIt != <a class="code" href="classSVF_1_1ObjTypeInference.html#af1bd0b800558eb5e3bcc6fae9c86a874">_objToClsNameSources</a>.end())</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    {</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;        <span class="keywordflow">return</span> tIt-&gt;second;</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    }</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160; </div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const CallBase *&gt;</a> sources;</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160; </div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="comment">// Lambda for adding a callee to the sources iff it is a constructor/destructor/template/dyncast</span></div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    <span class="keyword">auto</span> inferViaCppCall = [&amp;sources](<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">CallBase</a> *caller)</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    {</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <span class="keywordflow">if</span> (!caller) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(caller)) sources.insert(caller);</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    };</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160; </div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    <span class="comment">// Find all calls of starting val (or through cast); add as potential source iff applicable</span></div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *user : startValue-&gt;users())</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    {</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *caller = SVFUtil::dyn_cast&lt;CallBase&gt;(user))</div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;        {</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *cast_user : bitcast-&gt;users())</div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;            {</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *caller = SVFUtil::dyn_cast&lt;CallBase&gt;(cast_user))</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                {</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                    inferViaCppCall(caller);</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                }</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;            }</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        }</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;    }</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160; </div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;    <span class="comment">// Store sources in cache for starting value &amp; return the found sources</span></div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ObjTypeInference.html#af1bd0b800558eb5e3bcc6fae9c86a874">_objToClsNameSources</a>[startValue] = <a class="code" href="namespaceSVF_1_1SVFUtil.html#a72502f7f536418621485e90ab98c2016">SVFUtil::move</a>(sources);</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;}</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;            inferViaCppCall(caller);</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        }</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *bitcast = SVFUtil::dyn_cast&lt;BitCastInst&gt;(user))</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        {</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *cast_user : bitcast-&gt;users())</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;            {</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *caller = SVFUtil::dyn_cast&lt;CallBase&gt;(cast_user))</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;                {</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;                    inferViaCppCall(caller);</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;                }</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;            }</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;        }</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    }</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160; </div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    <span class="comment">// Store sources in cache for starting value &amp; return the found sources</span></div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ObjTypeInference.html#af1bd0b800558eb5e3bcc6fae9c86a874">_objToClsNameSources</a>[startValue] = <a class="code" href="namespaceSVF_1_1SVFUtil.html#a72502f7f536418621485e90ab98c2016">SVFUtil::move</a>(sources);</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_af1bd0b800558eb5e3bcc6fae9c86a874"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#af1bd0b800558eb5e3bcc6fae9c86a874">SVF::ObjTypeInference::_objToClsNameSources</a></div><div class="ttdeci">ObjToClsNameSources _objToClsNameSources</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8h_source.html#l00060">ObjTypeInference.h:60</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1161,8 +1164,8 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aObjTypeInference_8cpp_html_a19b8626948c43f4ce19dbc69742d309e"><div class="ttname"><a href="ObjTypeInference_8cpp.html#a19b8626948c43f4ce19dbc69742d309e">infersiteToType</a></div><div class="ttdeci">const Type * infersiteToType(const Value *val)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00085">ObjTypeInference.cpp:85</a></div></div>
 <div class="ttc" id="acJSON_8cpp_html_a3f9a0d3265a6254722587175dac3e4dc"><div class="ttname"><a href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a></div><div class="ttdeci">newitem type</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8cpp_source.html#l02739">cJSON.cpp:2739</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a0e34e7ea20e9ff7650f89750c53f4671"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a0e34e7ea20e9ff7650f89750c53f4671">SVF::ObjTypeInference::_valueToInferSites</a></div><div class="ttdeci">ValueToInferSites _valueToInferSites</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8h_source.html#l00055">ObjTypeInference.h:55</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a205fa59a7250270b216f47df78ef2319"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a205fa59a7250270b216f47df78ef2319">SVF::ObjTypeInference::selectLargestSizedType</a></div><div class="ttdeci">const Type * selectLargestSizedType(Set&lt; const Type * &gt; &amp;objTys)</div><div class="ttdoc">select the largest (conservative) type from all types</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00666">ObjTypeInference.cpp:666</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a72da2d7f06e8fee67dc5b3c451fa5dee"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a72da2d7f06e8fee67dc5b3c451fa5dee">SVF::ObjTypeInference::getArgPosInCall</a></div><div class="ttdeci">u32_t getArgPosInCall(const CallBase *callBase, const Value *arg)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00657">ObjTypeInference.cpp:657</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a205fa59a7250270b216f47df78ef2319"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a205fa59a7250270b216f47df78ef2319">SVF::ObjTypeInference::selectLargestSizedType</a></div><div class="ttdeci">const Type * selectLargestSizedType(Set&lt; const Type * &gt; &amp;objTys)</div><div class="ttdoc">select the largest (conservative) type from all types</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00668">ObjTypeInference.cpp:668</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a72da2d7f06e8fee67dc5b3c451fa5dee"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a72da2d7f06e8fee67dc5b3c451fa5dee">SVF::ObjTypeInference::getArgPosInCall</a></div><div class="ttdeci">u32_t getArgPosInCall(const CallBase *callBase, const Value *arg)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00659">ObjTypeInference.cpp:659</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_ad9ceac3c884a08ce0ae4fef4b488a7c5"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#ad9ceac3c884a08ce0ae4fef4b488a7c5">SVF::ObjTypeInference::_valueToType</a></div><div class="ttdeci">ValueToType _valueToType</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8h_source.html#l00056">ObjTypeInference.h:56</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_aee4383a13cda421acb034ea147e33a6d"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#aee4383a13cda421acb034ea147e33a6d">SVF::ObjTypeInference::defaultType</a></div><div class="ttdeci">const Type * defaultType(const Value *val)</div><div class="ttdoc">default type</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00114">ObjTypeInference.cpp:114</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a1d008c0666c145622b81d427be64c52d"><div class="ttname"><a href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">SVF::Type</a></div><div class="ttdeci">llvm::Type Type</div><div class="ttdef"><b>Definition:</b> <a href="BasicTypes_8h_source.html#l00083">BasicTypes.h:83</a></div></div>
@@ -1197,13 +1200,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00657">657</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;{</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    assert(callBase-&gt;hasArgument(arg) &amp;&amp; <span class="stringliteral">&quot;callInst does not have argument arg?&quot;</span>);</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keyword">auto</span> it = std::find(callBase-&gt;arg_begin(), callBase-&gt;arg_end(), arg);</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    assert(it != callBase-&gt;arg_end() &amp;&amp; <span class="stringliteral">&quot;Didn&#39;t find argument?&quot;</span>);</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordflow">return</span> std::distance(callBase-&gt;arg_begin(), it);</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00659">659</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;{</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    assert(callBase-&gt;hasArgument(arg) &amp;&amp; <span class="stringliteral">&quot;callInst does not have argument arg?&quot;</span>);</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keyword">auto</span> it = std::find(callBase-&gt;arg_begin(), callBase-&gt;arg_end(), arg);</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    assert(it != callBase-&gt;arg_end() &amp;&amp; <span class="stringliteral">&quot;Didn&#39;t find argument?&quot;</span>);</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="keywordflow">return</span> std::distance(callBase-&gt;arg_begin(), it);</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1305,77 +1308,77 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a set of all possible type names that :param:<code>thisPtr</code> could point to </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00707">707</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;{</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>.find(thisPtr);</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keywordflow">if</span> (it != <a class="code" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>.end()) <span class="keywordflow">return</span> it-&gt;second;</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160; </div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;std::string&gt;</a> names;</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00709">709</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;{</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>.find(thisPtr);</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keywordflow">if</span> (it != <a class="code" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>.end()) <span class="keywordflow">return</span> it-&gt;second;</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160; </div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="comment">// Lambda for checking a function is a valid name source &amp; extracting a class name from it</span></div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    <span class="keyword">auto</span> addNamesFromFunc = [&amp;names](<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *func) -&gt; <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    {</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(func), <span class="stringliteral">&quot;Func is invalid class name source: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(func));</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a> : <a class="code" href="namespaceSVF_1_1cppUtil.html#ae97bb256f20aa617f21a49c98d46177a">extractClsNamesFromFunc</a>(func)) names.insert(<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    };</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    <span class="comment">// Lambda for getting callee &amp; extracting class name for calls to constructors/destructors/template funcs</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keyword">auto</span> addNamesFromCall = [&amp;names, &amp;addNamesFromFunc](<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">CallBase</a> *call) -&gt; <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    {</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(call), <span class="stringliteral">&quot;Call is invalid class name source: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(call));</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> *func = call-&gt;getCalledFunction();</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#afd5fcc8fe98df5f057ff2e04c68b49b5">isDynCast</a>(func)) names.insert(<a class="code" href="namespaceSVF_1_1cppUtil.html#a26ccd6abf127a7ccc34a973f7b13161b">extractClsNameFromDynCast</a>(call));</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        <span class="keywordflow">else</span> addNamesFromFunc(func);</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    };</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160; </div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="comment">// Walk backwards to find all valid source sites for the pointer (e.g. stack/global/heap variables)</span></div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;val: <a class="code" href="classSVF_1_1ObjTypeInference.html#a744de27c13a045108c834c9484d7271c">bwFindAllocOrClsNameSources</a>(thisPtr))</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    {</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        <span class="comment">// A source site is either a constructor/destructor/template function from which the class name can be</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        <span class="comment">// extracted; a call to a C++ constructor/destructor/template function from which the class name can be</span></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        <span class="comment">// extracted; or an allocation site of an object (i.e. a stack/global/heap variable), from which a</span></div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        <span class="comment">// forward walk can be performed to find calls to C++ constructor/destructor/template functions from</span></div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="comment">// which the class&#39; name can then be extracted; skip starting pointer</span></div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <span class="keywordflow">if</span> (val == thisPtr) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *func = SVFUtil::dyn_cast&lt;Function&gt;(val))</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        {</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            <span class="comment">// Constructor/destructor/template func; extract name from func directly</span></div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;            addNamesFromFunc(func);</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        }</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(val))</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        {</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;            <span class="comment">// Call to constructor/destructor/template func; get callee; extract name from callee</span></div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;            <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(SVFUtil::isa&lt;CallBase&gt;(val), <span class="stringliteral">&quot;Call source site is not a callbase: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;            addNamesFromCall(SVFUtil::cast&lt;CallBase&gt;(val));</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        }</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1ObjTypeInference.html#a62020ece25ac660f1adb41bd0cf40be7">isAlloc</a>(val))</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        {</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;            <span class="comment">// Stack/global/heap allocation site; walk forward; find constructor/destructor/template calls</span></div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;            <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>((SVFUtil::isa&lt;AllocaInst, CallBase, GlobalVariable&gt;(val)),</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                        <span class="stringliteral">&quot;Alloc site source is not a stack/heap/global variable: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *src : <a class="code" href="classSVF_1_1ObjTypeInference.html#af44dd44401384a8e50b0cbe288152ab5">fwFindClsNameSources</a>(val))</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;            {</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *func = SVFUtil::dyn_cast&lt;Function&gt;(src)) addNamesFromFunc(func);</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *call = SVFUtil::dyn_cast&lt;CallBase&gt;(src)) addNamesFromCall(call);</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                <span class="keywordflow">else</span> <a class="code" href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a>(<span class="stringliteral">&quot;Source site from forward walk is invalid: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(src));</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;            }</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;        }</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        {</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            <a class="code" href="ObjTypeInference_8cpp.html#aa73dde570491da218d3ef11359f16955">ERR_MSG</a>(<span class="stringliteral">&quot;Unsupported source type found:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        }</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    }</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160; </div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>[thisPtr] = names;</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;}</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;std::string&gt;</a> names;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="comment">// Lambda for checking a function is a valid name source &amp; extracting a class name from it</span></div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    <span class="keyword">auto</span> addNamesFromFunc = [&amp;names](<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *func) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    {</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(func), <span class="stringliteral">&quot;Func is invalid class name source: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(func));</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a> : <a class="code" href="namespaceSVF_1_1cppUtil.html#ae97bb256f20aa617f21a49c98d46177a">extractClsNamesFromFunc</a>(func)) names.insert(<a class="code" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    };</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    <span class="comment">// Lambda for getting callee &amp; extracting class name for calls to constructors/destructors/template funcs</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    <span class="keyword">auto</span> addNamesFromCall = [&amp;names, &amp;addNamesFromFunc](<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">CallBase</a> *call) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    {</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(call), <span class="stringliteral">&quot;Call is invalid class name source: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(call));</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160; </div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> *func = call-&gt;getCalledFunction();</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#afd5fcc8fe98df5f057ff2e04c68b49b5">isDynCast</a>(func)) names.insert(<a class="code" href="namespaceSVF_1_1cppUtil.html#a26ccd6abf127a7ccc34a973f7b13161b">extractClsNameFromDynCast</a>(call));</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        <span class="keywordflow">else</span> addNamesFromFunc(func);</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    };</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="comment">// Walk backwards to find all valid source sites for the pointer (e.g. stack/global/heap variables)</span></div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;val: <a class="code" href="classSVF_1_1ObjTypeInference.html#a744de27c13a045108c834c9484d7271c">bwFindAllocOrClsNameSources</a>(thisPtr))</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    {</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        <span class="comment">// A source site is either a constructor/destructor/template function from which the class name can be</span></div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        <span class="comment">// extracted; a call to a C++ constructor/destructor/template function from which the class name can be</span></div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="comment">// extracted; or an allocation site of an object (i.e. a stack/global/heap variable), from which a</span></div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <span class="comment">// forward walk can be performed to find calls to C++ constructor/destructor/template functions from</span></div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <span class="comment">// which the class&#39; name can then be extracted; skip starting pointer</span></div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <span class="keywordflow">if</span> (val == thisPtr) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *func = SVFUtil::dyn_cast&lt;Function&gt;(val))</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        {</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;            <span class="comment">// Constructor/destructor/template func; extract name from func directly</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;            addNamesFromFunc(func);</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        }</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1cppUtil.html#a985a32c8324d559a87e4ee6e5a1e1efd">isClsNameSource</a>(val))</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        {</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;            <span class="comment">// Call to constructor/destructor/template func; get callee; extract name from callee</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;            <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>(SVFUtil::isa&lt;CallBase&gt;(val), <span class="stringliteral">&quot;Call source site is not a callbase: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;            addNamesFromCall(SVFUtil::cast&lt;CallBase&gt;(val));</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        }</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1ObjTypeInference.html#a62020ece25ac660f1adb41bd0cf40be7">isAlloc</a>(val))</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        {</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;            <span class="comment">// Stack/global/heap allocation site; walk forward; find constructor/destructor/template calls</span></div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;            <a class="code" href="ObjTypeInference_8cpp.html#a7165377d2fbd76a86ed0ec5218712c78">ABORT_IFNOT</a>((SVFUtil::isa&lt;AllocaInst, CallBase, GlobalVariable&gt;(val)),</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                        <span class="stringliteral">&quot;Alloc site source is not a stack/heap/global variable: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *src : <a class="code" href="classSVF_1_1ObjTypeInference.html#af44dd44401384a8e50b0cbe288152ab5">fwFindClsNameSources</a>(val))</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            {</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *func = SVFUtil::dyn_cast&lt;Function&gt;(src)) addNamesFromFunc(func);</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *call = SVFUtil::dyn_cast&lt;CallBase&gt;(src)) addNamesFromCall(call);</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                <span class="keywordflow">else</span> <a class="code" href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a>(<span class="stringliteral">&quot;Source site from forward walk is invalid: &quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(src));</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;            }</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        }</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        {</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;            <a class="code" href="ObjTypeInference_8cpp.html#aa73dde570491da218d3ef11359f16955">ERR_MSG</a>(<span class="stringliteral">&quot;Unsupported source type found:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        }</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    }</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160; </div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>[thisPtr] = names;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;}</div>
 <div class="ttc" id="aObjTypeInference_8cpp_html_a54176d0866e198769367b0dc65e049b5"><div class="ttname"><a href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a></div><div class="ttdeci">#define ABORT_MSG(msg)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00044">ObjTypeInference.cpp:44</a></div></div>
 <div class="ttc" id="aObjTypeInference_8cpp_html_aa73dde570491da218d3ef11359f16955"><div class="ttname"><a href="ObjTypeInference_8cpp.html#aa73dde570491da218d3ef11359f16955">ERR_MSG</a></div><div class="ttdeci">#define ERR_MSG(msg)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00038">ObjTypeInference.cpp:38</a></div></div>
 <div class="ttc" id="acJSON_8h_html_a25d22ecc7e656d2c59332072684e8766"><div class="ttname"><a href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a></div><div class="ttdeci">const char *const name</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00264">cJSON.h:264</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a744de27c13a045108c834c9484d7271c"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a744de27c13a045108c834c9484d7271c">SVF::ObjTypeInference::bwFindAllocOrClsNameSources</a></div><div class="ttdeci">Set&lt; const Value * &gt; &amp; bwFindAllocOrClsNameSources(const Value *startValue)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00780">ObjTypeInference.cpp:780</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a744de27c13a045108c834c9484d7271c"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a744de27c13a045108c834c9484d7271c">SVF::ObjTypeInference::bwFindAllocOrClsNameSources</a></div><div class="ttdeci">Set&lt; const Value * &gt; &amp; bwFindAllocOrClsNameSources(const Value *startValue)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00782">ObjTypeInference.cpp:782</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a82a1d348f80d3034fab1c32b8ff9637b"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">SVF::ObjTypeInference::_thisPtrClassNames</a></div><div class="ttdeci">ValueToClassNames _thisPtrClassNames</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8h_source.html#l00058">ObjTypeInference.h:58</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_af44dd44401384a8e50b0cbe288152ab5"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#af44dd44401384a8e50b0cbe288152ab5">SVF::ObjTypeInference::fwFindClsNameSources</a></div><div class="ttdeci">Set&lt; const CallBase * &gt; &amp; fwFindClsNameSources(const Value *startValue)</div><div class="ttdoc">forward find class name sources starting from an allocation</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00913">ObjTypeInference.cpp:913</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_af44dd44401384a8e50b0cbe288152ab5"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#af44dd44401384a8e50b0cbe288152ab5">SVF::ObjTypeInference::fwFindClsNameSources</a></div><div class="ttdeci">Set&lt; const CallBase * &gt; &amp; fwFindClsNameSources(const Value *startValue)</div><div class="ttdoc">forward find class name sources starting from an allocation</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00917">ObjTypeInference.cpp:917</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_a26ccd6abf127a7ccc34a973f7b13161b"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#a26ccd6abf127a7ccc34a973f7b13161b">SVF::cppUtil::extractClsNameFromDynCast</a></div><div class="ttdeci">std::string extractClsNameFromDynCast(const CallBase *callBase)</div><div class="ttdoc">extract class name from cpp dyncast function</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00921">CppUtil.cpp:921</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_ae97bb256f20aa617f21a49c98d46177a"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#ae97bb256f20aa617f21a49c98d46177a">SVF::cppUtil::extractClsNamesFromFunc</a></div><div class="ttdeci">Set&lt; std::string &gt; extractClsNamesFromFunc(const Function *foo)</div><div class="ttdoc">extract class name from the c++ function name, e.g., constructor/destructors</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00706">CppUtil.cpp:706</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_afd5fcc8fe98df5f057ff2e04c68b49b5"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#afd5fcc8fe98df5f057ff2e04c68b49b5">SVF::cppUtil::isDynCast</a></div><div class="ttdeci">bool isDynCast(const Function *foo)</div><div class="ttdoc">whether foo is a cpp dyncast function</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00910">CppUtil.cpp:910</a></div></div>
@@ -1441,10 +1444,10 @@ Private Attributes</h2></td></tr>
 
 <p>is allocation (stack, static, heap) </p>
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00609">609</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;{</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1LLVMUtil.html#aca11801ed6ef6ff8d2a1e85bc0fc5794">LLVMUtil::isObject</a>(val);</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00611">611</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;{</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1LLVMUtil.html#aca11801ed6ef6ff8d2a1e85bc0fc5794">LLVMUtil::isObject</a>(val);</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;}</div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_aca11801ed6ef6ff8d2a1e85bc0fc5794"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#aca11801ed6ef6ff8d2a1e85bc0fc5794">SVF::LLVMUtil::isObject</a></div><div class="ttdeci">bool isObject(const Value *ref)</div><div class="ttdoc">Return true if this value refers to a object.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00069">LLVMUtil.cpp:69</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1466,18 +1469,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>For an C++ class, it can have variant elements depending on the vtable size, Hence we only handle non-cpp-class object, the type of the cpp class is treated as default PointerType</p>
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00682">682</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;{</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> num = <a class="code" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <span class="keywordflow">if</span> (SVFUtil::isa&lt;ArrayType&gt;(objTy))</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        num = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ab5b55fce942ab6d7995541f3fe0503f8">getNumOfElements</a>(objTy);</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *st = SVFUtil::dyn_cast&lt;StructType&gt;(objTy))</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    {</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="namespaceSVF_1_1cppUtil.html#a4e1785295e2695fae72758d8bbe4f7ac">classTyHasVTable</a>(st))</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;            num = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ab5b55fce942ab6d7995541f3fe0503f8">getNumOfElements</a>(st);</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    }</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="keywordflow">return</span> num;</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00684">684</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;{</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> num = <a class="code" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keywordflow">if</span> (SVFUtil::isa&lt;ArrayType&gt;(objTy))</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        num = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ab5b55fce942ab6d7995541f3fe0503f8">getNumOfElements</a>(objTy);</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *st = SVFUtil::dyn_cast&lt;StructType&gt;(objTy))</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    {</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="namespaceSVF_1_1cppUtil.html#a4e1785295e2695fae72758d8bbe4f7ac">classTyHasVTable</a>(st))</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;            num = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ab5b55fce942ab6d7995541f3fe0503f8">getNumOfElements</a>(st);</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    }</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordflow">return</span> num;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1Options_html_aaab923c093730b1670a54f09340b1bd5"><div class="ttname"><a href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">SVF::Options::MaxFieldLimit</a></div><div class="ttdeci">static const Option&lt; u32_t &gt; MaxFieldLimit</div><div class="ttdoc">Maximum number of field derivations for an object.</div><div class="ttdef"><b>Definition:</b> <a href="Options_8h_source.html#l00038">Options.h:38</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_ab5b55fce942ab6d7995541f3fe0503f8"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#ab5b55fce942ab6d7995541f3fe0503f8">SVF::LLVMUtil::getNumOfElements</a></div><div class="ttdeci">u32_t getNumOfElements(const Type *ety)</div><div class="ttdoc">Return size of this object based on LLVM value.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00381">LLVMUtil.cpp:381</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_a4e1785295e2695fae72758d8bbe4f7ac"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#a4e1785295e2695fae72758d8bbe4f7ac">SVF::cppUtil::classTyHasVTable</a></div><div class="ttdeci">bool classTyHasVTable(const StructType *ty)</div><div class="ttdef"><b>Definition:</b> <a href="CppUtil_8cpp_source.html#l00569">CppUtil.cpp:569</a></div></div>
@@ -1534,22 +1537,22 @@ Private Attributes</h2></td></tr>
 
 <p>select the largest (conservative) type from all types </p>
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00666">666</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;{</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    <span class="keywordflow">if</span> (objTys.empty()) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <span class="comment">// map type size to types from with key in descending order</span></div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <a class="code" href="namespaceSVF.html#aedf0d6718ca176e0b9e17ab4b30729c6">OrderedMap&lt;u32_t, OrderedSet&lt;const Type *&gt;</a>, std::greater&lt;int&gt;&gt; typeSzToTypes;</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *ty: objTys)</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    {</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;        typeSzToTypes[<a class="code" href="classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e">objTyToNumFields</a>(ty)].insert(ty);</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    }</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    assert(!typeSzToTypes.empty() &amp;&amp; <span class="stringliteral">&quot;typeSzToTypes cannot be empty&quot;</span>);</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    <a class="code" href="namespaceSVF.html#a4f21e91ff8eaea5207afe5c60dbd78d7">OrderedSet&lt;const Type *&gt;</a> largestTypes;</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    std::tie(std::ignore, largestTypes) = *typeSzToTypes.begin();</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    assert(!largestTypes.empty() &amp;&amp; <span class="stringliteral">&quot;largest element cannot be empty&quot;</span>);</div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <span class="keywordflow">return</span> *largestTypes.begin();</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;}</div>
-<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a5eae038a7bffb0549ca75cd9c850ff1e"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e">SVF::ObjTypeInference::objTyToNumFields</a></div><div class="ttdeci">u32_t objTyToNumFields(const Type *objTy)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00682">ObjTypeInference.cpp:682</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00668">668</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;{</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordflow">if</span> (objTys.empty()) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="comment">// map type size to types from with key in descending order</span></div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <a class="code" href="namespaceSVF.html#aedf0d6718ca176e0b9e17ab4b30729c6">OrderedMap&lt;u32_t, OrderedSet&lt;const Type *&gt;</a>, std::greater&lt;int&gt;&gt; typeSzToTypes;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *ty: objTys)</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    {</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        typeSzToTypes[<a class="code" href="classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e">objTyToNumFields</a>(ty)].insert(ty);</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    }</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    assert(!typeSzToTypes.empty() &amp;&amp; <span class="stringliteral">&quot;typeSzToTypes cannot be empty&quot;</span>);</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    <a class="code" href="namespaceSVF.html#a4f21e91ff8eaea5207afe5c60dbd78d7">OrderedSet&lt;const Type *&gt;</a> largestTypes;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    std::tie(std::ignore, largestTypes) = *typeSzToTypes.begin();</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    assert(!largestTypes.empty() &amp;&amp; <span class="stringliteral">&quot;largest element cannot be empty&quot;</span>);</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="keywordflow">return</span> *largestTypes.begin();</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;}</div>
+<div class="ttc" id="aclassSVF_1_1ObjTypeInference_html_a5eae038a7bffb0549ca75cd9c850ff1e"><div class="ttname"><a href="classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e">SVF::ObjTypeInference::objTyToNumFields</a></div><div class="ttdeci">u32_t objTyToNumFields(const Type *objTy)</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00684">ObjTypeInference.cpp:684</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a4f21e91ff8eaea5207afe5c60dbd78d7"><div class="ttname"><a href="namespaceSVF.html#a4f21e91ff8eaea5207afe5c60dbd78d7">SVF::OrderedSet</a></div><div class="ttdeci">std::set&lt; Key, Compare, Allocator &gt; OrderedSet</div><div class="ttdef"><b>Definition:</b> <a href="GeneralType_8h_source.html#l00105">GeneralType.h:105</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_aedf0d6718ca176e0b9e17ab4b30729c6"><div class="ttname"><a href="namespaceSVF.html#aedf0d6718ca176e0b9e17ab4b30729c6">SVF::OrderedMap</a></div><div class="ttdeci">std::map&lt; Key, Value, Compare, Allocator &gt; OrderedMap</div><div class="ttdef"><b>Definition:</b> <a href="GeneralType_8h_source.html#l00109">GeneralType.h:109</a></div></div>
 </div><!-- fragment -->
@@ -1587,19 +1590,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00643">643</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;{</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="preprocessor">#if TYPE_DEBUG</span></div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *oTy = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#abba4111230f6009bbf50518ee36a9870">getPtrElementType</a>(oPTy);</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> iTyNum = <a class="code" href="classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e">objTyToNumFields</a>(iTy);</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1LLVMUtil.html#ab5b55fce942ab6d7995541f3fe0503f8">getNumOfElements</a>(oTy) &gt; iTyNum)</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    {</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#aa73dde570491da218d3ef11359f16955">ERR_MSG</a>(<span class="stringliteral">&quot;original type is:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">dumpType</a>(oTy));</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#aa73dde570491da218d3ef11359f16955">ERR_MSG</a>(<span class="stringliteral">&quot;infered type is:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">dumpType</a>(iTy));</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a>(<span class="stringliteral">&quot;wrong type, trace ID is &quot;</span> + std::to_string(traceId) + <span class="stringliteral">&quot;:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    }</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00645">645</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;{</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;<span class="preprocessor">#if TYPE_DEBUG</span></div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *oTy = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#abba4111230f6009bbf50518ee36a9870">getPtrElementType</a>(oPTy);</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> iTyNum = <a class="code" href="classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e">objTyToNumFields</a>(iTy);</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1LLVMUtil.html#ab5b55fce942ab6d7995541f3fe0503f8">getNumOfElements</a>(oTy) &gt; iTyNum)</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    {</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#aa73dde570491da218d3ef11359f16955">ERR_MSG</a>(<span class="stringliteral">&quot;original type is:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">dumpType</a>(oTy));</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#aa73dde570491da218d3ef11359f16955">ERR_MSG</a>(<span class="stringliteral">&quot;infered type is:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">dumpType</a>(iTy));</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        <a class="code" href="ObjTypeInference_8cpp.html#a54176d0866e198769367b0dc65e049b5">ABORT_MSG</a>(<span class="stringliteral">&quot;wrong type, trace ID is &quot;</span> + std::to_string(traceId) + <span class="stringliteral">&quot;:&quot;</span> + <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(val));</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    }</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;}</div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a6e8682537cf5bed808df439bd7e1add9"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">SVF::LLVMUtil::dumpType</a></div><div class="ttdeci">std::string dumpType(const Type *type)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00881">LLVMUtil.cpp:881</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_abba4111230f6009bbf50518ee36a9870"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#abba4111230f6009bbf50518ee36a9870">SVF::LLVMUtil::getPtrElementType</a></div><div class="ttdeci">static Type * getPtrElementType(const PointerType *pty)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00099">LLVMUtil.h:99</a></div></div>
 </div><!-- fragment -->
@@ -1629,30 +1632,30 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00618">618</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;{</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *func = cs-&gt;getCalledFunction())</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    {</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;        <span class="keywordflow">if</span> (func-&gt;getName().find(<a class="code" href="ObjTypeInference_8cpp.html#a5f334de99eb942058f27a1025c346f70">TYPEMALLOC</a>) != std::string::npos)</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;        {</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *objType = <a class="code" href="classSVF_1_1ObjTypeInference.html#a9d99aa95a862bc1434c6fbc3dec67a64">fwInferObjType</a>(cs);</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> *pInt =</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                SVFUtil::dyn_cast&lt;llvm::ConstantInt&gt;(cs-&gt;getOperand(1));</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            assert(pInt &amp;&amp; <span class="stringliteral">&quot;the second argument is a integer&quot;</span>);</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> iTyNum = <a class="code" href="classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e">objTyToNumFields</a>(objType);</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;            <span class="keywordflow">if</span> (iTyNum &gt;= pInt-&gt;getZExtValue())</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#a05dc00b2bd9a8176aae31b6cfffe725d">SVFUtil::sucMsg</a>(<span class="stringliteral">&quot;\t SUCCESS :&quot;</span>) &lt;&lt; <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(cs)</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                                &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#a4550f2fb815882edfb666ac818792064">SVFUtil::pasMsg</a>(<span class="stringliteral">&quot; TYPE: &quot;</span>)</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                                &lt;&lt; <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">dumpType</a>(objType) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;            {</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;                <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6">SVFUtil::errMsg</a>(<span class="stringliteral">&quot;\t FAILURE :&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(cs) &lt;&lt; <span class="stringliteral">&quot; TYPE: &quot;</span></div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;                                &lt;&lt; <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">dumpType</a>(objType) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;                abort();</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;            }</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        }</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    }</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00620">620</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;{</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *func = cs-&gt;getCalledFunction())</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    {</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;        <span class="keywordflow">if</span> (func-&gt;getName().find(<a class="code" href="ObjTypeInference_8cpp.html#a5f334de99eb942058f27a1025c346f70">TYPEMALLOC</a>) != std::string::npos)</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        {</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *objType = <a class="code" href="classSVF_1_1ObjTypeInference.html#a9d99aa95a862bc1434c6fbc3dec67a64">fwInferObjType</a>(cs);</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> *pInt =</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                SVFUtil::dyn_cast&lt;llvm::ConstantInt&gt;(cs-&gt;getOperand(1));</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;            assert(pInt &amp;&amp; <span class="stringliteral">&quot;the second argument is a integer&quot;</span>);</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;            <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> iTyNum = <a class="code" href="classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e">objTyToNumFields</a>(objType);</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;            <span class="keywordflow">if</span> (iTyNum &gt;= pInt-&gt;getZExtValue())</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                <a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVFUtil::outs</a>() &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#a05dc00b2bd9a8176aae31b6cfffe725d">SVFUtil::sucMsg</a>(<span class="stringliteral">&quot;\t SUCCESS :&quot;</span>) &lt;&lt; <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(cs)</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                                &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#a4550f2fb815882edfb666ac818792064">SVFUtil::pasMsg</a>(<span class="stringliteral">&quot; TYPE: &quot;</span>)</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;                                &lt;&lt; <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">dumpType</a>(objType) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;            {</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;                <a class="code" href="namespaceSVF_1_1SVFUtil.html#ab65033f068bfbeb0a1c52dcec3beb6bc">SVFUtil::errs</a>() &lt;&lt; <a class="code" href="namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6">SVFUtil::errMsg</a>(<span class="stringliteral">&quot;\t FAILURE :&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a86c0a0cb4ada72bd4f42c77558e6a350">dumpValueAndDbgInfo</a>(cs) &lt;&lt; <span class="stringliteral">&quot; TYPE: &quot;</span></div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                                &lt;&lt; <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a6e8682537cf5bed808df439bd7e1add9">dumpType</a>(objType) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                abort();</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            }</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        }</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    }</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;}</div>
 <div class="ttc" id="aObjTypeInference_8cpp_html_a5f334de99eb942058f27a1025c346f70"><div class="ttname"><a href="ObjTypeInference_8cpp.html#a5f334de99eb942058f27a1025c346f70">TYPEMALLOC</a></div><div class="ttdeci">const std::string TYPEMALLOC</div><div class="ttdef"><b>Definition:</b> <a href="ObjTypeInference_8cpp_source.html#l00081">ObjTypeInference.cpp:81</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a05dc00b2bd9a8176aae31b6cfffe725d"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a05dc00b2bd9a8176aae31b6cfffe725d">SVF::SVFUtil::sucMsg</a></div><div class="ttdeci">std::string sucMsg(const std::string &amp;msg)</div><div class="ttdoc">Returns successful message by converting a string into green string output.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8cpp_source.html#l00053">SVFUtil.cpp:53</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a4550f2fb815882edfb666ac818792064"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a4550f2fb815882edfb666ac818792064">SVF::SVFUtil::pasMsg</a></div><div class="ttdeci">std::string pasMsg(const std::string &amp;msg)</div><div class="ttdoc">Print each pass/phase message by converting a string into blue string output.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8cpp_source.html#l00099">SVFUtil.cpp:99</a></div></div>
