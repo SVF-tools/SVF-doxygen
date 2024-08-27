@@ -331,15 +331,19 @@ template&lt;class EdgeIter &gt; </div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        std::stringstream rawstr(str);</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1CallCFGEdge.html">CallCFGEdge</a>* dirCall = SVFUtil::dyn_cast&lt;CallCFGEdge&gt;(edge))</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;            rawstr &lt;&lt; dirCall-&gt;getCallSite();</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;            rawstr &lt;&lt; dirCall-&gt;getSrcNode();</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1RetCFGEdge.html">RetCFGEdge</a>* dirRet = SVFUtil::dyn_cast&lt;RetCFGEdge&gt;(edge))</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;            rawstr &lt;&lt; dirRet-&gt;getCallSite();</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160; </div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        <span class="keywordflow">return</span> rawstr.str();</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    }</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        {</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1RetICFGNode.html">RetICFGNode</a>* ret = SVFUtil::dyn_cast&lt;RetICFGNode&gt;(dirRet-&gt;getDstNode()))</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                rawstr &lt;&lt; ret-&gt;getCallICFGNode();</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        }</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160; </div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        <span class="keywordflow">return</span> rawstr.str();</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    }</div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallCFGEdge_html"><div class="ttname"><a href="classSVF_1_1CallCFGEdge.html">SVF::CallCFGEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00176">ICFGEdge.h:177</a></div></div>
-<div class="ttc" id="aclassSVF_1_1RetCFGEdge_html"><div class="ttname"><a href="classSVF_1_1RetCFGEdge.html">SVF::RetCFGEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00227">ICFGEdge.h:228</a></div></div>
+<div class="ttc" id="aclassSVF_1_1RetCFGEdge_html"><div class="ttname"><a href="classSVF_1_1RetCFGEdge.html">SVF::RetCFGEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00221">ICFGEdge.h:222</a></div></div>
+<div class="ttc" id="aclassSVF_1_1RetICFGNode_html"><div class="ttname"><a href="classSVF_1_1RetICFGNode.html">SVF::RetICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00573">ICFGNode.h:574</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
