@@ -262,35 +262,35 @@ Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFBugEvent.html#a4d0c0744525bc445a64176c3808377f3aa16d1c3d5b68a356288ba49f4aee1629">SVFBugEvent::CallSite</a>:</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> description(<span class="stringliteral">&quot;calls &quot;</span>);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *callee = <a class="code" href="namespaceSVF_1_1SVFUtil.html#a4f3075a6ccbff78c965c887c3ab154a8">SVFUtil::getCallee</a>(<a class="code" href="classSVF_1_1SVFBugEvent.html#a81893cf39c61d97c7c51b8f96c0a8188">eventInst</a>);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">if</span>(callee == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            description += <span class="stringliteral">&quot;&lt;unknown&gt;&quot;</span>;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        {</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            description += callee-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">getName</a>();</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">return</span> description;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFBugEvent.html#a4d0c0744525bc445a64176c3808377f3ace4540f37504bfbfab8451b8823fe999">SVFBugEvent::SourceInst</a>:</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;None&quot;</span>;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;No such type of event!&quot;</span>);</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        abort();</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        assert(SVFUtil::isa&lt;CallICFGNode&gt;(<a class="code" href="classSVF_1_1SVFBugEvent.html#a81893cf39c61d97c7c51b8f96c0a8188">eventInst</a>) &amp;&amp; <span class="stringliteral">&quot;not a call ICFGNode?&quot;</span>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *callee = SVFUtil::cast&lt;CallICFGNode&gt;(<a class="code" href="classSVF_1_1SVFBugEvent.html#a81893cf39c61d97c7c51b8f96c0a8188">eventInst</a>)-&gt;getCalledFunction();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">if</span>(callee == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            description += <span class="stringliteral">&quot;&lt;unknown&gt;&quot;</span>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            description += callee-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">getName</a>();</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">return</span> description;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSVF_1_1SVFBugEvent.html#a4d0c0744525bc445a64176c3808377f3ace4540f37504bfbfab8451b8823fe999">SVFBugEvent::SourceInst</a>:</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;None&quot;</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;No such type of event!&quot;</span>);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        abort();</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;}</div>
 <div class="ttc" id="aSVFBugReport_8h_html_a6c7cd1f1c2372251f51de3a8392faeec"><div class="ttname"><a href="SVFBugReport_8h.html#a6c7cd1f1c2372251f51de3a8392faeec">BRANCHFLAGMASK</a></div><div class="ttdeci">#define BRANCHFLAGMASK</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8h_source.html#l00040">SVFBugReport.h:40</a></div></div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFBugEvent_html_a7ded0022f3852a08a05c67aeae77162f"><div class="ttname"><a href="classSVF_1_1SVFBugEvent.html#a7ded0022f3852a08a05c67aeae77162f">SVF::SVFBugEvent::getEventType</a></div><div class="ttdeci">u32_t getEventType() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFBugReport_8h_source.html#l00071">SVFBugReport.h:71</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html"><div class="ttname"><a href="classSVF_1_1SVFFunction.html">SVF::SVFFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00297">SVFValue.h:298</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a2401b022638769f59f86ab424a189b6e"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">SVF::SVFValue::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00243">SVFValue.h:243</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a4f3075a6ccbff78c965c887c3ab154a8"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a4f3075a6ccbff78c965c887c3ab154a8">SVF::SVFUtil::getCallee</a></div><div class="ttdeci">const SVFFunction * getCallee(const SVFCallInst *cs)</div><div class="ttdoc">Return callee of a callsite. Return null if this is an indirect call.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00233">SVFUtil.h:233</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
