@@ -109,6 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7d9a8544b87e24d34056ecbe58c59c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AEDetector.html#ad7d9a8544b87e24d34056ecbe58c59c1">detect</a> (<a class="el" href="classSVF_1_1AbstractState.html">AbstractState</a> &amp;as, const <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *node)=0</td></tr>
 <tr class="memdesc:ad7d9a8544b87e24d34056ecbe58c59c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function for detecting issues within a node.  <a href="classSVF_1_1AEDetector.html#ad7d9a8544b87e24d34056ecbe58c59c1">More...</a><br /></td></tr>
 <tr class="separator:ad7d9a8544b87e24d34056ecbe58c59c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2455e0d20bf52a88832bf36ff414c75a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AEDetector.html#a2455e0d20bf52a88832bf36ff414c75a">handleStubFunctions</a> (const <a class="el" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a> *call)=0</td></tr>
+<tr class="memdesc:a2455e0d20bf52a88832bf36ff414c75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function for handling stub external API calls. (e.g. UNSAFE_BUFACCESS)  <a href="classSVF_1_1AEDetector.html#a2455e0d20bf52a88832bf36ff414c75a">More...</a><br /></td></tr>
+<tr class="separator:a2455e0d20bf52a88832bf36ff414c75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d936be5ca262a024a7554e685bddd61"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AEDetector.html#a4d936be5ca262a024a7554e685bddd61">reportBug</a> ()=0</td></tr>
 <tr class="memdesc:a4d936be5ca262a024a7554e685bddd61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to report detected bugs.  <a href="classSVF_1_1AEDetector.html#a4d936be5ca262a024a7554e685bddd61">More...</a><br /></td></tr>
 <tr class="separator:a4d936be5ca262a024a7554e685bddd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,7 +194,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00054">54</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;: <a class="code" href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">kind</a>(<a class="code" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">UNKNOWN</a>) {}</div>
-<div class="ttc" id="aclassSVF_1_1AEDetector_html_a3947d2ab84f861c484a80e060a875a13"><div class="ttname"><a href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">SVF::AEDetector::kind</a></div><div class="ttdeci">DetectorKind kind</div><div class="ttdoc">The kind of the detector.</div><div class="ttdef"><b>Definition:</b> <a href="AEDetector_8h_source.html#l00093">AEDetector.h:93</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AEDetector_html_a3947d2ab84f861c484a80e060a875a13"><div class="ttname"><a href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">SVF::AEDetector::kind</a></div><div class="ttdeci">DetectorKind kind</div><div class="ttdoc">The kind of the detector.</div><div class="ttdef"><b>Definition:</b> <a href="AEDetector_8h_source.html#l00099">AEDetector.h:99</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -336,11 +339,47 @@ Protected Attributes</h2></td></tr>
 <p>Get the kind of the detector. </p>
 <dl class="section return"><dt>Returns</dt><dd>The kind of the detector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00087">87</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">kind</a>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00093">93</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">kind</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a2455e0d20bf52a88832bf36ff414c75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2455e0d20bf52a88832bf36ff414c75a">&#9670;&nbsp;</a></span>handleStubFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SVF::AEDetector::handleStubFunctions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a> *&#160;</td>
+          <td class="paramname"><em>call</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pure virtual function for handling stub external API calls. (e.g. UNSAFE_BUFACCESS) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">call</td><td>Pointer to the ext call <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> node. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classSVF_1_1BufOverflowDetector.html#aa47ba77eb81cdc9f634dfaae7344a3dc">SVF::BufOverflowDetector</a>.</p>
+
 </div>
 </div>
 <a id="a4d936be5ca262a024a7554e685bddd61"></a>
@@ -395,7 +434,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The kind of the detector. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00093">93</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00099">99</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 
 </div>
 </div>

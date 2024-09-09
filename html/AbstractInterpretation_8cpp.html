@@ -66,13 +66,13 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">AbstractInterpretation.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="AbstractInterpretation_8h_source.html">AE/Svfexe/AbstractInterpretation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AbsExtAPI_8h_source.html">AE/Svfexe/AbsExtAPI.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SVFIR_8h_source.html">SVFIR/SVFIR.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Options_8h_source.html">Util/Options.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="WorkList_8h_source.html">Util/WorkList.h</a>&quot;</code><br />
@@ -80,11 +80,6 @@ $(function() {
 </div>
 <p><a href="AbstractInterpretation_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a6ded577f411d8dd34071fba96989f93a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AbstractInterpretation_8cpp.html#a6ded577f411d8dd34071fba96989f93a">SSE_FUNC_PROCESS</a>(LLVM_NAME, FUNC_NAME)</td></tr>
-<tr class="separator:a6ded577f411d8dd34071fba96989f93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a6baa35cec0782ac3179849752a732e5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map</a>&lt; <a class="el" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a>, <a class="el" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AbstractInterpretation_8cpp.html#a6baa35cec0782ac3179849752a732e5c">_reverse_predicate</a></td></tr>
@@ -92,49 +87,6 @@ Variables</h2></td></tr>
 <tr class="memitem:a3b70282b79998dcb9f6df78370bc1fe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map</a>&lt; <a class="el" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a>, <a class="el" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AbstractInterpretation_8cpp.html#a3b70282b79998dcb9f6df78370bc1fe9">_switch_lhsrhs_predicate</a></td></tr>
 <tr class="separator:a3b70282b79998dcb9f6df78370bc1fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a6ded577f411d8dd34071fba96989f93a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ded577f411d8dd34071fba96989f93a">&#9670;&nbsp;</a></span>SSE_FUNC_PROCESS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SSE_FUNC_PROCESS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">LLVM_NAME, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">FUNC_NAME&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <span class="keyword">auto</span> sse_##FUNC_NAME = [<span class="keyword">this</span>](<span class="keyword">const</span> <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a> *callNode) { \</div>
-<div class="line">        <span class="comment">/* run real ext function */</span>            \</div>
-<div class="line">        AbstractState&amp; as = getAbsStateFromTrace(callNode); \</div>
-<div class="line">        u32_t rhs_id = svfir-&gt;getValueNode(callNode-&gt;getArgument(0)); \</div>
-<div class="line">        if (!as.inVarToValTable(rhs_id)) <span class="keywordflow">return</span>; \</div>
-<div class="line">        u32_t rhs = as[rhs_id].getInterval().lb().getIntNumeral(); \</div>
-<div class="line">        s32_t res = FUNC_NAME(rhs);            \</div>
-<div class="line">        u32_t lhsId = svfir-&gt;getValueNode(callNode-&gt;getCallSite());               \</div>
-<div class="line">        as[lhsId] = <a class="code" href="classSVF_1_1IntervalValue.html">IntervalValue</a>(res);           \</div>
-<div class="line">        return; \</div>
-<div class="line">    };                                                                         \</div>
-<div class="line">    func_map[#FUNC_NAME] = sse_##FUNC_NAME;</div>
-<div class="ttc" id="aclassSVF_1_1CallICFGNode_html"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html">SVF::CallICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00408">ICFGNode.h:409</a></div></div>
-<div class="ttc" id="aclassSVF_1_1IntervalValue_html"><div class="ttname"><a href="classSVF_1_1IntervalValue.html">SVF::IntervalValue</a></div><div class="ttdef"><b>Definition:</b> <a href="IntervalValue_8h_source.html#l00045">IntervalValue.h:46</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a6baa35cec0782ac3179849752a732e5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6baa35cec0782ac3179849752a732e5c">&#9670;&nbsp;</a></span>_reverse_predicate</h2>
@@ -167,7 +119,7 @@ Variables</h2></td></tr>
 <div class="line">    {CmpStmt::Predicate::ICMP_SGE, CmpStmt::Predicate::ICMP_SLT},  </div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="AbstractInterpretation_8cpp_source.html#l00045">45</a> of file <a class="el" href="AbstractInterpretation_8cpp_source.html">AbstractInterpretation.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractInterpretation_8cpp_source.html#l00046">46</a> of file <a class="el" href="AbstractInterpretation_8cpp_source.html">AbstractInterpretation.cpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +154,7 @@ Variables</h2></td></tr>
 <div class="line">    {CmpStmt::Predicate::ICMP_SGE, CmpStmt::Predicate::ICMP_SLE},  </div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="AbstractInterpretation_8cpp_source.html#l00066">66</a> of file <a class="el" href="AbstractInterpretation_8cpp_source.html">AbstractInterpretation.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractInterpretation_8cpp_source.html#l00067">67</a> of file <a class="el" href="AbstractInterpretation_8cpp_source.html">AbstractInterpretation.cpp</a>.</p>
 
 </div>
 </div>
