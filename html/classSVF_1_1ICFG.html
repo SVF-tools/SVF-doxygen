@@ -573,10 +573,10 @@ Additional Inherited Members</h2></td></tr>
 <li>Build <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> 1) build <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> nodes statements for top level pointers (PAGEdges) 2) connect <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> edges between two statements (PAGEdges) </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00203">203</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;          : <a class="code" href="classSVF_1_1ICFG.html#a5df6061b65d021cd73c66592ec79f052">totalICFGNode</a>(0), <a class="code" href="classSVF_1_1ICFG.html#a8e43b27d4484a4acb575e4c1c6c8fd02">globalBlockNode</a>(<span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00210">210</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;          : <a class="code" href="classSVF_1_1ICFG.html#a5df6061b65d021cd73c66592ec79f052">totalICFGNode</a>(0), <a class="code" href="classSVF_1_1ICFG.html#a8e43b27d4484a4acb575e4c1c6c8fd02">globalBlockNode</a>(<span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a5df6061b65d021cd73c66592ec79f052"><div class="ttname"><a href="classSVF_1_1ICFG.html#a5df6061b65d021cd73c66592ec79f052">SVF::ICFG::totalICFGNode</a></div><div class="ttdeci">NodeID totalICFGNode</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00069">ICFG.h:69</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a8e43b27d4484a4acb575e4c1c6c8fd02"><div class="ttname"><a href="classSVF_1_1ICFG.html#a8e43b27d4484a4acb575e4c1c6c8fd02">SVF::ICFG::globalBlockNode</a></div><div class="ttdeci">GlobalICFGNode * globalBlockNode</div><div class="ttdoc">unique basic block for all globals</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00077">ICFG.h:77</a></div></div>
 </div><!-- fragment -->
@@ -607,23 +607,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00207">207</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const SVFLoop*&gt;</a> loops;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;it: <a class="code" href="classSVF_1_1ICFG.html#a7d6aeecb00d77600a204a72d60023d54">icfgNodeToSVFLoopVec</a>)</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;loop: it.second)</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            loops.insert(loop);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;it: loops)</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keyword">delete</span> it;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="classSVF_1_1ICFG.html#a7d6aeecb00d77600a204a72d60023d54">icfgNodeToSVFLoopVec</a>.clear();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00214">214</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">Set&lt;const SVFLoop*&gt;</a> loops;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;it: <a class="code" href="classSVF_1_1ICFG.html#a7d6aeecb00d77600a204a72d60023d54">icfgNodeToSVFLoopVec</a>)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;loop: it.second)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            loops.insert(loop);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;it: loops)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">delete</span> it;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="classSVF_1_1ICFG.html#a7d6aeecb00d77600a204a72d60023d54">icfgNodeToSVFLoopVec</a>.clear();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a7d6aeecb00d77600a204a72d60023d54"><div class="ttname"><a href="classSVF_1_1ICFG.html#a7d6aeecb00d77600a204a72d60023d54">SVF::ICFG::icfgNodeToSVFLoopVec</a></div><div class="ttdeci">ICFGNodeToSVFLoopVec icfgNodeToSVFLoopVec</div><div class="ttdoc">map ICFG node to the SVF loops where it resides</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00078">ICFG.h:78</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_af739db846e47ba6b2fd15eaad31ab7fb"><div class="ttname"><a href="namespaceSVF.html#af739db846e47ba6b2fd15eaad31ab7fb">SVF::Set</a></div><div class="ttdeci">std::unordered_set&lt; Key, Hash, KeyEqual, Allocator &gt; Set</div><div class="ttdef"><b>Definition:</b> <a href="GeneralType_8h_source.html#l00096">GeneralType.h:96</a></div></div>
 </div><!-- fragment -->
@@ -703,26 +703,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Add interprocedural call edges between two nodes </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00441">441</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;{</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#a86535e50d1feba706b19491d905baef1">hasInterICFGEdge</a>(srcNode,dstNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429a3486c9d9a182f2ba5d986fe74439ec2e">ICFGEdge::CallCF</a>);</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keywordflow">if</span> (edge != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    {</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        assert(edge-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#a2ecc0bc3bb3655bf3db3adb732747b49">isCallCFGEdge</a>() &amp;&amp; <span class="stringliteral">&quot;this should be a call CFG edge!&quot;</span>);</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    }</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    {</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        <a class="code" href="classSVF_1_1CallCFGEdge.html">CallCFGEdge</a>* callEdge = <span class="keyword">new</span> <a class="code" href="classSVF_1_1CallCFGEdge.html">CallCFGEdge</a>(srcNode,dstNode);</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">addICFGEdge</a>(callEdge) ? callEdge : <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    }</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00448">448</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;{</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#a86535e50d1feba706b19491d905baef1">hasInterICFGEdge</a>(srcNode,dstNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429a3486c9d9a182f2ba5d986fe74439ec2e">ICFGEdge::CallCF</a>);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordflow">if</span> (edge != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    {</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        assert(edge-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#a2ecc0bc3bb3655bf3db3adb732747b49">isCallCFGEdge</a>() &amp;&amp; <span class="stringliteral">&quot;this should be a call CFG edge!&quot;</span>);</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    }</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    {</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <a class="code" href="classSVF_1_1CallCFGEdge.html">CallCFGEdge</a>* callEdge = <span class="keyword">new</span> <a class="code" href="classSVF_1_1CallCFGEdge.html">CallCFGEdge</a>(srcNode,dstNode);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">addICFGEdge</a>(callEdge) ? callEdge : <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    }</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1CallCFGEdge_html"><div class="ttname"><a href="classSVF_1_1CallCFGEdge.html">SVF::CallCFGEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00176">ICFGEdge.h:177</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGEdge_html"><div class="ttname"><a href="classSVF_1_1ICFGEdge.html">SVF::ICFGEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00044">ICFGEdge.h:45</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGEdge_html_a2ecc0bc3bb3655bf3db3adb732747b49"><div class="ttname"><a href="classSVF_1_1ICFGEdge.html#a2ecc0bc3bb3655bf3db3adb732747b49">SVF::ICFGEdge::isCallCFGEdge</a></div><div class="ttdeci">bool isCallCFGEdge() const</div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00077">ICFGEdge.h:77</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGEdge_html_a395c34788e98950bc43e8cb44313e429a3486c9d9a182f2ba5d986fe74439ec2e"><div class="ttname"><a href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429a3486c9d9a182f2ba5d986fe74439ec2e">SVF::ICFGEdge::CallCF</a></div><div class="ttdeci">@ CallCF</div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00056">ICFGEdge.h:56</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a462f590c2604184d69e4efe3d85a7b5b"><div class="ttname"><a href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">SVF::ICFG::addICFGEdge</a></div><div class="ttdeci">bool addICFGEdge(ICFGEdge *edge)</div><div class="ttdoc">Add ICFG edge, only used by addIntraEdge, addCallEdge, addRetEdge etc.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00266">ICFG.h:266</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_a86535e50d1feba706b19491d905baef1"><div class="ttname"><a href="classSVF_1_1ICFG.html#a86535e50d1feba706b19491d905baef1">SVF::ICFG::hasInterICFGEdge</a></div><div class="ttdeci">ICFGEdge * hasInterICFGEdge(ICFGNode *src, ICFGNode *dst, ICFGEdge::ICFGEdgeK kind)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00343">ICFG.cpp:343</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_a86535e50d1feba706b19491d905baef1"><div class="ttname"><a href="classSVF_1_1ICFG.html#a86535e50d1feba706b19491d905baef1">SVF::ICFG::hasInterICFGEdge</a></div><div class="ttdeci">ICFGEdge * hasInterICFGEdge(ICFGNode *src, ICFGNode *dst, ICFGEdge::ICFGEdgeK kind)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00350">ICFG.cpp:350</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -742,13 +742,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00263">263</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a8cb755f339ad1650f8ae2155451d9c0d">SVFUtil::isCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;not a call instruction?&quot;</span>);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;associating an intrinsic debug instruction with an ICFGNode!&quot;</span>);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    assert(<a class="code" href="classSVF_1_1ICFG.html#a1490b28446b9d8efee567ec02e2abcf3">getCallBlock</a>(inst)==<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;duplicate CallICFGNode&quot;</span>);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#ac51c8f38efbd2576e150a9fc26a4a41b">addCallBlock</a>(inst);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00270">270</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a8cb755f339ad1650f8ae2155451d9c0d">SVFUtil::isCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;not a call instruction?&quot;</span>);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;associating an intrinsic debug instruction with an ICFGNode!&quot;</span>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    assert(<a class="code" href="classSVF_1_1ICFG.html#a1490b28446b9d8efee567ec02e2abcf3">getCallBlock</a>(inst)==<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;duplicate CallICFGNode&quot;</span>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#ac51c8f38efbd2576e150a9fc26a4a41b">addCallBlock</a>(inst);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a1490b28446b9d8efee567ec02e2abcf3"><div class="ttname"><a href="classSVF_1_1ICFG.html#a1490b28446b9d8efee567ec02e2abcf3">SVF::ICFG::getCallBlock</a></div><div class="ttdeci">CallICFGNode * getCallBlock(const SVFInstruction *cs)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00331">ICFG.h:331</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_ac51c8f38efbd2576e150a9fc26a4a41b"><div class="ttname"><a href="classSVF_1_1ICFG.html#ac51c8f38efbd2576e150a9fc26a4a41b">SVF::ICFG::addCallBlock</a></div><div class="ttdeci">CallICFGNode * addCallBlock(const SVFInstruction *cs)</div><div class="ttdoc">Get/Add a call node.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00324">ICFG.h:324</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a4af4db2fe43846609d2ed1d7022b1be1"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVF::SVFUtil::isNonInstricCallSite</a></div><div class="ttdeci">bool isNonInstricCallSite(const SVFInstruction *inst)</div><div class="ttdoc">Whether an instruction is a callsite in the application code, excluding llvm intrinsic calls.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00188">SVFUtil.h:188</a></div></div>
@@ -803,27 +803,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Add conditional intraprocedural edges between two nodes </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00419">419</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;{</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <a class="code" href="classSVF_1_1ICFG.html#a70421a19a494eb6131a9ae72ef1a64d6">checkIntraEdgeParents</a>(srcNode, dstNode);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709">hasIntraICFGEdge</a>(srcNode, dstNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b">ICFGEdge::IntraCF</a>);</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordflow">if</span> (edge != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    {</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        assert(edge-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#a4e6d228dfc678618a423e8293877f04c">isIntraCFGEdge</a>() &amp;&amp; <span class="stringliteral">&quot;this should be an intra CFG edge!&quot;</span>);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    }</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    {</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <a class="code" href="classSVF_1_1IntraCFGEdge.html">IntraCFGEdge</a>* intraEdge = <span class="keyword">new</span> <a class="code" href="classSVF_1_1IntraCFGEdge.html">IntraCFGEdge</a>(srcNode,dstNode);</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        intraEdge-&gt;<a class="code" href="classSVF_1_1IntraCFGEdge.html#ad7b35b7c9abb07122eaa8517dae56508">setBranchCondition</a>(condition,branchCondVal);</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">addICFGEdge</a>(intraEdge) ? intraEdge : <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    }</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00426">426</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;{</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <a class="code" href="classSVF_1_1ICFG.html#a70421a19a494eb6131a9ae72ef1a64d6">checkIntraEdgeParents</a>(srcNode, dstNode);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709">hasIntraICFGEdge</a>(srcNode, dstNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b">ICFGEdge::IntraCF</a>);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">if</span> (edge != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        assert(edge-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#a4e6d228dfc678618a423e8293877f04c">isIntraCFGEdge</a>() &amp;&amp; <span class="stringliteral">&quot;this should be an intra CFG edge!&quot;</span>);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    }</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    {</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        <a class="code" href="classSVF_1_1IntraCFGEdge.html">IntraCFGEdge</a>* intraEdge = <span class="keyword">new</span> <a class="code" href="classSVF_1_1IntraCFGEdge.html">IntraCFGEdge</a>(srcNode,dstNode);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        intraEdge-&gt;<a class="code" href="classSVF_1_1IntraCFGEdge.html#ad7b35b7c9abb07122eaa8517dae56508">setBranchCondition</a>(condition,branchCondVal);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">addICFGEdge</a>(intraEdge) ? intraEdge : <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    }</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ICFGEdge_html_a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b"><div class="ttname"><a href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b">SVF::ICFGEdge::IntraCF</a></div><div class="ttdeci">@ IntraCF</div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00055">ICFGEdge.h:55</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGEdge_html_a4e6d228dfc678618a423e8293877f04c"><div class="ttname"><a href="classSVF_1_1ICFGEdge.html#a4e6d228dfc678618a423e8293877f04c">SVF::ICFGEdge::isIntraCFGEdge</a></div><div class="ttdeci">bool isIntraCFGEdge() const</div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00085">ICFGEdge.h:85</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a70421a19a494eb6131a9ae72ef1a64d6"><div class="ttname"><a href="classSVF_1_1ICFG.html#a70421a19a494eb6131a9ae72ef1a64d6">SVF::ICFG::checkIntraEdgeParents</a></div><div class="ttdeci">void checkIntraEdgeParents(const ICFGNode *srcNode, const ICFGNode *dstNode)</div><div class="ttdoc">sanitize Intra edges, verify that both nodes belong to the same function.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00177">ICFG.h:177</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_aa662baae5682ef6ec5084fa4147c9709"><div class="ttname"><a href="classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709">SVF::ICFG::hasIntraICFGEdge</a></div><div class="ttdeci">ICFGEdge * hasIntraICFGEdge(ICFGNode *src, ICFGNode *dst, ICFGEdge::ICFGEdgeK kind)</div><div class="ttdoc">Whether we has a SVFG edge.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00326">ICFG.cpp:326</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_aa662baae5682ef6ec5084fa4147c9709"><div class="ttname"><a href="classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709">SVF::ICFG::hasIntraICFGEdge</a></div><div class="ttdeci">ICFGEdge * hasIntraICFGEdge(ICFGNode *src, ICFGNode *dst, ICFGEdge::ICFGEdgeK kind)</div><div class="ttdoc">Whether we has a SVFG edge.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00333">ICFG.cpp:333</a></div></div>
 <div class="ttc" id="aclassSVF_1_1IntraCFGEdge_html"><div class="ttname"><a href="classSVF_1_1IntraCFGEdge.html">SVF::IntraCFGEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00113">ICFGEdge.h:114</a></div></div>
 <div class="ttc" id="aclassSVF_1_1IntraCFGEdge_html_ad7b35b7c9abb07122eaa8517dae56508"><div class="ttname"><a href="classSVF_1_1IntraCFGEdge.html#ad7b35b7c9abb07122eaa8517dae56508">SVF::IntraCFGEdge::setBranchCondition</a></div><div class="ttdeci">void setBranchCondition(const SVFValue *c, s64_t bVal)</div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00151">ICFGEdge.h:151</a></div></div>
 </div><!-- fragment -->
@@ -1077,21 +1077,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Add intraprocedural and interprocedural control-flow edges. </p>
 <p>Add intraprocedural edges between two nodes </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00400">400</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;{</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="classSVF_1_1ICFG.html#a70421a19a494eb6131a9ae72ef1a64d6">checkIntraEdgeParents</a>(srcNode, dstNode);</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709">hasIntraICFGEdge</a>(srcNode, dstNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b">ICFGEdge::IntraCF</a>);</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">if</span> (edge != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        assert(edge-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#a4e6d228dfc678618a423e8293877f04c">isIntraCFGEdge</a>() &amp;&amp; <span class="stringliteral">&quot;this should be an intra CFG edge!&quot;</span>);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    {</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <a class="code" href="classSVF_1_1IntraCFGEdge.html">IntraCFGEdge</a>* intraEdge = <span class="keyword">new</span> <a class="code" href="classSVF_1_1IntraCFGEdge.html">IntraCFGEdge</a>(srcNode,dstNode);</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">addICFGEdge</a>(intraEdge) ? intraEdge : <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    }</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00407">407</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;{</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <a class="code" href="classSVF_1_1ICFG.html#a70421a19a494eb6131a9ae72ef1a64d6">checkIntraEdgeParents</a>(srcNode, dstNode);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709">hasIntraICFGEdge</a>(srcNode, dstNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b">ICFGEdge::IntraCF</a>);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">if</span> (edge != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    {</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        assert(edge-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#a4e6d228dfc678618a423e8293877f04c">isIntraCFGEdge</a>() &amp;&amp; <span class="stringliteral">&quot;this should be an intra CFG edge!&quot;</span>);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    }</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <a class="code" href="classSVF_1_1IntraCFGEdge.html">IntraCFGEdge</a>* intraEdge = <span class="keyword">new</span> <a class="code" href="classSVF_1_1IntraCFGEdge.html">IntraCFGEdge</a>(srcNode,dstNode);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">addICFGEdge</a>(intraEdge) ? intraEdge : <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1111,12 +1111,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00296">296</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;{</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="classSVF_1_1IntraICFGNode.html">IntraICFGNode</a>* node = <a class="code" href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">getIntraBlock</a>(inst);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    assert (node==<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no IntraICFGNode for this instruction?&quot;</span>);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#ad0183e8975e7190a121d8cb2aeec3d94">addIntraBlock</a>(inst);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00303">303</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="classSVF_1_1IntraICFGNode.html">IntraICFGNode</a>* node = <a class="code" href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">getIntraBlock</a>(inst);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    assert (node==<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no IntraICFGNode for this instruction?&quot;</span>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#ad0183e8975e7190a121d8cb2aeec3d94">addIntraBlock</a>(inst);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_ad0183e8975e7190a121d8cb2aeec3d94"><div class="ttname"><a href="classSVF_1_1ICFG.html#ad0183e8975e7190a121d8cb2aeec3d94">SVF::ICFG::addIntraBlock</a></div><div class="ttdeci">IntraICFGNode * addIntraBlock(const SVFInstruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00283">ICFG.h:283</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_afeee2b61f8a84e1276f8955c4f6cf22d"><div class="ttname"><a href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">SVF::ICFG::getIntraBlock</a></div><div class="ttdeci">IntraICFGNode * getIntraBlock(const SVFInstruction *inst)</div><div class="ttdoc">Get/Add IntraBlock ICFGNode.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00276">ICFG.h:276</a></div></div>
 <div class="ttc" id="aclassSVF_1_1IntraICFGNode_html"><div class="ttname"><a href="classSVF_1_1IntraICFGNode.html">SVF::IntraICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00187">ICFGNode.h:188</a></div></div>
@@ -1200,7 +1200,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">return</span> sNode;</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a0e43308038663c10667177238b23ab3e"><div class="ttname"><a href="classSVF_1_1ICFG.html#a0e43308038663c10667177238b23ab3e">SVF::ICFG::CSToRetNodeMap</a></div><div class="ttdeci">CSToRetNodeMapTy CSToRetNodeMap</div><div class="ttdoc">map a callsite to its RetICFGNode</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00075">ICFG.h:75</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_aa41516cdd2be5066adf22798a4fe2213"><div class="ttname"><a href="classSVF_1_1ICFG.html#aa41516cdd2be5066adf22798a4fe2213">SVF::ICFG::getCallICFGNode</a></div><div class="ttdeci">CallICFGNode * getCallICFGNode(const SVFInstruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00254">ICFG.cpp:254</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_aa41516cdd2be5066adf22798a4fe2213"><div class="ttname"><a href="classSVF_1_1ICFG.html#aa41516cdd2be5066adf22798a4fe2213">SVF::ICFG::getCallICFGNode</a></div><div class="ttdeci">CallICFGNode * getCallICFGNode(const SVFInstruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00261">ICFG.cpp:261</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1239,23 +1239,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Add interprocedural return edges between two nodes </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00459">459</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;{</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#a86535e50d1feba706b19491d905baef1">hasInterICFGEdge</a>(srcNode, dstNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429ad2370a77f6cc112b8c26efbcc36bf541">ICFGEdge::RetCF</a>);</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordflow">if</span> (edge != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    {</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        assert(edge-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#ae3e7a6596de9fd3a25a28242a06ddd80">isRetCFGEdge</a>() &amp;&amp; <span class="stringliteral">&quot;this should be a return CFG edge!&quot;</span>);</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    }</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    {</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <a class="code" href="classSVF_1_1RetCFGEdge.html">RetCFGEdge</a>* retEdge = <span class="keyword">new</span> <a class="code" href="classSVF_1_1RetCFGEdge.html">RetCFGEdge</a>(srcNode,dstNode);</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">addICFGEdge</a>(retEdge) ? retEdge : <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    }</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00466">466</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;{</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#a86535e50d1feba706b19491d905baef1">hasInterICFGEdge</a>(srcNode, dstNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429ad2370a77f6cc112b8c26efbcc36bf541">ICFGEdge::RetCF</a>);</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordflow">if</span> (edge != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    {</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        assert(edge-&gt;<a class="code" href="classSVF_1_1ICFGEdge.html#ae3e7a6596de9fd3a25a28242a06ddd80">isRetCFGEdge</a>() &amp;&amp; <span class="stringliteral">&quot;this should be a return CFG edge!&quot;</span>);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    }</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <a class="code" href="classSVF_1_1RetCFGEdge.html">RetCFGEdge</a>* retEdge = <span class="keyword">new</span> <a class="code" href="classSVF_1_1RetCFGEdge.html">RetCFGEdge</a>(srcNode,dstNode);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classSVF_1_1ICFG.html#a462f590c2604184d69e4efe3d85a7b5b">addICFGEdge</a>(retEdge) ? retEdge : <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ICFGEdge_html_a395c34788e98950bc43e8cb44313e429ad2370a77f6cc112b8c26efbcc36bf541"><div class="ttname"><a href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429ad2370a77f6cc112b8c26efbcc36bf541">SVF::ICFGEdge::RetCF</a></div><div class="ttdeci">@ RetCF</div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00057">ICFGEdge.h:57</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGEdge_html_ae3e7a6596de9fd3a25a28242a06ddd80"><div class="ttname"><a href="classSVF_1_1ICFGEdge.html#ae3e7a6596de9fd3a25a28242a06ddd80">SVF::ICFGEdge::isRetCFGEdge</a></div><div class="ttdeci">bool isRetCFGEdge() const</div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00081">ICFGEdge.h:81</a></div></div>
-<div class="ttc" id="aclassSVF_1_1RetCFGEdge_html"><div class="ttname"><a href="classSVF_1_1RetCFGEdge.html">SVF::RetCFGEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00221">ICFGEdge.h:222</a></div></div>
+<div class="ttc" id="aclassSVF_1_1RetCFGEdge_html"><div class="ttname"><a href="classSVF_1_1RetCFGEdge.html">SVF::RetCFGEdge</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGEdge_8h_source.html#l00227">ICFGEdge.h:228</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1275,13 +1275,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00280">280</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;{</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a8cb755f339ad1650f8ae2155451d9c0d">SVFUtil::isCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;not a call instruction?&quot;</span>);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;associating an intrinsic debug instruction with an ICFGNode!&quot;</span>);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    assert(<a class="code" href="classSVF_1_1ICFG.html#a5ad71237256b2a8ce94a7d79a84afe55">getRetBlock</a>(inst)==<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;duplicate RetICFGNode&quot;</span>);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#ac58aa82eb74616a6608ff51d92f5baf6">addRetBlock</a>(inst);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00287">287</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;{</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a8cb755f339ad1650f8ae2155451d9c0d">SVFUtil::isCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;not a call instruction?&quot;</span>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;associating an intrinsic debug instruction with an ICFGNode!&quot;</span>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    assert(<a class="code" href="classSVF_1_1ICFG.html#a5ad71237256b2a8ce94a7d79a84afe55">getRetBlock</a>(inst)==<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;duplicate RetICFGNode&quot;</span>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#ac58aa82eb74616a6608ff51d92f5baf6">addRetBlock</a>(inst);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a5ad71237256b2a8ce94a7d79a84afe55"><div class="ttname"><a href="classSVF_1_1ICFG.html#a5ad71237256b2a8ce94a7d79a84afe55">SVF::ICFG::getRetBlock</a></div><div class="ttdeci">RetICFGNode * getRetBlock(const SVFInstruction *cs)</div><div class="ttdoc">Get/Add a return node.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00340">ICFG.h:340</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_ac58aa82eb74616a6608ff51d92f5baf6"><div class="ttname"><a href="classSVF_1_1ICFG.html#ac58aa82eb74616a6608ff51d92f5baf6">SVF::ICFG::addRetBlock</a></div><div class="ttdeci">RetICFGNode * addRetBlock(const SVFInstruction *cs)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00347">ICFG.h:347</a></div></div>
 </div><!-- fragment -->
@@ -1411,10 +1411,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Dump graph into dot file. </p>
 <p>Dump <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00478">478</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;{</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <a class="code" href="classSVF_1_1GraphPrinter.html#a014217fb0d05c8f2a2f1a6c5b19d3e10">GraphPrinter::WriteGraphToFile</a>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>(), file, <span class="keyword">this</span>, simple);</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00485">485</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;{</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <a class="code" href="classSVF_1_1GraphPrinter.html#a014217fb0d05c8f2a2f1a6c5b19d3e10">GraphPrinter::WriteGraphToFile</a>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">outs</a>(), file, <span class="keyword">this</span>, simple);</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1GraphPrinter_html_a014217fb0d05c8f2a2f1a6c5b19d3e10"><div class="ttname"><a href="classSVF_1_1GraphPrinter.html#a014217fb0d05c8f2a2f1a6c5b19d3e10">SVF::GraphPrinter::WriteGraphToFile</a></div><div class="ttdeci">static void WriteGraphToFile(SVF::OutStream &amp;O, const std::string &amp;GraphName, const GraphType &amp;GT, bool simple=false)</div><div class="ttdef"><b>Definition:</b> <a href="GraphPrinter_8h_source.html#l00056">GraphPrinter.h:56</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aed0b0b9f035057552a6a82154fd88e61"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aed0b0b9f035057552a6a82154fd88e61">SVF::SVFUtil::outs</a></div><div class="ttdeci">std::ostream &amp; outs()</div><div class="ttdoc">Overwrite llvm::outs()</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00050">SVFUtil.h:50</a></div></div>
 </div><!-- fragment -->
@@ -1470,14 +1470,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00254">254</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a8cb755f339ad1650f8ae2155451d9c0d">SVFUtil::isCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;not a call instruction?&quot;</span>);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;associating an intrinsic debug instruction with an ICFGNode!&quot;</span>);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a>* node = <a class="code" href="classSVF_1_1ICFG.html#a1490b28446b9d8efee567ec02e2abcf3">getCallBlock</a>(inst);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    assert (node!=<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no CallICFGNode for this instruction?&quot;</span>);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> node;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00261">261</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a8cb755f339ad1650f8ae2155451d9c0d">SVFUtil::isCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;not a call instruction?&quot;</span>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;associating an intrinsic debug instruction with an ICFGNode!&quot;</span>);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a>* node = <a class="code" href="classSVF_1_1ICFG.html#a1490b28446b9d8efee567ec02e2abcf3">getCallBlock</a>(inst);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    assert (node!=<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no CallICFGNode for this instruction?&quot;</span>);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html">SVF::CallICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00408">ICFGNode.h:409</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1536,14 +1536,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Add a function entry node. </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00305">305</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classSVF_1_1FunEntryICFGNode.html">FunEntryICFGNode</a>* <a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a> = <a class="code" href="classSVF_1_1ICFG.html#acc261924103bd0c357acd3acfa6cf38a">getFunEntryBlock</a>(fun);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a> == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#a1af9ae1c2efb4cb7897d5234d035c06b">addFunEntryBlock</a>(fun);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00312">312</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="classSVF_1_1FunEntryICFGNode.html">FunEntryICFGNode</a>* <a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a> = <a class="code" href="classSVF_1_1ICFG.html#acc261924103bd0c357acd3acfa6cf38a">getFunEntryBlock</a>(fun);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#a1af9ae1c2efb4cb7897d5234d035c06b">addFunEntryBlock</a>(fun);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
 <div class="ttc" id="acJSON_8h_html_a1a175e87536301df98c805ac0636ad7c"><div class="ttname"><a href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a></div><div class="ttdeci">const cJSON *const b</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00255">cJSON.h:255</a></div></div>
 <div class="ttc" id="aclassSVF_1_1FunEntryICFGNode_html"><div class="ttname"><a href="classSVF_1_1FunEntryICFGNode.html">SVF::FunEntryICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00274">ICFGNode.h:275</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a1af9ae1c2efb4cb7897d5234d035c06b"><div class="ttname"><a href="classSVF_1_1ICFG.html#a1af9ae1c2efb4cb7897d5234d035c06b">SVF::ICFG::addFunEntryBlock</a></div><div class="ttdeci">FunEntryICFGNode * addFunEntryBlock(const SVFFunction *fun)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00299">ICFG.h:299</a></div></div>
@@ -1605,14 +1605,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Add a function exit node. </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00314">314</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;{</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="classSVF_1_1FunExitICFGNode.html">FunExitICFGNode</a>* <a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a> = <a class="code" href="classSVF_1_1ICFG.html#a22d7f37a0cb2df90f73c1f2e3eaa71c6">getFunExitBlock</a>(fun);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a> == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#a6b716225b38638d6a34703995b749ad2">addFunExitBlock</a>(fun);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a>;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00321">321</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <a class="code" href="classSVF_1_1FunExitICFGNode.html">FunExitICFGNode</a>* <a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a> = <a class="code" href="classSVF_1_1ICFG.html#a22d7f37a0cb2df90f73c1f2e3eaa71c6">getFunExitBlock</a>(fun);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ICFG.html#a6b716225b38638d6a34703995b749ad2">addFunExitBlock</a>(fun);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c">b</a>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1FunExitICFGNode_html"><div class="ttname"><a href="classSVF_1_1FunExitICFGNode.html">SVF::FunExitICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00342">ICFGNode.h:343</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a22d7f37a0cb2df90f73c1f2e3eaa71c6"><div class="ttname"><a href="classSVF_1_1ICFG.html#a22d7f37a0cb2df90f73c1f2e3eaa71c6">SVF::ICFG::getFunExitBlock</a></div><div class="ttdeci">FunExitICFGNode * getFunExitBlock(const SVFFunction *fun)</div><div class="ttdoc">Get/Add a function exit node.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00308">ICFG.h:308</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a6b716225b38638d6a34703995b749ad2"><div class="ttname"><a href="classSVF_1_1ICFG.html#a6b716225b38638d6a34703995b749ad2">SVF::ICFG::addFunExitBlock</a></div><div class="ttdeci">FunExitICFGNode * addFunExitBlock(const SVFFunction *fun)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00315">ICFG.h:315</a></div></div>
@@ -1684,24 +1684,24 @@ Additional Inherited Members</h2></td></tr>
 <p>Get a <a class="el" href="classSVF_1_1SVFG.html">SVFG</a> edge according to src and dst. </p>
 <p>Return the corresponding <a class="el" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00378">378</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> * edge = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> counter = 0;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">for</span> (ICFGEdge::ICFGEdgeSetTy::iterator iter = src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>();</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            iter != src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); ++iter)</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    {</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordflow">if</span> ((*iter)-&gt;getDstID() == dst-&gt;<a class="code" href="classSVF_1_1GenericNode.html#ac3e55ef37aefb411ea4c87b1aa3b1895">getId</a>() &amp;&amp; (*iter)-&gt;getEdgeKind() == kind)</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            counter++;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            edge = (*iter);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    assert(counter &lt;= 1 &amp;&amp; <span class="stringliteral">&quot;there&#39;s more than one edge between two ICFG nodes&quot;</span>);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">return</span> edge;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00385">385</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;{</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> * edge = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <a class="code" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> counter = 0;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">for</span> (ICFGEdge::ICFGEdgeSetTy::iterator iter = src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>();</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            iter != src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); ++iter)</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">if</span> ((*iter)-&gt;getDstID() == dst-&gt;<a class="code" href="classSVF_1_1GenericNode.html#ac3e55ef37aefb411ea4c87b1aa3b1895">getId</a>() &amp;&amp; (*iter)-&gt;getEdgeKind() == kind)</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            counter++;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            edge = (*iter);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    assert(counter &lt;= 1 &amp;&amp; <span class="stringliteral">&quot;there&#39;s more than one edge between two ICFG nodes&quot;</span>);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">return</span> edge;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;}</div>
 <div class="ttc" id="aCommandLine_8h_html_a2429346d37bd4c40889bd7c6d319d9da"><div class="ttname"><a href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a></div><div class="ttdeci">unsigned u32_t</div><div class="ttdef"><b>Definition:</b> <a href="CommandLine_8h_source.html#l00018">CommandLine.h:18</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_a19a3366fd8a58290d0c740c46c3dcb3d"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">SVF::GenericNode::OutEdgeEnd</a></div><div class="ttdeci">iterator OutEdgeEnd()</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00221">GenericGraph.h:221</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_aa4f103330118c8976bf95e4bf53416eb"><div class="ttname"><a href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">SVF::GenericNode::OutEdgeBegin</a></div><div class="ttdeci">iterator OutEdgeBegin()</div><div class="ttdoc">iterators</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00217">GenericGraph.h:217</a></div></div>
@@ -1728,21 +1728,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Get a basic block <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a>. </p>
 <p>Get a basic block <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> TODO:: need to fix the assertions </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00226">226</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* node;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst))</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#aa41516cdd2be5066adf22798a4fe2213">getCallICFGNode</a>(inst);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#abb2bbf6e0dc5adae2140a519259e6f17">SVFUtil::isIntrinsicInst</a>(inst))</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#aaf521832909781894659725300cf4f49">getIntraICFGNode</a>(inst);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#aaf521832909781894659725300cf4f49">getIntraICFGNode</a>(inst);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    assert (node!=<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no ICFGNode for this instruction?&quot;</span>);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">return</span> node;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00233">233</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* node;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst))</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#aa41516cdd2be5066adf22798a4fe2213">getCallICFGNode</a>(inst);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#abb2bbf6e0dc5adae2140a519259e6f17">SVFUtil::isIntrinsicInst</a>(inst))</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#aaf521832909781894659725300cf4f49">getIntraICFGNode</a>(inst);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#aaf521832909781894659725300cf4f49">getIntraICFGNode</a>(inst);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    assert (node!=<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no ICFGNode for this instruction?&quot;</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ICFGNode_html"><div class="ttname"><a href="classSVF_1_1ICFGNode.html">SVF::ICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00054">ICFGNode.h:55</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_aaf521832909781894659725300cf4f49"><div class="ttname"><a href="classSVF_1_1ICFG.html#aaf521832909781894659725300cf4f49">SVF::ICFG::getIntraICFGNode</a></div><div class="ttdeci">IntraICFGNode * getIntraICFGNode(const SVFInstruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00288">ICFG.cpp:288</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_aaf521832909781894659725300cf4f49"><div class="ttname"><a href="classSVF_1_1ICFG.html#aaf521832909781894659725300cf4f49">SVF::ICFG::getIntraICFGNode</a></div><div class="ttdeci">IntraICFGNode * getIntraICFGNode(const SVFInstruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00295">ICFG.cpp:295</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_abb2bbf6e0dc5adae2140a519259e6f17"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#abb2bbf6e0dc5adae2140a519259e6f17">SVF::SVFUtil::isIntrinsicInst</a></div><div class="ttdeci">bool isIntrinsicInst(const SVFInstruction *inst)</div><div class="ttdoc">Return true if it is an llvm intrinsic instruction.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8cpp_source.html#l00247">SVFUtil.cpp:247</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1863,12 +1863,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00288">288</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <a class="code" href="classSVF_1_1IntraICFGNode.html">IntraICFGNode</a>* node = <a class="code" href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">getIntraBlock</a>(inst);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    assert (node!=<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no IntraICFGNode for this instruction?&quot;</span>);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">return</span> node;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00295">295</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;{</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="classSVF_1_1IntraICFGNode.html">IntraICFGNode</a>* node = <a class="code" href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">getIntraBlock</a>(inst);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    assert (node!=<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no IntraICFGNode for this instruction?&quot;</span>);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1955,14 +1955,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00271">271</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a8cb755f339ad1650f8ae2155451d9c0d">SVFUtil::isCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;not a call instruction?&quot;</span>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;associating an intrinsic debug instruction with an ICFGNode!&quot;</span>);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="classSVF_1_1RetICFGNode.html">RetICFGNode</a>* node = <a class="code" href="classSVF_1_1ICFG.html#a5ad71237256b2a8ce94a7d79a84afe55">getRetBlock</a>(inst);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    assert (node!=<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no RetICFGNode for this instruction?&quot;</span>);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">return</span> node;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00278">278</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a8cb755f339ad1650f8ae2155451d9c0d">SVFUtil::isCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;not a call instruction?&quot;</span>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    assert(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst) &amp;&amp; <span class="stringliteral">&quot;associating an intrinsic debug instruction with an ICFGNode!&quot;</span>);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="classSVF_1_1RetICFGNode.html">RetICFGNode</a>* node = <a class="code" href="classSVF_1_1ICFG.html#a5ad71237256b2a8ce94a7d79a84afe55">getRetBlock</a>(inst);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    assert (node!=<span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;no RetICFGNode for this instruction?&quot;</span>);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1RetICFGNode_html"><div class="ttname"><a href="classSVF_1_1RetICFGNode.html">SVF::RetICFGNode</a></div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00573">ICFGNode.h:574</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2051,18 +2051,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Whether has the <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00240">240</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;{</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* node;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst))</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#a1490b28446b9d8efee567ec02e2abcf3">getCallBlock</a>(inst);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#abb2bbf6e0dc5adae2140a519259e6f17">SVFUtil::isIntrinsicInst</a>(inst))</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">getIntraBlock</a>(inst);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">getIntraBlock</a>(inst);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> node != <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00247">247</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;{</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* node;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#a4af4db2fe43846609d2ed1d7022b1be1">SVFUtil::isNonInstricCallSite</a>(inst))</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#a1490b28446b9d8efee567ec02e2abcf3">getCallBlock</a>(inst);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1SVFUtil.html#abb2bbf6e0dc5adae2140a519259e6f17">SVFUtil::isIntrinsicInst</a>(inst))</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">getIntraBlock</a>(inst);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        node = <a class="code" href="classSVF_1_1ICFG.html#afeee2b61f8a84e1276f8955c4f6cf22d">getIntraBlock</a>(inst);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">return</span> node != <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2133,19 +2133,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Whether we has an inter <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> edge </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00343">343</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;{</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> edge(src,dst, kind);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* outEdge = src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a>(&amp;edge);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* inEdge = dst-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>(&amp;edge);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">if</span> (outEdge &amp;&amp; inEdge)</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    {</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        assert(outEdge == inEdge &amp;&amp; <span class="stringliteral">&quot;edges not match&quot;</span>);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">return</span> outEdge;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00350">350</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;{</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> edge(src,dst, kind);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* outEdge = src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a>(&amp;edge);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* inEdge = dst-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>(&amp;edge);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordflow">if</span> (outEdge &amp;&amp; inEdge)</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        assert(outEdge == inEdge &amp;&amp; <span class="stringliteral">&quot;edges not match&quot;</span>);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">return</span> outEdge;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_a06a7373b11143e709784de784fa476fe"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">SVF::GenericNode::hasIncomingEdge</a></div><div class="ttdeci">bool hasIncomingEdge() const</div><div class="ttdoc">Has incoming/outgoing edge set.</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00205">GenericGraph.h:205</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_a0931220d7a38e03f206cbdc6465d32ad"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">SVF::GenericNode::hasOutgoingEdge</a></div><div class="ttdeci">bool hasOutgoingEdge() const</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00209">GenericGraph.h:209</a></div></div>
 </div><!-- fragment -->
@@ -2186,19 +2186,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Whether we has a <a class="el" href="classSVF_1_1SVFG.html">SVFG</a> edge. </p>
 <p>Whether we has an intra <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> edge </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00326">326</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;{</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> edge(src,dst,kind);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* outEdge = src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a>(&amp;edge);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* inEdge = dst-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>(&amp;edge);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">if</span> (outEdge &amp;&amp; inEdge)</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        assert(outEdge == inEdge &amp;&amp; <span class="stringliteral">&quot;edges not match&quot;</span>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">return</span> outEdge;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00333">333</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;{</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> edge(src,dst,kind);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* outEdge = src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a>(&amp;edge);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* inEdge = dst-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>(&amp;edge);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordflow">if</span> (outEdge &amp;&amp; inEdge)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        assert(outEdge == inEdge &amp;&amp; <span class="stringliteral">&quot;edges not match&quot;</span>);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">return</span> outEdge;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2235,19 +2235,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Whether we has an thread <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> edge </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00360">360</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;{</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> edge(src,dst,kind);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* outEdge = src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a>(&amp;edge);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* inEdge = dst-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>(&amp;edge);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">if</span> (outEdge &amp;&amp; inEdge)</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        assert(outEdge == inEdge &amp;&amp; <span class="stringliteral">&quot;edges not match&quot;</span>);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">return</span> outEdge;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00367">367</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;{</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a> edge(src,dst,kind);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* outEdge = src-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a>(&amp;edge);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* inEdge = dst-&gt;<a class="code" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>(&amp;edge);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">if</span> (outEdge &amp;&amp; inEdge)</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        assert(outEdge == inEdge &amp;&amp; <span class="stringliteral">&quot;edges not match&quot;</span>);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">return</span> outEdge;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2410,62 +2410,62 @@ Additional Inherited Members</h2></td></tr>
 <p>if this is an external function (no function body), connect calleeEntryNode to calleeExitNode</p>
 <p>Remove callBlockNode to retBlockNode intraICFGEdge since we found at least one inter procedural edge</p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00494">494</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;{</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    CallGraph::CallEdgeMap::const_iterator iter = callgraph-&gt;<a class="code" href="classSVF_1_1CallGraph.html#a1e3e12c110931365be3f412a725806dd">getIndCallMap</a>().begin();</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    CallGraph::CallEdgeMap::const_iterator eiter = callgraph-&gt;<a class="code" href="classSVF_1_1CallGraph.html#a1e3e12c110931365be3f412a725806dd">getIndCallMap</a>().end();</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordflow">for</span> (; iter != eiter; iter++)</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    {</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a>* callBlock = iter-&gt;first;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFInstruction.html">SVFInstruction</a>* cs = callBlock-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#a90fd0b8e44fba1a7eb76d15bce085d66">getCallSite</a>();</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        assert(callBlock-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#aa11226a2e4fa6a7b1d78006cc8ca0518">isIndirectCall</a>() &amp;&amp; <span class="stringliteral">&quot;this is not an indirect call?&quot;</span>);</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1CallGraph.html#a1c6cc5a0f02fef1a804111387877e335">CallGraph::FunctionSet</a> &amp; functions = iter-&gt;second;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        <span class="keywordflow">for</span> (CallGraph::FunctionSet::const_iterator func_iter = functions.begin(); func_iter != functions.end(); func_iter++)</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        {</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a>*  callee = *func_iter;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a>* callBlockNode = <a class="code" href="classSVF_1_1ICFG.html#aa41516cdd2be5066adf22798a4fe2213">getCallICFGNode</a>(cs);</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;            <a class="code" href="classSVF_1_1RetICFGNode.html">RetICFGNode</a>* retBlockNode = <a class="code" href="classSVF_1_1ICFG.html#a881fe977f3a6fde223bd786121e35fcf">getRetICFGNode</a>(cs);</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1SVFUtil.html#a22ef185e767ff76c098e75126c885400">isExtCall</a>(callee))</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                <a class="code" href="classSVF_1_1ICFG.html#adafd8bbb91507a9a78a3f16305812afc">addIntraEdge</a>(callBlockNode, retBlockNode);</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            {</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                <a class="code" href="classSVF_1_1FunEntryICFGNode.html">FunEntryICFGNode</a>* calleeEntryNode = <a class="code" href="classSVF_1_1ICFG.html#acc261924103bd0c357acd3acfa6cf38a">getFunEntryBlock</a>(callee);</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                <a class="code" href="classSVF_1_1FunExitICFGNode.html">FunExitICFGNode</a>* calleeExitNode = <a class="code" href="classSVF_1_1ICFG.html#a22d7f37a0cb2df90f73c1f2e3eaa71c6">getFunExitBlock</a>(callee);</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* callEdge = <a class="code" href="classSVF_1_1ICFG.html#a7bef5e8d0dfebdc255d6738833009e3c">addCallEdge</a>(callBlockNode, calleeEntryNode))</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                {</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *stmt : callBlockNode-&gt;<a class="code" href="classSVF_1_1ICFGNode.html#a6c68f52dd90728073fb79141df9b0661">getSVFStmts</a>())</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                    {</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CallPE.html">CallPE</a> *callPE = SVFUtil::dyn_cast&lt;CallPE&gt;(stmt))</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                        {</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                            <span class="keywordflow">if</span>(callPE-&gt;getFunEntryICFGNode() == calleeEntryNode)</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                                SVFUtil::cast&lt;CallCFGEdge&gt;(callEdge)-&gt;addCallPE(callPE);</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                        }</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                    }</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                }</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* retEdge = <a class="code" href="classSVF_1_1ICFG.html#aa04b5caacb553eaa29d202dd0ef03d32">addRetEdge</a>(calleeExitNode, retBlockNode))</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                {</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *stmt : retBlockNode-&gt;<a class="code" href="classSVF_1_1ICFGNode.html#a6c68f52dd90728073fb79141df9b0661">getSVFStmts</a>())</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                    {</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1RetPE.html">RetPE</a> *retPE = SVFUtil::dyn_cast&lt;RetPE&gt;(stmt))</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                        {</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                            <span class="keywordflow">if</span>(retPE-&gt;getFunExitICFGNode() == calleeExitNode)</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                                SVFUtil::cast&lt;RetCFGEdge&gt;(retEdge)-&gt;addRetPE(retPE);</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                        }</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                    }</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                }</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709">hasIntraICFGEdge</a>(callBlockNode,retBlockNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b">ICFGEdge::IntraCF</a>))</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                    <a class="code" href="classSVF_1_1ICFG.html#a534625b10673efe5b0f344bfebf9b3cf">removeICFGEdge</a>(edge);</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;            }</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160; </div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        }</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    }</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="comment">// dump ICFG</span></div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#ae7ccfb3d1308e205e5014849dcc43d9a">Options::DumpICFG</a>())</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    {</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        <a class="code" href="classSVF_1_1ICFG.html#a999956500bbd605326531480546db9ba">dump</a>(<span class="stringliteral">&quot;icfg_final&quot;</span>);</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    }</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00501">501</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;{</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    CallGraph::CallEdgeMap::const_iterator iter = callgraph-&gt;<a class="code" href="classSVF_1_1CallGraph.html#a1e3e12c110931365be3f412a725806dd">getIndCallMap</a>().begin();</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    CallGraph::CallEdgeMap::const_iterator eiter = callgraph-&gt;<a class="code" href="classSVF_1_1CallGraph.html#a1e3e12c110931365be3f412a725806dd">getIndCallMap</a>().end();</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">for</span> (; iter != eiter; iter++)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a>* callBlock = iter-&gt;first;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFInstruction.html">SVFInstruction</a>* cs = callBlock-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#a90fd0b8e44fba1a7eb76d15bce085d66">getCallSite</a>();</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        assert(callBlock-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#aa11226a2e4fa6a7b1d78006cc8ca0518">isIndirectCall</a>() &amp;&amp; <span class="stringliteral">&quot;this is not an indirect call?&quot;</span>);</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keyword">const</span> <a class="code" href="classSVF_1_1CallGraph.html#a1c6cc5a0f02fef1a804111387877e335">CallGraph::FunctionSet</a> &amp; functions = iter-&gt;second;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="keywordflow">for</span> (CallGraph::FunctionSet::const_iterator func_iter = functions.begin(); func_iter != functions.end(); func_iter++)</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        {</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            <span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFFunction.html">SVFFunction</a>*  callee = *func_iter;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;            <a class="code" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a>* callBlockNode = <a class="code" href="classSVF_1_1ICFG.html#aa41516cdd2be5066adf22798a4fe2213">getCallICFGNode</a>(cs);</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;            <a class="code" href="classSVF_1_1RetICFGNode.html">RetICFGNode</a>* retBlockNode = <a class="code" href="classSVF_1_1ICFG.html#a881fe977f3a6fde223bd786121e35fcf">getRetICFGNode</a>(cs);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1SVFUtil.html#a22ef185e767ff76c098e75126c885400">isExtCall</a>(callee))</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                <a class="code" href="classSVF_1_1ICFG.html#adafd8bbb91507a9a78a3f16305812afc">addIntraEdge</a>(callBlockNode, retBlockNode);</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;            {</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                <a class="code" href="classSVF_1_1FunEntryICFGNode.html">FunEntryICFGNode</a>* calleeEntryNode = <a class="code" href="classSVF_1_1ICFG.html#acc261924103bd0c357acd3acfa6cf38a">getFunEntryBlock</a>(callee);</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                <a class="code" href="classSVF_1_1FunExitICFGNode.html">FunExitICFGNode</a>* calleeExitNode = <a class="code" href="classSVF_1_1ICFG.html#a22d7f37a0cb2df90f73c1f2e3eaa71c6">getFunExitBlock</a>(callee);</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* callEdge = <a class="code" href="classSVF_1_1ICFG.html#a7bef5e8d0dfebdc255d6738833009e3c">addCallEdge</a>(callBlockNode, calleeEntryNode))</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                {</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *stmt : callBlockNode-&gt;<a class="code" href="classSVF_1_1ICFGNode.html#a6c68f52dd90728073fb79141df9b0661">getSVFStmts</a>())</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                    {</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1CallPE.html">CallPE</a> *callPE = SVFUtil::dyn_cast&lt;CallPE&gt;(stmt))</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                        {</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                            <span class="keywordflow">if</span>(callPE-&gt;getFunEntryICFGNode() == calleeEntryNode)</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                                SVFUtil::cast&lt;CallCFGEdge&gt;(callEdge)-&gt;addCallPE(callPE);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                        }</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                    }</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                }</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* retEdge = <a class="code" href="classSVF_1_1ICFG.html#aa04b5caacb553eaa29d202dd0ef03d32">addRetEdge</a>(calleeExitNode, retBlockNode))</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                {</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1SVFStmt.html">SVFStmt</a> *stmt : retBlockNode-&gt;<a class="code" href="classSVF_1_1ICFGNode.html#a6c68f52dd90728073fb79141df9b0661">getSVFStmts</a>())</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                    {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="classSVF_1_1RetPE.html">RetPE</a> *retPE = SVFUtil::dyn_cast&lt;RetPE&gt;(stmt))</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                        {</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                            <span class="keywordflow">if</span>(retPE-&gt;getFunExitICFGNode() == calleeExitNode)</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                                SVFUtil::cast&lt;RetCFGEdge&gt;(retEdge)-&gt;addRetPE(retPE);</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                        }</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                    }</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                }</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160; </div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1ICFGEdge.html">ICFGEdge</a>* edge = <a class="code" href="classSVF_1_1ICFG.html#aa662baae5682ef6ec5084fa4147c9709">hasIntraICFGEdge</a>(callBlockNode,retBlockNode, <a class="code" href="classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429acb8fba7c61b08ec952f1b65643d7a84b">ICFGEdge::IntraCF</a>))</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                    <a class="code" href="classSVF_1_1ICFG.html#a534625b10673efe5b0f344bfebf9b3cf">removeICFGEdge</a>(edge);</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;            }</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    }</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    <span class="comment">// dump ICFG</span></div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#ae7ccfb3d1308e205e5014849dcc43d9a">Options::DumpICFG</a>())</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    {</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;        <a class="code" href="classSVF_1_1ICFG.html#a999956500bbd605326531480546db9ba">dump</a>(<span class="stringliteral">&quot;icfg_final&quot;</span>);</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    }</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1CallGraph_html_a1c6cc5a0f02fef1a804111387877e335"><div class="ttname"><a href="classSVF_1_1CallGraph.html#a1c6cc5a0f02fef1a804111387877e335">SVF::CallGraph::FunctionSet</a></div><div class="ttdeci">Set&lt; const SVFFunction * &gt; FunctionSet</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00228">CallGraph.h:228</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallGraph_html_a1e3e12c110931365be3f412a725806dd"><div class="ttname"><a href="classSVF_1_1CallGraph.html#a1e3e12c110931365be3f412a725806dd">SVF::CallGraph::getIndCallMap</a></div><div class="ttdeci">CallEdgeMap &amp; getIndCallMap()</div><div class="ttdoc">Get callees from an indirect callsite.</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00280">CallGraph.h:280</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a90fd0b8e44fba1a7eb76d15bce085d66"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a90fd0b8e44fba1a7eb76d15bce085d66">SVF::CallICFGNode::getCallSite</a></div><div class="ttdeci">const SVFInstruction * getCallSite() const</div><div class="ttdoc">Return callsite.</div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00432">ICFGNode.h:432</a></div></div>
@@ -2473,11 +2473,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1CallPE_html"><div class="ttname"><a href="classSVF_1_1CallPE.html">SVF::CallPE</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00611">SVFStatements.h:612</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGNode_html_a6c68f52dd90728073fb79141df9b0661"><div class="ttname"><a href="classSVF_1_1ICFGNode.html#a6c68f52dd90728073fb79141df9b0661">SVF::ICFGNode::getSVFStmts</a></div><div class="ttdeci">const SVFStmtList &amp; getSVFStmts() const</div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00127">ICFGNode.h:127</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a534625b10673efe5b0f344bfebf9b3cf"><div class="ttname"><a href="classSVF_1_1ICFG.html#a534625b10673efe5b0f344bfebf9b3cf">SVF::ICFG::removeICFGEdge</a></div><div class="ttdeci">void removeICFGEdge(ICFGEdge *edge)</div><div class="ttdoc">Remove a ICFG edge.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8h_source.html#l00163">ICFG.h:163</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_a7bef5e8d0dfebdc255d6738833009e3c"><div class="ttname"><a href="classSVF_1_1ICFG.html#a7bef5e8d0dfebdc255d6738833009e3c">SVF::ICFG::addCallEdge</a></div><div class="ttdeci">ICFGEdge * addCallEdge(ICFGNode *srcNode, ICFGNode *dstNode)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00441">ICFG.cpp:441</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_a881fe977f3a6fde223bd786121e35fcf"><div class="ttname"><a href="classSVF_1_1ICFG.html#a881fe977f3a6fde223bd786121e35fcf">SVF::ICFG::getRetICFGNode</a></div><div class="ttdeci">RetICFGNode * getRetICFGNode(const SVFInstruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00271">ICFG.cpp:271</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_a999956500bbd605326531480546db9ba"><div class="ttname"><a href="classSVF_1_1ICFG.html#a999956500bbd605326531480546db9ba">SVF::ICFG::dump</a></div><div class="ttdeci">void dump(const std::string &amp;file, bool simple=false)</div><div class="ttdoc">Dump graph into dot file.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00478">ICFG.cpp:478</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_aa04b5caacb553eaa29d202dd0ef03d32"><div class="ttname"><a href="classSVF_1_1ICFG.html#aa04b5caacb553eaa29d202dd0ef03d32">SVF::ICFG::addRetEdge</a></div><div class="ttdeci">ICFGEdge * addRetEdge(ICFGNode *srcNode, ICFGNode *dstNode)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00459">ICFG.cpp:459</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ICFG_html_adafd8bbb91507a9a78a3f16305812afc"><div class="ttname"><a href="classSVF_1_1ICFG.html#adafd8bbb91507a9a78a3f16305812afc">SVF::ICFG::addIntraEdge</a></div><div class="ttdeci">ICFGEdge * addIntraEdge(ICFGNode *srcNode, ICFGNode *dstNode)</div><div class="ttdoc">Add intraprocedural and interprocedural control-flow edges.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00400">ICFG.cpp:400</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_a7bef5e8d0dfebdc255d6738833009e3c"><div class="ttname"><a href="classSVF_1_1ICFG.html#a7bef5e8d0dfebdc255d6738833009e3c">SVF::ICFG::addCallEdge</a></div><div class="ttdeci">ICFGEdge * addCallEdge(ICFGNode *srcNode, ICFGNode *dstNode)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00448">ICFG.cpp:448</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_a881fe977f3a6fde223bd786121e35fcf"><div class="ttname"><a href="classSVF_1_1ICFG.html#a881fe977f3a6fde223bd786121e35fcf">SVF::ICFG::getRetICFGNode</a></div><div class="ttdeci">RetICFGNode * getRetICFGNode(const SVFInstruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00278">ICFG.cpp:278</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_a999956500bbd605326531480546db9ba"><div class="ttname"><a href="classSVF_1_1ICFG.html#a999956500bbd605326531480546db9ba">SVF::ICFG::dump</a></div><div class="ttdeci">void dump(const std::string &amp;file, bool simple=false)</div><div class="ttdoc">Dump graph into dot file.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00485">ICFG.cpp:485</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_aa04b5caacb553eaa29d202dd0ef03d32"><div class="ttname"><a href="classSVF_1_1ICFG.html#aa04b5caacb553eaa29d202dd0ef03d32">SVF::ICFG::addRetEdge</a></div><div class="ttdeci">ICFGEdge * addRetEdge(ICFGNode *srcNode, ICFGNode *dstNode)</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00466">ICFG.cpp:466</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ICFG_html_adafd8bbb91507a9a78a3f16305812afc"><div class="ttname"><a href="classSVF_1_1ICFG.html#adafd8bbb91507a9a78a3f16305812afc">SVF::ICFG::addIntraEdge</a></div><div class="ttdeci">ICFGEdge * addIntraEdge(ICFGNode *srcNode, ICFGNode *dstNode)</div><div class="ttdoc">Add intraprocedural and interprocedural control-flow edges.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00407">ICFG.cpp:407</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_ae7ccfb3d1308e205e5014849dcc43d9a"><div class="ttname"><a href="classSVF_1_1Options.html#ae7ccfb3d1308e205e5014849dcc43d9a">SVF::Options::DumpICFG</a></div><div class="ttdeci">static const Option&lt; bool &gt; DumpICFG</div><div class="ttdef"><b>Definition:</b> <a href="Options_8h_source.html#l00123">Options.h:123</a></div></div>
 <div class="ttc" id="aclassSVF_1_1RetPE_html"><div class="ttname"><a href="classSVF_1_1RetPE.html">SVF::RetPE</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFStatements_8h_source.html#l00671">SVFStatements.h:672</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFFunction_html"><div class="ttname"><a href="classSVF_1_1SVFFunction.html">SVF::SVFFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00297">SVFValue.h:298</a></div></div>
@@ -2592,10 +2592,10 @@ Additional Inherited Members</h2></td></tr>
 <p>View graph from the debugger. </p>
 <p>View <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00486">486</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;{</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <a class="code" href="namespaceSVF.html#a4582a7d33a5631a5a38973f50035327e">SVF::ViewGraph</a>(<span class="keyword">this</span>, <span class="stringliteral">&quot;Interprocedural Control-Flow Graph&quot;</span>);</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ICFG_8cpp_source.html#l00493">493</a> of file <a class="el" href="ICFG_8cpp_source.html">ICFG.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;{</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <a class="code" href="namespaceSVF.html#a4582a7d33a5631a5a38973f50035327e">SVF::ViewGraph</a>(<span class="keyword">this</span>, <span class="stringliteral">&quot;Interprocedural Control-Flow Graph&quot;</span>);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;}</div>
 <div class="ttc" id="anamespaceSVF_html_a4582a7d33a5631a5a38973f50035327e"><div class="ttname"><a href="namespaceSVF.html#a4582a7d33a5631a5a38973f50035327e">SVF::ViewGraph</a></div><div class="ttdeci">void ViewGraph(const GraphType &amp;G, const std::string &amp;name, bool ShortNames=false, GraphProgram::Name Program=GraphProgram::DOT)</div><div class="ttdef"><b>Definition:</b> <a href="GraphWriter_8h_source.html#l00371">GraphWriter.h:371</a></div></div>
 </div><!-- fragment -->
 </div>
