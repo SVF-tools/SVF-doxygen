@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['leak_5ftype_12780',['LEAK_TYPE',['../classSVF_1_1LeakChecker.html#a42f54433e5ca60928f3c329ab545842d',1,'SVF::LeakChecker']]],
-  ['lsrelation_12781',['LSRelation',['../classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245',1,'SVF::AccessPath']]]
+  ['icfgedgek_12816',['ICFGEdgeK',['../classSVF_1_1ICFGEdge.html#a395c34788e98950bc43e8cb44313e429',1,'SVF::ICFGEdge']]]
 ];
