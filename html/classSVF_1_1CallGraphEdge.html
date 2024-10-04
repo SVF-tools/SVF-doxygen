@@ -388,13 +388,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Add direct and indirect callsite. </p>
 
-<p class="definition">Definition at line <a class="el" href="CallGraph_8cpp_source.html#l00046">46</a> of file <a class="el" href="CallGraph_8cpp_source.html">CallGraph.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    assert(call-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#a01da4df6aae8e660f9a97e91e42c397f">getCalledFunction</a>() &amp;&amp; <span class="stringliteral">&quot;not a direct callsite??&quot;</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classSVF_1_1CallGraphEdge.html#adf42aa951af8858763e9f4e0d35d622d">directCalls</a>.insert(call);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CallGraph_8cpp_source.html#l00047">47</a> of file <a class="el" href="CallGraph_8cpp_source.html">CallGraph.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    assert(call-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#a01da4df6aae8e660f9a97e91e42c397f">getCalledFunction</a>() &amp;&amp; <span class="stringliteral">&quot;not a direct callsite??&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classSVF_1_1CallGraphEdge.html#adf42aa951af8858763e9f4e0d35d622d">directCalls</a>.insert(call);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1CallGraphEdge_html_adf42aa951af8858763e9f4e0d35d622d"><div class="ttname"><a href="classSVF_1_1CallGraphEdge.html#adf42aa951af8858763e9f4e0d35d622d">SVF::CallGraphEdge::directCalls</a></div><div class="ttdeci">CallInstSet directCalls</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00063">CallGraph.h:63</a></div></div>
-<div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a01da4df6aae8e660f9a97e91e42c397f"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a01da4df6aae8e660f9a97e91e42c397f">SVF::CallICFGNode::getCalledFunction</a></div><div class="ttdeci">const SVFFunction * getCalledFunction() const</div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00529">ICFGNode.h:529</a></div></div>
+<div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a01da4df6aae8e660f9a97e91e42c397f"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a01da4df6aae8e660f9a97e91e42c397f">SVF::CallICFGNode::getCalledFunction</a></div><div class="ttdeci">const SVFFunction * getCalledFunction() const</div><div class="ttdef"><b>Definition:</b> <a href="ICFGNode_8h_source.html#l00509">ICFGNode.h:509</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -414,13 +414,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CallGraph_8cpp_source.html#l00052">52</a> of file <a class="el" href="CallGraph_8cpp_source.html">CallGraph.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    assert((<span class="keyword">nullptr</span> == call-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#a01da4df6aae8e660f9a97e91e42c397f">getCalledFunction</a>() || <span class="keyword">nullptr</span> == SVFUtil::dyn_cast&lt;SVFFunction&gt; (<a class="code" href="namespaceSVF_1_1SVFUtil.html#acceaa01be78180abcef82edeff0027eb">SVFUtil::getForkedFun</a>(call))) &amp;&amp; <span class="stringliteral">&quot;not an indirect callsite??&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classSVF_1_1CallGraphEdge.html#a3e474e333bacdd850bec837b48cf36aa">indirectCalls</a>.insert(call);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CallGraph_8cpp_source.html#l00053">53</a> of file <a class="el" href="CallGraph_8cpp_source.html">CallGraph.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    assert((<span class="keyword">nullptr</span> == call-&gt;<a class="code" href="classSVF_1_1CallICFGNode.html#a01da4df6aae8e660f9a97e91e42c397f">getCalledFunction</a>() || <span class="keyword">nullptr</span> == SVFUtil::dyn_cast&lt;SVFFunction&gt; (<a class="code" href="namespaceSVF_1_1SVFUtil.html#aaa911359a4c87bc71b7c5ade7bc7d1a2">SVFUtil::getForkedFun</a>(call)-&gt;<a class="code" href="classSVF_1_1SVFVar.html#ac2db6304ea5526fb446ae882983beeb0">getValue</a>())) &amp;&amp; <span class="stringliteral">&quot;not an indirect callsite??&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classSVF_1_1CallGraphEdge.html#a3e474e333bacdd850bec837b48cf36aa">indirectCalls</a>.insert(call);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1CallGraphEdge_html_a3e474e333bacdd850bec837b48cf36aa"><div class="ttname"><a href="classSVF_1_1CallGraphEdge.html#a3e474e333bacdd850bec837b48cf36aa">SVF::CallGraphEdge::indirectCalls</a></div><div class="ttdeci">CallInstSet indirectCalls</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00064">CallGraph.h:64</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_acceaa01be78180abcef82edeff0027eb"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#acceaa01be78180abcef82edeff0027eb">SVF::SVFUtil::getForkedFun</a></div><div class="ttdeci">const SVFValue * getForkedFun(const CallICFGNode *inst)</div><div class="ttdoc">Return thread fork function.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00381">SVFUtil.h:381</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFVar_html_ac2db6304ea5526fb446ae882983beeb0"><div class="ttname"><a href="classSVF_1_1SVFVar.html#ac2db6304ea5526fb446ae882983beeb0">SVF::SVFVar::getValue</a></div><div class="ttdeci">const SVFValue * getValue() const</div><div class="ttdoc">Get/has methods of the components.</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00083">SVFVariables.h:83</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aaa911359a4c87bc71b7c5ade7bc7d1a2"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aaa911359a4c87bc71b7c5ade7bc7d1a2">SVF::SVFUtil::getForkedFun</a></div><div class="ttdeci">const SVFVar * getForkedFun(const CallICFGNode *inst)</div><div class="ttdoc">Return thread fork function.</div><div class="ttdef"><b>Definition:</b> <a href="SVFUtil_8h_source.html#l00374">SVFUtil.h:374</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -893,18 +894,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1ThreadJoinEdge.html#a67b68672ef76e0a4f326f7dbbd77bbf7">SVF::ThreadJoinEdge</a>, and <a class="el" href="classSVF_1_1ThreadForkEdge.html#acdc2ff9ad9800847b581e9d27efd3843">SVF::ThreadForkEdge</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CallGraph_8cpp_source.html#l00059">59</a> of file <a class="el" href="CallGraph_8cpp_source.html">CallGraph.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::stringstream  rawstr(str);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;CallSite ID: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1CallGraphEdge.html#aeb45f358b1e793d5b895102b8c9d8d35">getCallSiteID</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1CallGraphEdge.html#ab7f63b48f0703b991166e7afda386c27">isDirectCallEdge</a>())</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;direct call&quot;</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;indirect call&quot;</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">getDstID</a>() &lt;&lt; <span class="stringliteral">&quot;&lt;--&quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#ae6792506a0150a9400d635eceab7f9e7">getSrcID</a>() &lt;&lt; <span class="stringliteral">&quot;]\t&quot;</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="CallGraph_8cpp_source.html#l00060">60</a> of file <a class="el" href="CallGraph_8cpp_source.html">CallGraph.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    std::stringstream  rawstr(str);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;CallSite ID: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1CallGraphEdge.html#aeb45f358b1e793d5b895102b8c9d8d35">getCallSiteID</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classSVF_1_1CallGraphEdge.html#ab7f63b48f0703b991166e7afda386c27">isDirectCallEdge</a>())</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;direct call&quot;</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;indirect call&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">getDstID</a>() &lt;&lt; <span class="stringliteral">&quot;&lt;--&quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1GenericEdge.html#ae6792506a0150a9400d635eceab7f9e7">getSrcID</a>() &lt;&lt; <span class="stringliteral">&quot;]\t&quot;</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallGraphEdge_html_ab7f63b48f0703b991166e7afda386c27"><div class="ttname"><a href="classSVF_1_1CallGraphEdge.html#ab7f63b48f0703b991166e7afda386c27">SVF::CallGraphEdge::isDirectCallEdge</a></div><div class="ttdeci">bool isDirectCallEdge() const</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00087">CallGraph.h:87</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallGraphEdge_html_aeb45f358b1e793d5b895102b8c9d8d35"><div class="ttname"><a href="classSVF_1_1CallGraphEdge.html#aeb45f358b1e793d5b895102b8c9d8d35">SVF::CallGraphEdge::getCallSiteID</a></div><div class="ttdeci">CallSiteID getCallSiteID() const</div><div class="ttdoc">Get direct and indirect calls.</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00083">CallGraph.h:83</a></div></div>
