@@ -25,7 +25,7 @@ var searchData=
   ['diffptsmap_11246',['diffPtsMap',['../classSVF_1_1MutableDiffPTData.html#a9ee7874e987e93eb4cb9d75ed08effd5',1,'SVF::MutableDiffPTData::diffPtsMap()'],['../classSVF_1_1PersistentDiffPTData.html#ac54339952e2734a6affdaa543fb3ed22',1,'SVF::PersistentDiffPTData::diffPtsMap()']]],
   ['diffwave_11247',['diffWave',['../classSVF_1_1AndersenWaveDiff.html#add4dcb6d74a8ce8747bcac5f740cd672',1,'SVF::AndersenWaveDiff']]],
   ['dirandindjoinmap_11248',['dirAndIndJoinMap',['../classSVF_1_1ForkJoinAnalysis.html#ab5678bd46e573070827cc413f0e0d5be',1,'SVF::ForkJoinAnalysis']]],
-  ['directcalls_11249',['directCalls',['../classSVF_1_1CallGraphEdge.html#adf42aa951af8858763e9f4e0d35d622d',1,'SVF::CallGraphEdge']]],
+  ['directcalls_11249',['directCalls',['../classSVF_1_1PTACallGraphEdge.html#a2f3e4b61225c4ca37b0f70e3edc61920',1,'SVF::PTACallGraphEdge']]],
   ['directedgeset_11250',['directEdgeSet',['../classSVF_1_1ConstraintGraph.html#a1be3ebb84b3d334daf98f7e6f5b82256',1,'SVF::ConstraintGraph']]],
   ['directinedges_11251',['directInEdges',['../classSVF_1_1ConstraintNode.html#a53626700d25b5c004e42354c925df83c',1,'SVF::ConstraintNode']]],
   ['directjoinmap_11252',['directJoinMap',['../classSVF_1_1ForkJoinAnalysis.html#abf5b499f93a658636d09a62d14a47cad',1,'SVF::ForkJoinAnalysis']]],

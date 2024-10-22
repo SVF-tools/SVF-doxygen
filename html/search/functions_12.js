@@ -35,7 +35,7 @@ var searchData=
   ['setbranchcondval_10197',['setBranchCondVal',['../classSVF_1_1IntraCFGEdge.html#ada6014d1a7acdb9e1d16a7302deda9f5',1,'SVF::IntraCFGEdge']]],
   ['setbytesizeofobj_10198',['setByteSizeOfObj',['../classSVF_1_1ObjTypeInfo.html#ac093156bfb46c07675ae201f449cdca0',1,'SVF::ObjTypeInfo']]],
   ['setcalledoperand_10199',['setCalledOperand',['../classSVF_1_1SVFCallInst.html#a6dd304f555d2d2388c4430e57b0d2b91',1,'SVF::SVFCallInst']]],
-  ['setcallgraph_10200',['setCallGraph',['../classSVF_1_1SVFIR.html#accd87d26e37ea8bb3f41a3139cab88a3',1,'SVF::SVFIR::setCallGraph()'],['../classSVF_1_1DDAVFSolver.html#a9e2b716e88b5d38e2984ee3b490133d6',1,'SVF::DDAVFSolver::setCallGraph(CallGraph *cg)']]],
+  ['setcallgraph_10200',['setCallGraph',['../classSVF_1_1SVFIR.html#ab91f9bf6121833b195254ee59f4f299a',1,'SVF::SVFIR::setCallGraph()'],['../classSVF_1_1DDAVFSolver.html#afc2b0eeb1d5d5f292690f3c949217c38',1,'SVF::DDAVFSolver::setCallGraph(PTACallGraph *cg)']]],
   ['setcallgraphscc_10201',['setCallGraphSCC',['../classSVF_1_1DDAVFSolver.html#abd652b2627f68d7d4f8bf3bdb20ce975',1,'SVF::DDAVFSolver']]],
   ['setcdn_10202',['setCDN',['../classSVF_1_1WTO.html#a7fc78de450f2cb6cbed8aa6856638ad1',1,'SVF::WTO']]],
   ['setcfcond_10203',['setCFCond',['../classSVF_1_1SaberCondAllocator.html#a9c1660f4a9ecc161c0fb97c735a690b9',1,'SVF::SaberCondAllocator']]],

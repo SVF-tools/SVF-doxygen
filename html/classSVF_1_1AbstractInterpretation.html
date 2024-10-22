@@ -86,8 +86,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae1532af5aedd7f20ef2044b8ec83ffc3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classSVF_1_1SCCDetection.html">SCCDetection</a>&lt; <a class="el" href="classSVF_1_1CallGraph.html">CallGraph</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AbstractInterpretation.html#ae1532af5aedd7f20ef2044b8ec83ffc3">CallGraphSCC</a></td></tr>
-<tr class="separator:ae1532af5aedd7f20ef2044b8ec83ffc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1b3407928ab39c68300e9d8f225d46"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classSVF_1_1SCCDetection.html">SCCDetection</a>&lt; <a class="el" href="classSVF_1_1PTACallGraph.html">PTACallGraph</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AbstractInterpretation.html#a3c1b3407928ab39c68300e9d8f225d46">CallGraphSCC</a></td></tr>
+<tr class="separator:a3c1b3407928ab39c68300e9d8f225d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -244,14 +244,14 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AbstractInterpretation_8h_source.html#l00102">102</a> of file <a class="el" href="AbstractInterpretation_8h_source.html">AbstractInterpretation.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae1532af5aedd7f20ef2044b8ec83ffc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1532af5aedd7f20ef2044b8ec83ffc3">&#9670;&nbsp;</a></span>CallGraphSCC</h2>
+<a id="a3c1b3407928ab39c68300e9d8f225d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1b3407928ab39c68300e9d8f225d46">&#9670;&nbsp;</a></span>CallGraphSCC</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classSVF_1_1SCCDetection.html">SCCDetection</a>&lt;<a class="el" href="classSVF_1_1CallGraph.html">CallGraph</a>*&gt; <a class="el" href="classSVF_1_1AbstractInterpretation.html#ae1532af5aedd7f20ef2044b8ec83ffc3">SVF::AbstractInterpretation::CallGraphSCC</a></td>
+          <td class="memname">typedef <a class="el" href="classSVF_1_1SCCDetection.html">SCCDetection</a>&lt;<a class="el" href="classSVF_1_1PTACallGraph.html">PTACallGraph</a>*&gt; <a class="el" href="classSVF_1_1AbstractInterpretation.html#a3c1b3407928ab39c68300e9d8f225d46">SVF::AbstractInterpretation::CallGraphSCC</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1303,9 +1303,9 @@ Friends</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classSVF_1_1AndersenWaveDiff.html">AndersenWaveDiff</a>* ander = <a class="code" href="classSVF_1_1AndersenWaveDiff.html#a48ff6fc4badc79ad3204ae9bd95cc540">AndersenWaveDiff::createAndersenWaveDiff</a>(<a class="code" href="classSVF_1_1AbstractInterpretation.html#a9128e36c097d2bc4b161e5ed36bba462">svfir</a>);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// Detect if the call graph has cycles by finding its strongly connected components (SCC)</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classSVF_1_1PointerAnalysis.html#ac63e12a07c8338e4b2ca401a6ca8009d">Andersen::CallGraphSCC</a>* callGraphScc = ander-&gt;<a class="code" href="classSVF_1_1PointerAnalysis.html#a0bddf297a2d8cd59ce9a232f0229f248">getCallGraphSCC</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classSVF_1_1PointerAnalysis.html#ac4ad73782f42f90ad7ac9c66edb27c69">Andersen::CallGraphSCC</a>* callGraphScc = ander-&gt;<a class="code" href="classSVF_1_1PointerAnalysis.html#a0bddf297a2d8cd59ce9a232f0229f248">getCallGraphSCC</a>();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    callGraphScc-&gt;<a class="code" href="classSVF_1_1SCCDetection.html#a123b5006a6da7053e5e357140da3c5a3">find</a>();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">auto</span> callGraph = ander-&gt;<a class="code" href="classSVF_1_1PointerAnalysis.html#a38355261fbf155324176628c5446e048">getCallGraph</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">auto</span> callGraph = ander-&gt;<a class="code" href="classSVF_1_1PointerAnalysis.html#a7722ed3433b6a65f5c2d61746d708d2a">getCallGraph</a>();</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// Iterate through the call graph</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = callGraph-&gt;begin(); it != callGraph-&gt;end(); it++)</div>
@@ -1330,8 +1330,8 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1AndersenWaveDiff_html_a48ff6fc4badc79ad3204ae9bd95cc540"><div class="ttname"><a href="classSVF_1_1AndersenWaveDiff.html#a48ff6fc4badc79ad3204ae9bd95cc540">SVF::AndersenWaveDiff::createAndersenWaveDiff</a></div><div class="ttdeci">static AndersenWaveDiff * createAndersenWaveDiff(SVFIR *_pag)</div><div class="ttdoc">Create an singleton instance directly instead of invoking llvm pass manager.</div><div class="ttdef"><b>Definition:</b> <a href="Andersen_8h_source.html#l00408">Andersen.h:408</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a0dca4655c2f6112a5be1f921b8e81076"><div class="ttname"><a href="classSVF_1_1ICFG.html#a0dca4655c2f6112a5be1f921b8e81076">SVF::ICFG::getFunEntryICFGNode</a></div><div class="ttdeci">FunEntryICFGNode * getFunEntryICFGNode(const SVFFunction *fun)</div><div class="ttdoc">Add a function entry node.</div><div class="ttdef"><b>Definition:</b> <a href="ICFG_8cpp_source.html#l00234">ICFG.cpp:234</a></div></div>
 <div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a0bddf297a2d8cd59ce9a232f0229f248"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a0bddf297a2d8cd59ce9a232f0229f248">SVF::PointerAnalysis::getCallGraphSCC</a></div><div class="ttdeci">CallGraphSCC * getCallGraphSCC() const</div><div class="ttdoc">Return call graph SCC.</div><div class="ttdef"><b>Definition:</b> <a href="PointerAnalysis_8h_source.html#l00176">PointerAnalysis.h:176</a></div></div>
-<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a38355261fbf155324176628c5446e048"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a38355261fbf155324176628c5446e048">SVF::PointerAnalysis::getCallGraph</a></div><div class="ttdeci">CallGraph * getCallGraph() const</div><div class="ttdoc">Return call graph.</div><div class="ttdef"><b>Definition:</b> <a href="PointerAnalysis_8h_source.html#l00171">PointerAnalysis.h:171</a></div></div>
-<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_ac63e12a07c8338e4b2ca401a6ca8009d"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#ac63e12a07c8338e4b2ca401a6ca8009d">SVF::PointerAnalysis::CallGraphSCC</a></div><div class="ttdeci">SCCDetection&lt; CallGraph * &gt; CallGraphSCC</div><div class="ttdef"><b>Definition:</b> <a href="PointerAnalysis_8h_source.html#l00106">PointerAnalysis.h:106</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a7722ed3433b6a65f5c2d61746d708d2a"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a7722ed3433b6a65f5c2d61746d708d2a">SVF::PointerAnalysis::getCallGraph</a></div><div class="ttdeci">PTACallGraph * getCallGraph() const</div><div class="ttdoc">Return call graph.</div><div class="ttdef"><b>Definition:</b> <a href="PointerAnalysis_8h_source.html#l00171">PointerAnalysis.h:171</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_ac4ad73782f42f90ad7ac9c66edb27c69"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#ac4ad73782f42f90ad7ac9c66edb27c69">SVF::PointerAnalysis::CallGraphSCC</a></div><div class="ttdeci">SCCDetection&lt; PTACallGraph * &gt; CallGraphSCC</div><div class="ttdef"><b>Definition:</b> <a href="PointerAnalysis_8h_source.html#l00106">PointerAnalysis.h:106</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SCCDetection_html_a123b5006a6da7053e5e357140da3c5a3"><div class="ttname"><a href="classSVF_1_1SCCDetection.html#a123b5006a6da7053e5e357140da3c5a3">SVF::SCCDetection::find</a></div><div class="ttdeci">void find(void)</div><div class="ttdef"><b>Definition:</b> <a href="SCC_8h_source.html#l00308">SCC.h:308</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFModule_html_abbaf48d9702ec1f38dc6ae137ca630a1"><div class="ttname"><a href="classSVF_1_1SVFModule.html#abbaf48d9702ec1f38dc6ae137ca630a1">SVF::SVFModule::getFunctionSet</a></div><div class="ttdeci">const FunctionSetType &amp; getFunctionSet() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFModule_8h_source.html#l00199">SVFModule.h:199</a></div></div>
 </div><!-- fragment -->

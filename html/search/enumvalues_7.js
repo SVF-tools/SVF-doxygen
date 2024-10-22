@@ -1,7 +1,7 @@
 var searchData=
 [
   ['hare_5fpar_5ffor_13012',['HARE_PAR_FOR',['../classSVF_1_1ThreadAPI.html#a38a7516702c55ab418167b7c850516b3a4690967fd6d32fb82c5de637846a3476',1,'SVF::ThreadAPI']]],
-  ['hareparforedge_13013',['HareParForEdge',['../classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3a56c42a3ca6b3388792292a590e7fcbd4',1,'SVF::CallGraphEdge']]],
+  ['hareparforedge_13013',['HareParForEdge',['../classSVF_1_1PTACallGraphEdge.html#a9738544725458bb022b8d5f2dbd281f7a17e0d58fd42d0d493087e698d4ecd838',1,'SVF::PTACallGraphEdge']]],
   ['hclust_5fmethod_5faverage_13014',['HCLUST_METHOD_AVERAGE',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dda3ab72664fc61704a1ba46bddbc347115',1,'fastcluster.h']]],
   ['hclust_5fmethod_5fcomplete_13015',['HCLUST_METHOD_COMPLETE',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dda44ce22fdfc560f27242e9b8f8e7009f4',1,'fastcluster.h']]],
   ['hclust_5fmethod_5fmedian_13016',['HCLUST_METHOD_MEDIAN',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913ddaa453b79910d9c6f7f57a179bcdf63474',1,'fastcluster.h']]],
