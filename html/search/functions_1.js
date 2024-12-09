@@ -125,7 +125,7 @@ var searchData=
   ['addformalretvfgnode_7538',['addFormalRetVFGNode',['../classSVF_1_1VFG.html#aae3bddc73e39d96fcc97d56ea3dec373',1,'SVF::VFG']]],
   ['addforwardvisited_7539',['addForwardVisited',['../classSVF_1_1SrcSnkDDA.html#a51c65cb4b8ea107161e112a8fd3fb7d4',1,'SVF::SrcSnkDDA']]],
   ['addfunargs_7540',['addFunArgs',['../classSVF_1_1SVFIR.html#ac27b9eedd489f13175c010a32203abae',1,'SVF::SVFIR']]],
-  ['addfunctionmap_7541',['addFunctionMap',['../classSVF_1_1LLVMModuleSet.html#a9595c990d2e1a31c11ccaea0a5cbf3ff',1,'SVF::LLVMModuleSet::addFunctionMap(const Function *func, CallGraphNode *svfFunc)'],['../classSVF_1_1LLVMModuleSet.html#ab671d5bb9ca5761e2b438a4d4da229cf',1,'SVF::LLVMModuleSet::addFunctionMap(const Function *func, SVFFunction *svfFunc)']]],
+  ['addfunctionmap_7541',['addFunctionMap',['../classSVF_1_1LLVMModuleSet.html#a553b54f6683e63ceeacbabd9991017e4',1,'SVF::LLVMModuleSet::addFunctionMap(const Function *func, CallGraphNode *cgNode)'],['../classSVF_1_1LLVMModuleSet.html#ab671d5bb9ca5761e2b438a4d4da229cf',1,'SVF::LLVMModuleSet::addFunctionMap(const Function *func, SVFFunction *svfFunc)']]],
   ['addfunctionset_7542',['addFunctionSet',['../classSVF_1_1SVFModule.html#a8a0fe93cc13b799fc28540fb312573c6',1,'SVF::SVFModule']]],
   ['addfunctofuncvector_7543',['addFuncToFuncVector',['../classSVF_1_1CHGBuilder.html#a87170f2cf98c6094491b8fbafdebec14',1,'SVF::CHGBuilder']]],
   ['addfunentryblock_7544',['addFunEntryBlock',['../classSVF_1_1ICFGBuilder.html#a0cc46ae6ea5c12dc796f86cfdc6c95d9',1,'SVF::ICFGBuilder']]],
