@@ -131,7 +131,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acf194658d2cbdaf3f26f2af6c325fad7 inherit pub_methods_classSVF_1_1SVFVar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this is an isolated node on the <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> graph.  <a href="classSVF_1_1SVFVar.html#acf194658d2cbdaf3f26f2af6c325fad7">More...</a><br /></td></tr>
 <tr class="separator:acf194658d2cbdaf3f26f2af6c325fad7 inherit pub_methods_classSVF_1_1SVFVar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79b35a312248e96a89a28cbf1b99b6fe inherit pub_methods_classSVF_1_1SVFVar"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a79b35a312248e96a89a28cbf1b99b6fe">getFunction</a> () const</td></tr>
-<tr class="memdesc:a79b35a312248e96a89a28cbf1b99b6fe inherit pub_methods_classSVF_1_1SVFVar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the function that this <a class="el" href="classSVF_1_1SVFVar.html">SVFVar</a> resides in. Return nullptr if it is a global or constantexpr node.  <a href="classSVF_1_1SVFVar.html#a79b35a312248e96a89a28cbf1b99b6fe">More...</a><br /></td></tr>
 <tr class="separator:a79b35a312248e96a89a28cbf1b99b6fe inherit pub_methods_classSVF_1_1SVFVar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76964ef7d4842a469d7720881499d8a6 inherit pub_methods_classSVF_1_1SVFVar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSVF_1_1SVFStmt.html#a8cd7b6c6fd8b030b1421d95a086359f4">SVFStmt::SVFStmtSetTy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a76964ef7d4842a469d7720881499d8a6">getIncomingEdges</a> (<a class="el" href="classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9">SVFStmt::PEDGEK</a> kind)</td></tr>
 <tr class="memdesc:a76964ef7d4842a469d7720881499d8a6 inherit pub_methods_classSVF_1_1SVFVar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get incoming <a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> statements (edges)  <a href="classSVF_1_1SVFVar.html#a76964ef7d4842a469d7720881499d8a6">More...</a><br /></td></tr>
@@ -271,7 +270,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a5c097c0686df4897325bbdbb4067d6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classSVF_1_1SVFVar"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classSVF_1_1SVFVar')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classSVF_1_1SVFVar.html">SVF::SVFVar</a></td></tr>
 <tr class="memitem:a4dd7c0b8216d8793376596d0b4ed90e1 inherit pro_methods_classSVF_1_1SVFVar"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">SVFVar</a> (<a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> i, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86">PNODEK</a> k)</td></tr>
-<tr class="memdesc:a4dd7c0b8216d8793376596d0b4ed90e1 inherit pro_methods_classSVF_1_1SVFVar"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether it is a pointer (top-level or address-taken)  <a href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">More...</a><br /></td></tr>
+<tr class="memdesc:a4dd7c0b8216d8793376596d0b4ed90e1 inherit pro_methods_classSVF_1_1SVFVar"><td class="mdescLeft">&#160;</td><td class="mdescRight">function containing this variable  <a href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">More...</a><br /></td></tr>
 <tr class="separator:a4dd7c0b8216d8793376596d0b4ed90e1 inherit pro_methods_classSVF_1_1SVFVar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -324,50 +323,52 @@ Additional Inherited Members</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a491dc19591b5a2d6e58014bbbe0f7df5">ObjNode</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a591dd9ad5335c3e359bce991154271eb">GepObjNode</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a0e0c802a93c7fdfd1fba3bcfb720c0c7">FIObjNode</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a8649d6faf3a3db681c14d56f469a2abf">BaseObjNode</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86afd28f0d2dc36e12618b542057dc2412d">FunObjNode</a>
 , <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a40f488182b172aeedc41b9696a597ac3">DummyObjNode</a>
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a97ccf13aa347bc1b132f867256156b23">HeapObjNode</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a39cb10f2c19d1cfeaa145e1be48259d6">StackObjNode</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a40f488182b172aeedc41b9696a597ac3">DummyObjNode</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a77763f6f50b6db20c5ab674ae9056920">Cmp</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aedb852cb4c78357d65c96517de975b79">BinaryOp</a>
+, <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aedb852cb4c78357d65c96517de975b79">BinaryOp</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86af6c5c400160cda28e3d12a0c9f8a1231">UnaryOp</a>
-, <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a9bbfa8dda77de06662edc1483a526107">Branch</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a9bbfa8dda77de06662edc1483a526107">Branch</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a247fcb0b5b7397804c46a2fd8918b915">DummyVProp</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a55c1d10afb905a029ad670aaa20daa06">NPtr</a>
+, <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a55c1d10afb905a029ad670aaa20daa06">NPtr</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a8d150ddd64d8db18102eb7f241ab628d">FRet</a>
-, <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86acef6eac316f9c8be9ba95aa9cb0fc403">ARet</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86acef6eac316f9c8be9ba95aa9cb0fc403">ARet</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aae56940a0f20d1602bc26d6d396efbcd">AParm</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aabfb44ba0644d4b9a1efeac167f2fdf3">FParm</a>
+, <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aabfb44ba0644d4b9a1efeac167f2fdf3">FParm</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86ae8329366c2182784616de58ca3787388">Addr</a>
-, <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86af0ad5074a1c706bc8116fb1168fb9173">Copy</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86af0ad5074a1c706bc8116fb1168fb9173">Copy</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86ac70433751113f5215450bf467817c8d1">Gep</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a613383400a5571218a8bec21989f9ef0">Store</a>
+, <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a613383400a5571218a8bec21989f9ef0">Store</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a8af7728fb1eb433c0b3ee099e9e5dc51">Load</a>
-, <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86ae3a61ca70c2a0fe8ecd0fcfacf9cb55d">TPhi</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86ae3a61ca70c2a0fe8ecd0fcfacf9cb55d">TPhi</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a427bbcc1e808baada8bdb7b24b408ffe">TIntraPhi</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a74f35d4c987844ae5e6e1b3c78c5d502">TInterPhi</a>
+, <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a74f35d4c987844ae5e6e1b3c78c5d502">TInterPhi</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a07a343cf794ad38502dc6ae737c47cbc">FPIN</a>
-, <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a67e5eeb16de5d2adfb48428c8c3c3717">FPOUT</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a67e5eeb16de5d2adfb48428c8c3c3717">FPOUT</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aef8987dd5ec096a15f436c1f3a1b6936">APIN</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a2dbb8f461783361f7c6855a215bc3bf7">APOUT</a>
+, <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a2dbb8f461783361f7c6855a215bc3bf7">APOUT</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86acca2163c7ccf9e552653b9b9f5e972d3">MPhi</a>
-, <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86af37bcff49f44151c0fec3729aa34a5b8">MIntraPhi</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86af37bcff49f44151c0fec3729aa34a5b8">MIntraPhi</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a85456438d29ab5da53135b3bdde5eba6">MInterPhi</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a5dd8b72c726b524c392b4f1090811869">CallNodeKd</a>
+, <br />
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a5dd8b72c726b524c392b4f1090811869">CallNodeKd</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a0b454cb6c5897c1ef587130f25953d7b">CDNodeKd</a>
-, <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aa9c30f1a0e37e00086887dcc57d1556c">CFLNodeKd</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aa9c30f1a0e37e00086887dcc57d1556c">CFLNodeKd</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a38e918d18537c6ce0b02ea95cd086110">CHNodeKd</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a4477b0e10bce002fe7ac02bfc70bd742">ConstraintNodeKd</a>
-, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86ace5fbbb93fa0bd71729e498bc8237486">TCTNodeKd</a>
 , <br />
-&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86af8e6cd844764082c0d4b128358cbe4af">DCHNodeKd</a>
+&#160;&#160;<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a4477b0e10bce002fe7ac02bfc70bd742">ConstraintNodeKd</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86ace5fbbb93fa0bd71729e498bc8237486">TCTNodeKd</a>
+, <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86af8e6cd844764082c0d4b128358cbe4af">DCHNodeKd</a>
 , <a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86ace7a6893bbcd10d51550e10a3ace32f2">OtherKd</a>
 <br />
  }</td></tr>
@@ -384,8 +385,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a9d716e532e81c92bb86f5c357e70a878 inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fe5e3f2774f3b61247afb0edc4fc9ee inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFBaseNode.html#a3fe5e3f2774f3b61247afb0edc4fc9ee">isObjVarKinds</a> (<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86">GNodeK</a> <a class="el" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>)</td></tr>
 <tr class="separator:a3fe5e3f2774f3b61247afb0edc4fc9ee inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6db86ac2e3524f011dbadbd763056fa inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFBaseNode.html#af6db86ac2e3524f011dbadbd763056fa">isFIObjVarKinds</a> (<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86">GNodeK</a> <a class="el" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>)</td></tr>
-<tr class="separator:af6db86ac2e3524f011dbadbd763056fa inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b66663a7ec06c2013c83ea410b06d0 inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFBaseNode.html#af6b66663a7ec06c2013c83ea410b06d0">isBaseObjVarKinds</a> (<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86">GNodeK</a> <a class="el" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>)</td></tr>
+<tr class="separator:af6b66663a7ec06c2013c83ea410b06d0 inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8282b9f8502a8d51c2711d13b3e3030f inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFBaseNode.html#a8282b9f8502a8d51c2711d13b3e3030f">isVFGNodeKinds</a> (<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86">GNodeK</a> <a class="el" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>)</td></tr>
 <tr class="separator:a8282b9f8502a8d51c2711d13b3e3030f inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05533078b229f6b633c133bdfa722ae0 inherit pro_static_methods_classSVF_1_1SVFBaseNode"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFBaseNode.html#a05533078b229f6b633c133bdfa722ae0">isArgumentVFGNodeKinds</a> (<a class="el" href="classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86">GNodeK</a> <a class="el" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>)</td></tr>
@@ -408,6 +409,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a3775dd07e89ea6b25950a8b900a4ceab inherit pro_attribs_classSVF_1_1SVFVar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8ffadedbf53d30694feeb7771990af inherit pro_attribs_classSVF_1_1SVFVar"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#a7c8ffadedbf53d30694feeb7771990af">isPtr</a></td></tr>
 <tr class="separator:a7c8ffadedbf53d30694feeb7771990af inherit pro_attribs_classSVF_1_1SVFVar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83380b9129f18113b0f39f010cfd7f1 inherit pro_attribs_classSVF_1_1SVFVar"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSVF_1_1SVFFunction.html">SVFFunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFVar.html#aa83380b9129f18113b0f39f010cfd7f1">func</a></td></tr>
+<tr class="memdesc:aa83380b9129f18113b0f39f010cfd7f1 inherit pro_attribs_classSVF_1_1SVFVar"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether it is a pointer (top-level or address-taken)  <a href="classSVF_1_1SVFVar.html#aa83380b9129f18113b0f39f010cfd7f1">More...</a><br /></td></tr>
+<tr class="separator:aa83380b9129f18113b0f39f010cfd7f1 inherit pro_attribs_classSVF_1_1SVFVar"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classSVF_1_1SVFBaseNode"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classSVF_1_1SVFBaseNode')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classSVF_1_1SVFBaseNode.html">SVF::SVFBaseNode</a></td></tr>
 <tr class="memitem:a7cd373be6b6c24e33c5a78b281d28623 inherit pro_attribs_classSVF_1_1SVFBaseNode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1SVFBaseNode.html#a7cd373be6b6c24e33c5a78b281d28623">id</a></td></tr>
 <tr class="memdesc:a7cd373be6b6c24e33c5a78b281d28623 inherit pro_attribs_classSVF_1_1SVFBaseNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node ID.  <a href="classSVF_1_1SVFBaseNode.html#a7cd373be6b6c24e33c5a78b281d28623">More...</a><br /></td></tr>
@@ -424,7 +428,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00263">263</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00277">277</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5c097c0686df4897325bbdbb4067d6e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c097c0686df4897325bbdbb4067d6e5">&#9670;&nbsp;</a></span>ValVar() <span class="overload">[1/2]</span></h2>
@@ -462,10 +466,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructor to create an empty <a class="el" href="classSVF_1_1ValVar.html">ValVar</a> (for SVFIRReader/deserialization) </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00272">272</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;: <a class="code" href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">SVFVar</a>(i, ty), <a class="code" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>(<span class="keyword">nullptr</span>) {}</div>
-<div class="ttc" id="aclassSVF_1_1SVFVar_html_a4dd7c0b8216d8793376596d0b4ed90e1"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">SVF::SVFVar::SVFVar</a></div><div class="ttdeci">SVFVar(NodeID i, PNODEK k)</div><div class="ttdoc">whether it is a pointer (top-level or address-taken)</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00073">SVFVariables.h:73</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ValVar_html_ae936610ab5ca2fd4bde376a4cfeecfab"><div class="ttname"><a href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">SVF::ValVar::icfgNode</a></div><div class="ttdeci">const ICFGNode * icfgNode</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00269">SVFVariables.h:269</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00286">286</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;: <a class="code" href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">SVFVar</a>(i, ty), <a class="code" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>(<span class="keyword">nullptr</span>) {}</div>
+<div class="ttc" id="aclassSVF_1_1SVFVar_html_a4dd7c0b8216d8793376596d0b4ed90e1"><div class="ttname"><a href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">SVF::SVFVar::SVFVar</a></div><div class="ttdeci">SVFVar(NodeID i, PNODEK k)</div><div class="ttdoc">function containing this variable</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00074">SVFVariables.h:74</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ValVar_html_ae936610ab5ca2fd4bde376a4cfeecfab"><div class="ttname"><a href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">SVF::ValVar::icfgNode</a></div><div class="ttdeci">const ICFGNode * icfgNode</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00283">SVFVariables.h:283</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -517,10 +521,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00296">296</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        : <a class="code" href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">SVFVar</a>(val, i, ty), <a class="code" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>(node)</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00310">310</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        : <a class="code" href="classSVF_1_1SVFVar.html#a4dd7c0b8216d8793376596d0b4ed90e1">SVFVar</a>(val, i, ty), <a class="code" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>(node)</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -549,11 +553,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00285">285</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFBaseNode.html#a9d716e532e81c92bb86f5c357e70a878">isValVarKinds</a>(node-&gt;getNodeKind());</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
-<div class="ttc" id="aclassSVF_1_1SVFBaseNode_html_a9d716e532e81c92bb86f5c357e70a878"><div class="ttname"><a href="classSVF_1_1SVFBaseNode.html#a9d716e532e81c92bb86f5c357e70a878">SVF::SVFBaseNode::isValVarKinds</a></div><div class="ttdeci">static bool isValVarKinds(GNodeK n)</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00327">GenericGraph.h:327</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00299">299</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFBaseNode.html#a9d716e532e81c92bb86f5c357e70a878">isValVarKinds</a>(node-&gt;getNodeKind());</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<div class="ttc" id="aclassSVF_1_1SVFBaseNode_html_a9d716e532e81c92bb86f5c357e70a878"><div class="ttname"><a href="classSVF_1_1SVFBaseNode.html#a9d716e532e81c92bb86f5c357e70a878">SVF::SVFBaseNode::isValVarKinds</a></div><div class="ttdeci">static bool isValVarKinds(GNodeK n)</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00288">GenericGraph.h:288</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -581,10 +585,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00289">289</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFBaseNode.html#a9d716e532e81c92bb86f5c357e70a878">isValVarKinds</a>(node-&gt;getNodeKind());</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00303">303</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFBaseNode.html#a9d716e532e81c92bb86f5c357e70a878">isValVarKinds</a>(node-&gt;getNodeKind());</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -612,10 +616,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00281">281</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFBaseNode.html#a9d716e532e81c92bb86f5c357e70a878">isValVarKinds</a>(node-&gt;getNodeKind());</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00295">295</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFBaseNode.html#a9d716e532e81c92bb86f5c357e70a878">isValVarKinds</a>(node-&gt;getNodeKind());</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -645,10 +649,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Methods for support type inquiry through isa, cast, and dyn_cast: </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00277">277</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00291">291</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -675,10 +679,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00308">308</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00322">322</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -711,12 +715,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1DummyValVar.html#a188ddcb95f842245fb97362ff8a06efd">SVF::DummyValVar</a>, <a class="el" href="classSVF_1_1VarArgPN.html#a2544fa1210634ede319e9ed89fb9a973">SVF::VarArgPN</a>, <a class="el" href="classSVF_1_1RetPN.html#a4e45ed44aacd6234e71957c7a590d9b3">SVF::RetPN</a>, and <a class="el" href="classSVF_1_1GepValVar.html#ae89482e674768298f49e51df4ebe63e3">SVF::GepValVar</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00301">301</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1SVFVar.html#aa72b0f34a0b646751a7b2003d6b9f11e">value</a>)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#aa72b0f34a0b646751a7b2003d6b9f11e">value</a>-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">getName</a>();</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00315">315</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1SVFVar.html#aa72b0f34a0b646751a7b2003d6b9f11e">value</a>)</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classSVF_1_1SVFVar.html#aa72b0f34a0b646751a7b2003d6b9f11e">value</a>-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">getName</a>();</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    }</div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a2401b022638769f59f86ab424a189b6e"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a2401b022638769f59f86ab424a189b6e">SVF::SVFValue::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition:</b> <a href="SVFValue_8h_source.html#l00243">SVFValue.h:243</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFVar_html_aa72b0f34a0b646751a7b2003d6b9f11e"><div class="ttname"><a href="classSVF_1_1SVFVar.html#aa72b0f34a0b646751a7b2003d6b9f11e">SVF::SVFVar::value</a></div><div class="ttdeci">const SVFValue * value</div><div class="ttdoc">value of this SVFIR node</div><div class="ttdef"><b>Definition:</b> <a href="SVFVariables_8h_source.html#l00067">SVFVariables.h:67</a></div></div>
 </div><!-- fragment -->
@@ -749,22 +753,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1DummyValVar.html#a4da61151fed6a64cc361d69276d00b84">SVF::DummyValVar</a>, <a class="el" href="classSVF_1_1VarArgPN.html#a617077176f0ea586a0cf9a4a1034e99d">SVF::VarArgPN</a>, <a class="el" href="classSVF_1_1RetPN.html#a9824061477c142e5dba14af14fa53aa2">SVF::RetPN</a>, <a class="el" href="classSVF_1_1FunValVar.html#a386fa3d5f132972b94d821fc91424325">SVF::FunValVar</a>, and <a class="el" href="classSVF_1_1GepValVar.html#ac9016b61dde44eb89ea715a0619994de">SVF::GepValVar</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00108">108</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::stringstream rawstr(str);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;ValVar ID: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1SVFBaseNode.html#ab2211bc249e7cc9f26255fb184fd4eae">getId</a>();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#a424a44f39a43b22434dbdce26007a353">Options::ShowSVFIRValue</a>())</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        rawstr &lt;&lt; <a class="code" href="classSVF_1_1SVFVar.html#aa72b0f34a0b646751a7b2003d6b9f11e">value</a>-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a4a0cfe3a8f37d33ffcdca3d66026dcc3">toString</a>();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00110">110</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::stringstream rawstr(str);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    rawstr &lt;&lt; <span class="stringliteral">&quot;ValVar ID: &quot;</span> &lt;&lt; <a class="code" href="classSVF_1_1SVFBaseNode.html#ab2211bc249e7cc9f26255fb184fd4eae">getId</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classSVF_1_1Options.html#a424a44f39a43b22434dbdce26007a353">Options::ShowSVFIRValue</a>())</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        rawstr &lt;&lt; <a class="code" href="classSVF_1_1SVFVar.html#aa72b0f34a0b646751a7b2003d6b9f11e">value</a>-&gt;<a class="code" href="classSVF_1_1SVFValue.html#a4a0cfe3a8f37d33ffcdca3d66026dcc3">toString</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_a424a44f39a43b22434dbdce26007a353"><div class="ttname"><a href="classSVF_1_1Options.html#a424a44f39a43b22434dbdce26007a353">SVF::Options::ShowSVFIRValue</a></div><div class="ttdeci">static const Option&lt; bool &gt; ShowSVFIRValue</div><div class="ttdef"><b>Definition:</b> <a href="Options_8h_source.html#l00122">Options.h:122</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFBaseNode_html_ab2211bc249e7cc9f26255fb184fd4eae"><div class="ttname"><a href="classSVF_1_1SVFBaseNode.html#ab2211bc249e7cc9f26255fb184fd4eae">SVF::SVFBaseNode::getId</a></div><div class="ttdeci">NodeID getId() const</div><div class="ttdoc">Get ID.</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00264">GenericGraph.h:264</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFValue_html_a4a0cfe3a8f37d33ffcdca3d66026dcc3"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a4a0cfe3a8f37d33ffcdca3d66026dcc3">SVF::SVFValue::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">Needs to be implemented by a SVF front end.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00663">LLVMUtil.cpp:663</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFBaseNode_html_ab2211bc249e7cc9f26255fb184fd4eae"><div class="ttname"><a href="classSVF_1_1SVFBaseNode.html#ab2211bc249e7cc9f26255fb184fd4eae">SVF::SVFBaseNode::getId</a></div><div class="ttdeci">NodeID getId() const</div><div class="ttdoc">Get ID.</div><div class="ttdef"><b>Definition:</b> <a href="GenericGraph_8h_source.html#l00225">GenericGraph.h:225</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFValue_html_a4a0cfe3a8f37d33ffcdca3d66026dcc3"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a4a0cfe3a8f37d33ffcdca3d66026dcc3">SVF::SVFValue::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">Needs to be implemented by a SVF front end.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00687">LLVMUtil.cpp:687</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -789,7 +793,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00266">266</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00280">280</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
 
 </div>
 </div>
@@ -813,7 +817,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00265">265</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00279">279</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
 
 </div>
 </div>
@@ -838,7 +842,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00269">269</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8h_source.html#l00283">283</a> of file <a class="el" href="SVFVariables_8h_source.html">SVFVariables.h</a>.</p>
 
 </div>
 </div>
