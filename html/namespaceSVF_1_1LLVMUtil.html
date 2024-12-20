@@ -219,8 +219,14 @@ Functions</h2></td></tr>
 <tr class="separator:ac8086fb69cc73b558d99a83ea99f8a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25120790dd56b1bde6fba2596dedcd35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#a25120790dd56b1bde6fba2596dedcd35">isHeapAllocExtCall</a> (const <a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a> *inst)</td></tr>
 <tr class="separator:a25120790dd56b1bde6fba2596dedcd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae230168ff3f242dc4b23d1a6ce223be0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#ae230168ff3f242dc4b23d1a6ce223be0">isStackAllocExtCallViaRet</a> (const <a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a> *inst)</td></tr>
+<tr class="separator:ae230168ff3f242dc4b23d1a6ce223be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9d7137def8551ebe16d699eaeecb98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#a5b9d7137def8551ebe16d699eaeecb98">isStackAllocExtCall</a> (const <a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a> *inst)</td></tr>
+<tr class="separator:a5b9d7137def8551ebe16d699eaeecb98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94a501d52cb1cce36b274cb11079c369"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#a94a501d52cb1cce36b274cb11079c369">isHeapObj</a> (const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *val)</td></tr>
 <tr class="separator:a94a501d52cb1cce36b274cb11079c369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b7560411436ceb824fdbbdd33052b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#ac6b7560411436ceb824fdbbdd33052b6">isStackObj</a> (const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *val)</td></tr>
+<tr class="separator:ac6b7560411436ceb824fdbbdd33052b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8eb37286d48346cc0c9fcc84184f080"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSVF_1_1LLVMUtil.html#af8eb37286d48346cc0c9fcc84184f080">isNonInstricCallSite</a> (const <a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a> *inst)</td></tr>
 <tr class="memdesc:af8eb37286d48346cc0c9fcc84184f080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether an instruction is a callsite in the application code, excluding llvm intrinsic calls.  <a href="namespaceSVF_1_1LLVMUtil.html#af8eb37286d48346cc0c9fcc84184f080">More...</a><br /></td></tr>
 <tr class="separator:af8eb37286d48346cc0c9fcc84184f080"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -938,16 +944,16 @@ Functions</h2></td></tr>
 
 <p>Get program entry function from module. </p>
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00370">370</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;{</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = module.begin(), eit = module.end(); it != eit; ++it)</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *fun = &amp;(*it);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1LLVMUtil.html#ac9d6aff1a5e778e45c51b4f3b6d787e0">isProgEntryFunction</a>(fun))</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <span class="keywordflow">return</span> (fun);</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    }</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00380">380</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;{</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = module.begin(), eit = module.end(); it != eit; ++it)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *fun = &amp;(*it);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1LLVMUtil.html#ac9d6aff1a5e778e45c51b4f3b6d787e0">isProgEntryFunction</a>(fun))</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <span class="keywordflow">return</span> (fun);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    }</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1683,7 +1689,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;}</div>
 <div class="ttc" id="aclassSVF_1_1ExtAPI_html"><div class="ttname"><a href="classSVF_1_1ExtAPI.html">SVF::ExtAPI</a></div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8h_source.html#l00044">ExtAPI.h:45</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ExtAPI_html_a0d865c55681a3b4a9bb965fd0200029d"><div class="ttname"><a href="classSVF_1_1ExtAPI.html#a0d865c55681a3b4a9bb965fd0200029d">SVF::ExtAPI::is_alloc</a></div><div class="ttdeci">bool is_alloc(const SVFFunction *F)</div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8cpp_source.html#l00217">ExtAPI.cpp:217</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ExtAPI_html_ac6d6bdc51a6b75d6d5741cb751559fe4"><div class="ttname"><a href="classSVF_1_1ExtAPI.html#ac6d6bdc51a6b75d6d5741cb751559fe4">SVF::ExtAPI::is_realloc</a></div><div class="ttdeci">bool is_realloc(const SVFFunction *F)</div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8cpp_source.html#l00245">ExtAPI.cpp:245</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ExtAPI_html_ac6d6bdc51a6b75d6d5741cb751559fe4"><div class="ttname"><a href="classSVF_1_1ExtAPI.html#ac6d6bdc51a6b75d6d5741cb751559fe4">SVF::ExtAPI::is_realloc</a></div><div class="ttdeci">bool is_realloc(const SVFFunction *F)</div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8cpp_source.html#l00250">ExtAPI.cpp:250</a></div></div>
 <div class="ttc" id="aclassSVF_1_1LLVMModuleSet_html"><div class="ttname"><a href="classSVF_1_1LLVMModuleSet.html">SVF::LLVMModuleSet</a></div><div class="ttdef"><b>Definition:</b> <a href="LLVMModule_8h_source.html#l00044">LLVMModule.h:45</a></div></div>
 <div class="ttc" id="aclassSVF_1_1LLVMModuleSet_html_a50fc24901350df9db890ba16a9b87e33"><div class="ttname"><a href="classSVF_1_1LLVMModuleSet.html#a50fc24901350df9db890ba16a9b87e33">SVF::LLVMModuleSet::getSVFFunction</a></div><div class="ttdeci">SVFFunction * getSVFFunction(const Function *fun) const</div><div class="ttdef"><b>Definition:</b> <a href="LLVMModule_8h_source.html#l00258">LLVMModule.h:258</a></div></div>
 </div><!-- fragment -->
@@ -1713,23 +1719,23 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the value represents a heap object, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00655">655</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;{</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <span class="comment">// Check if the value is an argument in the program entry function</span></div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1LLVMUtil.html#adad59a953dd81e213db71babbbc9df2f">ArgInProgEntryFunction</a>(val))</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    {</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        <span class="comment">// Return true if the value does not have a first use via cast instruction</span></div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        <span class="keywordflow">return</span> !<a class="code" href="namespaceSVF_1_1LLVMUtil.html#a200539f965bff5627abac41920498ee8">getFirstUseViaCastInst</a>(val);</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    }</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="comment">// Check if the value is an instruction and if it is a heap allocation external call</span></div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;Instruction&gt;(val) &amp;&amp;</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;             <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a25120790dd56b1bde6fba2596dedcd35">LLVMUtil::isHeapAllocExtCall</a>(SVFUtil::cast&lt;Instruction&gt;(val)))</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    {</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    }</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <span class="comment">// Return false if none of the above conditions are met</span></div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00670">670</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;{</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="comment">// Check if the value is an argument in the program entry function</span></div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceSVF_1_1LLVMUtil.html#adad59a953dd81e213db71babbbc9df2f">ArgInProgEntryFunction</a>(val))</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    {</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        <span class="comment">// Return true if the value does not have a first use via cast instruction</span></div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        <span class="keywordflow">return</span> !<a class="code" href="namespaceSVF_1_1LLVMUtil.html#a200539f965bff5627abac41920498ee8">getFirstUseViaCastInst</a>(val);</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    <span class="comment">// Check if the value is an instruction and if it is a heap allocation external call</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;Instruction&gt;(val) &amp;&amp;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;             <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a25120790dd56b1bde6fba2596dedcd35">LLVMUtil::isHeapAllocExtCall</a>(SVFUtil::cast&lt;Instruction&gt;(val)))</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    {</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    }</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <span class="comment">// Return false if none of the above conditions are met</span></div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;}</div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a200539f965bff5627abac41920498ee8"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a200539f965bff5627abac41920498ee8">SVF::LLVMUtil::getFirstUseViaCastInst</a></div><div class="ttdeci">const Value * getFirstUseViaCastInst(const Value *val)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00279">LLVMUtil.cpp:279</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a25120790dd56b1bde6fba2596dedcd35"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a25120790dd56b1bde6fba2596dedcd35">SVF::LLVMUtil::isHeapAllocExtCall</a></div><div class="ttdeci">bool isHeapAllocExtCall(const Instruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00358">LLVMUtil.h:358</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_adad59a953dd81e213db71babbbc9df2f"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#adad59a953dd81e213db71babbbc9df2f">SVF::LLVMUtil::ArgInProgEntryFunction</a></div><div class="ttdeci">bool ArgInProgEntryFunction(const Value *val)</div><div class="ttdoc">Return true if this is an argument of a program entry function (e.g. main)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00130">LLVMUtil.h:130</a></div></div>
@@ -1929,16 +1935,16 @@ Functions</h2></td></tr>
 
 <p>Whether an instruction is a callsite in the application code, excluding llvm intrinsic calls. </p>
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00673">673</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;{</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keywordtype">bool</span> res = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160; </div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1LLVMUtil.html#a003b769751b93b94bdb011bd704cfde1">isIntrinsicInst</a>(inst))</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        res = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        res = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a5a7dc8680a9714e08b01dd339b85bb20">isCallSite</a>(inst);</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00708">708</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;{</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keywordtype">bool</span> res = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160; </div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespaceSVF_1_1LLVMUtil.html#a003b769751b93b94bdb011bd704cfde1">isIntrinsicInst</a>(inst))</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        res = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        res = <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a5a7dc8680a9714e08b01dd339b85bb20">isCallSite</a>(inst);</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;}</div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a5a7dc8680a9714e08b01dd339b85bb20"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a5a7dc8680a9714e08b01dd339b85bb20">SVF::LLVMUtil::isCallSite</a></div><div class="ttdeci">bool isCallSite(const Instruction *inst)</div><div class="ttdoc">Whether an instruction is a call or invoke instruction.</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00045">LLVMUtil.h:45</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2180,6 +2186,114 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5b9d7137def8551ebe16d699eaeecb98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9d7137def8551ebe16d699eaeecb98">&#9670;&nbsp;</a></span>isStackAllocExtCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::LLVMUtil::isStackAllocExtCall </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a> *&#160;</td>
+          <td class="paramname"><em>inst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8h_source.html#l00365">365</a> of file <a class="el" href="LLVMUtil_8h_source.html">LLVMUtil.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;{</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceSVF_1_1LLVMUtil.html#ae230168ff3f242dc4b23d1a6ce223be0">isStackAllocExtCallViaRet</a>(inst);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_ae230168ff3f242dc4b23d1a6ce223be0"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#ae230168ff3f242dc4b23d1a6ce223be0">SVF::LLVMUtil::isStackAllocExtCallViaRet</a></div><div class="ttdeci">bool isStackAllocExtCallViaRet(const Instruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8cpp_source.html#l00649">LLVMUtil.cpp:649</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae230168ff3f242dc4b23d1a6ce223be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae230168ff3f242dc4b23d1a6ce223be0">&#9670;&nbsp;</a></span>isStackAllocExtCallViaRet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::LLVMUtil::isStackAllocExtCallViaRet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a> *&#160;</td>
+          <td class="paramname"><em>inst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00649">649</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;{</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <a class="code" href="classSVF_1_1LLVMModuleSet.html">LLVMModuleSet</a>* pSet = LLVMModuleSet::getLLVMModuleSet();</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <a class="code" href="classSVF_1_1ExtAPI.html">ExtAPI</a>* extApi = ExtAPI::getExtAPI();</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    <span class="keywordtype">bool</span> isPtrTy = inst-&gt;getType()-&gt;isPointerTy();</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a1f4624771922dc8c2447ad7433588c73">CallBase</a>* call = SVFUtil::dyn_cast&lt;CallBase&gt;(inst))</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    {</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a>* fun = call-&gt;getCalledFunction();</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        <span class="keywordflow">return</span> fun &amp;&amp; isPtrTy &amp;&amp;</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;               extApi-&gt;<a class="code" href="classSVF_1_1ExtAPI.html#a6382e5c02fbca6001318b8c9e0a6e9bc">is_alloc_stack_ret</a>(pSet-&gt;<a class="code" href="classSVF_1_1LLVMModuleSet.html#a50fc24901350df9db890ba16a9b87e33">getSVFFunction</a>(fun));</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    }</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;}</div>
+<div class="ttc" id="aclassSVF_1_1ExtAPI_html_a6382e5c02fbca6001318b8c9e0a6e9bc"><div class="ttname"><a href="classSVF_1_1ExtAPI.html#a6382e5c02fbca6001318b8c9e0a6e9bc">SVF::ExtAPI::is_alloc_stack_ret</a></div><div class="ttdeci">bool is_alloc_stack_ret(const SVFFunction *F)</div><div class="ttdef"><b>Definition:</b> <a href="ExtAPI_8cpp_source.html#l00228">ExtAPI.cpp:228</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac6b7560411436ceb824fdbbdd33052b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b7560411436ceb824fdbbdd33052b6">&#9670;&nbsp;</a></span>isStackObj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SVF::LLVMUtil::isStackObj </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>The value to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the value represents a stack object, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00692">692</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;{</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="keywordflow">if</span> (SVFUtil::isa&lt;AllocaInst&gt;(val))</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    {</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    }</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="comment">// Check if the value is an instruction and if it is a stack allocation external call</span></div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;Instruction&gt;(val) &amp;&amp;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;             <a class="code" href="namespaceSVF_1_1LLVMUtil.html#a5b9d7137def8551ebe16d699eaeecb98">LLVMUtil::isStackAllocExtCall</a>(SVFUtil::cast&lt;Instruction&gt;(val)))</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    {</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    }</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    <span class="comment">// Return false if none of the above conditions are met</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;}</div>
+<div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_a5b9d7137def8551ebe16d699eaeecb98"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#a5b9d7137def8551ebe16d699eaeecb98">SVF::LLVMUtil::isStackAllocExtCall</a></div><div class="ttdeci">bool isStackAllocExtCall(const Instruction *inst)</div><div class="ttdef"><b>Definition:</b> <a href="LLVMUtil_8h_source.html#l00365">LLVMUtil.h:365</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -1072,25 +1072,25 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00712">712</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;{</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    llvm::raw_string_ostream rawstr(str);</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1PTACallGraphNode.html">SVF::PTACallGraphNode</a>* fun = SVFUtil::dyn_cast&lt;PTACallGraphNode&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    {</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;Function: &quot;</span> &lt;&lt; fun-&gt;getFunction()-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    }</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    {</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        <span class="keyword">auto</span> llvmVal = <a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code" href="classSVF_1_1LLVMModuleSet.html#aaf9b679407f12b93afc53c157d37b444">getLLVMValue</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keywordflow">if</span> (llvmVal)</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; *llvmVal &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot; No llvmVal found&quot;</span>;</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;    }</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    rawstr &lt;&lt; <a class="code" href="classSVF_1_1SVFBaseNode.html#af3fa05d8e6252bc1c20bf98b6924e1ad">getSourceLoc</a>();</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00747">747</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;{</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    <a class="code" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> str;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    llvm::raw_string_ostream rawstr(str);</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classSVF_1_1PTACallGraphNode.html">SVF::PTACallGraphNode</a>* fun = SVFUtil::dyn_cast&lt;PTACallGraphNode&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    {</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        rawstr &lt;&lt; <span class="stringliteral">&quot;Function: &quot;</span> &lt;&lt; fun-&gt;getFunction()-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    }</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    {</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        <span class="keyword">auto</span> llvmVal = <a class="code" href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code" href="classSVF_1_1LLVMModuleSet.html#aaf9b679407f12b93afc53c157d37b444">getLLVMValue</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        <span class="keywordflow">if</span> (llvmVal)</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; *llvmVal &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;            rawstr &lt;&lt; <span class="stringliteral">&quot; No llvmVal found&quot;</span>;</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    }</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    rawstr &lt;&lt; <a class="code" href="classSVF_1_1SVFBaseNode.html#af3fa05d8e6252bc1c20bf98b6924e1ad">getSourceLoc</a>();</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="keywordflow">return</span> rawstr.str();</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;}</div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition:</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 <div class="ttc" id="aclassSVF_1_1LLVMModuleSet_html_aaf9b679407f12b93afc53c157d37b444"><div class="ttname"><a href="classSVF_1_1LLVMModuleSet.html#aaf9b679407f12b93afc53c157d37b444">SVF::LLVMModuleSet::getLLVMValue</a></div><div class="ttdeci">const Value * getLLVMValue(const SVFValue *value) const</div><div class="ttdef"><b>Definition:</b> <a href="LLVMModule_8h_source.html#l00237">LLVMModule.h:237</a></div></div>
 <div class="ttc" id="aclassSVF_1_1LLVMModuleSet_html_acf40310917909e4234282c0695a43160"><div class="ttname"><a href="classSVF_1_1LLVMModuleSet.html#acf40310917909e4234282c0695a43160">SVF::LLVMModuleSet::getLLVMModuleSet</a></div><div class="ttdeci">static LLVMModuleSet * getLLVMModuleSet()</div><div class="ttdef"><b>Definition:</b> <a href="LLVMModule_8h_source.html#l00120">LLVMModule.h:120</a></div></div>
