@@ -26,7 +26,7 @@ var searchData=
   ['ontheflythreadcallgraphsolve_23',['onTheFlyThreadCallGraphSolve',['../classSVF_1_1BVDataPTAImpl.html#a9009be40695a65b1896315f0a418e913',1,'SVF::BVDataPTAImpl']]],
   ['oobresetvisited_24',['OOBResetVisited',['../classSVF_1_1DDAVFSolver.html#ab60c701f1881d88aa4440991fb972638',1,'SVF::DDAVFSolver']]],
   ['opcache_25',['OpCache',['../classSVF_1_1PersistentPointsToCache.html#a896bab5039f4bf2d0da71045e2c63ad7',1,'SVF::PersistentPointsToCache']]],
-  ['opcode_26',['opcode',['../classSVF_1_1UnaryOPStmt.html#a099df135a83d28a2e6f344e008fe1cc6',1,'SVF::UnaryOPStmt::opcode'],['../classSVF_1_1BinaryOPStmt.html#a0c4f900cf7321e8385b4f45e5cba3d1a',1,'SVF::BinaryOPStmt::opcode'],['../classSVF_1_1UnaryOPStmt.html#ad06357c3d2abbd0eae12ba71d5206742',1,'SVF::UnaryOPStmt::OpCode'],['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6',1,'SVF::BinaryOPStmt::OpCode']]],
+  ['opcode_26',['opcode',['../classSVF_1_1UnaryOPStmt.html#ad06357c3d2abbd0eae12ba71d5206742',1,'SVF::UnaryOPStmt::OpCode'],['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6',1,'SVF::BinaryOPStmt::OpCode'],['../classSVF_1_1UnaryOPStmt.html#a099df135a83d28a2e6f344e008fe1cc6',1,'SVF::UnaryOPStmt::opcode'],['../classSVF_1_1BinaryOPStmt.html#a0c4f900cf7321e8385b4f45e5cba3d1a',1,'SVF::BinaryOPStmt::opcode']]],
   ['operator_20referencet_27',['operator ReferenceT',['../classSVF_1_1iter__facade__base_1_1ReferenceProxy.html#a6889cc9eba9892a3fc372f5353bc4dc6',1,'SVF::iter_facade_base::ReferenceProxy']]],
   ['operator_20u32_5ft_28',['operator u32_t',['../structSVF_1_1GrammarBase_1_1Symbol.html#a7ba35f7585b191a29573a9e116aa927f',1,'SVF::GrammarBase::Symbol::operator u32_t()'],['../structSVF_1_1GrammarBase_1_1Symbol.html#ada693de7fbe70e37120eed8dca3c143f',1,'SVF::GrammarBase::Symbol::operator u32_t() const']]],
   ['operator_21_29',['operator!',['../classSVF_1_1BoundedInt.html#a8d8bdbda9a11f3f97649fbde60901cc4',1,'SVF::BoundedInt::operator!'],['../classSVF_1_1BoundedDouble.html#a4e77f7827de0a72198e153b7e62d377d',1,'SVF::BoundedDouble::operator!'],['../classSVF_1_1Z3Expr.html#ac2b4e7b63f15e6780d25107b61f208ca',1,'SVF::Z3Expr::operator!']]],
@@ -123,7 +123,7 @@ var searchData=
   ['outstream_120',['OutStream',['../namespaceSVF.html#a8bd74fdcb0e58d0249003df9c3fb8b31',1,'SVF']]],
   ['outupdatedvarmap_121',['outupdatedvarmap',['../classSVF_1_1MutableIncDFPTData.html#af5f7db6c55037a0e117a36982736039e',1,'SVF::MutableIncDFPTData::outUpdatedVarMap'],['../classSVF_1_1PersistentIncDFPTData.html#a054f8e2a0668387c092b2802e64a4df0',1,'SVF::PersistentIncDFPTData::outUpdatedVarMap']]],
   ['ovalue_5fiterator_122',['ovalue_iterator',['../classSVF_1_1SVFModule.html#a7d11fccf78e9e69cef94c26aab6689d7',1,'SVF::SVFModule']]],
-  ['overlap_123',['overlap',['../classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245afbdf7000b827f7d8590e5f0997e0d59a',1,'SVF::AccessPath::Overlap'],['../classSVF_1_1CondPTAImpl.html#adf0acbb0c605278e43d88787d651bbd8',1,'SVF::CondPTAImpl::overlap()']]],
+  ['overlap_123',['overlap',['../classSVF_1_1CondPTAImpl.html#adf0acbb0c605278e43d88787d651bbd8',1,'SVF::CondPTAImpl::overlap()'],['../classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245afbdf7000b827f7d8590e5f0997e0d59a',1,'SVF::AccessPath::Overlap']]],
   ['owned_5fctx_124',['owned_ctx',['../classSVF_1_1LLVMModuleSet.html#a4b678ce8642fcdab0582cd626b7ac7c5',1,'SVF::LLVMModuleSet']]],
   ['owned_5fmodules_125',['owned_modules',['../classSVF_1_1LLVMModuleSet.html#ae365189769640adb919a23c36978e5e2',1,'SVF::LLVMModuleSet']]]
 ];
