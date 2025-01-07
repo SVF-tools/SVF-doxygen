@@ -5,5 +5,7 @@ var searchData=
   ['gepvalnode_2',['GepValNode',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86aa2e1349197531cdc5c42773598eed017',1,'SVF::SVFBaseNode']]],
   ['global_5fleak_3',['GLOBAL_LEAK',['../classSVF_1_1LeakChecker.html#a42f54433e5ca60928f3c329ab545842da20b4563d5fc09a0a076800cd02f238f1',1,'SVF::LeakChecker']]],
   ['globalblock_4',['GlobalBlock',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86ab09f5e05fc5f1a3eb13cb10b81494cba',1,'SVF::SVFBaseNode']]],
-  ['globvar_5fobj_5',['GLOBVAR_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830ad2ba0edfac1460f3fd89e7a6c4c4691b',1,'SVF::ObjTypeInfo']]]
+  ['globalobjnode_5',['GlobalObjNode',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86abc39e3a655b8e2e3a90c7b836c1f9f9f',1,'SVF::SVFBaseNode']]],
+  ['globalvalnode_6',['GlobalValNode',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a186678c33689abd5cbd60bdb3c8dd40a',1,'SVF::SVFBaseNode']]],
+  ['globvar_5fobj_7',['GLOBVAR_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830ad2ba0edfac1460f3fd89e7a6c4c4691b',1,'SVF::ObjTypeInfo']]]
 ];

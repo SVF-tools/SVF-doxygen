@@ -2,9 +2,9 @@ var searchData=
 [
   ['b_0',['b',['../cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c',1,'b:&#160;cJSON.h'],['../cJSON_8cpp.html#a1a175e87536301df98c805ac0636ad7c',1,'b:&#160;cJSON.cpp']]],
   ['backicfgedges_1',['backICFGEdges',['../classSVF_1_1SVFLoop.html#aed4400521f825802719ac97a18452230',1,'SVF::SVFLoop']]],
-  ['backwardslice_2',['backwardslice',['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice'],['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice']]],
+  ['backwardslice_2',['backwardslice',['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice'],['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice']]],
   ['backwardvisited_3',['backwardVisited',['../classSVF_1_1DDAVFSolver.html#a63d04c3af4529d0e0f82acd76ed57f6c',1,'SVF::DDAVFSolver']]],
-  ['base_4',['base',['../classSVF_1_1GepObjVar.html#aff50e1d96403eeacaa64f7adb07ce0a5',1,'SVF::GepObjVar']]],
+  ['base_4',['base',['../classSVF_1_1GepObjVar.html#aff50e1d96403eeacaa64f7adb07ce0a5',1,'SVF::GepObjVar::base'],['../classSVF_1_1GepValVar.html#a3d98349d6d73a759ddabba1ba1ff12ba',1,'SVF::GepValVar::base']]],
   ['baseids_5',['baseIds',['../classSVF_1_1ConstraintNode.html#ac40ecefd565e029748fdacbc44c4cd54',1,'SVF::ConstraintNode']]],
   ['basicblock_6',['basicBlock',['../classSVF_1_1SVFStmt.html#a8a2afa585fcbdcab375ddc04961a614f',1,'SVF::SVFStmt']]],
   ['bb_7',['bb',['../classSVF_1_1ICFGNode.html#a0cd08725df3e8665762ee37b5d4c138a',1,'SVF::ICFGNode::bb'],['../classSVF_1_1LoadMU.html#aadfeb1a4924cbe78a828fd4a94fb59da',1,'SVF::LoadMU::bb'],['../classSVF_1_1StoreCHI.html#ae8bd147e80514d5cb42f249d98b5fb72',1,'SVF::StoreCHI::bb'],['../classSVF_1_1MSSAPHI.html#a3353fb233d81d5218540e8da2bad1a45',1,'SVF::MSSAPHI::bb'],['../classSVF_1_1SVFInstruction.html#ade4a9596b2c288f2f74ce813d21fcaa0',1,'SVF::SVFInstruction::bb']]],

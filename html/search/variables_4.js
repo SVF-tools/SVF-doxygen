@@ -25,7 +25,7 @@ var searchData=
   ['diffptsmap_22',['diffptsmap',['../classSVF_1_1MutableDiffPTData.html#a9ee7874e987e93eb4cb9d75ed08effd5',1,'SVF::MutableDiffPTData::diffPtsMap'],['../classSVF_1_1PersistentDiffPTData.html#ac54339952e2734a6affdaa543fb3ed22',1,'SVF::PersistentDiffPTData::diffPtsMap']]],
   ['diffwave_23',['diffWave',['../classSVF_1_1AndersenWaveDiff.html#add4dcb6d74a8ce8747bcac5f740cd672',1,'SVF::AndersenWaveDiff']]],
   ['dirandindjoinmap_24',['dirAndIndJoinMap',['../classSVF_1_1ForkJoinAnalysis.html#ab5678bd46e573070827cc413f0e0d5be',1,'SVF::ForkJoinAnalysis']]],
-  ['directcalls_25',['directcalls',['../classSVF_1_1PTACallGraphEdge.html#a2f3e4b61225c4ca37b0f70e3edc61920',1,'SVF::PTACallGraphEdge::directCalls'],['../classSVF_1_1CallGraphEdge.html#adf42aa951af8858763e9f4e0d35d622d',1,'SVF::CallGraphEdge::directCalls']]],
+  ['directcalls_25',['directcalls',['../classSVF_1_1CallGraphEdge.html#adf42aa951af8858763e9f4e0d35d622d',1,'SVF::CallGraphEdge::directCalls'],['../classSVF_1_1PTACallGraphEdge.html#a2f3e4b61225c4ca37b0f70e3edc61920',1,'SVF::PTACallGraphEdge::directCalls']]],
   ['directedgeset_26',['directEdgeSet',['../classSVF_1_1ConstraintGraph.html#a1be3ebb84b3d334daf98f7e6f5b82256',1,'SVF::ConstraintGraph']]],
   ['directinedges_27',['directInEdges',['../classSVF_1_1ConstraintNode.html#a53626700d25b5c004e42354c925df83c',1,'SVF::ConstraintNode']]],
   ['directjoinmap_28',['directJoinMap',['../classSVF_1_1ForkJoinAnalysis.html#abf5b499f93a658636d09a62d14a47cad',1,'SVF::ForkJoinAnalysis']]],
@@ -50,6 +50,6 @@ var searchData=
   ['dumpmssa_47',['DumpMSSA',['../classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa',1,'SVF::Options']]],
   ['dumpslice_48',['DumpSlice',['../classSVF_1_1Options.html#ab9443e23bdcb60f118a7aab835f974db',1,'SVF::Options']]],
   ['dumpvfg_49',['DumpVFG',['../classSVF_1_1Options.html#ae3ad3003a8d3df2f1e3463248bb5ad51',1,'SVF::Options']]],
-  ['dval_50',['dval',['../classSVF_1_1SVFConstantFP.html#aa1d551ad74dd5ce3eb4b7d639aec31a9',1,'SVF::SVFConstantFP']]],
+  ['dval_50',['dval',['../classSVF_1_1SVFConstantFP.html#aa1d551ad74dd5ce3eb4b7d639aec31a9',1,'SVF::SVFConstantFP::dval'],['../classSVF_1_1ConstantFPValVar.html#a134de8ab008479d2b06e849b0257a1c7',1,'SVF::ConstantFPValVar::dval'],['../classSVF_1_1ConstantFPObjVar.html#a9ff9a0a22453395812f5c738473ac68a',1,'SVF::ConstantFPObjVar::dval']]],
   ['dyncast_51',['dyncast',['../CppUtil_8cpp.html#a7972d88aaaa4644ee22e5b95ac465a80',1,'CppUtil.cpp']]]
 ];

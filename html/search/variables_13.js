@@ -67,7 +67,7 @@ var searchData=
   ['typeandinfoflag_64',['typeAndInfoFlag',['../classSVF_1_1SVFBugEvent.html#a33496918c5f2adaf48a64f39d9c49567',1,'SVF::SVFBugEvent']]],
   ['typedefs_65',['typedefs',['../classSVF_1_1DCHNode.html#abafa483be12690549fbcccaf4c3fa511',1,'SVF::DCHNode']]],
   ['typeinference_66',['typeInference',['../classSVF_1_1LLVMModuleSet.html#a2eb76d2c787a9a02f7d37c790d647e9c',1,'SVF::LLVMModuleSet']]],
-  ['typeinfo_67',['typeinfo',['../classSVF_1_1MemObj.html#a750770ea992d39b22c8b2dda9aff2eaf',1,'SVF::MemObj::typeInfo'],['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo']]],
+  ['typeinfo_67',['typeinfo',['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo'],['../classSVF_1_1MemObj.html#a750770ea992d39b22c8b2dda9aff2eaf',1,'SVF::MemObj::typeInfo']]],
   ['typelocsetsmap_68',['typeLocSetsMap',['../classSVF_1_1SVFIR.html#a63ede1d8d381b91f81b93965dcffa288',1,'SVF::SVFIR']]],
   ['typemalloc_69',['TYPEMALLOC',['../ObjTypeInference_8cpp.html#a5f334de99eb942058f27a1025c346f70',1,'ObjTypeInference.cpp']]],
   ['typename_70',['typeName',['../classSVF_1_1DCHNode.html#a8a7b412262af7a90c9ef583b6a8c10fc',1,'SVF::DCHNode']]],

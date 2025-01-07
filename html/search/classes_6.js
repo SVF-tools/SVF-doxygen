@@ -98,10 +98,12 @@ var searchData=
   ['gepvalvar_95',['GepValVar',['../classSVF_1_1GepValVar.html',1,'SVF']]],
   ['gepvfgnode_96',['GepVFGNode',['../classSVF_1_1GepVFGNode.html',1,'SVF']]],
   ['globalicfgnode_97',['GlobalICFGNode',['../classSVF_1_1GlobalICFGNode.html',1,'SVF']]],
-  ['gnodesccinfo_98',['GNodeSCCInfo',['../classSVF_1_1SCCDetection_1_1GNodeSCCInfo.html',1,'SVF::SCCDetection']]],
-  ['grammarbase_99',['GrammarBase',['../classSVF_1_1GrammarBase.html',1,'SVF']]],
-  ['grammarbuilder_100',['GrammarBuilder',['../classSVF_1_1GrammarBuilder.html',1,'SVF']]],
-  ['graphprinter_101',['GraphPrinter',['../classSVF_1_1GraphPrinter.html',1,'SVF']]],
-  ['graphreachsolver_102',['GraphReachSolver',['../classSVF_1_1GraphReachSolver.html',1,'SVF']]],
-  ['graphwriter_103',['GraphWriter',['../classSVF_1_1GraphWriter.html',1,'SVF']]]
+  ['globalobjvar_98',['GlobalObjVar',['../classSVF_1_1GlobalObjVar.html',1,'SVF']]],
+  ['globalvalvar_99',['GlobalValVar',['../classSVF_1_1GlobalValVar.html',1,'SVF']]],
+  ['gnodesccinfo_100',['GNodeSCCInfo',['../classSVF_1_1SCCDetection_1_1GNodeSCCInfo.html',1,'SVF::SCCDetection']]],
+  ['grammarbase_101',['GrammarBase',['../classSVF_1_1GrammarBase.html',1,'SVF']]],
+  ['grammarbuilder_102',['GrammarBuilder',['../classSVF_1_1GrammarBuilder.html',1,'SVF']]],
+  ['graphprinter_103',['GraphPrinter',['../classSVF_1_1GraphPrinter.html',1,'SVF']]],
+  ['graphreachsolver_104',['GraphReachSolver',['../classSVF_1_1GraphReachSolver.html',1,'SVF']]],
+  ['graphwriter_105',['GraphWriter',['../classSVF_1_1GraphWriter.html',1,'SVF']]]
 ];
