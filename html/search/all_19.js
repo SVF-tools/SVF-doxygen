@@ -252,7 +252,7 @@ var searchData=
   ['stack_249',['Stack',['../classSVF_1_1WTO.html#ab35eabe45c6b944b26532fbe630cd019',1,'SVF::WTO']]],
   ['stack_5fobj_250',['STACK_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830aad918042d1f04a5e3960817d55ccb5d5',1,'SVF::ObjTypeInfo']]],
   ['stackobjnode_251',['StackObjNode',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a39cb10f2c19d1cfeaa145e1be48259d6',1,'SVF::SVFBaseNode']]],
-  ['stackobjvar_252',['stackobjvar',['../classSVF_1_1StackObjVar.html',1,'SVF::StackObjVar'],['../classSVF_1_1StackObjVar.html#a2070702ed32a0f0a7d905d10b8b2ec46',1,'SVF::StackObjVar::StackObjVar(NodeID i, PNODEK ty=StackObjNode)'],['../classSVF_1_1StackObjVar.html#a75259760df87cf691086c65a5a62df13',1,'SVF::StackObjVar::StackObjVar(const SVFFunction *f, const SVFType *svfType, NodeID i, const MemObj *mem, PNODEK ty=StackObjNode)']]],
+  ['stackobjvar_252',['stackobjvar',['../classSVF_1_1StackObjVar.html',1,'SVF::StackObjVar'],['../classSVF_1_1StackObjVar.html#a2070702ed32a0f0a7d905d10b8b2ec46',1,'SVF::StackObjVar::StackObjVar(NodeID i, PNODEK ty=StackObjNode)'],['../classSVF_1_1StackObjVar.html#a460c9c5a159fef7a01d130fbd6b2aca7',1,'SVF::StackObjVar::StackObjVar(NodeID i, const MemObj *mem, const SVFType *svfType, const SVFFunction *fun, PNODEK ty=StackObjNode)']]],
   ['standard_253',['Standard',['../classSVF_1_1CommonCHGraph.html#a6a1feb9e268fb56b0de3efc39cfc8db8afa3f4c3017fb95011bfdc11b147eae0c',1,'SVF::CommonCHGraph']]],
   ['startanalysislimittimer_254',['startAnalysisLimitTimer',['../namespaceSVF_1_1SVFUtil.html#a757815a2c758695176120509ceb0ce70',1,'SVF::SVFUtil']]],
   ['startclk_255',['startClk',['../classSVF_1_1SVFStat.html#a730cc814fede3edb563aa9957c869e9e',1,'SVF::SVFStat']]],

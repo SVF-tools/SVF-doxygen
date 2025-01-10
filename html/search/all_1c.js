@@ -33,7 +33,7 @@ var searchData=
   ['var_5fstruct_5fobj_30',['VAR_STRUCT_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830aaf98981bd15b41f543fd99d0c6222f08',1,'SVF::ObjTypeInfo']]],
   ['vararg_31',['vararg',['../classSVF_1_1SVFCallInst.html#a4280d986cfa4ebd0a1c4b6c63bb13eb6',1,'SVF::SVFCallInst::varArg'],['../classSVF_1_1SVFFunction.html#a11aaa0ffaf7fa3d220c9af5d4537eaad',1,'SVF::SVFFunction::varArg']]],
   ['varargnode_32',['VarargNode',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86afcafec1bf855fd8f0740ba382343adfa',1,'SVF::SVFBaseNode']]],
-  ['varargpn_33',['varargpn',['../classSVF_1_1VarArgPN.html',1,'SVF::VarArgPN'],['../classSVF_1_1VarArgPN.html#a76ee00577b5244a5266c70b2e97fb3c5',1,'SVF::VarArgPN::VarArgPN(const CallGraphNode *node, NodeID i)'],['../classSVF_1_1VarArgPN.html#ad7bdfa5c3abb60f5b6a604905a6c6424',1,'SVF::VarArgPN::VarArgPN(NodeID i)']]],
+  ['varargpn_33',['varargpn',['../classSVF_1_1VarArgPN.html',1,'SVF::VarArgPN'],['../classSVF_1_1VarArgPN.html#a5b03e71c2d383d54f1e4b5109d1b2bf8',1,'SVF::VarArgPN::VarArgPN(NodeID i, const CallGraphNode *node)'],['../classSVF_1_1VarArgPN.html#ad7bdfa5c3abb60f5b6a604905a6c6424',1,'SVF::VarArgPN::VarArgPN(NodeID i)']]],
   ['varargsymbol_34',['VarargSymbol',['../classSVF_1_1SymbolTableInfo.html#afd2cf6ef6d7f2a583c709a72067be89bab8a256319d4853178a0308c0f6f830e3',1,'SVF::SymbolTableInfo']]],
   ['varargsymmap_35',['varargSymMap',['../classSVF_1_1SymbolTableInfo.html#a94c06e5ac0b50989743a9e63c9a6d5b9',1,'SVF::SymbolTableInfo']]],
   ['varargsyms_36',['varargSyms',['../classSVF_1_1SymbolTableInfo.html#a31295d750aaa0a79762c8ee58577199d',1,'SVF::SymbolTableInfo']]],

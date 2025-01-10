@@ -177,7 +177,7 @@ var searchData=
   ['srcsnksolver_174',['SrcSnkSolver',['../classSVF_1_1SrcSnkSolver.html#a952450652e55f3325f24b8d237d2c37d',1,'SVF::SrcSnkSolver']]],
   ['ssarename_175',['SSARename',['../classSVF_1_1MemSSA.html#a16114eb55775f6ee812c1648dcaede0c',1,'SVF::MemSSA']]],
   ['ssarenamebb_176',['SSARenameBB',['../classSVF_1_1MemSSA.html#aeb7fc6c7880db45f6d0a90912ac5b5f7',1,'SVF::MemSSA']]],
-  ['stackobjvar_177',['stackobjvar',['../classSVF_1_1StackObjVar.html#a75259760df87cf691086c65a5a62df13',1,'SVF::StackObjVar::StackObjVar(const SVFFunction *f, const SVFType *svfType, NodeID i, const MemObj *mem, PNODEK ty=StackObjNode)'],['../classSVF_1_1StackObjVar.html#a2070702ed32a0f0a7d905d10b8b2ec46',1,'SVF::StackObjVar::StackObjVar(NodeID i, PNODEK ty=StackObjNode)']]],
+  ['stackobjvar_177',['stackobjvar',['../classSVF_1_1StackObjVar.html#a460c9c5a159fef7a01d130fbd6b2aca7',1,'SVF::StackObjVar::StackObjVar(NodeID i, const MemObj *mem, const SVFType *svfType, const SVFFunction *fun, PNODEK ty=StackObjNode)'],['../classSVF_1_1StackObjVar.html#a2070702ed32a0f0a7d905d10b8b2ec46',1,'SVF::StackObjVar::StackObjVar(NodeID i, PNODEK ty=StackObjNode)']]],
   ['startanalysislimittimer_178',['startAnalysisLimitTimer',['../namespaceSVF_1_1SVFUtil.html#a757815a2c758695176120509ceb0ce70',1,'SVF::SVFUtil']]],
   ['startclk_179',['startClk',['../classSVF_1_1SVFStat.html#a730cc814fede3edb563aa9957c869e9e',1,'SVF::SVFStat']]],
   ['startnewptcompfromloadsrc_180',['startNewPTCompFromLoadSrc',['../classSVF_1_1DDAVFSolver.html#acd694c2092adf8c516d1aba5f798cec7',1,'SVF::DDAVFSolver']]],
