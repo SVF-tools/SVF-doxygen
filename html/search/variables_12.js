@@ -69,7 +69,7 @@ var searchData=
   ['svfir_66',['svfir',['../classSVF_1_1CFLBase.html#a9e6cbab31612da4a1f8f660d1fabc4c0',1,'SVF::CFLBase::svfir'],['../classSVF_1_1AbstractInterpretation.html#a9128e36c097d2bc4b161e5ed36bba462',1,'SVF::AbstractInterpretation::svfir'],['../classSVF_1_1AbsExtAPI.html#abcb3d9a60b56bf8ddadb867fb2aa68b9',1,'SVF::AbsExtAPI::svfir'],['../classSVF_1_1SVFIRWriter.html#a599d699f1a1dcb576d33cb40142c6db8',1,'SVF::SVFIRWriter::svfIR']]],
   ['svflooppool_67',['svflooppool',['../classSVF_1_1ICFGWriter.html#a79f4edaff02404f518ffeaeab136c0a9',1,'SVF::ICFGWriter::svfLoopPool'],['../classSVF_1_1ICFGReader.html#a366fa1cfec101c723e36582d80125194',1,'SVF::ICFGReader::svfLoopPool']]],
   ['svfmain_68',['SVFMain',['../classSVF_1_1Options.html#a3a718b0a27c2d13878c0718af97ad73d',1,'SVF::Options']]],
-  ['svfmod_69',['svfmod',['../classSVF_1_1PointerAnalysis.html#a7e8b3f6843e5ea75fd189162d2cd60a5',1,'SVF::PointerAnalysis::svfMod'],['../classSVF_1_1CHGraph.html#a62a3ccdbc55381d5f8d96dc23141f2e5',1,'SVF::CHGraph::svfMod']]],
+  ['svfmod_69',['svfmod',['../classSVF_1_1CHGraph.html#a62a3ccdbc55381d5f8d96dc23141f2e5',1,'SVF::CHGraph::svfMod'],['../classSVF_1_1PointerAnalysis.html#a7e8b3f6843e5ea75fd189162d2cd60a5',1,'SVF::PointerAnalysis::svfMod']]],
   ['svfmodule_70',['svfmodule',['../classSVF_1_1SVFModule.html#ad81c63b60d030828262ea375917cc189',1,'SVF::SVFModule::svfModule'],['../classSVF_1_1SVFIRBuilder.html#a6ca1b9d5bb267806f8aaae5a94ed36cc',1,'SVF::SVFIRBuilder::svfModule'],['../classSVF_1_1LLVMModuleSet.html#a43832e93a42ae43d44b0cc160981678f',1,'SVF::LLVMModuleSet::svfModule'],['../classSVF_1_1DCHGraph.html#a85a3c9a6a60a4379717773f8722ae42e',1,'SVF::DCHGraph::svfModule'],['../classSVF_1_1SVFIR.html#a8bfa675eed3c60a21134faa8e0b9e6b9',1,'SVF::SVFIR::svfModule']]],
   ['svfmodulefieldjson_71',['svfModuleFieldJson',['../classSVF_1_1SVFModuleReader.html#a5258ef11a30116a8c7cdd366faa6568c',1,'SVF::SVFModuleReader']]],
   ['svfmodulereader_72',['svfModuleReader',['../classSVF_1_1SVFIRReader.html#a2414da27b56b86d2e6266693c66963cd',1,'SVF::SVFIRReader']]],
@@ -80,9 +80,8 @@ var searchData=
   ['svfvalue2llvmvalue_77',['SVFValue2LLVMValue',['../classSVF_1_1LLVMModuleSet.html#a7f8e61cf5d838d7a2e862bc6955f16be',1,'SVF::LLVMModuleSet']]],
   ['svfvaluepool_78',['svfvaluepool',['../classSVF_1_1SVFModuleWriter.html#aa3c7f0cf409d3b303f3dc308951b45fd',1,'SVF::SVFModuleWriter::svfValuePool'],['../classSVF_1_1SVFModuleReader.html#a2993c4358d71036440325001163731fe',1,'SVF::SVFModuleReader::svfValuePool']]],
   ['symabs_79',['SYMABS',['../ae_8cpp.html#ac8fc4394b98492dc1212cfeb21286ff4',1,'ae.cpp']]],
-  ['symid_80',['symId',['../classSVF_1_1MemObj.html#a37f4e34b7f7dd6bfd4379cf3552e9046',1,'SVF::MemObj']]],
-  ['syminfo_81',['syminfo',['../classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c',1,'SVF::SymbolTableInfo::symInfo'],['../classSVF_1_1IRGraph.html#a679145e7bf818b0a19005dc8e2845fe1',1,'SVF::IRGraph::symInfo'],['../classSVF_1_1SymbolTableBuilder.html#a3100246d9b0a58e53f2dbc8acf231afb',1,'SVF::SymbolTableBuilder::symInfo'],['../classSVF_1_1LLVMModuleSet.html#a5552135a27684cbe4d2a5ed346f64644',1,'SVF::LLVMModuleSet::symInfo']]],
-  ['symtabfieldjson_82',['symTabFieldJson',['../classSVF_1_1SymbolTableInfoReader.html#a4ebfcabecee32b0a226c2c57f6411a3c',1,'SVF::SymbolTableInfoReader']]],
-  ['symtablereader_83',['symTableReader',['../classSVF_1_1SVFIRReader.html#af86d67ef511b844e11a7d4f20756385c',1,'SVF::SVFIRReader']]],
-  ['symtabprint_84',['SymTabPrint',['../classSVF_1_1Options.html#a52c06ea1c5dd347079f192f0cba3dcd3',1,'SVF::Options']]]
+  ['syminfo_80',['syminfo',['../classSVF_1_1SymbolTableInfo.html#a4fbb8ea4b4796d10d13c027b7455505c',1,'SVF::SymbolTableInfo::symInfo'],['../classSVF_1_1IRGraph.html#a679145e7bf818b0a19005dc8e2845fe1',1,'SVF::IRGraph::symInfo'],['../classSVF_1_1SymbolTableBuilder.html#a3100246d9b0a58e53f2dbc8acf231afb',1,'SVF::SymbolTableBuilder::symInfo'],['../classSVF_1_1LLVMModuleSet.html#a5552135a27684cbe4d2a5ed346f64644',1,'SVF::LLVMModuleSet::symInfo']]],
+  ['symtabfieldjson_81',['symTabFieldJson',['../classSVF_1_1SymbolTableInfoReader.html#a4ebfcabecee32b0a226c2c57f6411a3c',1,'SVF::SymbolTableInfoReader']]],
+  ['symtablereader_82',['symTableReader',['../classSVF_1_1SVFIRReader.html#af86d67ef511b844e11a7d4f20756385c',1,'SVF::SVFIRReader']]],
+  ['symtabprint_83',['SymTabPrint',['../classSVF_1_1Options.html#a52c06ea1c5dd347079f192f0cba3dcd3',1,'SVF::Options']]]
 ];

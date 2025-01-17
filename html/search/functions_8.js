@@ -151,5 +151,5 @@ var searchData=
   ['headbegin_148',['headBegin',['../classSVF_1_1WTO.html#a62a6ee6d3894861a0fb74309d2951e16',1,'SVF::WTO']]],
   ['headend_149',['headEnd',['../classSVF_1_1WTO.html#ace35f97608d342cae7cda7936816f624',1,'SVF::WTO']]],
   ['heapallocatorviaindcall_150',['heapallocatorviaindcall',['../classSVF_1_1AndersenBase.html#a5be9fdfd2c701372ce679e6a32843ae1',1,'SVF::AndersenBase::heapAllocatorViaIndCall()'],['../classSVF_1_1CFLAlias.html#a55051f080cfc25193b3cf257b02457b3',1,'SVF::CFLAlias::heapAllocatorViaIndCall()']]],
-  ['heapobjvar_151',['heapobjvar',['../classSVF_1_1HeapObjVar.html#a8f9b89e7000701eb926ab65635caf0c0',1,'SVF::HeapObjVar::HeapObjVar(NodeID i, const MemObj *mem, const SVFType *svfType, const SVFFunction *fun, PNODEK ty=HeapObjNode)'],['../classSVF_1_1HeapObjVar.html#aadddadfc597550f0938048997a966e1c',1,'SVF::HeapObjVar::HeapObjVar(NodeID i, PNODEK ty=HeapObjNode)']]]
+  ['heapobjvar_151',['heapobjvar',['../classSVF_1_1HeapObjVar.html#a8171de6a9bdd5a3fcdb749a582565934',1,'SVF::HeapObjVar::HeapObjVar(const SVFValue *val, NodeID i, ObjTypeInfo *ti, const SVFFunction *f, PNODEK ty=HeapObjNode)'],['../classSVF_1_1HeapObjVar.html#aadddadfc597550f0938048997a966e1c',1,'SVF::HeapObjVar::HeapObjVar(NodeID i, PNODEK ty=HeapObjNode)']]]
 ];

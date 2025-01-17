@@ -26,7 +26,7 @@ var searchData=
   ['globs_23',['globs',['../classSVF_1_1SaberSVFGBuilder.html#a967dba864a6032e448222525aedb1f2a',1,'SVF::SaberSVFGBuilder']]],
   ['globsvfgnodes_24',['globSVFGNodes',['../classSVF_1_1SaberSVFGBuilder.html#a9431a9dcbcf88b78e721b0347046e997',1,'SVF::SaberSVFGBuilder']]],
   ['globsvfstmtset_25',['globSVFStmtSet',['../classSVF_1_1SVFIR.html#a71b51492b00e66e36266b9a76a842323',1,'SVF::SVFIR']]],
-  ['gnode_26',['gNode',['../classSVF_1_1MemObj.html#a46d4d1ff9d3d20685b9fe9126162c0a1',1,'SVF::MemObj']]],
+  ['gnode_26',['gNode',['../classSVF_1_1BaseObjVar.html#a6aae7f4ef1d8d7665fef183343d8d4b3',1,'SVF::BaseObjVar']]],
   ['grammar_27',['grammar',['../classSVF_1_1CFLSolver.html#a89781bbd0edd309b7c473ed154e7c11d',1,'SVF::CFLSolver::grammar'],['../classSVF_1_1GrammarBuilder.html#a7b81810150ce896801e4e6a831ab98aa',1,'SVF::GrammarBuilder::grammar'],['../classSVF_1_1CFLBase.html#a8dd040c7078b7f1a61da76849c89a640',1,'SVF::CFLBase::grammar']]],
   ['grammarbase_28',['grammarBase',['../classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f',1,'SVF::CFLBase']]],
   ['grammarfilename_29',['GrammarFilename',['../classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f',1,'SVF::Options']]],

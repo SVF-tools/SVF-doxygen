@@ -125,7 +125,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">typename</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">NodeTy</a>, <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">typename</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">EdgeTy</a>&gt;<br />
 class SVF::GenericGraphReader&lt; NodeTy, EdgeTy &gt;</div>
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00819">819</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00815">815</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a29c813df947df665d068fabe7b1fe919" name="a29c813df947df665d068fabe7b1fe919"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29c813df947df665d068fabe7b1fe919">&#9670;&#160;</a></span>createObjs()</h2>
@@ -171,44 +171,44 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00830">830</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  832</span>    {</div>
-<div class="line"><span class="lineno">  833</span>        <span class="comment">// Read nodeNum</span></div>
-<div class="line"><span class="lineno">  834</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structcJSON.html">cJSON</a>* nodeNum = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">graphJson</a>-&gt;<a class="code hl_variable" href="structcJSON.html#a401b274c2da358dac5c23ab8b2c71f85">child</a>;</div>
-<div class="line"><span class="lineno">  835</span>        <a class="code hl_define" href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a>(nodeNum);</div>
-<div class="line"><span class="lineno">  836</span>        <a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> numOfNodes = <a class="code hl_function" href="namespaceSVF.html#a0ffc17ff9b5cc328ff112e7f9ff21552">jsonGetNumber</a>(nodeNum);</div>
-<div class="line"><span class="lineno">  837</span>        (void)numOfNodes;</div>
-<div class="line"><span class="lineno">  838</span> </div>
-<div class="line"><span class="lineno">  839</span>        <span class="comment">// Read allNode</span></div>
-<div class="line"><span class="lineno">  840</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structcJSON.html">cJSON</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allNode</a> = nodeNum-&gt;<a class="code hl_variable" href="structcJSON.html#ade862b880379b5e2a591f7326401fa8d">next</a>;</div>
-<div class="line"><span class="lineno">  841</span>        <a class="code hl_define" href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allNode</a>);</div>
-<div class="line"><span class="lineno">  842</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#ae81aaaaf1c3bb461ff2929e79fd8c8f2">createObjs</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allNode</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">nodeCreator</a>);</div>
-<div class="line"><span class="lineno">  843</span>        <span class="comment">// TODO: ABORT_IFNOT(idToNodeMap.size() == numOfNodes, &quot;nodeNum mismatch&quot;);</span></div>
-<div class="line"><span class="lineno">  844</span> </div>
-<div class="line"><span class="lineno">  845</span>        <span class="comment">// Read edgeNum</span></div>
-<div class="line"><span class="lineno">  846</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structcJSON.html">cJSON</a>* edgeNum = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allNode</a>-&gt;<a class="code hl_variable" href="structcJSON.html#ade862b880379b5e2a591f7326401fa8d">next</a>;</div>
-<div class="line"><span class="lineno">  847</span>        <a class="code hl_define" href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a>(edgeNum);</div>
-<div class="line"><span class="lineno">  848</span>        <a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> numOfEdges = <a class="code hl_function" href="namespaceSVF.html#a0ffc17ff9b5cc328ff112e7f9ff21552">jsonGetNumber</a>(edgeNum);</div>
-<div class="line"><span class="lineno">  849</span>        (void)numOfEdges;</div>
-<div class="line"><span class="lineno">  850</span> </div>
-<div class="line"><span class="lineno">  851</span>        <span class="comment">// Read allEdge</span></div>
-<div class="line"><span class="lineno">  852</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structcJSON.html">cJSON</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allEdge</a> = edgeNum-&gt;<a class="code hl_variable" href="structcJSON.html#ade862b880379b5e2a591f7326401fa8d">next</a>;</div>
-<div class="line"><span class="lineno">  853</span>        <a class="code hl_define" href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allEdge</a>);</div>
-<div class="line"><span class="lineno">  854</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">edgePool</a>.<a class="code hl_function" href="classSVF_1_1ReaderPtrPool.html#ae324e7cf279e2b007a41ebea737d06f5">createObjs</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allEdge</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edgeCreator</a>);</div>
-<div class="line"><span class="lineno">  855</span>        <span class="comment">// TODO: ABORT_IFNOT(edgePool.size() == numOfEdges, &quot;edgeNum mismatch&quot;);</span></div>
-<div class="line"><span class="lineno">  856</span> </div>
-<div class="line"><span class="lineno">  857</span>        <span class="comment">// Rest fields</span></div>
-<div class="line"><span class="lineno">  858</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(!<a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88">graphFieldJson</a> &amp;&amp; <span class="stringliteral">&quot;graphFieldJson should be empty&quot;</span>);</div>
-<div class="line"><span class="lineno">  859</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88">graphFieldJson</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allEdge</a>-&gt;<a class="code hl_variable" href="structcJSON.html#ade862b880379b5e2a591f7326401fa8d">next</a>;</div>
-<div class="line"><span class="lineno">  860</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00826">826</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  828</span>    {</div>
+<div class="line"><span class="lineno">  829</span>        <span class="comment">// Read nodeNum</span></div>
+<div class="line"><span class="lineno">  830</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structcJSON.html">cJSON</a>* nodeNum = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">graphJson</a>-&gt;<a class="code hl_variable" href="structcJSON.html#a401b274c2da358dac5c23ab8b2c71f85">child</a>;</div>
+<div class="line"><span class="lineno">  831</span>        <a class="code hl_define" href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a>(nodeNum);</div>
+<div class="line"><span class="lineno">  832</span>        <a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> numOfNodes = <a class="code hl_function" href="namespaceSVF.html#a0ffc17ff9b5cc328ff112e7f9ff21552">jsonGetNumber</a>(nodeNum);</div>
+<div class="line"><span class="lineno">  833</span>        (void)numOfNodes;</div>
+<div class="line"><span class="lineno">  834</span> </div>
+<div class="line"><span class="lineno">  835</span>        <span class="comment">// Read allNode</span></div>
+<div class="line"><span class="lineno">  836</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structcJSON.html">cJSON</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allNode</a> = nodeNum-&gt;<a class="code hl_variable" href="structcJSON.html#ade862b880379b5e2a591f7326401fa8d">next</a>;</div>
+<div class="line"><span class="lineno">  837</span>        <a class="code hl_define" href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allNode</a>);</div>
+<div class="line"><span class="lineno">  838</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#ae81aaaaf1c3bb461ff2929e79fd8c8f2">createObjs</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allNode</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">nodeCreator</a>);</div>
+<div class="line"><span class="lineno">  839</span>        <span class="comment">// TODO: ABORT_IFNOT(idToNodeMap.size() == numOfNodes, &quot;nodeNum mismatch&quot;);</span></div>
+<div class="line"><span class="lineno">  840</span> </div>
+<div class="line"><span class="lineno">  841</span>        <span class="comment">// Read edgeNum</span></div>
+<div class="line"><span class="lineno">  842</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structcJSON.html">cJSON</a>* edgeNum = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allNode</a>-&gt;<a class="code hl_variable" href="structcJSON.html#ade862b880379b5e2a591f7326401fa8d">next</a>;</div>
+<div class="line"><span class="lineno">  843</span>        <a class="code hl_define" href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a>(edgeNum);</div>
+<div class="line"><span class="lineno">  844</span>        <a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> numOfEdges = <a class="code hl_function" href="namespaceSVF.html#a0ffc17ff9b5cc328ff112e7f9ff21552">jsonGetNumber</a>(edgeNum);</div>
+<div class="line"><span class="lineno">  845</span>        (void)numOfEdges;</div>
+<div class="line"><span class="lineno">  846</span> </div>
+<div class="line"><span class="lineno">  847</span>        <span class="comment">// Read allEdge</span></div>
+<div class="line"><span class="lineno">  848</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structcJSON.html">cJSON</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allEdge</a> = edgeNum-&gt;<a class="code hl_variable" href="structcJSON.html#ade862b880379b5e2a591f7326401fa8d">next</a>;</div>
+<div class="line"><span class="lineno">  849</span>        <a class="code hl_define" href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allEdge</a>);</div>
+<div class="line"><span class="lineno">  850</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">edgePool</a>.<a class="code hl_function" href="classSVF_1_1ReaderPtrPool.html#ae324e7cf279e2b007a41ebea737d06f5">createObjs</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allEdge</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edgeCreator</a>);</div>
+<div class="line"><span class="lineno">  851</span>        <span class="comment">// TODO: ABORT_IFNOT(edgePool.size() == numOfEdges, &quot;edgeNum mismatch&quot;);</span></div>
+<div class="line"><span class="lineno">  852</span> </div>
+<div class="line"><span class="lineno">  853</span>        <span class="comment">// Rest fields</span></div>
+<div class="line"><span class="lineno">  854</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(!<a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88">graphFieldJson</a> &amp;&amp; <span class="stringliteral">&quot;graphFieldJson should be empty&quot;</span>);</div>
+<div class="line"><span class="lineno">  855</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88">graphFieldJson</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">allEdge</a>-&gt;<a class="code hl_variable" href="structcJSON.html#ade862b880379b5e2a591f7326401fa8d">next</a>;</div>
+<div class="line"><span class="lineno">  856</span>    }</div>
 <div class="ttc" id="aCommandLine_8h_html_a2429346d37bd4c40889bd7c6d319d9da"><div class="ttname"><a href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a></div><div class="ttdeci">unsigned u32_t</div><div class="ttdef"><b>Definition</b> <a href="CommandLine_8h_source.html#l00018">CommandLine.h:18</a></div></div>
 <div class="ttc" id="aSVFFileSystem_8h_html_a8c3c95bd6414e7960ccfd878132749ec"><div class="ttname"><a href="SVFFileSystem_8h.html#a8c3c95bd6414e7960ccfd878132749ec">CHECK_JSON_KEY</a></div><div class="ttdeci">#define CHECK_JSON_KEY(obj)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00096">SVFFileSystem.h:96</a></div></div>
-<div class="ttc" id="aclassSVF_1_1GenericGraphReader_html_a2438233e46ad0a052ec1352de977df88"><div class="ttname"><a href="classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88">SVF::GenericGraphReader::graphFieldJson</a></div><div class="ttdeci">const cJSON * graphFieldJson</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00826">SVFFileSystem.h:826</a></div></div>
-<div class="ttc" id="aclassSVF_1_1GenericGraphReader_html_a2fc2248a433201314c636856603cb3fa"><div class="ttname"><a href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">SVF::GenericGraphReader::idToNodeMap</a></div><div class="ttdeci">ReaderIDToObjMap&lt; NodeTy &gt; idToNodeMap</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00822">SVFFileSystem.h:822</a></div></div>
-<div class="ttc" id="aclassSVF_1_1GenericGraphReader_html_a3d975e78d6ac1090c4bd6095429d2ab3"><div class="ttname"><a href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">SVF::GenericGraphReader::edgePool</a></div><div class="ttdeci">ReaderPtrPool&lt; EdgeTy &gt; edgePool</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00823">SVFFileSystem.h:823</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_ae81aaaaf1c3bb461ff2929e79fd8c8f2"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#ae81aaaaf1c3bb461ff2929e79fd8c8f2">SVF::ReaderIDToObjMap::createObjs</a></div><div class="ttdeci">void createObjs(const cJSON *idObjArrayJson, IdObjCreator idObjCreator)</div><div class="ttdoc">idObjcreator : (const cJSON*) -&gt; (id, T*) with id set</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00691">SVFFileSystem.h:691</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ReaderPtrPool_html_ae324e7cf279e2b007a41ebea737d06f5"><div class="ttname"><a href="classSVF_1_1ReaderPtrPool.html#ae324e7cf279e2b007a41ebea737d06f5">SVF::ReaderPtrPool::createObjs</a></div><div class="ttdeci">void createObjs(const cJSON *objArrayJson, Creator creator)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00767">SVFFileSystem.h:767</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_a0ffc17ff9b5cc328ff112e7f9ff21552"><div class="ttname"><a href="namespaceSVF.html#a0ffc17ff9b5cc328ff112e7f9ff21552">SVF::jsonGetNumber</a></div><div class="ttdeci">double jsonGetNumber(const cJSON *item)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8cpp_source.html#l00881">SVFFileSystem.cpp:881</a></div></div>
+<div class="ttc" id="aclassSVF_1_1GenericGraphReader_html_a2438233e46ad0a052ec1352de977df88"><div class="ttname"><a href="classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88">SVF::GenericGraphReader::graphFieldJson</a></div><div class="ttdeci">const cJSON * graphFieldJson</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00822">SVFFileSystem.h:822</a></div></div>
+<div class="ttc" id="aclassSVF_1_1GenericGraphReader_html_a2fc2248a433201314c636856603cb3fa"><div class="ttname"><a href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">SVF::GenericGraphReader::idToNodeMap</a></div><div class="ttdeci">ReaderIDToObjMap&lt; NodeTy &gt; idToNodeMap</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00818">SVFFileSystem.h:818</a></div></div>
+<div class="ttc" id="aclassSVF_1_1GenericGraphReader_html_a3d975e78d6ac1090c4bd6095429d2ab3"><div class="ttname"><a href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">SVF::GenericGraphReader::edgePool</a></div><div class="ttdeci">ReaderPtrPool&lt; EdgeTy &gt; edgePool</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00819">SVFFileSystem.h:819</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_ae81aaaaf1c3bb461ff2929e79fd8c8f2"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#ae81aaaaf1c3bb461ff2929e79fd8c8f2">SVF::ReaderIDToObjMap::createObjs</a></div><div class="ttdeci">void createObjs(const cJSON *idObjArrayJson, IdObjCreator idObjCreator)</div><div class="ttdoc">idObjcreator : (const cJSON*) -&gt; (id, T*) with id set</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00687">SVFFileSystem.h:687</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ReaderPtrPool_html_ae324e7cf279e2b007a41ebea737d06f5"><div class="ttname"><a href="classSVF_1_1ReaderPtrPool.html#ae324e7cf279e2b007a41ebea737d06f5">SVF::ReaderPtrPool::createObjs</a></div><div class="ttdeci">void createObjs(const cJSON *objArrayJson, Creator creator)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00763">SVFFileSystem.h:763</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a0ffc17ff9b5cc328ff112e7f9ff21552"><div class="ttname"><a href="namespaceSVF.html#a0ffc17ff9b5cc328ff112e7f9ff21552">SVF::jsonGetNumber</a></div><div class="ttdeci">double jsonGetNumber(const cJSON *item)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8cpp_source.html#l00834">SVFFileSystem.cpp:834</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00074">BasicTypes.h:74</a></div></div>
 <div class="ttc" id="astructcJSON_html"><div class="ttname"><a href="structcJSON.html">cJSON</a></div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00103">cJSON.h:104</a></div></div>
 <div class="ttc" id="astructcJSON_html_a401b274c2da358dac5c23ab8b2c71f85"><div class="ttname"><a href="structcJSON.html#a401b274c2da358dac5c23ab8b2c71f85">cJSON::child</a></div><div class="ttdeci">struct cJSON * child</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00109">cJSON.h:109</a></div></div>
@@ -254,17 +254,17 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00873">873</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  874</span>    {</div>
-<div class="line"><span class="lineno">  875</span>        <span class="comment">// GenericNode&lt;&gt; contains field `InEdges` and `OutEdges`, which are</span></div>
-<div class="line"><span class="lineno">  876</span>        <span class="comment">// ordered set of edges with comparator `GenericEdge::equalGEdge()`,</span></div>
-<div class="line"><span class="lineno">  877</span>        <span class="comment">// which need operands `src` and `dst` to be non-null to get IDs, so we</span></div>
-<div class="line"><span class="lineno">  878</span>        <span class="comment">// need to fill nodes first.</span></div>
-<div class="line"><span class="lineno">  879</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">edgePool</a>.<a class="code hl_function" href="classSVF_1_1ReaderPtrPool.html#acadb656fef08773e3d3a196cc34bc59d">fillObjs</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edgeFiller</a>);</div>
-<div class="line"><span class="lineno">  880</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#a8d677d0e7e3722fd9c47f02b33363b47">fillObjs</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">nodeFiller</a>);</div>
-<div class="line"><span class="lineno">  881</span>    }</div>
-<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_a8d677d0e7e3722fd9c47f02b33363b47"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#a8d677d0e7e3722fd9c47f02b33363b47">SVF::ReaderIDToObjMap::fillObjs</a></div><div class="ttdeci">void fillObjs(FillFunc fillFunc)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00717">SVFFileSystem.h:717</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ReaderPtrPool_html_acadb656fef08773e3d3a196cc34bc59d"><div class="ttname"><a href="classSVF_1_1ReaderPtrPool.html#acadb656fef08773e3d3a196cc34bc59d">SVF::ReaderPtrPool::fillObjs</a></div><div class="ttdeci">void fillObjs(FillFunc fillFunc)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00790">SVFFileSystem.h:790</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00869">869</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  870</span>    {</div>
+<div class="line"><span class="lineno">  871</span>        <span class="comment">// GenericNode&lt;&gt; contains field `InEdges` and `OutEdges`, which are</span></div>
+<div class="line"><span class="lineno">  872</span>        <span class="comment">// ordered set of edges with comparator `GenericEdge::equalGEdge()`,</span></div>
+<div class="line"><span class="lineno">  873</span>        <span class="comment">// which need operands `src` and `dst` to be non-null to get IDs, so we</span></div>
+<div class="line"><span class="lineno">  874</span>        <span class="comment">// need to fill nodes first.</span></div>
+<div class="line"><span class="lineno">  875</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">edgePool</a>.<a class="code hl_function" href="classSVF_1_1ReaderPtrPool.html#acadb656fef08773e3d3a196cc34bc59d">fillObjs</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edgeFiller</a>);</div>
+<div class="line"><span class="lineno">  876</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#a8d677d0e7e3722fd9c47f02b33363b47">fillObjs</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">nodeFiller</a>);</div>
+<div class="line"><span class="lineno">  877</span>    }</div>
+<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_a8d677d0e7e3722fd9c47f02b33363b47"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#a8d677d0e7e3722fd9c47f02b33363b47">SVF::ReaderIDToObjMap::fillObjs</a></div><div class="ttdeci">void fillObjs(FillFunc fillFunc)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00713">SVFFileSystem.h:713</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ReaderPtrPool_html_acadb656fef08773e3d3a196cc34bc59d"><div class="ttname"><a href="classSVF_1_1ReaderPtrPool.html#acadb656fef08773e3d3a196cc34bc59d">SVF::ReaderPtrPool::fillObjs</a></div><div class="ttdeci">void fillObjs(FillFunc fillFunc)</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00786">SVFFileSystem.h:786</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -294,11 +294,11 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00867">867</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  868</span>    {</div>
-<div class="line"><span class="lineno">  869</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">edgePool</a>.<a class="code hl_function" href="classSVF_1_1ReaderPtrPool.html#a9e474c908dd262c29a669c6e298096ec">getPtr</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  870</span>    }</div>
-<div class="ttc" id="aclassSVF_1_1ReaderPtrPool_html_a9e474c908dd262c29a669c6e298096ec"><div class="ttname"><a href="classSVF_1_1ReaderPtrPool.html#a9e474c908dd262c29a669c6e298096ec">SVF::ReaderPtrPool::getPtr</a></div><div class="ttdeci">T * getPtr(size_t id) const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00783">SVFFileSystem.h:783</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00863">863</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  864</span>    {</div>
+<div class="line"><span class="lineno">  865</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">edgePool</a>.<a class="code hl_function" href="classSVF_1_1ReaderPtrPool.html#a9e474c908dd262c29a669c6e298096ec">getPtr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  866</span>    }</div>
+<div class="ttc" id="aclassSVF_1_1ReaderPtrPool_html_a9e474c908dd262c29a669c6e298096ec"><div class="ttname"><a href="classSVF_1_1ReaderPtrPool.html#a9e474c908dd262c29a669c6e298096ec">SVF::ReaderPtrPool::getPtr</a></div><div class="ttdeci">T * getPtr(size_t id) const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00779">SVFFileSystem.h:779</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -327,10 +327,10 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00890">890</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  891</span>    {</div>
-<div class="line"><span class="lineno">  892</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88">graphFieldJson</a>;</div>
-<div class="line"><span class="lineno">  893</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00886">886</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  887</span>    {</div>
+<div class="line"><span class="lineno">  888</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88">graphFieldJson</a>;</div>
+<div class="line"><span class="lineno">  889</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -360,11 +360,11 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00862">862</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  863</span>    {</div>
-<div class="line"><span class="lineno">  864</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#a5d50058c1757bb0bb94ee18d2944cd4a">getPtr</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  865</span>    }</div>
-<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_a5d50058c1757bb0bb94ee18d2944cd4a"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#a5d50058c1757bb0bb94ee18d2944cd4a">SVF::ReaderIDToObjMap::getPtr</a></div><div class="ttdeci">T * getPtr(unsigned id) const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00710">SVFFileSystem.h:710</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00858">858</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  859</span>    {</div>
+<div class="line"><span class="lineno">  860</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#a5d50058c1757bb0bb94ee18d2944cd4a">getPtr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  861</span>    }</div>
+<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_a5d50058c1757bb0bb94ee18d2944cd4a"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#a5d50058c1757bb0bb94ee18d2944cd4a">SVF::ReaderIDToObjMap::getPtr</a></div><div class="ttdeci">T * getPtr(unsigned id) const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00706">SVFFileSystem.h:706</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -394,15 +394,15 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00883">883</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  884</span>    {</div>
-<div class="line"><span class="lineno">  885</span>        graph-&gt;edgeNum = <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">edgePool</a>.<a class="code hl_function" href="classSVF_1_1ReaderPtrPool.html#ab47d82a98973b27bf635c0bd3acb7163">size</a>();</div>
-<div class="line"><span class="lineno">  886</span>        graph-&gt;nodeNum = <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#a8a0810c1419004eee30cad5696476bdd">size</a>();</div>
-<div class="line"><span class="lineno">  887</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#a8c39d643a10d83a7f525ace9a002844c">saveToIDToObjMap</a>(graph-&gt;IDToNodeMap);</div>
-<div class="line"><span class="lineno">  888</span>    }</div>
-<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_a8a0810c1419004eee30cad5696476bdd"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#a8a0810c1419004eee30cad5696476bdd">SVF::ReaderIDToObjMap::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00730">SVFFileSystem.h:730</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_a8c39d643a10d83a7f525ace9a002844c"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#a8c39d643a10d83a7f525ace9a002844c">SVF::ReaderIDToObjMap::saveToIDToObjMap</a></div><div class="ttdeci">void saveToIDToObjMap(Map &amp;idToObjMap) const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00735">SVFFileSystem.h:735</a></div></div>
-<div class="ttc" id="aclassSVF_1_1ReaderPtrPool_html_ab47d82a98973b27bf635c0bd3acb7163"><div class="ttname"><a href="classSVF_1_1ReaderPtrPool.html#ab47d82a98973b27bf635c0bd3acb7163">SVF::ReaderPtrPool::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00805">SVFFileSystem.h:805</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00879">879</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  880</span>    {</div>
+<div class="line"><span class="lineno">  881</span>        graph-&gt;edgeNum = <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a3d975e78d6ac1090c4bd6095429d2ab3">edgePool</a>.<a class="code hl_function" href="classSVF_1_1ReaderPtrPool.html#ab47d82a98973b27bf635c0bd3acb7163">size</a>();</div>
+<div class="line"><span class="lineno">  882</span>        graph-&gt;nodeNum = <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#a8a0810c1419004eee30cad5696476bdd">size</a>();</div>
+<div class="line"><span class="lineno">  883</span>        <a class="code hl_variable" href="classSVF_1_1GenericGraphReader.html#a2fc2248a433201314c636856603cb3fa">idToNodeMap</a>.<a class="code hl_function" href="classSVF_1_1ReaderIDToObjMap.html#a8c39d643a10d83a7f525ace9a002844c">saveToIDToObjMap</a>(graph-&gt;IDToNodeMap);</div>
+<div class="line"><span class="lineno">  884</span>    }</div>
+<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_a8a0810c1419004eee30cad5696476bdd"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#a8a0810c1419004eee30cad5696476bdd">SVF::ReaderIDToObjMap::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00726">SVFFileSystem.h:726</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ReaderIDToObjMap_html_a8c39d643a10d83a7f525ace9a002844c"><div class="ttname"><a href="classSVF_1_1ReaderIDToObjMap.html#a8c39d643a10d83a7f525ace9a002844c">SVF::ReaderIDToObjMap::saveToIDToObjMap</a></div><div class="ttdeci">void saveToIDToObjMap(Map &amp;idToObjMap) const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00731">SVFFileSystem.h:731</a></div></div>
+<div class="ttc" id="aclassSVF_1_1ReaderPtrPool_html_ab47d82a98973b27bf635c0bd3acb7163"><div class="ttname"><a href="classSVF_1_1ReaderPtrPool.html#ab47d82a98973b27bf635c0bd3acb7163">SVF::ReaderPtrPool::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition</b> <a href="SVFFileSystem_8h_source.html#l00801">SVFFileSystem.h:801</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -429,7 +429,7 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00823">823</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00819">819</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00826">826</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00822">822</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +481,7 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00822">822</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SVFFileSystem_8h_source.html#l00818">818</a> of file <a class="el" href="SVFFileSystem_8h_source.html">SVFFileSystem.h</a>.</p>
 
 </div>
 </div>
