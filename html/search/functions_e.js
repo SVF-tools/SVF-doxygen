@@ -27,6 +27,5 @@ var searchData=
   ['nullptrvfgnode_24',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html#a5bbcd7ba5ac40efefbd1ef99bea86639',1,'SVF::NullPtrVFGNode']]],
   ['num_5fgenerator_25',['num_generator',['../classSVF_1_1CFGrammar.html#a4d98bd2fee3d88558ed2b59c3d0d0d57',1,'SVF::CFGrammar']]],
   ['numedgedestlabels_26',['numEdgeDestLabels',['../structSVF_1_1DefaultDOTGraphTraits.html#a94f582264d3020f36a2ca3bdfbdaf81b',1,'SVF::DefaultDOTGraphTraits']]],
-  ['numelement_27',['numElement',['../classSVF_1_1CondPointsToSet.html#a8d8f9e91b62b94d876f34066de7944d4',1,'SVF::CondPointsToSet']]],
-  ['numtostr_28',['numToStr',['../classSVF_1_1SVFIRWriter.html#a10ce46b10bad5f0f3dbcff5bf5818626',1,'SVF::SVFIRWriter']]]
+  ['numelement_27',['numElement',['../classSVF_1_1CondPointsToSet.html#a8d8f9e91b62b94d876f34066de7944d4',1,'SVF::CondPointsToSet']]]
 ];

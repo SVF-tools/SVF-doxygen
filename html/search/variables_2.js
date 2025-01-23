@@ -2,7 +2,7 @@ var searchData=
 [
   ['b_0',['b',['../cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c',1,'b:&#160;cJSON.h'],['../cJSON_8cpp.html#a1a175e87536301df98c805ac0636ad7c',1,'b:&#160;cJSON.cpp']]],
   ['backicfgedges_1',['backICFGEdges',['../classSVF_1_1SVFLoop.html#aed4400521f825802719ac97a18452230',1,'SVF::SVFLoop']]],
-  ['backwardslice_2',['backwardslice',['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice'],['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice']]],
+  ['backwardslice_2',['backwardslice',['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice'],['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice']]],
   ['backwardvisited_3',['backwardVisited',['../classSVF_1_1DDAVFSolver.html#a63d04c3af4529d0e0f82acd76ed57f6c',1,'SVF::DDAVFSolver']]],
   ['base_4',['base',['../classSVF_1_1GepObjVar.html#a36c6eea5c4a63e82b34b778d573bab15',1,'SVF::GepObjVar::base'],['../classSVF_1_1GepValVar.html#a70430f9ec9d7a2feeef3d159d5c464a0',1,'SVF::GepValVar::base']]],
   ['baseids_5',['baseIds',['../classSVF_1_1ConstraintNode.html#ac40ecefd565e029748fdacbc44c4cd54',1,'SVF::ConstraintNode']]],

@@ -107,8 +107,7 @@ var searchData=
   ['numprelabelversions_104',['numPrelabelVersions',['../classSVF_1_1VersionedFlowSensitive.html#a207ae4d1f2e0ccab8e36add0a45578af',1,'SVF::VersionedFlowSensitive']]],
   ['numregions_105',['NumRegions',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ac5fe44f10cdbca9754444943a0f5c3c1',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['numsymbols_106',['numSymbols',['../classSVF_1_1NodeIDAllocator.html#a3a160f4c6e761a130b863a3df0af7f96',1,'SVF::NodeIDAllocator']]],
-  ['numtostrmap_107',['numToStrMap',['../classSVF_1_1SVFIRWriter.html#a7f9d7bb88e4f98f71f542d01107878e4',1,'SVF::SVFIRWriter']]],
-  ['numtypes_108',['numTypes',['../classSVF_1_1DCHGraph.html#a76fd3154a31584bb64683f2d762cc56c',1,'SVF::DCHGraph']]],
-  ['numvalues_109',['numValues',['../classSVF_1_1NodeIDAllocator.html#a001c25f6998b8b0a9a7e5e00810e155f',1,'SVF::NodeIDAllocator']]],
-  ['nvthunkfunlabel_110',['NVThunkFunLabel',['../CppUtil_8cpp.html#a86fe6d521904f944bcf1b3164cfb5d4b',1,'CppUtil.cpp']]]
+  ['numtypes_107',['numTypes',['../classSVF_1_1DCHGraph.html#a76fd3154a31584bb64683f2d762cc56c',1,'SVF::DCHGraph']]],
+  ['numvalues_108',['numValues',['../classSVF_1_1NodeIDAllocator.html#a001c25f6998b8b0a9a7e5e00810e155f',1,'SVF::NodeIDAllocator']]],
+  ['nvthunkfunlabel_109',['NVThunkFunLabel',['../CppUtil_8cpp.html#a86fe6d521904f944bcf1b3164cfb5d4b',1,'CppUtil.cpp']]]
 ];

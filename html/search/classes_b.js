@@ -1,27 +1,8 @@
 var searchData=
 [
-  ['make_5fvoid_0',['make_void',['../structSVF_1_1SVFUtil_1_1make__void.html',1,'SVF::SVFUtil']]],
-  ['mapped_5fiter_1',['mapped_iter',['../classSVF_1_1mapped__iter.html',1,'SVF']]],
-  ['memregion_2',['MemRegion',['../classSVF_1_1MemRegion.html',1,'SVF']]],
-  ['memssa_3',['MemSSA',['../classSVF_1_1MemSSA.html',1,'SVF']]],
-  ['memssastat_4',['MemSSAStat',['../classSVF_1_1MemSSAStat.html',1,'SVF']]],
-  ['mergefunctionrets_5',['MergeFunctionRets',['../classSVF_1_1MergeFunctionRets.html',1,'SVF']]],
-  ['mhp_6',['MHP',['../classSVF_1_1MHP.html',1,'SVF']]],
-  ['mrgenerator_7',['MRGenerator',['../classSVF_1_1MRGenerator.html',1,'SVF']]],
-  ['mrsvfgnode_8',['MRSVFGNode',['../classSVF_1_1MRSVFGNode.html',1,'SVF']]],
-  ['mrver_9',['MRVer',['../classSVF_1_1MRVer.html',1,'SVF']]],
-  ['mssachi_10',['MSSACHI',['../classSVF_1_1MSSACHI.html',1,'SVF']]],
-  ['mssadef_11',['MSSADEF',['../classSVF_1_1MSSADEF.html',1,'SVF']]],
-  ['mssamu_12',['MSSAMU',['../classSVF_1_1MSSAMU.html',1,'SVF']]],
-  ['mssaphi_13',['MSSAPHI',['../classSVF_1_1MSSAPHI.html',1,'SVF']]],
-  ['mssaphisvfgnode_14',['MSSAPHISVFGNode',['../classSVF_1_1MSSAPHISVFGNode.html',1,'SVF']]],
-  ['mta_15',['MTA',['../classSVF_1_1MTA.html',1,'SVF']]],
-  ['mtastat_16',['MTAStat',['../classSVF_1_1MTAStat.html',1,'SVF']]],
-  ['multiopndstmt_17',['MultiOpndStmt',['../classSVF_1_1MultiOpndStmt.html',1,'SVF']]],
-  ['mutabledfptdata_18',['MutableDFPTData',['../classSVF_1_1MutableDFPTData.html',1,'SVF']]],
-  ['mutablediffptdata_19',['MutableDiffPTData',['../classSVF_1_1MutableDiffPTData.html',1,'SVF']]],
-  ['mutableincdfptdata_20',['MutableIncDFPTData',['../classSVF_1_1MutableIncDFPTData.html',1,'SVF']]],
-  ['mutableptdata_21',['MutablePTData',['../classSVF_1_1MutablePTData.html',1,'SVF']]],
-  ['mutableptdata_3c_20versionedkey_2c_20versionedkeyset_2c_20data_2c_20dataset_20_3e_22',['MutablePTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;',['../classSVF_1_1MutablePTData.html',1,'SVF']]],
-  ['mutableversionedptdata_23',['MutableVersionedPTData',['../classSVF_1_1MutableVersionedPTData.html',1,'SVF']]]
+  ['neverfreebug_0',['NeverFreeBug',['../classSVF_1_1NeverFreeBug.html',1,'SVF']]],
+  ['nodedata_1',['NodeData',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html',1,'SVF::VersionedFlowSensitive::SCC']]],
+  ['nodeidallocator_2',['NodeIDAllocator',['../classSVF_1_1NodeIDAllocator.html',1,'SVF']]],
+  ['normalgepcgedge_3',['NormalGepCGEdge',['../classSVF_1_1NormalGepCGEdge.html',1,'SVF']]],
+  ['nullptrvfgnode_4',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html',1,'SVF']]]
 ];

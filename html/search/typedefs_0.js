@@ -17,7 +17,5 @@ var searchData=
   ['arraytype_14',['ArrayType',['../namespaceSVF.html#a146d286041987860388da3d8bc85cee3',1,'SVF']]],
   ['atomiccmpxchginst_15',['AtomicCmpXchgInst',['../namespaceSVF.html#a582e3736a2bbb0540364c1693d831b49',1,'SVF']]],
   ['atomicrmwinst_16',['AtomicRMWInst',['../namespaceSVF.html#a468154e0ab9e7be82afef1aa0a2fb9e0',1,'SVF']]],
-  ['attribute_17',['Attribute',['../classSVF_1_1GrammarBase.html#ab070e5449d26e347b957d8b994d0303f',1,'SVF::GrammarBase']]],
-  ['autocstr_18',['autoCStr',['../classSVF_1_1SVFIRWriter.html#a1e568e5b4a081aad92e86646f419413c',1,'SVF::SVFIRWriter']]],
-  ['autojson_19',['autoJSON',['../classSVF_1_1SVFIRWriter.html#a63bdba43ccb01eef8ceb8a9c8dbe5c7f',1,'SVF::SVFIRWriter']]]
+  ['attribute_17',['Attribute',['../classSVF_1_1GrammarBase.html#ab070e5449d26e347b957d8b994d0303f',1,'SVF::GrammarBase']]]
 ];

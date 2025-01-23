@@ -4018,8 +4018,8 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SVFGReadWrite_8cpp_source.html#l00207">207</a> of file <a class="el" href="SVFGReadWrite_8cpp_source.html">SVFGReadWrite.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  208</span>{</div>
 <div class="line"><span class="lineno">  209</span>    <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;Loading SVFG analysis results from &#39;&quot;</span> &lt;&lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">filename</a> &lt;&lt; <span class="stringliteral">&quot;&#39;...&quot;</span>;</div>
-<div class="line"><span class="lineno">  210</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ifstream</a> <a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">filename</a>.c_str());</div>
-<div class="line"><span class="lineno">  211</span>    <span class="keywordflow">if</span> (!<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>.is_open())</div>
+<div class="line"><span class="lineno">  210</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ifstream</a> F(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">filename</a>.c_str());</div>
+<div class="line"><span class="lineno">  211</span>    <span class="keywordflow">if</span> (!F.is_open())</div>
 <div class="line"><span class="lineno">  212</span>    {</div>
 <div class="line"><span class="lineno">  213</span>        <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot; error opening file for reading!\n&quot;</span>;</div>
 <div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span>;</div>
@@ -4038,9 +4038,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  227</span>    <span class="keywordtype">string</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>;</div>
 <div class="line"><span class="lineno">  228</span>    <span class="comment">// add nodes</span></div>
 <div class="line"><span class="lineno">  229</span>    <a class="code hl_variable" href="classSVF_1_1SVFG.html#ad5c1415f488ec4412d5457262269eff3">stat</a>-&gt;<a class="code hl_function" href="classSVF_1_1SVFGStat.html#a4bf9a39b93b7254f627dd393b9f2b82c">ATVFNodeStart</a>();</div>
-<div class="line"><span class="lineno">  230</span>    <span class="keywordflow">while</span> (<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>.good())</div>
+<div class="line"><span class="lineno">  230</span>    <span class="keywordflow">while</span> (F.good())</div>
 <div class="line"><span class="lineno">  231</span>    {</div>
-<div class="line"><span class="lineno">  232</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
+<div class="line"><span class="lineno">  232</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(F, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
 <div class="line"><span class="lineno">  233</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>.empty())</div>
 <div class="line"><span class="lineno">  234</span>            <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  235</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>.find(<span class="stringliteral">&quot;__Edges__&quot;</span>) != std::string::npos)</div>
@@ -4157,9 +4157,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  346</span> </div>
 <div class="line"><span class="lineno">  347</span>    <a class="code hl_variable" href="classSVF_1_1SVFG.html#ad5c1415f488ec4412d5457262269eff3">stat</a>-&gt;<a class="code hl_function" href="classSVF_1_1SVFGStat.html#adcb30427bb220dc122ad22030e10eb21">indVFEdgeStart</a>();</div>
 <div class="line"><span class="lineno">  348</span>    <span class="comment">// Edges</span></div>
-<div class="line"><span class="lineno">  349</span>    <span class="keywordflow">while</span> (<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>.good())</div>
+<div class="line"><span class="lineno">  349</span>    <span class="keywordflow">while</span> (F.good())</div>
 <div class="line"><span class="lineno">  350</span>    {</div>
-<div class="line"><span class="lineno">  351</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
+<div class="line"><span class="lineno">  351</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(F, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
 <div class="line"><span class="lineno">  352</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>.empty())</div>
 <div class="line"><span class="lineno">  353</span>            <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  354</span> </div>
@@ -4238,7 +4238,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  427</span>    <a class="code hl_variable" href="classSVF_1_1SVFG.html#ad5c1415f488ec4412d5457262269eff3">stat</a>-&gt;<a class="code hl_function" href="classSVF_1_1SVFGStat.html#a8b3b9a211f410e67e8fd1a79d3db9023">indVFEdgeEnd</a>();</div>
 <div class="line"><span class="lineno">  428</span>    <a class="code hl_function" href="classSVF_1_1SVFG.html#a5921483cd5e1bf77b1b2bc8fb3250612">connectFromGlobalToProgEntry</a>();</div>
 <div class="line"><span class="lineno">  429</span>}</div>
-<div class="ttc" id="aSVFFileSystem_8cpp_html_ab25baccb41e3b67ef0bfdaa1336c9649"><div class="ttname"><a href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a></div><div class="ttdeci">#define F(f)</div></div>
 <div class="ttc" id="acJSON_8cpp_html_a3f9a0d3265a6254722587175dac3e4dc"><div class="ttname"><a href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a></div><div class="ttdeci">newitem type</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l02739">cJSON.cpp:2739</a></div></div>
 <div class="ttc" id="acJSON_8h_html_a750b5d744c39a06bfb13e6eb010e35d0"><div class="ttname"><a href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00170">cJSON.h:170</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFG_html_a63c770f06308e101a7f3987d8ca3aac9"><div class="ttname"><a href="classSVF_1_1ICFG.html#a63c770f06308e101a7f3987d8ca3aac9">SVF::ICFG::getICFGNode</a></div><div class="ttdeci">ICFGNode * getICFGNode(NodeID id) const</div><div class="ttdoc">Get a ICFG node.</div><div class="ttdef"><b>Definition</b> <a href="ICFG_8h_source.html#l00086">ICFG.h:86</a></div></div>

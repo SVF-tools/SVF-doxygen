@@ -1,13 +1,16 @@
 var searchData=
 [
-  ['valvar_0',['ValVar',['../classSVF_1_1ValVar.html',1,'SVF']]],
-  ['varargpn_1',['VarArgPN',['../classSVF_1_1VarArgPN.html',1,'SVF']]],
-  ['variantgepcgedge_2',['VariantGepCGEdge',['../classSVF_1_1VariantGepCGEdge.html',1,'SVF']]],
-  ['versionedflowsensitive_3',['VersionedFlowSensitive',['../classSVF_1_1VersionedFlowSensitive.html',1,'SVF']]],
-  ['versionedflowsensitivestat_4',['VersionedFlowSensitiveStat',['../classSVF_1_1VersionedFlowSensitiveStat.html',1,'SVF']]],
-  ['versionedptdata_5',['VersionedPTData',['../classSVF_1_1VersionedPTData.html',1,'SVF']]],
-  ['vfcflgraphbuilder_6',['VFCFLGraphBuilder',['../classSVF_1_1VFCFLGraphBuilder.html',1,'SVF']]],
-  ['vfg_7',['VFG',['../classSVF_1_1VFG.html',1,'SVF']]],
-  ['vfgedge_8',['VFGEdge',['../classSVF_1_1VFGEdge.html',1,'SVF']]],
-  ['vfgnode_9',['VFGNode',['../classSVF_1_1VFGNode.html',1,'SVF']]]
+  ['wpafssolver_0',['WPAFSSolver',['../classSVF_1_1WPAFSSolver.html',1,'SVF']]],
+  ['wpaminimumsolver_1',['WPAMinimumSolver',['../classSVF_1_1WPAMinimumSolver.html',1,'SVF']]],
+  ['wpapass_2',['WPAPass',['../classSVF_1_1WPAPass.html',1,'SVF']]],
+  ['wpasccsolver_3',['WPASCCSolver',['../classSVF_1_1WPASCCSolver.html',1,'SVF']]],
+  ['wpasolver_4',['WPASolver',['../classSVF_1_1WPASolver.html',1,'SVF']]],
+  ['wto_5',['WTO',['../classSVF_1_1WTO.html',1,'SVF']]],
+  ['wto_3c_20icfg_20_3e_6',['WTO&lt; ICFG &gt;',['../classSVF_1_1WTO.html',1,'SVF']]],
+  ['wtocomponent_7',['WTOComponent',['../classSVF_1_1WTOComponent.html',1,'SVF']]],
+  ['wtocomponentvisitor_8',['WTOComponentVisitor',['../classSVF_1_1WTOComponentVisitor.html',1,'SVF']]],
+  ['wtocycle_9',['WTOCycle',['../classSVF_1_1WTOCycle.html',1,'SVF']]],
+  ['wtocycledepth_10',['WTOCycleDepth',['../classSVF_1_1WTOCycleDepth.html',1,'SVF']]],
+  ['wtocycledepthbuilder_11',['WTOCycleDepthBuilder',['../classSVF_1_1WTO_1_1WTOCycleDepthBuilder.html',1,'SVF::WTO']]],
+  ['wtonode_12',['WTONode',['../classSVF_1_1WTONode.html',1,'SVF']]]
 ];

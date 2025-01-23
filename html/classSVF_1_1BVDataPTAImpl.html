@@ -2123,9 +2123,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  386</span>{</div>
 <div class="line"><span class="lineno">  387</span>    <span class="keywordtype">string</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>;</div>
 <div class="line"><span class="lineno">  388</span>    <span class="comment">// //update ObjVar status</span></div>
-<div class="line"><span class="lineno">  389</span>    <span class="keywordflow">while</span> (<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>.good())</div>
+<div class="line"><span class="lineno">  389</span>    <span class="keywordflow">while</span> (F.good())</div>
 <div class="line"><span class="lineno">  390</span>    {</div>
-<div class="line"><span class="lineno">  391</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
+<div class="line"><span class="lineno">  391</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(F, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
 <div class="line"><span class="lineno">  392</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>.empty() || <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a> == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">delimiterStr</a>)</div>
 <div class="line"><span class="lineno">  393</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  394</span>        <span class="comment">// Parse a single line in the form of &quot;baseNodeID insensitive&quot;</span></div>
@@ -2139,7 +2139,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  402</span>    }</div>
 <div class="line"><span class="lineno">  403</span> </div>
 <div class="line"><span class="lineno">  404</span>}</div>
-<div class="ttc" id="aSVFFileSystem_8cpp_html_ab25baccb41e3b67ef0bfdaa1336c9649"><div class="ttname"><a href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a></div><div class="ttdeci">#define F(f)</div></div>
 <div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_ac5683fe2e24b393ccc5cb6d8bc92cf2b"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#ac5683fe2e24b393ccc5cb6d8bc92cf2b">SVF::PointerAnalysis::setObjFieldInsensitive</a></div><div class="ttdeci">void setObjFieldInsensitive(NodeID id)</div><div class="ttdef"><b>Definition</b> <a href="PointerAnalysis_8h_source.html#l00340">PointerAnalysis.h:340</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2174,25 +2173,25 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  413</span> </div>
 <div class="line"><span class="lineno">  414</span>    <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;Loading pointer analysis results from &#39;&quot;</span> &lt;&lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">filename</a> &lt;&lt; <span class="stringliteral">&quot;&#39;...&quot;</span>;</div>
 <div class="line"><span class="lineno">  415</span> </div>
-<div class="line"><span class="lineno">  416</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ifstream</a> <a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">filename</a>.c_str());</div>
-<div class="line"><span class="lineno">  417</span>    <span class="keywordflow">if</span> (!<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>.is_open())</div>
+<div class="line"><span class="lineno">  416</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ifstream</a> F(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">filename</a>.c_str());</div>
+<div class="line"><span class="lineno">  417</span>    <span class="keywordflow">if</span> (!F.is_open())</div>
 <div class="line"><span class="lineno">  418</span>    {</div>
 <div class="line"><span class="lineno">  419</span>        <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;  error opening file for reading!\n&quot;</span>;</div>
 <div class="line"><span class="lineno">  420</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  421</span>    }</div>
 <div class="line"><span class="lineno">  422</span> </div>
-<div class="line"><span class="lineno">  423</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#a4ad982a53fbf62c5513afe63b2435fa5">readAndSetObjFieldSensitivity</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>,<span class="stringliteral">&quot;------&quot;</span>);</div>
+<div class="line"><span class="lineno">  423</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#a4ad982a53fbf62c5513afe63b2435fa5">readAndSetObjFieldSensitivity</a>(F,<span class="stringliteral">&quot;------&quot;</span>);</div>
 <div class="line"><span class="lineno">  424</span> </div>
-<div class="line"><span class="lineno">  425</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#af4e17ce3667d40d1a377508a275af384">readPtsResultFromFile</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>);</div>
+<div class="line"><span class="lineno">  425</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#af4e17ce3667d40d1a377508a275af384">readPtsResultFromFile</a>(F);</div>
 <div class="line"><span class="lineno">  426</span> </div>
-<div class="line"><span class="lineno">  427</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#afce21c2a8fca8a2eae4883d2fe148cc0">readGepObjVarMapFromFile</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>);</div>
+<div class="line"><span class="lineno">  427</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#afce21c2a8fca8a2eae4883d2fe148cc0">readGepObjVarMapFromFile</a>(F);</div>
 <div class="line"><span class="lineno">  428</span> </div>
-<div class="line"><span class="lineno">  429</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#a4ad982a53fbf62c5513afe63b2435fa5">readAndSetObjFieldSensitivity</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>,<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  429</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#a4ad982a53fbf62c5513afe63b2435fa5">readAndSetObjFieldSensitivity</a>(F,<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">  430</span> </div>
 <div class="line"><span class="lineno">  431</span>    <span class="comment">// Update callgraph</span></div>
 <div class="line"><span class="lineno">  432</span>    <a class="code hl_function" href="classSVF_1_1BVDataPTAImpl.html#aa534e475fa34fa322c567bc376a3da70">updateCallGraph</a>(<a class="code hl_variable" href="classSVF_1_1PointerAnalysis.html#adc7f5c71efb9cd1bec4f5ca9127654c3">pag</a>-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#aa56a324f07dc3cf323c7cebb199dc3c8">getIndirectCallsites</a>());</div>
 <div class="line"><span class="lineno">  433</span> </div>
-<div class="line"><span class="lineno">  434</span>    <a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>.close();</div>
+<div class="line"><span class="lineno">  434</span>    F.close();</div>
 <div class="line"><span class="lineno">  435</span>    <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><span class="lineno">  436</span> </div>
 <div class="line"><span class="lineno">  437</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -2234,9 +2233,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  345</span>    <span class="keywordtype">string</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>;</div>
 <div class="line"><span class="lineno">  346</span>    <span class="comment">//read GepObjVarMap from file</span></div>
 <div class="line"><span class="lineno">  347</span>    <a class="code hl_typedef" href="classSVF_1_1SVFIR.html#ae683914bce36e2d387bc0bc97dfcb14d">SVFIR::NodeOffsetMap</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">gepObjVarMap</a> = <a class="code hl_variable" href="classSVF_1_1PointerAnalysis.html#adc7f5c71efb9cd1bec4f5ca9127654c3">pag</a>-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#aa32d3870bac2e585dd1ea9631c3f6f6c">getGepObjNodeMap</a>();</div>
-<div class="line"><span class="lineno">  348</span>    <span class="keywordflow">while</span> (<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>.good())</div>
+<div class="line"><span class="lineno">  348</span>    <span class="keywordflow">while</span> (F.good())</div>
 <div class="line"><span class="lineno">  349</span>    {</div>
-<div class="line"><span class="lineno">  350</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
+<div class="line"><span class="lineno">  350</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(F, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
 <div class="line"><span class="lineno">  351</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a> == <span class="stringliteral">&quot;------&quot;</span>)     <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  352</span>        <span class="comment">// Parse a single line in the form of &quot;ID baseNodeID offset&quot;</span></div>
 <div class="line"><span class="lineno">  353</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">istringstream</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ss</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
@@ -2314,10 +2313,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  298</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">map&lt;NodeID, string&gt;</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">nodePtsMap</a>;</div>
 <div class="line"><span class="lineno">  299</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">map&lt;string, PointsTo&gt;</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">strPtsMap</a>;</div>
 <div class="line"><span class="lineno">  300</span> </div>
-<div class="line"><span class="lineno">  301</span>    <span class="keywordflow">while</span> (<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>.good())</div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordflow">while</span> (F.good())</div>
 <div class="line"><span class="lineno">  302</span>    {</div>
 <div class="line"><span class="lineno">  303</span>        <span class="comment">// Parse a single line in the form of &quot;var -&gt; { obj1 obj2 obj3 }&quot;</span></div>
-<div class="line"><span class="lineno">  304</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(<a class="code hl_define" href="SVFFileSystem_8cpp.html#ab25baccb41e3b67ef0bfdaa1336c9649">F</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
+<div class="line"><span class="lineno">  304</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">getline</a>(F, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>);</div>
 <div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>.at(0) == <span class="charliteral">&#39;[&#39;</span> || <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a> == <span class="stringliteral">&quot;---VERSIONED---&quot;</span>) <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a> == <span class="stringliteral">&quot;------&quot;</span>)     <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  307</span>        <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">pos</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">line</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">delimiter1</a>);</div>

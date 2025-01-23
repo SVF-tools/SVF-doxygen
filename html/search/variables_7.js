@@ -30,6 +30,5 @@ var searchData=
   ['grammarbase_27',['grammarBase',['../classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f',1,'SVF::CFLBase']]],
   ['grammarfilename_28',['GrammarFilename',['../classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f',1,'SVF::Options']]],
   ['graph_29',['graph',['../structSVF_1_1Inverse.html#a2037408b7047e9265b4b14e54bb584a2',1,'SVF::Inverse::Graph'],['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat::graph'],['../classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2',1,'SVF::CFLSolver::graph'],['../classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f',1,'SVF::CFLBase::graph']]],
-  ['graphfieldjson_30',['graphFieldJson',['../classSVF_1_1GenericGraphReader.html#a2438233e46ad0a052ec1352de977df88',1,'SVF::GenericGraphReader']]],
-  ['graphtxt_31',['Graphtxt',['../classSVF_1_1Options.html#a53f783c80f368bcdca6c7620229d6f8e',1,'SVF::Options']]]
+  ['graphtxt_30',['Graphtxt',['../classSVF_1_1Options.html#a53f783c80f368bcdca6c7620229d6f8e',1,'SVF::Options']]]
 ];

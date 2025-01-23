@@ -1,14 +1,11 @@
 var searchData=
 [
-  ['json_5fchild_0',['JSON_CHILD',['../SVFFileSystem_8h.html#a3ca68624f5f02024303506488b437b75',1,'SVFFileSystem.h']]],
-  ['json_5fdef_5fread_5ffwd_1',['JSON_DEF_READ_FWD',['../SVFFileSystem_8h.html#a3413fe5c29e073bcd13263a9e0c43f63',1,'SVFFileSystem.h']]],
-  ['json_5ffield_5for_2',['JSON_FIELD_OR',['../SVFFileSystem_8h.html#aa5182abbfcd24028c330a998337c786b',1,'SVFFileSystem.h']]],
-  ['json_5fkey_3',['JSON_KEY',['../SVFFileSystem_8h.html#abe7df84818bd194fefc80d766e0998da',1,'SVFFileSystem.h']]],
-  ['json_5fread_5ffield_5ffwd_4',['JSON_READ_FIELD_FWD',['../SVFFileSystem_8h.html#a525269da9931bad82b243376a6015392',1,'SVFFileSystem.h']]],
-  ['json_5fread_5fobj_5',['JSON_READ_OBJ',['../SVFFileSystem_8h.html#ac8b3857ce2ac53e578c170e60b19dbfd',1,'SVFFileSystem.h']]],
-  ['json_5fread_5fobj_5ffwd_6',['JSON_READ_OBJ_FWD',['../SVFFileSystem_8h.html#a017760a1bcb96eaf02f6631056cc4f6d',1,'SVFFileSystem.h']]],
-  ['json_5fread_5fobj_5fwith_5fname_7',['JSON_READ_OBJ_WITH_NAME',['../SVFFileSystem_8h.html#a2bf5ff5f66f8ffe83087032e6bb97715',1,'SVFFileSystem.h']]],
-  ['json_5fread_5fobj_5fwith_5fname_5ffwd_8',['JSON_READ_OBJ_WITH_NAME_FWD',['../SVFFileSystem_8h.html#af7a4ae130128f0931d3a12421873f56c',1,'SVFFileSystem.h']]],
-  ['json_5fwrite_5ffield_9',['JSON_WRITE_FIELD',['../SVFFileSystem_8h.html#a90d3d01ab67b64e88f6548ed3e172f8c',1,'SVFFileSystem.h']]],
-  ['jsonforeach_10',['jsonForEach',['../SVFFileSystem_8h.html#a1c984678ff0cd9b33a01caf11352d533',1,'SVFFileSystem.h']]]
+  ['kblu_0',['KBLU',['../SVFUtil_8cpp.html#a3f838f2fc3a9a3b434be606fc908964b',1,'SVFUtil.cpp']]],
+  ['kcya_1',['KCYA',['../SVFUtil_8cpp.html#add84f76d7bfbbc2b00215d7195f8d3bd',1,'SVFUtil.cpp']]],
+  ['kgrn_2',['KGRN',['../SVFUtil_8cpp.html#ac081c83b067273757f7a2e54a5957d41',1,'SVFUtil.cpp']]],
+  ['knrm_3',['KNRM',['../SVFUtil_8cpp.html#a137aa83ec74421d226a90c92ec032ac9',1,'SVFUtil.cpp']]],
+  ['kpur_4',['KPUR',['../SVFUtil_8cpp.html#a326cbc9ef8d75aa44a591bf476c9835b',1,'SVFUtil.cpp']]],
+  ['kred_5',['KRED',['../SVFUtil_8cpp.html#a66290957baed5df3930ada4cb8caccf1',1,'SVFUtil.cpp']]],
+  ['kwht_6',['KWHT',['../SVFUtil_8cpp.html#af0036c8022c9980079ab17e5c87fd478',1,'SVFUtil.cpp']]],
+  ['kyel_7',['KYEL',['../SVFUtil_8cpp.html#a897b10d246533c95ba86cb79f92e465a',1,'SVFUtil.cpp']]]
 ];
