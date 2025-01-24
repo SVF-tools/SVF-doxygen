@@ -9,5 +9,5 @@ var searchData=
   ['retindsvfgedge_6',['RetIndSVFGEdge',['../classSVF_1_1RetIndSVFGEdge.html',1,'SVF']]],
   ['retmu_7',['RetMU',['../classSVF_1_1RetMU.html',1,'SVF']]],
   ['retpe_8',['RetPE',['../classSVF_1_1RetPE.html',1,'SVF']]],
-  ['retpn_9',['RetPN',['../classSVF_1_1RetPN.html',1,'SVF']]]
+  ['retvalpn_9',['RetValPN',['../classSVF_1_1RetValPN.html',1,'SVF']]]
 ];

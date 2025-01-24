@@ -4,7 +4,7 @@ var searchData=
   ['objtypeinference_1',['ObjTypeInference',['../classSVF_1_1ObjTypeInference.html#ae8b18f3e71cc14c0cc085742a8f79510',1,'SVF::ObjTypeInference']]],
   ['objtypeinfo_2',['ObjTypeInfo',['../classSVF_1_1ObjTypeInfo.html#a433ce3b67d4fed4925bc057d5a085ff3',1,'SVF::ObjTypeInfo']]],
   ['objtytonumfields_3',['objTyToNumFields',['../classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e',1,'SVF::ObjTypeInference']]],
-  ['objvar_4',['objvar',['../classSVF_1_1ObjVar.html#a0678067a37d44e8655236454aee9eee0',1,'SVF::ObjVar::ObjVar(NodeID i, PNODEK ty=ObjNode)'],['../classSVF_1_1ObjVar.html#ac560af2756a1b43de74e67b5dd736d86',1,'SVF::ObjVar::ObjVar(const SVFValue *val, NodeID i, PNODEK ty=ObjNode)']]],
+  ['objvar_4',['objvar',['../classSVF_1_1ObjVar.html#a0678067a37d44e8655236454aee9eee0',1,'SVF::ObjVar::ObjVar(NodeID i, PNODEK ty=ObjNode)'],['../classSVF_1_1ObjVar.html#aa85cb515358e91860fee500ac76e1077',1,'SVF::ObjVar::ObjVar(NodeID i, const SVFType *svfType, PNODEK ty=ObjNode)']]],
   ['ontheflycallgraphsolve_5',['ontheflycallgraphsolve',['../classSVF_1_1CFLAlias.html#a25b38896aef06dad19532f7678291b37',1,'SVF::CFLAlias::onTheFlyCallGraphSolve()'],['../classSVF_1_1BVDataPTAImpl.html#a9830d4676fd424b633f8e4d918734296',1,'SVF::BVDataPTAImpl::onTheFlyCallGraphSolve(const CallSiteToFunPtrMap &amp;callsites, CallEdgeMap &amp;newEdges)']]],
   ['ontheflythreadcallgraphsolve_6',['onTheFlyThreadCallGraphSolve',['../classSVF_1_1BVDataPTAImpl.html#a9009be40695a65b1896315f0a418e913',1,'SVF::BVDataPTAImpl']]],
   ['oobresetvisited_7',['OOBResetVisited',['../classSVF_1_1DDAVFSolver.html#ab60c701f1881d88aa4440991fb972638',1,'SVF::DDAVFSolver']]],
