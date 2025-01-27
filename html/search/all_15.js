@@ -152,7 +152,7 @@ var searchData=
   ['numofmaxregion_149',['NumOfMaxRegion',['../classSVF_1_1MemSSAStat.html#acf3732557238de882bf7f34c49bd6cee',1,'SVF::MemSSAStat']]],
   ['numofmemregions_150',['NumOfMemRegions',['../classSVF_1_1MemSSAStat.html#a95695aa32886776804e192b4c4ddcc1d',1,'SVF::MemSSAStat']]],
   ['numofmhpqueries_151',['numOfMHPQueries',['../classSVF_1_1MHP.html#ab8bd382e0c70b0feb2a291ecc4043106',1,'SVF::MHP']]],
-  ['numofmssaphi_152',['numofmssaphi',['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi'],['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi']]],
+  ['numofmssaphi_152',['numofmssaphi',['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi'],['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi']]],
   ['numofnodes_153',['numofnodes',['../classSVF_1_1ICFGStat.html#a8e71a19c266aacd7acb1fee6bb339788',1,'SVF::ICFGStat::numOfNodes'],['../classSVF_1_1SVFGStat.html#ab499c24856a990dd4adb366107eb3302',1,'SVF::SVFGStat::numOfNodes']]],
   ['numofnodesinscc_154',['numOfNodesInSCC',['../classSVF_1_1FlowSensitive.html#a9f3fe97202db8170fa9f47c5684bce75',1,'SVF::FlowSensitive']]],
   ['numofnonterminaledges_155',['numOfNonterminalEdges',['../classSVF_1_1CFLBase.html#a4c03b83cb2a3c0c166d96550d6771a1b',1,'SVF::CFLBase']]],
