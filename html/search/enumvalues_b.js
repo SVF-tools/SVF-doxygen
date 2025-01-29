@@ -10,5 +10,5 @@ var searchData=
   ['normalgep_7',['NormalGep',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375acfd0a194af0da66162545f0089eb4baa',1,'SVF::ConstraintEdge']]],
   ['normcallgraph_8',['NormCallGraph',['../classSVF_1_1PTACallGraph.html#a5b1fe2b2314db947cd5e709b7285fe1ca6bbe72ac881caacbded694492df5417c',1,'SVF::PTACallGraph']]],
   ['nptr_9',['NPtr',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a55c1d10afb905a029ad670aaa20daa06',1,'SVF::SVFBaseNode']]],
-  ['nullptr_10',['NullPtr',['../classSVF_1_1SymbolTableInfo.html#afd2cf6ef6d7f2a583c709a72067be89ba1e6cc9ef0abd047b183382f2681cd4c1',1,'SVF::SymbolTableInfo']]]
+  ['nullptr_10',['NullPtr',['../classSVF_1_1IRGraph.html#a54e62136d0ca3729794ab69e779cfb92a201a73133547266aabae635fbf335b88',1,'SVF::IRGraph']]]
 ];

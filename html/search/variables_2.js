@@ -40,5 +40,5 @@ var searchData=
   ['buildingchgtime_37',['buildingCHGTime',['../classSVF_1_1CHGraph.html#ab5bd2348e4418fcb2f3b18227fccd836',1,'SVF::CHGraph']]],
   ['bv_38',['bv',['../classSVF_1_1PointsTo.html#a668be9270539fdfc5dbf3efb9cc17587',1,'SVF::PointsTo']]],
   ['bvit_39',['bvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#aa420a44769d1c25e083975e3cd04d699',1,'SVF::PointsTo::PointsToIterator']]],
-  ['bytesize_40',['bytesize',['../classSVF_1_1SVFType.html#a517f8bb64d3a2eb9d697e77191f718b6',1,'SVF::SVFType::byteSize'],['../classSVF_1_1ObjTypeInfo.html#abe4d855db71b38e7fdd2fd73cca67814',1,'SVF::ObjTypeInfo::byteSize']]]
+  ['bytesize_40',['bytesize',['../classSVF_1_1ObjTypeInfo.html#abe4d855db71b38e7fdd2fd73cca67814',1,'SVF::ObjTypeInfo::byteSize'],['../classSVF_1_1SVFType.html#a517f8bb64d3a2eb9d697e77191f718b6',1,'SVF::SVFType::byteSize']]]
 ];

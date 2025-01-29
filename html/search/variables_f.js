@@ -2,9 +2,9 @@ var searchData=
 [
   ['o_0',['O',['../classSVF_1_1GraphWriter.html#a2e882c9af39ffd3c4a4bac9212e0e82d',1,'SVF::GraphWriter']]],
   ['object_1',['object',['../classSVF_1_1DummyVersionPropSVFGNode.html#ad9a6fd01bf1a101da68eaacc61f420ee',1,'SVF::DummyVersionPropSVFGNode']]],
-  ['objsymmap_2',['objSymMap',['../classSVF_1_1SymbolTableInfo.html#a5840b742ed8c73ece548b9b4aede07ec',1,'SVF::SymbolTableInfo']]],
+  ['objsymmap_2',['objSymMap',['../classSVF_1_1IRGraph.html#a3c38235d737c874010537d95713d5b38',1,'SVF::IRGraph']]],
   ['objtonsrevptsmap_3',['objToNSRevPtsMap',['../classSVF_1_1CondPTAImpl.html#a22c23f3ba1ee7e0aaccf0b8a1b58e33e',1,'SVF::CondPTAImpl']]],
-  ['objtypeinfomap_4',['objTypeInfoMap',['../classSVF_1_1SymbolTableInfo.html#a2dbcf7b542205f6da00d75fac0f99559',1,'SVF::SymbolTableInfo']]],
+  ['objtypeinfomap_4',['objTypeInfoMap',['../classSVF_1_1IRGraph.html#a710142871a7307efce24097ce90aa8d5',1,'SVF::IRGraph']]],
   ['ocgdotgraph_5',['OCGDotGraph',['../classSVF_1_1Options.html#ad6c9b07d4dc8af20fbe2b93711cc2101',1,'SVF::Options']]],
   ['offset_6',['offset',['../cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de',1,'offset:&#160;cJSON.cpp'],['../structprintbuffer.html#a3ed6f9d24d6591047680492a962dc7c9',1,'printbuffer::offset'],['../classSVF_1_1CoreBitVector.html#a79dfa9f4c2efb6a0a2de18c6359c41bd',1,'SVF::CoreBitVector::offset'],['../classSVF_1_1DCHEdge.html#a41bd0d95d588aa7fb77e83dc91654493',1,'SVF::DCHEdge::offset'],['../structparse__buffer.html#af727920073077579942a79de519bb31a',1,'parse_buffer::offset']]],
   ['onstack_7',['onStack',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a0eb5f6b9985b9b512a76537d55b092b5',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],

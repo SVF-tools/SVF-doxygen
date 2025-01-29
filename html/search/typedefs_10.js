@@ -55,7 +55,7 @@ var searchData=
   ['svfstmtset_52',['svfstmtset',['../classSVF_1_1IRGraph.html#a28ea8f85b0923d00364a010c1fd4e416',1,'SVF::IRGraph::SVFStmtSet'],['../classSVF_1_1VFG.html#a8e3633597a4dca714df20e0720b31f1e',1,'SVF::VFG::SVFStmtSet']]],
   ['svfstmtsetty_53',['SVFStmtSetTy',['../classSVF_1_1SVFStmt.html#a8cd7b6c6fd8b030b1421d95a086359f4',1,'SVF::SVFStmt']]],
   ['svftypelocsetspair_54',['SVFTypeLocSetsPair',['../classSVF_1_1SVFIR.html#a9062fc3ed889f8971fb2ea49b8de3674',1,'SVF::SVFIR']]],
-  ['svftypeset_55',['SVFTypeSet',['../classSVF_1_1SymbolTableInfo.html#a87d443030a8a86e13be5a3a964bc7fa4',1,'SVF::SymbolTableInfo']]],
+  ['svftypeset_55',['SVFTypeSet',['../classSVF_1_1IRGraph.html#afbb6fb93362affe4cc0296663164b2d8',1,'SVF::IRGraph']]],
   ['svfvalue2llvmvaluemap_56',['SVFValue2LLVMValueMap',['../classSVF_1_1LLVMModuleSet.html#aa872d7a6b6bf3ec944bd9077de51b259',1,'SVF::LLVMModuleSet']]],
   ['svfvarlist_57',['SVFVarList',['../classSVF_1_1SVFIR.html#a64939d7ecfd8e2cf862782954a56596b',1,'SVF::SVFIR']]],
   ['switchinst_58',['SwitchInst',['../namespaceSVF.html#a412280b134578905248ce0122c5db7c9',1,'SVF']]],

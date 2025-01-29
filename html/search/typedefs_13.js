@@ -8,7 +8,7 @@ var searchData=
   ['valueboolpair_5',['ValueBoolPair',['../classSVF_1_1ObjTypeInference.html#afb1c28ce04b61c423bd734db48b0a5b6',1,'SVF::ObjTypeInference']]],
   ['valueset_6',['ValueSet',['../classSVF_1_1ObjTypeInference.html#a51116a59a9f6c2c692505def03f5bc25',1,'SVF::ObjTypeInference']]],
   ['valuetoclassnames_7',['ValueToClassNames',['../classSVF_1_1ObjTypeInference.html#ae23313c88149711f2ce74a2c6d3e9da8',1,'SVF::ObjTypeInference']]],
-  ['valuetoidmapty_8',['ValueToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#ad1741e65d47c39e03049c6d7265961af',1,'SVF::SymbolTableInfo']]],
+  ['valuetoidmapty_8',['ValueToIDMapTy',['../classSVF_1_1IRGraph.html#a512bf852569e6c19120989708663dc9d',1,'SVF::IRGraph']]],
   ['valuetoinfersites_9',['ValueToInferSites',['../classSVF_1_1ObjTypeInference.html#a17954e8e60a3736083504c7f675f5ba2',1,'SVF::ObjTypeInference']]],
   ['valuetosources_10',['ValueToSources',['../classSVF_1_1ObjTypeInference.html#a3ef6cdbd56a4d169a2d2cab0b2f6515b',1,'SVF::ObjTypeInference']]],
   ['valuetotype_11',['ValueToType',['../classSVF_1_1ObjTypeInference.html#ac97f30431b4e96d9d70dced9960072e9',1,'SVF::ObjTypeInference']]],

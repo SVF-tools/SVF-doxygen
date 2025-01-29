@@ -29,7 +29,7 @@ var searchData=
   ['funtoexitbbsmap_26',['FunToExitBBsMap',['../classSVF_1_1SaberCondAllocator.html#a1f13ef0f88ef09e0ee13c61ebc6ae678',1,'SVF::SaberCondAllocator']]],
   ['funtofunentrynodemapty_27',['funtofunentrynodemapty',['../classSVF_1_1LLVMModuleSet.html#a28627bf690f6f57eb7e0cc3c822e5d17',1,'SVF::LLVMModuleSet::FunToFunEntryNodeMapTy'],['../classSVF_1_1ICFG.html#a44a95ca43a7b3148c1aee9ad5da6e9d1',1,'SVF::ICFG::FunToFunEntryNodeMapTy'],['../classSVF_1_1ICFGBuilder.html#a6cf20dfe719f34262bcd9e5d0f93ae87',1,'SVF::ICFGBuilder::FunToFunEntryNodeMapTy']]],
   ['funtofunexitnodemapty_28',['funtofunexitnodemapty',['../classSVF_1_1ICFG.html#a25f4e5330af9d3fba19ad70520b2ec7f',1,'SVF::ICFG::FunToFunExitNodeMapTy'],['../classSVF_1_1LLVMModuleSet.html#a675719a8477b122a3c9a2c4f9a4f057f',1,'SVF::LLVMModuleSet::FunToFunExitNodeMapTy'],['../classSVF_1_1ICFGBuilder.html#a7c06fff4342612dda85f4d4ddfaee2d1',1,'SVF::ICFGBuilder::FunToFunExitNodeMapTy']]],
-  ['funtoidmapty_29',['FunToIDMapTy',['../classSVF_1_1SymbolTableInfo.html#acd5c1096bb8e93a2a708cd7eef66e7d8',1,'SVF::SymbolTableInfo']]],
+  ['funtoidmapty_29',['FunToIDMapTy',['../classSVF_1_1IRGraph.html#a3448483e84c8863a5201eb08b9c3182b',1,'SVF::IRGraph']]],
   ['funtointermap_30',['FunToInterMap',['../classSVF_1_1IntraDisjointMRG.html#ad59c11753db0b310246418df4c62f639',1,'SVF::IntraDisjointMRG']]],
   ['funtomrsmap_31',['FunToMRsMap',['../classSVF_1_1MRGenerator.html#a090070379a09460aef0c07270d32d27b',1,'SVF::MRGenerator']]],
   ['funtonodebsmap_32',['FunToNodeBSMap',['../classSVF_1_1MRGenerator.html#ab01e492f002c73e2c89eb0b4c8f9647d',1,'SVF::MRGenerator']]],

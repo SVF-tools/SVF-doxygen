@@ -65,6 +65,5 @@ var searchData=
   ['symbol_62',['Symbol',['../structSVF_1_1GrammarBase_1_1Symbol.html',1,'SVF::GrammarBase']]],
   ['symbolhash_63',['SymbolHash',['../classSVF_1_1GrammarBase_1_1SymbolHash.html',1,'SVF::GrammarBase']]],
   ['symboltablebuilder_64',['SymbolTableBuilder',['../classSVF_1_1SymbolTableBuilder.html',1,'SVF']]],
-  ['symboltableinfo_65',['SymbolTableInfo',['../classSVF_1_1SymbolTableInfo.html',1,'SVF']]],
-  ['symbolvectorhash_66',['SymbolVectorHash',['../structSVF_1_1GrammarBase_1_1SymbolVectorHash.html',1,'SVF::GrammarBase']]]
+  ['symbolvectorhash_65',['SymbolVectorHash',['../structSVF_1_1GrammarBase_1_1SymbolVectorHash.html',1,'SVF::GrammarBase']]]
 ];

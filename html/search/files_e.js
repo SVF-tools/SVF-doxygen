@@ -49,7 +49,5 @@ var searchData=
   ['svfvariables_2ecpp_46',['SVFVariables.cpp',['../SVFVariables_8cpp.html',1,'']]],
   ['svfvariables_2eh_47',['SVFVariables.h',['../SVFVariables_8h.html',1,'']]],
   ['symboltablebuilder_2ecpp_48',['SymbolTableBuilder.cpp',['../SymbolTableBuilder_8cpp.html',1,'']]],
-  ['symboltablebuilder_2eh_49',['SymbolTableBuilder.h',['../SymbolTableBuilder_8h.html',1,'']]],
-  ['symboltableinfo_2ecpp_50',['SymbolTableInfo.cpp',['../SymbolTableInfo_8cpp.html',1,'']]],
-  ['symboltableinfo_2eh_51',['SymbolTableInfo.h',['../SymbolTableInfo_8h.html',1,'']]]
+  ['symboltablebuilder_2eh_49',['SymbolTableBuilder.h',['../SymbolTableBuilder_8h.html',1,'']]]
 ];

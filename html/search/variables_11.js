@@ -32,7 +32,7 @@ var searchData=
   ['retpes_29',['retPEs',['../classSVF_1_1FormalRetVFGNode.html#a5fa2fc654385d0fab018053e89565157',1,'SVF::FormalRetVFGNode']]],
   ['retty_30',['retTy',['../classSVF_1_1SVFFunctionType.html#a2b3c4e21da9ad2bdd8e306192b953186',1,'SVF::SVFFunctionType']]],
   ['return_5fparse_5fend_31',['return_parse_end',['../cJSON_8cpp.html#a1a7c63ae727dcb98b54e081b2ff17ed9',1,'return_parse_end:&#160;cJSON.cpp'],['../cJSON_8h.html#a7725ae4fa33fc499614c6895ee9ee44a',1,'return_parse_end:&#160;cJSON.h']]],
-  ['returnsymmap_32',['returnSymMap',['../classSVF_1_1SymbolTableInfo.html#ae6f8a4dbe09ff4756983ffdbed6d0681',1,'SVF::SymbolTableInfo']]],
+  ['returnsymmap_32',['returnSymMap',['../classSVF_1_1IRGraph.html#afe5c699fa84f0e3bbf1d42bac716f7fa',1,'SVF::IRGraph']]],
   ['rev_33',['rev',['../classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219',1,'SVF::PTData']]],
   ['reversenodemapping_34',['reverseNodeMapping',['../classSVF_1_1PointsTo.html#a1ae4abe690d21eb5aaf2154243b604c1',1,'SVF::PointsTo']]],
   ['revptsmap_35',['revptsmap',['../classSVF_1_1PersistentPTData.html#a7b43ad5045ebdaa86f2587ea3f2f9563',1,'SVF::PersistentPTData::revPtsMap'],['../classSVF_1_1MutablePTData.html#ad8c9fc1b290372ed9c68e54687724b64',1,'SVF::MutablePTData::revPtsMap']]],

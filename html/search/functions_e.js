@@ -23,7 +23,7 @@ var searchData=
   ['normalizepointsto_20',['normalizepointsto',['../classSVF_1_1BVDataPTAImpl.html#a2026cffd7043208333083ed1a6603e7b',1,'SVF::BVDataPTAImpl::normalizePointsTo()'],['../classSVF_1_1CondPTAImpl.html#aa945d068c8935fc6926833fdf102e21c',1,'SVF::CondPTAImpl::normalizePointsTo()'],['../classSVF_1_1AndersenBase.html#a1c543a29e9257d2fa1ba864b41ef5417',1,'SVF::AndersenBase::normalizePointsTo()']]],
   ['nothingset_21',['nothingSet',['../classOptionMultiple.html#a6de3b01c7773ea6fddf84cd57e7401f8',1,'OptionMultiple']]],
   ['nullexpr_22',['nullExpr',['../classSVF_1_1Z3Expr.html#a9aa800372d57db519d484cc32ea1c5dc',1,'SVF::Z3Expr']]],
-  ['nullptrsymid_23',['nullPtrSymID',['../classSVF_1_1SymbolTableInfo.html#adaed6e68c2f53260ed4c4fc38b5c4721',1,'SVF::SymbolTableInfo']]],
+  ['nullptrsymid_23',['nullPtrSymID',['../classSVF_1_1IRGraph.html#a47b0c938cd72dc09ebd0d4b5dacc34bf',1,'SVF::IRGraph']]],
   ['nullptrvfgnode_24',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html#a5bbcd7ba5ac40efefbd1ef99bea86639',1,'SVF::NullPtrVFGNode']]],
   ['num_5fgenerator_25',['num_generator',['../classSVF_1_1CFGrammar.html#a4d98bd2fee3d88558ed2b59c3d0d0d57',1,'SVF::CFGrammar']]],
   ['numedgedestlabels_26',['numEdgeDestLabels',['../structSVF_1_1DefaultDOTGraphTraits.html#a94f582264d3020f36a2ca3bdfbdaf81b',1,'SVF::DefaultDOTGraphTraits']]],
