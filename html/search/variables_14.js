@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['uncalled_0',['uncalled',['../classSVF_1_1SVFArgument.html#a758fa3cd9354ec069f0fe569251da7cd',1,'SVF::SVFArgument::uncalled'],['../classSVF_1_1ArgValVar.html#afda459f34b0b17dec4ac1a05aec396d9',1,'SVF::ArgValVar::uncalled']]],
+  ['uncalled_0',['uncalled',['../classSVF_1_1SVFArgument.html#a758fa3cd9354ec069f0fe569251da7cd',1,'SVF::SVFArgument']]],
   ['unioncache_1',['unionCache',['../classSVF_1_1PersistentPointsToCache.html#a6b601ce2055d83f2c1df0c7af039ce05',1,'SVF::PersistentPointsToCache']]],
   ['uniquecomplements_2',['uniqueComplements',['../classSVF_1_1PersistentPointsToCache.html#a5c1afbaebce46eac6b1172aa5f2824ee',1,'SVF::PersistentPointsToCache']]],
   ['uniqueintersections_3',['uniqueIntersections',['../classSVF_1_1PersistentPointsToCache.html#a474023fe293b080fbda7da06ef380531',1,'SVF::PersistentPointsToCache']]],

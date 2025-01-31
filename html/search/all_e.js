@@ -204,7 +204,7 @@ var searchData=
   ['getanalysisty_201',['getAnalysisTy',['../classSVF_1_1PointerAnalysis.html#ac23f71c1307cda9cba44acc40059f0a3',1,'SVF::PointerAnalysis']]],
   ['getancestorthread_202',['getAncestorThread',['../classSVF_1_1TCT.html#aeb7dff0c02a90cb338c8d054d2b78984',1,'SVF::TCT']]],
   ['getandersenanalysis_203',['getAndersenAnalysis',['../classSVF_1_1DDAVFSolver.html#a4bf5ada00c50b207818e80b1a35b7ac7',1,'SVF::DDAVFSolver']]],
-  ['getarg_204',['getArg',['../classSVF_1_1SVFFunction.html#a10d9481ae41dce4f266dad5e64fffcee',1,'SVF::SVFFunction']]],
+  ['getarg_204',['getArg',['../classSVF_1_1SVFFunction.html#a2e4723e2dd9fcc331840c096b6aa6bc4',1,'SVF::SVFFunction']]],
   ['getargno_205',['getargno',['../classSVF_1_1SVFArgument.html#a978b4838cce84944c97c92e281859591',1,'SVF::SVFArgument::getArgNo()'],['../classSVF_1_1ArgValVar.html#a3bab6344b6997ffa89a240149dea23b7',1,'SVF::ArgValVar::getArgNo()']]],
   ['getargoperand_206',['getArgOperand',['../classSVF_1_1SVFCallInst.html#ad108ff5133179d2b046d3687235d5ae9',1,'SVF::SVFCallInst']]],
   ['getargposincall_207',['getArgPosInCall',['../classSVF_1_1ObjTypeInference.html#a72da2d7f06e8fee67dc5b3c451fa5dee',1,'SVF::ObjTypeInference']]],

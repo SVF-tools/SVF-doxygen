@@ -36,7 +36,7 @@ var searchData=
   ['aliastestnoaliasmangled_33',['aliasTestNoAliasMangled',['../classSVF_1_1PointerAnalysis.html#a0e68883e2ee328315af29e59bb2008cd',1,'SVF::PointerAnalysis']]],
   ['aliastestpartialalias_34',['aliasTestPartialAlias',['../classSVF_1_1PointerAnalysis.html#a83b0a51d88fa7aadff6e9267765d07a5',1,'SVF::PointerAnalysis']]],
   ['aliastestpartialaliasmangled_35',['aliasTestPartialAliasMangled',['../classSVF_1_1PointerAnalysis.html#acbb517523fd30708ed1a93f306cd3545',1,'SVF::PointerAnalysis']]],
-  ['allargs_36',['allArgs',['../classSVF_1_1SVFFunction.html#a625bef2b92c8e62df547bd2758b59c75',1,'SVF::SVFFunction']]],
+  ['allargs_36',['allArgs',['../classSVF_1_1SVFFunction.html#a5822049ca467fdf50ddb934196dc930b',1,'SVF::SVFFunction']]],
   ['allglobals_37',['allGlobals',['../classSVF_1_1MRGenerator.html#af46b82e45aa1ecdfb397325971206541',1,'SVF::MRGenerator']]],
   ['allicfgnodes_38',['allICFGNodes',['../classSVF_1_1SVFBasicBlock.html#aa6c814479a46db967e6f2c4df251ff80',1,'SVF::SVFBasicBlock']]],
   ['allocator_39',['allocator',['../classSVF_1_1NodeIDAllocator.html#a67e85749e539ea34146b197668a4ea64',1,'SVF::NodeIDAllocator']]],
