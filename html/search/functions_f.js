@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['objsyms_0',['objSyms',['../classSVF_1_1IRGraph.html#af293d9fa080a87c483b4274ba4deb281',1,'SVF::IRGraph']]],
+  ['objsyms_0',['objSyms',['../classSVF_1_1LLVMModuleSet.html#ad2985a3a5d9120914edc32b6cccd5a9b',1,'SVF::LLVMModuleSet']]],
   ['objtypeinference_1',['ObjTypeInference',['../classSVF_1_1ObjTypeInference.html#ae8b18f3e71cc14c0cc085742a8f79510',1,'SVF::ObjTypeInference']]],
   ['objtypeinfo_2',['ObjTypeInfo',['../classSVF_1_1ObjTypeInfo.html#acc479e5dabfbf619d7c20133c129a11e',1,'SVF::ObjTypeInfo']]],
   ['objtytonumfields_3',['objTyToNumFields',['../classSVF_1_1ObjTypeInference.html#a5eae038a7bffb0549ca75cd9c850ff1e',1,'SVF::ObjTypeInference']]],

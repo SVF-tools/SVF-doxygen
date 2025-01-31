@@ -171,7 +171,7 @@ var searchData=
   ['hasthreadjoinedge_168',['hasthreadjoinedge',['../classSVF_1_1ThreadCallGraph.html#a5f7c92af1a4ce33e4746f5b65c9c8421',1,'SVF::ThreadCallGraph::hasThreadJoinEdge(const CallICFGNode *cs) const'],['../classSVF_1_1ThreadCallGraph.html#a646e9221fb7c55bdf096b86c04fd75bd',1,'SVF::ThreadCallGraph::hasThreadJoinEdge(const CallICFGNode *call, PTACallGraphNode *joinFunNode, PTACallGraphNode *threadRoutineFunNode, CallSiteID csId) const']]],
   ['hasthreadstmtset_169',['hasThreadStmtSet',['../classSVF_1_1MHP.html#aa2bff98721ef24f772e4fb92facdcd9b',1,'SVF::MHP']]],
   ['hasthreadvfgedge_170',['hasThreadVFGEdge',['../classSVF_1_1VFG.html#aead3b463d9aa2fae5845d97896bd18ba',1,'SVF::VFG']]],
-  ['hasvaluenode_171',['hasValueNode',['../classSVF_1_1IRGraph.html#aaeaa7faa536d429494953be2965a915e',1,'SVF::IRGraph']]],
+  ['hasvaluenode_171',['hasValueNode',['../classSVF_1_1LLVMModuleSet.html#a04d8343f59a584319d691afb3263c250',1,'SVF::LLVMModuleSet']]],
   ['hasvfgnode_172',['hasVFGNode',['../classSVF_1_1VFG.html#a30eb9d717ad5bc8a9109a7bdef38f4a1',1,'SVF::VFG']]],
   ['hasvfgnodes_173',['hasVFGNodes',['../classSVF_1_1VFG.html#a76af43e28630eb56a1aa5971f516d43d',1,'SVF::VFG']]],
   ['hbpair_174',['HBPair',['../classSVF_1_1ForkJoinAnalysis.html#aad3e722ecaa4a39aef0e1cabfa2b8019',1,'SVF::ForkJoinAnalysis']]],

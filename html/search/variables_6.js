@@ -27,7 +27,7 @@ var searchData=
   ['formalouttodefmap_24',['formalOutToDefMap',['../classSVF_1_1SVFGOPT.html#abbd6ac28826b9cc4c4981271393c8b19',1,'SVF::SVFGOPT']]],
   ['formalret_25',['formalRet',['../classSVF_1_1FunExitICFGNode.html#ac3765c6a34ddff0018e38ce644d96641',1,'SVF::FunExitICFGNode']]],
   ['format_26',['format',['../cJSON_8h.html#a6122748ab66fdcaed151288ac056a1d1',1,'format:&#160;cJSON.h'],['../cJSON_8cpp.html#a6122748ab66fdcaed151288ac056a1d1',1,'format:&#160;cJSON.cpp'],['../structprintbuffer.html#a75d3f480f5308e7f4afecf30e11277ef',1,'printbuffer::format']]],
-  ['forwardslice_27',['forwardslice',['../classSVF_1_1SVFGStat.html#a1e5ec005dda8dc918422eaf33f3145f8',1,'SVF::SVFGStat::forwardSlice'],['../classSVF_1_1ProgSlice.html#ac12dc4caa0c764ae69175e787efad2ab',1,'SVF::ProgSlice::forwardslice']]],
+  ['forwardslice_27',['forwardslice',['../classSVF_1_1ProgSlice.html#ac12dc4caa0c764ae69175e787efad2ab',1,'SVF::ProgSlice::forwardslice'],['../classSVF_1_1SVFGStat.html#a1e5ec005dda8dc918422eaf33f3145f8',1,'SVF::SVFGStat::forwardSlice']]],
   ['fpnodes_28',['FPNodes',['../classSVF_1_1FunEntryICFGNode.html#a30e8c63bf2ae7a7528b9d8a516340ade',1,'SVF::FunEntryICFGNode']]],
   ['fromfile_29',['fromFile',['../classSVF_1_1IRGraph.html#a7750a2b2a98bb39fc5f67af4e0c12379',1,'SVF::IRGraph']]],
   ['fspta_30',['fspta',['../classSVF_1_1FlowSensitiveStat.html#af7e04f73ee17647c52e571cadef8729f',1,'SVF::FlowSensitiveStat::fspta'],['../classSVF_1_1FlowSensitive.html#a2fac4f6a9d2cc19b2d998f0197e6883b',1,'SVF::FlowSensitive::fspta']]],
@@ -58,10 +58,11 @@ var searchData=
   ['funtoformaloutmap_55',['funToFormalOUTMap',['../classSVF_1_1SVFG.html#a7d58f9fe97071ec9936174689cb99301',1,'SVF::SVFG']]],
   ['funtofunentrynodemap_56',['funtofunentrynodemap',['../classSVF_1_1ICFG.html#a69076849bd256fb0ca59711a59a7c092',1,'SVF::ICFG::FunToFunEntryNodeMap'],['../classSVF_1_1LLVMModuleSet.html#abdaae5e961ca8a8e517e25e92bfd7ff0',1,'SVF::LLVMModuleSet::FunToFunEntryNodeMap']]],
   ['funtofunexitnodemap_57',['funtofunexitnodemap',['../classSVF_1_1LLVMModuleSet.html#adaf8e2785b1961a206c229dca090749a',1,'SVF::LLVMModuleSet::FunToFunExitNodeMap'],['../classSVF_1_1ICFG.html#ab87a90adae3e9db06da7ecc0bd9d920f',1,'SVF::ICFG::FunToFunExitNodeMap']]],
-  ['funtomodsmap_58',['funToModsMap',['../classSVF_1_1MRGenerator.html#a2c94bfa19ad8d1d6360b12693c8b891d',1,'SVF::MRGenerator']]],
-  ['funtomrsmap_59',['funToMRsMap',['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator']]],
-  ['funtopointstomap_60',['funToPointsToMap',['../classSVF_1_1MRGenerator.html#a05c7a5ddbe3079f63be76c35298d1c2b',1,'SVF::MRGenerator']]],
-  ['funtorefsmap_61',['funToRefsMap',['../classSVF_1_1MRGenerator.html#af6d58e2971c4a8d3ee03f9dfd9072a3a',1,'SVF::MRGenerator']]],
-  ['funtoreturnmusetmap_62',['funToReturnMuSetMap',['../classSVF_1_1MemSSA.html#abae2396bf8a37a22be9365d368fe455c',1,'SVF::MemSSA']]],
-  ['funtovfgnodesmap_63',['funToVFGNodesMap',['../classSVF_1_1VFG.html#a9a99ae86d16ffe69bff9d52de769d049',1,'SVF::VFG']]]
+  ['funtofunobjvarmap_58',['funToFunObjvarMap',['../classSVF_1_1SVFIR.html#a75f76b3b132f61ee4d6a5e78c6256c98',1,'SVF::SVFIR']]],
+  ['funtomodsmap_59',['funToModsMap',['../classSVF_1_1MRGenerator.html#a2c94bfa19ad8d1d6360b12693c8b891d',1,'SVF::MRGenerator']]],
+  ['funtomrsmap_60',['funToMRsMap',['../classSVF_1_1MRGenerator.html#a3e74c3706ffcc14f378771b417dcbb96',1,'SVF::MRGenerator']]],
+  ['funtopointstomap_61',['funToPointsToMap',['../classSVF_1_1MRGenerator.html#a05c7a5ddbe3079f63be76c35298d1c2b',1,'SVF::MRGenerator']]],
+  ['funtorefsmap_62',['funToRefsMap',['../classSVF_1_1MRGenerator.html#af6d58e2971c4a8d3ee03f9dfd9072a3a',1,'SVF::MRGenerator']]],
+  ['funtoreturnmusetmap_63',['funToReturnMuSetMap',['../classSVF_1_1MemSSA.html#abae2396bf8a37a22be9365d368fe455c',1,'SVF::MemSSA']]],
+  ['funtovfgnodesmap_64',['funToVFGNodesMap',['../classSVF_1_1VFG.html#a9a99ae86d16ffe69bff9d52de769d049',1,'SVF::VFG']]]
 ];

@@ -51,8 +51,8 @@ var searchData=
   ['svfgnodetosvfgnodesetmap_48',['svfgnodetosvfgnodesetmap',['../classSVF_1_1SaberCondAllocator.html#a1e5ab069ebb4d17f04788a37fa616cab',1,'SVF::SaberCondAllocator::SVFGNodeToSVFGNodeSetMap'],['../classSVF_1_1ProgSlice.html#a256122a6455854a99131b807f7eb8335',1,'SVF::ProgSlice::SVFGNodeToSVFGNodeSetMap']]],
   ['svfgscc_49',['svfgscc',['../classSVF_1_1DDAPass.html#a5e51ac666db439865846b835bcea9d21',1,'SVF::DDAPass::SVFGSCC'],['../classSVF_1_1DDAVFSolver.html#a502207f81ed22fa42f9e18ccba83ad4e',1,'SVF::DDAVFSolver::SVFGSCC'],['../classSVF_1_1SVFGStat.html#a149edd19cd5adafec13cbb49c590f0a8',1,'SVF::SVFGStat::SVFGSCC']]],
   ['svfloopvec_50',['SVFLoopVec',['../classSVF_1_1ICFG.html#ad15daca24c91c5abe4bbb962979efbde',1,'SVF::ICFG']]],
-  ['svfstmtlist_51',['svfstmtlist',['../classSVF_1_1ICFGNode.html#aa84a3724426f08a0e31ecdbc99114072',1,'SVF::ICFGNode::SVFStmtList'],['../classSVF_1_1MRGenerator.html#a8717adf4520e0702274c5f013776be52',1,'SVF::MRGenerator::SVFStmtList'],['../classSVF_1_1MemSSA.html#a445d282890dbd2fb51e903255af1cc3e',1,'SVF::MemSSA::SVFStmtList'],['../classSVF_1_1SVFIR.html#a6bc360d2604ae4a0af74530b263b10d9',1,'SVF::SVFIR::SVFStmtList']]],
-  ['svfstmtset_52',['svfstmtset',['../classSVF_1_1IRGraph.html#a28ea8f85b0923d00364a010c1fd4e416',1,'SVF::IRGraph::SVFStmtSet'],['../classSVF_1_1VFG.html#a8e3633597a4dca714df20e0720b31f1e',1,'SVF::VFG::SVFStmtSet']]],
+  ['svfstmtlist_51',['svfstmtlist',['../classSVF_1_1ICFGNode.html#aa84a3724426f08a0e31ecdbc99114072',1,'SVF::ICFGNode::SVFStmtList'],['../classSVF_1_1MRGenerator.html#a8717adf4520e0702274c5f013776be52',1,'SVF::MRGenerator::SVFStmtList'],['../classSVF_1_1SVFIR.html#a6bc360d2604ae4a0af74530b263b10d9',1,'SVF::SVFIR::SVFStmtList'],['../classSVF_1_1MemSSA.html#a445d282890dbd2fb51e903255af1cc3e',1,'SVF::MemSSA::SVFStmtList']]],
+  ['svfstmtset_52',['svfstmtset',['../classSVF_1_1VFG.html#a8e3633597a4dca714df20e0720b31f1e',1,'SVF::VFG::SVFStmtSet'],['../classSVF_1_1IRGraph.html#a28ea8f85b0923d00364a010c1fd4e416',1,'SVF::IRGraph::SVFStmtSet']]],
   ['svfstmtsetty_53',['SVFStmtSetTy',['../classSVF_1_1SVFStmt.html#a8cd7b6c6fd8b030b1421d95a086359f4',1,'SVF::SVFStmt']]],
   ['svftypelocsetspair_54',['SVFTypeLocSetsPair',['../classSVF_1_1SVFIR.html#a9062fc3ed889f8971fb2ea49b8de3674',1,'SVF::SVFIR']]],
   ['svftypeset_55',['SVFTypeSet',['../classSVF_1_1IRGraph.html#afbb6fb93362affe4cc0296663164b2d8',1,'SVF::IRGraph']]],
@@ -61,6 +61,5 @@ var searchData=
   ['switchinst_58',['SwitchInst',['../namespaceSVF.html#a412280b134578905248ce0122c5db7c9',1,'SVF']]],
   ['symbol_59',['symbol',['../classSVF_1_1GrammarBase.html#a760208fb9737e766deb79d593ab86a3c',1,'SVF::GrammarBase::Symbol'],['../classSVF_1_1CFLGraphBuilder.html#a2ab271d42ab82aea2adf8b0e641aa39c',1,'SVF::CFLGraphBuilder::Symbol'],['../classSVF_1_1CFLSolver.html#a6c5e6474c6dfe0a067d397ea66c24dac',1,'SVF::CFLSolver::Symbol'],['../classSVF_1_1CFLGraph.html#aef6b4499430812645aa92799cf61ab96',1,'SVF::CFLGraph::Symbol']]],
   ['symbolmap_60',['SymbolMap',['../classSVF_1_1GrammarBase.html#a4405933cc8ed8cf30b98ee16fc14c112',1,'SVF::GrammarBase']]],
-  ['symbolset_61',['SymbolSet',['../classSVF_1_1GrammarBase.html#a8687586451b07458d591120cdee9f6a3',1,'SVF::GrammarBase']]],
-  ['symid_62',['SymID',['../namespaceSVF.html#ad11fe2412b2182365a662ff0e4639b48',1,'SVF']]]
+  ['symbolset_61',['SymbolSet',['../classSVF_1_1GrammarBase.html#a8687586451b07458d591120cdee9f6a3',1,'SVF::GrammarBase']]]
 ];
