@@ -112,7 +112,7 @@ var searchData=
   ['retpeend_109',['retPEEnd',['../classSVF_1_1FormalRetVFGNode.html#adae36045df1057e551d92aa7bfb236f9',1,'SVF::FormalRetVFGNode']]],
   ['retsyms_110',['retSyms',['../classSVF_1_1IRGraph.html#adb0494c9d6b697b814e4eb79efb4cf1b',1,'SVF::IRGraph']]],
   ['return_111',['return',['../cJSON_8cpp.html#a15f779a174654a93596726f6eb6b57fe',1,'cJSON.cpp']]],
-  ['retvalpn_112',['retvalpn',['../classSVF_1_1RetValPN.html#ad9f7af69fb4234f20f8cd88f8a926f09',1,'SVF::RetValPN::RetValPN(NodeID i)'],['../classSVF_1_1RetValPN.html#a00f2daafbd3587cd2f44d476b76ff4dd',1,'SVF::RetValPN::RetValPN(NodeID i, const CallGraphNode *node, const SVFType *svfType, const ICFGNode *icn)']]],
+  ['retvalpn_112',['retvalpn',['../classSVF_1_1RetValPN.html#ad9f7af69fb4234f20f8cd88f8a926f09',1,'SVF::RetValPN::RetValPN(NodeID i)'],['../classSVF_1_1RetValPN.html#a730d97834087a7e80dd3365eb81492e0',1,'SVF::RetValPN::RetValPN(NodeID i, const SVFFunction *node, const SVFType *svfType, const ICFGNode *icn)']]],
   ['revtoponodestack_113',['revTopoNodeStack',['../classSVF_1_1SCCDetection.html#a928010ac231875b18d67fcc85adb77fb',1,'SVF::SCCDetection']]],
   ['rindex_114',['rindex',['../extapi_8c.html#a63a8201d6dffde1a760889ef66a7a13c',1,'extapi.c']]],
   ['rmderefdirsvfgedges_115',['rmDerefDirSVFGEdges',['../classSVF_1_1SaberSVFGBuilder.html#ad8f4f63d2071be4eb5f6fb2fdf29a10a',1,'SVF::SaberSVFGBuilder']]],

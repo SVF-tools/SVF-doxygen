@@ -13,7 +13,7 @@ var searchData=
   ['reanalyze_10',['reanalyze',['../classSVF_1_1WPASolver.html#ac460772d9236a2fefe17b2557023b883',1,'SVF::WPASolver']]],
   ['recoder_11',['recoder',['../classSVF_1_1BufOverflowDetector.html#a4c0f8f9afa5723d016abf2199512d921',1,'SVF::BufOverflowDetector']]],
   ['recurse_12',['recurse',['../cJSON_8h.html#afc8d1c385c6dc37e1c5b640869ce4ab6',1,'recurse:&#160;cJSON.h'],['../cJSON_8cpp.html#afc8d1c385c6dc37e1c5b640869ce4ab6',1,'recurse:&#160;cJSON.cpp']]],
-  ['recursivefuns_13',['recursiveFuns',['../classSVF_1_1AbstractInterpretation.html#a503a6903c85e237cae23ed40a4804e33',1,'SVF::AbstractInterpretation']]],
+  ['recursivefuns_13',['recursiveFuns',['../classSVF_1_1AbstractInterpretation.html#a70e6ec5d0d2a16aee0e638aa7f32cf70',1,'SVF::AbstractInterpretation']]],
   ['redundantgepnodes_14',['redundantGepNodes',['../classSVF_1_1AndersenBase.html#a6c3d6b4c004d9e43690c3807502eed74',1,'SVF::AndersenBase']]],
   ['reg2bbmap_15',['reg2BBMap',['../classSVF_1_1MemSSA.html#add1d4ff17d0860906d2f5f7172176121',1,'SVF::MemSSA']]],
   ['regionalign_16',['RegionAlign',['../classSVF_1_1Options.html#a5a70a23e30df8dea3fcaf0e80479fe88',1,'SVF::Options']]],
