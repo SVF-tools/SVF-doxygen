@@ -29,10 +29,7 @@ var searchData=
   ['populationcounter_3c_20t_2c_208_20_3e_26',['PopulationCounter&lt; T, 8 &gt;',['../structSVF_1_1PopulationCounter_3_01T_00_018_01_4.html',1,'SVF']]],
   ['printbuffer_27',['printbuffer',['../structprintbuffer.html',1,'']]],
   ['progslice_28',['ProgSlice',['../classSVF_1_1ProgSlice.html',1,'SVF']]],
-  ['ptacallgraph_29',['PTACallGraph',['../classSVF_1_1PTACallGraph.html',1,'SVF']]],
-  ['ptacallgraphedge_30',['PTACallGraphEdge',['../classSVF_1_1PTACallGraphEdge.html',1,'SVF']]],
-  ['ptacallgraphnode_31',['PTACallGraphNode',['../classSVF_1_1PTACallGraphNode.html',1,'SVF']]],
-  ['ptastat_32',['PTAStat',['../classSVF_1_1PTAStat.html',1,'SVF']]],
-  ['ptdata_33',['PTData',['../classSVF_1_1PTData.html',1,'SVF']]],
-  ['ptdata_3c_20versionedkey_2c_20versionedkeyset_2c_20data_2c_20dataset_20_3e_34',['PTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;',['../classSVF_1_1PTData.html',1,'SVF']]]
+  ['ptastat_29',['PTAStat',['../classSVF_1_1PTAStat.html',1,'SVF']]],
+  ['ptdata_30',['PTData',['../classSVF_1_1PTData.html',1,'SVF']]],
+  ['ptdata_3c_20versionedkey_2c_20versionedkeyset_2c_20data_2c_20dataset_20_3e_31',['PTData&lt; VersionedKey, VersionedKeySet, Data, DataSet &gt;',['../classSVF_1_1PTData.html',1,'SVF']]]
 ];

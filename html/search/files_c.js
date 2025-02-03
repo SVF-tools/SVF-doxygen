@@ -14,8 +14,6 @@ var searchData=
   ['pointsto_2eh_11',['PointsTo.h',['../PointsTo_8h.html',1,'']]],
   ['progslice_2ecpp_12',['ProgSlice.cpp',['../ProgSlice_8cpp.html',1,'']]],
   ['progslice_2eh_13',['ProgSlice.h',['../ProgSlice_8h.html',1,'']]],
-  ['ptacallgraph_2ecpp_14',['PTACallGraph.cpp',['../PTACallGraph_8cpp.html',1,'']]],
-  ['ptacallgraph_2eh_15',['PTACallGraph.h',['../PTACallGraph_8h.html',1,'']]],
-  ['ptastat_2ecpp_16',['PTAStat.cpp',['../PTAStat_8cpp.html',1,'']]],
-  ['ptastat_2eh_17',['PTAStat.h',['../PTAStat_8h.html',1,'']]]
+  ['ptastat_2ecpp_14',['PTAStat.cpp',['../PTAStat_8cpp.html',1,'']]],
+  ['ptastat_2eh_15',['PTAStat.h',['../PTAStat_8h.html',1,'']]]
 ];

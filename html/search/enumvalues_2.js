@@ -8,7 +8,7 @@ var searchData=
   ['callmssachi_5',['CallMSSACHI',['../classSVF_1_1MSSADEF.html#a32682e20c9c08d2bdd5abc62ea17af18acdf2b1261a1be8a4a923a22311ecd1e4',1,'SVF::MSSADEF']]],
   ['callmssamu_6',['CallMSSAMU',['../classSVF_1_1MSSAMU.html#a82c66f3e2b7d2d9dd391a947719bda9ba5e02921dfd30772024d77915d9f15f18',1,'SVF::MSSAMU']]],
   ['callnodekd_7',['CallNodeKd',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a5dd8b72c726b524c392b4f1090811869',1,'SVF::SVFBaseNode']]],
-  ['callretedge_8',['CallRetEdge',['../classSVF_1_1PTACallGraphEdge.html#a9738544725458bb022b8d5f2dbd281f7aa968b68fb87a0135833105f4e6413c69',1,'SVF::PTACallGraphEdge']]],
+  ['callretedge_8',['CallRetEdge',['../classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3abdad2f36f7a3f9f9144f003a31fedc42',1,'SVF::CallGraphEdge']]],
   ['callsite_9',['CallSite',['../classSVF_1_1SVFBugEvent.html#a4d0c0744525bc445a64176c3808377f3aa16d1c3d5b68a356288ba49f4aee1629',1,'SVF::SVFBugEvent']]],
   ['cbv_10',['CBV',['../classSVF_1_1PointsTo.html#a8f757f92ebf0a2ebdb5e6b001606923ea0397c2678894d1792fcd3432a7aa64fb',1,'SVF::PointsTo']]],
   ['cdnodekd_11',['CDNodeKd',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a0b454cb6c5897c1ef587130f25953d7b',1,'SVF::SVFBaseNode']]],

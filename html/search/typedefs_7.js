@@ -13,7 +13,7 @@ var searchData=
   ['icfgsingletonwto_10',['ICFGSingletonWTO',['../namespaceSVF.html#a82d2864ff7ca8d6742cec42dd90fbc3d',1,'SVF']]],
   ['icfgwtocomp_11',['ICFGWTOComp',['../namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c',1,'SVF']]],
   ['icfgwtonode_12',['ICFGWTONode',['../classSVF_1_1ICFGWTO.html#aebed373baddc2aa1c74b9e7aff501a2c',1,'SVF::ICFGWTO']]],
-  ['idtocallsitemap_13',['IdToCallSiteMap',['../classSVF_1_1PTACallGraph.html#a5f626f5c9254b9e643d943e59068efba',1,'SVF::PTACallGraph']]],
+  ['idtocallsitemap_13',['IdToCallSiteMap',['../classSVF_1_1CallGraph.html#a5614f20f5e900b1c513ee83138bc0ff3',1,'SVF::CallGraph']]],
   ['idtoidmap_14',['IdToIdMap',['../classSVF_1_1CSC.html#a3fb06a0c1d3960c32e52ff485417035c',1,'SVF::CSC']]],
   ['idtonodemapty_15',['IDToNodeMapTy',['../classSVF_1_1GenericGraph.html#afe017704d73445211fecaf7f3853010e',1,'SVF::GenericGraph']]],
   ['idtotypeinfomapty_16',['IDToTypeInfoMapTy',['../classSVF_1_1IRGraph.html#aecca3658c56b24dc9dfc456075a7963a',1,'SVF::IRGraph']]],
