@@ -124,7 +124,7 @@ var searchData=
   ['curbb_121',['curBB',['../classSVF_1_1SVFIRBuilder.html#a8219f7e2581cc9974b42cf95d8318b15',1,'SVF::SVFIRBuilder']]],
   ['curevalsvfgnode_122',['curEvalSVFGNode',['../classSVF_1_1SaberCondAllocator.html#a4ac9b5ec6bfd7a7b468cb13a5e8803e0',1,'SVF::SaberCondAllocator']]],
   ['curloc_123',['curloc',['../classSVF_1_1StmtDPItem.html#a9e20ebd5ae8272a4aef74914098f97ef',1,'SVF::StmtDPItem']]],
-  ['curptr_124',['curPtr',['../classSVF_1_1DDAClient.html#a212a74fcb8d2066e82f1a384aa0ce92a',1,'SVF::DDAClient']]],
+  ['curptr_124',['curPtr',['../classSVF_1_1DDAClient.html#a6a133cf24ef65eaf58c82ec213f3f6cb',1,'SVF::DDAClient']]],
   ['currelementiter_125',['CurrElementIter',['../classSVF_1_1SparseBitVector.html#ada7cb2e144c2fccd0d50138778b152dd',1,'SVF::SparseBitVector']]],
   ['current_126',['current',['../classSVF_1_1CFLGraphBuilder.html#aad408d6ecb776fd763c9b9221a1bed18',1,'SVF::CFLGraphBuilder']]],
   ['currentbestnodemapping_127',['currentBestNodeMapping',['../classSVF_1_1PointsTo.html#a98781dd444ada40af7eef9aefe76123d',1,'SVF::PointsTo']]],

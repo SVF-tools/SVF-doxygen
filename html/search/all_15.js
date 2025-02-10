@@ -1,7 +1,7 @@
 var searchData=
 [
   ['n_0',['n',['../cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a',1,'cJSON.cpp']]],
-  ['name_1',['name',['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name'],['../classOptionBase.html#a494ea256d6484e4f7e8751de499889fc',1,'OptionBase::name'],['../classSVF_1_1SVFStructType.html#a21782d68a616fb955d4988382eea61cf',1,'SVF::SVFStructType::name'],['../classSVF_1_1SVFBaseNode.html#a7468b15afec3f1b9a5eff293962ab02d',1,'SVF::SVFBaseNode::name'],['../namespaceSVF_1_1GraphProgram.html#a10f45758abb5c1ef51b0ba38d18efd37',1,'SVF::GraphProgram::Name'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name:&#160;cJSON.cpp'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name:&#160;cJSON.h']]],
+  ['name_1',['name',['../classSVF_1_1SVFBaseNode.html#a7468b15afec3f1b9a5eff293962ab02d',1,'SVF::SVFBaseNode::name'],['../classOptionBase.html#a494ea256d6484e4f7e8751de499889fc',1,'OptionBase::name'],['../classSVF_1_1SVFStructType.html#a21782d68a616fb955d4988382eea61cf',1,'SVF::SVFStructType::name'],['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name'],['../namespaceSVF_1_1GraphProgram.html#a10f45758abb5c1ef51b0ba38d18efd37',1,'SVF::GraphProgram::Name'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name:&#160;cJSON.cpp'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name:&#160;cJSON.h']]],
   ['namedmdnode_2',['NamedMDNode',['../namespaceSVF.html#a3011dbac9102f044ad5f36a4ad3d4a71',1,'SVF']]],
   ['nametochnodesmap_3',['NameToCHNodesMap',['../classSVF_1_1CHGraph.html#aedb20aca2fa11a070cfe28e14fd3552b',1,'SVF::CHGraph']]],
   ['nan_4',['NAN',['../cJSON_8cpp.html#a8abfcc76130f3f991d124dd22d7e69bc',1,'cJSON.cpp']]],
@@ -152,7 +152,7 @@ var searchData=
   ['numofmaxregion_149',['NumOfMaxRegion',['../classSVF_1_1MemSSAStat.html#acf3732557238de882bf7f34c49bd6cee',1,'SVF::MemSSAStat']]],
   ['numofmemregions_150',['NumOfMemRegions',['../classSVF_1_1MemSSAStat.html#a95695aa32886776804e192b4c4ddcc1d',1,'SVF::MemSSAStat']]],
   ['numofmhpqueries_151',['numOfMHPQueries',['../classSVF_1_1MHP.html#ab8bd382e0c70b0feb2a291ecc4043106',1,'SVF::MHP']]],
-  ['numofmssaphi_152',['numofmssaphi',['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi'],['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi']]],
+  ['numofmssaphi_152',['numofmssaphi',['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi'],['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi']]],
   ['numofnodes_153',['numofnodes',['../classSVF_1_1SVFGStat.html#ab499c24856a990dd4adb366107eb3302',1,'SVF::SVFGStat::numOfNodes'],['../classSVF_1_1ICFGStat.html#a8e71a19c266aacd7acb1fee6bb339788',1,'SVF::ICFGStat::numOfNodes']]],
   ['numofnodesinscc_154',['numOfNodesInSCC',['../classSVF_1_1FlowSensitive.html#a9f3fe97202db8170fa9f47c5684bce75',1,'SVF::FlowSensitive']]],
   ['numofnonterminaledges_155',['numOfNonterminalEdges',['../classSVF_1_1CFLBase.html#a4c03b83cb2a3c0c166d96550d6771a1b',1,'SVF::CFLBase']]],

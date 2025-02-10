@@ -38,7 +38,7 @@ var searchData=
   ['modelarrays_35',['ModelArrays',['../classSVF_1_1Options.html#a429c3000ee2ac45119b8c241aa06762c',1,'SVF::Options']]],
   ['modelconsts_36',['ModelConsts',['../classSVF_1_1Options.html#a18dd95e01a50aa82165c46a3801053c5',1,'SVF::Options']]],
   ['moduleflagvalue_37',['moduleFlagValue',['../namespaceSVF_1_1cppUtil_1_1ctir.html#a05c7c51164928786d70713094db7f3f3',1,'SVF::cppUtil::ctir']]],
-  ['moduleidentifier_38',['moduleIdentifier',['../classSVF_1_1SVFModule.html#ac40e98040f949171279afec54bb03f71',1,'SVF::SVFModule']]],
+  ['moduleidentifier_38',['moduleIdentifier',['../classSVF_1_1SVFIR.html#a7a97534f89af50e324916a513ef8dc08',1,'SVF::SVFIR']]],
   ['modulename_39',['modulename',['../classSVF_1_1SVFStat.html#a3333e45303dcc9c3da00858628cdbbff',1,'SVF::SVFStat::moduleName'],['../classSVF_1_1AbstractInterpretation.html#a619ac5748a50a82c3219337625746f7e',1,'SVF::AbstractInterpretation::moduleName']]],
   ['modules_40',['modules',['../classSVF_1_1LLVMModuleSet.html#acde6292e719c80f93d3d1c344ab442cd',1,'SVF::LLVMModuleSet']]],
   ['mr_41',['mr',['../classSVF_1_1MRVer.html#aafe30801672cd436216386ad6ff479e6',1,'SVF::MRVer::mr'],['../classSVF_1_1MSSADEF.html#a01bc47f779d20fa8e3be182ceab12780',1,'SVF::MSSADEF::mr'],['../classSVF_1_1MSSAMU.html#a51b89fa50c39d864cc9ca63508ea94f4',1,'SVF::MSSAMU::mr']]],

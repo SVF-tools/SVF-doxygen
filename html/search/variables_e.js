@@ -1,7 +1,7 @@
 var searchData=
 [
   ['n_0',['n',['../cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a',1,'cJSON.cpp']]],
-  ['name_1',['name',['../classSVF_1_1SVFStructType.html#a21782d68a616fb955d4988382eea61cf',1,'SVF::SVFStructType::name'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name:&#160;cJSON.h'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name:&#160;cJSON.cpp'],['../classSVF_1_1SVFBaseNode.html#a7468b15afec3f1b9a5eff293962ab02d',1,'SVF::SVFBaseNode::name'],['../classOptionBase.html#a494ea256d6484e4f7e8751de499889fc',1,'OptionBase::name'],['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name']]],
+  ['name_1',['name',['../classSVF_1_1SVFStructType.html#a21782d68a616fb955d4988382eea61cf',1,'SVF::SVFStructType::name'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name:&#160;cJSON.h'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name:&#160;cJSON.cpp'],['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name'],['../classOptionBase.html#a494ea256d6484e4f7e8751de499889fc',1,'OptionBase::name'],['../classSVF_1_1SVFBaseNode.html#a7468b15afec3f1b9a5eff293962ab02d',1,'SVF::SVFBaseNode::name']]],
   ['negconds_2',['negConds',['../classSVF_1_1SaberCondAllocator.html#a4267ed81d5100d49581a4216f46e660c',1,'SVF::SaberCondAllocator']]],
   ['newbvnumwords_3',['NewBvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#af3fe4b4098898ee38928c9db30ea0fe9',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['newchild_4',['newchild',['../cJSON_8cpp.html#a81f8a22ccfd48d5d5f5b911c24892ca9',1,'cJSON.cpp']]],
@@ -74,7 +74,7 @@ var searchData=
   ['numofmaxregion_71',['NumOfMaxRegion',['../classSVF_1_1MemSSAStat.html#acf3732557238de882bf7f34c49bd6cee',1,'SVF::MemSSAStat']]],
   ['numofmemregions_72',['NumOfMemRegions',['../classSVF_1_1MemSSAStat.html#a95695aa32886776804e192b4c4ddcc1d',1,'SVF::MemSSAStat']]],
   ['numofmhpqueries_73',['numOfMHPQueries',['../classSVF_1_1MHP.html#ab8bd382e0c70b0feb2a291ecc4043106',1,'SVF::MHP']]],
-  ['numofmssaphi_74',['numofmssaphi',['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi'],['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi']]],
+  ['numofmssaphi_74',['numofmssaphi',['../classSVF_1_1SVFGStat.html#a9fc87025af3b7e54442e78f46ebe0360',1,'SVF::SVFGStat::numOfMSSAPhi'],['../classSVF_1_1MemSSAStat.html#a4b598cb1d06c4c0963787036862b1c3d',1,'SVF::MemSSAStat::NumOfMSSAPhi']]],
   ['numofnodes_75',['numofnodes',['../classSVF_1_1ICFGStat.html#a8e71a19c266aacd7acb1fee6bb339788',1,'SVF::ICFGStat::numOfNodes'],['../classSVF_1_1SVFGStat.html#ab499c24856a990dd4adb366107eb3302',1,'SVF::SVFGStat::numOfNodes']]],
   ['numofnodesinscc_76',['numOfNodesInSCC',['../classSVF_1_1FlowSensitive.html#a9f3fe97202db8170fa9f47c5684bce75',1,'SVF::FlowSensitive']]],
   ['numofnonterminaledges_77',['numOfNonterminalEdges',['../classSVF_1_1CFLBase.html#a4c03b83cb2a3c0c166d96550d6771a1b',1,'SVF::CFLBase']]],

@@ -18,7 +18,7 @@ var searchData=
   ['pagnodetointraphivfgnodemap_15',['PAGNodeToIntraPHIVFGNodeMap',['../classSVF_1_1VFG.html#a598bc7a6863a6eccc3e089b63e9add17',1,'SVF::VFG']]],
   ['pagnodetounaryopvfgnodemap_16',['PAGNodeToUnaryOPVFGNodeMap',['../classSVF_1_1VFG.html#ac7083aa233d8e3820d6eb8e922f0c051',1,'SVF::VFG']]],
   ['pagprint_17',['PAGPrint',['../classSVF_1_1Options.html#a7c6053f2341a500a8caca61607303b6e',1,'SVF::Options']]],
-  ['pagreadfromtxt_18',['pagReadFromTxt',['../classSVF_1_1SVFModule.html#a2547331e2c32b077d5876e609cb7f48f',1,'SVF::SVFModule']]],
+  ['pagreadfromtxt_18',['pagReadFromTxt',['../classSVF_1_1SVFIR.html#a66530b72c99c6434e32090980bf4a216',1,'SVF::SVFIR']]],
   ['param_19',['param',['../classSVF_1_1ArgumentVFGNode.html#af220abd2d55eafa518160be5a5137e8f',1,'SVF::ArgumentVFGNode']]],
   ['parforsites_20',['parForSites',['../classSVF_1_1ThreadCallGraph.html#a6c47e8d4e328bf20d676913f39d842c2',1,'SVF::ThreadCallGraph']]],
   ['partialjoin_21',['partialJoin',['../classSVF_1_1ForkJoinAnalysis.html#a3616d6e1649f9e451da0f7a44cffc1e3',1,'SVF::ForkJoinAnalysis']]],
