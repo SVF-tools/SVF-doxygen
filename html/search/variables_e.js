@@ -1,7 +1,7 @@
 var searchData=
 [
   ['n_0',['n',['../cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a',1,'cJSON.cpp']]],
-  ['name_1',['name',['../classSVF_1_1SVFStructType.html#a21782d68a616fb955d4988382eea61cf',1,'SVF::SVFStructType::name'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name:&#160;cJSON.h'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name:&#160;cJSON.cpp'],['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name'],['../classOptionBase.html#a494ea256d6484e4f7e8751de499889fc',1,'OptionBase::name'],['../classSVF_1_1SVFBaseNode.html#a7468b15afec3f1b9a5eff293962ab02d',1,'SVF::SVFBaseNode::name']]],
+  ['name_1',['name',['../classSVF_1_1SVFStructType.html#a21782d68a616fb955d4988382eea61cf',1,'SVF::SVFStructType::name'],['../cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766',1,'name:&#160;cJSON.h'],['../cJSON_8cpp.html#acc128f98d9ceca227038c771308eff39',1,'name:&#160;cJSON.cpp'],['../classSVF_1_1SVFLLVMValue.html#a41bba635d9279f447005d8125696aedc',1,'SVF::SVFLLVMValue::name'],['../classOptionBase.html#a494ea256d6484e4f7e8751de499889fc',1,'OptionBase::name'],['../classSVF_1_1SVFValue.html#aba56a2dc0ad508bf0ab2bbe52d557f07',1,'SVF::SVFValue::name']]],
   ['negconds_2',['negConds',['../classSVF_1_1SaberCondAllocator.html#a4267ed81d5100d49581a4216f46e660c',1,'SVF::SaberCondAllocator']]],
   ['newbvnumwords_3',['NewBvNumWords',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#af3fe4b4098898ee38928c9db30ea0fe9',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['newchild_4',['newchild',['../cJSON_8cpp.html#a81f8a22ccfd48d5d5f5b911c24892ca9',1,'cJSON.cpp']]],
@@ -12,7 +12,7 @@ var searchData=
   ['noalloc_9',['noalloc',['../structprintbuffer.html#aa2a7966b71dc3535e4e3789c33ec5368',1,'printbuffer::noalloc'],['../cJSON_8cpp.html#a2212121102d55231315839f800aa1350',1,'noalloc:&#160;cJSON.cpp']]],
   ['node_10',['node',['../classSVF_1_1NullPtrVFGNode.html#adef43dcc86e61145a7fdc6711b28239d',1,'SVF::NullPtrVFGNode']]],
   ['nodeallocstrat_11',['NodeAllocStrat',['../classSVF_1_1Options.html#a38107576f4f242191cdbfb1ca51f93cd',1,'SVF::Options']]],
-  ['nodekind_12',['nodeKind',['../classSVF_1_1SVFBaseNode.html#ac0f005e662d2315cec789b4d6d927dd7',1,'SVF::SVFBaseNode']]],
+  ['nodekind_12',['nodeKind',['../classSVF_1_1SVFValue.html#a67196939d8bb4ca9f181793c396fdac5',1,'SVF::SVFValue']]],
   ['nodemapping_13',['nodeMapping',['../classSVF_1_1PointsTo.html#acd7eab32125de90020c55c757d6adfda',1,'SVF::PointsTo']]],
   ['nodenum_14',['nodeNum',['../classSVF_1_1GenericGraph.html#a38122734cbe71551a420dfb7fee2012e',1,'SVF::GenericGraph']]],
   ['nodenumafterpagbuild_15',['nodeNumAfterPAGBuild',['../classSVF_1_1IRGraph.html#a80cf14bf43accb89cb82490b4f173598',1,'SVF::IRGraph']]],

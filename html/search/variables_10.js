@@ -79,7 +79,7 @@ var searchData=
   ['ptdty_76',['ptdTy',['../classSVF_1_1PTData.html#abe01b39afed97b540c9bb8a8634afa28',1,'SVF::PTData']]],
   ['ptnumstatmap_77',['PTNumStatMap',['../classSVF_1_1SVFStat.html#a11c34e8ba16769d218432d9504ba26a0',1,'SVF::SVFStat']]],
   ['ptr_78',['Ptr',['../classSVF_1_1pointer__iterator.html#a0dd739c7a521b7efe951bb9712ddcd14',1,'SVF::pointer_iterator']]],
-  ['ptrinuncalledfun_79',['ptrInUncalledFun',['../classSVF_1_1SVFValue.html#ab9dc800239cb906c1a044b05568f5fec',1,'SVF::SVFValue']]],
+  ['ptrinuncalledfun_79',['ptrInUncalledFun',['../classSVF_1_1SVFLLVMValue.html#a78306e035861455080b6352eb7298139',1,'SVF::SVFLLVMValue']]],
   ['ptronlymssa_80',['ptrOnlyMSSA',['../classSVF_1_1MRGenerator.html#a6a62d2dede5d2506c19b2d058d1cd9d3',1,'SVF::MRGenerator']]],
   ['ptrtobvptsmap_81',['ptrToBVPtsMap',['../classSVF_1_1CondPTAImpl.html#a30b9ee7b1dcd04285f92cf7accd05b2e',1,'SVF::CondPTAImpl']]],
   ['ptrtocptsmap_82',['ptrToCPtsMap',['../classSVF_1_1CondPTAImpl.html#a61167fcdb2005090de1b38e53450431a',1,'SVF::CondPTAImpl']]],

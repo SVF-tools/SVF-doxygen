@@ -171,7 +171,7 @@ var searchData=
   ['hasthreadjoinedge_168',['hasthreadjoinedge',['../classSVF_1_1ThreadCallGraph.html#a9b81cebc42608f36b6b6279d44be42f0',1,'SVF::ThreadCallGraph::hasThreadJoinEdge(const CallICFGNode *call, CallGraphNode *joinFunNode, CallGraphNode *threadRoutineFunNode, CallSiteID csId) const'],['../classSVF_1_1ThreadCallGraph.html#a5f7c92af1a4ce33e4746f5b65c9c8421',1,'SVF::ThreadCallGraph::hasThreadJoinEdge(const CallICFGNode *cs) const']]],
   ['hasthreadstmtset_169',['hasThreadStmtSet',['../classSVF_1_1MHP.html#aa2bff98721ef24f772e4fb92facdcd9b',1,'SVF::MHP']]],
   ['hasthreadvfgedge_170',['hasThreadVFGEdge',['../classSVF_1_1VFG.html#aead3b463d9aa2fae5845d97896bd18ba',1,'SVF::VFG']]],
-  ['hasvaluenode_171',['hasValueNode',['../classSVF_1_1LLVMModuleSet.html#a04d8343f59a584319d691afb3263c250',1,'SVF::LLVMModuleSet']]],
+  ['hasvaluenode_171',['hasValueNode',['../classSVF_1_1LLVMModuleSet.html#ac290fe77cb1099512ec462270a7f585d',1,'SVF::LLVMModuleSet']]],
   ['hasvfgnode_172',['hasVFGNode',['../classSVF_1_1VFG.html#a30eb9d717ad5bc8a9109a7bdef38f4a1',1,'SVF::VFG']]],
   ['hasvfgnodes_173',['hasVFGNodes',['../classSVF_1_1VFG.html#a4251df26fb1cccac5893adbf0f77efbf',1,'SVF::VFG']]],
   ['hbpair_174',['HBPair',['../classSVF_1_1ForkJoinAnalysis.html#aad3e722ecaa4a39aef0e1cabfa2b8019',1,'SVF::ForkJoinAnalysis']]],
@@ -191,7 +191,7 @@ var searchData=
   ['headreftocycle_188',['headRefToCycle',['../classSVF_1_1WTO.html#a5752288fb686b9ef5d6c8edc0cee6348',1,'SVF::WTO']]],
   ['heap_5fobj_189',['HEAP_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830a692b4b0df23bad19ea04d18b01bf445c',1,'SVF::ObjTypeInfo']]],
   ['heapallocatorviaindcall_190',['heapallocatorviaindcall',['../classSVF_1_1CFLAlias.html#a55051f080cfc25193b3cf257b02457b3',1,'SVF::CFLAlias::heapAllocatorViaIndCall()'],['../classSVF_1_1AndersenBase.html#a5be9fdfd2c701372ce679e6a32843ae1',1,'SVF::AndersenBase::heapAllocatorViaIndCall()']]],
-  ['heapobjnode_191',['HeapObjNode',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a97ccf13aa347bc1b132f867256156b23',1,'SVF::SVFBaseNode']]],
+  ['heapobjnode_191',['HeapObjNode',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a365f351d41e2cb3fb9ee262f2f75b88c',1,'SVF::SVFValue']]],
   ['heapobjvar_192',['heapobjvar',['../classSVF_1_1HeapObjVar.html#a3dc1838f404057a8a0ffbdcb8c5a5806',1,'SVF::HeapObjVar::HeapObjVar()'],['../classSVF_1_1HeapObjVar.html',1,'SVF::HeapObjVar'],['../classSVF_1_1HeapObjVar.html#a28cc34184c202d6b59cca0b48fe2d7b4',1,'SVF::HeapObjVar::HeapObjVar()']]],
   ['hooks_193',['hooks',['../cJSON_8cpp.html#a182a7b0d4467e799ca4ea26235b1cf74',1,'hooks:&#160;cJSON.cpp'],['../structparse__buffer.html#a2c3e99b15da2935fc5d58124ffb4a894',1,'parse_buffer::hooks'],['../structprintbuffer.html#a43a8b3bcc644432f12f5aed5159d2520',1,'printbuffer::hooks']]],
   ['hppair_194',['HPPair',['../classSVF_1_1ForkJoinAnalysis.html#a4ad5c7a21ca994d908d648ca9d9e1833',1,'SVF::ForkJoinAnalysis']]]

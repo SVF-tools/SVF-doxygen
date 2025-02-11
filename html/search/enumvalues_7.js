@@ -8,5 +8,5 @@ var searchData=
   ['hclust_5fmethod_5fsingle_5',['HCLUST_METHOD_SINGLE',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913ddad16cc6362447cc32292c4af4c6fe8024',1,'fastcluster.h']]],
   ['hclust_5fmethod_5fsvf_5fbest_6',['HCLUST_METHOD_SVF_BEST',['../fastcluster_8h.html#a4205a14ad66b3320d2e94c61d74913dda66ab3fde95842ef6da0dae1f702a9618',1,'fastcluster.h']]],
   ['heap_5fobj_7',['HEAP_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830a692b4b0df23bad19ea04d18b01bf445c',1,'SVF::ObjTypeInfo']]],
-  ['heapobjnode_8',['HeapObjNode',['../classSVF_1_1SVFBaseNode.html#afd0f2bb36ff7205e399ab48e7386cc86a97ccf13aa347bc1b132f867256156b23',1,'SVF::SVFBaseNode']]]
+  ['heapobjnode_8',['HeapObjNode',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a365f351d41e2cb3fb9ee262f2f75b88c',1,'SVF::SVFValue']]]
 ];
