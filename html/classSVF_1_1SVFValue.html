@@ -1334,40 +1334,40 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00779">779</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  780</span>{</div>
-<div class="line"><span class="lineno">  781</span>    std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>;</div>
-<div class="line"><span class="lineno">  782</span>    llvm::raw_string_ostream <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>);</div>
-<div class="line"><span class="lineno">  783</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1CallGraphNode.html">SVF::CallGraphNode</a>* fun = SVFUtil::dyn_cast&lt;CallGraphNode&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  784</span>    {</div>
-<div class="line"><span class="lineno">  785</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;Function: &quot;</span> &lt;&lt; fun-&gt;getFunction()-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  786</span>    }</div>
-<div class="line"><span class="lineno">  787</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  788</span>    {</div>
-<div class="line"><span class="lineno">  789</span>        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SVFValue.html">SVFValue</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a> = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  790</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1GepValVar.html">GepValVar</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">valVar</a> = SVFUtil::dyn_cast&lt;GepValVar&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  791</span>        {</div>
-<div class="line"><span class="lineno">  792</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">valVar</a>-&gt;getBaseNode();</div>
-<div class="line"><span class="lineno">  793</span>        }</div>
-<div class="line"><span class="lineno">  794</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1GepObjVar.html">GepObjVar</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">objVar</a> = SVFUtil::dyn_cast&lt;GepObjVar&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  795</span>        {</div>
-<div class="line"><span class="lineno">  796</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">objVar</a>-&gt;getBaseObj();</div>
-<div class="line"><span class="lineno">  797</span>        }</div>
-<div class="line"><span class="lineno">  798</span>        <span class="keywordflow">if</span> (SVFUtil::isa&lt;DummyObjVar, DummyValVar, BlackHoleValVar&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a>))</div>
-<div class="line"><span class="lineno">  799</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  800</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  801</span>        {</div>
-<div class="line"><span class="lineno">  802</span>            <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">llvmVal</a> =</div>
-<div class="line"><span class="lineno">  803</span>                <a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a23db3116f8a2bd250018368a8c111651">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a799aa3a0363246f6f98605446be37dde">getLLVMValue</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a>);</div>
-<div class="line"><span class="lineno">  804</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">llvmVal</a>)</div>
-<div class="line"><span class="lineno">  805</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; *<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">llvmVal</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  806</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  807</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  808</span>        }</div>
-<div class="line"><span class="lineno">  809</span>    }</div>
-<div class="line"><span class="lineno">  810</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <a class="code hl_function" href="classSVF_1_1SVFValue.html#a7effb0f37f486745e0cdc3ae5e9c732b">getSourceLoc</a>();</div>
-<div class="line"><span class="lineno">  811</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>.str();</div>
-<div class="line"><span class="lineno">  812</span>}</div>
+<p class="definition">Definition at line <a class="el" href="LLVMUtil_8cpp_source.html#l00766">766</a> of file <a class="el" href="LLVMUtil_8cpp_source.html">LLVMUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  767</span>{</div>
+<div class="line"><span class="lineno">  768</span>    std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>;</div>
+<div class="line"><span class="lineno">  769</span>    llvm::raw_string_ostream <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>);</div>
+<div class="line"><span class="lineno">  770</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1CallGraphNode.html">SVF::CallGraphNode</a>* fun = SVFUtil::dyn_cast&lt;CallGraphNode&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  771</span>    {</div>
+<div class="line"><span class="lineno">  772</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;Function: &quot;</span> &lt;&lt; fun-&gt;getFunction()-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  773</span>    }</div>
+<div class="line"><span class="lineno">  774</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  775</span>    {</div>
+<div class="line"><span class="lineno">  776</span>        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SVFValue.html">SVFValue</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  777</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1GepValVar.html">GepValVar</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">valVar</a> = SVFUtil::dyn_cast&lt;GepValVar&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  778</span>        {</div>
+<div class="line"><span class="lineno">  779</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">valVar</a>-&gt;getBaseNode();</div>
+<div class="line"><span class="lineno">  780</span>        }</div>
+<div class="line"><span class="lineno">  781</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1GepObjVar.html">GepObjVar</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">objVar</a> = SVFUtil::dyn_cast&lt;GepObjVar&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  782</span>        {</div>
+<div class="line"><span class="lineno">  783</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">objVar</a>-&gt;getBaseObj();</div>
+<div class="line"><span class="lineno">  784</span>        }</div>
+<div class="line"><span class="lineno">  785</span>        <span class="keywordflow">if</span> (SVFUtil::isa&lt;DummyObjVar, DummyValVar, BlackHoleValVar&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a>))</div>
+<div class="line"><span class="lineno">  786</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  787</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  788</span>        {</div>
+<div class="line"><span class="lineno">  789</span>            <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">llvmVal</a> =</div>
+<div class="line"><span class="lineno">  790</span>                <a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a23db3116f8a2bd250018368a8c111651">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a799aa3a0363246f6f98605446be37dde">getLLVMValue</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">baseNode</a>);</div>
+<div class="line"><span class="lineno">  791</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">llvmVal</a>)</div>
+<div class="line"><span class="lineno">  792</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; *<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">llvmVal</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  793</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  794</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  795</span>        }</div>
+<div class="line"><span class="lineno">  796</span>    }</div>
+<div class="line"><span class="lineno">  797</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <a class="code hl_function" href="classSVF_1_1SVFValue.html#a7effb0f37f486745e0cdc3ae5e9c732b">getSourceLoc</a>();</div>
+<div class="line"><span class="lineno">  798</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>.str();</div>
+<div class="line"><span class="lineno">  799</span>}</div>
 <div class="ttc" id="aclassSVF_1_1CallGraphNode_html"><div class="ttname"><a href="classSVF_1_1CallGraphNode.html">SVF::CallGraphNode</a></div><div class="ttdef"><b>Definition</b> <a href="CallGraph_8h_source.html#l00177">CallGraph.h:178</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepObjVar_html"><div class="ttname"><a href="classSVF_1_1GepObjVar.html">SVF::GepObjVar</a></div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l00724">SVFVariables.h:725</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepValVar_html"><div class="ttname"><a href="classSVF_1_1GepValVar.html">SVF::GepValVar</a></div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l00425">SVFVariables.h:426</a></div></div>
