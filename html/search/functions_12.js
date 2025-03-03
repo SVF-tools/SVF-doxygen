@@ -224,7 +224,7 @@ var searchData=
   ['svfbasicblock_221',['svfbasicblock',['../classSVF_1_1SVFBasicBlock.html#a21639ad85355f180d2d00665075cb270',1,'SVF::SVFBasicBlock::SVFBasicBlock(NodeID id, const FunObjVar *f)'],['../classSVF_1_1SVFBasicBlock.html#ae017f9a00c523585718bde13665275b3',1,'SVF::SVFBasicBlock::SVFBasicBlock()=delete']]],
   ['svfbugevent_222',['SVFBugEvent',['../classSVF_1_1SVFBugEvent.html#a7ca1f90c4d6bc7623694f3b3d2970f77',1,'SVF::SVFBugEvent']]],
   ['svfbugreport_223',['SVFBugReport',['../classSVF_1_1SVFBugReport.html#af163790aa2065d72be8c31c281abee20',1,'SVF::SVFBugReport']]],
-  ['svffunctiontype_224',['SVFFunctionType',['../classSVF_1_1SVFFunctionType.html#af4bacdbcf4867575f6f27fc26aa66bbe',1,'SVF::SVFFunctionType']]],
+  ['svffunctiontype_224',['SVFFunctionType',['../classSVF_1_1SVFFunctionType.html#ae860ea33a112e3b26222fab4d25b3c35',1,'SVF::SVFFunctionType']]],
   ['svfg_225',['SVFG',['../classSVF_1_1SVFG.html#a07d48490eda50ee6d31f295150409cf3',1,'SVF::SVFG']]],
   ['svfgbuilder_226',['SVFGBuilder',['../classSVF_1_1SVFGBuilder.html#a003c6d9e13e5f73e0648d97400f1854e',1,'SVF::SVFGBuilder']]],
   ['svfgopt_227',['SVFGOPT',['../classSVF_1_1SVFGOPT.html#a64c300c8a9f8cc2ac13eef65c1108d01',1,'SVF::SVFGOPT']]],

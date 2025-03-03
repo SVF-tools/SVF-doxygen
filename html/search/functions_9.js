@@ -256,7 +256,7 @@ var searchData=
   ['isindirectedge_253',['isIndirectEdge',['../classSVF_1_1ConstraintNode.html#a8c3e6dca7bf12fa941c4411f6a1f52c0',1,'SVF::ConstraintNode']]],
   ['isindirectvfgedge_254',['isIndirectVFGEdge',['../classSVF_1_1VFGEdge.html#aa8f30d093d4950724a6688707326b57b',1,'SVF::VFGEdge']]],
   ['isinicfgedge_255',['isInICFGEdge',['../classSVF_1_1SVFLoop.html#ae8a579b8798cf14ba8c1d9ee9c355267',1,'SVF::SVFLoop']]],
-  ['isinloop_256',['isinloop',['../classSVF_1_1ICFG.html#ae115e70bf53f25c0ca6b1f22acccf5b5',1,'SVF::ICFG::isInLoop()'],['../classSVF_1_1SVFLoop.html#af2433fcc43f4e22fdf97ca2672a5dfa3',1,'SVF::SVFLoop::isInLoop()'],['../classSVF_1_1TCTNode.html#a4541cd85dcde2ce789ea411ebb1d89c7',1,'SVF::TCTNode::isInloop()'],['../classSVF_1_1CxtThread.html#a39230596cd1c927353eaaee071eb16c6',1,'SVF::CxtThread::isInloop()']]],
+  ['isinloop_256',['isinloop',['../classSVF_1_1TCTNode.html#a4541cd85dcde2ce789ea411ebb1d89c7',1,'SVF::TCTNode::isInloop()'],['../classSVF_1_1CxtThread.html#a39230596cd1c927353eaaee071eb16c6',1,'SVF::CxtThread::isInloop()'],['../classSVF_1_1ICFG.html#ae115e70bf53f25c0ca6b1f22acccf5b5',1,'SVF::ICFG::isInLoop()'],['../classSVF_1_1SVFLoop.html#af2433fcc43f4e22fdf97ca2672a5dfa3',1,'SVF::SVFLoop::isInLoop()']]],
   ['isinloopinstruction_257',['isInLoopInstruction',['../classSVF_1_1TCT.html#a895b1afea0562396bf3ccc94431b52ec',1,'SVF::TCT']]],
   ['isinrecursion_258',['isinrecursion',['../classSVF_1_1PointerAnalysis.html#ae561cdf70f6161f270626188c2ece5af',1,'SVF::PointerAnalysis::isInRecursion()'],['../classSVF_1_1TCT.html#a05e6037f389ba332d39bc1c1a3e365d7',1,'SVF::TCT::isInRecursion()']]],
   ['isinsamecispan_259',['isInSameCISpan',['../classSVF_1_1LockAnalysis.html#ad38dcea569c8dcecf663dbd5d9a17546',1,'SVF::LockAnalysis']]],
