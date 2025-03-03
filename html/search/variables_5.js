@@ -30,7 +30,7 @@ var searchData=
   ['evaltime_27',['EvalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1d98862e19affdd08740f85490d0d856',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['eventinst_28',['eventInst',['../classSVF_1_1SVFBugEvent.html#a81893cf39c61d97c7c51b8f96c0a8188',1,'SVF::SVFBugEvent']]],
   ['exit_29',['exit',['../classSVF_1_1RetPE.html#a6f6ccda153150b6acdd81550e45f640f',1,'SVF::RetPE']]],
-  ['exitblock_30',['exitblock',['../classSVF_1_1FunObjVar.html#ad178d8c5bd9e0ea41eba83d531f7e171',1,'SVF::FunObjVar::exitBlock'],['../classSVF_1_1SVFFunction.html#a374cbaa780f540cb4b4ccac562a82632',1,'SVF::SVFFunction::exitBlock']]],
+  ['exitblock_30',['exitBlock',['../classSVF_1_1FunObjVar.html#a8d2ea313bacd2c157da8c072f7a54ad2',1,'SVF::FunObjVar']]],
   ['extapibufoverflowcheckrules_31',['extAPIBufOverflowCheckRules',['../classSVF_1_1BufOverflowDetector.html#a416ec25c8bb80b8bb241adc0e5216bc0',1,'SVF::BufOverflowDetector']]],
   ['extapipath_32',['ExtAPIPath',['../classSVF_1_1Options.html#a2dffc9d885fa53340a1cdbc028d7f24a',1,'SVF::Options']]],
   ['extbcpath_33',['extBcPath',['../classSVF_1_1ExtAPI.html#a3ce3e67c96a65484d8077d9e3a9efa7d',1,'SVF::ExtAPI']]],

@@ -88,6 +88,8 @@ $(function() {
 <code>#include &quot;llvm/IR/InstIterator.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="BasicTypes_8h_source.html">SVF-LLVM/BasicTypes.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="BreakConstantExpr_8h_source.html">SVF-LLVM/BreakConstantExpr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GeneralType_8h_source.html">Util/GeneralType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SVFUtil_8h_source.html">Util/SVFUtil.h</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
@@ -127,7 +129,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00065">65</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00067">67</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
 
 </div>
 </div>
@@ -166,18 +168,18 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00162">162</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>{</div>
-<div class="line"><span class="lineno">  164</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  165</span>    <span class="comment">// Convert this constant expression into a regular instruction.</span></div>
+<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00164">164</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>{</div>
 <div class="line"><span class="lineno">  166</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOpcode() == Instruction::GetElementPtr)</div>
-<div class="line"><span class="lineno">  168</span>        ++<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">GEPChanges</a>;</div>
-<div class="line"><span class="lineno">  169</span>    ++<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">TotalChanges</a>;</div>
-<div class="line"><span class="lineno">  170</span>    <a class="code hl_typedef" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Result</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getAsInstruction();</div>
-<div class="line"><span class="lineno">  171</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Result</a>-&gt;insertBefore(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">InsertPt</a>);</div>
-<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Result</a>;</div>
-<div class="line"><span class="lineno">  173</span>}</div>
+<div class="line"><span class="lineno">  167</span>    <span class="comment">// Convert this constant expression into a regular instruction.</span></div>
+<div class="line"><span class="lineno">  168</span>    <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOpcode() == Instruction::GetElementPtr)</div>
+<div class="line"><span class="lineno">  170</span>        ++<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">GEPChanges</a>;</div>
+<div class="line"><span class="lineno">  171</span>    ++<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">TotalChanges</a>;</div>
+<div class="line"><span class="lineno">  172</span>    <a class="code hl_typedef" href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">Instruction</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Result</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getAsInstruction();</div>
+<div class="line"><span class="lineno">  173</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Result</a>-&gt;insertBefore(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">InsertPt</a>);</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Result</a>;</div>
+<div class="line"><span class="lineno">  175</span>}</div>
 <div class="ttc" id="anamespaceSVF_html_a7875172ff434b2210eea7cecfbbd959e"><div class="ttname"><a href="namespaceSVF.html#a7875172ff434b2210eea7cecfbbd959e">SVF::Instruction</a></div><div class="ttdeci">llvm::Instruction Instruction</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00087">BasicTypes.h:87</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00074">BasicTypes.h:74</a></div></div>
 </div><!-- fragment -->
@@ -207,27 +209,27 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00112">112</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>{</div>
-<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">ConstantExpr</a> * <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a> = SVFUtil::dyn_cast&lt;ConstantExpr&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
-<div class="line"><span class="lineno">  115</span>    {</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (Instruction::isBinaryOp(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOpcode()) || Instruction::isUnaryOp(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOpcode()))</div>
-<div class="line"><span class="lineno">  117</span>        {</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>;</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> = 0; <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getNumOperands(); ++<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)</div>
-<div class="line"><span class="lineno">  123</span>            {</div>
-<div class="line"><span class="lineno">  124</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="BreakConstantExpr_8cpp.html#a907940997e0fa98c8c83a4b385c0470f">hasConstantBinaryOrUnaryOp</a> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOperand(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)))</div>
-<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>;</div>
-<div class="line"><span class="lineno">  126</span>            }</div>
-<div class="line"><span class="lineno">  127</span>        }</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="line"><span class="lineno">  129</span> </div>
-<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  131</span>}</div>
-<div class="ttc" id="aBreakConstantExpr_8cpp_html_a907940997e0fa98c8c83a4b385c0470f"><div class="ttname"><a href="BreakConstantExpr_8cpp.html#a907940997e0fa98c8c83a4b385c0470f">hasConstantBinaryOrUnaryOp</a></div><div class="ttdeci">static ConstantExpr * hasConstantBinaryOrUnaryOp(Value *V)</div><div class="ttdef"><b>Definition</b> <a href="BreakConstantExpr_8cpp_source.html#l00112">BreakConstantExpr.cpp:112</a></div></div>
+<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00114">114</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>{</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">ConstantExpr</a> * <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a> = SVFUtil::dyn_cast&lt;ConstantExpr&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
+<div class="line"><span class="lineno">  117</span>    {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (Instruction::isBinaryOp(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOpcode()) || Instruction::isUnaryOp(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOpcode()))</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>;</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> = 0; <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getNumOperands(); ++<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="BreakConstantExpr_8cpp.html#a907940997e0fa98c8c83a4b385c0470f">hasConstantBinaryOrUnaryOp</a> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOperand(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)))</div>
+<div class="line"><span class="lineno">  127</span>                    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>;</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  133</span>}</div>
+<div class="ttc" id="aBreakConstantExpr_8cpp_html_a907940997e0fa98c8c83a4b385c0470f"><div class="ttname"><a href="BreakConstantExpr_8cpp.html#a907940997e0fa98c8c83a4b385c0470f">hasConstantBinaryOrUnaryOp</a></div><div class="ttdeci">static ConstantExpr * hasConstantBinaryOrUnaryOp(Value *V)</div><div class="ttdef"><b>Definition</b> <a href="BreakConstantExpr_8cpp_source.html#l00114">BreakConstantExpr.cpp:114</a></div></div>
 <div class="ttc" id="aCommandLine_8h_html_a2429346d37bd4c40889bd7c6d319d9da"><div class="ttname"><a href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a></div><div class="ttdeci">unsigned u32_t</div><div class="ttdef"><b>Definition</b> <a href="CommandLine_8h_source.html#l00018">CommandLine.h:18</a></div></div>
 <div class="ttc" id="acJSON_8h_html_a750b5d744c39a06bfb13e6eb010e35d0"><div class="ttname"><a href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00170">cJSON.h:170</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a911dbaab38cb42deb9c195c7f687853d"><div class="ttname"><a href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">SVF::ConstantExpr</a></div><div class="ttdeci">llvm::ConstantExpr ConstantExpr</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00120">BasicTypes.h:120</a></div></div>
@@ -258,22 +260,22 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00136">136</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>{</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">ConstantExpr</a> * <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">gep</a> = <a class="code hl_function" href="BreakConstantExpr_8cpp.html#adfb1861eb1609a9397102aca3cfa681a">hasConstantGEP</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
-<div class="line"><span class="lineno">  139</span>    {</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">gep</a>;</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">ConstantExpr</a> * <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">buop</a> = <a class="code hl_function" href="BreakConstantExpr_8cpp.html#a907940997e0fa98c8c83a4b385c0470f">hasConstantBinaryOrUnaryOp</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
-<div class="line"><span class="lineno">  143</span>    {</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">buop</a>;</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  147</span>    {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-<div class="line"><span class="lineno">  150</span>}</div>
-<div class="ttc" id="aBreakConstantExpr_8cpp_html_adfb1861eb1609a9397102aca3cfa681a"><div class="ttname"><a href="BreakConstantExpr_8cpp.html#adfb1861eb1609a9397102aca3cfa681a">hasConstantGEP</a></div><div class="ttdeci">static ConstantExpr * hasConstantGEP(Value *V)</div><div class="ttdef"><b>Definition</b> <a href="BreakConstantExpr_8cpp_source.html#l00087">BreakConstantExpr.cpp:87</a></div></div>
+<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00138">138</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>{</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">ConstantExpr</a> * <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">gep</a> = <a class="code hl_function" href="BreakConstantExpr_8cpp.html#adfb1861eb1609a9397102aca3cfa681a">hasConstantGEP</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
+<div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">gep</a>;</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">ConstantExpr</a> * <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">buop</a> = <a class="code hl_function" href="BreakConstantExpr_8cpp.html#a907940997e0fa98c8c83a4b385c0470f">hasConstantBinaryOrUnaryOp</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
+<div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">buop</a>;</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  149</span>    {</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="line"><span class="lineno">  152</span>}</div>
+<div class="ttc" id="aBreakConstantExpr_8cpp_html_adfb1861eb1609a9397102aca3cfa681a"><div class="ttname"><a href="BreakConstantExpr_8cpp.html#adfb1861eb1609a9397102aca3cfa681a">hasConstantGEP</a></div><div class="ttdeci">static ConstantExpr * hasConstantGEP(Value *V)</div><div class="ttdef"><b>Definition</b> <a href="BreakConstantExpr_8cpp_source.html#l00089">BreakConstantExpr.cpp:89</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -301,26 +303,26 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00087">87</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>{</div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">ConstantExpr</a> * <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a> = SVFUtil::dyn_cast&lt;ConstantExpr&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
-<div class="line"><span class="lineno">   90</span>    {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOpcode() == Instruction::GetElementPtr)</div>
-<div class="line"><span class="lineno">   92</span>        {</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>;</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   96</span>        {</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> = 0; <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getNumOperands(); ++<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)</div>
-<div class="line"><span class="lineno">   98</span>            {</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="BreakConstantExpr_8cpp.html#adfb1861eb1609a9397102aca3cfa681a">hasConstantGEP</a> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOperand(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)))</div>
-<div class="line"><span class="lineno">  100</span>                    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>;</div>
-<div class="line"><span class="lineno">  101</span>            }</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  106</span>}</div>
+<p class="definition">Definition at line <a class="el" href="BreakConstantExpr_8cpp_source.html#l00089">89</a> of file <a class="el" href="BreakConstantExpr_8cpp_source.html">BreakConstantExpr.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>{</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a911dbaab38cb42deb9c195c7f687853d">ConstantExpr</a> * <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a> = SVFUtil::dyn_cast&lt;ConstantExpr&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
+<div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOpcode() == Instruction::GetElementPtr)</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>;</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> = 0; <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getNumOperands(); ++<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="BreakConstantExpr_8cpp.html#adfb1861eb1609a9397102aca3cfa681a">hasConstantGEP</a> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>-&gt;getOperand(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)))</div>
+<div class="line"><span class="lineno">  102</span>                    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">CE</a>;</div>
+<div class="line"><span class="lineno">  103</span>            }</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  108</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

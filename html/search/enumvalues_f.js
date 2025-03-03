@@ -19,7 +19,7 @@ var searchData=
   ['static_5fobj_16',['STATIC_OBJ',['../classSVF_1_1ObjTypeInfo.html#a91b41b7ade5871362b77a2ef566b2830a4e7606afe2dabdef9c9836ae798a9d98',1,'SVF::ObjTypeInfo']]],
   ['std_5fdef_17',['STD_DEF',['../classSVF_1_1DCHEdge.html#a02dc7660f9603cd065e7098ae3f220ada8b07351616a1798fa34ec3828f485ebb',1,'SVF::DCHEdge']]],
   ['steensgaard_5fwpa_18',['Steensgaard_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85ad24ef5326c26db858c73432aa7e67a0a',1,'SVF::PointerAnalysis']]],
-  ['store_19',['store',['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc',1,'SVF::SVFStmt::Store'],['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01afb5552687ac1ac624b5a2275a84a8dfb',1,'SVF::SVFValue::Store'],['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375a20d6a102ddc06257a822ffffcc5a3b47',1,'SVF::ConstraintEdge::Store']]],
+  ['store_19',['store',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375a20d6a102ddc06257a822ffffcc5a3b47',1,'SVF::ConstraintEdge::Store'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9aa0f700b514c431ec5329aec49df56dcc',1,'SVF::SVFStmt::Store'],['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01afb5552687ac1ac624b5a2275a84a8dfb',1,'SVF::SVFValue::Store']]],
   ['storemssachi_20',['StoreMSSACHI',['../classSVF_1_1MSSADEF.html#a32682e20c9c08d2bdd5abc62ea17af18ac9b53519d32443a72c04e771489aba43',1,'SVF::MSSADEF']]],
   ['strcat_21',['STRCAT',['../classSVF_1_1AbsExtAPI.html#ac30c873a83c91e3ead2c55783de34670aa4de9da88bd25ff9485007fa457de443',1,'SVF::AbsExtAPI']]],
   ['strcpy_22',['STRCPY',['../classSVF_1_1AbsExtAPI.html#ac30c873a83c91e3ead2c55783de34670adebe1478d4a4b8d77b9929ed5cfc5255',1,'SVF::AbsExtAPI']]],
@@ -27,12 +27,10 @@ var searchData=
   ['subset_24',['Subset',['../classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245a45bfb1e14fd39a700dba1243afe022e4',1,'SVF::AccessPath']]],
   ['superset_25',['Superset',['../classSVF_1_1AccessPath.html#aabb6c9600fac408f36b9fde013597245a52a64f855e6233e88b319cf2f3442f14',1,'SVF::AccessPath']]],
   ['svfarrayty_26',['SVFArrayTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40cac8c846ff3208d07a4a39c7a21433c6a5',1,'SVF::SVFType']]],
-  ['svffunc_27',['SVFFunc',['../classSVF_1_1SVFLLVMValue.html#a1f280ed000fd1df682789751e52826eaa4a5a5473b97fe8ecaf0be1dd2d6735f4',1,'SVF::SVFLLVMValue']]],
-  ['svffunctionty_28',['SVFFunctionTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40ca01274de074f51be05f2ad6b2d0ca9dd6',1,'SVF::SVFType']]],
-  ['svfintegerty_29',['SVFIntegerTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40cae2025d3e9d7943027c74ae6bba3fff22',1,'SVF::SVFType']]],
-  ['svfotherty_30',['SVFOtherTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40cac7de365c24c89f86bc6f6ab5ecafd8ef',1,'SVF::SVFType']]],
-  ['svfpointerty_31',['SVFPointerTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40cae8c18603570fa65fa5a9aabdf2f5d0a1',1,'SVF::SVFType']]],
-  ['svfstructty_32',['SVFStructTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40ca77e52ad9bebff282f40383f468fe856d',1,'SVF::SVFType']]],
-  ['svfty_33',['SVFTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40ca2862d2a6ef2e31bf7fa1cc2f72d65725',1,'SVF::SVFType']]],
-  ['svfval_34',['SVFVal',['../classSVF_1_1SVFLLVMValue.html#a1f280ed000fd1df682789751e52826eaaa8e2cc52e256cc251dc59737d9131bc6',1,'SVF::SVFLLVMValue']]]
+  ['svffunctionty_27',['SVFFunctionTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40ca01274de074f51be05f2ad6b2d0ca9dd6',1,'SVF::SVFType']]],
+  ['svfintegerty_28',['SVFIntegerTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40cae2025d3e9d7943027c74ae6bba3fff22',1,'SVF::SVFType']]],
+  ['svfotherty_29',['SVFOtherTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40cac7de365c24c89f86bc6f6ab5ecafd8ef',1,'SVF::SVFType']]],
+  ['svfpointerty_30',['SVFPointerTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40cae8c18603570fa65fa5a9aabdf2f5d0a1',1,'SVF::SVFType']]],
+  ['svfstructty_31',['SVFStructTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40ca77e52ad9bebff282f40383f468fe856d',1,'SVF::SVFType']]],
+  ['svfty_32',['SVFTy',['../classSVF_1_1SVFType.html#a333e01a9c431c8f53bd2fc597bd5c40ca2862d2a6ef2e31bf7fa1cc2f72d65725',1,'SVF::SVFType']]]
 ];

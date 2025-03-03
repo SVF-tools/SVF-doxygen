@@ -2,7 +2,7 @@ var searchData=
 [
   ['b_0',['b',['../cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c',1,'b:&#160;cJSON.h'],['../cJSON_8cpp.html#a1a175e87536301df98c805ac0636ad7c',1,'b:&#160;cJSON.cpp']]],
   ['backicfgedges_1',['backICFGEdges',['../classSVF_1_1SVFLoop.html#aed4400521f825802719ac97a18452230',1,'SVF::SVFLoop']]],
-  ['backwardslice_2',['backwardslice',['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice'],['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice']]],
+  ['backwardslice_2',['backwardslice',['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice'],['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice']]],
   ['backwardvisited_3',['backwardVisited',['../classSVF_1_1DDAVFSolver.html#a63d04c3af4529d0e0f82acd76ed57f6c',1,'SVF::DDAVFSolver']]],
   ['base_4',['base',['../classSVF_1_1GepObjVar.html#a36c6eea5c4a63e82b34b778d573bab15',1,'SVF::GepObjVar::base'],['../classSVF_1_1GepValVar.html#a7171918fa7689e7a6a3d0dcb45504bde',1,'SVF::GepValVar::base']]],
   ['baseids_5',['baseIds',['../classSVF_1_1ConstraintNode.html#ac40ecefd565e029748fdacbc44c4cd54',1,'SVF::ConstraintNode']]],
@@ -13,7 +13,7 @@ var searchData=
   ['bb2phisetmap_10',['bb2PhiSetMap',['../classSVF_1_1MemSSA.html#a190061a6f7423461f4292fc326330f23',1,'SVF::MemSSA']]],
   ['bb2pidom_11',['bb2PIdom',['../classSVF_1_1SVFLoopAndDomInfo.html#ab7bf163ebfd2c43d233c598ed2a25551',1,'SVF::SVFLoopAndDomInfo']]],
   ['bbconds_12',['bbConds',['../classSVF_1_1SaberCondAllocator.html#a5c129ebf5ae55eb3af8bd670c921a646',1,'SVF::SaberCondAllocator']]],
-  ['bbgraph_13',['bbgraph',['../classSVF_1_1SVFFunction.html#a0cd0dbdd021bba9090b0c8b0be8792db',1,'SVF::SVFFunction::bbGraph'],['../classSVF_1_1FunObjVar.html#af2e2d6004e5f27e2a9b290c530203bb5',1,'SVF::FunObjVar::bbGraph']]],
+  ['bbgraph_13',['bbGraph',['../classSVF_1_1FunObjVar.html#af2e2d6004e5f27e2a9b290c530203bb5',1,'SVF::FunObjVar']]],
   ['bbtocondmap_14',['bbToCondMap',['../classSVF_1_1SaberCondAllocator.html#a6d29487d00d66dadae7b4b79f9bf50e9',1,'SVF::SaberCondAllocator']]],
   ['begin_5fiterator_15',['begin_iterator',['../classSVF_1_1iter__range.html#a56f458edec1d1181e1cfe0f9a23c8003',1,'SVF::iter_range']]],
   ['bestcandidate_16',['BestCandidate',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a3556bdda6725b72d0ca88364daeae32e',1,'SVF::NodeIDAllocator::Clusterer']]],

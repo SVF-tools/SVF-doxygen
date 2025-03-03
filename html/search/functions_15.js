@@ -44,7 +44,7 @@ var searchData=
   ['visitfenceinst_41',['visitFenceInst',['../classSVF_1_1SVFIRBuilder.html#a87a34334a50071e6061ee5dd1d34c9ed',1,'SVF::SVFIRBuilder']]],
   ['visitfreezeinst_42',['visitFreezeInst',['../classSVF_1_1SVFIRBuilder.html#a870ea33a335a7036555dd24171cf8f22',1,'SVF::SVFIRBuilder']]],
   ['visitgetelementptrinst_43',['visitGetElementPtrInst',['../classSVF_1_1SVFIRBuilder.html#a4a945eafd262f81b4f9cc1fa61b57371',1,'SVF::SVFIRBuilder']]],
-  ['visitglobal_44',['visitGlobal',['../classSVF_1_1SVFIRBuilder.html#a4c6cd51def26ebd8e839df9fdc4b64b8',1,'SVF::SVFIRBuilder']]],
+  ['visitglobal_44',['visitGlobal',['../classSVF_1_1SVFIRBuilder.html#a9b67a60ad2ab1361d0a3f49ff1d86424',1,'SVF::SVFIRBuilder']]],
   ['visitinsertelementinst_45',['visitInsertElementInst',['../classSVF_1_1SVFIRBuilder.html#a9db09a2c74f2489648b0282769488a17',1,'SVF::SVFIRBuilder']]],
   ['visitinsertvalueinst_46',['visitInsertValueInst',['../classSVF_1_1SVFIRBuilder.html#a4e6025dcd8af2f35e3cc33d280fde497',1,'SVF::SVFIRBuilder']]],
   ['visitinstruction_47',['visitInstruction',['../classSVF_1_1SVFIRBuilder.html#a91c8f9dc6e7cb225c2ed4b8f0322a2b3',1,'SVF::SVFIRBuilder']]],
