@@ -62,7 +62,7 @@ var searchData=
   ['setfldidx_59',['setFldIdx',['../classSVF_1_1AccessPath.html#ab95df74c97fba13206df48e00131e15f',1,'SVF::AccessPath']]],
   ['setformaloutdef_60',['setFormalOUTDef',['../classSVF_1_1SVFGOPT.html#a3e2b811dd939c93bcf9fb94e91d553b1',1,'SVF::SVFGOPT']]],
   ['setfun_61',['setFun',['../classSVF_1_1SVFBasicBlock.html#a24670b7d15669e1666b3b4100d4c71d8',1,'SVF::SVFBasicBlock']]],
-  ['setfunexitbb_62',['setFunExitBB',['../classSVF_1_1LLVMModuleSet.html#a02e14f626a3a9ac88104c9a888e674e4',1,'SVF::LLVMModuleSet']]],
+  ['setfunexitbb_62',['setFunExitBB',['../classSVF_1_1LLVMModuleSet.html#a60296c7a9eeb26ca23682aa45c7d5281',1,'SVF::LLVMModuleSet']]],
   ['setfunrealdeffun_63',['setFunRealDefFun',['../classSVF_1_1LLVMModuleSet.html#a2480b901feb5b01f16a4ef0884ba840b',1,'SVF::LLVMModuleSet']]],
   ['setgraph_64',['setgraph',['../classSVF_1_1SrcSnkSolver.html#a49cae8f70144639f529956478a8fca2b',1,'SVF::SrcSnkSolver::setGraph()'],['../classSVF_1_1GraphReachSolver.html#a0298a692295a8a4eae32ab151aa6ccc3',1,'SVF::GraphReachSolver::setGraph()'],['../classSVF_1_1WPASolver.html#aa04deb39cd024c051f30ac43d1d62b34',1,'SVF::WPASolver::setGraph()']]],
   ['seticfg_65',['setICFG',['../classSVF_1_1SVFIR.html#a756ae2b40ec29f2f92c95919f615e5ec',1,'SVF::SVFIR']]],
