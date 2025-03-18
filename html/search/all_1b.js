@@ -80,7 +80,7 @@ var searchData=
   ['use_77',['Use',['../namespaceSVF.html#a334998718813a19a7697daf4ba282faf',1,'SVF']]],
   ['usedmrvers_78',['usedMRVers',['../classSVF_1_1MemSSA.html#a6e5ac4f390528f8ee3cdc8e0e221ee71',1,'SVF::MemSSA']]],
   ['usedregs_79',['usedRegs',['../classSVF_1_1MemSSA.html#acf840b71b67cabe831f01f2d358f27fa',1,'SVF::MemSSA']]],
-  ['useprecompfieldsensitive_80',['UsePreCompFieldSensitive',['../classSVF_1_1Options.html#a742a42d855c5b96fb7c70a2d0ab64021',1,'SVF::Options']]],
+  ['useprecompfieldsensitive_80',['UsePreCompFieldSensitive',['../classSVF_1_1Options.html#a9279e4ec0d53afb482d4b62191b78f42',1,'SVF::Options']]],
   ['user_81',['User',['../namespaceSVF.html#afc1b50355821e7299df03b026e36f1df',1,'SVF']]],
   ['userinput_82',['userInput',['../classSVF_1_1DDAClient.html#a25f8abbcaca653d0883d542bfbe729a3',1,'SVF::DDAClient']]],
   ['userinputquery_83',['UserInputQuery',['../classSVF_1_1Options.html#a5d14e81336dbfefa14146bf610989e6b',1,'SVF::Options']]],
