@@ -50,7 +50,7 @@ var searchData=
   ['loadsrcnodes_47',['loadSrcNodes',['../classSVF_1_1AliasDDAClient.html#a246448efd1ff5da683a6ffe9f759e282',1,'SVF::AliasDDAClient']]],
   ['loadstmt_48',['loadstmt',['../classSVF_1_1LoadStmt.html#a4bd939005c7c6a5da4ed3b6be6ef1a22',1,'SVF::LoadStmt::LoadStmt()'],['../classSVF_1_1LoadStmt.html',1,'SVF::LoadStmt'],['../classSVF_1_1LoadStmt.html#a2efafa925a30de73735ca73b1632b5f8',1,'SVF::LoadStmt::LoadStmt(const LoadStmt &amp;)'],['../classSVF_1_1LoadStmt.html#a92c5817abfaa1f6fbc9ee911f458dfb2',1,'SVF::LoadStmt::LoadStmt(SVFVar *s, SVFVar *d)']]],
   ['loadstomrsmap_49',['loadstomrsmap',['../classSVF_1_1MRGenerator.html#a0d8229b1f0b8428708e923d19096e4ba',1,'SVF::MRGenerator::loadsToMRsMap'],['../classSVF_1_1MRGenerator.html#a273b2634adcfa10a08924517e8d51175',1,'SVF::MRGenerator::LoadsToMRsMap']]],
-  ['loadstopointstomap_50',['loadstopointstomap',['../classSVF_1_1MRGenerator.html#af47e15d6b8c15d547a718f3577513975',1,'SVF::MRGenerator::loadsToPointsToMap'],['../classSVF_1_1MRGenerator.html#acfadd565b5c978c9417e059b3ea7588c',1,'SVF::MRGenerator::LoadsToPointsToMap']]],
+  ['loadstopointstomap_50',['loadstopointstomap',['../classSVF_1_1MRGenerator.html#acfadd565b5c978c9417e059b3ea7588c',1,'SVF::MRGenerator::LoadsToPointsToMap'],['../classSVF_1_1MRGenerator.html#af47e15d6b8c15d547a718f3577513975',1,'SVF::MRGenerator::loadsToPointsToMap']]],
   ['loadsvfgnode_51',['LoadSVFGNode',['../namespaceSVF.html#a3ce49be3724e1e8423ccdfa726fbf6c8',1,'SVF']]],
   ['loadtime_52',['loadTime',['../classSVF_1_1FlowSensitive.html#aab4f70210eb1e6447a24697d3b459067',1,'SVF::FlowSensitive']]],
   ['loadtomusetmap_53',['LoadToMUSetMap',['../classSVF_1_1MemSSA.html#a94164c59384ef04f98a3713b504fca35',1,'SVF::MemSSA']]],
