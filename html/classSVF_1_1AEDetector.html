@@ -94,12 +94,14 @@ Inheritance diagram for SVF::AEDetector:</div>
   <img src="classSVF_1_1AEDetector.png" usemap="#SVF::AEDetector_map" alt=""/>
   <map id="SVF::AEDetector_map" name="SVF::AEDetector_map">
 <area href="classSVF_1_1BufOverflowDetector.html" title="Detector for identifying buffer overflow issues." alt="SVF::BufOverflowDetector" shape="rect" coords="0,56,162,80"/>
+<area href="classSVF_1_1NullptrDerefDetector.html" alt="SVF::NullptrDerefDetector" shape="rect" coords="172,56,334,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a1666c7c2ee82415603bde7ef5c75a8be" id="r_a1666c7c2ee82415603bde7ef5c75a8be"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8be">DetectorKind</a> { <a class="el" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8beaf04a46a640c280f4380ddc48f8ee375b">BUF_OVERFLOW</a>
+, <a class="el" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bea67efd3d625e5d85908a9d6a31f306c60">NULL_DEREF</a>
 , <a class="el" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">UNKNOWN</a>
  }</td></tr>
 <tr class="memdesc:a1666c7c2ee82415603bde7ef5c75a8be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the types of detectors available.  <a href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8be">More...</a><br /></td></tr>
@@ -159,6 +161,8 @@ Protected Attributes</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1666c7c2ee82415603bde7ef5c75a8beaf04a46a640c280f4380ddc48f8ee375b" name="a1666c7c2ee82415603bde7ef5c75a8beaf04a46a640c280f4380ddc48f8ee375b"></a>BUF_OVERFLOW&#160;</td><td class="fielddoc"><p>Detector for buffer overflow issues. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a1666c7c2ee82415603bde7ef5c75a8bea67efd3d625e5d85908a9d6a31f306c60" name="a1666c7c2ee82415603bde7ef5c75a8bea67efd3d625e5d85908a9d6a31f306c60"></a>NULL_DEREF&#160;</td><td class="fielddoc"><p>Detector for nullptr dereference issues. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17" name="a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17"></a>UNKNOWN&#160;</td><td class="fielddoc"><p>Default type if the kind is not specified. </p>
 </td></tr>
 </table>
@@ -166,9 +170,11 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00045">45</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
 <div class="line"><span class="lineno">   47</span>        <a class="code hl_enumvalue" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8beaf04a46a640c280f4380ddc48f8ee375b">BUF_OVERFLOW</a>,   </div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_enumvalue" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">UNKNOWN</a>,    </div>
-<div class="line"><span class="lineno">   49</span>    };</div>
-<div class="ttc" id="aclassSVF_1_1AEDetector_html_a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17"><div class="ttname"><a href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">SVF::AEDetector::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdoc">Default type if the kind is not specified.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00048">AEDetector.h:48</a></div></div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_enumvalue" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bea67efd3d625e5d85908a9d6a31f306c60">NULL_DEREF</a>,  </div>
+<div class="line"><span class="lineno">   49</span>        <a class="code hl_enumvalue" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">UNKNOWN</a>,    </div>
+<div class="line"><span class="lineno">   50</span>    };</div>
+<div class="ttc" id="aclassSVF_1_1AEDetector_html_a1666c7c2ee82415603bde7ef5c75a8bea67efd3d625e5d85908a9d6a31f306c60"><div class="ttname"><a href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bea67efd3d625e5d85908a9d6a31f306c60">SVF::AEDetector::NULL_DEREF</a></div><div class="ttdeci">@ NULL_DEREF</div><div class="ttdoc">Detector for nullptr dereference issues.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00048">AEDetector.h:48</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AEDetector_html_a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17"><div class="ttname"><a href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">SVF::AEDetector::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdoc">Default type if the kind is not specified.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00049">AEDetector.h:49</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AEDetector_html_a1666c7c2ee82415603bde7ef5c75a8beaf04a46a640c280f4380ddc48f8ee375b"><div class="ttname"><a href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8beaf04a46a640c280f4380ddc48f8ee375b">SVF::AEDetector::BUF_OVERFLOW</a></div><div class="ttdeci">@ BUF_OVERFLOW</div><div class="ttdoc">Detector for buffer overflow issues.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00047">AEDetector.h:47</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -199,9 +205,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Constructor initializes the detector kind to UNKNOWN. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00054">54</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>: <a class="code hl_variable" href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">kind</a>(<a class="code hl_enumvalue" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">UNKNOWN</a>) {}</div>
-<div class="ttc" id="aclassSVF_1_1AEDetector_html_a3947d2ab84f861c484a80e060a875a13"><div class="ttname"><a href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">SVF::AEDetector::kind</a></div><div class="ttdeci">DetectorKind kind</div><div class="ttdoc">The kind of the detector.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00099">AEDetector.h:99</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00055">55</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>: <a class="code hl_variable" href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">kind</a>(<a class="code hl_enumvalue" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">UNKNOWN</a>) {}</div>
+<div class="ttc" id="aclassSVF_1_1AEDetector_html_a3947d2ab84f861c484a80e060a875a13"><div class="ttname"><a href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">SVF::AEDetector::kind</a></div><div class="ttdeci">DetectorKind kind</div><div class="ttdoc">The kind of the detector.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00100">AEDetector.h:100</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -266,10 +272,10 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the detector is of type UNKNOWN, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00066">66</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">detector</a>-&gt;getKind() == <a class="code hl_enumvalue" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">AEDetector::UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00067">67</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">detector</a>-&gt;getKind() == <a class="code hl_enumvalue" href="classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bead62d303c8d623dc3a31e49fca5967c17">AEDetector::UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
 <div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00074">BasicTypes.h:74</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -317,7 +323,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classSVF_1_1BufOverflowDetector.html#a437da08394623067ff14782f7de20375">SVF::BufOverflowDetector</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1BufOverflowDetector.html#a437da08394623067ff14782f7de20375">SVF::BufOverflowDetector</a>, and <a class="el" href="classSVF_1_1NullptrDerefDetector.html#a81443a9c9f242629b6560fc0da383863">SVF::NullptrDerefDetector</a>.</p>
 
 </div>
 </div>
@@ -347,10 +353,10 @@ Protected Attributes</h2></td></tr>
 <p>Get the kind of the detector. </p>
 <dl class="section return"><dt>Returns</dt><dd>The kind of the detector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00093">93</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">kind</a>;</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00094">94</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13">kind</a>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -386,7 +392,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classSVF_1_1BufOverflowDetector.html#aa47ba77eb81cdc9f634dfaae7344a3dc">SVF::BufOverflowDetector</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1BufOverflowDetector.html#aa47ba77eb81cdc9f634dfaae7344a3dc">SVF::BufOverflowDetector</a>, and <a class="el" href="classSVF_1_1NullptrDerefDetector.html#ac819ebdd0c0eb828388ce5753506f93a">SVF::NullptrDerefDetector</a>.</p>
 
 </div>
 </div>
@@ -415,7 +421,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Pure virtual function to report detected bugs. </p>
 
-<p>Implemented in <a class="el" href="classSVF_1_1BufOverflowDetector.html#a9c5cb9af3b1e74d10f11b36d88552b01">SVF::BufOverflowDetector</a>.</p>
+<p>Implemented in <a class="el" href="classSVF_1_1BufOverflowDetector.html#a9c5cb9af3b1e74d10f11b36d88552b01">SVF::BufOverflowDetector</a>, and <a class="el" href="classSVF_1_1NullptrDerefDetector.html#a83cffccbbecafdd5b5d4fc0d4c9b59db">SVF::NullptrDerefDetector</a>.</p>
 
 </div>
 </div>
@@ -442,7 +448,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The kind of the detector. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00099">99</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00100">100</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 
 </div>
 </div>

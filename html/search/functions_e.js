@@ -24,9 +24,10 @@ var searchData=
   ['normalizepointsto_21',['normalizepointsto',['../classSVF_1_1BVDataPTAImpl.html#a2026cffd7043208333083ed1a6603e7b',1,'SVF::BVDataPTAImpl::normalizePointsTo()'],['../classSVF_1_1CondPTAImpl.html#aa945d068c8935fc6926833fdf102e21c',1,'SVF::CondPTAImpl::normalizePointsTo()'],['../classSVF_1_1AndersenBase.html#a1c543a29e9257d2fa1ba864b41ef5417',1,'SVF::AndersenBase::normalizePointsTo()']]],
   ['nothingset_22',['nothingSet',['../classOptionMultiple.html#a6de3b01c7773ea6fddf84cd57e7401f8',1,'OptionMultiple']]],
   ['nullexpr_23',['nullExpr',['../classSVF_1_1Z3Expr.html#a9aa800372d57db519d484cc32ea1c5dc',1,'SVF::Z3Expr']]],
-  ['nullptrsymid_24',['nullPtrSymID',['../classSVF_1_1IRGraph.html#a47b0c938cd72dc09ebd0d4b5dacc34bf',1,'SVF::IRGraph']]],
-  ['nullptrvfgnode_25',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html#a5bbcd7ba5ac40efefbd1ef99bea86639',1,'SVF::NullPtrVFGNode']]],
-  ['num_5fgenerator_26',['num_generator',['../classSVF_1_1CFGrammar.html#a4d98bd2fee3d88558ed2b59c3d0d0d57',1,'SVF::CFGrammar']]],
-  ['numedgedestlabels_27',['numEdgeDestLabels',['../structSVF_1_1DefaultDOTGraphTraits.html#a94f582264d3020f36a2ca3bdfbdaf81b',1,'SVF::DefaultDOTGraphTraits']]],
-  ['numelement_28',['numElement',['../classSVF_1_1CondPointsToSet.html#a8d8f9e91b62b94d876f34066de7944d4',1,'SVF::CondPointsToSet']]]
+  ['nullptrderefdetector_24',['NullptrDerefDetector',['../classSVF_1_1NullptrDerefDetector.html#affca11776ac8751262dd1dbbfee8dc34',1,'SVF::NullptrDerefDetector']]],
+  ['nullptrsymid_25',['nullPtrSymID',['../classSVF_1_1IRGraph.html#a47b0c938cd72dc09ebd0d4b5dacc34bf',1,'SVF::IRGraph']]],
+  ['nullptrvfgnode_26',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html#a5bbcd7ba5ac40efefbd1ef99bea86639',1,'SVF::NullPtrVFGNode']]],
+  ['num_5fgenerator_27',['num_generator',['../classSVF_1_1CFGrammar.html#a4d98bd2fee3d88558ed2b59c3d0d0d57',1,'SVF::CFGrammar']]],
+  ['numedgedestlabels_28',['numEdgeDestLabels',['../structSVF_1_1DefaultDOTGraphTraits.html#a94f582264d3020f36a2ca3bdfbdaf81b',1,'SVF::DefaultDOTGraphTraits']]],
+  ['numelement_29',['numElement',['../classSVF_1_1CondPointsToSet.html#a8d8f9e91b62b94d876f34066de7944d4',1,'SVF::CondPointsToSet']]]
 ];

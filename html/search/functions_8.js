@@ -39,7 +39,7 @@ var searchData=
   ['handlestore_36',['handleStore',['../classSVF_1_1AndersenWaveDiff.html#a775a74d57842b85301daeafe64c8a5c4',1,'SVF::AndersenWaveDiff']]],
   ['handlestrcat_37',['handleStrcat',['../classSVF_1_1AbsExtAPI.html#abfcdec64689429ff72bc5afa75b1b8b7',1,'SVF::AbsExtAPI']]],
   ['handlestrcpy_38',['handleStrcpy',['../classSVF_1_1AbsExtAPI.html#aec96af747e7028b2836da37d51b2431b',1,'SVF::AbsExtAPI']]],
-  ['handlestubfunctions_39',['handlestubfunctions',['../classSVF_1_1BufOverflowDetector.html#aa47ba77eb81cdc9f634dfaae7344a3dc',1,'SVF::BufOverflowDetector::handleStubFunctions()'],['../classSVF_1_1AEDetector.html#a2455e0d20bf52a88832bf36ff414c75a',1,'SVF::AEDetector::handleStubFunctions()']]],
+  ['handlestubfunctions_39',['handlestubfunctions',['../classSVF_1_1BufOverflowDetector.html#aa47ba77eb81cdc9f634dfaae7344a3dc',1,'SVF::BufOverflowDetector::handleStubFunctions()'],['../classSVF_1_1NullptrDerefDetector.html#ac819ebdd0c0eb828388ce5753506f93a',1,'SVF::NullptrDerefDetector::handleStubFunctions()'],['../classSVF_1_1AEDetector.html#a2455e0d20bf52a88832bf36ff414c75a',1,'SVF::AEDetector::handleStubFunctions()']]],
   ['handlesvfstatement_40',['handleSVFStatement',['../classSVF_1_1AbstractInterpretation.html#a896d04a02951947bc228bf97b2c00313',1,'SVF::AbstractInterpretation']]],
   ['handlethunkfunction_41',['handleThunkFunction',['../CppUtil_8cpp.html#a264d15523be2c695d9cee8d49ae87ebe',1,'CppUtil.cpp']]],
   ['handletypedef_42',['handleTypedef',['../classSVF_1_1DCHGraph.html#a6d97a772afe16c1483e65eea81f82603',1,'SVF::DCHGraph']]],
