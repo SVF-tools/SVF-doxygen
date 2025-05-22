@@ -21,7 +21,7 @@ var searchData=
   ['aetest_18',['AETEST',['../ae_8cpp.html#ae005c0651caefe412c15c8467a192e59',1,'ae.cpp']]],
   ['after_5finserted_19',['after_inserted',['../cJSON_8cpp.html#a38b1dcebd0d04ad6f2ee1872ec39d53d',1,'cJSON.cpp']]],
   ['alias_5fvalidation_20',['alias_validation',['../classSVF_1_1PointerAnalysis.html#aac1a133d478bd14c74309d9c4eaf0c8e',1,'SVF::PointerAnalysis']]],
-  ['aliasrule_21',['AliasRule',['../classSVF_1_1Options.html#a2960fcb679f8dfee7d8822fcf9609f4a',1,'SVF::Options']]],
+  ['aliasrule_21',['AliasRule',['../classSVF_1_1Options.html#a23da0134ac51adc295582317ee387ec9',1,'SVF::Options']]],
   ['aliastestfailmayalias_22',['aliasTestFailMayAlias',['../classSVF_1_1PointerAnalysis.html#a32c6f12ce8bc0554dbb6aafa36f9a235',1,'SVF::PointerAnalysis']]],
   ['aliastestfailmayaliasmangled_23',['aliasTestFailMayAliasMangled',['../classSVF_1_1PointerAnalysis.html#a651cc82379c2d18cc2f69f25b2ae08db',1,'SVF::PointerAnalysis']]],
   ['aliastestfailnoalias_24',['aliasTestFailNoAlias',['../classSVF_1_1PointerAnalysis.html#a18347e41bc66b16e3f42c7c52811ad42',1,'SVF::PointerAnalysis']]],

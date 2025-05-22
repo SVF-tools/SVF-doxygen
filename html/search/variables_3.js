@@ -68,7 +68,7 @@ var searchData=
   ['clsname_65',['clsName',['../CppUtil_8cpp.html#a5f8da60b0fcc28445f508f4e42513a82',1,'CppUtil.cpp']]],
   ['clusterander_66',['ClusterAnder',['../classSVF_1_1Options.html#a46743284466ff803f52a82b094186d16',1,'SVF::Options']]],
   ['clusterfs_67',['ClusterFs',['../classSVF_1_1Options.html#a853caba808dc7d17cba4ad4214b56b6f',1,'SVF::Options']]],
-  ['clustermethod_68',['ClusterMethod',['../classSVF_1_1Options.html#ac17ce6d75293dcd0baf366cbeb0cb6d6',1,'SVF::Options']]],
+  ['clustermethod_68',['ClusterMethod',['../classSVF_1_1Options.html#aaad3e7b089236a0dfe9138fe162c55fb',1,'SVF::Options']]],
   ['collapsetime_69',['CollapseTime',['../classSVF_1_1AndersenStat.html#a3f5739454b1f4e03b4388a4ba5730e15',1,'SVF::AndersenStat']]],
   ['collectextretglobals_70',['CollectExtRetGlobals',['../classSVF_1_1Options.html#a9be31261a2f96c5733bd35a5da07eb76',1,'SVF::Options']]],
   ['complementcache_71',['complementCache',['../classSVF_1_1PersistentPointsToCache.html#adef498f8a0d4c75023382e6312a85a58',1,'SVF::PersistentPointsToCache']]],
