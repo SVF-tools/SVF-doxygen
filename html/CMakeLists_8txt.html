@@ -77,12 +77,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a31f93b6c80cf1738388338630dff4962" id="r_a31f93b6c80cf1738388338630dff4962"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a31f93b6c80cf1738388338630dff4962">add_subdirectory</a> (SABER) add_subdirectory(WPA) add_subdirectory(Example) add_subdirectory(DDA) add_subdirectory(MTA) add_subdirectory(CFL) add_subdirectory(LLVM2SVF) add_subdirectory(AE) set_target_properties(cfl dvf svf-ex llvm2svf mta saber wpa ae PROPERTIES RUNTIME_OUTPUT_DIRECTORY $</td></tr>
-<tr class="separator:a31f93b6c80cf1738388338630dff4962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095adb383e17fd25f8801edb1c977d98" id="r_a095adb383e17fd25f8801edb1c977d98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a095adb383e17fd25f8801edb1c977d98">add_subdirectory</a> (SABER) add_subdirectory(WPA) add_subdirectory(Example) add_subdirectory(DDA) add_subdirectory(MTA) add_subdirectory(CFL) add_subdirectory(LLVM2SVF) add_subdirectory(AE) set(ALL_TOOLS ae cfl dvf llvm2svf mta saber svf-ex wpa) foreach(_tool IN LISTS ALL_TOOLS) target_link_libraries($</td></tr>
+<tr class="separator:a095adb383e17fd25f8801edb1c977d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fdf5026b0cab815349563d9b03e856" id="r_a03fdf5026b0cab815349563d9b03e856"><td class="memItemLeft" align="right" valign="top">PRIVATE SvfCore SvfLLVM&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a03fdf5026b0cab815349563d9b03e856">set_target_properties</a> (${_tool} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/bin LIBRARY_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/lib ARCHIVE_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/lib) install(TARGETS $</td></tr>
+<tr class="separator:a03fdf5026b0cab815349563d9b03e856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a31f93b6c80cf1738388338630dff4962" name="a31f93b6c80cf1738388338630dff4962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31f93b6c80cf1738388338630dff4962">&#9670;&#160;</a></span>add_subdirectory()</h2>
+<a id="a095adb383e17fd25f8801edb1c977d98" name="a095adb383e17fd25f8801edb1c977d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095adb383e17fd25f8801edb1c977d98">&#9670;&#160;</a></span>add_subdirectory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -98,7 +100,35 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00001">1</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                                  {CMAKE_BINARY_DIR}/bin</div>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                         {_tool} PRIVATE SvfCore SvfLLVM)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a03fdf5026b0cab815349563d9b03e856" name="a03fdf5026b0cab815349563d9b03e856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03fdf5026b0cab815349563d9b03e856">&#9670;&#160;</a></span>set_target_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PRIVATE SvfCore SvfLLVM set_target_properties </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>${_tool} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/bin LIBRARY_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/lib ARCHIVE_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00026">26</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>     {_tool}</div>
+<div class="line"><span class="lineno">   28</span>    PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/bin</div>
+<div class="line"><span class="lineno">   29</span>               LIBRARY_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/lib</div>
+<div class="line"><span class="lineno">   30</span>               ARCHIVE_OUTPUT_DIRECTORY ${SVF_BINARY_DIR}/lib</div>
+<div class="line"><span class="lineno">   31</span>  )</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>  install(</div>
+<div class="line"><span class="lineno">   34</span>    TARGETS ${_tool}</div>
 </div><!-- fragment -->
 </div>
 </div>
