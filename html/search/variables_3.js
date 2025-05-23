@@ -44,7 +44,7 @@ var searchData=
   ['cbv_41',['cbv',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a0cba79551b56ed83dc45ab63619dc590',1,'SVF::CoreBitVector::CoreBitVectorIterator::cbv'],['../classSVF_1_1PointsTo.html#a79333c4ae5c002d9632fa589956b3605',1,'SVF::PointsTo::cbv']]],
   ['cbvit_42',['cbvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a4db2c62eb3ad789ab7aaf7506cd340b2',1,'SVF::PointsTo::PointsToIterator']]],
   ['cfledgeset_43',['cflEdgeSet',['../classSVF_1_1CFLGraph.html#afb41039ad53899fa64fedcef8b7aa7fe',1,'SVF::CFLGraph']]],
-  ['cflgraph_44',['cflgraph',['../classSVF_1_1CFLGraphBuilder.html#af034366ce280120e5cd1a5685894e9ac',1,'SVF::CFLGraphBuilder::cflGraph'],['../classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac',1,'SVF::Options::CFLGraph']]],
+  ['cflgraph_44',['cflgraph',['../classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac',1,'SVF::Options::CFLGraph'],['../classSVF_1_1CFLGraphBuilder.html#af034366ce280120e5cd1a5685894e9ac',1,'SVF::CFLGraphBuilder::cflGraph']]],
   ['cflsvfg_45',['CFLSVFG',['../classSVF_1_1Options.html#a7ef3e2cd417646e9d06e0da16ff6c516',1,'SVF::Options']]],
   ['cg_46',['cg',['../classSVF_1_1ICFGIWTO.html#a7bce3f42203ea965cf5f040acc10ebde',1,'SVF::ICFGIWTO']]],
   ['cgnode_47',['cgNode',['../classSVF_1_1ArgValVar.html#a58e36e0a98d25250ec64efb4da892961',1,'SVF::ArgValVar']]],
