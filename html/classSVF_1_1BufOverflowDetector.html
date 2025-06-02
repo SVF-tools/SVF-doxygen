@@ -321,37 +321,37 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00235">235</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  236</span>    {</div>
-<div class="line"><span class="lineno">  237</span> </div>
-<div class="line"><span class="lineno">  238</span>        <a class="code hl_typedef" href="classSVF_1_1GenericBug.html#acc65b033bfd61257d5b6fdbf932dfafe">GenericBug::EventStack</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>;</div>
-<div class="line"><span class="lineno">  239</span>        SVFBugEvent <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">sourceInstEvent</a>(<a class="code hl_enumvalue" href="classSVF_1_1SVFBugEvent.html#a4d0c0744525bc445a64176c3808377f3ace4540f37504bfbfab8451b8823fe999">SVFBugEvent::EventType::SourceInst</a>, node);</div>
-<div class="line"><span class="lineno">  240</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>.push_back(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">sourceInstEvent</a>); <span class="comment">// Add the source instruction event to the event stack</span></div>
-<div class="line"><span class="lineno">  241</span> </div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>.empty())</div>
-<div class="line"><span class="lineno">  243</span>        {</div>
-<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">return</span>; <span class="comment">// If the event stack is empty, return early</span></div>
-<div class="line"><span class="lineno">  245</span>        }</div>
-<div class="line"><span class="lineno">  246</span> </div>
-<div class="line"><span class="lineno">  247</span>        std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loc</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>.back().getEventLoc(); <span class="comment">// Get the location of the last event in the stack</span></div>
-<div class="line"><span class="lineno">  248</span> </div>
-<div class="line"><span class="lineno">  249</span>        <span class="comment">// Check if the bug at this location has already been reported</span></div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a63f1738ad44d9d07e1dcf911858ced04">bugLoc</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loc</a>) != <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a63f1738ad44d9d07e1dcf911858ced04">bugLoc</a>.end())</div>
-<div class="line"><span class="lineno">  251</span>        {</div>
-<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">return</span>; <span class="comment">// If the bug location is already reported, return early</span></div>
-<div class="line"><span class="lineno">  253</span>        }</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  255</span>        {</div>
-<div class="line"><span class="lineno">  256</span>            <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a63f1738ad44d9d07e1dcf911858ced04">bugLoc</a>.insert(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loc</a>); <span class="comment">// Otherwise, mark this location as reported</span></div>
-<div class="line"><span class="lineno">  257</span>        }</div>
-<div class="line"><span class="lineno">  258</span> </div>
-<div class="line"><span class="lineno">  259</span>        <span class="comment">// Add the bug to the recorder with details from the event stack</span></div>
-<div class="line"><span class="lineno">  260</span>        <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a4c0f8f9afa5723d016abf2199512d921">recoder</a>.<a class="code hl_function" href="classSVF_1_1SVFBugReport.html#a05f395eff23619ed10c31c0acda949e2">addAbsExecBug</a>(<a class="code hl_enumvalue" href="classSVF_1_1GenericBug.html#a7aeeb33097bca5f7fe6747f90f5cecacac88ddac03bb8ae09a72058e4ad7af747">GenericBug::FULLBUFOVERFLOW</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>, 0, 0, 0, 0);</div>
-<div class="line"><span class="lineno">  261</span>        <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">nodeToBugInfo</a>[node] = e.what(); <span class="comment">// Record the exception information for the node</span></div>
-<div class="line"><span class="lineno">  262</span>    }</div>
-<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a4c0f8f9afa5723d016abf2199512d921"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a4c0f8f9afa5723d016abf2199512d921">SVF::BufOverflowDetector::recoder</a></div><div class="ttdeci">SVFBugReport recoder</div><div class="ttdoc">Recorder for abstract execution bugs.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00323">AEDetector.h:323</a></div></div>
-<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a63f1738ad44d9d07e1dcf911858ced04"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a63f1738ad44d9d07e1dcf911858ced04">SVF::BufOverflowDetector::bugLoc</a></div><div class="ttdeci">Set&lt; std::string &gt; bugLoc</div><div class="ttdoc">Set of locations where bugs have been reported.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00322">AEDetector.h:322</a></div></div>
-<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a9d0a7fa63e5898380111edef2c748ce8"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">SVF::BufOverflowDetector::nodeToBugInfo</a></div><div class="ttdeci">Map&lt; const ICFGNode *, std::string &gt; nodeToBugInfo</div><div class="ttdoc">Maps ICFG nodes to bug information.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00324">AEDetector.h:324</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00238">238</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>    {</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_typedef" href="classSVF_1_1GenericBug.html#acc65b033bfd61257d5b6fdbf932dfafe">GenericBug::EventStack</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>;</div>
+<div class="line"><span class="lineno">  242</span>        SVFBugEvent <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">sourceInstEvent</a>(<a class="code hl_enumvalue" href="classSVF_1_1SVFBugEvent.html#a4d0c0744525bc445a64176c3808377f3ace4540f37504bfbfab8451b8823fe999">SVFBugEvent::EventType::SourceInst</a>, node);</div>
+<div class="line"><span class="lineno">  243</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>.push_back(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">sourceInstEvent</a>); <span class="comment">// Add the source instruction event to the event stack</span></div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>.empty())</div>
+<div class="line"><span class="lineno">  246</span>        {</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">return</span>; <span class="comment">// If the event stack is empty, return early</span></div>
+<div class="line"><span class="lineno">  248</span>        }</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>        std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loc</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>.back().getEventLoc(); <span class="comment">// Get the location of the last event in the stack</span></div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>        <span class="comment">// Check if the bug at this location has already been reported</span></div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a63f1738ad44d9d07e1dcf911858ced04">bugLoc</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loc</a>) != <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a63f1738ad44d9d07e1dcf911858ced04">bugLoc</a>.end())</div>
+<div class="line"><span class="lineno">  254</span>        {</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">return</span>; <span class="comment">// If the bug location is already reported, return early</span></div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  258</span>        {</div>
+<div class="line"><span class="lineno">  259</span>            <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a63f1738ad44d9d07e1dcf911858ced04">bugLoc</a>.insert(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loc</a>); <span class="comment">// Otherwise, mark this location as reported</span></div>
+<div class="line"><span class="lineno">  260</span>        }</div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span>        <span class="comment">// Add the bug to the recorder with details from the event stack</span></div>
+<div class="line"><span class="lineno">  263</span>        <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a4c0f8f9afa5723d016abf2199512d921">recoder</a>.<a class="code hl_function" href="classSVF_1_1SVFBugReport.html#a05f395eff23619ed10c31c0acda949e2">addAbsExecBug</a>(<a class="code hl_enumvalue" href="classSVF_1_1GenericBug.html#a7aeeb33097bca5f7fe6747f90f5cecacac88ddac03bb8ae09a72058e4ad7af747">GenericBug::FULLBUFOVERFLOW</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">eventStack</a>, 0, 0, 0, 0);</div>
+<div class="line"><span class="lineno">  264</span>        <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">nodeToBugInfo</a>[node] = e.what(); <span class="comment">// Record the exception information for the node</span></div>
+<div class="line"><span class="lineno">  265</span>    }</div>
+<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a4c0f8f9afa5723d016abf2199512d921"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a4c0f8f9afa5723d016abf2199512d921">SVF::BufOverflowDetector::recoder</a></div><div class="ttdeci">SVFBugReport recoder</div><div class="ttdoc">Recorder for abstract execution bugs.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00326">AEDetector.h:326</a></div></div>
+<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a63f1738ad44d9d07e1dcf911858ced04"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a63f1738ad44d9d07e1dcf911858ced04">SVF::BufOverflowDetector::bugLoc</a></div><div class="ttdeci">Set&lt; std::string &gt; bugLoc</div><div class="ttdoc">Set of locations where bugs have been reported.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00325">AEDetector.h:325</a></div></div>
+<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a9d0a7fa63e5898380111edef2c748ce8"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">SVF::BufOverflowDetector::nodeToBugInfo</a></div><div class="ttdeci">Map&lt; const ICFGNode *, std::string &gt; nodeToBugInfo</div><div class="ttdoc">Maps ICFG nodes to bug information.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00327">AEDetector.h:327</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericBug_html_a7aeeb33097bca5f7fe6747f90f5cecacac88ddac03bb8ae09a72058e4ad7af747"><div class="ttname"><a href="classSVF_1_1GenericBug.html#a7aeeb33097bca5f7fe6747f90f5cecacac88ddac03bb8ae09a72058e4ad7af747">SVF::GenericBug::FULLBUFOVERFLOW</a></div><div class="ttdeci">@ FULLBUFOVERFLOW</div><div class="ttdef"><b>Definition</b> <a href="SVFBugReport_8h_source.html#l00086">SVFBugReport.h:86</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericBug_html_acc65b033bfd61257d5b6fdbf932dfafe"><div class="ttname"><a href="classSVF_1_1GenericBug.html#acc65b033bfd61257d5b6fdbf932dfafe">SVF::GenericBug::EventStack</a></div><div class="ttdeci">std::vector&lt; SVFBugEvent &gt; EventStack</div><div class="ttdef"><b>Definition</b> <a href="SVFBugReport_8h_source.html#l00083">SVFBugReport.h:83</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFBugEvent_html_a4d0c0744525bc445a64176c3808377f3ace4540f37504bfbfab8451b8823fe999"><div class="ttname"><a href="classSVF_1_1SVFBugEvent.html#a4d0c0744525bc445a64176c3808377f3ace4540f37504bfbfab8451b8823fe999">SVF::SVFBugEvent::SourceInst</a></div><div class="ttdeci">@ SourceInst</div><div class="ttdef"><b>Definition</b> <a href="SVFBugReport_8h_source.html#l00061">SVFBugReport.h:60</a></div></div>
@@ -408,7 +408,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  195</span>        <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a3cd11f8d87ca8a2aa971349a5446f1cd">gepObjOffsetFromBase</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">obj</a>] = <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>;</div>
 <div class="line"><span class="lineno">  196</span>    }</div>
 <div class="ttc" id="acJSON_8cpp_html_a95bf816579e97b6f33bdb5e25ed6d5de"><div class="ttname"><a href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a></div><div class="ttdeci">buffer offset</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l01113">cJSON.cpp:1113</a></div></div>
-<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a3cd11f8d87ca8a2aa971349a5446f1cd"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a3cd11f8d87ca8a2aa971349a5446f1cd">SVF::BufOverflowDetector::gepObjOffsetFromBase</a></div><div class="ttdeci">Map&lt; const GepObjVar *, IntervalValue &gt; gepObjOffsetFromBase</div><div class="ttdoc">Maps GEP objects to their offsets from the base.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00320">AEDetector.h:320</a></div></div>
+<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a3cd11f8d87ca8a2aa971349a5446f1cd"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a3cd11f8d87ca8a2aa971349a5446f1cd">SVF::BufOverflowDetector::gepObjOffsetFromBase</a></div><div class="ttdeci">Map&lt; const GepObjVar *, IntervalValue &gt; gepObjOffsetFromBase</div><div class="ttdoc">Maps GEP objects to their offsets from the base.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00323">AEDetector.h:323</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -692,7 +692,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a0c39879a8c2cf7e2aff839fe5a7f8f3d"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a0c39879a8c2cf7e2aff839fe5a7f8f3d">SVF::BufOverflowDetector::getAccessOffset</a></div><div class="ttdeci">IntervalValue getAccessOffset(AbstractState &amp;as, NodeID objId, const GepStmt *gep)</div><div class="ttdoc">Retrieves the access offset for a given object and GEP statement.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00312">AEDetector.cpp:312</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_ac6844230bf29cccc3b44cfb17915a13b"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#ac6844230bf29cccc3b44cfb17915a13b">SVF::BufOverflowDetector::detectExtAPI</a></div><div class="ttdeci">void detectExtAPI(AbstractState &amp;as, const CallICFGNode *call)</div><div class="ttdoc">Handles external API calls related to buffer overflow detection.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00218">AEDetector.cpp:218</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_ae86d6842d7f33688b18af1578fe75b98"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#ae86d6842d7f33688b18af1578fe75b98">SVF::BufOverflowDetector::updateGepObjOffsetFromBase</a></div><div class="ttdeci">void updateGepObjOffsetFromBase(AbstractState &amp;as, AddressValue gepAddrs, AddressValue objAddrs, IntervalValue offset)</div><div class="ttdoc">Updates the offset of a GEP object from its base.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00346">AEDetector.cpp:346</a></div></div>
-<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_ae8fe081d8a287976c6b02e0b5030bc6b"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#ae8fe081d8a287976c6b02e0b5030bc6b">SVF::BufOverflowDetector::addBugToReporter</a></div><div class="ttdeci">void addBugToReporter(const AEException &amp;e, const ICFGNode *node)</div><div class="ttdoc">Adds a bug to the reporter based on an exception.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00235">AEDetector.h:235</a></div></div>
+<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_ae8fe081d8a287976c6b02e0b5030bc6b"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#ae8fe081d8a287976c6b02e0b5030bc6b">SVF::BufOverflowDetector::addBugToReporter</a></div><div class="ttdeci">void addBugToReporter(const AEException &amp;e, const ICFGNode *node)</div><div class="ttdoc">Adds a bug to the reporter based on an exception.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00238">AEDetector.h:238</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html">SVF::CallICFGNode</a></div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00416">ICFGNode.h:417</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepStmt_html"><div class="ttname"><a href="classSVF_1_1GepStmt.html">SVF::GepStmt</a></div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8h_source.html#l00523">SVFStatements.h:524</a></div></div>
 <div class="ttc" id="aclassSVF_1_1IntervalValue_html_aa027be2f9243ce4cae799b265b019443"><div class="ttname"><a href="classSVF_1_1IntervalValue.html#aa027be2f9243ce4cae799b265b019443">SVF::IntervalValue::bottom</a></div><div class="ttdeci">static IntervalValue bottom()</div><div class="ttdoc">Create the bottom IntervalValue [+inf, -inf].</div><div class="ttdef"><b>Definition</b> <a href="IntervalValue_8h_source.html#l00100">IntervalValue.h:100</a></div></div>
@@ -830,7 +830,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1AbsExtAPI_html_ac30c873a83c91e3ead2c55783de34670adebe1478d4a4b8d77b9929ed5cfc5255"><div class="ttname"><a href="classSVF_1_1AbsExtAPI.html#ac30c873a83c91e3ead2c55783de34670adebe1478d4a4b8d77b9929ed5cfc5255">SVF::AbsExtAPI::STRCPY</a></div><div class="ttdeci">@ STRCPY</div><div class="ttdef"><b>Definition</b> <a href="AbsExtAPI_8h_source.html#l00050">AbsExtAPI.h:50</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbsExtAPI_html_ac30c873a83c91e3ead2c55783de34670ae739cb8f6f26620771403f6290c1b4e6"><div class="ttname"><a href="classSVF_1_1AbsExtAPI.html#ac30c873a83c91e3ead2c55783de34670ae739cb8f6f26620771403f6290c1b4e6">SVF::AbsExtAPI::MEMSET</a></div><div class="ttdeci">@ MEMSET</div><div class="ttdef"><b>Definition</b> <a href="AbsExtAPI_8h_source.html#l00050">AbsExtAPI.h:50</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbsExtAPI_html_ac30c873a83c91e3ead2c55783de34670aff39fd0bbf8e04357eb1281a7ab8e938"><div class="ttname"><a href="classSVF_1_1AbsExtAPI.html#ac30c873a83c91e3ead2c55783de34670aff39fd0bbf8e04357eb1281a7ab8e938">SVF::AbsExtAPI::MEMCPY</a></div><div class="ttdeci">@ MEMCPY</div><div class="ttdef"><b>Definition</b> <a href="AbsExtAPI_8h_source.html#l00050">AbsExtAPI.h:50</a></div></div>
-<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a416ec25c8bb80b8bb241adc0e5216bc0"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a416ec25c8bb80b8bb241adc0e5216bc0">SVF::BufOverflowDetector::extAPIBufOverflowCheckRules</a></div><div class="ttdeci">Map&lt; std::string, std::vector&lt; std::pair&lt; u32_t, u32_t &gt; &gt; &gt; extAPIBufOverflowCheckRules</div><div class="ttdoc">Rules for checking buffer overflows in external APIs.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00321">AEDetector.h:321</a></div></div>
+<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a416ec25c8bb80b8bb241adc0e5216bc0"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a416ec25c8bb80b8bb241adc0e5216bc0">SVF::BufOverflowDetector::extAPIBufOverflowCheckRules</a></div><div class="ttdeci">Map&lt; std::string, std::vector&lt; std::pair&lt; u32_t, u32_t &gt; &gt; &gt; extAPIBufOverflowCheckRules</div><div class="ttdoc">Rules for checking buffer overflows in external APIs.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00324">AEDetector.h:324</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a4492568641edcdd0f882bed1a0bbe3b5"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a4492568641edcdd0f882bed1a0bbe3b5">SVF::BufOverflowDetector::detectStrcpy</a></div><div class="ttdeci">bool detectStrcpy(AbstractState &amp;as, const CallICFGNode *call)</div><div class="ttdoc">Detects buffer overflow in 'strcpy' function calls.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00417">AEDetector.cpp:417</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a6332a437555eb3b503741d420f633292"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#a6332a437555eb3b503741d420f633292">SVF::BufOverflowDetector::detectStrcat</a></div><div class="ttdeci">bool detectStrcat(AbstractState &amp;as, const CallICFGNode *call)</div><div class="ttdoc">Detects buffer overflow in 'strcat' function calls.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00435">AEDetector.cpp:435</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_ab76fcd4f6b7e832f56e918a811532173"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#ab76fcd4f6b7e832f56e918a811532173">SVF::BufOverflowDetector::canSafelyAccessMemory</a></div><div class="ttdeci">bool canSafelyAccessMemory(AbstractState &amp;as, const SVFVar *value, const IntervalValue &amp;len)</div><div class="ttdoc">Checks if memory can be safely accessed.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00476">AEDetector.cpp:476</a></div></div>
@@ -926,9 +926,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  461</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">abort</a>();</div>
 <div class="line"><span class="lineno">  462</span>    }</div>
 <div class="line"><span class="lineno">  463</span>}</div>
-<div class="ttc" id="aclassSVF_1_1AbsExtAPI_html_a547c5d9e1464bab6f0e05a9705c7a28a"><div class="ttname"><a href="classSVF_1_1AbsExtAPI.html#a547c5d9e1464bab6f0e05a9705c7a28a">SVF::AbsExtAPI::getStrlen</a></div><div class="ttdeci">IntervalValue getStrlen(AbstractState &amp;as, const SVF::SVFVar *strValue)</div><div class="ttdoc">Calculates the length of a string.</div><div class="ttdef"><b>Definition</b> <a href="AbsExtAPI_8cpp_source.html#l00502">AbsExtAPI.cpp:502</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbsExtAPI_html_a547c5d9e1464bab6f0e05a9705c7a28a"><div class="ttname"><a href="classSVF_1_1AbsExtAPI.html#a547c5d9e1464bab6f0e05a9705c7a28a">SVF::AbsExtAPI::getStrlen</a></div><div class="ttdeci">IntervalValue getStrlen(AbstractState &amp;as, const SVF::SVFVar *strValue)</div><div class="ttdoc">Calculates the length of a string.</div><div class="ttdef"><b>Definition</b> <a href="AbsExtAPI_8cpp_source.html#l00503">AbsExtAPI.cpp:503</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a1d9e03a8dfd9cca940cac16f954d659a"><div class="ttname"><a href="classSVF_1_1AbstractInterpretation.html#a1d9e03a8dfd9cca940cac16f954d659a">SVF::AbstractInterpretation::getAEInstance</a></div><div class="ttdeci">static AbstractInterpretation &amp; getAEInstance()</div><div class="ttdef"><b>Definition</b> <a href="AbstractInterpretation_8h_source.html#l00146">AbstractInterpretation.h:146</a></div></div>
-<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_ac9465083ff86b7488079d3f4011b1fba"><div class="ttname"><a href="classSVF_1_1AbstractInterpretation.html#ac9465083ff86b7488079d3f4011b1fba">SVF::AbstractInterpretation::getUtils</a></div><div class="ttdeci">AbsExtAPI * getUtils()</div><div class="ttdef"><b>Definition</b> <a href="AbstractInterpretation_8h_source.html#l00309">AbstractInterpretation.h:309</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_ac9465083ff86b7488079d3f4011b1fba"><div class="ttname"><a href="classSVF_1_1AbstractInterpretation.html#ac9465083ff86b7488079d3f4011b1fba">SVF::AbstractInterpretation::getUtils</a></div><div class="ttdeci">AbsExtAPI * getUtils()</div><div class="ttdef"><b>Definition</b> <a href="AbstractInterpretation_8h_source.html#l00310">AbstractInterpretation.h:310</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1113,8 +1113,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  215</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1BufOverflowDetector.html#aad6a7f125d4d5dc3659edc2f0f950c57">hasGepObjOffsetFromBase</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">obj</a>))</div>
 <div class="line"><span class="lineno">  216</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a3cd11f8d87ca8a2aa971349a5446f1cd">gepObjOffsetFromBase</a>.at(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">obj</a>);</div>
 <div class="line"><span class="lineno">  217</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  218</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;GepObjVar not found in gepObjOffsetFromBase&quot;</span>);</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
+<div class="line"><span class="lineno">  218</span>        {</div>
+<div class="line"><span class="lineno">  219</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;GepObjVar not found in gepObjOffsetFromBase&quot;</span>);</div>
+<div class="line"><span class="lineno">  220</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">abort</a>();</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
+<div class="line"><span class="lineno">  222</span>    }</div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_aad6a7f125d4d5dc3659edc2f0f950c57"><div class="ttname"><a href="classSVF_1_1BufOverflowDetector.html#aad6a7f125d4d5dc3659edc2f0f950c57">SVF::BufOverflowDetector::hasGepObjOffsetFromBase</a></div><div class="ttdeci">bool hasGepObjOffsetFromBase(const GepObjVar *obj) const</div><div class="ttdoc">Checks if a GEP object has an associated offset.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00203">AEDetector.h:203</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1345,19 +1348,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1AEDetector.html#a4d936be5ca262a024a7554e685bddd61">SVF::AEDetector</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00267">267</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  268</span>    {</div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">nodeToBugInfo</a>.empty())</div>
-<div class="line"><span class="lineno">  270</span>        {</div>
-<div class="line"><span class="lineno">  271</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;######################Buffer Overflow (&quot;</span> + std::to_string(<a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">nodeToBugInfo</a>.size())</div>
-<div class="line"><span class="lineno">  272</span>                      + <span class="stringliteral">&quot; found)######################\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  273</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;---------------------------------------------\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a> : <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">nodeToBugInfo</a>)</div>
-<div class="line"><span class="lineno">  275</span>            {</div>
-<div class="line"><span class="lineno">  276</span>                std::cerr &lt;&lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>.second &lt;&lt; <span class="stringliteral">&quot;\n---------------------------------------------\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  277</span>            }</div>
-<div class="line"><span class="lineno">  278</span>        }</div>
-<div class="line"><span class="lineno">  279</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00270">270</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  271</span>    {</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">nodeToBugInfo</a>.empty())</div>
+<div class="line"><span class="lineno">  273</span>        {</div>
+<div class="line"><span class="lineno">  274</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;######################Buffer Overflow (&quot;</span> + std::to_string(<a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">nodeToBugInfo</a>.size())</div>
+<div class="line"><span class="lineno">  275</span>                      + <span class="stringliteral">&quot; found)######################\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  276</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;---------------------------------------------\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a> : <a class="code hl_variable" href="classSVF_1_1BufOverflowDetector.html#a9d0a7fa63e5898380111edef2c748ce8">nodeToBugInfo</a>)</div>
+<div class="line"><span class="lineno">  278</span>            {</div>
+<div class="line"><span class="lineno">  279</span>                std::cerr &lt;&lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>.second &lt;&lt; <span class="stringliteral">&quot;\n---------------------------------------------\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  280</span>            }</div>
+<div class="line"><span class="lineno">  281</span>        }</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1533,7 +1536,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set of locations where bugs have been reported. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00322">322</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00325">325</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1562,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Rules for checking buffer overflows in external APIs. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00321">321</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00324">324</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 
 </div>
 </div>
@@ -1585,7 +1588,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Maps GEP objects to their offsets from the base. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00320">320</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00323">323</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1614,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Maps <a class="el" href="classSVF_1_1ICFG.html">ICFG</a> nodes to bug information. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00324">324</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00327">327</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 
 </div>
 </div>
@@ -1637,7 +1640,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Recorder for abstract execution bugs. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00323">323</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8h_source.html#l00326">326</a> of file <a class="el" href="AEDetector_8h_source.html">AEDetector.h</a>.</p>
 
 </div>
 </div>
