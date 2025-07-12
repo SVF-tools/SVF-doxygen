@@ -359,36 +359,36 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00065">65</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>{</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a> == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>)</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>    <span class="comment">// An unreachable node is dominated by anything.</span></div>
-<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">isUnreachable</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>))</div>
-<div class="line"><span class="lineno">   72</span>    {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>    <span class="comment">// And dominates nothing.</span></div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">isUnreachable</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a>))</div>
-<div class="line"><span class="lineno">   78</span>    {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Map&lt;const SVFBasicBlock*,BBSet&gt;</a>&amp; <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a2cc82e4d10666e44ffb4b046bf4ba7ed">getDomTreeMap</a>();</div>
-<div class="line"><span class="lineno">   83</span>    <a class="code hl_typedef" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map&lt;const SVFBasicBlock*,BBSet&gt;::const_iterator</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> = <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a>);</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> != <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a>.end())</div>
-<div class="line"><span class="lineno">   85</span>    {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classSVF_1_1SVFLoopAndDomInfo.html#ad478ac88bc07cf4d6d0ad3517b2c4ab3">BBSet</a> &amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a>-&gt;second;</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>) != <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a>.end())</div>
-<div class="line"><span class="lineno">   88</span>        {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   94</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00096">96</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>{</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a> == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>)</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <span class="comment">// An unreachable node is dominated by anything.</span></div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">isUnreachable</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>))</div>
+<div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    <span class="comment">// And dominates nothing.</span></div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">isUnreachable</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a>))</div>
+<div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Map&lt;const SVFBasicBlock*,BBSet&gt;</a>&amp; <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a2cc82e4d10666e44ffb4b046bf4ba7ed">getDomTreeMap</a>();</div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_typedef" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map&lt;const SVFBasicBlock*,BBSet&gt;::const_iterator</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> = <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a>);</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> != <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a>.end())</div>
+<div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classSVF_1_1SVFLoopAndDomInfo.html#ad478ac88bc07cf4d6d0ad3517b2c4ab3">BBSet</a> &amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a>-&gt;second;</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>) != <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a>.end())</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  125</span>}</div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a2cc82e4d10666e44ffb4b046bf4ba7ed"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a2cc82e4d10666e44ffb4b046bf4ba7ed">SVF::SVFLoopAndDomInfo::getDomTreeMap</a></div><div class="ttdeci">Map&lt; const SVFBasicBlock *, BBSet &gt; &amp; getDomTreeMap()</div><div class="ttdef"><b>Definition</b> <a href="SVFLoopAndDomInfo_8h_source.html#l00130">SVFLoopAndDomInfo.h:130</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a34296b98ee8dd1bfc0b1ae7fe327cde3"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">SVF::SVFLoopAndDomInfo::dtBBsMap</a></div><div class="ttdeci">Map&lt; const SVFBasicBlock *, BBSet &gt; dtBBsMap</div><div class="ttdoc">map a BasicBlock to BasicBlocks it Dominates</div><div class="ttdef"><b>Definition</b> <a href="SVFLoopAndDomInfo_8h_source.html#l00052">SVFLoopAndDomInfo.h:52</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_aac4d533d1c7abfefbd54507357e240f4"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">SVF::SVFLoopAndDomInfo::isUnreachable</a></div><div class="ttdeci">bool isUnreachable(const SVFBasicBlock *bb) const</div><div class="ttdef"><b>Definition</b> <a href="SVFLoopAndDomInfo_8h_source.html#l00140">SVFLoopAndDomInfo.h:140</a></div></div>
@@ -425,31 +425,31 @@ Friends</h2></td></tr>
 
 <p>find nearest common post dominator of two basic blocks </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00126">126</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>{</div>
-<div class="line"><span class="lineno">  128</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a> &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a> &amp;&amp; <span class="stringliteral">&quot;Pointers are not valid&quot;</span>);</div>
-<div class="line"><span class="lineno">  129</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>-&gt;getParent() == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a>-&gt;getParent() &amp;&amp;</div>
-<div class="line"><span class="lineno">  130</span>           <span class="stringliteral">&quot;Two blocks are not in same function&quot;</span>);</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    <span class="comment">// Use level information to go up the tree until the levels match. Then</span></div>
-<div class="line"><span class="lineno">  133</span>    <span class="comment">// continue going up til we arrive at the same node.</span></div>
-<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">while</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a> != <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a>)</div>
-<div class="line"><span class="lineno">  135</span>    {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="comment">// no common PDominator</span></div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a> == <a class="code hl_define" href="extapi_8c.html#a1a05ede2ad100bf5de5dfa7ccdfa4397">NULL</a>) <span class="keywordflow">return</span> <a class="code hl_define" href="extapi_8c.html#a1a05ede2ad100bf5de5dfa7ccdfa4397">NULL</a>;</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvA</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">getBBPDomLevel</a>().find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>);</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvB</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">getBBPDomLevel</a>().find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a>);</div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvA</a> != <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">getBBPDomLevel</a>().end() &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvB</a> != <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">getBBPDomLevel</a>().end());</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvA</a>-&gt;second &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvB</a>-&gt;second) std::swap(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a>);</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvAIdom</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a8ee71a783e32de5963a5a352948a82b3">getBB2PIdom</a>().find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>);</div>
-<div class="line"><span class="lineno">  145</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvAIdom</a> != <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a8ee71a783e32de5963a5a352948a82b3">getBB2PIdom</a>().end());</div>
-<div class="line"><span class="lineno">  146</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvAIdom</a>-&gt;second;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>;</div>
-<div class="line"><span class="lineno">  150</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00157">157</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>{</div>
+<div class="line"><span class="lineno">  159</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a> &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a> &amp;&amp; <span class="stringliteral">&quot;Pointers are not valid&quot;</span>);</div>
+<div class="line"><span class="lineno">  160</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>-&gt;getParent() == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a>-&gt;getParent() &amp;&amp;</div>
+<div class="line"><span class="lineno">  161</span>           <span class="stringliteral">&quot;Two blocks are not in same function&quot;</span>);</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>    <span class="comment">// Use level information to go up the tree until the levels match. Then</span></div>
+<div class="line"><span class="lineno">  164</span>    <span class="comment">// continue going up til we arrive at the same node.</span></div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">while</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a> != <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a>)</div>
+<div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>        <span class="comment">// no common PDominator</span></div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a> == <a class="code hl_define" href="extapi_8c.html#a1a05ede2ad100bf5de5dfa7ccdfa4397">NULL</a>) <span class="keywordflow">return</span> <a class="code hl_define" href="extapi_8c.html#a1a05ede2ad100bf5de5dfa7ccdfa4397">NULL</a>;</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvA</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">getBBPDomLevel</a>().find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>);</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvB</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">getBBPDomLevel</a>().find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a>);</div>
+<div class="line"><span class="lineno">  171</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvA</a> != <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">getBBPDomLevel</a>().end() &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvB</a> != <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">getBBPDomLevel</a>().end());</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvA</a>-&gt;second &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvB</a>-&gt;second) std::swap(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">B</a>);</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvAIdom</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a8ee71a783e32de5963a5a352948a82b3">getBB2PIdom</a>().find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>);</div>
+<div class="line"><span class="lineno">  176</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvAIdom</a> != <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a8ee71a783e32de5963a5a352948a82b3">getBB2PIdom</a>().end());</div>
+<div class="line"><span class="lineno">  177</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lvAIdom</a>-&gt;second;</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">A</a>;</div>
+<div class="line"><span class="lineno">  181</span>}</div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a5561078a5c0f2340bf90e31941b238d7"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a5561078a5c0f2340bf90e31941b238d7">SVF::SVFLoopAndDomInfo::getBBPDomLevel</a></div><div class="ttdeci">const Map&lt; const SVFBasicBlock *, u32_t &gt; &amp; getBBPDomLevel() const</div><div class="ttdef"><b>Definition</b> <a href="SVFLoopAndDomInfo_8h_source.html#l00109">SVFLoopAndDomInfo.h:109</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a8ee71a783e32de5963a5a352948a82b3"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a8ee71a783e32de5963a5a352948a82b3">SVF::SVFLoopAndDomInfo::getBB2PIdom</a></div><div class="ttdeci">const Map&lt; const SVFBasicBlock *, const SVFBasicBlock * &gt; &amp; getBB2PIdom() const</div><div class="ttdef"><b>Definition</b> <a href="SVFLoopAndDomInfo_8h_source.html#l00119">SVFLoopAndDomInfo.h:119</a></div></div>
 <div class="ttc" id="aextapi_8c_html_a1a05ede2ad100bf5de5dfa7ccdfa4397"><div class="ttname"><a href="extapi_8c.html#a1a05ede2ad100bf5de5dfa7ccdfa4397">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="extapi_8c_source.html#l00005">extapi.c:5</a></div></div>
@@ -725,26 +725,26 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00046">46</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#abe37f8896e2491a7a60be3fbfde8123c">hasLoopInfo</a>(bb))</div>
-<div class="line"><span class="lineno">   49</span>    {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classSVF_1_1SVFLoopAndDomInfo.html#ae5e2b154313b4330bb015050aec72a1f">LoopBBs</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a0fb893485fc3df088d921762514faf66">getLoopInfo</a>(bb);</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.empty())</div>
-<div class="line"><span class="lineno">   52</span>        {</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SVFBasicBlock.html">SVFBasicBlock</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">block</a> : <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>)</div>
-<div class="line"><span class="lineno">   54</span>            {</div>
-<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SVFBasicBlock.html">SVFBasicBlock</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">succ</a> : <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">block</a>-&gt;getSuccessors())</div>
-<div class="line"><span class="lineno">   56</span>                {</div>
-<div class="line"><span class="lineno">   57</span>                    <span class="keywordflow">if</span> ((std::find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.end(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">succ</a>)==<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.end()))</div>
-<div class="line"><span class="lineno">   58</span>                        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">exitbbs</a>.push_back(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">succ</a>);</div>
-<div class="line"><span class="lineno">   59</span>                }</div>
-<div class="line"><span class="lineno">   60</span>            }</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="line"><span class="lineno">   63</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00077">77</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>{</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#abe37f8896e2491a7a60be3fbfde8123c">hasLoopInfo</a>(bb))</div>
+<div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classSVF_1_1SVFLoopAndDomInfo.html#ae5e2b154313b4330bb015050aec72a1f">LoopBBs</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a0fb893485fc3df088d921762514faf66">getLoopInfo</a>(bb);</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.empty())</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SVFBasicBlock.html">SVFBasicBlock</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">block</a> : <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>)</div>
+<div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SVFBasicBlock.html">SVFBasicBlock</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">succ</a> : <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">block</a>-&gt;getSuccessors())</div>
+<div class="line"><span class="lineno">   87</span>                {</div>
+<div class="line"><span class="lineno">   88</span>                    <span class="keywordflow">if</span> ((std::find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.end(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">succ</a>)==<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.end()))</div>
+<div class="line"><span class="lineno">   89</span>                        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">exitbbs</a>.push_back(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">succ</a>);</div>
+<div class="line"><span class="lineno">   90</span>                }</div>
+<div class="line"><span class="lineno">   91</span>            }</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span>}</div>
 <div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html">SVF::SVFBasicBlock</a></div><div class="ttdef"><b>Definition</b> <a href="BasicBlockG_8h_source.html#l00073">BasicBlockG.h:74</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a0fb893485fc3df088d921762514faf66"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a0fb893485fc3df088d921762514faf66">SVF::SVFLoopAndDomInfo::getLoopInfo</a></div><div class="ttdeci">const LoopBBs &amp; getLoopInfo(const SVFBasicBlock *bb) const</div><div class="ttdef"><b>Definition</b> <a href="SVFValue_8cpp_source.html#l00039">SVFValue.cpp:39</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a0fb893485fc3df088d921762514faf66"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a0fb893485fc3df088d921762514faf66">SVF::SVFLoopAndDomInfo::getLoopInfo</a></div><div class="ttdeci">const LoopBBs &amp; getLoopInfo(const SVFBasicBlock *bb) const</div><div class="ttdef"><b>Definition</b> <a href="SVFValue_8cpp_source.html#l00070">SVFValue.cpp:70</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_abe37f8896e2491a7a60be3fbfde8123c"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#abe37f8896e2491a7a60be3fbfde8123c">SVF::SVFLoopAndDomInfo::hasLoopInfo</a></div><div class="ttdeci">bool hasLoopInfo(const SVFBasicBlock *bb) const</div><div class="ttdef"><b>Definition</b> <a href="SVFLoopAndDomInfo_8h_source.html#l00076">SVFLoopAndDomInfo.h:76</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_ae5e2b154313b4330bb015050aec72a1f"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#ae5e2b154313b4330bb015050aec72a1f">SVF::SVFLoopAndDomInfo::LoopBBs</a></div><div class="ttdeci">BBList LoopBBs</div><div class="ttdef"><b>Definition</b> <a href="SVFLoopAndDomInfo_8h_source.html#l00048">SVFLoopAndDomInfo.h:48</a></div></div>
 </div><!-- fragment -->
@@ -798,12 +798,12 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00039">39</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
-<div class="line"><span class="lineno">   41</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#abe37f8896e2491a7a60be3fbfde8123c">hasLoopInfo</a>(bb) &amp;&amp; <span class="stringliteral">&quot;loopinfo does not exist (bb not in a loop)&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>    <a class="code hl_typedef" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map&lt;const SVFBasicBlock*, LoopBBs&gt;::const_iterator</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> = <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#ad578beedd9a6b64a57f82d799e6b8fa7">bb2LoopMap</a>.find(bb);</div>
-<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a>-&gt;second;</div>
-<div class="line"><span class="lineno">   44</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00070">70</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
+<div class="line"><span class="lineno">   72</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#abe37f8896e2491a7a60be3fbfde8123c">hasLoopInfo</a>(bb) &amp;&amp; <span class="stringliteral">&quot;loopinfo does not exist (bb not in a loop)&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>    <a class="code hl_typedef" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map&lt;const SVFBasicBlock*, LoopBBs&gt;::const_iterator</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> = <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#ad578beedd9a6b64a57f82d799e6b8fa7">bb2LoopMap</a>.find(bb);</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a>-&gt;second;</div>
+<div class="line"><span class="lineno">   75</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -946,16 +946,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00152">152</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>{</div>
-<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#abe37f8896e2491a7a60be3fbfde8123c">hasLoopInfo</a>(bb))</div>
-<div class="line"><span class="lineno">  155</span>    {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classSVF_1_1SVFLoopAndDomInfo.html#ae5e2b154313b4330bb015050aec72a1f">LoopBBs</a>&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a0fb893485fc3df088d921762514faf66">getLoopInfo</a>(bb);</div>
-<div class="line"><span class="lineno">  157</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(!<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.empty() &amp;&amp; <span class="stringliteral">&quot;no available loop info?&quot;</span>);</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.front() == bb;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  161</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00183">183</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>{</div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#abe37f8896e2491a7a60be3fbfde8123c">hasLoopInfo</a>(bb))</div>
+<div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classSVF_1_1SVFLoopAndDomInfo.html#ae5e2b154313b4330bb015050aec72a1f">LoopBBs</a>&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a0fb893485fc3df088d921762514faf66">getLoopInfo</a>(bb);</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(!<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.empty() &amp;&amp; <span class="stringliteral">&quot;no available loop info?&quot;</span>);</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">blocks</a>.front() == bb;</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="line"><span class="lineno">  191</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  192</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1058,35 +1058,35 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00096">96</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>{</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a> == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>)</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>    <span class="comment">// An unreachable node is dominated by anything.</span></div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">isUnreachable</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>))</div>
-<div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>    <span class="comment">// And dominates nothing.</span></div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">isUnreachable</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a>))</div>
-<div class="line"><span class="lineno">  109</span>    {</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Map&lt;const SVFBasicBlock*,BBSet&gt;</a>&amp; <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a0cd1cd44311997be96a74ee536ea84a3">getPostDomTreeMap</a>();</div>
-<div class="line"><span class="lineno">  114</span>    <a class="code hl_typedef" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map&lt;const SVFBasicBlock*,BBSet&gt;::const_iterator</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> = <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a>);</div>
-<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> != <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a>.end())</div>
-<div class="line"><span class="lineno">  116</span>    {</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classSVF_1_1SVFLoopAndDomInfo.html#ad478ac88bc07cf4d6d0ad3517b2c4ab3">BBSet</a> &amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a>-&gt;second;</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>) != <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a>.end())</div>
-<div class="line"><span class="lineno">  119</span>        {</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  124</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFValue_8cpp_source.html#l00127">127</a> of file <a class="el" href="SVFValue_8cpp_source.html">SVFValue.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>{</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a> == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>)</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>    <span class="comment">// An unreachable node is dominated by anything.</span></div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">isUnreachable</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>))</div>
+<div class="line"><span class="lineno">  134</span>    {</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    <span class="comment">// And dominates nothing.</span></div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#aac4d533d1c7abfefbd54507357e240f4">isUnreachable</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a>))</div>
+<div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Map&lt;const SVFBasicBlock*,BBSet&gt;</a>&amp; <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a> = <a class="code hl_function" href="classSVF_1_1SVFLoopAndDomInfo.html#a0cd1cd44311997be96a74ee536ea84a3">getPostDomTreeMap</a>();</div>
+<div class="line"><span class="lineno">  145</span>    <a class="code hl_typedef" href="namespaceSVF.html#a8234d4b959abc9123993bcff4eee34c1">Map&lt;const SVFBasicBlock*,BBSet&gt;::const_iterator</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> = <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbKey</a>);</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a> != <a class="code hl_variable" href="classSVF_1_1SVFLoopAndDomInfo.html#a34296b98ee8dd1bfc0b1ae7fe327cde3">dtBBsMap</a>.end())</div>
+<div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classSVF_1_1SVFLoopAndDomInfo.html#ad478ac88bc07cf4d6d0ad3517b2c4ab3">BBSet</a> &amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">mapIter</a>-&gt;second;</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bbValue</a>) != <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dtBBs</a>.end())</div>
+<div class="line"><span class="lineno">  150</span>        {</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span>    }</div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  155</span>}</div>
 <div class="ttc" id="aclassSVF_1_1SVFLoopAndDomInfo_html_a0cd1cd44311997be96a74ee536ea84a3"><div class="ttname"><a href="classSVF_1_1SVFLoopAndDomInfo.html#a0cd1cd44311997be96a74ee536ea84a3">SVF::SVFLoopAndDomInfo::getPostDomTreeMap</a></div><div class="ttdeci">const Map&lt; const SVFBasicBlock *, BBSet &gt; &amp; getPostDomTreeMap() const</div><div class="ttdef"><b>Definition</b> <a href="SVFLoopAndDomInfo_8h_source.html#l00099">SVFLoopAndDomInfo.h:99</a></div></div>
 </div><!-- fragment -->
 </div>
