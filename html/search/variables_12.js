@@ -8,7 +8,7 @@ var searchData=
   ['sb_5fslicesource_5',['SB_SLICESOURCE',['../classSVF_1_1Annotator.html#a01900f5ada5948361cc18857aee26744',1,'SVF::Annotator']]],
   ['sbv_6',['sbv',['../classSVF_1_1PointsTo.html#aecd6b98c0687de59aebb297ec38a7084',1,'SVF::PointsTo']]],
   ['sbvit_7',['sbvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a735a2a9f0c3f4bc3997edf11b133c0f9',1,'SVF::PointsTo::PointsToIterator']]],
-  ['scc_8',['scc',['../classSVF_1_1WPASolver.html#a1d3b2a21385c775f355e188e2abe345e',1,'SVF::WPASolver']]],
+  ['scc_8',['scc',['../classSVF_1_1ICFGWTO.html#a34ff0ca290675472e0e9d77daaa8081d',1,'SVF::ICFGWTO::scc'],['../classSVF_1_1WPASolver.html#a1d3b2a21385c775f355e188e2abe345e',1,'SVF::WPASolver::scc']]],
   ['scccandidates_9',['sccCandidates',['../classSVF_1_1AndersenSCD.html#aeb0b3644c3bfbfa5768b92c99aeeef40',1,'SVF::AndersenSCD']]],
   ['scctime_10',['sccTime',['../classSVF_1_1FlowSensitive.html#af496fa9aa2f4d59594950b2ad121deff',1,'SVF::FlowSensitive']]],
   ['scdandersen_11',['scdAndersen',['../classSVF_1_1AndersenSCD.html#a1d143f104c0bfb5258b7129d0eceb4cd',1,'SVF::AndersenSCD']]],
