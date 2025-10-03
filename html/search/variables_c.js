@@ -29,7 +29,7 @@ var searchData=
   ['lookupunions_26',['lookupUnions',['../classSVF_1_1PersistentPointsToCache.html#ace976f138cf1b8ab6bbf7a5c5d0b60b8',1,'SVF::PersistentPointsToCache']]],
   ['loopanalysis_27',['LoopAnalysis',['../classSVF_1_1Options.html#abfd13c7d998333290b39354178739f2c',1,'SVF::Options']]],
   ['loopanddom_28',['loopAndDom',['../classSVF_1_1FunObjVar.html#a56981c2f8bd44a54639197d9077e0293',1,'SVF::FunObjVar']]],
-  ['loopbound_29',['loopbound',['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound'],['../classSVF_1_1Options.html#a17f11eb3e9a3178395e8574a027b181e',1,'SVF::Options::LoopBound']]],
+  ['loopbound_29',['loopbound',['../classSVF_1_1Options.html#a17f11eb3e9a3178395e8574a027b181e',1,'SVF::Options::LoopBound'],['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound']]],
   ['lowlink_30',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
   ['lsa_31',['lsa',['../classSVF_1_1MTA.html#a80a44f3aa41d4259523c94044983c509',1,'SVF::MTA']]]
 ];
