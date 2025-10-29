@@ -164,7 +164,7 @@ var searchData=
   ['srcsnksolver_161',['SrcSnkSolver',['../classSVF_1_1SrcSnkSolver.html#a952450652e55f3325f24b8d237d2c37d',1,'SVF::SrcSnkSolver']]],
   ['ssarename_162',['SSARename',['../classSVF_1_1MemSSA.html#acbe4640898f71caa567c4d1b02fb07ce',1,'SVF::MemSSA']]],
   ['ssarenamebb_163',['SSARenameBB',['../classSVF_1_1MemSSA.html#aeb7fc6c7880db45f6d0a90912ac5b5f7',1,'SVF::MemSSA']]],
-  ['stackobjvar_164',['StackObjVar',['../classSVF_1_1StackObjVar.html#a6f1d94d77655fe7486f832ece19ddea0',1,'SVF::StackObjVar']]],
+  ['stackobjvar_164',['StackObjVar',['../classSVF_1_1StackObjVar.html#ab5fb1b40b8ad37fb7066f04386ebe79e',1,'SVF::StackObjVar']]],
   ['startanalysislimittimer_165',['startAnalysisLimitTimer',['../namespaceSVF_1_1SVFUtil.html#a757815a2c758695176120509ceb0ce70',1,'SVF::SVFUtil']]],
   ['startclk_166',['startClk',['../classSVF_1_1SVFStat.html#a730cc814fede3edb563aa9957c869e9e',1,'SVF::SVFStat']]],
   ['startnewptcompfromloadsrc_167',['startNewPTCompFromLoadSrc',['../classSVF_1_1DDAVFSolver.html#acd694c2092adf8c516d1aba5f798cec7',1,'SVF::DDAVFSolver']]],

@@ -12,7 +12,7 @@ var searchData=
   ['backwardtraverse_9',['backwardtraverse',['../classSVF_1_1SrcSnkSolver.html#a9c2fbfa1a4563ce45726ae79f0f34fcc',1,'SVF::SrcSnkSolver::backwardTraverse()'],['../classSVF_1_1GraphReachSolver.html#a8785ea71a1b0da03595fc8f594921819',1,'SVF::GraphReachSolver::backwardTraverse()']]],
   ['backwardvisited_10',['backwardVisited',['../classSVF_1_1SrcSnkDDA.html#a32cc8a131b2448b5e8e1fe65d99fd286',1,'SVF::SrcSnkDDA']]],
   ['barreplace_11',['barReplace',['../classSVF_1_1CFGNormalizer.html#a099b05cb4240787859832971f376863f',1,'SVF::CFGNormalizer']]],
-  ['baseobjvar_12',['BaseObjVar',['../classSVF_1_1BaseObjVar.html#ac1bf487d4af5ebc90b1538f8e89413bc',1,'SVF::BaseObjVar']]],
+  ['baseobjvar_12',['BaseObjVar',['../classSVF_1_1BaseObjVar.html#a3643d0ef31a6f8b1d8f7b57ecca6d43c',1,'SVF::BaseObjVar']]],
   ['basicblockedge_13',['BasicBlockEdge',['../classSVF_1_1BasicBlockEdge.html#a47aab40d1a37387c2ddfa59632cac9e9',1,'SVF::BasicBlockEdge']]],
   ['basicblockgraph_14',['BasicBlockGraph',['../classSVF_1_1BasicBlockGraph.html#ac795b8a21793eba293b2ebd05a45cbe5',1,'SVF::BasicBlockGraph']]],
   ['basicblockhasretinst_15',['basicBlockHasRetInst',['../namespaceSVF_1_1LLVMUtil.html#abb4b5ed04ec70a2e7fca8198132370cf',1,'SVF::LLVMUtil']]],

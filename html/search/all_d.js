@@ -190,7 +190,7 @@ var searchData=
   ['funhasret_187',['funHasRet',['../classSVF_1_1SVFIR.html#a0966c87b9e50b2f7872382dbc4a8e099',1,'SVF::SVFIR']]],
   ['funnameofvcall_188',['funNameOfVcall',['../classSVF_1_1CallICFGNode.html#ab9fe27f58236b5cb3e30192a30286f09',1,'SVF::CallICFGNode']]],
   ['funobjnode_189',['FunObjNode',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01ac03189704bab4eb3e6834c1e07a3054a',1,'SVF::SVFValue']]],
-  ['funobjvar_190',['funobjvar',['../classSVF_1_1FunObjVar.html',1,'SVF::FunObjVar'],['../classSVF_1_1FunValVar.html#abe3c8e1676c7e1059f459d35b29a0c1d',1,'SVF::FunValVar::funObjVar'],['../classSVF_1_1FunObjVar.html#a2d407071739724f494898323515b0f75',1,'SVF::FunObjVar::FunObjVar()'],['../classSVF_1_1SVFBasicBlock.html#a02910a3be6c39a08b3ca7625718be4f7',1,'SVF::SVFBasicBlock::FunObjVar']]],
+  ['funobjvar_190',['funobjvar',['../classSVF_1_1FunObjVar.html',1,'SVF::FunObjVar'],['../classSVF_1_1FunValVar.html#abe3c8e1676c7e1059f459d35b29a0c1d',1,'SVF::FunValVar::funObjVar'],['../classSVF_1_1FunObjVar.html#ad397a3834c3f4e3120c1e0e9b02efc0e',1,'SVF::FunObjVar::FunObjVar()'],['../classSVF_1_1SVFBasicBlock.html#a02910a3be6c39a08b3ca7625718be4f7',1,'SVF::SVFBasicBlock::FunObjVar']]],
   ['funobjvar2annotations_191',['funObjVar2Annotations',['../classSVF_1_1ExtAPI.html#a8ba8c03d0831601168b84dbac9c2390e',1,'SVF::ExtAPI']]],
   ['funobjvartoidmapty_192',['FunObjVarToIDMapTy',['../classSVF_1_1IRGraph.html#a8ab531f9e2728f1ccdb51287e54bca01',1,'SVF::IRGraph']]],
   ['funptrddaclient_193',['funptrddaclient',['../classSVF_1_1FunptrDDAClient.html#adf6515349771570d154e67114b0125fb',1,'SVF::FunptrDDAClient::FunptrDDAClient()'],['../classSVF_1_1FunptrDDAClient.html',1,'SVF::FunptrDDAClient']]],
