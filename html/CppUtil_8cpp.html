@@ -98,6 +98,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2bff9158f699b6fd11c8e116b91e4809"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a264d15523be2c695d9cee8d49ae87ebe" id="r_a264d15523be2c695d9cee8d49ae87ebe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a264d15523be2c695d9cee8d49ae87ebe">handleThunkFunction</a> (<a class="el" href="structSVF_1_1cppUtil_1_1DemangledName.html">cppUtil::DemangledName</a> &amp;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>)</td></tr>
 <tr class="separator:a264d15523be2c695d9cee8d49ae87ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0330165f344ba07d10a63635686c34" id="r_a5f0330165f344ba07d10a63635686c34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a5f0330165f344ba07d10a63635686c34">isDerivedFromThisPtr</a> (<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801">Argument</a> *<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">thisPtr</a>, <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>)</td></tr>
+<tr class="separator:a5f0330165f344ba07d10a63635686c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6008113739aef2f184281d3985d97d6" id="r_af6008113739aef2f184281d3985d97d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#af6008113739aef2f184281d3985d97d6">stripBracketsAndNamespace</a> (<a class="el" href="structSVF_1_1cppUtil_1_1DemangledName.html">cppUtil::DemangledName</a> &amp;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>)</td></tr>
 <tr class="separator:af6008113739aef2f184281d3985d97d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72a27992aa706c1402253e6de7c16264" id="r_a72a27992aa706c1402253e6de7c16264"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CppUtil_8cpp.html#a72a27992aa706c1402253e6de7c16264">findInnermostBrackets</a> (<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">std::string</a> &amp;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>)</td></tr>
@@ -184,51 +186,51 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00734">734</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  735</span>{</div>
-<div class="line"><span class="lineno">  736</span>    <span class="keyword">typedef</span> std::pair&lt;u32_t, u32_t&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">StEdIdxPair</a>;</div>
-<div class="line"><span class="lineno">  737</span>    std::stack&lt;int&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>;</div>
-<div class="line"><span class="lineno">  738</span>    std::vector&lt;StEdIdxPair&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>;</div>
-<div class="line"><span class="lineno">  739</span>    std::vector&lt;bool&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">used</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.length(), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  740</span> </div>
-<div class="line"><span class="lineno">  741</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> = 0; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.length(); ++<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>)</div>
-<div class="line"><span class="lineno">  742</span>    {</div>
-<div class="line"><span class="lineno">  743</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>] == <span class="charliteral">&#39;&lt;&#39;</span>)</div>
-<div class="line"><span class="lineno">  744</span>        {</div>
-<div class="line"><span class="lineno">  745</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>.push(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>);</div>
-<div class="line"><span class="lineno">  746</span>        }</div>
-<div class="line"><span class="lineno">  747</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>] == <span class="charliteral">&#39;&gt;&#39;</span> &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> &gt; 0 &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> - 1] != <span class="charliteral">&#39;-&#39;</span>)</div>
-<div class="line"><span class="lineno">  748</span>        {</div>
-<div class="line"><span class="lineno">  749</span>            <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>.empty())</div>
-<div class="line"><span class="lineno">  750</span>            {</div>
-<div class="line"><span class="lineno">  751</span>                <span class="keywordtype">int</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">openIndex</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>.top();</div>
-<div class="line"><span class="lineno">  752</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>.pop();</div>
-<div class="line"><span class="lineno">  753</span> </div>
-<div class="line"><span class="lineno">  754</span>                <span class="comment">// Check if this pair is innermost</span></div>
-<div class="line"><span class="lineno">  755</span>                <span class="keywordtype">bool</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">isInnermost</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  756</span>                <span class="keywordflow">for</span> (<a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">j</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">openIndex</a> + 1; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">j</a> &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">isInnermost</a>; ++<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">j</a>)</div>
-<div class="line"><span class="lineno">  757</span>                {</div>
-<div class="line"><span class="lineno">  758</span>                    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">used</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">j</a>])</div>
-<div class="line"><span class="lineno">  759</span>                    {</div>
-<div class="line"><span class="lineno">  760</span>                        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">isInnermost</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  761</span>                    }</div>
-<div class="line"><span class="lineno">  762</span>                }</div>
-<div class="line"><span class="lineno">  763</span> </div>
-<div class="line"><span class="lineno">  764</span>                <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">isInnermost</a>)</div>
-<div class="line"><span class="lineno">  765</span>                {</div>
-<div class="line"><span class="lineno">  766</span>                    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>.emplace_back(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">openIndex</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>);</div>
-<div class="line"><span class="lineno">  767</span>                    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">used</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">openIndex</a>] = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">used</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>] = <span class="keyword">true</span>; <span class="comment">// Mark these indices as used</span></div>
-<div class="line"><span class="lineno">  768</span>                }</div>
-<div class="line"><span class="lineno">  769</span>            }</div>
-<div class="line"><span class="lineno">  770</span>        }</div>
-<div class="line"><span class="lineno">  771</span>    }</div>
-<div class="line"><span class="lineno">  772</span>    std::vector&lt;std::string&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ans</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>.size());</div>
-<div class="line"><span class="lineno">  773</span>    std::transform(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>.begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>.end(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ans</a>.begin(), [&amp;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>](<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">StEdIdxPair</a> &amp;<a class="code hl_variable" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>) -&gt; std::string</div>
-<div class="line"><span class="lineno">  774</span>    {</div>
-<div class="line"><span class="lineno">  775</span>        return input.substr(p.first + 1, p.second - p.first - 1);</div>
-<div class="line"><span class="lineno">  776</span>    });</div>
-<div class="line"><span class="lineno">  777</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ans</a>;</div>
-<div class="line"><span class="lineno">  778</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00805">805</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  806</span>{</div>
+<div class="line"><span class="lineno">  807</span>    <span class="keyword">typedef</span> std::pair&lt;u32_t, u32_t&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">StEdIdxPair</a>;</div>
+<div class="line"><span class="lineno">  808</span>    std::stack&lt;int&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>;</div>
+<div class="line"><span class="lineno">  809</span>    std::vector&lt;StEdIdxPair&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>;</div>
+<div class="line"><span class="lineno">  810</span>    std::vector&lt;bool&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">used</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.length(), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  811</span> </div>
+<div class="line"><span class="lineno">  812</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> = 0; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.length(); ++<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>)</div>
+<div class="line"><span class="lineno">  813</span>    {</div>
+<div class="line"><span class="lineno">  814</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>] == <span class="charliteral">&#39;&lt;&#39;</span>)</div>
+<div class="line"><span class="lineno">  815</span>        {</div>
+<div class="line"><span class="lineno">  816</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>.push(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>);</div>
+<div class="line"><span class="lineno">  817</span>        }</div>
+<div class="line"><span class="lineno">  818</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>] == <span class="charliteral">&#39;&gt;&#39;</span> &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> &gt; 0 &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> - 1] != <span class="charliteral">&#39;-&#39;</span>)</div>
+<div class="line"><span class="lineno">  819</span>        {</div>
+<div class="line"><span class="lineno">  820</span>            <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>.empty())</div>
+<div class="line"><span class="lineno">  821</span>            {</div>
+<div class="line"><span class="lineno">  822</span>                <span class="keywordtype">int</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">openIndex</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>.top();</div>
+<div class="line"><span class="lineno">  823</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stack</a>.pop();</div>
+<div class="line"><span class="lineno">  824</span> </div>
+<div class="line"><span class="lineno">  825</span>                <span class="comment">// Check if this pair is innermost</span></div>
+<div class="line"><span class="lineno">  826</span>                <span class="keywordtype">bool</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">isInnermost</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  827</span>                <span class="keywordflow">for</span> (<a class="code hl_typedef" href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">j</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">openIndex</a> + 1; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">j</a> &lt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a> &amp;&amp; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">isInnermost</a>; ++<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">j</a>)</div>
+<div class="line"><span class="lineno">  828</span>                {</div>
+<div class="line"><span class="lineno">  829</span>                    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">used</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">j</a>])</div>
+<div class="line"><span class="lineno">  830</span>                    {</div>
+<div class="line"><span class="lineno">  831</span>                        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">isInnermost</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  832</span>                    }</div>
+<div class="line"><span class="lineno">  833</span>                }</div>
+<div class="line"><span class="lineno">  834</span> </div>
+<div class="line"><span class="lineno">  835</span>                <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">isInnermost</a>)</div>
+<div class="line"><span class="lineno">  836</span>                {</div>
+<div class="line"><span class="lineno">  837</span>                    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>.emplace_back(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">openIndex</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>);</div>
+<div class="line"><span class="lineno">  838</span>                    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">used</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">openIndex</a>] = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">used</a>[<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>] = <span class="keyword">true</span>; <span class="comment">// Mark these indices as used</span></div>
+<div class="line"><span class="lineno">  839</span>                }</div>
+<div class="line"><span class="lineno">  840</span>            }</div>
+<div class="line"><span class="lineno">  841</span>        }</div>
+<div class="line"><span class="lineno">  842</span>    }</div>
+<div class="line"><span class="lineno">  843</span>    std::vector&lt;std::string&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ans</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>.size());</div>
+<div class="line"><span class="lineno">  844</span>    std::transform(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>.begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">innerMostPairs</a>.end(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ans</a>.begin(), [&amp;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>](<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">StEdIdxPair</a> &amp;<a class="code hl_variable" href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a>) -&gt; std::string</div>
+<div class="line"><span class="lineno">  845</span>    {</div>
+<div class="line"><span class="lineno">  846</span>        return input.substr(p.first + 1, p.second - p.first - 1);</div>
+<div class="line"><span class="lineno">  847</span>    });</div>
+<div class="line"><span class="lineno">  848</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ans</a>;</div>
+<div class="line"><span class="lineno">  849</span>}</div>
 <div class="ttc" id="aCommandLine_8h_html_a2429346d37bd4c40889bd7c6d319d9da"><div class="ttname"><a href="CommandLine_8h.html#a2429346d37bd4c40889bd7c6d319d9da">u32_t</a></div><div class="ttdeci">unsigned u32_t</div><div class="ttdef"><b>Definition</b> <a href="CommandLine_8h_source.html#l00018">CommandLine.h:18</a></div></div>
 <div class="ttc" id="acJSON_8cpp_html_a009ef1d888ab6dbe77e6b42b0b39f1ae"><div class="ttname"><a href="cJSON_8cpp.html#a009ef1d888ab6dbe77e6b42b0b39f1ae">p</a></div><div class="ttdeci">cJSON * p</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l02559">cJSON.cpp:2559</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00074">BasicTypes.h:74</a></div></div>
@@ -337,6 +339,72 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a5f0330165f344ba07d10a63635686c34" name="a5f0330165f344ba07d10a63635686c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0330165f344ba07d10a63635686c34">&#9670;&#160;</a></span>isDerivedFromThisPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bool</a> isDerivedFromThisPtr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801">Argument</a> *&#160;</td>
+          <td class="paramname"><em>thisPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td>
+          <td class="paramname"><em>V</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if V is derived from thisPtr Handles O0 pattern: this1 = load ptr, ptr this.addr </p>
+
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00425">425</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  426</span>{</div>
+<div class="line"><span class="lineno">  427</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>-&gt;stripPointerCasts();</div>
+<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a> == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">thisPtr</a>)</div>
+<div class="line"><span class="lineno">  429</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  430</span> </div>
+<div class="line"><span class="lineno">  431</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a5a6e8ab900d5cd17ef72661006a7fbe0">LoadInst</a>* load = SVFUtil::dyn_cast&lt;LoadInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">V</a>))</div>
+<div class="line"><span class="lineno">  432</span>    {</div>
+<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a3bacb4f95c73e6d794901d01c6b65a83">AllocaInst</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">alloca</a> =</div>
+<div class="line"><span class="lineno">  434</span>                    SVFUtil::dyn_cast&lt;AllocaInst&gt;(load-&gt;getPointerOperand()))</div>
+<div class="line"><span class="lineno">  435</span>        {</div>
+<div class="line"><span class="lineno">  436</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">User</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">U</a> : <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">alloca</a>-&gt;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">users</a>())</div>
+<div class="line"><span class="lineno">  437</span>            {</div>
+<div class="line"><span class="lineno">  438</span>                <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ab696aab940eb187dc81217efe8649af5">StoreInst</a>* store = SVFUtil::dyn_cast&lt;StoreInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">U</a>))</div>
+<div class="line"><span class="lineno">  439</span>                {</div>
+<div class="line"><span class="lineno">  440</span>                    <span class="keywordflow">if</span> (store-&gt;getPointerOperand() == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">alloca</a> &amp;&amp;</div>
+<div class="line"><span class="lineno">  441</span>                            store-&gt;getValueOperand()-&gt;stripPointerCasts() == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">thisPtr</a>)</div>
+<div class="line"><span class="lineno">  442</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  443</span>                }</div>
+<div class="line"><span class="lineno">  444</span>            }</div>
+<div class="line"><span class="lineno">  445</span>        }</div>
+<div class="line"><span class="lineno">  446</span>    }</div>
+<div class="line"><span class="lineno">  447</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  448</span>}</div>
+<div class="ttc" id="anamespaceSVF_html_a3bacb4f95c73e6d794901d01c6b65a83"><div class="ttname"><a href="namespaceSVF.html#a3bacb4f95c73e6d794901d01c6b65a83">SVF::AllocaInst</a></div><div class="ttdeci">llvm::AllocaInst AllocaInst</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00150">BasicTypes.h:150</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a5a6e8ab900d5cd17ef72661006a7fbe0"><div class="ttname"><a href="namespaceSVF.html#a5a6e8ab900d5cd17ef72661006a7fbe0">SVF::LoadInst</a></div><div class="ttdeci">llvm::LoadInst LoadInst</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00149">BasicTypes.h:149</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_ab696aab940eb187dc81217efe8649af5"><div class="ttname"><a href="namespaceSVF.html#ab696aab940eb187dc81217efe8649af5">SVF::StoreInst</a></div><div class="ttdeci">llvm::StoreInst StoreInst</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00148">BasicTypes.h:148</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_afc1b50355821e7299df03b026e36f1df"><div class="ttname"><a href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">SVF::User</a></div><div class="ttdeci">llvm::User User</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00142">BasicTypes.h:142</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a2a7c55fe3b24b913890307e9ac6cb2ba" name="a2a7c55fe3b24b913890307e9ac6cb2ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a7c55fe3b24b913890307e9ac6cb2ba">&#9670;&#160;</a></span>isOperOverload()</h2>
 
@@ -412,22 +480,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00799">799</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  800</span>{</div>
-<div class="line"><span class="lineno">  801</span>    std::vector&lt;std::string&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">tokens</a>;</div>
-<div class="line"><span class="lineno">  802</span>    <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = 0, end = 0;</div>
-<div class="line"><span class="lineno">  803</span> </div>
-<div class="line"><span class="lineno">  804</span>    <span class="keywordflow">while</span> ((end = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">delimiter</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>)) != std::string::npos)</div>
-<div class="line"><span class="lineno">  805</span>    {</div>
-<div class="line"><span class="lineno">  806</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">tokens</a>.push_back(<a class="code hl_function" href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>, end - <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>)));</div>
-<div class="line"><span class="lineno">  807</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = end + 1;</div>
-<div class="line"><span class="lineno">  808</span>    }</div>
-<div class="line"><span class="lineno">  809</span> </div>
-<div class="line"><span class="lineno">  810</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">tokens</a>.push_back(<a class="code hl_function" href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>)));</div>
-<div class="line"><span class="lineno">  811</span> </div>
-<div class="line"><span class="lineno">  812</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">tokens</a>;</div>
-<div class="line"><span class="lineno">  813</span>}</div>
-<div class="ttc" id="aCppUtil_8cpp_html_a6a41352b62d0c45dcb828d3740083e71"><div class="ttname"><a href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a></div><div class="ttdeci">std::string stripWhitespaces(const std::string &amp;str)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00785">CppUtil.cpp:785</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00870">870</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  871</span>{</div>
+<div class="line"><span class="lineno">  872</span>    std::vector&lt;std::string&gt; <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">tokens</a>;</div>
+<div class="line"><span class="lineno">  873</span>    <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = 0, end = 0;</div>
+<div class="line"><span class="lineno">  874</span> </div>
+<div class="line"><span class="lineno">  875</span>    <span class="keywordflow">while</span> ((end = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">delimiter</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>)) != std::string::npos)</div>
+<div class="line"><span class="lineno">  876</span>    {</div>
+<div class="line"><span class="lineno">  877</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">tokens</a>.push_back(<a class="code hl_function" href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>, end - <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>)));</div>
+<div class="line"><span class="lineno">  878</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = end + 1;</div>
+<div class="line"><span class="lineno">  879</span>    }</div>
+<div class="line"><span class="lineno">  880</span> </div>
+<div class="line"><span class="lineno">  881</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">tokens</a>.push_back(<a class="code hl_function" href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">input</a>.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>)));</div>
+<div class="line"><span class="lineno">  882</span> </div>
+<div class="line"><span class="lineno">  883</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">tokens</a>;</div>
+<div class="line"><span class="lineno">  884</span>}</div>
+<div class="ttc" id="aCppUtil_8cpp_html_a6a41352b62d0c45dcb828d3740083e71"><div class="ttname"><a href="CppUtil_8cpp.html#a6a41352b62d0c45dcb828d3740083e71">stripWhitespaces</a></div><div class="ttdeci">std::string stripWhitespaces(const std::string &amp;str)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00856">CppUtil.cpp:856</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -448,22 +516,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>strip off brackets and namespace from classname e.g., for &lsquo;namespace::A&lt;...::...&gt;::f&rsquo;, we get &lsquo;A&rsquo; by stripping off namespace and &lt;&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00472">472</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  473</span>{</div>
-<div class="line"><span class="lineno">  474</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.funcName = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.funcName);</div>
-<div class="line"><span class="lineno">  475</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className);</div>
-<div class="line"><span class="lineno">  476</span>    <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">colon</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className.rfind(<span class="stringliteral">&quot;::&quot;</span>);</div>
-<div class="line"><span class="lineno">  477</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">colon</a> == std::string::npos)</div>
-<div class="line"><span class="lineno">  478</span>    {</div>
-<div class="line"><span class="lineno">  479</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className);</div>
-<div class="line"><span class="lineno">  480</span>    }</div>
-<div class="line"><span class="lineno">  481</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  482</span>    {</div>
-<div class="line"><span class="lineno">  483</span>        <span class="comment">// strip off namespace</span></div>
-<div class="line"><span class="lineno">  484</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className =</div>
-<div class="line"><span class="lineno">  485</span>            <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">colon</a> + 2));</div>
-<div class="line"><span class="lineno">  486</span>    }</div>
-<div class="line"><span class="lineno">  487</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00543">543</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  544</span>{</div>
+<div class="line"><span class="lineno">  545</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.funcName = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.funcName);</div>
+<div class="line"><span class="lineno">  546</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className);</div>
+<div class="line"><span class="lineno">  547</span>    <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">colon</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className.rfind(<span class="stringliteral">&quot;::&quot;</span>);</div>
+<div class="line"><span class="lineno">  548</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">colon</a> == std::string::npos)</div>
+<div class="line"><span class="lineno">  549</span>    {</div>
+<div class="line"><span class="lineno">  550</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className);</div>
+<div class="line"><span class="lineno">  551</span>    }</div>
+<div class="line"><span class="lineno">  552</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  553</span>    {</div>
+<div class="line"><span class="lineno">  554</span>        <span class="comment">// strip off namespace</span></div>
+<div class="line"><span class="lineno">  555</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className =</div>
+<div class="line"><span class="lineno">  556</span>            <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">cppUtil::getBeforeBrackets</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">dname</a>.className.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">colon</a> + 2));</div>
+<div class="line"><span class="lineno">  557</span>    }</div>
+<div class="line"><span class="lineno">  558</span>}</div>
 <div class="ttc" id="anamespaceSVF_1_1cppUtil_html_a1cf2e4671b16b477cc779c72f2419234"><div class="ttname"><a href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">SVF::cppUtil::getBeforeBrackets</a></div><div class="ttdeci">std::string getBeforeBrackets(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00127">CppUtil.cpp:127</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -491,19 +559,19 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00785">785</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  786</span>{</div>
-<div class="line"><span class="lineno">  787</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = std::find_if(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>.begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>.end(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ch</a>)</div>
-<div class="line"><span class="lineno">  788</span>    {</div>
-<div class="line"><span class="lineno">  789</span>        return !std::isspace(ch);</div>
-<div class="line"><span class="lineno">  790</span>    });</div>
-<div class="line"><span class="lineno">  791</span>    <span class="keyword">auto</span> end = std::find_if(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>.rbegin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>.rend(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ch</a>)</div>
-<div class="line"><span class="lineno">  792</span>    {</div>
-<div class="line"><span class="lineno">  793</span>        return !std::isspace(ch);</div>
-<div class="line"><span class="lineno">  794</span>    }).base();</div>
-<div class="line"><span class="lineno">  795</span> </div>
-<div class="line"><span class="lineno">  796</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> &lt; end) ? std::string(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>, end) : std::<a class="code hl_variable" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a>();</div>
-<div class="line"><span class="lineno">  797</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l00856">856</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  857</span>{</div>
+<div class="line"><span class="lineno">  858</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = std::find_if(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>.begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>.end(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ch</a>)</div>
+<div class="line"><span class="lineno">  859</span>    {</div>
+<div class="line"><span class="lineno">  860</span>        return !std::isspace(ch);</div>
+<div class="line"><span class="lineno">  861</span>    });</div>
+<div class="line"><span class="lineno">  862</span>    <span class="keyword">auto</span> end = std::find_if(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>.rbegin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>.rend(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ch</a>)</div>
+<div class="line"><span class="lineno">  863</span>    {</div>
+<div class="line"><span class="lineno">  864</span>        return !std::isspace(ch);</div>
+<div class="line"><span class="lineno">  865</span>    }).base();</div>
+<div class="line"><span class="lineno">  866</span> </div>
+<div class="line"><span class="lineno">  867</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> &lt; end) ? std::string(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>, end) : std::<a class="code hl_variable" href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a>();</div>
+<div class="line"><span class="lineno">  868</span>}</div>
 <div class="ttc" id="acJSON_8h_html_ad4c68ea99a26b0a98ad9a79982960458"><div class="ttname"><a href="cJSON_8h.html#ad4c68ea99a26b0a98ad9a79982960458">string</a></div><div class="ttdeci">const char *const string</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00172">cJSON.h:172</a></div></div>
 </div><!-- fragment -->
 </div>
