@@ -20,7 +20,7 @@ var searchData=
   ['beta_17',['beta',['../classSVF_1_1RelationSolver.html#a342d3c7d5192449fb10e9c3bab2de24f',1,'SVF::RelationSolver']]],
   ['bilateral_18',['bilateral',['../classSVF_1_1RelationSolver.html#a23c59e437950b139dde49f11eb45b63a',1,'SVF::RelationSolver']]],
   ['bilateral_5ftime_19',['Bilateral_time',['../classSymblicAbstractionTest.html#ad9539ad539a0e3848b7ad1d65ebe81fe',1,'SymblicAbstractionTest']]],
-  ['binaryopstmt_20',['binaryopstmt',['../classSVF_1_1BinaryOPStmt.html#a9f5ec771bc547371ab9db18bb44a17c1',1,'SVF::BinaryOPStmt::BinaryOPStmt(const BinaryOPStmt &amp;)'],['../classSVF_1_1BinaryOPStmt.html#a82ccf9e41f4f9eaeb6d4c8a9e913ffdb',1,'SVF::BinaryOPStmt::BinaryOPStmt(SVFVar *s, const OPVars &amp;opnds, u32_t oc)']]],
+  ['binaryopstmt_20',['binaryopstmt',['../classSVF_1_1BinaryOPStmt.html#a9f5ec771bc547371ab9db18bb44a17c1',1,'SVF::BinaryOPStmt::BinaryOPStmt(const BinaryOPStmt &amp;)'],['../classSVF_1_1BinaryOPStmt.html#a238d8521d1b2238b3fc15b6ac48700fe',1,'SVF::BinaryOPStmt::BinaryOPStmt(SVFVar *res, const OPVars &amp;opnds, u32_t oc)']]],
   ['binaryopvfgnode_21',['binaryopvfgnode',['../classSVF_1_1BinaryOPVFGNode.html#a20a0cf8366831b6be38c9c1945254362',1,'SVF::BinaryOPVFGNode::BinaryOPVFGNode()'],['../classSVF_1_1BinaryOPVFGNode.html#afa52d77205075141b59847b8400344e7',1,'SVF::BinaryOPVFGNode::BinaryOPVFGNode(NodeID id, const PAGNode *r)'],['../classSVF_1_1BinaryOPVFGNode.html#aa292ddc0ac6e43f20dcee8a9cb8f97e0',1,'SVF::BinaryOPVFGNode::BinaryOPVFGNode(const BinaryOPVFGNode &amp;)']]],
   ['bind_5ftextdomain_5fcodeset_22',['bind_textdomain_codeset',['../extapi_8c.html#a4263f24e5be72e676b5e0cb963aa9725',1,'extapi.c']]],
   ['bindtextdomain_23',['bindtextdomain',['../extapi_8c.html#aaf512850327fdfbb42151735cd060094',1,'extapi.c']]],
