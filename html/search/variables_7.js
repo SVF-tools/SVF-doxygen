@@ -9,7 +9,7 @@ var searchData=
   ['gepinedges_6',['gepInEdges',['../classSVF_1_1ConstraintNode.html#a4d0113f2af3a61892acee1fb21f0b938',1,'SVF::ConstraintNode']]],
   ['gepnodenumindex_7',['gepNodeNumIndex',['../PAGBuilderFromFile_8cpp.html#a1af3947dbaf1ad4364bc4818f70ead40',1,'PAGBuilderFromFile.cpp']]],
   ['gepobjoffsetfrombase_8',['gepObjOffsetFromBase',['../classSVF_1_1BufOverflowDetector.html#a3cd11f8d87ca8a2aa971349a5446f1cd',1,'SVF::BufOverflowDetector']]],
-  ['gepobjvarmap_9',['GepObjVarMap',['../classSVF_1_1SVFIR.html#a09a604cf6a7708f4391fcf807fec1453',1,'SVF::SVFIR']]],
+  ['gepobjvarmap_9',['GepObjVarMap',['../classSVF_1_1SVFIR.html#aa26ca7eeb08bd1a0aff4629a99511e2d',1,'SVF::SVFIR']]],
   ['gepoutedges_10',['gepOutEdges',['../classSVF_1_1ConstraintNode.html#a583880cd83a9f353003e199401d1b024',1,'SVF::ConstraintNode']]],
   ['geppointeetype_11',['gepPointeeType',['../classSVF_1_1AccessPath.html#a1d75baf851ba9982ac0861c850929985',1,'SVF::AccessPath']]],
   ['gepsrcnodes_12',['gepSrcNodes',['../classSVF_1_1AliasDDAClient.html#ab165537f4c9a318f31de8a272a529c9c',1,'SVF::AliasDDAClient']]],
