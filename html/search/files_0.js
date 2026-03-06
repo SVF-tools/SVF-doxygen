@@ -14,12 +14,14 @@ var searchData=
   ['ae_2ecpp_11',['ae.cpp',['../ae_8cpp.html',1,'']]],
   ['aedetector_2ecpp_12',['AEDetector.cpp',['../AEDetector_8cpp.html',1,'']]],
   ['aedetector_2eh_13',['AEDetector.h',['../AEDetector_8h.html',1,'']]],
-  ['andersen_2ecpp_14',['Andersen.cpp',['../Andersen_8cpp.html',1,'']]],
-  ['andersen_2eh_15',['Andersen.h',['../Andersen_8h.html',1,'']]],
-  ['andersenpwc_2eh_16',['AndersenPWC.h',['../AndersenPWC_8h.html',1,'']]],
-  ['andersenscd_2ecpp_17',['AndersenSCD.cpp',['../AndersenSCD_8cpp.html',1,'']]],
-  ['andersensfr_2ecpp_18',['AndersenSFR.cpp',['../AndersenSFR_8cpp.html',1,'']]],
-  ['andersenstat_2ecpp_19',['AndersenStat.cpp',['../AndersenStat_8cpp.html',1,'']]],
-  ['andersenwavediff_2ecpp_20',['AndersenWaveDiff.cpp',['../AndersenWaveDiff_8cpp.html',1,'']]],
-  ['annotator_2eh_21',['Annotator.h',['../Annotator_8h.html',1,'']]]
+  ['aestat_2ecpp_14',['AEStat.cpp',['../AEStat_8cpp.html',1,'']]],
+  ['aestat_2eh_15',['AEStat.h',['../AEStat_8h.html',1,'']]],
+  ['andersen_2ecpp_16',['Andersen.cpp',['../Andersen_8cpp.html',1,'']]],
+  ['andersen_2eh_17',['Andersen.h',['../Andersen_8h.html',1,'']]],
+  ['andersenpwc_2eh_18',['AndersenPWC.h',['../AndersenPWC_8h.html',1,'']]],
+  ['andersenscd_2ecpp_19',['AndersenSCD.cpp',['../AndersenSCD_8cpp.html',1,'']]],
+  ['andersensfr_2ecpp_20',['AndersenSFR.cpp',['../AndersenSFR_8cpp.html',1,'']]],
+  ['andersenstat_2ecpp_21',['AndersenStat.cpp',['../AndersenStat_8cpp.html',1,'']]],
+  ['andersenwavediff_2ecpp_22',['AndersenWaveDiff.cpp',['../AndersenWaveDiff_8cpp.html',1,'']]],
+  ['annotator_2eh_23',['Annotator.h',['../Annotator_8h.html',1,'']]]
 ];
