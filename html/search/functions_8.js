@@ -49,7 +49,7 @@ var searchData=
   ['handletypedef_46',['handleTypedef',['../classSVF_1_1DCHGraph.html#a6d97a772afe16c1483e65eea81f82603',1,'SVF::DCHGraph']]],
   ['hareparforedge_47',['HareParForEdge',['../classSVF_1_1HareParForEdge.html#a3ac3c5d654ba2e06656f2476b3ff57aa',1,'SVF::HareParForEdge']]],
   ['has_5fstatic_48',['has_static',['../classSVF_1_1LLVMModuleSet.html#a8ce2ea60f036a6d938eceed53acacfbe',1,'SVF::LLVMModuleSet::has_static()'],['../classSVF_1_1ExtAPI.html#aeca57f7777f63b82b00c50474d24cd30',1,'SVF::ExtAPI::has_static()']]],
-  ['hasabsstatefromtrace_49',['hasAbsStateFromTrace',['../classSVF_1_1AbstractInterpretation.html#a8e2b4bb8d8f2911846f88a13cf4229b0',1,'SVF::AbstractInterpretation']]],
+  ['hasabstractstate_49',['hasAbstractState',['../classSVF_1_1AbstractInterpretation.html#a90fd7f656118507e27051cb9ab3d322f',1,'SVF::AbstractInterpretation']]],
   ['hasactualinsvfgnodes_50',['hasActualINSVFGNodes',['../classSVF_1_1SVFG.html#a21577bc4b4e55b23aa55083f5321b399',1,'SVF::SVFG']]],
   ['hasactualoutsvfgnodes_51',['hasActualOUTSVFGNodes',['../classSVF_1_1SVFG.html#ab1fde654cc464c5b4d1bafff83d346ed',1,'SVF::SVFG']]],
   ['hasactualparmvfgnode_52',['hasActualParmVFGNode',['../classSVF_1_1VFG.html#aca85ae5897c3f12a41752818b7ca16db',1,'SVF::VFG']]],

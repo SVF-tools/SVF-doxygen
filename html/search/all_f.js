@@ -59,7 +59,7 @@ var searchData=
   ['has_5fnodetype_56',['has_nodetype',['../structSVF_1_1has__nodetype.html',1,'SVF']]],
   ['has_5fnodetype_3c_20t_2c_20std_3a_3avoid_5ft_3c_20typename_20t_3a_3anodetype_20_3e_20_3e_57',['has_nodetype&lt; T, std::void_t&lt; typename T::NodeType &gt; &gt;',['../structSVF_1_1has__nodetype_3_01T_00_01std_1_1void__t_3_01typename_01T_1_1NodeType_01_4_01_4.html',1,'SVF']]],
   ['has_5fstatic_58',['has_static',['../classSVF_1_1ExtAPI.html#aeca57f7777f63b82b00c50474d24cd30',1,'SVF::ExtAPI::has_static()'],['../classSVF_1_1LLVMModuleSet.html#a8ce2ea60f036a6d938eceed53acacfbe',1,'SVF::LLVMModuleSet::has_static()']]],
-  ['hasabsstatefromtrace_59',['hasAbsStateFromTrace',['../classSVF_1_1AbstractInterpretation.html#a8e2b4bb8d8f2911846f88a13cf4229b0',1,'SVF::AbstractInterpretation']]],
+  ['hasabstractstate_59',['hasAbstractState',['../classSVF_1_1AbstractInterpretation.html#a90fd7f656118507e27051cb9ab3d322f',1,'SVF::AbstractInterpretation']]],
   ['hasactualinsvfgnodes_60',['hasActualINSVFGNodes',['../classSVF_1_1SVFG.html#a21577bc4b4e55b23aa55083f5321b399',1,'SVF::SVFG']]],
   ['hasactualoutsvfgnodes_61',['hasActualOUTSVFGNodes',['../classSVF_1_1SVFG.html#ab1fde654cc464c5b4d1bafff83d346ed',1,'SVF::SVFG']]],
   ['hasactualparmvfgnode_62',['hasActualParmVFGNode',['../classSVF_1_1VFG.html#aca85ae5897c3f12a41752818b7ca16db',1,'SVF::VFG']]],

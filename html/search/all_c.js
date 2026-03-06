@@ -63,7 +63,7 @@ var searchData=
   ['equalpointsto_60',['equalpointsto',['../structSVF_1_1SVFUtil_1_1equalPointsTo.html',1,'SVF::SVFUtil::equalPointsTo'],['../namespaceSVF_1_1SVFUtil.html#ac047d963ed4b701c83958868ab36202f',1,'SVF::SVFUtil::equalPointsTo']]],
   ['equals_61',['equals',['../classSVF_1_1AbstractState.html#a65131e4b96d21984c6907ac4fb32e973',1,'SVF::AbstractState::equals()'],['../classSVF_1_1IntervalValue.html#ac06d554ff5f63c43f9b02378800488c1',1,'SVF::IntervalValue::equals()'],['../classSVF_1_1AddressValue.html#a04456fe47889dd8f1b712255c9598fe9',1,'SVF::AddressValue::equals()'],['../classSVF_1_1AbstractValue.html#ae8a8fb4dc6ff1d7faddea6a9b1e65f1e',1,'SVF::AbstractValue::equals()']]],
   ['equivalentobject_62',['equivalentObject',['../classSVF_1_1VersionedFlowSensitive.html#a2d451d89f99a4bff828b682723df477f',1,'SVF::VersionedFlowSensitive']]],
-  ['eqvartovalmap_63',['eqvartovalmap',['../classSVF_1_1RelExeState.html#aaa5306f4f26b5a11342a726c2f7e4bb6',1,'SVF::RelExeState::eqVarToValMap()'],['../classSVF_1_1AbstractState.html#adb1ce2a16c501aefa7c902e9bec012f6',1,'SVF::AbstractState::eqVarToValMap()']]],
+  ['eqvartovalmap_63',['eqvartovalmap',['../classSVF_1_1RelExeState.html#aaa5306f4f26b5a11342a726c2f7e4bb6',1,'SVF::RelExeState::eqVarToValMap()'],['../classSVF_1_1AbstractState.html#a48ad678e92463c7a92278e28ad02c7ac',1,'SVF::AbstractState::eqVarToValMap()']]],
   ['err_5fmsg_64',['ERR_MSG',['../ObjTypeInference_8cpp.html#aa73dde570491da218d3ef11359f16955',1,'ObjTypeInference.cpp']]],
   ['errmsg_65',['errMsg',['../namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6',1,'SVF::SVFUtil']]],
   ['error_66',['error',['../structerror.html',1,'']]],
