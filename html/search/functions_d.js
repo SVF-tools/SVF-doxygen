@@ -62,7 +62,7 @@ var searchData=
   ['mssaphisvfgnode_59',['MSSAPHISVFGNode',['../classSVF_1_1MSSAPHISVFGNode.html#aec8a372f9024af27a87c5b43e4dc633d',1,'SVF::MSSAPHISVFGNode']]],
   ['mta_60',['MTA',['../classSVF_1_1MTA.html#ab25d605ed6040a9ad6ed6fcec4e8d338',1,'SVF::MTA']]],
   ['mtastat_61',['MTAStat',['../classSVF_1_1MTAStat.html#a10631a14fd258679f98c17622de4352a',1,'SVF::MTAStat']]],
-  ['multiopndstmt_62',['multiopndstmt',['../classSVF_1_1MultiOpndStmt.html#a60420a9681df31686eb4a42adf37e1e3',1,'SVF::MultiOpndStmt::MultiOpndStmt()'],['../classSVF_1_1MultiOpndStmt.html#a6b01d569057dda1783503563c20c74e6',1,'SVF::MultiOpndStmt::MultiOpndStmt(const MultiOpndStmt &amp;)'],['../classSVF_1_1MultiOpndStmt.html#aaa85920507005b39a670b6d226159e58',1,'SVF::MultiOpndStmt::MultiOpndStmt(SVFVar *r, const OPVars &amp;opnds, GEdgeFlag k)']]],
+  ['multiopndstmt_62',['multiopndstmt',['../classSVF_1_1MultiOpndStmt.html#a60420a9681df31686eb4a42adf37e1e3',1,'SVF::MultiOpndStmt::MultiOpndStmt()'],['../classSVF_1_1MultiOpndStmt.html#a6b01d569057dda1783503563c20c74e6',1,'SVF::MultiOpndStmt::MultiOpndStmt(const MultiOpndStmt &amp;)'],['../classSVF_1_1MultiOpndStmt.html#ae09deac6ac26f3ef1af1ea787431188c',1,'SVF::MultiOpndStmt::MultiOpndStmt(ValVar *r, const OPVars &amp;opnds, GEdgeFlag k)']]],
   ['mustalias_63',['mustAlias',['../classSVF_1_1CondPTAImpl.html#a3b5877fec52bbfa7c83bab6c9bc95684',1,'SVF::CondPTAImpl']]],
   ['mutabledfptdata_64',['MutableDFPTData',['../classSVF_1_1MutableDFPTData.html#aed141fb836cb22e02032ea46e3e5f51b',1,'SVF::MutableDFPTData']]],
   ['mutablediffptdata_65',['MutableDiffPTData',['../classSVF_1_1MutableDiffPTData.html#ae087d0307844312710c2d4c05535ea86',1,'SVF::MutableDiffPTData']]],

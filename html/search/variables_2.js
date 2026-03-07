@@ -2,7 +2,7 @@ var searchData=
 [
   ['b_0',['b',['../cJSON_8h.html#a1a175e87536301df98c805ac0636ad7c',1,'b:&#160;cJSON.h'],['../cJSON_8cpp.html#a1a175e87536301df98c805ac0636ad7c',1,'b:&#160;cJSON.cpp']]],
   ['backicfgedges_1',['backICFGEdges',['../classSVF_1_1SVFLoop.html#aed4400521f825802719ac97a18452230',1,'SVF::SVFLoop']]],
-  ['backwardslice_2',['backwardslice',['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice'],['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice']]],
+  ['backwardslice_2',['backwardslice',['../classSVF_1_1ProgSlice.html#addb781260db48c0571c0083a45065ca0',1,'SVF::ProgSlice::backwardslice'],['../classSVF_1_1SVFGStat.html#a1f93abeefa0c265f4945171255107725',1,'SVF::SVFGStat::backwardSlice']]],
   ['backwardvisited_3',['backwardVisited',['../classSVF_1_1DDAVFSolver.html#a63d04c3af4529d0e0f82acd76ed57f6c',1,'SVF::DDAVFSolver']]],
   ['base_4',['base',['../classSVF_1_1GepObjVar.html#a36c6eea5c4a63e82b34b778d573bab15',1,'SVF::GepObjVar::base'],['../classSVF_1_1GepValVar.html#a7171918fa7689e7a6a3d0dcb45504bde',1,'SVF::GepValVar::base']]],
   ['baseids_5',['baseIds',['../classSVF_1_1ConstraintNode.html#ac40ecefd565e029748fdacbc44c4cd54',1,'SVF::ConstraintNode']]],
@@ -29,7 +29,7 @@ var searchData=
   ['branchcondval_26',['branchCondVal',['../classSVF_1_1IntraCFGEdge.html#a8ba42f12f31c5f7ff633f60856f973b3',1,'SVF::IntraCFGEdge']]],
   ['brconditions_27',['brConditions',['../classSVF_1_1CDGEdge.html#a061f2c40b29b00f09ff02206c09405c0',1,'SVF::CDGEdge']]],
   ['briefconscgdotgraph_28',['BriefConsCGDotGraph',['../classSVF_1_1Options.html#a25a3db9daa81a127a8dad86888adea6c',1,'SVF::Options']]],
-  ['brinst_29',['brInst',['../classSVF_1_1BranchStmt.html#a33887345c00ffda9ca7dca59d61e184a',1,'SVF::BranchStmt']]],
+  ['brinst_29',['brInst',['../classSVF_1_1BranchStmt.html#af4977689a5ea4747f41b41d194dd0353',1,'SVF::BranchStmt']]],
   ['brstmt_30',['brstmt',['../classSVF_1_1BranchVFGNode.html#ab2c5f49a3ac21d827b37b0e4b61f1a10',1,'SVF::BranchVFGNode']]],
   ['buffer_31',['buffer',['../cJSON_8cpp.html#a503753140aa27b00f99a3501280b2746',1,'buffer:&#160;cJSON.cpp'],['../cJSON_8h.html#a503753140aa27b00f99a3501280b2746',1,'buffer:&#160;cJSON.h'],['../structprintbuffer.html#a754f63618e91db99f7ab6cfc4e629013',1,'printbuffer::buffer']]],
   ['buffer_5flength_32',['buffer_length',['../cJSON_8cpp.html#a7beaf9b4ef5e4c7254cc3298a3424354',1,'buffer_length:&#160;cJSON.cpp'],['../cJSON_8h.html#a7beaf9b4ef5e4c7254cc3298a3424354',1,'buffer_length:&#160;cJSON.h']]],

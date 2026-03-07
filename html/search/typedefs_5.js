@@ -24,7 +24,7 @@ var searchData=
   ['funobjvartoidmapty_21',['FunObjVarToIDMapTy',['../classSVF_1_1IRGraph.html#a8ab531f9e2728f1ccdb51287e54bca01',1,'SVF::IRGraph']]],
   ['funptrtocallsitesmap_22',['FunPtrToCallSitesMap',['../classSVF_1_1SVFIR.html#ae0aab46dbf1e02d7ec6f754970f485f9',1,'SVF::SVFIR']]],
   ['funset_23',['funset',['../classSVF_1_1MHP.html#a34d09e73db462316c459fa843da403f0',1,'SVF::MHP::FunSet'],['../classSVF_1_1LockAnalysis.html#acca4ea80ba6a815ad6b99626876d0783',1,'SVF::LockAnalysis::FunSet'],['../classSVF_1_1TCT.html#ad6b35deb4b7e74953f5ccf73a1949b0b',1,'SVF::TCT::FunSet']]],
-  ['funtoargslistmap_24',['FunToArgsListMap',['../classSVF_1_1SVFIR.html#ad938233324d77a9360154e57291c8225',1,'SVF::SVFIR']]],
+  ['funtoargslistmap_24',['FunToArgsListMap',['../classSVF_1_1SVFIR.html#a863eb8c13f47b68edcd1f604c6d63c83',1,'SVF::SVFIR']]],
   ['funtocallgraphnodemap_25',['FunToCallGraphNodeMap',['../classSVF_1_1CallGraph.html#a6cb59405beb687a010fc24880901d672',1,'SVF::CallGraph']]],
   ['funtoentrychisetmap_26',['FunToEntryChiSetMap',['../classSVF_1_1MemSSA.html#ae63259179b3c1d9ec0e3a8fc701ae04c',1,'SVF::MemSSA']]],
   ['funtoexitbbmap_27',['FunToExitBBMap',['../classSVF_1_1LLVMModuleSet.html#a34321627890ae4f5da9f46646aea1e79',1,'SVF::LLVMModuleSet']]],
@@ -40,7 +40,7 @@ var searchData=
   ['funtopointstosmap_37',['FunToPointsTosMap',['../classSVF_1_1MRGenerator.html#a9a1292ab72db58039f49b5cd0d67b748',1,'SVF::MRGenerator']]],
   ['funtoptsmap_38',['FunToPtsMap',['../classSVF_1_1IntraDisjointMRG.html#a1276742efad556f508aba76e001ede9f',1,'SVF::IntraDisjointMRG']]],
   ['funtorealdeffunmap_39',['FunToRealDefFunMap',['../classSVF_1_1LLVMModuleSet.html#a45f1bffad4c5cdb25897f02c4f0c9794',1,'SVF::LLVMModuleSet']]],
-  ['funtoretmap_40',['FunToRetMap',['../classSVF_1_1SVFIR.html#acb5fb0f37c44c7aa4432d5005588f168',1,'SVF::SVFIR']]],
+  ['funtoretmap_40',['FunToRetMap',['../classSVF_1_1SVFIR.html#ac1be14c494f719ac7e8b052b1fe22423',1,'SVF::SVFIR']]],
   ['funtoreturnmusetmap_41',['FunToReturnMuSetMap',['../classSVF_1_1MemSSA.html#a763ecf684b962511a632b96f2e8a1545',1,'SVF::MemSSA']]],
   ['funtovfgnodesmapty_42',['FunToVFGNodesMapTy',['../classSVF_1_1VFG.html#a37c85c30a5e6e4940d1b97a0eed8c89b',1,'SVF::VFG']]]
 ];
