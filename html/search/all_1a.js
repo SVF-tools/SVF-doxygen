@@ -179,7 +179,7 @@ var searchData=
   ['typedefs_176',['typedefs',['../classSVF_1_1DCHNode.html#abafa483be12690549fbcccaf4c3fa511',1,'SVF::DCHNode']]],
   ['typeinference_177',['typeInference',['../classSVF_1_1LLVMModuleSet.html#a2eb76d2c787a9a02f7d37c790d647e9c',1,'SVF::LLVMModuleSet']]],
   ['typeinfo_178',['typeinfo',['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo'],['../classSVF_1_1BaseObjVar.html#ac1397563284bd856915e9252366a85cb',1,'SVF::BaseObjVar::typeInfo']]],
-  ['typelocsetsmap_179',['typelocsetsmap',['../classSVF_1_1SVFIR.html#a63ede1d8d381b91f81b93965dcffa288',1,'SVF::SVFIR::typeLocSetsMap'],['../classSVF_1_1SVFIR.html#ad74ca54e6d62d4410038ef900ea8f150',1,'SVF::SVFIR::TypeLocSetsMap']]],
+  ['typelocsetsmap_179',['typelocsetsmap',['../classSVF_1_1SVFIR.html#ad74ca54e6d62d4410038ef900ea8f150',1,'SVF::SVFIR::TypeLocSetsMap'],['../classSVF_1_1SVFIR.html#a63ede1d8d381b91f81b93965dcffa288',1,'SVF::SVFIR::typeLocSetsMap']]],
   ['typemalloc_180',['TYPEMALLOC',['../ObjTypeInference_8cpp.html#a5f334de99eb942058f27a1025c346f70',1,'ObjTypeInference.cpp']]],
   ['typemap_181',['TypeMap',['../classSVF_1_1POCRSolver.html#ac4d92529d21db89c547e20e886060b0f',1,'SVF::POCRSolver']]],
   ['typename_182',['typeName',['../classSVF_1_1DCHNode.html#a8a7b412262af7a90c9ef583b6a8c10fc',1,'SVF::DCHNode']]],
