@@ -18,7 +18,7 @@ var searchData=
   ['dibasictype_15',['DIBasicType',['../namespaceSVF.html#ada0513be7e25325325ccc9183aeca278',1,'SVF']]],
   ['dicompositetype_16',['DICompositeType',['../namespaceSVF.html#aded9b991c77acc5284ccead0739e84f1',1,'SVF']]],
   ['diderivedtype_17',['DIDerivedType',['../namespaceSVF.html#a852e75c562139237fcc754c7461533e6',1,'SVF']]],
-  ['difference_5ftype_18',['difference_type',['../classSVF_1_1iter__facade__base.html#a4850340b864a13fb78e52dfb46d0e8a3',1,'SVF::iter_facade_base::difference_type'],['../classSVF_1_1iter__adaptor__base.html#a0dc562917692ec5e4880509444b66e9a',1,'SVF::iter_adaptor_base::difference_type'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#aeabc3acd9ce15b8beff0db8a49d8781f',1,'SVF::CoreBitVector::CoreBitVectorIterator::difference_type'],['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a79da80a016d68d70b63bcaa884cf53cb',1,'SVF::PointsTo::PointsToIterator::difference_type']]],
+  ['difference_5ftype_18',['difference_type',['../classSVF_1_1iter__facade__base.html#a4850340b864a13fb78e52dfb46d0e8a3',1,'SVF::iter_facade_base::difference_type'],['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a79da80a016d68d70b63bcaa884cf53cb',1,'SVF::PointsTo::PointsToIterator::difference_type'],['../classSVF_1_1iter__adaptor__base.html#a0dc562917692ec5e4880509444b66e9a',1,'SVF::iter_adaptor_base::difference_type'],['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#aeabc3acd9ce15b8beff0db8a49d8781f',1,'SVF::CoreBitVector::CoreBitVectorIterator::difference_type']]],
   ['diffptdataty_19',['DiffPTDataTy',['../classSVF_1_1BVDataPTAImpl.html#abd8bb73e9beac5e39667091b1e211bd3',1,'SVF::BVDataPTAImpl']]],
   ['dinode_20',['DINode',['../namespaceSVF.html#a758f3bee97ed46a719d64a2d4f2bc62d',1,'SVF']]],
   ['dinodearray_21',['DINodeArray',['../namespaceSVF.html#a0f825e73d115173b05ca54fb8ec65003',1,'SVF']]],
@@ -38,5 +38,6 @@ var searchData=
   ['dpimtocptsetmap_35',['DPImToCPtSetMap',['../classSVF_1_1DDAVFSolver.html#a8b5a34679fb1362425c88d6e74b6c019',1,'SVF::DDAVFSolver']]],
   ['dpmtocvarmap_36',['DPMToCVarMap',['../classSVF_1_1DDAVFSolver.html#af0538abf12c01d31a0296553e2f7c92d',1,'SVF::DDAVFSolver']]],
   ['dpmtodpmmap_37',['DPMToDPMMap',['../classSVF_1_1DDAVFSolver.html#a2ccbcfa949a1796094b5d9499177fc2b',1,'SVF::DDAVFSolver']]],
-  ['dptitemset_38',['DPTItemSet',['../classSVF_1_1DDAVFSolver.html#a05d6b074b04aad7dc1f3cbe0ca587467',1,'SVF::DDAVFSolver']]]
+  ['dptitemset_38',['DPTItemSet',['../classSVF_1_1DDAVFSolver.html#a05d6b074b04aad7dc1f3cbe0ca587467',1,'SVF::DDAVFSolver']]],
+  ['dsolocalequivalent_39',['DSOLocalEquivalent',['../namespaceSVF.html#a2c290aed2891065a6525ba47090b5c5e',1,'SVF']]]
 ];
