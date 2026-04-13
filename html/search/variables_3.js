@@ -44,7 +44,7 @@ var searchData=
   ['cbv_41',['cbv',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a0cba79551b56ed83dc45ab63619dc590',1,'SVF::CoreBitVector::CoreBitVectorIterator::cbv'],['../classSVF_1_1PointsTo.html#a79333c4ae5c002d9632fa589956b3605',1,'SVF::PointsTo::cbv']]],
   ['cbvit_42',['cbvIt',['../classSVF_1_1PointsTo_1_1PointsToIterator.html#a4db2c62eb3ad789ab7aaf7506cd340b2',1,'SVF::PointsTo::PointsToIterator']]],
   ['cfledgeset_43',['cflEdgeSet',['../classSVF_1_1CFLGraph.html#afb41039ad53899fa64fedcef8b7aa7fe',1,'SVF::CFLGraph']]],
-  ['cflgraph_44',['cflgraph',['../classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac',1,'SVF::Options::CFLGraph'],['../classSVF_1_1CFLGraphBuilder.html#af034366ce280120e5cd1a5685894e9ac',1,'SVF::CFLGraphBuilder::cflGraph']]],
+  ['cflgraph_44',['cflgraph',['../classSVF_1_1CFLGraphBuilder.html#af034366ce280120e5cd1a5685894e9ac',1,'SVF::CFLGraphBuilder::cflGraph'],['../classSVF_1_1Options.html#a81dbd12b5141c4a2758d6f2d3321f1ac',1,'SVF::Options::CFLGraph']]],
   ['cflsvfg_45',['CFLSVFG',['../classSVF_1_1Options.html#a7ef3e2cd417646e9d06e0da16ff6c516',1,'SVF::Options']]],
   ['cgnode_46',['cgNode',['../classSVF_1_1ArgValVar.html#a58e36e0a98d25250ec64efb4da892961',1,'SVF::ArgValVar']]],
   ['chaffmap_47',['chaFFMap',['../classSVF_1_1DCHGraph.html#a607d83338feeb58af3638b988b7fa00b',1,'SVF::DCHGraph']]],
@@ -134,7 +134,7 @@ var searchData=
   ['curty_131',['CurTy',['../classllvm_1_1generic__bridge__gep__type__iterator.html#af4eefb034e50627c6d4ef5bfcdcb4f57',1,'llvm::generic_bridge_gep_type_iterator']]],
   ['curval_132',['curVal',['../classSVF_1_1SVFIRBuilder.html#a5afb07f2cf8d76f8db334250e0c96cc0',1,'SVF::SVFIRBuilder']]],
   ['customized_133',['Customized',['../classSVF_1_1Options.html#a15a9c1086e1bbd6a76d56ad1bdd6b994',1,'SVF::Options']]],
-  ['cxt_134',['cxt',['../classSVF_1_1CxtProc.html#af5f186c71d815dabcbfab6bae7c57b59',1,'SVF::CxtProc::cxt'],['../classSVF_1_1CxtStmt.html#ae451ee5a61dbdd2367a04cee304bbcb1',1,'SVF::CxtStmt::cxt'],['../classSVF_1_1CxtThread.html#ae8e5c401e008739bf018f1d618c08ea5',1,'SVF::CxtThread::cxt']]],
+  ['cxt_134',['cxt',['../classSVF_1_1CxtStmt.html#ae451ee5a61dbdd2367a04cee304bbcb1',1,'SVF::CxtStmt::cxt'],['../classSVF_1_1CxtThread.html#ae8e5c401e008739bf018f1d618c08ea5',1,'SVF::CxtThread::cxt'],['../classSVF_1_1CxtProc.html#af5f186c71d815dabcbfab6bae7c57b59',1,'SVF::CxtProc::cxt']]],
   ['cxtbudget_135',['CxtBudget',['../classSVF_1_1Options.html#a3bbd106de519cb8d00f33e82f14d279b',1,'SVF::Options']]],
   ['cxtjoininloop_136',['cxtJoinInLoop',['../classSVF_1_1ForkJoinAnalysis.html#a63da48d338683ec95709a6bd95238707',1,'SVF::ForkJoinAnalysis']]],
   ['cxtlimit_137',['CxtLimit',['../classSVF_1_1Options.html#a3fd9cce83729bc62cd2fb568b0d53db5',1,'SVF::Options']]],
@@ -143,5 +143,6 @@ var searchData=
   ['cxtstmtlist_140',['cxtstmtlist',['../classSVF_1_1ForkJoinAnalysis.html#acccf53d174cac3275da0d79c89a73916',1,'SVF::ForkJoinAnalysis::cxtStmtList'],['../classSVF_1_1MHP.html#a0300d46dd22ee7cc8c62fada694d3acb',1,'SVF::MHP::cxtStmtList'],['../classSVF_1_1LockAnalysis.html#a109293f282e9b920b0b13c58026f6f1d',1,'SVF::LockAnalysis::cxtStmtList']]],
   ['cxtstmttoaliveflagmap_141',['cxtStmtToAliveFlagMap',['../classSVF_1_1ForkJoinAnalysis.html#aa31b3f3d51b963ccd475e66b77143dba',1,'SVF::ForkJoinAnalysis']]],
   ['cxtstmttocxtlockset_142',['cxtStmtToCxtLockSet',['../classSVF_1_1LockAnalysis.html#ae256a84fd63947a6f81bee030bdbe7fc',1,'SVF::LockAnalysis']]],
-  ['cyclicfldidx_143',['CyclicFldIdx',['../classSVF_1_1Options.html#a3914c0785473a773c7cb3da01229f2ee',1,'SVF::Options']]]
+  ['cycletovalvars_143',['cycleToValVars',['../classSVF_1_1PreAnalysis.html#a78ed40e4a92e7c6ceeef0cd2c04d4937',1,'SVF::PreAnalysis']]],
+  ['cyclicfldidx_144',['CyclicFldIdx',['../classSVF_1_1Options.html#a3914c0785473a773c7cb3da01229f2ee',1,'SVF::Options']]]
 ];

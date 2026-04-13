@@ -4,7 +4,7 @@ var searchData=
   ['dbug_1',['DBUG',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228a36e359346b349ead71f7ab095b0865af',1,'SVF::NodeIDAllocator']]],
   ['dchnodekd_2',['DCHNodeKd',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01af7a5a4f8019fa3ce8a3c8077499e39cd',1,'SVF::SVFValue']]],
   ['default_5fpta_3',['Default_PTA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85adb3d4cbd8c38c1c498bc51198626a790',1,'SVF::PointerAnalysis']]],
-  ['dense_4',['DENSE',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228a9df17b1222681bba5e649895deb726f0',1,'SVF::NodeIDAllocator']]],
+  ['dense_4',['dense',['../classSVF_1_1AbstractInterpretation.html#a6af0400f5b4fc6b214ce0f6d425c522ca5fcc2c76616be8ff9b7445a3327862f9',1,'SVF::AbstractInterpretation::Dense'],['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228a9df17b1222681bba5e649895deb726f0',1,'SVF::NodeIDAllocator::DENSE']]],
   ['destructor_5',['DESTRUCTOR',['../classSVF_1_1CHGraph.html#a2a1da7f262a2f11653fb583154a93a22adfb68ad45ad216277b580d9a45926dc7',1,'SVF::CHGraph']]],
   ['di_6',['DI',['../classSVF_1_1CommonCHGraph.html#a6a1feb9e268fb56b0de3efc39cfc8db8ae9e3edea0bae930aa9af04699fca9506',1,'SVF::CommonCHGraph']]],
   ['diff_7',['Diff',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a03a155517b9587d79c3f0b6dc3b72447',1,'SVF::PTData']]],
