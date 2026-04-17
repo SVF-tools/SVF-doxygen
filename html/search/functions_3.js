@@ -88,7 +88,7 @@ var searchData=
   ['clearsinglerevpts_85',['clearsinglerevpts',['../classSVF_1_1PersistentPTData.html#a46ab9d8365d9f9db9d84f5b8bcd3309c',1,'SVF::PersistentPTData::clearSingleRevPts()'],['../classSVF_1_1MutablePTData.html#a5756fb30b7bd405c04defb49a7d688f7',1,'SVF::MutablePTData::clearSingleRevPts()']]],
   ['clearsolitaries_86',['clearSolitaries',['../classSVF_1_1ConstraintGraph.html#a65c96cdd904e4240fbc7a044f89b91a1',1,'SVF::ConstraintGraph']]],
   ['clearstat_87',['clearstat',['../classSVF_1_1FlowSensitiveStat.html#ab4c205136b22a13b54ceb48135730d23',1,'SVF::FlowSensitiveStat::clearStat()'],['../classSVF_1_1VersionedFlowSensitiveStat.html#a6664f28eab3052988ab9e89766373981',1,'SVF::VersionedFlowSensitiveStat::clearStat()']]],
-  ['clearvars_88',['clearVars',['../classSVF_1_1AbstractState.html#ac037bff607000ef306549308e1bbf601',1,'SVF::AbstractState']]],
+  ['clearvalvars_88',['clearValVars',['../classSVF_1_1AbstractState.html#ab5fc372ad6c3d386f056ec82bb903b04',1,'SVF::AbstractState']]],
   ['clearvisitedmap_89',['clearVisitedMap',['../classSVF_1_1SrcSnkDDA.html#af048c70d7e68da22835570a3381eb14d',1,'SVF::SrcSnkDDA']]],
   ['cluster_90',['cluster',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a0d75800f3ad7c56e7aea7c74a6b6dc4c',1,'SVF::NodeIDAllocator::Clusterer::cluster()'],['../classSVF_1_1Andersen.html#ae1ff65a411f2c4dfee0973ad4af48daf',1,'SVF::Andersen::cluster()'],['../classSVF_1_1FlowSensitive.html#a89d3b97b8077027514135c9201c4d02c',1,'SVF::FlowSensitive::cluster()'],['../classSVF_1_1VersionedFlowSensitive.html#aedd12e894fb2c17d2201f4049e5f3793',1,'SVF::VersionedFlowSensitive::cluster()']]],
   ['cmpnodebs_91',['cmpNodeBS',['../namespaceSVF_1_1SVFUtil.html#a8f749354b7e882ef3e5bf5081fa715b5',1,'SVF::SVFUtil']]],
