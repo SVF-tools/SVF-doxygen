@@ -24,7 +24,7 @@ var searchData=
   ['timeofbuildingsvfir_21',['timeOfBuildingSVFIR',['../classSVF_1_1SVFStat.html#aea75388c973674686d1f2b7498b4095c',1,'SVF::SVFStat']]],
   ['timeofbuildingsymboltable_22',['timeOfBuildingSymbolTable',['../classSVF_1_1SVFStat.html#ae89293bc063bdc74a988e9c37c70321e',1,'SVF::SVFStat']]],
   ['timeofcollapse_23',['timeOfCollapse',['../classSVF_1_1AndersenBase.html#ad40b196c2c699bd115529b806d20de25',1,'SVF::AndersenBase']]],
-  ['timeofcreatemuchi_24',['timeofcreatemuchi',['../classSVF_1_1MemSSA.html#a4d2418b7df74f23d8fd328f66e29f198',1,'SVF::MemSSA::timeOfCreateMUCHI'],['../classSVF_1_1MemSSAStat.html#a48c70f0ed1c7d031a3cd528035162e52',1,'SVF::MemSSAStat::TimeOfCreateMUCHI']]],
+  ['timeofcreatemuchi_24',['timeofcreatemuchi',['../classSVF_1_1MemSSAStat.html#a48c70f0ed1c7d031a3cd528035162e52',1,'SVF::MemSSAStat::TimeOfCreateMUCHI'],['../classSVF_1_1MemSSA.html#a4d2418b7df74f23d8fd328f66e29f198',1,'SVF::MemSSA::timeOfCreateMUCHI']]],
   ['timeofgeneratingmemregions_25',['timeofgeneratingmemregions',['../classSVF_1_1MemSSA.html#a37dca8a7d155de4870358146d219b5e5',1,'SVF::MemSSA::timeOfGeneratingMemRegions'],['../classSVF_1_1MemSSAStat.html#a74c36654b7452aa94aa241881f0a83c5',1,'SVF::MemSSAStat::TimeOfGeneratingMemRegions']]],
   ['timeofinsertingphi_26',['timeofinsertingphi',['../classSVF_1_1MemSSAStat.html#a0c24822c8549af6a96e82312954fab9b',1,'SVF::MemSSAStat::TimeOfInsertingPHI'],['../classSVF_1_1MemSSA.html#a3c7b5fa73fdc7c805ee3673fbe812b44',1,'SVF::MemSSA::timeOfInsertingPHI']]],
   ['timeofnormalizegrammar_27',['timeOfNormalizeGrammar',['../classSVF_1_1CFLBase.html#ad4d65dd4c3e173d014199ac6b08a5261',1,'SVF::CFLBase']]],

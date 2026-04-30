@@ -60,7 +60,7 @@ var searchData=
   ['demangle_57',['demangle',['../namespaceSVF_1_1cppUtil.html#a745a2addadc136075d45c7fb8437af3e',1,'SVF::cppUtil']]],
   ['demangledname_58',['DemangledName',['../structSVF_1_1cppUtil_1_1DemangledName.html',1,'SVF::cppUtil']]],
   ['dendrogramtraversaltime_59',['DendrogramTraversalTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a67ab9cffacc1584b2e7bae5d1b08c541',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['dense_60',['dense',['../classSVF_1_1AbstractInterpretation.html#a6af0400f5b4fc6b214ce0f6d425c522ca5fcc2c76616be8ff9b7445a3327862f9',1,'SVF::AbstractInterpretation::Dense'],['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228a9df17b1222681bba5e649895deb726f0',1,'SVF::NodeIDAllocator::DENSE']]],
+  ['dense_60',['dense',['../classSVF_1_1NodeIDAllocator.html#a8cf553cd07768aad3f3b91bf3d7c6228a9df17b1222681bba5e649895deb726f0',1,'SVF::NodeIDAllocator::DENSE'],['../classSVF_1_1AbstractInterpretation.html#a6af0400f5b4fc6b214ce0f6d425c522ca5fcc2c76616be8ff9b7445a3327862f9',1,'SVF::AbstractInterpretation::Dense']]],
   ['depth_61',['depth',['../structprintbuffer.html#aa7311b5da38ff8d1737824c611b48732',1,'printbuffer::depth'],['../structparse__buffer.html#af613c4ed7d73f76c60c50d1bcf4c67a0',1,'parse_buffer::depth'],['../classSVF_1_1WTOCycleDepth.html#autotoc_md1',1,'|     Node NO.    | Cycle Depth |']]],
   ['depth_20is_20as_20following_3a_62',['The cycle depth is as following:',['../classSVF_1_1WTOCycleDepth.html#autotoc_md0',1,'']]],
   ['deref_5fval_63',['deref_val',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#a572085defe4300f3326060ca49249d7a',1,'SVF::GenericGraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; * &gt;']]],

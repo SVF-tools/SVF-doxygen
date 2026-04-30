@@ -13,7 +13,7 @@ var searchData=
   ['widencyclestate_10',['widenCycleState',['../classSVF_1_1AbstractInterpretation.html#a7270cdd6afff34ff8d7636812eb1a2f1',1,'SVF::AbstractInterpretation']]],
   ['widendelay_11',['WidenDelay',['../classSVF_1_1Options.html#ab25f7ec430ba1d41597fc409b758b193',1,'SVF::Options']]],
   ['widening_12',['widening',['../classSVF_1_1AbstractState.html#afd37c4419cfc79b6765fa243fcbea573',1,'SVF::AbstractState']]],
-  ['word_13',['word',['../structSVF_1_1SparseBitVectorElement.html#a5d43d980591d14d3a3d0782be034ed4f',1,'SVF::SparseBitVectorElement::word()'],['../classSVF_1_1CoreBitVector.html#aaee26ffc13d05cd57f0fd7e4c2ea875c',1,'SVF::CoreBitVector::Word']]],
+  ['word_13',['word',['../classSVF_1_1CoreBitVector.html#aaee26ffc13d05cd57f0fd7e4c2ea875c',1,'SVF::CoreBitVector::Word'],['../structSVF_1_1SparseBitVectorElement.html#a5d43d980591d14d3a3d0782be034ed4f',1,'SVF::SparseBitVectorElement::word()']]],
   ['wordit_14',['wordIt',['../classSVF_1_1CoreBitVector_1_1CoreBitVectorIterator.html#a1afa1cb9e8377d3dab767aa4bfc713dc',1,'SVF::CoreBitVector::CoreBitVectorIterator']]],
   ['wordnumber_15',['WordNumber',['../classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html#a6b139db78c9cba017df0fa468bee713a',1,'SVF::SparseBitVector::SparseBitVectorIterator']]],
   ['words_16',['words',['../classSVF_1_1CoreBitVector.html#a807283a917e845ef19c4962b1744e98b',1,'SVF::CoreBitVector']]],
