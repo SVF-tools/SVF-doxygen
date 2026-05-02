@@ -1,7 +1,7 @@
 var searchData=
 [
   ['narrow_5fwith_0',['narrow_with',['../classSVF_1_1IntervalValue.html#a6c175067e5573ae7180ae4d872c49c8f',1,'SVF::IntervalValue::narrow_with()'],['../classSVF_1_1AbstractValue.html#a84d4827120d8fa5858edfce1406ed386',1,'SVF::AbstractValue::narrow_with()']]],
-  ['narrowcyclestate_1',['narrowCycleState',['../classSVF_1_1AbstractInterpretation.html#a18ccdbfe2c7a02f7f53660d4bc3a8f75',1,'SVF::AbstractInterpretation']]],
+  ['narrowcyclestate_1',['narrowcyclestate',['../classSVF_1_1AbstractInterpretation.html#a18ccdbfe2c7a02f7f53660d4bc3a8f75',1,'SVF::AbstractInterpretation::narrowCycleState()'],['../classSVF_1_1SemiSparseAbstractInterpretation.html#a16e2165ff0f01e099ee2c3958b560386',1,'SVF::SemiSparseAbstractInterpretation::narrowCycleState()']]],
   ['narrowing_2',['narrowing',['../classSVF_1_1AbstractState.html#aa9f048614c0bdbe5e8562bfcc6288a97',1,'SVF::AbstractState']]],
   ['neg_3',['NEG',['../classSVF_1_1Z3Expr.html#a9a545e516e6dee37310ad02481a84356',1,'SVF::Z3Expr']]],
   ['neverfreebug_4',['NeverFreeBug',['../classSVF_1_1NeverFreeBug.html#a2366068e0e1813c47003e3c072c1ad85',1,'SVF::NeverFreeBug']]],

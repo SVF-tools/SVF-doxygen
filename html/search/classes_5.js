@@ -23,9 +23,10 @@ var searchData=
   ['formalretvfgnode_20',['FormalRetVFGNode',['../classSVF_1_1FormalRetVFGNode.html',1,'SVF']]],
   ['fullbufferoverflowbug_21',['FullBufferOverflowBug',['../classSVF_1_1FullBufferOverflowBug.html',1,'SVF']]],
   ['fullnullptrdereferencebug_22',['FullNullPtrDereferenceBug',['../classSVF_1_1FullNullPtrDereferenceBug.html',1,'SVF']]],
-  ['funentryicfgnode_23',['FunEntryICFGNode',['../classSVF_1_1FunEntryICFGNode.html',1,'SVF']]],
-  ['funexiticfgnode_24',['FunExitICFGNode',['../classSVF_1_1FunExitICFGNode.html',1,'SVF']]],
-  ['funobjvar_25',['FunObjVar',['../classSVF_1_1FunObjVar.html',1,'SVF']]],
-  ['funptrddaclient_26',['FunptrDDAClient',['../classSVF_1_1FunptrDDAClient.html',1,'SVF']]],
-  ['funvalvar_27',['FunValVar',['../classSVF_1_1FunValVar.html',1,'SVF']]]
+  ['fullsparseabstractinterpretation_23',['FullSparseAbstractInterpretation',['../classSVF_1_1FullSparseAbstractInterpretation.html',1,'SVF']]],
+  ['funentryicfgnode_24',['FunEntryICFGNode',['../classSVF_1_1FunEntryICFGNode.html',1,'SVF']]],
+  ['funexiticfgnode_25',['FunExitICFGNode',['../classSVF_1_1FunExitICFGNode.html',1,'SVF']]],
+  ['funobjvar_26',['FunObjVar',['../classSVF_1_1FunObjVar.html',1,'SVF']]],
+  ['funptrddaclient_27',['FunptrDDAClient',['../classSVF_1_1FunptrDDAClient.html',1,'SVF']]],
+  ['funvalvar_28',['FunValVar',['../classSVF_1_1FunValVar.html',1,'SVF']]]
 ];

@@ -14,7 +14,7 @@ var searchData=
   ['loadmodules_11',['loadModules',['../classSVF_1_1LLVMModuleSet.html#a298966366b02d0a34f409c2c77da3789',1,'SVF::LLVMModuleSet']]],
   ['loadmu_12',['LoadMU',['../classSVF_1_1LoadMU.html#ae092d4197b966d428d7ffdd9146621b4',1,'SVF::LoadMU']]],
   ['loadstmt_13',['loadstmt',['../classSVF_1_1LoadStmt.html#a2efafa925a30de73735ca73b1632b5f8',1,'SVF::LoadStmt::LoadStmt(const LoadStmt &amp;)'],['../classSVF_1_1LoadStmt.html#a92c5817abfaa1f6fbc9ee911f458dfb2',1,'SVF::LoadStmt::LoadStmt(SVFVar *s, SVFVar *d)']]],
-  ['loadvalue_14',['loadValue',['../classSVF_1_1AbstractStateManager.html#ac4740b824d49b0aa65fce492b1d83381',1,'SVF::AbstractStateManager']]],
+  ['loadvalue_14',['loadValue',['../classSVF_1_1AbstractInterpretation.html#a4b1c44c1b75d19f54ab9f2d8fceb37bf',1,'SVF::AbstractInterpretation']]],
   ['loadvfgnode_15',['loadvfgnode',['../classSVF_1_1LoadVFGNode.html#afe482a8a05b0efc45ceb4052ea87a039',1,'SVF::LoadVFGNode::LoadVFGNode(const LoadVFGNode &amp;)'],['../classSVF_1_1LoadVFGNode.html#a8ae07c41215e9c7544c45e581c18c29b',1,'SVF::LoadVFGNode::LoadVFGNode(NodeID id, const LoadStmt *edge)'],['../classSVF_1_1LoadVFGNode.html#aca72f4582e33a2d4ef3a96dd2936f567',1,'SVF::LoadVFGNode::LoadVFGNode()']]],
   ['loadwordproductions_16',['loadWordProductions',['../classSVF_1_1GrammarBuilder.html#abad6b574d9f88e2b4ebb6372dc903f62',1,'SVF::GrammarBuilder']]],
   ['localeconv_17',['localeconv',['../extapi_8c.html#a6d4f0a84c0eb0de59f1d67b2a0f2b169',1,'extapi.c']]],
