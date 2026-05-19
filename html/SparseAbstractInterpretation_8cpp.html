@@ -73,6 +73,8 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">SparseAbstractInterpretation.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -84,6 +86,63 @@ $(function() {
 <code>#include &quot;<a class="el" href="Andersen_8h_source.html">WPA/Andersen.h</a>&quot;</code><br />
 </div>
 <p><a href="SparseAbstractInterpretation_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a727cada44dff2e4804e1ad9a350b7422" id="r_a727cada44dff2e4804e1ad9a350b7422"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SparseAbstractInterpretation_8cpp.html#a727cada44dff2e4804e1ad9a350b7422">hasRedefineToSameObj</a> (<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *node, <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="classSVF_1_1IndirectSVFGEdge.html">IndirectSVFGEdge</a> *<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>)</td></tr>
+<tr class="separator:a727cada44dff2e4804e1ad9a350b7422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a727cada44dff2e4804e1ad9a350b7422" name="a727cada44dff2e4804e1ad9a350b7422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a727cada44dff2e4804e1ad9a350b7422">&#9670;&#160;</a></span>hasRedefineToSameObj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bool</a> hasRedefineToSameObj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="classSVF_1_1ICFGNode.html">ICFGNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="classSVF_1_1IndirectSVFGEdge.html">IndirectSVFGEdge</a> *&#160;</td>
+          <td class="paramname"><em>edge</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseAbstractInterpretation_8cpp_source.html#l00240">240</a> of file <a class="el" href="SparseAbstractInterpretation_8cpp_source.html">SparseAbstractInterpretation.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  242</span>{</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1VFGNode.html">VFGNode</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">vfgNode</a> : node-&gt;getVFGNodes())</div>
+<div class="line"><span class="lineno">  244</span>    {</div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">if</span> (SVFUtil::isa&lt;StoreVFGNode&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">vfgNode</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno">  246</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">vfgNode</a>-&gt;getDefSVFVars().intersects(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>-&gt;getPointsTo()))</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  248</span>    }</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  251</span>}</div>
+<div class="ttc" id="aclassSVF_1_1VFGNode_html"><div class="ttname"><a href="classSVF_1_1VFGNode.html">SVF::VFGNode</a></div><div class="ttdef"><b>Definition</b> <a href="VFGNode_8h_source.html#l00046">VFGNode.h:47</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00076">BasicTypes.h:76</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

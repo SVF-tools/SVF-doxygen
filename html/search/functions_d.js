@@ -41,7 +41,7 @@ var searchData=
   ['mergescccycle_38',['mergeSccCycle',['../classSVF_1_1Andersen.html#ac86ffd334568e4df5c08b3c827018bef',1,'SVF::Andersen']]],
   ['mergesccnodes_39',['mergeSccNodes',['../classSVF_1_1Andersen.html#a1ba1e1e36af289982146de06cf06ab0a',1,'SVF::Andersen']]],
   ['mergesrctotgt_40',['mergesrctotgt',['../classSVF_1_1AndersenSFR.html#ac5f406db5610347564fceff4d36f6a6f',1,'SVF::AndersenSFR::mergeSrcToTgt()'],['../classSVF_1_1Andersen.html#ae6b1e54a389abc68994219e39539127e',1,'SVF::Andersen::mergeSrcToTgt()']]],
-  ['mergestatesfrompredecessors_41',['mergeStatesFromPredecessors',['../classSVF_1_1AbstractInterpretation.html#a865a7867aad0598f80231dc234804e8e',1,'SVF::AbstractInterpretation']]],
+  ['mergestatesfrompredecessors_41',['mergestatesfrompredecessors',['../classSVF_1_1FullSparseAbstractInterpretation.html#a2885e08d42c6190318cc7bc5b738a1e8',1,'SVF::FullSparseAbstractInterpretation::mergeStatesFromPredecessors()'],['../classSVF_1_1AbstractInterpretation.html#a865a7867aad0598f80231dc234804e8e',1,'SVF::AbstractInterpretation::mergeStatesFromPredecessors()']]],
   ['metasame_42',['metaSame',['../classSVF_1_1PointsTo.html#aa1e773b7abda97441d6ffe39c668d4ec',1,'SVF::PointsTo']]],
   ['mhp_43',['MHP',['../classSVF_1_1MHP.html#abf1f5a7c365dfb95b42015b7b2ad6fbe',1,'SVF::MHP']]],
   ['min_44',['min',['../classSVF_1_1BoundedDouble.html#ab453f9da0ab0dd45a5bb956172d30c6d',1,'SVF::BoundedDouble::min()'],['../classSVF_1_1BoundedInt.html#a4e5e7d7317490ffa932a34b639fd5ea2',1,'SVF::BoundedInt::min()']]],
