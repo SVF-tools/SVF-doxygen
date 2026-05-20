@@ -118,7 +118,7 @@ var searchData=
   ['collectmodrefforloadstore_115',['collectModRefForLoadStore',['../classSVF_1_1MRGenerator.html#a207dfa4c9f044764665478142c6e6b22',1,'SVF::MRGenerator']]],
   ['collectmultiforkedthreads_116',['collectMultiForkedThreads',['../classSVF_1_1TCT.html#ad15753a9c20d738325e5c0edea6c9c56',1,'SVF::TCT']]],
   ['collectobj_117',['collectObj',['../classSVF_1_1SymbolTableBuilder.html#a891bfea437256d1b7aa957d32797e419',1,'SVF::SymbolTableBuilder']]],
-  ['collectprogentryfuns_118',['collectProgEntryFuns',['../classSVF_1_1AbstractInterpretation.html#ac92220b1c9de2cbc7837fc1e08ceae0d',1,'SVF::AbstractInterpretation']]],
+  ['collectprogentryfuns_118',['collectProgEntryFuns',['../classSVF_1_1AbstractInterpretation.html#ac77c210f9640be656d5f0b2d0caeb2c2',1,'SVF::AbstractInterpretation']]],
   ['collectptschain_119',['collectptschain',['../classSVF_1_1MRGenerator.html#a81bd687d34eea884dfcf68274fcec7b5',1,'SVF::MRGenerator::CollectPtsChain()'],['../classSVF_1_1SaberSVFGBuilder.html#a411e168e2a6c27e15186c609c5e216b3',1,'SVF::SaberSVFGBuilder::CollectPtsChain()']]],
   ['collectregdefs_120',['collectRegDefs',['../classSVF_1_1MemSSA.html#a35bdf8364527f3e556b0a32a8259ee45',1,'SVF::MemSSA']]],
   ['collectreguses_121',['collectRegUses',['../classSVF_1_1MemSSA.html#a8032c530b44e264544881d53d2fac390',1,'SVF::MemSSA']]],
