@@ -1374,87 +1374,87 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>        std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>;</div>
 <div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>        std::stringstream <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>);</div>
 <div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span> </div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="classSVF_1_1StmtVFGNode.html">StmtVFGNode</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stmtNode</a> = SVFUtil::dyn_cast&lt;StmtVFGNode&gt;(node))</div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>        {</div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>            <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SVFStmt.html">SVFStmt</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stmtNode</a>-&gt;getSVFStmt();</div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>            <span class="keywordflow">if</span> (SVFUtil::isa&lt;AddrStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>            {</div>
-<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=green&quot;</span>;</div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>            }</div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;CopyStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>            {</div>
-<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=black&quot;</span>;</div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>            }</div>
-<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;RetPE&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
-<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>            {</div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=black,style=dotted&quot;</span>;</div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>            }</div>
-<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;GepStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>            {</div>
-<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=purple&quot;</span>;</div>
-<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>            }</div>
-<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;StoreStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>            {</div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=blue&quot;</span>;</div>
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>            }</div>
-<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;LoadStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
-<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>            {</div>
-<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;color=red&quot;</span>;</div>
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>            }</div>
-<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>            {</div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(0 &amp;&amp; <span class="stringliteral">&quot;No such kind edge!!&quot;</span>);</div>
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>            }</div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>        }</div>
-<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;CmpVFGNode&gt;(node))</div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>        {</div>
-<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;color=grey&quot;</span>;</div>
-<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>        }</div>
-<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;BinaryOPVFGNode&gt;(node))</div>
-<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>        {</div>
-<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;color=grey&quot;</span>;</div>
-<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>        }</div>
-<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;UnaryOPVFGNode&gt;(node))</div>
-<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>        {</div>
-<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;color=grey&quot;</span>;</div>
-<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>        }</div>
-<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(SVFUtil::isa&lt;PHIVFGNode&gt;(node))</div>
-<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>        {</div>
-<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=black&quot;</span>;</div>
-<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>        }</div>
-<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(SVFUtil::isa&lt;NullPtrVFGNode&gt;(node))</div>
-<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>        {</div>
-<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=grey&quot;</span>;</div>
-<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>        }</div>
-<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(SVFUtil::isa&lt;FormalParmVFGNode&gt;(node))</div>
-<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>        {</div>
-<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=yellow,penwidth=2&quot;</span>;</div>
-<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>        }</div>
-<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(SVFUtil::isa&lt;ActualParmVFGNode&gt;(node))</div>
-<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>        {</div>
-<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=yellow,penwidth=2&quot;</span>;</div>
-<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span>        }</div>
-<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;ActualRetVFGNode&gt;(node))</div>
-<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span>        {</div>
-<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=yellow,penwidth=2&quot;</span>;</div>
-<div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>        }</div>
-<div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;FormalRetVFGNode&gt;(node))</div>
-<div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>        {</div>
-<div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=yellow,penwidth=2&quot;</span>;</div>
-<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>        }</div>
-<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;MRSVFGNode&gt;(node))</div>
-<div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>        {</div>
-<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=orange,penwidth=2&quot;</span>;</div>
-<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>        }</div>
-<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;BranchVFGNode&gt;(node))</div>
-<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span>        {</div>
-<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;color=gold,penwidth=2&quot;</span>;</div>
-<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>        }</div>
-<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;no such kind of node!!&quot;</span>);</div>
-<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span> </div>
-<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;shape=record&quot;</span>;</div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span> </div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="classSVF_1_1StmtVFGNode.html">StmtVFGNode</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stmtNode</a> = SVFUtil::dyn_cast&lt;StmtVFGNode&gt;(node))</div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>        {</div>
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>            <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SVFStmt.html">SVFStmt</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">stmtNode</a>-&gt;getSVFStmt();</div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>            <span class="keywordflow">if</span> (SVFUtil::isa&lt;AddrStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>            {</div>
+<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=green&quot;</span>;</div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>            }</div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;CopyStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>            {</div>
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=black&quot;</span>;</div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>            }</div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;RetPE&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>            {</div>
+<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=black,style=dotted&quot;</span>;</div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>            }</div>
+<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;GepStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
+<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>            {</div>
+<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=purple&quot;</span>;</div>
+<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>            }</div>
+<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;StoreStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
+<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>            {</div>
+<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=blue&quot;</span>;</div>
+<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>            }</div>
+<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;LoadStmt&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">edge</a>))</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>            {</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;,color=red&quot;</span>;</div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>            }</div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>            {</div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(0 &amp;&amp; <span class="stringliteral">&quot;No such kind edge!!&quot;</span>);</div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>            }</div>
+<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>        }</div>
+<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;CmpVFGNode&gt;(node))</div>
+<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>        {</div>
+<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;,color=grey&quot;</span>;</div>
+<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>        }</div>
+<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;BinaryOPVFGNode&gt;(node))</div>
+<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>        {</div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;,color=grey&quot;</span>;</div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>        }</div>
+<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;UnaryOPVFGNode&gt;(node))</div>
+<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>        {</div>
+<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;,color=grey&quot;</span>;</div>
+<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>        }</div>
+<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(SVFUtil::isa&lt;PHIVFGNode&gt;(node))</div>
+<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>        {</div>
+<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=black&quot;</span>;</div>
+<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>        }</div>
+<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(SVFUtil::isa&lt;NullPtrVFGNode&gt;(node))</div>
+<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>        {</div>
+<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=grey&quot;</span>;</div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>        }</div>
+<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(SVFUtil::isa&lt;FormalParmVFGNode&gt;(node))</div>
+<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>        {</div>
+<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=yellow,penwidth=2&quot;</span>;</div>
+<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>        }</div>
+<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(SVFUtil::isa&lt;ActualParmVFGNode&gt;(node))</div>
+<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span>        {</div>
+<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=yellow,penwidth=2&quot;</span>;</div>
+<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span>        }</div>
+<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;ActualRetVFGNode&gt;(node))</div>
+<div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>        {</div>
+<div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=yellow,penwidth=2&quot;</span>;</div>
+<div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>        }</div>
+<div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;FormalRetVFGNode&gt;(node))</div>
+<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>        {</div>
+<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=yellow,penwidth=2&quot;</span>;</div>
+<div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>        }</div>
+<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;MRSVFGNode&gt;(node))</div>
+<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>        {</div>
+<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=orange,penwidth=2&quot;</span>;</div>
+<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span>        }</div>
+<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;BranchVFGNode&gt;(node))</div>
+<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>        {</div>
+<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt;  <span class="stringliteral">&quot;,color=gold,penwidth=2&quot;</span>;</div>
+<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>        }</div>
+<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;no such kind of node!!&quot;</span>);</div>
 <div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span> </div>
 <div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>.str();</div>
 <div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>    }</div>
