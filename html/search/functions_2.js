@@ -90,7 +90,7 @@ var searchData=
   ['buildthreadcallgraph_87',['buildThreadCallGraph',['../classSVF_1_1CallGraphBuilder.html#a86f929403a09a9425fc86dce68889f02',1,'SVF::CallGraphBuilder']]],
   ['buildusage_88',['buildUsage',['../classOptionBase.html#a7dbcdc9ff8df95a2c5ca4bd0723a3965',1,'OptionBase']]],
   ['buildvirtualfunctiontoidmap_89',['buildVirtualFunctionToIDMap',['../classSVF_1_1CHGBuilder.html#aa677ac2c640ee7fc0dab1d4fe508ead8',1,'SVF::CHGBuilder']]],
-  ['bvdataptaimpl_90',['BVDataPTAImpl',['../classSVF_1_1BVDataPTAImpl.html#ab0e1242aadfe1e16a2bd1445658a5476',1,'SVF::BVDataPTAImpl']]],
+  ['bvdataptaimpl_90',['BVDataPTAImpl',['../classSVF_1_1BVDataPTAImpl.html#a86cf9c2920346a0d597c137d51ae2ce7',1,'SVF::BVDataPTAImpl']]],
   ['bwfindallocofvar_91',['bwfindAllocOfVar',['../classSVF_1_1ObjTypeInference.html#a42149ece87a178241ef1ef0cce7ec554',1,'SVF::ObjTypeInference']]],
   ['bwfindallocorclsnamesources_92',['bwFindAllocOrClsNameSources',['../classSVF_1_1ObjTypeInference.html#a744de27c13a045108c834c9484d7271c',1,'SVF::ObjTypeInference']]],
   ['bwprocesscurnode_93',['bwprocesscurnode',['../classSVF_1_1GraphReachSolver.html#a5b2ec04cbee0e457ed9d8a8a4c2e134f',1,'SVF::GraphReachSolver::BWProcessCurNode()'],['../classSVF_1_1SrcSnkSolver.html#a447db2796a7024dfa0fbe9ac95c671c0',1,'SVF::SrcSnkSolver::BWProcessCurNode()'],['../classSVF_1_1SrcSnkDDA.html#ad9eb5a4e0b3783c300c36b66f053e302',1,'SVF::SrcSnkDDA::BWProcessCurNode()']]],

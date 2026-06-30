@@ -9,13 +9,13 @@ var searchData=
   ['option_3c_20u32_5ft_20_3e_6',['Option&lt; u32_t &gt;',['../classOption.html',1,'']]],
   ['optionbase_7',['OptionBase',['../classOptionBase.html',1,'']]],
   ['optionmap_8',['OptionMap',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20bvdataptaimpl_3a_3aptbackingtype_20_3e_9',['OptionMap&lt; BVDataPTAImpl::PTBackingType &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20enum_20ptastat_3a_3aclocktype_20_3e_10',['OptionMap&lt; enum PTAStat::ClockType &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20pointsto_3a_3atype_20_3e_11',['OptionMap&lt; PointsTo::Type &gt;',['../classOptionMap.html',1,'']]],
-  ['optionmap_3c_20svf_3a_3anodeidallocator_3a_3astrategy_20_3e_12',['OptionMap&lt; SVF::NodeIDAllocator::Strategy &gt;',['../classOptionMap.html',1,'']]],
+  ['optionmap_3c_20pointsto_3a_3atype_20_3e_9',['OptionMap&lt; PointsTo::Type &gt;',['../classOptionMap.html',1,'']]],
+  ['optionmap_3c_20ptbackingtype_20_3e_10',['OptionMap&lt; PTBackingType &gt;',['../classOptionMap.html',1,'']]],
+  ['optionmap_3c_20svf_3a_3anodeidallocator_3a_3astrategy_20_3e_11',['OptionMap&lt; SVF::NodeIDAllocator::Strategy &gt;',['../classOptionMap.html',1,'']]],
+  ['optionmap_3c_20svfstat_3a_3aclocktype_20_3e_12',['OptionMap&lt; SVFStat::ClockType &gt;',['../classOptionMap.html',1,'']]],
   ['optionmap_3c_20u32_5ft_20_3e_13',['OptionMap&lt; u32_t &gt;',['../classOptionMap.html',1,'']]],
   ['optionmultiple_14',['OptionMultiple',['../classOptionMultiple.html',1,'']]],
-  ['optionmultiple_3c_20pointeranalysis_3a_3aptaty_20_3e_15',['OptionMultiple&lt; PointerAnalysis::PTATY &gt;',['../classOptionMultiple.html',1,'']]],
+  ['optionmultiple_3c_20ptaty_20_3e_15',['OptionMultiple&lt; PTATY &gt;',['../classOptionMultiple.html',1,'']]],
   ['optionmultiple_3c_20u32_5ft_20_3e_16',['OptionMultiple&lt; u32_t &gt;',['../classOptionMultiple.html',1,'']]],
   ['options_17',['Options',['../classSVF_1_1Options.html',1,'SVF']]]
 ];

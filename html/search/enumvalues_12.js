@@ -9,5 +9,5 @@ var searchData=
   ['variantgep_6',['VariantGep',['../classSVF_1_1ConstraintEdge.html#a663af27955ba0c545f34fa1f076b7375ae5df3ce07dd670b48916f7b8ab33ae5a',1,'SVF::ConstraintEdge']]],
   ['versioned_7',['Versioned',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a33bb78ff686c2cd774e127ce77f9cb67',1,'SVF::PTData']]],
   ['veto_8',['Veto',['../classSVF_1_1WPAPass.html#a4505a1882956feda3cf83c788149394dabb45a604558e2ebff460adb77b4a5d7c',1,'SVF::WPAPass']]],
-  ['vfs_5fwpa_9',['VFS_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85a412254a7738029bf3ee96f5c15a6bec9',1,'SVF::PointerAnalysis']]]
+  ['vfs_5fwpa_9',['VFS_WPA',['../namespaceSVF.html#a379e34f41e970f55d6063d16714a52b9a05b46b47a36dbc7339ad527476ad0b30',1,'SVF']]]
 ];

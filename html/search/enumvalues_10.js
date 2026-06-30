@@ -37,5 +37,5 @@ var searchData=
   ['tphi_34',['TPhi',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a0dd3cc5754506163be60416cb02ab86b',1,'SVF::SVFValue']]],
   ['trunc_35',['TRUNC',['../classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1ab2b2f7dffed3d446a147fc7a27e66dd8',1,'SVF::CopyStmt']]],
   ['twopi_36',['TWOPI',['../namespaceSVF_1_1GraphProgram.html#a10f45758abb5c1ef51b0ba38d18efd37ac6a6eaaa34322cf54953ba390895f0c5',1,'SVF::GraphProgram']]],
-  ['typecpp_5fwpa_37',['TypeCPP_WPA',['../classSVF_1_1PointerAnalysis.html#a0b182ac680cce0547dbe7714c870ca85acc2e7cbdd04a614a3b6189d2f01042f3',1,'SVF::PointerAnalysis']]]
+  ['typecpp_5fwpa_37',['TypeCPP_WPA',['../namespaceSVF.html#a379e34f41e970f55d6063d16714a52b9aa1d3d8d884d0a11fa7ef8a476926635e',1,'SVF']]]
 ];

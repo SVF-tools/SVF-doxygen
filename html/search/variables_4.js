@@ -4,7 +4,7 @@ var searchData=
   ['data_1',['data',['../classSVF_1_1List_1_1ListNode.html#a4a9cb4ae17156d6d80d2357e06231e12',1,'SVF::List::ListNode']]],
   ['data_5flist_2',['data_list',['../classSVF_1_1CFLFIFOWorkList.html#a5a5caa556bf8023b4b0b525179efd1b0',1,'SVF::CFLFIFOWorkList::data_list'],['../classSVF_1_1FILOWorkList.html#aeda28a2200d763279027642c8cf6a4bf',1,'SVF::FILOWorkList::data_list'],['../classSVF_1_1FIFOWorkList.html#a270dad3fd1d95418e4af102b64fcc883',1,'SVF::FIFOWorkList::data_list']]],
   ['data_5fset_3',['data_set',['../classSVF_1_1CFLFIFOWorkList.html#a62ef55a46552652e20f8e3bfc2b72bd0',1,'SVF::CFLFIFOWorkList::data_set'],['../classSVF_1_1FIFOWorkList.html#a5e9648954a2f6902dc4106cc17a7d1e6',1,'SVF::FIFOWorkList::data_set'],['../classSVF_1_1FILOWorkList.html#a46092b75425becfe97fdf047206c736b',1,'SVF::FILOWorkList::data_set']]],
-  ['ddaselected_4',['DDASelected',['../classSVF_1_1Options.html#afa6c98d477db41a457ac83cfbfd4a580',1,'SVF::Options']]],
+  ['ddaselected_4',['DDASelected',['../classSVF_1_1Options.html#ad8bae552b8bb0799eb6e1c3b5514798f',1,'SVF::Options']]],
   ['ddastat_5',['ddaStat',['../classSVF_1_1DDAVFSolver.html#ae40c7bad663e0fa07dee4be3d1794ff2',1,'SVF::DDAVFSolver']]],
   ['def_6',['def',['../classSVF_1_1MRVer.html#a3398bb8d3189413c275b62d5cb7a5fc4',1,'SVF::MRVer']]],
   ['defnodes_7',['defNodes',['../classSVF_1_1SVFGOPT.html#abd524dca72261bbcc7ebb1103b693a2b',1,'SVF::SVFGOPT']]],

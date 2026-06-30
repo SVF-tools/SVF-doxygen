@@ -15,5 +15,6 @@ var searchData=
   ['progslice_2ecpp_12',['ProgSlice.cpp',['../ProgSlice_8cpp.html',1,'']]],
   ['progslice_2eh_13',['ProgSlice.h',['../ProgSlice_8h.html',1,'']]],
   ['ptastat_2ecpp_14',['PTAStat.cpp',['../PTAStat_8cpp.html',1,'']]],
-  ['ptastat_2eh_15',['PTAStat.h',['../PTAStat_8h.html',1,'']]]
+  ['ptastat_2eh_15',['PTAStat.h',['../PTAStat_8h.html',1,'']]],
+  ['ptaty_2eh_16',['PTATY.h',['../PTATY_8h.html',1,'']]]
 ];

@@ -502,41 +502,41 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00085">85</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>    : <a class="code hl_class" href="classSVF_1_1SVFVar.html">SVFVar</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">svfType</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ty</a>), <a class="code hl_variable" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>(node)</div>
-<div class="line"><span class="lineno">   87</span>{</div>
-<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">if</span> (SVFUtil::isa&lt;GlobalValVar&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">   89</span>    {</div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(node &amp;&amp; <span class="stringliteral">&quot;GlobalValVar must have a valid ICFGNode&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;GepValVar&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">   93</span>    {</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(node &amp;&amp; <span class="stringliteral">&quot;GepValVar must have a valid ICFGNode&quot;</span>);</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;ArgValVar&gt;(<span class="keyword">this</span>) ||</div>
-<div class="line"><span class="lineno">   97</span>             SVFUtil::isa&lt;RetValPN&gt;(<span class="keyword">this</span>) ||</div>
-<div class="line"><span class="lineno">   98</span>             SVFUtil::isa&lt;VarArgValPN&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">   99</span>    {</div>
-<div class="line"><span class="lineno">  100</span>        <span class="comment">// Conditional assert (isDeclaration || icn) is in each subclass constructor.</span></div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;ConstDataValVar&gt;(<span class="keyword">this</span>) ||</div>
-<div class="line"><span class="lineno">  103</span>             SVFUtil::isa&lt;ConstAggValVar&gt;(<span class="keyword">this</span>) ||</div>
-<div class="line"><span class="lineno">  104</span>             SVFUtil::isa&lt;FunValVar&gt;(<span class="keyword">this</span>) ||</div>
-<div class="line"><span class="lineno">  105</span>             SVFUtil::isa&lt;DummyValVar&gt;(<span class="keyword">this</span>) ||</div>
-<div class="line"><span class="lineno">  106</span>             SVFUtil::isa&lt;IntrinsicValVar&gt;(<span class="keyword">this</span>) ||</div>
-<div class="line"><span class="lineno">  107</span>             SVFUtil::isa&lt;AsmPCValVar&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  108</span>    {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="comment">// These ValVar subclasses don&#39;t require an ICFGNode.</span></div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ty</a> == <a class="code hl_enumvalue" href="classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01ab5080cab98e457d0e3797143a4f5aadc">ValNode</a>)</div>
-<div class="line"><span class="lineno">  112</span>    {</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(node &amp;&amp; <span class="stringliteral">&quot;Base ValVar must have a valid ICFGNode&quot;</span>);</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  116</span>    {</div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Unknown ValVar subclass -- update this check&quot;</span>);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="line"><span class="lineno">  119</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00086">86</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    : <a class="code hl_class" href="classSVF_1_1SVFVar.html">SVFVar</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">i</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">svfType</a>, <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ty</a>), <a class="code hl_variable" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>(node)</div>
+<div class="line"><span class="lineno">   88</span>{</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span> (SVFUtil::isa&lt;GlobalValVar&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(node &amp;&amp; <span class="stringliteral">&quot;GlobalValVar must have a valid ICFGNode&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;GepValVar&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(node &amp;&amp; <span class="stringliteral">&quot;GepValVar must have a valid ICFGNode&quot;</span>);</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;ArgValVar&gt;(<span class="keyword">this</span>) ||</div>
+<div class="line"><span class="lineno">   98</span>             SVFUtil::isa&lt;RetValPN&gt;(<span class="keyword">this</span>) ||</div>
+<div class="line"><span class="lineno">   99</span>             SVFUtil::isa&lt;VarArgValPN&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        <span class="comment">// Conditional assert (isDeclaration || icn) is in each subclass constructor.</span></div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;ConstDataValVar&gt;(<span class="keyword">this</span>) ||</div>
+<div class="line"><span class="lineno">  104</span>             SVFUtil::isa&lt;ConstAggValVar&gt;(<span class="keyword">this</span>) ||</div>
+<div class="line"><span class="lineno">  105</span>             SVFUtil::isa&lt;FunValVar&gt;(<span class="keyword">this</span>) ||</div>
+<div class="line"><span class="lineno">  106</span>             SVFUtil::isa&lt;DummyValVar&gt;(<span class="keyword">this</span>) ||</div>
+<div class="line"><span class="lineno">  107</span>             SVFUtil::isa&lt;IntrinsicValVar&gt;(<span class="keyword">this</span>) ||</div>
+<div class="line"><span class="lineno">  108</span>             SVFUtil::isa&lt;AsmPCValVar&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        <span class="comment">// These ValVar subclasses don&#39;t require an ICFGNode.</span></div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ty</a> == <a class="code hl_enumvalue" href="classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01ab5080cab98e457d0e3797143a4f5aadc">ValNode</a>)</div>
+<div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(node &amp;&amp; <span class="stringliteral">&quot;Base ValVar must have a valid ICFGNode&quot;</span>);</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  117</span>    {</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Unknown ValVar subclass -- update this check&quot;</span>);</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>}</div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a192ba7fcd03c9ca861d9f594b9a20a01ab5080cab98e457d0e3797143a4f5aadc"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01ab5080cab98e457d0e3797143a4f5aadc">SVF::SVFValue::ValNode</a></div><div class="ttdeci">@ ValNode</div><div class="ttdef"><b>Definition</b> <a href="SVFValue_8h_source.html#l00067">SVFValue.h:67</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFVar_html"><div class="ttname"><a href="classSVF_1_1SVFVar.html">SVF::SVFVar</a></div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l00048">SVFVariables.h:49</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ValVar_html_ae936610ab5ca2fd4bde376a4cfeecfab"><div class="ttname"><a href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">SVF::ValVar::icfgNode</a></div><div class="ttdeci">const ICFGNode * icfgNode</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l00262">SVFVariables.h:262</a></div></div>
@@ -701,12 +701,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1ArgValVar.html#a8c3f33a1cb9945bb046e59c361119952">SVF::ArgValVar</a>, <a class="el" href="classSVF_1_1GepValVar.html#aae9205507f248f7175eaab931315344d">SVF::GepValVar</a>, <a class="el" href="classSVF_1_1FunValVar.html#add5e73a6fb5df811537cf6adf1b984c9">SVF::FunValVar</a>, <a class="el" href="classSVF_1_1RetValPN.html#afe7cbd7be0221dc6e0d38dc201a54cd7">SVF::RetValPN</a>, and <a class="el" href="classSVF_1_1VarArgValPN.html#acd80cf8001c61d758ba7cce5714440e7">SVF::VarArgValPN</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00121">121</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>{</div>
-<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>)</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
-<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  126</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00122">122</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>)</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSVF_1_1ValVar.html#ae936610ab5ca2fd4bde376a4cfeecfab">icfgNode</a>-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  127</span>}</div>
 <div class="ttc" id="aclassSVF_1_1ICFGNode_html_a64897854233de17a2bde83d1fe35a113"><div class="ttname"><a href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">SVF::ICFGNode::getFun</a></div><div class="ttdeci">virtual const FunObjVar * getFun() const</div><div class="ttdoc">Return the function of this ICFGNode.</div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00074">ICFGNode.h:74</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -824,18 +824,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1ArgValVar.html#aeeddeb8c311c4b46c20391520e3aa940">SVF::ArgValVar</a>, <a class="el" href="classSVF_1_1GepValVar.html#ac9016b61dde44eb89ea715a0619994de">SVF::GepValVar</a>, <a class="el" href="classSVF_1_1FunValVar.html#a386fa3d5f132972b94d821fc91424325">SVF::FunValVar</a>, <a class="el" href="classSVF_1_1GlobalValVar.html#a446393f02410a8d8ea61a7d9313d3217">SVF::GlobalValVar</a>, <a class="el" href="classSVF_1_1ConstAggValVar.html#ada6afd109aa90ea7348eaa5b758119a8">SVF::ConstAggValVar</a>, <a class="el" href="classSVF_1_1ConstDataValVar.html#a531fb933d53ec8490321ea90df204c40">SVF::ConstDataValVar</a>, <a class="el" href="classSVF_1_1BlackHoleValVar.html#a2098713c01d960d8e22f916f4a29e4d4">SVF::BlackHoleValVar</a>, <a class="el" href="classSVF_1_1ConstFPValVar.html#a45d25f1ecef416757dc915707b7becbe">SVF::ConstFPValVar</a>, <a class="el" href="classSVF_1_1ConstIntValVar.html#a46f6bf5390036e5168a624c813d0da73">SVF::ConstIntValVar</a>, <a class="el" href="classSVF_1_1ConstNullPtrValVar.html#a844dc763a0d5e33376b7def3b5bdef68">SVF::ConstNullPtrValVar</a>, <a class="el" href="classSVF_1_1RetValPN.html#aefd5029e7fc47506eeb9fef649d8eeeb">SVF::RetValPN</a>, <a class="el" href="classSVF_1_1VarArgValPN.html#a4c7ffe8504e159972b3980be18462287">SVF::VarArgValPN</a>, <a class="el" href="classSVF_1_1DummyValVar.html#a4da61151fed6a64cc361d69276d00b84">SVF::DummyValVar</a>, <a class="el" href="classSVF_1_1IntrinsicValVar.html#ac91e849767f505d98b14eeb6355e2826">SVF::IntrinsicValVar</a>, and <a class="el" href="classSVF_1_1AsmPCValVar.html#a608b730dd38ee177fac79f037b86f660">SVF::AsmPCValVar</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00128">128</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
-<div class="line"><span class="lineno">  130</span>    std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>;</div>
-<div class="line"><span class="lineno">  131</span>    std::stringstream <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>);</div>
-<div class="line"><span class="lineno">  132</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;ValVar ID: &quot;</span> &lt;&lt; <a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>();</div>
-<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a424a44f39a43b22434dbdce26007a353">Options::ShowSVFIRValue</a>())</div>
-<div class="line"><span class="lineno">  134</span>    {</div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  136</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <a class="code hl_function" href="classSVF_1_1SVFValue.html#a8972e65b30a0b127e6fbdc364283ca52">valueOnlyToString</a>();</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>.str();</div>
-<div class="line"><span class="lineno">  139</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFVariables_8cpp_source.html#l00129">129</a> of file <a class="el" href="SVFVariables_8cpp_source.html">SVFVariables.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>{</div>
+<div class="line"><span class="lineno">  131</span>    std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>;</div>
+<div class="line"><span class="lineno">  132</span>    std::stringstream <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>);</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;ValVar ID: &quot;</span> &lt;&lt; <a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>();</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a424a44f39a43b22434dbdce26007a353">Options::ShowSVFIRValue</a>())</div>
+<div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a> &lt;&lt; <a class="code hl_function" href="classSVF_1_1SVFValue.html#a8972e65b30a0b127e6fbdc364283ca52">valueOnlyToString</a>();</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">rawstr</a>.str();</div>
+<div class="line"><span class="lineno">  140</span>}</div>
 <div class="ttc" id="aclassSVF_1_1Options_html_a424a44f39a43b22434dbdce26007a353"><div class="ttname"><a href="classSVF_1_1Options.html#a424a44f39a43b22434dbdce26007a353">SVF::Options::ShowSVFIRValue</a></div><div class="ttdeci">static const Option&lt; bool &gt; ShowSVFIRValue</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00119">Options.h:119</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a3e1925f1c3f731bf9047dbd2f929dd91"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">SVF::SVFValue::getId</a></div><div class="ttdeci">NodeID getId() const</div><div class="ttdoc">Get ID.</div><div class="ttdef"><b>Definition</b> <a href="SVFValue_8h_source.html#l00161">SVFValue.h:161</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a8972e65b30a0b127e6fbdc364283ca52"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a8972e65b30a0b127e6fbdc364283ca52">SVF::SVFValue::valueOnlyToString</a></div><div class="ttdeci">const std::string valueOnlyToString() const</div><div class="ttdef"><b>Definition</b> <a href="LLVMUtil_8cpp_source.html#l00740">LLVMUtil.cpp:740</a></div></div>

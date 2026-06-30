@@ -3,11 +3,11 @@ var searchData=
   ['bad_5ffcmp_5fpredicate_0',['BAD_FCMP_PREDICATE',['../classSVF_1_1CmpStmt.html#ad8e01744bfd98d584661025ce59338aca257536bcaeadf76c6172db4d225f3a26',1,'SVF::CmpStmt']]],
   ['bad_5ficmp_5fpredicate_1',['BAD_ICMP_PREDICATE',['../classSVF_1_1CmpStmt.html#ad8e01744bfd98d584661025ce59338aca163b0f2adc52334e5a1083d59d6bc5d9',1,'SVF::CmpStmt']]],
   ['base_2',['Base',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a347b03b12df7d51774b617f4e7399568',1,'SVF::PTData']]],
-  ['baseimpl_3',['BaseImpl',['../classSVF_1_1PointerAnalysis.html#ac0c0855918cb2cdc3d8ebc175acfbd4da66b132e5ab8c8746eb22e58d199b4c2a',1,'SVF::PointerAnalysis']]],
+  ['baseimpl_3',['BaseImpl',['../namespaceSVF.html#a173f3daa296a303333da8cbf4741f125a270a492f190cd102fa970a9e5afb9381',1,'SVF']]],
   ['baseobjnode_4',['BaseObjNode',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a5bbb1cd26bfca2693416828bb29f3aeb',1,'SVF::SVFValue']]],
   ['basicblockkd_5',['BasicBlockKd',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a17eaa99cf89f94bf2592bd460194dfdd',1,'SVF::SVFValue']]],
   ['bidirection_6',['bidirection',['../namespaceSVF.html#a165cd8904ba9f1ae6e0fa1752ba78caaaf3515b032dca85081a3d653d0cb9b995',1,'SVF']]],
-  ['binaryop_7',['binaryop',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a60abc932dfcd41ea57573fe984ca0f5a',1,'SVF::SVFValue::BinaryOp'],['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13',1,'SVF::SVFStmt::BinaryOp']]],
+  ['binaryop_7',['binaryop',['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad58f5e59c55e1ffd23b83d16224fed13',1,'SVF::SVFStmt::BinaryOp'],['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a60abc932dfcd41ea57573fe984ca0f5a',1,'SVF::SVFValue::BinaryOp']]],
   ['bitcast_8',['BITCAST',['../classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a77433e71effbacec14da8f658523fb3e',1,'SVF::CopyStmt']]],
   ['bits_5fper_5felement_9',['BITS_PER_ELEMENT',['../structSVF_1_1SparseBitVectorElement.html#a88e49a140a08313ab4d664774c4957a2aeb226b2e0dea78fbdbf5b780c3745f6d',1,'SVF::SparseBitVectorElement']]],
   ['bitword_5fsize_10',['bitword_size',['../structSVF_1_1SparseBitVectorElement.html#a88e49a140a08313ab4d664774c4957a2a3335c07a7225c80110e998246f96d6c4',1,'SVF::SparseBitVectorElement::BITWORD_SIZE'],['../classSVF_1_1SparseBitVector.html#ae6cdfbedeb260d7fc91d83f7c1523be8a887a4856f51078b02a23348b7331453e',1,'SVF::SparseBitVector::BITWORD_SIZE']]],
@@ -18,5 +18,5 @@ var searchData=
   ['branch_15',['branch',['../classSVF_1_1SVFStmt.html#a0ab8621e75e75f03425c323b3ed62ce9ad52703e3ec09b6a4f565e5d82279b6a3',1,'SVF::SVFStmt::Branch'],['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a5d41dd2d28873ea5e0c6267a4bea63de',1,'SVF::SVFValue::Branch'],['../classSVF_1_1SVFBugEvent.html#a4d0c0744525bc445a64176c3808377f3a070acf2c72c74cba55b5acea3db9c854',1,'SVF::SVFBugEvent::Branch']]],
   ['buf_5foverflow_16',['BUF_OVERFLOW',['../classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8beaf04a46a640c280f4380ddc48f8ee375b',1,'SVF::AEDetector']]],
   ['bv_17',['BV',['../classSVF_1_1PointsTo.html#a8f757f92ebf0a2ebdb5e6b001606923eafd6e0658d0eb4cdba368fa8e77d4d892',1,'SVF::PointsTo']]],
-  ['bvdataimpl_18',['BVDataImpl',['../classSVF_1_1PointerAnalysis.html#ac0c0855918cb2cdc3d8ebc175acfbd4da84705167ea3a7162ecb9470a8a77b5d8',1,'SVF::PointerAnalysis']]]
+  ['bvdataimpl_18',['BVDataImpl',['../namespaceSVF.html#a173f3daa296a303333da8cbf4741f125a0c760e578ce667d7478225e64f5a9d68',1,'SVF']]]
 ];
