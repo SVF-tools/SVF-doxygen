@@ -11,7 +11,7 @@ var searchData=
   ['edgetype_8',['edgeType',['../classSVF_1_1CHEdge.html#a58ac14decda4041e773d723475f5c1c8',1,'SVF::CHEdge']]],
   ['ei_5fpairs_9',['ei_pairs',['../SaberCheckerAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs:&#160;SaberCheckerAPI.cpp'],['../ThreadAPI_8cpp.html#aa5c38361a7f02befa83ea45388056ea1',1,'ei_pairs:&#160;ThreadAPI.cpp']]],
   ['elementindex_10',['ElementIndex',['../structSVF_1_1SparseBitVectorElement.html#ae5c5ac3afef47499a4e852de0dc39c18',1,'SVF::SparseBitVectorElement']]],
-  ['elements_11',['elements',['../classSVF_1_1SparseBitVector.html#ab094576b73de3c8580ea152f90d63636',1,'SVF::SparseBitVector::Elements'],['../classSVF_1_1CondStdSet.html#a1caece9a66b6617b89037fd8211f2934',1,'SVF::CondStdSet::elements']]],
+  ['elements_11',['elements',['../classSVF_1_1CondStdSet.html#a1caece9a66b6617b89037fd8211f2934',1,'SVF::CondStdSet::elements'],['../classSVF_1_1SparseBitVector.html#ab094576b73de3c8580ea152f90d63636',1,'SVF::SparseBitVector::Elements']]],
   ['elemidxvec_12',['elemIdxVec',['../classSVF_1_1StInfo.html#a807ae5cb4d277c79f8b2c9ecde5f12ea',1,'SVF::StInfo']]],
   ['elemnum_13',['elemNum',['../classSVF_1_1ObjTypeInfo.html#a5fdcd5f3b7550e7bdc30c8c030c6226d',1,'SVF::ObjTypeInfo']]],
   ['else_14',['else',['../cJSON_8cpp.html#a0544c3fe466e421738dae463968b70ba',1,'cJSON.cpp']]],
@@ -35,8 +35,7 @@ var searchData=
   ['extapibufoverflowcheckrules_32',['extAPIBufOverflowCheckRules',['../classSVF_1_1BufOverflowDetector.html#a416ec25c8bb80b8bb241adc0e5216bc0',1,'SVF::BufOverflowDetector']]],
   ['extapipath_33',['ExtAPIPath',['../classSVF_1_1Options.html#a2dffc9d885fa53340a1cdbc028d7f24a',1,'SVF::Options']]],
   ['extbcpath_34',['extBcPath',['../classSVF_1_1ExtAPI.html#a3ce3e67c96a65484d8077d9e3a9efa7d',1,'SVF::ExtAPI']]],
-  ['extended_35',['extended',['../classSVF_1_1DCHGraph.html#aa6f49dfc9e3580d3f2d8c257395eb11e',1,'SVF::DCHGraph']]],
-  ['extfun2annotations_36',['ExtFun2Annotations',['../classSVF_1_1LLVMModuleSet.html#a7968a00d41166d18acb684052ed1eed8',1,'SVF::LLVMModuleSet']]],
-  ['extfuncsvec_37',['ExtFuncsVec',['../classSVF_1_1LLVMModuleSet.html#ab932917041e1b1d8b461bfef464330fd',1,'SVF::LLVMModuleSet']]],
-  ['extop_38',['extOp',['../classSVF_1_1ExtAPI.html#a552feab663622681db231d5b48f00d75',1,'SVF::ExtAPI']]]
+  ['extfun2annotations_35',['ExtFun2Annotations',['../classSVF_1_1LLVMModuleSet.html#a7968a00d41166d18acb684052ed1eed8',1,'SVF::LLVMModuleSet']]],
+  ['extfuncsvec_36',['ExtFuncsVec',['../classSVF_1_1LLVMModuleSet.html#ab932917041e1b1d8b461bfef464330fd',1,'SVF::LLVMModuleSet']]],
+  ['extop_37',['extOp',['../classSVF_1_1ExtAPI.html#a552feab663622681db231d5b48f00d75',1,'SVF::ExtAPI']]]
 ];

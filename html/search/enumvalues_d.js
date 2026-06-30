@@ -18,5 +18,5 @@ var searchData=
   ['ptronlysvfg_15',['PTRONLYSVFG',['../classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6ada8562b20e8d888a4b421c200957294d',1,'SVF::VFG']]],
   ['ptronlysvfg_5fopt_16',['PTRONLYSVFG_OPT',['../classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd',1,'SVF::VFG']]],
   ['ptrtoint_17',['PTRTOINT',['../classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1ae746463dbec33f7d026b1a43e9ea4b87',1,'SVF::CopyStmt']]],
-  ['pure_5fabstract_18',['pure_abstract',['../classSVF_1_1DCHNode.html#a029988e54846db9aca2584e1c10283e3a06075ea779ab7777fd25e0e45c462a73',1,'SVF::DCHNode::PURE_ABSTRACT'],['../classSVF_1_1CHNode.html#a7111a3971f9f03e32bfd291a783d43b4ab530567d5ba09c9c579aef964aef8f81',1,'SVF::CHNode::PURE_ABSTRACT']]]
+  ['pure_5fabstract_18',['PURE_ABSTRACT',['../classSVF_1_1CHNode.html#a7111a3971f9f03e32bfd291a783d43b4ab530567d5ba09c9c579aef964aef8f81',1,'SVF::CHNode']]]
 ];

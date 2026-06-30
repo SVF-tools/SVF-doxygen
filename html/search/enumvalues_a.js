@@ -10,7 +10,7 @@ var searchData=
   ['modref_7',['ModRef',['../namespaceSVF.html#a3e2b6638b0fbca37846e953142bcc844a7f99364c041329bd5758261c8c440b30',1,'SVF']]],
   ['mphi_8',['MPhi',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a91bfb6fc3f021934aae3dcc5fbb3ee2d',1,'SVF::SVFValue']]],
   ['mul_9',['Mul',['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6a787e5771d6e70f3cbec3e2a33f5a4e8a',1,'SVF::BinaryOPStmt']]],
-  ['multi_5finheritance_10',['multi_inheritance',['../classSVF_1_1DCHNode.html#a029988e54846db9aca2584e1c10283e3a1d2b2d38bfc09259f63933e9ab23aecc',1,'SVF::DCHNode::MULTI_INHERITANCE'],['../classSVF_1_1CHNode.html#a7111a3971f9f03e32bfd291a783d43b4afd6d851b22e741690f0736b4858d81a5',1,'SVF::CHNode::MULTI_INHERITANCE']]],
+  ['multi_5finheritance_10',['MULTI_INHERITANCE',['../classSVF_1_1CHNode.html#a7111a3971f9f03e32bfd291a783d43b4afd6d851b22e741690f0736b4858d81a5',1,'SVF::CHNode']]],
   ['mustalias_11',['MustAlias',['../namespaceSVF.html#a61c01e2e687ab3a001fb806737583943ab58a0391f037031a51016ebfe2a752b2',1,'SVF']]],
   ['mutable_12',['Mutable',['../classSVF_1_1BVDataPTAImpl.html#ad76328a8543b02784992afc2d5501d8aa1cfb236b5127b660373c36b77a79ab5e',1,'SVF::BVDataPTAImpl']]],
   ['mutbase_13',['MutBase',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a47a2413878b6ed98b42b9ae10e839072',1,'SVF::PTData']]],

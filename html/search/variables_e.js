@@ -34,7 +34,7 @@ var searchData=
   ['numgtintregions_31',['NumGtIntRegions',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ad7cb36a1f0f67864fb8290e9dfd7b639',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['numnodes_32',['numNodes',['../classSVF_1_1NodeIDAllocator.html#a8e76e0da58f0a5bdbd8118ac419cfa62',1,'SVF::NodeIDAllocator']]],
   ['numnontrivialregionobjects_33',['NumNonTrivialRegionObjects',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a1bf9461c717e8dabaee6a57f3d76d61f',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['numobjects_34',['numobjects',['../classSVF_1_1NodeIDAllocator.html#a190c729a3f3f622f82cee4917946b50f',1,'SVF::NodeIDAllocator::numObjects'],['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#afa74c5ccd22bebe0b76db33066d8b498',1,'SVF::NodeIDAllocator::Clusterer::NumObjects']]],
+  ['numobjects_34',['numobjects',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#afa74c5ccd22bebe0b76db33066d8b498',1,'SVF::NodeIDAllocator::Clusterer::NumObjects'],['../classSVF_1_1NodeIDAllocator.html#a190c729a3f3f622f82cee4917946b50f',1,'SVF::NodeIDAllocator::numObjects']]],
   ['numofactualin_35',['numOfActualIn',['../classSVF_1_1SVFGStat.html#a5365744d2ec3594e2255d274f7256569',1,'SVF::SVFGStat']]],
   ['numofactualout_36',['numOfActualOut',['../classSVF_1_1SVFGStat.html#a122555f5c4b9746cc2b7f38c7cd6b505',1,'SVF::SVFGStat']]],
   ['numofactualparam_37',['numOfActualParam',['../classSVF_1_1SVFGStat.html#a0494c59483520b57acdca95952c93d76',1,'SVF::SVFGStat']]],
@@ -84,8 +84,8 @@ var searchData=
   ['numofprocessedaddr_81',['numofprocessedaddr',['../classSVF_1_1AndersenBase.html#a4acad18a6eb585ba9e3d2276dd591067',1,'SVF::AndersenBase::numOfProcessedAddr'],['../classSVF_1_1FlowSensitive.html#ae4253bc632ffffe2498263c90f456ca7',1,'SVF::FlowSensitive::numOfProcessedAddr']]],
   ['numofprocessedcopy_82',['numofprocessedcopy',['../classSVF_1_1AndersenBase.html#a04acd871bd1b98cd9e83e395334ac130',1,'SVF::AndersenBase::numOfProcessedCopy'],['../classSVF_1_1FlowSensitive.html#a19e017f3ed6429fa30687018e64dae54',1,'SVF::FlowSensitive::numOfProcessedCopy']]],
   ['numofprocessedformalret_83',['numOfProcessedFormalRet',['../classSVF_1_1FlowSensitive.html#ae048cc5350cf2b075c05f5d84777a3c5',1,'SVF::FlowSensitive']]],
-  ['numofprocessedgep_84',['numofprocessedgep',['../classSVF_1_1AndersenBase.html#aa1246b392aeae1fd10c8a9ebedcc2dd9',1,'SVF::AndersenBase::numOfProcessedGep'],['../classSVF_1_1FlowSensitive.html#a88a111b6bc347d6562db7af8bd8f2f0e',1,'SVF::FlowSensitive::numOfProcessedGep']]],
-  ['numofprocessedload_85',['numofprocessedload',['../classSVF_1_1AndersenBase.html#a69aae96fc1c99bf108075e5061f50f9e',1,'SVF::AndersenBase::numOfProcessedLoad'],['../classSVF_1_1FlowSensitive.html#a0e1a0bdbf4f81a3600ac26ac011ac268',1,'SVF::FlowSensitive::numOfProcessedLoad']]],
+  ['numofprocessedgep_84',['numofprocessedgep',['../classSVF_1_1FlowSensitive.html#a88a111b6bc347d6562db7af8bd8f2f0e',1,'SVF::FlowSensitive::numOfProcessedGep'],['../classSVF_1_1AndersenBase.html#aa1246b392aeae1fd10c8a9ebedcc2dd9',1,'SVF::AndersenBase::numOfProcessedGep']]],
+  ['numofprocessedload_85',['numofprocessedload',['../classSVF_1_1FlowSensitive.html#a0e1a0bdbf4f81a3600ac26ac011ac268',1,'SVF::FlowSensitive::numOfProcessedLoad'],['../classSVF_1_1AndersenBase.html#a69aae96fc1c99bf108075e5061f50f9e',1,'SVF::AndersenBase::numOfProcessedLoad']]],
   ['numofprocessedmssanode_86',['numOfProcessedMSSANode',['../classSVF_1_1FlowSensitive.html#af71a5ae3aef022c569e89f40515072cf',1,'SVF::FlowSensitive']]],
   ['numofprocessedphi_87',['numOfProcessedPhi',['../classSVF_1_1FlowSensitive.html#ac39abcb40e4b568ab59b7cf48ed10f70',1,'SVF::FlowSensitive']]],
   ['numofprocessedstore_88',['numofprocessedstore',['../classSVF_1_1FlowSensitive.html#a669e8f1dd8572b7dcff373c9787a923d',1,'SVF::FlowSensitive::numOfProcessedStore'],['../classSVF_1_1AndersenBase.html#a2b763519509ce21cf40893c01f8357b6',1,'SVF::AndersenBase::numOfProcessedStore']]],
@@ -109,7 +109,6 @@ var searchData=
   ['numregions_106',['NumRegions',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ac5fe44f10cdbca9754444943a0f5c3c1',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['numsymbols_107',['numSymbols',['../classSVF_1_1NodeIDAllocator.html#a3a160f4c6e761a130b863a3df0af7f96',1,'SVF::NodeIDAllocator']]],
   ['numtype_108',['numType',['../classSVF_1_1NodeIDAllocator.html#a5ce88d393e002b6a2764a7162a9e4ce5',1,'SVF::NodeIDAllocator']]],
-  ['numtypes_109',['numTypes',['../classSVF_1_1DCHGraph.html#a76fd3154a31584bb64683f2d762cc56c',1,'SVF::DCHGraph']]],
-  ['numvalues_110',['numValues',['../classSVF_1_1NodeIDAllocator.html#a001c25f6998b8b0a9a7e5e00810e155f',1,'SVF::NodeIDAllocator']]],
-  ['nvthunkfunlabel_111',['NVThunkFunLabel',['../CppUtil_8cpp.html#a86fe6d521904f944bcf1b3164cfb5d4b',1,'CppUtil.cpp']]]
+  ['numvalues_109',['numValues',['../classSVF_1_1NodeIDAllocator.html#a001c25f6998b8b0a9a7e5e00810e155f',1,'SVF::NodeIDAllocator']]],
+  ['nvthunkfunlabel_110',['NVThunkFunLabel',['../CppUtil_8cpp.html#a86fe6d521904f944bcf1b3164cfb5d4b',1,'CppUtil.cpp']]]
 ];
