@@ -16,7 +16,7 @@ var searchData=
   ['pagnode_13',['PAGNode',['../namespaceSVF.html#a733b44f64a95e6e13e7379120d7a3eea',1,'SVF']]],
   ['pagnodeset_14',['PAGNodeSet',['../classSVF_1_1AliasDDAClient.html#a3c24763f943ae27f93b2be64a81ab488',1,'SVF::AliasDDAClient']]],
   ['pagprint_15',['PAGPrint',['../classSVF_1_1Options.html#a7c6053f2341a500a8caca61607303b6e',1,'SVF::Options']]],
-  ['pagreadfromtxt_16',['pagreadfromtxt',['../classSVF_1_1SVFIR.html#a66530b72c99c6434e32090980bf4a216',1,'SVF::SVFIR::pagReadFromTxt'],['../classSVF_1_1SVFIR.html#a5e343884e6e41a93272bbd07d569c7a2',1,'SVF::SVFIR::pagReadFromTXT()']]],
+  ['pagreadfromtxt_16',['pagreadfromtxt',['../classSVF_1_1SVFIR.html#a5e343884e6e41a93272bbd07d569c7a2',1,'SVF::SVFIR::pagReadFromTXT()'],['../classSVF_1_1SVFIR.html#a66530b72c99c6434e32090980bf4a216',1,'SVF::SVFIR::pagReadFromTxt']]],
   ['pairty_17',['PairTy',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1GenericGraph_3_01NodeTy_00_01EdgeTy_01_4_01_5_01_4.html#aa03b48c12ea1a17469ba00651d1e22a8',1,'SVF::GenericGraphTraits&lt; SVF::GenericGraph&lt; NodeTy, EdgeTy &gt; * &gt;']]],
   ['pango_5fcairo_5ffont_5fmap_5fget_5fdefault_18',['pango_cairo_font_map_get_default',['../extapi_8c.html#aee61f84d63373ed1ea4c29965d27f2e0',1,'extapi.c']]],
   ['pango_5fcairo_5ffont_5fmap_5fglobal_19',['pango_cairo_font_map_global',['../extapi_8c.html#aeea9e2c411ea88d37de84c52f5ce41e8',1,'extapi.c']]],
