@@ -90,7 +90,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">typename</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">T</a>, std::size_t SizeOfT&gt;<br />
 struct SVF::PopulationCounter&lt; T, SizeOfT &gt;</div>
-<p class="definition">Definition at line <a class="el" href="SparseBitVector_8h_source.html#l00127">127</a> of file <a class="el" href="SparseBitVector_8h_source.html">SparseBitVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseBitVector_8h_source.html#l00129">129</a> of file <a class="el" href="SparseBitVector_8h_source.html">SparseBitVector.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa49a07f6be7991ffe42af5445b38d59b" name="aa49a07f6be7991ffe42af5445b38d59b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa49a07f6be7991ffe42af5445b38d59b">&#9670;&#160;</a></span>count()</h2>
@@ -118,19 +118,19 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseBitVector_8h_source.html#l00129">129</a> of file <a class="el" href="SparseBitVector_8h_source.html">SparseBitVector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
-<div class="line"><span class="lineno">  131</span>        <span class="comment">// Generic version, forward to 32 bits.</span></div>
-<div class="line"><span class="lineno">  132</span>        <span class="keyword">static_assert</span>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SizeOfT</a> &lt;= 4, <span class="stringliteral">&quot;Not implemented!&quot;</span>);</div>
-<div class="line"><span class="lineno">  133</span><span class="preprocessor">#if defined(__GNUC__)</span></div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">__builtin_popcount</a>(<a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>);</div>
-<div class="line"><span class="lineno">  135</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  136</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">uint32_t</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> = <a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>;</div>
-<div class="line"><span class="lineno">  137</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> - ((<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> &gt;&gt; 1) &amp; 0x55555555);</div>
-<div class="line"><span class="lineno">  138</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> = (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> &amp; 0x33333333) + ((<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> &gt;&gt; 2) &amp; 0x33333333);</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> ((<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> + (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> &gt;&gt; 4) &amp; 0xF0F0F0F) * 0x1010101) &gt;&gt; 24;</div>
-<div class="line"><span class="lineno">  140</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  141</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SparseBitVector_8h_source.html#l00131">131</a> of file <a class="el" href="SparseBitVector_8h_source.html">SparseBitVector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="comment">// Generic version, forward to 32 bits.</span></div>
+<div class="line"><span class="lineno">  134</span>        <span class="keyword">static_assert</span>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SizeOfT</a> &lt;= 4, <span class="stringliteral">&quot;Not implemented!&quot;</span>);</div>
+<div class="line"><span class="lineno">  135</span><span class="preprocessor">#if defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">__builtin_popcount</a>(<a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>);</div>
+<div class="line"><span class="lineno">  137</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  138</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">uint32_t</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> = <a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>;</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> - ((<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> &gt;&gt; 1) &amp; 0x55555555);</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> = (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> &amp; 0x33333333) + ((<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> &gt;&gt; 2) &amp; 0x33333333);</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> ((<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> + (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">v</a> &gt;&gt; 4) &amp; 0xF0F0F0F) * 0x1010101) &gt;&gt; 24;</div>
+<div class="line"><span class="lineno">  142</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  143</span>    }</div>
 <div class="ttc" id="anamespaceSVF_html_a90b263fd2f541eca78135078114cabda"><div class="ttname"><a href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">SVF::Value</a></div><div class="ttdeci">llvm::Value Value</div><div class="ttdoc">LLVM Basic classes.</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00086">BasicTypes.h:86</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00076">BasicTypes.h:76</a></div></div>
 </div><!-- fragment -->
