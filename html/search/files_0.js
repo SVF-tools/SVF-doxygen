@@ -26,6 +26,5 @@ var searchData=
   ['andersenscd_2ecpp_23',['AndersenSCD.cpp',['../AndersenSCD_8cpp.html',1,'']]],
   ['andersensfr_2ecpp_24',['AndersenSFR.cpp',['../AndersenSFR_8cpp.html',1,'']]],
   ['andersenstat_2ecpp_25',['AndersenStat.cpp',['../AndersenStat_8cpp.html',1,'']]],
-  ['andersenwavediff_2ecpp_26',['AndersenWaveDiff.cpp',['../AndersenWaveDiff_8cpp.html',1,'']]],
-  ['annotator_2eh_27',['Annotator.h',['../Annotator_8h.html',1,'']]]
+  ['andersenwavediff_2ecpp_26',['AndersenWaveDiff.cpp',['../AndersenWaveDiff_8cpp.html',1,'']]]
 ];
