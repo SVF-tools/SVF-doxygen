@@ -11,7 +11,11 @@ var searchData=
   ['mssamuchi_2eh_8',['MSSAMuChi.h',['../MSSAMuChi_8h.html',1,'']]],
   ['mta_2ecpp_9',['mta.cpp',['../mta_8cpp.html',1,'(Global Namespace)'],['../MTA_8cpp.html',1,'(Global Namespace)']]],
   ['mta_2eh_10',['MTA.h',['../MTA_8h.html',1,'']]],
-  ['mtastat_2ecpp_11',['MTAStat.cpp',['../MTAStat_8cpp.html',1,'']]],
-  ['mtastat_2eh_12',['MTAStat.h',['../MTAStat_8h.html',1,'']]],
-  ['mutablepointstods_2eh_13',['MutablePointsToDS.h',['../MutablePointsToDS_8h.html',1,'']]]
+  ['mtaslicer_2ecpp_11',['MTASlicer.cpp',['../MTASlicer_8cpp.html',1,'']]],
+  ['mtaslicer_2eh_12',['MTASlicer.h',['../MTASlicer_8h.html',1,'']]],
+  ['mtastat_2ecpp_13',['MTAStat.cpp',['../MTAStat_8cpp.html',1,'']]],
+  ['mtastat_2eh_14',['MTAStat.h',['../MTAStat_8h.html',1,'']]],
+  ['mtasvfgbuilder_2ecpp_15',['MTASVFGBuilder.cpp',['../MTASVFGBuilder_8cpp.html',1,'']]],
+  ['mtasvfgbuilder_2eh_16',['MTASVFGBuilder.h',['../MTASVFGBuilder_8h.html',1,'']]],
+  ['mutablepointstods_2eh_17',['MutablePointsToDS.h',['../MutablePointsToDS_8h.html',1,'']]]
 ];

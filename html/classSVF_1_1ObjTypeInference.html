@@ -915,9 +915,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  295</span>            <span class="comment">// hasUseList() was removed from Value&#39;s public API in LLVM 18-20; use</span></div>
 <div class="line"><span class="lineno">  296</span>            <span class="comment">// the version-portable compat shim defined above instead.</span></div>
 <div class="line"><span class="lineno">  297</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="ObjTypeInference_8cpp.html#aeca6c0db580d0cc6f3013f31f958bf98">hasUseList</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">curValue</a>)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a> : <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">curValue</a>-&gt;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">users</a>())</div>
+<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> it : <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">curValue</a>-&gt;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">users</a>())</div>
 <div class="line"><span class="lineno">  299</span>            {</div>
-<div class="line"><span class="lineno">  300</span>                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loadInst</a> = SVFUtil::dyn_cast&lt;LoadInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>))</div>
+<div class="line"><span class="lineno">  300</span>                <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loadInst</a> = SVFUtil::dyn_cast&lt;LoadInst&gt;(it))</div>
 <div class="line"><span class="lineno">  301</span>                {</div>
 <div class="line"><span class="lineno">  302</span>                    <span class="comment">/*</span></div>
 <div class="line"><span class="lineno">  303</span><span class="comment">                     * infer based on load, e.g.,</span></div>
@@ -928,7 +928,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  308</span>                    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">insertInferSite</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">loadInst</a>);</div>
 <div class="line"><span class="lineno">  309</span>                }</div>
 <div class="line"><span class="lineno">  310</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">storeInst</a> =</div>
-<div class="line"><span class="lineno">  311</span>                             SVFUtil::dyn_cast&lt;StoreInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>))</div>
+<div class="line"><span class="lineno">  311</span>                             SVFUtil::dyn_cast&lt;StoreInst&gt;(it))</div>
 <div class="line"><span class="lineno">  312</span>                {</div>
 <div class="line"><span class="lineno">  313</span>                    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">storeInst</a>-&gt;getPointerOperand() == <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">curValue</a>)</div>
 <div class="line"><span class="lineno">  314</span>                    {</div>
@@ -1042,7 +1042,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  422</span>                    }</div>
 <div class="line"><span class="lineno">  423</span>                }</div>
 <div class="line"><span class="lineno">  424</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">gepInst</a> =</div>
-<div class="line"><span class="lineno">  425</span>                             SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>))</div>
+<div class="line"><span class="lineno">  425</span>                             SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;(it))</div>
 <div class="line"><span class="lineno">  426</span>                {</div>
 <div class="line"><span class="lineno">  427</span>                    <span class="comment">/*</span></div>
 <div class="line"><span class="lineno">  428</span><span class="comment">                     * infer based on gep (pointer operand)</span></div>
@@ -1055,18 +1055,18 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  435</span>                        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">insertInferSite</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">gepInst</a>);</div>
 <div class="line"><span class="lineno">  436</span>                }</div>
 <div class="line"><span class="lineno">  437</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bitcast</a> =</div>
-<div class="line"><span class="lineno">  438</span>                             SVFUtil::dyn_cast&lt;BitCastInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>))</div>
+<div class="line"><span class="lineno">  438</span>                             SVFUtil::dyn_cast&lt;BitCastInst&gt;(it))</div>
 <div class="line"><span class="lineno">  439</span>                {</div>
 <div class="line"><span class="lineno">  440</span>                    <span class="comment">// continue on bitcast</span></div>
 <div class="line"><span class="lineno">  441</span>                    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">insertInferSitesOrPushWorklist</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bitcast</a>);</div>
 <div class="line"><span class="lineno">  442</span>                }</div>
-<div class="line"><span class="lineno">  443</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">phiNode</a> = SVFUtil::dyn_cast&lt;PHINode&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>))</div>
+<div class="line"><span class="lineno">  443</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">phiNode</a> = SVFUtil::dyn_cast&lt;PHINode&gt;(it))</div>
 <div class="line"><span class="lineno">  444</span>                {</div>
 <div class="line"><span class="lineno">  445</span>                    <span class="comment">// continue on bitcast</span></div>
 <div class="line"><span class="lineno">  446</span>                    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">insertInferSitesOrPushWorklist</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">phiNode</a>);</div>
 <div class="line"><span class="lineno">  447</span>                }</div>
 <div class="line"><span class="lineno">  448</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">retInst</a> =</div>
-<div class="line"><span class="lineno">  449</span>                             SVFUtil::dyn_cast&lt;ReturnInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>))</div>
+<div class="line"><span class="lineno">  449</span>                             SVFUtil::dyn_cast&lt;ReturnInst&gt;(it))</div>
 <div class="line"><span class="lineno">  450</span>                {</div>
 <div class="line"><span class="lineno">  451</span>                    <span class="comment">/*</span></div>
 <div class="line"><span class="lineno">  452</span><span class="comment">                     * propagate from return to caller</span></div>
@@ -1093,7 +1093,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  473</span>                        }</div>
 <div class="line"><span class="lineno">  474</span>                    }</div>
 <div class="line"><span class="lineno">  475</span>                }</div>
-<div class="line"><span class="lineno">  476</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a> = SVFUtil::dyn_cast&lt;CallBase&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>))</div>
+<div class="line"><span class="lineno">  476</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a> = SVFUtil::dyn_cast&lt;CallBase&gt;(it))</div>
 <div class="line"><span class="lineno">  477</span>                {</div>
 <div class="line"><span class="lineno">  478</span>                    <span class="comment">/*</span></div>
 <div class="line"><span class="lineno">  479</span><span class="comment">                     * propagate from callsite to callee</span></div>
@@ -1211,9 +1211,9 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00727">727</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  728</span>{</div>
 <div class="line"><span class="lineno">  729</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;hasArgument(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">arg</a>) &amp;&amp; <span class="stringliteral">&quot;callInst does not have argument arg?&quot;</span>);</div>
-<div class="line"><span class="lineno">  730</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a> = std::find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;arg_begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;arg_end(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">arg</a>);</div>
-<div class="line"><span class="lineno">  731</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a> != <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;arg_end() &amp;&amp; <span class="stringliteral">&quot;Didn&#39;t find argument?&quot;</span>);</div>
-<div class="line"><span class="lineno">  732</span>    <span class="keywordflow">return</span> std::distance(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;arg_begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>);</div>
+<div class="line"><span class="lineno">  730</span>    <span class="keyword">auto</span> it = std::find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;arg_begin(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;arg_end(), <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">arg</a>);</div>
+<div class="line"><span class="lineno">  731</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">assert</a>(it != <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;arg_end() &amp;&amp; <span class="stringliteral">&quot;Didn&#39;t find argument?&quot;</span>);</div>
+<div class="line"><span class="lineno">  732</span>    <span class="keywordflow">return</span> std::distance(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">callBase</a>-&gt;arg_begin(), it);</div>
 <div class="line"><span class="lineno">  733</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -1385,8 +1385,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ObjTypeInference_8cpp_source.html#l00777">777</a> of file <a class="el" href="ObjTypeInference_8cpp_source.html">ObjTypeInference.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  778</span>{</div>
-<div class="line"><span class="lineno">  779</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a> = <a class="code hl_variable" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">thisPtr</a>);</div>
-<div class="line"><span class="lineno">  780</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a> != <a class="code hl_variable" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>.end()) <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">it</a>-&gt;second;</div>
+<div class="line"><span class="lineno">  779</span>    <span class="keyword">auto</span> it = <a class="code hl_variable" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>.find(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">thisPtr</a>);</div>
+<div class="line"><span class="lineno">  780</span>    <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="classSVF_1_1ObjTypeInference.html#a82a1d348f80d3034fab1c32b8ff9637b">_thisPtrClassNames</a>.end()) <span class="keywordflow">return</span> it-&gt;second;</div>
 <div class="line"><span class="lineno">  781</span> </div>
 <div class="line"><span class="lineno">  782</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">Set&lt;std::string&gt;</a> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">names</a>;</div>
 <div class="line"><span class="lineno">  783</span> </div>
