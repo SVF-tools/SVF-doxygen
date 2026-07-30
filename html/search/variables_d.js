@@ -5,7 +5,7 @@ var searchData=
   ['maincxtdepth_2',['mainCxtDepth',['../classSVF_1_1SlicedMTA.html#a00b0d6e49756d51b2caa554dede5bcd8',1,'SVF::SlicedMTA']]],
   ['markedclocksonly_3',['MarkedClocksOnly',['../classSVF_1_1Options.html#abcb6796d45722562546f33b2745a0418',1,'SVF::Options']]],
   ['maxbvlen_4',['MaxBVLen',['../classSVF_1_1Options.html#a71461051f5fe6b4cc33103746525b23f',1,'SVF::Options']]],
-  ['maxcontextlen_5',['maxcontextlen',['../classSVF_1_1Options.html#aca573a8919bce420aa3b192ad26ba240',1,'SVF::Options::MaxContextLen'],['../classSVF_1_1SlicedTCT.html#a921c46dcae06b5ab8860f766f2daefda',1,'SVF::SlicedTCT::maxContextLen']]],
+  ['maxcontextlen_5',['maxcontextlen',['../classSVF_1_1SlicedTCT.html#a921c46dcae06b5ab8860f766f2daefda',1,'SVF::SlicedTCT::maxContextLen'],['../classSVF_1_1Options.html#aca573a8919bce420aa3b192ad26ba240',1,'SVF::Options::MaxContextLen']]],
   ['maxcxtsize_6',['MaxCxtSize',['../classSVF_1_1TCT.html#aaae41663b1d1f4d38b047c50c156defb',1,'SVF::TCT']]],
   ['maxfieldlimit_7',['MaxFieldLimit',['../classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5',1,'SVF::Options']]],
   ['maximumbudget_8',['maximumBudget',['../classSVF_1_1DPItem.html#a5dbb0e6010b38c5b937ff06cb40cd0ef',1,'SVF::DPItem']]],

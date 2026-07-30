@@ -279,7 +279,7 @@ var searchData=
   ['svfgnodestoicfgnodes_276',['svfgNodesToICFGNodes',['../classSVF_1_1MTASlicerBase.html#ab98e68ad458072c6ede2126e25573ccc',1,'SVF::MTASlicerBase']]],
   ['svfgopt_277',['SVFGOPT',['../classSVF_1_1SVFGOPT.html#a64c300c8a9f8cc2ac13eef65c1108d01',1,'SVF::SVFGOPT']]],
   ['svfgsccdetection_278',['SVFGSCCDetection',['../classSVF_1_1DDAVFSolver.html#aba0ec611a5cfd096ac0b8b11e0bd5580',1,'SVF::DDAVFSolver']]],
-  ['svfgstat_279',['svfgstat',['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()'],['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()']]],
+  ['svfgstat_279',['svfgstat',['../classSVF_1_1FlowSensitive.html#a5f015d8f2b0956306822172d02b415c3',1,'SVF::FlowSensitive::svfgStat()'],['../classSVF_1_1SVFGStat.html#ae61d5bd92ef495a0f6c2f9dedac3da03',1,'SVF::SVFGStat::SVFGStat()']]],
   ['svfintegertype_280',['SVFIntegerType',['../classSVF_1_1SVFIntegerType.html#ab39d5ccb5677ad016d8d7126958b9624',1,'SVF::SVFIntegerType']]],
   ['svfir_281',['SVFIR',['../classSVF_1_1SVFIR.html#abf511f82cdbf7a6d9b6da167aee57636',1,'SVF::SVFIR']]],
   ['svfirbuilder_282',['SVFIRBuilder',['../classSVF_1_1SVFIRBuilder.html#a8c25c3903cda26312f182014f29069fc',1,'SVF::SVFIRBuilder']]],
