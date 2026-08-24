@@ -10,7 +10,9 @@ var searchData=
   ['threadforkedge_7',['ThreadForkEdge',['../classSVF_1_1ThreadForkEdge.html',1,'SVF']]],
   ['threadjoinedge_8',['ThreadJoinEdge',['../classSVF_1_1ThreadJoinEdge.html',1,'SVF']]],
   ['threadmhpindsvfgedge_9',['ThreadMHPIndSVFGEdge',['../classSVF_1_1ThreadMHPIndSVFGEdge.html',1,'SVF']]],
-  ['trailingzeroscounter_10',['TrailingZerosCounter',['../structSVF_1_1TrailingZerosCounter.html',1,'SVF']]],
-  ['treenode_11',['TreeNode',['../structSVF_1_1POCRHybridSolver_1_1TreeNode.html',1,'SVF::POCRHybridSolver']]],
-  ['typeanalysis_12',['TypeAnalysis',['../classSVF_1_1TypeAnalysis.html',1,'SVF']]]
+  ['threadvfbuildconfig_10',['ThreadVFBuildConfig',['../classSVF_1_1MTASVFGBuilder_1_1ThreadVFBuildConfig.html',1,'SVF::MTASVFGBuilder']]],
+  ['threadvfcandidate_11',['ThreadVFCandidate',['../structSVF_1_1MTASVFGBuilder_1_1ThreadVFCandidate.html',1,'SVF::MTASVFGBuilder']]],
+  ['trailingzeroscounter_12',['TrailingZerosCounter',['../structSVF_1_1TrailingZerosCounter.html',1,'SVF']]],
+  ['treenode_13',['TreeNode',['../structSVF_1_1POCRHybridSolver_1_1TreeNode.html',1,'SVF::POCRHybridSolver']]],
+  ['typeanalysis_14',['TypeAnalysis',['../classSVF_1_1TypeAnalysis.html',1,'SVF']]]
 ];

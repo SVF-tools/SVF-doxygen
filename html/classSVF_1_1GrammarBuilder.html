@@ -353,20 +353,20 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   62</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineNum</a> == 3)</div>
 <div class="line"><span class="lineno">   63</span>        {</div>
 <div class="line"><span class="lineno">   64</span>            <span class="comment">// Trim leading and trailing whitespace</span></div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.find_first_not_of(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">WHITESPACE</a>);</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordtype">size_t</span> start = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.find_first_not_of(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">WHITESPACE</a>);</div>
 <div class="line"><span class="lineno">   66</span>            <span class="keywordtype">size_t</span> end = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.find_last_not_of(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">WHITESPACE</a>);</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> != std::string::npos &amp;&amp; end != std::string::npos)</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (start != std::string::npos &amp;&amp; end != std::string::npos)</div>
 <div class="line"><span class="lineno">   68</span>            {</div>
-<div class="line"><span class="lineno">   69</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">symbolString</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>, end - <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> + 1);</div>
+<div class="line"><span class="lineno">   69</span>                <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">symbolString</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.substr(start, end - start + 1);</div>
 <div class="line"><span class="lineno">   70</span>            }</div>
 <div class="line"><span class="lineno">   71</span>        }</div>
 <div class="line"><span class="lineno">   72</span> </div>
 <div class="line"><span class="lineno">   73</span>        <span class="comment">// Append line to `lines` with whitespace trimmed</span></div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.find_first_not_of(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">WHITESPACE</a>);</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">size_t</span> start = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.find_first_not_of(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">WHITESPACE</a>);</div>
 <div class="line"><span class="lineno">   75</span>        <span class="keywordtype">size_t</span> end = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.find_last_not_of(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">WHITESPACE</a>);</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> != std::string::npos &amp;&amp; end != std::string::npos)</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (start != std::string::npos &amp;&amp; end != std::string::npos)</div>
 <div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lines</a>.append(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>, end - <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> + 1));</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lines</a>.append(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineString</a>.substr(start, end - start + 1));</div>
 <div class="line"><span class="lineno">   79</span>        }</div>
 <div class="line"><span class="lineno">   80</span> </div>
 <div class="line"><span class="lineno">   81</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">lineNum</a>++;</div>
@@ -432,15 +432,15 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="GrammarBuilder_8cpp_source.html#l00127">127</a> of file <a class="el" href="GrammarBuilder_8cpp_source.html">GrammarBuilder.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  128</span>{</div>
 <div class="line"><span class="lineno">  129</span>    <span class="comment">// Remove leading spaces</span></div>
-<div class="line"><span class="lineno">  130</span>    <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">s</a>.find_first_not_of(<span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> == std::string::npos)</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordtype">size_t</span> start = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">s</a>.find_first_not_of(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span> (start == std::string::npos)</div>
 <div class="line"><span class="lineno">  132</span>    {</div>
 <div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; <span class="comment">// Return an empty string if no non-space character is found</span></div>
 <div class="line"><span class="lineno">  134</span>    }</div>
 <div class="line"><span class="lineno">  135</span> </div>
 <div class="line"><span class="lineno">  136</span>    <span class="comment">// Remove trailing spaces</span></div>
 <div class="line"><span class="lineno">  137</span>    <span class="keywordtype">size_t</span> end = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">s</a>.find_last_not_of(<span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">s</a>.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a>, end - <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> + 1);</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">s</a>.substr(start, end - start + 1);</div>
 <div class="line"><span class="lineno">  139</span>}</div>
 </div><!-- fragment -->
 </div>

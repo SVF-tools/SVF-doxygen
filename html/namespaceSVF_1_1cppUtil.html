@@ -676,15 +676,15 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  277</span>        std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">realnameStr</a> = std::string(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">realname</a>);</div>
 <div class="line"><span class="lineno">  278</span> </div>
 <div class="line"><span class="lineno">  279</span>        <span class="comment">// Find the start and end of the parameter list</span></div>
-<div class="line"><span class="lineno">  280</span>        <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">realnameStr</a>.find(<span class="charliteral">&#39;(&#39;</span>);</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordtype">size_t</span> start = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">realnameStr</a>.find(<span class="charliteral">&#39;(&#39;</span>);</div>
 <div class="line"><span class="lineno">  281</span>        <span class="keywordtype">size_t</span> end = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">realnameStr</a>.find(<span class="charliteral">&#39;)&#39;</span>);</div>
-<div class="line"><span class="lineno">  282</span>        <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> == std::string::npos || end == std::string::npos || <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> &gt;= end)</div>
+<div class="line"><span class="lineno">  282</span>        <span class="keywordflow">if</span> (start == std::string::npos || end == std::string::npos || start &gt;= end)</div>
 <div class="line"><span class="lineno">  283</span>        {</div>
 <div class="line"><span class="lineno">  284</span>            <span class="keywordflow">return</span> res; <span class="comment">// Return empty set if the format is incorrect</span></div>
 <div class="line"><span class="lineno">  285</span>        }</div>
 <div class="line"><span class="lineno">  286</span> </div>
 <div class="line"><span class="lineno">  287</span>        <span class="comment">// Extract the parameter list</span></div>
-<div class="line"><span class="lineno">  288</span>        std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">paramList</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">realnameStr</a>.substr(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> + 1, end - <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">start</a> - 1);</div>
+<div class="line"><span class="lineno">  288</span>        std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">paramList</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">realnameStr</a>.substr(start + 1, end - start - 1);</div>
 <div class="line"><span class="lineno">  289</span> </div>
 <div class="line"><span class="lineno">  290</span>        <span class="comment">// Split the parameter list by commas</span></div>
 <div class="line"><span class="lineno">  291</span>        std::istringstream <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">ss</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">paramList</a>);</div>

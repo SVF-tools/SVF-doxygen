@@ -170,7 +170,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00057">57</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00049">49</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae2f50e03a84f14aa37523ade79f5d605" name="ae2f50e03a84f14aa37523ade79f5d605"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2f50e03a84f14aa37523ade79f5d605">&#9670;&#160;</a></span>DOTGraphTraits()</h2>
@@ -196,8 +196,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00059">59</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>: <a class="code hl_struct" href="structSVF_1_1DefaultDOTGraphTraits.html">DefaultDOTGraphTraits</a>(<a class="code hl_function" href="structSVF_1_1DefaultDOTGraphTraits.html#acc82bc6228128e5bb98a6b00d6dc5f77">isSimple</a>) {}</div>
+<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00051">51</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                          : <a class="code hl_struct" href="structSVF_1_1DefaultDOTGraphTraits.html">DefaultDOTGraphTraits</a>(<a class="code hl_function" href="structSVF_1_1DefaultDOTGraphTraits.html#acc82bc6228128e5bb98a6b00d6dc5f77">isSimple</a>)</div>
+<div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 <div class="ttc" id="astructSVF_1_1DefaultDOTGraphTraits_html"><div class="ttname"><a href="structSVF_1_1DefaultDOTGraphTraits.html">SVF::DefaultDOTGraphTraits</a></div><div class="ttdef"><b>Definition</b> <a href="DOTGraphTraits_8h_source.html#l00029">DOTGraphTraits.h:30</a></div></div>
 <div class="ttc" id="astructSVF_1_1DefaultDOTGraphTraits_html_acc82bc6228128e5bb98a6b00d6dc5f77"><div class="ttname"><a href="structSVF_1_1DefaultDOTGraphTraits.html#acc82bc6228128e5bb98a6b00d6dc5f77">SVF::DefaultDOTGraphTraits::isSimple</a></div><div class="ttdeci">bool isSimple()</div><div class="ttdef"><b>Definition</b> <a href="DOTGraphTraits_8h_source.html#l00035">DOTGraphTraits.h:35</a></div></div>
 </div><!-- fragment -->
@@ -249,17 +251,18 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 <p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00092">92</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
 <div class="line"><span class="lineno">   94</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structSVF_1_1SlicedICFGEdgeRef.html">SlicedICFGEdgeRef</a>&amp; e = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">EI</a>.currentEdge();</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a25f0ee4792a1dd93bef3a47dcfa145fc">bridged</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=dashed,color=gray&quot;</span>;</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">underlying</a> != <span class="keyword">nullptr</span> &amp;&amp; SVFUtil::isa&lt;CallCFGEdge&gt;(e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">underlying</a>))</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=solid,color=red&quot;</span>;</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">underlying</a> != <span class="keyword">nullptr</span> &amp;&amp; SVFUtil::isa&lt;RetCFGEdge&gt;(e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">underlying</a>))</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=solid,color=blue&quot;</span>;</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=solid&quot;</span>;</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a25f0ee4792a1dd93bef3a47dcfa145fc">bridged</a>)</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=dashed,color=gray&quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">underlying</a> != <span class="keyword">nullptr</span> &amp;&amp; SVFUtil::isa&lt;CallCFGEdge&gt;(e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">underlying</a>))</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=solid,color=red&quot;</span>;</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">underlying</a> != <span class="keyword">nullptr</span> &amp;&amp; SVFUtil::isa&lt;RetCFGEdge&gt;(e.<a class="code hl_variable" href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">underlying</a>))</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=solid,color=blue&quot;</span>;</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;style=solid&quot;</span>;</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
 <div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00076">BasicTypes.h:76</a></div></div>
-<div class="ttc" id="astructSVF_1_1SlicedICFGEdgeRef_html"><div class="ttname"><a href="structSVF_1_1SlicedICFGEdgeRef.html">SVF::SlicedICFGEdgeRef</a></div><div class="ttdef"><b>Definition</b> <a href="SlicedGraphs_8h_source.html#l00432">SlicedGraphs.h:433</a></div></div>
-<div class="ttc" id="astructSVF_1_1SlicedICFGEdgeRef_html_a25f0ee4792a1dd93bef3a47dcfa145fc"><div class="ttname"><a href="structSVF_1_1SlicedICFGEdgeRef.html#a25f0ee4792a1dd93bef3a47dcfa145fc">SVF::SlicedICFGEdgeRef::bridged</a></div><div class="ttdeci">bool bridged</div><div class="ttdef"><b>Definition</b> <a href="SlicedGraphs_8h_source.html#l00437">SlicedGraphs.h:437</a></div></div>
-<div class="ttc" id="astructSVF_1_1SlicedICFGEdgeRef_html_a4cd78f0b906bc3085f8cb4eaa6bf0d81"><div class="ttname"><a href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">SVF::SlicedICFGEdgeRef::underlying</a></div><div class="ttdeci">const ICFGEdge * underlying</div><div class="ttdef"><b>Definition</b> <a href="SlicedGraphs_8h_source.html#l00436">SlicedGraphs.h:436</a></div></div>
+<div class="ttc" id="astructSVF_1_1SlicedICFGEdgeRef_html"><div class="ttname"><a href="structSVF_1_1SlicedICFGEdgeRef.html">SVF::SlicedICFGEdgeRef</a></div><div class="ttdef"><b>Definition</b> <a href="SlicedGraphs_8h_source.html#l00416">SlicedGraphs.h:417</a></div></div>
+<div class="ttc" id="astructSVF_1_1SlicedICFGEdgeRef_html_a25f0ee4792a1dd93bef3a47dcfa145fc"><div class="ttname"><a href="structSVF_1_1SlicedICFGEdgeRef.html#a25f0ee4792a1dd93bef3a47dcfa145fc">SVF::SlicedICFGEdgeRef::bridged</a></div><div class="ttdeci">bool bridged</div><div class="ttdef"><b>Definition</b> <a href="SlicedGraphs_8h_source.html#l00421">SlicedGraphs.h:421</a></div></div>
+<div class="ttc" id="astructSVF_1_1SlicedICFGEdgeRef_html_a4cd78f0b906bc3085f8cb4eaa6bf0d81"><div class="ttname"><a href="structSVF_1_1SlicedICFGEdgeRef.html#a4cd78f0b906bc3085f8cb4eaa6bf0d81">SVF::SlicedICFGEdgeRef::underlying</a></div><div class="ttdeci">const ICFGEdge * underlying</div><div class="ttdef"><b>Definition</b> <a href="SlicedGraphs_8h_source.html#l00420">SlicedGraphs.h:420</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -287,10 +290,10 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00061">61</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;SlicedICFG&quot;</span>;</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00055">55</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;SlicedICFG&quot;</span>;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -328,16 +331,22 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00077">77</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
-<div class="line"><span class="lineno">   79</span>        std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> = <span class="stringliteral">&quot;shape=record&quot;</span>;</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* node = <a class="code hl_variable" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>.raw;</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (SVFUtil::isa&lt;FunEntryICFGNode&gt;(node)) <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=yellow&quot;</span>;</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;FunExitICFGNode&gt;(node)) <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=green&quot;</span>;</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;CallICFGNode&gt;(node)) <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=red&quot;</span>;</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;RetICFGNode&gt;(node)) <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=blue&quot;</span>;</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;GlobalICFGNode&gt;(node)) <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=purple&quot;</span>;</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">else</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=black&quot;</span>;</div>
+<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00071">71</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        std::string <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> = <span class="stringliteral">&quot;shape=record&quot;</span>;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1ICFGNode.html">ICFGNode</a>* node = <a class="code hl_variable" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>.raw;</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (SVFUtil::isa&lt;FunEntryICFGNode&gt;(node))</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=yellow&quot;</span>;</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;FunExitICFGNode&gt;(node))</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=green&quot;</span>;</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;CallICFGNode&gt;(node))</div>
+<div class="line"><span class="lineno">   80</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=red&quot;</span>;</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;RetICFGNode&gt;(node))</div>
+<div class="line"><span class="lineno">   82</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=blue&quot;</span>;</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SVFUtil::isa&lt;GlobalICFGNode&gt;(node))</div>
+<div class="line"><span class="lineno">   84</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=purple&quot;</span>;</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a> += <span class="stringliteral">&quot;,color=black&quot;</span>;</div>
 <div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">str</a>;</div>
 <div class="line"><span class="lineno">   88</span>    }</div>
 <div class="ttc" id="acJSON_8cpp_html_ab6e2ea6dc7bd57d1483413449998230a"><div class="ttname"><a href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a></div><div class="ttdeci">cJSON * n</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l02558">cJSON.cpp:2558</a></div></div>
@@ -369,10 +378,10 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00067">67</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>.raw;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00061">61</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>.raw;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -410,10 +419,10 @@ template&lt;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f73
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00072">72</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>.raw != <span class="keyword">nullptr</span> ? <a class="code hl_variable" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>.raw-&gt;toString() : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SlicedGraphs_8cpp_source.html#l00066">66</a> of file <a class="el" href="SlicedGraphs_8cpp_source.html">SlicedGraphs.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>.raw != <span class="keyword">nullptr</span> ? <a class="code hl_variable" href="cJSON_8cpp.html#ab6e2ea6dc7bd57d1483413449998230a">n</a>.raw-&gt;toString() : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

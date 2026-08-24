@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['xor_0',['Xor',['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6ac89b793572db14a3c018122cf9fc79d6',1,'SVF::BinaryOPStmt']]]
+  ['wall_0',['Wall',['../classSVF_1_1SVFStat.html#a4f47da512cfa8f94fddaddc65334b454a94e8a499539d1a472f3b5dbbb85508c0',1,'SVF::SVFStat']]],
+  ['widen_5fnarrow_1',['WIDEN_NARROW',['../classSVF_1_1AbstractInterpretation.html#acf8bdd0ff54a1393c0da372551dbe137ae39f99903f584e2af04a8e8d3bef4052',1,'SVF::AbstractInterpretation']]],
+  ['widen_5fonly_2',['WIDEN_ONLY',['../classSVF_1_1AbstractInterpretation.html#acf8bdd0ff54a1393c0da372551dbe137a090f0e751acc924e61cf0a6038a5963b',1,'SVF::AbstractInterpretation']]]
 ];

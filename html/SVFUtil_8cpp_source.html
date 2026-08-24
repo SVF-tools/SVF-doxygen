@@ -375,16 +375,16 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="comment">// If an alarm is already set, don&#39;t set another. That means this analysis</span></div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="comment">// is part of another which has a time limit.</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordtype">unsigned</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">remainingSeconds</a> = <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">alarm</a>(0);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordtype">unsigned</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">remainingSeconds</a> = alarm(0);</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">remainingSeconds</a> != 0)</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    {</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="comment">// Continue the previous alarm and move on.</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">alarm</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">remainingSeconds</a>);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        alarm(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">remainingSeconds</a>);</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">signal</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SIGALRM</a>, &amp;<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#add4cd21115988f9f5eec12e268ddf1d9">timeLimitReached</a>);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">alarm</a>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">timeLimit</a>);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    alarm(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">timeLimit</a>);</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
 </div>
@@ -392,7 +392,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00302" data-start="{" data-end="}">
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="namespaceSVF_1_1SVFUtil.html#a168f7f7a3a8c70dbf2b5b4269cd4c7c5">  302</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a168f7f7a3a8c70dbf2b5b4269cd4c7c5">SVFUtil::stopAnalysisLimitTimer</a>(<span class="keywordtype">bool</span> <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">limitTimerSet</a>)</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>{</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">limitTimerSet</a>) <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">alarm</a>(0);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">limitTimerSet</a>) alarm(0);</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>}</div>
 </div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>

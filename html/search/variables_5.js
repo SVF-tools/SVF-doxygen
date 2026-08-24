@@ -17,7 +17,7 @@ var searchData=
   ['else_14',['else',['../cJSON_8cpp.html#a0544c3fe466e421738dae463968b70ba',1,'cJSON.cpp']]],
   ['emptydata_15',['emptyData',['../classSVF_1_1POCRSolver.html#ab871a24f8eb451aec71fd94af7a65bc0',1,'SVF::POCRSolver']]],
   ['enablealiascheck_16',['EnableAliasCheck',['../classSVF_1_1Options.html#a5f07ff361307017b35fb6b9a97919a73',1,'SVF::Options']]],
-  ['enableslicing_17',['EnableSlicing',['../classSVF_1_1Options.html#a47c8096250a851198bda1443665abf1d',1,'SVF::Options']]],
+  ['enabled_17',['enabled',['../classSVF_1_1ScopedPhaseTimer.html#a7be11b839ab7067cda1d08aa1f14b249',1,'SVF::ScopedPhaseTimer']]],
   ['enablethreadcallgraph_18',['EnableThreadCallGraph',['../classSVF_1_1Options.html#a1daf36a755523519187c3a8e9a19b58d',1,'SVF::Options']]],
   ['enabletypecheck_19',['EnableTypeCheck',['../classSVF_1_1Options.html#a320a86694c42b92d0dd599d7825c7ca4',1,'SVF::Options']]],
   ['end_5fiterator_20',['end_iterator',['../classSVF_1_1iter__range.html#aced2e91eaf4970e387ad249f6e936373',1,'SVF::iter_range']]],
