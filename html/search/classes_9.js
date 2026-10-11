@@ -9,6 +9,7 @@ var searchData=
   ['loadcgedge_6',['LoadCGEdge',['../classSVF_1_1LoadCGEdge.html',1,'SVF']]],
   ['loadmu_7',['LoadMU',['../classSVF_1_1LoadMU.html',1,'SVF']]],
   ['loadstmt_8',['LoadStmt',['../classSVF_1_1LoadStmt.html',1,'SVF']]],
-  ['loadvfgnode_9',['LoadVFGNode',['../classSVF_1_1LoadVFGNode.html',1,'SVF']]],
-  ['lockanalysis_10',['LockAnalysis',['../classSVF_1_1LockAnalysis.html',1,'SVF']]]
+  ['loadstorestate_9',['LoadStoreState',['../structSVF_1_1AndersenWaveDiff_1_1LoadStoreState.html',1,'SVF::AndersenWaveDiff']]],
+  ['loadvfgnode_10',['LoadVFGNode',['../classSVF_1_1LoadVFGNode.html',1,'SVF']]],
+  ['lockanalysis_11',['LockAnalysis',['../classSVF_1_1LockAnalysis.html',1,'SVF']]]
 ];
