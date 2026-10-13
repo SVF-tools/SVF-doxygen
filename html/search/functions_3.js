@@ -20,7 +20,7 @@ var searchData=
   ['callsitehasret_17',['callsiteHasRet',['../classSVF_1_1SVFIR.html#aa79dba26cb34b40eee682713db299d5f',1,'SVF::SVFIR']]],
   ['canberemoved_18',['canBeRemoved',['../classSVF_1_1SVFGOPT.html#ab72ce28409a440bbf5b84a68e5f82b85',1,'SVF::SVFGOPT']]],
   ['canhold_19',['canHold',['../classSVF_1_1CoreBitVector.html#a3c85fd2084e52df869cb8fcf2dab6486',1,'SVF::CoreBitVector']]],
-  ['cansafelyaccessmemory_20',['canSafelyAccessMemory',['../classSVF_1_1BufOverflowDetector.html#a65d153349e585fc3466d7eee2fca1b07',1,'SVF::BufOverflowDetector']]],
+  ['cansafelyaccessmemory_20',['canSafelyAccessMemory',['../classSVF_1_1BufOverflowDetector.html#a821dd9ecad92e60acfa73786bcd65a4f',1,'SVF::BufOverflowDetector']]],
   ['cansafelyderefptr_21',['canSafelyDerefPtr',['../classSVF_1_1NullptrDerefDetector.html#a034b35348cf0839b31e8858909fb4d0a',1,'SVF::NullptrDerefDetector']]],
   ['canset_22',['canset',['../classOptionBase.html#a41b5697dffc86139fa9341210f7233d9',1,'OptionBase::canSet()'],['../classOption.html#a25507245c3b4b8d2d52ab069d756bc31',1,'Option::canSet()'],['../classOptionMap.html#a9fe150111f4ef83a91c5a1a01878ffa3',1,'OptionMap::canSet()'],['../classOptionMultiple.html#aa582e95f6546ffd2fc8420699967bca9',1,'OptionMultiple::canSet()']]],
   ['case_5finsensitive_5fstrcmp_23',['case_insensitive_strcmp',['../cJSON_8cpp.html#a9b295e9edc859c11ad8c1e3d2cef0467',1,'cJSON.cpp']]],

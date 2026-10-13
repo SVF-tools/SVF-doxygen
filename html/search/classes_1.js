@@ -13,6 +13,7 @@ var searchData=
   ['branchvfgnode_10',['BranchVFGNode',['../classSVF_1_1BranchVFGNode.html',1,'SVF']]],
   ['breakconstantgeps_11',['BreakConstantGEPs',['../classSVF_1_1BreakConstantGEPs.html',1,'SVF']]],
   ['bufferoverflowbug_12',['BufferOverflowBug',['../classSVF_1_1BufferOverflowBug.html',1,'SVF']]],
-  ['bufoverflowdetector_13',['BufOverflowDetector',['../classSVF_1_1BufOverflowDetector.html',1,'SVF']]],
-  ['bvdataptaimpl_14',['BVDataPTAImpl',['../classSVF_1_1BVDataPTAImpl.html',1,'SVF']]]
+  ['bufferoverflowinfo_13',['BufferOverflowInfo',['../structSVF_1_1BufOverflowDetector_1_1BufferOverflowInfo.html',1,'SVF::BufOverflowDetector']]],
+  ['bufoverflowdetector_14',['BufOverflowDetector',['../classSVF_1_1BufOverflowDetector.html',1,'SVF']]],
+  ['bvdataptaimpl_15',['BVDataPTAImpl',['../classSVF_1_1BVDataPTAImpl.html',1,'SVF']]]
 ];
