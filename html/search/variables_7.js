@@ -40,6 +40,6 @@ var searchData=
   ['grammar_37',['grammar',['../classSVF_1_1GrammarBuilder.html#a7b81810150ce896801e4e6a831ab98aa',1,'SVF::GrammarBuilder::grammar'],['../classSVF_1_1CFLSolver.html#a89781bbd0edd309b7c473ed154e7c11d',1,'SVF::CFLSolver::grammar'],['../classSVF_1_1CFLBase.html#a8dd040c7078b7f1a61da76849c89a640',1,'SVF::CFLBase::grammar']]],
   ['grammarbase_38',['grammarBase',['../classSVF_1_1CFLBase.html#aef3da4ce970597586757cafd2a435c1f',1,'SVF::CFLBase']]],
   ['grammarfilename_39',['GrammarFilename',['../classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f',1,'SVF::Options']]],
-  ['graph_40',['graph',['../structSVF_1_1Inverse.html#a2037408b7047e9265b4b14e54bb584a2',1,'SVF::Inverse::Graph'],['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat::graph'],['../classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2',1,'SVF::CFLSolver::graph'],['../classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f',1,'SVF::CFLBase::graph']]],
+  ['graph_40',['graph',['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat::graph'],['../classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2',1,'SVF::CFLSolver::graph'],['../classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f',1,'SVF::CFLBase::graph'],['../structSVF_1_1Inverse.html#a2037408b7047e9265b4b14e54bb584a2',1,'SVF::Inverse::Graph']]],
   ['graphtxt_41',['Graphtxt',['../classSVF_1_1Options.html#a53f783c80f368bcdca6c7620229d6f8e',1,'SVF::Options']]]
 ];
