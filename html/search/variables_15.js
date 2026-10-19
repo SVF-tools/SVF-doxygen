@@ -9,10 +9,11 @@ var searchData=
   ['unlocksites_6',['unlockSites',['../classSVF_1_1LockAnalysis.html#acc832dc6bbd8b0fea4df95652a8bac6c',1,'SVF::LockAnalysis']]],
   ['updatecallgraphtime_7',['updateCallGraphTime',['../classSVF_1_1FlowSensitive.html#afc140b6c8e78dc2d962f64fdf53b1e07',1,'SVF::FlowSensitive']]],
   ['updatetime_8',['updateTime',['../classSVF_1_1FlowSensitive.html#af5a94d14096ae2bbc47b3b3b9f723226',1,'SVF::FlowSensitive']]],
-  ['usedmrvers_9',['usedMRVers',['../classSVF_1_1MemSSA.html#a6e5ac4f390528f8ee3cdc8e0e221ee71',1,'SVF::MemSSA']]],
-  ['usedregs_10',['usedRegs',['../classSVF_1_1MemSSA.html#acf840b71b67cabe831f01f2d358f27fa',1,'SVF::MemSSA']]],
-  ['useprecompfieldsensitive_11',['UsePreCompFieldSensitive',['../classSVF_1_1Options.html#a9279e4ec0d53afb482d4b62191b78f42',1,'SVF::Options']]],
-  ['userinput_12',['userInput',['../classSVF_1_1DDAClient.html#a25f8abbcaca653d0883d542bfbe729a3',1,'SVF::DDAClient']]],
-  ['userinputquery_13',['UserInputQuery',['../classSVF_1_1Options.html#a5d14e81336dbfefa14146bf610989e6b',1,'SVF::Options']]],
-  ['utils_14',['utils',['../classSVF_1_1AbstractInterpretation.html#a7e9cfb5ffc6851505f95b4a014d012e4',1,'SVF::AbstractInterpretation']]]
+  ['upperbound_9',['upperBound',['../structSVF_1_1AbstractInterpretation_1_1AllocationSizeBounds.html#a87c74d528dda3315e1a3b5baa28731f4',1,'SVF::AbstractInterpretation::AllocationSizeBounds']]],
+  ['usedmrvers_10',['usedMRVers',['../classSVF_1_1MemSSA.html#a6e5ac4f390528f8ee3cdc8e0e221ee71',1,'SVF::MemSSA']]],
+  ['usedregs_11',['usedRegs',['../classSVF_1_1MemSSA.html#acf840b71b67cabe831f01f2d358f27fa',1,'SVF::MemSSA']]],
+  ['useprecompfieldsensitive_12',['UsePreCompFieldSensitive',['../classSVF_1_1Options.html#a9279e4ec0d53afb482d4b62191b78f42',1,'SVF::Options']]],
+  ['userinput_13',['userInput',['../classSVF_1_1DDAClient.html#a25f8abbcaca653d0883d542bfbe729a3',1,'SVF::DDAClient']]],
+  ['userinputquery_14',['UserInputQuery',['../classSVF_1_1Options.html#a5d14e81336dbfefa14146bf610989e6b',1,'SVF::Options']]],
+  ['utils_15',['utils',['../classSVF_1_1AbstractInterpretation.html#a7e9cfb5ffc6851505f95b4a014d012e4',1,'SVF::AbstractInterpretation']]]
 ];
