@@ -1,7 +1,7 @@
 var searchData=
 [
   ['o_0',['O',['../classSVF_1_1GraphWriter.html#a2e882c9af39ffd3c4a4bac9212e0e82d',1,'SVF::GraphWriter']]],
-  ['object_1',['object',['../classSVF_1_1DummyVersionPropSVFGNode.html#ad9a6fd01bf1a101da68eaacc61f420ee',1,'SVF::DummyVersionPropSVFGNode']]],
+  ['object_1',['object',['../classSVF_1_1DummyVersionPropSVFGNode.html#ad9a6fd01bf1a101da68eaacc61f420ee',1,'SVF::DummyVersionPropSVFGNode::object'],['../structSVF_1_1SVFIRBuilder_1_1AggregateCallField.html#a6c85db947bad47d743628dd7bbe5bfe4',1,'SVF::SVFIRBuilder::AggregateCallField::object']]],
   ['objecttoraceoccurrences_2',['ObjectToRaceOccurrences',['../classSVF_1_1MTA.html#a8c51570023f1ea2f5742b475b92314f1',1,'SVF::MTA']]],
   ['objnode_3',['ObjNode',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a97b094e0a933c05a44fbb6f32e91a582',1,'SVF::SVFValue']]],
   ['objsymbol_4',['ObjSymbol',['../classSVF_1_1IRGraph.html#a54e62136d0ca3729794ab69e779cfb92a4f7356de3ea45acedea3d25e7219cd73',1,'SVF::IRGraph']]],

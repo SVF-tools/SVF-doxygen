@@ -1,7 +1,7 @@
 var searchData=
 [
   ['o_0',['O',['../classSVF_1_1GraphWriter.html#a2e882c9af39ffd3c4a4bac9212e0e82d',1,'SVF::GraphWriter']]],
-  ['object_1',['object',['../classSVF_1_1DummyVersionPropSVFGNode.html#ad9a6fd01bf1a101da68eaacc61f420ee',1,'SVF::DummyVersionPropSVFGNode']]],
+  ['object_1',['object',['../structSVF_1_1SVFIRBuilder_1_1AggregateCallField.html#a6c85db947bad47d743628dd7bbe5bfe4',1,'SVF::SVFIRBuilder::AggregateCallField::object'],['../classSVF_1_1DummyVersionPropSVFGNode.html#ad9a6fd01bf1a101da68eaacc61f420ee',1,'SVF::DummyVersionPropSVFGNode::object']]],
   ['objsymmap_2',['objSymMap',['../classSVF_1_1LLVMModuleSet.html#a6ea7821dfe681cc47bae93c1a763574f',1,'SVF::LLVMModuleSet']]],
   ['objtonsrevptsmap_3',['objToNSRevPtsMap',['../classSVF_1_1CondPTAImpl.html#a22c23f3ba1ee7e0aaccf0b8a1b58e33e',1,'SVF::CondPTAImpl']]],
   ['objtypeinfomap_4',['objTypeInfoMap',['../classSVF_1_1IRGraph.html#a710142871a7307efce24097ce90aa8d5',1,'SVF::IRGraph']]],

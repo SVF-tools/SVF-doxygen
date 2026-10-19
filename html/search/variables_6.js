@@ -4,7 +4,7 @@ var searchData=
   ['fastclustertime_1',['FastClusterTime',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#ae78d2b60035350c634f6f58d7a043c22',1,'SVF::NodeIDAllocator::Clusterer']]],
   ['fbar_2',['Fbar',['../PEGGrammar_8txt.html#a1e8b28eb87d57c33c5c45731db639c91',1,'PEGGrammar.txt']]],
   ['fieldreps_3',['fieldReps',['../classSVF_1_1AndersenSFR.html#a99337c429aebe9046c65068b44eff7cc',1,'SVF::AndersenSFR']]],
-  ['fields_4',['fields',['../classSVF_1_1SVFStructType.html#a83b080e621b8c685590983819c68ae34',1,'SVF::SVFStructType']]],
+  ['fields_4',['fields',['../classSVF_1_1SVFStructType.html#a83b080e621b8c685590983819c68ae34',1,'SVF::SVFStructType::fields'],['../structSVF_1_1SVFIRBuilder_1_1AggregateCall.html#a03f3d597c2a44e714d0510e1e6df8f37',1,'SVF::SVFIRBuilder::AggregateCall::fields']]],
   ['file_5',['file',['../classSVF_1_1PAGBuilderFromFile.html#a9ce304b448de65fbde586655dce885a4',1,'SVF::PAGBuilderFromFile']]],
   ['filecheck_6',['FileCheck',['../classSVF_1_1Options.html#a65a8c37c1ce3b183a8ac43d64475fed9',1,'SVF::Options']]],
   ['filename_7',['fileName',['../classSVF_1_1GrammarBuilder.html#aa0f5135a232adc1ca42d4f51a3c70704',1,'SVF::GrammarBuilder']]],
