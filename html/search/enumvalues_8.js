@@ -22,5 +22,6 @@ var searchData=
   ['intrinsicvalnode_19',['IntrinsicValNode',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a88230b638656c20ec32d3d9f3fa4a833',1,'SVF::SVFValue']]],
   ['inttoptr_20',['INTTOPTR',['../classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a32b1e88bbb7433ed8071e9dd9daa2c83',1,'SVF::CopyStmt']]],
   ['isbidirectional_21',['IsBidirectional',['../classSVF_1_1iter__facade__base.html#ae4dcd496538760ee92152ad26728e873a0552120a5aa8ae40a219b52934ad3409',1,'SVF::iter_facade_base']]],
-  ['israndomaccess_22',['IsRandomAccess',['../classSVF_1_1iter__facade__base.html#ae4dcd496538760ee92152ad26728e873a3571f11b56b4970ffff3c021f6fb47e8',1,'SVF::iter_facade_base']]]
+  ['israndomaccess_22',['IsRandomAccess',['../classSVF_1_1iter__facade__base.html#ae4dcd496538760ee92152ad26728e873a3571f11b56b4970ffff3c021f6fb47e8',1,'SVF::iter_facade_base']]],
+  ['itanium_23',['Itanium',['../namespaceSVF.html#a86681e0b5f772d3668f15a1a7484312fa19ba66c202fd06b553e4e1895204561d',1,'SVF']]]
 ];

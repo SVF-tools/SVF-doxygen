@@ -10,13 +10,14 @@ var searchData=
   ['mod_7',['Mod',['../namespaceSVF.html#a3e2b6638b0fbca37846e953142bcc844aea8604a04fd5c658e0ca8b9177316ba0',1,'SVF']]],
   ['modref_8',['ModRef',['../namespaceSVF.html#a3e2b6638b0fbca37846e953142bcc844a7f99364c041329bd5758261c8c440b30',1,'SVF']]],
   ['mphi_9',['MPhi',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a91bfb6fc3f021934aae3dcc5fbb3ee2d',1,'SVF::SVFValue']]],
-  ['mul_10',['Mul',['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6a787e5771d6e70f3cbec3e2a33f5a4e8a',1,'SVF::BinaryOPStmt']]],
-  ['multi_5finheritance_11',['MULTI_INHERITANCE',['../classSVF_1_1CHNode.html#a7111a3971f9f03e32bfd291a783d43b4afd6d851b22e741690f0736b4858d81a5',1,'SVF::CHNode']]],
-  ['mustalias_12',['MustAlias',['../namespaceSVF.html#a61c01e2e687ab3a001fb806737583943ab58a0391f037031a51016ebfe2a752b2',1,'SVF']]],
-  ['mutable_13',['Mutable',['../namespaceSVF.html#ae25d51ec154130695b1689c96407cd0da345964b1b109f9f278990c3e99780466',1,'SVF']]],
-  ['mutbase_14',['MutBase',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a47a2413878b6ed98b42b9ae10e839072',1,'SVF::PTData']]],
-  ['mutdataflow_15',['MutDataFlow',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62',1,'SVF::PTData']]],
-  ['mutdiff_16',['MutDiff',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848ac17ed6fa5de5a3f67108692b103a4c87',1,'SVF::PTData']]],
-  ['mutincdataflow_17',['MutIncDataFlow',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c',1,'SVF::PTData']]],
-  ['mutversioned_18',['MutVersioned',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5',1,'SVF::PTData']]]
+  ['msvc_10',['MSVC',['../namespaceSVF.html#a86681e0b5f772d3668f15a1a7484312fa0f51fc6751dcde1d4bb3760fcf465689',1,'SVF']]],
+  ['mul_11',['Mul',['../classSVF_1_1BinaryOPStmt.html#a2f647224242dd87099104e0fdc994de6a787e5771d6e70f3cbec3e2a33f5a4e8a',1,'SVF::BinaryOPStmt']]],
+  ['multi_5finheritance_12',['MULTI_INHERITANCE',['../classSVF_1_1CHNode.html#a7111a3971f9f03e32bfd291a783d43b4afd6d851b22e741690f0736b4858d81a5',1,'SVF::CHNode']]],
+  ['mustalias_13',['MustAlias',['../namespaceSVF.html#a61c01e2e687ab3a001fb806737583943ab58a0391f037031a51016ebfe2a752b2',1,'SVF']]],
+  ['mutable_14',['Mutable',['../namespaceSVF.html#ae25d51ec154130695b1689c96407cd0da345964b1b109f9f278990c3e99780466',1,'SVF']]],
+  ['mutbase_15',['MutBase',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a47a2413878b6ed98b42b9ae10e839072',1,'SVF::PTData']]],
+  ['mutdataflow_16',['MutDataFlow',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848a46777c0122829cc199bc911e585b4f62',1,'SVF::PTData']]],
+  ['mutdiff_17',['MutDiff',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848ac17ed6fa5de5a3f67108692b103a4c87',1,'SVF::PTData']]],
+  ['mutincdataflow_18',['MutIncDataFlow',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aa4e18dfa52aad741c91bcc78339e986c',1,'SVF::PTData']]],
+  ['mutversioned_19',['MutVersioned',['../classSVF_1_1PTData.html#a74ce29609c51f2be34a0b5b7650a9848aac925590471ccb9c851698b232fdd3a5',1,'SVF::PTData']]]
 ];
