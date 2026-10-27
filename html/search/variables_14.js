@@ -73,7 +73,7 @@ var searchData=
   ['type2typeinfo_70',['Type2TypeInfo',['../classSVF_1_1LLVMModuleSet.html#af2c555af91679d9e6d3009547ee11486',1,'SVF::LLVMModuleSet']]],
   ['typeandinfoflag_71',['typeAndInfoFlag',['../classSVF_1_1SVFBugEvent.html#a33496918c5f2adaf48a64f39d9c49567',1,'SVF::SVFBugEvent']]],
   ['typeinference_72',['typeInference',['../classSVF_1_1LLVMModuleSet.html#a2eb76d2c787a9a02f7d37c790d647e9c',1,'SVF::LLVMModuleSet']]],
-  ['typeinfo_73',['typeinfo',['../classSVF_1_1BaseObjVar.html#ac1397563284bd856915e9252366a85cb',1,'SVF::BaseObjVar::typeInfo'],['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo']]],
+  ['typeinfo_73',['typeinfo',['../classSVF_1_1SVFType.html#a86ea48a882823de2e3e906220dc0111e',1,'SVF::SVFType::typeinfo'],['../classSVF_1_1BaseObjVar.html#ac1397563284bd856915e9252366a85cb',1,'SVF::BaseObjVar::typeInfo']]],
   ['typelocsetsmap_74',['typeLocSetsMap',['../classSVF_1_1SVFIR.html#a63ede1d8d381b91f81b93965dcffa288',1,'SVF::SVFIR']]],
   ['typemalloc_75',['TYPEMALLOC',['../ObjTypeInference_8cpp.html#a5f334de99eb942058f27a1025c346f70',1,'ObjTypeInference.cpp']]],
   ['typeofelement_76',['typeOfElement',['../classSVF_1_1SVFArrayType.html#a395841ef9448d7d78df53aff374e6f7a',1,'SVF::SVFArrayType']]],

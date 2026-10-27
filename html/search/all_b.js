@@ -220,7 +220,7 @@ var searchData=
   ['dumplocversionmaps_217',['dumpLocVersionMaps',['../classSVF_1_1VersionedFlowSensitive.html#a032acdcd8b84523a7ac2f0e46d21c62f',1,'SVF::VersionedFlowSensitive']]],
   ['dumpmeldversion_218',['dumpMeldVersion',['../classSVF_1_1VersionedFlowSensitive.html#a7565989371100f84ae5f9e2efa655fcb',1,'SVF::VersionedFlowSensitive']]],
   ['dumpmodulestofile_219',['dumpModulesToFile',['../classSVF_1_1LLVMModuleSet.html#af37b9976b282c875cac7bb1777da635c',1,'SVF::LLVMModuleSet']]],
-  ['dumpmssa_220',['dumpmssa',['../classSVF_1_1MemSSA.html#a749df6d6b28dd1bae569989bffeb7746',1,'SVF::MemSSA::dumpMSSA()'],['../classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa',1,'SVF::Options::DumpMSSA']]],
+  ['dumpmssa_220',['dumpmssa',['../classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa',1,'SVF::Options::DumpMSSA'],['../classSVF_1_1MemSSA.html#a749df6d6b28dd1bae569989bffeb7746',1,'SVF::MemSSA::dumpMSSA()']]],
   ['dumpmtagraphs_221',['DumpMTAGraphs',['../classSVF_1_1Options.html#a6e5fec5360635917e75763e77eaae332',1,'SVF::Options']]],
   ['dumppointstolist_222',['dumpPointsToList',['../namespaceSVF_1_1SVFUtil.html#af4ceddbe4d57b24e80201bc895f73810',1,'SVF::SVFUtil']]],
   ['dumppointstoset_223',['dumpPointsToSet',['../namespaceSVF_1_1SVFUtil.html#abd0a9ee845a455f9354d24a8b84a0bb3',1,'SVF::SVFUtil']]],
