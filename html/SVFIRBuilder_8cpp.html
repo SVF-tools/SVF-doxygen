@@ -128,21 +128,21 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Require a returning, nonvariadic definition whose uses are all ordinary direct calls with matching types, so each call can pass the output pointers. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01529">1529</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1530</span>{</div>
-<div class="line"><span class="lineno"> 1531</span>    <span class="keywordflow">if</span> (!fun || <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">LLVMUtil::isExtCall</a>(fun) || fun-&gt;isVarArg() ||</div>
-<div class="line"><span class="lineno"> 1532</span>            fun-&gt;doesNotReturn() || !fun-&gt;getReturnType()-&gt;isAggregateType() ||</div>
-<div class="line"><span class="lineno"> 1533</span>            fun-&gt;hasAddressTaken())</div>
-<div class="line"><span class="lineno"> 1534</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1535</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">User</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">user</a> : fun-&gt;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">users</a>())</div>
-<div class="line"><span class="lineno"> 1536</span>    {</div>
-<div class="line"><span class="lineno"> 1537</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* call = SVFUtil::dyn_cast&lt;CallInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">user</a>);</div>
-<div class="line"><span class="lineno"> 1538</span>        <span class="keywordflow">if</span> (!call || call-&gt;getCalledFunction() != fun ||</div>
-<div class="line"><span class="lineno"> 1539</span>                call-&gt;getFunctionType() != fun-&gt;getFunctionType())</div>
-<div class="line"><span class="lineno"> 1540</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1541</span>    }</div>
-<div class="line"><span class="lineno"> 1542</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1543</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01535">1535</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1536</span>{</div>
+<div class="line"><span class="lineno"> 1537</span>    <span class="keywordflow">if</span> (!fun || <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">LLVMUtil::isExtCall</a>(fun) || fun-&gt;isVarArg() ||</div>
+<div class="line"><span class="lineno"> 1538</span>            fun-&gt;doesNotReturn() || !fun-&gt;getReturnType()-&gt;isAggregateType() ||</div>
+<div class="line"><span class="lineno"> 1539</span>            fun-&gt;hasAddressTaken())</div>
+<div class="line"><span class="lineno"> 1540</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1541</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">User</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">user</a> : fun-&gt;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">users</a>())</div>
+<div class="line"><span class="lineno"> 1542</span>    {</div>
+<div class="line"><span class="lineno"> 1543</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* call = SVFUtil::dyn_cast&lt;CallInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">user</a>);</div>
+<div class="line"><span class="lineno"> 1544</span>        <span class="keywordflow">if</span> (!call || call-&gt;getCalledFunction() != fun ||</div>
+<div class="line"><span class="lineno"> 1545</span>                call-&gt;getFunctionType() != fun-&gt;getFunctionType())</div>
+<div class="line"><span class="lineno"> 1546</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1547</span>    }</div>
+<div class="line"><span class="lineno"> 1548</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1549</span>}</div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_aaecb35817e1ccc9401ebc7306be347af"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">SVF::LLVMUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const Function *fun)</div><div class="ttdef"><b>Definition</b> <a href="LLVMUtil_8cpp_source.html#l00385">LLVMUtil.cpp:385</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00076">BasicTypes.h:76</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_afc1b50355821e7299df03b026e36f1df"><div class="ttname"><a href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">SVF::User</a></div><div class="ttdeci">llvm::User User</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00149">BasicTypes.h:149</a></div></div>
