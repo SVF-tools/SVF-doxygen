@@ -11,11 +11,12 @@ var searchData=
   ['addrtovalmap_8',['AddrToValMap',['../classSVF_1_1RelExeState.html#a019c2d09ca0ccfbd21502089e348bdfb',1,'SVF::RelExeState']]],
   ['aggregatefield_9',['AggregateField',['../classSVF_1_1SVFIRBuilder.html#a251d18d26d05b6fdced516e2ecc7f035',1,'SVF::SVFIRBuilder']]],
   ['aggregatefieldkey_10',['AggregateFieldKey',['../classSVF_1_1SVFIRBuilder.html#a78b90b6bc666eb4b4617d767ba5faa8b',1,'SVF::SVFIRBuilder']]],
-  ['allocainst_11',['AllocaInst',['../namespaceSVF.html#a3bacb4f95c73e6d794901d01c6b65a83',1,'SVF']]],
-  ['apoffset_12',['APOffset',['../namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1',1,'SVF']]],
-  ['argument_13',['Argument',['../namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801',1,'SVF']]],
-  ['arraytype_14',['ArrayType',['../namespaceSVF.html#a146d286041987860388da3d8bc85cee3',1,'SVF']]],
-  ['atomiccmpxchginst_15',['AtomicCmpXchgInst',['../namespaceSVF.html#a582e3736a2bbb0540364c1693d831b49',1,'SVF']]],
-  ['atomicrmwinst_16',['AtomicRMWInst',['../namespaceSVF.html#a468154e0ab9e7be82afef1aa0a2fb9e0',1,'SVF']]],
-  ['attribute_17',['Attribute',['../classSVF_1_1GrammarBase.html#ab070e5449d26e347b957d8b994d0303f',1,'SVF::GrammarBase']]]
+  ['aggregatereturnfields_11',['AggregateReturnFields',['../classSVF_1_1SVFIRBuilder.html#a6689e05d5cc2d233601c22adea607913',1,'SVF::SVFIRBuilder']]],
+  ['allocainst_12',['AllocaInst',['../namespaceSVF.html#a3bacb4f95c73e6d794901d01c6b65a83',1,'SVF']]],
+  ['apoffset_13',['APOffset',['../namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1',1,'SVF']]],
+  ['argument_14',['Argument',['../namespaceSVF.html#a58cdfbc4160cae08745b67844ac29801',1,'SVF']]],
+  ['arraytype_15',['ArrayType',['../namespaceSVF.html#a146d286041987860388da3d8bc85cee3',1,'SVF']]],
+  ['atomiccmpxchginst_16',['AtomicCmpXchgInst',['../namespaceSVF.html#a582e3736a2bbb0540364c1693d831b49',1,'SVF']]],
+  ['atomicrmwinst_17',['AtomicRMWInst',['../namespaceSVF.html#a468154e0ab9e7be82afef1aa0a2fb9e0',1,'SVF']]],
+  ['attribute_18',['Attribute',['../classSVF_1_1GrammarBase.html#ab070e5449d26e347b957d8b994d0303f',1,'SVF::GrammarBase']]]
 ];

@@ -99,6 +99,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a3f8737524c11a3ae55416c839a3215e2" id="r_a3f8737524c11a3ae55416c839a3215e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVFIRBuilder_8cpp.html#a3f8737524c11a3ae55416c839a3215e2">getAggregateFieldType</a> (<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *<a class="el" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>, <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> std::vector&lt; <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">unsigned</a> &gt; &amp;<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">indices</a>)</td></tr>
 <tr class="memdesc:a3f8737524c11a3ae55416c839a3215e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type at a constant aggregate path, including fixed vector lanes.  <br /></td></tr>
 <tr class="separator:a3f8737524c11a3ae55416c839a3215e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567dbaf24f56ca774cd2481d74b548bd" id="r_a567dbaf24f56ca774cd2481d74b548bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> std::optional&lt; <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">unsigned</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVFIRBuilder_8cpp.html#a567dbaf24f56ca774cd2481d74b548bd">getFixedVectorLane</a> (<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *<a class="el" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>, <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *<a class="el" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>)</td></tr>
+<tr class="separator:a567dbaf24f56ca774cd2481d74b548bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcb2e66f33380096b6c9442902ace2fb" id="r_afcb2e66f33380096b6c9442902ace2fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SVFIRBuilder_8cpp.html#afcb2e66f33380096b6c9442902ace2fb">canModelAggregateReturn</a> (<a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *fun)</td></tr>
 <tr class="separator:afcb2e66f33380096b6c9442902ace2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -128,21 +130,21 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Require a returning, nonvariadic definition whose uses are all ordinary direct calls with matching types, so each call can pass the output pointers. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01535">1535</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1536</span>{</div>
-<div class="line"><span class="lineno"> 1537</span>    <span class="keywordflow">if</span> (!fun || <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">LLVMUtil::isExtCall</a>(fun) || fun-&gt;isVarArg() ||</div>
-<div class="line"><span class="lineno"> 1538</span>            fun-&gt;doesNotReturn() || !fun-&gt;getReturnType()-&gt;isAggregateType() ||</div>
-<div class="line"><span class="lineno"> 1539</span>            fun-&gt;hasAddressTaken())</div>
-<div class="line"><span class="lineno"> 1540</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1541</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">User</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">user</a> : fun-&gt;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">users</a>())</div>
-<div class="line"><span class="lineno"> 1542</span>    {</div>
-<div class="line"><span class="lineno"> 1543</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* call = SVFUtil::dyn_cast&lt;CallInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">user</a>);</div>
-<div class="line"><span class="lineno"> 1544</span>        <span class="keywordflow">if</span> (!call || call-&gt;getCalledFunction() != fun ||</div>
-<div class="line"><span class="lineno"> 1545</span>                call-&gt;getFunctionType() != fun-&gt;getFunctionType())</div>
-<div class="line"><span class="lineno"> 1546</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1547</span>    }</div>
-<div class="line"><span class="lineno"> 1548</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1549</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01558">1558</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1559</span>{</div>
+<div class="line"><span class="lineno"> 1560</span>    <span class="keywordflow">if</span> (!fun || <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">LLVMUtil::isExtCall</a>(fun) || fun-&gt;isVarArg() ||</div>
+<div class="line"><span class="lineno"> 1561</span>            fun-&gt;doesNotReturn() || !fun-&gt;getReturnType()-&gt;isAggregateType() ||</div>
+<div class="line"><span class="lineno"> 1562</span>            fun-&gt;hasAddressTaken())</div>
+<div class="line"><span class="lineno"> 1563</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1564</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">User</a>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">user</a> : fun-&gt;<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">users</a>())</div>
+<div class="line"><span class="lineno"> 1565</span>    {</div>
+<div class="line"><span class="lineno"> 1566</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* call = SVFUtil::dyn_cast&lt;CallInst&gt;(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">user</a>);</div>
+<div class="line"><span class="lineno"> 1567</span>        <span class="keywordflow">if</span> (!call || call-&gt;getCalledFunction() != fun ||</div>
+<div class="line"><span class="lineno"> 1568</span>                call-&gt;getFunctionType() != fun-&gt;getFunctionType())</div>
+<div class="line"><span class="lineno"> 1569</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1570</span>    }</div>
+<div class="line"><span class="lineno"> 1571</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1572</span>}</div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_aaecb35817e1ccc9401ebc7306be347af"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">SVF::LLVMUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const Function *fun)</div><div class="ttdef"><b>Definition</b> <a href="LLVMUtil_8cpp_source.html#l00385">LLVMUtil.cpp:385</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a94824519e439aeef1568d415b6f7331c"><div class="ttname"><a href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">SVF::IRBuilder</a></div><div class="ttdeci">llvm::IRBuilder IRBuilder</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00076">BasicTypes.h:76</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_afc1b50355821e7299df03b026e36f1df"><div class="ttname"><a href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">SVF::User</a></div><div class="ttdeci">llvm::User User</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00149">BasicTypes.h:149</a></div></div>
@@ -214,6 +216,53 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno"> 1362</span>}</div>
 <div class="ttc" id="acJSON_8cpp_html_a3f9a0d3265a6254722587175dac3e4dc"><div class="ttname"><a href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a></div><div class="ttdeci">newitem type</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l02739">cJSON.cpp:2739</a></div></div>
 <div class="ttc" id="acJSON_8h_html_a750b5d744c39a06bfb13e6eb010e35d0"><div class="ttname"><a href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00170">cJSON.h:170</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a567dbaf24f56ca774cd2481d74b548bd" name="a567dbaf24f56ca774cd2481d74b548bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567dbaf24f56ca774cd2481d74b548bd">&#9670;&#160;</a></span>getFixedVectorLane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">static</a> std::optional&lt; <a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">unsigned</a> &gt; getFixedVectorLane </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">const</a> <a class="el" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a> *&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the selected fixed-vector lane, or no lane for other vector types, variable indices and out-of-range indices. </p>
+
+<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01366">1366</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1368</span>{</div>
+<div class="line"><span class="lineno"> 1369</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">vector</a> = SVFUtil::dyn_cast&lt;llvm::FixedVectorType&gt;(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>);</div>
+<div class="line"><span class="lineno"> 1370</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">constant</a> = SVFUtil::dyn_cast&lt;ConstantInt&gt;(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>);</div>
+<div class="line"><span class="lineno"> 1371</span>    <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">vector</a> || !<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">constant</a> ||</div>
+<div class="line"><span class="lineno"> 1372</span>            <a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">constant</a>-&gt;getValue().uge(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">vector</a>-&gt;getNumElements()))</div>
+<div class="line"><span class="lineno"> 1373</span>        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno"> 1374</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(<a class="code hl_typedef" href="namespaceSVF.html#a94824519e439aeef1568d415b6f7331c">constant</a>-&gt;getZExtValue());</div>
+<div class="line"><span class="lineno"> 1375</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
