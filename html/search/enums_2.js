@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cedgek_0',['cedgek',['../classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3',1,'SVF::CallGraphEdge::CEDGEK'],['../classSVF_1_1TCTEdge.html#a18644ee9ae37b03254afb077dca5494f',1,'SVF::TCTEdge::CEDGEK']]],
+  ['cedgek_0',['CEDGEK',['../classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3',1,'SVF::CallGraphEdge::CEDGEK'],['../classSVF_1_1TCTEdge.html#a18644ee9ae37b03254afb077dca5494f',1,'SVF::TCTEdge::CEDGEK']]],
   ['cgek_1',['CGEK',['../classSVF_1_1CallGraph.html#a9e0e1c52235e53f41ebafdda5b2255a1',1,'SVF::CallGraph']]],
   ['checker_5ftype_2',['CHECKER_TYPE',['../classSVF_1_1SaberCheckerAPI.html#a32f3c37a5957dc7533f7e82617d5d056',1,'SVF::SaberCheckerAPI']]],
   ['chedgetype_3',['CHEDGETYPE',['../classSVF_1_1CHEdge.html#a26280c3b724551036f7e3ba2b5922676',1,'SVF::CHEdge']]],

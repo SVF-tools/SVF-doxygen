@@ -9,7 +9,7 @@ var searchData=
   ['unifyfunctionexitnodes_6',['UnifyFunctionExitNodes',['../namespaceSVF.html#ae5853f7df76735b195ff93949ca4256b',1,'SVF']]],
   ['unreachableinst_7',['UnreachableInst',['../namespaceSVF.html#a8ac6a8ff90f47a93166fbdf15be2d721',1,'SVF']]],
   ['updatedvarconstiter_8',['UpdatedVarconstIter',['../classSVF_1_1MutableIncDFPTData.html#af815dd2108c16e1dfddbcd5bdbcceeb6',1,'SVF::MutableIncDFPTData']]],
-  ['updatedvarmap_9',['updatedvarmap',['../classSVF_1_1MutableIncDFPTData.html#a67c24cebffdcea9c8059f6769c7f9798',1,'SVF::MutableIncDFPTData::UpdatedVarMap'],['../classSVF_1_1PersistentIncDFPTData.html#abad78c2ef84371b693dca206ebbb63ab',1,'SVF::PersistentIncDFPTData::UpdatedVarMap']]],
+  ['updatedvarmap_9',['UpdatedVarMap',['../classSVF_1_1MutableIncDFPTData.html#a67c24cebffdcea9c8059f6769c7f9798',1,'SVF::MutableIncDFPTData::UpdatedVarMap'],['../classSVF_1_1PersistentIncDFPTData.html#abad78c2ef84371b693dca206ebbb63ab',1,'SVF::PersistentIncDFPTData::UpdatedVarMap']]],
   ['updatedvarmapiter_10',['UpdatedVarMapIter',['../classSVF_1_1MutableIncDFPTData.html#a8b30326d3fa3f4054e67268f512aec9e',1,'SVF::MutableIncDFPTData']]],
   ['use_11',['Use',['../namespaceSVF.html#a334998718813a19a7697daf4ba282faf',1,'SVF']]],
   ['user_12',['User',['../namespaceSVF.html#afc1b50355821e7299df03b026e36f1df',1,'SVF']]]

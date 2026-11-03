@@ -3,7 +3,7 @@ var searchData=
   ['labelinterferenceedges_0',['labelInterferenceEdges',['../classSVF_1_1MTASVFGBuilder.html#ac6d2f809fa59e868c297e36502f8971e',1,'SVF::MTASVFGBuilder']]],
   ['labeltokindmap_1',['labelToKindMap',['../classSVF_1_1CFLGraphBuilder.html#a1ecf9cad8707ba07d3e44624ea273f2f',1,'SVF::CFLGraphBuilder']]],
   ['largestregion_2',['LargestRegion',['../classSVF_1_1NodeIDAllocator_1_1Clusterer.html#a172d72ae4ae45fa2baf2f20ff2b499dc',1,'SVF::NodeIDAllocator::Clusterer']]],
-  ['length_3',['length',['../cJSON_8h.html#a9f237f17f4e79d5b89149e09152edabe',1,'length:&#160;cJSON.h'],['../cJSON_8cpp.html#a9f237f17f4e79d5b89149e09152edabe',1,'length:&#160;cJSON.cpp'],['../structparse__buffer.html#a036970e9335896d3cee8459eda9e2eb9',1,'parse_buffer::length'],['../structprintbuffer.html#a1a679f8b6fe9b413fb3a87203b0f5bc8',1,'printbuffer::length']]],
+  ['length_3',['length',['../structparse__buffer.html#a036970e9335896d3cee8459eda9e2eb9',1,'parse_buffer::length'],['../structprintbuffer.html#a1a679f8b6fe9b413fb3a87203b0f5bc8',1,'printbuffer::length'],['../cJSON_8h.html#a9f237f17f4e79d5b89149e09152edabe',1,'length:&#160;cJSON.h'],['../cJSON_8cpp.html#a9f237f17f4e79d5b89149e09152edabe',1,'length:&#160;cJSON.cpp']]],
   ['llvmbb2svfbb_4',['LLVMBB2SVFBB',['../classSVF_1_1LLVMModuleSet.html#a0f9b36699b99dfcfe3c1588bfab6b97c',1,'SVF::LLVMModuleSet']]],
   ['llvmfun2funobjvar_5',['LLVMFun2FunObjVar',['../classSVF_1_1LLVMModuleSet.html#a46f79860e90748f6ccf7b2205d021baa',1,'SVF::LLVMModuleSet']]],
   ['llvmmoduleset_6',['llvmModuleSet',['../classSVF_1_1LLVMModuleSet.html#ac59b07cafcbacc950eefea4082425b63',1,'SVF::LLVMModuleSet']]],
@@ -23,7 +23,7 @@ var searchData=
   ['loadtoptcvarmap_20',['loadToPTCVarMap',['../classSVF_1_1DDAVFSolver.html#a6d62420837fe0c7814fc4da68a91eda4',1,'SVF::DDAVFSolver']]],
   ['localeconv_5fglobal_21',['localeconv_global',['../extapi_8c.html#a324d80bd61652f4c3c696b56081344fe',1,'extapi.c']]],
   ['localvarinrecursion_22',['localVarInRecursion',['../classSVF_1_1PTAStat.html#a5b4095f427c9c7b9ec0db497ba33baea',1,'SVF::PTAStat']]],
-  ['lockanalysis_23',['lockanalysis',['../classSVF_1_1MTASVFGBuilder.html#ab489e89f934c651ef2d4616143be762d',1,'SVF::MTASVFGBuilder::lockAnalysis'],['../classSVF_1_1SlicedMTA.html#a10e770ca0d32485038a8ffe70d7cc4b8',1,'SVF::SlicedMTA::lockAnalysis'],['../classSVF_1_1MTASlicerBase.html#ab10953676b9a998921e05ed6ab1afab8',1,'SVF::MTASlicerBase::lockAnalysis']]],
+  ['lockanalysis_23',['lockAnalysis',['../classSVF_1_1SlicedMTA.html#a10e770ca0d32485038a8ffe70d7cc4b8',1,'SVF::SlicedMTA::lockAnalysis'],['../classSVF_1_1MTASlicerBase.html#ab10953676b9a998921e05ed6ab1afab8',1,'SVF::MTASlicerBase::lockAnalysis'],['../classSVF_1_1MTASVFGBuilder.html#ab489e89f934c651ef2d4616143be762d',1,'SVF::MTASVFGBuilder::lockAnalysis']]],
   ['lockcandidatefuncset_24',['lockCandidateFuncSet',['../classSVF_1_1LockAnalysis.html#a50f5172f1581b9afdda53813d4e0b8a1',1,'SVF::LockAnalysis']]],
   ['locked_25',['locked',['../structSVF_1_1MTA_1_1RaceOccurrence.html#a80c0dc44c0fb313ce506801e52e8cd23',1,'SVF::MTA::RaceOccurrence::locked'],['../structSVF_1_1MTA_1_1RaceClass.html#ac8b60a83c006975942c6955ed04d97b6',1,'SVF::MTA::RaceClass::locked'],['../structSVF_1_1MTA_1_1RaceClassKey.html#aa5e428f7690141557fc7cc28c47ef7ab',1,'SVF::MTA::RaceClassKey::locked']]],
   ['locknodeid_26',['lockNodeId',['../structSVF_1_1MTA_1_1RaceClassKey.html#a73d356ce1796a1696f339016a92f61d3',1,'SVF::MTA::RaceClassKey']]],
@@ -37,8 +37,9 @@ var searchData=
   ['lookupunions_34',['lookupUnions',['../classSVF_1_1PersistentPointsToCache.html#ace976f138cf1b8ab6bbf7a5c5d0b60b8',1,'SVF::PersistentPointsToCache']]],
   ['loopanalysis_35',['LoopAnalysis',['../classSVF_1_1Options.html#abfd13c7d998333290b39354178739f2c',1,'SVF::Options']]],
   ['loopanddom_36',['loopAndDom',['../classSVF_1_1FunObjVar.html#a56981c2f8bd44a54639197d9077e0293',1,'SVF::FunObjVar']]],
-  ['loopbound_37',['loopbound',['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop::loopBound'],['../classSVF_1_1Options.html#a17f11eb3e9a3178395e8574a027b181e',1,'SVF::Options::LoopBound']]],
-  ['lowerbound_38',['lowerBound',['../structSVF_1_1AbstractInterpretation_1_1AllocationSizeBounds.html#a82976b6fdb8f8ffd5ab617fe17a79c25',1,'SVF::AbstractInterpretation::AllocationSizeBounds']]],
-  ['lowlink_39',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
-  ['lsa_40',['lsa',['../classSVF_1_1MTA.html#a80a44f3aa41d4259523c94044983c509',1,'SVF::MTA']]]
+  ['loopbound_37',['LoopBound',['../classSVF_1_1Options.html#a17f11eb3e9a3178395e8574a027b181e',1,'SVF::Options']]],
+  ['loopbound_38',['loopBound',['../classSVF_1_1SVFLoop.html#ac4e2c365e2a08477381802205029b85c',1,'SVF::SVFLoop']]],
+  ['lowerbound_39',['lowerBound',['../structSVF_1_1AbstractInterpretation_1_1AllocationSizeBounds.html#a82976b6fdb8f8ffd5ab617fe17a79c25',1,'SVF::AbstractInterpretation::AllocationSizeBounds']]],
+  ['lowlink_40',['lowlink',['../structSVF_1_1VersionedFlowSensitive_1_1SCC_1_1NodeData.html#a6d66813dfb5338c22de62c100e951cf2',1,'SVF::VersionedFlowSensitive::SCC::NodeData']]],
+  ['lsa_41',['lsa',['../classSVF_1_1MTA.html#a80a44f3aa41d4259523c94044983c509',1,'SVF::MTA']]]
 ];

@@ -34,7 +34,7 @@ var searchData=
   ['memoryleakcheck_31',['MemoryLeakCheck',['../classSVF_1_1Options.html#ae70456dac0e85572ce072a7b9de88596',1,'SVF::Options']]],
   ['mempar_32',['MemPar',['../classSVF_1_1Options.html#a53be9a9f1a5a6dcffdf8fb2d7a99c847',1,'SVF::Options']]],
   ['memregset_33',['memRegSet',['../classSVF_1_1MRGenerator.html#af94bd8155a23273aab2396334d905119',1,'SVF::MRGenerator']]],
-  ['memssa_34',['memssa',['../classSVF_1_1FlowSensitive.html#a76f6f19ac2b58ab4a10a2d7e6e24e42a',1,'SVF::FlowSensitive::memSSA'],['../classSVF_1_1SrcSnkDDA.html#ab6803f0a2b3507213ad2979b9b12f700',1,'SVF::SrcSnkDDA::memSSA'],['../classSVF_1_1CFLVF.html#a88ee14429afb2d1efbc83e551e7869a8',1,'SVF::CFLVF::memSSA']]],
+  ['memssa_34',['memSSA',['../classSVF_1_1CFLVF.html#a88ee14429afb2d1efbc83e551e7869a8',1,'SVF::CFLVF::memSSA'],['../classSVF_1_1SrcSnkDDA.html#ab6803f0a2b3507213ad2979b9b12f700',1,'SVF::SrcSnkDDA::memSSA'],['../classSVF_1_1FlowSensitive.html#a76f6f19ac2b58ab4a10a2d7e6e24e42a',1,'SVF::FlowSensitive::memSSA']]],
   ['memtofieldsmap_35',['memToFieldsMap',['../classSVF_1_1SVFIR.html#a3c014227661d8976714772205611c252',1,'SVF::SVFIR']]],
   ['memusage_36',['memUsage',['../classSVF_1_1AEStat.html#a4b1f6388893e6aaef1acd411972cde19',1,'SVF::AEStat']]],
   ['mhp_37',['mhp',['../classSVF_1_1MTA.html#a957925a4ae00e48f77a58697853f3cc3',1,'SVF::MTA::mhp'],['../classSVF_1_1SlicedMTA.html#add8535845d240858a29cf977f27aecf8',1,'SVF::SlicedMTA::mhp'],['../classSVF_1_1MTASlicerBase.html#aa869b55bbcba89053987eaa9e89ef239',1,'SVF::MTASlicerBase::mhp'],['../classSVF_1_1MTASVFGBuilder.html#a73024bf30aa3ec79e5953a7ea1f8feb7',1,'SVF::MTASVFGBuilder::mhp']]],
@@ -42,7 +42,7 @@ var searchData=
   ['modelarrays_39',['ModelArrays',['../classSVF_1_1Options.html#a13011832b3717029a7e377283c4351b7',1,'SVF::Options']]],
   ['modelconsts_40',['ModelConsts',['../classSVF_1_1Options.html#a5c60e813486d897668ef032e3c7e85cc',1,'SVF::Options']]],
   ['moduleidentifier_41',['moduleIdentifier',['../classSVF_1_1SVFIR.html#a7a97534f89af50e324916a513ef8dc08',1,'SVF::SVFIR']]],
-  ['modulename_42',['modulename',['../classSVF_1_1AbstractInterpretation.html#a619ac5748a50a82c3219337625746f7e',1,'SVF::AbstractInterpretation::moduleName'],['../classSVF_1_1SVFStat.html#a3333e45303dcc9c3da00858628cdbbff',1,'SVF::SVFStat::moduleName']]],
+  ['modulename_42',['moduleName',['../classSVF_1_1AbstractInterpretation.html#a619ac5748a50a82c3219337625746f7e',1,'SVF::AbstractInterpretation::moduleName'],['../classSVF_1_1SVFStat.html#a3333e45303dcc9c3da00858628cdbbff',1,'SVF::SVFStat::moduleName']]],
   ['modules_43',['modules',['../classSVF_1_1LLVMModuleSet.html#acde6292e719c80f93d3d1c344ab442cd',1,'SVF::LLVMModuleSet']]],
   ['mr_44',['mr',['../classSVF_1_1MRVer.html#aafe30801672cd436216386ad6ff479e6',1,'SVF::MRVer::mr'],['../classSVF_1_1MSSAMU.html#a51b89fa50c39d864cc9ca63508ea94f4',1,'SVF::MSSAMU::mr'],['../classSVF_1_1MSSADEF.html#a01bc47f779d20fa8e3be182ceab12780',1,'SVF::MSSADEF::mr']]],
   ['mr2countermap_45',['mr2CounterMap',['../classSVF_1_1MemSSA.html#a22e2dd0fc78877bdedd207a40540a634',1,'SVF::MemSSA']]],
@@ -59,5 +59,5 @@ var searchData=
   ['multiforked_56',['multiforked',['../classSVF_1_1TCTNode.html#a414f4b98fb8fd36d2cb381ff56eb98d8',1,'SVF::TCTNode']]],
   ['multiopndlabelcounter_57',['multiOpndLabelCounter',['../classSVF_1_1SVFStmt.html#a9ea22adbfc307dddee42ffec07cc88ed',1,'SVF::SVFStmt']]],
   ['multistageslicer_58',['multiStageSlicer',['../classSVF_1_1SlicedMTA.html#a98299f4ebf0d53c0ee0f048e66d31252',1,'SVF::SlicedMTA']]],
-  ['mutptdata_59',['mutptdata',['../classSVF_1_1MutableDiffPTData.html#a3603cb4baf60b1aa83b7807ac5591484',1,'SVF::MutableDiffPTData::mutPTData'],['../classSVF_1_1MutableDFPTData.html#acf40f716470f73095d44a1b9e3bb939e',1,'SVF::MutableDFPTData::mutPTData']]]
+  ['mutptdata_59',['mutPTData',['../classSVF_1_1MutableDiffPTData.html#a3603cb4baf60b1aa83b7807ac5591484',1,'SVF::MutableDiffPTData::mutPTData'],['../classSVF_1_1MutableDFPTData.html#acf40f716470f73095d44a1b9e3bb939e',1,'SVF::MutableDFPTData::mutPTData']]]
 ];
