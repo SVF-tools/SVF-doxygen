@@ -378,77 +378,77 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Walk every function's <a class="el" href="classSVF_1_1WTO.html">WTO</a> and populate cycleToValVars bottom-up. Called once right after <a class="el" href="#af95219bce076c795fdd8b377b5d4ad1f" title="Build WTO for each function using call graph SCC.">initWTO()</a>. No-op in dense mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="AEWTO_8cpp_source.html#l00098">98</a> of file <a class="el" href="AEWTO_8cpp_source.html">AEWTO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>{</div>
-<div class="line"><span class="lineno">  100</span>    <span class="comment">// Step 1: Collect all cycles in top-down order using a stack-based DFS,</span></div>
-<div class="line"><span class="lineno">  101</span>    <span class="comment">// then reverse to get bottom-up order (inner cycles before outer ones).</span></div>
-<div class="line"><span class="lineno">  102</span>    std::vector&lt;const ICFGCycleWTO*&gt; cycles;</div>
-<div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>        std::vector&lt;const ICFGWTOComp*&gt; <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>;</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; kv : <a class="code hl_variable" href="#af4c8a7ebec94f050966a6a4862676a76">funcToWTO</a>)</div>
-<div class="line"><span class="lineno">  106</span>        {</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (!kv.second) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c">ICFGWTOComp</a>* comp : kv.second-&gt;getWTOComponents())</div>
-<div class="line"><span class="lineno">  109</span>                <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.push_back(comp);</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">while</span> (!<a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.empty())</div>
-<div class="line"><span class="lineno">  112</span>        {</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c">ICFGWTOComp</a>* comp = <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.back();</div>
-<div class="line"><span class="lineno">  114</span>            <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.pop_back();</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a065d23ec41ebb5bb608c59f1adc18e9a">ICFGCycleWTO</a>* cycle = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ICFGCycleWTO&gt;</a>(comp))</div>
-<div class="line"><span class="lineno">  116</span>            {</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c">ICFGWTOComp</a>* sub : cycle-&gt;getWTOComponents())</div>
-<div class="line"><span class="lineno">  118</span>                    <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.push_back(sub);</div>
-<div class="line"><span class="lineno">  119</span>                cycles.push_back(cycle);</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        std::reverse(cycles.begin(), cycles.end());</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>    <span class="comment">// Step 2: Build ValVar sets bottom-up.  Inner cycles are already in the</span></div>
-<div class="line"><span class="lineno">  126</span>    <span class="comment">// map when we reach their enclosing cycle.</span></div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a065d23ec41ebb5bb608c59f1adc18e9a">ICFGCycleWTO</a>* cycle : cycles)</div>
-<div class="line"><span class="lineno">  128</span>    {</div>
-<div class="line"><span class="lineno">  129</span>        <a class="code hl_typedef" href="namespaceSVF.html#a4ecf35a0b61bde7270ef29e66961d5d5">Set&lt;const ValVar*&gt;</a>&amp; out = <a class="code hl_variable" href="#ac951a55d21be8cdefa210cbcd1c8e9d4">cycleToValVars</a>[cycle];</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>        <span class="comment">// Gather every ICFG node in this cycle (head + body singletons).</span></div>
-<div class="line"><span class="lineno">  132</span>        <span class="comment">// For nested sub-cycles, merge their already-computed sets instead.</span></div>
-<div class="line"><span class="lineno">  133</span>        std::vector&lt;const ICFGNode*&gt; <a class="code hl_function" href="namespaceSVF.html#aac4c48718882b8529c5a27c90f4bfca6">nodes</a>;</div>
-<div class="line"><span class="lineno">  134</span>        <a class="code hl_function" href="namespaceSVF.html#aac4c48718882b8529c5a27c90f4bfca6">nodes</a>.push_back(cycle-&gt;head()-&gt;getICFGNode());</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c">ICFGWTOComp</a>* comp : cycle-&gt;getWTOComponents())</div>
-<div class="line"><span class="lineno">  136</span>        {</div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a82d2864ff7ca8d6742cec42dd90fbc3d">ICFGSingletonWTO</a>* s = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ICFGSingletonWTO&gt;</a>(comp))</div>
-<div class="line"><span class="lineno">  138</span>                <a class="code hl_function" href="namespaceSVF.html#aac4c48718882b8529c5a27c90f4bfca6">nodes</a>.push_back(s-&gt;getICFGNode());</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a065d23ec41ebb5bb608c59f1adc18e9a">ICFGCycleWTO</a>* sub = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ICFGCycleWTO&gt;</a>(comp))</div>
-<div class="line"><span class="lineno">  140</span>                out.insert(<a class="code hl_variable" href="#ac951a55d21be8cdefa210cbcd1c8e9d4">cycleToValVars</a>[sub].begin(), <a class="code hl_variable" href="#ac951a55d21be8cdefa210cbcd1c8e9d4">cycleToValVars</a>[sub].end());</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        <span class="comment">// For each node, collect LHS ValVar IDs from its statements.</span></div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> ICFGNode* node : <a class="code hl_function" href="namespaceSVF.html#aac4c48718882b8529c5a27c90f4bfca6">nodes</a>)</div>
-<div class="line"><span class="lineno">  145</span>        {</div>
-<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFStmt* stmt : node-&gt;getSVFStmts())</div>
-<div class="line"><span class="lineno">  147</span>            {</div>
-<div class="line"><span class="lineno">  148</span>                <span class="keyword">const</span> ValVar* lhs = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">if</span> (<span class="keyword">const</span> AssignStmt* <a class="code hl_variable" href="cJSON_8cpp.html#a8a1a0a26c50cc4becfc754bb68d1dc6b">a</a> = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;AssignStmt&gt;</a>(stmt))</div>
-<div class="line"><span class="lineno">  150</span>                    lhs = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ValVar&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a8a1a0a26c50cc4becfc754bb68d1dc6b">a</a>-&gt;getLHSVar());</div>
-<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> MultiOpndStmt* m = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;MultiOpndStmt&gt;</a>(stmt))</div>
-<div class="line"><span class="lineno">  152</span>                    lhs = m-&gt;getRes();</div>
-<div class="line"><span class="lineno">  153</span>                <span class="keywordflow">if</span> (lhs)</div>
-<div class="line"><span class="lineno">  154</span>                    out.insert(lhs);</div>
-<div class="line"><span class="lineno">  155</span>            }</div>
-<div class="line"><span class="lineno">  156</span>            <span class="comment">// FunEntryICFGNode owns ArgValVars (formal parameters) that have</span></div>
-<div class="line"><span class="lineno">  157</span>            <span class="comment">// no defining stmt at the entry — the CallPE lives on the caller</span></div>
-<div class="line"><span class="lineno">  158</span>            <span class="comment">// side.  For recursive cycles whose head is a FunEntry, we need</span></div>
-<div class="line"><span class="lineno">  159</span>            <span class="comment">// these IDs so widening/narrowing observes them across iterations.</span></div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> FunEntryICFGNode* fe = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;FunEntryICFGNode&gt;</a>(node))</div>
-<div class="line"><span class="lineno">  161</span>            {</div>
-<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFVar* fp : fe-&gt;getFormalParms())</div>
-<div class="line"><span class="lineno">  163</span>                    <span class="keywordflow">if</span> (<span class="keyword">const</span> ValVar* v = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ValVar&gt;</a>(fp))</div>
-<div class="line"><span class="lineno">  164</span>                        out.insert(v);</div>
-<div class="line"><span class="lineno">  165</span>            }</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="line"><span class="lineno">  168</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AEWTO_8cpp_source.html#l00125">125</a> of file <a class="el" href="AEWTO_8cpp_source.html">AEWTO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>{</div>
+<div class="line"><span class="lineno">  127</span>    <span class="comment">// Step 1: Collect all cycles in top-down order using a stack-based DFS,</span></div>
+<div class="line"><span class="lineno">  128</span>    <span class="comment">// then reverse to get bottom-up order (inner cycles before outer ones).</span></div>
+<div class="line"><span class="lineno">  129</span>    std::vector&lt;const ICFGCycleWTO*&gt; cycles;</div>
+<div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        std::vector&lt;const ICFGWTOComp*&gt; <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>;</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; kv : <a class="code hl_variable" href="#af4c8a7ebec94f050966a6a4862676a76">funcToWTO</a>)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">if</span> (!kv.second) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c">ICFGWTOComp</a>* comp : kv.second-&gt;getWTOComponents())</div>
+<div class="line"><span class="lineno">  136</span>                <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.push_back(comp);</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">while</span> (!<a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.empty())</div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c">ICFGWTOComp</a>* comp = <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.back();</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.pop_back();</div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a065d23ec41ebb5bb608c59f1adc18e9a">ICFGCycleWTO</a>* cycle = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ICFGCycleWTO&gt;</a>(comp))</div>
+<div class="line"><span class="lineno">  143</span>            {</div>
+<div class="line"><span class="lineno">  144</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c">ICFGWTOComp</a>* sub : cycle-&gt;getWTOComponents())</div>
+<div class="line"><span class="lineno">  145</span>                    <a class="code hl_variable" href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a>.push_back(sub);</div>
+<div class="line"><span class="lineno">  146</span>                cycles.push_back(cycle);</div>
+<div class="line"><span class="lineno">  147</span>            }</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span>        std::reverse(cycles.begin(), cycles.end());</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>    <span class="comment">// Step 2: Build ValVar sets bottom-up.  Inner cycles are already in the</span></div>
+<div class="line"><span class="lineno">  153</span>    <span class="comment">// map when we reach their enclosing cycle.</span></div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a065d23ec41ebb5bb608c59f1adc18e9a">ICFGCycleWTO</a>* cycle : cycles)</div>
+<div class="line"><span class="lineno">  155</span>    {</div>
+<div class="line"><span class="lineno">  156</span>        <a class="code hl_typedef" href="namespaceSVF.html#a4ecf35a0b61bde7270ef29e66961d5d5">Set&lt;const ValVar*&gt;</a>&amp; out = <a class="code hl_variable" href="#ac951a55d21be8cdefa210cbcd1c8e9d4">cycleToValVars</a>[cycle];</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>        <span class="comment">// Gather every ICFG node in this cycle (head + body singletons).</span></div>
+<div class="line"><span class="lineno">  159</span>        <span class="comment">// For nested sub-cycles, merge their already-computed sets instead.</span></div>
+<div class="line"><span class="lineno">  160</span>        std::vector&lt;const ICFGNode*&gt; <a class="code hl_function" href="namespaceSVF.html#aac4c48718882b8529c5a27c90f4bfca6">nodes</a>;</div>
+<div class="line"><span class="lineno">  161</span>        <a class="code hl_function" href="namespaceSVF.html#aac4c48718882b8529c5a27c90f4bfca6">nodes</a>.push_back(cycle-&gt;head()-&gt;getICFGNode());</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ae7e2a86baf7f3a20ee906030188dce7c">ICFGWTOComp</a>* comp : cycle-&gt;getWTOComponents())</div>
+<div class="line"><span class="lineno">  163</span>        {</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a82d2864ff7ca8d6742cec42dd90fbc3d">ICFGSingletonWTO</a>* s = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ICFGSingletonWTO&gt;</a>(comp))</div>
+<div class="line"><span class="lineno">  165</span>                <a class="code hl_function" href="namespaceSVF.html#aac4c48718882b8529c5a27c90f4bfca6">nodes</a>.push_back(s-&gt;getICFGNode());</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a065d23ec41ebb5bb608c59f1adc18e9a">ICFGCycleWTO</a>* sub = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ICFGCycleWTO&gt;</a>(comp))</div>
+<div class="line"><span class="lineno">  167</span>                out.insert(<a class="code hl_variable" href="#ac951a55d21be8cdefa210cbcd1c8e9d4">cycleToValVars</a>[sub].begin(), <a class="code hl_variable" href="#ac951a55d21be8cdefa210cbcd1c8e9d4">cycleToValVars</a>[sub].end());</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>        <span class="comment">// For each node, collect LHS ValVar IDs from its statements.</span></div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> ICFGNode* node : <a class="code hl_function" href="namespaceSVF.html#aac4c48718882b8529c5a27c90f4bfca6">nodes</a>)</div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFStmt* stmt : node-&gt;getSVFStmts())</div>
+<div class="line"><span class="lineno">  174</span>            {</div>
+<div class="line"><span class="lineno">  175</span>                <span class="keyword">const</span> ValVar* lhs = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">if</span> (<span class="keyword">const</span> AssignStmt* <a class="code hl_variable" href="cJSON_8cpp.html#a8a1a0a26c50cc4becfc754bb68d1dc6b">a</a> = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;AssignStmt&gt;</a>(stmt))</div>
+<div class="line"><span class="lineno">  177</span>                    lhs = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ValVar&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a8a1a0a26c50cc4becfc754bb68d1dc6b">a</a>-&gt;getLHSVar());</div>
+<div class="line"><span class="lineno">  178</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> MultiOpndStmt* m = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;MultiOpndStmt&gt;</a>(stmt))</div>
+<div class="line"><span class="lineno">  179</span>                    lhs = m-&gt;getRes();</div>
+<div class="line"><span class="lineno">  180</span>                <span class="keywordflow">if</span> (lhs)</div>
+<div class="line"><span class="lineno">  181</span>                    out.insert(lhs);</div>
+<div class="line"><span class="lineno">  182</span>            }</div>
+<div class="line"><span class="lineno">  183</span>            <span class="comment">// FunEntryICFGNode owns ArgValVars (formal parameters) that have</span></div>
+<div class="line"><span class="lineno">  184</span>            <span class="comment">// no defining stmt at the entry — the CallPE lives on the caller</span></div>
+<div class="line"><span class="lineno">  185</span>            <span class="comment">// side.  For recursive cycles whose head is a FunEntry, we need</span></div>
+<div class="line"><span class="lineno">  186</span>            <span class="comment">// these IDs so widening/narrowing observes them across iterations.</span></div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> FunEntryICFGNode* fe = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;FunEntryICFGNode&gt;</a>(node))</div>
+<div class="line"><span class="lineno">  188</span>            {</div>
+<div class="line"><span class="lineno">  189</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFVar* fp : fe-&gt;getFormalParms())</div>
+<div class="line"><span class="lineno">  190</span>                    <span class="keywordflow">if</span> (<span class="keyword">const</span> ValVar* v = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ValVar&gt;</a>(fp))</div>
+<div class="line"><span class="lineno">  191</span>                        out.insert(v);</div>
+<div class="line"><span class="lineno">  192</span>            }</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+<div class="line"><span class="lineno">  195</span>}</div>
 <div class="ttc" id="aCMakeLists_8txt_html_aab4f4791f45cdf286a873325329a163b"><div class="ttname"><a href="CMakeLists_8txt.html#aab4f4791f45cdf286a873325329a163b">stack</a></div><div class="ttdeci">PRIVATE Xlinker stack</div><div class="ttdef"><b>Definition</b> <a href="CMakeLists_8txt_source.html#l00038">CMakeLists.txt:38</a></div></div>
 <div class="ttc" id="acJSON_8cpp_html_a8a1a0a26c50cc4becfc754bb68d1dc6b"><div class="ttname"><a href="cJSON_8cpp.html#a8a1a0a26c50cc4becfc754bb68d1dc6b">a</a></div><div class="ttdeci">cJSON * a</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l02560">cJSON.cpp:2560</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aefeaa1d67563fbf00b9f06a848072df1"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVF::SVFUtil::dyn_cast</a></div><div class="ttdeci">LLVM_NODISCARD std::enable_if_t&lt;!is_simple_type&lt; Y &gt;::value, typename cast_retty&lt; X, const Y &gt;::ret_type &gt; dyn_cast(const Y &amp;Val)</div><div class="ttdef"><b>Definition</b> <a href="Casting_8h_source.html#l00405">Casting.h:405</a></div></div>
@@ -480,42 +480,75 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
 <div class="line"><span class="lineno">   53</span>    <a class="code hl_variable" href="#adf9fb46ca834ac7aaefa33fba37ae73c">callGraphSCC</a>-&gt;find();</div>
 <div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code hl_variable" href="#ac2bf1a2bcaf0e99f27c8967f4faa28c6">callGraph</a>-&gt;begin(); it != <a class="code hl_variable" href="#ac2bf1a2bcaf0e99f27c8967f4faa28c6">callGraph</a>-&gt;end(); it++)</div>
-<div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keyword">const</span> FunObjVar *fun = it-&gt;second-&gt;getFunction();</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (fun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#af63a62fb20698840eb4b490a337472f6">isDeclaration</a>())</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> repNodeId = <a class="code hl_variable" href="#adf9fb46ca834ac7aaefa33fba37ae73c">callGraphSCC</a>-&gt;repNode(it-&gt;second-&gt;getId());</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keyword">auto</span> cgSCCNodes = <a class="code hl_variable" href="#adf9fb46ca834ac7aaefa33fba37ae73c">callGraphSCC</a>-&gt;subNodes(repNodeId);</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">bool</span> isEntry = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (it-&gt;second-&gt;getInEdges().empty())</div>
-<div class="line"><span class="lineno">   66</span>            isEntry = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> inEdge: it-&gt;second-&gt;getInEdges())</div>
-<div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> srcNodeId = inEdge-&gt;getSrcID();</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (!cgSCCNodes.test(srcNodeId))</div>
-<div class="line"><span class="lineno">   71</span>                isEntry = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment">// In no-main mode, an SCC with no outside caller is an analysis entry.</span></div>
+<div class="line"><span class="lineno">   56</span>    <span class="comment">// Choose one function per SCC, preferring main when it is present.</span></div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_typedef" href="namespaceSVF.html#a96fe50bab678c03406d20811cb429c53">Map&lt;NodeID, const FunObjVar*&gt;</a> rootEntry;</div>
+<div class="line"><span class="lineno">   58</span>    <a class="code hl_typedef" href="namespaceSVF.html#a4ecf35a0b61bde7270ef29e66961d5d5">Set&lt;NodeID&gt;</a> nonRootSCCs;</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code hl_variable" href="#ac2bf1a2bcaf0e99f27c8967f4faa28c6">callGraph</a>-&gt;begin(); it != <a class="code hl_variable" href="#ac2bf1a2bcaf0e99f27c8967f4faa28c6">callGraph</a>-&gt;end(); ++it)</div>
+<div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keyword">const</span> CallGraphNode* node = it-&gt;second;</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keyword">const</span> FunObjVar* fun = node-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphNode.html#a200bbf3e2ea4133606b7b8adb4863657">getFunction</a>();</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (fun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#af63a62fb20698840eb4b490a337472f6">isDeclaration</a>())</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> rep = <a class="code hl_variable" href="#adf9fb46ca834ac7aaefa33fba37ae73c">callGraphSCC</a>-&gt;repNode(node-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>());</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (!rootEntry.count(rep) || <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a1071e5fd17b686b62d37f11a848d731c">SVFUtil::isProgEntryFunction</a>(fun))</div>
+<div class="line"><span class="lineno">   67</span>            rootEntry[rep] = fun;</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* edge : node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a64d33ee6a460b89c08da16bada24c6cf">getInEdges</a>())</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#adf9fb46ca834ac7aaefa33fba37ae73c">callGraphSCC</a>-&gt;repNode(edge-&gt;getSrcID()) != rep)</div>
+<div class="line"><span class="lineno">   71</span>                nonRootSCCs.insert(rep);</div>
 <div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (isEntry)</div>
-<div class="line"><span class="lineno">   75</span>        {</div>
-<div class="line"><span class="lineno">   76</span>            <a class="code hl_typedef" href="namespaceSVF.html#a4ecf35a0b61bde7270ef29e66961d5d5">Set&lt;const FunObjVar*&gt;</a> funcScc;</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; node: cgSCCNodes)</div>
-<div class="line"><span class="lineno">   78</span>            {</div>
-<div class="line"><span class="lineno">   79</span>                funcScc.insert(<a class="code hl_variable" href="#ac2bf1a2bcaf0e99f27c8967f4faa28c6">callGraph</a>-&gt;getGNode(node)-&gt;getFunction());</div>
-<div class="line"><span class="lineno">   80</span>            }</div>
-<div class="line"><span class="lineno">   81</span>            ICFGWTO* iwto = <span class="keyword">new</span> ICFGWTO(<a class="code hl_variable" href="#a003535d43913ad1de501cc5a496fe3c2">icfg</a>-&gt;getFunEntryICFGNode(fun), funcScc);</div>
-<div class="line"><span class="lineno">   82</span>            iwto-&gt;<a class="code hl_function" href="classSVF_1_1WTO.html#a12d50323eaa2d40925699232beb37747">init</a>();</div>
-<div class="line"><span class="lineno">   83</span>            <a class="code hl_variable" href="#af4c8a7ebec94f050966a6a4862676a76">funcToWTO</a>[it-&gt;second-&gt;getFunction()] = iwto;</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>}</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code hl_variable" href="#ac2bf1a2bcaf0e99f27c8967f4faa28c6">callGraph</a>-&gt;begin(); it != <a class="code hl_variable" href="#ac2bf1a2bcaf0e99f27c8967f4faa28c6">callGraph</a>-&gt;end(); it++)</div>
+<div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keyword">const</span> FunObjVar *fun = it-&gt;second-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a1f3ef0b3a17997f2f766a8e9bdf1ab49">getFunction</a>();</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (fun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#af63a62fb20698840eb4b490a337472f6">isDeclaration</a>())</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> repNodeId = <a class="code hl_variable" href="#adf9fb46ca834ac7aaefa33fba37ae73c">callGraphSCC</a>-&gt;repNode(it-&gt;second-&gt;getId());</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keyword">auto</span> cgSCCNodes = <a class="code hl_variable" href="#adf9fb46ca834ac7aaefa33fba37ae73c">callGraphSCC</a>-&gt;subNodes(repNodeId);</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">bool</span> isEntry = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (it-&gt;second-&gt;getInEdges().empty())</div>
+<div class="line"><span class="lineno">   86</span>            isEntry = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> inEdge: it-&gt;second-&gt;getInEdges())</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> srcNodeId = inEdge-&gt;getSrcID();</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (!cgSCCNodes.test(srcNodeId))</div>
+<div class="line"><span class="lineno">   91</span>                isEntry = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>        <span class="comment">// A root recursive SCC (e.g. nDPI&#39;s bt_decode in no-main mode) has</span></div>
+<div class="line"><span class="lineno">   94</span>        <span class="comment">// internal callers but no outside caller, so neither check above</span></div>
+<div class="line"><span class="lineno">   95</span>        <span class="comment">// selects an entry. Build its WTO too, or handleFunction will fail</span></div>
+<div class="line"><span class="lineno">   96</span>        <span class="comment">// with &quot;Missing WTO for function&quot;. In contrast, main -&gt; foo with</span></div>
+<div class="line"><span class="lineno">   97</span>        <span class="comment">// foo -&gt; foo is already covered by the outside call from main.</span></div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (!nonRootSCCs.count(repNodeId) &amp;&amp; rootEntry[repNodeId] == fun)</div>
+<div class="line"><span class="lineno">   99</span>            isEntry = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (isEntry)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <a class="code hl_typedef" href="namespaceSVF.html#a4ecf35a0b61bde7270ef29e66961d5d5">Set&lt;const FunObjVar*&gt;</a> funcScc;</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; node: cgSCCNodes)</div>
+<div class="line"><span class="lineno">  105</span>            {</div>
+<div class="line"><span class="lineno">  106</span>                funcScc.insert(<a class="code hl_variable" href="#ac2bf1a2bcaf0e99f27c8967f4faa28c6">callGraph</a>-&gt;getGNode(node)-&gt;getFunction());</div>
+<div class="line"><span class="lineno">  107</span>            }</div>
+<div class="line"><span class="lineno">  108</span>            ICFGWTO* iwto = <span class="keyword">new</span> ICFGWTO(<a class="code hl_variable" href="#a003535d43913ad1de501cc5a496fe3c2">icfg</a>-&gt;getFunEntryICFGNode(fun), funcScc);</div>
+<div class="line"><span class="lineno">  109</span>            iwto-&gt;<a class="code hl_function" href="classSVF_1_1WTO.html#a12d50323eaa2d40925699232beb37747">init</a>();</div>
+<div class="line"><span class="lineno">  110</span>            <a class="code hl_variable" href="#af4c8a7ebec94f050966a6a4862676a76">funcToWTO</a>[it-&gt;second-&gt;getFunction()] = iwto;</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>}</div>
+<div class="ttc" id="aclassSVF_1_1CallGraphNode_html_a200bbf3e2ea4133606b7b8adb4863657"><div class="ttname"><a href="classSVF_1_1CallGraphNode.html#a200bbf3e2ea4133606b7b8adb4863657">SVF::CallGraphNode::getFunction</a></div><div class="ttdeci">const FunObjVar * getFunction() const</div><div class="ttdoc">Get function of this call node.</div><div class="ttdef"><b>Definition</b> <a href="CallGraph_8h_source.html#l00191">CallGraph.h:191</a></div></div>
+<div class="ttc" id="aclassSVF_1_1FunObjVar_html_a1f3ef0b3a17997f2f766a8e9bdf1ab49"><div class="ttname"><a href="classSVF_1_1FunObjVar.html#a1f3ef0b3a17997f2f766a8e9bdf1ab49">SVF::FunObjVar::getFunction</a></div><div class="ttdeci">virtual const FunObjVar * getFunction() const</div><div class="ttdoc">Get containing function, or null for globals/constants.</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8cpp_source.html#l00486">SVFVariables.cpp:486</a></div></div>
 <div class="ttc" id="aclassSVF_1_1FunObjVar_html_af63a62fb20698840eb4b490a337472f6"><div class="ttname"><a href="classSVF_1_1FunObjVar.html#af63a62fb20698840eb4b490a337472f6">SVF::FunObjVar::isDeclaration</a></div><div class="ttdeci">bool isDeclaration() const</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l01083">SVFVariables.h:1083</a></div></div>
+<div class="ttc" id="aclassSVF_1_1GenericNode_html_a64d33ee6a460b89c08da16bada24c6cf"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a64d33ee6a460b89c08da16bada24c6cf">SVF::GenericNode::getInEdges</a></div><div class="ttdeci">const GEdgeSetTy &amp; getInEdges() const</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00180">GenericGraph.h:180</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFValue_html_a3e1925f1c3f731bf9047dbd2f929dd91"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">SVF::SVFValue::getId</a></div><div class="ttdeci">NodeID getId() const</div><div class="ttdoc">Get ID.</div><div class="ttdef"><b>Definition</b> <a href="SVFValue_8h_source.html#l00158">SVFValue.h:158</a></div></div>
 <div class="ttc" id="aclassSVF_1_1WTO_html_a12d50323eaa2d40925699232beb37747"><div class="ttname"><a href="classSVF_1_1WTO.html#a12d50323eaa2d40925699232beb37747">SVF::WTO::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition</b> <a href="WTO_8h_source.html#l00672">WTO.h:672</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a1071e5fd17b686b62d37f11a848d731c"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a1071e5fd17b686b62d37f11a848d731c">SVF::SVFUtil::isProgEntryFunction</a></div><div class="ttdeci">bool isProgEntryFunction(const FunObjVar *)</div><div class="ttdoc">Program entry function e.g. main.</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00531">SVFUtil.cpp:531</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a43a65e0d33af3c743294f7a1139d2301"><div class="ttname"><a href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">SVF::NodeID</a></div><div class="ttdeci">u32_t NodeID</div><div class="ttdef"><b>Definition</b> <a href="GeneralType_8h_source.html#l00076">GeneralType.h:76</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a96fe50bab678c03406d20811cb429c53"><div class="ttname"><a href="namespaceSVF.html#a96fe50bab678c03406d20811cb429c53">SVF::Map</a></div><div class="ttdeci">std::unordered_map&lt; Key, Value, Hash, KeyEqual, Allocator &gt; Map</div><div class="ttdef"><b>Definition</b> <a href="GeneralType_8h_source.html#l00056">GeneralType.h:56</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

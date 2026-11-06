@@ -305,21 +305,21 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00691">691</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  692</span>{</div>
-<div class="line"><span class="lineno">  693</span>    <span class="keyword">auto</span>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
-<div class="line"><span class="lineno">  694</span>    <span class="keyword">const</span> AbstractValue&amp; AbsVal = ae.getAbsValue(value, node);</div>
-<div class="line"><span class="lineno">  695</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#a14d1ef0d7a0bf9a68418111214e8ca05">isUninit</a>(AbsVal)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  696</span>    <span class="keywordflow">if</span> (!AbsVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#aa3699151c57c0401092ce12fd9e7b982">isAddr</a>()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  697</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;addr: AbsVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
-<div class="line"><span class="lineno">  698</span>    {</div>
-<div class="line"><span class="lineno">  699</span>        <span class="comment">// Unknown, null, and freed addresses cannot be safely dereferenced.</span></div>
-<div class="line"><span class="lineno">  700</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">AbstractState::isNullOrBlackHoleAddr</a>(addr) ||</div>
-<div class="line"><span class="lineno">  701</span>                ae.getAbsState(node).isFreedMem(addr))</div>
-<div class="line"><span class="lineno">  702</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  703</span>    }</div>
-<div class="line"><span class="lineno">  704</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  705</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00717">717</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  718</span>{</div>
+<div class="line"><span class="lineno">  719</span>    <span class="keyword">auto</span>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
+<div class="line"><span class="lineno">  720</span>    <span class="keyword">const</span> AbstractValue&amp; AbsVal = ae.getAbsValue(value, node);</div>
+<div class="line"><span class="lineno">  721</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#a14d1ef0d7a0bf9a68418111214e8ca05">isUninit</a>(AbsVal)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  722</span>    <span class="keywordflow">if</span> (!AbsVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#aa3699151c57c0401092ce12fd9e7b982">isAddr</a>()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  723</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;addr: AbsVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
+<div class="line"><span class="lineno">  724</span>    {</div>
+<div class="line"><span class="lineno">  725</span>        <span class="comment">// Unknown, null, and freed addresses cannot be safely dereferenced.</span></div>
+<div class="line"><span class="lineno">  726</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">AbstractState::isNullOrBlackHoleAddr</a>(addr) ||</div>
+<div class="line"><span class="lineno">  727</span>                ae.getAbsState(node).isFreedMem(addr))</div>
+<div class="line"><span class="lineno">  728</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  729</span>    }</div>
+<div class="line"><span class="lineno">  730</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  731</span>}</div>
 <div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_addeccac0aae4bd2928c18f1a5cb23e1d"><div class="ttname"><a href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">SVF::AbstractInterpretation::getAEInstance</a></div><div class="ttdeci">static AbstractInterpretation &amp; getAEInstance()</div><div class="ttdef"><b>Definition</b> <a href="AbstractInterpretation_8cpp_source.html#l00076">AbstractInterpretation.cpp:76</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractState_html_a55c78a0dd6a76a9e2719b803dfb427d5"><div class="ttname"><a href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">SVF::AbstractState::isNullOrBlackHoleAddr</a></div><div class="ttdeci">static bool isNullOrBlackHoleAddr(u32_t addr)</div><div class="ttdoc">Whether addr has no concrete backing memory object.</div><div class="ttdef"><b>Definition</b> <a href="AbstractState_8h_source.html#l00154">AbstractState.h:154</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractValue_html_a9523adf98a0146bc6eb978817352a95d"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">SVF::AbstractValue::getAddrs</a></div><div class="ttdeci">AddressValue &amp; getAddrs()</div><div class="ttdef"><b>Definition</b> <a href="AbstractValue_8h_source.html#l00111">AbstractValue.h:111</a></div></div>
@@ -392,52 +392,52 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1AEDetector.html#aa4712c93b8944def0926f46992583bdc">SVF::AEDetector</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00536">536</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  537</span>{</div>
-<div class="line"><span class="lineno">  538</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;CallICFGNode&gt;</a>(node))</div>
-<div class="line"><span class="lineno">  539</span>    {</div>
-<div class="line"><span class="lineno">  540</span>        <span class="comment">// external API like memset(*dst, elem, sz)</span></div>
-<div class="line"><span class="lineno">  541</span>        <span class="comment">// we check if it&#39;s external api and check the corrisponding index</span></div>
-<div class="line"><span class="lineno">  542</span>        <span class="keyword">const</span> CallICFGNode* callNode = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;CallICFGNode&gt;</a>(node);</div>
-<div class="line"><span class="lineno">  543</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVFUtil::isExtCall</a>(callNode-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>()))</div>
-<div class="line"><span class="lineno">  544</span>        {</div>
-<div class="line"><span class="lineno">  545</span>            <a class="code hl_function" href="#ac48328d0388433a72f6f87c3d8779447">detectExtAPI</a>(callNode);</div>
-<div class="line"><span class="lineno">  546</span>        }</div>
-<div class="line"><span class="lineno">  547</span>    }</div>
-<div class="line"><span class="lineno">  548</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  549</span>    {</div>
-<div class="line"><span class="lineno">  550</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; stmt: node-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#afd7465b9aecc8189f79c57f53067a52c">getSVFStmts</a>())</div>
-<div class="line"><span class="lineno">  551</span>        {</div>
-<div class="line"><span class="lineno">  552</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> GepStmt* gep = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;GepStmt&gt;</a>(stmt))</div>
-<div class="line"><span class="lineno">  553</span>            {</div>
-<div class="line"><span class="lineno">  554</span>                <span class="comment">// like llvm bitcode `p = gep p, idx`</span></div>
-<div class="line"><span class="lineno">  555</span>                <span class="comment">// we check rhs p&#39;s all address are valid mem</span></div>
-<div class="line"><span class="lineno">  556</span>                <span class="keyword">const</span> ValVar* rhs = gep-&gt;getRHSVar();</div>
-<div class="line"><span class="lineno">  557</span>                <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(rhs, node))</div>
-<div class="line"><span class="lineno">  558</span>                {</div>
-<div class="line"><span class="lineno">  559</span>                    AEException bug(stmt-&gt;toString());</div>
-<div class="line"><span class="lineno">  560</span>                    <a class="code hl_function" href="#a939e61ff3e0c95de40ac5894def6e838">addBugToReporter</a>(bug, stmt-&gt;getICFGNode());</div>
-<div class="line"><span class="lineno">  561</span>                }</div>
-<div class="line"><span class="lineno">  562</span>            }</div>
-<div class="line"><span class="lineno">  563</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> LoadStmt* load = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;LoadStmt&gt;</a>(stmt))</div>
-<div class="line"><span class="lineno">  564</span>            {</div>
-<div class="line"><span class="lineno">  565</span>                <span class="comment">// like llvm bitcode `p = load q`</span></div>
-<div class="line"><span class="lineno">  566</span>                <span class="comment">// we check lhs p&#39;s all address are valid mem</span></div>
-<div class="line"><span class="lineno">  567</span>                <span class="keyword">const</span> ValVar* lhs = load-&gt;getLHSVar();</div>
-<div class="line"><span class="lineno">  568</span>                <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(lhs, node))</div>
-<div class="line"><span class="lineno">  569</span>                {</div>
-<div class="line"><span class="lineno">  570</span>                    AEException bug(stmt-&gt;toString());</div>
-<div class="line"><span class="lineno">  571</span>                    <a class="code hl_function" href="#a939e61ff3e0c95de40ac5894def6e838">addBugToReporter</a>(bug, stmt-&gt;getICFGNode());</div>
-<div class="line"><span class="lineno">  572</span>                }</div>
-<div class="line"><span class="lineno">  573</span>            }</div>
-<div class="line"><span class="lineno">  574</span>        }</div>
-<div class="line"><span class="lineno">  575</span>    }</div>
-<div class="line"><span class="lineno">  576</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00562">562</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  563</span>{</div>
+<div class="line"><span class="lineno">  564</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;CallICFGNode&gt;</a>(node))</div>
+<div class="line"><span class="lineno">  565</span>    {</div>
+<div class="line"><span class="lineno">  566</span>        <span class="comment">// external API like memset(*dst, elem, sz)</span></div>
+<div class="line"><span class="lineno">  567</span>        <span class="comment">// we check if it&#39;s external api and check the corrisponding index</span></div>
+<div class="line"><span class="lineno">  568</span>        <span class="keyword">const</span> CallICFGNode* callNode = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;CallICFGNode&gt;</a>(node);</div>
+<div class="line"><span class="lineno">  569</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVFUtil::isExtCall</a>(callNode-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>()))</div>
+<div class="line"><span class="lineno">  570</span>        {</div>
+<div class="line"><span class="lineno">  571</span>            <a class="code hl_function" href="#ac48328d0388433a72f6f87c3d8779447">detectExtAPI</a>(callNode);</div>
+<div class="line"><span class="lineno">  572</span>        }</div>
+<div class="line"><span class="lineno">  573</span>    }</div>
+<div class="line"><span class="lineno">  574</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  575</span>    {</div>
+<div class="line"><span class="lineno">  576</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; stmt: node-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#afd7465b9aecc8189f79c57f53067a52c">getSVFStmts</a>())</div>
+<div class="line"><span class="lineno">  577</span>        {</div>
+<div class="line"><span class="lineno">  578</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> GepStmt* gep = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;GepStmt&gt;</a>(stmt))</div>
+<div class="line"><span class="lineno">  579</span>            {</div>
+<div class="line"><span class="lineno">  580</span>                <span class="comment">// like llvm bitcode `p = gep p, idx`</span></div>
+<div class="line"><span class="lineno">  581</span>                <span class="comment">// we check rhs p&#39;s all address are valid mem</span></div>
+<div class="line"><span class="lineno">  582</span>                <span class="keyword">const</span> ValVar* rhs = gep-&gt;getRHSVar();</div>
+<div class="line"><span class="lineno">  583</span>                <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(rhs, node))</div>
+<div class="line"><span class="lineno">  584</span>                {</div>
+<div class="line"><span class="lineno">  585</span>                    AEException bug(stmt-&gt;toString());</div>
+<div class="line"><span class="lineno">  586</span>                    <a class="code hl_function" href="#a939e61ff3e0c95de40ac5894def6e838">addBugToReporter</a>(bug, stmt-&gt;getICFGNode());</div>
+<div class="line"><span class="lineno">  587</span>                }</div>
+<div class="line"><span class="lineno">  588</span>            }</div>
+<div class="line"><span class="lineno">  589</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> LoadStmt* load = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;LoadStmt&gt;</a>(stmt))</div>
+<div class="line"><span class="lineno">  590</span>            {</div>
+<div class="line"><span class="lineno">  591</span>                <span class="comment">// like llvm bitcode `p = load q`</span></div>
+<div class="line"><span class="lineno">  592</span>                <span class="comment">// we check lhs p&#39;s all address are valid mem</span></div>
+<div class="line"><span class="lineno">  593</span>                <span class="keyword">const</span> ValVar* lhs = load-&gt;getLHSVar();</div>
+<div class="line"><span class="lineno">  594</span>                <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(lhs, node))</div>
+<div class="line"><span class="lineno">  595</span>                {</div>
+<div class="line"><span class="lineno">  596</span>                    AEException bug(stmt-&gt;toString());</div>
+<div class="line"><span class="lineno">  597</span>                    <a class="code hl_function" href="#a939e61ff3e0c95de40ac5894def6e838">addBugToReporter</a>(bug, stmt-&gt;getICFGNode());</div>
+<div class="line"><span class="lineno">  598</span>                }</div>
+<div class="line"><span class="lineno">  599</span>            }</div>
+<div class="line"><span class="lineno">  600</span>        }</div>
+<div class="line"><span class="lineno">  601</span>    }</div>
+<div class="line"><span class="lineno">  602</span>}</div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a55c4e8d302f61aa9a46ac7daa318b849"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">SVF::CallICFGNode::getCalledFunction</a></div><div class="ttdeci">const FunObjVar * getCalledFunction() const</div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00501">ICFGNode.h:501</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGNode_html_afd7465b9aecc8189f79c57f53067a52c"><div class="ttname"><a href="classSVF_1_1ICFGNode.html#afd7465b9aecc8189f79c57f53067a52c">SVF::ICFGNode::getSVFStmts</a></div><div class="ttdeci">const SVFStmtList &amp; getSVFStmts() const</div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00116">ICFGNode.h:116</a></div></div>
-<div class="ttc" id="aclassSVF_1_1NullptrDerefDetector_html_a034b35348cf0839b31e8858909fb4d0a"><div class="ttname"><a href="#a034b35348cf0839b31e8858909fb4d0a">SVF::NullptrDerefDetector::canSafelyDerefPtr</a></div><div class="ttdeci">bool canSafelyDerefPtr(const ValVar *ptr, const ICFGNode *node)</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00691">AEDetector.cpp:691</a></div></div>
+<div class="ttc" id="aclassSVF_1_1NullptrDerefDetector_html_a034b35348cf0839b31e8858909fb4d0a"><div class="ttname"><a href="#a034b35348cf0839b31e8858909fb4d0a">SVF::NullptrDerefDetector::canSafelyDerefPtr</a></div><div class="ttdeci">bool canSafelyDerefPtr(const ValVar *ptr, const ICFGNode *node)</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00717">AEDetector.cpp:717</a></div></div>
 <div class="ttc" id="aclassSVF_1_1NullptrDerefDetector_html_a939e61ff3e0c95de40ac5894def6e838"><div class="ttname"><a href="#a939e61ff3e0c95de40ac5894def6e838">SVF::NullptrDerefDetector::addBugToReporter</a></div><div class="ttdeci">void addBugToReporter(const AEException &amp;e, const ICFGNode *node)</div><div class="ttdoc">Adds a bug to the reporter based on an exception.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00394">AEDetector.h:394</a></div></div>
-<div class="ttc" id="aclassSVF_1_1NullptrDerefDetector_html_ac48328d0388433a72f6f87c3d8779447"><div class="ttname"><a href="#ac48328d0388433a72f6f87c3d8779447">SVF::NullptrDerefDetector::detectExtAPI</a></div><div class="ttdeci">void detectExtAPI(const CallICFGNode *call)</div><div class="ttdoc">Handle external API calls related to nullptr dereferences.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00632">AEDetector.cpp:632</a></div></div>
+<div class="ttc" id="aclassSVF_1_1NullptrDerefDetector_html_ac48328d0388433a72f6f87c3d8779447"><div class="ttname"><a href="#ac48328d0388433a72f6f87c3d8779447">SVF::NullptrDerefDetector::detectExtAPI</a></div><div class="ttdeci">void detectExtAPI(const CallICFGNode *call)</div><div class="ttdoc">Handle external API calls related to nullptr dereferences.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00658">AEDetector.cpp:658</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a5ac2d264d80b8bfdbeaf120c5d6778d0"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVF::SVFUtil::cast</a></div><div class="ttdeci">std::enable_if_t&lt;!is_simple_type&lt; Y &gt;::value, typename cast_retty&lt; X, const Y &gt;::ret_type &gt; cast(const Y &amp;Val)</div><div class="ttdef"><b>Definition</b> <a href="Casting_8h_source.html#l00360">Casting.h:360</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a5c8cbc986cccb9d84f87aae162df3737"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVF::SVFUtil::isa</a></div><div class="ttdeci">LLVM_NODISCARD bool isa(const Y &amp;Val)</div><div class="ttdef"><b>Definition</b> <a href="Casting_8h_source.html#l00241">Casting.h:241</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aa6b83d34488eaa1d6613568dd8394bdd"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVF::SVFUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const FunObjVar *fun)</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00526">SVFUtil.cpp:526</a></div></div>
@@ -469,63 +469,63 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00632">632</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  633</span>{</div>
-<div class="line"><span class="lineno">  634</span>    assert(call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>() &amp;&amp; <span class="stringliteral">&quot;FunObjVar* is nullptr&quot;</span>);</div>
-<div class="line"><span class="lineno">  635</span>    <span class="comment">// get ext type</span></div>
-<div class="line"><span class="lineno">  636</span>    <span class="comment">// get argument index which are nullptr deref checkpoints for extapi</span></div>
-<div class="line"><span class="lineno">  637</span>    std::vector&lt;u32_t&gt; tmp_args;</div>
-<div class="line"><span class="lineno">  638</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;annotation: <a class="code hl_function" href="classSVF_1_1ExtAPI.html#a58a764c27354d5f9b70995d30de65f1d">ExtAPI::getExtAPI</a>()-&gt;getExtFuncAnnotations(call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>()))</div>
-<div class="line"><span class="lineno">  639</span>    {</div>
-<div class="line"><span class="lineno">  640</span>        <span class="keywordflow">if</span> (annotation.find(<span class="stringliteral">&quot;MEMCPY&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno">  641</span>        {</div>
-<div class="line"><span class="lineno">  642</span>            <span class="keywordflow">if</span> (call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#ada0b68a709fde6d41a5e067b87642937">arg_size</a>() &lt; 4)</div>
-<div class="line"><span class="lineno">  643</span>            {</div>
-<div class="line"><span class="lineno">  644</span>                <span class="comment">// for memcpy(void* dest, const void* src, size_t n)</span></div>
-<div class="line"><span class="lineno">  645</span>                tmp_args.push_back(0);</div>
-<div class="line"><span class="lineno">  646</span>                tmp_args.push_back(1);</div>
-<div class="line"><span class="lineno">  647</span>            }</div>
-<div class="line"><span class="lineno">  648</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  649</span>            {</div>
-<div class="line"><span class="lineno">  650</span>                <span class="comment">// for unsigned long iconv(void* cd, char **restrict inbuf, unsigned long *restrict inbytesleft, char **restrict outbuf, unsigned long *restrict outbytesleft)</span></div>
-<div class="line"><span class="lineno">  651</span>                tmp_args.push_back(1);</div>
-<div class="line"><span class="lineno">  652</span>                tmp_args.push_back(2);</div>
-<div class="line"><span class="lineno">  653</span>                tmp_args.push_back(3);</div>
-<div class="line"><span class="lineno">  654</span>                tmp_args.push_back(4);</div>
-<div class="line"><span class="lineno">  655</span>            }</div>
-<div class="line"><span class="lineno">  656</span>        }</div>
-<div class="line"><span class="lineno">  657</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (annotation.find(<span class="stringliteral">&quot;MEMSET&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno">  658</span>        {</div>
-<div class="line"><span class="lineno">  659</span>            <span class="comment">// for memset(void* dest, elem, sz)</span></div>
-<div class="line"><span class="lineno">  660</span>            tmp_args.push_back(0);</div>
-<div class="line"><span class="lineno">  661</span>        }</div>
-<div class="line"><span class="lineno">  662</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (annotation.find(<span class="stringliteral">&quot;STRCPY&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno">  663</span>        {</div>
-<div class="line"><span class="lineno">  664</span>            <span class="comment">// for strcpy(void* dest, void* src)</span></div>
-<div class="line"><span class="lineno">  665</span>            tmp_args.push_back(0);</div>
-<div class="line"><span class="lineno">  666</span>            tmp_args.push_back(1);</div>
-<div class="line"><span class="lineno">  667</span>        }</div>
-<div class="line"><span class="lineno">  668</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (annotation.find(<span class="stringliteral">&quot;STRCAT&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno">  669</span>        {</div>
-<div class="line"><span class="lineno">  670</span>            <span class="comment">// for strcat(void* dest, const void* src)</span></div>
-<div class="line"><span class="lineno">  671</span>            <span class="comment">// for strncat(void* dest, const void* src, size_t n)</span></div>
-<div class="line"><span class="lineno">  672</span>            tmp_args.push_back(0);</div>
-<div class="line"><span class="lineno">  673</span>            tmp_args.push_back(1);</div>
-<div class="line"><span class="lineno">  674</span>        }</div>
-<div class="line"><span class="lineno">  675</span>    }</div>
-<div class="line"><span class="lineno">  676</span> </div>
-<div class="line"><span class="lineno">  677</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;arg: tmp_args)</div>
-<div class="line"><span class="lineno">  678</span>    {</div>
-<div class="line"><span class="lineno">  679</span>        <span class="keywordflow">if</span> (call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#ada0b68a709fde6d41a5e067b87642937">arg_size</a>() &lt;= arg)</div>
-<div class="line"><span class="lineno">  680</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  681</span>        <span class="keyword">const</span> ValVar* argVal = call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">getArgument</a>(arg);</div>
-<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">if</span> (argVal &amp;&amp; !<a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(argVal, call))</div>
-<div class="line"><span class="lineno">  683</span>        {</div>
-<div class="line"><span class="lineno">  684</span>            AEException bug(call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a05607292d6ee32db702fa36aa8bd894e">toString</a>());</div>
-<div class="line"><span class="lineno">  685</span>            <a class="code hl_function" href="#a939e61ff3e0c95de40ac5894def6e838">addBugToReporter</a>(bug, call);</div>
-<div class="line"><span class="lineno">  686</span>        }</div>
-<div class="line"><span class="lineno">  687</span>    }</div>
-<div class="line"><span class="lineno">  688</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00658">658</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  659</span>{</div>
+<div class="line"><span class="lineno">  660</span>    assert(call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>() &amp;&amp; <span class="stringliteral">&quot;FunObjVar* is nullptr&quot;</span>);</div>
+<div class="line"><span class="lineno">  661</span>    <span class="comment">// get ext type</span></div>
+<div class="line"><span class="lineno">  662</span>    <span class="comment">// get argument index which are nullptr deref checkpoints for extapi</span></div>
+<div class="line"><span class="lineno">  663</span>    std::vector&lt;u32_t&gt; tmp_args;</div>
+<div class="line"><span class="lineno">  664</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;annotation: <a class="code hl_function" href="classSVF_1_1ExtAPI.html#a58a764c27354d5f9b70995d30de65f1d">ExtAPI::getExtAPI</a>()-&gt;getExtFuncAnnotations(call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>()))</div>
+<div class="line"><span class="lineno">  665</span>    {</div>
+<div class="line"><span class="lineno">  666</span>        <span class="keywordflow">if</span> (annotation.find(<span class="stringliteral">&quot;MEMCPY&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  667</span>        {</div>
+<div class="line"><span class="lineno">  668</span>            <span class="keywordflow">if</span> (call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#ada0b68a709fde6d41a5e067b87642937">arg_size</a>() &lt; 4)</div>
+<div class="line"><span class="lineno">  669</span>            {</div>
+<div class="line"><span class="lineno">  670</span>                <span class="comment">// for memcpy(void* dest, const void* src, size_t n)</span></div>
+<div class="line"><span class="lineno">  671</span>                tmp_args.push_back(0);</div>
+<div class="line"><span class="lineno">  672</span>                tmp_args.push_back(1);</div>
+<div class="line"><span class="lineno">  673</span>            }</div>
+<div class="line"><span class="lineno">  674</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  675</span>            {</div>
+<div class="line"><span class="lineno">  676</span>                <span class="comment">// for unsigned long iconv(void* cd, char **restrict inbuf, unsigned long *restrict inbytesleft, char **restrict outbuf, unsigned long *restrict outbytesleft)</span></div>
+<div class="line"><span class="lineno">  677</span>                tmp_args.push_back(1);</div>
+<div class="line"><span class="lineno">  678</span>                tmp_args.push_back(2);</div>
+<div class="line"><span class="lineno">  679</span>                tmp_args.push_back(3);</div>
+<div class="line"><span class="lineno">  680</span>                tmp_args.push_back(4);</div>
+<div class="line"><span class="lineno">  681</span>            }</div>
+<div class="line"><span class="lineno">  682</span>        }</div>
+<div class="line"><span class="lineno">  683</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (annotation.find(<span class="stringliteral">&quot;MEMSET&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  684</span>        {</div>
+<div class="line"><span class="lineno">  685</span>            <span class="comment">// for memset(void* dest, elem, sz)</span></div>
+<div class="line"><span class="lineno">  686</span>            tmp_args.push_back(0);</div>
+<div class="line"><span class="lineno">  687</span>        }</div>
+<div class="line"><span class="lineno">  688</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (annotation.find(<span class="stringliteral">&quot;STRCPY&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  689</span>        {</div>
+<div class="line"><span class="lineno">  690</span>            <span class="comment">// for strcpy(void* dest, void* src)</span></div>
+<div class="line"><span class="lineno">  691</span>            tmp_args.push_back(0);</div>
+<div class="line"><span class="lineno">  692</span>            tmp_args.push_back(1);</div>
+<div class="line"><span class="lineno">  693</span>        }</div>
+<div class="line"><span class="lineno">  694</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (annotation.find(<span class="stringliteral">&quot;STRCAT&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  695</span>        {</div>
+<div class="line"><span class="lineno">  696</span>            <span class="comment">// for strcat(void* dest, const void* src)</span></div>
+<div class="line"><span class="lineno">  697</span>            <span class="comment">// for strncat(void* dest, const void* src, size_t n)</span></div>
+<div class="line"><span class="lineno">  698</span>            tmp_args.push_back(0);</div>
+<div class="line"><span class="lineno">  699</span>            tmp_args.push_back(1);</div>
+<div class="line"><span class="lineno">  700</span>        }</div>
+<div class="line"><span class="lineno">  701</span>    }</div>
+<div class="line"><span class="lineno">  702</span> </div>
+<div class="line"><span class="lineno">  703</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;arg: tmp_args)</div>
+<div class="line"><span class="lineno">  704</span>    {</div>
+<div class="line"><span class="lineno">  705</span>        <span class="keywordflow">if</span> (call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#ada0b68a709fde6d41a5e067b87642937">arg_size</a>() &lt;= arg)</div>
+<div class="line"><span class="lineno">  706</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  707</span>        <span class="keyword">const</span> ValVar* argVal = call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">getArgument</a>(arg);</div>
+<div class="line"><span class="lineno">  708</span>        <span class="keywordflow">if</span> (argVal &amp;&amp; !<a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(argVal, call))</div>
+<div class="line"><span class="lineno">  709</span>        {</div>
+<div class="line"><span class="lineno">  710</span>            AEException bug(call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a05607292d6ee32db702fa36aa8bd894e">toString</a>());</div>
+<div class="line"><span class="lineno">  711</span>            <a class="code hl_function" href="#a939e61ff3e0c95de40ac5894def6e838">addBugToReporter</a>(bug, call);</div>
+<div class="line"><span class="lineno">  712</span>        }</div>
+<div class="line"><span class="lineno">  713</span>    }</div>
+<div class="line"><span class="lineno">  714</span>}</div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a05607292d6ee32db702fa36aa8bd894e"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a05607292d6ee32db702fa36aa8bd894e">SVF::CallICFGNode::toString</a></div><div class="ttdeci">const std::string toString() const override</div><div class="ttdef"><b>Definition</b> <a href="ICFG_8cpp_source.html#l00129">ICFG.cpp:129</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a170acd29312b20ce4cbe221d7b23d11c"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">SVF::CallICFGNode::getArgument</a></div><div class="ttdeci">const ValVar * getArgument(u32_t ArgNo) const</div><div class="ttdoc">Parameter operations.</div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00483">ICFGNode.h:483</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_ada0b68a709fde6d41a5e067b87642937"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#ada0b68a709fde6d41a5e067b87642937">SVF::CallICFGNode::arg_size</a></div><div class="ttdeci">u32_t arg_size() const</div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00488">ICFGNode.h:488</a></div></div>
@@ -566,58 +566,58 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1AEDetector.html#a2455e0d20bf52a88832bf36ff414c75a">SVF::AEDetector</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00579">579</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  580</span>{</div>
-<div class="line"><span class="lineno">  581</span>    std::string funcName = callNode-&gt;getCalledFunction()-&gt;getName();</div>
-<div class="line"><span class="lineno">  582</span>    <span class="keyword">auto</span>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
-<div class="line"><span class="lineno">  583</span>    <span class="keywordflow">if</span> (funcName == <span class="stringliteral">&quot;UNSAFE_LOAD&quot;</span>)</div>
-<div class="line"><span class="lineno">  584</span>    {</div>
-<div class="line"><span class="lineno">  585</span>        <span class="comment">// void UNSAFE_LOAD(void* ptr);</span></div>
-<div class="line"><span class="lineno">  586</span>        ae.getUtils()-&gt;checkpoints.erase(callNode);</div>
-<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">if</span> (callNode-&gt;arg_size() &lt; 1)</div>
-<div class="line"><span class="lineno">  588</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  589</span> </div>
-<div class="line"><span class="lineno">  590</span>        <span class="keyword">const</span> ValVar* arg0Val = callNode-&gt;getArgument(0);</div>
-<div class="line"><span class="lineno">  591</span>        <span class="comment">// opt may directly dereference a null pointer and call UNSAFE_LOAD(null)</span></div>
-<div class="line"><span class="lineno">  592</span>        <span class="keywordtype">bool</span> isSafe = <a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(arg0Val, callNode) &amp;&amp; arg0Val-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>() != 0;</div>
-<div class="line"><span class="lineno">  593</span>        <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <span class="stringliteral">&quot;[UNSAFE_LOAD] node=&quot;</span> &lt;&lt; callNode-&gt;getId()</div>
-<div class="line"><span class="lineno">  594</span>                        &lt;&lt; <span class="stringliteral">&quot; arg0=&quot;</span> &lt;&lt; arg0Val-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>() &lt;&lt; <span class="stringliteral">&quot; isSafe=&quot;</span> &lt;&lt; isSafe</div>
-<div class="line"><span class="lineno">  595</span>                        &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  596</span>        <span class="keywordflow">if</span> (!isSafe)</div>
-<div class="line"><span class="lineno">  597</span>        {</div>
-<div class="line"><span class="lineno">  598</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a05dc00b2bd9a8176aae31b6cfffe725d">SVFUtil::sucMsg</a>(<span class="stringliteral">&quot;success: expected null dereference at UNSAFE_LOAD&quot;</span>)</div>
-<div class="line"><span class="lineno">  599</span>                            &lt;&lt; <span class="stringliteral">&quot; — &quot;</span> &lt;&lt; callNode-&gt;toString() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  600</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  601</span>        }</div>
-<div class="line"><span class="lineno">  602</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  603</span>        {</div>
-<div class="line"><span class="lineno">  604</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6">SVFUtil::errMsg</a>(<span class="stringliteral">&quot;failure: null dereference expected at UNSAFE_LOAD, but none detected&quot;</span>)</div>
-<div class="line"><span class="lineno">  605</span>                            &lt;&lt; <span class="stringliteral">&quot; — Position: &quot;</span> &lt;&lt; callNode-&gt;getSourceLoc() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  606</span>            assert(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  607</span>        }</div>
-<div class="line"><span class="lineno">  608</span>    }</div>
-<div class="line"><span class="lineno">  609</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (funcName == <span class="stringliteral">&quot;SAFE_LOAD&quot;</span>)</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00605">605</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  606</span>{</div>
+<div class="line"><span class="lineno">  607</span>    std::string funcName = callNode-&gt;getCalledFunction()-&gt;getName();</div>
+<div class="line"><span class="lineno">  608</span>    <span class="keyword">auto</span>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
+<div class="line"><span class="lineno">  609</span>    <span class="keywordflow">if</span> (funcName == <span class="stringliteral">&quot;UNSAFE_LOAD&quot;</span>)</div>
 <div class="line"><span class="lineno">  610</span>    {</div>
-<div class="line"><span class="lineno">  611</span>        <span class="comment">// void SAFE_LOAD(void* ptr);</span></div>
+<div class="line"><span class="lineno">  611</span>        <span class="comment">// void UNSAFE_LOAD(void* ptr);</span></div>
 <div class="line"><span class="lineno">  612</span>        ae.getUtils()-&gt;checkpoints.erase(callNode);</div>
-<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">if</span> (callNode-&gt;arg_size() &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  614</span>        <span class="keyword">const</span> ValVar* arg0Val = callNode-&gt;getArgument(0);</div>
-<div class="line"><span class="lineno">  615</span>        <span class="comment">// opt may directly dereference a null pointer and call UNSAFE_LOAD(null)ols</span></div>
-<div class="line"><span class="lineno">  616</span>        <span class="keywordtype">bool</span> isSafe = <a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(arg0Val, callNode) &amp;&amp; arg0Val-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>() != 0;</div>
-<div class="line"><span class="lineno">  617</span>        <span class="keywordflow">if</span> (isSafe)</div>
-<div class="line"><span class="lineno">  618</span>        {</div>
-<div class="line"><span class="lineno">  619</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a05dc00b2bd9a8176aae31b6cfffe725d">SVFUtil::sucMsg</a>(<span class="stringliteral">&quot;success: expected safe dereference at SAFE_LOAD&quot;</span>)</div>
-<div class="line"><span class="lineno">  620</span>                            &lt;&lt; <span class="stringliteral">&quot; — &quot;</span> &lt;&lt; callNode-&gt;toString() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  621</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  622</span>        }</div>
-<div class="line"><span class="lineno">  623</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  624</span>        {</div>
-<div class="line"><span class="lineno">  625</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6">SVFUtil::errMsg</a>(<span class="stringliteral">&quot;failure: unexpected null dereference at SAFE_LOAD&quot;</span>)</div>
-<div class="line"><span class="lineno">  626</span>                            &lt;&lt; <span class="stringliteral">&quot; — Position: &quot;</span> &lt;&lt; callNode-&gt;getSourceLoc() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  627</span>            assert(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  628</span>        }</div>
-<div class="line"><span class="lineno">  629</span>    }</div>
-<div class="line"><span class="lineno">  630</span>}</div>
+<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">if</span> (callNode-&gt;arg_size() &lt; 1)</div>
+<div class="line"><span class="lineno">  614</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  615</span> </div>
+<div class="line"><span class="lineno">  616</span>        <span class="keyword">const</span> ValVar* arg0Val = callNode-&gt;getArgument(0);</div>
+<div class="line"><span class="lineno">  617</span>        <span class="comment">// opt may directly dereference a null pointer and call UNSAFE_LOAD(null)</span></div>
+<div class="line"><span class="lineno">  618</span>        <span class="keywordtype">bool</span> isSafe = <a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(arg0Val, callNode) &amp;&amp; arg0Val-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>() != 0;</div>
+<div class="line"><span class="lineno">  619</span>        <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <span class="stringliteral">&quot;[UNSAFE_LOAD] node=&quot;</span> &lt;&lt; callNode-&gt;getId()</div>
+<div class="line"><span class="lineno">  620</span>                        &lt;&lt; <span class="stringliteral">&quot; arg0=&quot;</span> &lt;&lt; arg0Val-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>() &lt;&lt; <span class="stringliteral">&quot; isSafe=&quot;</span> &lt;&lt; isSafe</div>
+<div class="line"><span class="lineno">  621</span>                        &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  622</span>        <span class="keywordflow">if</span> (!isSafe)</div>
+<div class="line"><span class="lineno">  623</span>        {</div>
+<div class="line"><span class="lineno">  624</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a05dc00b2bd9a8176aae31b6cfffe725d">SVFUtil::sucMsg</a>(<span class="stringliteral">&quot;success: expected null dereference at UNSAFE_LOAD&quot;</span>)</div>
+<div class="line"><span class="lineno">  625</span>                            &lt;&lt; <span class="stringliteral">&quot; — &quot;</span> &lt;&lt; callNode-&gt;toString() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  626</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  627</span>        }</div>
+<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  629</span>        {</div>
+<div class="line"><span class="lineno">  630</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6">SVFUtil::errMsg</a>(<span class="stringliteral">&quot;failure: null dereference expected at UNSAFE_LOAD, but none detected&quot;</span>)</div>
+<div class="line"><span class="lineno">  631</span>                            &lt;&lt; <span class="stringliteral">&quot; — Position: &quot;</span> &lt;&lt; callNode-&gt;getSourceLoc() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  632</span>            assert(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  633</span>        }</div>
+<div class="line"><span class="lineno">  634</span>    }</div>
+<div class="line"><span class="lineno">  635</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (funcName == <span class="stringliteral">&quot;SAFE_LOAD&quot;</span>)</div>
+<div class="line"><span class="lineno">  636</span>    {</div>
+<div class="line"><span class="lineno">  637</span>        <span class="comment">// void SAFE_LOAD(void* ptr);</span></div>
+<div class="line"><span class="lineno">  638</span>        ae.getUtils()-&gt;checkpoints.erase(callNode);</div>
+<div class="line"><span class="lineno">  639</span>        <span class="keywordflow">if</span> (callNode-&gt;arg_size() &lt; 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  640</span>        <span class="keyword">const</span> ValVar* arg0Val = callNode-&gt;getArgument(0);</div>
+<div class="line"><span class="lineno">  641</span>        <span class="comment">// opt may directly dereference a null pointer and call UNSAFE_LOAD(null)ols</span></div>
+<div class="line"><span class="lineno">  642</span>        <span class="keywordtype">bool</span> isSafe = <a class="code hl_function" href="#a034b35348cf0839b31e8858909fb4d0a">canSafelyDerefPtr</a>(arg0Val, callNode) &amp;&amp; arg0Val-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>() != 0;</div>
+<div class="line"><span class="lineno">  643</span>        <span class="keywordflow">if</span> (isSafe)</div>
+<div class="line"><span class="lineno">  644</span>        {</div>
+<div class="line"><span class="lineno">  645</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a05dc00b2bd9a8176aae31b6cfffe725d">SVFUtil::sucMsg</a>(<span class="stringliteral">&quot;success: expected safe dereference at SAFE_LOAD&quot;</span>)</div>
+<div class="line"><span class="lineno">  646</span>                            &lt;&lt; <span class="stringliteral">&quot; — &quot;</span> &lt;&lt; callNode-&gt;toString() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  647</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  648</span>        }</div>
+<div class="line"><span class="lineno">  649</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  650</span>        {</div>
+<div class="line"><span class="lineno">  651</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVFUtil::outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6">SVFUtil::errMsg</a>(<span class="stringliteral">&quot;failure: unexpected null dereference at SAFE_LOAD&quot;</span>)</div>
+<div class="line"><span class="lineno">  652</span>                            &lt;&lt; <span class="stringliteral">&quot; — Position: &quot;</span> &lt;&lt; callNode-&gt;getSourceLoc() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  653</span>            assert(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  654</span>        }</div>
+<div class="line"><span class="lineno">  655</span>    }</div>
+<div class="line"><span class="lineno">  656</span>}</div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a3e1925f1c3f731bf9047dbd2f929dd91"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">SVF::SVFValue::getId</a></div><div class="ttdeci">NodeID getId() const</div><div class="ttdoc">Get ID.</div><div class="ttdef"><b>Definition</b> <a href="SVFValue_8h_source.html#l00158">SVFValue.h:158</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a05dc00b2bd9a8176aae31b6cfffe725d"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a05dc00b2bd9a8176aae31b6cfffe725d">SVF::SVFUtil::sucMsg</a></div><div class="ttdeci">std::string sucMsg(const std::string &amp;msg)</div><div class="ttdoc">Returns successful message by converting a string into green string output.</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00075">SVFUtil.cpp:75</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_a7655b13bbfe720ca2b8a25e0a72528e6"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#a7655b13bbfe720ca2b8a25e0a72528e6">SVF::SVFUtil::errMsg</a></div><div class="ttdeci">std::string errMsg(const std::string &amp;msg)</div><div class="ttdoc">Print error message by converting a string into red string output.</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00098">SVFUtil.cpp:98</a></div></div>

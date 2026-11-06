@@ -2132,31 +2132,31 @@ Friends</h2></td></tr>
 
 <p>Bitwise AND of IntervalValues. </p>
 
-<p class="definition">Definition at line <a class="el" href="IntervalValue_8h_source.html#l00960">960</a> of file <a class="el" href="IntervalValue_8h_source.html">IntervalValue.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  961</span>{</div>
-<div class="line"><span class="lineno">  962</span>    <span class="keywordflow">if</span> (lhs.isBottom() || rhs.isBottom())</div>
-<div class="line"><span class="lineno">  963</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
-<div class="line"><span class="lineno">  964</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.is_numeral() &amp;&amp; rhs.is_numeral())</div>
-<div class="line"><span class="lineno">  965</span>    {</div>
-<div class="line"><span class="lineno">  966</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(lhs.lb() &amp; rhs.lb());</div>
-<div class="line"><span class="lineno">  967</span>    }</div>
-<div class="line"><span class="lineno">  968</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; rhs.lb().getNumeral() &gt;= 0)</div>
-<div class="line"><span class="lineno">  969</span>    {</div>
-<div class="line"><span class="lineno">  970</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, min(lhs.ub(), rhs.ub()));</div>
-<div class="line"><span class="lineno">  971</span>    }</div>
-<div class="line"><span class="lineno">  972</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0)</div>
-<div class="line"><span class="lineno">  973</span>    {</div>
-<div class="line"><span class="lineno">  974</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, lhs.ub());</div>
-<div class="line"><span class="lineno">  975</span>    }</div>
-<div class="line"><span class="lineno">  976</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhs.lb().getNumeral() &gt;= 0)</div>
-<div class="line"><span class="lineno">  977</span>    {</div>
-<div class="line"><span class="lineno">  978</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, rhs.ub());</div>
-<div class="line"><span class="lineno">  979</span>    }</div>
-<div class="line"><span class="lineno">  980</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  981</span>    {</div>
-<div class="line"><span class="lineno">  982</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
-<div class="line"><span class="lineno">  983</span>    }</div>
-<div class="line"><span class="lineno">  984</span>}</div>
+<p class="definition">Definition at line <a class="el" href="IntervalValue_8h_source.html#l00949">949</a> of file <a class="el" href="IntervalValue_8h_source.html">IntervalValue.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  950</span>{</div>
+<div class="line"><span class="lineno">  951</span>    <span class="keywordflow">if</span> (lhs.isBottom() || rhs.isBottom())</div>
+<div class="line"><span class="lineno">  952</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
+<div class="line"><span class="lineno">  953</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.is_numeral() &amp;&amp; rhs.is_numeral())</div>
+<div class="line"><span class="lineno">  954</span>    {</div>
+<div class="line"><span class="lineno">  955</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(lhs.lb() &amp; rhs.lb());</div>
+<div class="line"><span class="lineno">  956</span>    }</div>
+<div class="line"><span class="lineno">  957</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; rhs.lb().getNumeral() &gt;= 0)</div>
+<div class="line"><span class="lineno">  958</span>    {</div>
+<div class="line"><span class="lineno">  959</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, min(lhs.ub(), rhs.ub()));</div>
+<div class="line"><span class="lineno">  960</span>    }</div>
+<div class="line"><span class="lineno">  961</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0)</div>
+<div class="line"><span class="lineno">  962</span>    {</div>
+<div class="line"><span class="lineno">  963</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, lhs.ub());</div>
+<div class="line"><span class="lineno">  964</span>    }</div>
+<div class="line"><span class="lineno">  965</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rhs.lb().getNumeral() &gt;= 0)</div>
+<div class="line"><span class="lineno">  966</span>    {</div>
+<div class="line"><span class="lineno">  967</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, rhs.ub());</div>
+<div class="line"><span class="lineno">  968</span>    }</div>
+<div class="line"><span class="lineno">  969</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  970</span>    {</div>
+<div class="line"><span class="lineno">  971</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
+<div class="line"><span class="lineno">  972</span>    }</div>
+<div class="line"><span class="lineno">  973</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2418,30 +2418,19 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno">  897</span>        shift.meet_with(<a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(0, <a class="code hl_function" href="#aaf82f969eb5f5cdc860a2852662159cf">IntervalValue::plus_infinity</a>()));</div>
 <div class="line"><span class="lineno">  898</span>        <span class="keywordflow">if</span> (shift.isBottom())</div>
 <div class="line"><span class="lineno">  899</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
-<div class="line"><span class="lineno">  900</span>        BoundedInt <a class="code hl_function" href="#af474918db973b38af8eb4c7793624363">lb</a> = 0;</div>
-<div class="line"><span class="lineno">  901</span>        <span class="comment">// If the shift is greater than 32, the result is always 0</span></div>
-<div class="line"><span class="lineno">  902</span>        <span class="keywordflow">if</span> ((<a class="code hl_typedef" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a>) shift.lb().getNumeral() &gt;= 32 || shift.lb().is_infinity())</div>
-<div class="line"><span class="lineno">  903</span>        {</div>
-<div class="line"><span class="lineno">  904</span>            <a class="code hl_function" href="#af474918db973b38af8eb4c7793624363">lb</a> = <a class="code hl_function" href="#a1fa81ea6c8a3c1a51c5842f8309c5c69">IntervalValue::minus_infinity</a>();</div>
-<div class="line"><span class="lineno">  905</span>        }</div>
-<div class="line"><span class="lineno">  906</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  907</span>        {</div>
-<div class="line"><span class="lineno">  908</span>            <a class="code hl_function" href="#af474918db973b38af8eb4c7793624363">lb</a> = (1 &lt;&lt; (<a class="code hl_typedef" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a>) shift.lb().<a class="code hl_function" href="#ae081b5c462f8ed5b306719822e35cea9">getNumeral</a>());</div>
-<div class="line"><span class="lineno">  909</span>        }</div>
-<div class="line"><span class="lineno">  910</span>        BoundedInt <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a> = 0;</div>
-<div class="line"><span class="lineno">  911</span>        <span class="keywordflow">if</span> (shift.ub().is_infinity())</div>
-<div class="line"><span class="lineno">  912</span>        {</div>
-<div class="line"><span class="lineno">  913</span>            <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a> = <a class="code hl_function" href="#aaf82f969eb5f5cdc860a2852662159cf">IntervalValue::plus_infinity</a>();</div>
-<div class="line"><span class="lineno">  914</span>        }</div>
-<div class="line"><span class="lineno">  915</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  916</span>        {</div>
-<div class="line"><span class="lineno">  917</span>            <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a> = (1 &lt;&lt; (<a class="code hl_typedef" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a>) shift.ub().<a class="code hl_function" href="#ae081b5c462f8ed5b306719822e35cea9">getNumeral</a>());</div>
-<div class="line"><span class="lineno">  918</span>        }</div>
-<div class="line"><span class="lineno">  919</span>        <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> coeff(<a class="code hl_function" href="#af474918db973b38af8eb4c7793624363">lb</a>, <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>);</div>
-<div class="line"><span class="lineno">  920</span>        <span class="keywordflow">return</span> lhs * coeff;</div>
-<div class="line"><span class="lineno">  921</span>    }</div>
-<div class="line"><span class="lineno">  922</span>}</div>
-<div class="ttc" id="aclassSVF_1_1IntervalValue_html_ae081b5c462f8ed5b306719822e35cea9"><div class="ttname"><a href="#ae081b5c462f8ed5b306719822e35cea9">SVF::IntervalValue::getNumeral</a></div><div class="ttdeci">s64_t getNumeral() const</div><div class="ttdoc">Return.</div><div class="ttdef"><b>Definition</b> <a href="IntervalValue_8h_source.html#l00258">IntervalValue.h:258</a></div></div>
+<div class="line"><span class="lineno">  900</span>        <span class="comment">// Zero stays zero for any admitted shift, even an unbounded one.</span></div>
+<div class="line"><span class="lineno">  901</span>        <span class="keywordflow">if</span> (lhs.equals(<a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(0)))</div>
+<div class="line"><span class="lineno">  902</span>            <span class="keywordflow">return</span> lhs;</div>
+<div class="line"><span class="lineno">  903</span>        <span class="comment">// 1 &lt;&lt; 31 overflows a signed 32-bit coefficient and may create an</span></div>
+<div class="line"><span class="lineno">  904</span>        <span class="comment">// invalid interval whose lower bound is greater than its upper bound.</span></div>
+<div class="line"><span class="lineno">  905</span>        <span class="keywordflow">if</span> (shift.ub().is_infinity() || shift.ub().getIntNumeral() &gt;= 31)</div>
+<div class="line"><span class="lineno">  906</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
+<div class="line"><span class="lineno">  907</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> low = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a><span class="keyword">&gt;</span>(shift.lb().<a class="code hl_function" href="#a4f9d13c0f642fcad6ddb86ea79fac6e3">getIntNumeral</a>());</div>
+<div class="line"><span class="lineno">  908</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a> high = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">s32_t</a><span class="keyword">&gt;</span>(shift.ub().<a class="code hl_function" href="#a4f9d13c0f642fcad6ddb86ea79fac6e3">getIntNumeral</a>());</div>
+<div class="line"><span class="lineno">  909</span>        <span class="keywordflow">return</span> lhs * <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(1) &lt;&lt; low, <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(1) &lt;&lt; high);</div>
+<div class="line"><span class="lineno">  910</span>    }</div>
+<div class="line"><span class="lineno">  911</span>}</div>
+<div class="ttc" id="aclassSVF_1_1IntervalValue_html_a4f9d13c0f642fcad6ddb86ea79fac6e3"><div class="ttname"><a href="#a4f9d13c0f642fcad6ddb86ea79fac6e3">SVF::IntervalValue::getIntNumeral</a></div><div class="ttdeci">s64_t getIntNumeral() const</div><div class="ttdef"><b>Definition</b> <a href="IntervalValue_8h_source.html#l00264">IntervalValue.h:264</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a9b707002523ece2ac54ca893ee9a2d4e"><div class="ttname"><a href="namespaceSVF.html#a9b707002523ece2ac54ca893ee9a2d4e">SVF::s32_t</a></div><div class="ttdeci">signed s32_t</div><div class="ttdef"><b>Definition</b> <a href="GeneralType_8h_source.html#l00068">GeneralType.h:68</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2475,39 +2464,39 @@ Friends</h2></td></tr>
 
 <p>Left binary shift of IntervalValues. </p>
 
-<p class="definition">Definition at line <a class="el" href="IntervalValue_8h_source.html#l00925">925</a> of file <a class="el" href="IntervalValue_8h_source.html">IntervalValue.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  926</span>{</div>
-<div class="line"><span class="lineno">  927</span>    <span class="keywordflow">if</span> (lhs.isBottom() || rhs.isBottom())</div>
-<div class="line"><span class="lineno">  928</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
-<div class="line"><span class="lineno">  929</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.isTop() &amp;&amp; rhs.isTop())</div>
-<div class="line"><span class="lineno">  930</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
-<div class="line"><span class="lineno">  931</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  932</span>    {</div>
-<div class="line"><span class="lineno">  933</span>        <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> shift = rhs;</div>
-<div class="line"><span class="lineno">  934</span>        shift.meet_with(<a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(0, <a class="code hl_function" href="#aaf82f969eb5f5cdc860a2852662159cf">IntervalValue::plus_infinity</a>()));</div>
-<div class="line"><span class="lineno">  935</span>        <span class="keywordflow">if</span> (shift.isBottom())</div>
-<div class="line"><span class="lineno">  936</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
-<div class="line"><span class="lineno">  937</span>        <span class="keywordflow">if</span> (lhs.contains(0))</div>
-<div class="line"><span class="lineno">  938</span>        {</div>
-<div class="line"><span class="lineno">  939</span>            <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> l = <a class="code hl_function" href="#abb6809c3e9de03afc4d5cc417ebb0975">IntervalValue::create</a>(lhs.lb(), -1);</div>
-<div class="line"><span class="lineno">  940</span>            <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> u = <a class="code hl_function" href="#abb6809c3e9de03afc4d5cc417ebb0975">IntervalValue::create</a>(1, lhs.ub());</div>
-<div class="line"><span class="lineno">  941</span>            <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> tmp = l &gt;&gt; rhs;</div>
-<div class="line"><span class="lineno">  942</span>            tmp.join_with(u &gt;&gt; rhs);</div>
-<div class="line"><span class="lineno">  943</span>            tmp.join_with(<a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(0));</div>
-<div class="line"><span class="lineno">  944</span>            <span class="keywordflow">return</span> tmp;</div>
-<div class="line"><span class="lineno">  945</span>        }</div>
-<div class="line"><span class="lineno">  946</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  947</span>        {</div>
-<div class="line"><span class="lineno">  948</span>            BoundedInt ll = lhs.lb() &gt;&gt; shift.lb();</div>
-<div class="line"><span class="lineno">  949</span>            BoundedInt lu = lhs.lb() &gt;&gt; shift.ub();</div>
-<div class="line"><span class="lineno">  950</span>            BoundedInt ul = lhs.ub() &gt;&gt; shift.lb();</div>
-<div class="line"><span class="lineno">  951</span>            BoundedInt uu = lhs.ub() &gt;&gt; shift.ub();</div>
-<div class="line"><span class="lineno">  952</span>            std::vector&lt;BoundedInt&gt; vec{ll, lu, ul, uu};</div>
-<div class="line"><span class="lineno">  953</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(<a class="code hl_friend" href="classSVF_1_1BoundedInt.html#abf2f4da921e0bd3824dbebf70e375b42">BoundedInt::min</a>(vec),</div>
-<div class="line"><span class="lineno">  954</span>                                 <a class="code hl_friend" href="classSVF_1_1BoundedInt.html#a7f96b28013fe6ef65fd040d287758d59">BoundedInt::max</a>(vec));</div>
-<div class="line"><span class="lineno">  955</span>        }</div>
-<div class="line"><span class="lineno">  956</span>    }</div>
-<div class="line"><span class="lineno">  957</span>}</div>
+<p class="definition">Definition at line <a class="el" href="IntervalValue_8h_source.html#l00914">914</a> of file <a class="el" href="IntervalValue_8h_source.html">IntervalValue.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  915</span>{</div>
+<div class="line"><span class="lineno">  916</span>    <span class="keywordflow">if</span> (lhs.isBottom() || rhs.isBottom())</div>
+<div class="line"><span class="lineno">  917</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
+<div class="line"><span class="lineno">  918</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.isTop() &amp;&amp; rhs.isTop())</div>
+<div class="line"><span class="lineno">  919</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
+<div class="line"><span class="lineno">  920</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  921</span>    {</div>
+<div class="line"><span class="lineno">  922</span>        <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> shift = rhs;</div>
+<div class="line"><span class="lineno">  923</span>        shift.meet_with(<a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(0, <a class="code hl_function" href="#aaf82f969eb5f5cdc860a2852662159cf">IntervalValue::plus_infinity</a>()));</div>
+<div class="line"><span class="lineno">  924</span>        <span class="keywordflow">if</span> (shift.isBottom())</div>
+<div class="line"><span class="lineno">  925</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
+<div class="line"><span class="lineno">  926</span>        <span class="keywordflow">if</span> (lhs.contains(0))</div>
+<div class="line"><span class="lineno">  927</span>        {</div>
+<div class="line"><span class="lineno">  928</span>            <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> l = <a class="code hl_function" href="#abb6809c3e9de03afc4d5cc417ebb0975">IntervalValue::create</a>(lhs.lb(), -1);</div>
+<div class="line"><span class="lineno">  929</span>            <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> u = <a class="code hl_function" href="#abb6809c3e9de03afc4d5cc417ebb0975">IntervalValue::create</a>(1, lhs.ub());</div>
+<div class="line"><span class="lineno">  930</span>            <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a> tmp = l &gt;&gt; rhs;</div>
+<div class="line"><span class="lineno">  931</span>            tmp.join_with(u &gt;&gt; rhs);</div>
+<div class="line"><span class="lineno">  932</span>            tmp.join_with(<a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(0));</div>
+<div class="line"><span class="lineno">  933</span>            <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><span class="lineno">  934</span>        }</div>
+<div class="line"><span class="lineno">  935</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  936</span>        {</div>
+<div class="line"><span class="lineno">  937</span>            BoundedInt ll = lhs.lb() &gt;&gt; shift.lb();</div>
+<div class="line"><span class="lineno">  938</span>            BoundedInt lu = lhs.lb() &gt;&gt; shift.ub();</div>
+<div class="line"><span class="lineno">  939</span>            BoundedInt ul = lhs.ub() &gt;&gt; shift.lb();</div>
+<div class="line"><span class="lineno">  940</span>            BoundedInt uu = lhs.ub() &gt;&gt; shift.ub();</div>
+<div class="line"><span class="lineno">  941</span>            std::vector&lt;BoundedInt&gt; vec{ll, lu, ul, uu};</div>
+<div class="line"><span class="lineno">  942</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(<a class="code hl_friend" href="classSVF_1_1BoundedInt.html#abf2f4da921e0bd3824dbebf70e375b42">BoundedInt::min</a>(vec),</div>
+<div class="line"><span class="lineno">  943</span>                                 <a class="code hl_friend" href="classSVF_1_1BoundedInt.html#a7f96b28013fe6ef65fd040d287758d59">BoundedInt::max</a>(vec));</div>
+<div class="line"><span class="lineno">  944</span>        }</div>
+<div class="line"><span class="lineno">  945</span>    }</div>
+<div class="line"><span class="lineno">  946</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2540,33 +2529,33 @@ Friends</h2></td></tr>
 
 <p>Bitwise XOR of IntervalValues. </p>
 
-<p class="definition">Definition at line <a class="el" href="IntervalValue_8h_source.html#l01016">1016</a> of file <a class="el" href="IntervalValue_8h_source.html">IntervalValue.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1017</span>{</div>
-<div class="line"><span class="lineno"> 1018</span>    <span class="keyword">auto</span> next_power_of_2 = [](<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> num)</div>
-<div class="line"><span class="lineno"> 1019</span>    {</div>
-<div class="line"><span class="lineno"> 1020</span>        <span class="keywordtype">int</span> i = 1;</div>
-<div class="line"><span class="lineno"> 1021</span>        <span class="keywordflow">while</span> ((num &gt;&gt; i) != 0)</div>
-<div class="line"><span class="lineno"> 1022</span>        {</div>
-<div class="line"><span class="lineno"> 1023</span>            ++i;</div>
-<div class="line"><span class="lineno"> 1024</span>        }</div>
-<div class="line"><span class="lineno"> 1025</span>        <span class="keywordflow">return</span> 1 &lt;&lt; i;</div>
-<div class="line"><span class="lineno"> 1026</span>    };</div>
-<div class="line"><span class="lineno"> 1027</span>    <span class="keywordflow">if</span> (lhs.isBottom() || rhs.isBottom())</div>
-<div class="line"><span class="lineno"> 1028</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
-<div class="line"><span class="lineno"> 1029</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.is_numeral() &amp;&amp; rhs.is_numeral())</div>
-<div class="line"><span class="lineno"> 1030</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(lhs.lb() ^ rhs.lb());</div>
-<div class="line"><span class="lineno"> 1031</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; !lhs.ub().is_infinity() &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1032</span>             rhs.lb().getNumeral() &gt;= 0 &amp;&amp; !rhs.ub().is_infinity())</div>
-<div class="line"><span class="lineno"> 1033</span>    {</div>
-<div class="line"><span class="lineno"> 1034</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> m = std::max(lhs.ub().getNumeral(), rhs.ub().getNumeral());</div>
-<div class="line"><span class="lineno"> 1035</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a> = next_power_of_2(<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(m)) - 1;</div>
-<div class="line"><span class="lineno"> 1036</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, (<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>);</div>
-<div class="line"><span class="lineno"> 1037</span>    }</div>
-<div class="line"><span class="lineno"> 1038</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1039</span>    {</div>
-<div class="line"><span class="lineno"> 1040</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
-<div class="line"><span class="lineno"> 1041</span>    }</div>
-<div class="line"><span class="lineno"> 1042</span>}</div>
+<p class="definition">Definition at line <a class="el" href="IntervalValue_8h_source.html#l01005">1005</a> of file <a class="el" href="IntervalValue_8h_source.html">IntervalValue.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1006</span>{</div>
+<div class="line"><span class="lineno"> 1007</span>    <span class="keyword">auto</span> next_power_of_2 = [](<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> num)</div>
+<div class="line"><span class="lineno"> 1008</span>    {</div>
+<div class="line"><span class="lineno"> 1009</span>        <span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><span class="lineno"> 1010</span>        <span class="keywordflow">while</span> ((num &gt;&gt; i) != 0)</div>
+<div class="line"><span class="lineno"> 1011</span>        {</div>
+<div class="line"><span class="lineno"> 1012</span>            ++i;</div>
+<div class="line"><span class="lineno"> 1013</span>        }</div>
+<div class="line"><span class="lineno"> 1014</span>        <span class="keywordflow">return</span> 1 &lt;&lt; i;</div>
+<div class="line"><span class="lineno"> 1015</span>    };</div>
+<div class="line"><span class="lineno"> 1016</span>    <span class="keywordflow">if</span> (lhs.isBottom() || rhs.isBottom())</div>
+<div class="line"><span class="lineno"> 1017</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
+<div class="line"><span class="lineno"> 1018</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.is_numeral() &amp;&amp; rhs.is_numeral())</div>
+<div class="line"><span class="lineno"> 1019</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(lhs.lb() ^ rhs.lb());</div>
+<div class="line"><span class="lineno"> 1020</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; !lhs.ub().is_infinity() &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1021</span>             rhs.lb().getNumeral() &gt;= 0 &amp;&amp; !rhs.ub().is_infinity())</div>
+<div class="line"><span class="lineno"> 1022</span>    {</div>
+<div class="line"><span class="lineno"> 1023</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> m = std::max(lhs.ub().getNumeral(), rhs.ub().getNumeral());</div>
+<div class="line"><span class="lineno"> 1024</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a> = next_power_of_2(<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(m)) - 1;</div>
+<div class="line"><span class="lineno"> 1025</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, (<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>);</div>
+<div class="line"><span class="lineno"> 1026</span>    }</div>
+<div class="line"><span class="lineno"> 1027</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1028</span>    {</div>
+<div class="line"><span class="lineno"> 1029</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
+<div class="line"><span class="lineno"> 1030</span>    }</div>
+<div class="line"><span class="lineno"> 1031</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2599,33 +2588,33 @@ Friends</h2></td></tr>
 
 <p>Bitwise OR of IntervalValues. </p>
 
-<p class="definition">Definition at line <a class="el" href="IntervalValue_8h_source.html#l00987">987</a> of file <a class="el" href="IntervalValue_8h_source.html">IntervalValue.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  988</span>{</div>
-<div class="line"><span class="lineno">  989</span>    <span class="keyword">auto</span> next_power_of_2 = [](<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> num)</div>
-<div class="line"><span class="lineno">  990</span>    {</div>
-<div class="line"><span class="lineno">  991</span>        <span class="keywordtype">int</span> i = 1;</div>
-<div class="line"><span class="lineno">  992</span>        <span class="keywordflow">while</span> ((num &gt;&gt; i) != 0)</div>
-<div class="line"><span class="lineno">  993</span>        {</div>
-<div class="line"><span class="lineno">  994</span>            ++i;</div>
-<div class="line"><span class="lineno">  995</span>        }</div>
-<div class="line"><span class="lineno">  996</span>        <span class="keywordflow">return</span> 1 &lt;&lt; i;</div>
-<div class="line"><span class="lineno">  997</span>    };</div>
-<div class="line"><span class="lineno">  998</span>    <span class="keywordflow">if</span> (lhs.isBottom() || rhs.isBottom())</div>
-<div class="line"><span class="lineno">  999</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
-<div class="line"><span class="lineno"> 1000</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.is_numeral() &amp;&amp; rhs.is_numeral())</div>
-<div class="line"><span class="lineno"> 1001</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(lhs.lb() | rhs.lb());</div>
-<div class="line"><span class="lineno"> 1002</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; !lhs.ub().is_infinity() &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1003</span>             rhs.lb().getNumeral() &gt;= 0 &amp;&amp; !rhs.ub().is_infinity())</div>
-<div class="line"><span class="lineno"> 1004</span>    {</div>
-<div class="line"><span class="lineno"> 1005</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> m = std::max(lhs.ub().getNumeral(), rhs.ub().getNumeral());</div>
-<div class="line"><span class="lineno"> 1006</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a> = next_power_of_2(<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(m)) - 1;</div>
-<div class="line"><span class="lineno"> 1007</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, (<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>);</div>
-<div class="line"><span class="lineno"> 1008</span>    }</div>
-<div class="line"><span class="lineno"> 1009</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1010</span>    {</div>
-<div class="line"><span class="lineno"> 1011</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
-<div class="line"><span class="lineno"> 1012</span>    }</div>
-<div class="line"><span class="lineno"> 1013</span>}</div>
+<p class="definition">Definition at line <a class="el" href="IntervalValue_8h_source.html#l00976">976</a> of file <a class="el" href="IntervalValue_8h_source.html">IntervalValue.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  977</span>{</div>
+<div class="line"><span class="lineno">  978</span>    <span class="keyword">auto</span> next_power_of_2 = [](<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> num)</div>
+<div class="line"><span class="lineno">  979</span>    {</div>
+<div class="line"><span class="lineno">  980</span>        <span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><span class="lineno">  981</span>        <span class="keywordflow">while</span> ((num &gt;&gt; i) != 0)</div>
+<div class="line"><span class="lineno">  982</span>        {</div>
+<div class="line"><span class="lineno">  983</span>            ++i;</div>
+<div class="line"><span class="lineno">  984</span>        }</div>
+<div class="line"><span class="lineno">  985</span>        <span class="keywordflow">return</span> 1 &lt;&lt; i;</div>
+<div class="line"><span class="lineno">  986</span>    };</div>
+<div class="line"><span class="lineno">  987</span>    <span class="keywordflow">if</span> (lhs.isBottom() || rhs.isBottom())</div>
+<div class="line"><span class="lineno">  988</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa027be2f9243ce4cae799b265b019443">IntervalValue::bottom</a>();</div>
+<div class="line"><span class="lineno">  989</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.is_numeral() &amp;&amp; rhs.is_numeral())</div>
+<div class="line"><span class="lineno">  990</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>(lhs.lb() | rhs.lb());</div>
+<div class="line"><span class="lineno">  991</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.lb().getNumeral() &gt;= 0 &amp;&amp; !lhs.ub().is_infinity() &amp;&amp;</div>
+<div class="line"><span class="lineno">  992</span>             rhs.lb().getNumeral() &gt;= 0 &amp;&amp; !rhs.ub().is_infinity())</div>
+<div class="line"><span class="lineno">  993</span>    {</div>
+<div class="line"><span class="lineno">  994</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> m = std::max(lhs.ub().getNumeral(), rhs.ub().getNumeral());</div>
+<div class="line"><span class="lineno">  995</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a> = next_power_of_2(<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>(m)) - 1;</div>
+<div class="line"><span class="lineno">  996</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad51535cb50a03df7a439b4e5b5d305f0">IntervalValue</a>((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) 0, (<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>) <a class="code hl_function" href="#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>);</div>
+<div class="line"><span class="lineno">  997</span>    }</div>
+<div class="line"><span class="lineno">  998</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  999</span>    {</div>
+<div class="line"><span class="lineno"> 1000</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
+<div class="line"><span class="lineno"> 1001</span>    }</div>
+<div class="line"><span class="lineno"> 1002</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

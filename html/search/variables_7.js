@@ -42,5 +42,6 @@ var searchData=
   ['grammarfilename_39',['GrammarFilename',['../classSVF_1_1Options.html#ad09017ae2e1010fbba5c086a4772750f',1,'SVF::Options']]],
   ['graph_40',['Graph',['../structSVF_1_1Inverse.html#a2037408b7047e9265b4b14e54bb584a2',1,'SVF::Inverse']]],
   ['graph_41',['graph',['../classSVF_1_1CFLBase.html#a8101683062b9a71c0b2309cbdfb7b26f',1,'SVF::CFLBase::graph'],['../classSVF_1_1CFLSolver.html#aedd6c605c4c381c738f4c6682c40d9f2',1,'SVF::CFLSolver::graph'],['../classSVF_1_1SVFGStat.html#a3d06ead4c3222ce8a0535d9f3d504c3d',1,'SVF::SVFGStat::graph']]],
-  ['graphtxt_42',['Graphtxt',['../classSVF_1_1Options.html#a53f783c80f368bcdca6c7620229d6f8e',1,'SVF::Options']]]
+  ['graphtxt_42',['Graphtxt',['../classSVF_1_1Options.html#a53f783c80f368bcdca6c7620229d6f8e',1,'SVF::Options']]],
+  ['groupnodes_43',['groupNodes',['../classSVF_1_1SparseObjGraph.html#a54a033ad6e6f194de6bbbabc0fd290c1',1,'SVF::SparseObjGraph']]]
 ];

@@ -310,35 +310,47 @@ Protected Attributes</h2></td></tr>
 <p>Create DDA <a class="el" href="classSVF_1_1SVFG.html">SVFG</a>. </p>
 <p>Update call graph using pre-analysis results</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00063">63</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>{</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>    <span class="keyword">auto</span> mssa = <a class="code hl_function" href="#a057d1d631326e844ce3287eb17b98c1a">buildMSSA</a>(</div>
-<div class="line"><span class="lineno">   67</span>                    pta, (<a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6ada8562b20e8d888a4b421c200957294d">VFG::PTRONLYSVFG</a> == kind || <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd">VFG::PTRONLYSVFG_OPT</a> == kind));</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>    <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a2c64190a065f342897573a3ef4973adb">DGENERAL</a>, <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a4550f2fb815882edfb666ac818792064">pasMsg</a>(<span class="stringliteral">&quot;Build Sparse Value-Flow Graph \n&quot;</span>));</div>
-<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">if</span> (kind == <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0">VFG::FULLSVFG_OPT</a> || kind == <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd">VFG::PTRONLYSVFG_OPT</a>)</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a> = std::make_unique&lt;SVFGOPT&gt;(std::move(mssa), kind);</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a> = std::unique_ptr&lt;SVFG&gt;(<span class="keyword">new</span> SVFG(std::move(mssa), kind));</div>
-<div class="line"><span class="lineno">   74</span>    <a class="code hl_function" href="#ae2d84f7527de200a2f269dc1c056a305">buildSVFG</a>();</div>
-<div class="line"><span class="lineno">   75</span></div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a70de38086437635d2e44d2a0c9fdded9">SVFGWithIndCall</a>)</div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;updateCallGraph(pta);</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;getMSSA()-&gt;getPTA()-&gt;printStat())</div>
-<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;performStat();</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#ae3ad3003a8d3df2f1e3463248bb5ad51">Options::DumpVFG</a>())</div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;dump(<span class="stringliteral">&quot;svfg_final&quot;</span>);</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>.get();</div>
-<div class="line"><span class="lineno">   87</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00065">65</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>{</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keyword">auto</span> mssa = <a class="code hl_function" href="#a057d1d631326e844ce3287eb17b98c1a">buildMSSA</a>(</div>
+<div class="line"><span class="lineno">   69</span>                    pta, (<a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6ada8562b20e8d888a4b421c200957294d">VFG::PTRONLYSVFG</a> == kind || <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd">VFG::PTRONLYSVFG_OPT</a> == kind));</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a2c64190a065f342897573a3ef4973adb">DGENERAL</a>, <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a4550f2fb815882edfb666ac818792064">pasMsg</a>(<span class="stringliteral">&quot;Build Sparse Value-Flow Graph \n&quot;</span>));</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">if</span> (kind == <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0">VFG::FULLSVFG_OPT</a> || kind == <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd">VFG::PTRONLYSVFG_OPT</a>)</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a> = std::make_unique&lt;SVFGOPT&gt;(std::move(mssa), kind);</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a> = std::unique_ptr&lt;SVFG&gt;(<span class="keyword">new</span> SVFG(std::move(mssa), kind));</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_function" href="#ae2d84f7527de200a2f269dc1c056a305">buildSVFG</a>();</div>
+<div class="line"><span class="lineno">   77</span></div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a70de38086437635d2e44d2a0c9fdded9">SVFGWithIndCall</a>)</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;updateCallGraph(pta);</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;getMSSA()-&gt;getPTA()-&gt;printStat())</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;performStat();</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#ae3ad3003a8d3df2f1e3463248bb5ad51">Options::DumpVFG</a>())</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;dump(<span class="stringliteral">&quot;svfg_final&quot;</span>);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">if</span> ((kind == <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a5a28e6fd51e73e076091d4b6f4e61eaa">VFG::FULLSVFG</a> || kind == <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0">VFG::FULLSVFG_OPT</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno">   89</span>            <a class="code hl_variable" href="classSVF_1_1Options.html#a6bb16566b6206b49f1944d7f19d892af">Options::DumpSparseObjGraph</a>())</div>
+<div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        SVFIR* svfir = pta-&gt;<a class="code hl_function" href="classSVF_1_1PointerAnalysis.html#a6921d23861adbb899a11cb51e8b4764a">getPAG</a>();</div>
+<div class="line"><span class="lineno">   92</span>        SparseObjGraph routes(*<a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>, *svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a89e4621ec97af7899d9657fc97ee63d9">getICFG</a>(), *pta, *svfir);</div>
+<div class="line"><span class="lineno">   93</span>        routes.dump(<span class="stringliteral">&quot;sparse_obj_graph&quot;</span>);</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>.get();</div>
+<div class="line"><span class="lineno">   97</span>}</div>
 <div class="ttc" id="aSVFType_8h_html_a173ce1b9b505fdadf5613b663749d3b0"><div class="ttname"><a href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a></div><div class="ttdeci">#define DBOUT(TYPE, X)</div><div class="ttdoc">LLVM debug macros, define type of your DBUG model of each pass.</div><div class="ttdef"><b>Definition</b> <a href="SVFType_8h_source.html#l00576">SVFType.h:576</a></div></div>
 <div class="ttc" id="aSVFType_8h_html_a2c64190a065f342897573a3ef4973adb"><div class="ttname"><a href="SVFType_8h.html#a2c64190a065f342897573a3ef4973adb">DGENERAL</a></div><div class="ttdeci">#define DGENERAL</div><div class="ttdef"><b>Definition</b> <a href="SVFType_8h_source.html#l00582">SVFType.h:582</a></div></div>
+<div class="ttc" id="aclassSVF_1_1Options_html_a6bb16566b6206b49f1944d7f19d892af"><div class="ttname"><a href="classSVF_1_1Options.html#a6bb16566b6206b49f1944d7f19d892af">SVF::Options::DumpSparseObjGraph</a></div><div class="ttdeci">static const Option&lt; bool &gt; DumpSparseObjGraph</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00109">Options.h:109</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_ae3ad3003a8d3df2f1e3463248bb5ad51"><div class="ttname"><a href="classSVF_1_1Options.html#ae3ad3003a8d3df2f1e3463248bb5ad51">SVF::Options::DumpVFG</a></div><div class="ttdeci">static const Option&lt; bool &gt; DumpVFG</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00108">Options.h:108</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_a057d1d631326e844ce3287eb17b98c1a"><div class="ttname"><a href="#a057d1d631326e844ce3287eb17b98c1a">SVF::SVFGBuilder::buildMSSA</a></div><div class="ttdeci">virtual std::unique_ptr&lt; MemSSA &gt; buildMSSA(BVDataPTAImpl *pta, bool ptrOnlyMSSA)</div><div class="ttdoc">Build Memory SSA.</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00117">SVFGBuilder.cpp:117</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_ae2d84f7527de200a2f269dc1c056a305"><div class="ttname"><a href="#ae2d84f7527de200a2f269dc1c056a305">SVF::SVFGBuilder::buildSVFG</a></div><div class="ttdeci">virtual void buildSVFG()</div><div class="ttdoc">Can be rewritten by subclasses.</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00057">SVFGBuilder.cpp:57</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a6921d23861adbb899a11cb51e8b4764a"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a6921d23861adbb899a11cb51e8b4764a">SVF::PointerAnalysis::getPAG</a></div><div class="ttdeci">SVFIR * getPAG() const</div><div class="ttdef"><b>Definition</b> <a href="PointerAnalysis_8h_source.html#l00149">PointerAnalysis.h:149</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_a057d1d631326e844ce3287eb17b98c1a"><div class="ttname"><a href="#a057d1d631326e844ce3287eb17b98c1a">SVF::SVFGBuilder::buildMSSA</a></div><div class="ttdeci">virtual std::unique_ptr&lt; MemSSA &gt; buildMSSA(BVDataPTAImpl *pta, bool ptrOnlyMSSA)</div><div class="ttdoc">Build Memory SSA.</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00127">SVFGBuilder.cpp:127</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_ae2d84f7527de200a2f269dc1c056a305"><div class="ttname"><a href="#ae2d84f7527de200a2f269dc1c056a305">SVF::SVFGBuilder::buildSVFG</a></div><div class="ttdeci">virtual void buildSVFG()</div><div class="ttdoc">Can be rewritten by subclasses.</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00059">SVFGBuilder.cpp:59</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFIR_html_a89e4621ec97af7899d9657fc97ee63d9"><div class="ttname"><a href="classSVF_1_1SVFIR.html#a89e4621ec97af7899d9657fc97ee63d9">SVF::SVFIR::getICFG</a></div><div class="ttdeci">ICFG * getICFG() const</div><div class="ttdef"><b>Definition</b> <a href="SVFIR_8h_source.html#l00232">SVFIR.h:232</a></div></div>
+<div class="ttc" id="aclassSVF_1_1VFG_html_ac2e2f555975063da3fa1932ac35802c6a5a28e6fd51e73e076091d4b6f4e61eaa"><div class="ttname"><a href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a5a28e6fd51e73e076091d4b6f4e61eaa">SVF::VFG::FULLSVFG</a></div><div class="ttdeci">@ FULLSVFG</div><div class="ttdef"><b>Definition</b> <a href="VFG_8h_source.html#l00057">VFG.h:57</a></div></div>
 <div class="ttc" id="aclassSVF_1_1VFG_html_ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd"><div class="ttname"><a href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd">SVF::VFG::PTRONLYSVFG_OPT</a></div><div class="ttdeci">@ PTRONLYSVFG_OPT</div><div class="ttdef"><b>Definition</b> <a href="VFG_8h_source.html#l00057">VFG.h:57</a></div></div>
 <div class="ttc" id="aclassSVF_1_1VFG_html_ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0"><div class="ttname"><a href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0">SVF::VFG::FULLSVFG_OPT</a></div><div class="ttdeci">@ FULLSVFG_OPT</div><div class="ttdef"><b>Definition</b> <a href="VFG_8h_source.html#l00057">VFG.h:57</a></div></div>
 <div class="ttc" id="aclassSVF_1_1VFG_html_ac2e2f555975063da3fa1932ac35802c6ada8562b20e8d888a4b421c200957294d"><div class="ttname"><a href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6ada8562b20e8d888a4b421c200957294d">SVF::VFG::PTRONLYSVFG</a></div><div class="ttdeci">@ PTRONLYSVFG</div><div class="ttdef"><b>Definition</b> <a href="VFG_8h_source.html#l00057">VFG.h:57</a></div></div>
@@ -362,12 +374,12 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00048">48</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>{</div>
-<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a0e0e2fe0c377452b62c1e6e8e8829a82">SVFGWithPostOpts</a> ? <a class="code hl_function" href="#a47591192260ddc3ff0717430f127cc95">build</a>(pta, <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0">VFG::FULLSVFG_OPT</a>)</div>
-<div class="line"><span class="lineno">   51</span>           : <a class="code hl_function" href="#a47591192260ddc3ff0717430f127cc95">build</a>(pta, VFG::FULLSVFG);</div>
-<div class="line"><span class="lineno">   52</span>}</div>
-<div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_a47591192260ddc3ff0717430f127cc95"><div class="ttname"><a href="#a47591192260ddc3ff0717430f127cc95">SVF::SVFGBuilder::build</a></div><div class="ttdeci">SVFG * build(BVDataPTAImpl *pta, VFG::VFGK kind)</div><div class="ttdoc">Create a DDA SVFG. By default actualOut and FormalIN are removed, unless withAOFI is set true.</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00063">SVFGBuilder.cpp:63</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00050">50</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a0e0e2fe0c377452b62c1e6e8e8829a82">SVFGWithPostOpts</a> ? <a class="code hl_function" href="#a47591192260ddc3ff0717430f127cc95">build</a>(pta, <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0">VFG::FULLSVFG_OPT</a>)</div>
+<div class="line"><span class="lineno">   53</span>           : <a class="code hl_function" href="#a47591192260ddc3ff0717430f127cc95">build</a>(pta, VFG::FULLSVFG);</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+<div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_a47591192260ddc3ff0717430f127cc95"><div class="ttname"><a href="#a47591192260ddc3ff0717430f127cc95">SVF::SVFGBuilder::build</a></div><div class="ttdeci">SVFG * build(BVDataPTAImpl *pta, VFG::VFGK kind)</div><div class="ttdoc">Create a DDA SVFG. By default actualOut and FormalIN are removed, unless withAOFI is set true.</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00065">SVFGBuilder.cpp:65</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -400,35 +412,35 @@ Protected Attributes</h2></td></tr>
 
 <p>Build Memory SSA. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00117">117</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>{</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>    <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a2c64190a065f342897573a3ef4973adb">DGENERAL</a>, <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a4550f2fb815882edfb666ac818792064">pasMsg</a>(<span class="stringliteral">&quot;Build Memory SSA \n&quot;</span>));</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>    <span class="keyword">auto</span> mssa = std::make_unique&lt;MemSSA&gt;(pta, <a class="code hl_function" href="#a54790e22298f90cef25b77c8399f5b3c">createMRGenerator</a>(pta, ptrOnlyMSSA));</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>    <span class="keyword">const</span> CallGraph* svfirCallGraph = <a class="code hl_function" href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6f4d606d40bcc8386929effcb5e1f0b1">getCallGraph</a>();</div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a> : *svfirCallGraph)</div>
-<div class="line"><span class="lineno">  127</span>    {</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>        <span class="keyword">const</span> FunObjVar* fun = <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a>.second-&gt;getFunction();</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">isExtCall</a>(fun))</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">continue</span>;</div>
+<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00127">127</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a2c64190a065f342897573a3ef4973adb">DGENERAL</a>, <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a4550f2fb815882edfb666ac818792064">pasMsg</a>(<span class="stringliteral">&quot;Build Memory SSA \n&quot;</span>));</div>
 <div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>        mssa-&gt;buildMemSSA(*fun);</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>    mssa-&gt;performStat();</div>
-<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa">Options::DumpMSSA</a>())</div>
-<div class="line"><span class="lineno">  138</span>    {</div>
-<div class="line"><span class="lineno">  139</span>        mssa-&gt;dumpMSSA();</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">return</span> mssa;</div>
-<div class="line"><span class="lineno">  143</span>}</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keyword">auto</span> mssa = std::make_unique&lt;MemSSA&gt;(pta, <a class="code hl_function" href="#a54790e22298f90cef25b77c8399f5b3c">createMRGenerator</a>(pta, ptrOnlyMSSA));</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>    <span class="keyword">const</span> CallGraph* svfirCallGraph = <a class="code hl_function" href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6f4d606d40bcc8386929effcb5e1f0b1">getCallGraph</a>();</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a> : *svfirCallGraph)</div>
+<div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>        <span class="keyword">const</span> FunObjVar* fun = <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a>.second-&gt;getFunction();</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">isExtCall</a>(fun))</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>        mssa-&gt;buildMemSSA(*fun);</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    mssa-&gt;performStat();</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa">Options::DumpMSSA</a>())</div>
+<div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>        mssa-&gt;dumpMSSA();</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">return</span> mssa;</div>
+<div class="line"><span class="lineno">  153</span>}</div>
 <div class="ttc" id="acJSON_8h_html_ac76cea59d438ba893d2f82aabb367d14"><div class="ttname"><a href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a></div><div class="ttdeci">cJSON * item</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00222">cJSON.h:222</a></div></div>
-<div class="ttc" id="aclassSVF_1_1Options_html_a0bb4bfd677e2e45cc8c24bfc190edfaa"><div class="ttname"><a href="classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa">SVF::Options::DumpMSSA</a></div><div class="ttdeci">static const Option&lt; bool &gt; DumpMSSA</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00139">Options.h:139</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_a54790e22298f90cef25b77c8399f5b3c"><div class="ttname"><a href="#a54790e22298f90cef25b77c8399f5b3c">SVF::SVFGBuilder::createMRGenerator</a></div><div class="ttdeci">virtual std::unique_ptr&lt; MRGenerator &gt; createMRGenerator(BVDataPTAImpl *pta, bool ptrOnlyMSSA)</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00101">SVFGBuilder.cpp:101</a></div></div>
+<div class="ttc" id="aclassSVF_1_1Options_html_a0bb4bfd677e2e45cc8c24bfc190edfaa"><div class="ttname"><a href="classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa">SVF::Options::DumpMSSA</a></div><div class="ttdeci">static const Option&lt; bool &gt; DumpMSSA</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00140">Options.h:140</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_a54790e22298f90cef25b77c8399f5b3c"><div class="ttname"><a href="#a54790e22298f90cef25b77c8399f5b3c">SVF::SVFGBuilder::createMRGenerator</a></div><div class="ttdeci">virtual std::unique_ptr&lt; MRGenerator &gt; createMRGenerator(BVDataPTAImpl *pta, bool ptrOnlyMSSA)</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00111">SVFGBuilder.cpp:111</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIR_html_a6f4d606d40bcc8386929effcb5e1f0b1"><div class="ttname"><a href="classSVF_1_1SVFIR.html#a6f4d606d40bcc8386929effcb5e1f0b1">SVF::SVFIR::getCallGraph</a></div><div class="ttdeci">const CallGraph * getCallGraph()</div><div class="ttdoc">Get CG.</div><div class="ttdef"><b>Definition</b> <a href="SVFIR_8h_source.html#l00249">SVFIR.h:249</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIR_html_acdb6795e102e7c03a61b7a4d2044c348"><div class="ttname"><a href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">SVF::SVFIR::getPAG</a></div><div class="ttdeci">static SVFIR * getPAG(bool buildFromFile=false)</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis.</div><div class="ttdef"><b>Definition</b> <a href="SVFIR_8h_source.html#l00121">SVFIR.h:121</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aa6b83d34488eaa1d6613568dd8394bdd"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVF::SVFUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const FunObjVar *fun)</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00526">SVFUtil.cpp:526</a></div></div>
@@ -450,11 +462,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00042">42</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
-<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a0e0e2fe0c377452b62c1e6e8e8829a82">SVFGWithPostOpts</a> ? <a class="code hl_function" href="#a47591192260ddc3ff0717430f127cc95">build</a>(pta, <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd">VFG::PTRONLYSVFG_OPT</a>)</div>
-<div class="line"><span class="lineno">   45</span>           : <a class="code hl_function" href="#a47591192260ddc3ff0717430f127cc95">build</a>(pta, VFG::PTRONLYSVFG);</div>
-<div class="line"><span class="lineno">   46</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00044">44</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a0e0e2fe0c377452b62c1e6e8e8829a82">SVFGWithPostOpts</a> ? <a class="code hl_function" href="#a47591192260ddc3ff0717430f127cc95">build</a>(pta, <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd">VFG::PTRONLYSVFG_OPT</a>)</div>
+<div class="line"><span class="lineno">   47</span>           : <a class="code hl_function" href="#a47591192260ddc3ff0717430f127cc95">build</a>(pta, VFG::PTRONLYSVFG);</div>
+<div class="line"><span class="lineno">   48</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -486,10 +498,10 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1CFLSVFGBuilder.html#ab8c71c5af2877ccacd6c34a86a9eadf2">SVF::CFLSVFGBuilder</a>, <a class="el" href="classSVF_1_1MTASVFGBuilder.html#af83d243b1f740136c5ee92354cd891ff">SVF::MTASVFGBuilder</a>, and <a class="el" href="classSVF_1_1SaberSVFGBuilder.html#a4d70d1413f42f30437d8eb45ff00b6f6">SVF::SaberSVFGBuilder</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00057">57</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
-<div class="line"><span class="lineno">   59</span>    <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;buildSVFG();</div>
-<div class="line"><span class="lineno">   60</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00059">59</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;buildSVFG();</div>
+<div class="line"><span class="lineno">   62</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -524,25 +536,25 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1MTASVFGBuilder.html#a2449f182a0daef18e4c22f039a9c5bf1">SVF::MTASVFGBuilder</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00101">101</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>{</div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a53be9a9f1a5a6dcffdf8fb2d7a99c847">Options::MemPar</a>())</div>
-<div class="line"><span class="lineno">  104</span>    {</div>
-<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a9da5f4ad2a43befdbc4be319bffc80ea">MemSSA::MemPartition::Distinct</a>:</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> std::make_unique&lt;DistinctMRG&gt;(pta, ptrOnlyMSSA);</div>
-<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671ac9388cc44f91bd9a00666c0d69b32ef1">MemSSA::MemPartition::IntraDisjoint</a>:</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> std::make_unique&lt;IntraDisjointMRG&gt;(pta, ptrOnlyMSSA);</div>
-<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a549b5589ecfbe073623091605785fc03">MemSSA::MemPartition::InterDisjoint</a>:</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> std::make_unique&lt;InterDisjointMRG&gt;(pta, ptrOnlyMSSA);</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  112</span>        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;unrecognised memory partition strategy&quot;</span>);</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="line"><span class="lineno">  115</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00111">111</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>{</div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a53be9a9f1a5a6dcffdf8fb2d7a99c847">Options::MemPar</a>())</div>
+<div class="line"><span class="lineno">  114</span>    {</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a9da5f4ad2a43befdbc4be319bffc80ea">MemSSA::MemPartition::Distinct</a>:</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> std::make_unique&lt;DistinctMRG&gt;(pta, ptrOnlyMSSA);</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671ac9388cc44f91bd9a00666c0d69b32ef1">MemSSA::MemPartition::IntraDisjoint</a>:</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> std::make_unique&lt;IntraDisjointMRG&gt;(pta, ptrOnlyMSSA);</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a549b5589ecfbe073623091605785fc03">MemSSA::MemPartition::InterDisjoint</a>:</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> std::make_unique&lt;InterDisjointMRG&gt;(pta, ptrOnlyMSSA);</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  122</span>        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;unrecognised memory partition strategy&quot;</span>);</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="line"><span class="lineno">  125</span>}</div>
 <div class="ttc" id="aclassSVF_1_1MemSSA_html_ac0797f2ee7b59ae720095a4836533671a549b5589ecfbe073623091605785fc03"><div class="ttname"><a href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a549b5589ecfbe073623091605785fc03">SVF::MemSSA::InterDisjoint</a></div><div class="ttdeci">@ InterDisjoint</div><div class="ttdef"><b>Definition</b> <a href="MemSSA_8h_source.html#l00117">MemSSA.h:117</a></div></div>
 <div class="ttc" id="aclassSVF_1_1MemSSA_html_ac0797f2ee7b59ae720095a4836533671a9da5f4ad2a43befdbc4be319bffc80ea"><div class="ttname"><a href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671a9da5f4ad2a43befdbc4be319bffc80ea">SVF::MemSSA::Distinct</a></div><div class="ttdeci">@ Distinct</div><div class="ttdef"><b>Definition</b> <a href="MemSSA_8h_source.html#l00115">MemSSA.h:115</a></div></div>
 <div class="ttc" id="aclassSVF_1_1MemSSA_html_ac0797f2ee7b59ae720095a4836533671ac9388cc44f91bd9a00666c0d69b32ef1"><div class="ttname"><a href="classSVF_1_1MemSSA.html#ac0797f2ee7b59ae720095a4836533671ac9388cc44f91bd9a00666c0d69b32ef1">SVF::MemSSA::IntraDisjoint</a></div><div class="ttdeci">@ IntraDisjoint</div><div class="ttdef"><b>Definition</b> <a href="MemSSA_8h_source.html#l00116">MemSSA.h:116</a></div></div>
-<div class="ttc" id="aclassSVF_1_1Options_html_a53be9a9f1a5a6dcffdf8fb2d7a99c847"><div class="ttname"><a href="classSVF_1_1Options.html#a53be9a9f1a5a6dcffdf8fb2d7a99c847">SVF::Options::MemPar</a></div><div class="ttdeci">static const OptionMap&lt; u32_t &gt; MemPar</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00142">Options.h:142</a></div></div>
+<div class="ttc" id="aclassSVF_1_1Options_html_a53be9a9f1a5a6dcffdf8fb2d7a99c847"><div class="ttname"><a href="classSVF_1_1Options.html#a53be9a9f1a5a6dcffdf8fb2d7a99c847">SVF::Options::MemPar</a></div><div class="ttdeci">static const OptionMap&lt; u32_t &gt; MemPar</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00143">Options.h:143</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -671,10 +683,10 @@ Protected Attributes</h2></td></tr>
 <p>Release global <a class="el" href="classSVF_1_1SVFG.html">SVFG</a>. </p>
 <p>Release memory </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00092">92</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>{</div>
-<div class="line"><span class="lineno">   94</span>    <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;clearMSSA();</div>
-<div class="line"><span class="lineno">   95</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFGBuilder_8cpp_source.html#l00102">102</a> of file <a class="el" href="SVFGBuilder_8cpp_source.html">SVFGBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>{</div>
+<div class="line"><span class="lineno">  104</span>    <a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>-&gt;clearMSSA();</div>
+<div class="line"><span class="lineno">  105</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

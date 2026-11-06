@@ -39,12 +39,14 @@ var searchData=
   ['retpes_36',['retPEs',['../classSVF_1_1FormalRetVFGNode.html#a5fa2fc654385d0fab018053e89565157',1,'SVF::FormalRetVFGNode']]],
   ['retty_37',['retTy',['../classSVF_1_1SVFFunctionType.html#a2b3c4e21da9ad2bdd8e306192b953186',1,'SVF::SVFFunctionType']]],
   ['return_5fparse_5fend_38',['return_parse_end',['../cJSON_8h.html#a7725ae4fa33fc499614c6895ee9ee44a',1,'return_parse_end:&#160;cJSON.h'],['../cJSON_8cpp.html#a1a7c63ae727dcb98b54e081b2ff17ed9',1,'return_parse_end:&#160;cJSON.cpp']]],
-  ['returnfunobjsymmap_39',['returnFunObjSymMap',['../classSVF_1_1IRGraph.html#adeceab2ddf59ba096b43c7217612be10',1,'SVF::IRGraph']]],
-  ['returnsymmap_40',['returnSymMap',['../classSVF_1_1LLVMModuleSet.html#a98e5fc56406ce00cdcb27a5abaf3aeb1',1,'SVF::LLVMModuleSet']]],
-  ['rev_41',['rev',['../classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219',1,'SVF::PTData']]],
-  ['reversenodemapping_42',['reverseNodeMapping',['../classSVF_1_1PointsTo.html#a1ae4abe690d21eb5aaf2154243b604c1',1,'SVF::PointsTo']]],
-  ['revptsmap_43',['revPtsMap',['../classSVF_1_1MutablePTData.html#ad8c9fc1b290372ed9c68e54687724b64',1,'SVF::MutablePTData::revPtsMap'],['../classSVF_1_1PersistentPTData.html#a7b43ad5045ebdaa86f2587ea3f2f9563',1,'SVF::PersistentPTData::revPtsMap']]],
-  ['rid_44',['rid',['../classSVF_1_1MemRegion.html#aeb8ba1e0c907aeb3de84d8bd899c98b4',1,'SVF::MemRegion']]],
-  ['root_45',['root',['../classSVF_1_1ProgSlice.html#ada13c2389d43973ff7db18b7fca90087',1,'SVF::ProgSlice']]],
-  ['rununcallfuncs_46',['RunUncallFuncs',['../classSVF_1_1Options.html#abbdf86ddc2fb37d03b7ef7a9bcc4ce29',1,'SVF::Options']]]
+  ['returnedgroups_39',['returnedGroups',['../classSVF_1_1SparseObjGraph.html#a4e4e04842b37f9067aa48a39431fbf1c',1,'SVF::SparseObjGraph']]],
+  ['returnedgroupsbycallee_40',['returnedGroupsByCallee',['../classSVF_1_1SparseObjGraph.html#a7369c5b8e3521975733202d4a31e549e',1,'SVF::SparseObjGraph']]],
+  ['returnfunobjsymmap_41',['returnFunObjSymMap',['../classSVF_1_1IRGraph.html#adeceab2ddf59ba096b43c7217612be10',1,'SVF::IRGraph']]],
+  ['returnsymmap_42',['returnSymMap',['../classSVF_1_1LLVMModuleSet.html#a98e5fc56406ce00cdcb27a5abaf3aeb1',1,'SVF::LLVMModuleSet']]],
+  ['rev_43',['rev',['../classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219',1,'SVF::PTData']]],
+  ['reversenodemapping_44',['reverseNodeMapping',['../classSVF_1_1PointsTo.html#a1ae4abe690d21eb5aaf2154243b604c1',1,'SVF::PointsTo']]],
+  ['revptsmap_45',['revPtsMap',['../classSVF_1_1MutablePTData.html#ad8c9fc1b290372ed9c68e54687724b64',1,'SVF::MutablePTData::revPtsMap'],['../classSVF_1_1PersistentPTData.html#a7b43ad5045ebdaa86f2587ea3f2f9563',1,'SVF::PersistentPTData::revPtsMap']]],
+  ['rid_46',['rid',['../classSVF_1_1MemRegion.html#aeb8ba1e0c907aeb3de84d8bd899c98b4',1,'SVF::MemRegion']]],
+  ['root_47',['root',['../classSVF_1_1ProgSlice.html#ada13c2389d43973ff7db18b7fca90087',1,'SVF::ProgSlice']]],
+  ['rununcallfuncs_48',['RunUncallFuncs',['../classSVF_1_1Options.html#abbdf86ddc2fb37d03b7ef7a9bcc4ce29',1,'SVF::Options']]]
 ];
