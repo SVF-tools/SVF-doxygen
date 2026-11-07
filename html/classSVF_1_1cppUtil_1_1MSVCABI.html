@@ -133,84 +133,84 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#a6a8ff43d1706dc7e7cdb8a6fc5b22d90">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01147">1147</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1148</span>{</div>
-<div class="line"><span class="lineno"> 1149</span>    DemangledName dname;</div>
-<div class="line"><span class="lineno"> 1150</span>    dname.isThunkFunc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1151</span> </div>
-<div class="line"><span class="lineno"> 1152</span>    std::string realnameStr = llvm::demangle(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
-<div class="line"><span class="lineno"> 1153</span>    <span class="keywordflow">if</span> (realnameStr == <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>)</div>
-<div class="line"><span class="lineno"> 1154</span>    {</div>
-<div class="line"><span class="lineno"> 1155</span>        dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1156</span>        dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1157</span>        <span class="keywordflow">return</span> dname;</div>
-<div class="line"><span class="lineno"> 1158</span>    }</div>
-<div class="line"><span class="lineno"> 1159</span> </div>
-<div class="line"><span class="lineno"> 1160</span>    <span class="keywordflow">if</span> (realnameStr.find(<span class="stringliteral">&quot;[thunk]&quot;</span>) != std::string::npos ||</div>
-<div class="line"><span class="lineno"> 1161</span>            realnameStr.find(<span class="stringliteral">&quot;`vcall&#39;&quot;</span>) != std::string::npos ||</div>
-<div class="line"><span class="lineno"> 1162</span>            realnameStr.find(<span class="stringliteral">&quot;`adjustor&#39;&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno"> 1163</span>    {</div>
-<div class="line"><span class="lineno"> 1164</span>        dname.isThunkFunc = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1165</span>    }</div>
-<div class="line"><span class="lineno"> 1166</span> </div>
-<div class="line"><span class="lineno"> 1167</span>    std::string beforeParenthesis = <a class="code hl_function" href="CppUtil_8cpp.html#a2bff9158f699b6fd11c8e116b91e4809">getBeforeParenthesis</a>(realnameStr);</div>
-<div class="line"><span class="lineno"> 1168</span>    <span class="keywordflow">if</span> (beforeParenthesis.find(<span class="stringliteral">&quot;::&quot;</span>) == std::string::npos ||</div>
-<div class="line"><span class="lineno"> 1169</span>            <a class="code hl_function" href="CppUtil_8cpp.html#a2a7c55fe3b24b913890307e9ac6cb2ba">isOperOverload</a>(beforeParenthesis))</div>
-<div class="line"><span class="lineno"> 1170</span>    {</div>
-<div class="line"><span class="lineno"> 1171</span>        dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1172</span>        dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1173</span>    }</div>
-<div class="line"><span class="lineno"> 1174</span>    <span class="keywordflow">else</span></div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01168">1168</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1169</span>{</div>
+<div class="line"><span class="lineno"> 1170</span>    DemangledName dname;</div>
+<div class="line"><span class="lineno"> 1171</span>    dname.isThunkFunc = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1172</span> </div>
+<div class="line"><span class="lineno"> 1173</span>    std::string realnameStr = llvm::demangle(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
+<div class="line"><span class="lineno"> 1174</span>    <span class="keywordflow">if</span> (realnameStr == <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>)</div>
 <div class="line"><span class="lineno"> 1175</span>    {</div>
-<div class="line"><span class="lineno"> 1176</span>        std::string beforeBracket = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">getBeforeBrackets</a>(beforeParenthesis);</div>
-<div class="line"><span class="lineno"> 1177</span>        <span class="keywordtype">size_t</span> colon = beforeBracket.rfind(<span class="stringliteral">&quot;::&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1178</span>        <span class="keywordflow">if</span> (colon == std::string::npos)</div>
-<div class="line"><span class="lineno"> 1179</span>        {</div>
-<div class="line"><span class="lineno"> 1180</span>            dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1181</span>            dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1182</span>        }</div>
-<div class="line"><span class="lineno"> 1183</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1184</span>        {</div>
-<div class="line"><span class="lineno"> 1185</span>            std::string classNamePart = beforeParenthesis.substr(0, colon);</div>
-<div class="line"><span class="lineno"> 1186</span>            dname.funcName = beforeParenthesis.substr(colon + 2);</div>
+<div class="line"><span class="lineno"> 1176</span>        dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1177</span>        dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1178</span>        <span class="keywordflow">return</span> dname;</div>
+<div class="line"><span class="lineno"> 1179</span>    }</div>
+<div class="line"><span class="lineno"> 1180</span> </div>
+<div class="line"><span class="lineno"> 1181</span>    <span class="keywordflow">if</span> (realnameStr.find(<span class="stringliteral">&quot;[thunk]&quot;</span>) != std::string::npos ||</div>
+<div class="line"><span class="lineno"> 1182</span>            realnameStr.find(<span class="stringliteral">&quot;`vcall&#39;&quot;</span>) != std::string::npos ||</div>
+<div class="line"><span class="lineno"> 1183</span>            realnameStr.find(<span class="stringliteral">&quot;`adjustor&#39;&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno"> 1184</span>    {</div>
+<div class="line"><span class="lineno"> 1185</span>        dname.isThunkFunc = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1186</span>    }</div>
 <div class="line"><span class="lineno"> 1187</span> </div>
-<div class="line"><span class="lineno"> 1188</span>            <span class="keywordtype">int</span> i = classNamePart.size() - 1;</div>
-<div class="line"><span class="lineno"> 1189</span>            <span class="keywordtype">int</span> bracketDepth = 0;</div>
-<div class="line"><span class="lineno"> 1190</span>            <span class="keywordflow">while</span> (i &gt;= 0)</div>
-<div class="line"><span class="lineno"> 1191</span>            {</div>
-<div class="line"><span class="lineno"> 1192</span>                <span class="keywordtype">char</span> c = classNamePart[i];</div>
-<div class="line"><span class="lineno"> 1193</span>                <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;&gt;&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1194</span>                {</div>
-<div class="line"><span class="lineno"> 1195</span>                    bracketDepth++;</div>
-<div class="line"><span class="lineno"> 1196</span>                }</div>
-<div class="line"><span class="lineno"> 1197</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;&lt;&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1198</span>                {</div>
-<div class="line"><span class="lineno"> 1199</span>                    bracketDepth--;</div>
-<div class="line"><span class="lineno"> 1200</span>                }</div>
-<div class="line"><span class="lineno"> 1201</span> </div>
-<div class="line"><span class="lineno"> 1202</span>                <span class="keywordflow">if</span> (bracketDepth &gt; 0)</div>
-<div class="line"><span class="lineno"> 1203</span>                {</div>
-<div class="line"><span class="lineno"> 1204</span>                    i--;</div>
-<div class="line"><span class="lineno"> 1205</span>                }</div>
-<div class="line"><span class="lineno"> 1206</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1207</span>                {</div>
-<div class="line"><span class="lineno"> 1208</span>                    <span class="keywordflow">if</span> (std::isalnum(c) || c == <span class="charliteral">&#39;_&#39;</span> || c == <span class="charliteral">&#39;:&#39;</span> || c == <span class="charliteral">&#39;&lt;&#39;</span> ||</div>
-<div class="line"><span class="lineno"> 1209</span>                            c == <span class="charliteral">&#39;&gt;&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1210</span>                    {</div>
-<div class="line"><span class="lineno"> 1211</span>                        i--;</div>
-<div class="line"><span class="lineno"> 1212</span>                    }</div>
-<div class="line"><span class="lineno"> 1213</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1214</span>                    {</div>
-<div class="line"><span class="lineno"> 1215</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1216</span>                    }</div>
+<div class="line"><span class="lineno"> 1188</span>    std::string beforeParenthesis = <a class="code hl_function" href="CppUtil_8cpp.html#a2bff9158f699b6fd11c8e116b91e4809">getBeforeParenthesis</a>(realnameStr);</div>
+<div class="line"><span class="lineno"> 1189</span>    <span class="keywordflow">if</span> (beforeParenthesis.find(<span class="stringliteral">&quot;::&quot;</span>) == std::string::npos ||</div>
+<div class="line"><span class="lineno"> 1190</span>            <a class="code hl_function" href="CppUtil_8cpp.html#a2a7c55fe3b24b913890307e9ac6cb2ba">isOperOverload</a>(beforeParenthesis))</div>
+<div class="line"><span class="lineno"> 1191</span>    {</div>
+<div class="line"><span class="lineno"> 1192</span>        dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1193</span>        dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1194</span>    }</div>
+<div class="line"><span class="lineno"> 1195</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1196</span>    {</div>
+<div class="line"><span class="lineno"> 1197</span>        std::string beforeBracket = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">getBeforeBrackets</a>(beforeParenthesis);</div>
+<div class="line"><span class="lineno"> 1198</span>        <span class="keywordtype">size_t</span> colon = beforeBracket.rfind(<span class="stringliteral">&quot;::&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1199</span>        <span class="keywordflow">if</span> (colon == std::string::npos)</div>
+<div class="line"><span class="lineno"> 1200</span>        {</div>
+<div class="line"><span class="lineno"> 1201</span>            dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1202</span>            dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1203</span>        }</div>
+<div class="line"><span class="lineno"> 1204</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1205</span>        {</div>
+<div class="line"><span class="lineno"> 1206</span>            std::string classNamePart = beforeParenthesis.substr(0, colon);</div>
+<div class="line"><span class="lineno"> 1207</span>            dname.funcName = beforeParenthesis.substr(colon + 2);</div>
+<div class="line"><span class="lineno"> 1208</span> </div>
+<div class="line"><span class="lineno"> 1209</span>            <span class="keywordtype">int</span> i = classNamePart.size() - 1;</div>
+<div class="line"><span class="lineno"> 1210</span>            <span class="keywordtype">int</span> bracketDepth = 0;</div>
+<div class="line"><span class="lineno"> 1211</span>            <span class="keywordflow">while</span> (i &gt;= 0)</div>
+<div class="line"><span class="lineno"> 1212</span>            {</div>
+<div class="line"><span class="lineno"> 1213</span>                <span class="keywordtype">char</span> c = classNamePart[i];</div>
+<div class="line"><span class="lineno"> 1214</span>                <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1215</span>                {</div>
+<div class="line"><span class="lineno"> 1216</span>                    bracketDepth++;</div>
 <div class="line"><span class="lineno"> 1217</span>                }</div>
-<div class="line"><span class="lineno"> 1218</span>            }</div>
-<div class="line"><span class="lineno"> 1219</span>            dname.className = classNamePart.substr(i + 1);</div>
-<div class="line"><span class="lineno"> 1220</span>        }</div>
-<div class="line"><span class="lineno"> 1221</span>    }</div>
+<div class="line"><span class="lineno"> 1218</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;&lt;&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1219</span>                {</div>
+<div class="line"><span class="lineno"> 1220</span>                    bracketDepth--;</div>
+<div class="line"><span class="lineno"> 1221</span>                }</div>
 <div class="line"><span class="lineno"> 1222</span> </div>
-<div class="line"><span class="lineno"> 1223</span>    <span class="keywordflow">return</span> dname;</div>
-<div class="line"><span class="lineno"> 1224</span>}</div>
+<div class="line"><span class="lineno"> 1223</span>                <span class="keywordflow">if</span> (bracketDepth &gt; 0)</div>
+<div class="line"><span class="lineno"> 1224</span>                {</div>
+<div class="line"><span class="lineno"> 1225</span>                    i--;</div>
+<div class="line"><span class="lineno"> 1226</span>                }</div>
+<div class="line"><span class="lineno"> 1227</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1228</span>                {</div>
+<div class="line"><span class="lineno"> 1229</span>                    <span class="keywordflow">if</span> (std::isalnum(c) || c == <span class="charliteral">&#39;_&#39;</span> || c == <span class="charliteral">&#39;:&#39;</span> || c == <span class="charliteral">&#39;&lt;&#39;</span> ||</div>
+<div class="line"><span class="lineno"> 1230</span>                            c == <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1231</span>                    {</div>
+<div class="line"><span class="lineno"> 1232</span>                        i--;</div>
+<div class="line"><span class="lineno"> 1233</span>                    }</div>
+<div class="line"><span class="lineno"> 1234</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1235</span>                    {</div>
+<div class="line"><span class="lineno"> 1236</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1237</span>                    }</div>
+<div class="line"><span class="lineno"> 1238</span>                }</div>
+<div class="line"><span class="lineno"> 1239</span>            }</div>
+<div class="line"><span class="lineno"> 1240</span>            dname.className = classNamePart.substr(i + 1);</div>
+<div class="line"><span class="lineno"> 1241</span>        }</div>
+<div class="line"><span class="lineno"> 1242</span>    }</div>
+<div class="line"><span class="lineno"> 1243</span> </div>
+<div class="line"><span class="lineno"> 1244</span>    <span class="keywordflow">return</span> dname;</div>
+<div class="line"><span class="lineno"> 1245</span>}</div>
 <div class="ttc" id="aCppUtil_8cpp_html_a2a7c55fe3b24b913890307e9ac6cb2ba"><div class="ttname"><a href="CppUtil_8cpp.html#a2a7c55fe3b24b913890307e9ac6cb2ba">isOperOverload</a></div><div class="ttdeci">static bool isOperOverload(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00084">CppUtil.cpp:84</a></div></div>
 <div class="ttc" id="aCppUtil_8cpp_html_a2bff9158f699b6fd11c8e116b91e4809"><div class="ttname"><a href="CppUtil_8cpp.html#a2bff9158f699b6fd11c8e116b91e4809">getBeforeParenthesis</a></div><div class="ttdeci">static std::string getBeforeParenthesis(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00107">CppUtil.cpp:107</a></div></div>
 <div class="ttc" id="acJSON_8h_html_a25d22ecc7e656d2c59332072684e8766"><div class="ttname"><a href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a></div><div class="ttdeci">const char *const name</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00264">cJSON.h:264</a></div></div>
@@ -243,25 +243,25 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#a7db2ccbc56d18a62c888b77220a35351">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01127">1127</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1128</span>{</div>
-<div class="line"><span class="lineno"> 1129</span>    std::string className = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1130</span>    std::string realnameStr = llvm::demangle(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
-<div class="line"><span class="lineno"> 1131</span>    <span class="keywordtype">size_t</span> pos = realnameStr.rfind(<span class="stringliteral">&quot;::`vftable&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1132</span>    <span class="keywordflow">if</span> (pos == std::string::npos)</div>
-<div class="line"><span class="lineno"> 1133</span>    {</div>
-<div class="line"><span class="lineno"> 1134</span>        pos = realnameStr.rfind(<span class="stringliteral">&quot;::`vbtable&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1135</span>    }</div>
-<div class="line"><span class="lineno"> 1136</span>    <span class="keywordflow">if</span> (pos != std::string::npos)</div>
-<div class="line"><span class="lineno"> 1137</span>    {</div>
-<div class="line"><span class="lineno"> 1138</span>        className = realnameStr.substr(0, pos);</div>
-<div class="line"><span class="lineno"> 1139</span>        <span class="keywordflow">if</span> (className.compare(0, 6, <span class="stringliteral">&quot;const &quot;</span>) == 0)</div>
-<div class="line"><span class="lineno"> 1140</span>        {</div>
-<div class="line"><span class="lineno"> 1141</span>            className = className.substr(6);</div>
-<div class="line"><span class="lineno"> 1142</span>        }</div>
-<div class="line"><span class="lineno"> 1143</span>    }</div>
-<div class="line"><span class="lineno"> 1144</span>    <span class="keywordflow">return</span> className;</div>
-<div class="line"><span class="lineno"> 1145</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01148">1148</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1149</span>{</div>
+<div class="line"><span class="lineno"> 1150</span>    std::string className = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1151</span>    std::string realnameStr = llvm::demangle(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
+<div class="line"><span class="lineno"> 1152</span>    <span class="keywordtype">size_t</span> pos = realnameStr.rfind(<span class="stringliteral">&quot;::`vftable&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1153</span>    <span class="keywordflow">if</span> (pos == std::string::npos)</div>
+<div class="line"><span class="lineno"> 1154</span>    {</div>
+<div class="line"><span class="lineno"> 1155</span>        pos = realnameStr.rfind(<span class="stringliteral">&quot;::`vbtable&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1156</span>    }</div>
+<div class="line"><span class="lineno"> 1157</span>    <span class="keywordflow">if</span> (pos != std::string::npos)</div>
+<div class="line"><span class="lineno"> 1158</span>    {</div>
+<div class="line"><span class="lineno"> 1159</span>        className = realnameStr.substr(0, pos);</div>
+<div class="line"><span class="lineno"> 1160</span>        <span class="keywordflow">if</span> (className.compare(0, 6, <span class="stringliteral">&quot;const &quot;</span>) == 0)</div>
+<div class="line"><span class="lineno"> 1161</span>        {</div>
+<div class="line"><span class="lineno"> 1162</span>            className = className.substr(6);</div>
+<div class="line"><span class="lineno"> 1163</span>        }</div>
+<div class="line"><span class="lineno"> 1164</span>    }</div>
+<div class="line"><span class="lineno"> 1165</span>    <span class="keywordflow">return</span> className;</div>
+<div class="line"><span class="lineno"> 1166</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -290,10 +290,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#a86bb3989d88c1d9c0aa2340ffb3ba0bb">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01117">1117</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1118</span>{</div>
-<div class="line"><span class="lineno"> 1119</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 3, <span class="stringliteral">&quot;??0&quot;</span>) == 0;</div>
-<div class="line"><span class="lineno"> 1120</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01138">1138</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1139</span>{</div>
+<div class="line"><span class="lineno"> 1140</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 3, <span class="stringliteral">&quot;??0&quot;</span>) == 0;</div>
+<div class="line"><span class="lineno"> 1141</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -322,10 +322,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#ac1e10406361d2d03234936ca6a90e05b">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01122">1122</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1123</span>{</div>
-<div class="line"><span class="lineno"> 1124</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 3, <span class="stringliteral">&quot;??1&quot;</span>) == 0;</div>
-<div class="line"><span class="lineno"> 1125</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01143">1143</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1144</span>{</div>
+<div class="line"><span class="lineno"> 1145</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 3, <span class="stringliteral">&quot;??1&quot;</span>) == 0;</div>
+<div class="line"><span class="lineno"> 1146</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -354,10 +354,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#a82aa1b4f84e460ef8f2e26da6fe2148a">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01112">1112</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1113</span>{</div>
-<div class="line"><span class="lineno"> 1114</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 4, <span class="stringliteral">&quot;??_R&quot;</span>) == 0;</div>
-<div class="line"><span class="lineno"> 1115</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01133">1133</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1134</span>{</div>
+<div class="line"><span class="lineno"> 1135</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 4, <span class="stringliteral">&quot;??_R&quot;</span>) == 0;</div>
+<div class="line"><span class="lineno"> 1136</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -386,10 +386,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#ab1922307eec52f36b9232ea5911c3cf8">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01107">1107</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1108</span>{</div>
-<div class="line"><span class="lineno"> 1109</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 4, <span class="stringliteral">&quot;??_7&quot;</span>) == 0 || <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 4, <span class="stringliteral">&quot;??_8&quot;</span>) == 0;</div>
-<div class="line"><span class="lineno"> 1110</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01128">1128</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1129</span>{</div>
+<div class="line"><span class="lineno"> 1130</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 4, <span class="stringliteral">&quot;??_7&quot;</span>) == 0 || <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, 4, <span class="stringliteral">&quot;??_8&quot;</span>) == 0;</div>
+<div class="line"><span class="lineno"> 1131</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

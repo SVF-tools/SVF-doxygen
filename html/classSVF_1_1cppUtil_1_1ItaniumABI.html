@@ -133,47 +133,47 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#a6a8ff43d1706dc7e7cdb8a6fc5b22d90">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01065">1065</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1066</span>{</div>
-<div class="line"><span class="lineno"> 1067</span>    DemangledName dname;</div>
-<div class="line"><span class="lineno"> 1068</span>    dname.isThunkFunc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1069</span> </div>
-<div class="line"><span class="lineno"> 1070</span>    std::string realnameStr = llvm::demangle(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
-<div class="line"><span class="lineno"> 1071</span>    <span class="keywordflow">if</span> (realnameStr == <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>)</div>
-<div class="line"><span class="lineno"> 1072</span>    {</div>
-<div class="line"><span class="lineno"> 1073</span>        dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1074</span>        dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1075</span>    }</div>
-<div class="line"><span class="lineno"> 1076</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1077</span>    {</div>
-<div class="line"><span class="lineno"> 1078</span>        std::string beforeParenthesis = <a class="code hl_function" href="CppUtil_8cpp.html#a2bff9158f699b6fd11c8e116b91e4809">getBeforeParenthesis</a>(realnameStr);</div>
-<div class="line"><span class="lineno"> 1079</span>        <span class="keywordflow">if</span> (beforeParenthesis.find(<span class="stringliteral">&quot;::&quot;</span>) == std::string::npos ||</div>
-<div class="line"><span class="lineno"> 1080</span>                <a class="code hl_function" href="CppUtil_8cpp.html#a2a7c55fe3b24b913890307e9ac6cb2ba">isOperOverload</a>(beforeParenthesis))</div>
-<div class="line"><span class="lineno"> 1081</span>        {</div>
-<div class="line"><span class="lineno"> 1082</span>            dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1083</span>            dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1084</span>        }</div>
-<div class="line"><span class="lineno"> 1085</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1086</span>        {</div>
-<div class="line"><span class="lineno"> 1087</span>            std::string beforeBracket = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">getBeforeBrackets</a>(beforeParenthesis);</div>
-<div class="line"><span class="lineno"> 1088</span>            <span class="keywordtype">size_t</span> colon = beforeBracket.rfind(<span class="stringliteral">&quot;::&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1089</span>            <span class="keywordflow">if</span> (colon == std::string::npos)</div>
-<div class="line"><span class="lineno"> 1090</span>            {</div>
-<div class="line"><span class="lineno"> 1091</span>                dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1092</span>                dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1093</span>            }</div>
-<div class="line"><span class="lineno"> 1094</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1095</span>            {</div>
-<div class="line"><span class="lineno"> 1096</span>                dname.className = beforeParenthesis.substr(0, colon);</div>
-<div class="line"><span class="lineno"> 1097</span>                dname.funcName = beforeParenthesis.substr(colon + 2);</div>
-<div class="line"><span class="lineno"> 1098</span>            }</div>
-<div class="line"><span class="lineno"> 1099</span>        }</div>
-<div class="line"><span class="lineno"> 1100</span>    }</div>
-<div class="line"><span class="lineno"> 1101</span> </div>
-<div class="line"><span class="lineno"> 1102</span>    <a class="code hl_function" href="CppUtil_8cpp.html#a264d15523be2c695d9cee8d49ae87ebe">handleThunkFunction</a>(dname);</div>
-<div class="line"><span class="lineno"> 1103</span> </div>
-<div class="line"><span class="lineno"> 1104</span>    <span class="keywordflow">return</span> dname;</div>
-<div class="line"><span class="lineno"> 1105</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01086">1086</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1087</span>{</div>
+<div class="line"><span class="lineno"> 1088</span>    DemangledName dname;</div>
+<div class="line"><span class="lineno"> 1089</span>    dname.isThunkFunc = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1090</span> </div>
+<div class="line"><span class="lineno"> 1091</span>    std::string realnameStr = llvm::demangle(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
+<div class="line"><span class="lineno"> 1092</span>    <span class="keywordflow">if</span> (realnameStr == <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>)</div>
+<div class="line"><span class="lineno"> 1093</span>    {</div>
+<div class="line"><span class="lineno"> 1094</span>        dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1095</span>        dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1096</span>    }</div>
+<div class="line"><span class="lineno"> 1097</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1098</span>    {</div>
+<div class="line"><span class="lineno"> 1099</span>        std::string beforeParenthesis = <a class="code hl_function" href="CppUtil_8cpp.html#a2bff9158f699b6fd11c8e116b91e4809">getBeforeParenthesis</a>(realnameStr);</div>
+<div class="line"><span class="lineno"> 1100</span>        <span class="keywordflow">if</span> (beforeParenthesis.find(<span class="stringliteral">&quot;::&quot;</span>) == std::string::npos ||</div>
+<div class="line"><span class="lineno"> 1101</span>                <a class="code hl_function" href="CppUtil_8cpp.html#a2a7c55fe3b24b913890307e9ac6cb2ba">isOperOverload</a>(beforeParenthesis))</div>
+<div class="line"><span class="lineno"> 1102</span>        {</div>
+<div class="line"><span class="lineno"> 1103</span>            dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1104</span>            dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1105</span>        }</div>
+<div class="line"><span class="lineno"> 1106</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1107</span>        {</div>
+<div class="line"><span class="lineno"> 1108</span>            std::string beforeBracket = <a class="code hl_function" href="namespaceSVF_1_1cppUtil.html#a1cf2e4671b16b477cc779c72f2419234">getBeforeBrackets</a>(beforeParenthesis);</div>
+<div class="line"><span class="lineno"> 1109</span>            <span class="keywordtype">size_t</span> colon = beforeBracket.rfind(<span class="stringliteral">&quot;::&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1110</span>            <span class="keywordflow">if</span> (colon == std::string::npos)</div>
+<div class="line"><span class="lineno"> 1111</span>            {</div>
+<div class="line"><span class="lineno"> 1112</span>                dname.className = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1113</span>                dname.funcName = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1114</span>            }</div>
+<div class="line"><span class="lineno"> 1115</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1116</span>            {</div>
+<div class="line"><span class="lineno"> 1117</span>                dname.className = beforeParenthesis.substr(0, colon);</div>
+<div class="line"><span class="lineno"> 1118</span>                dname.funcName = beforeParenthesis.substr(colon + 2);</div>
+<div class="line"><span class="lineno"> 1119</span>            }</div>
+<div class="line"><span class="lineno"> 1120</span>        }</div>
+<div class="line"><span class="lineno"> 1121</span>    }</div>
+<div class="line"><span class="lineno"> 1122</span> </div>
+<div class="line"><span class="lineno"> 1123</span>    <a class="code hl_function" href="CppUtil_8cpp.html#a264d15523be2c695d9cee8d49ae87ebe">handleThunkFunction</a>(dname);</div>
+<div class="line"><span class="lineno"> 1124</span> </div>
+<div class="line"><span class="lineno"> 1125</span>    <span class="keywordflow">return</span> dname;</div>
+<div class="line"><span class="lineno"> 1126</span>}</div>
 <div class="ttc" id="aCppUtil_8cpp_html_a264d15523be2c695d9cee8d49ae87ebe"><div class="ttname"><a href="CppUtil_8cpp.html#a264d15523be2c695d9cee8d49ae87ebe">handleThunkFunction</a></div><div class="ttdeci">static void handleThunkFunction(cppUtil::DemangledName &amp;dname)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00146">CppUtil.cpp:146</a></div></div>
 <div class="ttc" id="aCppUtil_8cpp_html_a2a7c55fe3b24b913890307e9ac6cb2ba"><div class="ttname"><a href="CppUtil_8cpp.html#a2a7c55fe3b24b913890307e9ac6cb2ba">isOperOverload</a></div><div class="ttdeci">static bool isOperOverload(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00084">CppUtil.cpp:84</a></div></div>
 <div class="ttc" id="aCppUtil_8cpp_html_a2bff9158f699b6fd11c8e116b91e4809"><div class="ttname"><a href="CppUtil_8cpp.html#a2bff9158f699b6fd11c8e116b91e4809">getBeforeParenthesis</a></div><div class="ttdeci">static std::string getBeforeParenthesis(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00107">CppUtil.cpp:107</a></div></div>
@@ -207,20 +207,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#a7db2ccbc56d18a62c888b77220a35351">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01050">1050</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1051</span>{</div>
-<div class="line"><span class="lineno"> 1052</span>    std::string className = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1053</span>    std::string realnameStr = llvm::demangle(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
-<div class="line"><span class="lineno"> 1054</span>    <span class="keywordflow">if</span> (realnameStr != <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>)</div>
-<div class="line"><span class="lineno"> 1055</span>    {</div>
-<div class="line"><span class="lineno"> 1056</span>        <span class="keywordflow">if</span> (realnameStr.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#a3afb7512c76959754d6398b8f20012da">vtblLabelAfterDemangle</a>.size(),</div>
-<div class="line"><span class="lineno"> 1057</span>                                <a class="code hl_variable" href="CppUtil_8cpp.html#a3afb7512c76959754d6398b8f20012da">vtblLabelAfterDemangle</a>) == 0)</div>
-<div class="line"><span class="lineno"> 1058</span>        {</div>
-<div class="line"><span class="lineno"> 1059</span>            className = realnameStr.substr(<a class="code hl_variable" href="CppUtil_8cpp.html#a3afb7512c76959754d6398b8f20012da">vtblLabelAfterDemangle</a>.size());</div>
-<div class="line"><span class="lineno"> 1060</span>        }</div>
-<div class="line"><span class="lineno"> 1061</span>    }</div>
-<div class="line"><span class="lineno"> 1062</span>    <span class="keywordflow">return</span> className;</div>
-<div class="line"><span class="lineno"> 1063</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01071">1071</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1072</span>{</div>
+<div class="line"><span class="lineno"> 1073</span>    std::string className = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1074</span>    std::string realnameStr = llvm::demangle(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
+<div class="line"><span class="lineno"> 1075</span>    <span class="keywordflow">if</span> (realnameStr != <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>)</div>
+<div class="line"><span class="lineno"> 1076</span>    {</div>
+<div class="line"><span class="lineno"> 1077</span>        <span class="keywordflow">if</span> (realnameStr.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#a3afb7512c76959754d6398b8f20012da">vtblLabelAfterDemangle</a>.size(),</div>
+<div class="line"><span class="lineno"> 1078</span>                                <a class="code hl_variable" href="CppUtil_8cpp.html#a3afb7512c76959754d6398b8f20012da">vtblLabelAfterDemangle</a>) == 0)</div>
+<div class="line"><span class="lineno"> 1079</span>        {</div>
+<div class="line"><span class="lineno"> 1080</span>            className = realnameStr.substr(<a class="code hl_variable" href="CppUtil_8cpp.html#a3afb7512c76959754d6398b8f20012da">vtblLabelAfterDemangle</a>.size());</div>
+<div class="line"><span class="lineno"> 1081</span>        }</div>
+<div class="line"><span class="lineno"> 1082</span>    }</div>
+<div class="line"><span class="lineno"> 1083</span>    <span class="keywordflow">return</span> className;</div>
+<div class="line"><span class="lineno"> 1084</span>}</div>
 <div class="ttc" id="aCppUtil_8cpp_html_a3afb7512c76959754d6398b8f20012da"><div class="ttname"><a href="CppUtil_8cpp.html#a3afb7512c76959754d6398b8f20012da">vtblLabelAfterDemangle</a></div><div class="ttdeci">const std::string vtblLabelAfterDemangle</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00043">CppUtil.cpp:43</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -250,23 +250,23 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#a86bb3989d88c1d9c0aa2340ffb3ba0bb">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01017">1017</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1018</span>{</div>
-<div class="line"><span class="lineno"> 1019</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a>.size(), <a class="code hl_variable" href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a>) != 0)</div>
-<div class="line"><span class="lineno"> 1020</span>    {</div>
-<div class="line"><span class="lineno"> 1021</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1022</span>    }</div>
-<div class="line"><span class="lineno"> 1023</span>    cppUtil::DemangledName dname = <a class="code hl_function" href="#a76316b79d386cdee7f46979e1a794e82">demangle</a>(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
-<div class="line"><span class="lineno"> 1024</span>    <span class="keywordflow">if</span> (dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() == 0)</div>
-<div class="line"><span class="lineno"> 1025</span>    {</div>
-<div class="line"><span class="lineno"> 1026</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1027</span>    }</div>
-<div class="line"><span class="lineno"> 1028</span>    <a class="code hl_function" href="CppUtil_8cpp.html#af6008113739aef2f184281d3985d97d6">stripBracketsAndNamespace</a>(dname);</div>
-<div class="line"><span class="lineno"> 1029</span>    <span class="keywordflow">return</span> dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() &gt; 0 &amp;&amp; dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a> == dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>;</div>
-<div class="line"><span class="lineno"> 1030</span>}</div>
-<div class="ttc" id="aCppUtil_8cpp_html_af6008113739aef2f184281d3985d97d6"><div class="ttname"><a href="CppUtil_8cpp.html#af6008113739aef2f184281d3985d97d6">stripBracketsAndNamespace</a></div><div class="ttdeci">void stripBracketsAndNamespace(cppUtil::DemangledName &amp;dname)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00484">CppUtil.cpp:484</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01038">1038</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1039</span>{</div>
+<div class="line"><span class="lineno"> 1040</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a>.size(), <a class="code hl_variable" href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a>) != 0)</div>
+<div class="line"><span class="lineno"> 1041</span>    {</div>
+<div class="line"><span class="lineno"> 1042</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1043</span>    }</div>
+<div class="line"><span class="lineno"> 1044</span>    cppUtil::DemangledName dname = <a class="code hl_function" href="#a76316b79d386cdee7f46979e1a794e82">demangle</a>(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
+<div class="line"><span class="lineno"> 1045</span>    <span class="keywordflow">if</span> (dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() == 0)</div>
+<div class="line"><span class="lineno"> 1046</span>    {</div>
+<div class="line"><span class="lineno"> 1047</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1048</span>    }</div>
+<div class="line"><span class="lineno"> 1049</span>    <a class="code hl_function" href="CppUtil_8cpp.html#af6008113739aef2f184281d3985d97d6">stripBracketsAndNamespace</a>(dname);</div>
+<div class="line"><span class="lineno"> 1050</span>    <span class="keywordflow">return</span> dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() &gt; 0 &amp;&amp; dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a> == dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>;</div>
+<div class="line"><span class="lineno"> 1051</span>}</div>
+<div class="ttc" id="aCppUtil_8cpp_html_af6008113739aef2f184281d3985d97d6"><div class="ttname"><a href="CppUtil_8cpp.html#af6008113739aef2f184281d3985d97d6">stripBracketsAndNamespace</a></div><div class="ttdeci">void stripBracketsAndNamespace(cppUtil::DemangledName &amp;dname)</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00505">CppUtil.cpp:505</a></div></div>
 <div class="ttc" id="aCppUtil_8cpp_html_aff4f7c7a9aacf05a3a3c42ae24ea7d96"><div class="ttname"><a href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a></div><div class="ttdeci">const std::string vfunPreLabel</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00053">CppUtil.cpp:53</a></div></div>
-<div class="ttc" id="aclassSVF_1_1cppUtil_1_1ItaniumABI_html_a76316b79d386cdee7f46979e1a794e82"><div class="ttname"><a href="#a76316b79d386cdee7f46979e1a794e82">SVF::cppUtil::ItaniumABI::demangle</a></div><div class="ttdeci">DemangledName demangle(const std::string &amp;name) override</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l01065">CppUtil.cpp:1065</a></div></div>
+<div class="ttc" id="aclassSVF_1_1cppUtil_1_1ItaniumABI_html_a76316b79d386cdee7f46979e1a794e82"><div class="ttname"><a href="#a76316b79d386cdee7f46979e1a794e82">SVF::cppUtil::ItaniumABI::demangle</a></div><div class="ttdeci">DemangledName demangle(const std::string &amp;name) override</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l01086">CppUtil.cpp:1086</a></div></div>
 <div class="ttc" id="astructSVF_1_1cppUtil_1_1DemangledName_html_a1dd17b240663bc9412adefde82385e02"><div class="ttname"><a href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">SVF::cppUtil::DemangledName::funcName</a></div><div class="ttdeci">std::string funcName</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8h_source.html#l00050">CppUtil.h:50</a></div></div>
 <div class="ttc" id="astructSVF_1_1cppUtil_1_1DemangledName_html_a5cd207bce618521166e6fa235014b297"><div class="ttname"><a href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">SVF::cppUtil::DemangledName::className</a></div><div class="ttdeci">std::string className</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8h_source.html#l00049">CppUtil.h:49</a></div></div>
 </div><!-- fragment -->
@@ -297,23 +297,23 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#ac1e10406361d2d03234936ca6a90e05b">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01032">1032</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1033</span>{</div>
-<div class="line"><span class="lineno"> 1034</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a>.size(), <a class="code hl_variable" href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a>) != 0)</div>
-<div class="line"><span class="lineno"> 1035</span>    {</div>
-<div class="line"><span class="lineno"> 1036</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1037</span>    }</div>
-<div class="line"><span class="lineno"> 1038</span>    cppUtil::DemangledName dname = <a class="code hl_function" href="#a76316b79d386cdee7f46979e1a794e82">demangle</a>(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
-<div class="line"><span class="lineno"> 1039</span>    <span class="keywordflow">if</span> (dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() == 0)</div>
-<div class="line"><span class="lineno"> 1040</span>    {</div>
-<div class="line"><span class="lineno"> 1041</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1042</span>    }</div>
-<div class="line"><span class="lineno"> 1043</span>    <a class="code hl_function" href="CppUtil_8cpp.html#af6008113739aef2f184281d3985d97d6">stripBracketsAndNamespace</a>(dname);</div>
-<div class="line"><span class="lineno"> 1044</span>    <span class="keywordflow">return</span> (dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() &gt; 0 &amp;&amp; dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>.size() &gt; 0 &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1045</span>            dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() + 1 == dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>.size() &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1046</span>            dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>.compare(0, 1, <span class="stringliteral">&quot;~&quot;</span>) == 0 &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1047</span>            dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.compare(dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>.substr(1)) == 0);</div>
-<div class="line"><span class="lineno"> 1048</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01053">1053</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1054</span>{</div>
+<div class="line"><span class="lineno"> 1055</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a>.size(), <a class="code hl_variable" href="CppUtil_8cpp.html#aff4f7c7a9aacf05a3a3c42ae24ea7d96">vfunPreLabel</a>) != 0)</div>
+<div class="line"><span class="lineno"> 1056</span>    {</div>
+<div class="line"><span class="lineno"> 1057</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1058</span>    }</div>
+<div class="line"><span class="lineno"> 1059</span>    cppUtil::DemangledName dname = <a class="code hl_function" href="#a76316b79d386cdee7f46979e1a794e82">demangle</a>(<a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>);</div>
+<div class="line"><span class="lineno"> 1060</span>    <span class="keywordflow">if</span> (dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() == 0)</div>
+<div class="line"><span class="lineno"> 1061</span>    {</div>
+<div class="line"><span class="lineno"> 1062</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1063</span>    }</div>
+<div class="line"><span class="lineno"> 1064</span>    <a class="code hl_function" href="CppUtil_8cpp.html#af6008113739aef2f184281d3985d97d6">stripBracketsAndNamespace</a>(dname);</div>
+<div class="line"><span class="lineno"> 1065</span>    <span class="keywordflow">return</span> (dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() &gt; 0 &amp;&amp; dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>.size() &gt; 0 &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1066</span>            dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.size() + 1 == dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>.size() &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1067</span>            dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>.compare(0, 1, <span class="stringliteral">&quot;~&quot;</span>) == 0 &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1068</span>            dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a5cd207bce618521166e6fa235014b297">className</a>.compare(dname.<a class="code hl_variable" href="structSVF_1_1cppUtil_1_1DemangledName.html#a1dd17b240663bc9412adefde82385e02">funcName</a>.substr(1)) == 0);</div>
+<div class="line"><span class="lineno"> 1069</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -342,10 +342,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#a82aa1b4f84e460ef8f2e26da6fe2148a">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01012">1012</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1013</span>{</div>
-<div class="line"><span class="lineno"> 1014</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#ac6c8cb5e26437d51d4d2e0112ebfdbc6">ztilabel</a>.size(), <a class="code hl_variable" href="CppUtil_8cpp.html#ac6c8cb5e26437d51d4d2e0112ebfdbc6">ztilabel</a>) == 0;</div>
-<div class="line"><span class="lineno"> 1015</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01033">1033</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1034</span>{</div>
+<div class="line"><span class="lineno"> 1035</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#ac6c8cb5e26437d51d4d2e0112ebfdbc6">ztilabel</a>.size(), <a class="code hl_variable" href="CppUtil_8cpp.html#ac6c8cb5e26437d51d4d2e0112ebfdbc6">ztilabel</a>) == 0;</div>
+<div class="line"><span class="lineno"> 1036</span>}</div>
 <div class="ttc" id="aCppUtil_8cpp_html_ac6c8cb5e26437d51d4d2e0112ebfdbc6"><div class="ttname"><a href="CppUtil_8cpp.html#ac6c8cb5e26437d51d4d2e0112ebfdbc6">ztilabel</a></div><div class="ttdeci">const std::string ztilabel</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00079">CppUtil.cpp:79</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -375,11 +375,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classSVF_1_1cppUtil_1_1CXXABI.html#ab1922307eec52f36b9232ea5911c3cf8">SVF::cppUtil::CXXABI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01006">1006</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1007</span>{</div>
-<div class="line"><span class="lineno"> 1008</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#a211c0223a37893d84fb5e2fd2f9fc76b">vtblLabelBeforeDemangle</a>.size(),</div>
-<div class="line"><span class="lineno"> 1009</span>                        <a class="code hl_variable" href="CppUtil_8cpp.html#a211c0223a37893d84fb5e2fd2f9fc76b">vtblLabelBeforeDemangle</a>) == 0;</div>
-<div class="line"><span class="lineno"> 1010</span>}</div>
+<p class="definition">Definition at line <a class="el" href="CppUtil_8cpp_source.html#l01027">1027</a> of file <a class="el" href="CppUtil_8cpp_source.html">CppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1028</span>{</div>
+<div class="line"><span class="lineno"> 1029</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8h.html#a25d22ecc7e656d2c59332072684e8766">name</a>.compare(0, <a class="code hl_variable" href="CppUtil_8cpp.html#a211c0223a37893d84fb5e2fd2f9fc76b">vtblLabelBeforeDemangle</a>.size(),</div>
+<div class="line"><span class="lineno"> 1030</span>                        <a class="code hl_variable" href="CppUtil_8cpp.html#a211c0223a37893d84fb5e2fd2f9fc76b">vtblLabelBeforeDemangle</a>) == 0;</div>
+<div class="line"><span class="lineno"> 1031</span>}</div>
 <div class="ttc" id="aCppUtil_8cpp_html_a211c0223a37893d84fb5e2fd2f9fc76b"><div class="ttname"><a href="CppUtil_8cpp.html#a211c0223a37893d84fb5e2fd2f9fc76b">vtblLabelBeforeDemangle</a></div><div class="ttdeci">const std::string vtblLabelBeforeDemangle</div><div class="ttdef"><b>Definition</b> <a href="CppUtil_8cpp_source.html#l00050">CppUtil.cpp:50</a></div></div>
 </div><!-- fragment -->
 </div>
