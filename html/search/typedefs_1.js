@@ -20,12 +20,13 @@ var searchData=
   ['bbtophisetmap_17',['BBToPhiSetMap',['../classSVF_1_1MemSSA.html#af939c93eee0128973d86974e36345917',1,'SVF::MemSSA']]],
   ['bbtosymjoinsmap_18',['BBToSymJoinsMap',['../classSVF_1_1MHP.html#a7d337cbae1af3590077b4eb402ccd08b',1,'SVF::MHP']]],
   ['binaryoperator_19',['BinaryOperator',['../namespaceSVF.html#aad5d26ab07a5d1314bdb8f54e0fcdb22',1,'SVF']]],
-  ['bitcastinst_20',['BitCastInst',['../namespaceSVF.html#afc50da46a6ea7c2cf61683bbec4d7c8d',1,'SVF']]],
-  ['bitword_21',['BitWord',['../structSVF_1_1SparseBitVectorElement.html#af9014ab5077a2d9c1aed1e9b1460390d',1,'SVF::SparseBitVectorElement']]],
-  ['blockaddress_22',['BlockAddress',['../namespaceSVF.html#a956458a8554bf734db1194f320fd4b4c',1,'SVF']]],
-  ['branchcondition_23',['BranchCondition',['../classSVF_1_1CDGEdge.html#a4afe4a311099df84c14023900d38b292',1,'SVF::CDGEdge']]],
-  ['branchinst_24',['BranchInst',['../namespaceSVF.html#ac9a05dd7ab16e998625037aa242cd30f',1,'SVF']]],
-  ['bridge_5fgep_5fiterator_25',['bridge_gep_iterator',['../namespaceSVF.html#a3b6e84470681a9f731a81e8cf54680cc',1,'SVF::bridge_gep_iterator'],['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator']]],
-  ['brit_26',['BrIt',['../classSVF_1_1SlicedICFGEdgeIterImpl.html#a57cc62886dffbe8e07bb8dfbd85d1ddf',1,'SVF::SlicedICFGEdgeIterImpl']]],
-  ['bugset_27',['BugSet',['../classSVF_1_1SVFBugReport.html#a357fa4ad635d2c53693ab147f255f7ac',1,'SVF::SVFBugReport']]]
+  ['binaryopintrinsic_20',['BinaryOpIntrinsic',['../namespaceSVF.html#aff2da2ed0d7c413dcb014141f0b750f1',1,'SVF']]],
+  ['bitcastinst_21',['BitCastInst',['../namespaceSVF.html#afc50da46a6ea7c2cf61683bbec4d7c8d',1,'SVF']]],
+  ['bitword_22',['BitWord',['../structSVF_1_1SparseBitVectorElement.html#af9014ab5077a2d9c1aed1e9b1460390d',1,'SVF::SparseBitVectorElement']]],
+  ['blockaddress_23',['BlockAddress',['../namespaceSVF.html#a956458a8554bf734db1194f320fd4b4c',1,'SVF']]],
+  ['branchcondition_24',['BranchCondition',['../classSVF_1_1CDGEdge.html#a4afe4a311099df84c14023900d38b292',1,'SVF::CDGEdge']]],
+  ['branchinst_25',['BranchInst',['../namespaceSVF.html#ac9a05dd7ab16e998625037aa242cd30f',1,'SVF']]],
+  ['bridge_5fgep_5fiterator_26',['bridge_gep_iterator',['../namespaceSVF.html#a3b6e84470681a9f731a81e8cf54680cc',1,'SVF::bridge_gep_iterator'],['../namespacellvm.html#af77a7ec045719d1f075cf6c591902522',1,'llvm::bridge_gep_iterator']]],
+  ['brit_27',['BrIt',['../classSVF_1_1SlicedICFGEdgeIterImpl.html#a57cc62886dffbe8e07bb8dfbd85d1ddf',1,'SVF::SlicedICFGEdgeIterImpl']]],
+  ['bugset_28',['BugSet',['../classSVF_1_1SVFBugReport.html#a357fa4ad635d2c53693ab147f255f7ac',1,'SVF::SVFBugReport']]]
 ];

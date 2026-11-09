@@ -53,6 +53,5 @@ var searchData=
   ['traverseonicfg_50',['traverseOnICFG',['../svf-ex_8cpp.html#a19f3fe331a1e7050a513672a91743b96',1,'svf-ex.cpp']]],
   ['traverseonvfg_51',['traverseOnVFG',['../svf-ex_8cpp.html#af9ba8fcc16a41106375608b105ca24cf',1,'svf-ex.cpp']]],
   ['treenode_52',['TreeNode',['../structSVF_1_1POCRHybridSolver_1_1TreeNode.html#a2bedc69e7062cf96058395d3f7ebd030',1,'SVF::POCRHybridSolver::TreeNode']]],
-  ['typeanalysis_53',['TypeAnalysis',['../classSVF_1_1TypeAnalysis.html#aaec66fea631bfe00064182e17dfb9db3',1,'SVF::TypeAnalysis']]],
-  ['typesizedifftest_54',['typeSizeDiffTest',['../classSVF_1_1ObjTypeInference.html#a99eaaef89f214fc8587349361600b44d',1,'SVF::ObjTypeInference']]]
+  ['typeanalysis_53',['TypeAnalysis',['../classSVF_1_1TypeAnalysis.html#aaec66fea631bfe00064182e17dfb9db3',1,'SVF::TypeAnalysis']]]
 ];

@@ -37,6 +37,7 @@ var searchData=
   ['vfgnodeset_34',['VFGNodeSet',['../classSVF_1_1VFG.html#a03d388eec513f713f5e0d06f920168db',1,'SVF::VFG']]],
   ['vfunset_35',['VFunSet',['../classSVF_1_1PointerAnalysis.html#af574a9dfa397c702d8160a81db807845',1,'SVF::PointerAnalysis::VFunSet'],['../namespaceSVF.html#ae7bc0dbcc7aedd243d7705811d7d4aae',1,'SVF::VFunSet']]],
   ['vfworklist_36',['VFWorkList',['../classSVF_1_1ProgSlice.html#a684e44ade783439c6f77a8d84eed282c',1,'SVF::ProgSlice']]],
-  ['vtableptrtocallsitemap_37',['VTablePtrToCallSiteMap',['../classSVF_1_1FunptrDDAClient.html#ad195fbe1a6b422e67f16c9fde9d8e671',1,'SVF::FunptrDDAClient::VTablePtrToCallSiteMap'],['../classSVF_1_1AliasDDAClient.html#a1eb12d17470a8b1ae7131470ace2daa2',1,'SVF::AliasDDAClient::VTablePtrToCallSiteMap']]],
-  ['vtableset_38',['VTableSet',['../classSVF_1_1PointerAnalysis.html#a40cc2267ef563ee4d87ff72a13aa3ef6',1,'SVF::PointerAnalysis::VTableSet'],['../namespaceSVF.html#a4c927afe1534eab7377cb2189c193fc3',1,'SVF::VTableSet']]]
+  ['vpintrinsic_37',['VPIntrinsic',['../namespaceSVF.html#a0ea8b301ceeb6ab13d781878029a6403',1,'SVF']]],
+  ['vtableptrtocallsitemap_38',['VTablePtrToCallSiteMap',['../classSVF_1_1FunptrDDAClient.html#ad195fbe1a6b422e67f16c9fde9d8e671',1,'SVF::FunptrDDAClient::VTablePtrToCallSiteMap'],['../classSVF_1_1AliasDDAClient.html#a1eb12d17470a8b1ae7131470ace2daa2',1,'SVF::AliasDDAClient::VTablePtrToCallSiteMap']]],
+  ['vtableset_39',['VTableSet',['../classSVF_1_1PointerAnalysis.html#a40cc2267ef563ee4d87ff72a13aa3ef6',1,'SVF::PointerAnalysis::VTableSet'],['../namespaceSVF.html#a4c927afe1534eab7377cb2189c193fc3',1,'SVF::VTableSet']]]
 ];

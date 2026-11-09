@@ -128,24 +128,24 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Require a returning, nonvariadic definition whose uses are all ordinary direct calls with matching types, so each call can pass the output pointers. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01558">1558</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1559</span>{</div>
-<div class="line"><span class="lineno"> 1560</span>    <span class="keywordflow">if</span> (!fun || <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">LLVMUtil::isExtCall</a>(fun) || fun-&gt;isVarArg() ||</div>
-<div class="line"><span class="lineno"> 1561</span>            fun-&gt;doesNotReturn() || !fun-&gt;getReturnType()-&gt;isAggregateType() ||</div>
-<div class="line"><span class="lineno"> 1562</span>            fun-&gt;hasAddressTaken())</div>
-<div class="line"><span class="lineno"> 1563</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1564</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">User</a>* user : fun-&gt;users())</div>
-<div class="line"><span class="lineno"> 1565</span>    {</div>
-<div class="line"><span class="lineno"> 1566</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* call = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;CallInst&gt;</a>(user);</div>
-<div class="line"><span class="lineno"> 1567</span>        <span class="keywordflow">if</span> (!call || call-&gt;getCalledFunction() != fun ||</div>
-<div class="line"><span class="lineno"> 1568</span>                call-&gt;getFunctionType() != fun-&gt;getFunctionType())</div>
-<div class="line"><span class="lineno"> 1569</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1570</span>    }</div>
-<div class="line"><span class="lineno"> 1571</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1572</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01554">1554</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1555</span>{</div>
+<div class="line"><span class="lineno"> 1556</span>    <span class="keywordflow">if</span> (!fun || <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">LLVMUtil::isExtCall</a>(fun) || fun-&gt;isVarArg() ||</div>
+<div class="line"><span class="lineno"> 1557</span>            fun-&gt;doesNotReturn() || !fun-&gt;getReturnType()-&gt;isAggregateType() ||</div>
+<div class="line"><span class="lineno"> 1558</span>            fun-&gt;hasAddressTaken())</div>
+<div class="line"><span class="lineno"> 1559</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1560</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">User</a>* user : fun-&gt;users())</div>
+<div class="line"><span class="lineno"> 1561</span>    {</div>
+<div class="line"><span class="lineno"> 1562</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* call = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;CallInst&gt;</a>(user);</div>
+<div class="line"><span class="lineno"> 1563</span>        <span class="keywordflow">if</span> (!call || call-&gt;getCalledFunction() != fun ||</div>
+<div class="line"><span class="lineno"> 1564</span>                call-&gt;getFunctionType() != fun-&gt;getFunctionType())</div>
+<div class="line"><span class="lineno"> 1565</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1566</span>    }</div>
+<div class="line"><span class="lineno"> 1567</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1568</span>}</div>
 <div class="ttc" id="anamespaceSVF_1_1LLVMUtil_html_aaecb35817e1ccc9401ebc7306be347af"><div class="ttname"><a href="namespaceSVF_1_1LLVMUtil.html#aaecb35817e1ccc9401ebc7306be347af">SVF::LLVMUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const Function *fun)</div><div class="ttdef"><b>Definition</b> <a href="LLVMUtil_8cpp_source.html#l00385">LLVMUtil.cpp:385</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aefeaa1d67563fbf00b9f06a848072df1"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVF::SVFUtil::dyn_cast</a></div><div class="ttdeci">LLVM_NODISCARD std::enable_if_t&lt;!is_simple_type&lt; Y &gt;::value, typename cast_retty&lt; X, const Y &gt;::ret_type &gt; dyn_cast(const Y &amp;Val)</div><div class="ttdef"><b>Definition</b> <a href="Casting_8h_source.html#l00405">Casting.h:405</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_afc1b50355821e7299df03b026e36f1df"><div class="ttname"><a href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">SVF::User</a></div><div class="ttdeci">llvm::User User</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00149">BasicTypes.h:149</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_afc1b50355821e7299df03b026e36f1df"><div class="ttname"><a href="namespaceSVF.html#afc1b50355821e7299df03b026e36f1df">SVF::User</a></div><div class="ttdeci">llvm::User User</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00143">BasicTypes.h:143</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -178,33 +178,33 @@ Functions</h2></td></tr>
 
 <p>Return the type at a constant aggregate path, including fixed vector lanes. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01335">1335</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1337</span>{</div>
-<div class="line"><span class="lineno"> 1338</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> : indices)</div>
-<div class="line"><span class="lineno"> 1339</span>    {</div>
-<div class="line"><span class="lineno"> 1340</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* structure = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;StructType&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><span class="lineno"> 1341</span>        {</div>
-<div class="line"><span class="lineno"> 1342</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &gt;= structure-&gt;getNumElements())</div>
-<div class="line"><span class="lineno"> 1343</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 1344</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = structure-&gt;getElementType(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>);</div>
-<div class="line"><span class="lineno"> 1345</span>        }</div>
-<div class="line"><span class="lineno"> 1346</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* array = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ArrayType&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><span class="lineno"> 1347</span>        {</div>
-<div class="line"><span class="lineno"> 1348</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &gt;= array-&gt;getNumElements())</div>
-<div class="line"><span class="lineno"> 1349</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 1350</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = array-&gt;getElementType();</div>
-<div class="line"><span class="lineno"> 1351</span>        }</div>
-<div class="line"><span class="lineno"> 1352</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* vector = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;llvm::FixedVectorType&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
-<div class="line"><span class="lineno"> 1353</span>        {</div>
-<div class="line"><span class="lineno"> 1354</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &gt;= vector-&gt;getNumElements())</div>
-<div class="line"><span class="lineno"> 1355</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 1356</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = vector-&gt;getElementType();</div>
-<div class="line"><span class="lineno"> 1357</span>        }</div>
-<div class="line"><span class="lineno"> 1358</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1359</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 1360</span>    }</div>
-<div class="line"><span class="lineno"> 1361</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>;</div>
-<div class="line"><span class="lineno"> 1362</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01331">1331</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1333</span>{</div>
+<div class="line"><span class="lineno"> 1334</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> : indices)</div>
+<div class="line"><span class="lineno"> 1335</span>    {</div>
+<div class="line"><span class="lineno"> 1336</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* structure = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;StructType&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><span class="lineno"> 1337</span>        {</div>
+<div class="line"><span class="lineno"> 1338</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &gt;= structure-&gt;getNumElements())</div>
+<div class="line"><span class="lineno"> 1339</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 1340</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = structure-&gt;getElementType(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>);</div>
+<div class="line"><span class="lineno"> 1341</span>        }</div>
+<div class="line"><span class="lineno"> 1342</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* array = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ArrayType&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><span class="lineno"> 1343</span>        {</div>
+<div class="line"><span class="lineno"> 1344</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &gt;= array-&gt;getNumElements())</div>
+<div class="line"><span class="lineno"> 1345</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 1346</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = array-&gt;getElementType();</div>
+<div class="line"><span class="lineno"> 1347</span>        }</div>
+<div class="line"><span class="lineno"> 1348</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* vector = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;llvm::FixedVectorType&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>))</div>
+<div class="line"><span class="lineno"> 1349</span>        {</div>
+<div class="line"><span class="lineno"> 1350</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &gt;= vector-&gt;getNumElements())</div>
+<div class="line"><span class="lineno"> 1351</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 1352</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = vector-&gt;getElementType();</div>
+<div class="line"><span class="lineno"> 1353</span>        }</div>
+<div class="line"><span class="lineno"> 1354</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1355</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 1356</span>    }</div>
+<div class="line"><span class="lineno"> 1357</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>;</div>
+<div class="line"><span class="lineno"> 1358</span>}</div>
 <div class="ttc" id="acJSON_8cpp_html_a3f9a0d3265a6254722587175dac3e4dc"><div class="ttname"><a href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a></div><div class="ttdeci">newitem type</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l02739">cJSON.cpp:2739</a></div></div>
 <div class="ttc" id="acJSON_8h_html_a750b5d744c39a06bfb13e6eb010e35d0"><div class="ttname"><a href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00170">cJSON.h:170</a></div></div>
 </div><!-- fragment -->
@@ -238,15 +238,15 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Return the selected fixed-vector lane, or no lane for other vector types, variable indices and out-of-range indices. </p>
 
-<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01366">1366</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1368</span>{</div>
-<div class="line"><span class="lineno"> 1369</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* vector = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;llvm::FixedVectorType&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>);</div>
-<div class="line"><span class="lineno"> 1370</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* constant = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ConstantInt&gt;</a>(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>);</div>
-<div class="line"><span class="lineno"> 1371</span>    <span class="keywordflow">if</span> (!vector || !constant ||</div>
-<div class="line"><span class="lineno"> 1372</span>            constant-&gt;getValue().uge(vector-&gt;getNumElements()))</div>
-<div class="line"><span class="lineno"> 1373</span>        <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><span class="lineno"> 1374</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(constant-&gt;getZExtValue());</div>
-<div class="line"><span class="lineno"> 1375</span>}</div>
+<p class="definition">Definition at line <a class="el" href="SVFIRBuilder_8cpp_source.html#l01362">1362</a> of file <a class="el" href="SVFIRBuilder_8cpp_source.html">SVFIRBuilder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1364</span>{</div>
+<div class="line"><span class="lineno"> 1365</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* vector = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;llvm::FixedVectorType&gt;</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>);</div>
+<div class="line"><span class="lineno"> 1366</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* constant = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ConstantInt&gt;</a>(<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>);</div>
+<div class="line"><span class="lineno"> 1367</span>    <span class="keywordflow">if</span> (!vector || !constant ||</div>
+<div class="line"><span class="lineno"> 1368</span>            constant-&gt;getValue().uge(vector-&gt;getNumElements()))</div>
+<div class="line"><span class="lineno"> 1369</span>        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno"> 1370</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(constant-&gt;getZExtValue());</div>
+<div class="line"><span class="lineno"> 1371</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

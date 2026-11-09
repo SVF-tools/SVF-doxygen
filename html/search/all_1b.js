@@ -205,6 +205,5 @@ var searchData=
   ['typemalloc_202',['TYPEMALLOC',['../ObjTypeInference_8cpp.html#a5f334de99eb942058f27a1025c346f70',1,'ObjTypeInference.cpp']]],
   ['typemap_203',['TypeMap',['../classSVF_1_1POCRSolver.html#ac4d92529d21db89c547e20e886060b0f',1,'SVF::POCRSolver']]],
   ['typeofelement_204',['typeOfElement',['../classSVF_1_1SVFArrayType.html#a395841ef9448d7d78df53aff374e6f7a',1,'SVF::SVFArrayType']]],
-  ['typeprint_205',['TypePrint',['../classSVF_1_1Options.html#a83103f0d5f166e0bb062aa7d7b393ddd',1,'SVF::Options']]],
-  ['typesizedifftest_206',['typeSizeDiffTest',['../classSVF_1_1ObjTypeInference.html#a99eaaef89f214fc8587349361600b44d',1,'SVF::ObjTypeInference']]]
+  ['typeprint_205',['TypePrint',['../classSVF_1_1Options.html#a83103f0d5f166e0bb062aa7d7b393ddd',1,'SVF::Options']]]
 ];
