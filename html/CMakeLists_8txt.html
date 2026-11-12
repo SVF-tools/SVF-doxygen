@@ -81,8 +81,9 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a095adb383e17fd25f8801edb1c977d98" id="r_a095adb383e17fd25f8801edb1c977d98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a095adb383e17fd25f8801edb1c977d98">add_subdirectory</a> (SABER) add_subdirectory(WPA) add_subdirectory(Example) add_subdirectory(DDA) add_subdirectory(MTA) add_subdirectory(CFL) add_subdirectory(LLVM2SVF) add_subdirectory(AE) set(ALL_TOOLS ae cfl dvf llvm2svf mta saber svf-ex wpa) foreach(_tool IN LISTS ALL_TOOLS) target_link_libraries($</td></tr>
-<tr class="memitem:aa534c17e5d6a2d0fbd0a5f9be3c6d60b" id="r_aa534c17e5d6a2d0fbd0a5f9be3c6d60b"><td class="memItemLeft" align="right" valign="top">PRIVATE SvfCore SvfLLVM&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa534c17e5d6a2d0fbd0a5f9be3c6d60b">if</a> (WIN32) if(MSVC OR CMAKE_CXX_SIMULATE_ID STREQUAL &quot;MSVC&quot;) if(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL &quot;GNU&quot;) target_link_options($</td></tr>
-<tr class="memitem:a3aecd972e04365a0313627eb9eed25df" id="r_a3aecd972e04365a0313627eb9eed25df"><td class="memItemLeft" align="right" valign="top">PRIVATE Xlinker&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aecd972e04365a0313627eb9eed25df">endif</a> () endif() set_target_properties($</td></tr>
+<tr class="memitem:ad2c3132394aeefa2237663d795fbbee0" id="r_ad2c3132394aeefa2237663d795fbbee0"><td class="memItemLeft" align="right" valign="top">PRIVATE SvfCore SvfLLVM&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2c3132394aeefa2237663d795fbbee0">if</a> (NOT LLVM_ENABLE_RTTI) if(MSVC) target_compile_options($</td></tr>
+<tr class="memitem:a8bf3fb9a104e1162ecc3ba5465e1493b" id="r_a8bf3fb9a104e1162ecc3ba5465e1493b"><td class="memItemLeft" align="right" valign="top">PRIVATE GR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bf3fb9a104e1162ecc3ba5465e1493b">else</a> () target_compile_options($</td></tr>
+<tr class="memitem:a0ecd7e98578e854247cf43ea0ff581c3" id="r_a0ecd7e98578e854247cf43ea0ff581c3"><td class="memItemLeft" align="right" valign="top">PRIVATE fno rtti&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ecd7e98578e854247cf43ea0ff581c3">endif</a> () endif() <a class="el" href="#ad2c3132394aeefa2237663d795fbbee0">if</a>(WIN32) <a class="el" href="#ad2c3132394aeefa2237663d795fbbee0">if</a>(MSVC OR CMAKE_CXX_SIMULATE_ID STREQUAL &quot;MSVC&quot;) <a class="el" href="#ad2c3132394aeefa2237663d795fbbee0">if</a>(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL &quot;GNU&quot;) target_link_options($</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -110,8 +111,28 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a3aecd972e04365a0313627eb9eed25df" name="a3aecd972e04365a0313627eb9eed25df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aecd972e04365a0313627eb9eed25df">&#9670;&#160;</a></span>endif()</h2>
+<a id="a8bf3fb9a104e1162ecc3ba5465e1493b" name="a8bf3fb9a104e1162ecc3ba5465e1493b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf3fb9a104e1162ecc3ba5465e1493b">&#9670;&#160;</a></span>else()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PRIVATE GR else </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00028">28</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                              {_tool} PRIVATE -fno-rtti)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0ecd7e98578e854247cf43ea0ff581c3" name="a0ecd7e98578e854247cf43ea0ff581c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ecd7e98578e854247cf43ea0ff581c3">&#9670;&#160;</a></span>endif()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,13 +146,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00039">39</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>     {_tool}</div>
+<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00030">30</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>                             {_tool} PRIVATE -Xlinker /<a class="code hl_variable" href="#a95e48e5b40702b32c7e8782a7cb9bb21">STACK</a>:268435456)</div>
+<div class="ttc" id="aCMakeLists_8txt_html_a95e48e5b40702b32c7e8782a7cb9bb21"><div class="ttname"><a href="#a95e48e5b40702b32c7e8782a7cb9bb21">STACK</a></div><div class="ttdeci">PRIVATE Xlinker STACK</div><div class="ttdef"><b>Definition</b> <a href="CMakeLists_8txt_source.html#l00039">CMakeLists.txt:46</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aa534c17e5d6a2d0fbd0a5f9be3c6d60b" name="aa534c17e5d6a2d0fbd0a5f9be3c6d60b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa534c17e5d6a2d0fbd0a5f9be3c6d60b">&#9670;&#160;</a></span>if()</h2>
+<a id="ad2c3132394aeefa2237663d795fbbee0" name="ad2c3132394aeefa2237663d795fbbee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c3132394aeefa2237663d795fbbee0">&#9670;&#160;</a></span>if()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,15 +161,14 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">PRIVATE SvfCore SvfLLVM if </td>
           <td>(</td>
-          <td class="paramtype">WIN32</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">NOT</td>          <td class="paramname"><span class="paramname"><em>LLVM_ENABLE_RTTI</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00027">27</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                             {_tool} PRIVATE -Xlinker /<a class="code hl_variable" href="#a95e48e5b40702b32c7e8782a7cb9bb21">STACK</a>:268435456)</div>
-<div class="ttc" id="aCMakeLists_8txt_html_a95e48e5b40702b32c7e8782a7cb9bb21"><div class="ttname"><a href="#a95e48e5b40702b32c7e8782a7cb9bb21">STACK</a></div><div class="ttdeci">PRIVATE Xlinker STACK</div><div class="ttdef"><b>Definition</b> <a href="CMakeLists_8txt_source.html#l00031">CMakeLists.txt:38</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00025">25</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                              {_tool} PRIVATE /GR-)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -164,7 +185,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00031">31</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00039">39</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
 
 </div>
 </div>
@@ -180,7 +201,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00038">38</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CMakeLists_8txt_source.html#l00046">46</a> of file <a class="el" href="CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
 
 </div>
 </div>
