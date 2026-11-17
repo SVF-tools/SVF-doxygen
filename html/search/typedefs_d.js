@@ -3,7 +3,7 @@ var searchData=
   ['objecttoraceoccurrences_0',['ObjectToRaceOccurrences',['../classSVF_1_1MTA.html#a2f6b4ff23049d669a1bbec71ed762533',1,'SVF::MTA']]],
   ['objtoclsnamesources_1',['ObjToClsNameSources',['../classSVF_1_1ObjTypeInference.html#a151f6952ad6bcc3356a01542759eaae1',1,'SVF::ObjTypeInference']]],
   ['objtoversionmap_2',['ObjToVersionMap',['../classSVF_1_1VersionedFlowSensitive.html#af9a43f48b7d99cc6694f3ae3248fd8e0',1,'SVF::VersionedFlowSensitive']]],
-  ['offsettogepvarmap_3',['OffsetToGepVarMap',['../classSVF_1_1SVFIR.html#ab9a2786d0ec5855919a63011fcc132a8',1,'SVF::SVFIR']]],
+  ['offsettogepvarmap_3',['OffsetToGepVarMap',['../classSVF_1_1PAG.html#a75867954777426fb47286102d61b0c72',1,'SVF::PAG']]],
   ['opcache_4',['OpCache',['../classSVF_1_1PersistentPointsToCache.html#a896bab5039f4bf2d0da71045e2c63ad7',1,'SVF::PersistentPointsToCache']]],
   ['opicfgnodevec_5',['OpICFGNodeVec',['../classSVF_1_1PhiStmt.html#a49d49b191592f21e8e4e8b6676871423',1,'SVF::PhiStmt']]],
   ['opincomingbbs_6',['OPIncomingBBs',['../classSVF_1_1IntraPHIVFGNode.html#a66928f6cc755bd2a048804d00f859a80',1,'SVF::IntraPHIVFGNode']]],

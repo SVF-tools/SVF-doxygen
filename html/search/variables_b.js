@@ -18,6 +18,6 @@ var searchData=
   ['kind_15',['kind',['../classSVF_1_1AEDetector.html#a3947d2ab84f861c484a80e060a875a13',1,'SVF::AEDetector::kind'],['../structSVF_1_1GrammarBase_1_1Symbol.html#aa60ddaabcb38b277d56b41bc9133ef71',1,'SVF::GrammarBase::Symbol::kind'],['../classSVF_1_1CallGraph.html#ad40e722a3b0983cd1e24d2529615e6c2',1,'SVF::CallGraph::kind'],['../classSVF_1_1CommonCHGraph.html#a4d3f2b9ed7ae8e87baf69525e9115071',1,'SVF::CommonCHGraph::kind'],['../classSVF_1_1VFG.html#a3867c591a231bad0aa2e6ab7c095a42f',1,'SVF::VFG::kind'],['../classSVF_1_1SVFType.html#a428617a1e7addda6094ddd80bdbb62c8',1,'SVF::SVFType::kind']]],
   ['kindtoattrsmap_16',['kindToAttrsMap',['../classSVF_1_1GrammarBase.html#a7707662599fe848ae6526802be4f7b6c',1,'SVF::GrammarBase::kindToAttrsMap'],['../classSVF_1_1CFLGraphBuilder.html#af34aa7ae71e100d8bbe7c1b17c1f0068',1,'SVF::CFLGraphBuilder::kindToAttrsMap']]],
   ['kindtolabelmap_17',['kindToLabelMap',['../classSVF_1_1CFLGraphBuilder.html#a93b41c2f0eca82e6eaf49895b2b13a1e',1,'SVF::CFLGraphBuilder']]],
-  ['kindtoptasvfstmtsetmap_18',['KindToPTASVFStmtSetMap',['../classSVF_1_1IRGraph.html#ae0a9b81717fd834bbd109c4b69aaff9d',1,'SVF::IRGraph']]],
-  ['kindtosvfstmtsetmap_19',['KindToSVFStmtSetMap',['../classSVF_1_1IRGraph.html#a3db2c4e2823f16d78c86596da284acd1',1,'SVF::IRGraph']]]
+  ['kindtoptasvfstmtsetmap_18',['KindToPTASVFStmtSetMap',['../classSVF_1_1PAGBase.html#ac26b99f48b1d9fd2493f3bba1ac90ee0',1,'SVF::PAGBase']]],
+  ['kindtosvfstmtsetmap_19',['KindToSVFStmtSetMap',['../classSVF_1_1PAGBase.html#a3790ee107a01fdc2cba25c94788034e9',1,'SVF::PAGBase']]]
 ];

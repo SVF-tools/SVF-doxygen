@@ -10,7 +10,7 @@ var searchData=
   ['memcpyinst_7',['MemCpyInst',['../namespaceSVF.html#a7b1ab6ca15d368bd378d4123c9f75451',1,'SVF']]],
   ['memintrinsic_8',['MemIntrinsic',['../namespaceSVF.html#a062e5cbf987400704aff9209ac4507d1',1,'SVF']]],
   ['memmoveinst_9',['MemMoveInst',['../namespaceSVF.html#a3c102dae4e7eb1cd6604ed9944b43e97',1,'SVF']]],
-  ['memobjtofieldsmap_10',['MemObjToFieldsMap',['../classSVF_1_1SVFIR.html#ab6abb822445c9b3f5cb2b7206042e940',1,'SVF::SVFIR']]],
+  ['memobjtofieldsmap_10',['MemObjToFieldsMap',['../classSVF_1_1PAG.html#a49da7e7d6273a0d8798166f95ce6bb16',1,'SVF::PAG']]],
   ['memorylocation_11',['MemoryLocation',['../namespaceSVF.html#a339bbddac9d9dffd5ef602200d34c403',1,'SVF']]],
   ['memregtobbsmap_12',['MemRegToBBsMap',['../classSVF_1_1MemSSA.html#a8d0c1a00d7db194da66c685d79e73de5',1,'SVF::MemSSA']]],
   ['memregtocountermap_13',['MemRegToCounterMap',['../classSVF_1_1MemSSA.html#ae1aca020147c270deca2a1241e3847d0',1,'SVF::MemSSA']]],

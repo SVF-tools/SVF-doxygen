@@ -27,7 +27,7 @@ var searchData=
   ['nothingset_24',['nothingSet',['../classOptionMultiple.html#a6de3b01c7773ea6fddf84cd57e7401f8',1,'OptionMultiple']]],
   ['nullexpr_25',['nullExpr',['../classSVF_1_1Z3Expr.html#a9aa800372d57db519d484cc32ea1c5dc',1,'SVF::Z3Expr']]],
   ['nullptrderefdetector_26',['NullptrDerefDetector',['../classSVF_1_1NullptrDerefDetector.html#affca11776ac8751262dd1dbbfee8dc34',1,'SVF::NullptrDerefDetector']]],
-  ['nullptrsymid_27',['nullPtrSymID',['../classSVF_1_1IRGraph.html#a47b0c938cd72dc09ebd0d4b5dacc34bf',1,'SVF::IRGraph']]],
+  ['nullptrsymid_27',['nullPtrSymID',['../classSVF_1_1PAGBase.html#a19677ec97150a4c0aabdb0b679597c68',1,'SVF::PAGBase']]],
   ['nullptrvfgnode_28',['NullPtrVFGNode',['../classSVF_1_1NullPtrVFGNode.html#a689ac3b767538ecc80c734fd327aff38',1,'SVF::NullPtrVFGNode']]],
   ['num_5fgenerator_29',['num_generator',['../classSVF_1_1CFGrammar.html#a4d98bd2fee3d88558ed2b59c3d0d0d57',1,'SVF::CFGrammar']]],
   ['numedgedestlabels_30',['numEdgeDestLabels',['../structSVF_1_1DefaultDOTGraphTraits.html#ab84b8c94495cf8e805aae9d9f6f0aadc',1,'SVF::DefaultDOTGraphTraits']]],

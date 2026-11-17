@@ -15,7 +15,7 @@ var searchData=
   ['nodekind_12',['nodeKind',['../classSVF_1_1SVFValue.html#a67196939d8bb4ca9f181793c396fdac5',1,'SVF::SVFValue']]],
   ['nodemapping_13',['nodeMapping',['../classSVF_1_1PointsTo.html#acd7eab32125de90020c55c757d6adfda',1,'SVF::PointsTo']]],
   ['nodenum_14',['nodeNum',['../classSVF_1_1GenericGraph.html#a38122734cbe71551a420dfb7fee2012e',1,'SVF::GenericGraph']]],
-  ['nodenumafterpagbuild_15',['nodeNumAfterPAGBuild',['../classSVF_1_1IRGraph.html#a80cf14bf43accb89cb82490b4f173598',1,'SVF::IRGraph']]],
+  ['nodenumafterpagbuild_15',['nodeNumAfterPAGBuild',['../classSVF_1_1PAGBase.html#a651360d13af42710b8fb38bbc0433ca9',1,'SVF::PAGBase']]],
   ['nodeset_16',['nodeSet',['../classSVF_1_1List.html#a8d9ffc8497d53e0e1de230e0d8a50fec',1,'SVF::List']]],
   ['nodestack_17',['nodeStack',['../classSVF_1_1WPAFSSolver.html#a2cb80102611c663c4daddd68b4f4b75f',1,'SVF::WPAFSSolver']]],
   ['nodestobecollapsed_18',['nodesToBeCollapsed',['../classSVF_1_1ConstraintGraph.html#af3406f1e191d9d6d9c33d23bdd2d564b',1,'SVF::ConstraintGraph']]],

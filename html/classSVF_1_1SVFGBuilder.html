@@ -335,8 +335,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   88</span>    <span class="keywordflow">if</span> ((kind == <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a5a28e6fd51e73e076091d4b6f4e61eaa">VFG::FULLSVFG</a> || kind == <a class="code hl_enumvalue" href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0">VFG::FULLSVFG_OPT</a>) &amp;&amp;</div>
 <div class="line"><span class="lineno">   89</span>            <a class="code hl_variable" href="classSVF_1_1Options.html#a6bb16566b6206b49f1944d7f19d892af">Options::DumpSparseObjGraph</a>())</div>
 <div class="line"><span class="lineno">   90</span>    {</div>
-<div class="line"><span class="lineno">   91</span>        SVFIR* svfir = pta-&gt;<a class="code hl_function" href="classSVF_1_1PointerAnalysis.html#a6921d23861adbb899a11cb51e8b4764a">getPAG</a>();</div>
-<div class="line"><span class="lineno">   92</span>        SparseObjGraph routes(*<a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>, *svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a89e4621ec97af7899d9657fc97ee63d9">getICFG</a>(), *pta, *svfir);</div>
+<div class="line"><span class="lineno">   91</span>        PAG* pag = pta-&gt;<a class="code hl_function" href="classSVF_1_1PointerAnalysis.html#a9dd0ae15727f9b56ae48b6445ffa7b50">getPAG</a>();</div>
+<div class="line"><span class="lineno">   92</span>        SparseObjGraph routes(*<a class="code hl_variable" href="#af9f454c48ebf26376fca06cdcec0f9cc">svfg</a>, *pag-&gt;<a class="code hl_function" href="classSVF_1_1PAG.html#aa05171ae9207ccd958beb98aaebe4c97">getICFG</a>(), *pta, *pag);</div>
 <div class="line"><span class="lineno">   93</span>        routes.dump(<span class="stringliteral">&quot;sparse_obj_graph&quot;</span>);</div>
 <div class="line"><span class="lineno">   94</span>    }</div>
 <div class="line"><span class="lineno">   95</span> </div>
@@ -346,10 +346,10 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aSVFType_8h_html_a2c64190a065f342897573a3ef4973adb"><div class="ttname"><a href="SVFType_8h.html#a2c64190a065f342897573a3ef4973adb">DGENERAL</a></div><div class="ttdeci">#define DGENERAL</div><div class="ttdef"><b>Definition</b> <a href="SVFType_8h_source.html#l00582">SVFType.h:582</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_a6bb16566b6206b49f1944d7f19d892af"><div class="ttname"><a href="classSVF_1_1Options.html#a6bb16566b6206b49f1944d7f19d892af">SVF::Options::DumpSparseObjGraph</a></div><div class="ttdeci">static const Option&lt; bool &gt; DumpSparseObjGraph</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00109">Options.h:109</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_ae3ad3003a8d3df2f1e3463248bb5ad51"><div class="ttname"><a href="classSVF_1_1Options.html#ae3ad3003a8d3df2f1e3463248bb5ad51">SVF::Options::DumpVFG</a></div><div class="ttdeci">static const Option&lt; bool &gt; DumpVFG</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00108">Options.h:108</a></div></div>
-<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a6921d23861adbb899a11cb51e8b4764a"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a6921d23861adbb899a11cb51e8b4764a">SVF::PointerAnalysis::getPAG</a></div><div class="ttdeci">SVFIR * getPAG() const</div><div class="ttdef"><b>Definition</b> <a href="PointerAnalysis_8h_source.html#l00149">PointerAnalysis.h:149</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PAG_html_aa05171ae9207ccd958beb98aaebe4c97"><div class="ttname"><a href="classSVF_1_1PAG.html#aa05171ae9207ccd958beb98aaebe4c97">SVF::PAG::getICFG</a></div><div class="ttdeci">ICFG * getICFG() const</div><div class="ttdef"><b>Definition</b> <a href="PAG_8h_source.html#l00232">PAG.h:232</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a9dd0ae15727f9b56ae48b6445ffa7b50"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a9dd0ae15727f9b56ae48b6445ffa7b50">SVF::PointerAnalysis::getPAG</a></div><div class="ttdeci">PAG * getPAG() const</div><div class="ttdef"><b>Definition</b> <a href="PointerAnalysis_8h_source.html#l00149">PointerAnalysis.h:149</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_a057d1d631326e844ce3287eb17b98c1a"><div class="ttname"><a href="#a057d1d631326e844ce3287eb17b98c1a">SVF::SVFGBuilder::buildMSSA</a></div><div class="ttdeci">virtual std::unique_ptr&lt; MemSSA &gt; buildMSSA(BVDataPTAImpl *pta, bool ptrOnlyMSSA)</div><div class="ttdoc">Build Memory SSA.</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00127">SVFGBuilder.cpp:127</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_ae2d84f7527de200a2f269dc1c056a305"><div class="ttname"><a href="#ae2d84f7527de200a2f269dc1c056a305">SVF::SVFGBuilder::buildSVFG</a></div><div class="ttdeci">virtual void buildSVFG()</div><div class="ttdoc">Can be rewritten by subclasses.</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00059">SVFGBuilder.cpp:59</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFIR_html_a89e4621ec97af7899d9657fc97ee63d9"><div class="ttname"><a href="classSVF_1_1SVFIR.html#a89e4621ec97af7899d9657fc97ee63d9">SVF::SVFIR::getICFG</a></div><div class="ttdeci">ICFG * getICFG() const</div><div class="ttdef"><b>Definition</b> <a href="SVFIR_8h_source.html#l00232">SVFIR.h:232</a></div></div>
 <div class="ttc" id="aclassSVF_1_1VFG_html_ac2e2f555975063da3fa1932ac35802c6a5a28e6fd51e73e076091d4b6f4e61eaa"><div class="ttname"><a href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a5a28e6fd51e73e076091d4b6f4e61eaa">SVF::VFG::FULLSVFG</a></div><div class="ttdeci">@ FULLSVFG</div><div class="ttdef"><b>Definition</b> <a href="VFG_8h_source.html#l00057">VFG.h:57</a></div></div>
 <div class="ttc" id="aclassSVF_1_1VFG_html_ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd"><div class="ttname"><a href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6a8ed0b9aea88fbbbe91f33301bea0c9dd">SVF::VFG::PTRONLYSVFG_OPT</a></div><div class="ttdeci">@ PTRONLYSVFG_OPT</div><div class="ttdef"><b>Definition</b> <a href="VFG_8h_source.html#l00057">VFG.h:57</a></div></div>
 <div class="ttc" id="aclassSVF_1_1VFG_html_ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0"><div class="ttname"><a href="classSVF_1_1VFG.html#ac2e2f555975063da3fa1932ac35802c6aab1abd6be4a29fe8fb03a82f85e568a0">SVF::VFG::FULLSVFG_OPT</a></div><div class="ttdeci">@ FULLSVFG_OPT</div><div class="ttdef"><b>Definition</b> <a href="VFG_8h_source.html#l00057">VFG.h:57</a></div></div>
@@ -419,31 +419,29 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  132</span> </div>
 <div class="line"><span class="lineno">  133</span>    <span class="keyword">auto</span> mssa = std::make_unique&lt;MemSSA&gt;(pta, <a class="code hl_function" href="#a54790e22298f90cef25b77c8399f5b3c">createMRGenerator</a>(pta, ptrOnlyMSSA));</div>
 <div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    <span class="keyword">const</span> CallGraph* svfirCallGraph = <a class="code hl_function" href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6f4d606d40bcc8386929effcb5e1f0b1">getCallGraph</a>();</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a> : *svfirCallGraph)</div>
-<div class="line"><span class="lineno">  137</span>    {</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>        <span class="keyword">const</span> FunObjVar* fun = <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a>.second-&gt;getFunction();</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">isExtCall</a>(fun))</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        mssa-&gt;buildMemSSA(*fun);</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-<div class="line"><span class="lineno">  145</span> </div>
-<div class="line"><span class="lineno">  146</span>    mssa-&gt;performStat();</div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa">Options::DumpMSSA</a>())</div>
-<div class="line"><span class="lineno">  148</span>    {</div>
-<div class="line"><span class="lineno">  149</span>        mssa-&gt;dumpMSSA();</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-<div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">return</span> mssa;</div>
-<div class="line"><span class="lineno">  153</span>}</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a> : *(<a class="code hl_function" href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">PAG::getPAG</a>()-&gt;getCallGraph()))</div>
+<div class="line"><span class="lineno">  136</span>    {</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>        <span class="keyword">const</span> FunObjVar* fun = <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a>.second-&gt;getFunction();</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">isExtCall</a>(fun))</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>        mssa-&gt;buildMemSSA(*fun);</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>    mssa-&gt;performStat();</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa">Options::DumpMSSA</a>())</div>
+<div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        mssa-&gt;dumpMSSA();</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">return</span> mssa;</div>
+<div class="line"><span class="lineno">  152</span>}</div>
 <div class="ttc" id="acJSON_8h_html_ac76cea59d438ba893d2f82aabb367d14"><div class="ttname"><a href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a></div><div class="ttdeci">cJSON * item</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00222">cJSON.h:222</a></div></div>
 <div class="ttc" id="aclassSVF_1_1Options_html_a0bb4bfd677e2e45cc8c24bfc190edfaa"><div class="ttname"><a href="classSVF_1_1Options.html#a0bb4bfd677e2e45cc8c24bfc190edfaa">SVF::Options::DumpMSSA</a></div><div class="ttdeci">static const Option&lt; bool &gt; DumpMSSA</div><div class="ttdef"><b>Definition</b> <a href="Options_8h_source.html#l00140">Options.h:140</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PAG_html_a33a51406069e9dee0006e25295bf9220"><div class="ttname"><a href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">SVF::PAG::getPAG</a></div><div class="ttdeci">static PAG * getPAG(bool buildFromFile=false)</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis.</div><div class="ttdef"><b>Definition</b> <a href="PAG_8h_source.html#l00121">PAG.h:121</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFGBuilder_html_a54790e22298f90cef25b77c8399f5b3c"><div class="ttname"><a href="#a54790e22298f90cef25b77c8399f5b3c">SVF::SVFGBuilder::createMRGenerator</a></div><div class="ttdeci">virtual std::unique_ptr&lt; MRGenerator &gt; createMRGenerator(BVDataPTAImpl *pta, bool ptrOnlyMSSA)</div><div class="ttdef"><b>Definition</b> <a href="SVFGBuilder_8cpp_source.html#l00111">SVFGBuilder.cpp:111</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFIR_html_a6f4d606d40bcc8386929effcb5e1f0b1"><div class="ttname"><a href="classSVF_1_1SVFIR.html#a6f4d606d40bcc8386929effcb5e1f0b1">SVF::SVFIR::getCallGraph</a></div><div class="ttdeci">const CallGraph * getCallGraph()</div><div class="ttdoc">Get CG.</div><div class="ttdef"><b>Definition</b> <a href="SVFIR_8h_source.html#l00249">SVFIR.h:249</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFIR_html_acdb6795e102e7c03a61b7a4d2044c348"><div class="ttname"><a href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">SVF::SVFIR::getPAG</a></div><div class="ttdeci">static SVFIR * getPAG(bool buildFromFile=false)</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis.</div><div class="ttdef"><b>Definition</b> <a href="SVFIR_8h_source.html#l00121">SVFIR.h:121</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aa6b83d34488eaa1d6613568dd8394bdd"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVF::SVFUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const FunObjVar *fun)</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00526">SVFUtil.cpp:526</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aa6b83d34488eaa1d6613568dd8394bdd"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVF::SVFUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const FunObjVar *fun)</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00524">SVFUtil.cpp:524</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

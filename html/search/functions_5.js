@@ -23,7 +23,7 @@ var searchData=
   ['endsymbolallocation_20',['endSymbolAllocation',['../classSVF_1_1NodeIDAllocator.html#a92b053f79cfa1259603836cb0aacad7d',1,'SVF::NodeIDAllocator']]],
   ['enqueuesvfgnode_21',['enqueueSVFGNode',['../classSVF_1_1FSMPTA.html#a2e0696de9d12660ffb688e362692fbf9',1,'SVF::FSMPTA::enqueueSVFGNode()'],['../classSVF_1_1MTASlicerBase.html#ad4909045acdeba4e791b2b93b2e059db',1,'SVF::MTASlicerBase::enqueueSVFGNode()']]],
   ['ensure_22',['ensure',['../cJSON_8cpp.html#ad9f9a9b2ad3154fc8033756f23c023a6',1,'cJSON.cpp']]],
-  ['ensurepagview_23',['ensurePAGView',['../classSVF_1_1SlicedSVFIRView.html#abbc8bf2dfbe669ad4c597c61dbcbcf66',1,'SVF::SlicedSVFIRView']]],
+  ['ensurepagview_23',['ensurePAGView',['../classSVF_1_1SlicedUnifiedView.html#a7753d27fc20d614a58c0eeb987177c69',1,'SVF::SlicedUnifiedView']]],
   ['entrychi_24',['EntryCHI',['../classSVF_1_1EntryCHI.html#a35ac013e6f1a0df4f58d73fdce2f41cf',1,'SVF::EntryCHI']]],
   ['entryicfgedgesbegin_25',['entryICFGEdgesBegin',['../classSVF_1_1SVFLoop.html#ae837960286e6861697b99cf7c2ba79e5',1,'SVF::SVFLoop']]],
   ['entryicfgedgesend_26',['entryICFGEdgesEnd',['../classSVF_1_1SVFLoop.html#aa9defde1da46995b6e870b80c1f9ae01',1,'SVF::SVFLoop']]],

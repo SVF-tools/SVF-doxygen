@@ -97,7 +97,7 @@ var searchData=
   ['genericgraphtraits_3c_20svf_3a_3aicfg_20_2a_20_3e_94',['GenericGraphTraits&lt; SVF::ICFG * &gt;',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1ICFG_01_5_01_4.html',1,'SVF']]],
   ['genericgraphtraits_3c_20svf_3a_3aicfgnode_20_2a_20_3e_95',['GenericGraphTraits&lt; SVF::ICFGNode * &gt;',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1ICFGNode_01_5_01_4.html',1,'SVF']]],
   ['genericgraphtraits_3c_20svf_3a_3ainverse_3c_20gnode_20_2a_20_3e_20_3e_96',['GenericGraphTraits&lt; SVF::Inverse&lt; GNODE * &gt; &gt;',['../structSVF_1_1GenericGraphTraits.html',1,'SVF']]],
-  ['genericgraphtraits_3c_20svf_3a_3airgraph_20_2a_20_3e_97',['GenericGraphTraits&lt; SVF::IRGraph * &gt;',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1IRGraph_01_5_01_4.html',1,'SVF']]],
+  ['genericgraphtraits_3c_20svf_3a_3apagbase_20_2a_20_3e_97',['GenericGraphTraits&lt; SVF::PAGBase * &gt;',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1PAGBase_01_5_01_4.html',1,'SVF']]],
   ['genericgraphtraits_3c_20svf_3a_3asvfg_20_2a_20_3e_98',['GenericGraphTraits&lt; SVF::SVFG * &gt;',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1SVFG_01_5_01_4.html',1,'SVF']]],
   ['genericgraphtraits_3c_20svf_3a_3asvfvar_20_2a_20_3e_99',['GenericGraphTraits&lt; SVF::SVFVar * &gt;',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1SVFVar_01_5_01_4.html',1,'SVF']]],
   ['genericgraphtraits_3c_20svf_3a_3atct_20_2a_20_3e_100',['GenericGraphTraits&lt; SVF::TCT * &gt;',['../structSVF_1_1GenericGraphTraits_3_01SVF_1_1TCT_01_5_01_4.html',1,'SVF']]],

@@ -792,7 +792,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  486</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  487</span>    }</div>
 <div class="ttc" id="aclassSVF_1_1TCTEdge_html_a18644ee9ae37b03254afb077dca5494fac7915e379517d9d17b770540adb577c8"><div class="ttname"><a href="classSVF_1_1TCTEdge.html#a18644ee9ae37b03254afb077dca5494fac7915e379517d9d17b770540adb577c8">SVF::TCTEdge::ThreadCreateEdge</a></div><div class="ttdeci">@ ThreadCreateEdge</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00057">TCT.h:57</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_adb2025048dc69f0689f526c58df29802"><div class="ttname"><a href="#adb2025048dc69f0689f526c58df29802">SVF::TCT::hasGraphEdge</a></div><div class="ttdeci">TCTEdge * hasGraphEdge(TCTNode *src, TCTNode *dst, TCTEdge::CEDGEK kind) const</div><div class="ttdoc">Whether we have already created this call graph edge.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00589">TCT.cpp:589</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_adb2025048dc69f0689f526c58df29802"><div class="ttname"><a href="#adb2025048dc69f0689f526c58df29802">SVF::TCT::hasGraphEdge</a></div><div class="ttdeci">TCTEdge * hasGraphEdge(TCTNode *src, TCTNode *dst, TCTEdge::CEDGEK kind) const</div><div class="ttdoc">Whether we have already created this call graph edge.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00588">TCT.cpp:588</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -865,66 +865,66 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1SlicedTCT.html#ae962b97b77f2ef31cf8edc5c62e93f25">SVF::SlicedTCT</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00419">419</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  420</span>{</div>
-<div class="line"><span class="lineno">  421</span> </div>
-<div class="line"><span class="lineno">  422</span>    <a class="code hl_function" href="#a8bb7ffa8dd185c52e6c150f9bc995511">markRelProcs</a>();</div>
-<div class="line"><span class="lineno">  423</span> </div>
-<div class="line"><span class="lineno">  424</span>    <a class="code hl_function" href="#a276da0e6bbe3e4fe9d1dd051ddd8d81b">collectLoopInfoForJoin</a>();</div>
-<div class="line"><span class="lineno">  425</span> </div>
-<div class="line"><span class="lineno">  426</span>    <span class="comment">// the fork site of main function is initialized with nullptr.</span></div>
-<div class="line"><span class="lineno">  427</span>    <span class="comment">// the context of main is initialized with empty</span></div>
-<div class="line"><span class="lineno">  428</span>    <span class="comment">// start routine is empty</span></div>
-<div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>    <a class="code hl_function" href="#a313962cab59c12057d4f780a918ed1e8">collectEntryFunInCallGraph</a>();</div>
-<div class="line"><span class="lineno">  431</span> </div>
-<div class="line"><span class="lineno">  432</span>    <span class="keywordflow">for</span> (FunSet::iterator it=<a class="code hl_variable" href="#a140eaf9440ae9d52dbfb659967aa449a">entryFuncSet</a>.begin(), eit=<a class="code hl_variable" href="#a140eaf9440ae9d52dbfb659967aa449a">entryFuncSet</a>.end(); it!=eit; ++it)</div>
-<div class="line"><span class="lineno">  433</span>    {</div>
-<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a7f6f83951cd8ac7e061a0aa4fee048a9">isCandidateFun</a>(*it))</div>
-<div class="line"><span class="lineno">  435</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  436</span>        <a class="code hl_typedef" href="namespaceSVF.html#ab700523619b089b952498f39a7f5b6b1">CallStrCxt</a> cxt;</div>
-<div class="line"><span class="lineno">  437</span>        CxtThreadProc dummyCtp(-1, cxt, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  438</span>        <span class="keyword">const</span> ICFGNode* dummyForkSite = <a class="code hl_function" href="#a5307faedd6f3d0b64d57d6166063a4c7">createDummyForkSite</a>();</div>
-<div class="line"><span class="lineno">  439</span>        TCTNode* mainTCTNode = <a class="code hl_function" href="#a1d331ccb9055582b18a8f12eeef230e0">getOrCreateTCTNode</a>(cxt, dummyForkSite, dummyCtp, *it);</div>
-<div class="line"><span class="lineno">  440</span>        CxtThreadProc t(mainTCTNode-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>(), cxt, *it);</div>
-<div class="line"><span class="lineno">  441</span>        <a class="code hl_function" href="#a002bac3dc928bc78b94de0ca97b1ec1d">pushToCTPWorkList</a>(t);</div>
-<div class="line"><span class="lineno">  442</span>    }</div>
-<div class="line"><span class="lineno">  443</span> </div>
-<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">while</span>(!<a class="code hl_variable" href="#a80dad1dfdf64cb7a5805eb8bedf79226">ctpList</a>.empty())</div>
-<div class="line"><span class="lineno">  445</span>    {</div>
-<div class="line"><span class="lineno">  446</span>        CxtThreadProc ctp = <a class="code hl_function" href="#ad84cdb0d192312f96d006f7b9e660da3">popFromCTPWorkList</a>();</div>
-<div class="line"><span class="lineno">  447</span>        CallGraphNode* cgNode = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(ctp.<a class="code hl_function" href="classSVF_1_1CxtProc.html#aedb608fbe49c51446a5db86917b69624">getProc</a>());</div>
-<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a7f6f83951cd8ac7e061a0aa4fee048a9">isCandidateFun</a>(cgNode-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphNode.html#a200bbf3e2ea4133606b7b8adb4863657">getFunction</a>()) == <span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  449</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  450</span> </div>
-<div class="line"><span class="lineno">  451</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">CallGraphNode::const_iterator</a> nit = cgNode-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>(), neit = cgNode-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); nit!=neit; nit++)</div>
-<div class="line"><span class="lineno">  452</span>        {</div>
-<div class="line"><span class="lineno">  453</span>            <span class="keyword">const</span> CallGraphEdge* cgEdge = (*nit);</div>
-<div class="line"><span class="lineno">  454</span> </div>
-<div class="line"><span class="lineno">  455</span>            <span class="keywordflow">for</span>(CallGraphEdge::CallInstSet::const_iterator cit = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphEdge.html#adfa36438bfc4e32b3641e2444ce92821">directCallsBegin</a>(),</div>
-<div class="line"><span class="lineno">  456</span>                    ecit = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphEdge.html#a9bc7e8cf8b0fb358dc163cdfc71bc0a1">directCallsEnd</a>(); cit!=ecit; ++cit)</div>
-<div class="line"><span class="lineno">  457</span>            {</div>
-<div class="line"><span class="lineno">  458</span>                <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;\nTCT handling direct call:&quot;</span> &lt;&lt; **cit &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a458819fe10aa17dbeb1ce05626ff4e08">getSrcNode</a>()-&gt;getFunction()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>() &lt;&lt; <span class="stringliteral">&quot;--&gt;&quot;</span> &lt;&lt; cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a86ca0dcae1cbd2abd23db7af834bbfc7">getDstNode</a>()-&gt;getFunction()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  459</span>                <a class="code hl_function" href="#ac1f2d763bf06c6f8d4b61ea3ce85c185">handleCallRelation</a>(ctp,cgEdge,*cit);</div>
-<div class="line"><span class="lineno">  460</span>            }</div>
-<div class="line"><span class="lineno">  461</span>            <span class="keywordflow">for</span>(CallGraphEdge::CallInstSet::const_iterator ind = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphEdge.html#a2f336ff3e89f820b8af0d616a92ff406">indirectCallsBegin</a>(),</div>
-<div class="line"><span class="lineno">  462</span>                    eind = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphEdge.html#acb4884de30d6d283b7d21704dbcca688">indirectCallsEnd</a>(); ind!=eind; ++ind)</div>
-<div class="line"><span class="lineno">  463</span>            {</div>
-<div class="line"><span class="lineno">  464</span>                <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;\nTCT handling indirect call:&quot;</span> &lt;&lt; **ind &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a458819fe10aa17dbeb1ce05626ff4e08">getSrcNode</a>()-&gt;getFunction()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>() &lt;&lt; <span class="stringliteral">&quot;--&gt;&quot;</span> &lt;&lt; cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a86ca0dcae1cbd2abd23db7af834bbfc7">getDstNode</a>()-&gt;getFunction()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  465</span>                <a class="code hl_function" href="#ac1f2d763bf06c6f8d4b61ea3ce85c185">handleCallRelation</a>(ctp,cgEdge,*ind);</div>
-<div class="line"><span class="lineno">  466</span>            }</div>
-<div class="line"><span class="lineno">  467</span>        }</div>
-<div class="line"><span class="lineno">  468</span>    }</div>
-<div class="line"><span class="lineno">  469</span> </div>
-<div class="line"><span class="lineno">  470</span>    <a class="code hl_function" href="#ad15753a9c20d738325e5c0edea6c9c56">collectMultiForkedThreads</a>();</div>
-<div class="line"><span class="lineno">  471</span> </div>
-<div class="line"><span class="lineno">  472</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#adceab9fa76c438b8e5e83dd6042523ce">Options::TCTDotGraph</a>())</div>
-<div class="line"><span class="lineno">  473</span>    {</div>
-<div class="line"><span class="lineno">  474</span>        <a class="code hl_function" href="#abf2a992a66de9832915b1f959b8988e4">print</a>();</div>
-<div class="line"><span class="lineno">  475</span>        <a class="code hl_function" href="#a716c97a80c483c571ca7a03b9acce3e8">dump</a>(<span class="stringliteral">&quot;tct&quot;</span>);</div>
-<div class="line"><span class="lineno">  476</span>    }</div>
-<div class="line"><span class="lineno">  477</span> </div>
-<div class="line"><span class="lineno">  478</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00418">418</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  419</span>{</div>
+<div class="line"><span class="lineno">  420</span> </div>
+<div class="line"><span class="lineno">  421</span>    <a class="code hl_function" href="#a8bb7ffa8dd185c52e6c150f9bc995511">markRelProcs</a>();</div>
+<div class="line"><span class="lineno">  422</span> </div>
+<div class="line"><span class="lineno">  423</span>    <a class="code hl_function" href="#a276da0e6bbe3e4fe9d1dd051ddd8d81b">collectLoopInfoForJoin</a>();</div>
+<div class="line"><span class="lineno">  424</span> </div>
+<div class="line"><span class="lineno">  425</span>    <span class="comment">// the fork site of main function is initialized with nullptr.</span></div>
+<div class="line"><span class="lineno">  426</span>    <span class="comment">// the context of main is initialized with empty</span></div>
+<div class="line"><span class="lineno">  427</span>    <span class="comment">// start routine is empty</span></div>
+<div class="line"><span class="lineno">  428</span> </div>
+<div class="line"><span class="lineno">  429</span>    <a class="code hl_function" href="#a313962cab59c12057d4f780a918ed1e8">collectEntryFunInCallGraph</a>();</div>
+<div class="line"><span class="lineno">  430</span> </div>
+<div class="line"><span class="lineno">  431</span>    <span class="keywordflow">for</span> (FunSet::iterator it=<a class="code hl_variable" href="#a140eaf9440ae9d52dbfb659967aa449a">entryFuncSet</a>.begin(), eit=<a class="code hl_variable" href="#a140eaf9440ae9d52dbfb659967aa449a">entryFuncSet</a>.end(); it!=eit; ++it)</div>
+<div class="line"><span class="lineno">  432</span>    {</div>
+<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a7f6f83951cd8ac7e061a0aa4fee048a9">isCandidateFun</a>(*it))</div>
+<div class="line"><span class="lineno">  434</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  435</span>        <a class="code hl_typedef" href="namespaceSVF.html#ab700523619b089b952498f39a7f5b6b1">CallStrCxt</a> cxt;</div>
+<div class="line"><span class="lineno">  436</span>        CxtThreadProc dummyCtp(-1, cxt, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  437</span>        <span class="keyword">const</span> ICFGNode* dummyForkSite = <a class="code hl_function" href="#a5307faedd6f3d0b64d57d6166063a4c7">createDummyForkSite</a>();</div>
+<div class="line"><span class="lineno">  438</span>        TCTNode* mainTCTNode = <a class="code hl_function" href="#a1d331ccb9055582b18a8f12eeef230e0">getOrCreateTCTNode</a>(cxt, dummyForkSite, dummyCtp, *it);</div>
+<div class="line"><span class="lineno">  439</span>        CxtThreadProc t(mainTCTNode-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>(), cxt, *it);</div>
+<div class="line"><span class="lineno">  440</span>        <a class="code hl_function" href="#a002bac3dc928bc78b94de0ca97b1ec1d">pushToCTPWorkList</a>(t);</div>
+<div class="line"><span class="lineno">  441</span>    }</div>
+<div class="line"><span class="lineno">  442</span> </div>
+<div class="line"><span class="lineno">  443</span>    <span class="keywordflow">while</span>(!<a class="code hl_variable" href="#a80dad1dfdf64cb7a5805eb8bedf79226">ctpList</a>.empty())</div>
+<div class="line"><span class="lineno">  444</span>    {</div>
+<div class="line"><span class="lineno">  445</span>        CxtThreadProc ctp = <a class="code hl_function" href="#ad84cdb0d192312f96d006f7b9e660da3">popFromCTPWorkList</a>();</div>
+<div class="line"><span class="lineno">  446</span>        CallGraphNode* cgNode = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(ctp.<a class="code hl_function" href="classSVF_1_1CxtProc.html#aedb608fbe49c51446a5db86917b69624">getProc</a>());</div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a7f6f83951cd8ac7e061a0aa4fee048a9">isCandidateFun</a>(cgNode-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphNode.html#a200bbf3e2ea4133606b7b8adb4863657">getFunction</a>()) == <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  448</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  449</span> </div>
+<div class="line"><span class="lineno">  450</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="classSVF_1_1GenericNode.html#ab6dc1ae41ae23b383f8add474caa7429">CallGraphNode::const_iterator</a> nit = cgNode-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>(), neit = cgNode-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); nit!=neit; nit++)</div>
+<div class="line"><span class="lineno">  451</span>        {</div>
+<div class="line"><span class="lineno">  452</span>            <span class="keyword">const</span> CallGraphEdge* cgEdge = (*nit);</div>
+<div class="line"><span class="lineno">  453</span> </div>
+<div class="line"><span class="lineno">  454</span>            <span class="keywordflow">for</span>(CallGraphEdge::CallInstSet::const_iterator cit = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphEdge.html#adfa36438bfc4e32b3641e2444ce92821">directCallsBegin</a>(),</div>
+<div class="line"><span class="lineno">  455</span>                    ecit = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphEdge.html#a9bc7e8cf8b0fb358dc163cdfc71bc0a1">directCallsEnd</a>(); cit!=ecit; ++cit)</div>
+<div class="line"><span class="lineno">  456</span>            {</div>
+<div class="line"><span class="lineno">  457</span>                <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;\nTCT handling direct call:&quot;</span> &lt;&lt; **cit &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a458819fe10aa17dbeb1ce05626ff4e08">getSrcNode</a>()-&gt;getFunction()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>() &lt;&lt; <span class="stringliteral">&quot;--&gt;&quot;</span> &lt;&lt; cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a86ca0dcae1cbd2abd23db7af834bbfc7">getDstNode</a>()-&gt;getFunction()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  458</span>                <a class="code hl_function" href="#ac1f2d763bf06c6f8d4b61ea3ce85c185">handleCallRelation</a>(ctp,cgEdge,*cit);</div>
+<div class="line"><span class="lineno">  459</span>            }</div>
+<div class="line"><span class="lineno">  460</span>            <span class="keywordflow">for</span>(CallGraphEdge::CallInstSet::const_iterator ind = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphEdge.html#a2f336ff3e89f820b8af0d616a92ff406">indirectCallsBegin</a>(),</div>
+<div class="line"><span class="lineno">  461</span>                    eind = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1CallGraphEdge.html#acb4884de30d6d283b7d21704dbcca688">indirectCallsEnd</a>(); ind!=eind; ++ind)</div>
+<div class="line"><span class="lineno">  462</span>            {</div>
+<div class="line"><span class="lineno">  463</span>                <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;\nTCT handling indirect call:&quot;</span> &lt;&lt; **ind &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a458819fe10aa17dbeb1ce05626ff4e08">getSrcNode</a>()-&gt;getFunction()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>() &lt;&lt; <span class="stringliteral">&quot;--&gt;&quot;</span> &lt;&lt; cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a86ca0dcae1cbd2abd23db7af834bbfc7">getDstNode</a>()-&gt;getFunction()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  464</span>                <a class="code hl_function" href="#ac1f2d763bf06c6f8d4b61ea3ce85c185">handleCallRelation</a>(ctp,cgEdge,*ind);</div>
+<div class="line"><span class="lineno">  465</span>            }</div>
+<div class="line"><span class="lineno">  466</span>        }</div>
+<div class="line"><span class="lineno">  467</span>    }</div>
+<div class="line"><span class="lineno">  468</span> </div>
+<div class="line"><span class="lineno">  469</span>    <a class="code hl_function" href="#ad15753a9c20d738325e5c0edea6c9c56">collectMultiForkedThreads</a>();</div>
+<div class="line"><span class="lineno">  470</span> </div>
+<div class="line"><span class="lineno">  471</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#adceab9fa76c438b8e5e83dd6042523ce">Options::TCTDotGraph</a>())</div>
+<div class="line"><span class="lineno">  472</span>    {</div>
+<div class="line"><span class="lineno">  473</span>        <a class="code hl_function" href="#abf2a992a66de9832915b1f959b8988e4">print</a>();</div>
+<div class="line"><span class="lineno">  474</span>        <a class="code hl_function" href="#a716c97a80c483c571ca7a03b9acce3e8">dump</a>(<span class="stringliteral">&quot;tct&quot;</span>);</div>
+<div class="line"><span class="lineno">  475</span>    }</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>}</div>
 <div class="ttc" id="aSVFType_8h_html_a173ce1b9b505fdadf5613b663749d3b0"><div class="ttname"><a href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a></div><div class="ttdeci">#define DBOUT(TYPE, X)</div><div class="ttdoc">LLVM debug macros, define type of your DBUG model of each pass.</div><div class="ttdef"><b>Definition</b> <a href="SVFType_8h_source.html#l00576">SVFType.h:576</a></div></div>
 <div class="ttc" id="aSVFType_8h_html_a217a1ccdaec1abb103cf6b0373631234"><div class="ttname"><a href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a></div><div class="ttdeci">#define DMTA</div><div class="ttdef"><b>Definition</b> <a href="SVFType_8h_source.html#l00597">SVFType.h:597</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallGraphEdge_html_a2f336ff3e89f820b8af0d616a92ff406"><div class="ttname"><a href="classSVF_1_1CallGraphEdge.html#a2f336ff3e89f820b8af0d616a92ff406">SVF::CallGraphEdge::indirectCallsBegin</a></div><div class="ttdeci">CallInstSet::const_iterator indirectCallsBegin() const</div><div class="ttdef"><b>Definition</b> <a href="CallGraph_8h_source.html#l00131">CallGraph.h:131</a></div></div>
@@ -944,16 +944,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a002bac3dc928bc78b94de0ca97b1ec1d"><div class="ttname"><a href="#a002bac3dc928bc78b94de0ca97b1ec1d">SVF::TCT::pushToCTPWorkList</a></div><div class="ttdeci">bool pushToCTPWorkList(const CxtThreadProc &amp;ctp)</div><div class="ttdoc">WorkList helper functions.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00595">TCT.h:595</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a140eaf9440ae9d52dbfb659967aa449a"><div class="ttname"><a href="#a140eaf9440ae9d52dbfb659967aa449a">SVF::TCT::entryFuncSet</a></div><div class="ttdeci">FunSet entryFuncSet</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00615">TCT.h:615</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a1d331ccb9055582b18a8f12eeef230e0"><div class="ttname"><a href="#a1d331ccb9055582b18a8f12eeef230e0">SVF::TCT::getOrCreateTCTNode</a></div><div class="ttdeci">TCTNode * getOrCreateTCTNode(const CallStrCxt &amp;cxt, const ICFGNode *fork, const CxtThreadProc &amp;forkSiteCtp, const FunObjVar *routine)</div><div class="ttdoc">Get or create a tct node based on CxtThread.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00528">TCT.h:528</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_a276da0e6bbe3e4fe9d1dd051ddd8d81b"><div class="ttname"><a href="#a276da0e6bbe3e4fe9d1dd051ddd8d81b">SVF::TCT::collectLoopInfoForJoin</a></div><div class="ttdeci">virtual void collectLoopInfoForJoin()</div><div class="ttdoc">Handle join site in loop.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00350">TCT.cpp:350</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_a276da0e6bbe3e4fe9d1dd051ddd8d81b"><div class="ttname"><a href="#a276da0e6bbe3e4fe9d1dd051ddd8d81b">SVF::TCT::collectLoopInfoForJoin</a></div><div class="ttdeci">virtual void collectLoopInfoForJoin()</div><div class="ttdoc">Handle join site in loop.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00349">TCT.cpp:349</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a313962cab59c12057d4f780a918ed1e8"><div class="ttname"><a href="#a313962cab59c12057d4f780a918ed1e8">SVF::TCT::collectEntryFunInCallGraph</a></div><div class="ttdeci">virtual void collectEntryFunInCallGraph()</div><div class="ttdoc">Get entry functions that are neither called by other functions nor extern functions.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00219">TCT.cpp:219</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a5307faedd6f3d0b64d57d6166063a4c7"><div class="ttname"><a href="#a5307faedd6f3d0b64d57d6166063a4c7">SVF::TCT::createDummyForkSite</a></div><div class="ttdeci">ICFGNode * createDummyForkSite()</div><div class="ttdoc">Create and get a new dummy fork site for starter routines.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00586">TCT.h:586</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_a716c97a80c483c571ca7a03b9acce3e8"><div class="ttname"><a href="#a716c97a80c483c571ca7a03b9acce3e8">SVF::TCT::dump</a></div><div class="ttdeci">void dump(const std::string &amp;filename)</div><div class="ttdoc">Dump the graph.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00569">TCT.cpp:569</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_a716c97a80c483c571ca7a03b9acce3e8"><div class="ttname"><a href="#a716c97a80c483c571ca7a03b9acce3e8">SVF::TCT::dump</a></div><div class="ttdeci">void dump(const std::string &amp;filename)</div><div class="ttdoc">Dump the graph.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00568">TCT.cpp:568</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a7f6f83951cd8ac7e061a0aa4fee048a9"><div class="ttname"><a href="#a7f6f83951cd8ac7e061a0aa4fee048a9">SVF::TCT::isCandidateFun</a></div><div class="ttdeci">bool isCandidateFun(const CallGraph::FunctionSet &amp;callees) const</div><div class="ttdoc">Whether it is a candidate function for indirect call.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00294">TCT.h:294</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a80dad1dfdf64cb7a5805eb8bedf79226"><div class="ttname"><a href="#a80dad1dfdf64cb7a5805eb8bedf79226">SVF::TCT::ctpList</a></div><div class="ttdeci">CxtThreadProcVec ctpList</div><div class="ttdoc">Thread call graph SCC.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00618">TCT.h:618</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a8bb7ffa8dd185c52e6c150f9bc995511"><div class="ttname"><a href="#a8bb7ffa8dd185c52e6c150f9bc995511">SVF::TCT::markRelProcs</a></div><div class="ttdeci">virtual void markRelProcs()</div><div class="ttdoc">Mark relevant procedures that are backward reachable from any fork/join site.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00165">TCT.cpp:165</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_abf2a992a66de9832915b1f959b8988e4"><div class="ttname"><a href="#abf2a992a66de9832915b1f959b8988e4">SVF::TCT::print</a></div><div class="ttdeci">void print() const</div><div class="ttdoc">Print TCT information.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00577">TCT.cpp:577</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_ac1f2d763bf06c6f8d4b61ea3ce85c185"><div class="ttname"><a href="#ac1f2d763bf06c6f8d4b61ea3ce85c185">SVF::TCT::handleCallRelation</a></div><div class="ttdeci">virtual void handleCallRelation(CxtThreadProc &amp;ctp, const CallGraphEdge *cgEdge, const CallICFGNode *call)</div><div class="ttdoc">Handle call relations.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00277">TCT.cpp:277</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_ad15753a9c20d738325e5c0edea6c9c56"><div class="ttname"><a href="#ad15753a9c20d738325e5c0edea6c9c56">SVF::TCT::collectMultiForkedThreads</a></div><div class="ttdeci">void collectMultiForkedThreads()</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00239">TCT.cpp:239</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_abf2a992a66de9832915b1f959b8988e4"><div class="ttname"><a href="#abf2a992a66de9832915b1f959b8988e4">SVF::TCT::print</a></div><div class="ttdeci">void print() const</div><div class="ttdoc">Print TCT information.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00576">TCT.cpp:576</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_ac1f2d763bf06c6f8d4b61ea3ce85c185"><div class="ttname"><a href="#ac1f2d763bf06c6f8d4b61ea3ce85c185">SVF::TCT::handleCallRelation</a></div><div class="ttdeci">virtual void handleCallRelation(CxtThreadProc &amp;ctp, const CallGraphEdge *cgEdge, const CallICFGNode *call)</div><div class="ttdoc">Handle call relations.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00276">TCT.cpp:276</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_ad15753a9c20d738325e5c0edea6c9c56"><div class="ttname"><a href="#ad15753a9c20d738325e5c0edea6c9c56">SVF::TCT::collectMultiForkedThreads</a></div><div class="ttdeci">void collectMultiForkedThreads()</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00238">TCT.cpp:238</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_ad84cdb0d192312f96d006f7b9e660da3"><div class="ttname"><a href="#ad84cdb0d192312f96d006f7b9e660da3">SVF::TCT::popFromCTPWorkList</a></div><div class="ttdeci">CxtThreadProc popFromCTPWorkList()</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00604">TCT.h:604</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ad8b432d1a6e3f8ddd7a3505f7b7a8cd3"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVF::SVFUtil::outs</a></div><div class="ttdeci">std::ostream &amp; outs()</div><div class="ttdoc">Overwrite llvm::outs().</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8h_source.html#l00058">SVFUtil.h:58</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_ab700523619b089b952498f39a7f5b6b1"><div class="ttname"><a href="namespaceSVF.html#ab700523619b089b952498f39a7f5b6b1">SVF::CallStrCxt</a></div><div class="ttdeci">std::vector&lt; u32_t &gt; CallStrCxt</div><div class="ttdef"><b>Definition</b> <a href="GeneralType_8h_source.html#l00096">GeneralType.h:96</a></div></div>
@@ -990,25 +990,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00219">219</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  220</span>{</div>
-<div class="line"><span class="lineno">  221</span>    <span class="keyword">const</span> CallGraph* svfirCallGraph = <a class="code hl_function" href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6f4d606d40bcc8386929effcb5e1f0b1">getCallGraph</a>();</div>
-<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a>: *svfirCallGraph)</div>
-<div class="line"><span class="lineno">  223</span>    {</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keyword">const</span> FunObjVar* fun = <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a>.second-&gt;getFunction();</div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVFUtil::isExtCall</a>(fun))</div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  227</span>        CallGraphNode* node = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(fun);</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">if</span> (!node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>())</div>
-<div class="line"><span class="lineno">  229</span>        {</div>
-<div class="line"><span class="lineno">  230</span>            <a class="code hl_variable" href="#a140eaf9440ae9d52dbfb659967aa449a">entryFuncSet</a>.insert(fun);</div>
-<div class="line"><span class="lineno">  231</span>        }</div>
-<div class="line"><span class="lineno">  232</span>    }</div>
-<div class="line"><span class="lineno">  233</span>    assert(!<a class="code hl_variable" href="#a140eaf9440ae9d52dbfb659967aa449a">entryFuncSet</a>.empty() &amp;&amp; <span class="stringliteral">&quot;Can&#39;t find any function in module!&quot;</span>);</div>
-<div class="line"><span class="lineno">  234</span>}</div>
+<div class="line"><span class="lineno">  221</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a>: *(<a class="code hl_function" href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">PAG::getPAG</a>()-&gt;getCallGraph()))</div>
+<div class="line"><span class="lineno">  222</span>    {</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keyword">const</span> FunObjVar* fun = <a class="code hl_variable" href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a>.second-&gt;getFunction();</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVFUtil::isExtCall</a>(fun))</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  226</span>        CallGraphNode* node = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(fun);</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (!node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>())</div>
+<div class="line"><span class="lineno">  228</span>        {</div>
+<div class="line"><span class="lineno">  229</span>            <a class="code hl_variable" href="#a140eaf9440ae9d52dbfb659967aa449a">entryFuncSet</a>.insert(fun);</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+<div class="line"><span class="lineno">  232</span>    assert(!<a class="code hl_variable" href="#a140eaf9440ae9d52dbfb659967aa449a">entryFuncSet</a>.empty() &amp;&amp; <span class="stringliteral">&quot;Can&#39;t find any function in module!&quot;</span>);</div>
+<div class="line"><span class="lineno">  233</span>}</div>
 <div class="ttc" id="acJSON_8h_html_ac76cea59d438ba893d2f82aabb367d14"><div class="ttname"><a href="cJSON_8h.html#ac76cea59d438ba893d2f82aabb367d14">item</a></div><div class="ttdeci">cJSON * item</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00222">cJSON.h:222</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_a06a7373b11143e709784de784fa476fe"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">SVF::GenericNode::hasIncomingEdge</a></div><div class="ttdeci">bool hasIncomingEdge() const</div><div class="ttdoc">Has incoming/outgoing edge set.</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00188">GenericGraph.h:188</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFIR_html_a6f4d606d40bcc8386929effcb5e1f0b1"><div class="ttname"><a href="classSVF_1_1SVFIR.html#a6f4d606d40bcc8386929effcb5e1f0b1">SVF::SVFIR::getCallGraph</a></div><div class="ttdeci">const CallGraph * getCallGraph()</div><div class="ttdoc">Get CG.</div><div class="ttdef"><b>Definition</b> <a href="SVFIR_8h_source.html#l00249">SVFIR.h:249</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SVFIR_html_acdb6795e102e7c03a61b7a4d2044c348"><div class="ttname"><a href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">SVF::SVFIR::getPAG</a></div><div class="ttdeci">static SVFIR * getPAG(bool buildFromFile=false)</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis.</div><div class="ttdef"><b>Definition</b> <a href="SVFIR_8h_source.html#l00121">SVFIR.h:121</a></div></div>
-<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aa6b83d34488eaa1d6613568dd8394bdd"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVF::SVFUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const FunObjVar *fun)</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00526">SVFUtil.cpp:526</a></div></div>
+<div class="ttc" id="aclassSVF_1_1PAG_html_a33a51406069e9dee0006e25295bf9220"><div class="ttname"><a href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">SVF::PAG::getPAG</a></div><div class="ttdeci">static PAG * getPAG(bool buildFromFile=false)</div><div class="ttdoc">Singleton design here to make sure we only have one instance during any analysis.</div><div class="ttdef"><b>Definition</b> <a href="PAG_8h_source.html#l00121">PAG.h:121</a></div></div>
+<div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_aa6b83d34488eaa1d6613568dd8394bdd"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#aa6b83d34488eaa1d6613568dd8394bdd">SVF::SVFUtil::isExtCall</a></div><div class="ttdeci">bool isExtCall(const FunObjVar *fun)</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8cpp_source.html#l00524">SVFUtil.cpp:524</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1041,34 +1039,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1SlicedTCT.html#a710e1cba07fc91f4fbfdeee6ed1d2c46">SVF::SlicedTCT</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00350">350</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  351</span>{</div>
-<div class="line"><span class="lineno">  352</span>    <span class="keywordflow">for</span>(ThreadCallGraph::CallSiteSet::const_iterator it = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;joinsitesBegin(), eit = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;joinsitesEnd(); it!=eit; ++it)</div>
-<div class="line"><span class="lineno">  353</span>    {</div>
-<div class="line"><span class="lineno">  354</span>        <span class="keyword">const</span> ICFGNode* join = *it;</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keyword">const</span> FunObjVar* svffun = join-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
-<div class="line"><span class="lineno">  356</span>        <span class="keyword">const</span> SVFBasicBlock* svfbb = join-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#aa4cdcb073bb22cecf215dcc5b2919428">getBB</a>();</div>
-<div class="line"><span class="lineno">  357</span> </div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span>(svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#afa34e6f6e2252210e9208f3645384062">hasLoopInfo</a>(svfbb))</div>
-<div class="line"><span class="lineno">  359</span>        {</div>
-<div class="line"><span class="lineno">  360</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="#aeb61fffa4861cb1146676869d85d3773">LoopBBs</a>&amp; lp = svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a6824943ac4056cce5958446c9909fbeb">getLoopInfo</a>(svfbb);</div>
-<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">if</span>(!lp.empty() &amp;&amp; <a class="code hl_function" href="#a8b00b9bce80a59990a2765ddf30ea31b">isJoinMustExecutedInLoop</a>(lp,join))</div>
-<div class="line"><span class="lineno">  362</span>            {</div>
-<div class="line"><span class="lineno">  363</span>                <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>[join] = lp;</div>
-<div class="line"><span class="lineno">  364</span>            }</div>
-<div class="line"><span class="lineno">  365</span>        }</div>
-<div class="line"><span class="lineno">  366</span> </div>
-<div class="line"><span class="lineno">  367</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a05e6037f389ba332d39bc1c1a3e365d7">isInRecursion</a>(join))</div>
-<div class="line"><span class="lineno">  368</span>            <a class="code hl_variable" href="#a8dc43fbd68c9266642c5bbe22f22770b">inRecurJoinSites</a>.insert(join);</div>
-<div class="line"><span class="lineno">  369</span>    }</div>
-<div class="line"><span class="lineno">  370</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00349">349</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  350</span>{</div>
+<div class="line"><span class="lineno">  351</span>    <span class="keywordflow">for</span>(ThreadCallGraph::CallSiteSet::const_iterator it = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;joinsitesBegin(), eit = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;joinsitesEnd(); it!=eit; ++it)</div>
+<div class="line"><span class="lineno">  352</span>    {</div>
+<div class="line"><span class="lineno">  353</span>        <span class="keyword">const</span> ICFGNode* join = *it;</div>
+<div class="line"><span class="lineno">  354</span>        <span class="keyword">const</span> FunObjVar* svffun = join-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
+<div class="line"><span class="lineno">  355</span>        <span class="keyword">const</span> SVFBasicBlock* svfbb = join-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#aa4cdcb073bb22cecf215dcc5b2919428">getBB</a>();</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">if</span>(svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#afa34e6f6e2252210e9208f3645384062">hasLoopInfo</a>(svfbb))</div>
+<div class="line"><span class="lineno">  358</span>        {</div>
+<div class="line"><span class="lineno">  359</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="#aeb61fffa4861cb1146676869d85d3773">LoopBBs</a>&amp; lp = svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a6824943ac4056cce5958446c9909fbeb">getLoopInfo</a>(svfbb);</div>
+<div class="line"><span class="lineno">  360</span>            <span class="keywordflow">if</span>(!lp.empty() &amp;&amp; <a class="code hl_function" href="#a8b00b9bce80a59990a2765ddf30ea31b">isJoinMustExecutedInLoop</a>(lp,join))</div>
+<div class="line"><span class="lineno">  361</span>            {</div>
+<div class="line"><span class="lineno">  362</span>                <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>[join] = lp;</div>
+<div class="line"><span class="lineno">  363</span>            }</div>
+<div class="line"><span class="lineno">  364</span>        }</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a05e6037f389ba332d39bc1c1a3e365d7">isInRecursion</a>(join))</div>
+<div class="line"><span class="lineno">  367</span>            <a class="code hl_variable" href="#a8dc43fbd68c9266642c5bbe22f22770b">inRecurJoinSites</a>.insert(join);</div>
+<div class="line"><span class="lineno">  368</span>    }</div>
+<div class="line"><span class="lineno">  369</span>}</div>
 <div class="ttc" id="aclassSVF_1_1FunObjVar_html_a6824943ac4056cce5958446c9909fbeb"><div class="ttname"><a href="classSVF_1_1FunObjVar.html#a6824943ac4056cce5958446c9909fbeb">SVF::FunObjVar::getLoopInfo</a></div><div class="ttdeci">const LoopBBs &amp; getLoopInfo(const SVFBasicBlock *bb) const</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l01145">SVFVariables.h:1145</a></div></div>
 <div class="ttc" id="aclassSVF_1_1FunObjVar_html_afa34e6f6e2252210e9208f3645384062"><div class="ttname"><a href="classSVF_1_1FunObjVar.html#afa34e6f6e2252210e9208f3645384062">SVF::FunObjVar::hasLoopInfo</a></div><div class="ttdeci">bool hasLoopInfo(const SVFBasicBlock *bb) const</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l01140">SVFVariables.h:1140</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGNode_html_a64897854233de17a2bde83d1fe35a113"><div class="ttname"><a href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">SVF::ICFGNode::getFun</a></div><div class="ttdeci">virtual const FunObjVar * getFun() const</div><div class="ttdoc">Return the function of this ICFGNode.</div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00075">ICFGNode.h:75</a></div></div>
 <div class="ttc" id="aclassSVF_1_1ICFGNode_html_aa4cdcb073bb22cecf215dcc5b2919428"><div class="ttname"><a href="classSVF_1_1ICFGNode.html#aa4cdcb073bb22cecf215dcc5b2919428">SVF::ICFGNode::getBB</a></div><div class="ttdeci">virtual const SVFBasicBlock * getBB() const</div><div class="ttdoc">Return the basic block of this ICFGNode.</div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00081">ICFGNode.h:81</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a05e6037f389ba332d39bc1c1a3e365d7"><div class="ttname"><a href="#a05e6037f389ba332d39bc1c1a3e365d7">SVF::TCT::isInRecursion</a></div><div class="ttdeci">bool isInRecursion(const ICFGNode *inst) const</div><div class="ttdoc">Whether an instruction is in a recursion.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00123">TCT.cpp:123</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a5b1f44ffa732607a7800728befa5bc57"><div class="ttname"><a href="#a5b1f44ffa732607a7800728befa5bc57">SVF::TCT::joinSiteToLoopMap</a></div><div class="ttdeci">InstToLoopMap joinSiteToLoopMap</div><div class="ttdoc">Map a CxtThread to its start routine function.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00623">TCT.h:623</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_a8b00b9bce80a59990a2765ddf30ea31b"><div class="ttname"><a href="#a8b00b9bce80a59990a2765ddf30ea31b">SVF::TCT::isJoinMustExecutedInLoop</a></div><div class="ttdeci">bool isJoinMustExecutedInLoop(const LoopBBs &amp;lp, const ICFGNode *join)</div><div class="ttdoc">Return true if a join instruction must be executed inside a loop.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00326">TCT.cpp:326</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_a8b00b9bce80a59990a2765ddf30ea31b"><div class="ttname"><a href="#a8b00b9bce80a59990a2765ddf30ea31b">SVF::TCT::isJoinMustExecutedInLoop</a></div><div class="ttdeci">bool isJoinMustExecutedInLoop(const LoopBBs &amp;lp, const ICFGNode *join)</div><div class="ttdoc">Return true if a join instruction must be executed inside a loop.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00325">TCT.cpp:325</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a8dc43fbd68c9266642c5bbe22f22770b"><div class="ttname"><a href="#a8dc43fbd68c9266642c5bbe22f22770b">SVF::TCT::inRecurJoinSites</a></div><div class="ttdeci">Set&lt; const ICFGNode * &gt; inRecurJoinSites</div><div class="ttdoc">Fork or Join sites in recursions.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00624">TCT.h:624</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_aeb61fffa4861cb1146676869d85d3773"><div class="ttname"><a href="#aeb61fffa4861cb1146676869d85d3773">SVF::TCT::LoopBBs</a></div><div class="ttdeci">SVFLoopAndDomInfo::LoopBBs LoopBBs</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00159">TCT.h:159</a></div></div>
 </div><!-- fragment -->
@@ -1099,39 +1097,39 @@ Additional Inherited Members</h2></td></tr>
 <p>Collect multi-forked threads whose 1, cxt is in loop or recursion; 2, parent thread is a multi-forked thread.</p>
 <p>Collect all multi-forked threads </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00239">239</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  240</span>{</div>
-<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="classSVF_1_1GenericGraph.html#a38122734cbe71551a420dfb7fee2012e">nodeNum</a> == 0 )</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>    FIFOWorkList&lt;TCTNode*&gt; worklist;</div>
-<div class="line"><span class="lineno">  245</span>    worklist.<a class="code hl_function" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(<a class="code hl_function" href="#a07ce83106bfac6b21d664b9349c6f3bd">getTCTNode</a>(0));</div>
-<div class="line"><span class="lineno">  246</span> </div>
-<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">while</span>(!worklist.<a class="code hl_function" href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">empty</a>())</div>
-<div class="line"><span class="lineno">  248</span>    {</div>
-<div class="line"><span class="lineno">  249</span>        TCTNode* node = worklist.<a class="code hl_function" href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">pop</a>();</div>
-<div class="line"><span class="lineno">  250</span>        <span class="keyword">const</span> CxtThread &amp;ct = node-&gt;<a class="code hl_function" href="classSVF_1_1TCTNode.html#a05292fdf2b949479a143cc069e036395">getCxtThread</a>();</div>
-<div class="line"><span class="lineno">  251</span> </div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span>(ct.<a class="code hl_function" href="classSVF_1_1CxtThread.html#a54c95794963cb5a478db7c49c1b8c428">isIncycle</a>() || ct.<a class="code hl_function" href="classSVF_1_1CxtThread.html#a39230596cd1c927353eaaee071eb16c6">isInloop</a>())</div>
-<div class="line"><span class="lineno">  253</span>        {</div>
-<div class="line"><span class="lineno">  254</span>            node-&gt;<a class="code hl_function" href="classSVF_1_1TCTNode.html#a0fafde34cdffde6d38bb9efca9b7a9a1">setMultiforked</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  257</span>        {</div>
-<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">for</span> (TCT::ThreadCreateEdgeSet::const_iterator it = node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a64d33ee6a460b89c08da16bada24c6cf">getInEdges</a>().begin(), eit = node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a64d33ee6a460b89c08da16bada24c6cf">getInEdges</a>().end(); it != eit;</div>
-<div class="line"><span class="lineno">  259</span>                    ++it)</div>
-<div class="line"><span class="lineno">  260</span>            {</div>
-<div class="line"><span class="lineno">  261</span>                <span class="keywordflow">if</span> ((*it)-&gt;getSrcNode()-&gt;isMultiforked())</div>
-<div class="line"><span class="lineno">  262</span>                    node-&gt;<a class="code hl_function" href="classSVF_1_1TCTNode.html#a0fafde34cdffde6d38bb9efca9b7a9a1">setMultiforked</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  263</span>            }</div>
-<div class="line"><span class="lineno">  264</span>        }</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">for</span> (TCT::ThreadCreateEdgeSet::const_iterator it = node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a4374792e6658d4ecc78e515b3bdefe22">getOutEdges</a>().begin(), eit = node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a4374792e6658d4ecc78e515b3bdefe22">getOutEdges</a>().end(); it != eit;</div>
-<div class="line"><span class="lineno">  266</span>                ++it)</div>
-<div class="line"><span class="lineno">  267</span>        {</div>
-<div class="line"><span class="lineno">  268</span>            worklist.<a class="code hl_function" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>((*it)-&gt;getDstNode());</div>
-<div class="line"><span class="lineno">  269</span>        }</div>
-<div class="line"><span class="lineno">  270</span>    }</div>
-<div class="line"><span class="lineno">  271</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00238">238</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>{</div>
+<div class="line"><span class="lineno">  240</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="classSVF_1_1GenericGraph.html#a38122734cbe71551a420dfb7fee2012e">nodeNum</a> == 0 )</div>
+<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span>    FIFOWorkList&lt;TCTNode*&gt; worklist;</div>
+<div class="line"><span class="lineno">  244</span>    worklist.<a class="code hl_function" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>(<a class="code hl_function" href="#a07ce83106bfac6b21d664b9349c6f3bd">getTCTNode</a>(0));</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">while</span>(!worklist.<a class="code hl_function" href="classSVF_1_1FIFOWorkList.html#a7056704c224dfb4b57287fe90c004aa8">empty</a>())</div>
+<div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        TCTNode* node = worklist.<a class="code hl_function" href="classSVF_1_1FIFOWorkList.html#a8fa72918fce7e9c0b2dc34b683a797c6">pop</a>();</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keyword">const</span> CxtThread &amp;ct = node-&gt;<a class="code hl_function" href="classSVF_1_1TCTNode.html#a05292fdf2b949479a143cc069e036395">getCxtThread</a>();</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">if</span>(ct.<a class="code hl_function" href="classSVF_1_1CxtThread.html#a54c95794963cb5a478db7c49c1b8c428">isIncycle</a>() || ct.<a class="code hl_function" href="classSVF_1_1CxtThread.html#a39230596cd1c927353eaaee071eb16c6">isInloop</a>())</div>
+<div class="line"><span class="lineno">  252</span>        {</div>
+<div class="line"><span class="lineno">  253</span>            node-&gt;<a class="code hl_function" href="classSVF_1_1TCTNode.html#a0fafde34cdffde6d38bb9efca9b7a9a1">setMultiforked</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  254</span>        }</div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  256</span>        {</div>
+<div class="line"><span class="lineno">  257</span>            <span class="keywordflow">for</span> (TCT::ThreadCreateEdgeSet::const_iterator it = node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a64d33ee6a460b89c08da16bada24c6cf">getInEdges</a>().begin(), eit = node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a64d33ee6a460b89c08da16bada24c6cf">getInEdges</a>().end(); it != eit;</div>
+<div class="line"><span class="lineno">  258</span>                    ++it)</div>
+<div class="line"><span class="lineno">  259</span>            {</div>
+<div class="line"><span class="lineno">  260</span>                <span class="keywordflow">if</span> ((*it)-&gt;getSrcNode()-&gt;isMultiforked())</div>
+<div class="line"><span class="lineno">  261</span>                    node-&gt;<a class="code hl_function" href="classSVF_1_1TCTNode.html#a0fafde34cdffde6d38bb9efca9b7a9a1">setMultiforked</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  262</span>            }</div>
+<div class="line"><span class="lineno">  263</span>        }</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">for</span> (TCT::ThreadCreateEdgeSet::const_iterator it = node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a4374792e6658d4ecc78e515b3bdefe22">getOutEdges</a>().begin(), eit = node-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a4374792e6658d4ecc78e515b3bdefe22">getOutEdges</a>().end(); it != eit;</div>
+<div class="line"><span class="lineno">  265</span>                ++it)</div>
+<div class="line"><span class="lineno">  266</span>        {</div>
+<div class="line"><span class="lineno">  267</span>            worklist.<a class="code hl_function" href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">push</a>((*it)-&gt;getDstNode());</div>
+<div class="line"><span class="lineno">  268</span>        }</div>
+<div class="line"><span class="lineno">  269</span>    }</div>
+<div class="line"><span class="lineno">  270</span>}</div>
 <div class="ttc" id="aclassSVF_1_1CxtThread_html_a39230596cd1c927353eaaee071eb16c6"><div class="ttname"><a href="classSVF_1_1CxtThread.html#a39230596cd1c927353eaaee071eb16c6">SVF::CxtThread::isInloop</a></div><div class="ttdeci">bool isInloop() const</div><div class="ttdef"><b>Definition</b> <a href="CxtStmt_8h_source.html#l00262">CxtStmt.h:262</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CxtThread_html_a54c95794963cb5a478db7c49c1b8c428"><div class="ttname"><a href="classSVF_1_1CxtThread.html#a54c95794963cb5a478db7c49c1b8c428">SVF::CxtThread::isIncycle</a></div><div class="ttdeci">bool isIncycle() const</div><div class="ttdef"><b>Definition</b> <a href="CxtStmt_8h_source.html#l00270">CxtStmt.h:270</a></div></div>
 <div class="ttc" id="aclassSVF_1_1FIFOWorkList_html_a0df409a67428e528321869d201f2a474"><div class="ttname"><a href="classSVF_1_1FIFOWorkList.html#a0df409a67428e528321869d201f2a474">SVF::FIFOWorkList::push</a></div><div class="ttdeci">bool push(const Data &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="WorkList_8h_source.html#l00180">WorkList.h:180</a></div></div>
@@ -1272,10 +1270,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Dump the graph. </p>
 <p>Dump call graph into dot file </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00569">569</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  570</span>{</div>
-<div class="line"><span class="lineno">  571</span>    <a class="code hl_function" href="classSVF_1_1GraphPrinter.html#a014217fb0d05c8f2a2f1a6c5b19d3e10">GraphPrinter::WriteGraphToFile</a>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>(), filename, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  572</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00568">568</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  569</span>{</div>
+<div class="line"><span class="lineno">  570</span>    <a class="code hl_function" href="classSVF_1_1GraphPrinter.html#a014217fb0d05c8f2a2f1a6c5b19d3e10">GraphPrinter::WriteGraphToFile</a>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>(), filename, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  571</span>}</div>
 <div class="ttc" id="aclassSVF_1_1GraphPrinter_html_a014217fb0d05c8f2a2f1a6c5b19d3e10"><div class="ttname"><a href="classSVF_1_1GraphPrinter.html#a014217fb0d05c8f2a2f1a6c5b19d3e10">SVF::GraphPrinter::WriteGraphToFile</a></div><div class="ttdeci">static void WriteGraphToFile(SVF::OutStream &amp;O, const std::string &amp;GraphName, const GraphType &amp;GT, bool simple=false)</div><div class="ttdef"><b>Definition</b> <a href="GraphPrinter_8h_source.html#l00056">GraphPrinter.h:56</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1298,20 +1296,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Dump calling context. </p>
 <p>Dump calling context information </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00551">551</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  552</span>{</div>
-<div class="line"><span class="lineno">  553</span>    std::string str;</div>
-<div class="line"><span class="lineno">  554</span>    std::stringstream rawstr(str);</div>
-<div class="line"><span class="lineno">  555</span>    rawstr &lt;&lt; <span class="stringliteral">&quot;[:&quot;</span>;</div>
-<div class="line"><span class="lineno">  556</span>    <span class="keywordflow">for</span>(CallStrCxt::const_iterator it = cxt.begin(), eit = cxt.end(); it!=eit; ++it)</div>
-<div class="line"><span class="lineno">  557</span>    {</div>
-<div class="line"><span class="lineno">  558</span>        rawstr &lt;&lt; <span class="stringliteral">&quot; &#39; &quot;</span>&lt;&lt; *it &lt;&lt; <span class="stringliteral">&quot; &#39; &quot;</span>;</div>
-<div class="line"><span class="lineno">  559</span>        rawstr &lt;&lt; (<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallSite(*it))-&gt;valueOnlyToString();</div>
-<div class="line"><span class="lineno">  560</span>        rawstr &lt;&lt; <span class="stringliteral">&quot;  call  &quot;</span> &lt;&lt; <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallSite(*it)-&gt;getCaller()-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;--&gt;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCalleeOfCallSite(*it)-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;, \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  561</span>    }</div>
-<div class="line"><span class="lineno">  562</span>    rawstr &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
-<div class="line"><span class="lineno">  563</span>    <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;max cxt = &quot;</span> &lt;&lt; cxt.size() &lt;&lt; rawstr.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  564</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00550">550</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  551</span>{</div>
+<div class="line"><span class="lineno">  552</span>    std::string str;</div>
+<div class="line"><span class="lineno">  553</span>    std::stringstream rawstr(str);</div>
+<div class="line"><span class="lineno">  554</span>    rawstr &lt;&lt; <span class="stringliteral">&quot;[:&quot;</span>;</div>
+<div class="line"><span class="lineno">  555</span>    <span class="keywordflow">for</span>(CallStrCxt::const_iterator it = cxt.begin(), eit = cxt.end(); it!=eit; ++it)</div>
+<div class="line"><span class="lineno">  556</span>    {</div>
+<div class="line"><span class="lineno">  557</span>        rawstr &lt;&lt; <span class="stringliteral">&quot; &#39; &quot;</span>&lt;&lt; *it &lt;&lt; <span class="stringliteral">&quot; &#39; &quot;</span>;</div>
+<div class="line"><span class="lineno">  558</span>        rawstr &lt;&lt; (<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallSite(*it))-&gt;valueOnlyToString();</div>
+<div class="line"><span class="lineno">  559</span>        rawstr &lt;&lt; <span class="stringliteral">&quot;  call  &quot;</span> &lt;&lt; <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallSite(*it)-&gt;getCaller()-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;--&gt;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCalleeOfCallSite(*it)-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;, \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  560</span>    }</div>
+<div class="line"><span class="lineno">  561</span>    rawstr &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line"><span class="lineno">  562</span>    <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;max cxt = &quot;</span> &lt;&lt; cxt.size() &lt;&lt; rawstr.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  563</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1523,16 +1521,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Get call graph edge via nodes. </p>
 <p>get PTACallGraph edge via nodes </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00606">606</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  607</span>{</div>
-<div class="line"><span class="lineno">  608</span>    <span class="keywordflow">for</span> (TCTEdge::ThreadCreateEdgeSet::const_iterator iter = src-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>(); iter != src-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); ++iter)</div>
-<div class="line"><span class="lineno">  609</span>    {</div>
-<div class="line"><span class="lineno">  610</span>        TCTEdge* edge = (*iter);</div>
-<div class="line"><span class="lineno">  611</span>        <span class="keywordflow">if</span> (edge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">getEdgeKind</a>() == kind &amp;&amp; edge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">getDstID</a>() == dst-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>())</div>
-<div class="line"><span class="lineno">  612</span>            <span class="keywordflow">return</span> edge;</div>
-<div class="line"><span class="lineno">  613</span>    }</div>
-<div class="line"><span class="lineno">  614</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  615</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00605">605</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  606</span>{</div>
+<div class="line"><span class="lineno">  607</span>    <span class="keywordflow">for</span> (TCTEdge::ThreadCreateEdgeSet::const_iterator iter = src-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#aa4f103330118c8976bf95e4bf53416eb">OutEdgeBegin</a>(); iter != src-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a19a3366fd8a58290d0c740c46c3dcb3d">OutEdgeEnd</a>(); ++iter)</div>
+<div class="line"><span class="lineno">  608</span>    {</div>
+<div class="line"><span class="lineno">  609</span>        TCTEdge* edge = (*iter);</div>
+<div class="line"><span class="lineno">  610</span>        <span class="keywordflow">if</span> (edge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">getEdgeKind</a>() == kind &amp;&amp; edge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">getDstID</a>() == dst-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>())</div>
+<div class="line"><span class="lineno">  611</span>            <span class="keywordflow">return</span> edge;</div>
+<div class="line"><span class="lineno">  612</span>    }</div>
+<div class="line"><span class="lineno">  613</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  614</span>}</div>
 <div class="ttc" id="aclassSVF_1_1GenericEdge_html_abe8525c542def8162b094c169a01993b"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">SVF::GenericEdge::getEdgeKind</a></div><div class="ttdeci">GEdgeKind getEdgeKind() const</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00088">GenericGraph.h:88</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericEdge_html_ad9edb45e74ae675d9da82f5acf02d56e"><div class="ttname"><a href="classSVF_1_1GenericEdge.html#ad9edb45e74ae675d9da82f5acf02d56e">SVF::GenericEdge::getDstID</a></div><div class="ttdeci">NodeID getDstID() const</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00084">GenericGraph.h:84</a></div></div>
 </div><!-- fragment -->
@@ -1610,11 +1608,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Get loop for fork/join site. </p>
 <p>Get loop for fork/join site </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00410">410</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  411</span>{</div>
-<div class="line"><span class="lineno">  412</span>    <span class="keyword">const</span> FunObjVar* fun = bb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">getParent</a>();</div>
-<div class="line"><span class="lineno">  413</span>    <span class="keywordflow">return</span> fun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a6824943ac4056cce5958446c9909fbeb">getLoopInfo</a>(bb);</div>
-<div class="line"><span class="lineno">  414</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00409">409</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  410</span>{</div>
+<div class="line"><span class="lineno">  411</span>    <span class="keyword">const</span> FunObjVar* fun = bb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">getParent</a>();</div>
+<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">return</span> fun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a6824943ac4056cce5958446c9909fbeb">getLoopInfo</a>(bb);</div>
+<div class="line"><span class="lineno">  413</span>}</div>
 <div class="ttc" id="aclassSVF_1_1SVFBasicBlock_html_a1a332b47452318af85b747baf12a31cf"><div class="ttname"><a href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">SVF::SVFBasicBlock::getParent</a></div><div class="ttdeci">const FunObjVar * getParent() const</div><div class="ttdef"><b>Definition</b> <a href="BasicBlockG_8h_source.html#l00198">BasicBlockG.h:198</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2161,47 +2159,47 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSVF_1_1SlicedTCT.html#a750fa91d06e6094d8be42b9c03a2104d">SVF::SlicedTCT</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00277">277</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  278</span>{</div>
-<div class="line"><span class="lineno">  279</span>    <span class="keyword">const</span> FunObjVar* callee = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a86ca0dcae1cbd2abd23db7af834bbfc7">getDstNode</a>()-&gt;getFunction();</div>
-<div class="line"><span class="lineno">  280</span> </div>
-<div class="line"><span class="lineno">  281</span>    <a class="code hl_typedef" href="namespaceSVF.html#ab700523619b089b952498f39a7f5b6b1">CallStrCxt</a> cxt(ctp.<a class="code hl_function" href="classSVF_1_1CxtProc.html#a7c2c03b30f78aee5570e572eaf877493">getContext</a>());</div>
-<div class="line"><span class="lineno">  282</span>    <a class="code hl_typedef" href="namespaceSVF.html#ab700523619b089b952498f39a7f5b6b1">CallStrCxt</a> oldCxt = cxt;</div>
-<div class="line"><span class="lineno">  283</span>    <span class="keyword">const</span> CallICFGNode* callNode = cs;</div>
-<div class="line"><span class="lineno">  284</span></div>
-<div class="line"><span class="lineno">  286</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a7f6f83951cd8ac7e061a0aa4fee048a9">isCandidateFun</a>(callNode-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>()) == <span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">  287</span>        <a class="code hl_function" href="#afa974a1773d1f0b65e93d53a85d05138">pushCxt</a>(cxt,callNode,callee);</div>
-<div class="line"><span class="lineno">  288</span> </div>
-<div class="line"><span class="lineno">  289</span>    <span class="keywordflow">if</span>(cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">getEdgeKind</a>() == <a class="code hl_enumvalue" href="classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3abdad2f36f7a3f9f9144f003a31fedc42">CallGraphEdge::CallRetEdge</a>)</div>
-<div class="line"><span class="lineno">  290</span>    {</div>
-<div class="line"><span class="lineno">  291</span>        CxtThreadProc newctp(ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#a61d950c7469f4bb9d2152b0e7d892ebf">getTid</a>(),cxt,callee);</div>
-<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a002bac3dc928bc78b94de0ca97b1ec1d">pushToCTPWorkList</a>(newctp))</div>
-<div class="line"><span class="lineno">  293</span>        {</div>
-<div class="line"><span class="lineno">  294</span>            <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TCT Process CallRet old ctp --&quot;</span>; ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#aed801cfecdbfcd690db2d78de5f8e0b5">dump</a>());</div>
-<div class="line"><span class="lineno">  295</span>            <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TCT Process CallRet new ctp --&quot;</span>; newctp.dump());</div>
-<div class="line"><span class="lineno">  296</span>        }</div>
-<div class="line"><span class="lineno">  297</span>    }</div>
-<div class="line"><span class="lineno">  298</span> </div>
-<div class="line"><span class="lineno">  299</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">getEdgeKind</a>() == <a class="code hl_enumvalue" href="classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3a2ffd67b9bffbaa39a3e1c9d84483bce7">CallGraphEdge::TDForkEdge</a>)</div>
-<div class="line"><span class="lineno">  300</span>    {</div>
-<div class="line"><span class="lineno">  302</span>        TCTNode* spawneeNode = <a class="code hl_function" href="#a1d331ccb9055582b18a8f12eeef230e0">getOrCreateTCTNode</a>(cxt,callNode, ctp, callee);</div>
-<div class="line"><span class="lineno">  303</span>        CxtThreadProc newctp(spawneeNode-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>(),cxt,callee);</div>
-<div class="line"><span class="lineno">  304</span> </div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a002bac3dc928bc78b94de0ca97b1ec1d">pushToCTPWorkList</a>(newctp))</div>
-<div class="line"><span class="lineno">  306</span>        {</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="#aa87bfebf48f9e74655ab3db4ec1576b3">addTCTEdge</a>(this-&gt;<a class="code hl_function" href="#a07ce83106bfac6b21d664b9349c6f3bd">getTCTNode</a>(ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#a61d950c7469f4bb9d2152b0e7d892ebf">getTid</a>()), spawneeNode))</div>
-<div class="line"><span class="lineno">  309</span>            {</div>
-<div class="line"><span class="lineno">  310</span>                <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;Add TCT Edge from thread &quot;</span> &lt;&lt; ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#a61d950c7469f4bb9d2152b0e7d892ebf">getTid</a>() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
-<div class="line"><span class="lineno">  311</span>                      this-&gt;getTCTNode(ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#a61d950c7469f4bb9d2152b0e7d892ebf">getTid</a>())-&gt;getCxtThread().dump();</div>
-<div class="line"><span class="lineno">  312</span>                      <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot; to thread &quot;</span> &lt;&lt; spawneeNode-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
-<div class="line"><span class="lineno">  313</span>                      spawneeNode-&gt;<a class="code hl_function" href="classSVF_1_1TCTNode.html#a05292fdf2b949479a143cc069e036395">getCxtThread</a>().<a class="code hl_function" href="classSVF_1_1CxtThread.html#a66709acfa2f5762d86574c9cf7f38a64">dump</a>();</div>
-<div class="line"><span class="lineno">  314</span>                      <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span> );</div>
-<div class="line"><span class="lineno">  315</span>            }</div>
-<div class="line"><span class="lineno">  316</span>            <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TCT Process Fork old ctp --&quot;</span>; ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#aed801cfecdbfcd690db2d78de5f8e0b5">dump</a>());</div>
-<div class="line"><span class="lineno">  317</span>            <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TCT Process Fork new ctp --&quot;</span>; newctp.dump());</div>
-<div class="line"><span class="lineno">  318</span>        }</div>
-<div class="line"><span class="lineno">  319</span>    }</div>
-<div class="line"><span class="lineno">  320</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00276">276</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>{</div>
+<div class="line"><span class="lineno">  278</span>    <span class="keyword">const</span> FunObjVar* callee = cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#a86ca0dcae1cbd2abd23db7af834bbfc7">getDstNode</a>()-&gt;getFunction();</div>
+<div class="line"><span class="lineno">  279</span> </div>
+<div class="line"><span class="lineno">  280</span>    <a class="code hl_typedef" href="namespaceSVF.html#ab700523619b089b952498f39a7f5b6b1">CallStrCxt</a> cxt(ctp.<a class="code hl_function" href="classSVF_1_1CxtProc.html#a7c2c03b30f78aee5570e572eaf877493">getContext</a>());</div>
+<div class="line"><span class="lineno">  281</span>    <a class="code hl_typedef" href="namespaceSVF.html#ab700523619b089b952498f39a7f5b6b1">CallStrCxt</a> oldCxt = cxt;</div>
+<div class="line"><span class="lineno">  282</span>    <span class="keyword">const</span> CallICFGNode* callNode = cs;</div>
+<div class="line"><span class="lineno">  283</span></div>
+<div class="line"><span class="lineno">  285</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a7f6f83951cd8ac7e061a0aa4fee048a9">isCandidateFun</a>(callNode-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>()) == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  286</span>        <a class="code hl_function" href="#afa974a1773d1f0b65e93d53a85d05138">pushCxt</a>(cxt,callNode,callee);</div>
+<div class="line"><span class="lineno">  287</span> </div>
+<div class="line"><span class="lineno">  288</span>    <span class="keywordflow">if</span>(cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">getEdgeKind</a>() == <a class="code hl_enumvalue" href="classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3abdad2f36f7a3f9f9144f003a31fedc42">CallGraphEdge::CallRetEdge</a>)</div>
+<div class="line"><span class="lineno">  289</span>    {</div>
+<div class="line"><span class="lineno">  290</span>        CxtThreadProc newctp(ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#a61d950c7469f4bb9d2152b0e7d892ebf">getTid</a>(),cxt,callee);</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a002bac3dc928bc78b94de0ca97b1ec1d">pushToCTPWorkList</a>(newctp))</div>
+<div class="line"><span class="lineno">  292</span>        {</div>
+<div class="line"><span class="lineno">  293</span>            <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TCT Process CallRet old ctp --&quot;</span>; ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#aed801cfecdbfcd690db2d78de5f8e0b5">dump</a>());</div>
+<div class="line"><span class="lineno">  294</span>            <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TCT Process CallRet new ctp --&quot;</span>; newctp.dump());</div>
+<div class="line"><span class="lineno">  295</span>        }</div>
+<div class="line"><span class="lineno">  296</span>    }</div>
+<div class="line"><span class="lineno">  297</span> </div>
+<div class="line"><span class="lineno">  298</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(cgEdge-&gt;<a class="code hl_function" href="classSVF_1_1GenericEdge.html#abe8525c542def8162b094c169a01993b">getEdgeKind</a>() == <a class="code hl_enumvalue" href="classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3a2ffd67b9bffbaa39a3e1c9d84483bce7">CallGraphEdge::TDForkEdge</a>)</div>
+<div class="line"><span class="lineno">  299</span>    {</div>
+<div class="line"><span class="lineno">  301</span>        TCTNode* spawneeNode = <a class="code hl_function" href="#a1d331ccb9055582b18a8f12eeef230e0">getOrCreateTCTNode</a>(cxt,callNode, ctp, callee);</div>
+<div class="line"><span class="lineno">  302</span>        CxtThreadProc newctp(spawneeNode-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>(),cxt,callee);</div>
+<div class="line"><span class="lineno">  303</span> </div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a002bac3dc928bc78b94de0ca97b1ec1d">pushToCTPWorkList</a>(newctp))</div>
+<div class="line"><span class="lineno">  305</span>        {</div>
+<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="#aa87bfebf48f9e74655ab3db4ec1576b3">addTCTEdge</a>(this-&gt;<a class="code hl_function" href="#a07ce83106bfac6b21d664b9349c6f3bd">getTCTNode</a>(ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#a61d950c7469f4bb9d2152b0e7d892ebf">getTid</a>()), spawneeNode))</div>
+<div class="line"><span class="lineno">  308</span>            {</div>
+<div class="line"><span class="lineno">  309</span>                <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;Add TCT Edge from thread &quot;</span> &lt;&lt; ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#a61d950c7469f4bb9d2152b0e7d892ebf">getTid</a>() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
+<div class="line"><span class="lineno">  310</span>                      this-&gt;getTCTNode(ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#a61d950c7469f4bb9d2152b0e7d892ebf">getTid</a>())-&gt;getCxtThread().dump();</div>
+<div class="line"><span class="lineno">  311</span>                      <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot; to thread &quot;</span> &lt;&lt; spawneeNode-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
+<div class="line"><span class="lineno">  312</span>                      spawneeNode-&gt;<a class="code hl_function" href="classSVF_1_1TCTNode.html#a05292fdf2b949479a143cc069e036395">getCxtThread</a>().<a class="code hl_function" href="classSVF_1_1CxtThread.html#a66709acfa2f5762d86574c9cf7f38a64">dump</a>();</div>
+<div class="line"><span class="lineno">  313</span>                      <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span> );</div>
+<div class="line"><span class="lineno">  314</span>            }</div>
+<div class="line"><span class="lineno">  315</span>            <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TCT Process Fork old ctp --&quot;</span>; ctp.<a class="code hl_function" href="classSVF_1_1CxtThreadProc.html#aed801cfecdbfcd690db2d78de5f8e0b5">dump</a>());</div>
+<div class="line"><span class="lineno">  316</span>            <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TCT Process Fork new ctp --&quot;</span>; newctp.dump());</div>
+<div class="line"><span class="lineno">  317</span>        }</div>
+<div class="line"><span class="lineno">  318</span>    }</div>
+<div class="line"><span class="lineno">  319</span>}</div>
 <div class="ttc" id="aclassSVF_1_1CallGraphEdge_html_ada17a588ca74aa016606d94661bd82d3a2ffd67b9bffbaa39a3e1c9d84483bce7"><div class="ttname"><a href="classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3a2ffd67b9bffbaa39a3e1c9d84483bce7">SVF::CallGraphEdge::TDForkEdge</a></div><div class="ttdeci">@ TDForkEdge</div><div class="ttdef"><b>Definition</b> <a href="CallGraph_8h_source.html#l00058">CallGraph.h:58</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallGraphEdge_html_ada17a588ca74aa016606d94661bd82d3abdad2f36f7a3f9f9144f003a31fedc42"><div class="ttname"><a href="classSVF_1_1CallGraphEdge.html#ada17a588ca74aa016606d94661bd82d3abdad2f36f7a3f9f9144f003a31fedc42">SVF::CallGraphEdge::CallRetEdge</a></div><div class="ttdeci">@ CallRetEdge</div><div class="ttdef"><b>Definition</b> <a href="CallGraph_8h_source.html#l00058">CallGraph.h:58</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CxtProc_html_a7c2c03b30f78aee5570e572eaf877493"><div class="ttname"><a href="classSVF_1_1CxtProc.html#a7c2c03b30f78aee5570e572eaf877493">SVF::CxtProc::getContext</a></div><div class="ttdeci">const CallStrCxt &amp; getContext() const</div><div class="ttdoc">Return current context.</div><div class="ttdef"><b>Definition</b> <a href="CxtStmt_8h_source.html#l00330">CxtStmt.h:330</a></div></div>
@@ -2209,7 +2207,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1CxtThreadProc_html_aed801cfecdbfcd690db2d78de5f8e0b5"><div class="ttname"><a href="classSVF_1_1CxtThreadProc.html#aed801cfecdbfcd690db2d78de5f8e0b5">SVF::CxtThreadProc::dump</a></div><div class="ttdeci">void dump() const</div><div class="ttdoc">Dump CxtThreadProc.</div><div class="ttdef"><b>Definition</b> <a href="CxtStmt_8h_source.html#l00447">CxtStmt.h:447</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CxtThread_html_a66709acfa2f5762d86574c9cf7f38a64"><div class="ttname"><a href="classSVF_1_1CxtThread.html#a66709acfa2f5762d86574c9cf7f38a64">SVF::CxtThread::dump</a></div><div class="ttdeci">void dump() const</div><div class="ttdoc">Dump CxtThread.</div><div class="ttdef"><b>Definition</b> <a href="CxtStmt_8h_source.html#l00277">CxtStmt.h:277</a></div></div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_aa87bfebf48f9e74655ab3db4ec1576b3"><div class="ttname"><a href="#aa87bfebf48f9e74655ab3db4ec1576b3">SVF::TCT::addTCTEdge</a></div><div class="ttdeci">bool addTCTEdge(TCTNode *src, TCTNode *dst)</div><div class="ttdoc">Add TCT edge.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00476">TCT.h:476</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_afa974a1773d1f0b65e93d53a85d05138"><div class="ttname"><a href="#afa974a1773d1f0b65e93d53a85d05138">SVF::TCT::pushCxt</a></div><div class="ttdeci">virtual void pushCxt(CallStrCxt &amp;cxt, const CallICFGNode *call, const FunObjVar *callee)</div><div class="ttdoc">Context helper functions.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00483">TCT.cpp:483</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_afa974a1773d1f0b65e93d53a85d05138"><div class="ttname"><a href="#afa974a1773d1f0b65e93d53a85d05138">SVF::TCT::pushCxt</a></div><div class="ttdeci">virtual void pushCxt(CallStrCxt &amp;cxt, const CallICFGNode *call, const FunObjVar *callee)</div><div class="ttdoc">Context helper functions.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00482">TCT.cpp:482</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2240,19 +2238,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Whether we have already created this call graph edge. </p>
 <p>Whether we have already created this call graph edge </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00589">589</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  590</span>{</div>
-<div class="line"><span class="lineno">  591</span>    TCTEdge edge(src, dst, kind);</div>
-<div class="line"><span class="lineno">  592</span>    TCTEdge* outEdge = src-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a>(&amp;edge);</div>
-<div class="line"><span class="lineno">  593</span>    TCTEdge* inEdge = dst-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>(&amp;edge);</div>
-<div class="line"><span class="lineno">  594</span>    <span class="keywordflow">if</span> (outEdge &amp;&amp; inEdge)</div>
-<div class="line"><span class="lineno">  595</span>    {</div>
-<div class="line"><span class="lineno">  596</span>        assert(outEdge == inEdge &amp;&amp; <span class="stringliteral">&quot;edges not match&quot;</span>);</div>
-<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">return</span> outEdge;</div>
-<div class="line"><span class="lineno">  598</span>    }</div>
-<div class="line"><span class="lineno">  599</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  600</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  601</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00588">588</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  589</span>{</div>
+<div class="line"><span class="lineno">  590</span>    TCTEdge edge(src, dst, kind);</div>
+<div class="line"><span class="lineno">  591</span>    TCTEdge* outEdge = src-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">hasOutgoingEdge</a>(&amp;edge);</div>
+<div class="line"><span class="lineno">  592</span>    TCTEdge* inEdge = dst-&gt;<a class="code hl_function" href="classSVF_1_1GenericNode.html#a06a7373b11143e709784de784fa476fe">hasIncomingEdge</a>(&amp;edge);</div>
+<div class="line"><span class="lineno">  593</span>    <span class="keywordflow">if</span> (outEdge &amp;&amp; inEdge)</div>
+<div class="line"><span class="lineno">  594</span>    {</div>
+<div class="line"><span class="lineno">  595</span>        assert(outEdge == inEdge &amp;&amp; <span class="stringliteral">&quot;edges not match&quot;</span>);</div>
+<div class="line"><span class="lineno">  596</span>        <span class="keywordflow">return</span> outEdge;</div>
+<div class="line"><span class="lineno">  597</span>    }</div>
+<div class="line"><span class="lineno">  598</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  599</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  600</span>}</div>
 <div class="ttc" id="aclassSVF_1_1GenericNode_html_a0931220d7a38e03f206cbdc6465d32ad"><div class="ttname"><a href="classSVF_1_1GenericNode.html#a0931220d7a38e03f206cbdc6465d32ad">SVF::GenericNode::hasOutgoingEdge</a></div><div class="ttdeci">bool hasOutgoingEdge() const</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00192">GenericGraph.h:192</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2576,21 +2574,21 @@ Additional Inherited Members</h2></td></tr>
 <p>If lhs is a suffix of rhs, including equal. </p>
 <p>If lhs is a suffix of rhs, including equal </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00531">531</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  532</span>{</div>
-<div class="line"><span class="lineno">  533</span>    <span class="keywordflow">if</span> (lhs.size() &gt; call.size())</div>
-<div class="line"><span class="lineno">  534</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  535</span>    <span class="keywordtype">bool</span> isSuffix = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  536</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; lhs.size(); ++i)</div>
-<div class="line"><span class="lineno">  537</span>    {</div>
-<div class="line"><span class="lineno">  538</span>        <span class="keywordflow">if</span> (lhs[lhs.size() - 1 - i] != call[call.size() - 1 - i])</div>
-<div class="line"><span class="lineno">  539</span>        {</div>
-<div class="line"><span class="lineno">  540</span>            isSuffix = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  541</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  542</span>        }</div>
-<div class="line"><span class="lineno">  543</span>    }</div>
-<div class="line"><span class="lineno">  544</span>    <span class="keywordflow">return</span> isSuffix;</div>
-<div class="line"><span class="lineno">  545</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00530">530</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  531</span>{</div>
+<div class="line"><span class="lineno">  532</span>    <span class="keywordflow">if</span> (lhs.size() &gt; call.size())</div>
+<div class="line"><span class="lineno">  533</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  534</span>    <span class="keywordtype">bool</span> isSuffix = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  535</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; lhs.size(); ++i)</div>
+<div class="line"><span class="lineno">  536</span>    {</div>
+<div class="line"><span class="lineno">  537</span>        <span class="keywordflow">if</span> (lhs[lhs.size() - 1 - i] != call[call.size() - 1 - i])</div>
+<div class="line"><span class="lineno">  538</span>        {</div>
+<div class="line"><span class="lineno">  539</span>            isSuffix = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  540</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  541</span>        }</div>
+<div class="line"><span class="lineno">  542</span>    }</div>
+<div class="line"><span class="lineno">  543</span>    <span class="keywordflow">return</span> isSuffix;</div>
+<div class="line"><span class="lineno">  544</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2789,25 +2787,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Return true if a join instruction must be executed inside a loop. </p>
 <p>Return true if a join instruction must be executed inside a loop joinbb should post dominate the successive basic block of a loop header </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00326">326</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  327</span>{</div>
-<div class="line"><span class="lineno">  328</span>    assert(!lp.empty() &amp;&amp; <span class="stringliteral">&quot;this is not a loop, empty basic block&quot;</span>);</div>
-<div class="line"><span class="lineno">  329</span>    <span class="keyword">const</span> FunObjVar* svffun = join-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
-<div class="line"><span class="lineno">  330</span>    <span class="keyword">const</span> SVFBasicBlock* loopheadbb = svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a20697bf6cdddac71a0763f577252b391">getLoopHeader</a>(lp);</div>
-<div class="line"><span class="lineno">  331</span>    <span class="keyword">const</span> SVFBasicBlock* joinbb = join-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#aa4cdcb073bb22cecf215dcc5b2919428">getBB</a>();</div>
-<div class="line"><span class="lineno">  332</span>    assert(loopheadbb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">getParent</a>()==joinbb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">getParent</a>() &amp;&amp; <span class="stringliteral">&quot;should inside same function&quot;</span>);</div>
-<div class="line"><span class="lineno">  333</span> </div>
-<div class="line"><span class="lineno">  334</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFBasicBlock* svf_scc_bb : loopheadbb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#aeeb9630b8d6b1b1b57d7fddcbdbfaaa7">getSuccessors</a>())</div>
-<div class="line"><span class="lineno">  335</span>    {</div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">if</span>(svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#ad383746dc62cf1f0ef51787f6f7e5aac">loopContainsBB</a>(lp,svf_scc_bb))</div>
-<div class="line"><span class="lineno">  337</span>        {</div>
-<div class="line"><span class="lineno">  338</span>            <span class="keywordflow">if</span>(svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a6b87de824746290ae9ab6f0010b9892d">dominate</a>(joinbb,svf_scc_bb)==<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  339</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  340</span>        }</div>
-<div class="line"><span class="lineno">  341</span>    }</div>
-<div class="line"><span class="lineno">  342</span> </div>
-<div class="line"><span class="lineno">  343</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  344</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00325">325</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  326</span>{</div>
+<div class="line"><span class="lineno">  327</span>    assert(!lp.empty() &amp;&amp; <span class="stringliteral">&quot;this is not a loop, empty basic block&quot;</span>);</div>
+<div class="line"><span class="lineno">  328</span>    <span class="keyword">const</span> FunObjVar* svffun = join-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
+<div class="line"><span class="lineno">  329</span>    <span class="keyword">const</span> SVFBasicBlock* loopheadbb = svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a20697bf6cdddac71a0763f577252b391">getLoopHeader</a>(lp);</div>
+<div class="line"><span class="lineno">  330</span>    <span class="keyword">const</span> SVFBasicBlock* joinbb = join-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#aa4cdcb073bb22cecf215dcc5b2919428">getBB</a>();</div>
+<div class="line"><span class="lineno">  331</span>    assert(loopheadbb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">getParent</a>()==joinbb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">getParent</a>() &amp;&amp; <span class="stringliteral">&quot;should inside same function&quot;</span>);</div>
+<div class="line"><span class="lineno">  332</span> </div>
+<div class="line"><span class="lineno">  333</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFBasicBlock* svf_scc_bb : loopheadbb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#aeeb9630b8d6b1b1b57d7fddcbdbfaaa7">getSuccessors</a>())</div>
+<div class="line"><span class="lineno">  334</span>    {</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">if</span>(svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#ad383746dc62cf1f0ef51787f6f7e5aac">loopContainsBB</a>(lp,svf_scc_bb))</div>
+<div class="line"><span class="lineno">  336</span>        {</div>
+<div class="line"><span class="lineno">  337</span>            <span class="keywordflow">if</span>(svffun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a6b87de824746290ae9ab6f0010b9892d">dominate</a>(joinbb,svf_scc_bb)==<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  338</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  339</span>        }</div>
+<div class="line"><span class="lineno">  340</span>    }</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  343</span>}</div>
 <div class="ttc" id="aclassSVF_1_1FunObjVar_html_a20697bf6cdddac71a0763f577252b391"><div class="ttname"><a href="classSVF_1_1FunObjVar.html#a20697bf6cdddac71a0763f577252b391">SVF::FunObjVar::getLoopHeader</a></div><div class="ttdeci">const SVFBasicBlock * getLoopHeader(const BBList &amp;lp) const</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l01150">SVFVariables.h:1150</a></div></div>
 <div class="ttc" id="aclassSVF_1_1FunObjVar_html_a6b87de824746290ae9ab6f0010b9892d"><div class="ttname"><a href="classSVF_1_1FunObjVar.html#a6b87de824746290ae9ab6f0010b9892d">SVF::FunObjVar::dominate</a></div><div class="ttdeci">bool dominate(const SVFBasicBlock *bbKey, const SVFBasicBlock *bbValue) const</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l01175">SVFVariables.h:1175</a></div></div>
 <div class="ttc" id="aclassSVF_1_1FunObjVar_html_ad383746dc62cf1f0ef51787f6f7e5aac"><div class="ttname"><a href="classSVF_1_1FunObjVar.html#ad383746dc62cf1f0ef51787f6f7e5aac">SVF::FunObjVar::loopContainsBB</a></div><div class="ttdeci">bool loopContainsBB(const BBList &amp;lp, const SVFBasicBlock *bb) const</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l01155">SVFVariables.h:1155</a></div></div>
@@ -2874,23 +2872,23 @@ Additional Inherited Members</h2></td></tr>
 <p>Whether a given bb is an exit of a inloop join site. </p>
 <p>Whether a given bb is an exit of a inloop join site </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00389">389</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  390</span>{</div>
-<div class="line"><span class="lineno">  391</span>    <span class="keywordflow">for</span>(InstToLoopMap::const_iterator it = <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>.begin(), eit = <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>.end(); it!=eit; ++it)</div>
-<div class="line"><span class="lineno">  392</span>    {</div>
-<div class="line"><span class="lineno">  393</span>        std::vector&lt;const SVFBasicBlock*&gt; exitbbs;</div>
-<div class="line"><span class="lineno">  394</span>        it-&gt;first-&gt;getFun()-&gt;getExitBlocksOfLoop(it-&gt;first-&gt;getBB(),exitbbs);</div>
-<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">while</span>(!exitbbs.empty())</div>
-<div class="line"><span class="lineno">  396</span>        {</div>
-<div class="line"><span class="lineno">  397</span>            <span class="keyword">const</span> SVFBasicBlock* eb = exitbbs.back();</div>
-<div class="line"><span class="lineno">  398</span>            exitbbs.pop_back();</div>
-<div class="line"><span class="lineno">  399</span>            <span class="keywordflow">if</span>(eb == bb)</div>
-<div class="line"><span class="lineno">  400</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  401</span>        }</div>
-<div class="line"><span class="lineno">  402</span>    }</div>
-<div class="line"><span class="lineno">  403</span> </div>
-<div class="line"><span class="lineno">  404</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  405</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00388">388</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  389</span>{</div>
+<div class="line"><span class="lineno">  390</span>    <span class="keywordflow">for</span>(InstToLoopMap::const_iterator it = <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>.begin(), eit = <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>.end(); it!=eit; ++it)</div>
+<div class="line"><span class="lineno">  391</span>    {</div>
+<div class="line"><span class="lineno">  392</span>        std::vector&lt;const SVFBasicBlock*&gt; exitbbs;</div>
+<div class="line"><span class="lineno">  393</span>        it-&gt;first-&gt;getFun()-&gt;getExitBlocksOfLoop(it-&gt;first-&gt;getBB(),exitbbs);</div>
+<div class="line"><span class="lineno">  394</span>        <span class="keywordflow">while</span>(!exitbbs.empty())</div>
+<div class="line"><span class="lineno">  395</span>        {</div>
+<div class="line"><span class="lineno">  396</span>            <span class="keyword">const</span> SVFBasicBlock* eb = exitbbs.back();</div>
+<div class="line"><span class="lineno">  397</span>            exitbbs.pop_back();</div>
+<div class="line"><span class="lineno">  398</span>            <span class="keywordflow">if</span>(eb == bb)</div>
+<div class="line"><span class="lineno">  399</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  400</span>        }</div>
+<div class="line"><span class="lineno">  401</span>    }</div>
+<div class="line"><span class="lineno">  402</span> </div>
+<div class="line"><span class="lineno">  403</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  404</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2920,16 +2918,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Whether a given bb is a loop head of a inloop join site. </p>
 <p>Return true if a given bb is a loop head of a inloop join site </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00375">375</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  376</span>{</div>
-<div class="line"><span class="lineno">  377</span>    <span class="keywordflow">for</span>(InstToLoopMap::const_iterator it = <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>.begin(), eit = <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>.end(); it!=eit; ++it)</div>
-<div class="line"><span class="lineno">  378</span>    {</div>
-<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">if</span>(bb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">getParent</a>()-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a20697bf6cdddac71a0763f577252b391">getLoopHeader</a>(it-&gt;second) == bb)</div>
-<div class="line"><span class="lineno">  380</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  381</span>    }</div>
-<div class="line"><span class="lineno">  382</span> </div>
-<div class="line"><span class="lineno">  383</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  384</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00374">374</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  375</span>{</div>
+<div class="line"><span class="lineno">  376</span>    <span class="keywordflow">for</span>(InstToLoopMap::const_iterator it = <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>.begin(), eit = <a class="code hl_variable" href="#a5b1f44ffa732607a7800728befa5bc57">joinSiteToLoopMap</a>.end(); it!=eit; ++it)</div>
+<div class="line"><span class="lineno">  377</span>    {</div>
+<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">if</span>(bb-&gt;<a class="code hl_function" href="classSVF_1_1SVFBasicBlock.html#a1a332b47452318af85b747baf12a31cf">getParent</a>()-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a20697bf6cdddac71a0763f577252b391">getLoopHeader</a>(it-&gt;second) == bb)</div>
+<div class="line"><span class="lineno">  379</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  380</span>    }</div>
+<div class="line"><span class="lineno">  381</span> </div>
+<div class="line"><span class="lineno">  382</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  383</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3101,30 +3099,30 @@ Additional Inherited Members</h2></td></tr>
 <p>handle calling context for candidate functions only</p>
 <p>partial match</p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00503">503</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  504</span>{</div>
-<div class="line"><span class="lineno">  505</span>    <span class="keyword">const</span> FunObjVar* caller = call-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
-<div class="line"><span class="lineno">  506</span>    <a class="code hl_typedef" href="namespaceSVF.html#a03d88a0302bcd253387690f13f693f64">CallSiteID</a> csId = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallSiteID(call, callee);</div>
-<div class="line"><span class="lineno">  507</span></div>
-<div class="line"><span class="lineno">  509</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a7f6f83951cd8ac7e061a0aa4fee048a9">isCandidateFun</a>(caller) == <span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  510</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  511</span></div>
-<div class="line"><span class="lineno">  513</span>    <span class="keywordflow">if</span>(cxt.empty())</div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  515</span> </div>
-<div class="line"><span class="lineno">  516</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a752049c24d9566a41afb4f6dc12a980c">inSameCallGraphSCC</a>(<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(caller),<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(callee))==<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  517</span>    {</div>
-<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">if</span>(cxt.back() == csId)</div>
-<div class="line"><span class="lineno">  519</span>            cxt.pop_back();</div>
-<div class="line"><span class="lineno">  520</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  521</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  522</span>        <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="#aa86c4422e17cf00408444f18687d555b">dumpCxt</a>(cxt));</div>
-<div class="line"><span class="lineno">  523</span>    }</div>
-<div class="line"><span class="lineno">  524</span> </div>
-<div class="line"><span class="lineno">  525</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  526</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00502">502</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  503</span>{</div>
+<div class="line"><span class="lineno">  504</span>    <span class="keyword">const</span> FunObjVar* caller = call-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
+<div class="line"><span class="lineno">  505</span>    <a class="code hl_typedef" href="namespaceSVF.html#a03d88a0302bcd253387690f13f693f64">CallSiteID</a> csId = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallSiteID(call, callee);</div>
+<div class="line"><span class="lineno">  506</span></div>
+<div class="line"><span class="lineno">  508</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a7f6f83951cd8ac7e061a0aa4fee048a9">isCandidateFun</a>(caller) == <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  510</span></div>
+<div class="line"><span class="lineno">  512</span>    <span class="keywordflow">if</span>(cxt.empty())</div>
+<div class="line"><span class="lineno">  513</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  514</span> </div>
+<div class="line"><span class="lineno">  515</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a752049c24d9566a41afb4f6dc12a980c">inSameCallGraphSCC</a>(<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(caller),<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(callee))==<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  516</span>    {</div>
+<div class="line"><span class="lineno">  517</span>        <span class="keywordflow">if</span>(cxt.back() == csId)</div>
+<div class="line"><span class="lineno">  518</span>            cxt.pop_back();</div>
+<div class="line"><span class="lineno">  519</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  520</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  521</span>        <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="#aa86c4422e17cf00408444f18687d555b">dumpCxt</a>(cxt));</div>
+<div class="line"><span class="lineno">  522</span>    }</div>
+<div class="line"><span class="lineno">  523</span> </div>
+<div class="line"><span class="lineno">  524</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  525</span>}</div>
 <div class="ttc" id="aclassSVF_1_1TCT_html_a752049c24d9566a41afb4f6dc12a980c"><div class="ttname"><a href="#a752049c24d9566a41afb4f6dc12a980c">SVF::TCT::inSameCallGraphSCC</a></div><div class="ttdeci">bool inSameCallGraphSCC(const CallGraphNode *src, const CallGraphNode *dst)</div><div class="ttdoc">Whether two functions in the same callgraph scc.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8h_source.html#l00309">TCT.h:309</a></div></div>
-<div class="ttc" id="aclassSVF_1_1TCT_html_aa86c4422e17cf00408444f18687d555b"><div class="ttname"><a href="#aa86c4422e17cf00408444f18687d555b">SVF::TCT::dumpCxt</a></div><div class="ttdeci">void dumpCxt(CallStrCxt &amp;cxt)</div><div class="ttdoc">Dump calling context.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00551">TCT.cpp:551</a></div></div>
+<div class="ttc" id="aclassSVF_1_1TCT_html_aa86c4422e17cf00408444f18687d555b"><div class="ttname"><a href="#aa86c4422e17cf00408444f18687d555b">SVF::TCT::dumpCxt</a></div><div class="ttdeci">void dumpCxt(CallStrCxt &amp;cxt)</div><div class="ttdoc">Dump calling context.</div><div class="ttdef"><b>Definition</b> <a href="TCT_8cpp_source.html#l00550">TCT.cpp:550</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a03d88a0302bcd253387690f13f693f64"><div class="ttname"><a href="namespaceSVF.html#a03d88a0302bcd253387690f13f693f64">SVF::CallSiteID</a></div><div class="ttdeci">unsigned CallSiteID</div><div class="ttdef"><b>Definition</b> <a href="GeneralType_8h_source.html#l00078">GeneralType.h:78</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -3178,14 +3176,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Print <a class="el" href="classSVF_1_1TCT.html">TCT</a> information. </p>
 <p>Print <a class="el" href="classSVF_1_1TCT.html">TCT</a> information </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00577">577</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  578</span>{</div>
-<div class="line"><span class="lineno">  579</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="classSVF_1_1GenericGraph.html#a5dfa3f178d4abf37177d0d74ff4c6a97">TCT::const_iterator</a> it = this-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">begin</a>(), eit = this-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">end</a>(); it!=eit; ++it)</div>
-<div class="line"><span class="lineno">  580</span>    {</div>
-<div class="line"><span class="lineno">  581</span>        <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TID &quot;</span> &lt;&lt; it-&gt;first &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div>
-<div class="line"><span class="lineno">  582</span>        it-&gt;second-&gt;getCxtThread().dump();</div>
-<div class="line"><span class="lineno">  583</span>    }</div>
-<div class="line"><span class="lineno">  584</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00576">576</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  577</span>{</div>
+<div class="line"><span class="lineno">  578</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="classSVF_1_1GenericGraph.html#a5dfa3f178d4abf37177d0d74ff4c6a97">TCT::const_iterator</a> it = this-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">begin</a>(), eit = this-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">end</a>(); it!=eit; ++it)</div>
+<div class="line"><span class="lineno">  579</span>    {</div>
+<div class="line"><span class="lineno">  580</span>        <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">outs</a>() &lt;&lt; <span class="stringliteral">&quot;TID &quot;</span> &lt;&lt; it-&gt;first &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line"><span class="lineno">  581</span>        it-&gt;second-&gt;getCxtThread().dump();</div>
+<div class="line"><span class="lineno">  582</span>    }</div>
+<div class="line"><span class="lineno">  583</span>}</div>
 <div class="ttc" id="aclassSVF_1_1GenericGraph_html_a0d9744b1b0e7a09a6f7af29188e243b7"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">SVF::GenericGraph&lt; TCTNode, TCTEdge &gt;::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00371">GenericGraph.h:371</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericGraph_html_a4bef15157423cef48dc7333a803cd27d"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">SVF::GenericGraph&lt; TCTNode, TCTEdge &gt;::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00375">GenericGraph.h:375</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericGraph_html_a5dfa3f178d4abf37177d0d74ff4c6a97"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a5dfa3f178d4abf37177d0d74ff4c6a97">SVF::GenericGraph&lt; TCTNode, TCTEdge &gt;::const_iterator</a></div><div class="ttdeci">IDToNodeMapTy::const_iterator const_iterator</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00351">GenericGraph.h:351</a></div></div>
@@ -3228,21 +3226,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Push calling context</p>
 <p>Push calling context, with k limiting </p>
 
-<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00483">483</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  484</span>{</div>
-<div class="line"><span class="lineno">  485</span>    <span class="keyword">const</span> FunObjVar* caller = call-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
-<div class="line"><span class="lineno">  486</span>    <a class="code hl_typedef" href="namespaceSVF.html#a03d88a0302bcd253387690f13f693f64">CallSiteID</a> csId = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallSiteID(call, callee);</div>
-<div class="line"><span class="lineno">  487</span> </div>
-<div class="line"><span class="lineno">  488</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a752049c24d9566a41afb4f6dc12a980c">inSameCallGraphSCC</a>(<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(caller),<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(callee))==<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  489</span>    {</div>
-<div class="line"><span class="lineno">  490</span>        cxt.push_back(csId);</div>
-<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">if</span> (cxt.size() &gt; <a class="code hl_variable" href="#a826fcc10884db41ab96665ca76f09e2a">contextLimit</a>)</div>
-<div class="line"><span class="lineno">  492</span>            cxt.erase(cxt.begin());</div>
-<div class="line"><span class="lineno">  493</span>        <span class="keywordflow">if</span> (cxt.size() &gt; <a class="code hl_variable" href="#aaae41663b1d1f4d38b047c50c156defb">MaxCxtSize</a>)</div>
-<div class="line"><span class="lineno">  494</span>            <a class="code hl_variable" href="#aaae41663b1d1f4d38b047c50c156defb">MaxCxtSize</a> = cxt.size();</div>
-<div class="line"><span class="lineno">  495</span>        <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="#aa86c4422e17cf00408444f18687d555b">dumpCxt</a>(cxt));</div>
-<div class="line"><span class="lineno">  496</span>    }</div>
-<div class="line"><span class="lineno">  497</span>}</div>
+<p class="definition">Definition at line <a class="el" href="TCT_8cpp_source.html#l00482">482</a> of file <a class="el" href="TCT_8cpp_source.html">TCT.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>{</div>
+<div class="line"><span class="lineno">  484</span>    <span class="keyword">const</span> FunObjVar* caller = call-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#a64897854233de17a2bde83d1fe35a113">getFun</a>();</div>
+<div class="line"><span class="lineno">  485</span>    <a class="code hl_typedef" href="namespaceSVF.html#a03d88a0302bcd253387690f13f693f64">CallSiteID</a> csId = <a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallSiteID(call, callee);</div>
+<div class="line"><span class="lineno">  486</span> </div>
+<div class="line"><span class="lineno">  487</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a752049c24d9566a41afb4f6dc12a980c">inSameCallGraphSCC</a>(<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(caller),<a class="code hl_variable" href="#ac9ddd6559e818f37c018ed5435182363">tcg</a>-&gt;getCallGraphNode(callee))==<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  488</span>    {</div>
+<div class="line"><span class="lineno">  489</span>        cxt.push_back(csId);</div>
+<div class="line"><span class="lineno">  490</span>        <span class="keywordflow">if</span> (cxt.size() &gt; <a class="code hl_variable" href="#a826fcc10884db41ab96665ca76f09e2a">contextLimit</a>)</div>
+<div class="line"><span class="lineno">  491</span>            cxt.erase(cxt.begin());</div>
+<div class="line"><span class="lineno">  492</span>        <span class="keywordflow">if</span> (cxt.size() &gt; <a class="code hl_variable" href="#aaae41663b1d1f4d38b047c50c156defb">MaxCxtSize</a>)</div>
+<div class="line"><span class="lineno">  493</span>            <a class="code hl_variable" href="#aaae41663b1d1f4d38b047c50c156defb">MaxCxtSize</a> = cxt.size();</div>
+<div class="line"><span class="lineno">  494</span>        <a class="code hl_define" href="SVFType_8h.html#a173ce1b9b505fdadf5613b663749d3b0">DBOUT</a>(<a class="code hl_define" href="SVFType_8h.html#a217a1ccdaec1abb103cf6b0373631234">DMTA</a>,<a class="code hl_function" href="#aa86c4422e17cf00408444f18687d555b">dumpCxt</a>(cxt));</div>
+<div class="line"><span class="lineno">  495</span>    }</div>
+<div class="line"><span class="lineno">  496</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

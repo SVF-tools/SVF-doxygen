@@ -41,7 +41,7 @@ var searchData=
   ['return_5fparse_5fend_38',['return_parse_end',['../cJSON_8h.html#a7725ae4fa33fc499614c6895ee9ee44a',1,'return_parse_end:&#160;cJSON.h'],['../cJSON_8cpp.html#a1a7c63ae727dcb98b54e081b2ff17ed9',1,'return_parse_end:&#160;cJSON.cpp']]],
   ['returnedgroups_39',['returnedGroups',['../classSVF_1_1SparseObjGraph.html#a4e4e04842b37f9067aa48a39431fbf1c',1,'SVF::SparseObjGraph']]],
   ['returnedgroupsbycallee_40',['returnedGroupsByCallee',['../classSVF_1_1SparseObjGraph.html#a7369c5b8e3521975733202d4a31e549e',1,'SVF::SparseObjGraph']]],
-  ['returnfunobjsymmap_41',['returnFunObjSymMap',['../classSVF_1_1IRGraph.html#adeceab2ddf59ba096b43c7217612be10',1,'SVF::IRGraph']]],
+  ['returnfunobjsymmap_41',['returnFunObjSymMap',['../classSVF_1_1PAGBase.html#a3ed82f24b57fdf5a3e67daf61538c501',1,'SVF::PAGBase']]],
   ['returnsymmap_42',['returnSymMap',['../classSVF_1_1LLVMModuleSet.html#a98e5fc56406ce00cdcb27a5abaf3aeb1',1,'SVF::LLVMModuleSet']]],
   ['rev_43',['rev',['../classSVF_1_1PTData.html#a46fa3ec6462f3dda19549340281bb219',1,'SVF::PTData']]],
   ['reversenodemapping_44',['reverseNodeMapping',['../classSVF_1_1PointsTo.html#a1ae4abe690d21eb5aaf2154243b604c1',1,'SVF::PointsTo']]],

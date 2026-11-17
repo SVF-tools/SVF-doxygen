@@ -12,5 +12,5 @@ var searchData=
   ['normcallgraph_9',['NormCallGraph',['../classSVF_1_1CallGraph.html#a9e0e1c52235e53f41ebafdda5b2255a1a64ff50275111136d3ad5edf73e2bdb43',1,'SVF::CallGraph']]],
   ['nptr_10',['NPtr',['../classSVF_1_1SVFValue.html#a192ba7fcd03c9ca861d9f594b9a20a01a309a8b7811e86bd2413efcd3e9e7745b',1,'SVF::SVFValue']]],
   ['null_5fderef_11',['NULL_DEREF',['../classSVF_1_1AEDetector.html#a1666c7c2ee82415603bde7ef5c75a8bea67efd3d625e5d85908a9d6a31f306c60',1,'SVF::AEDetector']]],
-  ['nullptr_12',['NullPtr',['../classSVF_1_1IRGraph.html#a54e62136d0ca3729794ab69e779cfb92a201a73133547266aabae635fbf335b88',1,'SVF::IRGraph']]]
+  ['nullptr_12',['NullPtr',['../classSVF_1_1PAGBase.html#ac5d264d13e81ae6fae4a933233e802b8a9b4b7d86ef9c63131a7832acb34c8466',1,'SVF::PAGBase']]]
 ];

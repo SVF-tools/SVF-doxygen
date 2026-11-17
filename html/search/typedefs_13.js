@@ -13,7 +13,7 @@ var searchData=
   ['valuetosources_10',['ValueToSources',['../classSVF_1_1ObjTypeInference.html#a3ef6cdbd56a4d169a2d2cab0b2f6515b',1,'SVF::ObjTypeInference']]],
   ['valuetotype_11',['ValueToType',['../classSVF_1_1ObjTypeInference.html#ac97f30431b4e96d9d70dced9960072e9',1,'SVF::ObjTypeInference']]],
   ['valuetovalueset_12',['ValueToValueSet',['../classSVF_1_1ObjTypeInference.html#a02b5fdeee42828326afda5efaa997934',1,'SVF::ObjTypeInference']]],
-  ['valvarlist_13',['ValVarList',['../classSVF_1_1SVFIR.html#a44dc754cd200f66129c799d95ad3dc87',1,'SVF::SVFIR']]],
+  ['valvarlist_13',['ValVarList',['../classSVF_1_1PAG.html#a2764b52f1b1e5e60c932d52967b57ff6',1,'SVF::PAG']]],
   ['valvartodefmapty_14',['ValVarToDefMapTy',['../classSVF_1_1SVFG.html#a9a2a1c6f3dae97b61a97b35e8fcb383c',1,'SVF::SVFG::ValVarToDefMapTy'],['../classSVF_1_1VFG.html#a9dcb2b67721886a7ae7f0d048ec11674',1,'SVF::VFG::ValVarToDefMapTy']]],
   ['var2labelmap_15',['Var2LabelMap',['../classSVF_1_1SVFStmt.html#ad178ccbc7800527c3dc406ad5fa069bb',1,'SVF::SVFStmt']]],
   ['variableattribute_16',['VariableAttribute',['../classSVF_1_1GrammarBase.html#a716ce662e6a3f2febf3ab378c4217759',1,'SVF::GrammarBase']]],

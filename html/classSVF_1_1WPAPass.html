@@ -110,8 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a816737d36e989996c434ce203ab89734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface of mod-ref analysis to determine whether a CallSite instruction can mod or ref any memory location.  <br /></td></tr>
 <tr class="memitem:ae00145f8acd33710d86cd9699032619c" id="r_ae00145f8acd33710d86cd9699032619c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceSVF.html#a3e2b6638b0fbca37846e953142bcc844">ModRefInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae00145f8acd33710d86cd9699032619c">getModRefInfo</a> (const <a class="el" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a> *callInst1, const <a class="el" href="classSVF_1_1CallICFGNode.html">CallICFGNode</a> *callInst2)</td></tr>
 <tr class="memdesc:ae00145f8acd33710d86cd9699032619c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface of mod-ref analysis to determine whether a CallSite instruction can mod or ref a specific memory location, given Location infos.  <br /></td></tr>
-<tr class="memitem:af5ae999c6ca7c481e32b628dd3f6a7b0" id="r_af5ae999c6ca7c481e32b628dd3f6a7b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5ae999c6ca7c481e32b628dd3f6a7b0">runOnModule</a> (<a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> *svfModule)</td></tr>
-<tr class="memdesc:af5ae999c6ca7c481e32b628dd3f6a7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run pointer analysis on SVFModule.  <br /></td></tr>
+<tr class="memitem:a9a39db60d5049841b0de56aece532ba9" id="r_a9a39db60d5049841b0de56aece532ba9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a39db60d5049841b0de56aece532ba9">runOnModule</a> (<a class="el" href="classSVF_1_1PAG.html">PAG</a> *svfModule)</td></tr>
+<tr class="memdesc:a9a39db60d5049841b0de56aece532ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run pointer analysis on SVFModule.  <br /></td></tr>
 <tr class="memitem:a8f6bbf39ea2848ff3b6d105aeb5a31b1" id="r_a8f6bbf39ea2848ff3b6d105aeb5a31b1"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f6bbf39ea2848ff3b6d105aeb5a31b1">getPassName</a> () const</td></tr>
 <tr class="memdesc:a8f6bbf39ea2848ff3b6d105aeb5a31b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">PTA name.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -126,8 +126,8 @@ Private Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ace6627f09d237f01d7b698aaea9020eb" id="r_ace6627f09d237f01d7b698aaea9020eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace6627f09d237f01d7b698aaea9020eb">runPointerAnalysis</a> (<a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> *pag, <a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> kind)</td></tr>
-<tr class="memdesc:ace6627f09d237f01d7b698aaea9020eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create pointer analysis according to specified kind and analyze the module.  <br /></td></tr>
+<tr class="memitem:a8fc96872d87719855e56ff70d4b8b4fb" id="r_a8fc96872d87719855e56ff70d4b8b4fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc96872d87719855e56ff70d4b8b4fb">runPointerAnalysis</a> (<a class="el" href="classSVF_1_1PAG.html">PAG</a> *pag, <a class="el" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> kind)</td></tr>
+<tr class="memdesc:a8fc96872d87719855e56ff70d4b8b4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create pointer analysis according to specified kind and analyze the module.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -445,12 +445,12 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WPAPass_8cpp_source.html#l00133">133</a> of file <a class="el" href="WPAPass_8cpp_source.html">WPAPass.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  134</span>{</div>
-<div class="line"><span class="lineno">  135</span>    SVFIR* pag = pta-&gt;<a class="code hl_function" href="classSVF_1_1PointerAnalysis.html#a6921d23861adbb899a11cb51e8b4764a">getPAG</a>();</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="classSVF_1_1GenericGraph.html#ac213302cf5c7cdf3b66f7b18649d0fbc">SVFIR::iterator</a> lit = pag-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">begin</a>(), elit = pag-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">end</a>(); lit != elit; ++lit)</div>
+<div class="line"><span class="lineno">  135</span>    PAG* pag = pta-&gt;<a class="code hl_function" href="classSVF_1_1PointerAnalysis.html#a9dd0ae15727f9b56ae48b6445ffa7b50">getPAG</a>();</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="classSVF_1_1GenericGraph.html#ac213302cf5c7cdf3b66f7b18649d0fbc">PAG::iterator</a> lit = pag-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">begin</a>(), elit = pag-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">end</a>(); lit != elit; ++lit)</div>
 <div class="line"><span class="lineno">  137</span>    {</div>
 <div class="line"><span class="lineno">  138</span>        <a class="code hl_typedef" href="namespaceSVF.html#a733b44f64a95e6e13e7379120d7a3eea">PAGNode</a>* node1 = lit-&gt;second;</div>
 <div class="line"><span class="lineno">  139</span>        <a class="code hl_typedef" href="namespaceSVF.html#a733b44f64a95e6e13e7379120d7a3eea">PAGNode</a>* node2 = node1;</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="classSVF_1_1GenericGraph.html#ac213302cf5c7cdf3b66f7b18649d0fbc">SVFIR::iterator</a> rit = lit, erit = pag-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">end</a>(); rit != erit; ++rit)</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="classSVF_1_1GenericGraph.html#ac213302cf5c7cdf3b66f7b18649d0fbc">PAG::iterator</a> rit = lit, erit = pag-&gt;<a class="code hl_function" href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">end</a>(); rit != erit; ++rit)</div>
 <div class="line"><span class="lineno">  141</span>        {</div>
 <div class="line"><span class="lineno">  142</span>            node2 = rit-&gt;second;</div>
 <div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span>(node1==node2)</div>
@@ -469,20 +469,20 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1GenericGraph_html_a0d9744b1b0e7a09a6f7af29188e243b7"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a0d9744b1b0e7a09a6f7af29188e243b7">SVF::GenericGraph::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdoc">Iterators.</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00371">GenericGraph.h:371</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericGraph_html_a4bef15157423cef48dc7333a803cd27d"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#a4bef15157423cef48dc7333a803cd27d">SVF::GenericGraph::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00375">GenericGraph.h:375</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GenericGraph_html_ac213302cf5c7cdf3b66f7b18649d0fbc"><div class="ttname"><a href="classSVF_1_1GenericGraph.html#ac213302cf5c7cdf3b66f7b18649d0fbc">SVF::GenericGraph&lt; SVFVar, SVFStmt &gt;::iterator</a></div><div class="ttdeci">IDToNodeMapTy::iterator iterator</div><div class="ttdef"><b>Definition</b> <a href="GenericGraph_8h_source.html#l00350">GenericGraph.h:350</a></div></div>
-<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a6921d23861adbb899a11cb51e8b4764a"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a6921d23861adbb899a11cb51e8b4764a">SVF::PointerAnalysis::getPAG</a></div><div class="ttdeci">SVFIR * getPAG() const</div><div class="ttdef"><b>Definition</b> <a href="PointerAnalysis_8h_source.html#l00149">PointerAnalysis.h:149</a></div></div>
 <div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a8c3c310729bed3e2d078b1ccd1e18b82"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a8c3c310729bed3e2d078b1ccd1e18b82">SVF::PointerAnalysis::alias</a></div><div class="ttdeci">virtual AliasResult alias(const SVFVar *V1, const SVFVar *V2)=0</div><div class="ttdoc">Interface exposed to users of our pointer analysis, given Value infos.</div></div>
+<div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a9dd0ae15727f9b56ae48b6445ffa7b50"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a9dd0ae15727f9b56ae48b6445ffa7b50">SVF::PointerAnalysis::getPAG</a></div><div class="ttdeci">PAG * getPAG() const</div><div class="ttdef"><b>Definition</b> <a href="PointerAnalysis_8h_source.html#l00149">PointerAnalysis.h:149</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a3e1925f1c3f731bf9047dbd2f929dd91"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">SVF::SVFValue::getId</a></div><div class="ttdeci">NodeID getId() const</div><div class="ttdoc">Get ID.</div><div class="ttdef"><b>Definition</b> <a href="SVFValue_8h_source.html#l00158">SVFValue.h:158</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFValue_html_a80044bf8c6eebee7cbe2d6d3abfa3732"><div class="ttname"><a href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">SVF::SVFValue::getName</a></div><div class="ttdeci">virtual const std::string &amp; getName() const</div><div class="ttdef"><b>Definition</b> <a href="SVFValue_8h_source.html#l00184">SVFValue.h:184</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFVar_html_aa186767b6b69781552a7cf1131cf7776"><div class="ttname"><a href="classSVF_1_1SVFVar.html#aa186767b6b69781552a7cf1131cf7776">SVF::SVFVar::getFunction</a></div><div class="ttdeci">virtual const FunObjVar * getFunction() const</div><div class="ttdoc">Get containing function, or null for globals/constants.</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l00120">SVFVariables.h:120</a></div></div>
 <div class="ttc" id="anamespaceSVF_1_1SVFUtil_html_ad8b432d1a6e3f8ddd7a3505f7b7a8cd3"><div class="ttname"><a href="namespaceSVF_1_1SVFUtil.html#ad8b432d1a6e3f8ddd7a3505f7b7a8cd3">SVF::SVFUtil::outs</a></div><div class="ttdeci">std::ostream &amp; outs()</div><div class="ttdoc">Overwrite llvm::outs().</div><div class="ttdef"><b>Definition</b> <a href="SVFUtil_8h_source.html#l00058">SVFUtil.h:58</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a61c01e2e687ab3a001fb806737583943"><div class="ttname"><a href="namespaceSVF.html#a61c01e2e687ab3a001fb806737583943">SVF::AliasResult</a></div><div class="ttdeci">AliasResult</div><div class="ttdef"><b>Definition</b> <a href="SVFType_8h_source.html#l00618">SVFType.h:619</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a61c01e2e687ab3a001fb806737583943afdd83ddff93d38902f07775cd36df239"><div class="ttname"><a href="namespaceSVF.html#a61c01e2e687ab3a001fb806737583943afdd83ddff93d38902f07775cd36df239">SVF::NoAlias</a></div><div class="ttdeci">@ NoAlias</div><div class="ttdef"><b>Definition</b> <a href="SVFType_8h_source.html#l00620">SVFType.h:620</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_a733b44f64a95e6e13e7379120d7a3eea"><div class="ttname"><a href="namespaceSVF.html#a733b44f64a95e6e13e7379120d7a3eea">SVF::PAGNode</a></div><div class="ttdeci">SVFVar PAGNode</div><div class="ttdef"><b>Definition</b> <a href="IRGraph_8h_source.html#l00040">IRGraph.h:40</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a733b44f64a95e6e13e7379120d7a3eea"><div class="ttname"><a href="namespaceSVF.html#a733b44f64a95e6e13e7379120d7a3eea">SVF::PAGNode</a></div><div class="ttdeci">SVFVar PAGNode</div><div class="ttdef"><b>Definition</b> <a href="PAGBase_8h_source.html#l00040">PAGBase.h:40</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="af5ae999c6ca7c481e32b628dd3f6a7b0" name="af5ae999c6ca7c481e32b628dd3f6a7b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5ae999c6ca7c481e32b628dd3f6a7b0">&#9670;&#160;</a></span>runOnModule()</h2>
+<a id="a9a39db60d5049841b0de56aece532ba9" name="a9a39db60d5049841b0de56aece532ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a39db60d5049841b0de56aece532ba9">&#9670;&#160;</a></span>runOnModule()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -493,7 +493,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void WPAPass::runOnModule </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> *</td>          <td class="paramname"><span class="paramname"><em>pag</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1PAG.html">PAG</a> *</td>          <td class="paramname"><span class="paramname"><em>pag</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -513,19 +513,19 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   72</span>    {</div>
 <div class="line"><span class="lineno">   73</span>        <a class="code hl_enumeration" href="namespaceSVF.html#a379e34f41e970f55d6063d16714a52b9">PTATY</a> iPtaTy = <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespaceSVF.html#a379e34f41e970f55d6063d16714a52b9">PTATY</a><span class="keyword">&gt;</span>(i);</div>
 <div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#aaa047cd9c44a0e08f3792f20834f6ec3">Options::PASelected</a>(iPtaTy))</div>
-<div class="line"><span class="lineno">   75</span>            <a class="code hl_function" href="#ace6627f09d237f01d7b698aaea9020eb">runPointerAnalysis</a>(pag, i);</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_function" href="#a8fc96872d87719855e56ff70d4b8b4fb">runPointerAnalysis</a>(pag, i);</div>
 <div class="line"><span class="lineno">   76</span>    }</div>
 <div class="line"><span class="lineno">   77</span>    assert(!<a class="code hl_variable" href="#a72a66ae158793f5d1bcb37b655db4446">ptaVector</a>.empty() &amp;&amp; <span class="stringliteral">&quot;No pointer analysis is specified.\n&quot;</span>);</div>
 <div class="line"><span class="lineno">   78</span>}</div>
-<div class="ttc" id="aclassSVF_1_1WPAPass_html_ace6627f09d237f01d7b698aaea9020eb"><div class="ttname"><a href="#ace6627f09d237f01d7b698aaea9020eb">SVF::WPAPass::runPointerAnalysis</a></div><div class="ttdeci">void runPointerAnalysis(SVFIR *pag, u32_t kind)</div><div class="ttdoc">Create pointer analysis according to specified kind and analyze the module.</div><div class="ttdef"><b>Definition</b> <a href="WPAPass_8cpp_source.html#l00083">WPAPass.cpp:83</a></div></div>
+<div class="ttc" id="aclassSVF_1_1WPAPass_html_a8fc96872d87719855e56ff70d4b8b4fb"><div class="ttname"><a href="#a8fc96872d87719855e56ff70d4b8b4fb">SVF::WPAPass::runPointerAnalysis</a></div><div class="ttdeci">void runPointerAnalysis(PAG *pag, u32_t kind)</div><div class="ttdoc">Create pointer analysis according to specified kind and analyze the module.</div><div class="ttdef"><b>Definition</b> <a href="WPAPass_8cpp_source.html#l00083">WPAPass.cpp:83</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a379e34f41e970f55d6063d16714a52b9"><div class="ttname"><a href="namespaceSVF.html#a379e34f41e970f55d6063d16714a52b9">SVF::PTATY</a></div><div class="ttdeci">PTATY</div><div class="ttdoc">Pointer analysis type list.</div><div class="ttdef"><b>Definition</b> <a href="PTATY_8h_source.html#l00008">PTATY.h:9</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a379e34f41e970f55d6063d16714a52b9a47095a4fd89e1579b52757694979fa66"><div class="ttname"><a href="namespaceSVF.html#a379e34f41e970f55d6063d16714a52b9a47095a4fd89e1579b52757694979fa66">SVF::Default_PTA</a></div><div class="ttdeci">@ Default_PTA</div><div class="ttdoc">default pta without any analysis</div><div class="ttdef"><b>Definition</b> <a href="PTATY_8h_source.html#l00035">PTATY.h:35</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_ad42bff8d0a7d60a085aa32d10f4955af"><div class="ttname"><a href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">SVF::u32_t</a></div><div class="ttdeci">unsigned u32_t</div><div class="ttdef"><b>Definition</b> <a href="GeneralType_8h_source.html#l00067">GeneralType.h:67</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ace6627f09d237f01d7b698aaea9020eb" name="ace6627f09d237f01d7b698aaea9020eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace6627f09d237f01d7b698aaea9020eb">&#9670;&#160;</a></span>runPointerAnalysis()</h2>
+<a id="a8fc96872d87719855e56ff70d4b8b4fb" name="a8fc96872d87719855e56ff70d4b8b4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc96872d87719855e56ff70d4b8b4fb">&#9670;&#160;</a></span>runPointerAnalysis()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -536,7 +536,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void WPAPass::runPointerAnalysis </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSVF_1_1SVFIR.html">SVFIR</a> *</td>          <td class="paramname"><span class="paramname"><em>pag</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classSVF_1_1PAG.html">PAG</a> *</td>          <td class="paramname"><span class="paramname"><em>pag</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
