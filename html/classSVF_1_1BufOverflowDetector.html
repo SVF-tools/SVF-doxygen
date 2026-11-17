@@ -472,75 +472,75 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the memory access is safe, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00501">501</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  503</span>{</div>
-<div class="line"><span class="lineno">  504</span>    <span class="keywordflow">if</span> (info) *info = {};</div>
-<div class="line"><span class="lineno">  505</span>    SVFIR* svfir = <a class="code hl_function" href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">PAG::getPAG</a>();</div>
-<div class="line"><span class="lineno">  506</span>    <span class="keyword">auto</span>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
+<p class="definition">Definition at line <a class="el" href="AEDetector_8cpp_source.html#l00494">494</a> of file <a class="el" href="AEDetector_8cpp_source.html">AEDetector.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  496</span>{</div>
+<div class="line"><span class="lineno">  497</span>    <span class="keywordflow">if</span> (info) *info = {};</div>
+<div class="line"><span class="lineno">  498</span>    SVFIR* svfir = <a class="code hl_function" href="classSVF_1_1SVFIR.html#acdb6795e102e7c03a61b7a4d2044c348">PAG::getPAG</a>();</div>
+<div class="line"><span class="lineno">  499</span>    <span class="keyword">auto</span>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
+<div class="line"><span class="lineno">  500</span> </div>
+<div class="line"><span class="lineno">  501</span>    AbstractValue ptrVal = ae.getAbsValue(value, node);</div>
+<div class="line"><span class="lineno">  502</span>    <span class="keywordflow">if</span> (!ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#aa3699151c57c0401092ce12fd9e7b982">isAddr</a>())</div>
+<div class="line"><span class="lineno">  503</span>    {</div>
+<div class="line"><span class="lineno">  504</span>        ptrVal = AddressValue(<a class="code hl_define" href="AddressValue_8h.html#aad4c44d26f28d3f04f2a553193df5824">BlackHoleObjAddr</a>);</div>
+<div class="line"><span class="lineno">  505</span>        ae.updateAbsValue(value, ptrVal, node);</div>
+<div class="line"><span class="lineno">  506</span>    }</div>
 <div class="line"><span class="lineno">  507</span> </div>
-<div class="line"><span class="lineno">  508</span>    AbstractValue ptrVal = ae.getAbsValue(value, node);</div>
-<div class="line"><span class="lineno">  509</span>    <span class="keywordflow">if</span> (!ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#aa3699151c57c0401092ce12fd9e7b982">isAddr</a>())</div>
-<div class="line"><span class="lineno">  510</span>    {</div>
-<div class="line"><span class="lineno">  511</span>        ptrVal = AddressValue(<a class="code hl_define" href="AddressValue_8h.html#aad4c44d26f28d3f04f2a553193df5824">BlackHoleObjAddr</a>);</div>
-<div class="line"><span class="lineno">  512</span>        ae.updateAbsValue(value, ptrVal, node);</div>
-<div class="line"><span class="lineno">  513</span>    }</div>
+<div class="line"><span class="lineno">  508</span>    <span class="keyword">const</span> AddressValue&amp; addresses = ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>();</div>
+<div class="line"><span class="lineno">  509</span>    <span class="keywordflow">if</span> (std::any_of(addresses.<a class="code hl_function" href="classSVF_1_1AddressValue.html#aed0b4789beda4980e4e215a65350f323">begin</a>(), addresses.<a class="code hl_function" href="classSVF_1_1AddressValue.html#a6f8186d1df43be4fbd0a48f724046372">end</a>(), [&amp;](<a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> addr)</div>
+<div class="line"><span class="lineno">  510</span>{</div>
+<div class="line"><span class="lineno">  511</span>    return svfir-&gt;isNullOrBlkObj(ae.getAbsState(node).getIDFromAddr(addr));</div>
+<div class="line"><span class="lineno">  512</span>    }))</div>
+<div class="line"><span class="lineno">  513</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  514</span> </div>
-<div class="line"><span class="lineno">  515</span>    <span class="keyword">const</span> AddressValue&amp; addresses = ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>();</div>
-<div class="line"><span class="lineno">  516</span>    <span class="keywordflow">if</span> (std::any_of(addresses.<a class="code hl_function" href="classSVF_1_1AddressValue.html#aed0b4789beda4980e4e215a65350f323">begin</a>(), addresses.<a class="code hl_function" href="classSVF_1_1AddressValue.html#a6f8186d1df43be4fbd0a48f724046372">end</a>(), [&amp;](<a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> addr)</div>
-<div class="line"><span class="lineno">  517</span>{</div>
-<div class="line"><span class="lineno">  518</span>    return svfir-&gt;isNullOrBlkObj(ae.getAbsState(node).getIDFromAddr(addr));</div>
-<div class="line"><span class="lineno">  519</span>    }))</div>
-<div class="line"><span class="lineno">  520</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  521</span> </div>
-<div class="line"><span class="lineno">  522</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; addr : addresses)</div>
-<div class="line"><span class="lineno">  523</span>    {</div>
-<div class="line"><span class="lineno">  524</span>        <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> objId = ae.getAbsState(node).getIDFromAddr(addr);</div>
-<div class="line"><span class="lineno">  525</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> size = 0;</div>
-<div class="line"><span class="lineno">  526</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> lower = 0;</div>
-<div class="line"><span class="lineno">  527</span>        <span class="comment">// if the object is a constant size object, get the size directly</span></div>
-<div class="line"><span class="lineno">  528</span>        <span class="keywordflow">if</span> (svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6d2760579a059b1aba98e4555a443884">getBaseObject</a>(objId)-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#aa7fd696ea4a8a8ad505294727f894802">isConstantByteSize</a>())</div>
-<div class="line"><span class="lineno">  529</span>        {</div>
-<div class="line"><span class="lineno">  530</span>            size = svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6d2760579a059b1aba98e4555a443884">getBaseObject</a>(objId)-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#aa85a3d18980860c01ebe190a16039af7">getByteSizeOfObj</a>();</div>
-<div class="line"><span class="lineno">  531</span>            lower = size;</div>
-<div class="line"><span class="lineno">  532</span>        }</div>
-<div class="line"><span class="lineno">  533</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  534</span>        {</div>
-<div class="line"><span class="lineno">  535</span>            <span class="comment">// if the object is not a constant size object, get the size from the addrStmt</span></div>
-<div class="line"><span class="lineno">  536</span>            <span class="keyword">const</span> ICFGNode* addrNode = svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6d2760579a059b1aba98e4555a443884">getBaseObject</a>(objId)-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#a95cafb75a7ae4879dee6949a158fe0c6">getICFGNode</a>();</div>
-<div class="line"><span class="lineno">  537</span>            <span class="keywordflow">if</span> (!addrNode)</div>
-<div class="line"><span class="lineno">  538</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  539</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFStmt* stmt2 : addrNode-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#afd7465b9aecc8189f79c57f53067a52c">getSVFStmts</a>())</div>
-<div class="line"><span class="lineno">  540</span>            {</div>
-<div class="line"><span class="lineno">  541</span>                <span class="keywordflow">if</span> (<span class="keyword">const</span> AddrStmt* addrStmt = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;AddrStmt&gt;</a>(stmt2))</div>
-<div class="line"><span class="lineno">  542</span>                {</div>
-<div class="line"><span class="lineno">  543</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> bounds = ae.getAllocaInstByteSize(addrStmt);</div>
-<div class="line"><span class="lineno">  544</span>                    size = bounds.upperBound;</div>
-<div class="line"><span class="lineno">  545</span>                    lower = bounds.lowerBound;</div>
-<div class="line"><span class="lineno">  546</span>                }</div>
-<div class="line"><span class="lineno">  547</span>            }</div>
+<div class="line"><span class="lineno">  515</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; addr : addresses)</div>
+<div class="line"><span class="lineno">  516</span>    {</div>
+<div class="line"><span class="lineno">  517</span>        <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> objId = ae.getAbsState(node).getIDFromAddr(addr);</div>
+<div class="line"><span class="lineno">  518</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> size = 0;</div>
+<div class="line"><span class="lineno">  519</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> lower = 0;</div>
+<div class="line"><span class="lineno">  520</span>        <span class="comment">// if the object is a constant size object, get the size directly</span></div>
+<div class="line"><span class="lineno">  521</span>        <span class="keywordflow">if</span> (svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6d2760579a059b1aba98e4555a443884">getBaseObject</a>(objId)-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#aa7fd696ea4a8a8ad505294727f894802">isConstantByteSize</a>())</div>
+<div class="line"><span class="lineno">  522</span>        {</div>
+<div class="line"><span class="lineno">  523</span>            size = svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6d2760579a059b1aba98e4555a443884">getBaseObject</a>(objId)-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#aa85a3d18980860c01ebe190a16039af7">getByteSizeOfObj</a>();</div>
+<div class="line"><span class="lineno">  524</span>            lower = size;</div>
+<div class="line"><span class="lineno">  525</span>        }</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  527</span>        {</div>
+<div class="line"><span class="lineno">  528</span>            <span class="comment">// if the object is not a constant size object, get the size from the addrStmt</span></div>
+<div class="line"><span class="lineno">  529</span>            <span class="keyword">const</span> ICFGNode* addrNode = svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#a6d2760579a059b1aba98e4555a443884">getBaseObject</a>(objId)-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#a95cafb75a7ae4879dee6949a158fe0c6">getICFGNode</a>();</div>
+<div class="line"><span class="lineno">  530</span>            <span class="keywordflow">if</span> (!addrNode)</div>
+<div class="line"><span class="lineno">  531</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  532</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFStmt* stmt2 : addrNode-&gt;<a class="code hl_function" href="classSVF_1_1ICFGNode.html#afd7465b9aecc8189f79c57f53067a52c">getSVFStmts</a>())</div>
+<div class="line"><span class="lineno">  533</span>            {</div>
+<div class="line"><span class="lineno">  534</span>                <span class="keywordflow">if</span> (<span class="keyword">const</span> AddrStmt* addrStmt = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;AddrStmt&gt;</a>(stmt2))</div>
+<div class="line"><span class="lineno">  535</span>                {</div>
+<div class="line"><span class="lineno">  536</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> bounds = ae.getAllocaInstByteSize(addrStmt);</div>
+<div class="line"><span class="lineno">  537</span>                    size = bounds.upperBound;</div>
+<div class="line"><span class="lineno">  538</span>                    lower = bounds.lowerBound;</div>
+<div class="line"><span class="lineno">  539</span>                }</div>
+<div class="line"><span class="lineno">  540</span>            }</div>
+<div class="line"><span class="lineno">  541</span>        }</div>
+<div class="line"><span class="lineno">  542</span> </div>
+<div class="line"><span class="lineno">  543</span>        IntervalValue <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>(0);</div>
+<div class="line"><span class="lineno">  544</span>        <span class="comment">// if the object is a GepObjVar, get the offset from the base object</span></div>
+<div class="line"><span class="lineno">  545</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;GepObjVar&gt;</a>(svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#aa69d7590e9e4e65ddf195840ecfa1a2f">getSVFVar</a>(objId)))</div>
+<div class="line"><span class="lineno">  546</span>        {</div>
+<div class="line"><span class="lineno">  547</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> = <a class="code hl_function" href="#a6cd23cec47be6d202ab2fc5dce3f664b">getGepObjOffsetFromBase</a>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;GepObjVar&gt;</a>(svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#aa69d7590e9e4e65ddf195840ecfa1a2f">getSVFVar</a>(objId))) + len;</div>
 <div class="line"><span class="lineno">  548</span>        }</div>
-<div class="line"><span class="lineno">  549</span> </div>
-<div class="line"><span class="lineno">  550</span>        IntervalValue <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>(0);</div>
-<div class="line"><span class="lineno">  551</span>        <span class="comment">// if the object is a GepObjVar, get the offset from the base object</span></div>
-<div class="line"><span class="lineno">  552</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;GepObjVar&gt;</a>(svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#aa69d7590e9e4e65ddf195840ecfa1a2f">getSVFVar</a>(objId)))</div>
-<div class="line"><span class="lineno">  553</span>        {</div>
-<div class="line"><span class="lineno">  554</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> = <a class="code hl_function" href="#a6cd23cec47be6d202ab2fc5dce3f664b">getGepObjOffsetFromBase</a>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;GepObjVar&gt;</a>(svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#aa69d7590e9e4e65ddf195840ecfa1a2f">getSVFVar</a>(objId))) + len;</div>
-<div class="line"><span class="lineno">  555</span>        }</div>
-<div class="line"><span class="lineno">  556</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;BaseObjVar&gt;</a>(svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#aa69d7590e9e4e65ddf195840ecfa1a2f">getSVFVar</a>(objId)))</div>
+<div class="line"><span class="lineno">  549</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;BaseObjVar&gt;</a>(svfir-&gt;<a class="code hl_function" href="classSVF_1_1SVFIR.html#aa69d7590e9e4e65ddf195840ecfa1a2f">getSVFVar</a>(objId)))</div>
+<div class="line"><span class="lineno">  550</span>        {</div>
+<div class="line"><span class="lineno">  551</span>            <span class="comment">// if the object is a BaseObjVar, get the offset directly</span></div>
+<div class="line"><span class="lineno">  552</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> = len;</div>
+<div class="line"><span class="lineno">  553</span>        }</div>
+<div class="line"><span class="lineno">  554</span> </div>
+<div class="line"><span class="lineno">  555</span>        <span class="comment">// if the offset is greater than the size, return false</span></div>
+<div class="line"><span class="lineno">  556</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.ub().getIntNumeral() &gt;= size)</div>
 <div class="line"><span class="lineno">  557</span>        {</div>
-<div class="line"><span class="lineno">  558</span>            <span class="comment">// if the object is a BaseObjVar, get the offset directly</span></div>
-<div class="line"><span class="lineno">  559</span>            <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> = len;</div>
+<div class="line"><span class="lineno">  558</span>            <span class="keywordflow">if</span> (info) *info = {IntervalValue(lower, size), <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>};</div>
+<div class="line"><span class="lineno">  559</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  560</span>        }</div>
-<div class="line"><span class="lineno">  561</span> </div>
-<div class="line"><span class="lineno">  562</span>        <span class="comment">// if the offset is greater than the size, return false</span></div>
-<div class="line"><span class="lineno">  563</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.ub().getIntNumeral() &gt;= size)</div>
-<div class="line"><span class="lineno">  564</span>        {</div>
-<div class="line"><span class="lineno">  565</span>            <span class="keywordflow">if</span> (info) *info = {IntervalValue(lower, size), <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>};</div>
-<div class="line"><span class="lineno">  566</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  567</span>        }</div>
-<div class="line"><span class="lineno">  568</span>    }</div>
-<div class="line"><span class="lineno">  569</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  570</span>}</div>
+<div class="line"><span class="lineno">  561</span>    }</div>
+<div class="line"><span class="lineno">  562</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  563</span>}</div>
 <div class="ttc" id="aAddressValue_8h_html_aad4c44d26f28d3f04f2a553193df5824"><div class="ttname"><a href="AddressValue_8h.html#aad4c44d26f28d3f04f2a553193df5824">BlackHoleObjAddr</a></div><div class="ttdeci">#define BlackHoleObjAddr</div><div class="ttdef"><b>Definition</b> <a href="AddressValue_8h_source.html#l00036">AddressValue.h:36</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_addeccac0aae4bd2928c18f1a5cb23e1d"><div class="ttname"><a href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">SVF::AbstractInterpretation::getAEInstance</a></div><div class="ttdeci">static AbstractInterpretation &amp; getAEInstance()</div><div class="ttdef"><b>Definition</b> <a href="AbstractInterpretation_8cpp_source.html#l00076">AbstractInterpretation.cpp:76</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractValue_html_a9523adf98a0146bc6eb978817352a95d"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">SVF::AbstractValue::getAddrs</a></div><div class="ttdeci">AddressValue &amp; getAddrs()</div><div class="ttdef"><b>Definition</b> <a href="AbstractValue_8h_source.html#l00111">AbstractValue.h:111</a></div></div>
@@ -866,7 +866,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1AbsExtAPI_html_ac30c873a83c91e3ead2c55783de34670aff39fd0bbf8e04357eb1281a7ab8e938"><div class="ttname"><a href="classSVF_1_1AbsExtAPI.html#ac30c873a83c91e3ead2c55783de34670aff39fd0bbf8e04357eb1281a7ab8e938">SVF::AbsExtAPI::MEMCPY</a></div><div class="ttdeci">@ MEMCPY</div><div class="ttdef"><b>Definition</b> <a href="AbsExtAPI_8h_source.html#l00055">AbsExtAPI.h:55</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a084141aa5cbc5184e5ad67df25555793"><div class="ttname"><a href="#a084141aa5cbc5184e5ad67df25555793">SVF::BufOverflowDetector::detectStrcat</a></div><div class="ttdeci">bool detectStrcat(const CallICFGNode *call, BufferOverflowInfo &amp;info)</div><div class="ttdoc">Detects buffer overflow in &#39;strcat&#39; function calls.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00459">AEDetector.cpp:459</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a416ec25c8bb80b8bb241adc0e5216bc0"><div class="ttname"><a href="#a416ec25c8bb80b8bb241adc0e5216bc0">SVF::BufOverflowDetector::extAPIBufOverflowCheckRules</a></div><div class="ttdeci">Map&lt; std::string, std::vector&lt; std::pair&lt; u32_t, u32_t &gt; &gt; &gt; extAPIBufOverflowCheckRules</div><div class="ttdoc">Rules for checking buffer overflows in external APIs.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8h_source.html#l00342">AEDetector.h:342</a></div></div>
-<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a821dd9ecad92e60acfa73786bcd65a4f"><div class="ttname"><a href="#a821dd9ecad92e60acfa73786bcd65a4f">SVF::BufOverflowDetector::canSafelyAccessMemory</a></div><div class="ttdeci">bool canSafelyAccessMemory(const ValVar *value, const IntervalValue &amp;len, const ICFGNode *node, BufferOverflowInfo *info=nullptr)</div><div class="ttdoc">Checks if memory can be safely accessed.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00501">AEDetector.cpp:501</a></div></div>
+<div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_a821dd9ecad92e60acfa73786bcd65a4f"><div class="ttname"><a href="#a821dd9ecad92e60acfa73786bcd65a4f">SVF::BufOverflowDetector::canSafelyAccessMemory</a></div><div class="ttdeci">bool canSafelyAccessMemory(const ValVar *value, const IntervalValue &amp;len, const ICFGNode *node, BufferOverflowInfo *info=nullptr)</div><div class="ttdoc">Checks if memory can be safely accessed.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00494">AEDetector.cpp:494</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BufOverflowDetector_html_afe5b8d3e03047406d2d2328c3b0fac3f"><div class="ttname"><a href="#afe5b8d3e03047406d2d2328c3b0fac3f">SVF::BufOverflowDetector::detectStrcpy</a></div><div class="ttdeci">bool detectStrcpy(const CallICFGNode *call, BufferOverflowInfo &amp;info)</div><div class="ttdoc">Detects buffer overflow in &#39;strcpy&#39; function calls.</div><div class="ttdef"><b>Definition</b> <a href="AEDetector_8cpp_source.html#l00450">AEDetector.cpp:450</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a05607292d6ee32db702fa36aa8bd894e"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a05607292d6ee32db702fa36aa8bd894e">SVF::CallICFGNode::toString</a></div><div class="ttdeci">const std::string toString() const override</div><div class="ttdef"><b>Definition</b> <a href="ICFG_8cpp_source.html#l00129">ICFG.cpp:129</a></div></div>
 <div class="ttc" id="aclassSVF_1_1CallICFGNode_html_a170acd29312b20ce4cbe221d7b23d11c"><div class="ttname"><a href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">SVF::CallICFGNode::getArgument</a></div><div class="ttdeci">const ValVar * getArgument(u32_t ArgNo) const</div><div class="ttdoc">Parameter operations.</div><div class="ttdef"><b>Definition</b> <a href="ICFGNode_8h_source.html#l00483">ICFGNode.h:483</a></div></div>
@@ -918,30 +918,23 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  462</span>    <span class="keyword">const</span> std::vector&lt;std::string&gt; strcatGroup = {<span class="stringliteral">&quot;__strcat_chk&quot;</span>, <span class="stringliteral">&quot;strcat&quot;</span>, <span class="stringliteral">&quot;__wcscat_chk&quot;</span>, <span class="stringliteral">&quot;wcscat&quot;</span>};</div>
 <div class="line"><span class="lineno">  463</span>    <span class="keyword">const</span> std::vector&lt;std::string&gt; strncatGroup = {<span class="stringliteral">&quot;__strncat_chk&quot;</span>, <span class="stringliteral">&quot;strncat&quot;</span>, <span class="stringliteral">&quot;__wcsncat_chk&quot;</span>, <span class="stringliteral">&quot;wcsncat&quot;</span>};</div>
 <div class="line"><span class="lineno">  464</span> </div>
-<div class="line"><span class="lineno">  465</span>    <span class="keywordflow">if</span> (std::find(strcatGroup.begin(), strcatGroup.end(), call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>()) != strcatGroup.end())</div>
-<div class="line"><span class="lineno">  466</span>    {</div>
-<div class="line"><span class="lineno">  467</span>        <span class="keyword">const</span> ValVar* arg0Val = call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">getArgument</a>(0);</div>
-<div class="line"><span class="lineno">  468</span>        <span class="keyword">const</span> ValVar* arg1Val = call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">getArgument</a>(1);</div>
-<div class="line"><span class="lineno">  469</span>        IntervalValue strLen0 = ae.getUtils()-&gt;getStrlen(arg0Val, call);</div>
-<div class="line"><span class="lineno">  470</span>        IntervalValue strLen1 = ae.getUtils()-&gt;getStrlen(arg1Val, call);</div>
-<div class="line"><span class="lineno">  471</span>        IntervalValue totalLen = strLen0 + strLen1;</div>
-<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a821dd9ecad92e60acfa73786bcd65a4f">canSafelyAccessMemory</a>(arg0Val, totalLen, call, &amp;info);</div>
-<div class="line"><span class="lineno">  473</span>    }</div>
-<div class="line"><span class="lineno">  474</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (std::find(strncatGroup.begin(), strncatGroup.end(), call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>()) != strncatGroup.end())</div>
-<div class="line"><span class="lineno">  475</span>    {</div>
-<div class="line"><span class="lineno">  476</span>        <span class="keyword">const</span> ValVar* arg0Val = call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">getArgument</a>(0);</div>
-<div class="line"><span class="lineno">  477</span>        <span class="keyword">const</span> ValVar* arg2Val = call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">getArgument</a>(2);</div>
-<div class="line"><span class="lineno">  478</span>        IntervalValue arg2Num = ae.getAbsValue(arg2Val, call).getInterval();</div>
-<div class="line"><span class="lineno">  479</span>        IntervalValue strLen0 = ae.getUtils()-&gt;getStrlen(arg0Val, call);</div>
-<div class="line"><span class="lineno">  480</span>        IntervalValue totalLen = strLen0 + arg2Num;</div>
-<div class="line"><span class="lineno">  481</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a821dd9ecad92e60acfa73786bcd65a4f">canSafelyAccessMemory</a>(arg0Val, totalLen, call, &amp;info);</div>
-<div class="line"><span class="lineno">  482</span>    }</div>
-<div class="line"><span class="lineno">  483</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  484</span>    {</div>
-<div class="line"><span class="lineno">  485</span>        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Unknown strcat function, please add it to strcatGroup or strncatGroup&quot;</span>);</div>
-<div class="line"><span class="lineno">  486</span>        abort();</div>
-<div class="line"><span class="lineno">  487</span>    }</div>
-<div class="line"><span class="lineno">  488</span>}</div>
+<div class="line"><span class="lineno">  465</span>    <span class="comment">// Detectors see the state after the call, where dst already holds the</span></div>
+<div class="line"><span class="lineno">  466</span>    <span class="comment">// concatenation, so strlen(dst) is the index of the new terminator.</span></div>
+<div class="line"><span class="lineno">  467</span>    <span class="comment">// If the append overflowed, no terminator is inside dst and the length</span></div>
+<div class="line"><span class="lineno">  468</span>    <span class="comment">// stays unbounded above, which keeps the reported access sound.</span></div>
+<div class="line"><span class="lineno">  469</span>    <span class="keywordflow">if</span> (std::find(strcatGroup.begin(), strcatGroup.end(), call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>()) != strcatGroup.end() ||</div>
+<div class="line"><span class="lineno">  470</span>            std::find(strncatGroup.begin(), strncatGroup.end(), call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a55c4e8d302f61aa9a46ac7daa318b849">getCalledFunction</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a80044bf8c6eebee7cbe2d6d3abfa3732">getName</a>()) != strncatGroup.end())</div>
+<div class="line"><span class="lineno">  471</span>    {</div>
+<div class="line"><span class="lineno">  472</span>        <span class="keyword">const</span> ValVar* arg0Val = call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">getArgument</a>(0);</div>
+<div class="line"><span class="lineno">  473</span>        IntervalValue totalLen = ae.getUtils()-&gt;getStrlen(arg0Val, call);</div>
+<div class="line"><span class="lineno">  474</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a821dd9ecad92e60acfa73786bcd65a4f">canSafelyAccessMemory</a>(arg0Val, ae.getUtils()-&gt;getStringLastByte(call, totalLen), call, &amp;info);</div>
+<div class="line"><span class="lineno">  475</span>    }</div>
+<div class="line"><span class="lineno">  476</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  477</span>    {</div>
+<div class="line"><span class="lineno">  478</span>        assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Unknown strcat function, please add it to strcatGroup or strncatGroup&quot;</span>);</div>
+<div class="line"><span class="lineno">  479</span>        abort();</div>
+<div class="line"><span class="lineno">  480</span>    }</div>
+<div class="line"><span class="lineno">  481</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -996,7 +989,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  453</span>    <span class="keyword">const</span> ValVar* arg1Val = call-&gt;<a class="code hl_function" href="classSVF_1_1CallICFGNode.html#a170acd29312b20ce4cbe221d7b23d11c">getArgument</a>(1);</div>
 <div class="line"><span class="lineno">  454</span>    <span class="keyword">auto</span>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
 <div class="line"><span class="lineno">  455</span>    IntervalValue strLen = ae.getUtils()-&gt;getStrlen(arg1Val, call);</div>
-<div class="line"><span class="lineno">  456</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a821dd9ecad92e60acfa73786bcd65a4f">canSafelyAccessMemory</a>(arg0Val, strLen, call, &amp;info);</div>
+<div class="line"><span class="lineno">  456</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a821dd9ecad92e60acfa73786bcd65a4f">canSafelyAccessMemory</a>(arg0Val, ae.getUtils()-&gt;getStringLastByte(call, strLen), call, &amp;info);</div>
 <div class="line"><span class="lineno">  457</span>}</div>
 </div><!-- fragment -->
 </div>

@@ -3626,148 +3626,157 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno">  502</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ab2e0196e0ce547ab4a483cc6d2646b24">writeWrnMsg</a>(<span class="stringliteral">&quot;Arg receiving new object must be pointer type&quot;</span>);</div>
 <div class="line"><span class="lineno">  503</span>        }</div>
 <div class="line"><span class="lineno">  504</span>    }</div>
-<div class="line"><span class="lineno">  505</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#a461ebbcc9ec40082a9564b2711f32180">LLVMUtil::isMemcpyExtFun</a>(callee))</div>
-<div class="line"><span class="lineno">  506</span>    {</div>
-<div class="line"><span class="lineno">  507</span>        <span class="comment">// Side-effects similar to void *memcpy(void *dest, const void * src, size_t n)</span></div>
-<div class="line"><span class="lineno">  508</span>        <span class="comment">// which  copies n characters from memory area &#39;src&#39; to memory area &#39;dest&#39;.</span></div>
-<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">if</span>(callee-&gt;getName().find(<span class="stringliteral">&quot;iconv&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno">  510</span>            <a class="code hl_function" href="#ad0e9f1dd1cba235a699c2b710a888d06">addComplexConsForExt</a>(cs-&gt;getArgOperand(3), cs-&gt;getArgOperand(1), <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  511</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(callee-&gt;getName().find(<span class="stringliteral">&quot;bcopy&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno">  512</span>            <a class="code hl_function" href="#ad0e9f1dd1cba235a699c2b710a888d06">addComplexConsForExt</a>(cs-&gt;getArgOperand(1), cs-&gt;getArgOperand(0), cs-&gt;getArgOperand(2));</div>
-<div class="line"><span class="lineno">  513</span>        <span class="keywordflow">if</span>(cs-&gt;arg_size() == 3)</div>
-<div class="line"><span class="lineno">  514</span>            <a class="code hl_function" href="#ad0e9f1dd1cba235a699c2b710a888d06">addComplexConsForExt</a>(cs-&gt;getArgOperand(0), cs-&gt;getArgOperand(1), cs-&gt;getArgOperand(2));</div>
-<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  516</span>            <a class="code hl_function" href="#ad0e9f1dd1cba235a699c2b710a888d06">addComplexConsForExt</a>(cs-&gt;getArgOperand(0), cs-&gt;getArgOperand(1), <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  517</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;PointerType&gt;</a>(cs-&gt;getType()))</div>
-<div class="line"><span class="lineno">  518</span>            <a class="code hl_function" href="#ab306b7c446b59ab6da0cc71986a36da5">addCopyEdge</a>(<a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs-&gt;getArgOperand(0)), <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs), <a class="code hl_enumvalue" href="classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a3fbb25d7761cca1dd44e06e41e5570c9">CopyStmt::COPYVAL</a>);</div>
-<div class="line"><span class="lineno">  519</span>    }</div>
-<div class="line"><span class="lineno">  520</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;hasExtFuncAnnotation(callee, <span class="stringliteral">&quot;STRLEN&quot;</span>))</div>
-<div class="line"><span class="lineno">  521</span>    {</div>
-<div class="line"><span class="lineno">  522</span>        <span class="comment">// strlen(p) and wcslen(p) read characters, not just p&#39;s address.</span></div>
-<div class="line"><span class="lineno">  523</span>        <span class="comment">// For char s[4]=&quot;ABC&quot;, represent reads of s[0..3] so a write</span></div>
-<div class="line"><span class="lineno">  524</span>        <span class="comment">// to s[1] in a callee can reach this call through the SVFG.</span></div>
-<div class="line"><span class="lineno">  525</span>        std::vector&lt;AccessPath&gt; fields;</div>
-<div class="line"><span class="lineno">  526</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* arg = cs-&gt;getArgOperand(0);</div>
-<div class="line"><span class="lineno">  527</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a>* <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = <a class="code hl_function" href="#aa7e7b3dba00201972783f93c35cadad9">getBaseTypeAndFlattenedFields</a>(arg, fields, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  528</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> AccessPath&amp; field : fields)</div>
-<div class="line"><span class="lineno">  529</span>        {</div>
-<div class="line"><span class="lineno">  530</span>            <span class="keyword">const</span> SVFType* elementType = <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getFlatternedElemType(</div>
-<div class="line"><span class="lineno">  531</span>                                             <a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;getSVFType(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>),</div>
-<div class="line"><span class="lineno">  532</span>                                             field.getConstantStructFldIdx());</div>
-<div class="line"><span class="lineno">  533</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> address = <a class="code hl_function" href="#ae4516ec05eabece1bc8e0cad1ec8cf1c">getGepValVar</a>(arg, field, elementType);</div>
-<div class="line"><span class="lineno">  534</span>            <a class="code hl_function" href="#a4469ae4c52c162d3fbbd559420045243">addLoadEdge</a>(address, <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;addDummyValNode());</div>
-<div class="line"><span class="lineno">  535</span>        }</div>
-<div class="line"><span class="lineno">  536</span>    }</div>
-<div class="line"><span class="lineno">  537</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#ac88ef3ee44fdea13f9fb4f6381da1cc5">LLVMUtil::isMemsetExtFun</a>(callee))</div>
-<div class="line"><span class="lineno">  538</span>    {</div>
-<div class="line"><span class="lineno">  539</span>        <span class="comment">// Side-effects similar to memset(void *str, int c, size_t n)</span></div>
-<div class="line"><span class="lineno">  540</span>        <span class="comment">// which copies the character c (an unsigned char) to the first n characters of the string pointed to, by the argument str</span></div>
-<div class="line"><span class="lineno">  541</span>        std::vector&lt;AccessPath&gt; dstFields;</div>
-<div class="line"><span class="lineno">  542</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *dtype = <a class="code hl_function" href="#aa7e7b3dba00201972783f93c35cadad9">getBaseTypeAndFlattenedFields</a>(cs-&gt;getArgOperand(0), dstFields, cs-&gt;getArgOperand(2));</div>
-<div class="line"><span class="lineno">  543</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> sz = dstFields.size();</div>
-<div class="line"><span class="lineno">  544</span>        <span class="comment">//For each field (i), add store edge *(arg0 + i) = arg1</span></div>
-<div class="line"><span class="lineno">  545</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> = 0; <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &lt; sz; <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>++)</div>
-<div class="line"><span class="lineno">  546</span>        {</div>
-<div class="line"><span class="lineno">  547</span>            LLVMModuleSet* llvmmodule = <a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a23db3116f8a2bd250018368a8c111651">LLVMModuleSet::getLLVMModuleSet</a>();</div>
-<div class="line"><span class="lineno">  548</span>            <span class="keyword">const</span> SVFType* dElementType = <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getFlatternedElemType(llvmmodule-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a5f0bd932f3129a9c565f3a09711f7b99">getSVFType</a>(dtype),</div>
-<div class="line"><span class="lineno">  549</span>                                          dstFields[<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>].getConstantStructFldIdx());</div>
-<div class="line"><span class="lineno">  550</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> dField = <a class="code hl_function" href="#ae4516ec05eabece1bc8e0cad1ec8cf1c">getGepValVar</a>(cs-&gt;getArgOperand(0), dstFields[<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>], dElementType);</div>
-<div class="line"><span class="lineno">  551</span>            <a class="code hl_function" href="#a30f043eeca79259d84b97e265110f018">addStoreEdge</a>(<a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs-&gt;getArgOperand(1)),dField);</div>
-<div class="line"><span class="lineno">  552</span>        }</div>
-<div class="line"><span class="lineno">  553</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;PointerType&gt;</a>(cs-&gt;getType()))</div>
-<div class="line"><span class="lineno">  554</span>            <a class="code hl_function" href="#ab306b7c446b59ab6da0cc71986a36da5">addCopyEdge</a>(<a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs-&gt;getArgOperand(0)), <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs), <a class="code hl_enumvalue" href="classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a3fbb25d7761cca1dd44e06e41e5570c9">CopyStmt::COPYVAL</a>);</div>
-<div class="line"><span class="lineno">  555</span>    }</div>
-<div class="line"><span class="lineno">  556</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(callee-&gt;getName().compare(<span class="stringliteral">&quot;dlsym&quot;</span>) == 0)</div>
-<div class="line"><span class="lineno">  557</span>    {</div>
-<div class="line"><span class="lineno">  558</span>        <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  559</span><span class="comment">        Side-effects of void* dlsym( void* handle, const char* funName),</span></div>
-<div class="line"><span class="lineno">  560</span><span class="comment">        Locate the function with the name &quot;funName,&quot; then add a &quot;copy&quot; edge between the callsite and that function.</span></div>
-<div class="line"><span class="lineno">  561</span><span class="comment">        dlsym() example:</span></div>
-<div class="line"><span class="lineno">  562</span><span class="comment">            int main() {</span></div>
-<div class="line"><span class="lineno">  563</span><span class="comment">                // Open the shared library</span></div>
-<div class="line"><span class="lineno">  564</span><span class="comment">                void* handle = dlopen(&quot;./my_shared_library.so&quot;, RTLD_LAZY);</span></div>
-<div class="line"><span class="lineno">  565</span><span class="comment">                // Find the function address</span></div>
-<div class="line"><span class="lineno">  566</span><span class="comment">                void (*myFunctionPtr)() = (void (*)())dlsym(handle, &quot;myFunction&quot;);</span></div>
-<div class="line"><span class="lineno">  567</span><span class="comment">                // Call the function</span></div>
-<div class="line"><span class="lineno">  568</span><span class="comment">                myFunctionPtr();</span></div>
-<div class="line"><span class="lineno">  569</span><span class="comment">            }</span></div>
-<div class="line"><span class="lineno">  570</span><span class="comment">        */</span></div>
-<div class="line"><span class="lineno">  571</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* src = cs-&gt;getArgOperand(1);</div>
-<div class="line"><span class="lineno">  572</span>        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ac4e93e1fec646ff222940a663843921b">GetElementPtrInst</a>* gep = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;</a>(src))</div>
-<div class="line"><span class="lineno">  573</span>            src = <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#a07bd47ccfd02c5a2a6db26b537b2184f">stripConstantCasts</a>(gep-&gt;getPointerOperand());</div>
-<div class="line"><span class="lineno">  574</span> </div>
-<div class="line"><span class="lineno">  575</span>        <span class="keyword">auto</span> getHookFn = [](<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* src)-&gt;<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a>*</div>
-<div class="line"><span class="lineno">  576</span>        {</div>
-<div class="line"><span class="lineno">  577</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;GlobalVariable&gt;</a>(src))</div>
-<div class="line"><span class="lineno">  578</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  579</span> </div>
-<div class="line"><span class="lineno">  580</span>            <span class="keyword">auto</span> *glob = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;GlobalVariable&gt;</a>(src);</div>
-<div class="line"><span class="lineno">  581</span>            <span class="keywordflow">if</span> (!glob-&gt;hasInitializer() || !<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;ConstantDataArray&gt;</a>(glob-&gt;getInitializer()))</div>
-<div class="line"><span class="lineno">  582</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  505</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;hasExtFuncAnnotation(callee, <span class="stringliteral">&quot;STRCAT&quot;</span>) ||</div>
+<div class="line"><span class="lineno">  506</span>             <a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;hasExtFuncAnnotation(callee, <span class="stringliteral">&quot;STRCPY&quot;</span>))</div>
+<div class="line"><span class="lineno">  507</span>    {</div>
+<div class="line"><span class="lineno">  508</span>        <span class="comment">// strcpy/strcat: add only ret = dst. Unlike the memcpy branch below, add no</span></div>
+<div class="line"><span class="lineno">  509</span>        <span class="comment">// field copies (addComplexConsForExt), because the copied range depends on</span></div>
+<div class="line"><span class="lineno">  510</span>        <span class="comment">// the string contents. AbsExtAPI&#39;s strcpy/strcat handlers write dst.</span></div>
+<div class="line"><span class="lineno">  511</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;PointerType&gt;</a>(cs-&gt;getType()))</div>
+<div class="line"><span class="lineno">  512</span>            <a class="code hl_function" href="#ab306b7c446b59ab6da0cc71986a36da5">addCopyEdge</a>(<a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs-&gt;getArgOperand(0)), <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs), <a class="code hl_enumvalue" href="classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a3fbb25d7761cca1dd44e06e41e5570c9">CopyStmt::COPYVAL</a>);</div>
+<div class="line"><span class="lineno">  513</span>    }</div>
+<div class="line"><span class="lineno">  514</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#a461ebbcc9ec40082a9564b2711f32180">LLVMUtil::isMemcpyExtFun</a>(callee))</div>
+<div class="line"><span class="lineno">  515</span>    {</div>
+<div class="line"><span class="lineno">  516</span>        <span class="comment">// Side-effects similar to void *memcpy(void *dest, const void * src, size_t n)</span></div>
+<div class="line"><span class="lineno">  517</span>        <span class="comment">// which  copies n characters from memory area &#39;src&#39; to memory area &#39;dest&#39;.</span></div>
+<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">if</span>(callee-&gt;getName().find(<span class="stringliteral">&quot;iconv&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  519</span>            <a class="code hl_function" href="#ad0e9f1dd1cba235a699c2b710a888d06">addComplexConsForExt</a>(cs-&gt;getArgOperand(3), cs-&gt;getArgOperand(1), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  520</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(callee-&gt;getName().find(<span class="stringliteral">&quot;bcopy&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  521</span>            <a class="code hl_function" href="#ad0e9f1dd1cba235a699c2b710a888d06">addComplexConsForExt</a>(cs-&gt;getArgOperand(1), cs-&gt;getArgOperand(0), cs-&gt;getArgOperand(2));</div>
+<div class="line"><span class="lineno">  522</span>        <span class="keywordflow">if</span>(cs-&gt;arg_size() == 3)</div>
+<div class="line"><span class="lineno">  523</span>            <a class="code hl_function" href="#ad0e9f1dd1cba235a699c2b710a888d06">addComplexConsForExt</a>(cs-&gt;getArgOperand(0), cs-&gt;getArgOperand(1), cs-&gt;getArgOperand(2));</div>
+<div class="line"><span class="lineno">  524</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  525</span>            <a class="code hl_function" href="#ad0e9f1dd1cba235a699c2b710a888d06">addComplexConsForExt</a>(cs-&gt;getArgOperand(0), cs-&gt;getArgOperand(1), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;PointerType&gt;</a>(cs-&gt;getType()))</div>
+<div class="line"><span class="lineno">  527</span>            <a class="code hl_function" href="#ab306b7c446b59ab6da0cc71986a36da5">addCopyEdge</a>(<a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs-&gt;getArgOperand(0)), <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs), <a class="code hl_enumvalue" href="classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a3fbb25d7761cca1dd44e06e41e5570c9">CopyStmt::COPYVAL</a>);</div>
+<div class="line"><span class="lineno">  528</span>    }</div>
+<div class="line"><span class="lineno">  529</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;hasExtFuncAnnotation(callee, <span class="stringliteral">&quot;STRLEN&quot;</span>))</div>
+<div class="line"><span class="lineno">  530</span>    {</div>
+<div class="line"><span class="lineno">  531</span>        <span class="comment">// strlen(p) and wcslen(p) read characters, not just p&#39;s address.</span></div>
+<div class="line"><span class="lineno">  532</span>        <span class="comment">// For char s[4]=&quot;ABC&quot;, represent reads of s[0..3] so a write</span></div>
+<div class="line"><span class="lineno">  533</span>        <span class="comment">// to s[1] in a callee can reach this call through the SVFG.</span></div>
+<div class="line"><span class="lineno">  534</span>        std::vector&lt;AccessPath&gt; fields;</div>
+<div class="line"><span class="lineno">  535</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* arg = cs-&gt;getArgOperand(0);</div>
+<div class="line"><span class="lineno">  536</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a>* <a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a> = <a class="code hl_function" href="#aa7e7b3dba00201972783f93c35cadad9">getBaseTypeAndFlattenedFields</a>(arg, fields, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  537</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> AccessPath&amp; field : fields)</div>
+<div class="line"><span class="lineno">  538</span>        {</div>
+<div class="line"><span class="lineno">  539</span>            <span class="keyword">const</span> SVFType* elementType = <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getFlatternedElemType(</div>
+<div class="line"><span class="lineno">  540</span>                                             <a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;getSVFType(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>),</div>
+<div class="line"><span class="lineno">  541</span>                                             field.getConstantStructFldIdx());</div>
+<div class="line"><span class="lineno">  542</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> address = <a class="code hl_function" href="#ae4516ec05eabece1bc8e0cad1ec8cf1c">getGepValVar</a>(arg, field, elementType);</div>
+<div class="line"><span class="lineno">  543</span>            <a class="code hl_function" href="#a4469ae4c52c162d3fbbd559420045243">addLoadEdge</a>(address, <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;addDummyValNode());</div>
+<div class="line"><span class="lineno">  544</span>        }</div>
+<div class="line"><span class="lineno">  545</span>    }</div>
+<div class="line"><span class="lineno">  546</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#ac88ef3ee44fdea13f9fb4f6381da1cc5">LLVMUtil::isMemsetExtFun</a>(callee))</div>
+<div class="line"><span class="lineno">  547</span>    {</div>
+<div class="line"><span class="lineno">  548</span>        <span class="comment">// Side-effects similar to memset(void *str, int c, size_t n)</span></div>
+<div class="line"><span class="lineno">  549</span>        <span class="comment">// which copies the character c (an unsigned char) to the first n characters of the string pointed to, by the argument str</span></div>
+<div class="line"><span class="lineno">  550</span>        std::vector&lt;AccessPath&gt; dstFields;</div>
+<div class="line"><span class="lineno">  551</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a1d008c0666c145622b81d427be64c52d">Type</a> *dtype = <a class="code hl_function" href="#aa7e7b3dba00201972783f93c35cadad9">getBaseTypeAndFlattenedFields</a>(cs-&gt;getArgOperand(0), dstFields, cs-&gt;getArgOperand(2));</div>
+<div class="line"><span class="lineno">  552</span>        <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> sz = dstFields.size();</div>
+<div class="line"><span class="lineno">  553</span>        <span class="comment">//For each field (i), add store edge *(arg0 + i) = arg1</span></div>
+<div class="line"><span class="lineno">  554</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> = 0; <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> &lt; sz; <a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>++)</div>
+<div class="line"><span class="lineno">  555</span>        {</div>
+<div class="line"><span class="lineno">  556</span>            LLVMModuleSet* llvmmodule = <a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a23db3116f8a2bd250018368a8c111651">LLVMModuleSet::getLLVMModuleSet</a>();</div>
+<div class="line"><span class="lineno">  557</span>            <span class="keyword">const</span> SVFType* dElementType = <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getFlatternedElemType(llvmmodule-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a5f0bd932f3129a9c565f3a09711f7b99">getSVFType</a>(dtype),</div>
+<div class="line"><span class="lineno">  558</span>                                          dstFields[<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>].getConstantStructFldIdx());</div>
+<div class="line"><span class="lineno">  559</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> dField = <a class="code hl_function" href="#ae4516ec05eabece1bc8e0cad1ec8cf1c">getGepValVar</a>(cs-&gt;getArgOperand(0), dstFields[<a class="code hl_variable" href="cJSON_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>], dElementType);</div>
+<div class="line"><span class="lineno">  560</span>            <a class="code hl_function" href="#a30f043eeca79259d84b97e265110f018">addStoreEdge</a>(<a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs-&gt;getArgOperand(1)),dField);</div>
+<div class="line"><span class="lineno">  561</span>        }</div>
+<div class="line"><span class="lineno">  562</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;PointerType&gt;</a>(cs-&gt;getType()))</div>
+<div class="line"><span class="lineno">  563</span>            <a class="code hl_function" href="#ab306b7c446b59ab6da0cc71986a36da5">addCopyEdge</a>(<a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs-&gt;getArgOperand(0)), <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs), <a class="code hl_enumvalue" href="classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a3fbb25d7761cca1dd44e06e41e5570c9">CopyStmt::COPYVAL</a>);</div>
+<div class="line"><span class="lineno">  564</span>    }</div>
+<div class="line"><span class="lineno">  565</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(callee-&gt;getName().compare(<span class="stringliteral">&quot;dlsym&quot;</span>) == 0)</div>
+<div class="line"><span class="lineno">  566</span>    {</div>
+<div class="line"><span class="lineno">  567</span>        <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  568</span><span class="comment">        Side-effects of void* dlsym( void* handle, const char* funName),</span></div>
+<div class="line"><span class="lineno">  569</span><span class="comment">        Locate the function with the name &quot;funName,&quot; then add a &quot;copy&quot; edge between the callsite and that function.</span></div>
+<div class="line"><span class="lineno">  570</span><span class="comment">        dlsym() example:</span></div>
+<div class="line"><span class="lineno">  571</span><span class="comment">            int main() {</span></div>
+<div class="line"><span class="lineno">  572</span><span class="comment">                // Open the shared library</span></div>
+<div class="line"><span class="lineno">  573</span><span class="comment">                void* handle = dlopen(&quot;./my_shared_library.so&quot;, RTLD_LAZY);</span></div>
+<div class="line"><span class="lineno">  574</span><span class="comment">                // Find the function address</span></div>
+<div class="line"><span class="lineno">  575</span><span class="comment">                void (*myFunctionPtr)() = (void (*)())dlsym(handle, &quot;myFunction&quot;);</span></div>
+<div class="line"><span class="lineno">  576</span><span class="comment">                // Call the function</span></div>
+<div class="line"><span class="lineno">  577</span><span class="comment">                myFunctionPtr();</span></div>
+<div class="line"><span class="lineno">  578</span><span class="comment">            }</span></div>
+<div class="line"><span class="lineno">  579</span><span class="comment">        */</span></div>
+<div class="line"><span class="lineno">  580</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* src = cs-&gt;getArgOperand(1);</div>
+<div class="line"><span class="lineno">  581</span>        <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ac4e93e1fec646ff222940a663843921b">GetElementPtrInst</a>* gep = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;GetElementPtrInst&gt;</a>(src))</div>
+<div class="line"><span class="lineno">  582</span>            src = <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#a07bd47ccfd02c5a2a6db26b537b2184f">stripConstantCasts</a>(gep-&gt;getPointerOperand());</div>
 <div class="line"><span class="lineno">  583</span> </div>
-<div class="line"><span class="lineno">  584</span>            <span class="keyword">auto</span> *constarray = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;ConstantDataArray&gt;</a>(glob-&gt;getInitializer());</div>
-<div class="line"><span class="lineno">  585</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#a026ae778570145a4719bd475f8f66d85">LLVMUtil::getProgFunction</a>(constarray-&gt;getAsCString().str());</div>
-<div class="line"><span class="lineno">  586</span>        };</div>
-<div class="line"><span class="lineno">  587</span> </div>
-<div class="line"><span class="lineno">  588</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *fn = getHookFn(src))</div>
-<div class="line"><span class="lineno">  589</span>        {</div>
-<div class="line"><span class="lineno">  590</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> srcNode = <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(fn);</div>
-<div class="line"><span class="lineno">  591</span>            <a class="code hl_function" href="#ab306b7c446b59ab6da0cc71986a36da5">addCopyEdge</a>(srcNode,  <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs), <a class="code hl_enumvalue" href="classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a3fbb25d7761cca1dd44e06e41e5570c9">CopyStmt::COPYVAL</a>);</div>
-<div class="line"><span class="lineno">  592</span>        }</div>
-<div class="line"><span class="lineno">  593</span>    }</div>
-<div class="line"><span class="lineno">  594</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(callee-&gt;getName().find(<span class="stringliteral">&quot;_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno">  595</span>    {</div>
-<div class="line"><span class="lineno">  596</span>        <span class="comment">// The purpose of this function is to insert a new node into the red-black tree and then rebalance the tree to ensure that the red-black tree properties are maintained.</span></div>
-<div class="line"><span class="lineno">  597</span>        assert(cs-&gt;arg_size() == 4 &amp;&amp; <span class="stringliteral">&quot;_Rb_tree_insert_and_rebalance should have 4 arguments.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  598</span> </div>
-<div class="line"><span class="lineno">  599</span>        <span class="comment">// We have vArg3 points to the entry of _Rb_tree_node_base { color; parent; left; right; }.</span></div>
-<div class="line"><span class="lineno">  600</span>        <span class="comment">// Now we calculate the offset from base to vArg3</span></div>
-<div class="line"><span class="lineno">  601</span>        <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> vnArg3 = <a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a03d0508724e36c188392433966e0cef5">getValueNode</a>(cs-&gt;getArgOperand(3));</div>
-<div class="line"><span class="lineno">  602</span>        <a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> =</div>
-<div class="line"><span class="lineno">  603</span>            <a class="code hl_function" href="#a7c401d6929e583be734c0c4e9957d0d7">getAccessPathFromBaseNode</a>(vnArg3).<a class="code hl_function" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
-<div class="line"><span class="lineno">  604</span> </div>
-<div class="line"><span class="lineno">  605</span>        <span class="comment">// We get all flattened fields of base</span></div>
-<div class="line"><span class="lineno">  606</span>        vector&lt;AccessPath&gt; fields =  <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getTypeLocSetsMap(vnArg3).second;</div>
+<div class="line"><span class="lineno">  584</span>        <span class="keyword">auto</span> getHookFn = [](<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">Value</a>* src)-&gt;<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a>*</div>
+<div class="line"><span class="lineno">  585</span>        {</div>
+<div class="line"><span class="lineno">  586</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;GlobalVariable&gt;</a>(src))</div>
+<div class="line"><span class="lineno">  587</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  588</span> </div>
+<div class="line"><span class="lineno">  589</span>            <span class="keyword">auto</span> *glob = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;GlobalVariable&gt;</a>(src);</div>
+<div class="line"><span class="lineno">  590</span>            <span class="keywordflow">if</span> (!glob-&gt;hasInitializer() || !<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;ConstantDataArray&gt;</a>(glob-&gt;getInitializer()))</div>
+<div class="line"><span class="lineno">  591</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  592</span> </div>
+<div class="line"><span class="lineno">  593</span>            <span class="keyword">auto</span> *constarray = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;ConstantDataArray&gt;</a>(glob-&gt;getInitializer());</div>
+<div class="line"><span class="lineno">  594</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceSVF_1_1LLVMUtil.html#a026ae778570145a4719bd475f8f66d85">LLVMUtil::getProgFunction</a>(constarray-&gt;getAsCString().str());</div>
+<div class="line"><span class="lineno">  595</span>        };</div>
+<div class="line"><span class="lineno">  596</span> </div>
+<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a5faee14fa1dd41447bc73ac365fe33c1">Function</a> *fn = getHookFn(src))</div>
+<div class="line"><span class="lineno">  598</span>        {</div>
+<div class="line"><span class="lineno">  599</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> srcNode = <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(fn);</div>
+<div class="line"><span class="lineno">  600</span>            <a class="code hl_function" href="#ab306b7c446b59ab6da0cc71986a36da5">addCopyEdge</a>(srcNode,  <a class="code hl_function" href="#acc69fc638380f34164db649d9bf2a7d6">getValueNode</a>(cs), <a class="code hl_enumvalue" href="classSVF_1_1CopyStmt.html#ae041bbd93e3839193fd7ffe9611a4ca1a3fbb25d7761cca1dd44e06e41e5570c9">CopyStmt::COPYVAL</a>);</div>
+<div class="line"><span class="lineno">  601</span>        }</div>
+<div class="line"><span class="lineno">  602</span>    }</div>
+<div class="line"><span class="lineno">  603</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(callee-&gt;getName().find(<span class="stringliteral">&quot;_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  604</span>    {</div>
+<div class="line"><span class="lineno">  605</span>        <span class="comment">// The purpose of this function is to insert a new node into the red-black tree and then rebalance the tree to ensure that the red-black tree properties are maintained.</span></div>
+<div class="line"><span class="lineno">  606</span>        assert(cs-&gt;arg_size() == 4 &amp;&amp; <span class="stringliteral">&quot;_Rb_tree_insert_and_rebalance should have 4 arguments.\n&quot;</span>);</div>
 <div class="line"><span class="lineno">  607</span> </div>
-<div class="line"><span class="lineno">  608</span>        <span class="comment">// We summarize the side effects: arg3-&gt;parent = arg1, arg3-&gt;left = arg1, arg3-&gt;right = arg1</span></div>
-<div class="line"><span class="lineno">  609</span>        <span class="comment">// Note that arg0 is aligned with &quot;offset&quot;.</span></div>
-<div class="line"><span class="lineno">  610</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> i = <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> + 1; i &lt;= <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> + 3; ++i)</div>
-<div class="line"><span class="lineno">  611</span>        {</div>
-<div class="line"><span class="lineno">  612</span>            <span class="keywordflow">if</span>((<a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>)i &gt;= fields.size())</div>
-<div class="line"><span class="lineno">  613</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  614</span>            <span class="keyword">const</span> SVFType* elementType = <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getFlatternedElemType(<a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getTypeLocSetsMap(vnArg3).first,</div>
-<div class="line"><span class="lineno">  615</span>                                         fields[i].getConstantStructFldIdx());</div>
-<div class="line"><span class="lineno">  616</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> vnD = <a class="code hl_function" href="#ae4516ec05eabece1bc8e0cad1ec8cf1c">getGepValVar</a>(cs-&gt;getArgOperand(3), fields[i], elementType);</div>
-<div class="line"><span class="lineno">  617</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> vnS = <a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a03d0508724e36c188392433966e0cef5">getValueNode</a>(cs-&gt;getArgOperand(1));</div>
-<div class="line"><span class="lineno">  618</span>            <span class="keywordflow">if</span>(vnD &amp;&amp; vnS)</div>
-<div class="line"><span class="lineno">  619</span>                <a class="code hl_function" href="#a30f043eeca79259d84b97e265110f018">addStoreEdge</a>(vnS,vnD);</div>
-<div class="line"><span class="lineno">  620</span>        }</div>
-<div class="line"><span class="lineno">  621</span>    }</div>
-<div class="line"><span class="lineno">  622</span> </div>
-<div class="line"><span class="lineno">  623</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aac9a03aaeb26832c69f95a9a96a2d31a">isThreadForkCall</a>(callICFGNode))</div>
-<div class="line"><span class="lineno">  624</span>    {</div>
-<div class="line"><span class="lineno">  625</span>        <span class="keyword">const</span> ValVar* valVar = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#acfa1298393769239472e919a3c52c0de">getForkedFun</a>(callICFGNode);</div>
-<div class="line"><span class="lineno">  626</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> FunValVar* funcValVar = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;FunValVar&gt;</a>(valVar))</div>
-<div class="line"><span class="lineno">  627</span>        {</div>
-<div class="line"><span class="lineno">  628</span>            <span class="keyword">const</span> FunObjVar* forkedFun = funcValVar-&gt;getFunction()-&gt;getDefFunForMultipleModule();</div>
-<div class="line"><span class="lineno">  629</span>            <span class="keyword">const</span> SVFVar* actualParm = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ab7764f2af867180da0a0b08c239a10d0">getActualParmAtForkSite</a>(callICFGNode);</div>
-<div class="line"><span class="lineno">  632</span>            assert((forkedFun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a21cf21f84f70bd635d5ee29c9be3cf6c">arg_size</a>() &lt;= 2) &amp;&amp; <span class="stringliteral">&quot;Size of formal parameter of start routine should be one&quot;</span>);</div>
-<div class="line"><span class="lineno">  633</span>            <span class="keywordflow">if</span> (forkedFun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a21cf21f84f70bd635d5ee29c9be3cf6c">arg_size</a>() &lt;= 2 &amp;&amp; forkedFun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a21cf21f84f70bd635d5ee29c9be3cf6c">arg_size</a>() &gt;= 1)</div>
-<div class="line"><span class="lineno">  634</span>            {</div>
-<div class="line"><span class="lineno">  635</span>                <span class="keyword">const</span> ArgValVar* formalParm = forkedFun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a0dac2be504bb4eea6f5d4602c419cc4e">getArg</a>(0);</div>
-<div class="line"><span class="lineno">  637</span>                <span class="keywordflow">if</span> (actualParm-&gt;<a class="code hl_function" href="classSVF_1_1SVFVar.html#a3b61042079a6c9dc395f38925c6a1271">isPointer</a>() &amp;&amp; formalParm-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a66658e192dd21a3b4ad9b787d8ea2e59">getType</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFType.html#a870b63af2bf9fe43cdf1df3d56b20f6c">isPointerTy</a>())</div>
-<div class="line"><span class="lineno">  638</span>                {</div>
-<div class="line"><span class="lineno">  639</span>                    FunEntryICFGNode *entry = <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getICFG()-&gt;getFunEntryICFGNode(forkedFun);</div>
-<div class="line"><span class="lineno">  640</span>                    <a class="code hl_function" href="#a54636413fd3ed7e634ac7428139966a4">addThreadForkEdge</a>(actualParm-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>(), formalParm-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>(), callICFGNode, entry);</div>
-<div class="line"><span class="lineno">  641</span>                }</div>
-<div class="line"><span class="lineno">  642</span>            }</div>
-<div class="line"><span class="lineno">  643</span>        }</div>
-<div class="line"><span class="lineno">  644</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  645</span>        {</div>
-<div class="line"><span class="lineno">  650</span>        }</div>
-<div class="line"><span class="lineno">  654</span>    }</div>
-<div class="line"><span class="lineno">  655</span></div>
-<div class="line"><span class="lineno">  657</span>}</div>
+<div class="line"><span class="lineno">  608</span>        <span class="comment">// We have vArg3 points to the entry of _Rb_tree_node_base { color; parent; left; right; }.</span></div>
+<div class="line"><span class="lineno">  609</span>        <span class="comment">// Now we calculate the offset from base to vArg3</span></div>
+<div class="line"><span class="lineno">  610</span>        <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> vnArg3 = <a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a03d0508724e36c188392433966e0cef5">getValueNode</a>(cs-&gt;getArgOperand(3));</div>
+<div class="line"><span class="lineno">  611</span>        <a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> =</div>
+<div class="line"><span class="lineno">  612</span>            <a class="code hl_function" href="#a7c401d6929e583be734c0c4e9957d0d7">getAccessPathFromBaseNode</a>(vnArg3).<a class="code hl_function" href="classSVF_1_1AccessPath.html#a5427d08c9eb9d86e66c2bff6aeba6bac">getConstantStructFldIdx</a>();</div>
+<div class="line"><span class="lineno">  613</span> </div>
+<div class="line"><span class="lineno">  614</span>        <span class="comment">// We get all flattened fields of base</span></div>
+<div class="line"><span class="lineno">  615</span>        vector&lt;AccessPath&gt; fields =  <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getTypeLocSetsMap(vnArg3).second;</div>
+<div class="line"><span class="lineno">  616</span> </div>
+<div class="line"><span class="lineno">  617</span>        <span class="comment">// We summarize the side effects: arg3-&gt;parent = arg1, arg3-&gt;left = arg1, arg3-&gt;right = arg1</span></div>
+<div class="line"><span class="lineno">  618</span>        <span class="comment">// Note that arg0 is aligned with &quot;offset&quot;.</span></div>
+<div class="line"><span class="lineno">  619</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> i = <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> + 1; i &lt;= <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a> + 3; ++i)</div>
+<div class="line"><span class="lineno">  620</span>        {</div>
+<div class="line"><span class="lineno">  621</span>            <span class="keywordflow">if</span>((<a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a>)i &gt;= fields.size())</div>
+<div class="line"><span class="lineno">  622</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  623</span>            <span class="keyword">const</span> SVFType* elementType = <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getFlatternedElemType(<a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getTypeLocSetsMap(vnArg3).first,</div>
+<div class="line"><span class="lineno">  624</span>                                         fields[i].getConstantStructFldIdx());</div>
+<div class="line"><span class="lineno">  625</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> vnD = <a class="code hl_function" href="#ae4516ec05eabece1bc8e0cad1ec8cf1c">getGepValVar</a>(cs-&gt;getArgOperand(3), fields[i], elementType);</div>
+<div class="line"><span class="lineno">  626</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> vnS = <a class="code hl_function" href="#a50ab8c494336e96924b76704829e0c94">llvmModuleSet</a>()-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a03d0508724e36c188392433966e0cef5">getValueNode</a>(cs-&gt;getArgOperand(1));</div>
+<div class="line"><span class="lineno">  627</span>            <span class="keywordflow">if</span>(vnD &amp;&amp; vnS)</div>
+<div class="line"><span class="lineno">  628</span>                <a class="code hl_function" href="#a30f043eeca79259d84b97e265110f018">addStoreEdge</a>(vnS,vnD);</div>
+<div class="line"><span class="lineno">  629</span>        }</div>
+<div class="line"><span class="lineno">  630</span>    }</div>
+<div class="line"><span class="lineno">  631</span> </div>
+<div class="line"><span class="lineno">  632</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aac9a03aaeb26832c69f95a9a96a2d31a">isThreadForkCall</a>(callICFGNode))</div>
+<div class="line"><span class="lineno">  633</span>    {</div>
+<div class="line"><span class="lineno">  634</span>        <span class="keyword">const</span> ValVar* valVar = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#acfa1298393769239472e919a3c52c0de">getForkedFun</a>(callICFGNode);</div>
+<div class="line"><span class="lineno">  635</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> FunValVar* funcValVar = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;FunValVar&gt;</a>(valVar))</div>
+<div class="line"><span class="lineno">  636</span>        {</div>
+<div class="line"><span class="lineno">  637</span>            <span class="keyword">const</span> FunObjVar* forkedFun = funcValVar-&gt;getFunction()-&gt;getDefFunForMultipleModule();</div>
+<div class="line"><span class="lineno">  638</span>            <span class="keyword">const</span> SVFVar* actualParm = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#ab7764f2af867180da0a0b08c239a10d0">getActualParmAtForkSite</a>(callICFGNode);</div>
+<div class="line"><span class="lineno">  641</span>            assert((forkedFun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a21cf21f84f70bd635d5ee29c9be3cf6c">arg_size</a>() &lt;= 2) &amp;&amp; <span class="stringliteral">&quot;Size of formal parameter of start routine should be one&quot;</span>);</div>
+<div class="line"><span class="lineno">  642</span>            <span class="keywordflow">if</span> (forkedFun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a21cf21f84f70bd635d5ee29c9be3cf6c">arg_size</a>() &lt;= 2 &amp;&amp; forkedFun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a21cf21f84f70bd635d5ee29c9be3cf6c">arg_size</a>() &gt;= 1)</div>
+<div class="line"><span class="lineno">  643</span>            {</div>
+<div class="line"><span class="lineno">  644</span>                <span class="keyword">const</span> ArgValVar* formalParm = forkedFun-&gt;<a class="code hl_function" href="classSVF_1_1FunObjVar.html#a0dac2be504bb4eea6f5d4602c419cc4e">getArg</a>(0);</div>
+<div class="line"><span class="lineno">  646</span>                <span class="keywordflow">if</span> (actualParm-&gt;<a class="code hl_function" href="classSVF_1_1SVFVar.html#a3b61042079a6c9dc395f38925c6a1271">isPointer</a>() &amp;&amp; formalParm-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a66658e192dd21a3b4ad9b787d8ea2e59">getType</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFType.html#a870b63af2bf9fe43cdf1df3d56b20f6c">isPointerTy</a>())</div>
+<div class="line"><span class="lineno">  647</span>                {</div>
+<div class="line"><span class="lineno">  648</span>                    FunEntryICFGNode *entry = <a class="code hl_variable" href="#a4ea94b0a8d6da904ff9a6c1b0341b9cb">pag</a>-&gt;getICFG()-&gt;getFunEntryICFGNode(forkedFun);</div>
+<div class="line"><span class="lineno">  649</span>                    <a class="code hl_function" href="#a54636413fd3ed7e634ac7428139966a4">addThreadForkEdge</a>(actualParm-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>(), formalParm-&gt;<a class="code hl_function" href="classSVF_1_1SVFValue.html#a3e1925f1c3f731bf9047dbd2f929dd91">getId</a>(), callICFGNode, entry);</div>
+<div class="line"><span class="lineno">  650</span>                }</div>
+<div class="line"><span class="lineno">  651</span>            }</div>
+<div class="line"><span class="lineno">  652</span>        }</div>
+<div class="line"><span class="lineno">  653</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  654</span>        {</div>
+<div class="line"><span class="lineno">  659</span>        }</div>
+<div class="line"><span class="lineno">  663</span>    }</div>
+<div class="line"><span class="lineno">  664</span></div>
+<div class="line"><span class="lineno">  666</span>}</div>
 <div class="ttc" id="aclassSVF_1_1FunObjVar_html_a0dac2be504bb4eea6f5d4602c419cc4e"><div class="ttname"><a href="classSVF_1_1FunObjVar.html#a0dac2be504bb4eea6f5d4602c419cc4e">SVF::FunObjVar::getArg</a></div><div class="ttdeci">const ArgValVar * getArg(u32_t idx) const</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l01238">SVFVariables.h:1238</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIRBuilder_html_a4f7e55a254bd1faff74c33d406c7696b"><div class="ttname"><a href="#a4f7e55a254bd1faff74c33d406c7696b">SVF::SVFIRBuilder::addAddrWithHeapSz</a></div><div class="ttdeci">AddrStmt * addAddrWithHeapSz(NodeID src, NodeID dst, const CallBase *cs)</div><div class="ttdoc">Add Address edge from ext call with args like &quot;%5 = call i8* @malloc(i64 noundef 5)&quot;.</div><div class="ttdef"><b>Definition</b> <a href="SVFIRBuilder_8h_source.html#l00428">SVFIRBuilder.h:428</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SVFIRBuilder_html_a54636413fd3ed7e634ac7428139966a4"><div class="ttname"><a href="#a54636413fd3ed7e634ac7428139966a4">SVF::SVFIRBuilder::addThreadForkEdge</a></div><div class="ttdeci">void addThreadForkEdge(NodeID src, NodeID dst, const CallICFGNode *cs, const FunEntryICFGNode *entry)</div><div class="ttdoc">Add Thread fork edge for parameter passing.</div><div class="ttdef"><b>Definition</b> <a href="SVFIRBuilder_8h_source.html#l00607">SVFIRBuilder.h:607</a></div></div>
