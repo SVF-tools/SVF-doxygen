@@ -1321,150 +1321,158 @@ $(function() {
 <div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>    }</div>
 </div>
 <div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span> </div>
-<div class="foldopen" id="foldopen01148" data-start="{" data-end="}">
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"><a class="line" href="classSVF_1_1SparseBitVector.html#a9f96e6a886fa69e07cda5dbfaed8b7c9"> 1148</a></span>    <span class="keywordtype">unsigned</span> <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a9f96e6a886fa69e07cda5dbfaed8b7c9">count</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>        <span class="keywordtype">unsigned</span> BitCount = 0;</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#acdc2e97bfeeba3a91d8793992df9451f">ElementListConstIter</a> Iter = <a class="code hl_variable" href="classSVF_1_1SparseBitVector.html#ab094576b73de3c8580ea152f90d63636">Elements</a>.begin();</div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>                Iter != <a class="code hl_variable" href="classSVF_1_1SparseBitVector.html#ab094576b73de3c8580ea152f90d63636">Elements</a>.end();</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>                ++Iter)</div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>            BitCount += Iter-&gt;count();</div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span> </div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>        <span class="keywordflow">return</span> BitCount;</div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>    }</div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>    <span class="comment">// Return true if exactly one bit is set.</span></div>
+<div class="foldopen" id="foldopen01149" data-start="{" data-end="}">
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"><a class="line" href="classSVF_1_1SparseBitVector.html#a8ecf746c9b37934090a97cd75c902c9a"> 1149</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a8ecf746c9b37934090a97cd75c902c9a">isSingleElement</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#aea5389ad7e5fe4c8bef686940a1a6056">empty</a>() &amp;&amp; <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a06eeb5543eb160e08f9a41e30b52d963">find_first</a>() == <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#ac969500db9dbd1c63b6a47a1d9a5abba">find_last</a>();</div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>    }</div>
 </div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span> </div>
-<div class="foldopen" id="foldopen01159" data-start="{" data-end="}">
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"><a class="line" href="classSVF_1_1SparseBitVector.html#abf76d8157c49ddba24bdc9dab3655772"> 1159</a></span>    <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">iterator</a> <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#abf76d8157c49ddba24bdc9dab3655772">begin</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">iterator</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    }</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span> </div>
+<div class="foldopen" id="foldopen01154" data-start="{" data-end="}">
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"><a class="line" href="classSVF_1_1SparseBitVector.html#a9f96e6a886fa69e07cda5dbfaed8b7c9"> 1154</a></span>    <span class="keywordtype">unsigned</span> <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a9f96e6a886fa69e07cda5dbfaed8b7c9">count</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>        <span class="keywordtype">unsigned</span> BitCount = 0;</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#acdc2e97bfeeba3a91d8793992df9451f">ElementListConstIter</a> Iter = <a class="code hl_variable" href="classSVF_1_1SparseBitVector.html#ab094576b73de3c8580ea152f90d63636">Elements</a>.begin();</div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>                Iter != <a class="code hl_variable" href="classSVF_1_1SparseBitVector.html#ab094576b73de3c8580ea152f90d63636">Elements</a>.end();</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>                ++Iter)</div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>            BitCount += Iter-&gt;count();</div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span> </div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>        <span class="keywordflow">return</span> BitCount;</div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    }</div>
 </div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span> </div>
-<div class="foldopen" id="foldopen01164" data-start="{" data-end="}">
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"><a class="line" href="classSVF_1_1SparseBitVector.html#a1b5abe09fd0fcd337385653cb47343c1"> 1164</a></span>    <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">iterator</a> <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a1b5abe09fd0fcd337385653cb47343c1">end</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">iterator</a>(<span class="keyword">this</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>    }</div>
-</div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>};</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span> </div>
+<div class="foldopen" id="foldopen01165" data-start="{" data-end="}">
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"><a class="line" href="classSVF_1_1SparseBitVector.html#abf76d8157c49ddba24bdc9dab3655772"> 1165</a></span>    <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">iterator</a> <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#abf76d8157c49ddba24bdc9dab3655772">begin</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">iterator</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>    }</div>
 </div>
 <div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span> </div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span><span class="comment">// Convenience functions to allow Or and And without dereferencing in the user</span></div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span><span class="comment">// code.</span></div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span> </div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
-<div class="foldopen" id="foldopen01174" data-start="{" data-end="}">
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"><a class="line" href="namespaceSVF.html#a97ff28f5dfd5c31e6ef351de3cdad85d"> 1174</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceSVF.html#a97ff28f5dfd5c31e6ef351de3cdad85d">operator |=</a>(<a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>                        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> *RHS)</div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>{</div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>    <span class="keywordflow">return</span> LHS |= *RHS;</div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>}</div>
+<div class="foldopen" id="foldopen01170" data-start="{" data-end="}">
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"><a class="line" href="classSVF_1_1SparseBitVector.html#a1b5abe09fd0fcd337385653cb47343c1"> 1170</a></span>    <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">iterator</a> <a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a1b5abe09fd0fcd337385653cb47343c1">end</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">iterator</a>(<span class="keyword">this</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>    }</div>
 </div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span> </div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
-<div class="foldopen" id="foldopen01181" data-start="{" data-end="}">
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"><a class="line" href="namespaceSVF.html#a7554dead3b2d1bcdfcb36c213e6735b6"> 1181</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceSVF.html#a97ff28f5dfd5c31e6ef351de3cdad85d">operator |=</a>(<a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> *LHS,</div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>                        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>{</div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>    <span class="keywordflow">return</span> LHS-&gt;operator|=(RHS);</div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>}</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>};</div>
 </div>
-<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span> </div>
-<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
-<div class="foldopen" id="foldopen01188" data-start="{" data-end="}">
-<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"><a class="line" href="namespaceSVF.html#a68ad438785ef7186d76378b98dc83543"> 1188</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceSVF.html#a68ad438785ef7186d76378b98dc83543">operator &amp;=</a>(<a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> *LHS,</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>                        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
-<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>{</div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>    <span class="keywordflow">return</span> LHS-&gt;operator&amp;=(RHS);</div>
-<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>}</div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span> </div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span><span class="comment">// Convenience functions to allow Or and And without dereferencing in the user</span></div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span><span class="comment">// code.</span></div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span> </div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
+<div class="foldopen" id="foldopen01180" data-start="{" data-end="}">
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"><a class="line" href="namespaceSVF.html#a97ff28f5dfd5c31e6ef351de3cdad85d"> 1180</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceSVF.html#a97ff28f5dfd5c31e6ef351de3cdad85d">operator |=</a>(<a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>                        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> *RHS)</div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>{</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>    <span class="keywordflow">return</span> LHS |= *RHS;</div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>}</div>
 </div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span> </div>
-<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
-<div class="foldopen" id="foldopen01195" data-start="{" data-end="}">
-<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"><a class="line" href="namespaceSVF.html#abb5c24d1757132a454a7a693fa958e09"> 1195</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceSVF.html#a68ad438785ef7186d76378b98dc83543">operator &amp;=</a>(<a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
-<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>                        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> *RHS)</div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>{</div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>    <span class="keywordflow">return</span> LHS &amp;= *RHS;</div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>}</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span> </div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
+<div class="foldopen" id="foldopen01187" data-start="{" data-end="}">
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"><a class="line" href="namespaceSVF.html#a7554dead3b2d1bcdfcb36c213e6735b6"> 1187</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceSVF.html#a97ff28f5dfd5c31e6ef351de3cdad85d">operator |=</a>(<a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> *LHS,</div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>                        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>{</div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>    <span class="keywordflow">return</span> LHS-&gt;operator|=(RHS);</div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>}</div>
 </div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span> </div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span><span class="comment">// Convenience functions for infix union, intersection, difference operators.</span></div>
-<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span> </div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span><span class="keyword">inline</span> SparseBitVector&lt;ElementSize&gt;</div>
-<div class="foldopen" id="foldopen01205" data-start="{" data-end="}">
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"><a class="line" href="namespaceSVF.html#a6973fbd3bc128e3bd14d5ca735403665"> 1205</a></span><a class="code hl_function" href="namespaceSVF.html#abed4354cf0282ae30b8330c0e91008d8">operator|</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>          <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
-<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>{</div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>    <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> Result(LHS);</div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>    Result |= RHS;</div>
-<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>    <span class="keywordflow">return</span> Result;</div>
-<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>}</div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span> </div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
+<div class="foldopen" id="foldopen01194" data-start="{" data-end="}">
+<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"><a class="line" href="namespaceSVF.html#a68ad438785ef7186d76378b98dc83543"> 1194</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceSVF.html#a68ad438785ef7186d76378b98dc83543">operator &amp;=</a>(<a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> *LHS,</div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>                        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>{</div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>    <span class="keywordflow">return</span> LHS-&gt;operator&amp;=(RHS);</div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>}</div>
 </div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span> </div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span><span class="keyword">inline</span> SparseBitVector&lt;ElementSize&gt;</div>
-<div class="foldopen" id="foldopen01215" data-start="{" data-end="}">
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"><a class="line" href="namespaceSVF.html#ac0c1c26a0cefc6c9bb3099a32350f85f"> 1215</a></span><a class="code hl_function" href="namespaceSVF.html#a8ca7e84917358976240bc88c3cceb0c2">operator&amp;</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>          <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>{</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>    <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> Result(LHS);</div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    Result &amp;= RHS;</div>
-<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>    <span class="keywordflow">return</span> Result;</div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>}</div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span> </div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
+<div class="foldopen" id="foldopen01201" data-start="{" data-end="}">
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"><a class="line" href="namespaceSVF.html#abb5c24d1757132a454a7a693fa958e09"> 1201</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceSVF.html#a68ad438785ef7186d76378b98dc83543">operator &amp;=</a>(<a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>                        <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> *RHS)</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>{</div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>    <span class="keywordflow">return</span> LHS &amp;= *RHS;</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>}</div>
 </div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span> </div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
-<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span><span class="keyword">inline</span> SparseBitVector&lt;ElementSize&gt;</div>
-<div class="foldopen" id="foldopen01225" data-start="{" data-end="}">
-<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"><a class="line" href="namespaceSVF.html#ad08cc4a6f6993fc8d0c57a41c4d1aa7c"> 1225</a></span><a class="code hl_function" href="namespaceSVF.html#a4bddb7dbd28d3c0deb3cd35e48179a36">operator-</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
-<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>          <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>{</div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>    <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> Result;</div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>    Result.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a8b481ef53a27a351affecab90310b1ef">intersectWithComplement</a>(LHS, RHS);</div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>    <span class="keywordflow">return</span> Result;</div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>}</div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span> </div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span><span class="comment">// Convenience functions for infix union, intersection, difference operators.</span></div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span> </div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span><span class="keyword">inline</span> SparseBitVector&lt;ElementSize&gt;</div>
+<div class="foldopen" id="foldopen01211" data-start="{" data-end="}">
+<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"><a class="line" href="namespaceSVF.html#a6973fbd3bc128e3bd14d5ca735403665"> 1211</a></span><a class="code hl_function" href="namespaceSVF.html#abed4354cf0282ae30b8330c0e91008d8">operator|</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>          <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>{</div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>    <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> Result(LHS);</div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>    Result |= RHS;</div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>    <span class="keywordflow">return</span> Result;</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>}</div>
 </div>
-<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span> </div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span><span class="comment">// Dump a SparseBitVector to a stream</span></div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
-<div class="foldopen" id="foldopen01235" data-start="{" data-end="}">
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"><a class="line" href="namespaceSVF.html#aae350f79ebcb9efd22ec9efa6678cd13"> 1235</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceSVF.html#aae350f79ebcb9efd22ec9efa6678cd13">dump</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS, std::ostream &amp;out)</div>
-<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>{</div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>    out &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span> </div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span><span class="keyword">inline</span> SparseBitVector&lt;ElementSize&gt;</div>
+<div class="foldopen" id="foldopen01221" data-start="{" data-end="}">
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"><a class="line" href="namespaceSVF.html#ac0c1c26a0cefc6c9bb3099a32350f85f"> 1221</a></span><a class="code hl_function" href="namespaceSVF.html#a8ca7e84917358976240bc88c3cceb0c2">operator&amp;</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>          <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>{</div>
+<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> Result(LHS);</div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>    Result &amp;= RHS;</div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>    <span class="keywordflow">return</span> Result;</div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>}</div>
+</div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span> </div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span><span class="keyword">inline</span> SparseBitVector&lt;ElementSize&gt;</div>
+<div class="foldopen" id="foldopen01231" data-start="{" data-end="}">
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"><a class="line" href="namespaceSVF.html#ad08cc4a6f6993fc8d0c57a41c4d1aa7c"> 1231</a></span><a class="code hl_function" href="namespaceSVF.html#a4bddb7dbd28d3c0deb3cd35e48179a36">operator-</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS,</div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>          <span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;RHS)</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>{</div>
+<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>    <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> Result;</div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>    Result.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a8b481ef53a27a351affecab90310b1ef">intersectWithComplement</a>(LHS, RHS);</div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>    <span class="keywordflow">return</span> Result;</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>}</div>
+</div>
 <div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span> </div>
-<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>    <span class="keyword">typename</span> <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">SparseBitVector&lt;ElementSize&gt;::iterator</a> bi = LHS.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#abf76d8157c49ddba24bdc9dab3655772">begin</a>(),</div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>             be = LHS.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a1b5abe09fd0fcd337385653cb47343c1">end</a>();</div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>    <span class="keywordflow">if</span> (bi != be)</div>
-<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>    {</div>
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>        out &lt;&lt; *bi;</div>
-<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>        <span class="keywordflow">for</span> (++bi; bi != be; ++bi)</div>
-<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>        {</div>
-<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>            out &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; *bi;</div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>        }</div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>    }</div>
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>    out &lt;&lt; <span class="stringliteral">&quot;]\n&quot;</span>;</div>
-<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>}</div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span><span class="comment">// Dump a SparseBitVector to a stream</span></div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> ElementSize&gt;</div>
+<div class="foldopen" id="foldopen01241" data-start="{" data-end="}">
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"><a class="line" href="namespaceSVF.html#aae350f79ebcb9efd22ec9efa6678cd13"> 1241</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceSVF.html#aae350f79ebcb9efd22ec9efa6678cd13">dump</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SparseBitVector&lt;ElementSize&gt;</a> &amp;LHS, std::ostream &amp;out)</div>
+<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>{</div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>    out &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span> </div>
+<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>    <span class="keyword">typename</span> <a class="code hl_typedef" href="classSVF_1_1SparseBitVector.html#a0421e3336137b232edc442ece00a8a9c">SparseBitVector&lt;ElementSize&gt;::iterator</a> bi = LHS.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#abf76d8157c49ddba24bdc9dab3655772">begin</a>(),</div>
+<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>             be = LHS.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a1b5abe09fd0fcd337385653cb47343c1">end</a>();</div>
+<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>    <span class="keywordflow">if</span> (bi != be)</div>
+<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>    {</div>
+<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>        out &lt;&lt; *bi;</div>
+<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>        <span class="keywordflow">for</span> (++bi; bi != be; ++bi)</div>
+<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>        {</div>
+<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>            out &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; *bi;</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>        }</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>    }</div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>    out &lt;&lt; <span class="stringliteral">&quot;]\n&quot;</span>;</div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>}</div>
 </div>
-<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span> </div>
-<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>} <span class="comment">// End namespace SVF</span></div>
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span></div>
-<div class="foldopen" id="foldopen01255" data-start="{" data-end="};">
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html"> 1255</a></span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> N&gt; <span class="keyword">struct </span>std::hash&lt;<a class="code hl_namespace" href="namespaceSVF.html">SVF</a>::SparseBitVector&lt;N&gt;&gt;</div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>{</div>
-<div class="foldopen" id="foldopen01257" data-start="{" data-end="}">
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html#a450703a33d907a011a97ee50818b0b4d"> 1257</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html#a450703a33d907a011a97ee50818b0b4d">operator()</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SVF::SparseBitVector&lt;N&gt;</a>&amp; sbv)<span class="keyword"> const</span></div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>        <a class="code hl_struct" href="structSVF_1_1Hash.html">SVF::Hash&lt;std::pair&lt;std::pair&lt;size_t, size_t&gt;</a>, <span class="keywordtype">size_t</span>&gt;&gt; h;</div>
-<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>        <span class="keywordflow">return</span> h(std::make_pair(std::make_pair(sbv.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a9f96e6a886fa69e07cda5dbfaed8b7c9">count</a>(), sbv.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a06eeb5543eb160e08f9a41e30b52d963">find_first</a>()),</div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>                                sbv.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#ac969500db9dbd1c63b6a47a1d9a5abba">find_last</a>()));</div>
-<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>    }</div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span> </div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>} <span class="comment">// End namespace SVF</span></div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span></div>
+<div class="foldopen" id="foldopen01261" data-start="{" data-end="};">
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html"> 1261</a></span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> N&gt; <span class="keyword">struct </span>std::hash&lt;<a class="code hl_namespace" href="namespaceSVF.html">SVF</a>::SparseBitVector&lt;N&gt;&gt;</div>
+<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>{</div>
+<div class="foldopen" id="foldopen01263" data-start="{" data-end="}">
+<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html#a450703a33d907a011a97ee50818b0b4d"> 1263</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html#a450703a33d907a011a97ee50818b0b4d">operator()</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSVF_1_1SparseBitVector.html">SVF::SparseBitVector&lt;N&gt;</a>&amp; sbv)<span class="keyword"> const</span></div>
+<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>        <a class="code hl_struct" href="structSVF_1_1Hash.html">SVF::Hash&lt;std::pair&lt;std::pair&lt;size_t, size_t&gt;</a>, <span class="keywordtype">size_t</span>&gt;&gt; h;</div>
+<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>        <span class="keywordflow">return</span> h(std::make_pair(std::make_pair(sbv.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a9f96e6a886fa69e07cda5dbfaed8b7c9">count</a>(), sbv.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#a06eeb5543eb160e08f9a41e30b52d963">find_first</a>()),</div>
+<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>                                sbv.<a class="code hl_function" href="classSVF_1_1SparseBitVector.html#ac969500db9dbd1c63b6a47a1d9a5abba">find_last</a>()));</div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>    }</div>
 </div>
-<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>};</div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>};</div>
 </div>
-<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span> </div>
-<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span><span class="preprocessor">#endif </span><span class="comment">// SPARSEBITVECTOR_H</span></div>
+<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span> </div>
+<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span><span class="preprocessor">#endif </span><span class="comment">// SPARSEBITVECTOR_H</span></div>
 <div class="ttc" id="aHash_8h_html"><div class="ttname"><a href="Hash_8h.html">Hash.h</a></div></div>
 <div class="ttc" id="acJSON_8h_html_ad43c3812e6d13e0518d9f8b8f463ffcf"><div class="ttname"><a href="cJSON_8h.html#ad43c3812e6d13e0518d9f8b8f463ffcf">count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8h_source.html#l00216">cJSON.h:216</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_1_1SparseBitVectorIterator_html"><div class="ttname"><a href="classSVF_1_1SparseBitVector_1_1SparseBitVectorIterator.html">SVF::SparseBitVector::SparseBitVectorIterator</a></div><div class="ttdef"><b>Definition</b> <a href="#l00578">SparseBitVector.h:579</a></div></div>
@@ -1490,7 +1498,7 @@ $(function() {
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a112f2ede1240c95f9fe810f2882fab80"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a112f2ede1240c95f9fe810f2882fab80">SVF::SparseBitVector::test</a></div><div class="ttdeci">bool test(unsigned Idx) const</div><div class="ttdef"><b>Definition</b> <a href="#l00750">SparseBitVector.h:750</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a1558d1431f987fa42e99126e171a5a00"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a1558d1431f987fa42e99126e171a5a00">SVF::SparseBitVector::operator&amp;=</a></div><div class="ttdeci">bool operator&amp;=(const SparseBitVector &amp;RHS)</div><div class="ttdef"><b>Definition</b> <a href="#l00888">SparseBitVector.h:888</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a16756e0545fd3d50ab89f45a2e83bb79"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a16756e0545fd3d50ab89f45a2e83bb79">SVF::SparseBitVector::intersects</a></div><div class="ttdeci">bool intersects(const SparseBitVector&lt; ElementSize &gt; *RHS) const</div><div class="ttdef"><b>Definition</b> <a href="#l01075">SparseBitVector.h:1075</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a1b5abe09fd0fcd337385653cb47343c1"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a1b5abe09fd0fcd337385653cb47343c1">SVF::SparseBitVector::end</a></div><div class="ttdeci">iterator end() const</div><div class="ttdef"><b>Definition</b> <a href="#l01164">SparseBitVector.h:1164</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a1b5abe09fd0fcd337385653cb47343c1"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a1b5abe09fd0fcd337385653cb47343c1">SVF::SparseBitVector::end</a></div><div class="ttdeci">iterator end() const</div><div class="ttdef"><b>Definition</b> <a href="#l01170">SparseBitVector.h:1170</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a25dbb40c4ed108a7f897898b8ce5fd5b"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a25dbb40c4ed108a7f897898b8ce5fd5b">SVF::SparseBitVector::ElementList</a></div><div class="ttdeci">std::list&lt; SparseBitVectorElement&lt; ElementSize &gt; &gt; ElementList</div><div class="ttdef"><b>Definition</b> <a href="#l00504">SparseBitVector.h:504</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a28d0e5b43ad556d079b5b0ec58e898e4"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a28d0e5b43ad556d079b5b0ec58e898e4">SVF::SparseBitVector::intersectWithComplement</a></div><div class="ttdeci">void intersectWithComplement(const SparseBitVector&lt; ElementSize &gt; *RHS1, const SparseBitVector&lt; ElementSize &gt; *RHS2)</div><div class="ttdef"><b>Definition</b> <a href="#l01069">SparseBitVector.h:1069</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a355247d17d1c17b857b4ee572e19b91f"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a355247d17d1c17b857b4ee572e19b91f">SVF::SparseBitVector::test_and_set</a></div><div class="ttdeci">bool test_and_set(unsigned Idx)</div><div class="ttdef"><b>Definition</b> <a href="#l00820">SparseBitVector.h:820</a></div></div>
@@ -1504,14 +1512,15 @@ $(function() {
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a816d96bad46fde34b3848bf08dc6cdf5"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a816d96bad46fde34b3848bf08dc6cdf5">SVF::SparseBitVector::operator==</a></div><div class="ttdeci">bool operator==(const SparseBitVector &amp;RHS) const</div><div class="ttdef"><b>Definition</b> <a href="#l00836">SparseBitVector.h:836</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a8b481ef53a27a351affecab90310b1ef"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a8b481ef53a27a351affecab90310b1ef">SVF::SparseBitVector::intersectWithComplement</a></div><div class="ttdeci">bool intersectWithComplement(const SparseBitVector &amp;RHS)</div><div class="ttdef"><b>Definition</b> <a href="#l00949">SparseBitVector.h:949</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a8bb2c6e68fadfae0428bc6ce5d63ad88"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a8bb2c6e68fadfae0428bc6ce5d63ad88">SVF::SparseBitVector::SparseBitVector</a></div><div class="ttdeci">SparseBitVector(SparseBitVector &amp;&amp;RHS) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00723">SparseBitVector.h:723</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a8ecf746c9b37934090a97cd75c902c9a"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a8ecf746c9b37934090a97cd75c902c9a">SVF::SparseBitVector::isSingleElement</a></div><div class="ttdeci">bool isSingleElement() const</div><div class="ttdef"><b>Definition</b> <a href="#l01149">SparseBitVector.h:1149</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a9cb4261779da0cbeb8d09b8fbd5cf557"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a9cb4261779da0cbeb8d09b8fbd5cf557">SVF::SparseBitVector::SparseBitVector</a></div><div class="ttdeci">SparseBitVector(const SparseBitVector &amp;RHS)</div><div class="ttdef"><b>Definition</b> <a href="#l00721">SparseBitVector.h:721</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a9f96e6a886fa69e07cda5dbfaed8b7c9"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a9f96e6a886fa69e07cda5dbfaed8b7c9">SVF::SparseBitVector::count</a></div><div class="ttdeci">unsigned count() const</div><div class="ttdef"><b>Definition</b> <a href="#l01148">SparseBitVector.h:1148</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SparseBitVector_html_a9f96e6a886fa69e07cda5dbfaed8b7c9"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#a9f96e6a886fa69e07cda5dbfaed8b7c9">SVF::SparseBitVector::count</a></div><div class="ttdeci">unsigned count() const</div><div class="ttdef"><b>Definition</b> <a href="#l01154">SparseBitVector.h:1154</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_aaab743995d5dd1359b0f541dacc1dcf3"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#aaab743995d5dd1359b0f541dacc1dcf3">SVF::SparseBitVector::intersectWithComplement</a></div><div class="ttdeci">bool intersectWithComplement(const SparseBitVector&lt; ElementSize &gt; *RHS) const</div><div class="ttdef"><b>Definition</b> <a href="#l01007">SparseBitVector.h:1007</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_aaac61c8dd5477ecc6e76c664bf45c0b0"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#aaac61c8dd5477ecc6e76c664bf45c0b0">SVF::SparseBitVector::FindLowerBound</a></div><div class="ttdeci">ElementListIter FindLowerBound(unsigned ElementIndex)</div><div class="ttdef"><b>Definition</b> <a href="#l00571">SparseBitVector.h:571</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_ab094576b73de3c8580ea152f90d63636"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#ab094576b73de3c8580ea152f90d63636">SVF::SparseBitVector::Elements</a></div><div class="ttdeci">ElementList Elements</div><div class="ttdef"><b>Definition</b> <a href="#l00512">SparseBitVector.h:512</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_ab4787f96a5f7cab926f9c7426aa92fc1"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#ab4787f96a5f7cab926f9c7426aa92fc1">SVF::SparseBitVector::FindLowerBoundConst</a></div><div class="ttdeci">ElementListConstIter FindLowerBoundConst(unsigned ElementIndex) const</div><div class="ttdef"><b>Definition</b> <a href="#l00567">SparseBitVector.h:567</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_abbd0e0cf759fad7858224ed8a63aade8"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#abbd0e0cf759fad7858224ed8a63aade8">SVF::SparseBitVector::contains</a></div><div class="ttdeci">bool contains(const SparseBitVector&lt; ElementSize &gt; &amp;RHS) const</div><div class="ttdef"><b>Definition</b> <a href="#l01117">SparseBitVector.h:1117</a></div></div>
-<div class="ttc" id="aclassSVF_1_1SparseBitVector_html_abf76d8157c49ddba24bdc9dab3655772"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#abf76d8157c49ddba24bdc9dab3655772">SVF::SparseBitVector::begin</a></div><div class="ttdeci">iterator begin() const</div><div class="ttdef"><b>Definition</b> <a href="#l01159">SparseBitVector.h:1159</a></div></div>
+<div class="ttc" id="aclassSVF_1_1SparseBitVector_html_abf76d8157c49ddba24bdc9dab3655772"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#abf76d8157c49ddba24bdc9dab3655772">SVF::SparseBitVector::begin</a></div><div class="ttdeci">iterator begin() const</div><div class="ttdef"><b>Definition</b> <a href="#l01165">SparseBitVector.h:1165</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_abfb058304c4b174d162a94c0cc26d2f7"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#abfb058304c4b174d162a94c0cc26d2f7">SVF::SparseBitVector::operator!=</a></div><div class="ttdeci">bool operator!=(const SparseBitVector &amp;RHS) const</div><div class="ttdef"><b>Definition</b> <a href="#l00831">SparseBitVector.h:831</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_ac969500db9dbd1c63b6a47a1d9a5abba"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#ac969500db9dbd1c63b6a47a1d9a5abba">SVF::SparseBitVector::find_last</a></div><div class="ttdeci">int find_last() const</div><div class="ttdef"><b>Definition</b> <a href="#l01134">SparseBitVector.h:1134</a></div></div>
 <div class="ttc" id="aclassSVF_1_1SparseBitVector_html_acdc2e97bfeeba3a91d8793992df9451f"><div class="ttname"><a href="classSVF_1_1SparseBitVector.html#acdc2e97bfeeba3a91d8793992df9451f">SVF::SparseBitVector::ElementListConstIter</a></div><div class="ttdeci">typename ElementList::const_iterator ElementListConstIter</div><div class="ttdef"><b>Definition</b> <a href="#l00506">SparseBitVector.h:506</a></div></div>
@@ -1524,11 +1533,11 @@ $(function() {
 <div class="ttc" id="anamespaceSVF_html"><div class="ttname"><a href="namespaceSVF.html">SVF</a></div><div class="ttdoc">for isBitcode</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00069">BasicTypes.h:70</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a4bddb7dbd28d3c0deb3cd35e48179a36"><div class="ttname"><a href="namespaceSVF.html#a4bddb7dbd28d3c0deb3cd35e48179a36">SVF::operator-</a></div><div class="ttdeci">IntervalValue operator-(const IntervalValue &amp;lhs, const IntervalValue &amp;rhs)</div><div class="ttdoc">Subtract IntervalValues.</div><div class="ttdef"><b>Definition</b> <a href="IntervalValue_8h_source.html#l00565">IntervalValue.h:565</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a5cb5811bab8e04773dfa21ad919df461"><div class="ttname"><a href="namespaceSVF.html#a5cb5811bab8e04773dfa21ad919df461">SVF::countTrailingZeros</a></div><div class="ttdeci">unsigned countTrailingZeros(T Val, ZeroBehavior ZB=ZB_Width)</div><div class="ttdef"><b>Definition</b> <a href="#l00121">SparseBitVector.h:121</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_a68ad438785ef7186d76378b98dc83543"><div class="ttname"><a href="namespaceSVF.html#a68ad438785ef7186d76378b98dc83543">SVF::operator&amp;=</a></div><div class="ttdeci">bool operator&amp;=(SparseBitVector&lt; ElementSize &gt; *LHS, const SparseBitVector&lt; ElementSize &gt; &amp;RHS)</div><div class="ttdef"><b>Definition</b> <a href="#l01188">SparseBitVector.h:1188</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a68ad438785ef7186d76378b98dc83543"><div class="ttname"><a href="namespaceSVF.html#a68ad438785ef7186d76378b98dc83543">SVF::operator&amp;=</a></div><div class="ttdeci">bool operator&amp;=(SparseBitVector&lt; ElementSize &gt; *LHS, const SparseBitVector&lt; ElementSize &gt; &amp;RHS)</div><div class="ttdef"><b>Definition</b> <a href="#l01194">SparseBitVector.h:1194</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a8ca7e84917358976240bc88c3cceb0c2"><div class="ttname"><a href="namespaceSVF.html#a8ca7e84917358976240bc88c3cceb0c2">SVF::operator&amp;</a></div><div class="ttdeci">IntervalValue operator&amp;(const IntervalValue &amp;lhs, const IntervalValue &amp;rhs)</div><div class="ttdoc">Bitwise AND of IntervalValues.</div><div class="ttdef"><b>Definition</b> <a href="IntervalValue_8h_source.html#l00949">IntervalValue.h:949</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_a90b263fd2f541eca78135078114cabda"><div class="ttname"><a href="namespaceSVF.html#a90b263fd2f541eca78135078114cabda">SVF::Value</a></div><div class="ttdeci">llvm::Value Value</div><div class="ttdoc">LLVM Basic classes.</div><div class="ttdef"><b>Definition</b> <a href="BasicTypes_8h_source.html#l00080">BasicTypes.h:80</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_a97ff28f5dfd5c31e6ef351de3cdad85d"><div class="ttname"><a href="namespaceSVF.html#a97ff28f5dfd5c31e6ef351de3cdad85d">SVF::operator|=</a></div><div class="ttdeci">bool operator|=(SparseBitVector&lt; ElementSize &gt; &amp;LHS, const SparseBitVector&lt; ElementSize &gt; *RHS)</div><div class="ttdef"><b>Definition</b> <a href="#l01174">SparseBitVector.h:1174</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_aae350f79ebcb9efd22ec9efa6678cd13"><div class="ttname"><a href="namespaceSVF.html#aae350f79ebcb9efd22ec9efa6678cd13">SVF::dump</a></div><div class="ttdeci">void dump(const SparseBitVector&lt; ElementSize &gt; &amp;LHS, std::ostream &amp;out)</div><div class="ttdef"><b>Definition</b> <a href="#l01235">SparseBitVector.h:1235</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a97ff28f5dfd5c31e6ef351de3cdad85d"><div class="ttname"><a href="namespaceSVF.html#a97ff28f5dfd5c31e6ef351de3cdad85d">SVF::operator|=</a></div><div class="ttdeci">bool operator|=(SparseBitVector&lt; ElementSize &gt; &amp;LHS, const SparseBitVector&lt; ElementSize &gt; *RHS)</div><div class="ttdef"><b>Definition</b> <a href="#l01180">SparseBitVector.h:1180</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_aae350f79ebcb9efd22ec9efa6678cd13"><div class="ttname"><a href="namespaceSVF.html#aae350f79ebcb9efd22ec9efa6678cd13">SVF::dump</a></div><div class="ttdeci">void dump(const SparseBitVector&lt; ElementSize &gt; &amp;LHS, std::ostream &amp;out)</div><div class="ttdef"><b>Definition</b> <a href="#l01241">SparseBitVector.h:1241</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_abed4354cf0282ae30b8330c0e91008d8"><div class="ttname"><a href="namespaceSVF.html#abed4354cf0282ae30b8330c0e91008d8">SVF::operator|</a></div><div class="ttdeci">IntervalValue operator|(const IntervalValue &amp;lhs, const IntervalValue &amp;rhs)</div><div class="ttdoc">Bitwise OR of IntervalValues.</div><div class="ttdef"><b>Definition</b> <a href="IntervalValue_8h_source.html#l00976">IntervalValue.h:976</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_ae86e9ecca38512426d0bade3a95d0a51"><div class="ttname"><a href="namespaceSVF.html#ae86e9ecca38512426d0bade3a95d0a51">SVF::countPopulation</a></div><div class="ttdeci">unsigned countPopulation(T Value)</div><div class="ttdef"><b>Definition</b> <a href="#l00241">SparseBitVector.h:241</a></div></div>
 <div class="ttc" id="anamespaceSVF_html_af5b6ec9770091c42227a45491b00b349"><div class="ttname"><a href="namespaceSVF.html#af5b6ec9770091c42227a45491b00b349">SVF::ZeroBehavior</a></div><div class="ttdeci">ZeroBehavior</div><div class="ttdoc">The behavior an operation has on an input of 0.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">SparseBitVector.h:39</a></div></div>
@@ -1572,7 +1581,7 @@ $(function() {
 <div class="ttc" id="astructSVF_1_1SparseBitVectorElement_html_af9014ab5077a2d9c1aed1e9b1460390d"><div class="ttname"><a href="structSVF_1_1SparseBitVectorElement.html#af9014ab5077a2d9c1aed1e9b1460390d">SVF::SparseBitVectorElement::BitWord</a></div><div class="ttdeci">unsigned long BitWord</div><div class="ttdef"><b>Definition</b> <a href="#l00265">SparseBitVector.h:265</a></div></div>
 <div class="ttc" id="astructSVF_1_1TrailingZerosCounter_html"><div class="ttname"><a href="structSVF_1_1TrailingZerosCounter.html">SVF::TrailingZerosCounter</a></div><div class="ttdef"><b>Definition</b> <a href="#l00048">SparseBitVector.h:49</a></div></div>
 <div class="ttc" id="astructSVF_1_1TrailingZerosCounter_html_aa8b0814bfce87a935ef57f870fe1ee83"><div class="ttname"><a href="structSVF_1_1TrailingZerosCounter.html#aa8b0814bfce87a935ef57f870fe1ee83">SVF::TrailingZerosCounter::count</a></div><div class="ttdeci">static unsigned count(T Val, ZeroBehavior)</div><div class="ttdef"><b>Definition</b> <a href="#l00050">SparseBitVector.h:50</a></div></div>
-<div class="ttc" id="astructstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4_html_a450703a33d907a011a97ee50818b0b4d"><div class="ttname"><a href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html#a450703a33d907a011a97ee50818b0b4d">std::hash&lt; SVF::SparseBitVector&lt; N &gt; &gt;::operator()</a></div><div class="ttdeci">size_t operator()(const SVF::SparseBitVector&lt; N &gt; &amp;sbv) const</div><div class="ttdef"><b>Definition</b> <a href="#l01257">SparseBitVector.h:1257</a></div></div>
+<div class="ttc" id="astructstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4_html_a450703a33d907a011a97ee50818b0b4d"><div class="ttname"><a href="structstd_1_1hash_3_01SVF_1_1SparseBitVector_3_01N_01_4_01_4.html#a450703a33d907a011a97ee50818b0b4d">std::hash&lt; SVF::SparseBitVector&lt; N &gt; &gt;::operator()</a></div><div class="ttdeci">size_t operator()(const SVF::SparseBitVector&lt; N &gt; &amp;sbv) const</div><div class="ttdef"><b>Definition</b> <a href="#l01263">SparseBitVector.h:1263</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
