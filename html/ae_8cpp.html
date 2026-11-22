@@ -91,6 +91,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="RelationSolver_8h_source.html">AE/Core/RelationSolver.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="AbstractInterpretation_8h_source.html">AE/Svfexe/AbstractInterpretation.h</a>&quot;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div>
 <p><a href="ae_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -128,65 +129,69 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ae_8cpp_source.html#l00854">854</a> of file <a class="el" href="ae_8cpp_source.html">ae.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  855</span>{</div>
-<div class="line"><span class="lineno">  856</span>    <span class="keywordtype">int</span> arg_num = 0;</div>
-<div class="line"><span class="lineno">  857</span>    <span class="keywordtype">int</span> extraArgc = 3;</div>
-<div class="line"><span class="lineno">  858</span>    <span class="keywordtype">char</span> **arg_value = <span class="keyword">new</span> <span class="keywordtype">char</span> *[argc + extraArgc];</div>
-<div class="line"><span class="lineno">  859</span>    <span class="keywordflow">for</span> (; arg_num &lt; argc; ++arg_num)</div>
-<div class="line"><span class="lineno">  860</span>    {</div>
-<div class="line"><span class="lineno">  861</span>        arg_value[arg_num] = argv[arg_num];</div>
-<div class="line"><span class="lineno">  862</span>    }</div>
-<div class="line"><span class="lineno">  863</span>    <span class="comment">// add extra options</span></div>
-<div class="line"><span class="lineno">  864</span>    arg_value[arg_num++] = (<span class="keywordtype">char</span>*) <span class="stringliteral">&quot;-model-consts=true&quot;</span>;</div>
-<div class="line"><span class="lineno">  865</span>    arg_value[arg_num++] = (<span class="keywordtype">char</span>*) <span class="stringliteral">&quot;-model-arrays=true&quot;</span>;</div>
-<div class="line"><span class="lineno">  866</span>    arg_value[arg_num++] = (<span class="keywordtype">char</span>*) <span class="stringliteral">&quot;-pre-field-sensitive=false&quot;</span>;</div>
-<div class="line"><span class="lineno">  867</span>    assert(arg_num == (argc + extraArgc) &amp;&amp; <span class="stringliteral">&quot;more extra arguments? Change the value of extraArgc&quot;</span>);</div>
-<div class="line"><span class="lineno">  868</span> </div>
-<div class="line"><span class="lineno">  869</span>    std::vector&lt;std::string&gt; moduleNameVec;</div>
-<div class="line"><span class="lineno">  870</span>    moduleNameVec = <a class="code hl_function" href="classOptionBase.html#aa019019194cd5d96d42b186658eb68e6">OptionBase::parseOptions</a>(</div>
-<div class="line"><span class="lineno">  871</span>                        arg_num, arg_value, <span class="stringliteral">&quot;Static Symbolic Execution&quot;</span>, <span class="stringliteral">&quot;[options] &lt;input-bitcode...&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  872</span>                    );</div>
-<div class="line"><span class="lineno">  873</span>    <span class="keyword">delete</span>[] arg_value;</div>
-<div class="line"><span class="lineno">  874</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac8fc4394b98492dc1212cfeb21286ff4">SYMABS</a>())</div>
-<div class="line"><span class="lineno">  875</span>    {</div>
-<div class="line"><span class="lineno">  876</span>        <a class="code hl_class" href="classSymblicAbstractionTest.html">SymblicAbstractionTest</a> saTest;</div>
-<div class="line"><span class="lineno">  877</span>        saTest.<a class="code hl_function" href="classSymblicAbstractionTest.html#a66155c2b52131a7782382d8e5da560fc">testsValidation</a>();</div>
-<div class="line"><span class="lineno">  878</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  879</span>    }</div>
-<div class="line"><span class="lineno">  880</span> </div>
-<div class="line"><span class="lineno">  881</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae005c0651caefe412c15c8467a192e59">AETEST</a>())</div>
-<div class="line"><span class="lineno">  882</span>    {</div>
-<div class="line"><span class="lineno">  883</span>        <a class="code hl_class" href="classAETest.html">AETest</a> aeTest;</div>
-<div class="line"><span class="lineno">  884</span>        aeTest.<a class="code hl_function" href="classAETest.html#a431259b0eee376a1f6542b6b68af3aa9">testBinaryOpStmt</a>();</div>
-<div class="line"><span class="lineno">  885</span>        aeTest.<a class="code hl_function" href="classAETest.html#ab0426e154ca46ddf7ca6a442026b7188">testAbsState</a>();</div>
-<div class="line"><span class="lineno">  886</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  887</span>    }</div>
-<div class="line"><span class="lineno">  888</span> </div>
-<div class="line"><span class="lineno">  889</span>    <a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a23db3116f8a2bd250018368a8c111651">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#aa1319eef9cb0d777180c35657a2cc79f">buildSVFModule</a>(moduleNameVec);</div>
-<div class="line"><span class="lineno">  890</span>    <a class="code hl_class" href="classSVF_1_1PAGBuilder.html">PAGBuilder</a> builder;</div>
-<div class="line"><span class="lineno">  891</span>    <a class="code hl_class" href="classSVF_1_1PAG.html">PAG</a>* pag = builder.<a class="code hl_function" href="classSVF_1_1PAGBuilder.html#a8103787f6e23997113edbc16dfd9d55e">build</a>();</div>
-<div class="line"><span class="lineno">  892</span>    <span class="comment">// Run Andersen&#39;s to resolve indirect calls, then update PAG with resolved targets.</span></div>
-<div class="line"><span class="lineno">  893</span>    <span class="comment">// The Andersen singleton will be reused inside AbstractInterpretation::runOnModule().</span></div>
-<div class="line"><span class="lineno">  894</span>    <a class="code hl_class" href="classSVF_1_1AndersenWaveDiff.html">AndersenWaveDiff</a>* ander = <a class="code hl_function" href="classSVF_1_1AndersenWaveDiff.html#a0e48efec4d3f5095cde2c0ce99db5006">AndersenWaveDiff::createAndersenWaveDiff</a>(pag);</div>
-<div class="line"><span class="lineno">  895</span>    builder.<a class="code hl_function" href="classSVF_1_1PAGBuilder.html#a9b5e21fe3b8aa7e580d96d6b16b8ad48">updateCallGraph</a>(ander-&gt;<a class="code hl_function" href="classSVF_1_1PointerAnalysis.html#a6edd5b249cf584da0dfd18f62ec65deb">getCallGraph</a>());</div>
-<div class="line"><span class="lineno">  896</span>    <a class="code hl_class" href="classSVF_1_1AbstractInterpretation.html">AbstractInterpretation</a>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
-<div class="line"><span class="lineno">  897</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#afbe432aabda95308e2c190a04d227a6d">Options::BufferOverflowCheck</a>())</div>
-<div class="line"><span class="lineno">  898</span>        ae.<a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#a4b0f966257d229c042644a0dbd4d560c">addDetector</a>(std::make_unique&lt;BufOverflowDetector&gt;());</div>
-<div class="line"><span class="lineno">  899</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#ab4480b231706c1a8c1e33a22566e1b1b">Options::NullDerefCheck</a>())</div>
-<div class="line"><span class="lineno">  900</span>        ae.<a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#a4b0f966257d229c042644a0dbd4d560c">addDetector</a>(std::make_unique&lt;NullptrDerefDetector&gt;());</div>
-<div class="line"><span class="lineno">  901</span>    ae.<a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#a41cae60f42fd2876e5c273454fe53f55">runOnModule</a>();</div>
-<div class="line"><span class="lineno">  902</span> </div>
-<div class="line"><span class="lineno">  903</span>    <a class="code hl_function" href="classSVF_1_1AndersenWaveDiff.html#a5da6abb1a7f0ef3e3871ea6e5a623625">AndersenWaveDiff::releaseAndersenWaveDiff</a>();</div>
-<div class="line"><span class="lineno">  904</span>    <a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a2f8e91c075d90be66412a079fe73e936">LLVMModuleSet::releaseLLVMModuleSet</a>();</div>
-<div class="line"><span class="lineno">  905</span> </div>
-<div class="line"><span class="lineno">  906</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  907</span>}</div>
+<p class="definition">Definition at line <a class="el" href="ae_8cpp_source.html#l00925">925</a> of file <a class="el" href="ae_8cpp_source.html">ae.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  926</span>{</div>
+<div class="line"><span class="lineno">  927</span>    <span class="keywordtype">int</span> arg_num = 0;</div>
+<div class="line"><span class="lineno">  928</span>    <span class="keywordtype">int</span> extraArgc = 3;</div>
+<div class="line"><span class="lineno">  929</span>    <span class="keywordtype">char</span> **arg_value = <span class="keyword">new</span> <span class="keywordtype">char</span> *[argc + extraArgc];</div>
+<div class="line"><span class="lineno">  930</span>    <span class="keywordflow">for</span> (; arg_num &lt; argc; ++arg_num)</div>
+<div class="line"><span class="lineno">  931</span>    {</div>
+<div class="line"><span class="lineno">  932</span>        arg_value[arg_num] = argv[arg_num];</div>
+<div class="line"><span class="lineno">  933</span>    }</div>
+<div class="line"><span class="lineno">  934</span>    <span class="comment">// add extra options</span></div>
+<div class="line"><span class="lineno">  935</span>    arg_value[arg_num++] = (<span class="keywordtype">char</span>*) <span class="stringliteral">&quot;-model-consts=true&quot;</span>;</div>
+<div class="line"><span class="lineno">  936</span>    arg_value[arg_num++] = (<span class="keywordtype">char</span>*) <span class="stringliteral">&quot;-model-arrays=true&quot;</span>;</div>
+<div class="line"><span class="lineno">  937</span>    arg_value[arg_num++] = (<span class="keywordtype">char</span>*) <span class="stringliteral">&quot;-pre-field-sensitive=false&quot;</span>;</div>
+<div class="line"><span class="lineno">  938</span>    assert(arg_num == (argc + extraArgc) &amp;&amp; <span class="stringliteral">&quot;more extra arguments? Change the value of extraArgc&quot;</span>);</div>
+<div class="line"><span class="lineno">  939</span> </div>
+<div class="line"><span class="lineno">  940</span>    std::vector&lt;std::string&gt; moduleNameVec;</div>
+<div class="line"><span class="lineno">  941</span>    moduleNameVec = <a class="code hl_function" href="classOptionBase.html#aa019019194cd5d96d42b186658eb68e6">OptionBase::parseOptions</a>(</div>
+<div class="line"><span class="lineno">  942</span>                        arg_num, arg_value, <span class="stringliteral">&quot;Static Symbolic Execution&quot;</span>, <span class="stringliteral">&quot;[options] &lt;input-bitcode...&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  943</span>                    );</div>
+<div class="line"><span class="lineno">  944</span>    <span class="keyword">delete</span>[] arg_value;</div>
+<div class="line"><span class="lineno">  945</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ac8fc4394b98492dc1212cfeb21286ff4">SYMABS</a>())</div>
+<div class="line"><span class="lineno">  946</span>    {</div>
+<div class="line"><span class="lineno">  947</span>        <a class="code hl_class" href="classSymblicAbstractionTest.html">SymblicAbstractionTest</a> saTest;</div>
+<div class="line"><span class="lineno">  948</span>        saTest.<a class="code hl_function" href="classSymblicAbstractionTest.html#a66155c2b52131a7782382d8e5da560fc">testsValidation</a>();</div>
+<div class="line"><span class="lineno">  949</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  950</span>    }</div>
+<div class="line"><span class="lineno">  951</span> </div>
+<div class="line"><span class="lineno">  952</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae005c0651caefe412c15c8467a192e59">AETEST</a>())</div>
+<div class="line"><span class="lineno">  953</span>    {</div>
+<div class="line"><span class="lineno">  954</span>        <a class="code hl_class" href="classAETest.html">AETest</a> aeTest;</div>
+<div class="line"><span class="lineno">  955</span>        aeTest.<a class="code hl_function" href="classAETest.html#a1cecedc59c91d2a255fd8eeb604724c3">testBoundedIntBoundaryArithmetic</a>();</div>
+<div class="line"><span class="lineno">  956</span>        aeTest.<a class="code hl_function" href="classAETest.html#a42fcfe3dded94d44c5c6a64f1bc46825">testIntervalBoundaryArithmetic</a>();</div>
+<div class="line"><span class="lineno">  957</span>        aeTest.<a class="code hl_function" href="classAETest.html#a431259b0eee376a1f6542b6b68af3aa9">testBinaryOpStmt</a>();</div>
+<div class="line"><span class="lineno">  958</span>        aeTest.<a class="code hl_function" href="classAETest.html#ab0426e154ca46ddf7ca6a442026b7188">testAbsState</a>();</div>
+<div class="line"><span class="lineno">  959</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  960</span>    }</div>
+<div class="line"><span class="lineno">  961</span> </div>
+<div class="line"><span class="lineno">  962</span>    <a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a23db3116f8a2bd250018368a8c111651">LLVMModuleSet::getLLVMModuleSet</a>()-&gt;<a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#aa1319eef9cb0d777180c35657a2cc79f">buildSVFModule</a>(moduleNameVec);</div>
+<div class="line"><span class="lineno">  963</span>    <a class="code hl_class" href="classSVF_1_1PAGBuilder.html">PAGBuilder</a> builder;</div>
+<div class="line"><span class="lineno">  964</span>    <a class="code hl_class" href="classSVF_1_1PAG.html">PAG</a>* pag = builder.<a class="code hl_function" href="classSVF_1_1PAGBuilder.html#a8103787f6e23997113edbc16dfd9d55e">build</a>();</div>
+<div class="line"><span class="lineno">  965</span>    <span class="comment">// Run Andersen&#39;s to resolve indirect calls, then update PAG with resolved targets.</span></div>
+<div class="line"><span class="lineno">  966</span>    <span class="comment">// The Andersen singleton will be reused inside AbstractInterpretation::runOnModule().</span></div>
+<div class="line"><span class="lineno">  967</span>    <a class="code hl_class" href="classSVF_1_1AndersenWaveDiff.html">AndersenWaveDiff</a>* ander = <a class="code hl_function" href="classSVF_1_1AndersenWaveDiff.html#a0e48efec4d3f5095cde2c0ce99db5006">AndersenWaveDiff::createAndersenWaveDiff</a>(pag);</div>
+<div class="line"><span class="lineno">  968</span>    builder.<a class="code hl_function" href="classSVF_1_1PAGBuilder.html#a9b5e21fe3b8aa7e580d96d6b16b8ad48">updateCallGraph</a>(ander-&gt;<a class="code hl_function" href="classSVF_1_1PointerAnalysis.html#a6edd5b249cf584da0dfd18f62ec65deb">getCallGraph</a>());</div>
+<div class="line"><span class="lineno">  969</span>    <a class="code hl_class" href="classSVF_1_1AbstractInterpretation.html">AbstractInterpretation</a>&amp; ae = <a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#addeccac0aae4bd2928c18f1a5cb23e1d">AbstractInterpretation::getAEInstance</a>();</div>
+<div class="line"><span class="lineno">  970</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#afbe432aabda95308e2c190a04d227a6d">Options::BufferOverflowCheck</a>())</div>
+<div class="line"><span class="lineno">  971</span>        ae.<a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#a4b0f966257d229c042644a0dbd4d560c">addDetector</a>(std::make_unique&lt;BufOverflowDetector&gt;());</div>
+<div class="line"><span class="lineno">  972</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#ab4480b231706c1a8c1e33a22566e1b1b">Options::NullDerefCheck</a>())</div>
+<div class="line"><span class="lineno">  973</span>        ae.<a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#a4b0f966257d229c042644a0dbd4d560c">addDetector</a>(std::make_unique&lt;NullptrDerefDetector&gt;());</div>
+<div class="line"><span class="lineno">  974</span>    ae.<a class="code hl_function" href="classSVF_1_1AbstractInterpretation.html#a41cae60f42fd2876e5c273454fe53f55">runOnModule</a>();</div>
+<div class="line"><span class="lineno">  975</span> </div>
+<div class="line"><span class="lineno">  976</span>    <a class="code hl_function" href="classSVF_1_1AndersenWaveDiff.html#a5da6abb1a7f0ef3e3871ea6e5a623625">AndersenWaveDiff::releaseAndersenWaveDiff</a>();</div>
+<div class="line"><span class="lineno">  977</span>    <a class="code hl_function" href="classSVF_1_1LLVMModuleSet.html#a2f8e91c075d90be66412a079fe73e936">LLVMModuleSet::releaseLLVMModuleSet</a>();</div>
+<div class="line"><span class="lineno">  978</span> </div>
+<div class="line"><span class="lineno">  979</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  980</span>}</div>
 <div class="ttc" id="aae_8cpp_html_ac8fc4394b98492dc1212cfeb21286ff4"><div class="ttname"><a href="#ac8fc4394b98492dc1212cfeb21286ff4">SYMABS</a></div><div class="ttdeci">static Option&lt; bool &gt; SYMABS(&quot;symabs&quot;, &quot;symbolic abstraction test&quot;, false)</div></div>
 <div class="ttc" id="aae_8cpp_html_ae005c0651caefe412c15c8467a192e59"><div class="ttname"><a href="#ae005c0651caefe412c15c8467a192e59">AETEST</a></div><div class="ttdeci">static Option&lt; bool &gt; AETEST(&quot;aetest&quot;, &quot;abstract execution basic function test&quot;, false)</div></div>
-<div class="ttc" id="aclassAETest_html"><div class="ttname"><a href="classAETest.html">AETest</a></div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00626">ae.cpp:627</a></div></div>
-<div class="ttc" id="aclassAETest_html_a431259b0eee376a1f6542b6b68af3aa9"><div class="ttname"><a href="classAETest.html#a431259b0eee376a1f6542b6b68af3aa9">AETest::testBinaryOpStmt</a></div><div class="ttdeci">void testBinaryOpStmt()</div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00633">ae.cpp:633</a></div></div>
-<div class="ttc" id="aclassAETest_html_ab0426e154ca46ddf7ca6a442026b7188"><div class="ttname"><a href="classAETest.html#ab0426e154ca46ddf7ca6a442026b7188">AETest::testAbsState</a></div><div class="ttdeci">void testAbsState()</div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00834">ae.cpp:834</a></div></div>
+<div class="ttc" id="aclassAETest_html"><div class="ttname"><a href="classAETest.html">AETest</a></div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00627">ae.cpp:628</a></div></div>
+<div class="ttc" id="aclassAETest_html_a1cecedc59c91d2a255fd8eeb604724c3"><div class="ttname"><a href="classAETest.html#a1cecedc59c91d2a255fd8eeb604724c3">AETest::testBoundedIntBoundaryArithmetic</a></div><div class="ttdeci">void testBoundedIntBoundaryArithmetic()</div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00634">ae.cpp:634</a></div></div>
+<div class="ttc" id="aclassAETest_html_a42fcfe3dded94d44c5c6a64f1bc46825"><div class="ttname"><a href="classAETest.html#a42fcfe3dded94d44c5c6a64f1bc46825">AETest::testIntervalBoundaryArithmetic</a></div><div class="ttdeci">void testIntervalBoundaryArithmetic()</div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00672">ae.cpp:672</a></div></div>
+<div class="ttc" id="aclassAETest_html_a431259b0eee376a1f6542b6b68af3aa9"><div class="ttname"><a href="classAETest.html#a431259b0eee376a1f6542b6b68af3aa9">AETest::testBinaryOpStmt</a></div><div class="ttdeci">void testBinaryOpStmt()</div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00704">ae.cpp:704</a></div></div>
+<div class="ttc" id="aclassAETest_html_ab0426e154ca46ddf7ca6a442026b7188"><div class="ttname"><a href="classAETest.html#ab0426e154ca46ddf7ca6a442026b7188">AETest::testAbsState</a></div><div class="ttdeci">void testAbsState()</div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00905">ae.cpp:905</a></div></div>
 <div class="ttc" id="aclassOptionBase_html_aa019019194cd5d96d42b186658eb68e6"><div class="ttname"><a href="classOptionBase.html#aa019019194cd5d96d42b186658eb68e6">OptionBase::parseOptions</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; parseOptions(int argc, char *argv[], std::string description, std::string callFormat)</div><div class="ttdef"><b>Definition</b> <a href="CommandLine_8h_source.html#l00075">CommandLine.h:75</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html"><div class="ttname"><a href="classSVF_1_1AbstractInterpretation.html">SVF::AbstractInterpretation</a></div><div class="ttdef"><b>Definition</b> <a href="AbstractInterpretation_8h_source.html#l00060">AbstractInterpretation.h:61</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a41cae60f42fd2876e5c273454fe53f55"><div class="ttname"><a href="classSVF_1_1AbstractInterpretation.html#a41cae60f42fd2876e5c273454fe53f55">SVF::AbstractInterpretation::runOnModule</a></div><div class="ttdeci">virtual void runOnModule()</div><div class="ttdef"><b>Definition</b> <a href="AbstractInterpretation_8cpp_source.html#l00044">AbstractInterpretation.cpp:44</a></div></div>
@@ -205,8 +210,8 @@ Variables</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1PAGBuilder_html_a9b5e21fe3b8aa7e580d96d6b16b8ad48"><div class="ttname"><a href="classSVF_1_1PAGBuilder.html#a9b5e21fe3b8aa7e580d96d6b16b8ad48">SVF::PAGBuilder::updateCallGraph</a></div><div class="ttdeci">void updateCallGraph(CallGraph *callgraph)</div><div class="ttdoc">connect PAG edges based on callgraph</div><div class="ttdef"><b>Definition</b> <a href="PAGBuilder_8cpp_source.html#l02228">PAGBuilder.cpp:2228</a></div></div>
 <div class="ttc" id="aclassSVF_1_1PAG_html"><div class="ttname"><a href="classSVF_1_1PAG.html">SVF::PAG</a></div><div class="ttdef"><b>Definition</b> <a href="PAG_8h_source.html#l00045">PAG.h:46</a></div></div>
 <div class="ttc" id="aclassSVF_1_1PointerAnalysis_html_a6edd5b249cf584da0dfd18f62ec65deb"><div class="ttname"><a href="classSVF_1_1PointerAnalysis.html#a6edd5b249cf584da0dfd18f62ec65deb">SVF::PointerAnalysis::getCallGraph</a></div><div class="ttdeci">CallGraph * getCallGraph() const</div><div class="ttdoc">Return call graph.</div><div class="ttdef"><b>Definition</b> <a href="PointerAnalysis_8h_source.html#l00122">PointerAnalysis.h:122</a></div></div>
-<div class="ttc" id="aclassSymblicAbstractionTest_html"><div class="ttname"><a href="classSymblicAbstractionTest.html">SymblicAbstractionTest</a></div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00055">ae.cpp:56</a></div></div>
-<div class="ttc" id="aclassSymblicAbstractionTest_html_a66155c2b52131a7782382d8e5da560fc"><div class="ttname"><a href="classSymblicAbstractionTest.html#a66155c2b52131a7782382d8e5da560fc">SymblicAbstractionTest::testsValidation</a></div><div class="ttdeci">void testsValidation()</div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00604">ae.cpp:604</a></div></div>
+<div class="ttc" id="aclassSymblicAbstractionTest_html"><div class="ttname"><a href="classSymblicAbstractionTest.html">SymblicAbstractionTest</a></div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00056">ae.cpp:57</a></div></div>
+<div class="ttc" id="aclassSymblicAbstractionTest_html_a66155c2b52131a7782382d8e5da560fc"><div class="ttname"><a href="classSymblicAbstractionTest.html#a66155c2b52131a7782382d8e5da560fc">SymblicAbstractionTest::testsValidation</a></div><div class="ttdeci">void testsValidation()</div><div class="ttdef"><b>Definition</b> <a href="ae_8cpp_source.html#l00605">ae.cpp:605</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
