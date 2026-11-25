@@ -1402,40 +1402,40 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00432">432</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  433</span>{</div>
-<div class="line"><span class="lineno">  434</span>    <span class="keyword">const</span> ICFGNode* node = addr-&gt;<a class="code hl_function" href="classSVF_1_1SVFStmt.html#a0b41a75760c44c42e38bce7635747638">getICFGNode</a>();</div>
-<div class="line"><span class="lineno">  435</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> ObjVar* objvar = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ObjVar&gt;</a>(addr-&gt;<a class="code hl_function" href="classSVF_1_1AddrStmt.html#a3bbe31ee011863d768b7b2e9f9156c5f">getRHSVar</a>()))</div>
-<div class="line"><span class="lineno">  436</span>    {</div>
-<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getBaseObject(objvar-&gt;getId())-&gt;isConstantByteSize())</div>
-<div class="line"><span class="lineno">  438</span>        {</div>
-<div class="line"><span class="lineno">  439</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> size = <a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getBaseObject(objvar-&gt;getId())-&gt;getByteSizeOfObj();</div>
-<div class="line"><span class="lineno">  440</span>            <span class="keywordflow">return</span> {size, size};</div>
-<div class="line"><span class="lineno">  441</span>        }</div>
-<div class="line"><span class="lineno">  442</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  443</span>        {</div>
-<div class="line"><span class="lineno">  444</span>            <span class="keyword">const</span> std::vector&lt;SVFVar*&gt;&amp; sizes = addr-&gt;<a class="code hl_function" href="classSVF_1_1AddrStmt.html#ae57a3eb7d150009b62b2a4189b2328ce">getArrSize</a>();</div>
-<div class="line"><span class="lineno">  445</span>            <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> elementSize = 1;</div>
-<div class="line"><span class="lineno">  446</span>            <a class="code hl_typedef" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a> upper = elementSize;</div>
-<div class="line"><span class="lineno">  447</span>            <a class="code hl_typedef" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a> lower = sizes.empty() ? 0 : elementSize;</div>
-<div class="line"><span class="lineno">  448</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFVar* value : sizes)</div>
-<div class="line"><span class="lineno">  449</span>            {</div>
-<div class="line"><span class="lineno">  450</span>                <span class="keyword">const</span> AbstractValue&amp; sizeVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(value, node);</div>
-<div class="line"><span class="lineno">  451</span>                IntervalValue itv = sizeVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a7d8235bbc1f52d33c6cd94898544a986">getInterval</a>();</div>
-<div class="line"><span class="lineno">  452</span>                <span class="keywordflow">if</span> (itv.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a674f9bb98053f8658e246863d6561072">isBottom</a>())</div>
-<div class="line"><span class="lineno">  453</span>                    itv = IntervalValue(0u, <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>());</div>
-<div class="line"><span class="lineno">  454</span>                <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> lb = std::max&lt;s64_t&gt;(0, itv.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#af474918db973b38af8eb4c7793624363">lb</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>());</div>
-<div class="line"><span class="lineno">  455</span>                lower = lower * lb &gt; <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>()</div>
-<div class="line"><span class="lineno">  456</span>                        ? <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() : lower * lb;</div>
-<div class="line"><span class="lineno">  457</span>                upper = upper * itv.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>() &gt; <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>()</div>
-<div class="line"><span class="lineno">  458</span>                        ? <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() : upper * itv.ub().getIntNumeral();</div>
-<div class="line"><span class="lineno">  459</span>            }</div>
-<div class="line"><span class="lineno">  460</span>            <span class="keywordflow">return</span> {<span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a><span class="keyword">&gt;</span>(std::min(lower, upper)), <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a><span class="keyword">&gt;</span>(upper)};</div>
-<div class="line"><span class="lineno">  461</span>        }</div>
-<div class="line"><span class="lineno">  462</span>    }</div>
-<div class="line"><span class="lineno">  463</span>    assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Addr rhs value is not ObjVar&quot;</span>);</div>
-<div class="line"><span class="lineno">  464</span>    abort();</div>
-<div class="line"><span class="lineno">  465</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00442">442</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  443</span>{</div>
+<div class="line"><span class="lineno">  444</span>    <span class="keyword">const</span> ICFGNode* node = addr-&gt;<a class="code hl_function" href="classSVF_1_1SVFStmt.html#a0b41a75760c44c42e38bce7635747638">getICFGNode</a>();</div>
+<div class="line"><span class="lineno">  445</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> ObjVar* objvar = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ObjVar&gt;</a>(addr-&gt;<a class="code hl_function" href="classSVF_1_1AddrStmt.html#a3bbe31ee011863d768b7b2e9f9156c5f">getRHSVar</a>()))</div>
+<div class="line"><span class="lineno">  446</span>    {</div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getBaseObject(objvar-&gt;getId())-&gt;isConstantByteSize())</div>
+<div class="line"><span class="lineno">  448</span>        {</div>
+<div class="line"><span class="lineno">  449</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> size = <a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getBaseObject(objvar-&gt;getId())-&gt;getByteSizeOfObj();</div>
+<div class="line"><span class="lineno">  450</span>            <span class="keywordflow">return</span> {size, size};</div>
+<div class="line"><span class="lineno">  451</span>        }</div>
+<div class="line"><span class="lineno">  452</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  453</span>        {</div>
+<div class="line"><span class="lineno">  454</span>            <span class="keyword">const</span> std::vector&lt;SVFVar*&gt;&amp; sizes = addr-&gt;<a class="code hl_function" href="classSVF_1_1AddrStmt.html#ae57a3eb7d150009b62b2a4189b2328ce">getArrSize</a>();</div>
+<div class="line"><span class="lineno">  455</span>            <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> elementSize = 1;</div>
+<div class="line"><span class="lineno">  456</span>            <a class="code hl_typedef" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a> upper = elementSize;</div>
+<div class="line"><span class="lineno">  457</span>            <a class="code hl_typedef" href="namespaceSVF.html#a366625858f450a1ea5f985a3c83e0f14">u64_t</a> lower = sizes.empty() ? 0 : elementSize;</div>
+<div class="line"><span class="lineno">  458</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> SVFVar* value : sizes)</div>
+<div class="line"><span class="lineno">  459</span>            {</div>
+<div class="line"><span class="lineno">  460</span>                <span class="keyword">const</span> AbstractValue&amp; sizeVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(value, node);</div>
+<div class="line"><span class="lineno">  461</span>                IntervalValue itv = sizeVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a7d8235bbc1f52d33c6cd94898544a986">getInterval</a>();</div>
+<div class="line"><span class="lineno">  462</span>                <span class="keywordflow">if</span> (itv.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a674f9bb98053f8658e246863d6561072">isBottom</a>())</div>
+<div class="line"><span class="lineno">  463</span>                    itv = IntervalValue(0u, <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>());</div>
+<div class="line"><span class="lineno">  464</span>                <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> lb = std::max&lt;s64_t&gt;(0, itv.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#af474918db973b38af8eb4c7793624363">lb</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>());</div>
+<div class="line"><span class="lineno">  465</span>                lower = lower * lb &gt; <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>()</div>
+<div class="line"><span class="lineno">  466</span>                        ? <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() : lower * lb;</div>
+<div class="line"><span class="lineno">  467</span>                upper = upper * itv.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>() &gt; <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>()</div>
+<div class="line"><span class="lineno">  468</span>                        ? <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() : upper * itv.ub().getIntNumeral();</div>
+<div class="line"><span class="lineno">  469</span>            }</div>
+<div class="line"><span class="lineno">  470</span>            <span class="keywordflow">return</span> {<span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a><span class="keyword">&gt;</span>(std::min(lower, upper)), <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a><span class="keyword">&gt;</span>(upper)};</div>
+<div class="line"><span class="lineno">  471</span>        }</div>
+<div class="line"><span class="lineno">  472</span>    }</div>
+<div class="line"><span class="lineno">  473</span>    assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Addr rhs value is not ObjVar&quot;</span>);</div>
+<div class="line"><span class="lineno">  474</span>    abort();</div>
+<div class="line"><span class="lineno">  475</span>}</div>
 <div class="ttc" id="aclassSVF_1_1AddrStmt_html_a3bbe31ee011863d768b7b2e9f9156c5f"><div class="ttname"><a href="classSVF_1_1AddrStmt.html#a3bbe31ee011863d768b7b2e9f9156c5f">SVF::AddrStmt::getRHSVar</a></div><div class="ttdeci">const ObjVar * getRHSVar() const</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8cpp_source.html#l00307">SVFStatements.cpp:307</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AddrStmt_html_ae57a3eb7d150009b62b2a4189b2328ce"><div class="ttname"><a href="classSVF_1_1AddrStmt.html#ae57a3eb7d150009b62b2a4189b2328ce">SVF::AddrStmt::getArrSize</a></div><div class="ttdeci">const std::vector&lt; SVFVar * &gt; &amp; getArrSize() const</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8h_source.html#l00416">SVFStatements.h:416</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BoundedInt_html_a8064f9d3186fe77dba1c32d13c8f779b"><div class="ttname"><a href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">SVF::BoundedInt::getIntNumeral</a></div><div class="ttdeci">s64_t getIntNumeral() const</div><div class="ttdef"><b>Definition</b> <a href="NumericValue_8h_source.html#l00683">NumericValue.h:683</a></div></div>
@@ -1556,65 +1556,65 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00256">256</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  257</span>{</div>
-<div class="line"><span class="lineno">  258</span>    <span class="keyword">const</span> ICFGNode* node = gep-&gt;<a class="code hl_function" href="classSVF_1_1SVFStmt.html#a0b41a75760c44c42e38bce7635747638">getICFGNode</a>();</div>
-<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">if</span> (gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#ab6f37c073e4755c4b8bb3ed6365687f4">isConstantOffset</a>())</div>
-<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">return</span> IntervalValue((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>)gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a28a7ca818584abdc2d345b41d592c5dc">accumulateConstantByteOffset</a>());</div>
-<div class="line"><span class="lineno">  261</span> </div>
-<div class="line"><span class="lineno">  262</span>    IntervalValue res(0);</div>
-<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a348de09a7ccd04d1fa76fa6b250249ba">getOffsetVarAndGepTypePairVec</a>().size() - 1; i &gt;= 0; i--)</div>
-<div class="line"><span class="lineno">  264</span>    {</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keyword">const</span> ValVar* idxOperandVar = gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a348de09a7ccd04d1fa76fa6b250249ba">getOffsetVarAndGepTypePairVec</a>()[i].first;</div>
-<div class="line"><span class="lineno">  266</span>        <span class="keyword">const</span> SVFType* idxOperandType = gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a348de09a7ccd04d1fa76fa6b250249ba">getOffsetVarAndGepTypePairVec</a>()[i].second;</div>
+<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00262">262</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  263</span>{</div>
+<div class="line"><span class="lineno">  264</span>    <span class="keyword">const</span> ICFGNode* node = gep-&gt;<a class="code hl_function" href="classSVF_1_1SVFStmt.html#a0b41a75760c44c42e38bce7635747638">getICFGNode</a>();</div>
+<div class="line"><span class="lineno">  265</span>    <span class="keywordflow">if</span> (gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#ab6f37c073e4755c4b8bb3ed6365687f4">isConstantOffset</a>())</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">return</span> IntervalValue((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>)gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a28a7ca818584abdc2d345b41d592c5dc">accumulateConstantByteOffset</a>());</div>
 <div class="line"><span class="lineno">  267</span> </div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;SVFArrayType&gt;</a>(idxOperandType) || <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;SVFPointerType&gt;</a>(idxOperandType))</div>
-<div class="line"><span class="lineno">  269</span>        {</div>
-<div class="line"><span class="lineno">  270</span>            <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> elemByteSize = 1;</div>
-<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> SVFArrayType* arrOperandType = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;SVFArrayType&gt;</a>(idxOperandType))</div>
-<div class="line"><span class="lineno">  272</span>                elemByteSize = arrOperandType-&gt;getTypeOfElement()-&gt;getByteSize();</div>
-<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;SVFPointerType&gt;</a>(idxOperandType))</div>
-<div class="line"><span class="lineno">  274</span>                elemByteSize = gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a9279fd4c0dcdcb47c6e76580d4144d9a">getAccessPath</a>().<a class="code hl_function" href="classSVF_1_1AccessPath.html#a69a4c9a2bd7be5fc02e383ec6baa2112">gepSrcPointeeType</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFType.html#a95b8031f1e15d49c7d68628be1d05aae">getByteSize</a>();</div>
-<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  276</span>                assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;idxOperandType must be ArrType or PtrType&quot;</span>);</div>
-<div class="line"><span class="lineno">  277</span> </div>
-<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> ConstIntValVar* op = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ConstIntValVar&gt;</a>(idxOperandVar))</div>
-<div class="line"><span class="lineno">  279</span>            {</div>
-<div class="line"><span class="lineno">  280</span>                <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> lb = (double)<a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() / elemByteSize &gt;= op-&gt;getSExtValue()</div>
-<div class="line"><span class="lineno">  281</span>                           ? op-&gt;getSExtValue() * elemByteSize</div>
-<div class="line"><span class="lineno">  282</span>                           : <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
-<div class="line"><span class="lineno">  283</span>                res = res + IntervalValue(lb, lb);</div>
-<div class="line"><span class="lineno">  284</span>            }</div>
-<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  286</span>            {</div>
-<div class="line"><span class="lineno">  287</span>                IntervalValue idxVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(idxOperandVar, node).<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a7d8235bbc1f52d33c6cd94898544a986">getInterval</a>();</div>
-<div class="line"><span class="lineno">  288</span>                <span class="keywordflow">if</span> (idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a674f9bb98053f8658e246863d6561072">isBottom</a>())</div>
-<div class="line"><span class="lineno">  289</span>                    res = res + IntervalValue(0, 0);</div>
-<div class="line"><span class="lineno">  290</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  291</span>                {</div>
-<div class="line"><span class="lineno">  292</span>                    <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> ub = (idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>().getIntNumeral() &lt; 0) ? 0</div>
-<div class="line"><span class="lineno">  293</span>                               : (double)<a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() / elemByteSize &gt;= idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>()</div>
-<div class="line"><span class="lineno">  294</span>                               ? elemByteSize * idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>()</div>
-<div class="line"><span class="lineno">  295</span>                               : <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
-<div class="line"><span class="lineno">  296</span>                    <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> lb = (idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#af474918db973b38af8eb4c7793624363">lb</a>().getIntNumeral() &lt; 0) ? 0</div>
-<div class="line"><span class="lineno">  297</span>                               : (double)<a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() / elemByteSize &gt;= idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#af474918db973b38af8eb4c7793624363">lb</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>()</div>
-<div class="line"><span class="lineno">  298</span>                               ? elemByteSize * idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#af474918db973b38af8eb4c7793624363">lb</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>()</div>
-<div class="line"><span class="lineno">  299</span>                               : <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
-<div class="line"><span class="lineno">  300</span>                    res = res + IntervalValue(lb, ub);</div>
-<div class="line"><span class="lineno">  301</span>                }</div>
-<div class="line"><span class="lineno">  302</span>            }</div>
-<div class="line"><span class="lineno">  303</span>        }</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> SVFStructType* structOperandType = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;SVFStructType&gt;</a>(idxOperandType))</div>
-<div class="line"><span class="lineno">  305</span>        {</div>
-<div class="line"><span class="lineno">  306</span>            res = res + IntervalValue(gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a9279fd4c0dcdcb47c6e76580d4144d9a">getAccessPath</a>().<a class="code hl_function" href="classSVF_1_1AccessPath.html#aa5f5947489ce5342230882676f5aeb92">getStructFieldOffset</a>(idxOperandVar, structOperandType));</div>
-<div class="line"><span class="lineno">  307</span>        }</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  309</span>        {</div>
-<div class="line"><span class="lineno">  310</span>            assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;gep type pair only support arr/ptr/struct&quot;</span>);</div>
-<div class="line"><span class="lineno">  311</span>        }</div>
-<div class="line"><span class="lineno">  312</span>    }</div>
-<div class="line"><span class="lineno">  313</span>    <span class="keywordflow">return</span> res;</div>
-<div class="line"><span class="lineno">  314</span>}</div>
+<div class="line"><span class="lineno">  268</span>    IntervalValue res(0);</div>
+<div class="line"><span class="lineno">  269</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a348de09a7ccd04d1fa76fa6b250249ba">getOffsetVarAndGepTypePairVec</a>().size() - 1; i &gt;= 0; i--)</div>
+<div class="line"><span class="lineno">  270</span>    {</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keyword">const</span> ValVar* idxOperandVar = gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a348de09a7ccd04d1fa76fa6b250249ba">getOffsetVarAndGepTypePairVec</a>()[i].first;</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keyword">const</span> SVFType* idxOperandType = gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a348de09a7ccd04d1fa76fa6b250249ba">getOffsetVarAndGepTypePairVec</a>()[i].second;</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;SVFArrayType&gt;</a>(idxOperandType) || <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;SVFPointerType&gt;</a>(idxOperandType))</div>
+<div class="line"><span class="lineno">  275</span>        {</div>
+<div class="line"><span class="lineno">  276</span>            <a class="code hl_typedef" href="namespaceSVF.html#ad42bff8d0a7d60a085aa32d10f4955af">u32_t</a> elemByteSize = 1;</div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> SVFArrayType* arrOperandType = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;SVFArrayType&gt;</a>(idxOperandType))</div>
+<div class="line"><span class="lineno">  278</span>                elemByteSize = arrOperandType-&gt;getTypeOfElement()-&gt;getByteSize();</div>
+<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;SVFPointerType&gt;</a>(idxOperandType))</div>
+<div class="line"><span class="lineno">  280</span>                elemByteSize = gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a9279fd4c0dcdcb47c6e76580d4144d9a">getAccessPath</a>().<a class="code hl_function" href="classSVF_1_1AccessPath.html#a69a4c9a2bd7be5fc02e383ec6baa2112">gepSrcPointeeType</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFType.html#a95b8031f1e15d49c7d68628be1d05aae">getByteSize</a>();</div>
+<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  282</span>                assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;idxOperandType must be ArrType or PtrType&quot;</span>);</div>
+<div class="line"><span class="lineno">  283</span> </div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> ConstIntValVar* op = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;ConstIntValVar&gt;</a>(idxOperandVar))</div>
+<div class="line"><span class="lineno">  285</span>            {</div>
+<div class="line"><span class="lineno">  286</span>                <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> lb = (double)<a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() / elemByteSize &gt;= op-&gt;getSExtValue()</div>
+<div class="line"><span class="lineno">  287</span>                           ? op-&gt;getSExtValue() * elemByteSize</div>
+<div class="line"><span class="lineno">  288</span>                           : <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
+<div class="line"><span class="lineno">  289</span>                res = res + IntervalValue(lb, lb);</div>
+<div class="line"><span class="lineno">  290</span>            }</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  292</span>            {</div>
+<div class="line"><span class="lineno">  293</span>                IntervalValue idxVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(idxOperandVar, node).<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a7d8235bbc1f52d33c6cd94898544a986">getInterval</a>();</div>
+<div class="line"><span class="lineno">  294</span>                <span class="keywordflow">if</span> (idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a674f9bb98053f8658e246863d6561072">isBottom</a>())</div>
+<div class="line"><span class="lineno">  295</span>                    res = res + IntervalValue(0, 0);</div>
+<div class="line"><span class="lineno">  296</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  297</span>                {</div>
+<div class="line"><span class="lineno">  298</span>                    <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> ub = (idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>().getIntNumeral() &lt; 0) ? 0</div>
+<div class="line"><span class="lineno">  299</span>                               : (double)<a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() / elemByteSize &gt;= idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>()</div>
+<div class="line"><span class="lineno">  300</span>                               ? elemByteSize * idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#a34768e22c4d4d650ffc2d9599af7dedd">ub</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>()</div>
+<div class="line"><span class="lineno">  301</span>                               : <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
+<div class="line"><span class="lineno">  302</span>                    <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> lb = (idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#af474918db973b38af8eb4c7793624363">lb</a>().getIntNumeral() &lt; 0) ? 0</div>
+<div class="line"><span class="lineno">  303</span>                               : (double)<a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() / elemByteSize &gt;= idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#af474918db973b38af8eb4c7793624363">lb</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>()</div>
+<div class="line"><span class="lineno">  304</span>                               ? elemByteSize * idxVal.<a class="code hl_function" href="classSVF_1_1IntervalValue.html#af474918db973b38af8eb4c7793624363">lb</a>().<a class="code hl_function" href="classSVF_1_1BoundedInt.html#a8064f9d3186fe77dba1c32d13c8f779b">getIntNumeral</a>()</div>
+<div class="line"><span class="lineno">  305</span>                               : <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
+<div class="line"><span class="lineno">  306</span>                    res = res + IntervalValue(lb, ub);</div>
+<div class="line"><span class="lineno">  307</span>                }</div>
+<div class="line"><span class="lineno">  308</span>            }</div>
+<div class="line"><span class="lineno">  309</span>        }</div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> SVFStructType* structOperandType = <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#aefeaa1d67563fbf00b9f06a848072df1">SVFUtil::dyn_cast&lt;SVFStructType&gt;</a>(idxOperandType))</div>
+<div class="line"><span class="lineno">  311</span>        {</div>
+<div class="line"><span class="lineno">  312</span>            res = res + IntervalValue(gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a9279fd4c0dcdcb47c6e76580d4144d9a">getAccessPath</a>().<a class="code hl_function" href="classSVF_1_1AccessPath.html#aa5f5947489ce5342230882676f5aeb92">getStructFieldOffset</a>(idxOperandVar, structOperandType));</div>
+<div class="line"><span class="lineno">  313</span>        }</div>
+<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  315</span>        {</div>
+<div class="line"><span class="lineno">  316</span>            assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;gep type pair only support arr/ptr/struct&quot;</span>);</div>
+<div class="line"><span class="lineno">  317</span>        }</div>
+<div class="line"><span class="lineno">  318</span>    }</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><span class="lineno">  320</span>}</div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a69a4c9a2bd7be5fc02e383ec6baa2112"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a69a4c9a2bd7be5fc02e383ec6baa2112">SVF::AccessPath::gepSrcPointeeType</a></div><div class="ttdeci">const SVFType * gepSrcPointeeType() const</div><div class="ttdef"><b>Definition</b> <a href="AccessPath_8h_source.html#l00114">AccessPath.h:114</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_aa5f5947489ce5342230882676f5aeb92"><div class="ttname"><a href="classSVF_1_1AccessPath.html#aa5f5947489ce5342230882676f5aeb92">SVF::AccessPath::getStructFieldOffset</a></div><div class="ttdeci">u32_t getStructFieldOffset(const ValVar *idxOperandVar, const SVFStructType *idxOperandType) const</div><div class="ttdoc">Return byte offset from the beginning of the structure to the field where it is located for struct ty...</div><div class="ttdef"><b>Definition</b> <a href="AccessPath_8cpp_source.html#l00100">AccessPath.cpp:100</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepStmt_html_a28a7ca818584abdc2d345b41d592c5dc"><div class="ttname"><a href="classSVF_1_1GepStmt.html#a28a7ca818584abdc2d345b41d592c5dc">SVF::GepStmt::accumulateConstantByteOffset</a></div><div class="ttdeci">APOffset accumulateConstantByteOffset() const</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8h_source.html#l00654">SVFStatements.h:654</a></div></div>
@@ -1679,24 +1679,30 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno">  234</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSVF_1_1Options.html#a13011832b3717029a7e377283c4351b7">Options::ModelArrays</a>())</div>
 <div class="line"><span class="lineno">  235</span>            {</div>
 <div class="line"><span class="lineno">  236</span>                <span class="keyword">const</span> std::vector&lt;u32_t&gt;&amp; so = <a class="code hl_function" href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1PAGBase.html#ac05948eabda1ed280380186f8ebb4647">getTypeInfo</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>)-&gt;<a class="code hl_function" href="classSVF_1_1StInfo.html#a2bf5a09c142ab9e543bf8f85ba1e8501">getFlattenedElemIdxVec</a>();</div>
-<div class="line"><span class="lineno">  237</span>                <span class="keywordflow">if</span> (so.empty() || idxUb &gt;= (<a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a>)so.size() || idxLb &lt; 0)</div>
-<div class="line"><span class="lineno">  238</span>                    idxLb = idxUb = 0;</div>
-<div class="line"><span class="lineno">  239</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  240</span>                {</div>
-<div class="line"><span class="lineno">  241</span>                    idxLb = <a class="code hl_function" href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1PAGBase.html#a82db771454f09224faa501266b729886">getFlattenedElemIdx</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>, idxLb);</div>
-<div class="line"><span class="lineno">  242</span>                    idxUb = <a class="code hl_function" href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1PAGBase.html#a82db771454f09224faa501266b729886">getFlattenedElemIdx</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>, idxUb);</div>
-<div class="line"><span class="lineno">  243</span>                }</div>
-<div class="line"><span class="lineno">  244</span>            }</div>
-<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  246</span>                idxLb = idxUb = 0;</div>
-<div class="line"><span class="lineno">  247</span>        }</div>
-<div class="line"><span class="lineno">  248</span>        res = res + IntervalValue(idxLb, idxUb);</div>
-<div class="line"><span class="lineno">  249</span>    }</div>
-<div class="line"><span class="lineno">  250</span>    res.meet_with(IntervalValue((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>)0, (<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>)<a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>()));</div>
-<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">if</span> (res.isBottom())</div>
-<div class="line"><span class="lineno">  252</span>        res = IntervalValue(0);</div>
-<div class="line"><span class="lineno">  253</span>    <span class="keywordflow">return</span> res;</div>
-<div class="line"><span class="lineno">  254</span>}</div>
+<div class="line"><span class="lineno">  237</span>                <span class="comment">// Return the range of fields this array access may touch.</span></div>
+<div class="line"><span class="lineno">  238</span>                <span class="comment">// First keep only the indices that fall inside the array.</span></div>
+<div class="line"><span class="lineno">  239</span>                <span class="comment">// For example, for int a[4] (valid indices [0, 3]) and access a[i]:</span></div>
+<div class="line"><span class="lineno">  240</span>                <span class="comment">//   i = ⊤      -&gt; [0, 3]   (a load joins a[0]..a[3])</span></div>
+<div class="line"><span class="lineno">  241</span>                <span class="comment">//   i = [1, 4] -&gt; [1, 3]</span></div>
+<div class="line"><span class="lineno">  242</span>                <span class="comment">// If no index falls inside the array, conservatively return ⊤:</span></div>
+<div class="line"><span class="lineno">  243</span>                <span class="comment">//   i = [5, 6] -&gt; ⊤</span></div>
+<div class="line"><span class="lineno">  244</span>                idxLb = std::max&lt;s64_t&gt;(idxLb, 0);</div>
+<div class="line"><span class="lineno">  245</span>                idxUb = std::min(idxUb, <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a><span class="keyword">&gt;</span>(so.size()) - 1);</div>
+<div class="line"><span class="lineno">  246</span>                <span class="keywordflow">if</span> (idxLb &gt; idxUb)</div>
+<div class="line"><span class="lineno">  247</span>                    <span class="keywordflow">return</span> <a class="code hl_function" href="classSVF_1_1IntervalValue.html#add3acad151d5af6c9a5f692f7a01e65b">IntervalValue::top</a>();</div>
+<div class="line"><span class="lineno">  248</span>                idxLb = <a class="code hl_function" href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1PAGBase.html#a82db771454f09224faa501266b729886">getFlattenedElemIdx</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>, idxLb);</div>
+<div class="line"><span class="lineno">  249</span>                idxUb = <a class="code hl_function" href="classSVF_1_1PAG.html#a33a51406069e9dee0006e25295bf9220">PAG::getPAG</a>()-&gt;<a class="code hl_function" href="classSVF_1_1PAGBase.html#a82db771454f09224faa501266b729886">getFlattenedElemIdx</a>(<a class="code hl_variable" href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a>, idxUb);</div>
+<div class="line"><span class="lineno">  250</span>            }</div>
+<div class="line"><span class="lineno">  251</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  252</span>                idxLb = idxUb = 0;</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+<div class="line"><span class="lineno">  254</span>        res = res + IntervalValue(idxLb, idxUb);</div>
+<div class="line"><span class="lineno">  255</span>    }</div>
+<div class="line"><span class="lineno">  256</span>    res.meet_with(IntervalValue((<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>)0, (<a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a>)<a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>()));</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">if</span> (res.isBottom())</div>
+<div class="line"><span class="lineno">  258</span>        res = IntervalValue(0);</div>
+<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><span class="lineno">  260</span>}</div>
 <div class="ttc" id="acJSON_8cpp_html_a3f9a0d3265a6254722587175dac3e4dc"><div class="ttname"><a href="cJSON_8cpp.html#a3f9a0d3265a6254722587175dac3e4dc">type</a></div><div class="ttdeci">newitem type</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l02739">cJSON.cpp:2739</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AccessPath_html_a3c98f0c5f07109f9da0a8a897aa51d18"><div class="ttname"><a href="classSVF_1_1AccessPath.html#a3c98f0c5f07109f9da0a8a897aa51d18">SVF::AccessPath::getElementNum</a></div><div class="ttdeci">u32_t getElementNum(const SVFType *type) const</div><div class="ttdoc">Return element number of a type.</div><div class="ttdef"><b>Definition</b> <a href="AccessPath_8cpp_source.html#l00065">AccessPath.cpp:65</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepStmt_html_a1dd264b9f3b43d04aa1396443ad6ad33"><div class="ttname"><a href="classSVF_1_1GepStmt.html#a1dd264b9f3b43d04aa1396443ad6ad33">SVF::GepStmt::accumulateConstantOffset</a></div><div class="ttdeci">APOffset accumulateConstantOffset() const</div><div class="ttdoc">Return accumulated constant offset (when accessing array or struct) if this offset is a constant.</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8h_source.html#l00660">SVFStatements.h:660</a></div></div>
@@ -1704,7 +1710,6 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassSVF_1_1PAGBase_html_a82db771454f09224faa501266b729886"><div class="ttname"><a href="classSVF_1_1PAGBase.html#a82db771454f09224faa501266b729886">SVF::PAGBase::getFlattenedElemIdx</a></div><div class="ttdeci">u32_t getFlattenedElemIdx(const SVFType *T, u32_t origId)</div><div class="ttdoc">Flattened element idx of an array or struct by considering stride.</div><div class="ttdef"><b>Definition</b> <a href="IRGraph_8cpp_source.html#l00148">IRGraph.cpp:148</a></div></div>
 <div class="ttc" id="aclassSVF_1_1PAGBase_html_ac05948eabda1ed280380186f8ebb4647"><div class="ttname"><a href="classSVF_1_1PAGBase.html#ac05948eabda1ed280380186f8ebb4647">SVF::PAGBase::getTypeInfo</a></div><div class="ttdeci">const StInfo * getTypeInfo(const SVFType *T) const</div><div class="ttdoc">Get struct info.</div><div class="ttdef"><b>Definition</b> <a href="IRGraph_8cpp_source.html#l00259">IRGraph.cpp:259</a></div></div>
 <div class="ttc" id="aclassSVF_1_1StInfo_html_a2bf5a09c142ab9e543bf8f85ba1e8501"><div class="ttname"><a href="classSVF_1_1StInfo.html#a2bf5a09c142ab9e543bf8f85ba1e8501">SVF::StInfo::getFlattenedElemIdxVec</a></div><div class="ttdeci">std::vector&lt; u32_t &gt; &amp; getFlattenedElemIdxVec()</div><div class="ttdef"><b>Definition</b> <a href="SVFType_8h_source.html#l00123">SVFType.h:123</a></div></div>
-<div class="ttc" id="anamespaceSVF_html_a5c4820681ef340339ddded756eb82ae1"><div class="ttname"><a href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">SVF::APOffset</a></div><div class="ttdeci">s64_t APOffset</div><div class="ttdef"><b>Definition</b> <a href="GeneralType_8h_source.html#l00080">GeneralType.h:80</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1732,35 +1737,40 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00316">316</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>{</div>
-<div class="line"><span class="lineno">  319</span>    <span class="comment">// Read and update the state at the node being analysed, not at the</span></div>
-<div class="line"><span class="lineno">  320</span>    <span class="comment">// pointer&#39;s definition: in sparse mode the definition may have no state.</span></div>
-<div class="line"><span class="lineno">  321</span>    AddressValue gepAddrs;</div>
-<div class="line"><span class="lineno">  322</span>    AbstractState&amp; as = <a class="code hl_function" href="#a0808011b33a6831bde128270fa1b5d68">getAbsState</a>(node);</div>
-<div class="line"><span class="lineno">  323</span>    <a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> lb = <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.lb().getIntNumeral() &lt; <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() ? <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.lb().getIntNumeral()</div>
-<div class="line"><span class="lineno">  324</span>                  : <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
-<div class="line"><span class="lineno">  325</span>    <a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> ub = <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.ub().getIntNumeral() &lt; <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>() ? <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.ub().getIntNumeral()</div>
-<div class="line"><span class="lineno">  326</span>                  : <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
-<div class="line"><span class="lineno">  327</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> i = lb; i &lt;= ub; i++)</div>
-<div class="line"><span class="lineno">  328</span>    {</div>
-<div class="line"><span class="lineno">  329</span>        <span class="keyword">const</span> AbstractValue&amp; addrs = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(pointer, node);</div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; addr : addrs.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
-<div class="line"><span class="lineno">  331</span>        {</div>
-<div class="line"><span class="lineno">  332</span>            <span class="comment">// Null and black-hole addresses have no backing object.</span></div>
-<div class="line"><span class="lineno">  333</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">AbstractState::isNullOrBlackHoleAddr</a>(addr))</div>
-<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  335</span>            <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> baseObj = as.<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(addr);</div>
-<div class="line"><span class="lineno">  336</span>            assert(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;ObjVar&gt;</a>(<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getSVFVar(baseObj)) &amp;&amp; <span class="stringliteral">&quot;Fail to get the base object address!&quot;</span>);</div>
-<div class="line"><span class="lineno">  337</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> gepObj = <a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getGepObjVar(baseObj, i);</div>
-<div class="line"><span class="lineno">  338</span>            as[gepObj] = AddressValue(<a class="code hl_function" href="classSVF_1_1AbstractState.html#aa594b7f3d1590073a88bcc73918dde39">AbstractState::getVirtualMemAddress</a>(gepObj));</div>
-<div class="line"><span class="lineno">  339</span>            gepAddrs.<a class="code hl_function" href="classSVF_1_1AddressValue.html#a05a245362daac3c993003018006d28d4">insert</a>(<a class="code hl_function" href="classSVF_1_1AbstractState.html#aa594b7f3d1590073a88bcc73918dde39">AbstractState::getVirtualMemAddress</a>(gepObj));</div>
-<div class="line"><span class="lineno">  340</span>        }</div>
-<div class="line"><span class="lineno">  341</span>    }</div>
-<div class="line"><span class="lineno">  342</span>    <span class="keywordflow">return</span> gepAddrs;</div>
-<div class="line"><span class="lineno">  343</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00322">322</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  324</span>{</div>
+<div class="line"><span class="lineno">  325</span>    <span class="comment">// Read and update the state at the node being analysed, not at the</span></div>
+<div class="line"><span class="lineno">  326</span>    <span class="comment">// pointer&#39;s definition: in sparse mode the definition may have no state.</span></div>
+<div class="line"><span class="lineno">  327</span>    AddressValue gepAddrs;</div>
+<div class="line"><span class="lineno">  328</span>    AbstractState&amp; as = <a class="code hl_function" href="#a0808011b33a6831bde128270fa1b5d68">getAbsState</a>(node);</div>
+<div class="line"><span class="lineno">  329</span>    <span class="comment">// Decide which fields the access may touch, counted from the field the</span></div>
+<div class="line"><span class="lineno">  330</span>    <span class="comment">// pointer points to. If the offset is unknown (⊤), conservatively cover</span></div>
+<div class="line"><span class="lineno">  331</span>    <span class="comment">// every field up to fieldLimit, the most fields SVF models per object.</span></div>
+<div class="line"><span class="lineno">  332</span>    <span class="comment">// Otherwise use the offset range, capped at fieldLimit.</span></div>
+<div class="line"><span class="lineno">  333</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> unknownOffset = <a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.isTop();</div>
+<div class="line"><span class="lineno">  334</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> fieldLimit = <a class="code hl_variable" href="classSVF_1_1Options.html#aaab923c093730b1670a54f09340b1bd5">Options::MaxFieldLimit</a>();</div>
+<div class="line"><span class="lineno">  335</span>    <a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> lb = unknownOffset ? 0 : std::min(<a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.lb().getIntNumeral(), fieldLimit);</div>
+<div class="line"><span class="lineno">  336</span>    <a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> ub = unknownOffset ? fieldLimit : std::min(<a class="code hl_variable" href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a>.ub().getIntNumeral(), fieldLimit);</div>
+<div class="line"><span class="lineno">  337</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">APOffset</a> i = lb; i &lt;= ub; i++)</div>
+<div class="line"><span class="lineno">  338</span>    {</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keyword">const</span> AbstractValue&amp; addrs = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(pointer, node);</div>
+<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; addr : addrs.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
+<div class="line"><span class="lineno">  341</span>        {</div>
+<div class="line"><span class="lineno">  342</span>            <span class="comment">// Null and black-hole addresses have no backing object.</span></div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">AbstractState::isNullOrBlackHoleAddr</a>(addr))</div>
+<div class="line"><span class="lineno">  344</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  345</span>            <a class="code hl_typedef" href="namespaceSVF.html#ad781b0b14e89773e774072b280658ef3">s64_t</a> baseObj = as.<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(addr);</div>
+<div class="line"><span class="lineno">  346</span>            assert(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5c8cbc986cccb9d84f87aae162df3737">SVFUtil::isa&lt;ObjVar&gt;</a>(<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getSVFVar(baseObj)) &amp;&amp; <span class="stringliteral">&quot;Fail to get the base object address!&quot;</span>);</div>
+<div class="line"><span class="lineno">  347</span>            <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> gepObj = <a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getGepObjVar(baseObj, i);</div>
+<div class="line"><span class="lineno">  348</span>            as[gepObj] = AddressValue(<a class="code hl_function" href="classSVF_1_1AbstractState.html#aa594b7f3d1590073a88bcc73918dde39">AbstractState::getVirtualMemAddress</a>(gepObj));</div>
+<div class="line"><span class="lineno">  349</span>            gepAddrs.<a class="code hl_function" href="classSVF_1_1AddressValue.html#a05a245362daac3c993003018006d28d4">insert</a>(<a class="code hl_function" href="classSVF_1_1AbstractState.html#aa594b7f3d1590073a88bcc73918dde39">AbstractState::getVirtualMemAddress</a>(gepObj));</div>
+<div class="line"><span class="lineno">  350</span>        }</div>
+<div class="line"><span class="lineno">  351</span>    }</div>
+<div class="line"><span class="lineno">  352</span>    <span class="keywordflow">return</span> gepAddrs;</div>
+<div class="line"><span class="lineno">  353</span>}</div>
 <div class="ttc" id="acJSON_8cpp_html_a95bf816579e97b6f33bdb5e25ed6d5de"><div class="ttname"><a href="cJSON_8cpp.html#a95bf816579e97b6f33bdb5e25ed6d5de">offset</a></div><div class="ttdeci">buffer offset</div><div class="ttdef"><b>Definition</b> <a href="cJSON_8cpp_source.html#l01113">cJSON.cpp:1113</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AddressValue_html_a05a245362daac3c993003018006d28d4"><div class="ttname"><a href="classSVF_1_1AddressValue.html#a05a245362daac3c993003018006d28d4">SVF::AddressValue::insert</a></div><div class="ttdeci">std::pair&lt; AddressValue::AddrSet::iterator, bool &gt; insert(u32_t id)</div><div class="ttdef"><b>Definition</b> <a href="AddressValue_8h_source.html#l00125">AddressValue.h:125</a></div></div>
+<div class="ttc" id="anamespaceSVF_html_a5c4820681ef340339ddded756eb82ae1"><div class="ttname"><a href="namespaceSVF.html#a5c4820681ef340339ddded756eb82ae1">SVF::APOffset</a></div><div class="ttdeci">s64_t APOffset</div><div class="ttdef"><b>Definition</b> <a href="GeneralType_8h_source.html#l00080">GeneralType.h:80</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1783,20 +1793,20 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00416">416</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  417</span>{</div>
-<div class="line"><span class="lineno">  418</span>    <span class="keyword">const</span> AbstractValue&amp; ptrVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(var, node);</div>
-<div class="line"><span class="lineno">  419</span>    <span class="keywordflow">if</span> (!ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#aa3699151c57c0401092ce12fd9e7b982">isAddr</a>())</div>
-<div class="line"><span class="lineno">  420</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  421</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> addr : ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
-<div class="line"><span class="lineno">  422</span>    {</div>
-<div class="line"><span class="lineno">  423</span>        <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> objId = <a class="code hl_function" href="#a0808011b33a6831bde128270fa1b5d68">getAbsState</a>(node).<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(addr);</div>
-<div class="line"><span class="lineno">  424</span>        <span class="keywordflow">if</span> (objId == 0)</div>
-<div class="line"><span class="lineno">  425</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getBaseObject(objId)-&gt;getType();</div>
-<div class="line"><span class="lineno">  427</span>    }</div>
-<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  429</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00426">426</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  427</span>{</div>
+<div class="line"><span class="lineno">  428</span>    <span class="keyword">const</span> AbstractValue&amp; ptrVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(var, node);</div>
+<div class="line"><span class="lineno">  429</span>    <span class="keywordflow">if</span> (!ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#aa3699151c57c0401092ce12fd9e7b982">isAddr</a>())</div>
+<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  431</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> addr : ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
+<div class="line"><span class="lineno">  432</span>    {</div>
+<div class="line"><span class="lineno">  433</span>        <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> objId = <a class="code hl_function" href="#a0808011b33a6831bde128270fa1b5d68">getAbsState</a>(node).<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(addr);</div>
+<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">if</span> (objId == 0)</div>
+<div class="line"><span class="lineno">  435</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  436</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getBaseObject(objId)-&gt;getType();</div>
+<div class="line"><span class="lineno">  437</span>    }</div>
+<div class="line"><span class="lineno">  438</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  439</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2944,33 +2954,33 @@ Friends</h2></td></tr>
 <p>state is needed because getIDFromAddr checks its freed-address set, not just the address bits. An address recorded as freed resolves to the BlackHole Obj and must not receive a strong update.</p>
 <p>int x=1, y=3; p=cond ? &amp;x : &amp;y; *p=2; // x:[1,2], y:[2,3] a=foo(); b=foo(); // foo returns malloc: a/b may name one heap summary </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00361">361</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  364</span>{</div>
-<div class="line"><span class="lineno">  365</span>    <span class="keywordflow">if</span> (targets.<a class="code hl_function" href="classSVF_1_1AddressValue.html#ae93859318bf4f618b4cf681988a870ce">size</a>() != 1)</div>
-<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  367</span> </div>
-<div class="line"><span class="lineno">  368</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> obj = state.<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(*targets.<a class="code hl_function" href="classSVF_1_1AddressValue.html#aed0b4789beda4980e4e215a65350f323">begin</a>());</div>
-<div class="line"><span class="lineno">  369</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;isNullOrBlkObj(obj))</div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  371</span> </div>
-<div class="line"><span class="lineno">  372</span>    <span class="keyword">const</span> BaseObjVar* base = <a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getBaseObject(obj);</div>
-<div class="line"><span class="lineno">  373</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* pta = <a class="code hl_variable" href="#ae050e5c2ce790afbc9877e1a72d01177">preAnalysis</a>-&gt;getPointerAnalysis();</div>
-<div class="line"><span class="lineno">  374</span> </div>
-<div class="line"><span class="lineno">  375</span>    <span class="keywordflow">if</span> (pta-&gt;isHeapMemObj(obj) ||</div>
-<div class="line"><span class="lineno">  376</span>            base-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#ae3570cb709d40a9db219f61aa1004c04">isFieldInsensitive</a>() ||</div>
-<div class="line"><span class="lineno">  377</span>            pta-&gt;isLocalVarInRecursiveFun(obj))</div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  379</span> </div>
-<div class="line"><span class="lineno">  380</span>    <span class="comment">// Array bases are summaries; individual GEP objects may be</span></div>
-<div class="line"><span class="lineno">  381</span>    <span class="comment">// strongly updated only when their offsets are precise.</span></div>
-<div class="line"><span class="lineno">  382</span>    <span class="keywordflow">if</span> (pta-&gt;isArrayMemObj(obj) &amp;&amp; !<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;isGepObjVar(obj))</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00371">371</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  374</span>{</div>
+<div class="line"><span class="lineno">  375</span>    <span class="keywordflow">if</span> (targets.<a class="code hl_function" href="classSVF_1_1AddressValue.html#ae93859318bf4f618b4cf681988a870ce">size</a>() != 1)</div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  377</span> </div>
+<div class="line"><span class="lineno">  378</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceSVF.html#a43a65e0d33af3c743294f7a1139d2301">NodeID</a> obj = state.<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(*targets.<a class="code hl_function" href="classSVF_1_1AddressValue.html#aed0b4789beda4980e4e215a65350f323">begin</a>());</div>
+<div class="line"><span class="lineno">  379</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;isNullOrBlkObj(obj))</div>
+<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  381</span> </div>
+<div class="line"><span class="lineno">  382</span>    <span class="keyword">const</span> BaseObjVar* base = <a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getBaseObject(obj);</div>
+<div class="line"><span class="lineno">  383</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* pta = <a class="code hl_variable" href="#ae050e5c2ce790afbc9877e1a72d01177">preAnalysis</a>-&gt;getPointerAnalysis();</div>
 <div class="line"><span class="lineno">  384</span> </div>
-<div class="line"><span class="lineno">  385</span>    <span class="comment">// Reject objects whose fields may be merged by the field limit.</span></div>
-<div class="line"><span class="lineno">  386</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* typeInfo = base-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#ae71733870641d42b1f0e036b2abaa00c">getType</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFType.html#a3e499fe4fb9e3bb454ae514802169cb3">getTypeInfo</a>();</div>
-<div class="line"><span class="lineno">  387</span>    <span class="keywordflow">return</span> typeInfo-&gt;<a class="code hl_function" href="classSVF_1_1StInfo.html#a518c82138fcadc6634980566c1c0f762">getNumOfFlattenElements</a>() &lt;=</div>
-<div class="line"><span class="lineno">  388</span>           base-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#a8c89768fc6e4c84bdd821d5132592d3c">getMaxFieldOffsetLimit</a>();</div>
-<div class="line"><span class="lineno">  389</span>}</div>
+<div class="line"><span class="lineno">  385</span>    <span class="keywordflow">if</span> (pta-&gt;isHeapMemObj(obj) ||</div>
+<div class="line"><span class="lineno">  386</span>            base-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#ae3570cb709d40a9db219f61aa1004c04">isFieldInsensitive</a>() ||</div>
+<div class="line"><span class="lineno">  387</span>            pta-&gt;isLocalVarInRecursiveFun(obj))</div>
+<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  389</span> </div>
+<div class="line"><span class="lineno">  390</span>    <span class="comment">// Array bases are summaries; individual GEP objects may be</span></div>
+<div class="line"><span class="lineno">  391</span>    <span class="comment">// strongly updated only when their offsets are precise.</span></div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">if</span> (pta-&gt;isArrayMemObj(obj) &amp;&amp; !<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;isGepObjVar(obj))</div>
+<div class="line"><span class="lineno">  393</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  394</span> </div>
+<div class="line"><span class="lineno">  395</span>    <span class="comment">// Reject objects whose fields may be merged by the field limit.</span></div>
+<div class="line"><span class="lineno">  396</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* typeInfo = base-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#ae71733870641d42b1f0e036b2abaa00c">getType</a>()-&gt;<a class="code hl_function" href="classSVF_1_1SVFType.html#a3e499fe4fb9e3bb454ae514802169cb3">getTypeInfo</a>();</div>
+<div class="line"><span class="lineno">  397</span>    <span class="keywordflow">return</span> typeInfo-&gt;<a class="code hl_function" href="classSVF_1_1StInfo.html#a518c82138fcadc6634980566c1c0f762">getNumOfFlattenElements</a>() &lt;=</div>
+<div class="line"><span class="lineno">  398</span>           base-&gt;<a class="code hl_function" href="classSVF_1_1BaseObjVar.html#a8c89768fc6e4c84bdd821d5132592d3c">getMaxFieldOffsetLimit</a>();</div>
+<div class="line"><span class="lineno">  399</span>}</div>
 <div class="ttc" id="aclassSVF_1_1BaseObjVar_html_a8c89768fc6e4c84bdd821d5132592d3c"><div class="ttname"><a href="classSVF_1_1BaseObjVar.html#a8c89768fc6e4c84bdd821d5132592d3c">SVF::BaseObjVar::getMaxFieldOffsetLimit</a></div><div class="ttdeci">u32_t getMaxFieldOffsetLimit() const</div><div class="ttdoc">Get max field offset limit.</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l00651">SVFVariables.h:651</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BaseObjVar_html_ae3570cb709d40a9db219f61aa1004c04"><div class="ttname"><a href="classSVF_1_1BaseObjVar.html#ae3570cb709d40a9db219f61aa1004c04">SVF::BaseObjVar::isFieldInsensitive</a></div><div class="ttdeci">bool isFieldInsensitive() const</div><div class="ttdoc">Return true if its field limit is 0.</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l00658">SVFVariables.h:658</a></div></div>
 <div class="ttc" id="aclassSVF_1_1BaseObjVar_html_ae71733870641d42b1f0e036b2abaa00c"><div class="ttname"><a href="classSVF_1_1BaseObjVar.html#ae71733870641d42b1f0e036b2abaa00c">SVF::BaseObjVar::getType</a></div><div class="ttdeci">const SVFType * getType() const</div><div class="ttdoc">Get obj type.</div><div class="ttdef"><b>Definition</b> <a href="SVFVariables_8h_source.html#l00633">SVFVariables.h:633</a></div></div>
@@ -3160,21 +3170,21 @@ Friends</h2></td></tr>
 
 <p>Read memory through the pointer's address targets. </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00345">345</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  346</span>{</div>
-<div class="line"><span class="lineno">  347</span>    <span class="keyword">const</span> AbstractValue&amp; ptrVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(pointer, node);</div>
-<div class="line"><span class="lineno">  348</span>    AbstractState&amp; as = <a class="code hl_function" href="#a0808011b33a6831bde128270fa1b5d68">getAbsState</a>(node);</div>
-<div class="line"><span class="lineno">  349</span>    AbstractValue res;</div>
-<div class="line"><span class="lineno">  350</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> addr : ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
-<div class="line"><span class="lineno">  351</span>    {</div>
-<div class="line"><span class="lineno">  352</span>        <span class="comment">// Null and black-hole addresses have no backing object.</span></div>
-<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">AbstractState::isNullOrBlackHoleAddr</a>(addr))</div>
-<div class="line"><span class="lineno">  354</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  355</span>        res.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a52a8a738896179a148581e1060a2ed66">join_with</a>(</div>
-<div class="line"><span class="lineno">  356</span>            <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getSVFVar(as.<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(addr)), node));</div>
-<div class="line"><span class="lineno">  357</span>    }</div>
-<div class="line"><span class="lineno">  358</span>    <span class="keywordflow">return</span> res;</div>
-<div class="line"><span class="lineno">  359</span>}</div>
+<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00355">355</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  356</span>{</div>
+<div class="line"><span class="lineno">  357</span>    <span class="keyword">const</span> AbstractValue&amp; ptrVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(pointer, node);</div>
+<div class="line"><span class="lineno">  358</span>    AbstractState&amp; as = <a class="code hl_function" href="#a0808011b33a6831bde128270fa1b5d68">getAbsState</a>(node);</div>
+<div class="line"><span class="lineno">  359</span>    AbstractValue res;</div>
+<div class="line"><span class="lineno">  360</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> addr : ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
+<div class="line"><span class="lineno">  361</span>    {</div>
+<div class="line"><span class="lineno">  362</span>        <span class="comment">// Null and black-hole addresses have no backing object.</span></div>
+<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">AbstractState::isNullOrBlackHoleAddr</a>(addr))</div>
+<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  365</span>        res.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a52a8a738896179a148581e1060a2ed66">join_with</a>(</div>
+<div class="line"><span class="lineno">  366</span>            <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getSVFVar(as.<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(addr)), node));</div>
+<div class="line"><span class="lineno">  367</span>    }</div>
+<div class="line"><span class="lineno">  368</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><span class="lineno">  369</span>}</div>
 <div class="ttc" id="aclassSVF_1_1AbstractValue_html_a52a8a738896179a148581e1060a2ed66"><div class="ttname"><a href="classSVF_1_1AbstractValue.html#a52a8a738896179a148581e1060a2ed66">SVF::AbstractValue::join_with</a></div><div class="ttdeci">void join_with(const AbstractValue &amp;other)</div><div class="ttdef"><b>Definition</b> <a href="AbstractValue_8h_source.html#l00128">AbstractValue.h:128</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -3689,31 +3699,31 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Shared by all sparsity modes: a strong update replaces one concrete cell; a weak update JOINs the old and new values at every possible target. </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00391">391</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  392</span>{</div>
-<div class="line"><span class="lineno">  393</span>    <span class="keyword">const</span> AbstractValue&amp; ptrVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(pointer, node);</div>
-<div class="line"><span class="lineno">  394</span>    AbstractState&amp; as = <a class="code hl_function" href="#a0808011b33a6831bde128270fa1b5d68">getAbsState</a>(node);</div>
-<div class="line"><span class="lineno">  395</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> strongUpdate = <a class="code hl_function" href="#a1d11eac14fca5fde9ac38ccd3151f463">isStrongUpdate</a>(ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>(), as);</div>
-<div class="line"><span class="lineno">  396</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> addr : ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
-<div class="line"><span class="lineno">  397</span>    {</div>
-<div class="line"><span class="lineno">  398</span>        <span class="comment">// Null and black-hole addresses have no backing object.</span></div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">AbstractState::isNullOrBlackHoleAddr</a>(addr))</div>
-<div class="line"><span class="lineno">  400</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  401</span>        <span class="keyword">const</span> ObjVar* target =</div>
-<div class="line"><span class="lineno">  402</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;ObjVar&gt;</a>(<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getSVFVar(as.<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(addr)));</div>
-<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">if</span> (strongUpdate)</div>
-<div class="line"><span class="lineno">  404</span>        {</div>
-<div class="line"><span class="lineno">  405</span>            <a class="code hl_function" href="#adff3bde65cfc66bd3c46820168fe833d">updateAbsValue</a>(target, val, node);</div>
-<div class="line"><span class="lineno">  406</span>        }</div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  408</span>        {</div>
-<div class="line"><span class="lineno">  409</span>            AbstractValue joined = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(target, node);</div>
-<div class="line"><span class="lineno">  410</span>            joined.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a52a8a738896179a148581e1060a2ed66">join_with</a>(val);</div>
-<div class="line"><span class="lineno">  411</span>            <a class="code hl_function" href="#adff3bde65cfc66bd3c46820168fe833d">updateAbsValue</a>(target, joined, node);</div>
-<div class="line"><span class="lineno">  412</span>        }</div>
-<div class="line"><span class="lineno">  413</span>    }</div>
-<div class="line"><span class="lineno">  414</span>}</div>
-<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a1d11eac14fca5fde9ac38ccd3151f463"><div class="ttname"><a href="#a1d11eac14fca5fde9ac38ccd3151f463">SVF::AbstractInterpretation::isStrongUpdate</a></div><div class="ttdeci">bool isStrongUpdate(const AddressValue &amp;targets, const AbstractState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00361">AbstractStateManager.cpp:361</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AbstractStateManager_8cpp_source.html#l00401">401</a> of file <a class="el" href="AbstractStateManager_8cpp_source.html">AbstractStateManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  402</span>{</div>
+<div class="line"><span class="lineno">  403</span>    <span class="keyword">const</span> AbstractValue&amp; ptrVal = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(pointer, node);</div>
+<div class="line"><span class="lineno">  404</span>    AbstractState&amp; as = <a class="code hl_function" href="#a0808011b33a6831bde128270fa1b5d68">getAbsState</a>(node);</div>
+<div class="line"><span class="lineno">  405</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> strongUpdate = <a class="code hl_function" href="#a1d11eac14fca5fde9ac38ccd3151f463">isStrongUpdate</a>(ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>(), as);</div>
+<div class="line"><span class="lineno">  406</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> addr : ptrVal.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a9523adf98a0146bc6eb978817352a95d">getAddrs</a>())</div>
+<div class="line"><span class="lineno">  407</span>    {</div>
+<div class="line"><span class="lineno">  408</span>        <span class="comment">// Null and black-hole addresses have no backing object.</span></div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSVF_1_1AbstractState.html#a55c78a0dd6a76a9e2719b803dfb427d5">AbstractState::isNullOrBlackHoleAddr</a>(addr))</div>
+<div class="line"><span class="lineno">  410</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keyword">const</span> ObjVar* target =</div>
+<div class="line"><span class="lineno">  412</span>            <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;ObjVar&gt;</a>(<a class="code hl_variable" href="#a54619b0c5d226732f25f320d8042e34f">pag</a>-&gt;getSVFVar(as.<a class="code hl_function" href="classSVF_1_1AbstractState.html#a17df7f4791c92144eaecf1a02f3ab289">getIDFromAddr</a>(addr)));</div>
+<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">if</span> (strongUpdate)</div>
+<div class="line"><span class="lineno">  414</span>        {</div>
+<div class="line"><span class="lineno">  415</span>            <a class="code hl_function" href="#adff3bde65cfc66bd3c46820168fe833d">updateAbsValue</a>(target, val, node);</div>
+<div class="line"><span class="lineno">  416</span>        }</div>
+<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  418</span>        {</div>
+<div class="line"><span class="lineno">  419</span>            AbstractValue joined = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(target, node);</div>
+<div class="line"><span class="lineno">  420</span>            joined.<a class="code hl_function" href="classSVF_1_1AbstractValue.html#a52a8a738896179a148581e1060a2ed66">join_with</a>(val);</div>
+<div class="line"><span class="lineno">  421</span>            <a class="code hl_function" href="#adff3bde65cfc66bd3c46820168fe833d">updateAbsValue</a>(target, joined, node);</div>
+<div class="line"><span class="lineno">  422</span>        }</div>
+<div class="line"><span class="lineno">  423</span>    }</div>
+<div class="line"><span class="lineno">  424</span>}</div>
+<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a1d11eac14fca5fde9ac38ccd3151f463"><div class="ttname"><a href="#a1d11eac14fca5fde9ac38ccd3151f463">SVF::AbstractInterpretation::isStrongUpdate</a></div><div class="ttdeci">bool isStrongUpdate(const AddressValue &amp;targets, const AbstractState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00371">AbstractStateManager.cpp:371</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4337,7 +4347,7 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno"> 1057</span>    AddressValue gepAddrs = <a class="code hl_function" href="#a2b62e10c96b6aab5ec7e37f44ff8036b">getGepObjAddrs</a>(node, <a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;ValVar&gt;</a>(gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a52e286ff6a8f3b1cf1413555aede555d">getRHSVar</a>()), offsetPair);</div>
 <div class="line"><span class="lineno"> 1058</span>    <a class="code hl_function" href="#adff3bde65cfc66bd3c46820168fe833d">updateAbsValue</a>(gep-&gt;<a class="code hl_function" href="classSVF_1_1GepStmt.html#a9b1133fc1f88f5056fed6c0512d8c90b">getLHSVar</a>(), gepAddrs, node);</div>
 <div class="line"><span class="lineno"> 1059</span>}</div>
-<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a2b62e10c96b6aab5ec7e37f44ff8036b"><div class="ttname"><a href="#a2b62e10c96b6aab5ec7e37f44ff8036b">SVF::AbstractInterpretation::getGepObjAddrs</a></div><div class="ttdeci">AddressValue getGepObjAddrs(const ICFGNode *node, const ValVar *pointer, IntervalValue offset)</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00316">AbstractStateManager.cpp:316</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a2b62e10c96b6aab5ec7e37f44ff8036b"><div class="ttname"><a href="#a2b62e10c96b6aab5ec7e37f44ff8036b">SVF::AbstractInterpretation::getGepObjAddrs</a></div><div class="ttdeci">AddressValue getGepObjAddrs(const ICFGNode *node, const ValVar *pointer, IntervalValue offset)</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00322">AbstractStateManager.cpp:322</a></div></div>
 <div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a8019b0eb7456d7ddf0a5a83442519488"><div class="ttname"><a href="#a8019b0eb7456d7ddf0a5a83442519488">SVF::AbstractInterpretation::getGepElementIndex</a></div><div class="ttdeci">IntervalValue getGepElementIndex(const GepStmt *gep)</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00199">AbstractStateManager.cpp:199</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepStmt_html_a52e286ff6a8f3b1cf1413555aede555d"><div class="ttname"><a href="classSVF_1_1GepStmt.html#a52e286ff6a8f3b1cf1413555aede555d">SVF::GepStmt::getRHSVar</a></div><div class="ttdeci">const ValVar * getRHSVar() const</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8cpp_source.html#l00375">SVFStatements.cpp:375</a></div></div>
 <div class="ttc" id="aclassSVF_1_1GepStmt_html_a9b1133fc1f88f5056fed6c0512d8c90b"><div class="ttname"><a href="classSVF_1_1GepStmt.html#a9b1133fc1f88f5056fed6c0512d8c90b">SVF::GepStmt::getLHSVar</a></div><div class="ttdeci">const ValVar * getLHSVar() const</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8cpp_source.html#l00379">SVFStatements.cpp:379</a></div></div>
@@ -4374,7 +4384,7 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno"> 1359</span>        <a class="code hl_function" href="#a4b1c44c1b75d19f54ab9f2d8fceb37bf">loadValue</a>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;ValVar&gt;</a>(load-&gt;<a class="code hl_function" href="classSVF_1_1LoadStmt.html#a897d253369c6161d7debfd614c382d7a">getRHSVar</a>()), node);</div>
 <div class="line"><span class="lineno"> 1360</span>    <a class="code hl_function" href="#adff3bde65cfc66bd3c46820168fe833d">updateAbsValue</a>(load-&gt;<a class="code hl_function" href="classSVF_1_1LoadStmt.html#a0e67b53fcc4f70f2ae63bbef56e35dba">getLHSVar</a>(), loaded, node);</div>
 <div class="line"><span class="lineno"> 1361</span>}</div>
-<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a4b1c44c1b75d19f54ab9f2d8fceb37bf"><div class="ttname"><a href="#a4b1c44c1b75d19f54ab9f2d8fceb37bf">SVF::AbstractInterpretation::loadValue</a></div><div class="ttdeci">virtual AbstractValue loadValue(const ValVar *pointer, const ICFGNode *node)</div><div class="ttdoc">Read memory through the pointer&#39;s address targets.</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00345">AbstractStateManager.cpp:345</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_a4b1c44c1b75d19f54ab9f2d8fceb37bf"><div class="ttname"><a href="#a4b1c44c1b75d19f54ab9f2d8fceb37bf">SVF::AbstractInterpretation::loadValue</a></div><div class="ttdeci">virtual AbstractValue loadValue(const ValVar *pointer, const ICFGNode *node)</div><div class="ttdoc">Read memory through the pointer&#39;s address targets.</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00355">AbstractStateManager.cpp:355</a></div></div>
 <div class="ttc" id="aclassSVF_1_1LoadStmt_html_a0e67b53fcc4f70f2ae63bbef56e35dba"><div class="ttname"><a href="classSVF_1_1LoadStmt.html#a0e67b53fcc4f70f2ae63bbef56e35dba">SVF::LoadStmt::getLHSVar</a></div><div class="ttdeci">const ValVar * getLHSVar() const</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8cpp_source.html#l00362">SVFStatements.cpp:362</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -4549,7 +4559,7 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno"> 1366</span>    AbstractValue val = <a class="code hl_function" href="#ab9385bcb293a4e51a151dd1c63721682">getAbsValue</a>(store-&gt;<a class="code hl_function" href="classSVF_1_1StoreStmt.html#a27d047c6dbad5f7cd536c9f5f2a6c005">getRHSVar</a>(), node);</div>
 <div class="line"><span class="lineno"> 1367</span>    <a class="code hl_function" href="#ae91a62fdf6c8cb6a8e70638001211134">storeValue</a>(<a class="code hl_function" href="namespaceSVF_1_1SVFUtil.html#a5ac2d264d80b8bfdbeaf120c5d6778d0">SVFUtil::cast&lt;ValVar&gt;</a>(store-&gt;<a class="code hl_function" href="classSVF_1_1StoreStmt.html#a29dd0a0a188f8f44c3e48bc2139e06d5">getLHSVar</a>()), val, node);</div>
 <div class="line"><span class="lineno"> 1368</span>}</div>
-<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_ae91a62fdf6c8cb6a8e70638001211134"><div class="ttname"><a href="#ae91a62fdf6c8cb6a8e70638001211134">SVF::AbstractInterpretation::storeValue</a></div><div class="ttdeci">virtual void storeValue(const ValVar *pointer, const AbstractValue &amp;val, const ICFGNode *node)</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00391">AbstractStateManager.cpp:391</a></div></div>
+<div class="ttc" id="aclassSVF_1_1AbstractInterpretation_html_ae91a62fdf6c8cb6a8e70638001211134"><div class="ttname"><a href="#ae91a62fdf6c8cb6a8e70638001211134">SVF::AbstractInterpretation::storeValue</a></div><div class="ttdeci">virtual void storeValue(const ValVar *pointer, const AbstractValue &amp;val, const ICFGNode *node)</div><div class="ttdef"><b>Definition</b> <a href="AbstractStateManager_8cpp_source.html#l00401">AbstractStateManager.cpp:401</a></div></div>
 <div class="ttc" id="aclassSVF_1_1StoreStmt_html_a27d047c6dbad5f7cd536c9f5f2a6c005"><div class="ttname"><a href="classSVF_1_1StoreStmt.html#a27d047c6dbad5f7cd536c9f5f2a6c005">SVF::StoreStmt::getRHSVar</a></div><div class="ttdeci">const ValVar * getRHSVar() const</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8cpp_source.html#l00341">SVFStatements.cpp:341</a></div></div>
 <div class="ttc" id="aclassSVF_1_1StoreStmt_html_a29dd0a0a188f8f44c3e48bc2139e06d5"><div class="ttname"><a href="classSVF_1_1StoreStmt.html#a29dd0a0a188f8f44c3e48bc2139e06d5">SVF::StoreStmt::getLHSVar</a></div><div class="ttdeci">const ValVar * getLHSVar() const</div><div class="ttdef"><b>Definition</b> <a href="SVFStatements_8cpp_source.html#l00345">SVFStatements.cpp:345</a></div></div>
 </div><!-- fragment -->
